@@ -1,22 +1,25 @@
 ---
-title: Efeitos do Xamarin.Forms
-description: Efeitos permitem que os controles nativos em cada plataforma sejam personalizados sem precisar recorrer a uma implementação de renderizador personalizado.
-ms.prod: xamarin
-ms.assetid: 8AF168A7-4CD9-4603-B961-15B8B1543784
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/01/2017
-ms.openlocfilehash: 2de1d1dd065a01bb457ebf03acdc0c01529abf7b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsEffect
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a6206d2c561df74a01b7d7408e8d542f1e2189d3
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73083832"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139328"
 ---
-# <a name="xamarinforms-effects"></a>Efeitos do Xamarin.Forms
+# <a name="xamarinforms-effects"></a>Xamarin.FormsEffect
 
-_As interfaces de usuário do Xamarin.Forms são renderizadas usando os controles nativos da plataforma de destino, permitindo que os aplicativos Xamarin.Forms mantenham a aparência e a sensação apropriadas para cada plataforma. Os efeitos permitem que os controles nativos em cada plataforma sejam personalizados sem ter que recorrer a uma implementação de renderização personalizada._
+_As interfaces de usuário do Xamarin. Forms são renderizadas usando os controles nativos da plataforma de destino, permitindo que os Xamarin.Forms aplicativos mantenham a aparência apropriada para cada plataforma. Os efeitos permitem que os controles nativos em cada plataforma sejam personalizados sem a necessidade de recorrer a uma implementação de processador personalizado._
 
 ## <a name="introduction-to-effects"></a>[Introdução aos efeitos](introduction.md)
 
@@ -24,7 +27,7 @@ Efeitos permitem que os controles nativos em cada plataforma sejam personalizado
 
 ## <a name="creating-an-effect"></a>[Criando um efeito](creating.md)
 
-Efeitos simplificam a personalização de um controle. Este artigo demonstra como criar um efeito que [`Entry`](xref:Xamarin.Forms.Entry) altera a cor de fundo do controle quando o controle ganha foco.
+Efeitos simplificam a personalização de um controle. Este artigo demonstra como criar um efeito que altera a cor do plano de fundo do [`Entry`](xref:Xamarin.Forms.Entry) controle quando o controle ganha foco.
 
 ## <a name="passing-parameters-to-an-effect"></a>[Passar parâmetros para um efeito](passing-parameters/index.md)
 
@@ -36,4 +39,4 @@ Efeitos podem invocar eventos. Este artigo mostra como criar um evento que imple
 
 ## <a name="reusable-roundeffect"></a>[RoundEffect reutilizável](reusable-roundeffect.md)
 
-RoundEffect é um efeito reutilizável que pode ser aplicado a qualquer controle derivado do VisualElement para tornar o controle como um círculo. Esse efeito pode ser usado para criar imagens circulares, botões circulares ou outros controles circulares.
+RoundEffect é um efeito reutilizável que pode ser aplicado a qualquer controle derivado de Visualelement para renderizar o controle como um círculo. Esse efeito pode ser usado para criar imagens circulares, botões circulares ou outros controles circulares.

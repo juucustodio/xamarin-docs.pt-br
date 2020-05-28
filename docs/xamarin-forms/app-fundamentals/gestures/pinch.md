@@ -1,26 +1,29 @@
 ---
-title: Adicionando um reconhecedor de gestos de pinçagem
-description: Este artigo explica como usar o gesto de pinçagem para aplicar zoom de forma interativa a uma imagem na localização da pinçagem.
-ms.prod: xamarin
-ms.assetid: 832F7810-F0CF-441A-B04A-3975F3FB8B29
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/21/2016
-ms.openlocfilehash: be7a145e93aa4720b38921efc895ca3f3f33edb3
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: da4a8bc66a7986efd3683de6dce1f6af618b85cc
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "68656024"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137846"
 ---
 # <a name="adding-a-pinch-gesture-recognizer"></a>Adicionando um reconhecedor de gestos de pinçagem
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pinchgesture)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pinchgesture)
 
-_O gesto de pinça é usado para realizar zoom interativo e é implementado com a classe PinchGestureRecognizer. Um cenário comum para o gesto de beliscar é realizar zoom interativo de uma imagem no local de beliscão. Isso é feito através do dimensionamento do conteúdo do viewport, e é demonstrado neste artigo._
+_O gesto de pinçagem é usado para executar zoom interativo e é implementado com a classe PinchGestureRecognizer. Um cenário comum para o gesto de pinçar é executar o zoom interativo de uma imagem no local de pinçagem. Isso é feito dimensionando o conteúdo do visor e é demonstrado neste artigo._
 
-Para tornar um elemento de interface de usuário [`PinchGestureRecognizer`](xref:Xamarin.Forms.PinchGestureRecognizer) com zoom [`PinchUpdated`](xref:Xamarin.Forms.PinchGestureRecognizer.PinchUpdated) com o gesto de pinça, crie uma instância, manuseie o evento e adicione o novo reconhecimento de gestos à [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) coleção no elemento interface do usuário. O exemplo de `PinchGestureRecognizer` código a [`Image`](xref:Xamarin.Forms.Image) seguir mostra um anexo a um elemento:
+Para tornar um elemento de interface do usuário um zoom com o gesto de pinçagem, crie uma [`PinchGestureRecognizer`](xref:Xamarin.Forms.PinchGestureRecognizer) instância, manipule o [`PinchUpdated`](xref:Xamarin.Forms.PinchGestureRecognizer.PinchUpdated) evento e adicione o novo reconhecedor de gesto à [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) coleção no elemento de interface do usuário. O exemplo de código a seguir mostra um `PinchGestureRecognizer` anexado a um [`Image`](xref:Xamarin.Forms.Image) elemento:
 
 ```csharp
 var pinchGesture = new PinchGestureRecognizer();
@@ -72,7 +75,7 @@ public class PinchToZoomContainer : ContentView
 }
 ```
 
-Essa classe pode ser encapsulada em torno de um elemento de interface do usuário para que o gesto de pinçagem aplique zoom ao elemento de interface do usuário encapsulado. O exemplo de código XAML a seguir mostra o `PinchToZoomContainer` embrulho de um [`Image`](xref:Xamarin.Forms.Image) elemento:
+Essa classe pode ser encapsulada em torno de um elemento de interface do usuário para que o gesto de pinçagem aplique zoom ao elemento de interface do usuário encapsulado. O exemplo de código XAML a seguir mostra a `PinchToZoomContainer` disposição de um [`Image`](xref:Xamarin.Forms.Image) elemento:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -91,7 +94,7 @@ Essa classe pode ser encapsulada em torno de um elemento de interface do usuári
 </ContentPage>
 ```
 
-O exemplo de código `PinchToZoomContainer` a [`Image`](xref:Xamarin.Forms.Image) seguir mostra como o elemento envolve um elemento em uma página C#:
+O exemplo de código a seguir mostra como o `PinchToZoomContainer` encapsula um [`Image`](xref:Xamarin.Forms.Image) elemento em uma página do C#:
 
 ```csharp
 public class HomePageCS : ContentPage
@@ -110,7 +113,7 @@ public class HomePageCS : ContentPage
 }
 ```
 
-Quando [`Image`](xref:Xamarin.Forms.Image) o elemento recebe um gesto de pinça, a imagem exibida será ampliada ou retirada. O zoom é `PinchZoomContainer.OnPinchUpdated` realizado pelo método, que é mostrado no seguinte exemplo de código:
+Quando o [`Image`](xref:Xamarin.Forms.Image) elemento recebe um gesto de pinçar, a imagem exibida será ampliada ou desativada. O zoom é executado pelo `PinchZoomContainer.OnPinchUpdated` método, que é mostrado no exemplo de código a seguir:
 
 ```csharp
 void OnPinchUpdated (object sender, PinchGestureUpdatedEventArgs e)
@@ -160,7 +163,7 @@ void OnPinchUpdated (object sender, PinchGestureUpdatedEventArgs e)
 }
 ```
 
-Esse método atualiza o nível de aplicação de zoom do elemento da interface do usuário encapsulado, com base no gesto de pinçagem do usuário. Isso é conseguido usando os [`Scale`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Scale) [`ScaleOrigin`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.ScaleOrigin) valores da , e [`Status`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Status) propriedades da [`PinchGestureUpdatedEventArgs`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs) instância para calcular o fator de escala a ser aplicado na origem do gesto de pinça. O elemento do usuário embrulhado é então ampliado na [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY)origem [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) do gesto de pinça definindo suas propriedades e propriedades aos valores calculados.
+Esse método atualiza o nível de aplicação de zoom do elemento da interface do usuário encapsulado, com base no gesto de pinçagem do usuário. Isso é obtido usando os valores das [`Scale`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Scale) [`ScaleOrigin`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.ScaleOrigin) [`Status`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Status) Propriedades e da [`PinchGestureUpdatedEventArgs`](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs) instância do para calcular o fator de escala a ser aplicado na origem do gesto de pinçagem. O elemento de usuário encapsulado é então ampliado na origem do gesto de pinçagem definindo [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) suas [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) Propriedades, e [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) para os valores calculados.
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -1,38 +1,41 @@
 ---
-title: Outras plataformas Xamarin. Forms
-description: Este guia explica as plataformas adicionais com suporte pelo Xamarin. Forms.
-ms.prod: xamarin
-ms.assetid: C713B905-0C98-4442-B5CB-91C384A384DA
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/04/2019
-ms.openlocfilehash: 7c3c995607a85fd8e6325bbaed65c0d590e46205
-ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
+title: Xamarin.FormsOutras plataformas
+description: Este guia explica as plataformas adicionais com suporte no Xamarin.Forms .
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a0ab248d3e23854e8027f515fbcf0fa6ca9521fd
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71997126"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139536"
 ---
-# <a name="xamarinforms-other-platforms"></a>Outras plataformas Xamarin. Forms
+# <a name="xamarinforms-other-platforms"></a>Xamarin.FormsOutras plataformas
 
-O Xamarin. Forms dá suporte a plataformas adicionais além do iOS, Android e Windows.
+Xamarin.Formsdá suporte a plataformas adicionais além do iOS, Android e Windows.
 
 > [!IMPORTANT]
-> Para obter mais informações sobre plataformas do Xamarin. Forms com suporte, consulte [suporte da plataforma xamarin. Forms](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
+> Para obter mais informações sobre Xamarin.Forms plataformas com suporte, consulte [ Xamarin.Forms suporte a plataformas](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
 
-## <a name="gtkgtkmd"></a>[GTK](gtk.md)
+## <a name="gtk"></a>[GTK](gtk.md)
 
-O Xamarin. Forms agora tem suporte de visualização para aplicativos GTK #.
+Xamarin.FormsAgora tem suporte de visualização para aplicativos GTK #.
 
-## <a name="macmacmd"></a>[Mac](mac.md)
+## <a name="mac"></a>[Mac](mac.md)
 
-O Xamarin. Forms agora tem suporte de visualização para aplicativos macOS.
+Xamarin.FormsAgora tem suporte de visualização para aplicativos macOS.
 
-## <a name="tizentizenmd"></a>[Tizen](tizen.md)
+## <a name="tizen"></a>[Tizen](tizen.md)
 
-O tizen .NET permite que você crie aplicativos .NET com o Xamarin. Forms e o tizen .NET Framework.
+O tizen .NET permite que você crie aplicativos .NET com Xamarin.Forms o e o Tizen .NET Framework.
 
-## <a name="wpfwpfmd"></a>[WPF](wpf.md)
+## <a name="wpf"></a>[WPF](wpf.md)
 
-O Xamarin. Forms agora tem suporte de visualização para aplicativos Windows Presentation Foundation (WPF).
+Xamarin.FormsAgora tem suporte de visualização para aplicativos Windows Presentation Foundation (WPF).

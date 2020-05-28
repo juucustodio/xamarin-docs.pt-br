@@ -1,21 +1,24 @@
 ---
-title: Conversores de unidade do Xamarin.Essentials
-description: A classe UnitConverters no Xamarin.Essentials fornece vários conversores de unidade para ajudar os desenvolvedores ao usar o Xamarin.Essentials.
-ms.assetid: 35DE2704-E730-4337-9476-66CD53376943
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 01/06/2020
-ms.openlocfilehash: 866842cbed9f97dc957e3631c037fa8d27d20076
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+title: Xamarin.EssentialsConversores de unidade
+description: A classe UnitConverters no Xamarin.Essentials fornece vários conversores de unidade para ajudar os desenvolvedores ao usarem o Xamarin.Essentials .
+ms.assetid: ''
+author: ''
+ms.custom: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: deff6997ff921e6048ccb2497a0747c770501a04
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149778"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137131"
 ---
-# <a name="xamarinessentials-unit-converters"></a>Xamarin. Essentials: conversores de unidade
+# <a name="xamarinessentials-unit-converters"></a>Xamarin.Essentials: Conversores de unidade
 
-A classe **UnitConverters** fornece vários conversores de unidade para ajudar os desenvolvedores ao usar o Xamarin.Essentials.
+A classe **UnitConverters** fornece vários conversores de unidade para ajudar os desenvolvedores ao usarem o Xamarin.Essentials .
 
 ## <a name="get-started"></a>Introdução
 
@@ -23,13 +26,13 @@ A classe **UnitConverters** fornece vários conversores de unidade para ajudar o
 
 ## <a name="using-unit-converters"></a>Usando conversores de unidade
 
-Adicione uma referência ao Xamarin.Essentials na classe:
+Adicione uma referência a Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-Todos os conversores de unidade estão disponíveis com o uso da classe `UnitConverters` estática no Xamarin.Essentials. Por exemplo, você pode converter facilmente Fahrenheit em Celsius.
+Todos os conversores de unidade estão disponíveis usando a `UnitConverters` classe estática no Xamarin.Essentials . Por exemplo, você pode converter facilmente Fahrenheit em Celsius.
 
 ```csharp
 var celsius = UnitConverters.FahrenheitToCelsius(32.0);

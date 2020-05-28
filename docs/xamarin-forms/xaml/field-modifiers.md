@@ -1,20 +1,23 @@
 ---
-title: Modificadores de campo XAML no Xamarin. Forms
-description: O atributo namespace x:FieldModifier especifica o nível de acesso para campos gerados para elementos XAML nomeados.
-ms.prod: xamarin
-ms.assetid: 12357CE0-3C11-4B62-947F-72DB6DFC23A2
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/02/2019
-ms.openlocfilehash: 0f6050de943ca9878cf41b448d44bf222689be56
-ms.sourcegitcommit: c6e56545eafd8ff9e540d56aba32aa6232c5315f
+title: Modificadores de campo XAML emXamarin.Forms
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: db00f522b71a8993ef0f7f6cf5070813ce07396a
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68739443"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138119"
 ---
-# <a name="xaml-field-modifiers-in-xamarinforms"></a>Modificadores de campo XAML no Xamarin. Forms
+# <a name="xaml-field-modifiers-in-xamarinforms"></a>Modificadores de campo XAML emXamarin.Forms
 
 O `x:FieldModifier` atributo namespace Especifica o nível de acesso para campos gerados para elementos XAML nomeados. Os valores válidos do atributo são:
 
@@ -24,14 +27,14 @@ O `x:FieldModifier` atributo namespace Especifica o nível de acesso para campos
 - `internal`– Especifica que o campo gerado para o elemento XAML é acessível somente dentro de tipos no mesmo assembly.
 - `notpublic`– Especifica que o campo gerado para o elemento XAML é acessível somente dentro de tipos no mesmo assembly.
 
-Por padrão, se o valor do atributo não for definido, o campo gerado para o elemento será `private`.
+Por padrão, se o valor do atributo não for definido, o campo gerado para o elemento será `private` .
 
 > [!NOTE]
-> O valor do atributo pode usar qualquer maiúsculas e minúsculas, pois ele será convertido em minúsculas pelo Xamarin. Forms.
+> O valor do atributo pode usar qualquer maiúsculas e minúsculas, pois ele será convertido em minúsculas por Xamarin.Forms .
 
 As seguintes condições devem ser atendidas para `x:FieldModifier` que um atributo seja processado:
 
-- O elemento XAML de nível superior deve ser um válido `x:Class`.
+- O elemento XAML de nível superior deve ser um válido `x:Class` .
 - O elemento XAML atual tem um `x:Name` especificado.
 
 O XAML a seguir mostra exemplos de como definir o atributo:

@@ -1,20 +1,23 @@
 ---
-title: Polígonos do mapa do Xamarin. Forms, polilinhas e círculos
-description: Este artigo explica como criar polígonos, polilinhas e círculos em uma instância de mapa do Xamarin. Forms.
-ms.prod: xamarin
-ms.assetid: CDAF0B02-1AA8-4AD6-94A7-ABFC18006A2D
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/10/2020
-ms.openlocfilehash: 3a7c31f7d9c30e812e955a164404c357fe9aa340
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+title: Xamarin.FormsPolígonos de mapa, polilinhas e círculos
+description: Este artigo explica como criar polígonos, polilinhas e círculos em uma instância de Xamarin.Forms mapa.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ca813f9f0f75aeaf4a2502faa7cb96d1fbead471
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83425821"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138405"
 ---
-# <a name="xamarinforms-map-polygons-and-polylines"></a>Polígonos e polilinhas do mapa do Xamarin. Forms
+# <a name="xamarinforms-map-polygons-and-polylines"></a>Xamarin.FormsMapear polígonos e polilinhas
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 

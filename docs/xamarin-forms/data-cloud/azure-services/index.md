@@ -1,41 +1,44 @@
 ---
-title: Xamarin. Forms e serviços do Azure
-description: Este artigo explica como usar os Hubs de notificação do Azure para enviar notificações por push de plataforma cruzada para aplicativos xamarin. Forms.
-ms.prod: xamarin
-ms.assetid: 07C60A42-A9E1-4DD0-8874-BD9487DC3EA2
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/28/2019
-ms.openlocfilehash: 69e04eac5902692581045d070e38e9d016f179eb
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+title: Xamarin.Formse os serviços do Azure
+description: Este artigo explica como usar os hubs de notificação do Azure para enviar notificações por push de plataforma cruzada para Xamarin.Forms aplicativos.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a63b6329b9e8f4bcdc18a973b538e1e2e44bca67
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67659173"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84130969"
 ---
-# <a name="xamarinforms-and-azure-services"></a>Xamarin. Forms e serviços do Azure
+# <a name="xamarinforms-and-azure-services"></a>Xamarin.Formse os serviços do Azure
 
-## <a name="consume-an-azure-cosmos-db-document-database-in-xamarinformsazure-cosmosdbmd"></a>[Consumir um banco de dados de documentos do Azure Cosmos DB no xamarin. Forms](azure-cosmosdb.md)
+## <a name="consume-an-azure-cosmos-db-document-database-in-xamarinformsazure-cosmosdbmd"></a>[Consumir um banco de dados de documentos Azure Cosmos DB noXamarin.Forms](azure-cosmosdb.md)
 
-Um banco de dados de documentos do Azure Cosmos DB é um banco de dados NoSQL que fornece acesso de baixa latência para documentos JSON, oferecendo um serviço de banco de dados rápida, altamente disponível e escalonável para aplicativos que exigem dimensionamento perfeito e replicação global. Este artigo explica como usar a biblioteca de cliente .NET Standard do Azure Cosmos DB para integrar um banco de dados de documentos do Azure Cosmos DB em um aplicativo xamarin. Forms.
+Um banco de dados de documentos Azure Cosmos DB é um banco de dados NoSQL que fornece acesso de baixa latência a documentos JSON, oferecendo um serviço de banco de dados rápido, altamente disponível e escalonável para aplicativos que exigem dimensionamento contínuo e replicação global. Este artigo explica como usar a biblioteca de cliente do Azure Cosmos DB .NET Standard para integrar um banco de dados de documentos Azure Cosmos DB a um Xamarin.Forms aplicativo.
 
-## <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinformsazure-notification-hubmd"></a>[Enviar e receber notificações por Push com Hubs de notificação do Azure e o xamarin. Forms](azure-notification-hub.md)
+## <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinformsazure-notification-hubmd"></a>[Enviar e receber notificações por push com os hubs de notificação do Azure eXamarin.Forms](azure-notification-hub.md)
 
-Os Hubs de notificação do Azure permitem que você centralize notificações entre plataformas para que seu aplicativo de back-end que possa se comunicar com um único hub. Os Hubs de notificação do Azure cuidar da distribuição de notificações por push a vários provedores de plataforma. Este artigo explica como integrar os Hubs de notificação do Azure em um aplicativo xamarin. Forms.
+Os hubs de notificação do Azure permitem centralizar notificações entre plataformas para que seu aplicativo de back-end possa se comunicar com um único Hub. Os hubs de notificação do Azure cuidam da distribuição de notificações por push para vários provedores de plataforma. Este artigo explica como integrar os hubs de notificação do Azure em um Xamarin.Forms aplicativo.
 
-## <a name="store-and-access-data-in-azure-storage-from-xamarinformsazure-storagemd"></a>[Store e acessar dados no armazenamento do Azure do xamarin. Forms](azure-storage.md)
+## <a name="store-and-access-data-in-azure-storage-from-xamarinformsazure-storagemd"></a>[Armazene e acesse dados no armazenamento do Azure deXamarin.Forms](azure-storage.md)
 
-Armazenamento do Azure é uma solução de armazenamento de nuvem escalonável que pode ser usada para armazenar dados não estruturados e estruturados. Este artigo demonstra como usar o xamarin. Forms para armazenar texto e dados binários no armazenamento do Azure e como acessar os dados.
+O armazenamento do Azure é uma solução de armazenamento em nuvem escalonável que pode ser usada para armazenar dados não estruturados e estruturados. Este artigo demonstra como usar Xamarin.Forms o para armazenar texto e dados binários no armazenamento do Azure e como acessar os dados.
 
-## <a name="search-data-with-azure-search-and-xamarinformsazure-searchmd"></a>[Dados de pesquisa com o Azure Search e o xamarin. Forms](azure-search.md)
+## <a name="search-data-with-azure-search-and-xamarinformsazure-searchmd"></a>[Pesquisar dados com Azure Search eXamarin.Forms](azure-search.md)
 
-O Azure Search é um serviço de nuvem que fornece a indexação e consulta recursos para os dados carregados. Isso remove as complexidades do algoritmo de pesquisa tradicionalmente associadas ao implementar a funcionalidade de pesquisa em um aplicativo e requisitos de infraestrutura. Este artigo demonstra como usar a biblioteca do Microsoft Azure Search para integrar o Azure Search em um aplicativo xamarin. Forms.
+Azure Search é um serviço de nuvem que fornece recursos de indexação e consulta para dados carregados. Isso remove os requisitos de infraestrutura e as complexidades de algoritmos de pesquisa tradicionalmente associadas à implementação da funcionalidade de pesquisa em um aplicativo. Este artigo demonstra como usar a biblioteca de pesquisa Microsoft Azure para integrar o Azure Search em um Xamarin.Forms aplicativo.
 
-## <a name="azure-functions-with-xamarinformsazure-functionsmd"></a>[O Azure Functions com xamarin. Forms](azure-functions.md)
+## <a name="azure-functions-with-xamarinformsazure-functionsmd"></a>[Azure Functions comXamarin.Forms](azure-functions.md)
 
-Este artigo demonstra como criar seu primeiro Azure Function que interage com o xamarin. Forms.
+Este artigo demonstra como criar sua primeira função do Azure que interage com o Xamarin.Forms .
 
-## <a name="azure-signalr-service-with-xamarinformsazure-signalrmd"></a>[Serviço do Azure SignalR com o Xamarin.Forms](azure-signalr.md)
+## <a name="azure-signalr-service-with-xamarinformsazure-signalrmd"></a>[Serviço do Azure Signalr comXamarin.Forms](azure-signalr.md)
 
-SignalR do ASP.NET Core é um modelo de aplicativo que simplifica o processo de adição de comunicação em tempo real aos aplicativos. Azure SignalR Service permite o rápido desenvolvimento e implantação de aplicativos escaláveis do SignalR. Este artigo e o exemplo mostram como combinar o serviço do Azure SignalR e Azure Functions com o xamarin. Forms, para entregar mensagens em tempo real para os clientes conectados.
+ASP.NET Core Signalr é um modelo de aplicativo que simplifica o processo de adicionar comunicação em tempo real aos aplicativos. O serviço de Signaler do Azure permite o desenvolvimento e a implantação rápidos de aplicativos Signaler escalonáveis. Este artigo e um exemplo mostram como combinar o serviço de sinalizador do Azure e Azure Functions com o Xamarin.Forms , para entregar mensagens em tempo real a clientes conectados.

@@ -1,44 +1,47 @@
 ---
-title: A transformação de conversão
-description: Este artigo examina como usar a transformação de conversão para deslocar elementos gráficos de SkiaSharp em aplicativos xamarin. Forms e demonstra isso com o código de exemplo.
-ms.prod: xamarin
-ms.technology: xamarin-skiasharp
-ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/10/2017
-ms.openlocfilehash: f1efd7610b32e6a3903d34fc2f8b5a6e20c9da8a
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+title: ''
+description: Este artigo examina como usar a transformação traduzir para deslocar gráficos SkiaSharp em Xamarin.Forms aplicativos e demonstra isso com o código de exemplo.
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0eb3b4a6b37d59363984c9248cc39de91a6819e0
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78291550"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138249"
 ---
 # <a name="the-translate-transform"></a>A transformação de conversão
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Saiba como usar a transformação converter para deslocar gráficos SkiaSharp_
 
-O tipo mais simples de Transform em SkiaSharp é a transformação *translate* ou *translation* . Essa transformação passa objetos gráficos nas direções horizontais e verticais. De certa forma, a tradução é a transformação mais desnecessária porque você geralmente pode conseguir o mesmo efeito, simplesmente alterando as coordenadas que você está usando na função de desenho. Durante a renderização de um caminho, no entanto, todas as coordenadas são encapsuladas no caminho, portanto, é muito mais fácil aplicar uma transformação de translação para mudar o todo o caminho.
+O tipo mais simples de Transform em SkiaSharp é a transformação *translate* ou *translation* . Essa transformação desloca objetos gráficos nas direções horizontal e vertical. De certa forma, a tradução é a transformação mais desnecessária porque você geralmente pode atingir o mesmo efeito simplesmente alterando as coordenadas que você está usando na função de desenho. No entanto, ao renderizar um caminho, todas as coordenadas são encapsuladas no caminho, portanto, é muito mais fácil aplicar uma transformação de conversão para deslocar o caminho inteiro.
 
-Tradução também é útil para animação e efeitos de texto simples:
+A tradução também é útil para animação e para efeitos de texto simples:
 
 ![](translate-images/translateexample.png "Text shadow, engraving, and embossing with translation")
 
-O método [`Translate`](xref:SkiaSharp.SKCanvas.Translate(System.Single,System.Single)) no `SKCanvas` tem dois parâmetros que fazem com que objetos gráficos desenhados subsequentemente sejam deslocados horizontal e verticalmente:
+O [`Translate`](xref:SkiaSharp.SKCanvas.Translate(System.Single,System.Single)) método no `SKCanvas` tem dois parâmetros que fazem com que objetos gráficos desenhados subsequentemente sejam deslocados horizontal e verticalmente:
 
 ```csharp
 public void Translate (Single dx, Single dy)
 ```
 
-Esses argumentos podem ser negativos. Um segundo método [`Translate`](xref:SkiaSharp.SKCanvas.Translate(SkiaSharp.SKPoint)) combina os dois valores de tradução em um único valor de `SKPoint`:
+Esses argumentos podem ser negativos. Um segundo [`Translate`](xref:SkiaSharp.SKCanvas.Translate(SkiaSharp.SKPoint)) método combina os dois valores de tradução em um único `SKPoint` valor:
 
 ```csharp
 public void Translate (SKPoint point)
 ```
 
-A página de **tradução acumulada** do programa de exemplo [**SkiaSharpForms**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) demonstra que várias chamadas do método `Translate` são cumulativas. A classe [`AccumulatedTranslatePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) exibe 20 versões do mesmo retângulo, cada um dos deslocamentos do retângulo anterior apenas o suficiente para que eles se Alonguem ao longo da diagonal. Aqui está o manipulador de eventos `PaintSurface`:
+A página de **tradução acumulada** do programa de exemplo [**SkiaSharpForms**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) demonstra que várias chamadas do `Translate` método são cumulativas. A [`AccumulatedTranslatePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) classe exibe 20 versões do mesmo retângulo, cada um dos deslocamentos do retângulo anterior apenas o suficiente para que eles se Alonguem ao longo da diagonal. Este é o `PaintSurface` manipulador de eventos:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -69,19 +72,19 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Os retângulos sucessivos repassadas a página:
+Os retângulos sucessivos tricklem a página:
 
 [![](translate-images/accumulatedtranslate-small.png "Triple screenshot of the Accumulated Translate page")](translate-images/accumulatedtranslate-large.png#lightbox "Triple screenshot of the Accumulated Translate page")
 
-Se os fatores de conversão acumulados forem `dx` e `dy`, e o ponto especificado em uma função de desenho for (`x`, `y`), o objeto gráfico será renderizado no ponto (`x'`, `y'`), em que:
+Se os fatores de conversão acumulados forem `dx` e `dy` , e o ponto especificado em uma função de desenho for ( `x` , `y` ), o objeto gráfico será renderizado no ponto ( `x'` , `y'` ), em que:
 
-x' = x + dx
+x ' = x + DX
 
-y' = y + dy
+y ' = y + DY
 
-Elas são conhecidas como *fórmulas de transformação* para tradução. Os valores padrão de `dx` e `dy` para uma nova `SKCanvas` são 0.
+Elas são conhecidas como *fórmulas de transformação* para tradução. Os valores padrão de `dx` e `dy` para um novo `SKCanvas` são 0.
 
-É comum usar a transformação converter para efeitos de sombra e técnicas semelhantes, como demonstra a página **converter efeitos de texto** . Aqui está a parte relevante do manipulador de `PaintSurface` na classe [`TranslateTextEffectsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TranslateTextEffectsPage.cs) :
+É comum usar a transformação converter para efeitos de sombra e técnicas semelhantes, como demonstra a página **converter efeitos de texto** . Aqui está a parte relevante do `PaintSurface` manipulador na [`TranslateTextEffectsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TranslateTextEffectsPage.cs) classe:
 
 ```csharp
 float textSize = 150;
@@ -126,23 +129,23 @@ using (SKPaint textPaint = new SKPaint())
 }
 ```
 
-Em cada um dos três exemplos, `Translate` é chamado para exibir o texto para deslocá-lo do local fornecido pelas variáveis `x` e `y`. Em seguida, o texto é exibido novamente em outra cor sem efeito de tradução:
+Em cada um dos três exemplos, `Translate` é chamado para exibir o texto para deslocá-lo do local fornecido pelas `x` `y` variáveis e. Em seguida, o texto é exibido novamente em outra cor sem efeito de Tradução:
 
 [![](translate-images/translatetexteffects-small.png "Triple screenshot of the Translate Text Effects page")](translate-images/translatetexteffects-large.png#lightbox "Triple screenshot of the Translate Text Effects page")
 
-Cada um dos três exemplos mostra uma maneira diferente de negar a chamada de `Translate`:
+Cada um dos três exemplos mostra uma maneira diferente de negar a `Translate` chamada:
 
-O primeiro exemplo simplesmente chama `Translate` novamente, mas com valores negativos. Como as chamadas de `Translate` são cumulativas, essa sequência de chamadas simplesmente restaura a conversão total para os valores padrão de zero.
+O primeiro exemplo simplesmente chama `Translate` novamente, mas com valores negativos. Como as `Translate` chamadas são cumulativas, essa sequência de chamadas simplesmente restaura a conversão total para os valores padrão de zero.
 
-O segundo exemplo chama [`ResetMatrix`](xref:SkiaSharp.SKCanvas.ResetMatrix). Isso faz com que todas as transformações retornar ao seu estado padrão.
+O segundo exemplo chama [`ResetMatrix`](xref:SkiaSharp.SKCanvas.ResetMatrix) . Isso faz com que todas as transformações retornem ao seu estado padrão.
 
-O terceiro exemplo salva o estado do objeto `SKCanvas` com uma chamada para [`Save`](xref:SkiaSharp.SKCanvas.Save) e, em seguida, restaura o estado com uma chamada para [`Restore`](xref:SkiaSharp.SKCanvas.Restore). Essa é a maneira mais versátil para manipular as transformações para uma série de operações de desenho. Essas chamadas `Save` e `Restore` funcionam como uma pilha: você pode chamar `Save` várias vezes e, em seguida, chamar `Restore` na sequência inversa para retornar aos Estados anteriores. O método `Save` retorna um inteiro e você pode passar esse inteiro para [`RestoreToCount`](xref:SkiaSharp.SKCanvas.RestoreToCount*) chamar efetivamente `Restore` várias vezes. A propriedade [`SaveCount`](xref:SkiaSharp.SKCanvas.SaveCount) retorna o número de Estados atualmente salvos na pilha.
+O terceiro exemplo salva o estado do `SKCanvas` objeto com uma chamada para [`Save`](xref:SkiaSharp.SKCanvas.Save) e, em seguida, restaura o estado com uma chamada para [`Restore`](xref:SkiaSharp.SKCanvas.Restore) . Essa é a maneira mais versátil de manipular transformações para uma série de operações de desenho. Essas `Save` e `Restore` chamadas funcionam como uma pilha: você pode chamar `Save` várias vezes e, em seguida, chamar `Restore` na sequência inversa para retornar aos Estados anteriores. O `Save` método retorna um inteiro e você pode passar esse inteiro para [`RestoreToCount`](xref:SkiaSharp.SKCanvas.RestoreToCount*) ser efetivamente chamado `Restore` várias vezes. A [`SaveCount`](xref:SkiaSharp.SKCanvas.SaveCount) propriedade retorna o número de Estados atualmente salvos na pilha.
 
-Você também pode usar a classe [`SKAutoCanvasRestore`](xref:SkiaSharp.SKAutoCanvasRestore) para restaurar o estado da tela. O Construtor desta classe deve ser chamado em uma instrução `using`; o estado da tela é restaurado automaticamente no final do bloco de `using`.
+Você também pode usar a [`SKAutoCanvasRestore`](xref:SkiaSharp.SKAutoCanvasRestore) classe para restaurar o estado da tela. O construtor dessa classe deve ser chamado em uma `using` instrução; o estado da tela é restaurado automaticamente no final do `using` bloco.
 
-No entanto, você não precisa se preocupar com as transformações que são transportadas de uma chamada do manipulador de `PaintSurface` para a próxima. Cada nova chamada para `PaintSurface` fornece um objeto de `SKCanvas` atualizado com transformações padrão.
+No entanto, você não precisa se preocupar com as transformações que são transportadas de uma chamada do `PaintSurface` manipulador para a próxima. Cada nova chamada para `PaintSurface` entrega um `SKCanvas` objeto atualizado com transformações padrão.
 
-Outro uso comum da transformação `Translate` é para a renderização de um objeto visual que foi criado originalmente usando coordenadas que são convenientes para desenhar. Por exemplo, você talvez queira especificar as coordenadas de um relógio analógico com uma central no ponto (0, 0). Em seguida, você pode usar transformações para exibir o relógio em que você deseja. Essa técnica é demonstrada na página [**matriz Hendecagram**]. A classe [`HendecagramArrayPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramArrayPage.cs) começa criando um objeto `SKPath` para uma estrela de 11 pontas. O objeto `HendecagramPath` é definido como público, estático e somente leitura para que possa ser acessado de outros programas de demonstração. Ele é criado em um construtor estático:
+Outro uso comum da `Translate` transformação é para a renderização de um objeto visual que foi criado originalmente usando coordenadas que são convenientes para desenhar. Por exemplo, você pode querer especificar coordenadas para um relógio analógico com um centro no ponto (0,0). Em seguida, você pode usar transformações para exibir o relógio onde você deseja. Essa técnica é demonstrada na página [**matriz Hendecagram**]. A [`HendecagramArrayPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramArrayPage.cs) classe começa criando um `SKPath` objeto para uma estrela de 11 pontas. O `HendecagramPath` objeto é definido como público, estático e somente leitura para que possa ser acessado de outros programas de demonstração. Ele é criado em um construtor estático:
 
 ```csharp
 public class HendecagramArrayPage : ContentPage
@@ -173,9 +176,9 @@ public class HendecagramArrayPage : ContentPage
 }
 ```
 
-Se o centro da estrela é o ponto (0, 0), todos os pontos da estrela estão em um círculo em torno desse ponto. Cada ponto é uma combinação de valores do seno e cosseno de um ângulo que aumenta em 5/11ths de 360 graus. (Também é possível criar uma estrela de 11 pontas aumentando o ângulo de 2/11, 3/11ths ou 4/11 do círculo.) O raio desse círculo é definido como 100.
+Se o centro da estrela for o ponto (0, 0), todos os pontos da estrela estarão em um círculo ao redor desse ponto. Cada ponto é uma combinação de valores seno e cosseno de um ângulo que aumenta em 5/11ths de 360 graus. (Também é possível criar uma estrela de 11 pontas aumentando o ângulo de 2/11, 3/11ths ou 4/11 do círculo.) O raio desse círculo é definido como 100.
 
-Se esse caminho for renderizado sem nenhuma transformação, o centro será posicionado no canto superior esquerdo do `SKCanvas`, e apenas um trimestre será visível. O manipulador de `PaintSurface` de `HendecagramPage`, em vez disso, usa `Translate` para dividir a tela com várias cópias da estrela, cada uma colorida aleatoriamente:
+Se esse caminho for renderizado sem nenhuma transformação, o centro será posicionado no canto superior esquerdo do `SKCanvas` , e somente um trimestre será visível. O `PaintSurface` manipulador de `HendecagramPage` , em vez disso `Translate` , usa para dividir a tela com várias cópias da estrela, cada uma colorida aleatoriamente:
 
 ```csharp
 public class HendecagramArrayPage : ContentPage
@@ -216,7 +219,7 @@ Eis o resultado:
 
 [![](translate-images/hendecagramarray-small.png "Triple screenshot of the Hendecagram Array page")](translate-images/hendecagramarray-large.png#lightbox "Triple screenshot of the Hendecagram Array page")
 
-Animações frequentemente envolvem transformações. A página de **animação Hendecagram** move a estrela de 11 pontas em um círculo. A classe [`HendecagramAnimationPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramAnimationPage.cs) começa com alguns campos e substituições dos métodos `OnAppearing` e `OnDisappearing` para iniciar e parar um temporizador Xamarin. Forms:
+As animações geralmente envolvem transformações. A página de **animação Hendecagram** move a estrela de 11 pontas em um círculo. A [`HendecagramAnimationPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramAnimationPage.cs) classe começa com alguns campos e substitui os `OnAppearing` métodos e `OnDisappearing` para iniciar e parar um Xamarin.Forms temporizador:
 
 ```csharp
 public class HendecagramAnimationPage : ContentPage
@@ -267,7 +270,7 @@ public class HendecagramAnimationPage : ContentPage
 }
 ```
 
-O campo `angle` é animado de 0 graus a 360 graus a cada 5 segundos. O manipulador de `PaintSurface` usa a propriedade `angle` de duas maneiras: para especificar o matiz da cor no método `SKColor.FromHsl` e como um argumento para os métodos `Math.Sin` e `Math.Cos` para controlar o local da estrela:
+O `angle` campo é animado de 0 graus a 360 graus a cada 5 segundos. O `PaintSurface` manipulador usa a `angle` propriedade de duas maneiras: para especificar o matiz da cor no método e `SKColor.FromHsl` como um argumento para os `Math.Sin` `Math.Cos` métodos e para controlar o local da estrela:
 
 ```csharp
 public class HendecagramAnimationPage : ContentPage
@@ -297,11 +300,11 @@ public class HendecagramAnimationPage : ContentPage
 }
 ```
 
-O manipulador de `PaintSurface` chama o método de `Translate` duas vezes, primeiro para traduzir para o centro da tela e, em seguida, para traduzir para a circunferência de um círculo centralizado (0, 0). O raio do círculo é definido para ser tão grandes quanto possível enquanto ainda mantém a estrela dentro dos limites da página:
+O `PaintSurface` manipulador chama o `Translate` método duas vezes, primeiro para traduzir para o centro da tela e, em seguida, para traduzir para a circunferência de um círculo centralizado (0, 0). O raio do círculo é definido para ser o mais grande possível e, ao mesmo tempo, manter a estrela dentro dos limites da página:
 
 [![](translate-images/hendecagramanimation-small.png "Triple screenshot of the Hendecagram Animation page")](translate-images/hendecagramanimation-large.png#lightbox "Triple screenshot of the Hendecagram Animation page")
 
-Observe que a estrela mantém a mesma orientação à medida que ele gira em torno do centro da página. Ele não gira. Esse é um trabalho para uma transformação de giro.
+Observe que a estrela mantém a mesma orientação que ela gira em todo o centro da página. Ele não gira. Esse é um trabalho para uma transformação girar.
 
 ## <a name="related-links"></a>Links relacionados
 

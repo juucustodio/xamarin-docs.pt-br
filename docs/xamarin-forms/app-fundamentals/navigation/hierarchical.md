@@ -1,22 +1,25 @@
 ---
-title: Navegação hierárquica
-description: Este artigo demonstra como usar a classe NavigationPage para executar a navegação em uma pilha de páginas UEPS (último a entrar, primeiro a sair).
-ms.prod: xamarin
-ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/10/2020
-ms.openlocfilehash: 984f54698ccdee54c0b8670a50cb1f4432327977
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 92774cffdfed7412bdb4d44993dc221993ad56c8
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82517272"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137859"
 ---
 # <a name="hierarchical-navigation"></a>Navegação hierárquica
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
 
 _A classe NavigationPage fornece uma experiência de navegação hierárquica em que o usuário é capaz de navegar pelas páginas, encaminhamentos e para trás, conforme desejado. A classe implementa a navegação como uma pilha UEPS (último a entrar, primeiro a sair) de objetos de página. Este artigo demonstra como usar a classe NavigationPage para realizar a navegação em uma pilha de páginas._
 
@@ -28,7 +31,7 @@ Para retornar à página anterior, o aplicativo removerá a página atual da pil
 
 ![](hierarchical-images/popping.png "Popping a Page from the Navigation Stack")
 
-Os [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) métodos de navegação são expostos pela propriedade em [`Page`](xref:Xamarin.Forms.Page) qualquer tipo derivado. Esses métodos possibilitam enviar páginas por push para a pilha de navegação, remover páginas da pilha de navegação e executar a manipulação da pilha.
+Os métodos de navegação são expostos pela [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) propriedade em qualquer [`Page`](xref:Xamarin.Forms.Page) tipo derivado. Esses métodos possibilitam enviar páginas por push para a pilha de navegação, remover páginas da pilha de navegação e executar a manipulação da pilha.
 
 <a name="Performing_Navigation" />
 
@@ -60,7 +63,7 @@ public App ()
 }
 ```
 
-Isso faz com `Page1Xaml` [`ContentPage`](xref:Xamarin.Forms.ContentPage) que a instância seja enviada para a pilha de navegação, onde se torna a página ativa e a página raiz do aplicativo. Isso é mostrado nas seguintes capturas de tela:
+Isso faz com que a `Page1Xaml` [`ContentPage`](xref:Xamarin.Forms.ContentPage) instância seja enviada para a pilha de navegação, onde se torna a página ativa e a página raiz do aplicativo. Isso é mostrado nas seguintes capturas de tela:
 
 ![](hierarchical-images/mainpage.png "Root Page of Navigation Stack")
 
@@ -69,7 +72,7 @@ Isso faz com `Page1Xaml` [`ContentPage`](xref:Xamarin.Forms.ContentPage) que a i
 
 ### <a name="pushing-pages-to-the-navigation-stack"></a>Enviando páginas por push para a pilha de navegação
 
-Para navegar até `Page2Xaml`, é necessário invocar o [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) método na [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) propriedade da página atual, conforme demonstrado no exemplo de código a seguir:
+Para navegar até `Page2Xaml` , é necessário invocar o [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) método na [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) propriedade da página atual, conforme demonstrado no exemplo de código a seguir:
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)
@@ -84,20 +87,20 @@ Isso faz com que a instância `Page2Xaml` seja enviada por push para a pilha de 
 
 Quando o [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) método é invocado, ocorrem os seguintes eventos:
 
-- A chamada `PushAsync` de página tem [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) sua substituição invocada.
-- A página que está sendo navegada tem [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) sua substituição invocada.
+- A chamada de página `PushAsync` tem sua [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) substituição invocada.
+- A página que está sendo navegada tem sua [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) substituição invocada.
 - A tarefa `PushAsync` é concluída.
 
-No entanto, a ordem exata em que esses eventos ocorrem depende da plataforma. Para obter mais informações, consulte o [capítulo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) do livro Xamarin. Forms do Charles Petzold.
+No entanto, a ordem exata em que esses eventos ocorrem depende da plataforma. Para obter mais informações, consulte o [capítulo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) do livro de Charles Petzold Xamarin.Forms .
 
 > [!NOTE]
-> Chamadas para as [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) substituições e [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) não podem ser tratadas como indicações Garantidas da navegação de página. Por exemplo, no iOS, a substituição `OnDisappearing` é chamada na página ativa quando o aplicativo é encerrado.
+> Chamadas para as [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) substituições e não podem ser tratadas como indicações Garantidas da navegação de página. Por exemplo, no iOS, a substituição `OnDisappearing` é chamada na página ativa quando o aplicativo é encerrado.
 
 ### <a name="popping-pages-from-the-navigation-stack"></a>Removendo páginas da pilha de navegação
 
 A página ativa pode ser removida como o item mais recente da pilha de navegação pressionando o botão *Voltar* no dispositivo, independentemente de este ser um botão físico no dispositivo ou um botão na tela.
 
-Para retornar programaticamente à página original, `Page2Xaml` a instância deve invocar o [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) método, conforme demonstrado no exemplo de código a seguir:
+Para retornar programaticamente à página original, a `Page2Xaml` instância deve invocar o [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) método, conforme demonstrado no exemplo de código a seguir:
 
 ```csharp
 async void OnPreviousPageButtonClicked (object sender, EventArgs e)
@@ -108,13 +111,13 @@ async void OnPreviousPageButtonClicked (object sender, EventArgs e)
 
 Isso faz com que a instância `Page2Xaml` seja removida da pilha de navegação, com a nova página de nível superior tornando-se a página ativa. Quando o [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) método é invocado, ocorrem os seguintes eventos:
 
-- A chamada `PopAsync` de página tem [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) sua substituição invocada.
-- A página que está sendo retornada tem [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) sua substituição invocada.
+- A chamada de página `PopAsync` tem sua [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) substituição invocada.
+- A página que está sendo retornada tem sua [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) substituição invocada.
 - A tarefa `PopAsync` é retornada.
 
-No entanto, a ordem exata em que esses eventos ocorrem depende da plataforma. Para obter mais informações, confira o [Capítulo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) do livro de Charles Petzold sobre Xamarin.Forms.
+No entanto, a ordem exata em que esses eventos ocorrem depende da plataforma. Para obter mais informações, consulte o [capítulo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) do livro de Charles Petzold Xamarin.Forms .
 
-Assim como [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) os métodos [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) e, a [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) propriedade de cada página também fornece um [`PopToRootAsync`](xref:Xamarin.Forms.NavigationPage.PopToRootAsync) método, que é mostrado no exemplo de código a seguir:
+Assim como [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) os métodos e, a [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) propriedade de cada página também fornece um [`PopToRootAsync`](xref:Xamarin.Forms.NavigationPage.PopToRootAsync) método, que é mostrado no exemplo de código a seguir:
 
 ```csharp
 async void OnRootPageButtonClicked (object sender, EventArgs e)
@@ -123,11 +126,11 @@ async void OnRootPageButtonClicked (object sender, EventArgs e)
 }
 ```
 
-Esse método exibe tudo, exceto a [`Page`](xref:Xamarin.Forms.Page) raiz da pilha de navegação, tornando a página raiz do aplicativo a página ativa.
+Esse método exibe tudo, exceto a raiz da [`Page`](xref:Xamarin.Forms.Page) pilha de navegação, tornando a página raiz do aplicativo a página ativa.
 
 ### <a name="animating-page-transitions"></a>Animando transições de página
 
-A [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) propriedade de cada página também fornece métodos de push e pop substituídos que `boolean` incluem um parâmetro que controla se uma animação de página deve ser exibida durante a navegação, como mostrado no exemplo de código a seguir:
+A [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) propriedade de cada página também fornece métodos de push e pop substituídos que incluem um `boolean` parâmetro que controla se uma animação de página deve ser exibida durante a navegação, como mostrado no exemplo de código a seguir:
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)
@@ -168,7 +171,7 @@ public App ()
 }
 ```
 
-Esse código cria uma `MainPage` instância, passando a data e a hora atuais no formato ISO8601, que é encapsulado em [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) uma instância.
+Esse código cria uma `MainPage` instância, passando a data e a hora atuais no formato ISO8601, que é encapsulado em uma [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instância.
 
 A instância de `MainPage` recebe os dados por meio de um parâmetro de construtor, conforme mostrado no exemplo de código a seguir:
 
@@ -180,7 +183,7 @@ public MainPage (string date)
 }
 ```
 
-Os dados são exibidos na página definindo a [`Label.Text`](xref:Xamarin.Forms.Label.Text) Propriedade, conforme mostrado nas seguintes capturas de tela:
+Os dados são exibidos na página definindo a [`Label.Text`](xref:Xamarin.Forms.Label.Text) propriedade, conforme mostrado nas seguintes capturas de tela:
 
 ![](hierarchical-images/passing-data-constructor.png "Data Passed Through a Page Constructor")
 
@@ -204,7 +207,7 @@ async void OnNavigateButtonClicked (object sender, EventArgs e)
 }
 ```
 
-Esse código define o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) da `SecondPage` instância para a `Contact` instância do e, em seguida, navega para `SecondPage`o.
+Esse código define o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) da `SecondPage` instância para a `Contact` instância do e, em seguida, navega para o `SecondPage` .
 
 O `SecondPage`, em seguida, usa a associação de dados para exibir os dados da instância de `Contact`, conforme mostrado no exemplo de código XAML a seguir:
 
@@ -276,7 +279,7 @@ Para obter mais informações sobre vinculação de dados, veja [Noções básic
 
 ## <a name="manipulating-the-navigation-stack"></a>Manipulando a pilha de navegação
 
-A [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) Propriedade expõe uma [`NavigationStack`](xref:Xamarin.Forms.INavigation.NavigationStack) propriedade da qual as páginas na pilha de navegação podem ser obtidas. Enquanto o Xamarin. Forms mantém o acesso à pilha de navegação `Navigation` , a propriedade [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) fornece [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) os métodos e para manipular a pilha inserindo páginas ou removendo-as.
+A [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) Propriedade expõe uma [`NavigationStack`](xref:Xamarin.Forms.INavigation.NavigationStack) propriedade da qual as páginas na pilha de navegação podem ser obtidas. Embora o Xamarin.Forms Mantenha o acesso à pilha de navegação, a `Navigation` propriedade fornece os [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) métodos e para manipular a pilha inserindo páginas ou removendo-as.
 
 O [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) método insere uma página especificada na pilha de navegação antes de uma página especificada existente, conforme mostrado no diagrama a seguir:
 
@@ -304,11 +307,11 @@ async void OnLoginButtonClicked (object sender, EventArgs e)
 
 ```
 
-Desde que as credenciais do usuário estejam corretas, a instância `MainPage` será inserida na pilha de navegação antes da página atual. O [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) método, em seguida, remove a página atual da pilha de navegação `MainPage` , com a instância que se torna a página ativa.
+Desde que as credenciais do usuário estejam corretas, a instância `MainPage` será inserida na pilha de navegação antes da página atual. O [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) método, em seguida, remove a página atual da pilha de navegação, com a `MainPage` instância que se torna a página ativa.
 
 ## <a name="displaying-views-in-the-navigation-bar"></a>Exibindo modos de exibição na barra de navegação
 
-Qualquer Xamarin. Forms [`View`](xref:Xamarin.Forms.View) pode ser exibido na barra de navegação de um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). Isso é feito definindo a [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) Propriedade anexada como um `View`. Essa propriedade anexada pode ser definida em [`Page`](xref:Xamarin.Forms.Page)qualquer, e quando `Page` o for enviado para `NavigationPage`um, `NavigationPage` o respeitará o valor da propriedade.
+Qualquer um Xamarin.Forms [`View`](xref:Xamarin.Forms.View) pode ser exibido na barra de navegação de um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) . Isso é feito definindo a [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) Propriedade anexada como um `View` . Essa propriedade anexada pode ser definida em qualquer [`Page`](xref:Xamarin.Forms.Page) , e quando o `Page` for enviado para um `NavigationPage` , o `NavigationPage` respeitará o valor da propriedade.
 
 O exemplo a seguir, extraído do [Exemplo de Modo de Exibição de Título](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-titleview), mostra como definir a propriedade anexada [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) do XAML:
 
@@ -337,27 +340,27 @@ public class TitleViewPage : ContentPage
 }
 ```
 
-Isso resulta em uma [`Slider`](xref:Xamarin.Forms.Slider) exibição na barra de navegação do [`NavigationPage`](xref:Xamarin.Forms.NavigationPage):
+Isso resulta em uma [`Slider`](xref:Xamarin.Forms.Slider) exibição na barra de navegação do [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) :
 
 [![TitleView do controle deslizante](hierarchical-images/titleview-small.png "TitleView do controle deslizante")](hierarchical-images/titleview-large.png#lightbox "TitleView do controle deslizante")
 
 > [!IMPORTANT]
-> Muitas exibições não aparecerão na barra de navegação, a menos que o tamanho da exibição [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) seja [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) especificado com as propriedades e. Como alternativa, o modo de exibição pode ser encapsulado em [`StackLayout`](xref:Xamarin.Forms.StackLayout) um [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) com as propriedades e definidas com os [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) valores apropriados.
+> Muitas exibições não aparecerão na barra de navegação, a menos que o tamanho da exibição seja especificado com as [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) Propriedades e. Como alternativa, o modo de exibição pode ser encapsulado em um [`StackLayout`](xref:Xamarin.Forms.StackLayout) com as [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) Propriedades e definidas com os [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) valores apropriados.
 
-Observe que, como a [`Layout`](xref:Xamarin.Forms.Layout) classe deriva da [`View`](xref:Xamarin.Forms.View) classe, a [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) Propriedade anexada pode ser definida para exibir uma classe de layout que contém várias exibições. No iOS e na UWP (Plataforma Universal do Windows), não é possível alterar a altura da barra de navegação e, portanto, será feito um recorte se o modo de exibição na barra de navegação for maior que o tamanho padrão da barra de navegação. No entanto, no Android, a altura da barra de navegação pode ser alterada definindo [`NavigationPage.BarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) a propriedade vinculável `double` como um representando a nova altura. Para obter mais informações, confira [Definindo a altura da barra de navegação em uma NavigationPage](~/xamarin-forms/platform/android/navigationpage-bar-height.md).
+Observe que, como a [`Layout`](xref:Xamarin.Forms.Layout) classe deriva da [`View`](xref:Xamarin.Forms.View) classe, a [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) Propriedade anexada pode ser definida para exibir uma classe de layout que contém várias exibições. No iOS e na UWP (Plataforma Universal do Windows), não é possível alterar a altura da barra de navegação e, portanto, será feito um recorte se o modo de exibição na barra de navegação for maior que o tamanho padrão da barra de navegação. No entanto, no Android, a altura da barra de navegação pode ser alterada definindo a [`NavigationPage.BarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) propriedade vinculável como um `double` representando a nova altura. Para obter mais informações, confira [Definindo a altura da barra de navegação em uma NavigationPage](~/xamarin-forms/platform/android/navigationpage-bar-height.md).
 
-Como alternativa, é possível sugerir uma barra de navegação estendida colocando parte do conteúdo na barra de navegação e parte em um modo de exibição na parte superior do conteúdo da página, cuja cor deve corresponder à da barra de navegação. Além disso, no iOS, a linha separadora e a sombra na parte inferior da barra de navegação podem ser removidas definindo [`NavigationPage.HideNavigationBarSeparator`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) a `true`propriedade vinculável como. Para obter mais informações, confira [Ocultando o separador da barra de navegação em uma NavigationPage](~/xamarin-forms/platform/ios/navigation-bar-separator.md).
+Como alternativa, é possível sugerir uma barra de navegação estendida colocando parte do conteúdo na barra de navegação e parte em um modo de exibição na parte superior do conteúdo da página, cuja cor deve corresponder à da barra de navegação. Além disso, no iOS, a linha separadora e a sombra na parte inferior da barra de navegação podem ser removidas definindo a [`NavigationPage.HideNavigationBarSeparator`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) propriedade vinculável como `true` . Para obter mais informações, confira [Ocultando o separador da barra de navegação em uma NavigationPage](~/xamarin-forms/platform/ios/navigation-bar-separator.md).
 
 > [!NOTE]
-> As [`BackButtonTitle`](xref:Xamarin.Forms.NavigationPage.BackButtonTitleProperty) [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) propriedades [`Title`](xref:Xamarin.Forms.Page.Title), [`TitleIcon`](xref:Xamarin.Forms.NavigationPage.TitleIconProperty), e podem definir valores que ocupam espaço na barra de navegação. Embora o tamanho da barra de navegação varie de acordo com o tamanho da tela e a plataforma, definir todas essas propriedades causará conflitos devido à limitação do espaço disponível. Em vez de tentar usar uma combinação dessas propriedades, você provavelmente concluirá que é mais fácil obter o design desejado da barra de navegação definindo apenas a propriedade `TitleView`.
+> As [`BackButtonTitle`](xref:Xamarin.Forms.NavigationPage.BackButtonTitleProperty) [`Title`](xref:Xamarin.Forms.Page.Title) Propriedades,, e [`TitleIcon`](xref:Xamarin.Forms.NavigationPage.TitleIconProperty) [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) podem definir valores que ocupam espaço na barra de navegação. Embora o tamanho da barra de navegação varie de acordo com o tamanho da tela e a plataforma, definir todas essas propriedades causará conflitos devido à limitação do espaço disponível. Em vez de tentar usar uma combinação dessas propriedades, você provavelmente concluirá que é mais fácil obter o design desejado da barra de navegação definindo apenas a propriedade `TitleView`.
 
 ### <a name="limitations"></a>Limitações
 
-Há uma série de limitações a serem consideradas ao exibir um [`View`](xref:Xamarin.Forms.View) na barra de navegação de um: [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)
+Há uma série de limitações a serem consideradas ao exibir um [`View`](xref:Xamarin.Forms.View) na barra de navegação de um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) :
 
 - No iOS, modos de exibição colocados na barra de navegação de um `NavigationPage` poderão aparecer em uma posição diferente se títulos grandes estiverem habilitados. Para obter mais informações sobre a habilitação de títulos grandes, confira [Exibindo títulos grandes](~/xamarin-forms/platform/ios/page-large-title.md).
 - No Android, só é possível colocar modos de exibição na barra de navegação de um `NavigationPage` em aplicativos que usam a compatibilidade de aplicativos.
-- Não é recomendável posicionar exibições grandes e complexas, como [`ListView`](xref:Xamarin.Forms.ListView) e [`TableView`](xref:Xamarin.Forms.TableView), na barra de navegação de um `NavigationPage`.
+- Não é recomendável posicionar exibições grandes e complexas, como [`ListView`](xref:Xamarin.Forms.ListView) e [`TableView`](xref:Xamarin.Forms.TableView) , na barra de navegação de um `NavigationPage` .
 
 ## <a name="related-links"></a>Links relacionados
 
@@ -366,5 +369,5 @@ Há uma série de limitações a serem consideradas ao exibir um [`View`](xref:X
 - [PassingData (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata)
 - [LoginFlow (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-loginflow)
 - [TitleView (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-titleview)
-- [Vídeo sobre como criar um fluxo de tela de entrada no Xamarin.Forms](https://www.youtube.com/watch?v=qKQ7pyyG1fo)
+- [Como criar um fluxo de tela de entrada em Xamarin.Forms vídeo](https://www.youtube.com/watch?v=qKQ7pyyG1fo)
 - [NavigationPage](xref:Xamarin.Forms.NavigationPage)

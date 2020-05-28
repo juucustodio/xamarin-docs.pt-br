@@ -1,29 +1,33 @@
 ---
-title: Resumo do capítulo 4. Rolagem da pilha
-description: 'Criando aplicativos móveis com Xamarin. Forms: Resumo do capítulo 4. Rolagem da pilha'
-ms.prod: xamarin
-ms.technology: xamarin-forms
-ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
-author: davidbritch
-ms.author: dabritch
-ms.date: 07/19/2018
-ms.openlocfilehash: 5313dd34839d6a5d21432161b9fd3a0ffce6e816
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+title: ''
+description: ''
+Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 4. Scrolling the stack''
+ms.prod: ''
+ms.technology: ''
+ms.assetid: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9890ecdf286ee33d7af28fd20847788b063df8f5
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83149946"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84136884"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Resumo do capítulo 4. Rolagem da pilha
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
 
-Este capítulo é dedicado principalmente à introdução do conceito de *layout*, que é o termo geral para as classes e técnicas que o Xamarin. Forms usa para organizar a exibição visual de várias exibições na página.
+Este capítulo é dedicado principalmente à introdução do conceito de *layout*, que é o termo geral para as classes e técnicas que o Xamarin.Forms usa para organizar a exibição visual de várias exibições na página.
 
 O layout envolve várias classes que derivam de [`Layout`](xref:Xamarin.Forms.Layout) e [`Layout<T>`](xref:Xamarin.Forms.Layout`1) . Este capítulo se concentra em [`StackLayout`](xref:Xamarin.Forms.StackLayout) .
 
 > [!NOTE]
-> O [`FlexLayout`](~/xamarin-forms/user-interface/layouts/flex-layout.md) apresentado no Xamarin. Forms 3,0 pode ser usado de maneiras semelhantes a `StackLayout` , mas com mais flexibilidade.
+> O [`FlexLayout`](~/xamarin-forms/user-interface/layouts/flex-layout.md) introduzido no Xamarin.Forms 3,0 pode ser usado de maneiras semelhantes a `StackLayout` , mas com mais flexibilidade.
 
 Também foram apresentadas neste capítulo as [`ScrollView`](xref:Xamarin.Forms.ScrollView) classes, [`Frame`](xref:Xamarin.Forms.Frame) e [`BoxView`](xref:Xamarin.Forms.BoxView) .
 

@@ -1,48 +1,51 @@
 ---
-title: Associações relativas do Xamarin.Forms
-description: Este artigo explica como criar vinculações relativas usando a extensão de marcação RelativeSource para definir a fonte de vinculação em relação à posição do alvo de vinculação.
-ms.prod: xamarin
-ms.assetid: CC64BB1D-8303-46B1-94B6-4EF2F20317A8
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 12/04/2019
-ms.openlocfilehash: 63ce27fc871da12eabb1baad568af167c860926f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsAssociações relativas
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8d4e2696e6027f07b7b8e638cd1e0f1d65a5503d
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75955807"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139705"
 ---
-# <a name="xamarinforms-relative-bindings"></a>Associações relativas do Xamarin.Forms
+# <a name="xamarinforms-relative-bindings"></a>Xamarin.FormsAssociações relativas
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
-As ligações relativas fornecem a capacidade de definir a fonte de ligação em relação à posição do alvo de ligação. Eles são criados `RelativeSource` com a extensão `Source` de marcação, e definidos como propriedade de uma expressão vinculante.
+As associações relativas fornecem a capacidade de definir a origem da associação em relação à posição do destino da associação. Eles são criados com a `RelativeSource` extensão de marcação e definidos como a `Source` propriedade de uma expressão de associação.
 
-A `RelativeSource` extensão de marcação `RelativeSourceExtension` é suportada pela classe, que define as seguintes propriedades:
+A `RelativeSource` extensão de marcação é suportada pela `RelativeSourceExtension` classe, que define as seguintes propriedades:
 
-- `Mode`, do `RelativeBindingSourceMode`tipo, descreve a localização da fonte de ligação em relação à posição do alvo de ligação.
-- `AncestorLevel`, do `int`tipo , um nível de ancestral opcional `Mode` para `FindAncestor`procurar, quando a propriedade é . Um `AncestorLevel` `n` dos `n-1` exemplos de `AncestorType`saltos do .
-- `AncestorType`, do `Type`tipo , o tipo de ancestral a `Mode` procurar, quando a propriedade é `FindAncestor`.
+- `Mode`, do tipo `RelativeBindingSourceMode` , descreve o local da origem da associação em relação à posição do destino da associação.
+- `AncestorLevel`, do tipo `int` , um nível ancestral opcional para procurar, quando a `Mode` propriedade é `FindAncestor` . Um `AncestorLevel` de `n` ignora `n-1` instâncias do `AncestorType` .
+- `AncestorType`, do tipo `Type` , o tipo de ancestral a ser procurado, quando a `Mode` propriedade é `FindAncestor` .
 
 > [!NOTE]
-> O analisador XAML `RelativeSourceExtension` permite que a classe `RelativeSource`seja abreviada como .
+> O analisador XAML permite que a `RelativeSourceExtension` classe seja abreviada como `RelativeSource` .
 
-A `Mode` propriedade deve ser definida `RelativeBindingSourceMode` como um dos membros da enumeração:
+A `Mode` propriedade deve ser definida como um dos `RelativeBindingSourceMode` membros da enumeração:
 
-- `TemplatedParent`indica o elemento ao qual o modelo, no qual o elemento vinculado existe, é aplicado. Para obter mais informações, consulte [Vincular a um pai modelado](#bind-to-a-templated-parent).
-- `Self`indica o elemento no qual a vinculação está sendo definida, permitindo que você vincule uma propriedade desse elemento a outra propriedade no mesmo elemento. Para obter mais informações, consulte [Bind to self](#bind-to-self).
-- `FindAncestor`indica o ancestral na árvore visual do elemento vinculado. Este modo deve ser usado para vincular-se a `AncestorType` um controle ancestral representado pela propriedade. Para obter mais informações, consulte [Bind to a a ancer](#bind-to-an-ancestor).
-- `FindAncestorBindingContext`indica `BindingContext` o do ancestral na árvore visual do elemento vinculado. Este modo deve ser usado `BindingContext` para se ligar ao `AncestorType` de um ancestral representado pela propriedade. Para obter mais informações, consulte [Bind to a a ancer](#bind-to-an-ancestor).
+- `TemplatedParent`indica o elemento no qual o modelo, no qual o elemento vinculado existe, é aplicado. Para obter mais informações, consulte [associar a um modelo pai](#bind-to-a-templated-parent).
+- `Self`indica o elemento no qual a associação está sendo definida, permitindo que você vincule uma propriedade desse elemento a outra propriedade no mesmo elemento. Para obter mais informações, consulte [associar a si mesmo](#bind-to-self).
+- `FindAncestor`indica o ancestral na árvore visual do elemento associado. Esse modo deve ser usado para associar a um controle ancestral representado pela `AncestorType` propriedade. Para obter mais informações, consulte [associar a um ancestral](#bind-to-an-ancestor).
+- `FindAncestorBindingContext`indica o `BindingContext` do ancestral na árvore visual do elemento associado. Esse modo deve ser usado para associar ao `BindingContext` de um ancestral representado pela `AncestorType` propriedade. Para obter mais informações, consulte [associar a um ancestral](#bind-to-an-ancestor).
 
-A `Mode` propriedade é propriedade `RelativeSourceExtension` do conteúdo da classe. Portanto, para expressões de marcação XAML expressas com `Mode=` chaves, você pode eliminar a parte da expressão.
+A `Mode` propriedade é a propriedade content da `RelativeSourceExtension` classe. Portanto, para expressões de marcação XAML expressas com chaves, você pode eliminar a `Mode=` parte da expressão.
 
-Para obter mais informações sobre as extensões de marcação Xamarin.Forms, consulte [Extensões de marcação XAML](~/xamarin-forms/xaml/markup-extensions/index.md).
+Para obter mais informações sobre Xamarin.Forms extensões de marcação, consulte [extensões de marcação XAML](~/xamarin-forms/xaml/markup-extensions/index.md).
 
-## <a name="bind-to-self"></a>Vincule-se a si mesmo
+## <a name="bind-to-self"></a>Associar a si mesmo
 
-O `Self` modo de vinculação relativa é usado para vincular uma propriedade de um elemento a outra propriedade no mesmo elemento:
+O `Self` modo de associação relativo é usado para associar uma propriedade de um elemento a outra propriedade no mesmo elemento:
 
 ```xaml
 <BoxView Color="Red"
@@ -51,14 +54,14 @@ O `Self` modo de vinculação relativa é usado para vincular uma propriedade de
          HorizontalOptions="Center" />
 ```
 
-Neste exemplo, [`BoxView`](xref:Xamarin.Forms.BoxView) o `WidthRequest` conjunto de sua propriedade `HeightRequest` para um tamanho `WidthRequest` fixo, e a propriedade se liga ao imóvel. Portanto, ambas as propriedades são iguais e assim um quadrado é desenhado:
+Neste exemplo, [`BoxView`](xref:Xamarin.Forms.BoxView) define sua `WidthRequest` propriedade como um tamanho fixo e a `HeightRequest` propriedade é associada à `WidthRequest` propriedade. Portanto, ambas as propriedades são iguais e, portanto, um quadrado é desenhado:
 
-[![Captura de tela de uma vinculação relativa do modo Self, no iOS e Android](relative-bindings-images/self-relative-binding.png "Modo de vinculação auto-relativo")](relative-bindings-images/self-relative-binding-large.png#lightbox "Modo de vinculação auto-relativo")
+[![Captura de tela de uma associação relativa de Automodo, no iOS e no Android](relative-bindings-images/self-relative-binding.png "Modo de associação auto-relativo")](relative-bindings-images/self-relative-binding-large.png#lightbox "Modo de associação auto-relativo")
 
 > [!IMPORTANT]
-> Ao vincular uma propriedade de um elemento a outra propriedade no mesmo elemento, as propriedades devem ser do mesmo tipo. Alternativamente, você pode especificar um conversor na vinculação para converter o valor.
+> Ao associar uma propriedade de um elemento a outra propriedade no mesmo elemento, as propriedades devem ser do mesmo tipo. Como alternativa, você pode especificar um conversor na associação para converter o valor.
 
-Um uso comum deste modo de `BindingContext` vinculação é definido um objeto para uma propriedade em si mesmo. O código a seguir mostra um exemplo disso:
+Um uso comum desse modo de associação é definir um objeto `BindingContext` como uma propriedade em si. O código a seguir mostra um exemplo disso:
 
 ```xaml
 <ContentPage ...
@@ -71,21 +74,21 @@ Um uso comum deste modo de `BindingContext` vinculação é definido um objeto p
 </ContentPage>
 ```
 
-Neste exemplo, `BindingContext` a página é definida `DefaultViewModel` como propriedade de si mesma. Essa propriedade é definida no arquivo de código atrás da página e fornece uma instância de modelo de exibição. A [`ListView`](xref:Xamarin.Forms.ListView) ligação à `Employees` propriedade do modelo de visualização.
+Neste exemplo, a `BindingContext` da página é definida como a `DefaultViewModel` propriedade de si mesma. Essa propriedade é definida no arquivo code-behind para a página e fornece uma instância de ViewModel. O é [`ListView`](xref:Xamarin.Forms.ListView) associado à `Employees` Propriedade do ViewModel.
 
-## <a name="bind-to-an-ancestor"></a>Vincule-se a um ancestral
+## <a name="bind-to-an-ancestor"></a>Associar a um ancestral
 
-Os `FindAncestor` `FindAncestorBindingContext` modos de ligação relativa e relativos são usados para se ligar aos elementos-pai, de um certo tipo, na árvore visual. O `FindAncestor` modo é usado para se ligar a [`Element`](xref:Xamarin.Forms.Element) um elemento pai, que deriva do tipo. O `FindAncestorBindingContext` modo é usado `BindingContext` para se ligar ao de um elemento pai.
+Os `FindAncestor` `FindAncestorBindingContext` modos de associação relativo e são usados para associar a elementos pai, de um determinado tipo, na árvore visual. O `FindAncestor` modo é usado para associar a um elemento pai, que deriva do [`Element`](xref:Xamarin.Forms.Element) tipo. O `FindAncestorBindingContext` modo é usado para associar ao `BindingContext` de um elemento pai.
 
 > [!WARNING]
-> A `AncestorType` propriedade deve ser `Type` definida `FindAncestor` como `FindAncestorBindingContext` a ao usar os `XamlParseException` modos de ligação relativo e relativa, caso contrário, um é jogado.
+> A `AncestorType` propriedade deve ser definida como um `Type` ao usar os `FindAncestor` `FindAncestorBindingContext` modos de associação e, caso contrário, `XamlParseException` será gerada uma.
 
-Se `Mode` a propriedade não for explicitamente `AncestorType` definida, definir a propriedade [`Element`](xref:Xamarin.Forms.Element) para um `Mode` tipo `FindAncestor`derivado irá definir implicitamente a propriedade para . Da mesma forma, definir `AncestorType` a propriedade para `Element` um tipo `Mode` que `FindAncestorBindingContext`não derivairá definir implicitamente a propriedade para .
+Se a `Mode` propriedade não estiver definida explicitamente, definir a `AncestorType` propriedade como um tipo derivado de [`Element`](xref:Xamarin.Forms.Element) irá definir implicitamente a `Mode` propriedade como `FindAncestor` . Da mesma forma, definir a `AncestorType` propriedade para um tipo que não derive `Element` irá definir implicitamente a `Mode` propriedade como `FindAncestorBindingContext` .
 
 > [!NOTE]
-> As ligações relativas `FindAncestorBindingContext` que usam o modo `BindingContext` serão reaplicadas quando a de qualquer ancestral mudar.
+> As associações relativas que usam o `FindAncestorBindingContext` modo serão reaplicadas quando o `BindingContext` de qualquer um dos ancestrais for alterado.
 
-O XAML a seguir `Mode` mostra um exemplo onde `FindAncestorBindingContext`a propriedade será definida implicitamente para:
+O XAML a seguir mostra um exemplo em que a `Mode` propriedade será definida implicitamente como `FindAncestorBindingContext` :
 
 ```xaml
 <ContentPage ...
@@ -111,26 +114,26 @@ O XAML a seguir `Mode` mostra um exemplo onde `FindAncestorBindingContext`a prop
 </ContentPage>
 ```
 
-Neste exemplo, `BindingContext` a página é definida `DefaultViewModel` como propriedade de si mesma. Essa propriedade é definida no arquivo de código atrás da página e fornece uma instância de modelo de exibição. A [`ListView`](xref:Xamarin.Forms.ListView) ligação à `Employees` propriedade do modelo de visualização. O [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), que define a aparência de `ListView`cada [`Button`](xref:Xamarin.Forms.Button)item no , contém um . A propriedade `Command` do botão está `DeleteEmployeeCommand` vinculada ao modelo de visão de seus pais. Tocar `Button` em um exclui um funcionário:
+Neste exemplo, a `BindingContext` da página é definida como a `DefaultViewModel` propriedade de si mesma. Essa propriedade é definida no arquivo code-behind para a página e fornece uma instância de ViewModel. O é [`ListView`](xref:Xamarin.Forms.ListView) associado à `Employees` Propriedade do ViewModel. O [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , que define a aparência de cada item no `ListView` , contém um [`Button`](xref:Xamarin.Forms.Button) . A propriedade do botão `Command` está associada ao `DeleteEmployeeCommand` seu ViewModel do pai. Tocar em uma `Button` exclui um funcionário:
 
-[![Captura de tela de uma vinculação relativa do modo FindAncestor, no iOS e Android](relative-bindings-images/findancestor-relative-binding.png "Modo de vinculação relativa findancestor")](relative-bindings-images/findancestor-relative-binding-large.png#lightbox "Modo de vinculação relativa findancestor")
+[![Captura de tela de uma associação relativa de modo FindAncestor, no iOS e no Android](relative-bindings-images/findancestor-relative-binding.png "Modo de associação relativa de FindAncestor")](relative-bindings-images/findancestor-relative-binding-large.png#lightbox "Modo de associação relativa de FindAncestor")
 
-Além disso, `AncestorLevel` a propriedade opcional pode ajudar a desambiguar a procuração ancestral em cenários onde possivelmente há mais de um ancestral desse tipo na árvore visual:
+Além disso, a `AncestorLevel` propriedade opcional pode ajudar a desambiguar a pesquisa de ancestral em cenários em que há possivelmente mais de um ancestral desse tipo na árvore visual:
 
 ```xaml
 <Label Text="{Binding Source={RelativeSource AncestorType={x:Type Entry}, AncestorLevel=2}, Path=Text}" />
 ```
 
-Neste exemplo, `Label.Text` a propriedade se `Text` liga à [`Entry`](xref:Xamarin.Forms.Entry) propriedade do segundo que é encontrado no caminho para cima, começando pelo elemento alvo da vinculação.
+Neste exemplo, a `Label.Text` propriedade é vinculada à `Text` Propriedade do segundo [`Entry`](xref:Xamarin.Forms.Entry) que é encontrada no caminho para cima, começando pelo elemento de destino da associação.
 
 > [!NOTE]
-> A `AncestorLevel` propriedade deve ser definida como 1 para encontrar o ancestral mais próximo do elemento alvo de ligação.
+> A `AncestorLevel` propriedade deve ser definida como 1 para localizar o ancestral mais próximo ao elemento de destino de associação.
 
-## <a name="bind-to-a-templated-parent"></a>Vincule-se a um pai modelado
+## <a name="bind-to-a-templated-parent"></a>Associar a um pai com modelo
 
-O `TemplatedParent` modo de vinculação relativa é usado para vincular de dentro de um modelo de controle à instância do objeto de tempo de execução ao qual o modelo é aplicado (conhecido como o pai modelado). Este modo só é aplicável se a vinculação relativa estiver dentro `TemplateBinding`de um modelo de controle e for semelhante à configuração de um .
+O `TemplatedParent` modo de associação relativo é usado para associar de um modelo de controle à instância do objeto de tempo de execução à qual o modelo é aplicado (conhecido como pai do modelo). Esse modo só será aplicável se a associação relativa estiver dentro de um modelo de controle e for semelhante à definição de um `TemplateBinding` .
 
-O XAML a seguir `TemplatedParent` mostra um exemplo do modo de ligação relativa:
+O XAML a seguir mostra um exemplo do `TemplatedParent` modo de associação relativo:
 
 ```xaml
 <ContentPage ...>
@@ -175,14 +178,14 @@ O XAML a seguir `TemplatedParent` mostra um exemplo do modo de ligação relativ
 </ContentPage>
 ```
 
-Neste exemplo, [`Frame`](xref:Xamarin.Forms.Frame)o , que é `ControlTemplate`o elemento `BindingContext` raiz do , tem seu conjunto para a instância do objeto de tempo de execução à qual o modelo é aplicado. Portanto, os `Frame` filhos e seus filhos resolvem suas `CardView` expressões vinculantes contra as propriedades de cada objeto:
+Neste exemplo, o [`Frame`](xref:Xamarin.Forms.Frame) , que é o elemento raiz do `ControlTemplate` , tem seu `BindingContext` definido como a instância do objeto de tempo de execução à qual o modelo é aplicado. Portanto, o `Frame` e seus filhos resolvem suas expressões de associação em relação às propriedades de cada `CardView` objeto:
 
-[![Captura de tela de um modo TemplatedParent relativa vinculação, no iOS e Android](relative-bindings-images/templatedparent-relative-binding.png "Modo de vinculação relativa do ModeldParent")](relative-bindings-images/templatedparent-relative-binding-large.png#lightbox "Modo de vinculação relativa do ModeldParent")
+[![Captura de tela de uma associação relativa do modo TemplatedParent, no iOS e no Android](relative-bindings-images/templatedparent-relative-binding.png "Modo de associação relativa a TemplatedParent")](relative-bindings-images/templatedparent-relative-binding-large.png#lightbox "Modo de associação relativa a TemplatedParent")
 
-Para obter mais informações sobre modelos de controle, consulte [Xamarin.Forms Control Templates](~/xamarin-forms/app-fundamentals/templates/control-template.md).
+Para obter mais informações sobre modelos de controle, consulte [ Xamarin.Forms modelos de controle](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
-- [Extensões de marcação XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
-- [Modelos de controle xamarin.forms](~/xamarin-forms/app-fundamentals/templates/control-template.md)
+- [Extensões de marcação do XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
+- [Xamarin.FormsModelos de controle](~/xamarin-forms/app-fundamentals/templates/control-template.md)

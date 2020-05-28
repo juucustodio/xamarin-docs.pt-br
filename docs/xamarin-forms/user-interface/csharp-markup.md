@@ -1,37 +1,40 @@
 ---
-title: Marcação do Xamarin. Forms C#
-description: A marcação C# é um conjunto de métodos e classes auxiliares fluentes para simplificar o processo de criação de interfaces de usuário Xamarin. Forms declarativas em C#.
-ms.prod: xamarin
-ms.assetid: D41B9DCD-5C34-4C2F-B177-FC082AB2E9E0
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/15/2020
-ms.openlocfilehash: 4fa8397dafbbdd836f88193081720b4960f1ce5d
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+title: Xamarin.FormsMarcação C#
+description: A marcação C# é um conjunto opcional de métodos e classes auxiliares fluentes para simplificar o processo de criação de interfaces de usuário declarativas Xamarin.Forms em C#.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 939727d3dd8d419cdc020d33d3e7241dcedb8158
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83425814"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137735"
 ---
-# <a name="xamarinforms-c-markup"></a>Marcação do Xamarin. Forms C#
+# <a name="xamarinforms-c-markup"></a>Xamarin.FormsMarcação C#
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
 
-A marcação C# é um conjunto de métodos e classes auxiliares fluentes para simplificar o processo de criação de interfaces de usuário Xamarin. Forms declarativas em C#. A API fluente fornecida pela marcação C# está disponível no `Xamarin.Forms.Markup` namespace.
+A marcação C# é um conjunto opcional de métodos e classes auxiliares fluentes para simplificar o processo de criação de interfaces de usuário declarativas Xamarin.Forms em C#. A API fluente fornecida pela marcação C# está disponível no `Xamarin.Forms.Markup` namespace.
 
 Assim como acontece com o XAML, a marcação C# permite uma separação clara entre marcação de interface do usuário e lógica da interface do usuário. Isso pode ser obtido separando a marcação da interface do usuário e a lógica da interface do usuário em arquivos de classe parcial distintos. Por exemplo, para uma página de logon, a marcação de interface do usuário estaria em um arquivo chamado *LoginPage.cs*, enquanto a lógica da interface do usuário estaria em um arquivo chamado *LoginPage.Logic.cs*.
 
-A marcação C# está disponível no Xamarin. Forms 4,6. No entanto, ele está experimental e só pode ser usado adicionando a seguinte linha de código ao arquivo *app.cs* :
+A marcação C# está disponível em Xamarin.Forms 4,6. No entanto, ele está experimental e só pode ser usado adicionando a seguinte linha de código ao arquivo *app.cs* :
 
 ```csharp
 Device.SetFlags(new string[]{ "Markup_Experimental" });
 ```
 
 > [!NOTE]
-> A marcação C# está disponível em todas as plataformas com suporte no Xamarin. Forms.
+> A marcação C# está disponível em todas as plataformas com suporte no Xamarin.Forms .
 
 ## <a name="basic-example"></a>Exemplo básico
 
@@ -89,7 +92,7 @@ Este exemplo é idêntico ao exemplo anterior, mas a API Fluent de marcação do
 
 ## <a name="data-binding"></a>Vinculação de dados
 
-A marcação C# inclui um `Bind` método de extensão, juntamente com sobrecargas, que cria uma associação de dados entre uma propriedade de exibição vinculável e uma propriedade especificada. O `Bind` método conhece a propriedade vinculável padrão para a maioria dos controles incluídos no Xamarin. Forms. Portanto, normalmente não é necessário especificar a propriedade de destino ao usar esse método. No entanto, você também pode registrar a propriedade vinculável padrão para controles adicionais:
+A marcação C# inclui um `Bind` método de extensão, juntamente com sobrecargas, que cria uma associação de dados entre uma propriedade de exibição vinculável e uma propriedade especificada. O `Bind` método conhece a propriedade vinculável padrão para a maioria dos controles incluídos no Xamarin.Forms . Portanto, normalmente não é necessário especificar a propriedade de destino ao usar esse método. No entanto, você também pode registrar a propriedade vinculável padrão para controles adicionais:
 
 ```csharp
 using Xamarin.Forms.Markup;

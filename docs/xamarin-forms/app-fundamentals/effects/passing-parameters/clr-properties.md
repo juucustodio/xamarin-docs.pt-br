@@ -1,18 +1,21 @@
 ---
-title: Passando parâmetros de efeito como propriedades de Common Language Runtime
-description: Propriedades de CLR (Common Language Runtime) podem ser usadas para definir parâmetros de efeito que não respondem a alterações de propriedade de tempo de execução. Este artigo demonstra como usar propriedades de CLR para passar parâmetros para um efeito.
-ms.prod: xamarin
-ms.assetid: 4B50466C-5DBD-45DD-B1E6-BE9524C92F27
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/05/2016
-ms.openlocfilehash: 63c7eb799b92871d7e00b7302bbe86f8b959ec23
-ms.sourcegitcommit: 05ba8ffb8b34ec881b89e442323f3edd8de18f2e
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 37d870509e034f4c23afba60fa055965ed9df4de
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83546031"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138858"
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>Passando parâmetros de efeito como propriedades de Common Language Runtime
 

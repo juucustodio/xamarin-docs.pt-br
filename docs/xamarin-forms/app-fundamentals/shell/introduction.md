@@ -1,24 +1,27 @@
 ---
-title: Introdução ao Xamarin.Forms
-description: O Shell do Xamarin.Forms fornece os recursos fundamentais necessários para a maioria dos aplicativos, incluindo uma experiência de navegação comum para o usuário, um esquema de navegação baseada em URI e um manipulador de pesquisa integrado.
-ms.prod: xamarin
-ms.assetid: 4604DCB5-83DA-458A-8B02-6508A740BE0E
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 09/20/2019
-ms.openlocfilehash: cb2ae3afe9db86d4db603d499ef0e75e7cbbf552
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsIntrodução ao shell
+description: Xamarin.FormsO Shell fornece os recursos fundamentais que a maioria dos aplicativos exigem, incluindo uma experiência de usuário de navegação comum, um esquema de navegação baseado em URI e um manipulador de pesquisa integrado.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 29a99161ff2ef2d71b6c803db994522bfe80ed03
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76940400"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138730"
 ---
-# <a name="xamarinforms-shell-introduction"></a>Introdução ao Xamarin.Forms
+# <a name="xamarinforms-shell-introduction"></a>Xamarin.FormsIntrodução ao shell
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
-O Shell do Xamarin.Forms reduz a complexidade do desenvolvimento de aplicativos móveis, fornecendo os recursos fundamentais que a maioria dos aplicativos móveis exige, incluindo:
+Xamarin.FormsO Shell reduz a complexidade do desenvolvimento de aplicativos móveis fornecendo os recursos fundamentais que a maioria dos aplicativos móveis exigem, incluindo:
 
 - Um único lugar para descrever a hierarquia visual do aplicativo.
 - Uma experiência de navegação comum para o usuário.
@@ -32,13 +35,13 @@ Além disso, o aplicativo Shell tem a vantagem de aumentar a velocidade de rende
 
 ## <a name="platform-support"></a>Suporte a plataforma
 
-O Shell do Xamarin.Forms está totalmente disponível no iOS e no Android, mas apenas parcialmente disponível na UWP (Plataforma Universal do Windows). Além disso, o Shell é experimental no momento na UWP e só pode ser usado adicionando a linha de código a seguir à classe `App` em seu projeto UWP, antes de chamar `Forms.Init`:
+Xamarin.FormsO Shell está totalmente disponível no iOS e no Android, mas apenas parcialmente disponível no Plataforma Universal do Windows (UWP). Além disso, o Shell é experimental no momento na UWP e só pode ser usado adicionando a linha de código a seguir à classe `App` em seu projeto UWP, antes de chamar `Forms.Init`:
 
 ```csharp
 global::Xamarin.Forms.Forms.SetFlags("Shell_UWP_Experimental");
 ```
 
-Para obter informações sobre como adicionar um projeto UWP a uma solução Xamarin.Forms, confira [Configurar projetos do Windows](~/xamarin-forms/platform/windows/installation/index.md).
+Para obter informações sobre como adicionar um projeto UWP a uma Xamarin.Forms solução, consulte [Configurar projetos do Windows](~/xamarin-forms/platform/windows/installation/index.md).
 
 ## <a name="shell-navigation-experience"></a>Experiência de navegação do Shell
 
@@ -53,11 +56,11 @@ Selecionar um item de submenu faz com que a guia inferior que representa o item 
 > [!NOTE]
 > Quando o submenu está fechado, a barra de guias inferior pode ser considerada o nível principal da navegação no aplicativo.
 
-Cada guia [`ContentPage`](xref:Xamarin.Forms.ContentPage)exibe um . No entanto, se uma guia inferior contiver mais de uma página, será possível navegar pelas páginas por meio da barra de guias superior:
+Cada guia exibe um [`ContentPage`](xref:Xamarin.Forms.ContentPage) . No entanto, se uma guia inferior contiver mais de uma página, será possível navegar pelas páginas por meio da barra de guias superior:
 
 [![Captura de tela de guias superiores do Shell no iOS e no Android](introduction-images/cats.png "Guias superiores do Shell")](introduction-images/cats-large.png#lightbox "Guias superiores do Shell")
 
-Dentro de cada [`ContentPage`](xref:Xamarin.Forms.ContentPage) guia, outros objetos podem ser navegados para:
+Dentro de cada guia, os [`ContentPage`](xref:Xamarin.Forms.ContentPage) objetos adicionais podem ser navegados para:
 
 [![Captura de tela do painel de navegação do Shell no iOS e no Android](introduction-images/cat-details.png "Navegação do aplicativo do Shell")](introduction-images/cat-details-large.png#lightbox "Navegação do aplicativo do Shell")
 

@@ -1,24 +1,27 @@
 ---
-title: Armazenar dados em um banco de dados SQLite.NET local
-description: Este artigo explica como armazenar dados em um banco de dados SQLite.NET local.
-zone_pivot_groups: platform
-ms.topic: quickstart
-ms.prod: xamarin
-ms.assetid: 5BF901BD-FDE8-4B74-B4AB-418E81745A3B
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/01/2019
-ms.openlocfilehash: 2cd4726566e73aece5d0deef90ad1feedefaa2d8
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: ''
+description: ''
+zone_pivot_groups: ''
+ms.topic: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2864c7edabde18faec06c2c42042168d3e6c9671
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "71249673"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139796"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Armazenar dados em um banco de dados SQLite.NET local
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
 
 Neste guia de início rápido, você aprenderá a:
 
@@ -50,7 +53,7 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
 
     > [!NOTE]
     > Há diversos pacotes NuGet com nomes semelhantes. O pacote correto tem estes atributos:
-    > - **Autor(s):** Frank A. Krueger
+    > - **Autor (es):** Frank A. Krueger
     > - **Id:** sqlite-net-pcl
     > - **Link do NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
@@ -214,7 +217,7 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
     }
     ```    
 
-    Este código preenche [`ListView`](xref:Xamarin.Forms.ListView) o com quaisquer notas armazenadas no banco de dados.
+    Esse código popula o [`ListView`](xref:Xamarin.Forms.ListView) com todas as anotações armazenadas no banco de dados.
 
     Salve as alterações em **NotesPage.xaml** pressionando **CTRL+S** e feche o arquivo.
 
@@ -240,7 +243,7 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
       }
       ```    
 
-      As `NoteEntryPage` lojas `Note` uma instância, que representa uma [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) única nota, na página. Quando o manipulador de eventos `OnSaveButtonClicked` é executado, a instância de `Note` é salva no banco de dados e o aplicativo navega de volta para a página anterior. Quando o manipulador de eventos `OnDeleteButtonClicked` é executado, a instância de `Note` é excluída do banco de dados e o aplicativo navega de volta para a página anterior.
+      O `NoteEntryPage` armazena uma `Note` instância do, que representa uma única nota, no [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) da página. Quando o manipulador de eventos `OnSaveButtonClicked` é executado, a instância de `Note` é salva no banco de dados e o aplicativo navega de volta para a página anterior. Quando o manipulador de eventos `OnDeleteButtonClicked` é executado, a instância de `Note` é excluída do banco de dados e o aplicativo navega de volta para a página anterior.
 
       Salve as alterações em **NoteEntryPage.xaml.cs** pressionando **CTRL+S** e feche o arquivo.
 
@@ -431,7 +434,7 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
     }
     ```    
 
-    Este código preenche [`ListView`](xref:Xamarin.Forms.ListView) o com quaisquer notas armazenadas no banco de dados.
+    Esse código popula o [`ListView`](xref:Xamarin.Forms.ListView) com todas as anotações armazenadas no banco de dados.
 
     Salve as alterações em **NotesPage.xaml.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
 
@@ -457,7 +460,7 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
       }
       ```    
 
-      As `NoteEntryPage` lojas `Note` uma instância, que representa uma [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) única nota, na página. Quando o manipulador de eventos `OnSaveButtonClicked` é executado, a instância de `Note` é salva no banco de dados e o aplicativo navega de volta para a página anterior. Quando o manipulador de eventos `OnDeleteButtonClicked` é executado, a instância de `Note` é excluída do banco de dados e o aplicativo navega de volta para a página anterior.
+      O `NoteEntryPage` armazena uma `Note` instância do, que representa uma única nota, no [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) da página. Quando o manipulador de eventos `OnSaveButtonClicked` é executado, a instância de `Note` é salva no banco de dados e o aplicativo navega de volta para a página anterior. Quando o manipulador de eventos `OnDeleteButtonClicked` é executado, a instância de `Note` é excluída do banco de dados e o aplicativo navega de volta para a página anterior.
 
       Salve as alterações em **NoteEntryPage.xaml.cs** escolhendo **Arquivo > Salvar** (ou pressionando **&#8984; + S**) e feche o arquivo.
 
@@ -484,4 +487,4 @@ Para definir o estilo do aplicativo com estilos XAML, vá para o próximo iníci
 ## <a name="related-links"></a>Links relacionados
 
 - [Notas (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
-- [Aprofundamento do Guia de Início Rápido do Xamarin.Forms](deepdive.md)
+- [Xamarin.FormsAprofundamento do guia de início rápido](deepdive.md)

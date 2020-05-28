@@ -1,24 +1,27 @@
 ---
-title: Sinalizadores experimentais do Xamarin. Forms
-description: Os sinalizadores experimentais do Xamarin. Forms permitem que a equipe de engenharia envie novos recursos aos usuários mais rapidamente, enquanto ainda pode alterar as APIs de recursos antes que elas passem para uma versão estável.
-ms.prod: xamarin
-ms.assetid: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 04/14/2020
-ms.openlocfilehash: cca377a7a88599bc34fd66695ad303162e6be200
-ms.sourcegitcommit: 8d13d2262d02468c99c4e18207d50cd82275d233
+title: Xamarin.Formssinalizadores experimentais
+description: Xamarin.Formsos sinalizadores experimentais permitem que a equipe de engenharia envie novos recursos aos usuários mais rapidamente, enquanto ainda pode alterar as APIs de recursos antes que elas passem para uma versão estável.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b548323330ccdce6fb01e83c7e8ab7c2d5307125
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82516545"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139055"
 ---
-# <a name="xamarinforms-experimental-flags"></a>Sinalizadores experimentais do Xamarin. Forms
+# <a name="xamarinforms-experimental-flags"></a>Xamarin.Formssinalizadores experimentais
 
-Quando um novo recurso Xamarin. Forms é implementado, às vezes ele é colocado atrás de um sinalizador experimental. Isso permite que a equipe de engenharia forneça novos recursos para você com mais rapidez e, ao mesmo tempo, possa alterar as APIs de recursos antes que elas se movam para uma versão estável. O sinalizador experimental é removido quando o recurso passa para uma versão estável.
+Quando um novo Xamarin.Forms recurso é implementado, às vezes ele é colocado atrás de um sinalizador experimental. Isso permite que a equipe de engenharia forneça novos recursos para você com mais rapidez e, ao mesmo tempo, possa alterar as APIs de recursos antes que elas se movam para uma versão estável. O sinalizador experimental é removido quando o recurso passa para uma versão estável.
 
-O Xamarin. Forms inclui os seguintes sinalizadores experimentais:
+Xamarin.Formsinclui os seguintes sinalizadores experimentais:
 
 - `AppTheme_Experimental`
 - `CarouselView_Experimental`
@@ -34,7 +37,7 @@ O Xamarin. Forms inclui os seguintes sinalizadores experimentais:
 Usar a funcionalidade que está atrás de um sinalizador experimental exige que você habilite o sinalizador ou os sinalizadores em seu aplicativo. Há duas abordagens para habilitar sinalizadores experimentais:
 
 - Habilite o sinalizador experimental, ou sinalizadores, em seus projetos de plataforma.
-- Habilite o sinalizador experimental, ou sinalizadores, em `App` sua classe.
+- Habilite o sinalizador experimental, ou sinalizadores, em sua `App` classe.
 
 > [!WARNING]
 > O consumo da funcionalidade que está atrás de um sinalizador experimental, sem habilitar o sinalizador resultará em seu aplicativo lançar uma exceção que indica qual sinalizador deve ser habilitado.
@@ -47,10 +50,10 @@ O `Xamarin.Forms.Forms.SetFlags` método pode ser usado para habilitar um sinali
 Xamarin.Forms.Forms.SetFlags("CarouselView_Experimental");
 ```
 
-O `SetFlags` método deve ser invocado em `AppDelegate` sua classe no Ios, em `MainActivity` sua classe no Android e em sua `App` classe no UWP.
+O `SetFlags` método deve ser invocado em sua `AppDelegate` classe no Ios, em sua `MainActivity` classe no Android e em sua `App` classe no UWP.
 
 > [!IMPORTANT]
-> A habilitação de um sinalizador experimental em seus projetos de plataforma `Forms.Init` deve ocorrer antes que o método seja invocado.
+> A habilitação de um sinalizador experimental em seus projetos de plataforma deve ocorrer antes que o `Forms.Init` método seja invocado.
 
 O `Xamarin.Forms.Forms.SetFlags` método aceita um `string` argumento de matriz, o que torna possível habilitar vários sinalizadores experimentais em uma única chamada de método:
 

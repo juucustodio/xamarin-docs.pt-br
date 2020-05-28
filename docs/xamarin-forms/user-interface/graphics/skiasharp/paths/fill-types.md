@@ -1,41 +1,44 @@
 ---
-title: Os tipos de preenchimento do caminho
-description: Este artigo examina os diferentes efeitos possíveis com tipos de preenchimento do caminho de SkiaSharp e demonstra isso com o código de exemplo.
-ms.prod: xamarin
-ms.assetid: 57103A7A-49A2-46AE-894C-7C2664682644
-ms.technology: xamarin-skiasharp
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/10/2017
-ms.openlocfilehash: 98081ed1a9aef1260150671d4fd026dd64c20b62
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c8c54f3d3815e418d2f71960dc7733711cb40ae2
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78292321"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139042"
 ---
 # <a name="the-path-fill-types"></a>Os tipos de preenchimento do caminho
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Descobrir os diferentes efeitos possíveis com os tipos de preenchimento de caminho SkiaSharp_
 
-Dois dos contornos em um caminho podem se sobrepor e as linhas que compõem uma única delimitação podem se sobrepor. Qualquer área fechada potencialmente pode ser preenchida, mas você não deseja preencher todas as áreas fechadas. Aqui está um exemplo:
+Dois contornos em um caminho podem se sobrepor e as linhas que compõem uma única delimitação podem se sobrepor. Qualquer área fechada pode potencialmente ser preenchida, mas talvez você não queira preencher todas as áreas incluídas. Aqui está um exemplo:
 
 ![](fill-types-images/filltypeexample.png "Five-pointed star partially filles")
 
-Você tem controle um pouco sobre isso. O algoritmo de preenchimento é regido pela propriedade [`SKFillType`](xref:SkiaSharp.SKPath.FillType) de `SKPath`, que você define como um membro da enumeração [`SKPathFillType`](xref:SkiaSharp.SKPathFillType) :
+Você tem um pequeno controle sobre isso. O algoritmo de preenchimento é regido pela [`SKFillType`](xref:SkiaSharp.SKPath.FillType) propriedade de `SKPath` , que você define como um membro da [`SKPathFillType`](xref:SkiaSharp.SKPathFillType) enumeração:
 
 - `Winding`, o padrão
 - `EvenOdd`
 - `InverseWinding`
 - `InverseEvenOdd`
 
-Os algoritmos de contorno e par-ímpares determinam se qualquer área fechada é preenchida ou não preenchida com base em uma linha hipotética extraída nessa área até o infinito. Essa linha cruza uma ou mais linhas de limite que compõem o caminho. Com o modo de Enrolamento, se o número de linhas de limite desenhado no saldo de uma única direção horizontalmente o número das linhas desenhadas na outra direção, em seguida, a área não está preenchido. Caso contrário, a área é preenchida. O algoritmo de par-ímpar preenche uma área, se o número de linhas de limite é ímpar.
+Os algoritmos de vento e par-ímpar determinam se alguma área inclusa está preenchida ou não preenchida com base em uma linha hipotética desenhada dessa área para infinito. Essa linha cruza uma ou mais linhas de limite que compõem o caminho. Com o modo de vento, se o número de linhas de limite desenhadas em uma direção equilibrar o número de linhas desenhadas na outra direção, a área não será preenchida. Caso contrário, a área será preenchida. O algoritmo par-ímpar preenche uma área se o número de linhas de limite é ímpar.
 
-Com muitos caminhos de rotina, o algoritmo Enrolamento geralmente preenche todas as áreas contidas de um caminho. O algoritmo de par-ímpar geralmente produz resultados mais interessantes.
+Com muitos caminhos de rotina, o algoritmo de vento muitas vezes preenche todas as áreas fechadas de um caminho. O algoritmo par-ímpar geralmente produz resultados mais interessantes.
 
-O exemplo clássico é uma estrela de cinco pontas, conforme demonstrado na página de **estrela de cinco pontas** . O arquivo [**FivePointedStarPage. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FivePointedStarPage.xaml) instancia duas exibições de `Picker` para selecionar o tipo de preenchimento de caminho e se o caminho é traçado ou preenchido ou ambos, e em que ordem:
+O exemplo clássico é uma estrela de cinco pontas, conforme demonstrado na página de **estrela de cinco pontas** . O arquivo [**FivePointedStarPage. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FivePointedStarPage.xaml) instancia duas `Picker` exibições para selecionar o tipo de preenchimento de caminho e se o caminho é traçado ou preenchido, ou ambos, e em qual ordem:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -102,7 +105,7 @@ O exemplo clássico é uma estrela de cinco pontas, conforme demonstrado na pág
 </ContentPage>
 ```
 
-O arquivo code-behind usa ambos os valores `Picker` para desenhar uma estrela de cinco pontas:
+O arquivo code-behind usa ambos os `Picker` valores para desenhar uma estrela de cinco pontas:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -168,18 +171,18 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Normalmente, o tipo de preenchimento de caminho deve afetar apenas os preenchimentos e não traços, mas os dois modos de `Inverse` afetam os preenchimentos e os traços. Para preenchimentos, os dois tipos de `Inverse` preencher áreas opostamente para que a área fora da estrela seja preenchida. Para traços, os dois tipos de `Inverse` colorem tudo, exceto o traço. Usando esses tipos de preenchimento inverso pode produzir alguns efeitos ímpares, como demonstra a captura de tela do iOS:
+Normalmente, o tipo de preenchimento de caminho deve afetar apenas os preenchimentos e não traços, mas os dois `Inverse` modos afetam os preenchimentos e os traços. Para preenchimentos, os dois `Inverse` tipos preenchem áreas de forma oposta para que a área fora da estrela seja preenchida. Para traços, os dois `Inverse` tipos colorem tudo, exceto o traço. Usar esses tipos de preenchimento inverso pode produzir alguns efeitos estranhos, como demonstra a captura de tela do iOS:
 
 [![](fill-types-images/fivepointedstar-small.png "Triple screenshot of the Five-Pointed Star page")](fill-types-images/fivepointedstar-large.png#lightbox "Triple screenshot of the Five-Pointed Star page")
 
 A captura de tela do Android mostra os efeitos típicos de retrocesso e ímpar, mas a ordem do traço e do preenchimento também afeta os resultados.
 
-O algoritmo de contorno é dependente da direção que as linhas são desenhadas. Normalmente, quando você estiver criando um caminho, você pode controlar nessa direção conforme você especificar que as linhas são desenhadas de um ponto para outro. No entanto, a classe `SKPath` também define métodos como `AddRect` e `AddCircle` que desempatem contornos inteiros. Para controlar como esses objetos são desenhados, os métodos incluem um parâmetro do tipo [`SKPathDirection`](xref:SkiaSharp.SKPathDirection), que tem dois membros:
+O algoritmo de enrolamento depende da direção em que as linhas são desenhadas. Geralmente, quando você está criando um caminho, pode controlar essa direção à medida que especifica que as linhas são desenhadas de um ponto para outro. No entanto, a `SKPath` classe também define métodos como `AddRect` e `AddCircle` que redesenham contornos inteiros. Para controlar como esses objetos são desenhados, os métodos incluem um parâmetro do tipo [`SKPathDirection`](xref:SkiaSharp.SKPathDirection) , que tem dois membros:
 
 - `Clockwise`
 - `CounterClockwise`
 
-Os métodos em `SKPath` que incluem um parâmetro `SKPathDirection` dão a ele um valor padrão de `Clockwise`.
+Os métodos no `SKPath` que incluem um `SKPathDirection` parâmetro fornecem a ele um valor padrão de `Clockwise` .
 
 A página **círculos sobrepostos** cria um caminho com quatro círculos sobrepostos com um tipo de preenchimento de caminho par-ímpar:
 

@@ -1,32 +1,35 @@
 ---
-title: Compilação de XAML no xamarin. Forms
-description: Este artigo explica como o XAML pode ser opcionalmente compilado diretamente em linguagem intermediária (IL) com o compilador do xamarin. Forms XAML (XAMLC).
-ms.prod: xamarin
-ms.assetid: 9A2D10A6-5DFC-485F-A75A-2F7B98314025
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/22/2018
-ms.openlocfilehash: 9567f3ad8d748a94a03cd1c86254072d4ba3bbdc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+title: Compilação XAML noXamarin.Forms
+description: Este artigo explica como o XAML pode ser compilado opcionalmente diretamente na IL (linguagem intermediária) com o Xamarin.Forms compilador XAML (XAMLC).
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: eebbb3040175118320639bcb4482ec77b5c16ac7
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075110"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137287"
 ---
-# <a name="xaml-compilation-in-xamarinforms"></a>Compilação de XAML no xamarin. Forms
+# <a name="xaml-compilation-in-xamarinforms"></a>Compilação XAML noXamarin.Forms
 
-_Pode ser compilado, opcionalmente, o XAML diretamente em linguagem intermediária (IL) com o compilador XAML (XAMLC)._
+_Opcionalmente, XAML pode ser compilado direto na IL (linguagem intermediária) com o compilador XAML (XAMLC)._
 
-Compilação de XAML oferece vários benefícios:
+A compilação XAML oferece vários benefícios:
 
 - Executa verificação de tempo de compilação de XAML, notificando o usuário de quaisquer erros.
 - Elimina parte da carga e do tempo de instanciação para elementos XAML.
 - Ajuda a reduzir o tamanho do arquivo do assembly final não incluindo mais arquivos .XAML.
 
-Compilação de XAML está desabilitada por padrão, para garantir a compatibilidade com versões anteriores. Ele pode ser habilitado no nível de classe e do assembly adicionando a [ `XamlCompilation` ](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) atributo.
+A compilação XAML é desabilitada por padrão para garantir a compatibilidade com versões anteriores. Ele pode ser habilitado no nível do assembly e da classe adicionando o [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) atributo.
 
-O exemplo de código a seguir demonstra como habilitar compilação de XAML no nível de assembly:
+O exemplo de código a seguir demonstra como habilitar a compilação XAML no nível do assembly:
 
 ```csharp
 using Xamarin.Forms.Xaml;
@@ -38,12 +41,12 @@ namespace PhotoApp
 }
 ```
 
-Neste exemplo, a verificação de todas as do XAML contido dentro do assembly de tempo de compilação será executado, com erros XAML que está sendo relatados no tempo de compilação em vez de tempo de execução. Portanto, o `assembly` de prefixo para o [ `XamlCompilation` ](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) atributo especifica que o atributo se aplica a todo o assembly.
+Neste exemplo, a verificação em tempo de compilação de todos os XAML contidos no assembly será executada, com erros XAML sendo relatados em tempo de compilação em vez de tempo de execução. Portanto, o `assembly` prefixo para o [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) atributo especifica que o atributo se aplica a todo o assembly.
 
 > [!NOTE]
-> O [ `XamlCompilation` ](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) atributo e o [ `XamlCompilationOptions` ](xref:Xamarin.Forms.Xaml.XamlCompilationOptions) enumeração residem no `Xamarin.Forms.Xaml` namespace, que deve ser importado para usá-los.
+> O [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) atributo e a [`XamlCompilationOptions`](xref:Xamarin.Forms.Xaml.XamlCompilationOptions) Enumeração residem no `Xamarin.Forms.Xaml` namespace, que deve ser importado para usá-los.
 
-O exemplo de código a seguir demonstra como habilitar compilação de XAML no nível da classe:
+O exemplo de código a seguir demonstra como habilitar a compilação XAML no nível de classe:
 
 ```csharp
 using Xamarin.Forms.Xaml;
@@ -55,10 +58,10 @@ public class HomePage : ContentPage
 }
 ```
 
-Neste exemplo, a verificação de que o XAML para o tempo de compilação a `HomePage` classe será executado e erros são relatados como parte do processo de compilação.
+Neste exemplo, a verificação de tempo de compilação do XAML para a `HomePage` classe será executada e os erros relatados como parte do processo de compilação.
 
 > [!NOTE]
-> Associações compiladas podem ser habilitadas para melhorar o desempenho de associação de dados em aplicativos xamarin. Forms. Para obter mais informações, consulte [compilado associações](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
+> Associações compiladas podem ser habilitadas para melhorar o desempenho de vinculação de dados em Xamarin.Forms aplicativos. Para saber mais, confira [Associações compiladas](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
 
 ## <a name="related-links"></a>Links relacionados
 

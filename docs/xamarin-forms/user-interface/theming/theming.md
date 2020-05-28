@@ -1,26 +1,29 @@
 ---
-title: Tema um aplicativo Xamarin. Forms
-description: Eles podem ser implementados em aplicativos Xamarin. Forms criando um ResourceDictionary para cada tema e, em seguida, carregando os recursos com a extensão de marcação DynamicResource.
-ms.prod: xamarin
-ms.assetId: B7B17F66-4E37-4B50-9A57-351B62BE4FED
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 08/07/2019
-ms.openlocfilehash: 2f751549bdbd54b920a99b04d0068ab726600336
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+title: Aplicar tema a um Xamarin.Forms aplicativo
+description: Eles podem ser implementados em Xamarin.Forms aplicativos criando um ResourceDictionary para cada tema e, em seguida, carregando os recursos com a extensão de marcação DynamicResource.
+ms.prod: ''
+ms.assetId: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3341ada6c5605917eeec79aac96e38cb99b40fc4
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83425800"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138197"
 ---
-# <a name="theme-a-xamarinforms-application"></a>Tema um aplicativo Xamarin. Forms
+# <a name="theme-a-xamarinforms-application"></a>Aplicar tema a um Xamarin.Forms aplicativo
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 
-Aplicativos Xamarin. Forms podem responder a alterações de estilo dinamicamente em tempo de execução usando a `DynamicResource` extensão de marcação. Essa extensão de marcação é semelhante à `StaticResource` extensão de marcação, pois ambas usam uma chave de dicionário para buscar um valor de a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . No entanto, enquanto a `StaticResource` extensão de marcação executa uma única pesquisa de dicionário, a `DynamicResource` extensão de marcação mantém um link para a chave de dicionário. Portanto, se o valor associado à chave for substituído, a alteração será aplicada ao [`VisualElement`](xref:Xamarin.Forms.VisualElement) . Isso permite que eles sejam implementados em aplicativos Xamarin. Forms.
+Xamarin.Formsos aplicativos podem responder a alterações de estilo dinamicamente em tempo de execução usando a `DynamicResource` extensão de marcação. Essa extensão de marcação é semelhante à `StaticResource` extensão de marcação, pois ambas usam uma chave de dicionário para buscar um valor de a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . No entanto, enquanto a `StaticResource` extensão de marcação executa uma única pesquisa de dicionário, a `DynamicResource` extensão de marcação mantém um link para a chave de dicionário. Portanto, se o valor associado à chave for substituído, a alteração será aplicada ao [`VisualElement`](xref:Xamarin.Forms.VisualElement) . Isso permite que os tempos de execução sejam implementados em Xamarin.Forms aplicativos.
 
-O processo para implementar o tempo de execução em um aplicativo Xamarin. Forms é o seguinte:
+O processo para implementar o tempo de execução em um Xamarin.Forms aplicativo é o seguinte:
 
 1. Defina os recursos para cada tema em um [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) .
 1. Consuma recursos de tema no aplicativo, usando a `DynamicResource` extensão de marcação.
@@ -182,7 +185,7 @@ Esses estilos são então consumidos por páginas:
 
 Quando um recurso de tema é consumido diretamente, ele deve ser consumido com a `DynamicResource` extensão de marcação. No entanto, quando um estilo que usa a `DynamicResource` extensão de marcação é consumido, ele deve ser consumido com a `StaticResource` extensão de marcação.
 
-Para obter mais informações sobre estilos, consulte [estilizando aplicativos Xamarin. Forms usando estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md). Para obter mais informações sobre a `DynamicResource` extensão de marcação, consulte [estilos dinâmicos no Xamarin. Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md).
+Para obter mais informações sobre estilos, consulte [estilizando Xamarin.Forms aplicativos usando estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md). Para obter mais informações sobre a `DynamicResource` extensão de marcação, consulte [estilos Xamarin.Forms dinâmicos em ](~/xamarin-forms/user-interface/styles/xaml/dynamic.md).
 
 ## <a name="load-a-theme-at-runtime"></a>Carregar um tema em tempo de execução
 
@@ -225,5 +228,5 @@ void OnPickerSelectionChanged(object sender, EventArgs e)
 - [Temas (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 - [Responder às alterações do tema do sistema](system-theme-changes.md)
 - [Dicionários de recurso](~/xamarin-forms/xaml/resource-dictionaries.md)
-- [Estilos dinâmicos no Xamarin. Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
-- [Aplicar estilo a aplicativos do Xamarin.Forms usando os estilos do XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)
+- [Estilos dinâmicos emXamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
+- [Estilizando Xamarin.Forms aplicativos usando estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)

@@ -1,28 +1,31 @@
 ---
-title: Associação de dados do Xamarin.Forms
-description: A associação de dados é a técnica de vinculação de propriedades de dois objetos para que as alterações em uma propriedade sejam automaticamente refletidas na outra propriedade. A associação de dados é parte integrante da arquitetura do aplicativo MVVM (Model-View-ViewModel).
-ms.prod: xamarin
-ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 03/23/2020
-ms.openlocfilehash: 9e3e602eda0d2fa78dd25905a2b6ccf3ce5a744d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsAssociação de dados
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 4b99877342ddbaf9ad5606ec5dc284818fcfeffd
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "80247594"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84139692"
 ---
-# <a name="xamarinforms-data-binding"></a>Associação de dados do Xamarin.Forms
+# <a name="xamarinforms-data-binding"></a>Xamarin.FormsAssociação de dados
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
-_Vinculação de dados é a técnica de vincular propriedades de dois objetos para que as alterações em uma propriedade sejam automaticamente refletidas na outra propriedade. A vinculação de dados é parte integrante da arquitetura de aplicativos Model-View-ViewModel (MVVM)._
+_A vinculação de dados é a técnica de vincular propriedades de dois objetos para que as alterações em uma propriedade sejam refletidas automaticamente na outra propriedade. A vinculação de dados é parte integrante da arquitetura do aplicativo MVVM (Model-View-ViewModel)._
 
 ## <a name="the-data-linking-problem"></a>O problema de associação de dados
 
-Um aplicativo Xamarin.Forms consiste em uma ou mais páginas, cada uma das quais geralmente contém vários objetos da interface do usuário chamados de *exibições*. Uma das principais tarefas do programa é manter essas exibições sincronizadas e controlar os diversos valores ou seleções que elas representam. Muitas vezes as exibições representam valores de uma fonte de dados subjacente, e o usuário manipula essas exibições para alterar esses dados. Quando a exibição é alterada, os dados subjacentes devem refletir essa alteração e, da mesma forma, quando os dados subjacentes são alterados, essa alteração deve ser refletida na exibição.
+Um Xamarin.Forms aplicativo consiste em uma ou mais páginas, cada uma delas geralmente contém vários objetos de interface do usuário chamados *exibições*. Uma das principais tarefas do programa é manter essas exibições sincronizadas e controlar os diversos valores ou seleções que elas representam. Muitas vezes as exibições representam valores de uma fonte de dados subjacente, e o usuário manipula essas exibições para alterar esses dados. Quando a exibição é alterada, os dados subjacentes devem refletir essa alteração e, da mesma forma, quando os dados subjacentes são alterados, essa alteração deve ser refletida na exibição.
 
 Para que esse trabalho seja realizado com êxito, o programa deve ser notificado das alterações nessas exibições ou nos dados subjacentes. A solução comum é definir eventos que sinalizam quando uma alteração ocorre. É possível então instalar um manipulador de eventos que é notificado sobre essas alterações. Ele responde transferindo dados de um objeto para outro. No entanto, quando há muitas exibições, também é preciso que haja vários manipuladores de eventos, e há muito código envolvido.
 
@@ -35,7 +38,7 @@ Um dos dois objetos envolvidos em uma associação de dados quase sempre é um e
 - Outro derivado de `View`, geralmente na mesma página.
 - Um objeto em um arquivo de código.
 
-Em programas de demonstração, tais como aqueles na amostra [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos), associações de dados entre dois derivados de `View` geralmente são mostrados para fins de clareza e simplicidade. No entanto, os mesmos princípios podem ser aplicados às associações de dados entre um `View` e outros objetos. Quando um aplicativo é construído usando a arquitetura Model-View-ViewModel (MVVM), a classe com dados subjacentes é frequentemente chamada de modelo de exibição.
+Em programas de demonstração, tais como aqueles na amostra [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos), associações de dados entre dois derivados de `View` geralmente são mostrados para fins de clareza e simplicidade. No entanto, os mesmos princípios podem ser aplicados às associações de dados entre um `View` e outros objetos. Quando um aplicativo é criado usando a arquitetura MVVM (Model-View-ViewModel), a classe com dados subjacentes geralmente é chamada de ViewModel.
 
 Associações de dados são exploradas na seguinte série de artigos:
 
@@ -55,15 +58,15 @@ Use uma associação de dados para formatar e exibir objetos como cadeias de car
 
 Aprofunde-se na propriedade `Path` da associação de dados para acessar subpropriedades e os membros da coleção.
 
-## <a name="binding-value-converters"></a>[Conversores de associação de valor](converters.md)
+## <a name="binding-value-converters"></a>[Associação de conversores de valor](converters.md)
 
 Use conversores de valor de associação para alterar os valores dentro da associação de dados.
 
 ## <a name="relative-bindings"></a>[Associações relativas](relative-bindings.md)
 
-Use ligações relativas para definir a fonte de ligação em relação à posição do alvo de ligação.
+Use associações relativas para definir a origem da associação em relação à posição do destino da associação.
 
-## <a name="binding-fallbacks"></a>[Fallbacks de associação](binding-fallbacks.md)
+## <a name="binding-fallbacks"></a>[Associação de fallbacks](binding-fallbacks.md)
 
 Torne as associações de dados mais robustas definindo valores de fallback que deverão ser usados se o processo de associação falhar.
 
@@ -78,5 +81,5 @@ Use associações compiladas para melhorar o desempenho de associação de dados
 ## <a name="related-links"></a>Links relacionados
 
 - [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
-- [Capítulo de associação de dados do catálogo de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
-- [Extensões de marcação XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
+- [Capítulo de vinculação de dados do Xamarin.Forms livro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Extensões de marcação do XAML](~/xamarin-forms/xaml/markup-extensions/index.md)

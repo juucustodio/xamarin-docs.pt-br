@@ -1,24 +1,27 @@
 ---
-title: Padrões de Design de Tela Dupla do Xamarin.Forms
+title: Xamarin.FormsPadrões de design de tela dupla
 description: Este guia explica como o Xamarin.Forms dá suporte a uma variedade de padrões de design diferentes, otimizados para dispositivos de tela dupla.
-ms.prod: xamarin
-ms.assetid: 3176d792-6dba-4e00-b463-497c58678ee9
-ms.technology: xamarin-forms
-author: davidortinau
-ms.author: daortin
-ms.date: 02/08/2020
-ms.openlocfilehash: ab83869a4e865d1ce3b1fee83e84ce4e2fd913c6
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 277fb67eeea465239d9340e755240288286d2359
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "80628327"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138782"
 ---
-# <a name="xamarinforms-dual-screen-design-patterns"></a>Padrões de design de tela dupla do Xamarin.Forms
+# <a name="xamarinforms-dual-screen-design-patterns"></a>Xamarin.Formspadrões de design de tela dupla
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
 Este guia apresenta nossos padrões de design recomendados para dispositivos de tela dupla com código e amostras para ajudar você a criar interfaces que fornecem experiências de usuário envolventes e úteis.
 
@@ -117,7 +120,7 @@ Esse padrão é ideal para o conteúdo destinado a um layout de duas páginas, c
 </Grid>
 ```
 
-O [`CollectionView`](xref:Xamarin.Forms.CollectionView), com um layout de grade que se divide na largura da dobradiça, faz uma abordagem ideal para oferecer essa experiência de tela dupla.
+O [`CollectionView`](xref:Xamarin.Forms.CollectionView) , com um layout de grade que se divide na largura da dobradiça, faz uma abordagem ideal para fornecer essa experiência de tela dupla.
 
 ## <a name="dual-view-pattern"></a>Padrão de exibição dupla
 

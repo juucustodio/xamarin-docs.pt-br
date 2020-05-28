@@ -1,20 +1,23 @@
 ---
-title: Propriedades vinculáveis do Xamarin. Forms
-description: Este artigo fornece uma introdução às propriedades vinculáveis e demonstra como criá-las e consumi-las.
-ms.prod: xamarin
-ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/16/2020
-ms.openlocfilehash: 4151ac6f8cd9d860251ce1f27c7b342e0caa465c
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+title: Xamarin.FormsPropriedades vinculáveis
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 33b3763075b64ea8af615465825313a527d20db2
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83425783"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138171"
 ---
-# <a name="xamarinforms-bindable-properties"></a>Propriedades vinculáveis do Xamarin. Forms
+# <a name="xamarinforms-bindable-properties"></a>Xamarin.FormsPropriedades vinculáveis
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 
@@ -28,7 +31,7 @@ As propriedades devem ser implementadas como propriedades vinculáveis para dar 
 - Validando o valor da propriedade.
 - Monitorando alterações de propriedade.
 
-Exemplos de propriedades vinculáveis do Xamarin. Forms incluem [`Label.Text`](xref:Xamarin.Forms.Label.Text) , [`Button.BorderRadius`](xref:Xamarin.Forms.Button.BorderRadius) e [`StackLayout.Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) . Cada propriedade vinculável tem um `public static readonly` campo correspondente do tipo [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) que é exposto na mesma classe e que é o identificador da propriedade vinculável. Por exemplo, o identificador de propriedade vinculável correspondente para a `Label.Text` propriedade é [`Label.TextProperty`](xref:Xamarin.Forms.Label.TextProperty) .
+Exemplos de Xamarin.Forms propriedades vinculáveis incluem [`Label.Text`](xref:Xamarin.Forms.Label.Text) , [`Button.BorderRadius`](xref:Xamarin.Forms.Button.BorderRadius) e [`StackLayout.Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) . Cada propriedade vinculável tem um `public static readonly` campo correspondente do tipo [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) que é exposto na mesma classe e que é o identificador da propriedade vinculável. Por exemplo, o identificador de propriedade vinculável correspondente para a `Label.Text` propriedade é [`Label.TextProperty`](xref:Xamarin.Forms.Label.TextProperty) .
 
 ## <a name="create-a-bindable-property"></a>Criar uma propriedade vinculável
 
@@ -43,14 +46,14 @@ Todas as [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instâncias d
 
 Para criar uma `BindableProperty` instância, a classe que a contém deve derivar da [`BindableObject`](xref:Xamarin.Forms.BindableObject) classe. No entanto, a `BindableObject` classe é alta na hierarquia de classe, portanto, a maioria das classes usadas para funcionalidade de interface do usuário dão suporte a propriedades vinculáveis.
 
-Uma propriedade vinculável pode ser criada declarando-se uma `public static readonly` Propriedade do tipo [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . A propriedade vinculável deve ser definida como o valor retornado de uma das [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) sobrecargas de método. A declaração deve estar dentro do corpo da [`BindableObject`](xref:Xamarin.Forms.BindableObject) classe derivada, mas fora de qualquer definição de membro.
+Uma propriedade vinculável pode ser criada declarando-se uma `public static readonly` Propriedade do tipo [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . A propriedade vinculável deve ser definida como o valor retornado de um dos [ `BindableProperty.Create` ] (xref: Xamarin.Forms . Vinculproperty. Create (System. String, System. Type, System. Type, System. Object, Xamarin.Forms . BindingMode, Xamarin.Forms . Vinculproperty. ValidateValueDelegate, Xamarin.Forms . Vinculproperty. BindingPropertyChangedDelegate, Xamarin.Forms . Vinculproperty. BindingPropertyChangingDelegate, Xamarin.Forms . Vinculproperty. CoerceValueDelegate, Xamarin.Forms . O método acopláproperty. CreateDefaultValueDelegate)) é sobrecarregado. A declaração deve estar dentro do corpo da [`BindableObject`](xref:Xamarin.Forms.BindableObject) classe derivada, mas fora de qualquer definição de membro.
 
 No mínimo, um identificador deve ser especificado ao criar um [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) , juntamente com os seguintes parâmetros:
 
 - O nome do [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) .
 - O tipo da propriedade.
 - O tipo do objeto proprietário.
-- O valor padrão para a propriedade. Isso garante que a propriedade sempre retorna um valor padrão específico quando ela é desdefinida e pode ser diferente do valor padrão para o tipo da propriedade. O valor padrão será restaurado quando o [`ClearValue`](xref:Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindableProperty)) método for chamado na propriedade vinculável.
+- O valor padrão para a propriedade. Isso garante que a propriedade sempre retorna um valor padrão específico quando ela é desdefinida e pode ser diferente do valor padrão para o tipo da propriedade. O valor padrão será restaurado quando [ `ClearValue` ] (xref: Xamarin.Forms . Acopláble. ClearValue ( Xamarin.Forms . Vinculproperty)) é chamado na propriedade vinculável.
 
 O código a seguir mostra um exemplo de uma propriedade vinculável, com um identificador e valores para os quatro parâmetros necessários:
 
@@ -72,7 +75,7 @@ Opcionalmente, ao criar uma [`BindableProperty`](xref:Xamarin.Forms.BindableProp
 
 ### <a name="create-accessors"></a>Criar acessadores
 
-Acessadores de propriedade são necessários para usar a sintaxe de propriedade para acessar uma propriedade vinculável. O `Get` acessador deve retornar o valor contido na propriedade ligável correspondente. Isso pode ser obtido chamando o [`GetValue`](xref:Xamarin.Forms.BindableObject.GetValue(Xamarin.Forms.BindableProperty)) método, passando o identificador de propriedade vinculável no qual obter o valor e, em seguida, convertendo o resultado para o tipo necessário. O `Set` acessador deve definir o valor da propriedade vinculável correspondente. Isso pode ser obtido chamando o [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) método, passando o identificador de propriedade vinculável no qual definir o valor e o valor a ser definido.
+Acessadores de propriedade são necessários para usar a sintaxe de propriedade para acessar uma propriedade vinculável. O `Get` acessador deve retornar o valor contido na propriedade ligável correspondente. Isso pode ser obtido chamando [ `GetValue` ] (xref: Xamarin.Forms . Acopláble. GetValue ( Xamarin.Forms . Vinculproperty)), passando o identificador de propriedade vinculável no qual obter o valor e, em seguida, convertendo o resultado para o tipo necessário. O `Set` acessador deve definir o valor da propriedade vinculável correspondente. Isso pode ser obtido chamando [ `SetValue` ] (xref: Xamarin.Forms . Acopláble. SetValue ( Xamarin.Forms . Vinculproperty, System. Object), passando o identificador de propriedade vinculável no qual definir o valor e o valor a ser definido.
 
 O exemplo de código a seguir mostra os acessadores para a `EventName` propriedade vinculável:
 
@@ -123,7 +126,7 @@ Ao criar uma [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instânci
 
 ### <a name="detect-property-changes"></a>Detectar alterações de propriedade
 
-Um `static` método de retorno de chamada de propriedade alterada pode ser registrado com uma propriedade vinculável, especificando o `propertyChanged` parâmetro para o [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) método. O método de retorno de chamada especificado será invocado quando o valor da propriedade vinculável for alterado.
+Um `static` método de retorno de chamada de propriedade alterada pode ser registrado com uma propriedade vinculável especificando o `propertyChanged` parâmetro para [ `BindableProperty.Create` ] (xref: Xamarin.Forms . Vinculproperty. Create (System. String, System. Type, System. Type, System. Object, Xamarin.Forms . BindingMode, Xamarin.Forms . Vinculproperty. ValidateValueDelegate, Xamarin.Forms . Vinculproperty. BindingPropertyChangedDelegate, Xamarin.Forms . Vinculproperty. BindingPropertyChangingDelegate, Xamarin.Forms . Vinculproperty. CoerceValueDelegate, Xamarin.Forms . O método vinculproperty. CreateDefaultValueDelegate)). O método de retorno de chamada especificado será invocado quando o valor da propriedade vinculável for alterado.
 
 O exemplo de código a seguir mostra como a `EventName` propriedade vinculável registra o `OnEventNameChanged` método como um método de retorno de chamada de propriedade alterada:
 
@@ -143,7 +146,7 @@ No método de retorno de chamada Property-Changed, o [`BindableObject`](xref:Xam
 
 ### <a name="validation-callbacks"></a>Retornos de chamada de validação
 
-Um `static` método de retorno de chamada de validação pode ser registrado com uma propriedade vinculável especificando o `validateValue` parâmetro para o [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) método. O método de retorno de chamada especificado será invocado quando o valor da propriedade vinculável for definido.
+Um `static` método de retorno de chamada de validação pode ser registrado com uma propriedade vinculável especificando o `validateValue` parâmetro para [ `BindableProperty.Create` ] (xref: Xamarin.Forms . Vinculproperty. Create (System. String, System. Type, System. Type, System. Object, Xamarin.Forms . BindingMode, Xamarin.Forms . Vinculproperty. ValidateValueDelegate, Xamarin.Forms . Vinculproperty. BindingPropertyChangedDelegate, Xamarin.Forms . Vinculproperty. BindingPropertyChangingDelegate, Xamarin.Forms . Vinculproperty. CoerceValueDelegate, Xamarin.Forms . O método vinculproperty. CreateDefaultValueDelegate)). O método de retorno de chamada especificado será invocado quando o valor da propriedade vinculável for definido.
 
 O exemplo de código a seguir mostra como a `Angle` propriedade vinculável registra o `IsValidValue` método como um método de retorno de chamada de validação:
 
@@ -164,7 +167,7 @@ Os retornos de chamada de validação são fornecidos com um valor e devem retor
 
 ### <a name="coerce-value-callbacks"></a>Valores de retorno de chamada de valor forçado
 
-Um `static` método de retorno de chamada de valor forçado pode ser registrado com uma propriedade vinculável especificando o `coerceValue` parâmetro para o [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) método. O método de retorno de chamada especificado será invocado quando o valor da propriedade vinculável for alterado.
+Um `static` método de retorno de chamada de valor forçado pode ser registrado com uma propriedade vinculável especificando o `coerceValue` parâmetro para [ `BindableProperty.Create` ] (xref: Xamarin.Forms . Vinculproperty. Create (System. String, System. Type, System. Type, System. Object, Xamarin.Forms . BindingMode, Xamarin.Forms . Vinculproperty. ValidateValueDelegate, Xamarin.Forms . Vinculproperty. BindingPropertyChangedDelegate, Xamarin.Forms . Vinculproperty. BindingPropertyChangingDelegate, Xamarin.Forms . Vinculproperty. CoerceValueDelegate, Xamarin.Forms . O método vinculproperty. CreateDefaultValueDelegate)). O método de retorno de chamada especificado será invocado quando o valor da propriedade vinculável for alterado.
 
 > [!IMPORTANT]
 > O `BindableObject` tipo tem um `CoerceValue` método que pode ser chamado para forçar uma reavaliação do valor de seu `BindableProperty` argumento, invocando seu retorno de chamada de valor forçado.
@@ -210,7 +213,7 @@ public static readonly BindableProperty SizeProperty =
   defaultValueCreator: bindable => Device.GetNamedSize (NamedSize.Large, (Label)bindable));
 ```
 
-O `defaultValueCreator` parâmetro é definido como um `Func` que invoca o [`Device.GetNamedSize`](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,System.Type)) método para retornar um `double` que representa o tamanho nomeado da fonte usada em um [`Label`](xref:Xamarin.Forms.Label) na plataforma nativa.
+O `defaultValueCreator` parâmetro é definido como um `Func` que invoca o [ `Device.GetNamedSize` ] (xref: Xamarin.Forms . Device. GetNamedSize ( Xamarin.Forms . NamedSize, System. Type)) para retornar um `double` que representa o tamanho nomeado da fonte usada em uma [`Label`](xref:Xamarin.Forms.Label) na plataforma nativa.
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -1,28 +1,31 @@
 ---
-title: Layouts do Xamarin.Forms
-description: Os layouts do Xamarin. Forms são usados para compor controles de interface do usuário em estruturas visuais. Este artigo lista os layouts incluídos no Xamarin. Forms.
-ms.prod: xamarin
-ms.assetid: F4180997-BA21-453A-9958-D1E2940DF050
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/21/2018
-ms.openlocfilehash: fa08c5012adf74a17852a72b8faf2c0311d16cfa
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+title: Xamarin.FormsLayouts
+description: Xamarin.FormsOs layouts são usados para compor controles de interface do usuário em estruturas visuais. Este artigo lista os layouts incluídos no Xamarin.Forms .
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c39bf29feceaf598ac8fd38e6af3d227b6deddc0
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83150032"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137300"
 ---
-# <a name="xamarinforms-layouts"></a>Layouts do Xamarin.Forms
+# <a name="xamarinforms-layouts"></a>Xamarin.FormsLayouts
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
 _Os layouts do Xamarin. Forms são usados para compor controles de interface do usuário em estruturas visuais._
 
-As [`Layout`](xref:Xamarin.Forms.Layout) [`Layout<T>`](xref:Xamarin.Forms.Layout`1) classes e no Xamarin. Forms são subtipos especializados de exibições que atuam como contêineres para exibições e outros layouts. A `Layout` própria classe deriva de [`View`](views.md) . Um `Layout` derivativo normalmente contém uma lógica para definir a posição e o tamanho dos elementos filho em aplicativos Xamarin. Forms.
+As [`Layout`](xref:Xamarin.Forms.Layout) [`Layout<T>`](xref:Xamarin.Forms.Layout`1) classes e no Xamarin.Forms são subtipos especializados de exibições que atuam como contêineres para exibições e outros layouts. A `Layout` própria classe deriva de [`View`](views.md) . Um `Layout` derivativo normalmente contém uma lógica para definir a posição e o tamanho dos elementos filho em Xamarin.Forms aplicativos.
 
-[![Tipos de layout do Xamarin. Forms](layouts-images/layouts-sml.png "Tipos de layout do Xamarin. Forms")](layouts-images/layouts.png#lightbox "Tipos de layout do Xamarin. Forms")
+[![Xamarin.FormsTipos de layout](layouts-images/layouts-sml.png "[! Parar. Tipos de layout não LOC (Xamarin. Forms)]")](layouts-images/layouts.png#lightbox "[! Parar. Tipos de layout não LOC (Xamarin. Forms)]")
 
 As classes que derivam de `Layout` podem ser divididas em duas categorias:
 
@@ -41,7 +44,7 @@ Essas classes derivam de [`Layout`](xref:Xamarin.Forms.Layout) , que define [`Pa
 
 <a named="frame" />
 
-### <a name="frame"></a>Quadro
+### <a name="frame"></a>Frame
 
 |     |     |
 | --- | --- |
@@ -86,7 +89,7 @@ Essas classes derivam de [`Layout<View>`](xref:Xamarin.Forms.Layout`1) .
 
 <a name="grid" />
 
-### <a name="grid"></a>Grade
+### <a name="grid"></a>Grid
 
 |     |     |
 | --- | --- |
@@ -116,6 +119,6 @@ Essas classes derivam de [`Layout<View>`](xref:Xamarin.Forms.Layout`1) .
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplo de FormsGallery do Xamarin. Forms](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
-- [Exemplos do Xamarin.Forms](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
-- [Documentação da API do Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
+- [Xamarin.FormsExemplo de FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+- [Xamarin.FormsAmostras](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Xamarin.FormsDocumentação da API](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

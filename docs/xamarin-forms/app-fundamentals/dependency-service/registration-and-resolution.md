@@ -1,39 +1,42 @@
 ---
-title: Registro e resolução de DependencyService do Xamarin.Forms
-description: Este artigo explica como usar a classe do DependencyService do Xamarin.Forms para invocar a funcionalidade de plataforma nativa.
-ms.prod: xamarin
-ms.assetid: 5d019604-4f6f-4932-9b26-1fce3b4d88f8
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/05/2019
-ms.openlocfilehash: 6e666c16c9b1afc3478f524cae2f84d6704319c2
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsRegistro e resolução do DependencyService
+description: Este artigo explica como usar a Xamarin.Forms classe DependencyService para invocar a funcionalidade da plataforma nativa.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 50d77e9ba41767aa1f676bf21994431844fc4530
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70199230"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138765"
 ---
-# <a name="xamarinforms-dependencyservice-registration-and-resolution"></a>Registro e resolução de DependencyService do Xamarin.Forms
+# <a name="xamarinforms-dependencyservice-registration-and-resolution"></a>Xamarin.FormsRegistro e resolução do DependencyService
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 
-Ao usar o Xamarin.Forms [`DependencyService`](xref:Xamarin.Forms.DependencyService) para invocar a funcionalidade da plataforma `DependencyService`nativa, as implementações da plataforma devem ser registradas com o , e depois resolvidas a partir de código compartilhado para invocá-los.
+Ao usar o Xamarin.Forms [`DependencyService`](xref:Xamarin.Forms.DependencyService) para invocar a funcionalidade da plataforma nativa, as implementações de plataforma devem ser registradas com o `DependencyService` e, em seguida, resolvidas do código compartilhado para chamá-las.
 
 ## <a name="register-platform-implementations"></a>Registrar as implementações de plataforma
 
-As implementações da plataforma [`DependencyService`](xref:Xamarin.Forms.DependencyService) devem ser registradas com o para que o Xamarin.Forms possa localizá-los em tempo de execução.
+Implementações de plataforma devem ser registradas com o [`DependencyService`](xref:Xamarin.Forms.DependencyService) para que o Xamarin.Forms possa localizá-las em tempo de execução.
 
-O registro pode [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute)ser realizado [`Register`](xref:Xamarin.Forms.DependencyService.Register*) com o , ou com os métodos.
+O registro pode ser executado com o [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) , ou com os [`Register`](xref:Xamarin.Forms.DependencyService.Register*) métodos.
 
 > [!IMPORTANT]
-> As compilações de lançamento de projetos UWP que usam [`Register`](xref:Xamarin.Forms.DependencyService.Register*) compilação nativa .NET devem registrar implementações da plataforma com os métodos.
+> As compilações de versões de projetos UWP que usam a compilação nativa do .NET devem registrar implementações de plataforma com os [`Register`](xref:Xamarin.Forms.DependencyService.Register*) métodos.
 
 ### <a name="registration-by-attribute"></a>Registro por atributo
 
-O [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) pode ser usado para registrar [`DependencyService`](xref:Xamarin.Forms.DependencyService)uma implementação da plataforma com o . O atributo indica que o tipo especificado fornece uma implementação concreta da interface.
+O [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) pode ser usado para registrar uma implementação de plataforma com o [`DependencyService`](xref:Xamarin.Forms.DependencyService) . O atributo indica que o tipo especificado fornece uma implementação concreta da interface.
 
-O exemplo a [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) seguir mostra o uso `IDeviceOrientationService` do registro da implementação do iOS da interface:
+O exemplo a seguir mostra como usar o [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) para registrar a implementação do IOS da `IDeviceOrientationService` interface:
 
 ```csharp
 using Xamarin.Forms;
@@ -51,18 +54,18 @@ namespace DependencyServiceDemos.iOS
 }
 ```
 
-Neste exemplo, [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) os registros `DeviceOrientationService` com [`DependencyService`](xref:Xamarin.Forms.DependencyService)o . Isso resulta no tipo concreto que está sendo registrado em relação à interface que ele implementa.
+Neste exemplo, o [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) registra o `DeviceOrientationService` com o [`DependencyService`](xref:Xamarin.Forms.DependencyService) . Isso resulta no tipo concreto que está sendo registrado em relação à interface que ele implementa.
 
-Da mesma forma, as `IDeviceOrientationService` implementações da interface em outras plataformas devem ser registradas no [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute).
+Da mesma forma, as implementações da `IDeviceOrientationService` interface em outras plataformas devem ser registradas com o [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) .
 
 > [!NOTE]
-> A inscrição [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) com o é realizada no nível namespace.
+> O registro com o [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) é executado no nível do namespace.
 
 ### <a name="registration-by-method"></a>Registro por método
 
-Os [`DependencyService.Register`](xref:Xamarin.Forms.DependencyService.Register*) métodos podem ser usados para [`DependencyService`](xref:Xamarin.Forms.DependencyService)registrar uma implementação da plataforma com o .
+Os [`DependencyService.Register`](xref:Xamarin.Forms.DependencyService.Register*) métodos podem ser usados para registrar uma implementação de plataforma com o [`DependencyService`](xref:Xamarin.Forms.DependencyService) .
 
-O exemplo a [`Register`](xref:Xamarin.Forms.DependencyService.Register*) seguir mostra usar o método `IDeviceOrientationService` para registrar a implementação do iOS da interface:
+O exemplo a seguir mostra o uso do [`Register`](xref:Xamarin.Forms.DependencyService.Register*) método para registrar a implementação do IOS da `IDeviceOrientationService` interface:
 
 ```csharp
 [Register("AppDelegate")]
@@ -78,33 +81,33 @@ public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsAppli
 }
 ```
 
-Neste exemplo, [`Register`](xref:Xamarin.Forms.DependencyService.Register*) o método registra o `DeviceOrientationService`tipo `IDeviceOrientationService` de concreto, contra a interface. Alternativamente, uma sobrecarga [`Register`](xref:Xamarin.Forms.DependencyService.Register*) do método pode ser usada [`DependencyService`](xref:Xamarin.Forms.DependencyService)para registrar uma implementação da plataforma com o :
+Neste exemplo, o [`Register`](xref:Xamarin.Forms.DependencyService.Register*) método registra o tipo concreto, `DeviceOrientationService` , em relação à `IDeviceOrientationService` interface. Como alternativa, uma sobrecarga do [`Register`](xref:Xamarin.Forms.DependencyService.Register*) método pode ser usada para registrar uma implementação de plataforma com o [`DependencyService`](xref:Xamarin.Forms.DependencyService) :
 
 ```csharp
 DependencyService.Register<DeviceOrientationService>();
 ```
 
-Neste exemplo, [`Register`](xref:Xamarin.Forms.DependencyService.Register*) o método `DeviceOrientationService` registra [`DependencyService`](xref:Xamarin.Forms.DependencyService)o com o . Isso resulta no tipo concreto que está sendo registrado em relação à interface que ele implementa.
+Neste exemplo, o [`Register`](xref:Xamarin.Forms.DependencyService.Register*) método registra o `DeviceOrientationService` com o [`DependencyService`](xref:Xamarin.Forms.DependencyService) . Isso resulta no tipo concreto que está sendo registrado em relação à interface que ele implementa.
 
-Da mesma forma, as `IDeviceOrientationService` implementações da interface em outras plataformas podem ser registradas com os [`Register`](xref:Xamarin.Forms.DependencyService.Register*) métodos.
+Da mesma forma, as implementações da `IDeviceOrientationService` interface em outras plataformas podem ser registradas com os [`Register`](xref:Xamarin.Forms.DependencyService.Register*) métodos.
 
 > [!IMPORTANT]
-> O registro [`Register`](xref:Xamarin.Forms.DependencyService.Register*) com os métodos deve ser realizado em projetos de plataforma, antes que a funcionalidade fornecida pela implementação da plataforma seja invocada a partir do código compartilhado.
+> O registro com os [`Register`](xref:Xamarin.Forms.DependencyService.Register*) métodos deve ser executado em projetos de plataforma, antes que a funcionalidade fornecida pela implementação da plataforma seja invocada do código compartilhado.
 
 ## <a name="resolve-the-platform-implementations"></a>Resolver as implementações da plataforma
 
-As implementações de plataforma devem ser resolvidas antes de serem invocadas. Isso é normalmente realizado em [`DependencyService.Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) código compartilhado usando o método. No entanto, também pode [`DependencyService.Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) ser realizado com o método.
+As implementações de plataforma devem ser resolvidas antes de serem invocadas. Normalmente, isso é executado em código compartilhado usando o [`DependencyService.Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) método. No entanto, ele também pode ser feito com o [`DependencyService.Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) método.
 
-Por padrão, [`DependencyService`](xref:Xamarin.Forms.DependencyService) o só resolverá implementações de plataformas que tenham construtores sem parâmetros. No entanto, é possível injetar no Xamarin.Forms um método de resolução de dependência que um contêiner de injeção de dependências ou métodos de fábrica para resolver implementações da plataforma. Essa abordagem pode ser usada para resolver implementações da plataforma que têm construtores com parâmetros. Para obter mais informações, confira [Resolução de dependências no Xamarin.Forms](~/xamarin-forms/internals/dependency-resolution.md).
+Por padrão, o [`DependencyService`](xref:Xamarin.Forms.DependencyService) só resolverá implementações de plataforma que têm construtores sem parâmetros. No entanto, um método de resolução de dependência pode ser injetado no Xamarin.Forms que usa um contêiner de injeção de dependência ou métodos de fábrica para resolver implementações de plataforma. Essa abordagem pode ser usada para resolver implementações da plataforma que têm construtores com parâmetros. Para obter mais informações, consulte a [resolução Xamarin.Forms de dependência em ](~/xamarin-forms/internals/dependency-resolution.md).
 
 > [!IMPORTANT]
-> Invocar uma implementação de plataforma que não [`DependencyService`](xref:Xamarin.Forms.DependencyService) tenha sido `NullReferenceException` registrada com o resultará em um ser lançado.
+> Invocar uma implementação de plataforma que não tenha sido registrada com o [`DependencyService`](xref:Xamarin.Forms.DependencyService) resultará em uma `NullReferenceException` geração.
 
 ### <a name="resolve-using-the-getlttgt-method"></a>Resolver usando o método Get&lt;T&gt;
 
-O [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) método recupera a implementação da interface da plataforma `T` em tempo de execução e cria uma instância dela como um singleton. Essa instância deve durar o tempo de vida do aplicativo, e todas as chamadas subsequentes para resolver a mesma implementação de plataforma recuperará a mesma instância.
+O [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) método recupera a implementação da plataforma da interface `T` em tempo de execução e cria uma instância dela como um singleton. Essa instância deve durar o tempo de vida do aplicativo, e todas as chamadas subsequentes para resolver a mesma implementação de plataforma recuperará a mesma instância.
 
-O código a seguir mostra [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) um exemplo `IDeviceOrientationService` de chamar o `GetOrientation` método para resolver a interface e, em seguida, invocar seu método:
+O código a seguir mostra um exemplo de como chamar o [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) método para resolver a `IDeviceOrientationService` interface e, em seguida, invocar seu `GetOrientation` método:
 
 ```csharp
 IDeviceOrientationService service = DependencyService.Get<IDeviceOrientationService>();
@@ -118,13 +121,13 @@ DeviceOrientation orientation = DependencyService.Get<IDeviceOrientationService>
 ```
 
 > [!NOTE]
-> O [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) método cria uma instância da `T` implementação da interface da plataforma como um singleton, por padrão. No entanto, esse comportamento pode ser alterado. Para obter mais informações, confira [Gerenciar o tempo de vida de objetos resolvidos](#manage-the-lifetime-of-resolved-objects).
+> [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*)Por padrão, o método cria uma instância da implementação da plataforma da interface `T` como um singleton. No entanto, esse comportamento pode ser alterado. Para obter mais informações, confira [Gerenciar o tempo de vida de objetos resolvidos](#manage-the-lifetime-of-resolved-objects).
 
 ### <a name="resolve-using-the-resolvelttgt-method"></a>Resolver usando o método Resolve&lt;T&gt;
 
-O [`Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) método recupera a implementação da interface da plataforma `T` em tempo de execução, usando um [`DependencyResolver`](xref:Xamarin.Forms.Internals.DependencyResolver) método de resolução de dependência que foi injetado em Xamarin.Forms com a classe. Se um método de resolução de dependência não tiver sido `Resolve<T>` injetado no Xamarin.Forms, o método recuará ao chamar o [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) método para recuperar a implementação da plataforma. Para obter mais informações sobre a injeção de um método de resolução de dependência no Xamarin.Forms, confira [Resolução de dependências no Xamarin.Forms](~/xamarin-forms/internals/dependency-resolution.md).
+O [`Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) método recupera a implementação da plataforma da interface `T` em tempo de execução, usando um método de resolução de dependência que foi injetado no Xamarin.Forms com a [`DependencyResolver`](xref:Xamarin.Forms.Internals.DependencyResolver) classe. Se um método de resolução de dependência não tiver sido injetado no Xamarin.Forms , o `Resolve<T>` método fará fallback para chamar o [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) método para recuperar a implementação da plataforma. Para obter mais informações sobre como injetar um método de resolução de dependência no Xamarin.Forms , consulte [resolução de dependência em Xamarin.Forms ](~/xamarin-forms/internals/dependency-resolution.md).
 
-O código a seguir mostra [`Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) um exemplo `IDeviceOrientationService` de chamar o `GetOrientation` método para resolver a interface e, em seguida, invocar seu método:
+O código a seguir mostra um exemplo de como chamar o [`Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) método para resolver a `IDeviceOrientationService` interface e, em seguida, invocar seu `GetOrientation` método:
 
 ```csharp
 IDeviceOrientationService service = DependencyService.Resolve<IDeviceOrientationService>();
@@ -138,24 +141,24 @@ DeviceOrientation orientation = DependencyService.Resolve<IDeviceOrientationServ
 ```
 
 > [!NOTE]
-> Quando [`Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) o método volta [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) a chamar o método, ele cria `T` uma instância da implementação da interface da plataforma como um singleton, por padrão. No entanto, esse comportamento pode ser alterado. Para obter mais informações, confira [Gerenciar o tempo de vida de objetos resolvidos](#manage-the-lifetime-of-resolved-objects).
+> Quando o [`Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) método volta a chamar o [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) método, ele cria uma instância da implementação da plataforma da interface `T` como um singleton, por padrão. No entanto, esse comportamento pode ser alterado. Para obter mais informações, confira [Gerenciar o tempo de vida de objetos resolvidos](#manage-the-lifetime-of-resolved-objects).
 
 ## <a name="manage-the-lifetime-of-resolved-objects"></a>Gerenciar o tempo de vida de objetos resolvidos
 
-O comportamento padrão [`DependencyService`](xref:Xamarin.Forms.DependencyService) da classe é resolver implementações da plataforma como singletons. Portanto, as implementações de plataforma deverão durar o tempo de vida de um aplicativo.
+O comportamento padrão da [`DependencyService`](xref:Xamarin.Forms.DependencyService) classe é resolver implementações de plataforma como singletons. Portanto, as implementações de plataforma deverão durar o tempo de vida de um aplicativo.
 
-Esse comportamento é especificado com o [`DependencyFetchTarget`](xref:Xamarin.Forms.DependencyFetchTarget) argumento opcional sobre os [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) métodos. [`Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) A [`DependencyFetchTarget`](xref:Xamarin.Forms.DependencyFetchTarget) enumeração define dois membros:
+Esse comportamento é especificado com o [`DependencyFetchTarget`](xref:Xamarin.Forms.DependencyFetchTarget) argumento opcional nos [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) métodos e [`Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) . A [`DependencyFetchTarget`](xref:Xamarin.Forms.DependencyFetchTarget) enumeração define dois membros:
 
 - `GlobalInstance`, que retorna a implementação de plataforma como um singleton.
 - `NewInstance`, que retorna uma nova instância da implementação de plataforma. O aplicativo, então, é responsável por gerenciar o tempo de vida da instância de implementação de plataforma.
 
-Os [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) [`Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) métodos e métodos definem seus argumentos opcionais para [`DependencyFetchTarget.GlobalInstance`](xref:Xamarin.Forms.DependencyFetchTarget), e assim as implementações da plataforma são sempre resolvidas como singletons. Esse comportamento pode ser alterado, de modo que novas instâncias [`DependencyFetchTarget.NewInstance`](xref:Xamarin.Forms.DependencyFetchTarget) de implementações `Get<T>` da `Resolve<T>` plataforma sejam criadas, especificando como argumentos para os e métodos:
+Os [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) [`Resolve<T>`](xref:Xamarin.Forms.DependencyService.Resolve*) métodos e definem seus argumentos opcionais como e, [`DependencyFetchTarget.GlobalInstance`](xref:Xamarin.Forms.DependencyFetchTarget) portanto, implementações de plataforma são sempre resolvidas como singletons. Esse comportamento pode ser alterado, para que novas instâncias de implementações de plataforma sejam criadas, especificando [`DependencyFetchTarget.NewInstance`](xref:Xamarin.Forms.DependencyFetchTarget) como argumentos para `Get<T>` os `Resolve<T>` métodos e:
 
 ```csharp
 ITextToSpeechService service = DependencyService.Get<ITextToSpeechService>(DependencyFetchTarget.NewInstance);
 ```
 
-Neste exemplo, [`DependencyService`](xref:Xamarin.Forms.DependencyService) cria uma nova instância da `ITextToSpeechService` implementação da plataforma para a interface. Todas as chamadas subsequentes para resolver o `ITextToSpeechService` também criarão novas instâncias.
+Neste exemplo, o [`DependencyService`](xref:Xamarin.Forms.DependencyService) cria uma nova instância da implementação da plataforma para a `ITextToSpeechService` interface. Todas as chamadas subsequentes para resolver o `ITextToSpeechService` também criarão novas instâncias.
 
 A consequência de sempre criar uma nova instância de uma implementação de plataforma é que o aplicativo se torna responsável por gerenciar o tempo de vida das instâncias. Isso significa que, se você assinar um evento definido em uma implementação de plataforma, deverá cancelar o evento quando a implementação de plataforma não for mais necessária. Além disso, isso significa que talvez seja necessário que as implementações de plataforma implementem `IDisposable` e limpem seus recursos em métodos `Dispose`. O aplicativo de exemplo demonstra esse cenário em suas implementações de plataforma `TextToSpeechService`.
 
@@ -176,4 +179,4 @@ Para obter mais informações sobre como chamar o método `Dispose` de um objeto
 ## <a name="related-links"></a>Links relacionados
 
 - [Demonstrações de DependencyService (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
-- [Resolução de dependências no Xamarin.Forms](~/xamarin-forms/internals/dependency-resolution.md)
+- [Resolução de dependência emXamarin.Forms](~/xamarin-forms/internals/dependency-resolution.md)

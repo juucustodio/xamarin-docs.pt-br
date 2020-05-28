@@ -1,24 +1,27 @@
 ---
-title: Modo de cor de texto da barra de NavigationPage no iOS
-description: Especificidades da plataforma permitem que você consumir funcionalidade só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir a plataforma específica do iOS que controla se a cor do texto da barra de status em uma NavigationPage corresponde à luminosidade da barra de navegação.
-ms.prod: xamarin
-ms.assetid: 03698A44-39F1-4030-9AF5-F10A6713828A
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 10/24/2018
-ms.openlocfilehash: 5b12fbb3f7a0284dc78c51159b173dfdda300dc7
-ms.sourcegitcommit: 3ea9ee034af9790d2b0dc0893435e997bd06e587
+title: ''
+description: ''
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: dcbc20139b989ced11f2d1d890ca7dd99a780e96
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68651707"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84137053"
 ---
 # <a name="navigationpage-bar-text-color-mode-on-ios"></a>Modo de cor de texto da barra de NavigationPage no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-Este controles específicos da plataforma se o texto da barra de status de cor em um [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) é ajustado para coincidir com a luminosidade da barra de navegação. Ele é consumido em XAML, definindo o [ `NavigationPage.StatusBarTextColorMode` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty) propriedade anexada a um valor da [ `StatusBarTextColorMode` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode) enumeração:
+Essa plataforma determina se a cor do texto da barra de status em uma [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) é ajustada para corresponder à luminosidade da barra de navegação. Ele é consumido em XAML definindo a [`NavigationPage.StatusBarTextColorMode`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty) Propriedade anexada como um valor da [`StatusBarTextColorMode`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode) enumeração:
 
 ```xaml
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -42,7 +45,7 @@ Este controles específicos da plataforma se o texto da barra de status de cor e
 
 ```
 
-Como alternativa, ele pode ser consumido de C# usando a API fluente:
+Como alternativa, ele pode ser consumido em C# usando a API fluente:
 
 ```csharp
 using Xamarin.Forms.PlatformConfiguration;
@@ -63,19 +66,19 @@ IsPresentedChanged += (sender, e) =>
 };
 ```
 
-O `NavigationPage.On<iOS>` método Especifica que este específicos da plataforma serão executado apenas no iOS. O [ `NavigationPage.SetStatusBarTextColorMode` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.SetStatusBarTextColorMode(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage},Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode)) método, no [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, controles se o texto da barra de status de cor no [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) é ajustado para coincidir com o luminosidade da barra de navegação, com o [ `StatusBarTextColorMode` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode) enumeração fornecendo dois valores possíveis:
+O `NavigationPage.On<iOS>` método especifica que essa plataforma específica será executada somente no Ios. O [ `NavigationPage.SetStatusBarTextColorMode` ] (xref: Xamarin.Forms . PlatformConfiguration. iOSSpecific. NavigationPage. SetStatusBarTextColorMode ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . NavigationPage}, Xamarin.Forms . PlatformConfiguration. iOSSpecific. StatusBarTextColorMode)), no [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, controla se a cor do texto da barra de status no [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) é ajustada para corresponder à luminosidade da barra de navegação, com a [`StatusBarTextColorMode`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode) Enumeração fornecendo dois valores possíveis:
 
-- [`DoNotAdjust`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode.DoNotAdjust) – indica que a barra de cor do texto de status não devem ser ajustado.
-- [`MatchNavigationBarTextLuminosity`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode.MatchNavigationBarTextLuminosity) – indica que a barra de cor do texto de status deve corresponder à luminosidade da barra de navegação.
+- [`DoNotAdjust`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode.DoNotAdjust)– indica que a cor do texto da barra de status não deve ser ajustada.
+- [`MatchNavigationBarTextLuminosity`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode.MatchNavigationBarTextLuminosity)– indica que a cor do texto da barra de status deve corresponder à luminosidade da barra de navegação.
 
-Além disso, o [ `GetStatusBarTextColorMode` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.GetStatusBarTextColorMode(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.NavigationPage})) método pode ser usado para recuperar o valor atual da [ `StatusBarTextColorMode` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode) enumeração é aplicada para o [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage).
+Além disso, o [ `GetStatusBarTextColorMode` ] (xref: Xamarin.Forms . PlatformConfiguration. iOSSpecific. NavigationPage. GetStatusBarTextColorMode ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. iOS, Xamarin.Forms . NavigationPage})), o método pode ser usado para recuperar o valor atual da [`StatusBarTextColorMode`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode) Enumeração aplicada ao [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) .
 
-O resultado é que o status da barra de cor do texto em uma [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) pode ser ajustado de acordo com a luminosidade da barra de navegação. Neste exemplo, a barra de alterações de cor do texto de status que o usuário alterna entre o [ `Master` ](xref:Xamarin.Forms.MasterDetailPage.Master) e [ `Detail` ](xref:Xamarin.Forms.MasterDetailPage.Detail) páginas de um [ `MasterDetailPage` ](xref:Xamarin.Forms.MasterDetailPage):
+O resultado é que a cor do texto da barra de status em um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) pode ser ajustada para corresponder à luminosidade da barra de navegação. Neste exemplo, a cor do texto da barra de status muda conforme o usuário alterna entre as [`Master`](xref:Xamarin.Forms.MasterDetailPage.Master) [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) páginas e de a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) :
 
-![](status-bar-text-color-images/status-bar-text-color-mode.png "Barra de status texto cor modo específico da plataforma")
+![](status-bar-text-color-images/status-bar-text-color-mode.png "Status Bar Text Color Mode Platform-Specific")
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

@@ -1,35 +1,38 @@
 ---
-title: Introdução ao DependencyService do Xamarin.Forms
-description: Este artigo explica como usar a classe do DependencyService do Xamarin.Forms para invocar a funcionalidade de plataforma nativa.
-ms.prod: xamarin
-ms.assetid: 5d019604-4f6f-4932-9b26-1fce3b4d88f8
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/12/2019
-ms.openlocfilehash: b27b4b0c3c5662c6cc1c2c151dd9ebe1523da3a4
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+title: Xamarin.FormsIntrodução ao DependencyService
+description: Este artigo explica como usar a Xamarin.Forms classe DependencyService para invocar a funcionalidade da plataforma nativa.
+ms.prod: ''
+ms.assetid: ''
+ms.technology: ''
+author: ''
+ms.author: ''
+ms.date: ''
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f4d43a0c9c4878733d65b170c27e744b397aa4d0
+ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "71198519"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84138353"
 ---
-# <a name="xamarinforms-dependencyservice-introduction"></a>Introdução ao DependencyService do Xamarin.Forms
+# <a name="xamarinforms-dependencyservice-introduction"></a>Xamarin.FormsIntrodução ao DependencyService
 
-[![Baixar](~/media/shared/download.png) amostra Baixar a amostra](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 
-A [`DependencyService`](xref:Xamarin.Forms.DependencyService) classe é um localizador de serviço que permite que os aplicativos Xamarin.Forms invoque a funcionalidade da plataforma nativa a partir de código compartilhado.
+A [`DependencyService`](xref:Xamarin.Forms.DependencyService) classe é um localizador de serviço que permite que Xamarin.Forms os aplicativos invoquem a funcionalidade de plataforma nativa do código compartilhado.
 
-O processo para [`DependencyService`](xref:Xamarin.Forms.DependencyService) usar a funcionalidade da plataforma nativa é:
+O processo para usar o [`DependencyService`](xref:Xamarin.Forms.DependencyService) para invocar a funcionalidade da plataforma nativa é:
 
 1. Crie uma interface para a funcionalidade de plataforma nativa, em código compartilhado. Para obter mais informações, confira [Criar uma interface](#create-an-interface).
 1. Implemente a interface nos projetos de plataforma necessários. Para obter mais informações, confira [Implementar a interface em cada plataforma](#implement-the-interface-on-each-platform).
-1. Registre as implementações [`DependencyService`](xref:Xamarin.Forms.DependencyService)da plataforma com o . Isso permite que o Xamarin.Forms localize as implementações de plataforma em runtime. Para obter mais informações, confira [Registrar as implementações de plataforma](#register-the-platform-implementations).
+1. Registre as implementações de plataforma com o [`DependencyService`](xref:Xamarin.Forms.DependencyService) . Isso permite que Xamarin.Forms o localize as implementações de plataforma em tempo de execução. Para obter mais informações, confira [Registrar as implementações de plataforma](#register-the-platform-implementations).
 1. Resolva as implementações de plataforma de um código compartilhado e as invoque. Para obter mais informações, confira [Resolver as implementações de plataforma](#resolve-the-platform-implementations).
 
-O diagrama a seguir mostra como a funcionalidade de plataforma nativa é invocada em um aplicativo Xamarin.Forms:
+O diagrama a seguir mostra como a funcionalidade da plataforma nativa é invocada em um Xamarin.Forms aplicativo:
 
-![Visão geral do local de serviço usando a classe Xamarin.Forms DependencyService](introduction-images/dependency-service.png "Localização do serviço dependencyService")
+![Visão geral do local do serviço usando a Xamarin.Forms classe DependencyService](introduction-images/dependency-service.png "Local do serviço DependencyService")
 
 ## <a name="create-an-interface"></a>Criar uma interface
 
@@ -111,9 +114,9 @@ namespace DependencyServiceDemos.UWP
 
 ## <a name="register-the-platform-implementations"></a>Registrar as implementações de plataforma
 
-Após a implementação da interface em cada projeto de plataforma, as implementações da plataforma devem ser registradas com o , para que o [`DependencyService`](xref:Xamarin.Forms.DependencyService)Xamarin.Forms possa localizá-los em tempo de execução. Isso é normalmente [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute)realizado com o , o que indica que o tipo especificado fornece uma implementação da interface.
+Depois de implementar a interface em cada projeto de plataforma, as implementações de plataforma devem ser registradas com o [`DependencyService`](xref:Xamarin.Forms.DependencyService) , para que Xamarin.Forms possam localizá-las em tempo de execução. Normalmente, isso é executado com o [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) , que indica que o tipo especificado fornece uma implementação da interface.
 
-O exemplo a [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) seguir mostra o uso `IDeviceOrientationService` do registro da implementação do iOS da interface:
+O exemplo a seguir mostra como usar o [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) para registrar a implementação do IOS da `IDeviceOrientationService` interface:
 
 ```csharp
 using Xamarin.Forms;
@@ -131,15 +134,15 @@ namespace DependencyServiceDemos.iOS
 }
 ```
 
-Neste exemplo, [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) os registros `DeviceOrientationService` com [`DependencyService`](xref:Xamarin.Forms.DependencyService)o . Da mesma forma, as `IDeviceOrientationService` implementações da interface em outras plataformas devem ser registradas no [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute).
+Neste exemplo, o [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) registra o `DeviceOrientationService` com o [`DependencyService`](xref:Xamarin.Forms.DependencyService) . Da mesma forma, as implementações da `IDeviceOrientationService` interface em outras plataformas devem ser registradas com o [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) .
 
-Para obter mais informações sobre o [`DependencyService`](xref:Xamarin.Forms.DependencyService)registro de implementações da plataforma com o , consulte [Xamarin.Forms DependencyService Registration and Resolution](registration-and-resolution.md).
+Para obter mais informações sobre como registrar implementações de plataforma com o [`DependencyService`](xref:Xamarin.Forms.DependencyService) , consulte [ Xamarin.Forms registro e resolução do DependencyService](registration-and-resolution.md).
 
 ## <a name="resolve-the-platform-implementations"></a>Resolver as implementações da plataforma
 
-Após o registro das [`DependencyService`](xref:Xamarin.Forms.DependencyService)implementações da plataforma com o , as implementações devem ser resolvidas antes de serem invocadas. Isso é normalmente realizado em [`DependencyService.Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) código compartilhado usando o método.
+Após o registro das implementações de plataforma com o [`DependencyService`](xref:Xamarin.Forms.DependencyService) , as implementações devem ser resolvidas antes de serem invocadas. Normalmente, isso é executado em código compartilhado usando o [`DependencyService.Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) método.
 
-O código a seguir mostra [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) um exemplo `IDeviceOrientationService` de chamar o `GetOrientation` método para resolver a interface e, em seguida, invocar seu método:
+O código a seguir mostra um exemplo de como chamar o [`Get<T>`](xref:Xamarin.Forms.DependencyService.Get*) método para resolver a `IDeviceOrientationService` interface e, em seguida, invocar seu `GetOrientation` método:
 
 ```csharp
 IDeviceOrientationService service = DependencyService.Get<IDeviceOrientationService>();
@@ -152,9 +155,9 @@ Como alternativa, esse código pode ser condensado em uma única linha:
 DeviceOrientation orientation = DependencyService.Get<IDeviceOrientationService>().GetOrientation();
 ```
 
-Para obter mais informações sobre como [`DependencyService`](xref:Xamarin.Forms.DependencyService)resolver implementações da plataforma com o , consulte [Xamarin.Forms DependencyService Registration and Resolution](registration-and-resolution.md).
+Para obter mais informações sobre como resolver implementações de plataforma com o [`DependencyService`](xref:Xamarin.Forms.DependencyService) , consulte [ Xamarin.Forms registro e resolução do DependencyService](registration-and-resolution.md).
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Demonstrações de DependencyService (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
-- [Registro e resolução de DependencyService do Xamarin.Forms](registration-and-resolution.md)
+- [Xamarin.FormsRegistro e resolução do DependencyService](registration-and-resolution.md)

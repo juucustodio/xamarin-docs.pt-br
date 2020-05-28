@@ -1,19 +1,12 @@
 ---
-title: 'Xamarin.Essentials: Text-to-Speech'
-description: A classe TextToSpeech no Xamarin.Essentials permite que um aplicativo utilize os mecanismos internos de conversão de texto em fala para repetir o texto do dispositivo e, também, consulte os idiomas disponíveis, compatíveis com o mecanismo.
-ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: abe591d67ea749de4ae9a2f8dadf4df07712691a
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149722"
+Título: ' ' Xamarin.Essentials : Descrição de conversão de texto em fala: ' a classe TextToSpeech no Xamarin.Essentials habilita um aplicativo a utilizar os mecanismos internos de conversão de texto em fala para falar sobre o texto do dispositivo e também para consultar os idiomas disponíveis aos quais o mecanismo pode dar suporte. '
+MS. AssetID: autor: MS. Custom: MS. autor: MS. Date: no-loc:
+- 'Xamarin.Forms'
+- 'Xamarin.Essentials'
+
 ---
-# <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Text-to-Speech
+
+# <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Conversão de texto em fala
 
 A classe **TextToSpeech** permite que um aplicativo utilize os mecanismos internos de conversão de texto em fala para repetir o texto do dispositivo e, também, consulte os idiomas disponíveis, compatíveis com o mecanismo.
 
@@ -23,7 +16,7 @@ A classe **TextToSpeech** permite que um aplicativo utilize os mecanismos intern
 
 ## <a name="using-text-to-speech"></a>Uso da Conversão de Texto em Fala
 
-Adicione uma referência ao Xamarin.Essentials na classe:
+Adicione uma referência a Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;
@@ -121,7 +114,7 @@ Veja a seguir os valores com suporte para esses parâmetros:
 
 ### <a name="speech-locales"></a>Localidades de fala
 
-Cada plataforma suporta diferentes localidades, para responder em diferentes idiomas e sotaques. As plataformas têm diferentes códigos e formas de especificar a localidade e é por isso que o Xamarin.Essentials fornece uma classe `Locale` de plataforma cruzada e uma maneira de consultá-los com `GetLocalesAsync`.
+Cada plataforma suporta diferentes localidades, para responder em diferentes idiomas e sotaques. As plataformas têm códigos diferentes e maneiras de especificar a localidade, que é o motivo pelo qual o Xamarin.Essentials fornece uma classe de plataforma cruzada `Locale` e uma maneira de consultá-las `GetLocalesAsync` .
 
 ```csharp
 public async Task SpeakNow()
