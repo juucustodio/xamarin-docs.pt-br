@@ -1,19 +1,9 @@
 ---
-title: Xamarin.Essentials Launcher
-description: A classe Launcher no Xamarin.Essentials permite que um aplicativo abra um URI pelo sistema.
-ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 08/20/2019
-ms.openlocfilehash: f84d3bf379562c8ddd96a32dfb9f15b03b0a6827
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149783"
+Título: " Xamarin.Essentials iniciador" Descrição: "a classe do iniciador no Xamarin.Essentials permite que um aplicativo Abra um URI pelo sistema".
+MS. AssetID: BABF40CC-8BEE-43FD-BE12-6301DF27DD33 autor: jamesmontemagno MS. Custom: vídeo MS. Author: Jamont MS. Date: 08/20/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Launcher
+
+# <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Iniciador
 
 A classe **Launcher** permite que um aplicativo abra um URI pelo sistema. Isso geralmente é utilizado quando a vinculação profunda é usada em esquemas de URI personalizados de outro aplicativo. Se quiser abrir o navegador em um site, confira a API do **[Browser](open-browser.md)**.
 
@@ -23,7 +13,7 @@ A classe **Launcher** permite que um aplicativo abra um URI pelo sistema. Isso g
 
 ## <a name="using-launcher"></a>Uso do Launcher
 
-Adicione uma referência ao Xamarin.Essentials na classe:
+Adicione uma referência a Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;
@@ -81,7 +71,7 @@ Nenhuma configuração adicional.
 
 ## <a name="files"></a>Arquivos
 
-Esse recurso permite que um aplicativo solicite que outros aplicativos abram e exibam um arquivo. O Xamarin.Essentials detectará automaticamente o tipo de arquivo (MIME) e solicitará que o arquivo seja aberto.
+Esse recurso permite que um aplicativo solicite que outros aplicativos abram e exibam um arquivo. Xamarin.Essentialso detectará automaticamente o tipo de arquivo (MIME) e solicitará que o arquivo seja aberto.
 
 Aqui está um exemplo de gravação de texto em disco e solicitação de abertura:
 

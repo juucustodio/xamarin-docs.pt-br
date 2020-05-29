@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsRenderizadores rápidos
-description: Este artigo apresenta renderizadores rápidos, que reduzem os custos de inflação e renderização de um Xamarin.Forms controle no Android, nivelando a hierarquia de controle nativo resultante.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 3f25f4c2da5b2a426673b49045b5d2d05b0c6ac4
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139068"
+Título: Xamarin.Forms Descrição de "renderizadores rápidos": "Este artigo apresenta renderizadores rápidos, que reduzem os custos de inflação e renderização de um Xamarin.Forms controle no Android, nivelando a hierarquia de controle nativo resultante".
+MS. Prod: xamarin MS. AssetID: 097f87f2-d891-4f3c-be02-fb7d195a481a MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/28/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-fast-renderers"></a>Xamarin.FormsRenderizadores rápidos
 
 Tradicionalmente, a maioria dos renderizadores de controle original no Android é composta por duas exibições:
@@ -31,9 +17,10 @@ Renderizadores rápidos reduzem os custos de inflação e renderização de um X
 Renderizadores rápidos estão disponíveis para os seguintes controles no Xamarin.Forms Android:
 
 - [`Button`](xref:Xamarin.Forms.Button)
+- [`Frame`](xref:Xamarin.Forms.Frame)
 - [`Image`](xref:Xamarin.Forms.Image)
 - [`Label`](xref:Xamarin.Forms.Label)
-- [`Frame`](xref:Xamarin.Forms.Frame)
+- [`MediaElement`](xref:Xamarin.Forms.MediaElement)
 
 Funcionalmente, esses renderizadores rápidos não são diferentes dos renderizadores herdados. De Xamarin.Forms 4,0 em diante, todos os aplicativos direcionados usarão `FormsAppCompatActivity` esses renderizadores rápidos por padrão. Renderizadores para todos os novos controles, incluindo [`ImageButton`](xref:Xamarin.Forms.ImageButton) e [`CollectionView`](xref:Xamarin.Forms.CollectionView) , usam a abordagem de processador rápido.
 

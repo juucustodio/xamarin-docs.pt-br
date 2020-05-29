@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: Lanterna'
-description: Este documento descreve a classe Flashlight no Xamarin.Essentials, que tem a capacidade de ativar ou desativar o flash da câmera do dispositivo para transformá-lo em uma lanterna.
-ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 1a8601860afaf033c9bdb62c187fe228d2e83435
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149950"
+Título: " Xamarin.Essentials : lanterna" Descrição: "este documento descreve a classe lanterna no Xamarin.Essentials , que tem a capacidade de ativar ou desativar o flash de câmera do dispositivo para transformá-lo em uma lanterna".
+MS. AssetID: 06A03553-D212-43A2-9E6E-C2D2D93EB136 autor: jamesmontemagno MS. Custom: vídeo MS. Author: Jamont MS. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Lanterna
 
 A classe **Flashlight** tem a capacidade de ativar ou desativar o flash da câmera do dispositivo para transformá-lo em uma lanterna.
@@ -66,7 +56,7 @@ Não exige mais configurações.
 
 ## <a name="using-flashlight"></a>Como usar Flashlight
 
-Adicione uma referência ao Xamarin.Essentials na classe:
+Adicione uma referência a Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;
@@ -109,7 +99,7 @@ Em níveis mais recentes da API, o [Modo Tocha](https://developer.android.com/re
 
 #### <a name="api-level-22-and-lower"></a>Nível da API 22 e inferior
 
-Uma textura de superfície da câmera é criada para ativar ou desativar o `FlashMode` da unidade de câmera. 
+Uma textura de superfície da câmera é criada para ativar ou desativar o `FlashMode` da unidade de câmera.
 
 ### <a name="ios"></a>[iOS](#tab/ios)
 

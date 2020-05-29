@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: Bateria'
-description: Este documento descreve a classe Battery no Xamarin.Essentials, que permite que você verifique as informações da bateria do dispositivo e monitore a ocorrência de alterações.
-ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 01/22/2019
-ms.custom: video
-ms.openlocfilehash: cba17707f9129feecc618c9a7c2f144ad40f0168
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "70756930"
+Título: " Xamarin.Essentials : bateria" Descrição: "este documento descreve a classe Battery no Xamarin.Essentials , que permite que você verifique as informações da bateria do dispositivo e monitore as alterações."
+MS. AssetID: 47EB26D8-8C62-477B-A13C-6977F74E6E43 autor: jamesmontemagno MS. Author: Jamont MS. Data: 01/22/2019 MS. Custom: vídeo no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials: Bateria
 
 A classe **Battery** permite que você verifique as informações sobre a bateria do dispositivo e monitore as alterações, além de fornecer informações sobre o status de economia de energia do dispositivo, o que indica se o dispositivo está em execução em um modo de baixa energia. Os aplicativos devem evitar o processamento em segundo plano se o status da economia de energia do dispositivo estiver ativado.
@@ -35,7 +25,7 @@ Abra o arquivo **AssemblyInfo.cs** na pasta **Propriedades** e adicione:
 
 OU Atualize o Manifesto do Android:
 
-Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o seguinte dentro do **nó manifesto.**
+Abra o arquivo **AndroidManifest. xml** na pasta **Propriedades** e adicione o seguinte dentro do nó do **manifesto** .
 
 ```xml
 <uses-permission android:name="android.permission.BATTERY_STATS" />
@@ -55,7 +45,7 @@ Não exige mais configurações.
 
 ## <a name="using-battery"></a>Como usar Battery
 
-Adicione uma referência ao Xamarin.Essentials na classe:
+Adicione uma referência a Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;
@@ -170,7 +160,7 @@ Sem diferenças entre plataformas.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-- O dispositivo deve ser usado para testar APIs. 
+- O dispositivo deve ser usado para testar APIs.
 - Só retornará `AC` ou `Battery` para `PowerSource`.
 
 # <a name="uwp"></a>[UWP](#tab/uwp)

@@ -1,19 +1,9 @@
 ---
-title: 'Xamarin.Essentials: Connectivity'
-description: A classe Connectivity no Xamarin.Essentials permite monitorar alterações em condições de rede do dispositivo, verificar o acesso da rede atual e como ele está conectado no momento.
-ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 01/08/2019
-ms.custom: video
-ms.openlocfilehash: c70510f7b47f93c6119532b6a1c06f6c2e9e56ea
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "67855766"
+Título: " Xamarin.Essentials : conectividade" Descrição: "a classe de conectividade no Xamarin.Essentials permite que você monitore as alterações nas condições de rede do dispositivo, verifique o acesso à rede atual e como ela está conectada no momento."
+MS. AssetID: E1B1F152-B1D5-4227-965E-C0AEBF528F49 autor: jamesmontemagno MS. Author: Jamont MS. Data: 01/08/2019 MS. Custom: vídeo no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: Connectivity
+
+# <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: Conectividade
 
 A classe **Connectivity** permite monitorar alterações em condições de rede do dispositivo, verificar o acesso da rede atual e como ele está conectado no momento.
 
@@ -35,7 +25,7 @@ Abra o arquivo **AssemblyInfo.cs** na pasta **Propriedades** e adicione:
 
 OU Atualize o Manifesto do Android:
 
-Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o seguinte dentro do **nó manifesto.**
+Abra o arquivo **AndroidManifest. xml** na pasta **Propriedades** e adicione o seguinte dentro do nó do **manifesto** .
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -55,7 +45,7 @@ Não exige mais configurações.
 
 ## <a name="using-connectivity"></a>Uso de Connectivity
 
-Adicione uma referência ao Xamarin.Essentials na classe:
+Adicione uma referência a Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;

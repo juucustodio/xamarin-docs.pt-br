@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: Geolocalização'
-description: Este documento descreve a classe Geolocation no Xamarin.Essentials, que fornece APIs para recuperar as coordenadas atuais de geolocalização do dispositivo.
-ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 03/13/2019
-ms.openlocfilehash: 99b439e70038d27ed8bffcf20b908c52a10ede82
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149733"
+Título: " Xamarin.Essentials : geolocalização" Descrição: "este documento descreve a classe de geolocalização no Xamarin.Essentials , que fornece APIs para recuperar as coordenadas de localização geográfica atual do dispositivo".
+MS. AssetID: 8F66092C-13F0-4FEE-8AA5-901D5F79B357 autor: jamesmontemagno MS. Custom: vídeo MS. Author: Jamont MS. Date: 03/13/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocalização
 
 A classe **Geolocation** fornece APIs para recuperar as coordenadas atuais de geolocalização do dispositivo.
@@ -74,7 +64,7 @@ Você deve definir a permissão `Location` para o aplicativo. Isso pode ser feit
 
 ## <a name="using-geolocation"></a>Usar a geolocalização
 
-Adicione uma referência ao Xamarin.Essentials na classe:
+Adicione uma referência a Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;
@@ -112,7 +102,7 @@ catch (Exception ex)
 }
 ```
 
-A altitude nem sempre está disponível. Se não estiver disponível, a propriedade `Altitude` poderá ser `null` ou o valor poderá ser zero. Se a altitude estiver disponível, o valor estará em metros acima do nível do mar. 
+A altitude nem sempre está disponível. Se não estiver disponível, a propriedade `Altitude` poderá ser `null` ou o valor poderá ser zero. Se a altitude estiver disponível, o valor estará em metros acima do nível do mar.
 
 Para consultar as coordenadas do [local](xref:Xamarin.Essentials.Location) atual do dispositivo, use `GetLocationAsync`. É melhor passar um `GeolocationRequest` e `CancellationToken` completo, pois pode demorar um pouco para obter o local do dispositivo.
 

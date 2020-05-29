@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: Informações do dispositivo'
-description: Este documento descreve a classe DeviceInfo no Xamarin.Essentials, que fornece informações sobre o dispositivo no qual o aplicativo está em execução.
-ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 1790e950dfccddcca84adf97bcff64f905ee59f6
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150084"
+Título: " Xamarin.Essentials : informações do dispositivo" Descrição: "este documento descreve a classe DeviceInfo no Xamarin.Essentials , que fornece informações sobre o dispositivo em que o aplicativo está sendo executado".
+MS. AssetID: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522 autor: jamesmontemagno MS. Custom: vídeo MS. Author: Jamont MS. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: Informações do dispositivo
 
 A classe **DeviceInfo** fornece informações sobre o dispositivo no qual o aplicativo está em execução.
@@ -23,7 +13,7 @@ A classe **DeviceInfo** fornece informações sobre o dispositivo no qual o apli
 
 ## <a name="using-deviceinfo"></a>Como usar DeviceInfo
 
-Adicione uma referência ao Xamarin.Essentials na classe:
+Adicione uma referência a Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;

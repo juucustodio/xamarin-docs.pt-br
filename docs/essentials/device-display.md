@@ -1,19 +1,9 @@
 ---
-title: 'Xamarin.Essentials: Informações da tela do dispositivo'
-description: Este documento descreve a classe DeviceDisplay no Xamarin.Essentials, que fornece métricas da tela do dispositivo no qual o aplicativo está em execução.
-ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 1d72458fa32db58d0c5da278dbb424aa2b1714d1
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150117"
+Título: " Xamarin.Essentials : informações de exibição do dispositivo" Descrição: "este documento descreve a classe DeviceDisplay no Xamarin.Essentials , que fornece métricas de tela para o dispositivo no qual o aplicativo está sendo executado".
+MS. AssetID: 2821C908-C613-490D-8E8C-1BD3269FCEEA autor: jamesmontemagno MS. Custom: vídeo MS. Author: Jamont MS. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: Informações da tela do dispositivo
+
+# <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: Informações de exibição do dispositivo
 
 A classe **DeviceDisplay** fornece informações sobre as métricas de tela do dispositivo no qual o aplicativo está sendo executado e pode solicitar para evitar que a tela fique suspensa quando o aplicativo está em execução.
 
@@ -23,7 +13,7 @@ A classe **DeviceDisplay** fornece informações sobre as métricas de tela do d
 
 ## <a name="using-devicedisplay"></a>Como usar DeviceDisplay
 
-Adicione uma referência ao Xamarin.Essentials na classe:
+Adicione uma referência a Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;

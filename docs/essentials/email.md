@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: Email'
-description: A classe Email no Xamarin.Essentials permite que um aplicativo abra o aplicativo de email padrão com uma informação especificada, incluindo assunto, corpo e destinatários (PARA, CC, CCO).
-ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 08/20/2019
-ms.openlocfilehash: 77fcadf3ec58a38acac5eca14b43d937414a4a60
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150104"
+Título: " Xamarin.Essentials : email" Descrição: "a classe de email no Xamarin.Essentials permite que um aplicativo Abra o aplicativo de email padrão com uma informação especificada, incluindo assunto, corpo e destinatários (para, CC, Cco)."
+MS. AssetID: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629 autor: jamesmontemagno MS. Custom: vídeo MS. Author: Jamont MS. Date: 08/20/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: Email
 
 A classe **Email** permite que um aplicativo abra o aplicativo de email padrão com uma informação especificada, incluindo assunto, corpo e destinatários (PARA, CC, CCO).
@@ -26,7 +16,7 @@ A classe **Email** permite que um aplicativo abra o aplicativo de email padrão 
 
 ## <a name="using-email"></a>Como usar Email
 
-Adicione uma referência ao Xamarin.Essentials na classe:
+Adicione uma referência a Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;
@@ -65,7 +55,7 @@ public class EmailTest
 
 ## <a name="file-attachments"></a>Anexos de Arquivo
 
-Esse recurso permite que um aplicativo envie arquivos por email em clientes de email no dispositivo. O Xamarin.Essentials detectará automaticamente o tipo de arquivo (MIME) e solicitará que o arquivo seja adicionado como um anexo. Cada cliente de email é diferente e só pode dar suporte a extensões de arquivo específicas ou nenhum.
+Esse recurso permite que um aplicativo envie arquivos por email em clientes de email no dispositivo. Xamarin.Essentialso detectará automaticamente o tipo de arquivo (MIME) e solicitará que o arquivo seja adicionado como um anexo. Cada cliente de email é diferente e só pode dar suporte a extensões de arquivo específicas ou nenhum.
 
 Aqui está um exemplo de como gravar texto no disco e adicioná-lo como um anexo de email:
 

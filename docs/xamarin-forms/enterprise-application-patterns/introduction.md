@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 12582c567a439cf4e0236724bd373c3508f18748
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139345"
+Título: "introdução ao desenvolvimento de aplicativo empresarial" Descrição: "Este capítulo fornece uma introdução ao desenvolvimento de aplicativos empresariais e apresenta o aplicativo móvel eShopOnContainers".
+MS. Prod: xamarin MS. AssetID: cbce0659-fa03-447A-86ec-140438143230 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="introduction-to-enterprise-app-development"></a>Introdução ao desenvolvimento de aplicativos empresariais
 
 Independentemente da plataforma, os desenvolvedores de aplicativos empresariais enfrentam vários desafios:
@@ -114,7 +100,7 @@ O aplicativo móvel eShopOnContainers exercita a seguinte Xamarin.Forms funciona
 - MessagingCenter
 - Controles personalizados
 
-Para obter mais informações sobre essa funcionalidade, consulte a [ Xamarin.Forms documentação](~/xamarin-forms/index.yml)e [criando aplicativos móveis com Xamarin.Forms ](https://aka.ms/xamebook)o.
+Para obter mais informações sobre essa funcionalidade, consulte a [ Xamarin.Forms documentação](~/xamarin-forms/index.yml)e [criando aplicativos móveis com Xamarin.Forms ](https://aka.ms/xamformsebook)o.
 
 Além disso, os testes de unidade são fornecidos para algumas das classes no aplicativo móvel eShopOnContainers.
 
@@ -122,7 +108,7 @@ Além disso, os testes de unidade são fornecidos para algumas das classes no ap
 
 A solução de aplicativo móvel eShopOnContainers organiza o código-fonte e outros recursos em projetos. Todos os projetos usam pastas para organizar o código-fonte e outros recursos em categorias. A tabela a seguir descreve os projetos que compõem o aplicativo móvel eShopOnContainers:
 
-|Project|Descrição|
+|Project|Description|
 |--- |--- |
 |eShopOnContainers. Core|Este projeto é o projeto de PCL (biblioteca de classes portátil) que contém o código compartilhado e a interface do usuário compartilhada.|
 |eShopOnContainers. Droid|Este projeto mantém o código específico do Android e é o ponto de entrada para o aplicativo do Android.|
@@ -139,7 +125,7 @@ As classes do aplicativo móvel eShopOnContainers podem ser usadas novamente em 
 
 O projeto eShopOnContainers. Core PCL contém as seguintes pastas:
 
-|Pasta|Descrição|
+|Pasta|Description|
 |--- |--- |
 |Animações|Contém classes que permitem que as animações sejam consumidas em XAML.|
 |Comportamentos|Contém comportamentos que são expostos para exibir classes.|

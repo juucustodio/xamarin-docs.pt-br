@@ -1,18 +1,8 @@
 ---
-title: Xamarin.Essentials Mapa
-description: A classe Map no Xamarin.Essentials permite que um aplicativo abra o aplicativo de mapas instalado em um local ou marcador específico.
-ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
-author: jamesmontemagno
-ms.author: jamont
-ms.date: 05/26/2020
-ms.custom: video
-ms.openlocfilehash: 16f4a69e2d9216bb2e03fbcb663403d198b42c98
-ms.sourcegitcommit: 6a6cbb62bcf149f9515ee8868679a8a07ce17956
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83862710"
+Título: " Xamarin.Essentials mapa" Descrição: "a classe Map no Xamarin.Essentials permite que um aplicativo Abra o aplicativo de mapa instalado em um local específico ou placemark."
+MS. AssetID: BABF40CC-8BEE-43FD-BE12-6301DF27DD33 autor: jamesmontemagno MS. Author: Jamont MS. Data: 05/26/2020 MS. Custom: vídeo no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinessentials-map"></a>Xamarin.Essentials: Mapa
 
 A classe **Maps** permite que um aplicativo abra o aplicativo de mapas instalado em um local ou marcador específico.
@@ -23,7 +13,7 @@ A classe **Maps** permite que um aplicativo abra o aplicativo de mapas instalado
 
 ## <a name="using-map"></a>Usando o mapa
 
-Adicione uma referência ao Xamarin.Essentials na classe:
+Adicione uma referência a Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;
@@ -142,7 +132,7 @@ public class MapTest
 
 # <a name="android"></a>[Android](#tab/android)
 
-O Android usa o esquema de Uri `geo:` para iniciar o aplicativo de mapas no dispositivo. Isso pode levar o usuário a optar por um aplicativo existente que suporte esse esquema de Uri.  O Xamarin.Essentials é testado com o Google Maps, que é compatível com este esquema.
+O Android usa o esquema de Uri `geo:` para iniciar o aplicativo de mapas no dispositivo. Isso pode levar o usuário a optar por um aplicativo existente que suporte esse esquema de Uri.  Xamarin.Essentialsé testado com o Google Maps, que dá suporte a esse esquema.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 

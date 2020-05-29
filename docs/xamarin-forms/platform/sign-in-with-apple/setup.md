@@ -1,20 +1,9 @@
 ---
-title: Etapas de instalação-entrar com a Apple para Xamarin. Forms
-description: Entrar com a configuração da Apple difere dependendo das diferentes plataformas que seu aplicativo móvel tem como destino.
-ms.prod: xamarin
-ms.assetid: 8F712802-395B-469B-B5BE-C927AD1A8391
-ms.technology: xamarin-forms
-author: davidortinau
-ms.author: daortin
-ms.date: 09/10/2019
-ms.openlocfilehash: c1f75f4872d787e261ab6bbac3624e31538c6ff0
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206535"
+Título: "etapas de instalação-entrar com a Apple para Xamarin.Forms " Descrição: "entrar com a instalação da Apple difere dependendo das diferentes plataformas para as quais seu aplicativo móvel se destina".
+MS. Prod: xamarin MS. AssetID: 8F712802-395B-469B-B5BE-C927AD1A8391 MS. Technology: xamarin-Forms autor: davidortinau MS. Author: daortin MS. Date: 09/10/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="setup-sign-in-with-apple-for-xamarinforms"></a>Entrar com a Apple para Xamarin. Forms
+
+# <a name="setup-sign-in-with-apple-for-xamarinforms"></a>Instalação entre com a Apple paraXamarin.Forms
 
 Este guia aborda a série de etapas necessárias para configurar seus aplicativos de plataforma cruzada para que sejam avançados de entrar com a Apple. Embora a configuração da Apple seja direta no portal do desenvolvedor da Apple, etapas adicionais são necessárias para criar uma relação segura entre o Android e a Apple. 
 
@@ -33,14 +22,14 @@ Adicione seu domínio e clique em **registrar**.
 ![formulário de registro de domínio](sign-in-images/readme-signin-domain-more.png)
 
 > [!NOTE]
-> Se você vir um erro sobre o seu domínio não estar em conformidade com o SPF, você precisará adicionar um registro TXT do DNS do SPF ao seu domínio e esperar que ele seja propagado antes de continuar: O SPF TXT pode ser semelhante a este:`v=spf1 a a:myapp.com -all`
+> Se você vir um erro sobre o seu domínio não estar em conformidade com o SPF, você precisará adicionar um registro TXT do DNS do SPF ao seu domínio e aguardar sua propagação antes de continuar: o SPF TXT pode ser semelhante a este:`v=spf1 a a:myapp.com -all`
 
-Em seguida, você precisará verificar a propriedade do domínio clicando em **baixar** para recuperar `apple-developer-domain-association.txt` o arquivo e `.well-known` carregá-lo na pasta do site do seu domínio.
+Em seguida, você precisará verificar a propriedade do domínio clicando em **baixar** para recuperar o `apple-developer-domain-association.txt` arquivo e carregá-lo na `.well-known` pasta do site do seu domínio.
 
-Depois que `.well-known/apple-developer-domain-association.txt` o arquivo for carregado e acessível, você poderá clicar em **verificar** para que a Apple Verifique sua propriedade de domínio.
+Depois que o `.well-known/apple-developer-domain-association.txt` arquivo for carregado e acessível, você poderá clicar em **verificar** para que a Apple Verifique sua propriedade de domínio.
 
 > [!NOTE]
-> A Apple verificará a `https://`Propriedade com. Verifique se você tem a instalação do SSL e se o arquivo está acessível por meio de uma URL segura.
+> A Apple verificará a propriedade com `https://` . Verifique se você tem a instalação do SSL e se o arquivo está acessível por meio de uma URL segura.
 
 Este processo foi concluído com êxito antes de continuar.
 
@@ -62,7 +51,7 @@ Na seção [identificadores](https://developer.apple.com/account/resources/ident
 
 ![Criar uma nova ID de serviço](sign-in-images/readme-serviceid-create.png)
 
-Dê à sua ID de serviços uma descrição e um identificador.  Esse identificador será seu `ServerId`.  Certifique-se de habilitar a **entrada com a Apple**.
+Dê à sua ID de serviços uma descrição e um identificador.  Esse identificador será seu `ServerId` .  Certifique-se de habilitar a **entrada com a Apple**.
 
 Antes de continuar, clique em **Configurar** ao lado da opção _entrar com a Apple_ que você habilitou.
 
@@ -70,10 +59,10 @@ No painel de configuração, verifique se a **ID correta do aplicativo primário
 
 Em seguida, escolha o **domínio da Web** que você configurou anteriormente.
 
-Por fim, adicione uma ou mais **URLs de retorno**.  Qualquer `redirect_uri` um que você use posteriormente deve ser registrado aqui exatamente como você o usa.  Certifique-se de incluir `http://` o `https://` ou na URL ao inseri-lo.
+Por fim, adicione uma ou mais **URLs de retorno**.  Qualquer um `redirect_uri` que você use posteriormente deve ser registrado aqui exatamente como você o usa.  Certifique-se de incluir o `http://` ou `https://` na URL ao inseri-lo.
 
 > [!NOTE]
-> Para fins de teste, não é `127.0.0.1` possível `localhost`usar o ou o `local.test`, mas você pode usar outros domínios, como.  Se você optar por fazer isso, poderá editar o arquivo do `hosts` computador para resolver esse domínio fictício para seu endereço IP local.
+> Para fins de teste, não é possível usar `127.0.0.1` `localhost` o ou o, mas você pode usar outros domínios, como `local.test` .  Se você optar por fazer isso, poderá editar o arquivo do computador `hosts` para resolver esse domínio fictício para seu endereço IP local.
 
 ![Configurar sua entrada na Apple](sign-in-images/readme-serviceid-configure.png)
 
@@ -93,13 +82,13 @@ Verifique se a **ID do aplicativo primário** correta está selecionada e clique
 
 Clique em **continuar** e **Registre-se** para criar a nova chave.
 
-Em seguida, você terá apenas uma oportunidade de baixar a chave que acabou de gerar.  Clique em **Baixar**.
+Em seguida, você terá apenas uma oportunidade de baixar a chave que acabou de gerar.  Clique em **Download**.
 
 ![Chave de download](sign-in-images/readme-key-download.png)
 
 Além disso, anote sua **ID de chave** nesta etapa. Isso será usado para o `KeyId` mais tarde.
 
-Você terá baixado um arquivo `.p8` de chave.  Você pode abrir esse arquivo no bloco de notas ou VSCode para ver o conteúdo do texto.  Eles devem ter uma aparência semelhante a:
+Você terá baixado um `.p8` arquivo de chave.  Você pode abrir esse arquivo no bloco de notas ou VSCode para ver o conteúdo do texto.  Eles devem ter uma aparência semelhante a:
 
 ```
 -----BEGIN PRIVATE KEY-----
@@ -114,7 +103,7 @@ Nomeie essa chave `P8FileContents` e mantenha-a em um local seguro. Você o usar
 
 ## <a name="summary"></a>Resumo
 
-Este artigo descreveu as etapas necessárias para configurar a entrada com a Apple para uso em seus aplicativos Xamarin. Forms.
+Este artigo descreveu as etapas necessárias para configurar a entrada com a Apple para uso em seus Xamarin.Forms aplicativos.
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -1,26 +1,14 @@
 ---
-title: O que é Xamarin.Forms ?
-description: Este artigo apresenta as Xamarin.Forms bibliotecas relacionadas e.
-ms.prod: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b65be3cd552cf6a4fb094d59c44fa43de3deddcd
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139185"
+Título: "o que é Xamarin.Forms ?"
+Descrição: "Este artigo apresenta as Xamarin.Forms bibliotecas relacionadas."
+MS. Prod: xamarin MS. AssetID: C1E24DB9-3099-4F79-BB88-10AABF7D4614 autor: profexorgeek MS. Author: jusjohns MS. Date: 05/28/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="what-is-xamarinforms"></a>O que é Xamarin.Forms ?
 
 [![Capturas de tela do aplicativo de exemplo Xamarin.Forms no Ios e no Android](what-is-xamarin-forms-images/xamarin-forms-app-cropped.png)](what-is-xamarin-forms-images/xamarin-forms-app.png#lightbox)
 
-Xamarin.Formsé uma estrutura de interface do usuário de código-fonte aberto. Xamarin.Formspermite que os desenvolvedores compilem aplicativos Android, iOS e Windows a partir de uma única base de código compartilhada.
+Xamarin.Formsé uma estrutura de interface do usuário de código-fonte aberto. Xamarin.Formspermite que os desenvolvedores criem aplicativos Xamarin. Android, Xamarin. iOS e Windows a partir de uma única base de código compartilhada.
 
 Xamarin.Formspermite que os desenvolvedores criem interfaces de usuário em XAML com code-behind em C#. Essas interfaces são renderizadas como controles nativos de alto desempenho em cada plataforma.
 
@@ -38,15 +26,15 @@ Xamarin.Formso é para os desenvolvedores com os seguintes objetivos:
 
 Xamarin.Formsfornece uma API consistente para criar elementos de interface do usuário entre plataformas. Essa API pode ser implementada em XAML ou C# e é compatível com DataBinding para padrões como MVVM (Model-View-ViewModel).
 
-Em tempo de execução, o Xamarin.Forms utiliza renderizadores de plataforma para converter os elementos da interface do usuário de plataforma cruzada em controles nativos no Android, Ios e UWP. Isso permite que os desenvolvedores obtenham aparência, sensação e desempenho nativos, enquanto aproveitam os benefícios do compartilhamento de código entre plataformas.
+Em tempo de execução, o Xamarin.Forms utiliza renderizadores de plataforma para converter os elementos da interface do usuário de plataforma cruzada em controles nativos em xamarin. Android, xamarin. Ios e UWP. Isso permite que os desenvolvedores obtenham aparência, sensação e desempenho nativos, enquanto aproveitam os benefícios do compartilhamento de código entre plataformas.
 
 Xamarin.Formsos aplicativos normalmente consistem em uma biblioteca de .NET Standard compartilhada e projetos de plataforma individuais. A biblioteca compartilhada contém exibições XAML ou C# e qualquer lógica de negócios, como serviços, modelos ou outro código. Os projetos de plataforma contêm qualquer lógica específica da plataforma ou pacotes exigidos pelo aplicativo.
 
-Xamarin.Formsusa o Xamarin para executar aplicativos .NET nativamente entre plataformas. Para obter mais informações sobre o Xamarin, confira [O que é o Xamarin?](~/get-started/what-is-xamarin.md).
+Xamarin.Formsusa a plataforma Xamarin para executar aplicativos .NET nativamente entre plataformas. Para obter mais informações sobre a plataforma Xamarin, consulte [o que é o xamarin?](~/get-started/what-is-xamarin.md).
 
-## <a name="additional-tools"></a>Ferramentas adicionais
+## <a name="additional-functionality"></a>Funcionalidade adicional
 
-Xamarin.Formso tem um grande ecossistema de pacotes NuGet que adicionam uma funcionalidade diversificada aos aplicativos. Esta seção descreve alguns pacotes NuGet usados com frequência.
+Xamarin.Formso tem um grande ecossistema de bibliotecas que adicionam uma funcionalidade diversificada aos aplicativos. Esta seção descreve algumas dessas funcionalidades adicionais.
 
 ### Xamarin.Essentials
 
@@ -78,8 +66,8 @@ Xamarin.Formsfornece uma API comum que processa controles nativos entre platafor
 Xamarin.Formsinclui soluções predefinidas para uma variedade de funcionalidades específicas da plataforma. Para obter mais informações, consulte:
 
 - [Xamarin.Formsespecificações da plataforma](~/xamarin-forms/platform/platform-specifics/index.md)
-- [Elementos específicos da plataforma do Android](~/xamarin-forms/platform/android/index.md)
-- [Elementos específicos da plataforma do iOS](~/xamarin-forms/platform/ios/index.md)
+- [Especificações da plataforma Android](~/xamarin-forms/platform/android/index.md)
+- [especificações da plataforma iOS](~/xamarin-forms/platform/ios/index.md)
 - [Elementos específicos da plataforma do Windows](~/xamarin-forms/platform/windows/index.md)
 
 ### <a name="material-visual"></a>Visual material

@@ -1,28 +1,17 @@
 ---
-title: Manipulação de arquivos no Xamarin.Forms
-description: O tratamento de arquivos com o Xamarin.Forms pode ser alcançado usando código em uma biblioteca .NET Standard ou usando recursos inseridos.
-ms.prod: xamarin
-ms.assetid: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/21/2018
-ms.openlocfilehash: fb3bbda3caee9fdbd490aaea7e119baf470eedd1
-ms.sourcegitcommit: 4cf434b126eb7df6b2fd9bb1d71613bf2b6aac0e
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71997162"
+Título: "manipulação de arquivo em Xamarin.Forms " Descrição: "a manipulação de arquivos com Xamarin.Forms pode ser obtida usando código em uma biblioteca de .net Standard ou usando recursos incorporados".
+MS. Prod: xamarin MS. AssetID: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 06/21/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="file-handling-in-xamarinforms"></a>Manipulação de arquivos no Xamarin.Forms
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
+# <a name="file-handling-in-xamarinforms"></a>Manipulação de arquivos emXamarin.Forms
 
-_O tratamento de arquivos com o Xamarin.Forms pode ser alcançado usando código em uma biblioteca .NET Standard ou usando recursos inseridos._
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
+
+_A manipulação de arquivos com Xamarin.Forms o pode ser obtida com o uso de código em uma biblioteca de .net Standard ou por meio de recursos incorporados._
 
 ## <a name="overview"></a>Visão geral
 
-Código do Xamarin.Forms são executados em várias plataformas e cada uma delas tem seu próprio sistema de arquivos. Anteriormente, isso significava que ler e gravar arquivos era realizado mais facilmente usando as APIs de arquivo nativo em cada plataforma. Como alternativa, os recursos inseridos são uma solução mais simples para distribuir os arquivos de dados com um aplicativo. No entanto, com o .NET Standard 2.0, é possível compartilhar o código de acesso de arquivo nas bibliotecas .NET Standard.
+Xamarin.Formso código é executado em várias plataformas – cada um deles tem seu próprio sistema de arquivos. Anteriormente, isso significava que ler e gravar arquivos era realizado mais facilmente usando as APIs de arquivo nativo em cada plataforma. Como alternativa, os recursos inseridos são uma solução mais simples para distribuir os arquivos de dados com um aplicativo. No entanto, com o .NET Standard 2.0, é possível compartilhar o código de acesso de arquivo nas bibliotecas .NET Standard.
 
 Para saber mais sobre o tratamento de arquivos de imagem, confira a página [Trabalhando com imagens](~/xamarin-forms/user-interface/images.md).
 
@@ -50,7 +39,7 @@ Além disso, o método `File.Exists` determina se o arquivo especificado existe:
 bool doesExist = File.Exists(fileName);
 ```
 
-O caminho do arquivo em cada plataforma pode ser determinado com base em uma biblioteca .NET Standard usando um valor da enumeração [`Environment.SpecialFolder`](xref:System.Environment.SpecialFolder) como o primeiro argumento para o método `Environment.GetFolderPath`. Isso pode ser combinado com um nome de arquivo com o método `Path.Combine`:
+O caminho do arquivo em cada plataforma pode ser determinado de uma biblioteca de .NET Standard usando um valor da [`Environment.SpecialFolder`](xref:System.Environment.SpecialFolder) enumeração como o primeiro argumento para o `Environment.GetFolderPath` método. Isso pode ser combinado com um nome de arquivo com o método `Path.Combine`:
 
 ```csharp
 string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "temp.txt");
@@ -58,7 +47,7 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 
 Essas operações são demonstradas no aplicativo de exemplo, que inclui uma página que salva e carrega texto:
 
-[![Salvando e carregando texto](files-images/saveandload-sml.png "salvando e carregando arquivos no aplicativo")](files-images/saveandload.png#lightbox "Salvando e carregando arquivos no aplicativo")
+[![Salvando e carregando texto](files-images/saveandload-sml.png "Salvando e carregando arquivos no aplicativo")](files-images/saveandload.png#lightbox "Salvando e carregando arquivos no aplicativo")
 
 <a name="Loading_Files_Embedded_as_Resources" />
 
@@ -66,17 +55,17 @@ Essas operações são demonstradas no aplicativo de exemplo, que inclui uma pá
 
 Para inserir um arquivo em um assembly do **.NET Standard**, crie ou adicione um arquivo e certifique-se de que seja **Ação de build: EmbeddedResource**.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[Definindo a configuração da ![ação de compilação do recurso inserido](files-images/vs-embeddedresource-sml.png "EmbeddedResource BuildAction")](files-images/vs-embeddedresource.png#lightbox "Definindo EmbeddedResource BuildAction")
+[![Configurando ação de compilação de recurso inserido](files-images/vs-embeddedresource-sml.png "Definindo EmbeddedResource BuildAction")](files-images/vs-embeddedresource.png#lightbox "Definindo EmbeddedResource BuildAction")
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-[![Arquivo de texto inserido na biblioteca do .net Standard, definindo a configuração de ação de compilação de recurso inserida](files-images/xs-embeddedresource-sml.png "EmbeddedResource BuildAction")](files-images/xs-embeddedresource.png#lightbox "Definindo EmbeddedResource BuildAction")
+[![Arquivo de texto inserido na biblioteca do .NET Standard, configurando a ação de compilação de recurso inserido](files-images/xs-embeddedresource-sml.png "Definindo EmbeddedResource BuildAction")](files-images/xs-embeddedresource.png#lightbox "Definindo EmbeddedResource BuildAction")
 
 -----
 
-`GetManifestResourceStream` é usado para acessar o arquivo inserido usando sua **ID de recurso**. Por padrão, a ID do recurso é o nome de arquivo prefixado com o namespace padrão para o projeto no qual ele está incorporado – nesse caso, o assembly é **WorkingWithFiles** e o nome do arquivo é **LibTextResource. txt**, portanto, a ID do recurso é `WorkingWithFiles.LibTextResource.txt`.
+`GetManifestResourceStream` é usado para acessar o arquivo inserido usando sua **ID de recurso**. Por padrão, a ID do recurso é o nome de arquivo prefixado com o namespace padrão para o projeto no qual ele está incorporado – nesse caso, o assembly é **WorkingWithFiles** e o nome do arquivo é **LibTextResource. txt**, portanto, a ID do recurso é `WorkingWithFiles.LibTextResource.txt` .
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
@@ -90,7 +79,7 @@ using (var reader = new System.IO.StreamReader (stream))
 
 A variável `text` pode ser usada para exibir o texto ou, caso contrário, usá-lo no código. Esta captura de tela do [aplicativo de exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles) mostra o texto renderizado em um controle `Label`.
 
- [![Arquivo de texto inserido no](files-images/pcltext-sml.png "arquivo de texto inserido da biblioteca do .net standard na biblioteca .net Standard exibida no aplicativo")](files-images/pcltext.png#lightbox "Arquivo de texto inserido na biblioteca .NET Standard exibida no aplicativo")
+ [![Arquivo de texto inserido na biblioteca do .NET Standard](files-images/pcltext-sml.png "Arquivo de texto inserido na biblioteca .NET Standard exibida no aplicativo")](files-images/pcltext.png#lightbox "Arquivo de texto inserido na biblioteca .NET Standard exibida no aplicativo")
 
 Carregar e desserializar um XML é igualmente simples. O código a seguir mostra um arquivo XML sendo carregado e desserializado de um recurso, associado a um `ListView` para exibição. O arquivo XML contém uma matriz de objetos `Monkey` (a classe é definida no código de exemplo).
 
@@ -106,7 +95,7 @@ var listView = new ListView ();
 listView.ItemsSource = monkeys;
 ```
 
- [![Arquivo XML inserido na biblioteca do .net Standard, exibido no](files-images/pclxml-sml.png "arquivo XML inserido ListView na biblioteca do .net Standard exibida em ListView")](files-images/pclxml.png#lightbox "Arquivo XML inserido na biblioteca do .NET Standard exibida em ListView")
+ [![Arquivo XML inserido na biblioteca do .NET Standard, exibido em ListView](files-images/pclxml-sml.png "Arquivo XML inserido na biblioteca do .NET Standard exibida em ListView")](files-images/pclxml.png#lightbox "Arquivo XML inserido na biblioteca do .NET Standard exibida em ListView")
 
 <a name="Embedding_in_Shared_Projects" />
 
@@ -167,5 +156,5 @@ Este artigo mostrou algumas operações de arquivo simples para salvar e carrega
 ## <a name="related-links"></a>Links relacionados
 
 - [FilesSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
-- [Amostras do Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)
+- [Xamarin.FormsAmostras](https://github.com/xamarin/xamarin-forms-samples)
 - [Trabalhando com o sistema de arquivos no Xamarin.iOS](~/ios/app-fundamentals/file-system.md)

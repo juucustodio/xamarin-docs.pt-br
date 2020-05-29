@@ -1,18 +1,8 @@
 ---
-title: 'Xamarin.Essentials: Bússola'
-description: Este documento descreve a classe Compass no Xamarin.Essentials, que permite que você monitore o norte magnético do dispositivo.
-ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
-author: jamesmontemagno
-ms.custom: video
-ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 54ce725a319e0222179945ece558338c8a152653
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150125"
+Título: " Xamarin.Essentials : bússola" Descrição: "este documento descreve a classe Compass no Xamarin.Essentials , que permite monitorar o cabeçalho do norte magnético do dispositivo".
+MS. AssetID: BF85B0C3-C686-43D9-811A-07DCAF8CDD86 autor: jamesmontemagno MS. Custom: vídeo MS. Author: Jamont MS. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials: Bússola
 
 A classe **Compass** permite que você monitore o norte magnético do dispositivo.
@@ -23,7 +13,7 @@ A classe **Compass** permite que você monitore o norte magnético do dispositiv
 
 ## <a name="using-compass"></a>Como usar Compass
 
-Adicione uma referência ao Xamarin.Essentials na classe:
+Adicione uma referência a Xamarin.Essentials em sua classe:
 
 ```csharp
 using Xamarin.Essentials;

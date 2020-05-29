@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsBancos de dados locais
-description: Xamarin.Formsdá suporte a aplicativos controlados por banco de dados usando o mecanismo de banco de dados SQLite, que possibilita carregar e salvar objetos no código compartilhado. Este artigo descreve como Xamarin.Forms os aplicativos podem ler e gravar dados em um banco de dados SQLite local usando o SQLite.net.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 04d813baae5796da68ea27389df33738af5cde3e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130995"
+Título: " Xamarin.Forms bancos de dados locais" Descrição: " Xamarin.Forms dá suporte a aplicativos controlados por banco de dados usando o mecanismo de banco de dados SQLite, o que torna possível carregar e salvar objetos no código compartilhado. Este artigo descreve como Xamarin.Forms os aplicativos podem ler e gravar dados em um banco de dados SQLite local usando o SQLite.net.
+MS. Prod: xamarin MS. AssetID: F687B24B-7DF0-4F8E-A21A-A9BB507480EB MS. Technology: xamarin-Forms autor: profexorgeek MS. Author: jusjohns MS. Date: 12/05/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-local-databases"></a>Xamarin.FormsBancos de dados locais
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
@@ -39,7 +25,7 @@ Use o Gerenciador de pacotes NuGet para pesquisar o **SQLite-net-PCL** e adicion
 
 Há diversos pacotes NuGet com nomes semelhantes. O pacote correto tem estes atributos:
 
-- **Criado por:** Frank A. Krueger
+- **Criado por:** Frank A. Krueger (praeclarum)
 - **ID:** SQLite-net-PCL
 - **Link do NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 

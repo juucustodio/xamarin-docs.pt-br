@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsLayouts
-description: Xamarin.FormsOs layouts são usados para compor controles de interface do usuário em estruturas visuais. Este artigo lista os layouts incluídos no Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c39bf29feceaf598ac8fd38e6af3d227b6deddc0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137300"
+Título: " Xamarin.Forms layouts" Descrição: "os Xamarin.Forms layouts são usados para compor controles de interface do usuário em estruturas visuais. Este artigo lista os layouts incluídos no Xamarin.Forms .
+MS. Prod: xamarin MS. AssetID: F4180997-BA21-453A-9958-D1E2940DF050 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/21/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-layouts"></a>Xamarin.FormsLayouts
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
@@ -44,7 +30,7 @@ Essas classes derivam de [`Layout`](xref:Xamarin.Forms.Layout) , que define [`Pa
 
 <a named="frame" />
 
-### <a name="frame"></a>Frame
+### <a name="frame"></a>Quadro
 
 |     |     |
 | --- | --- |
@@ -57,7 +43,7 @@ Essas classes derivam de [`Layout`](xref:Xamarin.Forms.Layout) , que define [`Pa
 
 |     |     |
 | --- | --- |
-| [`ScrollView`](xref:Xamarin.Forms.ScrollView)o é capaz de rolar seu conteúdo. Defina a [`Content`](xref:Xamarin.Forms.ScrollView.Content) propriedade como uma exibição ou layout muito grande para caber na tela. (O conteúdo de a `ScrollView` é muitas vezes um [`StackLayout`](#stackLayout) .) Defina a [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) propriedade para indicar se a rolagem deve ser vertical, horizontal ou ambas.<br /><br />[Documentação](xref:Xamarin.Forms.ScrollView)  /  da API [Guia](~/xamarin-forms/user-interface/layouts/scroll-view.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) de | [![Exemplo de ScrollView](layouts-images/ScrollView.png "Exemplo de ScrollView")](layouts-images/ScrollView-Large.png#lightbox "Exemplo de ScrollView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ScrollViewDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ScrollViewDemoPage.xaml) |
+| [`ScrollView`](xref:Xamarin.Forms.ScrollView)o é capaz de rolar seu conteúdo. Defina a [`Content`](xref:Xamarin.Forms.ScrollView.Content) propriedade como uma exibição ou layout muito grande para caber na tela. (O conteúdo de a `ScrollView` é muitas vezes um [`StackLayout`](#stackLayout) .) Defina a [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) propriedade para indicar se a rolagem deve ser vertical, horizontal ou ambas.<br /><br />[Documentação](xref:Xamarin.Forms.ScrollView)  /  da API [Guia](~/xamarin-forms/user-interface/layouts/scrollview.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) de | [![Exemplo de ScrollView](layouts-images/ScrollView.png "Exemplo de ScrollView")](layouts-images/ScrollView-Large.png#lightbox "Exemplo de ScrollView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ScrollViewDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ScrollViewDemoPage.xaml) |
 |     |     |
 
 ### <a name="templatedview"></a>TemplatedView
@@ -89,7 +75,7 @@ Essas classes derivam de [`Layout<View>`](xref:Xamarin.Forms.Layout`1) .
 
 <a name="grid" />
 
-### <a name="grid"></a>Grid
+### <a name="grid"></a>Grade
 
 |     |     |
 | --- | --- |

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Este capítulo fornece um prefácio para padrões de aplicativos empresariais usando o Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b587bd8cacda9024103757a585c11fba2ed09fda
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130826"
+Título: "preceda to Enterprise app Development" Descrição: "Este capítulo fornece um prefácio para padrões de aplicativos empresariais usando Xamarin.Forms ".
+MS. Prod: xamarin MS. AssetID: fbf32a44-1d33-4e16-A904-dc7ee5991e7c MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="preface-to-enterprise-app-development"></a>Preceder para o desenvolvimento de aplicativos empresariais
 
 Este livro eletrônico fornece orientação sobre a criação de aplicativos empresariais de plataforma cruzada usando o Xamarin.Forms . Xamarin.Formso é um kit de ferramentas de interface do usuário de plataforma cruzada que permite aos desenvolvedores criar facilmente layouts de interface nativa de usuários que podem ser compartilhados entre plataformas, incluindo iOS, Android e o Plataforma Universal do Windows (UWP). Ele fornece uma solução abrangente para os aplicativos Business to Employee (B2E), Business to Business (B2B) e Business to Consumer (B2C), fornecendo a capacidade de compartilhar código em todas as plataformas de destino e ajudando a reduzir o TCO (custo total de propriedade).
@@ -27,7 +13,7 @@ O guia é fornecido com o código-fonte para o [aplicativo móvel eShopOnContain
 
 ## <a name="whats-left-out-of-this-guides-scope"></a>O que saiu do escopo deste guia
 
-Este guia destina-se a leitores que já estão familiarizados com o Xamarin.Forms . Para obter uma introdução detalhada Xamarin.Forms do, consulte a [ Xamarin.Forms documentação](~/xamarin-forms/index.yml)e [criando aplicativos móveis com Xamarin.Forms ](https://aka.ms/xamebook)o.
+Este guia destina-se a leitores que já estão familiarizados com o Xamarin.Forms . Para obter uma introdução detalhada Xamarin.Forms do, consulte a [ Xamarin.Forms documentação](~/xamarin-forms/index.yml)e [criando aplicativos móveis com Xamarin.Forms ](https://aka.ms/xamformsebook)o.
 
 O guia é complementar aos [microserviços .net: arquitetura para aplicativos .net em contêineres](https://aka.ms/microservicesebook), que se concentra no desenvolvimento e na implantação de microservices em contêineres. Outros guias que vale a pena ler incluem [a arquitetura e o desenvolvimento de aplicativos Web modernos com ASP.NET Core e Microsoft Azure](https://aka.ms/WebAppEbook), o [ciclo de vida do aplicativo Docker em contêineres com a plataforma e as ferramentas da Microsoft](https://aka.ms/dockerlifecycleebook)e a [plataforma e ferramentas da Microsoft para o desenvolvimento de aplicativos móveis](https://aka.ms/MobAppDev/StndPDF).
 
