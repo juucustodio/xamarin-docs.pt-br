@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: a3d0962eb8253ca72b6afce77036e02a7aa59b94
-ms.sourcegitcommit: 6f09bc2b760e76a61a854f55d6a87c4f421ac6c8
+ms.openlocfilehash: dd453ab5397e409cc9a7ccef9b4b845d47f32a8b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2020
-ms.locfileid: "75607887"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573723"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Como publicar na Apple TV App Store
 
@@ -21,13 +21,13 @@ Para distribuir aplicativos para todos os dispositivos da Apple TV, a Apple exig
 O processo de envio de um aplicativo para a loja de aplicativos da Apple TV envolve:
 
 1. Criar uma *ID do aplicativo* e a selecionar *Direitos*.
-2. Criar um *Perfil de provisionamento de distribuição.*
+2. Criando um *perfil de provisionamento de distribuição.*
 3. Usando esse perfil para compilar seu aplicativo.
 4. Enviando seu aplicativo por meio do *iTunes Connect*.
 
 Neste artigo, abordaremos todas as etapas necessárias para provisionar, compilar e enviar um aplicativo para a distribuição da loja de aplicativos da Apple TV.
 
-<a name="Before_you_Submit" />
+<a name="Before_you_Submit"></a>
 
 ## <a name="before-you-submit-an-application"></a>Antes de enviar um aplicativo
 
@@ -41,7 +41,7 @@ Algumas coisas a observar ao enviar um aplicativo:
 
 A Apple também mantém uma lista de dicas de envio da loja de aplicativos da Apple TV. Você pode ler essas dicas em [Distribuindo na App Store](https://developer.apple.com/appstore/resources/submission/tips.html).
 
-<a name="Configuring_your_Application_in_iTunes_Connect" />
+<a name="Configuring_your_Application_in_iTunes_Connect"></a>
 
 ## <a name="configuring-your-application-in-itunes-connect"></a>Configurando seu aplicativo no iTunes Connect
 
@@ -55,19 +55,19 @@ Faça o seguinte:
 4. Forneça um **ícone de loja de aplicativos** (ícone grande) e capturas de tela do seu aplicativo em ação, nos dispositivos Apple TV aos quais ele dá suporte. Veja nosso guia de [trabalho com ícones e imagens](~/ios/tvos/app-fundamentals/icons-images.md) para obter mais detalhes.
 5. Forneça uma **Descrição** clara e sucinta do aplicativo, incluindo seus recursos e benefícios para o usuário final.
 6. Forneça **categorias**, **subcategorias**e **palavras-chave** para ajudar o usuário a localizar seu aplicativo na loja de aplicativos da Apple TV.
-7. Forneça URLs de **Contact (Contato)** e **Support (Suporte)** para o seu site exigido pela Apple.
+7. Forneça URLs de **contato** e **suporte** para seu site exigido pela Apple.
 8. Defina a **classificação**do aplicativo, que é usada pelos controles dos pais na loja de aplicativos da Apple TV.
-9. Configure tecnologias opcionais da App Store, como **Game Center** e **In-App Purchase (Compra no aplicativo)** .
+9. Configure tecnologias de repositório de aplicativos opcionais, como **Game Center** e **compra no aplicativo**.
 
 Para obter mais detalhes, consulte nossa documentação [configurar seu aplicativo tvOS na iTunes Connect](~/ios/tvos/deploy-test/app-distribution/itunes-connect.md) .
 
-<a name="Preparing_for_App_Store_Distribution" />
+<a name="Preparing_for_App_Store_Distribution"></a>
 
 ## <a name="preparing-for-app-store-distribution"></a>Preparando para a distribuição da App Store
 
 Para publicar um aplicativo na loja de aplicativos da Apple TV, primeiro você precisa compilá-lo para distribuição, o que envolve várias etapas. As seções a seguir abordam tudo o que é necessário para preparar um aplicativo Xamarin. tvOS para publicação para que ele possa ser compilado e enviado para a loja de aplicativos da Apple TV para revisão e liberação.
 
-<a name="Provisioning_for_Application_Services" />
+<a name="Provisioning_for_Application_Services"></a>
 
 ### <a name="provisioning-for-application-services"></a>Provisionando para Serviços de Aplicativos
 
@@ -75,12 +75,12 @@ A Apple fornece uma seleção de Serviços de Aplicativos especiais, também cha
 
 A criação de uma ID do aplicativo e, opcionalmente, selecionar direitos, envolve as seguintes etapas usando o Portal de provisionamento iOS baseado na Web da Apple:
 
-1. Selecione **provisionamento** > **desenvolvimento**.
-2. Clique no botão **+** e forneça um **Name (Nome)** e uma **Bundle ID (ID do pacote)** para o novo aplicativo.
+1. Selecione **Provisioning**  >  **desenvolvimento**de provisionamento.
+2. Clique no **+** botão e forneça um **nome** e uma **ID de pacote** para o novo aplicativo.
 3. Role até a parte inferior da tela e selecione os **serviços de aplicativo** que serão exigidos pelo seu aplicativo Xamarin. tvOS.
 4. Clique no botão **Continue (Continuar)** e siga as instruções na tela para criar a nova ID do aplicativo.
 
-Além de selecionar e configurar o Serviços de Aplicativos necessário ao definir a ID do aplicativo, você também precisa configurar a ID do aplicativo e os direitos no projeto Xamarin. tvOS editando os arquivos `Info.plist` e `Entitlements.plist`.
+Além de selecionar e configurar o Serviços de Aplicativos necessário ao definir a ID do aplicativo, você também precisa configurar a ID do aplicativo e os direitos no projeto Xamarin. tvOS editando os `Info.plist` `Entitlements.plist` arquivos e.
 
 Faça o seguinte no Visual Studio para Mac:
 
@@ -93,15 +93,15 @@ Faça o seguinte no Visual Studio para Mac:
 
 Para obter instruções detalhadas, consulte a documentação [Provisionamento para Serviços de Aplicativo](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services). Embora este documento tenha sido escrito para iOS, as mesmas etapas são usadas para provisionar um aplicativo Xamarin. tvOS.
 
-<a name="Setting_the_Apps_Icons_and_Launch_Screens" />
+<a name="Setting_the_Apps_Icons_and_Launch_Screens"></a>
 
 ### <a name="setting-the-apps-icons-launch-image-and-top-shelf-image"></a>Configurando os ícones de aplicativos, imagem de inicialização e imagem de prateleira superior
 
-Para que um aplicativo tvOS seja aceito pela Apple para inclusão na loja de aplicativos da Apple TV, ele requer ícones adequados, lançamento e imagens de prateleira superior para todos os dispositivos da Apple TV nos quais ele será executado. Você precisará adicionar os ativos de imagem necessários que serão compilados em um arquivo de `Assets.car` e incluídos no pacote do aplicativo Xamarin. tvOS antes que ele seja carregado no iTunes Connect.
+Para que um aplicativo tvOS seja aceito pela Apple para inclusão na loja de aplicativos da Apple TV, ele requer ícones adequados, lançamento e imagens de prateleira superior para todos os dispositivos da Apple TV nos quais ele será executado. Você precisará adicionar os ativos de imagem necessários que serão compilados em um `Assets.car` arquivo e incluídos no pacote do aplicativo Xamarin. tvOS antes que ele seja carregado no iTunes Connect.
 
 Para obter instruções detalhadas, consulte nossa documentação sobre como [trabalhar com ícones e imagens](~/ios/tvos/app-fundamentals/icons-images.md) .
 
-<a name="Creating_and_Installing_a_Distribution_Profile" />
+<a name="Creating_and_Installing_a_Distribution_Profile"></a>
 
 ### <a name="creating-and-installing-a-distribution-profile"></a>Criando e instalando um perfil de distribuição
 
@@ -109,17 +109,17 @@ o tvOS usa *perfis de provisionamento* para controlar como uma compilação de a
 
 O provisionamento envolve as seguintes etapas usando o Portal de provisionamento do iOS baseado na Web da Apple:
 
-1. Selecione **Provisionamento** > **Distribuição**.
-2. Clique no botão **+** e selecione o tipo de perfil de distribuição que você deseja criar como a **loja de aplicativos da Apple TV**.
+1. Selecione **Provisioning**  >  **distribuição**de provisionamento.
+2. Clique no **+** botão e selecione o tipo de perfil de distribuição que você deseja criar como **a loja de aplicativos da Apple TV**.
 3. Selecione na lista suspensa a **ID do aplicativo** para a qual você deseja criar um Perfil de distribuição.
 4. Selecione o certificado necessário para assinar o aplicativo.
 5. Insira um **Nome** para o novo **Perfil de distribuição** e gere o perfil.
 6. Atualize a lista de perfis disponíveis no Xcode.
-7. Selecione o perfil de provisionamento de distribuição no Visual Studio para a _configuração de compilação_da loja de aplicativos.
+7. Selecione o perfil de provisionamento de distribuição no Visual Studio para a **App Store** _configuração de compilação_da loja de aplicativos.
 
 Para obter instruções detalhadas, consulte [Criando um perfil de distribuição](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#creatingprofile) e [Selecionando um perfil de distribuição em um projeto Xamarin.iOS](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#selectprofile). Novamente, esses dois documentos são específicos do iOS, mas a mesma técnica é usada para aplicativos tvOS.
 
-<a name="Setting_the_Build_Configuration_for_your_Application" />
+<a name="Setting_the_Build_Configuration_for_your_Application"></a>
 
 ### <a name="setting-the-build-configuration-for-your-application"></a>Definindo a configuração de build para o seu aplicativo
 
@@ -128,14 +128,14 @@ Por padrão, quando você cria um novo aplicativo Xamarin. tvOS, _as configuraç
 Faça o seguinte:
 
 1. Clique com o botão direito do mouse no **nome do projeto** nas **Opções** de **Gerenciador de soluções** e seleção para abri-los para edição.
-2. Se você estiver direcionando a uma versão específica do tvOS, selecione-a em **TvOS Build** > **Ios SDK versão**. Para obter a versão de visualização do suporte do tvOS, deixe esse valor definido como **padrão**.
+2. Se você estiver direcionando a uma versão específica do tvOS, selecione-a em **tvOS Build**  >  **Ios SDK versão**. Para obter a versão de visualização do suporte do tvOS, deixe esse valor definido como **padrão**.
 3. A vinculação reduz o tamanho geral do distribuível do seu aplicativo removendo métodos, propriedades, classes, etc. e, na maioria dos casos, deve ser deixado no valor padrão **somente do SDK do link Framework**. Em algumas situações, como no uso de algumas bibliotecas de terceiros específicas, você poderá ser forçado a definir esse valor como **Não vincular** para impedir que elementos necessários sejam removidos.
 4. Para enviar um aplicativo Xamarin. tvOS, você precisará usar o compilador de otimização do LLVM. Verifique se a caixa **usar o compilador de otimização de LLVM** está marcada sob a configuração de **versão** .
 5. A Apple também exigiu que os aplicativos tvOS usem o BitCode. Novamente na configuração da **versão** , adicione `--bitcode=asmonly` à caixa **argumentos adicionais do mTouch** .
 6. A caixa de seleção **otimizar arquivos de imagem png para IOS** deve ser marcada, pois isso ajudará a diminuir ainda mais o tamanho de entrega do aplicativo.
 7. A depuração *não* deve ser habilitada, pois deixará o build desnecessariamente maior.
 
-<a name="Building_and_Submitting_the_Distributable" />
+<a name="Building_and_Submitting_the_Distributable"></a>
 
 ## <a name="building-and-submitting-the-distributable"></a>Criando e enviando o distribuível
 
@@ -146,7 +146,7 @@ Com seu aplicativo Xamarin. tvOS configurado corretamente, agora você está pro
 1. Selecione a configuração **Versão | Dispositivo** no Visual Studio para Mac:
 
     ![](app-store-publishing-images/buildxs01new.png "Select the Release configuration")
-2. No menu **Compilar**, selecione **Arquivo para Publicação**:
+2. No menu **Compilar** , selecione **arquivo morto para publicação**:
 
     [![](app-store-publishing-images/buildxs02new.png "Select Archive for Publishing")](app-store-publishing-images/buildxs02new.png#lightbox)
 3. Quando o arquivo tiver sido criado, a exibição **Arquivos Mortos** será exibida:
@@ -161,7 +161,7 @@ Sempre que você compilar seu aplicativo para o Arquivo Morto, ele abrirá autom
 
 Para assinar seu aplicativo e prepará-lo para distribuição:
 
-1. Selecione **assinar e distribuir...** , ilustrado abaixo:
+1. Selecione **assinar e distribuir...**, ilustrado abaixo:
 
     [![](app-store-publishing-images/buildxs04new.png ", Select theSign and Distribute...")](app-store-publishing-images/buildxs04new.png#lightbox)
 2. Isso abrirá o assistente de publicação. Selecione o canal de distribuição da **App Store** para criar um pacote e abra o Application Loader:
@@ -179,15 +179,15 @@ Para assinar seu aplicativo e prepará-lo para distribuição:
 
 Com a compilação de distribuição criada e arquivada, agora você está pronto para enviar seu aplicativo para o iTunes Connect.
 
-<a name="Submitting_Your_App_to_Apple" />
+<a name="Submitting_Your_App_to_Apple"></a>
 
 ## <a name="submitting-your-app-to-apple"></a>Enviando seu aplicativo para a Apple
 
 Com a compilação de distribuição concluída, você está pronto para enviar o seu aplicativo iOS para a Apple para análise e lançamento na App Store.
 
-O fluxo de trabalho de arquivamento no Visual Studio para Mac abrirá o carregador de aplicativos automaticamente depois que você salvar o `.ipa`:
+O fluxo de trabalho de arquivamento no Visual Studio para Mac abrirá o carregador de aplicativos automaticamente depois que você salvar o `.ipa` :
 
-1. Selecione *Entregar seu aplicativo* e clique no botão *Escolher*:
+1. Selecione *Entregar seu aplicativo* e clique no botão *Escolher*: 
 
     [![](app-store-publishing-images/publishvs01.png "Select Deliver Your App")](app-store-publishing-images/publishvs01.png#lightbox)
 
@@ -195,13 +195,13 @@ O fluxo de trabalho de arquivamento no Visual Studio para Mac abrirá o carregad
 3. O Application Loader validará o arquivo:
 
     [![](app-store-publishing-images/publishvs02.png "The Application Loader validation screen")](app-store-publishing-images/publishvs02.png#lightbox)
-4. Clique no botão *Avançar* e o aplicativo será validados na App Store:
+4. Clique no botão *Avançar* e o aplicativo será validados na App Store: 
 
     [![](app-store-publishing-images/publishvs03.png "The application being validated against the App Store")](app-store-publishing-images/publishvs03.png#lightbox)
 5. Clique no botão **Enviar** para enviar o aplicativo para a Apple para análise.
 6. O Application Loader informará quando o arquivo for carregado com êxito.
 
-<a name="iTunes_Connect_Status" />
+<a name="iTunes_Connect_Status"></a>
 
 ### <a name="itunes-connect-status"></a>Status de conexão do iTunes
 
@@ -209,21 +209,21 @@ Se você fizer logon novamente no iTunes Connect e selecionar seu aplicativo na 
 
 [![](app-store-publishing-images/image21.png "The status in iTunes Connect showing Waiting for Review")](app-store-publishing-images/image21.png#lightbox)
 
-<a name="Troubleshooting" />
+<a name="Troubleshooting"></a>
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
 Se você estiver tendo problemas para enviar seu aplicativo Xamarin. tvOS para a loja de aplicativos da Apple TV, consulte nosso guia de [solução de problemas](~/ios/tvos/troubleshooting.md) . Ele contém vários problemas conhecidos que você pode encontrar e como solucioná-los no Xamarin. tvOS.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>Resumo
 
 Este artigo apresentou um guia passo a passo para configurar, compilar e enviar um aplicativo para publicação da loja de aplicativos da Apple TV. Primeiro, ele abordou as etapas necessárias para criar e instalar um perfil de provisionamento de distribuição. Em seguida, ele analisou como usar Visual Studio para Mac para criar uma compilação de distribuição. Por fim, ele mostrou como usar o iTunes Connect e a ferramenta de arquivamento Xcode para enviar um aplicativo para a loja de aplicativos da Apple TV.
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
-- [Trabalhar com ícones e imagens](~/ios/tvos/app-fundamentals/icons-images.md)
+- [Como trabalhar com ícones e imagens](~/ios/tvos/app-fundamentals/icons-images.md)
 - [Preparar o envio de seu aplicativo para a nova Apple TV](https://developer.apple.com/tvos/submit/)
 - [Dicas de Envio da App Store](https://developer.apple.com/appstore/resources/submission/tips.html)
 - [Rejeições de Aplicativo Comuns](https://developer.apple.com/app-store/review/rejections/)

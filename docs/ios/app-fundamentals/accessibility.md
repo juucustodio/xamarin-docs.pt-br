@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/18/2016
-ms.openlocfilehash: 31cae6d6770b4c8fc4ff722e67f4ddce8ffdd7c6
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2259566fc6342a40a8c0a94bacd1c146b6509d52
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73011299"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574152"
 ---
 # <a name="accessibility-on-ios"></a>Acessibilidade no iOS
 
@@ -21,9 +21,9 @@ Consulte as páginas de acessibilidade do [Android e acessibilidade](~/android/a
 
 ## <a name="describing-ui-elements"></a>Descrevendo elementos da interface do usuário
 
-o iOS fornece as propriedades `AccessibilityLabel` e `AccessibilityHint` para que os desenvolvedores adicionem texto descritivo que pode ser usado pelo leitor de tela do VoiceOver para tornar os controles mais acessíveis. Os controles também podem ser marcados com uma ou mais características que fornecem contexto adicional em modos acessíveis.
+o iOS fornece `AccessibilityLabel` as `AccessibilityHint` Propriedades e para que os desenvolvedores adicionem texto descritivo que pode ser usado pelo leitor de tela do VoiceOver para tornar os controles mais acessíveis. Os controles também podem ser marcados com uma ou mais características que fornecem contexto adicional em modos acessíveis.
 
-Alguns controles podem não precisar ser acessíveis (por exemplo, um rótulo em uma entrada de texto ou uma imagem puramente decorativa) – a `IsAccessibilityElement` é fornecida para desabilitar a acessibilidade nesses casos.
+Alguns controles talvez não precisem ser acessíveis (por exemplo, um rótulo em uma entrada de texto ou uma imagem puramente decorativa) – o `IsAccessibilityElement` é fornecido para desabilitar a acessibilidade nesses casos.
 
 **Designer de interface do usuário**
 
@@ -48,13 +48,13 @@ O `AccessibilityIdentifier` é usado para definir uma chave exclusiva que pode s
 
 O valor de `AccessibilityIdentifier` nunca é falado ou exibido para o usuário.
 
-<a name="postnotification" />
+<a name="postnotification"></a>
 
 ## <a name="postnotification"></a>Notificação por
 
-O método `UIAccessibility.PostNotification` permite que os eventos sejam gerados para o usuário fora da interação direta (por exemplo, quando eles interagem com um controle específico).
+O `UIAccessibility.PostNotification` método permite que os eventos sejam gerados para o usuário fora da interação direta (por exemplo, quando eles interagem com um controle específico).
 
-### <a name="announcement"></a>Nascimento
+### <a name="announcement"></a>Anúncio
 
 Um comunicado pode ser enviado do código para informar ao usuário que algum estado foi alterado (como uma operação em segundo plano concluída). Isso pode ser acompanhado por uma indicação visual na interface do usuário:
 
@@ -66,7 +66,7 @@ UIAccessibility.PostNotification (
 
 ### <a name="layoutchanged"></a>Layoutchanged
 
-O anúncio de `LayoutChanged` é usado quando o layout da tela:
+O `LayoutChanged` comunicado é usado quando o layout da tela:
 
 ```csharp
 UIAccessibility.PostNotification (
@@ -80,7 +80,7 @@ As propriedades de acessibilidade, como o rótulo e a dica, podem ser localizada
 
 **MainStoryboard. Strings**
 
-Se a interface do usuário for disposta em um storyboard, você poderá fornecer traduções para propriedades de acessibilidade da mesma maneira que outras propriedades. No exemplo a seguir, um `UITextField` tem uma **ID de localização** de `Pqa-aa-ury` e duas propriedades de acessibilidade sendo definidas em espanhol:
+Se a interface do usuário for disposta em um storyboard, você poderá fornecer traduções para propriedades de acessibilidade da mesma maneira que outras propriedades. No exemplo a seguir, um `UITextField` tem uma **ID** de localização `Pqa-aa-ury` e duas propriedades de acessibilidade sendo definidas em espanhol:
 
 ```csharp
 /* Accessibility */
@@ -100,7 +100,7 @@ Como alternativa, as traduções podem ser adicionadas ao arquivo **localizável
 "Provide more information" = "escriba más información";
 ```
 
-Essas traduções podem ser usadas C# no por meio do método `LocalizedString`:
+Essas traduções podem ser usadas em C# por meio do `LocalizedString` método:
 
 ```csharp
 notesText.AccessibilityLabel = NSBundle.MainBundle.LocalizedString ("Notes", "");
@@ -109,7 +109,7 @@ notesText.AccessibilityHint = NSBundle.MainBundle.LocalizedString ("Provide more
 
 Consulte o [Guia de localização do IOS](~/ios/app-fundamentals/localization/index.md) para obter mais detalhes sobre como localizar conteúdo.
 
-<a name="testing" />
+<a name="testing"></a>
 
 ## <a name="testing-accessibility"></a>Testando a acessibilidade
 

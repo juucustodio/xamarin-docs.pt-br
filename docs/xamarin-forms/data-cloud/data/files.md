@@ -15,8 +15,6 @@ Xamarin.Formso código é executado em várias plataformas – cada um deles tem
 
 Para saber mais sobre o tratamento de arquivos de imagem, confira a página [Trabalhando com imagens](~/xamarin-forms/user-interface/images.md).
 
-<a name="Loading_and_Saving_Files" />
-
 ## <a name="saving-and-loading-files"></a>Salvamento e carregamento de arquivos
 
 As classes `System.IO` podem ser usadas para acessar o sistema de arquivos em cada plataforma. A classe `File` permite criar, excluir e ler arquivos e a classe `Directory` permite criar, excluir ou enumerar o conteúdo de diretórios. Também é possível usar as subclasses `Stream`, que podem fornecer um maior grau de controle sobre operações de arquivo (como compactação ou pesquisa de posição em um arquivo).
@@ -48,8 +46,6 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 Essas operações são demonstradas no aplicativo de exemplo, que inclui uma página que salva e carrega texto:
 
 [![Salvando e carregando texto](files-images/saveandload-sml.png "Salvando e carregando arquivos no aplicativo")](files-images/saveandload.png#lightbox "Salvando e carregando arquivos no aplicativo")
-
-<a name="Loading_Files_Embedded_as_Resources" />
 
 ## <a name="loading-files-embedded-as-resources"></a>Carregamento de arquivos inseridos como recursos
 
@@ -97,8 +93,6 @@ listView.ItemsSource = monkeys;
 
  [![Arquivo XML inserido na biblioteca do .NET Standard, exibido em ListView](files-images/pclxml-sml.png "Arquivo XML inserido na biblioteca do .NET Standard exibida em ListView")](files-images/pclxml.png#lightbox "Arquivo XML inserido na biblioteca do .NET Standard exibida em ListView")
 
-<a name="Embedding_in_Shared_Projects" />
-
 ## <a name="embedding-in-shared-projects"></a>Inserção em projetos compartilhados
 
 Projetos compartilhados também podem conter arquivos como recursos inseridos; no entanto, como o conteúdo de um Projeto compartilhado é compilado em projetos de referência, o prefixo usado para IDs de recurso de arquivo inserido pode ser alterado. Isso significa que a ID do recurso para cada arquivo inserido pode ser diferente para cada plataforma.
@@ -125,15 +119,11 @@ Stream stream = assembly.GetManifestResourceStream
     (resourcePrefix + "SharedTextResource.txt");
 ```
 
-<a name="Organizing_Resources" />
-
 ### <a name="organizing-resources"></a>Organização de recursos
 
 Os exemplos acima supõem que o arquivo é inserido na raiz do projeto da biblioteca .NET Standard, em cujo caso a ID de recurso é do formato **Namespace.Filename.Extension**, como `WorkingWithFiles.LibTextResource.txt` e `WorkingWithFiles.iOS.SharedTextResource.txt`.
 
 É possível organizar os recursos inseridos em pastas. Quando um recurso inserido é colocado em uma pasta, o nome da pasta se torna parte da ID de recurso (separado por pontos) para que o formato de ID de recurso se torne **Namespace.Folder.Filename.Extension**. Colocar os arquivos usados no aplicativo de exemplo em uma pasta **MyFolder** tornaria as IDs de recurso correspondentes `WorkingWithFiles.MyFolder.LibTextResource.txt` e `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
-
-<a name="Debugging_Embedded_Resources" />
 
 ### <a name="debugging-embedded-resources"></a>Depuração de recursos inseridos
 

@@ -1,29 +1,14 @@
 ---
-title: Xamarin.FormsClasse de aplicativo
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 2f4b568809f949d813de86ae88cbe621cfa3161c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84129682"
+Título: " Xamarin.Forms classe de aplicativo" Descrição: "Este artigo explica os recursos da classe de aplicativo padrão, que inclui uma propriedade a ser definida para a página inicial do aplicativo e um dicionário persistente para armazenar valores simples entre alterações de estado do ciclo de vida."
+MS. Prod: xamarin MS. AssetID: 421F8294-1944-46A4-8459-D2BD5AAABC9D MS. Technology: xamarin – Forms MS. Custom: vídeo autor: davidbritch MS. Author: dabritch MS. Date: 02/19/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-app-class"></a>Xamarin.FormsClasse de aplicativo
 
 A classe base `Application` oferece os seguintes recursos, que são expostos na subclasse `App` padrão de seus projetos:
 
 * Uma propriedade `MainPage`, que é onde a página inicial do aplicativo deve ser definida.
-* Um [ `Properties` dicionário](#Properties_Dictionary) persistente para armazenar valores simples nas alterações de estado do ciclo de vida.
+* Um [ `Properties` dicionário](#properties-dictionary) persistente para armazenar valores simples nas alterações de estado do ciclo de vida.
 * Uma propriedade `Current` estática que contém uma referência ao objeto do aplicativo atual.
 
 Ele também expõe [métodos de ciclo de vida](~/xamarin-forms/app-fundamentals/app-lifecycle.md) , como `OnStart` , e, `OnSleep` `OnResume` bem como eventos de navegação modais.
@@ -76,8 +61,6 @@ public class App : Xamarin.Forms.Application
     }
 }
 ```
-
-<a name="Properties_Dictionary" />
 
 ## <a name="properties-dictionary"></a>Dicionário de propriedades
 

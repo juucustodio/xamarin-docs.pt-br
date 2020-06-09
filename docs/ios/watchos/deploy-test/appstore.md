@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: a622684461bfe2e4a57b910288ee1f9afb54c694
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: f42c4a6dd2f4408d7b0ccf65e60851ebd29b76f6
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78292248"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574530"
 ---
 # <a name="deploying-watchos-apps-to-the-app-store"></a>Implantando aplicativos watchOS na loja de aplicativos
 
@@ -21,7 +21,7 @@ ms.locfileid: "78292248"
 
 - Verifique se você tem:
   - [**Perfis de provisionamento de distribuição**](#provisioning) criados para seus projetos.
-  - O **destino de implantação** (`MinimumOSVersion`) para o aplicativo pai do IOS definido como **8,2** ou anterior (não há suporte para 8,3).
+  - O **destino de implantação** ( `MinimumOSVersion` ) para o aplicativo pai do iOS definido como **8,2** ou anterior (não há suporte para 8,3).
 
 - No [**iTunes Connect**](#iTunes_Connect):
 
@@ -43,7 +43,7 @@ ms.locfileid: "78292248"
 
 Leia dicas específicas relacionadas a esses itens abaixo. Consulte a seção de [solução de problemas](#troubleshooting) se você tiver problemas.
 
-<a name="provisioning" />
+<a name="provisioning"></a>
 
 ## <a name="distribution-provisioning-profiles"></a>Perfis de provisionamento de distribuição
 
@@ -63,13 +63,13 @@ A lista de **perfis de provisionamento** mostrará todos os perfis de correspond
 
 ![](appstore-images/options-selectprofile-sml.png "The iOS Bundle Signing dialog")
 
-<a name="iTunes_Connect"/>
+<a name="iTunes_Connect"></a>
 
 ## <a name="itunes-connect"></a>iTunes Connect
 
 Siga a [visão geral da distribuição do aplicativo](~/ios/deploy-test/app-distribution/index.md), em particular:
 
-- [Configurar um aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
+- [Configurando um aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
 - [Publicando na App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
 
 Ao configurar o aplicativo no iTunes Connect, não se esqueça de adicionar o ícone de inspeção e capturas de tela:
@@ -82,7 +82,7 @@ Pelo menos uma captura de tela é necessária, até cinco podem ser enviadas.
 Eles devem ser 312x390 pixels e demonstrar seu aplicativo Watch em ação.
 Você pode usar o simulador de inspeção do 42 mm para tirar capturas de tela neste tamanho.
 
-<a name="xamarin_studio" />
+<a name="xamarin_studio"></a>
 
 ## <a name="visual-studio-for-mac"></a>Visual Studio para Mac
 
@@ -102,7 +102,7 @@ Você também pode escolher o item de menu **exibir > arquivos mortos...** para 
 
   ![](appstore-images/xs-archives-sml.png "The Archives view")
 
-<a name="xcode" />
+<a name="xcode"></a>
 
 ## <a name="xcode"></a>Xcode
 
@@ -128,7 +128,7 @@ O Xcode mostrará automaticamente os arquivos criados no Visual Studio para Mac.
 
 Em seguida, você pode enviar o aplicativo para aprovação na página **versões** . Consulte a [visão geral da distribuição de aplicativo do IOS](~/ios/deploy-test/app-distribution/index.md) para obter mais informações.
 
-## <a name="troubleshooting"></a>solução de problemas
+## <a name="troubleshooting"></a>Solução de problemas
 
 Aqui estão alguns erros que podem ser encontrados durante o envio à loja de aplicativos e as etapas que você pode executar para corrigi-los.
 
@@ -175,7 +175,7 @@ is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 Verifique se você tem a versão mais recente do Visual Studio para Mac e se o **appIcon. appiconset** contém um conjunto completo de imagens. Se você ainda estiver vendo esse erro, exiba a origem do **Contents. JSON** para confirmar que ele contém uma entrada para todas as imagens necessárias. Como alternativa, depois de ter garantido que você está usando a versão mais recente do Xamarin, exclua e recrie o **appIcon. appiconset**.
 
 > [!IMPORTANT]
-> Há um bug conhecido no ícone de observação do Visual Studio para Mac suporte: ele espera uma imagem de pixel 88x88 para a imagem de **29x29@3x** (que deve ser 87x87 pixels).
+> Há um bug conhecido no ícone de observação do Visual Studio para Mac suporte: ele espera uma imagem de pixel 88x88 para a **29x29@3x** imagem (que deve ser 87x87 pixels).
 
 Não é possível corrigir isso em Visual Studio para Mac-edite o ativo da imagem no Xcode ou edite manualmente o arquivo **Contents. JSON** .
 

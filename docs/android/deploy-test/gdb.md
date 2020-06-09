@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/05/2018
-ms.openlocfilehash: 51ebb8932f4b1ef8f10ba699e59ce53c98a38a50
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 85516800b2fcc410a9eba3abd0c12fd040cee3da
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73021484"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571942"
 ---
 # <a name="gdb"></a>GDB
 
@@ -30,7 +30,7 @@ Há três maneiras de usar o `gdb`:
 
 Quando as coisas derem errado, consulte a seção [Solução de problemas](#Troubleshooting).
 
-<a name="Debug_Builds_with_Fast_Deployment" />
+<a name="Debug_Builds_with_Fast_Deployment"></a>
 
 ### <a name="debug-builds-with-fast-deployment"></a>Builds de depuração com o Fast Deployment
 
@@ -57,7 +57,7 @@ O destino `_Gdb` iniciará uma atividade launcher declarada dentro de seu arquiv
 O destino `_Gdb` criará um diretório `gdb-symbols` e copiará o conteúdo dos diretórios `/system/lib` e `$APPDIR/lib` do seu destino para lá.
 
 > [!NOTE]
-> O conteúdo do diretório `gdb-symbols` está vinculado ao destino do Android no qual você implantou, e não será automaticamente substituído se você mudar o destino. (Considere isso um bug.) Se você alterar dispositivos alvo do Android, você precisará excluir manualmente este diretório.
+> O conteúdo do diretório `gdb-symbols` está vinculado ao destino do Android no qual você implantou, e não será automaticamente substituído se você mudar o destino. (Considere esse um bug.) Se você alterar os dispositivos de destino do Android, será necessário excluir manualmente esse diretório.
 
 Por fim, copie o comando `gdb` gerado e execute-o no shell:
 
@@ -73,7 +73,7 @@ GNU gdb (GDB) 7.3.1-gg2
 (gdb) c
 ```
 
-<a name="Debug_Builds_without_Fast_Deployment" />
+<a name="Debug_Builds_without_Fast_Deployment"></a>
 
 ## <a name="debug-builds-without-fast-deployment"></a>Builds de depuração sem o Fast Deployment
 
@@ -132,7 +132,7 @@ GNU gdb (GDB) 7.3.1-gg2
 (gdb) c
 ```
 
-<a name="Release_Builds" />
+<a name="Release_Builds"></a>
 
 ## <a name="release-builds"></a>Builds de lançamento
 
@@ -154,7 +154,7 @@ Um `gdbserver` acessível pode ser fornecido seguindo a seção [Builds de depur
 
 Um probleminha: o destino `_Gdb` do MSBuild finalizará quaisquer instâncias de aplicativo em execução anteriormente. Isso não funcionará em destinos com Android anterior à v4.0.
 
-<a name="Troubleshooting" />
+<a name="Troubleshooting"></a>
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
