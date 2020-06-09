@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2017
-ms.openlocfilehash: 37695ef93a1005febf12369e7d1defccf6130832
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 41272e25570d9346751d7130ee8b52c6056f7f35
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304257"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84565220"
 ---
 # <a name="application-icons-in-xamarinios"></a>Ícones de aplicativo no Xamarin. iOS
 
@@ -22,7 +22,7 @@ Os tópicos a seguir serão abordados em detalhes:
 - [Gerenciando ícones com catálogos de ativos](#managing) -Gerenciando ícones de aplicativos usando catálogos de ativos.
 - [trabalho artístico do iTunes](#itunes) -fornecendo a arte-final do iTunes necessária para o método ad hoc de entregar seu aplicativo.
 
-<a name="icon-types" />
+<a name="icon-types"></a>
 
 ## <a name="application-spotlight-and-settings-icons"></a>Ícones de aplicativo, Spotlight e configurações
 
@@ -47,14 +47,14 @@ Os tamanhos e resoluções de ativos de imagem a seguir serão necessários para
     ||vezes|
     |---|---|
     |Ícone do Aplicativo|180x180|
-    |Destaque|120x120|
+    |Destaque|120 x 120|
     |Configurações|87x87|
 
 - **iPhone: iOS 7 & 8**
 
     ||1x|2|
     |---|---|---|
-    |Ícone do Aplicativo|60 x 60<sup>1</sup>|120x120|
+    |Ícone do Aplicativo|60 x 60<sup>1</sup>|120 x 120|
     |Destaque|40x40<sup>2</sup>|80x80|
     |Configurações|-|-|
 
@@ -70,7 +70,7 @@ Os tamanhos e resoluções de ativos de imagem a seguir serão necessários para
 
 - **iPad: iOS 9 & 10**
 
-    ||2x (iPad Pro)|
+    ||2x (iPad pro)|
     |---|---|
     |Ícone do Aplicativo|167x167<sup>6</sup>|
     |Destaque|120 x 120<sup>6</sup>|
@@ -80,15 +80,15 @@ Os tamanhos e resoluções de ativos de imagem a seguir serão necessários para
 
     ||1x|2|
     |---|---|---|
-    |Ícone do Aplicativo|76 x 76|152x152|
-    |Destaque|40 x 40|80x80|
+    |Ícone do Aplicativo|76 x 76|152 x 152|
+    |Destaque|40x40|80x80|
     |Configurações|-|-|
 
 - **iPad: iOS 5 & 6**
 
     ||1x|2|
     |---|---|---|
-    |Ícone do Aplicativo|72 x 72|144x144|
+    |Ícone do Aplicativo|72x72|144x144|
     |Destaque|50 x 50|100x100|
     |Configurações|29X29<sup>3, 5</sup>|58x58<sup>3, 5</sup>|
 
@@ -101,27 +101,27 @@ Os tamanhos e resoluções de ativos de imagem a seguir serão necessários para
 
  Para obter mais informações sobre ícones, consulte a documentação de [tamanhos de imagem e ícone](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1) da Apple.
 
-<a name="managing" />
+<a name="managing"></a>
 
 ## <a name="managing-icons-with-asset-catalogs"></a>Gerenciando ícones com catálogos de ativos
 
-Para ícones, um conjunto de imagens `AppIcon` especial pode ser adicionado ao arquivo de `Assets.xcassets` no projeto do aplicativo. Todas as versões da imagem necessárias para dar suporte a todas as resoluções são incluídas no _xcasset_ e agrupadas juntas. Um editor especial no Visual Studio para Mac permite que o desenvolvedor inclua e configure essas imagens graficamente.
+Para ícones, um `AppIcon` conjunto de imagens especial pode ser adicionado ao `Assets.xcassets` arquivo no projeto do aplicativo. Todas as versões da imagem necessárias para dar suporte a todas as resoluções são incluídas no _xcasset_ e agrupadas juntas. Um editor especial no Visual Studio para Mac permite que o desenvolvedor inclua e configure essas imagens graficamente.
 
 Para usar um catálogo de ativos, siga estas etapas:
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-1. Clique duas vezes no arquivo `Info.plist` no **Gerenciador de soluções** para abri-lo para edição.
+1. Clique duas vezes no `Info.plist` arquivo no **Gerenciador de soluções** para abri-lo para edição.
 2. Role para baixo até a seção **ícones do iPhone** .
 3. Clique no botão **migrar para o catálogo de ativos** :
 
     ![](app-icons-images/migrate01.png "Ensure AppIcon is selected")
 
-4. No **Gerenciador de soluções**, clique duas vezes no arquivo `Assets.xcassets` para abri-lo para edição: 
+4. No **Gerenciador de soluções**, clique duas vezes no `Assets.xcassets` arquivo para abri-lo para edição: 
 
     ![](app-icons-images/asset01.png "The Assets.xcassets file in the Solution Explorer")
 
-5. Selecione `AppIcon` na lista de ativos para exibir o `Icon Editor`:
+5. Selecione `AppIcon` na lista de ativos para exibir `Icon Editor` :
 
     ![](app-icons-images/asset02.png "The AppIcon editor")
 
@@ -131,7 +131,7 @@ Para usar um catálogo de ativos, siga estas etapas:
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Clique duas vezes nas informações * *.  \* * arquivo no **Gerenciador de soluções**:
+1. Clique duas vezes nas informações * *.  * * arquivo no **Gerenciador de soluções**:
 
     ![](app-icons-images/icon01w.png "Select Info.plist")
 
@@ -158,7 +158,7 @@ Para usar um catálogo de ativos, siga estas etapas:
 
 Esse é o método preferencial de incluir e gerenciar ativos de imagem que serão usados para fornecer ícones de aplicativo, de destaque e de configurações para um aplicativo.
 
-<a name="itunes" />
+<a name="itunes"></a>
 
 ## <a name="itunes-artwork"></a>Arte do iTunes
 
@@ -168,7 +168,7 @@ Para especificar a Arte do iTunes, faça o seguinte:
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-1. Clique duas vezes no arquivo `Info.plist` no **Gerenciador de soluções** para abri-lo para edição.
+1. Clique duas vezes no `Info.plist` arquivo no **Gerenciador de soluções** para abri-lo para edição.
 2. Role até a seção **trabalho artístico do iTunes** do editor: 
 
     ![](app-icons-images/itunes01.png "Scroll to the iTunes Artwork section of the editor")
@@ -177,7 +177,7 @@ Para especificar a Arte do iTunes, faça o seguinte:
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Clique duas vezes no arquivo `Info.plist` no **Gerenciador de soluções** para abri-lo para edição.
+1. Clique duas vezes no `Info.plist` arquivo no **Gerenciador de soluções** para abri-lo para edição.
 
 2. Clique na guia **ativos visuais** e expanda a **arte do iTunes**: 
 
@@ -187,7 +187,7 @@ Para especificar a Arte do iTunes, faça o seguinte:
 
 -----
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Trabalhando com imagens (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithimages)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)

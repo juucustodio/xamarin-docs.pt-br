@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 60bab56440fc7227e14d31875a8b6108cd1a86f3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 74d6dfb2b6a722e5af4dc97cdf23b84aa4bd95d0
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032488"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84565038"
 ---
 # <a name="core-animation-in-xamarinios"></a>Animação de núcleo no Xamarin. iOS
 
@@ -23,7 +23,7 @@ Todas as animações ultra suaves no iOS, como a rolagem de tabelas e o passar o
 
 A animação principal e as estruturas gráficas principais podem trabalhar em conjunto para criar gráficos 2D animados. Na verdade, a animação principal pode até mesmo transformar gráficos 2D em espaço 3D, criando experiências incríveis e Cinematic. No entanto, para criar gráficos 3D verdadeiros, você precisaria usar algo como OpenGL ES, ou para que os jogos se transformem em uma API como monogame, embora o 3D esteja além do escopo deste artigo.
 
-<a name="Using_Core_Animation" />
+<a name="Using_Core_Animation"></a>
 
 ## <a name="core-animation"></a>Animação principal
 
@@ -32,7 +32,7 @@ o iOS usa a estrutura de animação principal para criar efeitos de animação, 
 - [Via UIKit](#Using_UIKit_Animation), que inclui animações baseadas em exibição, bem como transições animadas entre controladores.
 - [Por meio de animação de núcleo](#Using_Core_Animation), quais camadas são diretamente, permitindo um controle mais refinado.
 
-<a name="Using_UIKit_Animation" />
+<a name="Using_UIKit_Animation"></a>
 
 ## <a name="using-uikit-animation"></a>Usando a animação UIKit
 
@@ -46,9 +46,9 @@ Esta seção aborda os recursos de animação do UIKit, incluindo:
 
 ### <a name="view-controller-transitions"></a>Transições de controlador de exibição
 
- o `UIViewController` fornece suporte interno para fazer a transição entre os controladores de exibição por meio do método `PresentViewController`. Ao usar `PresentViewController`, a transição para o segundo controlador pode, opcionalmente, ser animada.
+ `UIViewController`fornece suporte interno para fazer a transição entre os controladores de exibição por meio do `PresentViewController` método. Ao usar `PresentViewController` o, a transição para o segundo controlador pode, opcionalmente, ser animada.
 
-Por exemplo, considere um aplicativo com dois controladores, em que tocar um botão no primeiro controlador chama `PresentViewController` para exibir um segundo controlador. Para controlar qual animação de transição é usada para mostrar o segundo controlador, basta definir sua propriedade [`ModalTransitionStyle`](xref:UIKit.UIModalTransitionStyle) , conforme mostrado abaixo:
+Por exemplo, considere um aplicativo com dois controladores, em que tocar um botão no primeiro controlador chama `PresentViewController` para exibir um segundo controlador. Para controlar qual animação de transição é usada para mostrar o segundo controlador, basta definir sua [`ModalTransitionStyle`](xref:UIKit.UIModalTransitionStyle) propriedade, conforme mostrado abaixo:
 
 ```csharp
 SecondViewController vc2 = new SecondViewController {
@@ -56,19 +56,19 @@ SecondViewController vc2 = new SecondViewController {
 };
 ```
 
-Nesse caso, é usada uma animação `PartialCurl`, embora várias outras estejam disponíveis, incluindo:
+Nesse caso, uma `PartialCurl` animação é usada, embora várias outras estejam disponíveis, incluindo:
 
-- `CoverVertical` – slides para cima na parte inferior da tela
-- `CrossDissolve` – a exibição antiga esmaece & a nova exibição esmaece
-- `FlipHorizontal`-uma inversão horizontal da direita para a esquerda. No descarte, a transição inverte da esquerda para a direita.
+- `CoverVertical`– Desliza para cima na parte inferior da tela
+- `CrossDissolve`– A exibição antiga esmaece & a nova exibição esmaece
+- `FlipHorizontal`-Uma inversão horizontal da direita para a esquerda. No descarte, a transição inverte da esquerda para a direita.
 
-Para animar a transição, passe `true` como o segundo argumento para `PresentViewController`:
+Para animar a transição, passe `true` como o segundo argumento para `PresentViewController` :
 
 ```csharp
 PresentViewController (vc2, true, null);
 ```
 
-A captura de tela a seguir mostra a aparência da transição para o caso de `PartialCurl`:
+A captura de tela a seguir mostra a aparência da transição para o `PartialCurl` caso:
 
  ![](core-animation-images/06-view-transitions.png "This screenshot shows the PartialCurl transition")
 
@@ -76,7 +76,7 @@ A captura de tela a seguir mostra a aparência da transição para o caso de `Pa
 
 Além das transições entre controladores, o UIKit também dá suporte a transições de animação entre exibições para alternar uma exibição para outra.
 
-Por exemplo, digamos que você tenha um controlador com `UIImageView`, onde tocar na imagem deve exibir uma segunda `UIImageView`. Para animar a superexibição da exibição de imagem a fim de fazer a transição para a segunda exibição de imagem é tão simples quanto chamar `UIView.Transition`, passando-a `toView` e `fromView` conforme mostrado abaixo:
+Por exemplo, digamos que você tenha um controlador com `UIImageView` , onde tocar na imagem deve exibir um segundo `UIImageView` . Para animar a superexibição da exibição de imagem para fazer a transição para a segunda exibição de imagem é tão simples quanto chamar `UIView.Transition` , passando-a `toView` e `fromView` conforme mostrado abaixo:
 
 ```csharp
 UIView.Transition (
@@ -88,7 +88,7 @@ UIView.Transition (
   completion: () => { Console.WriteLine ("transition complete"); });
 ```
 
-`UIView.Transition` também usa um parâmetro `duration` que controla por quanto tempo a animação é executada, bem como [`options`](xref:UIKit.UIViewAnimationOptions) para especificar coisas como a animação a ser usada e a função de atenuação. Além disso, você pode especificar um manipulador de conclusão que será chamado quando a animação for concluída.
+`UIView.Transition`também usa um `duration` parâmetro que controla por quanto tempo a animação é executada, bem como [`options`](xref:UIKit.UIViewAnimationOptions) para especificar coisas como a animação a ser usada e a função de atenuação. Além disso, você pode especificar um manipulador de conclusão que será chamado quando a animação for concluída.
 
 A captura de tela abaixo mostra a transição animada entre as exibições de imagem quando `TransitionFlipFromTop` é usado:
 
@@ -96,16 +96,16 @@ A captura de tela abaixo mostra a transição animada entre as exibições de im
 
 ### <a name="view-property-animations"></a>Exibir animações de propriedade
 
-O UIKit dá suporte à animação de uma variedade de propriedades na classe `UIView` gratuitamente, incluindo:
+O UIKit dá suporte à animação de uma variedade de propriedades na `UIView` classe gratuitamente, incluindo:
 
 - Quadro
 - Limites
-- Centralizado
+- Centro
 - Alfa
 - Transformar
 - Cor
 
-Essas animações acontecem implicitamente especificando alterações de propriedade em um `NSAction` delegado passado para o método estático `UIView.Animate`. Por exemplo, o código a seguir anima o ponto central de um `UIImageView`:
+Essas animações acontecem implicitamente especificando alterações de propriedade em um `NSAction` delegado passado para o `UIView.Animate` método estático. Por exemplo, o código a seguir anima o ponto central de um `UIImageView` :
 
 ```csharp
 pt = imgView.Center;
@@ -127,25 +127,25 @@ Isso resulta em uma animação de imagem para frente e para trás na parte super
 
  ![](core-animation-images/08-animate-center.png "An image animating back and forth across the top of the screen as the output")
 
-Assim como com o método `Transition`, `Animate` permite que a duração seja definida, juntamente com a função de atenuação. Este exemplo também usou a opção `UIViewAnimationOptions.Autoreverse`, que faz com que a animação Anime do valor de volta para a inicial. No entanto, o código também define o `Center` de volta para seu valor inicial em um manipulador de conclusão. Embora uma animação esteja interpolando valores de propriedade ao longo do tempo, o valor do modelo real da propriedade é sempre o valor final que foi definido. Neste exemplo, o valor é um ponto próximo do lado direito da superexibição. Sem definir o `Center` para o ponto inicial, que é onde a animação é concluída devido ao `Autoreverse` ser definido, a imagem seria ajustada para o lado direito após a animação ser concluída, como mostrado abaixo:
+Assim como com o `Transition` método, `Animate` permite que a duração seja definida, juntamente com a função de atenuação. Este exemplo também usou a `UIViewAnimationOptions.Autoreverse` opção, que faz com que a animação Anime o valor de volta para o inicial. No entanto, o código também define de `Center` volta para seu valor inicial em um manipulador de conclusão. Embora uma animação esteja interpolando valores de propriedade ao longo do tempo, o valor do modelo real da propriedade é sempre o valor final que foi definido. Neste exemplo, o valor é um ponto próximo do lado direito da superexibição. Sem definir o `Center` para o ponto inicial, que é onde a animação é concluída devido ao `Autoreverse` que está sendo definido, a imagem seria ajustada para o lado direito após a conclusão da animação, como mostrado abaixo:
 
  ![](core-animation-images/09-animation-complete.png "Without setting the Center to the initial point, the image would snap back to the right side after the animation completes")
 
 ## <a name="using-core-animation"></a>Usando a animação de núcleo
 
- `UIView` animações permitem muita capacidade e devem ser usadas se possível devido à facilidade de implementação. Como mencionado anteriormente, as animações UIView usam a estrutura de animação principal. No entanto, algumas coisas não podem ser feitas com `UIView` animações, como animação de propriedades adicionais que não podem ser animadas com uma exibição ou interpolação em um caminho não linear. Nesses casos em que você precisa de controle mais preciso, a animação de núcleo também pode ser usada diretamente.
+ `UIView`as animações permitem muita capacidade e devem ser usadas se possível devido à facilidade de implementação. Como mencionado anteriormente, as animações UIView usam a estrutura de animação principal. No entanto, algumas coisas não podem ser feitas com `UIView` animações, como animação de propriedades adicionais que não podem ser animadas com uma exibição ou interpolação ao longo de um caminho não linear. Nesses casos em que você precisa de controle mais preciso, a animação de núcleo também pode ser usada diretamente.
 
-### <a name="layers"></a>Layer
+### <a name="layers"></a>Camadas
 
-Ao trabalhar com a animação principal, a animação ocorre por meio de *camadas*, que são do tipo `CALayer`. Uma camada é conceitualmente semelhante a uma exibição em que há uma hierarquia de camadas, assim como há uma hierarquia de exibição. Na verdade, as exibições de fundo de camadas, com a exibição adicionando suporte para interação do usuário. Você pode acessar a camada de qualquer exibição por meio da propriedade `Layer` da exibição. Na verdade, o contexto usado no método `Draw` de `UIView` é realmente criado a partir da camada. Internamente, a camada que faz o backup de um `UIView` tem seu delegado definido como a própria exibição, que é o que chama `Draw`. Portanto, ao desenhar em um `UIView`, você está realmente desenhando em sua camada.
+Ao trabalhar com a animação principal, a animação ocorre por meio de *camadas*, que são do tipo `CALayer` . Uma camada é conceitualmente semelhante a uma exibição em que há uma hierarquia de camadas, assim como há uma hierarquia de exibição. Na verdade, as exibições de fundo de camadas, com a exibição adicionando suporte para interação do usuário. Você pode acessar a camada de qualquer modo de exibição por meio da propriedade da exibição `Layer` . Na verdade, o contexto usado no `Draw` método de `UIView` é realmente criado a partir da camada. Internamente, a camada que faz o backup de um `UIView` tem seu delegado definido como a própria exibição, que é o que chama `Draw` . Portanto, ao desenhar em um `UIView` , você está realmente desenhando em sua camada.
 
 Animações de camada podem ser implícitas ou explícitas. Animações implícitas são declarativas. Você simplesmente declara quais propriedades de camada devem ser alteradas e a animação funciona apenas. Por outro lado, animações explícitas são criadas por meio de uma classe de animação que é adicionada a uma camada. As animações explícitas permitem o controle de adição sobre como uma animação é criada. As seções a seguir investigam animações implícitas e explícitas em maior profundidade.
 
 ### <a name="implicit-animations"></a>Animações implícitas
 
-Uma maneira de animar as propriedades de uma camada é por meio de uma animação implícita. `UIView` animações criam animações implícitas. No entanto, você também pode criar animações implícitas diretamente em uma camada.
+Uma maneira de animar as propriedades de uma camada é por meio de uma animação implícita. `UIView`animações criam animações implícitas. No entanto, você também pode criar animações implícitas diretamente em uma camada.
 
-Por exemplo, o código a seguir define o `Contents` de uma camada a partir de uma imagem, define uma largura e uma cor de borda e adiciona a camada como uma subcamada da camada da exibição:
+Por exemplo, o código a seguir define uma camada `Contents` de uma imagem, define uma largura e uma cor de borda e adiciona a camada como uma subcamada da camada da exibição:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -164,7 +164,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-Para adicionar uma animação implícita para a camada, basta encapsular as alterações de propriedade em um `CATransaction`. Isso permite animar propriedades que não seriam animáveis com uma animação de exibição, como a `BorderWidth` e `BorderColor`, conforme mostrado abaixo:
+Para adicionar uma animação implícita para a camada, basta encapsular as alterações de propriedade em um `CATransaction` . Isso permite animar propriedades que não seriam animáveis com uma animação de exibição, como `BorderWidth` e `BorderColor` conforme mostrado abaixo:
 
 ```csharp
 public override void ViewDidAppear (bool animated)
@@ -180,19 +180,19 @@ public override void ViewDidAppear (bool animated)
 }
 ```
 
-Esse código também anima o `Position`da camada, que é o local do ponto de ancoragem da camada medido a partir do canto superior esquerdo das coordenadas da SUPERCAMADA. O ponto de ancoragem de uma camada é um ponto normalizado dentro do sistema de coordenadas da camada.
+Esse código também anima a camada `Position` , que é o local do ponto de ancoragem da camada medido a partir do canto superior esquerdo das coordenadas da SUPERCAMADA. O ponto de ancoragem de uma camada é um ponto normalizado dentro do sistema de coordenadas da camada.
 
 A figura a seguir mostra a posição e o ponto de ancoragem:
 
  ![](core-animation-images/10-postion-anchorpt.png "This figure shows the position and anchor point")
 
-Quando o exemplo é executado, o `Position`, `BorderWidth` e `BorderColor` animar, conforme mostrado nas seguintes capturas de tela:
+Quando o exemplo é executado, o `Position` `BorderWidth` e o `BorderColor` animam conforme mostrado nas seguintes capturas de tela:
 
  ![](core-animation-images/11-implicit-animation.png "When the example is run, the Position, BorderWidth and BorderColor animate as shown")
 
 ### <a name="explicit-animations"></a>Animações explícitas
 
-Além das animações implícitas, a animação principal inclui uma variedade de classes que herdam de `CAAnimation` que permitem encapsular animações que são adicionadas explicitamente a uma camada. Eles permitem um controle mais refinado sobre animações, como modificar o valor inicial de uma animação, agrupar animações e especificar quadros-chave para permitir caminhos não lineares.
+Além das animações implícitas, a animação principal inclui uma variedade de classes que herdam do `CAAnimation` que permitem encapsular animações que são adicionadas explicitamente a uma camada. Eles permitem um controle mais refinado sobre animações, como modificar o valor inicial de uma animação, agrupar animações e especificar quadros-chave para permitir caminhos não lineares.
 
 O código a seguir mostra um exemplo de uma animação explícita usando um `CAKeyframeAnimation` para a camada mostrada anteriormente (na seção animação implícita):
 
@@ -225,7 +225,7 @@ public override void ViewDidAppear (bool animated)
 }
 ```
 
-Esse código altera a `Position` da camada criando um caminho que é usado para definir uma animação de quadro-chave. Observe que a `Position` da camada é definida como o valor final do `Position` da animação. Sem isso, a camada retornaria abruptamente para seu `Position` antes da animação porque a animação só altera o valor da apresentação e não o valor real do modelo. Ao definir o valor do modelo como o valor final da animação, a camada permanece em vigor no final da animação.
+Esse código altera o `Position` da camada criando um caminho que é usado para definir uma animação de quadro-chave. Observe que a camada `Position` é definida como o valor final do `Position` da animação. Sem isso, a camada retornaria abruptamente para seu `Position` antes da animação porque a animação só altera o valor da apresentação e não o valor real do modelo. Ao definir o valor do modelo como o valor final da animação, a camada permanece em vigor no final da animação.
 
 As capturas de tela a seguir mostram a camada que contém a animação da imagem por meio do caminho especificado:
 

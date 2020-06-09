@@ -1,22 +1,8 @@
 ---
-title: Armazene e acesse dados no armazenamento do Azure deXamarin.Forms
-description: O armazenamento do Azure é uma solução de armazenamento em nuvem escalonável que pode ser usada para armazenar dados não estruturados e estruturados. Este artigo explica como usar Xamarin.Forms o para armazenar texto e dados binários no armazenamento do Azure e como acessar os dados.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4df14ef4d3eb72b92e4201e57103780801ca2d2f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131021"
+Título: "armazenar e acessar dados no armazenamento do Azure de Xamarin.Forms " Descrição: "o armazenamento do Azure é uma solução de armazenamento em nuvem escalonável que pode ser usada para armazenar dados não estruturados e estruturados. Este artigo explica como usar Xamarin.Forms o para armazenar texto e dados binários no armazenamento do Azure e como acessar os dados. "
+MS. Prod: xamarin MS. AssetID: 5B10D37B-839B-4CD0-9C65-91014A93F3EB MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/28/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Armazene e acesse dados no armazenamento do Azure deXamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
@@ -71,10 +57,8 @@ O processo de integração de uma conta de armazenamento do Azure em um Xamarin.
 
 1. Criar uma conta de armazenamento. Para obter mais informações, consulte [criar uma conta de armazenamento](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/#create-a-storage-account).
 1. Adicione a [biblioteca de cliente do armazenamento do Azure](https://www.nuget.org/packages/WindowsAzure.Storage/) ao Xamarin.Forms aplicativo.
-1. Configure a cadeia de conexão de armazenamento. Para obter mais informações, consulte [conectando-se ao armazenamento do Azure](#connecting).
+1. Configure a cadeia de conexão de armazenamento. Para obter mais informações, consulte [conectando-se ao armazenamento do Azure](#connecting-to-azure-storage).
 1. Adicione `using` diretivas para os `Microsoft.WindowsAzure.Storage` `Microsoft.WindowsAzure.Storage.Blob` namespaces e a classes que acessarão o armazenamento do Azure.
-
-<a name="connecting" />
 
 ## <a name="connecting-to-azure-storage"></a>Conectando-se ao Armazenamento do Azure
 

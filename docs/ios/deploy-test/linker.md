@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: 284705973f9c0ec606572170f7e927ed4745ddd1
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 263c48c5006ba0060756e1050497c38dfb7c8eae
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73030233"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567769"
 ---
 # <a name="linking-xamarinios-apps"></a>Vinculando aplicativos Xamarin.iOS
 
@@ -22,7 +22,7 @@ O vinculador usa análise estática para determinar os diferentes caminhos de c�
 
 Já que o vinculador é uma ferramenta estática, ele não pode marcar para tipos de inclusão e métodos que são chamados por meio de reflexão, ou instanciados dinamicamente. Há várias opções de soluções alternativas para essa limitação.
 
-<a name="Linker_Behavior" />
+<a name="Linker_Behavior"></a>
 
 ## <a name="linker-behavior"></a>Comportamento do vinculador
 
@@ -56,7 +56,7 @@ Desabilitar o _linker_ assegura que nenhum assembly seja modificado. Por motivos
 
 Isso corresponde à opção *-nolink* ao usar a ferramenta de linha de comando mtouch.
 
-<a name="Link_SDK_assemblies_only" />
+<a name="Link_SDK_assemblies_only"></a>
 
 ### <a name="link-sdk-assemblies-only"></a>Vincular somente os assemblies do SDK
 
@@ -66,7 +66,7 @@ Essa é a opção mais simples, pois não requer nenhuma alteração ao código.
 
 Isso corresponde à opção *-linksdk* ao usar a ferramenta de linha de comando mtouch.
 
-<a name="Link_all_assemblies" />
+<a name="Link_all_assemblies"></a>
 
 ### <a name="link-all-assemblies"></a>Vincular todos os assemblies
 
@@ -74,13 +74,13 @@ Ao vincular tudo, o _linker_ pode usar o conjunto completo de suas otimizações
 
 Isso corresponde à opção *-linkall* ao usar a ferramenta de linha de comando **mtouch**.
 
-<a name="Controlling_the_Linker" />
+<a name="Controlling_the_Linker"></a>
 
 ## <a name="controlling-the-linker"></a>Controlar o vinculador
 
 Quando você usar o _linker_, ele às vezes removerá código que você pode ter chamado dinamicamente, ainda que indiretamente. Para abranger esses casos, o _linker_ fornece alguns recursos e opções para permitir maior controle sobre as ações dele.
 
-<a name="Preserving_Code" />
+<a name="Preserving_Code"></a>
 
 ### <a name="preserving-code"></a>Preservação do código
 
@@ -108,7 +108,7 @@ public sealed class PreserveAttribute : System.Attribute {
 
 Não importa em qual namespace isso é definido, o _linker_ procura esse atributo pelo nome do tipo.
 
- <a name="Skipping_Assemblies" />
+ <a name="Skipping_Assemblies"></a>
 
 ### <a name="skipping-assemblies"></a>Ignorar assemblies
 
@@ -130,7 +130,7 @@ Se você deseja que o _linker_ ignore vários assemblies, inclua vários argumen
 
 Não há nenhuma interface do usuário para usar essa opção, mas ela pode ser fornecida na caixa de diálogo Opções do Projeto do Visual Studio para Mac ou no painel Propriedades do projeto do Visual Studio, dentro do campo de texto **Argumentos adicionais do mtouch**. Por exemplo, *--linkskip=mscorlib* não vincularia mscorlib, mas vincularia outros assemblies na solução).
 
-<a name="Disabling_Link_Away" />
+<a name="Disabling_Link_Away"></a>
 
 ### <a name="disabling-link-away"></a>Desabilitar a Remoção
 
@@ -146,7 +146,7 @@ Os usuários podem selecionar a opção de apenas vincular os assemblies do SDK,
 
 Isso normalmente acontece porque eles não desejam adicionar manualmente atributos `[Preserve]` ao seu código.  O efeito colateral é que bibliotecas de terceiros não serão vinculadas, o que geralmente é um bom padrão, pois não é possível saber se uma outra biblioteca de terceiros é compatível com o _linker_ ou não.
 
-Se você tem uma biblioteca em seu projeto, ou você é um desenvolvedor de bibliotecas reutilizáveis e deseja que o linker [`LinkerSafe`](xref:Foundation.LinkerSafeAttribute)trate sua montagem como vinculável, tudo o que você precisa fazer é adicionar o atributo de nível de montagem, como este:
+Se você tiver uma biblioteca em seu projeto ou se for um desenvolvedor de bibliotecas reutilizáveis e quiser que o vinculador trate seu assembly como vinculável, tudo o que você precisa fazer é adicionar o atributo de nível de assembly [`LinkerSafe`](xref:Foundation.LinkerSafeAttribute) , desta forma:
 
 ```csharp
 [assembly:LinkerSafe]
@@ -167,6 +167,6 @@ Siga as [instruções para criar um arquivo de configuração do vinculador](~/c
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Configuração de linker personalizado](~/cross-platform/deploy-test/linker.md)
+- [Configuração do vinculador personalizado](~/cross-platform/deploy-test/linker.md)
 - [Usando Linker no Mac](~/mac/deploy-test/linker.md)
 - [Vinculação no Android](~/android/deploy-test/linker.md)

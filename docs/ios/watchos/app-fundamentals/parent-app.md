@@ -1,22 +1,22 @@
 ---
-title: Trabalhando com o aplicativo pai no Xamarin watchOS
-description: Este documento descreve como trabalhar com um aplicativo do pai do watchOS no Xamarin. Ele aborda extensões de aplicativo watchOS, aplicativos iOS, armazenamento compartilhado e muito mais.
+title: Trabalhando com o aplicativo pai watchOS no Xamarin
+description: Este documento descreve como trabalhar com um aplicativo pai watchOS no Xamarin. Ele aborda extensões de aplicativo watchOS, aplicativos iOS, armazenamento compartilhado e muito mais.
 ms.prod: xamarin
 ms.assetid: 9AD29833-E9CC-41A3-95D2-8A655FF0B511
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 3e11b163d16be9711bf09102e3ab8604d98299d7
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 49f2bdf63c286464073308cd1f17239692aa2395
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304957"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567327"
 ---
-# <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Trabalhando com o aplicativo pai no Xamarin watchOS
+# <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Trabalhando com o aplicativo pai watchOS no Xamarin
 
-Há diferentes maneiras de se comunicar entre o aplicativo de inspeção e o aplicativo iOS que ele é fornecido com:
+Há diferentes maneiras de se comunicar entre o aplicativo Watch e o aplicativo iOS em que ele é agrupado:
 
 - Observe que os aplicativos podem [executar código](#run-code) no aplicativo pai no iPhone.
 
@@ -24,11 +24,11 @@ Há diferentes maneiras de se comunicar entre o aplicativo de inspeção e o apl
 
 - Use a entrega para passar dados de uma notificação para o aplicativo Watch, enviando o usuário para um controlador de interface específico no aplicativo.
 
-O aplicativo pai, às vezes, também é conhecido como o aplicativo de contêiner.
+O aplicativo pai às vezes também é chamado de aplicativo de contêiner.
 
 ## <a name="run-code"></a>Executar código
 
-Esses dois exemplos demonstram como usar `WCSession` para executar código e enviar mensagens entre um aplicativo de inspeção e o iPhone emparelhado:
+Esses dois exemplos demonstram como usar `WCSession` o para executar código e enviar mensagens entre um aplicativo de inspeção e o iPhone emparelhado:
 
 - [Assista à conectividade](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchconnectivity/)
 - [SimpleWatchConnectivity](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-simplewatchconnectivity/) 
@@ -39,7 +39,7 @@ Se você configurar um [grupo de aplicativos](~/ios/watchos/app-fundamentals/app
 
 ### <a name="nsuserdefaults"></a>NSUserDefaults
 
-O código a seguir pode ser escrito na extensão do aplicativo de inspeção e no aplicativo pai do iPhone para que eles possam fazer referência a um conjunto comum de `NSUserDefaults`:
+O código a seguir pode ser escrito na extensão do aplicativo de inspeção e no aplicativo pai do iPhone para que eles possam fazer referência a um conjunto comum de `NSUserDefaults` :
 
 ```csharp
 NSUserDefaults shared = new NSUserDefaults(
@@ -55,11 +55,11 @@ shared.Synchronize ();
 var count = shared.IntForKey ("count");
 ```
 
-<a name="files" />
+<a name="files"></a>
 
-### <a name="files"></a>Files
+### <a name="files"></a>Arquivos
 
-A extensão de aplicativo e a inspeção do iOS também pode compartilhar arquivos usando um caminho de arquivo comum.
+O aplicativo iOS e a extensão Watch também podem compartilhar arquivos usando um caminho de arquivo comum.
 
 ```csharp
 var FileManager = new NSFileManager ();
@@ -70,11 +70,11 @@ Console.WriteLine ("agcpath: " + appGroupContainerPath);
 // use the path to create and update files
 ```
 
-Observação: se o caminho for `null`, verifique a [configuração do grupo de aplicativos](~/ios/watchos/app-fundamentals/app-groups.md) para garantir que os perfis de provisionamento tenham sido configurados corretamente e tenham sido baixados/instalados no computador de desenvolvimento.
+Observação: se o caminho for `null` , verifique a [configuração do grupo de aplicativos](~/ios/watchos/app-fundamentals/app-groups.md) para garantir que os perfis de provisionamento tenham sido configurados corretamente e tenham sido baixados/instalados no computador de desenvolvimento.
 
 Para obter mais informações, consulte a documentação de [recursos do grupo de aplicativos](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) .
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Referência do WKInterfaceController da Apple](https://developer.apple.com/library/prerelease/ios/documentation/WatchKit/Reference/WKInterfaceController_class/index.html#//apple_ref/occ/clm/WKInterfaceController/openParentApplication:reply:)
 - [Dados de compartilhamento da Apple com seu aplicativo recipiente](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)

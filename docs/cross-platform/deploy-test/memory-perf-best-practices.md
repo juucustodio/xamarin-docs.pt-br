@@ -6,18 +6,18 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: f99b64b67f4f1cabf3a5884fabb1301e5ee39eee
-ms.sourcegitcommit: 06043f6a5628a7326ac6690eb62ead8e4780f4a7
+ms.openlocfilehash: d21394b3c33b3f415cbe45ae13c84cabab1ec30b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82738788"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571032"
 ---
 # <a name="cross-platform-performance"></a>Desempenho de plataforma cruzada
 
 O baixo desempenho de aplicativo se apresenta de várias maneiras. Ele pode fazer com que o aplicativo pareça não responder, deixar a rolagem lenta ou reduzir a vida útil da bateria. No entanto, a otimização do desempenho engloba mais do que apenas a implementação de um código eficiente. A experiência do usuário quanto ao desempenho do aplicativo também deve ser considerada. Por exemplo, garantir que as operações sejam executadas sem impedir o usuário de realizar outras atividades pode ajudar a melhorar a experiência do usuário.
 
-<a name="profiler" />
+<a name="profiler"></a>
 
 ## <a name="use-the-profiler"></a>Usar o Profiler
 
@@ -31,7 +31,7 @@ As melhores práticas a seguir são recomendadas ao analisar um aplicativo:
 - Idealmente, a criação de perfil deve ser executada em uma variedade de dispositivos, pois tomar medidas de desempenho em um único dispositivo nem sempre mostrará as características de desempenho de outros dispositivos. No entanto, no mínimo, de criação de perfil deve ser executada em um dispositivo que tem a menor especificação antecipada.
 - Feche todos os outros aplicativos para garantir que o impacto total do aplicativo que está sendo analisado está sendo medido, em vez de o de outros aplicativos.
 
-<a name="idisposable" />
+<a name="idisposable"></a>
 
 ## <a name="release-idisposable-resources"></a>Liberar recursos IDisposable
 
@@ -89,7 +89,7 @@ A classe `StreamReader` implementa `IDisposable` e o bloco `finally` chama o mé
 
 Para obter mais informações, veja [Interface IDisposable](xref:System.IDisposable).
 
-<a name="events" />
+<a name="events"></a>
 
 ## <a name="unsubscribe-from-events"></a>Cancelar assinatura de eventos
 
@@ -160,14 +160,14 @@ public class Subscriber : IDisposable
 
 O campo `handler` mantém a referência para o método anônimo e é usado para assinatura e cancelamento de assinatura do evento.
 
-<a name="weakreferences" />
+<a name="weakreferences"></a>
 
 ## <a name="use-weak-references-to-prevent-immortal-objects"></a>Usar referências fracas para impedir a criação de objetos imortais
 
 > [!NOTE]
 > Os desenvolvedores iOS do  devem revisar a documentação ao [evitar referências circulares no iOS](~/ios/deploy-test/performance.md#avoid-strong-circular-references) para garantir que seus aplicativos usem a memória com eficiência.
 
-<a name="lazy" />
+<a name="lazy"></a>
 
 ## <a name="delay-the-cost-of-creating-objects"></a>Atrasar o custo de criação de objetos
 
@@ -209,7 +209,7 @@ A inicialização lenta ocorre na primeira vez que a propriedade `Lazy<T>.Value`
 
 Para obter mais informações sobre a inicialização lenta, veja [Inicialização lenta](https://msdn.microsoft.com/library/dd997286(v=vs.110).aspx).
 
-<a name="async" />
+<a name="async"></a>
 
 ## <a name="implement-asynchronous-operations"></a>Implementar operações assíncronas
 
@@ -248,7 +248,7 @@ Operações de execução longa também devem dar suporte a cancelamento. Por ex
 
 Para obter mais informações, veja [Visão geral do suporte assíncrono](~/cross-platform/platform/async.md).
 
-<a name="sgen" />
+<a name="sgen"></a>
 
 ## <a name="use-the-sgen-garbage-collector"></a>Usar o coletor de lixo SGen
 
@@ -282,7 +282,7 @@ Para reduzir a pressão sobre o coletor de lixo, siga estas diretrizes:
 - Libere explicitamente recursos como fluxos, conexões de rede, blocos grandes de memória e arquivos quando eles não forem mais necessários. Para obter mais informações, veja [Liberar recursos IDisposable](#idisposable).
 - Cancele o registro de manipuladores de eventos quando eles não forem mais necessários para tornar os objetos colecionáveis. Para obter mais informações, consulte [Unsubscribe from Events](#events) (Cancelar assinatura de eventos).
 
-<a name="linker" />
+<a name="linker"></a>
 
 ## <a name="reduce-the-size-of-the-application"></a>Reduzir o tamanho do aplicativo
 
@@ -335,7 +335,7 @@ As etapas a seguir podem ser usadas para reduzir ainda mais o tamanho do execut�
 Aplicativos Android também podem ser divididos em um APK separado para cada ABI ("arquitetura").
 Saiba mais nesta postagem de blog: [How To Keep Your Android App Size Down](https://montemagno.com/how-to-keep-your-android-app-size-down/) (Como manter o tamanho de seu aplicativo Android pequeno).
 
-<a name="optimizeimages" />
+<a name="optimizeimages"></a>
 
 ## <a name="optimize-image-resources"></a>Otimizar os recursos de imagem
 
@@ -343,7 +343,7 @@ As imagens são alguns dos recursos mais caros que os aplicativos usam e, geralm
 
 Independentemente da resolução da imagem, os recursos de imagem de exibição podem aumentar significativamente o volume de memória do aplicativo. Portanto, eles só devem ser criados quando necessário e devem ser liberados assim que o aplicativo não exigi-los mais.
 
-<a name="activationperiod" />
+<a name="activationperiod"></a>
 
 ## <a name="reduce-the-application-activation-period"></a>Reduzir o período de ativação do aplicativo
 
@@ -353,7 +353,7 @@ Antes de um aplicativo exibir sua interface do usuário inicial, ele deve fornec
 
 Durante o período de ativação os aplicativos executam a lógica de ativação, que geralmente inclui o carregamento e o processamento de recursos. O período de ativação pode ser reduzido, garantindo que os recursos necessários sejam empacotados no aplicativo, em vez de serem recuperados remotamente. Por exemplo, em algumas circunstâncias, pode ser apropriado durante o período de ativação carregar dados de espaço reservado armazenados localmente. Em seguida, depois que a interface do usuário inicial é exibida e o usuário é capaz de interagir com o aplicativo, os dados de espaço reservado podem ser substituídos progressivamente de uma fonte remota. Além disso, a lógica de ativação do aplicativo deve executar apenas o trabalho necessário para permitir que o usuário comece a usar o aplicativo. Isso pode ajudar se atrasar o carregamento de assemblies adicionais, já que assemblies são carregados na primeira vez em que eles são usados.
 
-<a name="webservicecommunication" />
+<a name="webservicecommunication"></a>
 
 ## <a name="reduce-web-service-communication"></a>Reduzir a comunicação de serviços Web
 

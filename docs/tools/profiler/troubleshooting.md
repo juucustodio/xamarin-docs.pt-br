@@ -6,12 +6,12 @@ ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: davidortinau
 ms.author: daortin
 ms.date: 10/27/2017
-ms.openlocfilehash: 915f7df80e3ae29ab3c598ea95fabbc054e916dd
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5b4b4bdf85ec79a46a4e4c06504eb8b9b85af329
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73019212"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84566951"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Solução de problemas Xamarin Profiler
 
@@ -25,19 +25,19 @@ A equipe do Xamarin pode ajudar a acompanhar problemas se você nos fornecer inf
 
 ### <a name="getting-log-outputs"></a>Obtendo saídas de log
 
-Os logs do Mac são salvos em `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`.
+Nos logs do Mac são salvos no `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log` .
 
-No Windows, eles são salvos em `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log` inclua o log mais recente sempre que você enviar um problema.
+No Windows, eles são salvos para `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log` incluir o log mais recente sempre que você enviar um problema.
 
 Estamos adicionando mais registro em log à medida que passamos, portanto, essa saída deve aumentar e se tornar mais útil ao longo do tempo.
 
-<a name="gen_mlpd" />
+<a name="gen_mlpd"></a>
 
 ### <a name="generating-mlpd-files"></a>Gerando arquivos. MLPD
 
 Um arquivo **. MLPD** é a saída compactada do analisador de tempo de execução mono. O Xamarin Profiler GUI lê os dados de um **. MLPD** e os exibe para o usuário. arquivos **. MLPD** são ferramentas de depuração úteis para o Xamarin, pois ajudam nossos engenheiros a diagnosticar problemas que o criador de perfil pode ter com seus dados.
 
-O **. MLPD** para a sessão atual é automaticamente salvo no diretório `/tmp` do seu Mac e pode ser identificado pelo carimbo de data/hora. Se você ativar o registro em log, a primeira saída será o caminho para o arquivo **. MLPD** . O arquivo **. MLPD** normalmente será salvo no diretório a partir de ~/var/Folders...
+O **. MLPD** para a sessão atual é automaticamente salvo no diretório do seu Mac `/tmp` e pode ser identificado pelo carimbo de data/hora. Se você ativar o registro em log, a primeira saída será o caminho para o arquivo **. MLPD** . O arquivo **. MLPD** normalmente será salvo no diretório a partir de ~/var/Folders...
 
 O **. MLPD** para uma sessão atual também pode ser salvo escolhendo **arquivo > salvar como...** no menu do criador de perfil:
 
@@ -79,7 +79,7 @@ Normalmente, é porque não é possível iniciar o simulador/emulador. Tente exe
 
 #### <a name="to-watch-a-specific-thread"></a>Para assistir a um thread específico
 
-Se você tiver um thread que quisesse observar especificamente, seria ideal nomear o thread no início de sua criação para obter `ThreadName` em vez de `0x0`. Por exemplo, para definir o nome do thread como `UI`, você pode usar o seguinte código:
+Se você tiver um thread que quisesse observar especificamente, seria ideal nomear o thread no início da criação para obter `ThreadName` em vez de `0x0` . Por exemplo, para definir o nome do thread como `UI` , você pode usar o seguinte código:
 
 ```csharp
 RunOnUiThread (() => {
@@ -91,4 +91,4 @@ RunOnUiThread (() => {
 
 - [Walkthrough – usando o Xamarin Profiler](~/tools/profiler/index.md)
 - [Práticas recomendadas de memória e desempenho](~/cross-platform/deploy-test/memory-perf-best-practices.md)
-- [Notas de Versão](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/profiler/preview/index.md)
+- [Notas sobre a versão](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/profiler/preview/index.md)

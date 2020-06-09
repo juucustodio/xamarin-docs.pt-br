@@ -1,39 +1,13 @@
 ---
-title: ''
-description: Exibições nativas do iOS, Android e Plataforma Universal do Windows podem ser referenciadas diretamente de Xamarin.Forms arquivos XAML. As propriedades e os manipuladores de eventos podem ser definidos em exibições nativas e podem interagir com Xamarin.Forms exibições. Este artigo demonstra como consumir exibições nativas de Xamarin.Forms arquivos XAML.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 67994371d3042100503eb3a7c3bc7d117b1c590c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139575"
+Título: "exibições nativas em XAML" Descrição: "exibições nativas do iOS, Android e Plataforma Universal do Windows podem ser referenciadas diretamente de Xamarin.Forms arquivos XAML. As propriedades e os manipuladores de eventos podem ser definidos em exibições nativas e podem interagir com Xamarin.Forms exibições. Este artigo demonstra como consumir exibições nativas de Xamarin.Forms arquivos XAML.
+MS. Prod: xamarin MS. AssetID: 7A856D31-B300-409E-9AEB-F8A4DB99B37E MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 03/23/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="native-views-in-xaml"></a>Exibições nativas em XAML
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
 
 _Exibições nativas do iOS, Android e Plataforma Universal do Windows podem ser referenciadas diretamente de Xamarin.Forms arquivos XAML. As propriedades e os manipuladores de eventos podem ser definidos em exibições nativas e podem interagir com Xamarin.Forms exibições. Este artigo demonstra como consumir exibições nativas de Xamarin.Forms arquivos XAML._
-
-Este artigo discute os seguintes tópicos:
-
-- [Consumindo exibições nativas](#consuming) – o processo para consumir uma exibição nativa do XAML.
-- [Usando associações nativas](#native_bindings) – vinculação de dados de e para propriedades de exibições nativas.
-- [Passando argumentos para exibições nativas](#passing_arguments) – passando argumentos para construtores de exibição nativa e chamando métodos de fábrica nativos de exibição.
-- [Referindo-se a exibições nativas do código](#native_view_code) – recuperando instâncias de exibição nativa declaradas em um arquivo XAML, de seu arquivo code-behind.
-- [Subclasse de exibições nativas](#subclassing) – subclasse de exibições nativas para definir uma API amigável para XAML.  
-
-<a name="overview" />
-
-## <a name="overview"></a>Visão geral
 
 Para inserir uma exibição nativa em um Xamarin.Forms arquivo XAML:
 
@@ -43,11 +17,9 @@ Para inserir uma exibição nativa em um Xamarin.Forms arquivo XAML:
 > [!IMPORTANT]
 > O XAML compilado deve ser desabilitado para qualquer página XAML que use exibições nativas. Isso pode ser feito decorando a classe code-behind para sua página XAML com o `[XamlCompilation(XamlCompilationOptions.Skip)]` atributo. Para obter mais informações sobre a compilação XAML, consulte [compilação Xamarin.Forms XAML em ](~/xamarin-forms/xaml/xamlc.md).
 
-Para fazer referência a uma exibição nativa de um arquivo code-behind, você deve usar um projeto de ativo compartilhado (SAP) e encapsular o código específico da plataforma com diretivas de compilação condicional. Para obter mais informações, consulte [referindo-se a exibições nativas do código](#native_view_code).
+Para fazer referência a uma exibição nativa de um arquivo code-behind, você deve usar um projeto de ativo compartilhado (SAP) e encapsular o código específico da plataforma com diretivas de compilação condicional. Para obter mais informações, consulte [consulte exibições nativas do código](#refer-to-native-views-from-code).
 
-<a name="consuming" />
-
-## <a name="consuming-native-views"></a>Consumindo exibições nativas
+## <a name="consume-native-views"></a>Consumir exibições nativas
 
 O exemplo de código a seguir demonstra o consumo de exibições nativas para cada plataforma para um Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage) :
 
@@ -77,12 +49,10 @@ As propriedades vinculáveis e as propriedades vinculáveis anexadas também pod
 > [!NOTE]
 > Observe que os estilos não podem ser usados com exibições nativas, porque os estilos só podem direcionar propriedades que são apoiadas por `BindableProperty` objetos.
 
-Os construtores do widget do Android geralmente exigem o objeto do Android `Context` como um argumento, e isso pode ser disponibilizado por meio de uma propriedade estática na `MainActivity` classe. Portanto, ao criar um widget do Android em XAML, o `Context` objeto geralmente deve ser passado para o construtor do widget usando o `x:Arguments` atributo com uma `x:Static` extensão de marcação. Para obter mais informações, consulte [passando argumentos para exibições nativas](#passing_arguments).
+Os construtores do widget do Android geralmente exigem o objeto do Android `Context` como um argumento, e isso pode ser disponibilizado por meio de uma propriedade estática na `MainActivity` classe. Portanto, ao criar um widget do Android em XAML, o `Context` objeto geralmente deve ser passado para o construtor do widget usando o `x:Arguments` atributo com uma `x:Static` extensão de marcação. Para obter mais informações, consulte [passar argumentos para exibições nativas](#pass-arguments-to-native-views).
 
 > [!NOTE]
-> Observe que a nomenclatura de uma exibição nativa com o `x:Name` não é possível em um projeto de biblioteca .net Standard ou em um projeto de ativo compartilhado (SAP). Isso irá gerar uma variável do tipo nativo, o que causará um erro de compilação. No entanto, as exibições nativas podem ser encapsuladas em `ContentView` instâncias e recuperadas no arquivo code-behind, desde que um SAP esteja sendo usado. Para obter mais informações, consulte [referindo-se a uma exibição nativa do código](#native_view_code).
-
-<a name="native_bindings" />
+> Observe que a nomenclatura de uma exibição nativa com o `x:Name` não é possível em um projeto de biblioteca .net Standard ou em um projeto de ativo compartilhado (SAP). Isso irá gerar uma variável do tipo nativo, o que causará um erro de compilação. No entanto, as exibições nativas podem ser encapsuladas em `ContentView` instâncias e recuperadas no arquivo code-behind, desde que um SAP esteja sendo usado. Para obter mais informações, consulte [consulte a exibição nativa do código](#refer-to-native-views-from-code).
 
 ## <a name="native-bindings"></a>Associações nativas
 
@@ -127,9 +97,7 @@ A página também contém um comutador nativo para cada plataforma. Cada comutad
 
 Associações bidirecionais são automaticamente suportadas desde que a propriedade nativa implementa `INotifyPropertyChanged` ou dá suporte à observação de valor-chave (KVO) no Ios, ou é uma `DependencyProperty` em UWP. No entanto, muitas exibições nativas não dão suporte à notificação de alteração de propriedade. Para essas exibições, você pode especificar um [`UpdateSourceEventName`](xref:Xamarin.Forms.Binding.UpdateSourceEventName) valor de propriedade como parte da expressão de associação. Essa propriedade deve ser definida como o nome de um evento no modo de exibição nativo que sinaliza quando a propriedade de destino foi alterada. Em seguida, quando o valor do comutador nativo é alterado, a `Binding` classe é notificada de que o usuário alterou o valor de opção e o `NativeSwitchPageViewModel.IsSwitchOn` valor da propriedade é atualizado.
 
-<a name="passing_arguments" />
-
-## <a name="passing-arguments-to-native-views"></a>Passando argumentos para exibições nativas
+## <a name="pass-arguments-to-native-views"></a>Passar argumentos para exibições nativas
 
 Argumentos de construtor podem ser passados para exibições nativas usando o `x:Arguments` atributo com uma `x:Static` extensão de marcação. Além disso, os métodos de fábrica de exibição nativa ( `public static` métodos que retornam objetos ou valores do mesmo tipo que a classe ou estrutura que define os métodos) podem ser chamados especificando o nome do método usando o `x:FactoryMethod` atributo e seus argumentos usando o `x:Arguments` atributo.
 
@@ -200,9 +168,7 @@ As capturas de tela a seguir mostram o resultado da especificação de argumento
 
 Para obter mais informações sobre como passar argumentos em XAML, consulte [passando argumentos em XAML](~/xamarin-forms/xaml/passing-arguments.md).
 
-<a name="native_view_code" />
-
-## <a name="referring-to-native-views-from-code"></a>Referindo-se às exibições nativas do código
+## <a name="refer-to-native-views-from-code"></a>Consulte exibições nativas do código
 
 Embora não seja possível nomear uma exibição nativa com o `x:Name` atributo, é possível recuperar uma instância de exibição nativa declarada em um arquivo XAML a partir de seu arquivo code-behind em um projeto de acesso compartilhado, desde que a exibição nativa seja um filho de um [`ContentView`](xref:Xamarin.Forms.ContentView) que especifique um `x:Name` valor de atributo. Em seguida, dentro das diretivas de compilação condicional no arquivo code-behind, você deve:
 
@@ -287,9 +253,7 @@ Os botões nativos do iOS e do Android compartilham o mesmo `OnButtonTap` manipu
 
 ![](xaml-images/contentview.png "ContentView Containing a Native Control")
 
-<a name="subclassing" />
-
-## <a name="subclassing-native-views"></a>Exibindo visualizações nativas de subclasse
+## <a name="subclass-native-views"></a>Exibições nativas de subclasse
 
 Muitas exibições nativas do iOS e do Android não são adequadas para instanciar em XAML porque usam métodos, em vez de propriedades, para configurar o controle. A solução para esse problema é usar exibições nativas de subclasse em wrappers que definem uma API mais amigável para XAML que usa propriedades para configurar o controle e que usa eventos independentes de plataforma. As exibições nativas encapsuladas podem ser colocadas em um projeto de ativo compartilhado (SAP) e junto com as diretivas de compilação condicional, ou colocadas em projetos específicos da plataforma e referenciadas de XAML em um projeto de biblioteca .NET Standard.
 
@@ -485,10 +449,6 @@ class MySpinner : Spinner
 ```
 
 A `MySpinner` classe expõe `ItemsSource` e `SelectedObject` Propriedades e um `ItemSelected` evento. Os itens exibidos pela `MySpinner` classe são fornecidos pelo associado à [`Adapter`](xref:Android.Widget.Adapter) exibição e os itens são preenchidos no `Adapter` quando a `ItemsSource` propriedade é definida pela primeira vez. Sempre que o item selecionado na `MySpinner` classe for alterado, o `OnBindableSpinnerItemSelected` manipulador de eventos atualizará a `SelectedObject` propriedade.
-
-## <a name="summary"></a>Resumo
-
-Este artigo demonstrou como consumir exibições nativas de Xamarin.Forms arquivos XAML. As propriedades e os manipuladores de eventos podem ser definidos em exibições nativas e podem interagir com Xamarin.Forms exibições.
 
 ## <a name="related-links"></a>Links relacionados
 

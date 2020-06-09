@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4a9af91e2d48ba7ef7fdcdb4f8472e0aaafb7854
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138704"
+Título: "validação em aplicativos empresariais" Descrição: "Este capítulo explica como o aplicativo móvel eShopOnContainers executa a validação da entrada do usuário. Isso inclui a especificação de regras de validação, o disparo da validação e a exibição de erros de validação. "
+MS. Prod: xamarin MS. AssetID: 56e4f0fc-48D9-4033-91ec-173bb46a5e4d MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="validation-in-enterprise-apps"></a>Validação em aplicativos empresariais
 
 Qualquer aplicativo que aceite entrada de usuários deve garantir que a entrada seja válida. Um aplicativo poderia, por exemplo, verificar se há entradas que contenham apenas caracteres em um intervalo específico, tem um determinado comprimento ou corresponde a um formato específico. Sem a validação, um usuário pode fornecer dados que causam falha no aplicativo. A validação impõe regras de negócio e impede que um invasor insira dados mal-intencionados.
@@ -209,9 +195,7 @@ A validação também pode ser disparada sempre que uma propriedade associada fo
 
 O [`Entry`](xref:Xamarin.Forms.Entry) controle é associado à `UserName.Value` propriedade da `ValidatableObject<T>` instância e a coleção do controle `Behaviors` tem uma `EventToCommandBehavior` instância adicionada a ele. Esse comportamento executa o `ValidateUserNameCommand` em resposta ao `TextChanged` acionamento do evento [] no `Entry` , que é gerado quando o texto é `Entry` alterado. Por sua vez, o `ValidateUserNameCommand` delegado executa o `ValidateUserName` método, que executa o `Validate` método na `ValidatableObject<T>` instância. Portanto, toda vez que o usuário insere um caractere no `Entry` controle para o nome de usuário, a validação dos dados inseridos é executada.
 
-Para obter mais informações sobre comportamentos, consulte [implementando comportamentos](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors).
-
-<a name="displaying_validation_errors" />
+Para obter mais informações sobre comportamentos, consulte [implementando comportamentos](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing-behaviors).
 
 ## <a name="displaying-validation-errors"></a>Exibindo erros de validação
 
@@ -286,7 +270,7 @@ public static class LineColorBehavior
 }
 ```
 
-Os parâmetros para esse método fornecem a instância do controle ao qual o comportamento está anexado e os valores novos e antigos da `ApplyLineColor` Propriedade anexada. A `EntryLineColorEffect` classe é adicionada à coleção do controle [`Effects`](xref:Xamarin.Forms.Element.Effects) se a `ApplyLineColor` Propriedade anexada for `true` , caso contrário, será removida da coleção do controle `Effects` . Para obter mais informações sobre comportamentos, consulte [implementando comportamentos](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors).
+Os parâmetros para esse método fornecem a instância do controle ao qual o comportamento está anexado e os valores novos e antigos da `ApplyLineColor` Propriedade anexada. A `EntryLineColorEffect` classe é adicionada à coleção do controle [`Effects`](xref:Xamarin.Forms.Element.Effects) se a `ApplyLineColor` Propriedade anexada for `true` , caso contrário, será removida da coleção do controle `Effects` . Para obter mais informações sobre comportamentos, consulte [implementando comportamentos](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing-behaviors).
 
 O `EntryLineColorEffect` subclasse é a [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) classe e é mostrada no exemplo de código a seguir:
 

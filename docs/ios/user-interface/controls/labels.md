@@ -7,20 +7,20 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/11/2017
-ms.openlocfilehash: 04d33d986d76daf29fc7392206c62f77d34dd969
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0957220ace9facee590a76953de6dd52be438582
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022014"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570837"
 ---
 # <a name="labels-in-xamarinios"></a>Rótulos no Xamarin. iOS
 
-O controle `UILabel` é usado para exibir texto único e de várias linhas somente leitura.
+O `UILabel` controle é usado para exibir texto único e de várias linhas, somente leitura.
 
 ## <a name="implementing-a-label"></a>Implementando um rótulo
 
-Um novo rótulo é criado instanciando uma [`UILabel`](xref:UIKit.UILabel):
+Um novo rótulo é criado instanciando-se um [`UILabel`](xref:UIKit.UILabel) :
 
 ```csharp
 UILabel label = new UILabel();
@@ -50,7 +50,7 @@ As propriedades a seguir podem ser ajustadas no painel de propriedades:
 
 Para obter informações sobre como usar as quebras de linha no iOS, consulte a receita [truncar e quebrar texto](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text) .
 
-<a name="Formatting_Text_and_Label"/>
+<a name="Formatting_Text_and_Label"></a>
 
 ## <a name="formatting-text-and-label"></a>Formatando texto e rótulo
 
@@ -74,9 +74,9 @@ label.AttributedText = new NSAttributedString(
             );
 ```
 
-Para obter mais informações sobre como estilizar o texto usando `NSAttributedString` consulte a receita de [texto de estilo](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) .
+Para obter mais informações sobre como estilizar o texto usando, `NSAttributedString` consulte a receita de [texto de estilo](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/text_field/style_text) .
 
-Por padrão, os rótulos têm o `Enabled` definido como true, mas é possível defini-lo como desabilitado para dar ao usuário uma dica de que determinado controle está desabilitado:
+Por padrão, os rótulos têm o `Enabled` conjunto como verdadeiro, mas é possível defini-lo como desabilitado para dar ao usuário uma dica de que um determinado controle está desabilitado:
 
 ```csharp
 label.Enabled = false;
