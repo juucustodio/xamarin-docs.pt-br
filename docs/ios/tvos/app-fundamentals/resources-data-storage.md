@@ -7,26 +7,26 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: d84752afd5579216272895f750522a8f38ece34a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8619fa73a4dbaabe1e161c634b6a794b701d5135
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030800"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570850"
 ---
 # <a name="tvos-resources-and-data-storage-in-xamarin"></a>Recursos de tvOS e armazenamento de dados no Xamarin
 
 _Este artigo aborda como trabalhar com recursos e armazenamento de dados persistentes em um aplicativo Xamarin. tvOS._
 
-<a name="tvOS-Resource-Limitations" />
+<a name="tvOS-Resource-Limitations"></a>
 
 ## <a name="tvos-resource-limitations"></a>Limitações de recursos do tvOS
 
-Ao contrário dos dispositivos iOS, a nova Apple TV fornece armazenamento local persistente extremamente limitado para aplicativos ou dados tvOS. Para itens muito pequenos (como as preferências do usuário), seu aplicativo tvOS ainda tem acesso a `NSUserDefaults` com um [limite de 500 KB de dados](https://forums.developer.apple.com/message/50696#50696). No entanto, se seu aplicativo Xamarin. tvOS precisar manter maiores quantidades de informações, ele deverá armazenar e recuperar esses dados do [icloud](#iCloud-Data-Storage).
+Ao contrário dos dispositivos iOS, a nova Apple TV fornece armazenamento local persistente extremamente limitado para aplicativos ou dados tvOS. Para itens muito pequenos (como preferências do usuário), seu aplicativo tvOS ainda tem acesso a `NSUserDefaults` com um [limite de 500 KB de dados](https://forums.developer.apple.com/message/50696#50696). No entanto, se seu aplicativo Xamarin. tvOS precisar manter maiores quantidades de informações, ele deverá armazenar e recuperar esses dados do [icloud](#iCloud-Data-Storage).
 
 Além disso, o tvOS limita o tamanho de um aplicativo da Apple TV para 200 MB. Se seu aplicativo exigir recursos além desse tamanho, eles precisarão ser empacotados e carregados usando [recursos sob demanda](#On-Demand-Resources) (até um 2 GB adicional). Devido a essas limitações, é essencial que você tenha tempo de download de ativos adicionais corretamente para fornecer a melhor experiência para os usuários do seu aplicativo. Para obter mais informações, consulte o [Guia de recursos sob demanda](https://developer.apple.com/library/prerelease/tvos/documentation/FileManagement/Conceptual/On_Demand_Resources_Guide/index.html#//apple_ref/doc/uid/TP40015083)da Apple.
 
-<a name="Non-Persistent-Downloads" />
+<a name="Non-Persistent-Downloads"></a>
 
 ## <a name="non-persistent-downloads"></a>Downloads não persistentes
 
@@ -37,13 +37,13 @@ Como resultado, seu aplicativo não poderá contar com o conteúdo baixado anter
 > [!IMPORTANT]
 > Embora você tenha a capacidade de baixar outros ativos e recursos conforme necessário, a Apple avisa sobre o consumo de todo o espaço no cache do aplicativo, pois pode levar a resultados imprevisíveis.
 
-<a name="Managing-Resources" />
+<a name="Managing-Resources"></a>
 
 ## <a name="managing-resources"></a>Gerenciando recursos
 
 Conforme mencionado acima, devido ao armazenamento limitado e não persistente de informações disponíveis para aplicativos tvOS, essas restrições exigem um planejamento cuidadoso para criar uma excelente experiência do usuário para seu aplicativo Xamarin. tvOS.
 
-<a name="iCloud-Data-Storage" />
+<a name="iCloud-Data-Storage"></a>
 
 ### <a name="icloud-data-storage"></a>Armazenamento de dados do iCloud
 
@@ -57,7 +57,7 @@ Como resultado, seu aplicativo Xamarin. tvOS deve armazenar qualquer dado do usu
 > [!IMPORTANT]
 > A Apple [fornece ferramentas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ajudar os desenvolvedores a lidar adequadamente com o GDPR (Regulamento Geral sobre a Proteção de Dados) da União Europeia.
 
-<a name="On-Demand-Resources" />
+<a name="On-Demand-Resources"></a>
 
 ### <a name="on-demand-resources"></a>Recursos sob demanda
 
@@ -72,7 +72,7 @@ Use o Xcode para criar pacotes de conteúdo relacionado (como todos os ativos pa
 > [!IMPORTANT]
 > Deve-se tomar cuidado para atingir o equilíbrio certo entre o número de vezes que o aplicativo precisa baixar recursos sob demanda e o tamanho dos downloads individuais. O usuário poderá se sentir frustrado com seu aplicativo se o jogo for interrompido constantemente para baixar novo conteúdo ou se um único download levar muito tempo.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>Resumo
 
@@ -80,7 +80,7 @@ Este artigo abordou as limitações de tamanho, de recursos e de armazenamento d
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guias de interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

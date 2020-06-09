@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 35a8d3aeb00ac73f944712cb31f913f98bd3b6e8
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 5aa3baa6aba76483866911d905687be6c3a5ae4e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304691"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569823"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automático com o Xamarin Designer para iOS
 
@@ -20,7 +20,7 @@ O layout automático (também chamado de "layout adaptável") é uma abordagem d
 
 Neste guia, apresentamos restrições e como trabalhar com eles no Xamarin iOS designer. Este guia não aborda o trabalho com restrições programaticamente. Para obter informações sobre como usar o layout automático programaticamente, consulte a [documentação da Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/AutolayoutPG/ProgrammaticallyCreatingConstraints.html).
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 O Xamarin Designer para iOS está disponível em Visual Studio para Mac no Visual Studio 2017 e posterior no Windows.
 
@@ -30,7 +30,7 @@ Este guia pressupõe o conhecimento dos componentes do designer da [introdução
 
 Uma restrição é uma representação matemática da relação entre dois elementos na tela. A representação da posição de um elemento de interface do usuário como uma relação matemática resolve vários problemas associados ao código da localização de um elemento de interface do usuário. Por exemplo, se tivéssemos de colocar um botão 20px na parte inferior da tela no modo retrato, a posição do botão estará fora da tela no modo paisagem. Para evitar isso, poderíamos definir uma restrição que coloca a borda inferior do botão 20px na parte inferior da exibição. Em seguida, a posição da borda do botão seria calculada como *Button. Bottom = View. Bottom-20px*, que colocaria o botão 20px na parte inferior da exibição no modo retrato e paisagem. A capacidade de calcular o posicionamento com base em uma relação matemática é o que torna as restrições tão úteis no design da interface do usuário.
 
-Quando definimos uma restrição, criamos um objeto `NSLayoutConstraint` que usa como argumentos os objetos a serem restritos e as propriedades, ou *atributos*, em que a restrição atuará. No designer do iOS, os atributos incluem bordas como a *esquerda*, *direita*, *superior*e *inferior* de um elemento. Eles também incluem atributos de tamanho, como *altura* e *largura*, e o local do ponto central, *CenterX* e *CenterY*. Por exemplo, quando adicionamos uma restrição na posição do limite esquerdo de dois botões, o designer está gerando o seguinte código nos bastidores:
+Quando definimos uma restrição, criamos um `NSLayoutConstraint` objeto que usa como argumentos os objetos a serem restritos e as propriedades, ou *atributos*, em que a restrição atuará. No designer do iOS, os atributos incluem bordas como a *esquerda*, *direita*, *superior*e *inferior* de um elemento. Eles também incluem atributos de tamanho, como *altura* e *largura*, e o local do ponto central, *CenterX* e *CenterY*. Por exemplo, quando adicionamos uma restrição na posição do limite esquerdo de dois botões, o designer está gerando o seguinte código nos bastidores:
 
 ```csharp
 View.AddConstraint (NSLayoutConstraint.Create (Button1, NSLayoutAttribute.Left, NSLayoutRelation.Equal, Button2, NSLayoutAttribute.Left, 1, 10));
@@ -67,7 +67,7 @@ A barra de ferramentas de restrições foi atualizada e agora consiste em duas p
 
 O pop-up do editor de restrições nos permite adicionar e atualizar as várias restrições de uma vez para uma exibição SELECT. Podemos criar várias restrições de espaçamento, taxa de proporção e alinhamento, como alinhar uma exibição às bordas esquerdas de duas exibições.
 
-Para as restrições de edição no modo de exibição selecionado, clique nas reticências para exibir as restrições popover: ![edição popover](designer-auto-layout-images/constraints-popup.png)
+Para as restrições de edição no modo de exibição selecionado, clique nas reticências para exibir o popover: ![ Constraints Editing popover](designer-auto-layout-images/constraints-popup.png)
 
 Ao abrir o popover de restrições, ele exibe as restrições predefinidas na exibição. Podemos definir todas as restrições de espaçamento selecionando **todos os lados** da ComboBox no canto superior direito e selecionar **limpar tudo** para removê-los.
 
@@ -170,7 +170,7 @@ Para resolver erros de local de quadro, selecione o botão **Atualizar quadros c
 
 Isso ajustará automaticamente o quadro do elemento para corresponder às posições definidas pelos controles.
 
-<a name="modifying-in-code" />
+<a name="modifying-in-code"></a>
 
 ## <a name="modifying-constraints-in-code"></a>Modificando restrições no código
 
@@ -185,7 +185,7 @@ Para acessar uma restrição no código, primeiro você precisa expô-lo no desi
 3. Em seguida, atribua um **nome** à restrição na guia **widget** do Gerenciador de **Propriedades**:
 
     [![](designer-auto-layout-images/modify02.png "The Widget Tab")](designer-auto-layout-images/modify02.png#lightbox)
-4. Salve as alterações.
+4. Salve suas alterações.
 
 Com as alterações acima em vigor, você pode acessar a restrição no código e modificar suas propriedades. Por exemplo, você pode usar o seguinte para definir a altura do modo de exibição anexado como zero:
 
@@ -201,12 +201,12 @@ Dada a seguinte configuração para a restrição no designer do iOS:
 
 Em vez de atualizar instantaneamente a exibição anexada em resposta às alterações de restrição, o mecanismo de layout automático agenda um _passo de layout adiado_ para o futuro próximo. Durante essa passagem adiada, não apenas a restrição de exibição fornecida é atualizada, as restrições para cada exibição na hierarquia são recalculadas e atualizadas para ajustar o novo layout.
 
-A qualquer momento, você pode agendar sua própria passagem de layout adiado chamando os métodos `SetNeedsLayout` ou `SetNeedsUpdateConstraints` da exibição pai.
+A qualquer momento, você pode agendar sua própria passagem de layout adiada chamando `SetNeedsLayout` os `SetNeedsUpdateConstraints` métodos ou da exibição pai.
 
 A passagem de layout adiada consiste em duas passagens exclusivas por meio da hierarquia de exibição:
 
-- **A passagem de atualização** dessa passagem, o mecanismo de layout automático percorre a hierarquia de exibição e invoca o método `UpdateViewConstraints` em todos os controladores de exibição e o método `UpdateConstraints` em todas as exibições.
-- **A passagem de layout** novamente, o mecanismo de layout automático atravessa a hierarquia de exibição, mas, desta vez, invoca o método `ViewWillLayoutSubviews` em todos os controladores de exibição e o método `LayoutSubviews` em todas as exibições. O método `LayoutSubviews` atualiza a propriedade `Frame` de cada subexibição com o retângulo calculado pelo mecanismo de layout automático.
+- **A passagem de atualização** dessa passagem, o mecanismo de layout automático percorre a hierarquia de exibição e invoca o `UpdateViewConstraints` método em todos os controladores de exibição e no `UpdateConstraints` método em todas as exibições.
+- **A passagem de layout** novamente, o mecanismo de layout automático atravessa a hierarquia de exibição, mas, desta vez, invoca o `ViewWillLayoutSubviews` método em todos os controladores de exibição e o `LayoutSubviews` método em todas as exibições. O `LayoutSubviews` método atualiza a `Frame` propriedade de cada subexibição com o retângulo calculado pelo mecanismo de layout automático.
 
 ### <a name="animating-constraint-changes"></a>Animando alterações de restrição
 
@@ -222,13 +222,13 @@ View.LayoutIfNeeded();
 UIView.CommitAnimations();
 ```
 
-A chave aqui é chamar o método `LayoutIfNeeded` da exibição pai dentro do bloco de animação. Isso informa ao modo de exibição para desenhar cada "frame" do local animado ou da alteração de tamanho. Sem essa linha, a exibição simplesmente se ajustaria à versão final sem animação.
+A chave aqui é chamar o `LayoutIfNeeded` método da exibição pai dentro do bloco de animação. Isso informa ao modo de exibição para desenhar cada "frame" do local animado ou da alteração de tamanho. Sem essa linha, a exibição simplesmente se ajustaria à versão final sem animação.
 
 ## <a name="summary"></a>Resumo
 
 Este guia introduziu o layout automático (ou "adaptável") do iOS e o conceito de restrições como representações matemáticas de relações entre elementos na superfície de design. Ele descreveu como habilitar o layout automático no designer do iOS, trabalhando com a **barra de ferramentas de restrições**e editando restrições individualmente na superfície de design. Em seguida, explicamos como solucionar problemas de três restrições comuns. Por fim, ele mostrou como modificar restrições no código.
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Introdução ao Storyboards](~/ios/user-interface/storyboards/index.md)
 - [Instruções de controles designáveis do iOS](~/ios/user-interface/designer/ios-designable-controls-walkthrough.md)

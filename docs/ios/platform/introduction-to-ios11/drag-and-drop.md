@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/05/2017
-ms.openlocfilehash: 928936815c89dd74d0ad3775f59ea210702c8857
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 2a59040efde59210152ca20b44df2a097904c9f9
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304845"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573749"
 ---
 # <a name="drag-and-drop-in-xamarinios"></a>Arrastar e soltar no Xamarin. iOS
 
@@ -35,20 +35,20 @@ Ao adicionar suporte para arrastar e soltar aos seus aplicativos, você pode for
 
 ## <a name="drag-and-drop-with-text-controls"></a>Arrastar e soltar com controles de texto
 
-`UITextView` e `UITextField` dão suporte automaticamente ao arrastar o texto selecionado para fora e remover o conteúdo de texto no.
+`UITextView`e `UITextField` dão suporte automaticamente ao arrastar o texto selecionado para fora e remover o conteúdo de texto no.
 
-<a name="uitableview" />
+<a name="uitableview"></a>
 
 ## <a name="drag-and-drop-with-uitableview"></a>Arrastar e soltar com UITableView
 
-`UITableView` tem manipulação interna para interações de arrastar e soltar com linhas de tabela, exigindo apenas alguns métodos para habilitar o comportamento padrão.
+`UITableView`tem manipulação interna para arrastar e soltar interações com linhas de tabela, exigindo apenas alguns métodos para habilitar o comportamento padrão.
 
 Há duas interfaces envolvidas:
 
-- `IUITableViewDragDelegate` – informações de pacotes quando um arrastar é iniciado na exibição de tabela.
-- `IUITableViewDropDelegate` – processa informações quando uma queda está sendo tentada e concluída.
+- `IUITableViewDragDelegate`– Informações de pacotes quando um arrastar é iniciado na exibição de tabela.
+- `IUITableViewDropDelegate`– Processa informações quando uma queda está sendo tentada e concluída.
 
-No [exemplo de DragAndDropTableView](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview) , essas duas interfaces são implementadas na classe `UITableViewController`, juntamente com a fonte de dados e o delegado. Eles são atribuídos no método `ViewDidLoad`:
+No [exemplo de DragAndDropTableView](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview) , essas duas interfaces são implementadas na `UITableViewController` classe, juntamente com o delegado e a fonte de dados. Eles são atribuídos no `ViewDidLoad` método:
 
 ```csharp
 this.TableView.DragDelegate = this;
@@ -59,9 +59,9 @@ O código mínimo necessário para essas duas interfaces é explicado abaixo.
 
 ### <a name="table-view-drag-delegate"></a>Delegar arrastar de exibição de tabela
 
-O único método _necessário_ para dar suporte ao arrastar uma linha de uma exibição de tabela é `GetItemsForBeginningDragSession`. Se o usuário começar a arrastar uma linha, esse método será chamado.
+O único método _necessário_ para dar suporte ao arrastar uma linha de uma exibição de tabela é `GetItemsForBeginningDragSession` . Se o usuário começar a arrastar uma linha, esse método será chamado.
 
-Uma implementação é mostrada abaixo. Ele recupera os dados associados à linha arrastada, codifica-os e configura um `NSItemProvider` que determina como os aplicativos tratarão a parte "soltar" da operação (por exemplo, se eles podem manipular o tipo de dados, `PlainText`, no exemplo):
+Uma implementação é mostrada abaixo. Ele recupera os dados associados à linha arrastada, codifica-os e configura um `NSItemProvider` que determina como os aplicativos tratarão a parte "descartar" da operação (por exemplo, se eles podem manipular o tipo de dados, `PlainText` , no exemplo):
 
 ```csharp
 public UIDragItem[] GetItemsForBeginningDragSession (UITableView tableView,
@@ -85,19 +85,19 @@ public UIDragItem[] GetItemsForBeginningDragSession (UITableView tableView,
 }
 ```
 
-Há muitos métodos opcionais no delegado de arrastar que podem ser implementados para personalizar o comportamento de arrastar, como fornecer várias representações de dados que podem ser aproveitadas em aplicativos de destino (como texto formatado, bem como texto sem formatação ou um vetor e versões de bitmap de um desenho). Você também pode fornecer representações de dados personalizadas a serem usadas ao arrastar e soltar no mesmo aplicativo.
+Há muitos métodos opcionais no delegado de arrastar que podem ser implementados para personalizar o comportamento de arrastar, como fornecer várias representações de dados que podem ser aproveitadas em aplicativos de destino (como texto formatado, bem como texto sem formatação ou em vetores e versões de bitmap de um desenho). Você também pode fornecer representações de dados personalizadas a serem usadas ao arrastar e soltar no mesmo aplicativo.
 
 ### <a name="table-view-drop-delegate"></a>Delegar remoção de exibição de tabela
 
 Os métodos no delegado de descarte são chamados quando uma operação de arrastar ocorre em uma exibição de tabela ou é concluída acima dela. Os métodos necessários determinam se os dados podem ser removidos e quais ações serão executadas se a remoção for concluída:
 
-- `CanHandleDropSession` – embora uma operação de arrastar esteja em andamento e possa ser descartada no aplicativo, esse método determina se os dados que estão sendo arrastados podem ser descartados.
-- `DropSessionDidUpdate` – enquanto a operação de arrastar está em andamento, esse método é chamado para determinar a ação desejada. As informações da exibição de tabela que estão sendo arrastadas, a sessão de arrastar e o caminho de índice possível podem ser usadas para determinar o comportamento e os comentários visuais fornecidos ao usuário.
-- `PerformDrop` – quando o usuário conclui o descarte (levantando seu dedo), esse método extrai os dados que estão sendo arrastados e modifica a exibição de tabela para adicionar os dados em uma nova linha (ou linhas).
+- `CanHandleDropSession`– Embora uma operação de arrastar esteja em andamento e possa ser cancelada no aplicativo, esse método determina se os dados que estão sendo arrastados podem ser descartados.
+- `DropSessionDidUpdate`– Enquanto a operação de arrastar está em andamento, esse método é chamado para determinar a ação desejada. As informações da exibição de tabela que estão sendo arrastadas, a sessão de arrastar e o caminho de índice possível podem ser usadas para determinar o comportamento e os comentários visuais fornecidos ao usuário.
+- `PerformDrop`– Quando o usuário conclui o descarte (levantando seu dedo), esse método extrai os dados que estão sendo arrastados e modifica a exibição de tabela para adicionar os dados em uma nova linha (ou linhas).
 
 #### <a name="canhandledropsession"></a>CanHandleDropSession
 
-`CanHandleDropSession` indica se a exibição de tabela pode aceitar os dados que estão sendo arrastados. Neste trecho de código, `CanLoadObjects` é usado para confirmar que este modo de exibição de tabela pode aceitar dados de cadeia de caracteres.
+`CanHandleDropSession`indica se a exibição de tabela pode aceitar os dados que estão sendo arrastados. Neste trecho de código, `CanLoadObjects` é usado para confirmar que este modo de exibição de tabela pode aceitar dados de cadeia de caracteres.
 
 ```csharp
 public bool CanHandleDropSession(UITableView tableView, IUIDropSession session)
@@ -108,7 +108,7 @@ public bool CanHandleDropSession(UITableView tableView, IUIDropSession session)
 
 #### <a name="dropsessiondidupdate"></a>DropSessionDidUpdate
 
-O método `DropSessionDidUpdate` é chamado repetidamente enquanto a operação de arrastar está em andamento, para fornecer indicações visuais ao usuário.
+O `DropSessionDidUpdate` método é chamado repetidamente enquanto a operação de arrastar está em andamento, para fornecer indicações visuais ao usuário.
 
 No código abaixo, `HasActiveDrag` é usado para determinar se a operação foi originada no modo de exibição de tabela atual. Nesse caso, apenas as linhas únicas podem ser movidas.
 Se o arrastar for de outra fonte, uma operação de cópia será indicada:
@@ -131,13 +131,13 @@ public UITableViewDropProposal DropSessionDidUpdate(UITableView tableView, IUIDr
 }
 ```
 
-A operação de soltar pode ser uma das `Cancel`, `Move`ou `Copy`.
+A operação de soltar pode ser uma das `Cancel` , `Move` ou `Copy` .
 
 A intenção pode ser inserir uma nova linha ou adicionar/acrescentar dados a uma linha existente.
 
 #### <a name="performdrop"></a>PerformDrop
 
-O método `PerformDrop` é chamado quando o usuário conclui a operação e modifica a exibição de tabela e a fonte de dados para refletir os dados descartados.
+O `PerformDrop` método é chamado quando o usuário conclui a operação e modifica a exibição de tabela e a fonte de dados para refletir os dados descartados.
 
 ```csharp
 public void PerformDrop(UITableView tableView, IUITableViewDropCoordinator coordinator)
@@ -185,7 +185,7 @@ Abra o exemplo junto com outro aplicativo (como observações) e arraste linhas 
 
 ![captura de tela da operação de arrastar em andamento](drag-and-drop-images/01-sml.png)
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Diretrizes de interface humana de arrastar e soltar (Apple)](https://developer.apple.com/ios/human-interface-guidelines/interaction/drag-and-drop/)
 - [Exemplo de exibição de tabela de arrastar e soltar](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview)

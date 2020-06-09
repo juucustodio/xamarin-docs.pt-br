@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 593d6a8b30d5ed0e143d1c013849d2bef571f6dc
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140290"
+Título: "Criando e desenhando bitmaps SkiaSharp" Descrição: "saiba como criar bitmaps do SkiaSharp e, em seguida, desenhe esses bitmaps criando uma tela com base neles".
+MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 79BD3266-D457-4E50-BDDF-33450035FA0F autor: davidbritch MS. Author: dabritch MS. Date: 07/17/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Criando e desenhando bitmaps SkiaSharp
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -341,8 +327,6 @@ O construtor é concluído criando um `SKCanvasView` para exibir o resultado:
 
 [![Imagem de pixelização](drawing-images/PixelizeImage.png "Imagem de pixelização")](drawing-images/PixelizeImage-Large.png#lightbox)
 
-<a name="rotating-bitmaps" />
-
 ## <a name="rotating-bitmaps"></a>Rotação de bitmaps
 
 Outra tarefa comum é a rotação de bitmaps. Isso é particularmente útil ao recuperar bitmaps de uma biblioteca de Fotos iPhone ou iPad. A menos que o dispositivo tenha sido mantido em uma orientação específica quando a foto foi tirada, é provável que a imagem fique de cabeça para baixo ou para a lateral.
@@ -388,7 +372,7 @@ using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
 }
 ```
 
-Esses dois métodos são usados nas páginas de **quebra-cabeça de foto** descritas no artigo [**recortando bitmaps SkiaSharp**](cropping.md#tile-division).
+Esses dois métodos são usados nas páginas de **quebra-cabeça de foto** descritas no artigo [**recortando bitmaps SkiaSharp**](cropping.md#cropping-skiasharp-bitmaps).
 
 Um programa que permite ao usuário girar um bitmap em incrementos de 90 graus só precisa implementar uma função para girar em 90 graus. Em seguida, o usuário pode girar em qualquer incremento de 90 graus por meio da execução repetida dessa função.
 

@@ -6,12 +6,12 @@ ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: 5ba451de857444bc5b12b750ae479b62abdb75a3
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: d2c00410581a35e67807f512b5b6fb6d5349ad0f
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304579"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571045"
 ---
 # <a name="3264-bit-platform-considerations"></a>considerações sobre a plataforma de 32/64 bits
 
@@ -21,11 +21,11 @@ A partir do iOS 11, os aplicativos de 32 bits não serão mais inicializados, e 
 
 A partir de janeiro de 2018, [novos aplicativos enviados para a Mac App Store devem dar suporte a 64 bits](https://developer.apple.com/news/?id=06282017a)e aplicativos existentes devem ser atualizados até junho de 2018.
 
-O API Clássica do Xamarin (`XamMac.dll` e `monotouch.dll`) tem suporte apenas para aplicativos de 32 bits. No entanto, novos aplicativos Xamarin. iOS e Xamarin. Mac usam a [API unificada](~/cross-platform/macios/unified/index.md) (`Xamarin.iOS` e `Xamarin.Mac`) por padrão e, portanto, podem direcionar 32 e 64 bits, conforme necessário.
+O API Clássica do Xamarin ( `XamMac.dll` e `monotouch.dll` ) tem suporte apenas para aplicativos de 32 bits. No entanto, novos aplicativos Xamarin. iOS e Xamarin. Mac usam o [API unificada](~/cross-platform/macios/unified/index.md) ( `Xamarin.iOS` e `Xamarin.Mac` ) por padrão e, portanto, podem ter como alvo 32 e 64 bits, conforme necessário.
 
 ## <a name="ios"></a>iOS
 
-<a name="enable-64" />
+<a name="enable-64"></a>
 
 ### <a name="enabling-64-bit-builds-of-xamarinios-apps"></a>Habilitando compilações de 64 bits de aplicativos Xamarin. iOS
 
@@ -40,9 +40,9 @@ Para aplicativos móveis Xamarin. iOS que foram convertidos no API Unificada, os
 
 1. No **painel de soluções**, clique duas vezes no projeto do aplicativo para abrir a janela **Opções do projeto** .
 2. Selecione **Build do IOS**.
-3. Para o simulador de iPhone, na lista suspensa **arquiteturas com suporte** , selecione **x86\_64** ou **i386 + x86\_64**:
+3. Para o simulador de iPhone, na lista suspensa **arquiteturas com suporte** , selecione **x86 \_ 64** ou **i386 + x86 \_ 64**:
 
-   [![Configurando arquiteturas com suporte para x86\_64 ou i386 + x86\_64](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox) 
+   [![Configurando arquiteturas com suporte para x86 \_ 64 ou i386 + x86 \_ 64](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox) 
 
 4. Para dispositivos físicos, selecione uma das combinações de **ARM64** disponíveis:
 
@@ -55,15 +55,15 @@ Para aplicativos móveis Xamarin. iOS que foram convertidos no API Unificada, os
 
 1. Na **Gerenciador de soluções**, clique com o botão direito do mouse no projeto do aplicativo e selecione **Propriedades**.
 2. Selecione **Build do IOS**.
-3. Para o simulador do iPhone, defina as **arquiteturas com suporte** para **x86\_64** ou **i386 + x86\_64**: 
+3. Para o simulador de iPhone, defina as **arquiteturas com suporte** para **x86 \_ 64** ou **i386 + x86 \_ 64**: 
 
-   [![Configurando arquiteturas com suporte para x86_64 ou i386 + x86\_64](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
+   [![Configurando arquiteturas com suporte para x86_64 ou i386 + x86 \_ 64](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
 
 4. Para dispositivos físicos, selecione uma das combinações de **ARM64** disponíveis:
     
    [![Configurando arquiteturas com suporte para uma das combinações de ARM64](Images/VS01.png "Configurando arquiteturas com suporte para uma das combinações de ARM64")](Images/VS01-large.png#lightbox)
 
-5. Salve as alterações.
+5. Salve suas alterações.
 6. Execute uma compilação limpa.
 
 -----
@@ -90,7 +90,7 @@ Direcionar as arquiteturas de 32 bits e 64 bits aumentará significativamente o 
 
 A maioria dos computadores Mac modernos oferece suporte a aplicativos de 32 bits e 64 bits.   O MacOS 10,6 (neve leopardo) foi o último sistema operacional a ser executado em sistemas de 32 bits.   A maioria dos Macs foi lançada desde 2010 para ambos os sistemas.
 
-Ao contrário do iOS, muitas das novas estruturas introduzidas em versões recentes do macOS só têm suporte no modo de 64 bits (CloudKit, Kit, GameController, LocalAuthentication, MediaLibrary, MultipeerConnectivity, NotificationCenter, GLKit, SpriteKit, social, e MapKit, entre outros).
+Ao contrário do iOS, muitas das novas estruturas introduzidas em versões recentes do macOS só têm suporte no modo de 64 bits (CloudKit, Kit, GameController, LocalAuthentication, MediaLibrary, MultipeerConnectivity, NotificationCenter, GLKit, SpriteKit, social e MapKit, entre outros).
 
 O API Unificada permitir que os desenvolvedores escolham o tipo de aplicativos que desejam produzir: 32 bits ou 64 bits.
 

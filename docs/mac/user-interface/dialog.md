@@ -1,22 +1,22 @@
 ---
 title: Caixas de diálogo no Xamarin. Mac
-description: Este artigo aborda como trabalhar com caixas de diálogo e janelas modais em um aplicativo Xamarin. Mac. Ele descreve a criação de janelas modais no Xcode e no construtor de interface, trabalhando com caixas de diálogo padrão e interagindo C# com esses controles no código.
+description: Este artigo aborda como trabalhar com caixas de diálogo e janelas modais em um aplicativo Xamarin. Mac. Ele descreve a criação de janelas modais no Xcode e no construtor de interface, trabalhando com caixas de diálogo padrão e interagindo com esses controles em código C#.
 ms.prod: xamarin
 ms.assetid: 55451990-B77B-4D44-B8BB-F874EC503B0C
 ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: a50445307156fc051edbab7abaea6b7bd21aa1fd
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0831ec2fae62d4e2230761a157a39f99f13b416a
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032832"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571656"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Caixas de diálogo no Xamarin. Mac
 
-Ao trabalhar com C# o e o .net em um aplicativo Xamarin. Mac, você tem acesso às mesmas caixas de diálogo e janelas modais que um desenvolvedor trabalhando no *Objective-C* e no *Xcode* . Como o Xamarin. Mac se integra diretamente com o Xcode, você pode usar o _interface Builder_ do Xcode para criar e manter suas janelas modais (ou, opcionalmente C# , criá-las diretamente no código).
+Ao trabalhar com C# e .NET em um aplicativo Xamarin. Mac, você tem acesso às mesmas caixas de diálogo e janelas modais que um desenvolvedor trabalhando no *Objective-C* e no *Xcode* . Como o Xamarin. Mac se integra diretamente com o Xcode, você pode usar o _interface Builder_ do Xcode para criar e manter suas janelas modais (ou, opcionalmente, criá-las diretamente no código C#).
 
 Uma caixa de diálogo é exibida em resposta a uma ação do usuário e normalmente fornece maneiras como os usuários podem concluir a ação. Uma caixa de diálogo requer uma resposta do usuário antes que possa ser fechada.
 
@@ -24,11 +24,11 @@ O Windows pode ser usado em um estado sem janela restrita (como um editor de tex
 
 [![](dialog-images/dialog03.png "An open dialog box")](dialog-images/dialog03.png#lightbox)
 
-Neste artigo, abordaremos as noções básicas de como trabalhar com caixas de diálogo e janelas modais em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos em Este artigo.
+Neste artigo, abordaremos as noções básicas de como trabalhar com caixas de diálogo e janelas modais em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos neste artigo.
 
-Talvez você queira dar uma olhada na seção [ C# expondo classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os comandos`Register`e`Export`usados para conectar suas C# classes ao Objective-C objetos e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [expondo classes/métodos C# para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os `Register` `Export` comandos e usados para conectar suas classes C# a objetos Objective-C e elementos de interface do usuário.
 
-<a name="Introduction_to_Dialogs" />
+<a name="Introduction_to_Dialogs"></a>
 
 ## <a name="introduction-to-dialogs"></a>Introdução às caixas de diálogo
 
@@ -42,7 +42,7 @@ De acordo com a Apple, há três maneiras de apresentar uma caixa de diálogo:
 
 ### <a name="modal-window"></a>Janela Modal
 
-Qualquer `NSWindow` padrão pode ser usada como uma caixa de diálogo personalizada exibindo-a de forma modal:
+Qualquer padrão `NSWindow` pode ser usado como uma caixa de diálogo personalizada exibindo-o de forma modal:
 
 [![](dialog-images/modal01.png "An example modal window")](dialog-images/modal01.png#lightbox)
 
@@ -104,7 +104,7 @@ Como pode a caixa de diálogo Salvar **expandida** :
 
 Para obter mais informações, consulte a seção [caixas de diálogo](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowDialogs.html#//apple_ref/doc/uid/20000957-CH43-SW1) das [diretrizes de interface humana do os X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) da Apple
 
-<a name="Adding_a_Modal_Window_to_a_Project" />
+<a name="Adding_a_Modal_Window_to_a_Project"></a>
 
 ## <a name="adding-a-modal-window-to-a-project"></a>Adicionando uma janela modal a um projeto
 
@@ -112,18 +112,18 @@ Além da janela principal do documento, um aplicativo Xamarin. Mac pode precisar
 
 Para adicionar uma nova janela, faça o seguinte:
 
-1. No **Gerenciador de soluções**, abra o arquivo `Main.storyboard` para edição no interface Builder do Xcode.
+1. No **Gerenciador de soluções**, abra o `Main.storyboard` arquivo para edição no interface Builder do Xcode.
 2. Arraste um novo **controlador de exibição** para a design Surface:
 
     [![](dialog-images/new01.png "Selecting a View Controller from the Library")](dialog-images/new01.png#lightbox)
-3. No **Inspetor de identidade**, insira `CustomDialogController` para o **nome da classe**: 
+3. No **Inspetor de identidade**, digite `CustomDialogController` para o **nome da classe**: 
 
     [![](dialog-images/new02.png "Setting the class name")](dialog-images/new02.png#lightbox)
-4. Volte para Visual Studio para Mac, permita que ele seja sincronizado com o Xcode e crie o arquivo de `CustomDialogController.h`.
+4. Volte para Visual Studio para Mac, permita que ele seja sincronizado com o Xcode e crie o `CustomDialogController.h` arquivo.
 5. Retorne ao Xcode e projete sua interface: 
 
     [![](dialog-images/new03.png "Designing the UI in Xcode")](dialog-images/new03.png#lightbox)
-6. Crie um **transição modal** na janela principal do seu aplicativo para o novo controlador de exibição por meio de controle-arrastando do elemento da interface do usuário que abrirá a caixa de diálogo na janela da caixa de diálogo. Atribuir o **identificador** `ModalSegue`: 
+6. Crie um **transição modal** na janela principal do seu aplicativo para o novo controlador de exibição por meio de controle-arrastando do elemento da interface do usuário que abrirá a caixa de diálogo na janela da caixa de diálogo. Atribuir o **identificador** `ModalSegue` : 
 
     [![](dialog-images/new06.png "A modal segue")](dialog-images/new06.png#lightbox)
 7. Conectar qualquer **ação** e **saídas**: 
@@ -131,7 +131,7 @@ Para adicionar uma nova janela, faça o seguinte:
     [![](dialog-images/new04.png "Configuring an Action")](dialog-images/new04.png#lightbox)
 8. Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
-Faça com que o arquivo de `CustomDialogController.cs` se pareça com o seguinte:
+Faça com que o `CustomDialogController.cs` arquivo se pareça com o seguinte:
 
 ```csharp
 using System;
@@ -221,7 +221,7 @@ namespace MacDialog
 
 Esse código expõe algumas propriedades para definir o título e a descrição da caixa de diálogo e alguns eventos para reagir à caixa de diálogo que está sendo cancelada ou aceita.
 
-Em seguida, edite o arquivo `ViewController.cs`, substitua o método `PrepareForSegue` e faça com que ele se pareça com o seguinte:
+Em seguida, edite o `ViewController.cs` arquivo, substitua o `PrepareForSegue` método e faça com que ele se pareça com o seguinte:
 
 ```csharp
 public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
@@ -252,7 +252,7 @@ Podemos executar nosso aplicativo e exibir a caixa de diálogo personalizada:
 
 Para obter mais informações sobre como usar o Windows em um aplicativo Xamarin. Mac, consulte [a documentação trabalhando com o Windows](~/mac/user-interface/window.md) .
 
-<a name="Creating_a_Custom_Sheet" />
+<a name="Creating_a_Custom_Sheet"></a>
 
 ## <a name="creating-a-custom-sheet"></a>Criando uma planilha personalizada
 
@@ -260,7 +260,7 @@ Uma _planilha_ é uma caixa de diálogo modal anexada a uma determinada janela d
 
 Para criar uma planilha personalizada no Xamarin. Mac, vamos fazer o seguinte:
 
-1. No **Gerenciador de soluções**, abra o arquivo `Main.storyboard` para edição no interface Builder do Xcode.
+1. No **Gerenciador de soluções**, abra o `Main.storyboard` arquivo para edição no interface Builder do Xcode.
 2. Arraste um novo **controlador de exibição** para a design Surface:
 
     [![](dialog-images/new01.png "Selecting a View Controller from the Library")](dialog-images/new01.png#lightbox)
@@ -270,7 +270,7 @@ Para criar uma planilha personalizada no Xamarin. Mac, vamos fazer o seguinte:
 4. Crie um **transição de planilha** de sua janela principal para o novo controlador de exibição: 
 
     [![](dialog-images/sheet02.png "Selecting the Sheet segue type")](dialog-images/sheet02.png#lightbox)
-5. No **Inspetor de identidade**, nomeie a **classe** do controlador de exibição `SheetViewController`: 
+5. No **Inspetor de identidade**, nomeie a **classe** do controlador de exibição `SheetViewController` : 
 
     [![](dialog-images/sheet03.png "Setting the class name")](dialog-images/sheet03.png#lightbox)
 6. Defina as **ações**e **saídas** necessárias: 
@@ -278,7 +278,7 @@ Para criar uma planilha personalizada no Xamarin. Mac, vamos fazer o seguinte:
     [![](dialog-images/sheet04.png "Defining the required Outlets and Actions")](dialog-images/sheet04.png#lightbox)
 7. Salve as alterações e retorne ao Visual Studio para Mac para sincronização.
 
-Em seguida, edite o arquivo de `SheetViewController.cs` e faça com que ele se pareça com o seguinte:
+Em seguida, edite o `SheetViewController.cs` arquivo e faça com que ele se pareça com o seguinte:
 
 ```csharp
 using System;
@@ -374,7 +374,7 @@ namespace MacDialog
 }
 ```
 
-Em seguida, edite o arquivo `ViewController.cs`, edite o método `PrepareForSegue` e faça com que ele se pareça com o seguinte:
+Em seguida, edite o `ViewController.cs` arquivo, edite o `PrepareForSegue` método e faça com que ele se pareça com o seguinte:
 
 ```csharp
 public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
@@ -408,11 +408,11 @@ Se executarmos nosso aplicativo e abrirmos a planilha, ele será anexado à jane
 
 [![](dialog-images/sheet08.png "An example sheet")](dialog-images/sheet08.png#lightbox)
 
-<a name="Creating_a_Preferences_Dialog" />
+<a name="Creating_a_Preferences_Dialog"></a>
 
 ## <a name="creating-a-preferences-dialog"></a>Criando uma caixa de diálogo Preferências
 
-Antes de criarmos o modo de exibição de preferência no Interface Builder, precisaremos adicionar um tipo de transição personalizado para lidar com a alternância das preferências. Adicione uma nova classe ao seu projeto e chame-a `ReplaceViewSeque`. Edite a classe e faça com que ela fique parecida com a seguinte:
+Antes de criarmos o modo de exibição de preferência no Interface Builder, precisaremos adicionar um tipo de transição personalizado para lidar com a alternância das preferências. Adicione uma nova classe ao seu projeto e chame-a `ReplaceViewSeque` . Edite a classe e faça com que ela fique parecida com a seguinte:
 
 ```csharp
 using System;
@@ -477,7 +477,7 @@ Com o transição personalizado criado, podemos adicionar uma nova janela na Int
 
 Para adicionar uma nova janela, faça o seguinte:
 
-1. No **Gerenciador de soluções**, abra o arquivo `Main.storyboard` para edição no interface Builder do Xcode.
+1. No **Gerenciador de soluções**, abra o `Main.storyboard` arquivo para edição no interface Builder do Xcode.
 2. Arraste um novo **controlador de janela** para a design Surface:
 
     [![](dialog-images/pref01.png "Select a Window Controller from the Library")](dialog-images/pref01.png#lightbox)
@@ -499,10 +499,10 @@ Para adicionar uma nova janela, faça o seguinte:
 8. Controle-clique e arraste de cada **botão da barra de ferramentas** para os modos de exibição que você criou acima. Selecione um tipo de transição **personalizado** :
 
     [![](dialog-images/pref07.png "Setting the segue type")](dialog-images/pref07.png#lightbox)
-9. Selecione o novo transição e defina a **classe** como `ReplaceViewSegue`:
+9. Selecione o novo transição e defina a **classe** como `ReplaceViewSegue` :
 
     [![](dialog-images/pref08.png "Setting the segue class")](dialog-images/pref08.png#lightbox)
-10. No **Designer de BarraDeMenu** na design Surface, no menu do aplicativo, selecione **preferências...** , clique no botão de controle e arraste para a janela preferências para criar um transição de **exibição** :
+10. No **Designer de BarraDeMenu** na design Surface, no menu do aplicativo, selecione **preferências...**, clique no botão de controle e arraste para a janela preferências para criar um transição de **exibição** :
 
     [![](dialog-images/pref09.png "Setting the segue type")](dialog-images/pref09.png#lightbox)
 11. Salve as alterações e retorne ao Visual Studio para Mac para sincronização.
@@ -513,15 +513,15 @@ Se executarmos o código e selecionarmos as **preferências...** no **menu do ap
 
 Para obter mais informações sobre como trabalhar com janelas e barras de ferramentas, consulte nossa documentação sobre [janelas](~/mac/user-interface/window.md) e [barras de ferramentas](~/mac/user-interface/toolbar.md) .
 
-<a name="Saving-and-Loading-Preferences" />
+<a name="Saving-and-Loading-Preferences"></a>
 
 ### <a name="saving-and-loading-preferences"></a>Salvando e carregando preferências
 
 Em um aplicativo macOS típico, quando o usuário faz alterações em qualquer uma das preferências do usuário do aplicativo, essas alterações são salvas automaticamente. A maneira mais fácil de lidar com isso em um aplicativo Xamarin. Mac é criar uma única classe para gerenciar todas as preferências do usuário e compartilhá-las em todo o sistema.
 
-Primeiro, adicione uma nova classe `AppPreferences` ao projeto e herde de `NSObject`. As preferências serão projetadas para usar a [vinculação de dados e a codificação de chave-valor](~/mac/app-fundamentals/databinding.md) , o que tornará o processo de criação e manutenção dos formulários de preferência muito mais simples. Como as preferências consistirão em uma pequena quantidade de tipos de dado simples, use o `NSUserDefaults` interno para armazenar e recuperar valores.
+Primeiro, adicione uma nova `AppPreferences` classe ao projeto e herde de `NSObject` . As preferências serão projetadas para usar a [vinculação de dados e a codificação de chave-valor](~/mac/app-fundamentals/databinding.md) , o que tornará o processo de criação e manutenção dos formulários de preferência muito mais simples. Como as preferências consistirão em uma pequena quantidade de tipos de dado simples, use o interno `NSUserDefaults` para armazenar e recuperar valores.
 
-Edite o arquivo de `AppPreferences.cs` e faça com que ele se pareça com o seguinte:
+Edite o `AppPreferences.cs` arquivo e faça com que ele se pareça com o seguinte:
 
 ```csharp
 using System;
@@ -682,9 +682,9 @@ namespace SourceWriter
 }
 ```
 
-Essa classe contém algumas rotinas auxiliares, como `SaveInt`, `LoadInt`, `SaveColor`, `LoadColor`, etc., para facilitar o trabalho com `NSUserDefaults`. Além disso, como `NSUserDefaults` não tem uma maneira interna de lidar com `NSColors`, os métodos `NSColorToHexString` e `NSColorFromHexString` são usados para converter cores em cadeias de caracteres hexadecimais baseadas na Web (`#RRGGBBAA` em que `AA` é a transparência alfa) que pode ser facilmente armazenada e recuperada.
+Essa classe contém algumas rotinas auxiliares, como,,, `SaveInt` `LoadInt` `SaveColor` `LoadColor` etc., para facilitar o trabalho com `NSUserDefaults` mais facilidade. Além disso, como o `NSUserDefaults` não tem uma maneira interna de manipular `NSColors` , os `NSColorToHexString` métodos e `NSColorFromHexString` são usados para converter cores em cadeias de caracteres hexadecimais baseadas na Web ( `#RRGGBBAA` onde `AA` é a transparência alfa) que pode ser facilmente armazenada e recuperada.
 
-No arquivo de `AppDelegate.cs`, crie uma instância do objeto **AppPreferences** que será usada em todo o aplicativo:
+No `AppDelegate.cs` arquivo, crie uma instância do objeto **AppPreferences** que será usada em todo o aplicativo:
 
 ```csharp
 using AppKit;
@@ -712,7 +712,7 @@ namespace SourceWriter
         ...
 ```
 
-<a name="Wiring-Preferences-to-Preference-Views" />
+<a name="Wiring-Preferences-to-Preference-Views"></a>
 
 ### <a name="wiring-preferences-to-preference-views"></a>Preferências de fiação para exibições de preferência
 
@@ -753,7 +753,7 @@ namespace SourceWriter
 }
 ```
 
-Observe que essa classe fez duas coisas aqui: primeiro, há um auxiliar `App` propriedade para facilitar o acesso ao **AppDelegate** . Em segundo lugar, a propriedade `Preferences` expõe a classe global **AppPreferences** para a vinculação de dados com qualquer controle de interface do usuário colocado nessa exibição.
+Observe que essa classe fez duas coisas aqui: primeiro, há uma `App` propriedade auxiliar para facilitar o acesso ao **AppDelegate** . Em segundo lugar, a `Preferences` Propriedade expõe a classe global **AppPreferences** para a vinculação de dados com qualquer controle de interface do usuário colocado nessa exibição.
 
 Em seguida, clique duas vezes no arquivo de storyboard para abri-lo novamente no Interface Builder (e veja as alterações feitas acima). Arraste os controles da interface do usuário necessários para criar a interface de preferências na exibição. Para cada controle, alterne para o **Inspetor de associação** e associe às propriedades individuais da classe **AppPreference** :
 
@@ -761,7 +761,7 @@ Em seguida, clique duas vezes no arquivo de storyboard para abri-lo novamente no
 
 Repita as etapas acima para todos os painéis (Exibir controladores) e propriedades de preferência necessários.
 
-<a name="Applying-Preference-Changes-to-All-Open-Windows" />
+<a name="Applying-Preference-Changes-to-All-Open-Windows"></a>
 
 ### <a name="applying-preference-changes-to-all-open-windows"></a>Aplicando alterações de preferência a todas as janelas abertas
 
@@ -805,7 +805,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-Em seguida, edite o arquivo `AppDelegate.cs` e adicione o seguinte método para aplicar qualquer alteração de preferência a todas as janelas abertas:
+Em seguida, edite o `AppDelegate.cs` arquivo e adicione o seguinte método para aplicar qualquer alteração de preferência a todas as janelas abertas:
 
 ```csharp
 public void UpdateWindowPreferences() {
@@ -822,7 +822,7 @@ public void UpdateWindowPreferences() {
 }
 ```
 
-Em seguida, adicione uma classe `PreferenceWindowDelegate` ao projeto e faça com que seja semelhante ao seguinte:
+Em seguida, adicione uma `PreferenceWindowDelegate` classe ao projeto e faça com que ele se pareça com o seguinte:
 
 ```csharp
 using System;
@@ -904,7 +904,7 @@ Com todas essas alterações em vigor, se o usuário editar as preferências do 
 
 [![](dialog-images/prefs14.png "An example preferences window")](dialog-images/prefs14.png#lightbox)
 
-<a name="The_Open_Dialog" />
+<a name="The_Open_Dialog"></a>
 
 ## <a name="the-open-dialog"></a>A caixa de diálogo abrir
 
@@ -939,23 +939,23 @@ if (dlg.RunModal () == 1) {
 
 No código acima, estamos abrindo uma nova janela de documento para exibir o conteúdo do arquivo. Você precisará substituir esse código com a funcionalidade necessária para seu aplicativo.
 
-As propriedades a seguir estão disponíveis ao trabalhar com um `NSOpenPanel`:
+As propriedades a seguir estão disponíveis ao trabalhar com um `NSOpenPanel` :
 
-- **CanChooseFiles** -se `true` o usuário pode selecionar arquivos.
-- **CanChooseDirectories** -se `true` o usuário pode selecionar diretórios.
-- **AllowsMultipleSelection** -se `true` o usuário pode selecionar mais de um arquivo por vez.
+- **CanChooseFiles** – se `true` o usuário puder selecionar arquivos.
+- **CanChooseDirectories** – se `true` o usuário puder selecionar diretórios.
+- **AllowsMultipleSelection** – se `true` o usuário puder selecionar mais de um arquivo por vez.
 - **ResolveAliases** -se `true` selecionar e alias, o o resolverá para o caminho do arquivo original.
-- **AllowedFileTypes** -é uma matriz de cadeia de caracteres de tipos de arquivos que o usuário pode selecionar como uma extensão ou _UTI_. O valor padrão é `null`, que permite que qualquer arquivo seja aberto.
+- **AllowedFileTypes** -é uma matriz de cadeia de caracteres de tipos de arquivos que o usuário pode selecionar como uma extensão ou _UTI_. O valor padrão é `null` , que permite que qualquer arquivo seja aberto.
 
-O método `RunModal ()` exibe a caixa de diálogo abrir e permite que o usuário selecione arquivos ou diretórios (conforme especificado pelas propriedades) e retorna `1` se o usuário clicar no botão **abrir** .
+O `RunModal ()` método exibe a caixa de diálogo abrir e permite que o usuário selecione arquivos ou diretórios (conforme especificado pelas propriedades) e retorna `1` se o usuário clica no botão **abrir** .
 
-A caixa de diálogo abrir retorna os arquivos ou diretórios selecionados do usuário como uma matriz de URLs na propriedade `URL`.
+A caixa de diálogo abrir retorna os arquivos ou diretórios selecionados do usuário como uma matriz de URLs na `URL` propriedade.
 
 Se executarmos o programa e selecionarmos o item **abrir...** no menu **arquivo** , o seguinte será exibido: 
 
 [![](dialog-images/dialog03.png "An open dialog box")](dialog-images/dialog03.png#lightbox)
 
-<a name="The_Print_and_Page_Setup_Dialogs" />
+<a name="The_Print_and_Page_Setup_Dialogs"></a>
 
 ## <a name="the-print-and-page-setup-dialogs"></a>As caixas de diálogo de configuração de impressão e de página
 
@@ -988,11 +988,11 @@ void ShowDocument (NSObject sender) {
 
 ```
 
-Se definirmos a propriedade `ShowPrintAsSheet` como `false`, executar o aplicativo e exibir a caixa de diálogo de impressão, o seguinte será exibido:
+Se definirmos a `ShowPrintAsSheet` propriedade como `false` , executar o aplicativo e exibir a caixa de diálogo de impressão, o seguinte será exibido:
 
 [![](dialog-images/print01.png "A print dialog box")](dialog-images/print01.png#lightbox)
 
-Se definir a propriedade `ShowPrintAsSheet` como `true`, executar o aplicativo e exibir a caixa de diálogo de impressão, o seguinte será exibido:
+Se definir a `ShowPrintAsSheet` propriedade como `true` , execute o aplicativo e exiba a caixa de diálogo Imprimir, o seguinte será exibido:
 
 [![](dialog-images/print02.png "A print sheet")](dialog-images/print02.png#lightbox)
 
@@ -1019,17 +1019,17 @@ void ShowLayout (NSObject sender) {
 }
 ```
 
-Se definirmos a propriedade `ShowPrintAsSheet` como `false`, executarei o aplicativo e exibirei a caixa de diálogo layout de impressão, o seguinte será exibido:
+Se definirmos a `ShowPrintAsSheet` propriedade como `false` , executar o aplicativo e exibir a caixa de diálogo layout de impressão, o seguinte será exibido:
 
 [![](dialog-images/print03.png "A page setup dialog")](dialog-images/print03.png#lightbox)
 
-Se definir a propriedade `ShowPrintAsSheet` como `true`, execute o aplicativo e exiba a caixa de diálogo layout de impressão, o seguinte será exibido:
+Se definir a `ShowPrintAsSheet` propriedade como `true` , execute o aplicativo e exiba a caixa de diálogo layout de impressão, o seguinte será exibido:
 
 [![](dialog-images/print04.png "A page setup sheet")](dialog-images/print04.png#lightbox)
 
 Para obter mais informações sobre como trabalhar com as caixas de diálogo de impressão e configuração de página, consulte a documentação do [NSPrintPanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPrintPanel_Class/index.html#//apple_ref/doc/uid/TP40004092) e do [NSPageLayout](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPageLayout_Class/index.html#//apple_ref/doc/uid/TP40004080) da Apple.
 
-<a name="The_Save_Dialog" />
+<a name="The_Save_Dialog"></a>
 
 ## <a name="the-save-dialog"></a>A caixa de diálogo salvar
 
@@ -1071,9 +1071,9 @@ void ShowSaveAs (NSObject sender)
 }
 ```
 
-A propriedade `AllowedFileTypes` é uma matriz de cadeia de caracteres de tipos de arquivo que o usuário pode selecionar para salvar o arquivo como. O tipo de arquivo pode ser especificado como uma extensão ou _UTI_. O valor padrão é `null`, que permite que qualquer tipo de arquivo seja usado.
+A `AllowedFileTypes` propriedade é uma matriz de cadeia de caracteres de tipos de arquivo que o usuário pode selecionar para salvar o arquivo como. O tipo de arquivo pode ser especificado como uma extensão ou _UTI_. O valor padrão é `null` , que permite que qualquer tipo de arquivo seja usado.
 
-Se definirmos a propriedade `ShowSaveAsSheet` como `false`, executar o aplicativo e selecionar **salvar como...** no menu **arquivo** , o seguinte será exibido:
+Se definirmos a `ShowSaveAsSheet` propriedade como `false` , executar o aplicativo e selecionar **salvar como...** no menu **arquivo** , o seguinte será exibido:
 
 [![](dialog-images/save01.png "A save dialog box")](dialog-images/save01.png#lightbox)
 
@@ -1081,7 +1081,7 @@ O usuário pode expandir a caixa de diálogo:
 
 [![](dialog-images/save02.png "An expanded save dialog box")](dialog-images/save02.png#lightbox)
 
-Se definirmos a propriedade `ShowSaveAsSheet` como `true`, executar o aplicativo e selecionar **salvar como...** no menu **arquivo** , o seguinte será exibido:
+Se definirmos a `ShowSaveAsSheet` propriedade como `true` , executar o aplicativo e selecionar **salvar como...** no menu **arquivo** , o seguinte será exibido:
 
 [![](dialog-images/save03.png "A save sheet")](dialog-images/save03.png#lightbox)
 
@@ -1091,11 +1091,11 @@ O usuário pode expandir a caixa de diálogo:
 
 Para obter mais informações sobre como trabalhar com a caixa de diálogo salvar, consulte a documentação do [NSSavePanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSSavePanel_Class/index.html#//apple_ref/doc/uid/TP40004098) da Apple.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>Resumo
 
-Este artigo adotou uma visão detalhada de como trabalhar com janelas modais, folhas e as caixas de diálogo do sistema padrão em um aplicativo Xamarin. Mac. Vimos os diferentes tipos e usos de janelas modais, planilhas e caixas de diálogo, como criar e manter janelas restritas e folhas no Interface Builder do Xcode e como trabalhar com janelas modais, folhas e caixas de diálogo C# no código.
+Este artigo adotou uma visão detalhada de como trabalhar com janelas modais, folhas e as caixas de diálogo do sistema padrão em um aplicativo Xamarin. Mac. Vimos os diferentes tipos e usos de janelas modais, planilhas e caixas de diálogo, como criar e manter janelas restritas e folhas no Interface Builder do Xcode e como trabalhar com janelas modais, folhas e caixas de diálogo no código C#.
 
 ## <a name="related-links"></a>Links relacionados
 
@@ -1103,7 +1103,7 @@ Este artigo adotou uma visão detalhada de como trabalhar com janelas modais, fo
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Menus](~/mac/user-interface/menu.md)
 - [Windows](~/mac/user-interface/window.md)
-- [Barras de ferramentas](~/mac/user-interface/toolbar.md)
+- [Barras de Ferramentas](~/mac/user-interface/toolbar.md)
 - [Diretrizes de interface humana do OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Introdução ao Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)
 - [Introdução às planilhas](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Sheets/Sheets.html#//apple_ref/doc/uid/10000002i)

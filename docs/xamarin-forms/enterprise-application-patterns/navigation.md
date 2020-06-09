@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 9b2ee9fb02a8fd18d69e93424dc76bfd54fafc86
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130891"
+Título: "navegação do aplicativo empresarial" Descrição: "Este capítulo explica como o aplicativo móvel do eShopOnContainers executa o modelo de exibição-primeira navegação de modelos de exibição".
+MS. Prod: xamarin MS. AssetID: 4cad57b5-7fe4-4527-a988-d9b60c9620b4 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="enterprise-app-navigation"></a>Navegação de aplicativo empresarial
 
 Xamarin.Formsinclui suporte para a navegação de página, que normalmente resulta da interação do usuário com a interface do usuário ou do próprio aplicativo como resultado de alterações de estado controladas pela lógica interna. No entanto, a navegação pode ser complexa para ser implementada em aplicativos que usam o padrão Model-View-ViewModel (MVVM), pois os seguintes desafios devem ser atendidos:
@@ -82,7 +68,7 @@ A `INavigationService` interface é resolvida no `ViewModelBase` Construtor da c
 NavigationService = ViewModelLocator.Resolve<INavigationService>();
 ```
 
-Isso retorna uma referência ao `NavigationService` objeto armazenado no contêiner de injeção de dependência Autofac, que é criado pelo `InitNavigation` método na `App` classe. Para obter mais informações, consulte [navegando quando o aplicativo é iniciado](#navigating_when_the_app_is_launched).
+Isso retorna uma referência ao `NavigationService` objeto armazenado no contêiner de injeção de dependência Autofac, que é criado pelo `InitNavigation` método na `App` classe. Para obter mais informações, consulte [navegando quando o aplicativo é iniciado](#navigating-when-the-app-is-launched).
 
 A `ViewModelBase` classe armazena a `NavigationService` instância em uma `NavigationService` propriedade, do tipo `INavigationService` . Portanto, todas as classes de modelo de exibição, que derivam da `ViewModelBase` classe, podem usar a `NavigationService` propriedade para acessar os métodos especificados pela `INavigationService` interface. Isso evita a sobrecarga de injetar o `NavigationService` objeto do contêiner de injeção de dependência Autofac em cada classe de modelo de exibição.
 
@@ -129,7 +115,7 @@ public Task NavigateToAsync<TViewModel>(object parameter) where TViewModel�
 }
 ```
 
-Cada método permite que qualquer classe de modelo de exibição derive da `ViewModelBase` classe para executar a navegação hierárquica invocando o `InternalNavigateToAsync` método. Além disso, o segundo `NavigateToAsync` método permite que os dados de navegação sejam especificados como um argumento passado para o modelo de exibição que está sendo navegado, onde é normalmente usado para executar a inicialização. Para obter mais informações, consulte [passando parâmetros durante a navegação](#passing_parameters_during_navigation).
+Cada método permite que qualquer classe de modelo de exibição derive da `ViewModelBase` classe para executar a navegação hierárquica invocando o `InternalNavigateToAsync` método. Além disso, o segundo `NavigateToAsync` método permite que os dados de navegação sejam especificados como um argumento passado para o modelo de exibição que está sendo navegado, onde é normalmente usado para executar a inicialização. Para obter mais informações, consulte [passando parâmetros durante a navegação](#passing-parameters-during-navigation).
 
 O `InternalNavigateToAsync` método executa a solicitação de navegação e é mostrado no exemplo de código a seguir:
 
@@ -188,16 +174,14 @@ O `InternalNavigateToAsync` método executa a navegação em um modelo de exibi�
 - Os modelos de exibição estão em um. Namespace filho de ViewModels.
 - Os nomes de exibição correspondem à exibição de nomes de modelo, com o "modelo" removido.
 
-Quando uma exibição é instanciada, ela é associada ao seu modelo de exibição correspondente. Para obter mais informações sobre como isso ocorre, consulte [criando automaticamente um modelo de exibição com um localizador de modelo de exibição](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
+Quando uma exibição é instanciada, ela é associada ao seu modelo de exibição correspondente. Para obter mais informações sobre como isso ocorre, consulte [criando automaticamente um modelo de exibição com um localizador de modelo de exibição](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically-creating-a-view-model-with-a-view-model-locator).
 
 Se o modo de exibição que está sendo criado for um `LoginView` , ele será encapsulado dentro de uma nova instância da `CustomNavigationView` classe e atribuído à [`Application.Current.MainPage`](xref:Xamarin.Forms.Application.MainPage) propriedade. Caso contrário, a `CustomNavigationView` instância será recuperada e desde que não seja nula, o [`PushAsync`](xref:Xamarin.Forms.NavigationPage) método será invocado para enviar por push a exibição que está sendo criada na pilha de navegação. No entanto, se a instância recuperada `CustomNavigationView` for `null` , a exibição que está sendo criada será encapsulada dentro de uma nova instância da `CustomNavigationView` classe e atribuída à `Application.Current.MainPage` propriedade. Esse mecanismo garante que, durante a navegação, as páginas sejam adicionadas corretamente à pilha de navegação quando estiverem vazias e quando contiverem dados.
 
 > [!TIP]
 > Considere armazenar páginas em cache. O cache de página resulta no consumo de memória para exibições que não são exibidas no momento. No entanto, sem o cache de página, isso significa que a análise e a construção de XAML da página e seu modelo de exibição ocorrerão sempre que uma nova página for navegada, o que pode afetar o desempenho de uma página complexa. Para uma página bem projetada que não usa um número excessivo de controles, o desempenho deve ser suficiente. No entanto, o cache de página pode ajudar se forem encontrados tempos de carregamento de página lentos.
 
-Depois que a exibição é criada e navegada, o `InitializeAsync` método do modelo de exibição associado do modo de exibição é executado. Para obter mais informações, consulte [passando parâmetros durante a navegação](#passing_parameters_during_navigation).
-
-<a name="navigating_when_the_app_is_launched" />
+Depois que a exibição é criada e navegada, o `InitializeAsync` método do modelo de exibição associado do modo de exibição é executado. Para obter mais informações, consulte [passando parâmetros durante a navegação](#passing-parameters-during-navigation).
 
 ### <a name="navigating-when-the-app-is-launched"></a>Navegando quando o aplicativo é iniciado
 
@@ -230,9 +214,7 @@ public Task InitializeAsync()
 
 O `MainView` é navegado para se o aplicativo tiver um token de acesso em cache, que é usado para autenticação. Caso contrário, o `LoginView` será navegado para.
 
-Para obter mais informações sobre o contêiner de injeção de dependência Autofac, consulte [introdução à injeção de dependência](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
-
-<a name="passing_parameters_during_navigation" />
+Para obter mais informações sobre o contêiner de injeção de dependência Autofac, consulte [introdução à injeção de dependência](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction-to-dependency-injection).
 
 ### <a name="passing-parameters-during-navigation"></a>Passando parâmetros durante a navegação
 
@@ -265,8 +247,6 @@ public override async Task InitializeAsync(object navigationData)
 ```
 
 Esse método recupera a `Order` instância que foi passada para o modelo de exibição durante a operação de navegação e a usa para recuperar os detalhes completos do pedido da `OrderService` instância.
-
-<a name="invoking_navigation_using_behaviors" />
 
 ### <a name="invoking-navigation-using-behaviors"></a>Invocando navegação usando comportamentos
 

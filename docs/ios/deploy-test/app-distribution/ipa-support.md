@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 58fbe6d688ffb506db4316ee29d79a364f849a97
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: b9254afdcb6286edcffc67a1a69af8b049f08b6b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73030421"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573216"
 ---
 # <a name="ipa-support-in-xamarinios"></a>Suporte de IPA no Xamarin.iOS
 
@@ -25,7 +25,7 @@ Além de liberar um aplicativo para venda por meio da iTunes App Store, ele pode
 
 Em ambos os casos, um pacote de IPA (um tipo especial de arquivo zip) deve ser criado e assinado digitalmente com o perfil de Provisionamento de Distribuição correto. Este artigo aborda as etapas necessárias para compilar o pacote IPA e instalá-lo em um dispositivo iOS usando o iTunes em um Mac ou PC com Windows.
 
-<a name="iTunesMetadata" />
+<a name="iTunesMetadata"></a>
 
 ## <a name="the-itunesmetadataplist-file"></a>O arquivo iTunesMetadata.plist
 
@@ -35,7 +35,7 @@ Aplicativos iOS entregues por meio de distribuição Interna ou Ad Hoc precisam 
 
 Um **iTunesMetadata.plist** personalizado também pode ser criado para fornecer informações adicionais para uma distribuição. Para saber mais sobre o conteúdo desse arquivo e como criá-lo, consulte nossa documentação [Conteúdo do iTunesMetadata.plist](~/ios/deploy-test/app-distribution/itunesmetadata.md#iTunesMetadata_contents) e [Como criar um arquivo iTunesMetadata.plist](~/ios/deploy-test/app-distribution/itunesmetadata.md#iTunesMetadata_creating).
 
-<a name="iTunesArtwork" />
+<a name="iTunesArtwork"></a>
 
 ## <a name="itunes-artwork"></a>Arte do iTunes
 
@@ -50,7 +50,7 @@ Para especificar a Arte do iTunes, faça o seguinte:
 
 Consulte a documentação [Arte do iTunes](~/ios/app-fundamentals/images-icons/app-icons.md) para obter mais detalhes.
 
-<a name="createipa" />
+<a name="createipa"></a>
 
 ## <a name="creating-an-ipa"></a>Como criar um IPA
 
@@ -70,7 +70,7 @@ Para compilar um IPA, é preciso criar um _arquivo morto_ de um build de versão
 
     ![](ipa-support-images/buildxs01new.png "Select the Release | Device configuration")
 
-1. No menu **Build,** selecione **'Arquivamento para publicação':**
+1. No menu **Compilar** , selecione **arquivo morto para publicação**:
 
     ![](ipa-support-images/buildxs02new.png "Select Archive for Publishing")
 
@@ -165,7 +165,7 @@ Em determinados casos, como em um ambiente de CI, pode ser necessário compilar 
 
 -----
 
-<a name="Customizing-the-IPA-Location" />
+<a name="Customizing-the-IPA-Location"></a>
 
 ## <a name="customizing-the-ipa-location"></a>Personalizando o local de IPA
 
@@ -221,7 +221,7 @@ Ou semelhante ao seguinte no Mac:
 msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/Builds" /t:Build SingleViewIphone1.sln
 ```
 
-<a name="installipa" />
+<a name="installipa"></a>
 
 ## <a name="installing-an-ipa-using-itunes"></a>Como instalar um IPA usando iTunes
 
@@ -241,7 +241,7 @@ O novo aplicativo iOS será mostrado na seção **Meus Aplicativos**, na qual vo
 
 O usuário agora pode sincronizar o iTunes com seu dispositivo para instalar o novo aplicativo iOS.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>Resumo
 
@@ -249,12 +249,12 @@ Este artigo abordou a configuração necessária para preparar um aplicativo Xam
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Distribuição da App Store](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
+- [Distribuição da loja de aplicativos](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
 - [Configurando um aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
 - [Publicando na App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
 - [Distribuição interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
 - [Distribuição Ad Hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md)
-- [O arquivo iTunesMetadata.plist](~/ios/deploy-test/app-distribution/itunesmetadata.md)
+- [O arquivo iTunesMetadata. plist](~/ios/deploy-test/app-distribution/itunesmetadata.md)
 - [Solução de problemas](~/ios/deploy-test/troubleshooting.md)
 - [Arte do iTunes](~/ios/app-fundamentals/images-icons/app-icons.md#itunes)
 - [Develop and distribute enterprise apps (Apple)](https://help.apple.com/xcode/mac/current/#/devba5e7054d) [Desenvolver e distribuir aplicativos empresariais (Apple)]

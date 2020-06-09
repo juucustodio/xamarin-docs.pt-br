@@ -8,16 +8,16 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/27/2018
-ms.openlocfilehash: d73c72fa70a22bacf122f5c3957b789914dfd765
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: ff68666d9f0385b159b9ac9908ff997f53715308
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79304047"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571929"
 ---
 # <a name="android-emulator-troubleshooting"></a>Solução de problemas do Android Emulator
 
-_Este artigo descreve as mensagens de aviso mais comuns e problemas que ocorrem durante a configuração e execução do Emulador android. Além disso, descreve soluções para resolver esses erros, bem como várias dicas de solução de problemas para ajudá-lo a diagnosticar problemas de emuladores._
+_Este artigo descreve as mensagens de aviso e os problemas mais comuns que ocorrem durante a configuração e a execução do Android Emulator. Além disso, ele descreve soluções para resolver esses erros, bem como várias dicas de solução de problemas para ajudá-lo a diagnosticar problemas de emulador._
 
 ::: zone pivot="windows"
 
@@ -33,7 +33,7 @@ Se vir um erro sobre uma falha ao instalar o APK no emulador ou sobre uma falha 
 
 2. Abra um prompt de comando e vá para a pasta em que o **adb** está instalado. Se o SDK do Android estiver instalado na localização padrão, o **adb** estará localizado em **C:\\Arquivos de Programas (x86)\\Android\\android-sdk\\platform-tools\\adb.exe**. Se não estiver, modifique esse caminho para a localização do SDK do Android em seu computador.
 
-3. Digite o seguinte comando: 
+3. Digite o seguinte comando:
 
    ```shell
    adb devices
@@ -52,7 +52,7 @@ Se vir um erro sobre uma falha ao instalar o APK no emulador ou sobre uma falha 
 
 Se for exibida a mensagem **Ocorreu um erro de acesso de MMIO**, reinicie o emulador.
 
-<a name="gps-win" />
+<a name="gps-win"></a>
 
 ## <a name="missing-google-play-services"></a>Google Play Services ausente
 
@@ -63,12 +63,12 @@ Se o dispositivo virtual em execução no emulador não tem o Google Play Servic
 
 Por exemplo, este dispositivo virtual incluirá o Google Play Services e o Google Play Store:
 
-[![Exemplo AVD com Google Play Services e Google Play Store ativado](troubleshooting-images/win/00-add-gps-w158-sml.png)](troubleshooting-images/win/00-add-gps-w158.png#lightbox)
+[![Exemplo de AVD com Google Play Services e Google Play Store habilitados](troubleshooting-images/win/00-add-gps-w158-sml.png)](troubleshooting-images/win/00-add-gps-w158.png#lightbox)
 
 > [!NOTE]
 > Imagens do Google Play Store estão disponíveis apenas para alguns tipos de dispositivos básicos, como Pixel, Pixel 2, Nexus 5 e Nexus 5X.
 
-<a name="perf-win" />
+<a name="perf-win"></a>
 
 ## <a name="performance-issues"></a>Problemas de desempenho
 
@@ -94,7 +94,7 @@ Uma causa comum para esse problema é não estar usando uma imagem com base em x
 
 [![Selecionando uma imagem do sistema x86 para um dispositivo virtual](troubleshooting-images/win/02-x86-virtual-device-w158-sml.png)](troubleshooting-images/win/02-x86-virtual-device-w158.png#lightbox)
 
-<a name="accel-issues-win" />
+<a name="accel-issues-win"></a>
 
 ## <a name="hardware-acceleration-issues"></a>Problemas de aceleração de hardware
 
@@ -224,7 +224,7 @@ SERVICE_NAME: intelhaxm
 
 Se o `STATE` não estiver definido como `RUNNING`, confira [Como usar o Hardware Accelerated Execution Manager da Intel](https://software.intel.com/android/articles/how-to-use-the-intel-hardware-accelerated-execution-manager-intel-haxm-android-emulator) para resolver o problema.
 
-<a name="virt-conflicts" />
+<a name="virt-conflicts"></a>
 
 #### <a name="haxm-virtualization-conflicts"></a>Conflitos de virtualização do HAXM
 
@@ -244,7 +244,7 @@ Se você estiver usando o HAXM em um computador Windows, o HAXM não funcionará
 
 Para corrigir esse erro, inicialize o computador no BIOS, habilite a VT-x e a SLAT (Conversão de Endereços de Segundo Nível) e reinicie o computador no Windows.
 
-<a name="disable-hyperv" />
+<a name="disable-hyperv"></a>
 
 #### <a name="disabling-hyper-v"></a>Desabilitando o Hyper-V
 
@@ -268,7 +268,7 @@ O Intel HAXM e o Microsoft Hyper-V não podem estar ativos ao mesmo tempo. Infel
 
 Em alguns casos, as etapas acima não funcionarão para desabilitar o Hyper-V caso o Device Guard e o Credential Guard estiverem habilitados. Se não for possível desabilitar o Hyper-V (ou ele parecer estar desabilitado, mas ainda ocorrer falha na instalação do HAXM), siga as etapas da próxima seção para desabilitar o Device Guard e o Credential Guard.
 
-<a name="disable-devguard" />
+<a name="disable-devguard"></a>
 
 #### <a name="disabling-device-guard"></a>Desabilitando o Device Guard
 
@@ -278,7 +278,7 @@ O Device Guard e o Credential Guard podem impedir que o Hyper-V seja desabilitad
 
 2. No **Resumo do Sistema**, verifique se **Segurança com base em Virtualização de Device Guard** está presente e está no estado **Em execução**:
 
-   [![O Device Guard está presente e funcionando](troubleshooting-images/win/04-device-guard-sml.png)](troubleshooting-images/win/04-device-guard.png#lightbox)
+   [![A proteção de dispositivo está presente e em execução](troubleshooting-images/win/04-device-guard-sml.png)](troubleshooting-images/win/04-device-guard.png#lightbox)
 
 Se o Device Guard estiver habilitado, use as seguintes etapas para desabilitá-lo:
 
@@ -288,7 +288,7 @@ Se o Device Guard estiver habilitado, use as seguintes etapas para desabilitá-l
 
 3. No **Editor de Política de Grupo Local**, navegue até **Configuração do Computador > Modelos Administrativos > Sistema > Device Guard**:
 
-   [![Guarda de dispositivos no editor de políticas de grupo local](troubleshooting-images/win/05-group-policy-editor-sml.png)](troubleshooting-images/win/05-group-policy-editor.png#lightbox)
+   [![Proteção de dispositivo no Editor de Política de Grupo Local](troubleshooting-images/win/05-group-policy-editor-sml.png)](troubleshooting-images/win/05-group-policy-editor.png#lightbox)
 
 4. Altere a opção **Ativar Segurança Baseada em Virtualização** para **Desabilitada** (conforme mostrado acima) e saia do **Editor de Política de Grupo Local**.
 
@@ -369,7 +369,7 @@ Se vir um erro sobre uma falha ao instalar o APK no emulador ou sobre uma falha 
 
 2. Abra um prompt de comando e vá para a pasta em que o **adb** está instalado. Se o SDK do Android estiver instalado na localização padrão, o **adb** estará localizado no diretório **~/Library/Developer/Xamarin/android-sdk-macosx/platform-tools/adb**. Se não estiver, modifique o caminho para a localização do SDK do Android no computador.
 
-3. Digite o seguinte comando: 
+3. Digite o seguinte comando:
 
    ```shell
    adb devices
@@ -388,7 +388,7 @@ Se vir um erro sobre uma falha ao instalar o APK no emulador ou sobre uma falha 
 
 Se a mensagem **Ocorreu um erro de acesso de MMIO** for exibida, reinicie o emulador.
 
-<a name="gps-mac" />
+<a name="gps-mac"></a>
 
 ## <a name="missing-google-play-services"></a>Google Play Services ausente
 
@@ -399,12 +399,12 @@ Se o dispositivo virtual em execução no emulador não tem o Google Play Servic
 
 Por exemplo, este dispositivo virtual incluirá o Google Play Services e o Google Play Store:
 
-[![Exemplo AVD com Google Play Services e Google Play Store ativado](troubleshooting-images/mac/01-google-play-services-m75-sml.png)](troubleshooting-images/mac/01-google-play-services-m75.png#lightbox)
+[![Exemplo de AVD com Google Play Services e Google Play Store habilitados](troubleshooting-images/mac/01-google-play-services-m75-sml.png)](troubleshooting-images/mac/01-google-play-services-m75.png#lightbox)
 
 > [!NOTE]
 > Imagens do Google Play Store estão disponíveis apenas para alguns tipos de dispositivos básicos, como Pixel, Pixel 2, Nexus 5 e Nexus 5X.
 
-<a name="perf-mac" />
+<a name="perf-mac"></a>
 
 ## <a name="performance-issues"></a>Problemas de desempenho
 
@@ -426,13 +426,13 @@ Uma causa comum para esse problema é não estar usando uma imagem com base em x
 
 [![Selecionando uma imagem do sistema x86 para um dispositivo virtual](troubleshooting-images/mac/02-x86-virtual-device-m75-sml.png)](troubleshooting-images/mac/02-x86-virtual-device-m75.png#lightbox)
 
-<a name="accel-issues-mac" />
+<a name="accel-issues-mac"></a>
 
 ## <a name="hardware-acceleration-issues"></a>Problemas de aceleração de hardware
 
 Quer esteja usando o Framework de Hipervisor ou o HAXM para a aceleração de hardware do emulador, você poderá ter problemas causados por falhas de instalação ou pelo uso de uma versão desatualizada do macOS. As seções a seguir podem ajudá-lo a resolver esse problema.
 
-<a name="hypervisor-issues" />
+<a name="hypervisor-issues"></a>
 
 ### <a name="hypervisor-framework-issues"></a>Problemas do Framework de Hipervisor
 

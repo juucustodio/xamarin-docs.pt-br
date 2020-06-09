@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 965ed4e802c05f8450192c0fec17fe31e464c779
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: e6be5d5d42abf7d99c5bd305d6e303ef770e5a04
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304530"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567705"
 ---
 # <a name="debug-on-a-wear-device"></a>Depurar em um dispositivo Wear
 
@@ -86,7 +86,7 @@ Use as etapas a seguir para conectar seu dispositivo de desgaste ao seu telefone
     Target: connected
     ```
 
-6. Depois de concluir as etapas acima, a execução de `adb devices` mostra o status do telefone e do dispositivo de desgaste do Android:
+6. Depois de concluir as etapas acima, a execução `adb devices` mostra o status do telefone e do dispositivo de desgaste do Android:
 
     ```
     List of devices attached
@@ -96,7 +96,7 @@ Use as etapas a seguir para conectar seu dispositivo de desgaste ao seu telefone
 
 Neste ponto, você pode implantar seu aplicativo no dispositivo de desgaste.
 
-<a name="screenshots" />
+<a name="screenshots"></a>
 
 ### <a name="taking-screenshots"></a>Tirando capturas de tela
 
@@ -126,7 +126,7 @@ Você pode desinstalar um aplicativo do dispositivo de desgaste digitando o segu
 adb -s 127.0.0.1:4444 uninstall <package name>
 ```
 
-Por exemplo, para remover o aplicativo com o nome do pacote `com.xamarin.weartest`, digite o seguinte comando:
+Por exemplo, para remover o aplicativo com o nome do pacote `com.xamarin.weartest` , digite o seguinte comando:
 
 ```shell
 adb -s 127.0.0.1:4444 uninstall com.xamarin.weartest

@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: a6588dee675aee3e2580b70dfdea2920c6235775
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: cd04450d1429092453e6d8b65278d87b5d52e45e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030608"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571617"
 ---
 # <a name="troubleshooting-tvos-10-apps-built-with-xamarin"></a>Solução de problemas de aplicativos do tvOS 10 criados com o Xamarin
 
 As seções a seguir listam alguns problemas conhecidos que podem ocorrer ao usar o tvOS 10 com o Xamarin e a solução para esses problemas:
 
-- [App Store](#App-Store)
+- [Loja de Aplicativos](#App-Store)
 - [Compatibilidade binária](#Binary-Compatibility)
 - [Protocolo HTTP CFNetwork](#CFNetwork-HTTP-Protocol)
 - [CloudKit](#CloudKit)
@@ -26,65 +26,65 @@ As seções a seguir listam alguns problemas conhecidos que podem ocorrer ao usa
 - [NSUserActivity](#NSUserActivity)
 - [UIKit](#UIKit)
 
-<a name="App-Store" />
+<a name="App-Store"></a>
 
-## <a name="app-store"></a>App Store
+## <a name="app-store"></a>Loja de aplicativos
 
 Problemas Conhecidos:
 
 - Ao testar compras no aplicativo no ambiente de área restrita, a caixa de diálogo de autenticação pode aparecer duas vezes.
 - Ao testar compras no aplicativo com conteúdo hospedado no ambiente de área restrita, a caixa de diálogo de senha será exibida toda vez que o aplicativo for levado para o primeiro plano até que o download do conteúdo seja concluído.
 
-<a name="Binary-Compatibility" />
+<a name="Binary-Compatibility"></a>
 
 ## <a name="binary-compatibility"></a>Compatibilidade binária
 
 Problemas Conhecidos:
 
-- Chamar `NSObject.ValueForKey` será uma chave de `null` resultará em uma exceção.
-- Fazer referência a uma fonte por nome ao chamar `UIFont.WithName` causará uma falha.
-- Os `NSURLSession` e `NSURLConnection` não são mais conjuntos de codificação RC4 durante o handshake de TLS para URLs de `http://`.
-- Os aplicativos podem travar se modificarem a geometria de uma superexibição nos métodos `ViewWillLayoutSubviews` ou `LayoutSubviews`.
+- Chamar `NSObject.ValueForKey` será uma `null` chave resultará em uma exceção.
+- Fazer referência a uma fonte por nome ao chamar causará `UIFont.WithName` uma falha.
+- Ambos `NSURLSession` e `NSURLConnection` não mais conjuntos de codificação RC4 durante o HANDSHAKE de TLS para `http://` URLs.
+- Os aplicativos podem parar se modificarem a geometria de uma superexibição nos `ViewWillLayoutSubviews` `LayoutSubviews` métodos ou.
 - Para todas as conexões SSL/TLS, a cifra simétrica RC4 agora está desabilitada por padrão. Além disso, a API de transporte seguro não dá mais suporte a SSLv3 e é recomendável que o aplicativo pare de usar a criptografia SHA-1 e 3DES assim que possível.
 
-<a name="CFNetwork-HTTP-Protocol" />
+<a name="CFNetwork-HTTP-Protocol"></a>
 
 ## <a name="cfnetwork-http-protocol"></a>Protocolo HTTP CFNetwork
 
-A propriedade `HTTPBodyStream` da classe `NSMutableURLRequest` deve ser definida como um fluxo não aberto, pois `NSURLConnection` e `NSURLSession` agora impõem estritamente esse requisito.
+A `HTTPBodyStream` propriedade da `NSMutableURLRequest` classe deve ser definida como um fluxo não aberto, já que `NSURLConnection` e `NSURLSession` agora impõe estritamente esse requisito.
 
-<a name="CloudKit" />
+<a name="CloudKit"></a>
 
 ## <a name="cloudkit"></a>CloudKit
 
-As operações de longa execução retornarão um _"você não tem permissão para salvar o arquivo"._ Ao.
+As operações de longa execução retornarão um _"você não tem permissão para salvar o arquivo"._ erro.
 
-<a name="CoreImage" />
+<a name="CoreImage"></a>
 
 ## <a name="core-image"></a>Imagem principal
 
-A API de `CIImageProcessor` agora dá suporte a uma contagem de imagens de entrada arbitrária. `CIImageProcessor` API que foi incluída no tvOS 10 beta 1 será removida.
+A `CIImageProcessor` API agora dá suporte a uma contagem de imagens de entrada arbitrária. `CIImageProcessor`A API que foi incluída no tvOS 10 beta 1 será removida.
 
-<a name="NSUserActivity" />
+<a name="NSUserActivity"></a>
 
 ## <a name="nsuseractivity"></a>NSUserActivity
 
-Após uma operação de entrega, a propriedade `UserInfo` de um objeto `NSUserActivity` pode estar vazia. Chame explicitamente `BecomeCurrent` objeto ' NSUserActivity ' como uma solução alternativa atual.
+Após uma operação de entrega, a `UserInfo` propriedade de um `NSUserActivity` objeto pode estar vazia. Chame explicitamente o `BecomeCurrent` objeto NSUserActivity ' como uma solução alternativa atual.
 
-<a name="UIKit" />
+<a name="UIKit"></a>
 
 ## <a name="uikit"></a>UIKit
 
 Problemas Conhecidos:
 
-- Alterações na aparência em segundo plano de `UINavigationBar`, `UITabBar` ou `UIToolBar` podem resultar em uma passagem de layout para resolver a nova aparência. A tentativa de modificar essas aparências dentro de um `LayoutSubviews`, `UpdateConstraints`, `WillLayoutSubviews` ou `DidUpdateSubviews` evento pode resultar em um loop de layout infinito.
-- No tvOS 10, chamar o método `RemoveGestureRecognizer` de um objeto `UIView` cancela explicitamente qualquer reconhecedor de gesto em andamento.
+- Muda para a aparência em segundo `UINavigationBar` plano `UITabBar` ou `UIToolBar` pode resultar em uma passagem de layout para resolver a nova aparência. A tentativa de modificar essas aparências dentro de um `LayoutSubviews` `UpdateConstraints` evento, `WillLayoutSubviews` ou `DidUpdateSubviews` pode resultar em um loop de layout infinito.
+- No tvOS 10, chamar o `RemoveGestureRecognizer` método de um `UIView` objeto cancela explicitamente qualquer reconhecedor de gesto em andamento.
 - Os controladores de exibição apresentados agora podem afetar a aparência da barra de status.
-- o tvOS 10 exige que o desenvolvedor chame `base.AwakeFromNib` ao fazer a subclasse `UIViewController` e substituir o método `AwakeFromNib`.
-- Aplicativos com subclasses `UIView` personalizadas que substituem `LayoutSubviews` e sujam o layout antes de chamar `base.LayoutSubviews` podem disparar um loop de layout infinito no tvOS 10.
-- Os ativos de imagens invertidas ou de direção específicas não são invertidos quando atribuídos a objetos `UIButton`.
+- tvOS 10 exige que o desenvolvedor chame `base.AwakeFromNib` ao subclasse `UIViewController` e substitua o `AwakeFromNib` método.
+- Aplicativos com `UIView` subclasses personalizadas que substituem `LayoutSubviews` e sujam o layout antes de chamar `base.LayoutSubviews` podem disparar um loop de layout infinito no tvOS 10.
+- Os ativos de imagens invertidas ou de direção específicas não são invertidos quando atribuídos a `UIButton` objetos.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [O que há de novo no tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

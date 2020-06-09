@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: aa376385b000b83a41fdcdc7a4d3c8bf1553f0a7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0d5ec4bc10747a287def3fd9a83a703d2ec4b2a2
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030472"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572371"
 ---
 # <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Trabalhando com barras de navegação do tvOS no Xamarin
 
@@ -20,20 +20,20 @@ As barras de navegação podem ser adicionadas à parte superior das exibições
 
 [![](navigation-bars-images/navbar01.png "Sample Navigation Bar")](navigation-bars-images/navbar01.png#lightbox)
 
-Além do título (exibido no centro), as barras de navegação podem conter um ou mais botões da barra de navegação (`UIBarButtonItem`) nos lados esquerdo e direito da barra.
+Além do título (exibido no centro), as barras de navegação podem conter um ou mais botões da barra de navegação ( `UIBarButtonItem` ) nos lados esquerdo e direito da barra.
 
 > [!IMPORTANT]
 > As barras de navegação são totalmente transparentes por padrão. Deve-se ter cuidado para garantir que o conteúdo da barra de navegação permaneça legível sobre o conteúdo abaixo dele. Por exemplo, quando o conteúdo em uma exibição de tabela ou coleção rola sobre ele.
 
-<a name="Navigation-Bars-and-Storyboards" />
+<a name="Navigation-Bars-and-Storyboards"></a>
 
 ## <a name="navigation-bars-and-storyboards"></a>Barras de navegação e storyboards
 
 A maneira mais fácil de trabalhar com barras de navegação em um aplicativo Xamarin. tvOS é adicioná-las à interface do usuário do aplicativo usando o designer do iOS.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-1. No **painel de soluções**, clique duas vezes em `Main.storyboard` arquivo e abra-o para edição.
+1. Na **painel de soluções**, clique duas vezes no `Main.storyboard` arquivo e abra-o para edição.
 1. Arraste uma **barra de navegação** da **caixa de ferramentas** e solte-a na exibição na parte superior da tela:
 
     [![](navigation-bars-images/navbar02.png "A Navigation Bar")](navigation-bars-images/navbar02.png#lightbox)
@@ -46,11 +46,11 @@ A maneira mais fácil de trabalhar com barras de navegação em um aplicativo Xa
 1. Por fim, conecte os **itens do botão de barra** a ações na guia **eventos** do **Gerenciador de propriedades**:
 
     [![](navigation-bars-images/navbar05.png "A Bar Button Item Action")](navigation-bars-images/navbar05.png#lightbox)
-1. Salve as alterações.
+1. Salve suas alterações.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. No **Gerenciador de soluções**, clique duas vezes em `Main.storyboard` arquivo e abra-o para edição.
+1. Na **Gerenciador de soluções**, clique duas vezes no `Main.storyboard` arquivo e abra-o para edição.
 1. Arraste uma **barra de navegação** da **caixa de ferramentas** e solte-a na exibição na parte superior da tela:
 
     [![](navigation-bars-images/navbar02-vs.png "A Navigation Bar")](navigation-bars-images/navbar02-vs.png#lightbox)
@@ -63,14 +63,14 @@ A maneira mais fácil de trabalhar com barras de navegação em um aplicativo Xa
 1. Por fim, conecte os **itens do botão de barra** a ações na guia **eventos** do **Gerenciador de propriedades**:
 
     [![](navigation-bars-images/navbar05-vs.png "A Bar Button Item Actions")](navigation-bars-images/navbar05-vs.png#lightbox)
-1. Salve as alterações.
+1. Salve suas alterações.
 
 -----
 
 > [!IMPORTANT]
-> Embora seja possível atribuir eventos como `TouchUpInside` a um elemento de interface do usuário (como um UIButton) no designer do iOS, ele nunca será chamado porque a Apple TV não tem uma tela sensível ao toque ou dá suporte a eventos de toque. Você sempre deve usar o evento `Primary Action` ao criar manipuladores de eventos para elementos da interface do usuário do tvOS.
+> Embora seja possível atribuir eventos como `TouchUpInside` a um elemento de interface do usuário (como um UIButton) no designer do IOS, ele nunca será chamado porque o Apple TV não tem uma tela sensível ao toque ou dá suporte a eventos de toque. Você sempre deve usar o `Primary Action` evento ao criar manipuladores de eventos para elementos da interface do usuário do tvOS.
 
-O código a seguir fornece um exemplo de manipuladores de eventos em três BarButtonItems diferentes: `ShowFirstHotel`, `ShowSecondHotel`e `ShowThirdHotel`. Quando cada item é clicado, a imagem de plano de fundo `HotelImage` é alterada. Isso é editado no arquivo do controlador de exibição (exemplo `ViewController.cs`):
+O código a seguir fornece um exemplo de manipuladores de eventos em três BarButtonItems diferentes: `ShowFirstHotel` , `ShowSecondHotel` e `ShowThirdHotel` . Quando cada item é clicado, a imagem de plano de fundo `HotelImage` é alterada. Isso é editado no arquivo do controlador de exibição (exemplo `ViewController.cs` ):
 
 ```csharp
 using System;
@@ -121,11 +121,11 @@ namespace MySingleView
 }
 ```
 
-Desde que a propriedade `Enabled` de um botão seja `true` e não seja coberta por outro controle ou exibição, ela poderá se tornar o item em foco usando o Siri remoto.
+Desde que a propriedade de um botão `Enabled` seja `true` e não seja coberta por outro controle ou exibição, ela pode se tornar o item em foco usando o Siri remoto.
 
 Para obter mais informações sobre como trabalhar com storyboards, consulte nossa [Guia de início rápido Olá, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>Resumo
 
@@ -133,7 +133,7 @@ Este artigo abordou a criação e o trabalho com barras de navegação dentro de
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guias de interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

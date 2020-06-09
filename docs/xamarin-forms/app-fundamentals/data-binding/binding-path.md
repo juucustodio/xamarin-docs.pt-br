@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCaminho de associação
-description: Este artigo explica como usar Xamarin.Forms associações de dados para acessar subpropriedades e membros da coleção com a propriedade Path da classe Binding.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 0657f39d0584405ea1a6d7611ac789488817770f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139732"
+Título: " Xamarin.Forms caminho de associação" Descrição: "Este artigo explica como usar Xamarin.Forms associações de dados para acessar subpropriedades e membros da coleção com a propriedade Path da classe Binding".
+MS. Prod: xamarin MS. AssetID: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/05/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-binding-path"></a>Xamarin.FormsCaminho de associação
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
@@ -127,7 +113,7 @@ O quarto `Label` faz algo similar, mas para a cultura associada à França. A pr
 </Label>
 ```
 
-Confira [Passando argumentos de construtor](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments) para obter mais detalhes sobre como especificar argumentos de construtor em XAML.
+Confira [Passando argumentos de construtor](~/xamarin-forms/xaml/passing-arguments.md#passing-constructor-arguments) para obter mais detalhes sobre como especificar argumentos de construtor em XAML.
 
 Por fim, o último exemplo é semelhante ao segundo, exceto que ele referencia um dos filhos do `StackLayout`:
 

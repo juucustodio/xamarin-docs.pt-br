@@ -1,9 +1,6 @@
 ---
-Título: ' atenuando funções em Xamarin.Forms ' Descrição: ' Xamarin.Forms inclui uma classe de atenuação que permite que você especifique uma função de transferência que controla como as animações se aceleram ou diminuem enquanto estão em execução. Este artigo demonstra como consumir as funções de atenuação predefinidas e como criar funções de atenuação personalizadas. '
-MS. Prod: MS. AssetID: MS. Technology: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+Título: "atenuando funções em Xamarin.Forms " Descrição: " Xamarin.Forms inclui uma classe de atenuação que permite que você especifique uma função de transferência que controla como as animações se aceleram ou diminuem enquanto estão em execução. Este artigo demonstra como consumir as funções de atenuação predefinidas e como criar funções de atenuação personalizadas. "
+MS. Prod: xamarin MS. AssetID: E6F124C7-A161-4C1F-AF40-52F0935E54DE MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 07/14/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="easing-functions-in-xamarinforms"></a>Facilitando funções noXamarin.Forms
@@ -28,7 +25,7 @@ A [`Easing`](xref:Xamarin.Forms.Easing) classe define uma série de funções de
 
 Os `In` `Out` sufixos e indicam se o efeito fornecido pela função de atenuação é perceptível no início da animação, no final ou em ambos.
 
-Além disso, as funções de atenuação personalizadas podem ser criadas. Para obter mais informações, consulte [funções de atenuação personalizadas](#customeasing).
+Além disso, as funções de atenuação personalizadas podem ser criadas. Para obter mais informações, consulte [funções de atenuação personalizadas](#custom-easing-functions).
 
 ## <a name="consuming-an-easing-function"></a>Consumindo uma função de atenuação
 
@@ -45,8 +42,6 @@ await image.TranslateTo(0, -200, 2000, Easing.BounceOut);
 Ao especificar uma função de atenuação para uma animação, a velocidade de animação se torna não linear e produz o efeito fornecido pela função de atenuação. Omitir uma função de atenuação ao criar uma animação faz com que a animação use a [`Linear`](xref:Xamarin.Forms.Easing.Linear) função de atenuação padrão, que produz uma velocidade linear.
 
 Para obter mais informações sobre como usar os métodos de extensão de animação na [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) classe, consulte [animações simples](~/xamarin-forms/user-interface/animation/simple.md). As funções de atenuação também podem ser consumidas pela [`Animation`](xref:Xamarin.Forms.Animation) classe. Para obter mais informações, consulte [animações personalizadas](~/xamarin-forms/user-interface/animation/custom.md).
-
-<a name="customeasing" />
 
 ## <a name="custom-easing-functions"></a>Funções de atenuação personalizadas
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: b9b4d201e02d60bd6131c8693d9ac6a233e4fe10
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 4e2ff46174d9dbb9171a470c389ffe301f6d0d60
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304915"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569641"
 ---
 # <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Implantando e testando aplicativos watchOS com o Xamarin
 
@@ -36,7 +36,7 @@ Se você estiver implantando em uma inspeção de teste ou carregando para a loj
   - [Implantar em um Apple Watch para teste](~/ios/watchos/deploy-test/device.md)ou
   - [Carregue na loja de aplicativos](~/ios/watchos/deploy-test/appstore.md).
 
-<a name="App_IDs"/>
+<a name="App_IDs"></a>
 
 ## <a name="app-ids"></a>IDs de aplicativo
 
@@ -44,7 +44,7 @@ Conforme discutido nas [instruções de instalação](~/ios/watchos/get-started/
 
 - Projeto unificado do Xamarin. iOS-`com.xamarin.WatchKitCatalog`
 - Projeto de extensão WatchKit-`com.xamarin.WatchKitCatalog.watchkitextension`
-- Assistir ao projeto de aplicativo-`com.xamarin.WatchKitCatalog.watchkitapp`
+- Inspecionar projeto de aplicativo-`com.xamarin.WatchKitCatalog.watchkitapp`
 
 Todos os três projetos exigem um perfil de provisionamento de distribuição correspondente, usando IDs de aplicativo explicitamente para cada um ou uma ID de aplicativo curinga.
 
@@ -60,25 +60,25 @@ Será necessário criar um perfil de provisionamento de distribuição para cada
 
 ### <a name="wildcard-app-id"></a>ID do aplicativo curinga
 
-Como alternativa, você pode criar uma **ID de aplicativo** curinga que corresponda a todos os três projetos, como `com.xamarin.*`.
+Como alternativa, você pode criar uma **ID de aplicativo** curinga que corresponda a todos os três projetos, como `com.xamarin.*` .
 
 Observe que alguns recursos não podem ser usados com uma ID de aplicativo curinga (como notificações por push). Se seu aplicativo exigir esses recursos, você deverá criar IDs explícitas do aplicativo.
 
 Para distribuição, você só precisará criar um perfil de provisionamento de distribuição para a ID do aplicativo curinga.
 
-<a name="App_Groups" />
+<a name="App_Groups"></a>
 
-## <a name="app-groups"></a>Grupos de aplicativo
+## <a name="app-groups"></a>Grupos de Aplicativos
 
 Você pode usar um grupo de aplicativos para compartilhar dados entre seu aplicativo iOS e a extensão Watch. Você deve garantir que sua solução tenha:
 
 - Configurado o **grupo de aplicativos** na seção certificados do portal do desenvolvedor Apple **, identificadores & perfis** .
 
-- Os **grupos de aplicativos** habilitados (e forneceram a **ID do grupo de aplicativos**) no aplicativo Ios e a ID do **aplicativo** da extensão de inspeção e os **direitos. plist**.
+- Os **grupos de aplicativos** habilitados (e forneceram a **ID do grupo de aplicativos**) no aplicativo Ios e a ID do **aplicativo** da extensão de inspeção e os **direitos. plist**. *both*
 
 ### <a name="certificates-identifiers--profiles"></a>Certificados, identificadores & perfis
 
-Para usar um grupo de aplicativos, crie uma entrada na tela **grupos de aplicativos** . No exemplo abaixo, o grupo é nomeado com o mesmo estilo de DNS reverso que é comumente usado para IDs de aplicativo, mas com o prefixo de `group.` (que é necessário):
+Para usar um grupo de aplicativos, crie uma entrada na tela **grupos de aplicativos** . No exemplo abaixo, o grupo é nomeado com o mesmo estilo de DNS reverso que é comumente usado para IDs de aplicativo, mas com o `group.` prefixo (que é necessário):
 
 ![O identificador](images/appgroups-new-sml.png)
 
@@ -104,6 +104,6 @@ Clique duas vezes para editar o arquivo **. plist de direitos** nesses projetos:
 
 Não **habilite** direitos no projeto de aplicativo Watch. Não é necessário habilitá-lo no próprio relógio.
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Guia de envio do Apple WatchKit](https://developer.apple.com/app-store/watch/)

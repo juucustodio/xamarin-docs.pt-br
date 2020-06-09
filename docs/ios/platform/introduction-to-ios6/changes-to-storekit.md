@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 7cf18934c70acf59213a697ab57b6c5e308e7b2a
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: d7491af1ced4e8e0309bb3e22298d33ee5a042be
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78292856"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571539"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>Alterações no StoreKit no iOS 6
 
@@ -53,16 +53,16 @@ Algumas opções dentro do `SKStoreProductViewController` ainda forçarão o usu
 
 ### <a name="skstoreproductviewcontroller"></a>SKStoreProductViewController
 
-A API para mostrar um produto em qualquer aplicativo é simples: requer apenas que você crie e exiba uma `SKStoreProductViewController`. Siga estas etapas para criar e mostrar um produto:
+A API para mostrar um produto em qualquer aplicativo é simples: requer apenas que você crie e exiba um `SKStoreProductViewController` . Siga estas etapas para criar e mostrar um produto:
 
-1. Crie um objeto `StoreProductParameters` para passar parâmetros para o controlador de exibição, incluindo o `productId` no construtor.
-1. Crie uma instância do `SKProductViewController`. Atribua-o a um campo de nível de classe.
-1. Atribua um manipulador ao evento de `Finished` do controlador de exibição, que deve ignorar o controlador de exibição. Esse evento é chamado quando o usuário pressiona cancelar; ou, de outra forma, finaliza uma transação dentro do controlador de exibição.
-1. Chame o método `LoadProduct` passando o `StoreProductParameters` e um manipulador de conclusão. O manipulador de conclusão deve verificar se a solicitação do produto foi bem-sucedida e, nesse caso, apresentar a `SKProductViewController` modalmente. O tratamento de erros apropriado deve ser adicionado caso o produto não possa ser recuperado.
+1. Crie um `StoreProductParameters` objeto para passar parâmetros para o controlador de exibição, incluindo o `productId` no construtor.
+1. Crie uma instância do `SKProductViewController` . Atribua-o a um campo de nível de classe.
+1. Atribua um manipulador ao evento do controlador de exibição `Finished` , que deve ignorar o controlador de exibição. Esse evento é chamado quando o usuário pressiona cancelar; ou, de outra forma, finaliza uma transação dentro do controlador de exibição.
+1. Chame o `LoadProduct` método passando o `StoreProductParameters` e um manipulador de conclusão. O manipulador de conclusão deve verificar se a solicitação do produto foi bem-sucedida e, em caso afirmativo, apresentar as `SKProductViewController` modalidades. O tratamento de erros apropriado deve ser adicionado caso o produto não possa ser recuperado.
 
 ### <a name="example"></a>Exemplo
 
-O projeto *ProductView* no código de exemplo *StoreKit* para este artigo implementa um método `Buy` que aceita a ID da Apple de qualquer produto e exibe o `SKStoreProductViewController`. O código a seguir exibe as informações do produto para qualquer ID da Apple determinada:
+O projeto *ProductView* no código de exemplo *StoreKit* para este artigo implementa um `Buy` método que aceita a ID da Apple de qualquer produto e exibe o `SKStoreProductViewController` . O código a seguir exibe as informações do produto para qualquer ID da Apple determinada:
 
 ```csharp
 void Buy (int productId)
@@ -86,13 +86,13 @@ void Buy (int productId)
 }
 ```
 
-O aplicativo se parece com a captura de tela abaixo ao executar – o download ou a compra ocorre inteiramente dentro do `SKStoreProductViewController`:
+O aplicativo se parece com a captura de tela abaixo ao executar – o download ou a compra ocorre inteiramente dentro do `SKStoreProductViewController` :
 
 [![](changes-to-storekit-images/image2.png "The app looks like this when running")](changes-to-storekit-images/image2.png#lightbox)
 
 ### <a name="supporting-older-operating-systems"></a>Suporte a sistemas operacionais mais antigos
 
-O aplicativo de exemplo inclui código que mostra como abrir a loja de aplicativos, o iTunes ou o eróticos da iBookstore em versões anteriores do iOS. Use o método `OpenUrl` para abrir uma URL **iTunes.com** corretamente criada.
+O aplicativo de exemplo inclui código que mostra como abrir a loja de aplicativos, o iTunes ou o eróticos da iBookstore em versões anteriores do iOS. Use o `OpenUrl` método para abrir uma URL de **iTunes.com** corretamente criada.
 
 Você pode implementar uma verificação de versão para determinar qual código executar, conforme mostrado aqui:
 
@@ -115,7 +115,7 @@ O seguinte erro ocorrerá se a ID da Apple usada não for válida, o que pode se
 
 ### <a name="reading-objective-c-documentation"></a>Lendo a documentação do Objective-C
 
-Os desenvolvedores lendo sobre o kit de loja no portal do desenvolvedor da Apple verão um protocolo – [SKStoreProductViewControllerDelegate](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKITunesProductViewControllerDelegate_ProtocolRef/Reference/Reference.html) – discutido em relação a esse novo recurso. O protocolo delegate tem apenas um método – productViewControllerDidFinish – que foi exposto como o evento `Finished` no `SKStoreProductViewController` no Xamarin. iOS.
+Os desenvolvedores lendo sobre o kit de loja no portal do desenvolvedor da Apple verão um protocolo – [SKStoreProductViewControllerDelegate](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKITunesProductViewControllerDelegate_ProtocolRef/Reference/Reference.html) – discutido em relação a esse novo recurso. O protocolo delegado tem apenas um método – productViewControllerDidFinish – que foi exposto como o `Finished` evento no `SKStoreProductViewController` Xamarin. Ios.
 
 ## <a name="determining-apple-ids"></a>Determinando IDs da Apple
 
@@ -127,29 +127,29 @@ Para aplicativos que você publica, é fácil encontrar a ID da **Apple** no iTu
 
 [![](changes-to-storekit-images/image3.png "Finding the Apple ID in iTunes Connect")](changes-to-storekit-images/image3.png#lightbox)
 
- <a name="Search_API" />
+ <a name="Search_API"></a>
 
 ### <a name="search-api"></a>API de Pesquisa
 
-A Apple fornece uma API de pesquisa dinâmica para consultar todos os produtos na App Store, no iTunes e no eróticos da iBookstore. Informações sobre como acessar a API de pesquisa podem ser encontradas nos recursos afiliados da Apple, embora a API seja exposta a qualquer pessoa (não apenas afiliadas registradas). O JSON resultante pode ser analisado para descobrir a `trackId` que é a ID da Apple a ser usada com `SKStoreProductViewController`.
+A Apple fornece uma API de pesquisa dinâmica para consultar todos os produtos na App Store, no iTunes e no eróticos da iBookstore. Informações sobre como acessar a API de pesquisa podem ser encontradas nos recursos afiliados da Apple, embora a API seja exposta a qualquer pessoa (não apenas afiliadas registradas). O JSON resultante pode ser analisado para descobrir `trackId` que é a ID da Apple a ser usada com o `SKStoreProductViewController` .
 
 Os resultados também incluirão outros metadados, incluindo informações de exibição e URLs do trabalho artístico que podem ser usados para renderizar o produto em seu aplicativo.
 
 Estes são alguns exemplos:
 
-- **aplicativo iBooks** – [https://itunes.apple.com/search?term=ibooks&amp; entidade = software&amp;Country = US](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
-- **Ponto e Kangaroo iBook** – [https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp; entidade = ebook&amp;país = EUA](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
+- **aplicativo iBooks** – [ https://itunes.apple.com/search?term=ibooks&amp ; entidade = software &amp; Country = US](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
+- **Ponto e Kangaroo iBook** – [ https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp ; Entity = livro eletrônico &amp; Country = US](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
 
 ### <a name="enterprise-partner-feed"></a>Feed de parceiro corporativo
 
 A Apple fornece aos parceiros aprovados um despejo de dados completo de todos os seus produtos, na forma de arquivos simples prontos para o banco de dado para download. Se você se qualifica para acesso ao feed de parceiros corporativos, a ID da Apple para qualquer produto pode ser encontrada nesse conjunto de código.
 
-Muitos usuários do feed de parceiros corporativos são membros do [programa afiliado](https://www.apple.com/itunes/affiliates) que permite que as comissões sejam obtidas em vendas de produtos. `SKStoreProductViewController` não oferece suporte a IDs de afiliação (no momento da gravação).
+Muitos usuários do feed de parceiros corporativos são membros do [programa afiliado](https://www.apple.com/itunes/affiliates) que permite que as comissões sejam obtidas em vendas de produtos. `SKStoreProductViewController`o não oferece suporte a IDs de afiliação (no momento da gravação).
 
 ### <a name="direct-product-links"></a>Links diretos de produtos
 
 A ID da Apple para um produto pode ser inferida de seu link de URL do iTunes Preview.
-Em qualquer link de produto do iTunes (para aplicativos, música ou livros), localize a parte da URL que começa com `id` e use o número a seguir.
+Em qualquer link de produto do iTunes (para aplicativos, música ou livros), localize a parte da URL `id` que começa com e use o número a seguir.
 
 Por exemplo, o link direto para iBooks é
 
@@ -167,7 +167,7 @@ e a ID da Apple é **496963922**.
 
 ## <a name="in-app-purchase-hosted-content"></a>Conteúdo hospedado de compra no aplicativo
 
-Se suas compras no aplicativo consistirem em conteúdo para download (como livros ou outras mídias, arte e configuração de nível de jogo ou outros arquivos grandes), esses arquivos serão usados para serem hospedados no servidor Web e os aplicativos precisarão incorporar o código para baixá-los com segurança após compras. A partir do iOS 6, a Apple hospedará seus arquivos em seus servidores, eliminando a necessidade de um servidor separado. O recurso está disponível somente para produtos não consumíveis (não consumíveis ou assinaturas). As vantagens de usar o serviço de hospedagem da Apple incluem:
+Se suas compras no aplicativo consistirem em conteúdo para download (como livros ou outras mídias, arte e configuração de nível de jogo ou outros arquivos grandes), esses arquivos serão usados para serem hospedados no servidor Web e os aplicativos precisarão incorporar o código para baixá-los com segurança após a compra. A partir do iOS 6, a Apple hospedará seus arquivos em seus servidores, eliminando a necessidade de um servidor separado. O recurso está disponível somente para produtos não consumíveis (não consumíveis ou assinaturas). As vantagens de usar o serviço de hospedagem da Apple incluem:
 
 - Economize os custos de largura de banda & de hospedagem.
 - Provavelmente mais escalonável do que qualquer host de servidor que esteja sendo usado no momento.
@@ -236,7 +236,7 @@ Os arquivos de conteúdo que você carrega na Apple devem atender às seguintes 
 
 Você pode adicionar vários arquivos diferentes e tipos de arquivos, desde que eles atendam a essas restrições. O conteúdo é compactado antes da entrega ao seu aplicativo e descompactado pelo kit de armazenamento antes de seu código acessá-lo.
 
-Depois de carregar um pacote de conteúdo, ele pode ser substituído por conteúdo mais recente. O novo conteúdo deve ser carregado e enviado para revisão/aprovação por meio do processo normal. Aumente o campo `ContentVersion` em pacotes de conteúdo atualizados para indicar que ele é mais recente.
+Depois de carregar um pacote de conteúdo, ele pode ser substituído por conteúdo mais recente. O novo conteúdo deve ser carregado e enviado para revisão/aprovação por meio do processo normal. Incrementar o `ContentVersion` campo em pacotes de conteúdo atualizados para indicar que ele é mais recente.
 
 ### <a name="xcode-in-app-purchase-content-projects"></a>Projetos de conteúdo de compra no aplicativo Xcode
 
@@ -322,7 +322,7 @@ Usar o Xcode e a ferramenta de arquivamento para criar e carregar um pacote de c
 
 [![](changes-to-storekit-images/image24.png "The plist file in the root and the product files in a Contents subdirectory")](changes-to-storekit-images/image24.png#lightbox)
 
-Observe a estrutura do diretório do pacote (especialmente o local dos arquivos no subdiretório `Contents`), pois você precisará entender essas informações para extrair os arquivos do pacote no dispositivo.
+Observe a estrutura de diretório do pacote (especialmente o local dos arquivos no `Contents` subdiretório), pois você precisará entender essas informações para extrair os arquivos do pacote no dispositivo.
 
 ### <a name="updating-package-content"></a>Atualizando conteúdo do pacote
 
@@ -361,17 +361,17 @@ As informações a seguir devem ser lidas em conjunto com a documentação compl
 As seguintes classes foram adicionadas ou alteradas para dar suporte ao conteúdo hospedado no iOS 6:
 
 - **SKDownload** – nova classe que representa um download em andamento. A API permite mais de um por produto, no entanto, inicialmente, apenas um foi implementado.
-- **SKProduct** – novas propriedades adicionadas: `Downloadable`, `ContentVersion`, `ContentLengths` matriz.
-- **SKPaymentTransaction** – nova propriedade adicionada: `Downloads`, que contém uma coleção de objetos `SKDownload` se este produto tiver conteúdo hospedado disponível para download.
-- **SKPaymentQueue** – novo método adicionado: `StartDownloads`. Chame esse método com `SKDownload` objetos para buscar seu conteúdo hospedado. O download pode ocorrer em segundo plano.
-- **SKPaymentTransactionObserver** – novo método: `UpdateDownloads`. O kit de loja chama esse método com informações de progresso sobre as operações de download atuais.
+- **SKProduct** – novas propriedades adicionadas: `Downloadable` , `ContentVersion` , `ContentLengths` matriz.
+- **SKPaymentTransaction** – nova propriedade adicionada: `Downloads` , que contém uma coleção de `SKDownload` objetos se este produto tem conteúdo hospedado disponível para download.
+- **SKPaymentQueue** – novo método adicionado: `StartDownloads` . Chame esse método com `SKDownload` objetos para buscar seu conteúdo hospedado. O download pode ocorrer em segundo plano.
+- **SKPaymentTransactionObserver** – novo método: `UpdateDownloads` . O kit de loja chama esse método com informações de progresso sobre as operações de download atuais.
 
-Detalhes da nova classe de `SKDownload`:
+Detalhes da nova `SKDownload` classe:
 
 - **Progresso** – um valor entre 0-1 que você pode usar para exibir um indicador de porcentagem concluída para o usuário. Não use Progress = = 1 para detectar se o download está concluído, verifique o estado = = concluído.
 - **Timecontinueing** – estimativa do tempo de download restante, em segundos. -1 significa que ainda está calculando a estimativa.
 - **Estado** – ativo, aguardando, concluído, falha, pausado, cancelado.
-- **ContentURL** – local do arquivo em que o conteúdo foi colocado no disco, no diretório `Cache`. Preenchido apenas depois que o download for concluído.
+- **ContentURL** – local do arquivo em que o conteúdo foi colocado no disco, no `Cache` diretório. Preenchido apenas depois que o download for concluído.
 - **Erro** – Verifique essa propriedade se o estado falhar.
 
 As interações entre as classes no código de exemplo são mostradas neste diagrama (o código específico para compras de conteúdo hospedado é mostrado em verde):
@@ -382,7 +382,7 @@ O código de exemplo em que essas classes foram usadas é mostrado no restante d
 
 ### <a name="custompaymentobserver-skpaymenttransactionobserver"></a>CustomPaymentObserver (SKPaymentTransactionObserver)
 
-Altere a substituição de `UpdatedTransactions` existente para verificar se há conteúdo para download e chame `StartDownloads` se necessário:
+Altere a `UpdatedTransactions` substituição existente para verificar se há conteúdo para download e chame `StartDownloads` se necessário:
 
 ```csharp
 public override void UpdatedTransactions (SKPaymentQueue queue, SKPaymentTransaction[] transactions)
@@ -415,7 +415,7 @@ public override void UpdatedTransactions (SKPaymentQueue queue, SKPaymentTransac
 }
 ```
 
-O novo método substituído `UpdatedDownloads` é mostrado abaixo. O kit de loja chama esse método depois que `StartDownloads` é disparado no `UpdatedTransactions`. Esse método é chamado *várias vezes* em intervalos indeterminados para fornecer o progresso do download e, em seguida, novamente quando o download for concluído. Observe que o método aceita uma matriz de objetos `SKDownload`, de modo que cada chamada de método pode fornecer o status de vários downloads na fila. Conforme mostrado na implementação abaixo, os status de download são verificados toda vez e a ação apropriada é executada.
+O novo método substituído `UpdatedDownloads` é mostrado abaixo. O kit de loja chama esse método depois que `StartDownloads` é disparado `UpdatedTransactions` . Esse método é chamado *várias vezes* em intervalos indeterminados para fornecer o progresso do download e, em seguida, novamente quando o download for concluído. Observe que o método aceita uma matriz de `SKDownload` objetos, de modo que cada chamada de método pode fornecer o status de vários downloads na fila. Conforme mostrado na implementação abaixo, os status de download são verificados toda vez e a ação apropriada é executada.
 
 ```csharp
 // ENTIRELY NEW METHOD IN iOS6
@@ -457,9 +457,9 @@ public override void PaymentQueueUpdatedDownloads (SKPaymentQueue queue, SKDownl
 
 Essa classe contém um novo método `SaveDownload` que é chamado depois que cada download é concluído com êxito.
 
-O conteúdo hospedado foi baixado com êxito e descompactado no diretório `Cache`. A estrutura do. O arquivo PKG requer que todos os arquivos sejam salvos em um subdiretório `Contents`, portanto, o código a seguir extrai arquivos de dentro do subdiretório `Contents`.
+O conteúdo hospedado foi baixado com êxito e descompactado no `Cache` diretório. A estrutura do. O arquivo PKG requer que todos os arquivos sejam salvos em um `Contents` subdiretório, portanto, o código a seguir extrai arquivos de dentro do `Contents` subdiretório.
 
-O código itera em todos os arquivos no pacote de conteúdo e os copia para o diretório `Documents`, em uma subpasta chamada para o `ProductIdentifier`. Finalmente, ele chama `CompleteTransaction`, que chama `FinishTransaction` para remover a transação da fila de pagamentos.
+O código itera em todos os arquivos no pacote de conteúdo e os copia no `Documents` diretório, em uma subpasta chamada para o `ProductIdentifier` . Finalmente, ele chama `CompleteTransaction` , que chama `FinishTransaction` para remover a transação da fila de pagamentos.
 
 ```csharp
 // ENTIRELY NEW METHOD IN iOS 6
@@ -483,7 +483,7 @@ public void SaveDownload (SKDownload download)
 }
 ```
 
-Quando `FinishTransaction` é chamado, os arquivos baixados não são mais garantidos no diretório `Cache`. Todos os arquivos devem ser copiados antes de chamar `FinishTransaction`.
+Quando `FinishTransaction` é chamado, os arquivos baixados não são mais garantidos no `Cache` diretório. Todos os arquivos devem ser copiados antes de chamar `FinishTransaction` .
 
 ## <a name="other-considerations"></a>Outras considerações
 
@@ -491,13 +491,13 @@ O código de exemplo acima demonstra uma implementação relativamente simples d
 
 ### <a name="detecting-updated-content"></a>Detectando conteúdo atualizado
 
-Embora seja possível atualizar seus pacotes de conteúdo hospedados, o kit de armazenamento não fornece nenhum mecanismo para enviar por push essas atualizações para os usuários que já baixaram e compraram o produto. Para implementar essa funcionalidade, seu código pode verificar a nova propriedade `SKProduct.ContentVersion` (se o `SKProduct` estiver `Downloadable`) regularmente e detectar se o valor é incrementado. Como alternativa, você pode criar um sistema de notificação por push.
+Embora seja possível atualizar seus pacotes de conteúdo hospedados, o kit de armazenamento não fornece nenhum mecanismo para enviar por push essas atualizações para os usuários que já baixaram e compraram o produto. Para implementar essa funcionalidade, seu código pode verificar a nova `SKProduct.ContentVersion` Propriedade (se `SKProduct` for `Downloadable` ) regularmente e detectar se o valor é incrementado. Como alternativa, você pode criar um sistema de notificação por push.
 
 ### <a name="installing-updated-content-versions"></a>Instalando versões de conteúdo atualizadas
 
 O código de exemplo acima ignora a cópia de arquivo se o arquivo já existe. Essa não é uma boa ideia se você quiser dar suporte a versões mais recentes do conteúdo que está sendo baixado.
 
-Uma alternativa pode ser copiar o conteúdo em uma pasta chamada para a versão e controlar qual é a versão atual (por exemplo, no `NSUserDefaults` ou onde você armazenar os registros de compra concluídos).
+Uma alternativa pode ser copiar o conteúdo em uma pasta chamada para a versão e controlar qual é a versão atual (por exemplo, no `NSUserDefaults` ou onde você armazena os registros de compra concluídos).
 
 ### <a name="restoring-transactions"></a>Restaurando transações
 
@@ -507,9 +507,9 @@ Considere manter o controle de se um produto foi adquirido separadamente do down
 
 ### <a name="pausing-restarting-and-canceling-downloads"></a>Pausando, reiniciando e cancelando downloads
 
-Embora o código de exemplo não demonstre esse recurso, é possível pausar e reiniciar downloads de conteúdo hospedado. O `SKPaymentQueue.DefaultQueue` tem métodos para `PauseDownloads`, `ResumeDownloads` e `CancelDownloads`.
+Embora o código de exemplo não demonstre esse recurso, é possível pausar e reiniciar downloads de conteúdo hospedado. O `SKPaymentQueue.DefaultQueue` tem métodos para `PauseDownloads` , `ResumeDownloads` e `CancelDownloads` .
 
-Se o código chamar `FinishTransaction` na fila de pagamentos antes de o download ser `Finished`, esse download será cancelado automaticamente.
+Se o código chamar `FinishTransaction` a fila de pagamentos antes do download ser `Finished` cancelado automaticamente.
 
 ### <a name="setting-the-skip-backup-flag-on-the-downloaded-content"></a>Configurando o sinalizador SKIP-backup no conteúdo baixado
 

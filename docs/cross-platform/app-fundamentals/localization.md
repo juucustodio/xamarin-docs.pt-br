@@ -6,12 +6,12 @@ ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 418c0da2b8fa0e495ae7e6a605c7fde43b6515cb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f496a831c226e377f62e2a6fab8ed328bf1be0b9
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016803"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571059"
 ---
 # <a name="localization"></a>Localização
 
@@ -31,7 +31,7 @@ A *localização* é a etapa a seguir – criando recursos (como cadeias de cara
 
 A internacionalização geralmente é reduzida para i18n – abreviação de 18 letras entre "i" e "n". A localização é, de forma semelhante, reduzida para l10n – por 10 letras entre "L" e "n".
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Este documento apresenta os conceitos associados à internacionalização e à localização e como eles se aplicam ao desenvolvimento de aplicativos móveis em geral.
 Ao projetar e criar um aplicativo, as coisas que você pode ter inserido anteriormente, mas que devem ser parametrizadas para localização, incluem:
@@ -45,9 +45,9 @@ Ao projetar e criar um aplicativo, as coisas que você pode ter inserido anterio
 
 Independentemente de quais plataformas móveis seu aplicativo se destina a essas dicas ajudará você a criar um aplicativo localizado de alta qualidade.
 
-## <a name="design-considerations"></a>Considerações de design
+## <a name="design-considerations"></a>Considerações de criação
 
-Arquitetar um aplicativo para que seja possível localizar seu conteúdo é chamado de internacionalização. Fazer a internacionalização corretamente é mais do que apenas permitir que diferentes cadeias de caracteres de idioma sejam carregadas em tempo de execução – um aplicativo bem projetado deve permitir que todos os recursos sejam alterados com base no idioma e na localidade (incluindo imagens, sons e vídeos) e possam adaptar-se formatação e layout para lidar com diferentes cadeias de caracteres de tamanho.
+Arquitetar um aplicativo para que seja possível localizar seu conteúdo é chamado de internacionalização. Fazer a internacionalização corretamente é mais do que apenas permitir que diferentes cadeias de caracteres de idioma sejam carregadas em tempo de execução – um aplicativo bem projetado deve permitir que todos os recursos sejam alterados com base no idioma e na localidade (incluindo imagens, sons e vídeos) e podem adaptar a formatação e o layout para lidar com diferentes cadeias de caracteres de tamanho.
 
 Esta seção aborda algumas considerações de design a serem levadas em conta ao criar um aplicativo internacionalizado.
 
@@ -67,7 +67,7 @@ Os layouts onde o rótulo de exibição e o campo de entrada são lado a lado s�
 
 Como regra geral, se você estiver criando layouts fixos (especialmente elementos lado a lado), permita pelo menos 50% mais largura do que suas cadeias de caracteres em inglês exigem para rótulos e texto. Isso não resolverá todos os problemas, mas fornecerá um buffer que funcionará em muitos casos.
 
-### <a name="input-validation"></a>Validação de entrada
+### <a name="input-validation"></a>Validação da entrada
 
 Cuidado com as suposições ao escrever regras de validação. Pode parecer válido exigir uma entrada de campo de texto para "exigir" pelo menos três caracteres em inglês, uma vez que uma única letra raramente tem qualquer significado. Em chinês e japonês, no entanto, um único caractere pode ser uma entrada válida e uma mensagem de validação "pelo menos 3 caracteres é necessária" não faz sentido para esses idiomas.
 
@@ -110,7 +110,7 @@ double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
 
 Consulte os artigos [analisando cadeias de caracteres numéricas](https://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) e [data e hora de análise](https://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) do MSDN para obter informações adicionais.
 
-<a name="rtl" />
+<a name="rtl"></a>
 
 ### <a name="right-to-left-rtl-languages"></a>Idiomas da direita para a esquerda (RTL)
 
@@ -151,7 +151,7 @@ Há algumas estratégias que você pode usar para tentar e garantir que seu apli
 - Exibição localizada – se você estiver exibindo um Twitter ou um feed de fotos, deverá exibir os metadados (como o tempo gasto) em seu próprio idioma, mesmo que o próprio conteúdo permaneça no idioma original.
 - Tradução – você pode criar uma opção de conversão em seu aplicativo para fazer uma tradução automática dos dados de entrada. Isso pode ser automático ou a critério do usuário – apenas lembre-se de notificar o usuário se isso estiver ocorrendo, já que as traduções da máquina nunca são perfeitos!
 
-Isso também pode afetar links externos para faixas de áudio ou vídeos – ao projetar seu aplicativo, não se esqueça de planejar antecipadamente o conteúdo traduzido ou garantir que os usuários sejam adequadamente informados pela interface do usuário quando o conteúdo não for apresentado em seus idioma.
+Isso também pode afetar links externos para faixas de áudio ou vídeos – ao projetar seu aplicativo, certifique-se de planejar antecipadamente o conteúdo traduzido ou garantir que os usuários sejam adequadamente informados pela interface do usuário quando o conteúdo não for apresentado em seu idioma.
 
 ### <a name="dont-over-translate"></a>Não sobretraduzir
 
@@ -166,7 +166,7 @@ Por fim, não se esqueça de incluir instruções detalhadas para o tradutor se 
 
 ### <a name="formatted-text"></a>Texto formatado
 
-Geralmente não é um problema com aplicativos móveis porque cadeias de caracteres geralmente não são formatadas de forma avançada. No entanto, se o Rich Text (como formatação em negrito ou itálico) for necessário em seu aplicativo, verifique se o tradutor sabe como inserir a formatação, se os arquivos de cadeias de caracteres o armazenam corretamente e se estão formatados corretamente antes de serem exibidos para o usuário (ou seja, não deixe acidentalmente os próprios códigos de formatação são apresentados ao usuário).
+Geralmente não é um problema com aplicativos móveis porque cadeias de caracteres geralmente não são formatadas de forma avançada. No entanto, se o Rich Text (como negrito ou itálico) for necessário em seu aplicativo, verifique se o tradutor sabe como inserir a formatação, se os arquivos de cadeia de caracteres o armazenam corretamente e se estão formatados corretamente antes de serem exibidos para o usuário (ou seja, não permita que os próprios códigos de formatação sejam apresentados ao usuário).
 
 ## <a name="translation-tips"></a>Dicas de tradução
 
@@ -218,7 +218,7 @@ e os tokens serão ordenados como o tradutor pretendido. Certifique-se de inclui
 
 ### <a name="use-multiple-strings-for-cardinality"></a>Usar várias cadeias de caracteres para cardinalidade
 
-Evite cadeias de caracteres como `"You have {0} message/s."` usar cadeias de caracteres específicas para cada Estado para fornecer uma melhor experiência do usuário:
+Evite cadeias `"You have {0} message/s."` de caracteres como usar cadeias de caracteres específicas para cada Estado para fornecer uma melhor experiência do usuário:
 
 **Bom**:
 
@@ -235,7 +235,7 @@ Você precisará escrever código em seu aplicativo para avaliar o número que e
 
 As linguagens baseadas em latim às vezes usam palavras diferentes, dependendo do gênero do assunto. Se seu aplicativo sabe sobre o gênero, você deve permitir que as cadeias de caracteres traduzidas reflitam isso.
 
-Também há um caso mais óbvio, até mesmo em inglês, em que as cadeias de caracteres referem-se a uma pessoa ou usuário específico do seu aplicativo. Por exemplo, alguns sites mostram mensagens como `"Bob commented on his post"`, portanto, você precisa de cadeias de caracteres para um sexo masculino, feminino e não binário ou desconhecido:
+Também há um caso mais óbvio, até mesmo em inglês, em que as cadeias de caracteres referem-se a uma pessoa ou usuário específico do seu aplicativo. Por exemplo, alguns sites mostram mensagens como `"Bob commented on his post"` , portanto, você precisa de cadeias de caracteres para um sexo masculino, fêmea e não binário ou desconhecido:
 
 **Bom**:
 
@@ -270,7 +270,7 @@ Para criar recursos de tradução em seu aplicativo, considere o [API de traduç
 
 Para fins de teste, você pode usar uma das muitas ferramentas de tradução online para incluir algum texto localizado em seu aplicativo durante o desenvolvimento:
 
-- [Tradutor do Bing](https://www.bing.com/translator/)
+- [Bing Translator](https://www.bing.com/translator/)
 - [Tradução do Google](https://translate.google.com/)
 
 Há muitos outros disponíveis. A qualidade da tradução automática geralmente não é considerada boa o suficiente para liberar um aplicativo sem primeiro ser revisado e testado por tradutores profissionais ou palestrantes nativos.

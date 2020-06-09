@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: e12bac1f65981776a7bd650cbc840cc0cdf72892
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 429b15b8e0f2b66b8a0edcdf386ef7778cf4a9ca
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78292682"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574113"
 ---
 # <a name="ios-9-compatibility"></a>Compatibilidade com o iOS 9
 
@@ -46,7 +46,7 @@ Esses problemas são corrigidos simplesmente recriando seu aplicativo com a vers
 
 Da mesma forma, os fornecedores de componentes e os autores do NuGet **não** precisam enviar novas compilações apenas para corrigir os dois problemas mencionados acima. No entanto, se qualquer componente ou NuGet usar `UICollectionView` ou carregar exibições de arquivos **XIB** , uma atualização *poderá* ser necessária para resolver os problemas de compatibilidade do IOS 9 mencionados abaixo.
 
-<a name="compat" />
+<a name="compat"></a>
 
 ## <a name="improving-compatibility-in-your-code"></a>Aprimorando a compatibilidade em seu código
 
@@ -54,9 +54,9 @@ Há alguns casos de padrões de código que *costumava* trabalhar em versões ma
 
 ### <a name="uicollectionviewcellcontentview-is-null-in-constructors"></a>UICollectionViewCell. ContentView é nulo em construtores
 
-**Motivo:** No iOS 9, o construtor de `initWithFrame:` agora é necessário, devido a alterações de comportamento no iOS 9 como os [Estados de documentação do UICollectionView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath). Se você registrou uma classe para o identificador especificado e uma nova célula deve ser criada, a célula agora é inicializada chamando seu método `initWithFrame:`.
+**Motivo:** No iOS 9 `initWithFrame:` , o Construtor agora é necessário, devido a alterações de comportamento no Ios 9 como os [Estados de documentação do UICollectionView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath). Se você registrou uma classe para o identificador especificado e uma nova célula deve ser criada, a célula agora é inicializada chamando seu `initWithFrame:` método.
 
-**Correção:** Adicione o Construtor `initWithFrame:` como este:
+**Correção:** Adicione o `initWithFrame:` Construtor da seguinte maneira:
 
 ```csharp
 [Export ("initWithFrame:")]
@@ -70,9 +70,9 @@ Exemplos relacionados: [MotionGraph](https://github.com/xamarin/monotouch-sample
 
 ### <a name="uiview-fails-to-init-with-coder-when-loading-a-view-from-a-xibnib"></a>UIView falha ao iniciar com codificador ao carregar uma exibição de um XIB/NIB
 
-**Motivo:** O construtor de `initWithCoder:` é o chamado ao carregar uma exibição de um arquivo de Interface Builder xib. Se esse construtor não for exportado, o código não gerenciado não poderá chamar nossa versão gerenciada dele. Anteriormente (por exemplo, no iOS 8), o construtor de `IntPtr` foi invocado para inicializar a exibição.
+**Motivo:** O `initWithCoder:` Construtor é o chamado ao carregar uma exibição de um arquivo interface Builder xib. Se esse construtor não for exportado, o código não gerenciado não poderá chamar nossa versão gerenciada dele. Anteriormente (por exemplo, no iOS 8), o `IntPtr` Construtor foi invocado para inicializar a exibição.
 
-**Correção:** Crie e exporte o Construtor `initWithCoder:` como este:
+**Correção:** Crie e exporte o `initWithCoder:` Construtor da seguinte maneira:
 
 ```csharp
 [Export ("initWithCoder:")]

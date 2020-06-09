@@ -7,12 +7,12 @@ ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
 author: davidortinau
 ms.author: daortin
 ms.date: 04/18/2018
-ms.openlocfilehash: 4a5aa13a197e885b074b07eae3594abd4992ee71
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: f81df8ac253e53b16c3ab09bf80d66a7b6324854
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728246"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571513"
 ---
 # <a name="updating-component-references-to-nuget"></a>Atualizando referências de componente para o NuGet
 
@@ -29,7 +29,7 @@ Uma lista de plug- [ins e bibliotecas](https://github.com/xamarin/XamarinCompone
 
 A versão 15,6 do Visual Studio e a versão 7,4 do Visual Studio para Mac não oferecem mais suporte a componentes em seu projeto. 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Se você carregar um projeto no Visual Studio, a caixa de diálogo a seguir será exibida, explicando que você deve remover manualmente todos os componentes do seu projeto:
 
@@ -41,7 +41,7 @@ Para remover um componente do seu projeto:
 
 2. Clique com o botão direito do mouse novamente no projeto descarregado e selecione **Editar {Your-Project-Name}. csproj**.
 
-3. Localize todas as referências no arquivo para `XamarinComponentReference`. Ela deve ter uma aparência semelhante ao exemplo a seguir:
+3. Localize todas as referências no arquivo para `XamarinComponentReference` . Ele deve ser semelhante ao exemplo a seguir:
 
     ```xml
     <ItemGroup>
@@ -60,13 +60,13 @@ Para remover um componente do seu projeto:
     </ItemGroup>
     ```
 
-4. Remova as referências a `XamarinComponentReference` e salve o arquivo. No exemplo acima, é seguro remover toda a `ItemGroup`.
+4. Remova as referências para `XamarinComponentReference` e salve o arquivo. No exemplo acima, é seguro remover todo o `ItemGroup` .
 
 5. Depois que o arquivo tiver sido salvo, clique com o botão direito do mouse no nome do projeto e selecione **recarregar projeto**.
 
 6. Repita as etapas acima para cada projeto em sua solução.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 Se você carregar um projeto em Visual Studio para Mac, a caixa de diálogo a seguir será exibida, explicando que você deve remover todos os componentes do seu projeto manualmente:
 
@@ -74,9 +74,9 @@ Se você carregar um projeto em Visual Studio para Mac, a caixa de diálogo a se
 
 Para remover um componente do seu projeto:
 
-1. Abra o arquivo. csproj. Para fazer isso, clique com o botão direito do mouse no nome do projeto e selecione **ferramentas > arquivo de edição**.
+1. Abra o arquivo .csproj. Para fazer isso, clique com o botão direito do mouse no nome do projeto e selecione **ferramentas > arquivo de edição**.
 
-2. Localize todas as referências no arquivo para `XamarinComponentReference`. Ela deve ter uma aparência semelhante ao exemplo a seguir:
+2. Localize todas as referências no arquivo para `XamarinComponentReference` . Ele deve ser semelhante ao exemplo a seguir:
 
     ```xml
     <ItemGroup>
@@ -95,7 +95,7 @@ Para remover um componente do seu projeto:
     </ItemGroup>
     ```
 
-3. Remova as referências a `XamarinComponentReference` e salve o arquivo. No exemplo acima, é seguro remover toda a `ItemGroup`
+3. Remova as referências para `XamarinComponentReference` e salve o arquivo. No exemplo acima, é seguro remover todo o`ItemGroup`
 
 4. Repita as etapas acima para cada projeto em sua solução.
 
@@ -113,7 +113,7 @@ As seções a seguir explicam como atualizar as soluções Xamarin existentes pa
 A maioria dos componentes se enquadra em uma das categorias acima.
 Se você estiver usando um componente que não parece ter um pacote NuGet equivalente, leia a seção [componentes sem um caminho de migração do NuGet](#require-update) abaixo.
 
-<a name="contain" />
+<a name="contain"></a>
 
 ## <a name="components-that-contain-nuget-packages"></a>Componentes que contêm pacotes NuGet
 
@@ -141,7 +141,7 @@ O pacote NuGet permanecerá listado no nó **pacotes** e seu aplicativo será co
 
 ![Atualizar pacote NuGet](component-nuget-images/nuget-update-sml.png)
 
-<a name="replace" />
+<a name="replace"></a>
 
 ## <a name="components-with-nuget-replacements"></a>Componentes com substituições de NuGet
 
@@ -159,8 +159,8 @@ Para confirmar se existe um pacote NuGet substituto, pesquise em [NuGet.org](htt
 
 Por exemplo, você pode encontrar o pacote **SQLite-net-PCL** popular procurando por:
 
-- [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl) – o nome do produto.
-- [`praeclarum`](https://www.nuget.org/packages?q=praeclarum) – o perfil do autor.
+- [`sqlite-net-pcl`](https://www.nuget.org/packages?q=sqlite-net-pcl)– o nome do produto.
+- [`praeclarum`](https://www.nuget.org/packages?q=praeclarum)– o perfil do autor.
 
 ### <a name="updating-the-solution"></a>Atualizando a solução
 
@@ -176,7 +176,7 @@ Isso excluirá o componente e todas as referências. Isso interromperá sua comp
 
 #### <a name="add-the-nuget-package"></a>Adicionar o pacote NuGet
 
-1. Clique com o botão direito do mouse no nó **pacotes** e escolha **adicionar pacotes...** .
+1. Clique com o botão direito do mouse no nó **pacotes** e escolha **adicionar pacotes...**.
 2. Procure a substituição do NuGet por nome ou autor:
 
     ![](component-nuget-images/nuget-search-sml.png)
@@ -186,7 +186,7 @@ Isso excluirá o componente e todas as referências. Isso interromperá sua comp
 O pacote NuGet será adicionado ao seu projeto, juntamente com quaisquer dependências.
 Isso deve corrigir a compilação. Se a compilação continuar a falhar, investigue cada erro para ver se há diferenças de API entre o componente e o pacote NuGet.
 
-<a name="require-update" />
+<a name="require-update"></a>
 
 ## <a name="components-without-a-nuget-migration-path"></a>Componentes sem um caminho de migração do NuGet
 
@@ -201,7 +201,7 @@ Isso significa que se você abrir a solução em um novo computador, o component
 
 Muitos fornecedores de componentes ainda estão trabalhando na migração para o NuGet, e outros (incluindo produtos comercialmente disponíveis) podem estar investigando opções de entrega alternativas.
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Lista de plug-ins e bibliotecas populares do Xamarin](https://github.com/xamarin/XamarinComponents/blob/master/README.md)
 - [Instalar e usar um pacote NuGet (Windows)](https://docs.microsoft.com/nuget/quickstart/use-a-package)

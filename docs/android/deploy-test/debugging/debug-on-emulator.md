@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 2bc8f82db29ed3c07c67293a83e6874f0cc6acb2
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 36538435066bc94a81f6449774718afe9a5ce7d7
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "75556516"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571981"
 ---
-# <a name="debug-on-the-android-emulator"></a>Depuração no Emulador android
+# <a name="debug-on-the-android-emulator"></a>Depurar no Android Emulator
 
 _Este guia mostra como iniciar um dispositivo virtual no Android Emulator para depurar e testar seu aplicativo._
 
@@ -63,7 +63,7 @@ Normalmente, você selecionaria o dispositivo virtual **Android\_Accelerated\_x8
 
 Para modificar os dispositivos virtuais (ou criar novos), você deve usar o [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
 
-<a name="launching" />
+<a name="launching"></a>
 
 ## <a name="launching-the-emulator"></a>Iniciando o Emulador
 
@@ -71,11 +71,11 @@ Perto da parte superior do Visual Studio, há um menu suspenso que pode ser usad
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![Debug e Modos de liberação, botão Play](debug-on-emulator-images/win/17-debug-release-sml.png)](debug-on-emulator-images/win/17-debug-release.png#lightbox)
+[![Modos de depuração e versão, botão reproduzir](debug-on-emulator-images/win/17-debug-release-sml.png)](debug-on-emulator-images/win/17-debug-release.png#lightbox)
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-[![Debug e Modos de liberação, botão Play](debug-on-emulator-images/mac/16-debug-release-sml.png)](debug-on-emulator-images/mac/16-debug-release.png#lightbox)
+[![Modos de depuração e versão, botão reproduzir](debug-on-emulator-images/mac/16-debug-release-sml.png)](debug-on-emulator-images/mac/16-debug-release.png#lightbox)
 
 -----
 
@@ -85,7 +85,7 @@ Após o emulador ser iniciado, o Xamarin.Android implantará o aplicativo no emu
 
 O emulador pode ser deixado em execução: não é necessário desligá-lo e aguardar seu reinício toda vez que o aplicativo é iniciado. A primeira vez que um aplicativo Xamarin.Android for executado no emulador, o runtime compartilhado do Xamarin.Android para o nível da API de destino será instalado, seguido pelo aplicativo. A instalação do runtime pode levar alguns minutos, portanto, tenha paciência. A instalação do runtime ocorre somente quando o primeiro aplicativo Xamarin.Android é implantado no emulador &ndash; as implantações subsequentes são mais rápidas porque somente o aplicativo é copiado para o emulador.
 
-<a name="quick-boot" />
+<a name="quick-boot"></a>
 
 ## <a name="quick-boot"></a>Inicialização Rápida
 

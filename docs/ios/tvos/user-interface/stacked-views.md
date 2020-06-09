@@ -7,26 +7,26 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 9f2c8fb235603c5dac37fc0c25be2f070d7df98e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 321ea87bfa4f460c4eaab31ef2ede6f3eb1b927f
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022155"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573567"
 ---
 # <a name="working-with-tvos-stacked-views-in-xamarin"></a>Trabalhando com exibições empilhadas do tvOS no Xamarin
 
-O controle de exibição de pilha (`UIStackView`) aproveita o poder do layout automático e as classes de tamanho para gerenciar uma pilha de subexibições, horizontal ou verticalmente, que respondem dinamicamente às alterações de conteúdo e ao tamanho da tela do dispositivo da Apple TV.
+O controle de exibição de pilha ( `UIStackView` ) aproveita o poder do layout automático e de classes de tamanho para gerenciar uma pilha de subexibições, horizontal ou verticalmente, que responde dinamicamente às alterações de conteúdo e ao tamanho da tela do dispositivo da Apple TV.
 
 O layout de todas as subexibições anexadas a uma exibição de pilha é gerenciado por ela com base nas propriedades definidas pelo desenvolvedor, como eixo, distribuição, alinhamento e espaçamento:
 
 [![](stacked-views-images/stacked01.png "Subview layout diagram")](stacked-views-images/stacked01.png#lightbox)
 
-Ao usar um `UIStackView` em um aplicativo Xamarin. tvOS, o desenvolvedor pode definir as subexibições dentro de um storyboard no designer do iOS ou adicionando e removendo subexibições no C# código.
+Ao usar um `UIStackView` em um aplicativo Xamarin. tvOS, o desenvolvedor pode definir as subexibições dentro de um storyboard no designer do Ios ou adicionando e removendo subexibições no código C#.
 
 ## <a name="about-stacked-view-controls"></a>Sobre controles de exibição empilhados
 
-A `UIStackView` é projetada como uma exibição de contêiner que não é de renderização e, como tal, não é desenhada para a tela como outras subclasses de `UIView`. Definir propriedades como `BackgroundColor` ou substituir `DrawRect` não terá efeito visual.
+O `UIStackView` é projetado como uma exibição de contêiner que não é de renderização e, como tal, não é desenhado para a tela como outras subclasses de `UIView` . Definir propriedades como `BackgroundColor` ou substituir `DrawRect` não terá nenhum efeito visual.
 
 Há várias propriedades que controlam como uma exibição de pilha irá organizar sua coleção de subexibições:
 
@@ -34,40 +34,40 @@ Há várias propriedades que controlam como uma exibição de pilha irá organiz
 - **Alinhamento** – controla como as subexibições são alinhadas dentro da exibição de pilha.
 - **Distribuição** – controla como as subexibições são dimensionadas na exibição de pilha.
 - **Espaçamento** – controla o espaço mínimo entre cada subexibição na exibição de pilha.
-- **Relativa à linha de base** – se `true`, o espaçamento vertical de cada subexibição será derivado da sua linha de base.
+- **Relativa à linha de base** – se `true` , o espaçamento vertical de cada subexibição será derivado da linha de base.
 - **Margens de layout relativas** – coloca as subexibições em relação às margens de layout padrão.
 
 Normalmente, você usará uma exibição de pilha para organizar um pequeno número de subexibições. Interfaces de usuário mais complexas podem ser criadas aninhando-se uma ou mais exibições de pilha umas nas outras.
 
 Você pode ajustar ainda mais a aparência das UIs adicionando restrições adicionais às subexibições (por exemplo, para controlar a altura ou largura). No entanto, deve-se ter cuidado para não incluir restrições conflitantes para as apresentadas pelo modo de exibição de pilha em si.
 
-<a name="Auto-Layout-and-Size-Classes" />
+<a name="Auto-Layout-and-Size-Classes"></a>
 
 ## <a name="auto-layout-and-size-classes"></a>Classes de layout e tamanho automático
 
 Quando uma subexibição é adicionada a uma exibição de pilha, seu layout é totalmente controlado por essa exibição de pilha usando classes de tamanho e layout automático para posicionar e dimensionar as exibições organizadas.
 
-A exibição de pilha _fixará_ a primeira e a última subexibição em sua coleção nas bordas **superior** e **inferior** para exibições de pilha vertical ou bordas **esquerda** e **direita** para exibições de pilha horizontal. Se você definir a propriedade `LayoutMarginsRelativeArrangement` como `true`, a exibição fixará as subexibições às margens relevantes, em vez da borda.
+A exibição de pilha _fixará_ a primeira e a última subexibição em sua coleção nas bordas **superior** e **inferior** para exibições de pilha vertical ou bordas **esquerda** e **direita** para exibições de pilha horizontal. Se você definir a `LayoutMarginsRelativeArrangement` propriedade como `true` , a exibição fixará as subexibições às margens relevantes, em vez da borda.
 
-A exibição de pilha usa a propriedade de `IntrinsicContentSize` de subexibição ao calcular o tamanho das subexibições ao longo do `Axis` definido (exceto para o `FillEqually Distribution`). O `FillEqually Distribution` redimensiona todas as subexibições para que elas tenham o mesmo tamanho, preenchendo o modo de exibição de pilha ao longo do `Axis`.
+A exibição de pilha usa a propriedade da subexibição `IntrinsicContentSize` ao calcular o tamanho das subexibições ao longo do definido `Axis` (exceto para o `FillEqually Distribution` ). O `FillEqually Distribution` redimensiona todas as subexibições para que elas tenham o mesmo tamanho, preenchendo o modo de exibição de pilha ao longo do `Axis` .
 
-Com exceção da `Fill Alignment`, a exibição de pilha usa a propriedade `IntrinsicContentSize` de subexibição para calcular o tamanho da exibição perpendicular ao `Axis`determinado. Para o `Fill Alignment`, todas as subexibições são dimensionadas para preencher a exibição de pilha perpendicular ao `Axis`especificado.
+Com exceção do `Fill Alignment` , a exibição de pilha usa a propriedade da subexibição `IntrinsicContentSize` para calcular o tamanho da exibição perpendicular ao especificado `Axis` . Para o `Fill Alignment` , todas as subexibições são dimensionadas para preencher a exibição de pilha perpendicular ao determinado `Axis` .
 
-<a name="Positioning-and-Sizing-the-Stack-View" />
+<a name="Positioning-and-Sizing-the-Stack-View"></a>
 
 ## <a name="positioning-and-sizing-the-stack-view"></a>Posicionando e dimensionando a exibição de pilha
 
-Embora a exibição de pilha tenha controle total sobre o layout de qualquer subexibição (com base em propriedades como `Axis` e `Distribution`), você ainda precisa posicionar o modo de exibição de pilha (`UIStackView`) em sua exibição pai usando o layout automático e as classes de tamanho.
+Embora o modo de exibição de pilha tenha controle total sobre o layout de qualquer subexibição (com base em propriedades como `Axis` e `Distribution` ), você ainda precisa posicionar o modo de exibição de pilha ( `UIStackView` ) dentro de sua exibição pai usando o layout automático e as classes de tamanho.
 
 Em geral, isso significa fixar pelo menos duas bordas da exibição de pilha para expandir e contratar, definindo, portanto, sua posição. Sem restrições adicionais, o modo de exibição de pilha será redimensionado automaticamente para se ajustar a todas as suas subexibições da seguinte maneira:
 
 - O tamanho ao longo de sua `Axis` será a soma de todos os tamanhos de subexibição, além de qualquer espaço que tenha sido definido entre cada subexibição.
-- Se a propriedade `LayoutMarginsRelativeArrangement` for `true`, o tamanho das exibições de pilha também incluirá espaço para as margens.
-- O tamanho perpendicular à `Axis` será definido como a maior subexibição na coleção.
+- Se a `LayoutMarginsRelativeArrangement` propriedade for `true` , o tamanho das exibições da pilha também incluirá espaço para as margens.
+- O tamanho perpendicular ao `Axis` será definido como a maior subexibição na coleção.
 
-Além disso, você pode especificar restrições para a **altura** e a **largura**da exibição de pilha. Nesse caso, as subexibições serão dispostas (dimensionadas) para preencher o espaço especificado pela exibição de pilha conforme determinado pelas propriedades `Distribution` e `Alignment`.
+Além disso, você pode especificar restrições para a **altura** e a **largura**da exibição de pilha. Nesse caso, as subexibições serão dispostas (dimensionadas) para preencher o espaço especificado pela exibição de pilha conforme determinado pelas `Distribution` Propriedades e `Alignment` .
 
-Se a propriedade `BaselineRelativeArrangement` for `true`, as subexibições serão dispostas com base na primeira ou última linha de base da subexibição, em vez de usar a posição **superior**, **inferior** ou **central*- **Y** . Eles são calculados no conteúdo da exibição de pilha da seguinte maneira:
+Se a `BaselineRelativeArrangement` propriedade for `true` , as subexibições serão dispostas com base na primeira ou na última linha de base da subexibição, em vez de usar a posição **superior**, **inferior** ou **central* -  **Y** . Eles são calculados no conteúdo da exibição de pilha da seguinte maneira:
 
 - Uma exibição de pilha vertical retornará a primeira subexibição para a primeira linha de base e a última para a última. Se qualquer uma dessas subexibições estiver em modo de exibição de pilha, a primeira ou a última linha de base será usada.
 - Uma exibição de pilha horizontal usará sua subexibição mais alta para a primeira e a última linha de base. Se a exibição mais alta também for uma exibição de pilha, ela usará a subexibição mais alta que a linha de base.
@@ -75,26 +75,26 @@ Se a propriedade `BaselineRelativeArrangement` for `true`, as subexibições ser
 > [!IMPORTANT]
 > O alinhamento de linha de base não funciona em tamanhos de subexibições ampliados ou compactados, pois a linha de base será calculada para a posição incorreta. Para alinhamento de linha de base, verifique se a **altura** da subexibição corresponde à **altura**do modo de exibição de conteúdo intrínseco.
 
-<a name="Common-Stack-View-Uses" />
+<a name="Common-Stack-View-Uses"></a>
 
 ## <a name="common-stack-view-uses"></a>Uso de exibição de pilha comum
 
 Há vários tipos de layout que funcionam bem com controles de exibição de pilha. De acordo com a Apple, aqui estão alguns dos usos mais comuns:
 
-- **Defina o tamanho ao longo do eixo** – fixando ambas as bordas ao longo do `Axis` da exibição da pilha e uma das bordas adjacentes para definir a posição, a exibição da pilha aumentará ao longo do eixo para se ajustar ao espaço definido por suas subexibições.
+- **Defina o tamanho ao longo do eixo** – fixando ambas as bordas ao longo da exibição da pilha `Axis` e uma das bordas adjacentes para definir a posição, a exibição da pilha aumentará ao longo do eixo para se ajustar ao espaço definido por suas subexibições.
 - **Definir a posição da subexibição** – ao fixar as bordas adjacentes da exibição de pilha à sua exibição pai, a exibição de pilha aumentará em ambas as dimensões para ajustá-la a ela contendo subexibições.
 - **Definir o tamanho e a posição da pilha** – fixando todas as quatro bordas da exibição de pilha para a exibição pai, a exibição de pilha organiza as subexibições com base no espaço definido na exibição de pilha.
-- **Defina o tamanho perpendicular ao eixo** – fixando ambas as bordas perpendiculares à `Axis` da exibição da pilha e uma das bordas ao longo do eixo para definir a posição, a exibição da pilha aumentará perpendicular ao eixo para se ajustar ao espaço definido por suas subexibições.
+- **Defina o tamanho perpendicular ao eixo** – fixando ambas as bordas perpendiculares à exibição da pilha `Axis` e uma das bordas ao longo do eixo para definir a posição, a exibição da pilha aumentará perpendicular ao eixo para se ajustar ao espaço definido por suas subexibições.
 
-<a name="Stack-Views-and-Storyboards" />
+<a name="Stack-Views-and-Storyboards"></a>
 
 ## <a name="stack-views-and-storyboards"></a>Exibições de pilha e storyboards
 
 A maneira mais fácil de trabalhar com exibições de pilha em um aplicativo Xamarin. tvOS é adicioná-las à interface do usuário do aplicativo usando o designer do iOS.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-1. Na **painel de soluções**, clique duas vezes no arquivo de `Main.storyboard` e abra-o para edição.
+1. Na **painel de soluções**, clique duas vezes no `Main.storyboard` arquivo e abra-o para edição.
 1. Projete o layout de seus elementos individuais que você vai adicionar à exibição de pilha:
 
     [![](stacked-views-images/layout01.png "Element layout example")](stacked-views-images/layout01.png#lightbox)
@@ -113,12 +113,12 @@ A maneira mais fácil de trabalhar com exibições de pilha em um aplicativo Xam
 
     [![](stacked-views-images/layout05.png "The individual elements in the Stack View")](stacked-views-images/layout05.png#lightbox)
 1. O layout será ajustado e os elementos serão organizados no modo de exibição de pilha com base nos atributos definidos acima.
-1. Atribua **nomes** na **Guia Widget** do Gerenciador de **Propriedades** para trabalhar com os controles de interface do C# usuário no código.
-1. Salve as alterações.
+1. Atribua **nomes** na **Guia Widget** do Gerenciador de **Propriedades** para trabalhar com os controles da interface do usuário no código C#.
+1. Salve suas alterações.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Na **Gerenciador de soluções**, clique duas vezes no arquivo de `Main.storyboard` e abra-o para edição.
+1. Na **Gerenciador de soluções**, clique duas vezes no `Main.storyboard` arquivo e abra-o para edição.
 1. Projete o layout de seus elementos individuais que você vai adicionar à exibição de pilha:
 
     [![](stacked-views-images/layout01.png "Example element layout")](stacked-views-images/layout01.png#lightbox)
@@ -137,13 +137,13 @@ A maneira mais fácil de trabalhar com exibições de pilha em um aplicativo Xam
 
     [![](stacked-views-images/layout05-vs.png "The individual elements in the Stack View")](stacked-views-images/layout05-vs.png#lightbox)
 1. O layout será ajustado e os elementos serão organizados no modo de exibição de pilha com base nos atributos definidos acima.
-1. Atribua **nomes** na **Guia Widget** do Gerenciador de **Propriedades** para trabalhar com os controles de interface do C# usuário no código.
-1. Salve as alterações.
+1. Atribua **nomes** na **Guia Widget** do Gerenciador de **Propriedades** para trabalhar com os controles da interface do usuário no código C#.
+1. Salve suas alterações.
 
 -----
 
 > [!IMPORTANT]
-> Embora seja possível atribuir ações como `TouchUpInside` a um elemento de interface do usuário (como um `UIButton`) no designer do iOS ao criar um manipulador de eventos, ele nunca será chamado porque a Apple TV não tem uma tela sensível ao toque ou dá suporte a eventos de toque. Você sempre deve usar o `Action Type` padrão ao criar ações para elementos da interface do usuário do tvOS.
+> Embora seja possível atribuir ações como `TouchUpInside` a um elemento de interface do usuário (como a `UIButton` ) no designer do Ios ao criar um manipulador de eventos, ele nunca será chamado porque a Apple TV não tem uma tela sensível ao toque ou dá suporte a eventos de toque. Você sempre deve usar o padrão `Action Type` ao criar ações para elementos da interface do usuário do tvOS.
 
 Para obter mais informações sobre como trabalhar com storyboards, consulte nossa [Guia de início rápido Olá, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
@@ -190,11 +190,11 @@ Se o número de players for reduzido, as exibições não usadas serão ocultada
 
 [![](stacked-views-images/layout07.png "If the number of players is decreased, the unused views are hidden and the Stack View adjust the layout to fit")](stacked-views-images/layout07.png#lightbox)
 
-<a name="Populate-a-Stack-View-from-Code" />
+<a name="Populate-a-Stack-View-from-Code"></a>
 
 ### <a name="populate-a-stack-view-from-code"></a>Preencher uma exibição de pilha do código
 
-Além de definir totalmente o conteúdo e o layout de uma exibição de pilha no designer do iOS, você pode criar e removê-lo C# dinamicamente do código.
+Além de definir totalmente o conteúdo e o layout de uma exibição de pilha no designer do iOS, você pode criar e removê-lo dinamicamente do código C#.
 
 Veja o exemplo a seguir que usa uma exibição de pilha para lidar com "estrelas" em uma revisão (1 a 5):
 
@@ -248,7 +248,7 @@ partial void DecreaseRating (Foundation.NSObject sender) {
 }
 ```
 
-Vamos dar uma olhada em algumas partes desse código em detalhes. Primeiro, usamos um `if` instruções para verificar se não há mais de cinco "estrelas" ou menos de zero.
+Vamos dar uma olhada em algumas partes desse código em detalhes. Primeiro, usamos `if` instruções para verificar se não há mais de cinco "estrelas" ou menos de zero.
 
 Para adicionar uma nova "estrela", carregamos sua imagem e definimos seu **modo de conteúdo** para **dimensionar o ajuste de aspecto**:
 
@@ -265,7 +265,7 @@ Em seguida, adicionamos o novo ícone de "estrela" à coleção de subexibiçõe
 RatingView.AddArrangedSubview(icon);
 ```
 
-Você observará que adicionamos o `UIImageView` à propriedade `ArrangedSubviews` do `UIStackView`e não ao `SubView`. Qualquer exibição que você deseja que a exibição de pilha controle seu layout deve ser adicionada à propriedade `ArrangedSubviews`.
+Você observará que adicionamos o `UIImageView` à `UIStackView` Propriedade do `ArrangedSubviews` e não ao `SubView` . Qualquer exibição que você deseja que a exibição de pilha controle seu layout deve ser adicionada à `ArrangedSubviews` propriedade.
 
 Para remover uma subexibição de uma exibição de pilha, primeiro obtemos a subexibição a ser removida:
 
@@ -273,7 +273,7 @@ Para remover uma subexibição de uma exibição de pilha, primeiro obtemos a su
 var icon = RatingView.ArrangedSubviews[RatingView.ArrangedSubviews.Length-1];
 ```
 
-Em seguida, precisamos removê-lo da coleção de `ArrangedSubviews` e da exibição super:
+Em seguida, precisamos removê-lo da `ArrangedSubviews` coleção e da exibição super:
 
 ```csharp
 // Remove from stack and screen
@@ -281,13 +281,13 @@ RatingView.RemoveArrangedSubview(icon);
 icon.RemoveFromSuperview();
 ```
 
-Remover uma subexibição apenas da coleção de `ArrangedSubviews` a retira do controle da exibição de pilha, mas não a remove da tela.
+Remover uma subexibição apenas da `ArrangedSubviews` coleção a retira do controle da exibição de pilha, mas não a remove da tela.
 
-<a name="Dynamically-Changing-Content" />
+<a name="Dynamically-Changing-Content"></a>
 
 ## <a name="dynamically-changing-content"></a>Alteração dinâmica de conteúdo
 
-Uma exibição de pilha ajustará automaticamente o layout das subexibições sempre que uma subexibição for adicionada, removida ou oculta. O layout também será ajustado se qualquer propriedade da exibição de pilha for ajustada (como sua `Axis`).
+Uma exibição de pilha ajustará automaticamente o layout das subexibições sempre que uma subexibição for adicionada, removida ou oculta. O layout também será ajustado se qualquer propriedade da exibição de pilha for ajustada (como a sua `Axis` ).
 
 As alterações de layout podem ser animadas colocando-as em um bloco de animação, por exemplo:
 
@@ -301,7 +301,7 @@ UIView.Animate(0.25, ()=>{
 
 Muitas das propriedades da exibição da pilha podem ser especificadas usando classes de tamanho dentro de um Storyboard. Essas propriedades serão automaticamente animadas é resposta a alterações de tamanho ou orientação.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>Resumo
 
@@ -309,7 +309,7 @@ Este artigo abordou a criação e o trabalho com a exibição empilhada dentro d
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guias de interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

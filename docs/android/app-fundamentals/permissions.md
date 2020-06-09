@@ -6,18 +6,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: da4884e7f1e3ec1ae8653ea8ec4247fce54a6565
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: 3204180ed28e98e52c4f0772ecb37a5353736acb
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "78292456"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570285"
 ---
 # <a name="permissions-in-xamarinandroid"></a>Permissões no Xamarin. Android
 
 ## <a name="overview"></a>Visão geral
 
-Os aplicativos Android são executados em sua própria área restrita e, por motivos de segurança, não têm acesso a determinados recursos do sistema ou hardware no dispositivo. O usuário deve conceder explicitamente permissão ao aplicativo para poder usar esses recursos. Por exemplo, um aplicativo não pode acessar o GPS em um dispositivo sem permissão explícita do usuário. O Android gerará um `Java.Lang.SecurityException` se um aplicativo tentar acessar um recurso protegido sem permissão.
+Os aplicativos Android são executados em sua própria área restrita e, por motivos de segurança, não têm acesso a determinados recursos do sistema ou hardware no dispositivo. O usuário deve conceder explicitamente permissão ao aplicativo para poder usar esses recursos. Por exemplo, um aplicativo não pode acessar o GPS em um dispositivo sem permissão explícita do usuário. O Android emitirá um `Java.Lang.SecurityException` se um aplicativo tentar acessar um recurso protegido sem permissão.
 
 As permissões são declaradas no **AndroidManifest. xml** pelo desenvolvedor do aplicativo quando o aplicativo é desenvolvido. O Android tem dois fluxos de trabalho diferentes para obter o consentimento do usuário para essas permissões:
 
@@ -28,19 +28,19 @@ As permissões são declaradas no **AndroidManifest. xml** pelo desenvolvedor do
 
 Os aplicativos Android devem verificar em tempo de execução para ver se eles têm permissão para acessar um recurso protegido. Se o aplicativo não tiver permissão, ele deverá fazer solicitações usando as novas APIs fornecidas pelo SDK do Android para que o usuário conceda as permissões. As permissões são divididas em duas categorias:
 
-- **As permissões normais** &ndash; são permissões que representam pouco risco de segurança à segurança ou privacidade do usuário. O Android 6,0 concederá automaticamente permissões normais no momento da instalação. Consulte a documentação do Android para obter uma [lista completa das permissões normais](https://developer.android.com/guide/topics/permissions/normal-permissions.html).
-- **Permissões perigosas** &ndash; em contraste com as permissões normais, permissões perigosas são aquelas que protegem a segurança ou a privacidade do usuário. Eles devem ser concedidos explicitamente pelo usuário. Enviar ou receber uma mensagem SMS é um exemplo de uma ação que requer uma permissão perigosa.
+- **Permissões normais** &ndash; Essas são permissões que representam pouco risco de segurança à segurança ou privacidade do usuário. O Android 6,0 concederá automaticamente permissões normais no momento da instalação. Consulte a documentação do Android para obter uma [lista completa das permissões normais](https://developer.android.com/guide/topics/permissions/normal-permissions.html).
+- **Permissões perigosas** &ndash; Ao contrário das permissões normais, as permissões perigosas são aquelas que protegem a segurança ou a privacidade do usuário. Eles devem ser concedidos explicitamente pelo usuário. Enviar ou receber uma mensagem SMS é um exemplo de uma ação que requer uma permissão perigosa.
 
 > [!IMPORTANT]
 > A categoria à qual uma permissão pertence pode mudar ao longo do tempo.  É possível que uma permissão que foi categorizada como uma permissão "normal" possa ser elevada em níveis futuros de API para uma permissão perigosa.
 
-Permissões perigosas são mais subdivididas em [_grupos de permissão_](https://developer.android.com/guide/topics/permissions/requesting.html#perm-groups). Um grupo de permissões terá permissões que estão logicamente relacionadas. Quando o usuário concede permissão a um membro de um grupo de permissões, o Android concede automaticamente permissão a todos os membros desse grupo. Por exemplo, o grupo de permissões [`STORAGE`](https://developer.android.com/reference/android/Manifest.permission_group.html#STORAGE) mantém as permissões `WRITE_EXTERNAL_STORAGE` e `READ_EXTERNAL_STORAGE`. Se o usuário conceder permissão para `READ_EXTERNAL_STORAGE`, a permissão `WRITE_EXTERNAL_STORAGE` será concedida automaticamente ao mesmo tempo.
+Permissões perigosas são mais subdivididas em [_grupos de permissão_](https://developer.android.com/guide/topics/permissions/requesting.html#perm-groups). Um grupo de permissões terá permissões que estão logicamente relacionadas. Quando o usuário concede permissão a um membro de um grupo de permissões, o Android concede automaticamente permissão a todos os membros desse grupo. Por exemplo, o [`STORAGE`](https://developer.android.com/reference/android/Manifest.permission_group.html#STORAGE) grupo de permissões mantém as `WRITE_EXTERNAL_STORAGE` `READ_EXTERNAL_STORAGE` permissões e. Se o usuário conceder permissão para `READ_EXTERNAL_STORAGE` , a `WRITE_EXTERNAL_STORAGE` permissão será concedida automaticamente ao mesmo tempo.
 
 Antes de solicitar uma ou mais permissões, é uma prática recomendada fornecer uma lógica para o motivo pelo qual o aplicativo requer a permissão antes de solicitar a permissão. Depois que o usuário entender a lógica, o aplicativo poderá solicitar permissão do usuário. Ao compreender a lógica, o usuário poderá tomar uma decisão informada se quiser conceder a permissão e entender as repercussões se elas não tiverem. 
 
 Todo o fluxo de trabalho de verificação e solicitação de permissões é conhecido como verificação de _permissões em tempo de execução_ e pode ser resumido no diagrama a seguir: 
 
-[gráfico de fluxo de verificação de permissão em tempo de execução ![](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png#lightbox)
+[![Gráfico de fluxo de verificação de permissão em tempo de execução](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png#lightbox)
 
 A biblioteca de suporte do Android reporta algumas das novas APIs para obter permissões para versões mais antigas do Android. Essas APIs reportadas verificarão automaticamente a versão do Android no dispositivo, de modo que não é necessário executar uma verificação de nível de API a cada vez.  
 
@@ -49,7 +49,7 @@ Este documento explicará como adicionar permissões a um aplicativo Xamarin. An
 > [!NOTE]
 > É possível que as permissões para hardware possam afetar a forma como o aplicativo é filtrado por Google Play. Por exemplo, se o aplicativo exigir permissão para a câmera, Google Play não mostrará o aplicativo no Google Play Store em um dispositivo que não tem uma câmera instalada.
 
-<a name="requirements" />
+<a name="requirements"></a>
 
 ## <a name="requirements"></a>Requisitos
 
@@ -66,7 +66,7 @@ Os aplicativos destinados ao Android 6,0 ou superior não podem pressupor que, c
 
 ### <a name="declaring-permissions-in-the-manifest"></a>Declarando permissões no manifesto
 
-As permissões são adicionadas ao **AndroidManifest. xml** com o elemento `uses-permission`. Por exemplo, se um aplicativo for para localizar a posição do dispositivo, ele exigirá permissões de local bem e de curso. Os dois elementos a seguir são adicionados ao manifesto: 
+As permissões são adicionadas ao **AndroidManifest. xml** com o `uses-permission` elemento. Por exemplo, se um aplicativo for para localizar a posição do dispositivo, ele exigirá permissões de local bem e de curso. Os dois elementos a seguir são adicionados ao manifesto: 
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -81,15 +81,15 @@ As permissões são adicionadas ao **AndroidManifest. xml** com o elemento `uses
 
 1. Clique duas vezes em **Propriedades** na **Gerenciador de soluções** e selecione a guia **manifesto do Android** na janela Propriedades:
 
-    [![permissões necessárias na guia manifesto do Android](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png#lightbox)
+    [![Permissões necessárias na guia manifesto do Android](permissions-images/04-required-permissions-vs-sml.png)](permissions-images/04-required-permissions-vs.png#lightbox)
 
 2. Se o aplicativo ainda não tiver um AndroidManifest. xml, clique em **nenhum AndroidManifest. XML encontrado. Clique para adicionar um** , conforme mostrado abaixo:
 
-    [![nenhuma mensagem AndroidManifest. xml](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png#lightbox)
+    [![Nenhuma mensagem AndroidManifest. xml](permissions-images/05-no-manifest-vs-sml.png)](permissions-images/05-no-manifest-vs.png#lightbox)
 
 3. Selecione as permissões que seu aplicativo precisa da lista de **permissões necessárias** e salve:
 
-    [![de permissões de câmera de exemplo selecionadas](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png#lightbox)
+    [![Exemplo de permissões de câmera selecionadas](permissions-images/06-selected-permission-vs-sml.png)](permissions-images/06-selected-permission-vs.png#lightbox)
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -97,28 +97,28 @@ As permissões são adicionadas ao **AndroidManifest. xml** com o elemento `uses
 
 1. Clique duas vezes no projeto no **painel de soluções** e selecione **opções > compilar > aplicativo Android**:
 
-    [![seção de permissões necessárias mostrada](permissions-images/04-required-permissions-xs-sml.png)](permissions-images/04-required-permissions-xs.png#lightbox)
+    [![Seção de permissões necessárias mostrada](permissions-images/04-required-permissions-xs-sml.png)](permissions-images/04-required-permissions-xs.png#lightbox)
 
 2. Clique no botão **Adicionar manifesto do Android** se o projeto ainda não tiver um **AndroidManifest. xml**:
 
-    [![o manifesto do Android do projeto está ausente](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png#lightbox)
+    [![O manifesto do Android do projeto está ausente](permissions-images/05-no-manifest-xs-sml.png)](permissions-images/05-no-manifest-xs.png#lightbox)
 
 3. Selecione as permissões de que seu aplicativo precisa da lista de **permissões necessárias** e clique em **OK**:
 
-    [![de permissões de câmera de exemplo selecionadas](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png#lightbox)
+    [![Exemplo de permissões de câmera selecionadas](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png#lightbox)
     
 -----
 
-O Xamarin. Android adicionará automaticamente algumas permissões no momento da compilação para Depurar compilações. Isso facilitará a depuração do aplicativo. Em particular, duas permissões notáveis são `INTERNET` e `READ_EXTERNAL_STORAGE`. Essas permissões definidas automaticamente não parecerão estar habilitadas na lista de **permissões necessárias** . As compilações de versão, no entanto, usam apenas as permissões definidas explicitamente na lista de **permissões necessárias** . 
+O Xamarin. Android adicionará automaticamente algumas permissões no momento da compilação para Depurar compilações. Isso facilitará a depuração do aplicativo. Em particular, duas permissões notáveis são `INTERNET` e `READ_EXTERNAL_STORAGE` . Essas permissões definidas automaticamente não parecerão estar habilitadas na lista de **permissões necessárias** . As compilações de versão, no entanto, usam apenas as permissões definidas explicitamente na lista de **permissões necessárias** . 
 
 Para aplicativos direcionados para Android 5.1 (API nível 22) ou inferior, não há nada mais que precise ser feito. Os aplicativos que serão executados no Android 6,0 (API 23 nível 23) ou superior devem passar para a próxima seção sobre como executar verificações de permissão de tempo de execução. 
 
 ### <a name="runtime-permission-checks-in-android-60"></a>Verificações de permissão em tempo de execução no Android 6,0
 
-O método de `ContextCompat.CheckSelfPermission` (disponível com a biblioteca de suporte do Android) é usado para verificar se uma permissão específica foi concedida. Esse método retornará um [`Android.Content.PM.Permission`](xref:Android.Content.PM.Permission) enum que tem um dos dois valores:
+O `ContextCompat.CheckSelfPermission` método (disponível com a biblioteca de suporte do Android) é usado para verificar se uma permissão específica foi concedida. Esse método retornará um [`Android.Content.PM.Permission`](xref:Android.Content.PM.Permission) enum que tem um dos dois valores:
 
-- **`Permission.Granted`** &ndash; a permissão especificada foi concedida.
-- **`Permission.Denied`** &ndash; a permissão especificada não foi concedida.
+- **`Permission.Granted`**&ndash;A permissão especificada foi concedida.
+- **`Permission.Denied`**&ndash;A permissão especificada não foi concedida.
 
 Este trecho de código é um exemplo de como verificar a permissão da câmera em uma atividade: 
 
@@ -135,15 +135,15 @@ else
 
 É uma prática recomendada informar o usuário sobre por que uma permissão é necessária para um aplicativo para que uma decisão informada possa ser feita para conceder a permissão. Um exemplo disso seria um aplicativo que usa fotos e marcas geográficas. É claro para o usuário que a permissão de câmera é necessária, mas pode não estar claro por que o aplicativo também precisa do local do dispositivo. A lógica deve exibir uma mensagem para ajudar o usuário a entender por que a permissão de localização é desejável e que a permissão de câmera é necessária.
 
-O método `ActivityCompat.ShouldShowRequestPermissionRationale` é usado para determinar se a lógica deve ser mostrada para o usuário. Esse método retornará `true` se a lógica de uma determinada permissão deve ser exibida. Esta captura de tela mostra um exemplo de um snackbar exibido por um aplicativo que explica por que o aplicativo precisa saber o local do dispositivo:
+O `ActivityCompat.ShouldShowRequestPermissionRationale` método é usado para determinar se a lógica deve ser mostrada para o usuário. Esse método retornará `true` se a lógica de uma determinada permissão deve ser exibida. Esta captura de tela mostra um exemplo de um snackbar exibido por um aplicativo que explica por que o aplicativo precisa saber o local do dispositivo:
 
 ![Lógica para o local](permissions-images/07-rationale-snackbar.png) 
 
-Se o usuário conceder a permissão, o método `ActivityCompat.RequestPermissions(Activity activity, string[] permissions, int requestCode)` deve ser chamado. Esse método requer os seguintes parâmetros:
+Se o usuário conceder a permissão, o `ActivityCompat.RequestPermissions(Activity activity, string[] permissions, int requestCode)` método deverá ser chamado. Esse método requer os seguintes parâmetros:
 
-- a **atividade** &ndash; essa é a atividade que está solicitando as permissões e deve ser informada pelo Android dos resultados.
-- **as permissões** &ndash; uma lista das permissões que estão sendo solicitadas.
-- **requestCode** &ndash; um valor inteiro que é usado para corresponder os resultados da solicitação de permissão a uma chamada de `RequestPermissions`. Esse valor deve ser maior que zero.
+- **atividade** &ndash; do Essa é a atividade que está solicitando as permissões e deve ser informada pelo Android dos resultados.
+- **permissões** &ndash; do Uma lista das permissões que estão sendo solicitadas.
+- **requestCode** &ndash; Um valor inteiro que é usado para corresponder os resultados da solicitação de permissão a uma `RequestPermissions` chamada. Esse valor deve ser maior que zero.
 
 Esse trecho de código é um exemplo dos dois métodos que foram discutidos. Primeiro, é feita uma verificação para determinar se a lógica de permissão deve ser mostrada. Se a lógica for mostrada, um snackbar será exibido com a lógica. Se o usuário clicar em **OK** no snackbar, o aplicativo solicitará as permissões. Se o usuário não aceitar a lógica, o aplicativo não deverá continuar solicitando permissões. Se a lógica não for mostrada, a atividade solicitará a permissão:
 
@@ -172,11 +172,11 @@ else
 }
 ```
 
-`RequestPermission` pode ser chamado mesmo que o usuário já tenha concedido a permissão. As chamadas subsequentes não são necessárias, mas fornecem ao usuário a oportunidade de confirmar (ou revogar) a permissão. Quando `RequestPermission` é chamado, o controle é enviado para o sistema operacional, que exibirá uma interface do usuário para aceitar as permissões:  
+`RequestPermission`pode ser chamado mesmo que o usuário já tenha concedido a permissão. As chamadas subsequentes não são necessárias, mas fornecem ao usuário a oportunidade de confirmar (ou revogar) a permissão. Quando `RequestPermission` é chamado, o controle é enviado para o sistema operacional, que exibirá uma interface do usuário para aceitar as permissões:  
 
 ![Caixa de diálogo Permssion](permissions-images/08-location-permission-dialog.png)
 
-Depois que o usuário for concluído, o Android retornará os resultados para a atividade por meio de um método de retorno de chamada, `OnRequestPermissionResult`. Esse método é uma parte da interface `ActivityCompat.IOnRequestPermissionsResultCallback` que deve ser implementada pela atividade. Essa interface tem um único método, `OnRequestPermissionsResult`, que será invocado pelo Android para informar a atividade das opções do usuário. Se o usuário tiver concedido a permissão, o aplicativo poderá continuar e usar o recurso protegido. Um exemplo de como implementar `OnRequestPermissionResult` é mostrado abaixo: 
+Depois que o usuário for concluído, o Android retornará os resultados para a atividade por meio de um método de retorno de chamada, `OnRequestPermissionResult` . Esse método é uma parte da interface `ActivityCompat.IOnRequestPermissionsResultCallback` que deve ser implementada pela atividade. Essa interface tem um único método, `OnRequestPermissionsResult` , que será invocado pelo Android para informar a atividade das opções do usuário. Se o usuário tiver concedido a permissão, o aplicativo poderá continuar e usar o recurso protegido. Um exemplo de como implementar `OnRequestPermissionResult` é mostrado abaixo: 
 
 ```csharp
 public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)

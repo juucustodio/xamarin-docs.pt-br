@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsAbsoluteLayout
-description: Este artigo explica como usar a Xamarin.Forms classe AbsoluteLayout para criar interfaces do uso de um pixel perfeito. Essa classe posiciona e dimensiona elementos filho proporcionais ao seu próprio tamanho e posição ou por valores absolutos.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d81a80e1f1190cbdffd578024cf9c6db1e7737e1
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139237"
+Título: " Xamarin.Forms AbsoluteLayout" Descrição: "Este artigo explica como usar a Xamarin.Forms classe AbsoluteLayout para criar interfaces do uso de pixel perfeito. Essa classe posiciona e dimensiona elementos filho proporcionais ao seu próprio tamanho e posição ou por valores absolutos. "
+MS. Prod: xamarin MS. AssetID: 01A5CCE0-AD45-4806-84FD-72C007005B38 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 11/25/2015 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-absolutelayout"></a>Xamarin.FormsAbsoluteLayout
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
@@ -27,14 +13,12 @@ ms.locfileid: "84139237"
 
 Este artigo abordará:
 
-- **[Finalidade](#Purpose)** &ndash; usos comuns do `AbsoluteLayout` .
-- **[Uso](#Usage)** &ndash; do como usar `AbsoluteLayout` o para obter o design desejado.
-  - **[Layouts](#Proportional_Layouts)** &ndash; proporcionais Entenda como os valores proporcionais funcionam em um `AbsoluteLayout` .
-  - **[Especificando valores](#Specifying_Values)** &ndash; Entenda como os valores proporcionais e absolutos são especificados.
-  - **[Valores](#Proportional_Values)** &ndash; proporcionais Entenda como funcionam os valores proporcionais.
-    - **[Valores](#Absolute_Values)** &ndash; absolutos Entenda como os valores absolutos funcionam.
-
-<a name="Purpose" />
+- **[Finalidade](#purpose)** &ndash; usos comuns do `AbsoluteLayout` .
+- **[Uso](#usage)** &ndash; do como usar `AbsoluteLayout` o para obter o design desejado.
+  - **[Layouts](#proportional-layouts)** &ndash; proporcionais Entenda como os valores proporcionais funcionam em um `AbsoluteLayout` .
+  - **[Especificando valores](#specifying-values)** &ndash; Entenda como os valores proporcionais e absolutos são especificados.
+  - **[Valores](#proportional-values)** &ndash; proporcionais Entenda como funcionam os valores proporcionais.
+    - **[Valores](#absolute-values)** &ndash; absolutos Entenda como os valores absolutos funcionam.
 
 ## <a name="purpose"></a>Finalidade
 
@@ -42,11 +26,7 @@ Devido ao modelo de posicionamento do `AbsoluteLayout` , o layout torna relativa
 
 `AbsoluteLayout`pode ser usado em qualquer lugar que os elementos precisem ser posicionados em uma exibição e seja especialmente útil ao alinhar elementos a bordas.
 
-<a name="Usage" />
-
 ## <a name="usage"></a>Uso
-
-<a name="Proportional_Layouts" />
 
 ### <a name="proportional-layouts"></a>Layouts proporcionais
 
@@ -63,8 +43,6 @@ Observe que, na captura de tela a seguir, a âncora da caixa é um ponto branco.
 ![](absolute-layout-images/anchor-center.png "Anchor at Center")
 ![](absolute-layout-images/anchor-end.png "Anchor at End")
 
-<a name="Specifying_Values" />
-
 ### <a name="specifying-values"></a>Especificando valores
 
 Exibições em um `AbsoluteLayout` são posicionadas usando quatro valores:
@@ -74,7 +52,7 @@ Exibições em um `AbsoluteLayout` são posicionadas usando quatro valores:
 - **Largura** &ndash; a largura da exibição
 - **Altura** &ndash; a altura da exibição
 
-Cada um desses valores pode ser definido como um valor [proporcional](#Proportional_Values) ou um valor [absoluto](#Absolute_Values) .
+Cada um desses valores pode ser definido como um valor [proporcional](#proportional-values) ou um valor [absoluto](#absolute-values) .
 
 Os valores são especificados como uma combinação de limites e um sinalizador. `LayoutBounds`é [`Rectangle`](xref:Xamarin.Forms.Rectangle) composto por quatro valores:,, `x` `y` `width` , `height` .
 
@@ -169,8 +147,6 @@ public class AbsoluteLayoutExplorationCode : ContentPage
 }
 ```
 
-<a name="Proportional_Values" />
-
 ### <a name="proportional-values"></a>Valores proporcionais
 
 Os valores proporcionais definem uma relação entre um layout e uma exibição. Essa relação define a posição de uma exibição filho ou o valor de escala como uma proporção do valor correspondente do layout pai. Esses valores são expressos como `double` s com valores entre 0 e 1.
@@ -193,8 +169,6 @@ var label = new Label {Text = "I'm bottom center on every device."};
 AbsoluteLayout.SetLayoutBounds(label, new Rectangle(.5,1,.5,.1));
 AbsoluteLayout.SetLayoutFlags(label, AbsoluteLayoutFlags.All);
 ```
-
-<a name="Absolute_Values" />
 
 ### <a name="absolute-values"></a>Valores absolutos
 

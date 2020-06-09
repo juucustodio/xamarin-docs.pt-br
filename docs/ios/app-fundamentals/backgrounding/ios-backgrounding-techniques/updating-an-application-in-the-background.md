@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 2d56af364d63ff78bafbdd7d8043ae4d75d97959
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: ae08d7d2d8d9de700570311f2294df737240b73f
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304649"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572150"
 ---
 # <a name="updating-a-xamarinios-app-in-the-background"></a>Atualizando um aplicativo Xamarin. iOS em segundo plano
 
@@ -35,7 +35,7 @@ Um aplicativo não precisa do local `UIBackgroundMode` para usar essas APIs com 
 
 Os aplicativos que usam o monitoramento de local para processamento em segundo plano expõem uma falha no iOS 6: se as necessidades de um aplicativo não se ajustarem a uma categoria necessária para o plano de fundo, ela terá opções limitadas de fundo. Com a introdução de duas novas APIs, *busca em segundo plano* e *notificações remotas*, o Ios 7 (e superior) fornece oportunidades em segundo plano para mais aplicativos. As duas próximas seções introduzem essas novas APIs.
 
-<a name="background_fetch" />
+<a name="background_fetch"></a>
 
 ## <a name="background-fetch-ios-7-and-greater"></a>Busca em segundo plano (iOS 7 e superior)
 
@@ -45,7 +45,7 @@ Para implementar a busca em segundo plano, edite *info. plist* e marque as caixa
 
  [![](updating-an-application-in-the-background-images/fetch.png "Edit the Info.plist and check the Enable Background Modes and Background Fetch check boxes")](updating-an-application-in-the-background-images/fetch.png#lightbox)
 
-Em seguida, na `AppDelegate`, substitua o método `FinishedLaunching` para definir o intervalo mínimo de busca. Neste exemplo, permitimos que o sistema operacional decida com que frequência obter o novo conteúdo:
+Em seguida, no `AppDelegate` , substitua o `FinishedLaunching` método para definir o intervalo mínimo de busca. Neste exemplo, permitimos que o sistema operacional decida com que frequência obter o novo conteúdo:
 
 ```csharp
 public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
@@ -55,7 +55,7 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
 }
 ```
 
-Por fim, execute a busca substituindo o método `PerformFetch` no `AppDelegate`e passando um manipulador de *conclusão*. O manipulador de conclusão é um delegado que usa um `UIBackgroundFetchResult`:
+Por fim, execute a busca substituindo o `PerformFetch` método no `AppDelegate` e passando um manipulador de *conclusão*. O manipulador de conclusão é um delegado que usa `UIBackgroundFetchResult` :
 
 ```csharp
 public override void PerformFetch (UIApplication application, Action<UIBackgroundFetchResult> completionHandler)
@@ -70,32 +70,32 @@ public override void PerformFetch (UIApplication application, Action<UIBackgroun
 
 Quando concluímos a atualização do conteúdo, permitimos que o sistema operacional saiba chamando o manipulador de conclusão com o status apropriado. o iOS oferece três opções para o status do manipulador de conclusão:
 
-1. `UIBackgroundFetchResult.NewData`-chamado quando um novo conteúdo foi obtido e o aplicativo foi atualizado.
-1. `UIBackgroundFetchResult.NoData`-chamado quando a busca de novo conteúdo foi enviada, mas nenhum conteúdo está disponível.
-1. `UIBackgroundFetchResult.Failed`-útil para tratamento de erros, isso é chamado quando a busca não conseguiu passar.
+1. `UIBackgroundFetchResult.NewData`– Chamado quando um novo conteúdo tiver sido obtido e o aplicativo tiver sido atualizado.
+1. `UIBackgroundFetchResult.NoData`-Chamado quando a busca de novo conteúdo foi enviada, mas nenhum conteúdo está disponível.
+1. `UIBackgroundFetchResult.Failed`-Útil para tratamento de erros, isso é chamado quando a busca não conseguiu passar.
 
 Os aplicativos que usam a busca em segundo plano podem fazer chamadas para atualizar a interface do usuário em segundo plano. Quando o usuário abrir o aplicativo, a interface do usuário estará atualizada e exibirá o novo conteúdo. Isso também atualizará o instantâneo do seletor de aplicativo do aplicativo, para que o usuário possa ver quando o aplicativo tem conteúdo novo.
 
 > [!IMPORTANT]
-> Quando `PerformFetch` é chamado, o aplicativo tem aproximadamente 30 segundos para iniciar o download do novo conteúdo e chamar o bloco do manipulador de conclusão. Se isso levar muito tempo, o aplicativo será encerrado. Considere o uso da busca em segundo plano com o _serviço de transferência em segundo plano_ ao baixar mídia ou outros arquivos grandes.
+> Uma vez `PerformFetch` chamado, o aplicativo tem aproximadamente 30 segundos para iniciar o download do novo conteúdo e chamar o bloco do manipulador de conclusão. Se isso levar muito tempo, o aplicativo será encerrado. Considere o uso da busca em segundo plano com o _serviço de transferência em segundo plano_ ao baixar mídia ou outros arquivos grandes.
 
 ### <a name="backgroundfetchinterval"></a>BackgroundFetchInterval
 
-No código de exemplo acima, permitimos que o sistema operacional decida a frequência de busca de novo conteúdo definindo o intervalo mínimo de busca para `BackgroundFetchIntervalMinimum`. o iOS oferece três opções para o intervalo de busca:
+No código de exemplo acima, permitimos que o sistema operacional decida com que frequência obter novo conteúdo definindo o intervalo mínimo de busca como `BackgroundFetchIntervalMinimum` . o iOS oferece três opções para o intervalo de busca:
 
-1. `BackgroundFetchIntervalNever`-diga ao sistema para nunca buscar um novo conteúdo. Use isso para desativar a busca em determinadas situações, como quando o usuário não estiver conectado. Esse é o valor padrão para o intervalo de busca. 
-1. `BackgroundFetchIntervalMinimum`-permite que o sistema decida com que frequência buscar com base nos padrões do usuário, na vida útil da bateria, no uso de dados e nas necessidades de outros aplicativos.
-1. `BackgroundFetchIntervalCustom`-se você souber com que frequência o conteúdo de um aplicativo é atualizado, poderá especificar um intervalo de "suspensão" após cada busca, durante o qual o aplicativo será impedido de buscar um novo conteúdo. Quando esse intervalo estiver ativo, o sistema determinará quando buscar conteúdo.
+1. `BackgroundFetchIntervalNever`-Informe o sistema para nunca buscar um novo conteúdo. Use isso para desativar a busca em determinadas situações, como quando o usuário não estiver conectado. Esse é o valor padrão para o intervalo de busca. 
+1. `BackgroundFetchIntervalMinimum`-Permita que o sistema decida com que frequência buscar com base nos padrões do usuário, na vida útil da bateria, no uso de dados e nas necessidades de outros aplicativos.
+1. `BackgroundFetchIntervalCustom`-Se você souber com que frequência o conteúdo de um aplicativo é atualizado, poderá especificar um intervalo de "suspensão" após cada busca, durante o qual o aplicativo será impedido de buscar um novo conteúdo. Quando esse intervalo estiver ativo, o sistema determinará quando buscar conteúdo.
 
-Tanto `BackgroundFetchIntervalMinimum` quanto `BackgroundFetchIntervalCustom` contam com o sistema para agendar buscas. Esse intervalo é dinâmico, adaptando-se às necessidades do dispositivo, bem como aos hábitos do usuário individual. Por exemplo, se um usuário verifica um aplicativo todas as manhãs e outra verificação a cada hora, o iOS garantirá que o conteúdo seja atualizado para ambos os usuários sempre que abrirem o aplicativo.
+Ambos `BackgroundFetchIntervalMinimum` e `BackgroundFetchIntervalCustom` contam com o sistema para agendar buscas. Esse intervalo é dinâmico, adaptando-se às necessidades do dispositivo, bem como aos hábitos do usuário individual. Por exemplo, se um usuário verifica um aplicativo todas as manhãs e outra verificação a cada hora, o iOS garantirá que o conteúdo seja atualizado para ambos os usuários sempre que abrirem o aplicativo.
 
 A busca em segundo plano deve ser usada para aplicativos que são atualizados com frequência com conteúdo não crítico. Para aplicativos com atualizações críticas, devem ser usadas notificações remotas. As notificações remotas são baseadas na busca em segundo plano e compartilham o mesmo manipulador de conclusão. Vamos nos aprofundar nas notificações remotas.
 
- <a name="remote_notifications" />
+ <a name="remote_notifications"></a>
 
 ## <a name="remote-notifications-ios-7-and-greater"></a>Notificações remotas (iOS 7 e superior)
 
-As notificações por push são mensagens JSON enviadas de um provedor para um dispositivo por meio do *serviço de notificação por push da Apple (APNs)* .
+As notificações por push são mensagens JSON enviadas de um provedor para um dispositivo por meio do *serviço de notificação por push da Apple (APNs)*.
 
 No iOS 6, uma notificação por push de entrada informa o sistema para alertar o usuário de que algo interessante aconteceu em um aplicativo. Clicar na notificação puxa o aplicativo para fora do estado suspenso ou encerrado, e o aplicativo começaria a atualizar o conteúdo. o iOS 7 (e superior) estende as notificações por push comuns, fornecendo aos aplicativos a oportunidade de atualizar o conteúdo em segundo plano *antes* de notificar o usuário, para que o usuário possa abrir o aplicativo e receber um novo conteúdo imediatamente.
 
@@ -103,7 +103,7 @@ Para implementar notificações remotas, edite *info. plist* e marque as caixas 
 
  [![](updating-an-application-in-the-background-images/remote.png "Background Mode set to Enable Background Modes and Remote notifications")](updating-an-application-in-the-background-images/remote.png#lightbox)
 
-Em seguida, defina o sinalizador `content-available` na notificação por push para 1. Isso permite que o aplicativo saiba como buscar um novo conteúdo antes de exibir o alerta:
+Em seguida, defina o `content-available` sinalizador na notificação por push para 1. Isso permite que o aplicativo saiba como buscar um novo conteúdo antes de exibir o alerta:
 
 ```csharp
 'aps' {
@@ -112,7 +112,7 @@ Em seguida, defina o sinalizador `content-available` na notificação por push p
 }
 ```
 
-No *AppDelegate*, substitua o método `DidReceiveRemoteNotification` para verificar a carga de notificação do conteúdo disponível e chame o bloco manipulador de conclusão apropriado:
+No *AppDelegate*, substitua o `DidReceiveRemoteNotification` método para verificar a carga de notificação do conteúdo disponível e chame o bloco manipulador de conclusão apropriado:
 
 ```csharp
 public override void DidReceiveRemoteNotification (UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)

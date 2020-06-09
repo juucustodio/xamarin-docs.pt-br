@@ -1,17 +1,17 @@
 ---
 title: Criando visão geral de aplicativos de plataforma cruzada
-description: Este documento fornece uma visão geral de alto nível da criação de aplicativos de plataforma cruzada. Ele aborda o valor de, C#padrões de design, como MVC/MVVM e UIs nativas.
+description: Este documento fornece uma visão geral de alto nível da criação de aplicativos de plataforma cruzada. Ele aborda o valor de C#, padrões de design, como MVC/MVVM e UIs nativas.
 ms.prod: xamarin
 ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 7d839e0141f14f4ba86897b128bf2a8c0a79548d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: de8c66e6a89f035b8370a2139361d3e942aa9c09
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016912"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571201"
 ---
 # <a name="building-cross-platform-applications-overview"></a>Criando visão geral de aplicativos de plataforma cruzada
 
@@ -25,9 +25,9 @@ O Xamarin não é apenas uma plataforma de "gravação única, executada em qual
 
 Aqui está um resumo dos principais pontos para criar aplicativos de plataforma cruzada do Xamarin:
 
-- **Use C#**  -escreva seus aplicativos no C#. O código existente escrito C# em pode ser portado para IOS e Android usando o Xamarin com muita facilidade e, obviamente, usado em aplicativos do Windows.
+- **Use c#** – escreva seus aplicativos em c#. O código existente escrito em C# pode ser portado para iOS e Android usando o Xamarin com muita facilidade e, obviamente, usado em aplicativos do Windows.
 - **Utilizar padrões de design do modelo MVC ou MVVM** – desenvolva a interface do usuário do aplicativo usando o padrão Model/View/Controller. Projete seu aplicativo usando uma abordagem de modelo/exibição/controlador ou uma abordagem de Model/View/ViewModel em que há uma separação clara entre o "modelo" e o restante. Determine quais partes do seu aplicativo usarão elementos nativos da interface do usuário de cada plataforma (iOS, Android, Windows, Mac) e use-o como uma diretriz para dividir seu aplicativo em dois componentes: "Core" e "user-interface".
-- **Criar UIs nativas** -cada aplicativo específico do sistema operacional fornece uma camada de interface de usuário diferente C# (implementada no com a ajuda de ferramentas de design de interface do projeto nativas):
+- **Criar UIs nativas** -cada aplicativo específico do sistema operacional fornece uma camada de interface de usuário diferente (implementada em C# com a ajuda de ferramentas de design de interface do usuário nativas):
 
 1. No iOS, use as APIs do UIKit para criar aplicativos de aparência nativa, utilizando opcionalmente o iOS designer do Xamarin para criar sua interface do usuário visualmente.
 1. No Android, use Android. views para criar aplicativos de aparência nativa, tirando proveito do designer de interface do usuário do Xamarin.
@@ -47,16 +47,16 @@ Para aumentar a quantidade de reutilização de código, você pode adotar compo
 
 Alguns desses componentes são implementados no estudo de caso de *tarefa* .
 
- <a name="Separate_Reusable_Code_into_a_Core_Library" />
+ <a name="Separate_Reusable_Code_into_a_Core_Library"></a>
 
 ## <a name="separate-reusable-code-into-a-core-library"></a>Separar código reutilizável em uma biblioteca principal
 
-Seguindo o princípio de separação de responsabilidade, colocando em camadas a arquitetura do aplicativo e, em seguida, movendo a funcionalidade principal que é independente da plataforma em uma biblioteca principal reutilizável, você pode maximizar o compartilhamento de código entre plataformas, como a figura abaixo apresenta
+Seguindo o princípio de separação de responsabilidade, colocando em camadas a arquitetura do aplicativo e, em seguida, movendo a funcionalidade principal que é independente da plataforma em uma biblioteca principal reutilizável, você pode maximizar o compartilhamento de código entre plataformas, como a figura abaixo ilustra:
 
  ![](overview-images/layers2.png "By following the principle of separation of responsibility by layering your application architecture and then moving core functionality that is platform agnostic into a reusable core library, you can maximize code sharing across platforms")
 
- <a name="Case_Studies" />
+ <a name="Case_Studies"></a>
 
-## <a name="case-studies"></a>Estudos de caso
+## <a name="case-studies"></a>Estudos de Caso
 
 Há um estudo de caso que acompanha este documento – *taskal pro*. Cada estudo de caso aborda a implementação dos conceitos descritos neste documento em um exemplo do mundo real. O código é de código-fonte aberto e está disponível no [GitHub](https://github.com/xamarin/mobile-samples/).

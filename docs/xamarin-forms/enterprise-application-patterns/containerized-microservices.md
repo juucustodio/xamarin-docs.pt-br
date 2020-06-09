@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a05090c18039f9d3a7f9376285ce2863e0482903
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139250"
+Título: Descrição de "microservices em contêineres": "Este capítulo explica como usar os microserviços e contêineres para criar aplicativos de nuvem modernos ágeis, escalonáveis e confiáveis".
+MS. Prod: xamarin MS. AssetID: 5872ad92-04e0-4F1A-9691-79d5602f5683 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="containerized-microservices"></a>Microsserviços em contêineres
 
 O desenvolvimento de aplicativos cliente-servidor resultou em um foco na criação de aplicativos em camadas que usam tecnologias específicas em cada camada. Esses aplicativos costumam ser chamados de aplicativos *monolíticos* e empacotados em hardware previamente dimensionado para picos de carga. As principais desvantagens dessa abordagem de desenvolvimento são o acoplamento rígido entre os componentes de cada camada, que os componentes individuais não podem ser dimensionados com facilidade e o custo do teste. Uma atualização simples pode ter efeitos imprevistos no restante da camada e, portanto, uma alteração em um componente de aplicativo requer que sua camada inteira seja testada novamente e reimplantada.
@@ -93,11 +79,9 @@ O aplicativo de referência eShopOnContainers usa o Docker para hospedar quatro 
 
 A arquitetura dos serviços de back-end no aplicativo de referência é decomposta em vários subsistemas autônomos na forma de colaboração de microserviços e contêineres. Cada microserviço fornece uma única área de funcionalidade: um serviço de identidade, um serviço de catálogo, um serviço de pedidos e um serviço de cesta.
 
-Cada Microservice tem seu próprio banco de dados, permitindo que ele seja totalmente dissociado dos outros microservices. Quando necessário, a consistência entre os bancos de dados de diferentes microservices é obtida usando eventos de nível de aplicativo. Para obter mais informações, consulte [comunicação entre os microserviços](#communication_between_microservices).
+Cada Microservice tem seu próprio banco de dados, permitindo que ele seja totalmente dissociado dos outros microservices. Quando necessário, a consistência entre os bancos de dados de diferentes microservices é obtida usando eventos de nível de aplicativo. Para obter mais informações, consulte [comunicação entre os microserviços](#communication-between-microservices).
 
 Para obter mais informações sobre o aplicativo de referência, consulte [microservices do .net: arquitetura para aplicativos .net em contêineres](https://aka.ms/microservicesebook).
-
-<a name="communication_between_client_and_microservices" />
 
 ## <a name="communication-between-client-and-microservices"></a>Comunicação entre o cliente e os microserviços
 
@@ -111,8 +95,6 @@ Com a comunicação direta entre cliente e microserviço, o aplicativo móvel fa
 
 > [!TIP]
 > Considere o uso da comunicação do gateway de API. A comunicação direta entre o cliente e o microserviço pode ter desvantagens ao criar um aplicativo baseado em microatendimento grande e complexo, mas é mais do que adequado para um pequeno aplicativo. Ao criar um grande aplicativo baseado em microserviço com dezenas de microserviços, considere o uso da comunicação do gateway de API. Para obter mais informações, consulte [microservices do .net: arquitetura para aplicativos .net em contêineres](https://aka.ms/microservicesebook).
-
-<a name="communication_between_microservices" />
 
 ## <a name="communication-between-microservices"></a>Comunicação entre os microserviços
 

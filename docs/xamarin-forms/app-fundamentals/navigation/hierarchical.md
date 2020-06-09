@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 92774cffdfed7412bdb4d44993dc221993ad56c8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137859"
+Título: "navegação hierárquica" Descrição: "Este artigo demonstra como usar a classe NavigationPage para realizar a navegação em uma pilha de páginas de UEPS (última entrada, primeiro a sair)".
+MS. Prod: xamarin MS. AssetID: C8A5EEFF-5A3B-4163-838A-147EE3939FAA MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 03/10/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="hierarchical-navigation"></a>Navegação hierárquica
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
@@ -32,8 +18,6 @@ Para retornar à página anterior, o aplicativo removerá a página atual da pil
 ![](hierarchical-images/popping.png "Popping a Page from the Navigation Stack")
 
 Os métodos de navegação são expostos pela [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) propriedade em qualquer [`Page`](xref:Xamarin.Forms.Page) tipo derivado. Esses métodos possibilitam enviar páginas por push para a pilha de navegação, remover páginas da pilha de navegação e executar a manipulação da pilha.
-
-<a name="Performing_Navigation" />
 
 ## <a name="performing-navigation"></a>Executando a navegação
 
@@ -154,8 +138,6 @@ async void OnRootPageButtonClicked (object sender, EventArgs e)
 
 Definir o parâmetro `boolean` como `false` desabilita a animação de transição de página, enquanto definir o parâmetro como `true` habilita a animação de transição de página, desde que ela tenha suporte da plataforma subjacente. No entanto, os métodos de envio por push e remoção que não têm esse parâmetro habilitam a animação por padrão.
 
-<a name="Passing_Data_when_Navigating" />
-
 ## <a name="passing-data-when-navigating"></a>Transmitindo dados ao navegar
 
 Às vezes, é necessário que uma página transmita dados para outra página durante a navegação. Duas técnicas para realizar isso são passando dados por meio de um construtor de página e definindo as novas páginas [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) para os dados. Descreveremos cada técnica separadamente.
@@ -274,8 +256,6 @@ Os dados são exibidos na página por uma série de [`Label`](xref:Xamarin.Forms
 ![](hierarchical-images/passing-data-bindingcontext.png "Data Passed Through a BindingContext")
 
 Para obter mais informações sobre vinculação de dados, veja [Noções básicas de vinculação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
-
-<a name="Manipulating_the_Navigation_Stack" />
 
 ## <a name="manipulating-the-navigation-stack"></a>Manipulando a pilha de navegação
 

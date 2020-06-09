@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Este artigo explica como usar o gesto de toque para detecção de toque em um Xamarin.Forms aplicativo. A detecção de toque é implementada com a classe TapGestureRecognizer.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 0470419dd5070424c362dec8d4b1978507985783
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137612"
+Título: "adição de um reconhecedor de gestos Tap" Descrição: "Este artigo explica como usar o gesto de toque para detecção de toque em um Xamarin.Forms aplicativo. A detecção de toque é implementada com a classe TapGestureRecognizer ".
+MS. Prod: xamarin MS. AssetID: 1D150BAF-4157-49BC-90A0-153323B8EBCF MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/21/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="adding-a-tap-gesture-recognizer"></a>Adicionando um reconhecedor de gestos de toque
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-tapgesture)
@@ -40,8 +26,6 @@ tapGestureRecognizer.NumberOfTapsRequired = 2; // double-tap
 ```
 
 Quando [`NumberOfTapsRequired`](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired) é definido acima de um, o manipulador de eventos só será executado se os toques ocorrerem dentro de um período de tempo definido (esse período não é configurável). Se o segundo toque (ou os toques posteriores) não ocorrerem dentro desse período, eles serão ignorados e a “contagem de toques” será reiniciada.
-
-<a name="Using_Xaml" />
 
 ## <a name="using-xaml"></a>Usando XAML
 

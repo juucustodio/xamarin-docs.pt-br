@@ -6,12 +6,12 @@ ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
-ms.openlocfilehash: 19c4a15fb2490c7bace4798b0cb8e062b1379a04
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 39e7a6c86a2d4ab4231a29c0e1014de702af01ac
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79305062"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573411"
 ---
 # <a name="inspector-installation-and-requirements"></a>Instalação e requisitos do Inspetor
 
@@ -31,9 +31,9 @@ ms.locfileid: "79305062"
 
 -----
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
-### <a name="supported-operating-systems"></a>Supported Operating Systems
+### <a name="supported-operating-systems"></a>Sistemas operacionais com suporte
 
 - **Mac** -OS X 10,11 ou superior
 - **Windows** -Windows 7 ou superior (com o Internet Explorer 11 ou superior e o .NET 4.6.1 ou superior)
@@ -45,18 +45,18 @@ ms.locfileid: "79305062"
 
 A inspeção do aplicativo ao vivo está disponível para clientes empresariais.
 
-<a name="supported-platforms" />
+<a name="supported-platforms"></a>
 
 ### <a name="supported-app-platforms"></a>Plataformas de aplicativos com suporte
 
-|Plataforma de aplicativo|Suporte a IDE|{1&gt;Observações&lt;1}|
+|Plataforma de aplicativo|Suporte a IDE|Observações|
 |--- |--- |--- |
 |Mac|Somente com suporte no Visual Studio para Mac|
 |iOS|Com suporte no Visual Studio 2017 e Visual Studio para Mac| O comportamento do vinculador deve ser definido como **não vincular** (em opções do projeto de **compilação do IOS** ) |
-|Android|Com suporte no Visual Studio 2017 e Visual Studio para Mac|É necessário direcionar o Android > = 4.0.3, com **fastdev** habilitado.<br />Deve usar os emuladores do Google, Visual Studio ou Xamarin Android. Os emuladores do Android 7 podem não permitir a inspeção no momento.|
+|Android|Com suporte no Visual Studio 2017 e Visual Studio para Mac|É necessário direcionar o Android >= 4.0.3, com **fastdev** habilitado.<br />Deve usar os emuladores do Google, Visual Studio ou Xamarin Android. Os emuladores do Android 7 podem não permitir a inspeção no momento.|
 |WPF|Somente com suporte no Visual Studio 2017|
 
-<a name="reporting-bugs" />
+<a name="reporting-bugs"></a>
 
 ## <a name="reporting-bugs"></a>Relatar bugs
 
@@ -72,10 +72,10 @@ Essas informações são vitais.
 
 Visual Studio para Mac
 
-- **O Visual Studio > sobre o Visual Studio > Mostrar detalhes > copiar informações**
+- **O Visual Studio > sobre o Visual Studio > mostrar detalhes > copiar informações**
 - Colar no relatório de bugs
 
-{1&gt;Visual Studio&lt;1}
+Visual Studio
 
 - **Ajuda > sobre o Visual Studio > copiar informações**
 - Informe-nos a sua versão do sistema operacional e se você está executando o Windows de 32 bits ou 64 bits.
@@ -97,12 +97,12 @@ Visual Studio para Mac
 
 - `~/Library/Logs/VisualStudio/7.0/Ide.log`
 
-{1&gt;Visual Studio&lt;1}
+Visual Studio
 
 - `%LOCALAPPDATA%\Xamarin\Logs\{VS version}\Inspector {date}.log`
 - O conteúdo do painel de **saída** do Visual Studio também pode ser informativo.
 
-### <a name="project-settings"></a>Configurações do Projeto
+### <a name="project-settings"></a>Configurações do projeto
 
 Se você puder anexar o **. csproj** para o projeto que está tentando inspecionar, ele seria extremamente útil. Isso é mais fácil do que perguntar sobre configurações individuais.
 

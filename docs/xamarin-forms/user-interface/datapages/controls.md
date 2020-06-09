@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Este artigo apresenta os controles que estão disponíveis no Xamarin.Forms pacote NuGet de DataPages.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 093ef4b9b3ae7bde25da276330894bcf4e399145
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134440"
+Título: "referência de controles de DataPages" Descrição: "Este artigo apresenta os controles que estão disponíveis no Xamarin.Forms pacote NuGet de DataPages."
+MS. Prod: xamarin MS. AssetID: 891615D0-E8BD-4ACC-A7F0-4C3725FBCC31 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/01/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="datapages-controls-reference"></a>Referência de controles de páginas de DataPages
 
 ![](~/media/shared/preview.png "This API is currently in preview")
@@ -36,14 +22,12 @@ Para usar esses controles em XAML, verifique se o namespace foi incluído, por e
     x:Class="DataPagesDemo.Detail">
 ```
 
-Os exemplos a seguir incluem `DynamicResource` referências que precisam existir no dicionário de recursos do projeto para funcionar. Também há um exemplo de como criar um [controle personalizado](#custom)
+Os exemplos a seguir incluem `DynamicResource` referências que precisam existir no dicionário de recursos do projeto para funcionar. Também há um exemplo de como criar um [controle personalizado](#custom-control-example).
 
 ## <a name="built-in-controls"></a>Controles internos
 
 * [HeroImage](#heroimage)
 * [Item](#listitem)
-
-<a name="heroimage" />
 
 ### <a name="heroimage"></a>HeroImage
 
@@ -69,8 +53,6 @@ O `HeroImage` controle tem quatro propriedades:
 **iOS**
 
 ![](controls-images/heroimage-light-ios.png "Controle HeroImage no iOS") ![](controls-images/heroimage-dark-ios.png "Controle HeroImage no iOS")
-
-<a name="listitem" />
 
 ### <a name="listitem"></a>Item
 
@@ -134,19 +116,15 @@ Ele deve ser semelhante às capturas de tela abaixo usando cores correspondentes
 
 ![](controls-images/cardview-light-ios.png "CardView controle personalizado no iOS") ![](controls-images/cardview-dark-ios.png "CardView controle personalizado no iOS")
 
-<a name="custom" />
-
 ### <a name="building-the-custom-cardview"></a>Criando o CardView personalizado
 
-1. [Subclasse de DataView](#1)
-2. [Definir fonte, layout e margens](#2)
-3. [Criar estilos para os filhos do controle](#3)
-4. [Criar o modelo de layout de controle](#4)
-5. [Adicionar os recursos específicos do tema](#5)
-6. [Definir o ControlTemplate para a classe CardView](#6)
-7. [Adicionar o controle a uma página](#7)
-
-<a name="1" />
+1. [Subclasse de DataView](#1-dataview-subclass)
+2. [Definir fonte, layout e margens](#2-define-font-layout-and-margins)
+3. [Criar estilos para os filhos do controle](#3-create-styles-for-the-controls-children)
+4. [Criar o modelo de layout de controle](#4-create-the-control-layout-template)
+5. [Adicionar os recursos específicos do tema](#5-add-the-theme-specific-resources)
+6. [Definir o ControlTemplate para a classe CardView](#6-set-the-controltemplate-for-the-cardview-class)
+7. [Adicionar o controle a uma página](#7-add-the-control-to-a-page)
 
 #### <a name="1-dataview-subclass"></a>subclasse 1. DataView
 
@@ -188,13 +166,11 @@ public class CardView : DataView
 }
 ```
 
-<a name="2" />
-
 #### <a name="2-define-font-layout-and-margins"></a>2. definir a fonte, o layout e as margens
 
 O designer de controle descobriria esses valores como parte do design da interface do usuário para o controle personalizado. Quando especificações específicas da plataforma são necessárias, o `OnPlatform` elemento é usado.
 
-Observe que alguns valores se referem a `StaticResource` s – eles serão definidos na [etapa 5](#5).
+Observe que alguns valores se referem a `StaticResource` s – eles serão definidos na [etapa 5](#5-add-the-theme-specific-resources).
 
 ```xml
 <!-- CARDVIEW FONT SIZES -->
@@ -246,8 +222,6 @@ Observe que alguns valores se referem a `StaticResource` s – eles serão defin
 </OnPlatform>
 ```
 
-<a name="3" />
-
 #### <a name="3-create-styles-for-the-controls-children"></a>3. criar estilos para os filhos do controle
 
 Referencie todos os elementos definidos para criar os filhos que serão usados no controle personalizado:
@@ -277,8 +251,6 @@ Referencie todos os elementos definidos para criar os filhos que serão usados n
     <Setter Property="HeightRequest" Value="165"/>
 </Style>
 ```
-
-<a name="4" />
 
 #### <a name="4-create-the-control-layout-template"></a>4. criar o modelo de layout de controle
 
@@ -321,8 +293,6 @@ O design visual do controle personalizado é declarado explicitamente no modelo 
 </ControlTemplate>
 ```
 
-<a name="5" />
-
 #### <a name="5-add-the-theme-specific-resources"></a>5. adicionar os recursos específicos ao tema
 
 Como esse é um controle personalizado, adicione os recursos que correspondem ao tema que você está usando o dicionário de recursos:
@@ -354,11 +324,9 @@ Como esse é um controle personalizado, adicione os recursos que correspondem ao
             <Color x:Key="iOSCardViewDetailTextColor">#B5B4B9</Color>
 ```
 
-<a name="6" />
-
 #### <a name="6-set-the-controltemplate-for-the-cardview-class"></a>6. defina o ControlTemplate para a classe CardView
 
-Por fim, verifique se a classe C# criada na [etapa 1](#1) usa o modelo de controle definido na [etapa 4](#4) usando um `Style` `Setter` elemento
+Por fim, verifique se a classe C# criada na [etapa 1](#1-dataview-subclass) usa o modelo de controle definido na [etapa 4](#4-create-the-control-layout-template) usando um `Style` `Setter` elemento
 
 ```xml
 <Style TargetType="local:CardView">
@@ -367,8 +335,6 @@ Por fim, verifique se a classe C# criada na [etapa 1](#1) usa o modelo de contro
   <Setter Property="BackgroundColor" Value="{ StaticResource CardViewBackgroundColor }" />
 </Style>
 ```
-
-<a name="7" />
 
 #### <a name="7-add-the-control-to-a-page"></a>7. Adicionar o controle a uma página
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 63a5ed357a903700ea89d858bcde9798ddf97942
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 65a89afb3f301fd88ac4819bb8c3658a2be5e29d
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76724614"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573190"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>O arquivo iTunesMetadata.plist em aplicativos Xamarin.iOS
 
@@ -22,7 +22,7 @@ Quando um aplicativo iOS é criado no iTune Connect (seja para venda ou para lan
 
 Para fornecer as informações ausentes a uma distribuição ad hoc, um arquivo `iTunesMetadata.plist` opcional pode ser criado e incluído no arquivo IPA de aplicativos. Esse arquivo plist é um arquivo XML especialmente formatado (consulte o [Property List Programming Guide](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) (Guia de Programação da Lista de Propriedade) da Apple para obter mais informações), que contém pares de chave/valor que definem as informações sobre um determinado aplicativo iOS.
 
-<a name="iTunesMetadata_contents" />
+<a name="iTunesMetadata_contents"></a>
 
 ## <a name="the-itunesmetadataplist-contents"></a>O Conteúdo do iTunesMetadata.plist
 
@@ -169,7 +169,7 @@ Use a chave `softwareVersionBundleId` para especificar a ID do pacote para o apl
 <string>com.company.appid</string>
 ```
 
-### <a name="copyright"></a>direitos autorais
+### <a name="copyright"></a>copyright
 
 Use a chave `copyright` para definir a notificação de direitos autorais que é exibida no iTunes. Exemplo:
 
@@ -280,7 +280,7 @@ As chaves a seguir são incluídas em todos os arquivos `iTunesMetadata.plist` n
 <integer>16843008</integer>
 ```
 
-<a name="iTunesMetadata_creating" />
+<a name="iTunesMetadata_creating"></a>
 
 ## <a name="creating-an-itunesmetadataplist-file"></a>Criando um Arquivo iTunesMetadata.plist
 
@@ -298,14 +298,14 @@ As chaves a seguir são incluídas em todos os arquivos `iTunesMetadata.plist` n
 Faça o seguinte:
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo de projeto Xamarin.iOS e selecione **Adicionar** > **Novo Arquivo... **
-2. Na caixa de diálogo novo arquivo, selecione**lista de propriedades do** **iOS:** > 
+2. Na caixa de diálogo novo arquivo, selecione lista de propriedades do **Ios**  >  **Property List**:
 
     ![](itunesmetadata-images/image01.png "Select iOS Property List")
 3. Digite `iTunesMetadata` para o **Nome** e clique no botão **Novo**.
 4. Clique duas vezes no arquivo `iTunesMetadata.plist` no **Gerenciador de Soluções** para abri-lo para edição:
 
     ![](itunesmetadata-images/image02.png "The iTunesMetadata.plist editor")
-5. Clique no **+** verde para criar `UIRequiredDeviceCapabilities` uma nova entrada e digite como o nome-chave:
+5. Clique no verde **+** para criar uma nova entrada e insira `UIRequiredDeviceCapabilities` como o nome da chave:
 
     ![](itunesmetadata-images/image03.png "Create a new entry and enter UIRequiredDeviceCapabilities as the key name")
 6. Clique no tipo de valor da **Cadeia de caracteres** e selecione **Dicionário** na lista pop-up:
@@ -360,10 +360,10 @@ Esse artigo abordou o arquivo `iTunesMetadata.plist` que pode ser usado para inf
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Distribuição da App Store](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
+- [Distribuição da loja de aplicativos](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
 - [Configurando um aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
 - [Publicando na App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md)
 - [Distribuição interna](~/ios/deploy-test/app-distribution/in-house-distribution.md)
 - [Distribuição Ad Hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md)
-- [Suporte ipa](~/ios/deploy-test/app-distribution/ipa-support.md)
+- [Suporte do IPA](~/ios/deploy-test/app-distribution/ipa-support.md)
 - [Solução de problemas](~/ios/deploy-test/troubleshooting.md)

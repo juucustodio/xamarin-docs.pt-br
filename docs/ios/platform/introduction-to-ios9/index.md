@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 531e04c3dbc9bd695087204ceae88d2f0f5df012
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: de4b6e8b95eed33e7fb38baf51a0da73cef313c0
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75488940"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574126"
 ---
 # <a name="introduction-to-ios-9"></a>Introdução ao iOS 9
 
@@ -42,7 +42,7 @@ Como o ATS está habilitado por padrão em aplicativos criados para iOS 9 e OS X
 
 Para saber mais sobre o ATS, consulte nosso guia de [segurança do transporte de aplicativo](~/ios/app-fundamentals/ats.md) .
 
-<a name="multitasking" />
+<a name="multitasking"></a>
 
 ## <a name="multitasking-for-ipad"></a>Multitarefa para iPad
 
@@ -109,7 +109,7 @@ Para obter mais informações, consulte nossa [introdução ao homekit](~/ios/pl
 
 ## <a name="handoff-framework-changes"></a>Alterações da estrutura de entrega
 
-A entrega (também conhecida como continuidade) foi introduzida pela Apple no iOS 8 e no OS X Yosemite (10,10) como uma maneira para o usuário iniciar uma atividade em um de seus dispositivos (iOS ou Mac) e continuar a mesma atividade em outro de seus dispositivos (conforme identificado pelo iClou do usuário Conta d).
+A entrega (também conhecida como continuidade) foi introduzida pela Apple no iOS 8 e no OS X Yosemite (10,10) como uma maneira para o usuário iniciar uma atividade em um de seus dispositivos (iOS ou Mac) e continuar a mesma atividade em outro de seus dispositivos (conforme identificado pela conta do iCloud do usuário).
 
 A entrega foi expandida no iOS 9 para oferecer também suporte a novos recursos de pesquisa aprimorados. Para obter mais informações, consulte nossa documentação de [aprimoramentos de pesquisa](~/ios/platform/search/index.md) . Para obter mais informações sobre como usar a entrega, consulte nossa [introdução à documentação de entrega](~/ios/platform/handoff.md) .
 
@@ -137,9 +137,9 @@ No iOS 9, a Apple aprimorou o conjunto de chaves para fornecer um novo tipo de c
 
 - Uma nova restrição de ID de toque que invalida itens de conjunto de chaves quando o banco de dados de impressão digital é modificado.
 - Novas restrições que permitem a criação de entradas da lista de controle de acesso com apenas a ID de toque ou senha.
-- Um novo contexto de autenticação que permite invocar a autenticação separada de chamadas `SecItem`.
+- Um novo contexto de autenticação que permite invocar a autenticação separada de `SecItem` chamadas.
 - Entropia da lista de controle de acesso (usando a opção de senha do aplicativo) para criptografia de item do conjunto de chaves fornecido pelo aplicativo.
-- Suporte para gerar e usar chaves dentro do enclave seguro (por meio do atributo `kSecAttrTokenIDSecureEnclave`).
+- Suporte para gerar e usar chaves dentro do enclave seguro (por meio do `kSecAttrTokenIDSecureEnclave` atributo).
 
 Para obter mais informações, consulte [ID de toque e ID de face no Xamarin. Ios](~/ios/platform/touch-id-face-id.md).
 
@@ -177,8 +177,8 @@ Para obter mais informações, consulte nossa documentação [adicional de alter
 A Apple preteriu as seguintes APIs e funções no iOS 9:
 
 - **Catálogo de endereços & interface do usuário do catálogo de endereços** -essas APIs foram substituídas pelas estruturas de interface do usuário contato e contato. Para obter mais informações, consulte a documentação [da interface do usuário contatos e contatos](~/ios/platform/contacts.md) .
-- **CBCentralManager** -os métodos `RetrievePeripherals` e `RetrieveConnectedPeripherals` da classe `CBCentralManager` foram removidos no Ios 9. Chamar esses métodos fará com que um aplicativo falhe ao emparelhar um acessório ou iniciar o aplicativo.
-- **FetchAllChanges** -a `FetchAllChanges` da classe `CKFetchRecordChangesOperation` foi depreciada e será removida no Ios 9.
+- **CBCentralManager** -os `RetrievePeripherals` `RetrieveConnectedPeripherals` métodos e da `CBCentralManager` classe foram removidos no Ios 9. Chamar esses métodos fará com que um aplicativo falhe ao emparelhar um acessório ou iniciar o aplicativo.
+- **FetchAllChanges** -a `FetchAllChanges` da `CKFetchRecordChangesOperation` classe foi depreciada e será removida no Ios 9.
 - **Player de mídia** -a estrutura do Media Player foi preterida no Ios 9. Em vez disso, use as APIs AVKit ou AV Foundation.
 
 Para obter uma lista completa de substituições de API específicas, consulte a documentação de [diffs da API do iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/iOS90APIDiffs/index.html#//apple_ref/doc/uid/TP40016222) da Apple.
@@ -201,11 +201,11 @@ Confira também as partes do iOS desses exemplos (versões do Companion Mac OS X
 - [AgentsCatalog](https://github.com/xamarin/mac-ios-samples/tree/master/AgentsCatalog)
 - [MetalKitEssentials](https://github.com/xamarin/mac-ios-samples/tree/master/MetalKitEssentials)
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Amostras do iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [Introdução ao toque 3D](~/ios/platform/3d-touch.md)
-- [Segurança de transporte de aplicativo](~/ios/app-fundamentals/ats.md)
+- [Segurança do transporte de aplicativo](~/ios/app-fundamentals/ats.md)
 - [Multitarefa para iPad](~/ios/platform/multitasking.md)
 - [Interface do usuário de contatos e contatos](~/ios/platform/contacts.md)
 - [Novas APIs de pesquisa](~/ios/platform/search/index.md)

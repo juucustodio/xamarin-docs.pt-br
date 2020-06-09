@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 522f90c21c46eaf75a730108cc46fc64769795d7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 015f0732e4d8cdf771af3e1d0b3cc3e31b6e806c
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032660"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572243"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Controles de tabela watchOS no Xamarin
 
-O controle de `WKInterfaceTable` watchOS é muito mais simples do que o equivalente do iOS, mas executa uma função semelhante. Ele cria uma lista de rolagem de linhas que pode ter layouts personalizados e que respondem a eventos de toque.
+O `WKInterfaceTable` controle watchOS é muito mais simples do que sua contraparte do IOS, mas executa uma função semelhante. Ele cria uma lista de rolagem de linhas que pode ter layouts personalizados e que respondem a eventos de toque.
 
 ![](table-images/table-list-sml.png "Lista de tabelas de observação") ![](table-images/table-detail-sml.png)
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
@@ -41,7 +41,7 @@ Depois que a classe do controlador da linha for definida, o IDE criará um arqui
 
 ## <a name="create-and-populate-rows"></a>Criar e preencher linhas
 
-`SetNumberOfRows` cria as classes de controlador de linha para cada linha, usando a `Identifier` para selecionar a correta. Se você deu ao controlador de linha um `Identifier` personalizado, altere **Default** no trecho de código abaixo para o identificador usado. O `RowController` *para cada linha* é criado quando `SetNumberOfRows` é chamado e a tabela é exibida.
+`SetNumberOfRows`cria as classes de controlador de linha para cada linha, usando o `Identifier` para selecionar a correta. Se você deu ao controlador de linha um personalizado `Identifier` , altere **padrão** no trecho de código abaixo para o identificador usado. O `RowController` *para cada linha* é criado quando `SetNumberOfRows` é chamado e a tabela é exibida.
 
 ```csharp
 myTable.SetNumberOfRows ((nint)rows.Count, "default");
@@ -51,7 +51,7 @@ myTable.SetNumberOfRows ((nint)rows.Count, "default");
 > [!IMPORTANT]
 > As linhas da tabela não são virtualizadas, como estão no iOS. Tente limitar o número de linhas (a Apple recomenda menos de 20).
 
-Depois que as linhas tiverem sido criadas, você precisará preencher cada célula (como `GetCell` faria no iOS). Este trecho de código do [exemplo WatchTables](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables) atualiza o rótulo em cada linha
+Depois que as linhas tiverem sido criadas, você precisará preencher cada célula (como `GetCell` faria no IOS). Este trecho de código do [exemplo WatchTables](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables) atualiza o rótulo em cada linha
 
 ```csharp
 for (var i = 0; i < rows.Count; i++) {
@@ -61,18 +61,18 @@ for (var i = 0; i < rows.Count; i++) {
 ```
 
 > [!IMPORTANT]
-> Usar `SetNumberOfRows` e, em seguida, executar um loop usando `GetRowController` faz com que toda a tabela seja enviada para o relógio. Nas exibições subsequentes da tabela, se você precisar adicionar ou remover linhas específicas, use `InsertRowsAt` e `RemoveRowsAt` para obter melhor desempenho.
+> Usar `SetNumberOfRows` e, em seguida, fazer o loop por meio `GetRowController` de using faz com que toda a tabela seja enviada para o relógio. Nas exibições subsequentes da tabela, se você precisar adicionar ou remover as linhas específicas, use `InsertRowsAt` e `RemoveRowsAt` para obter um melhor desempenho.
 
 ## <a name="respond-to-taps"></a>Responder a toques
 
 Você pode responder à seleção de linha de duas maneiras diferentes:
 
-- Implemente o método `DidSelectRow` no controlador de interface ou
-- Crie um transição no storyboard e implemente `GetContextForSegue` se desejar que a seleção de linha abra outra cena.
+- Implemente o `DidSelectRow` método no controlador de interface ou
+- Crie um transição no storyboard e implemente `GetContextForSegue` se você deseja que a seleção de linha abra outra cena.
 
 ### <a name="didselectrow"></a>DidSelectRow
 
-Para manipular de forma programática a seleção de linha, implemente o método `DidSelectRow`. Para abrir uma nova cena, use `PushController` e passe o identificador da cena e o contexto de dados a ser usado:
+Para manipular de forma programática a seleção de linha, implemente o `DidSelectRow` método. Para abrir uma nova cena, use `PushController` e passe o identificador da cena e o contexto de dados a ser usado:
 
 ```csharp
 public override void DidSelectRow (WKInterfaceTable table, nint rowIndex)
@@ -89,7 +89,7 @@ public override void DidSelectRow (WKInterfaceTable table, nint rowIndex)
 Arraste um transição no storyboard da linha da tabela para outra cena (mantenha pressionada a tecla **Control** enquanto arrasta).
 Certifique-se de selecionar o transição e atribuir a ele um identificador no painel de **Propriedades** (como `secondLevel` no exemplo abaixo).
 
-No controlador de interface, implemente o método `GetContextForSegue` e retorne o contexto de dados que deve ser fornecido para a cena que é apresentada pelo transição.
+No controlador de interface, implemente o `GetContextForSegue` método e retorne o contexto de dados que deve ser fornecido para a cena que é apresentada pelo transição.
 
 ```csharp
 public override NSObject GetContextForSegue (string segueIdentifier, WKInterfaceTable table, nint rowIndex)
@@ -101,7 +101,7 @@ public override NSObject GetContextForSegue (string segueIdentifier, WKInterface
 }
 ```
 
-Esses dados são passados para a cena de storyboard de destino em seu método de `Awake`.
+Esses dados são passados para a cena de storyboard de destino em seu `Awake` método.
 
 ## <a name="multiple-row-types"></a>Vários tipos de linha
 
@@ -113,7 +113,7 @@ Definir a propriedade **Rows** como **3** criará espaços reservados de linha a
 
 ![](table-images/prototype-rows2.png "The prototype rows in the designer")
 
-Para preencher uma tabela com tipos de linha diferentes, use o método `SetRowTypes` para especificar o tipo de controlador de linha a ser usado para cada linha na tabela. Use os identificadores da linha para especificar qual controlador de linha deve ser usado para cada linha.
+Para preencher uma tabela com tipos de linha diferentes, use o `SetRowTypes` método para especificar o tipo de controlador de linha a ser usado para cada linha na tabela. Use os identificadores da linha para especificar qual controlador de linha deve ser usado para cada linha.
 
 O número de elementos nesta matriz deve corresponder ao número de linhas que você espera que estejam na tabela:
 
@@ -153,7 +153,7 @@ Para habilitar esse recurso, selecione o `WKInterfaceTable` na superfície de de
 
 Conforme [explicado pela Apple,](https://developer.apple.com/reference/watchkit/wkinterfacetable#1682023) a navegação de tabela deve usar continuações para que o recurso de paginação funcione. Reescreva qualquer código existente que use `PushController` para usar continuações em vez disso.
 
-<a name="add_row_controller" />
+<a name="add_row_controller"></a>
 
 ## <a name="appendix-row-controller-code-example"></a>Apêndice: exemplo de código do controlador de linha
 
@@ -176,7 +176,7 @@ namespace WatchTablesExtension
 }
 ```
 
-O outro arquivo **. designer.cs** é uma definição de classe parcial que contém as saídas e as ações que são criadas na superfície do designer, como este exemplo com um controle de `WKInterfaceLabel`:
+O outro arquivo **. designer.cs** é uma definição de classe parcial que contém as saídas e as ações que são criadas na superfície do designer, como este exemplo com um `WKInterfaceLabel` controle:
 
 ```csharp
 using Foundation;

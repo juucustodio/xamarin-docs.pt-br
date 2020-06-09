@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 788df5f27066d0d8d1f672d82e94a06ddf5e0916
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139809"
+Título: "parte 2. Sintaxe XAML essencial "Descrição:" Este artigo explica os recursos de sintaxe XAML essenciais dos elementos de propriedade e das propriedades anexadas. "
+MS. Prod: xamarin MS. AssetID: 4022F1DC-3802-4635-A553-688ABD3F0D5A MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/25/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintaxe essencial do XAML
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
@@ -526,7 +512,7 @@ Essa é a maneira padrão de definir uma propriedade dependente de plataforma `P
 ```
 
 > [!NOTE]
-> A `OnPlatform` extensão de marcação também pode ser usada em XAML para personalizar a aparência da interface do usuário em uma base por plataforma. Ele fornece a mesma funcionalidade das `OnPlatform` classes e `On` , mas com uma representação mais concisa. Para obter mais informações, consulte [extensão de marcação do onplatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
+> A `OnPlatform` extensão de marcação também pode ser usada em XAML para personalizar a aparência da interface do usuário em uma base por plataforma. Ele fornece a mesma funcionalidade das `OnPlatform` classes e `On` , mas com uma representação mais concisa. Para obter mais informações, consulte [extensão de marcação do onplatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension).
 
 ## <a name="summary"></a>Resumo
 

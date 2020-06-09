@@ -6,18 +6,18 @@ ms.assetid: E587F0CF-7C1D-41F8-B5A8-DA3E738EDA81
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 23ef499005994c33586e1918ac3b2a9d28640d04
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: df042521d4e9852d6e23c2bbdf24484f9068250d
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030283"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571253"
 ---
 # <a name="accessibility-in-xamarin-apps"></a>Acessibilidade em aplicativos Xamarin
 
 _Certifique-se de que seus aplicativos sejam utilizáveis pelo público mais amplo possível_
 
-Acessibilidade refere-se ao conceito de criação de interfaces de usuário de aplicativo que funcionam bem com recursos de assistência de entrada e de exibição do sistema operacional, como tipo grande, alto contraste, zoom, leitura de tela (conversão de texto em fala), indicações de comentários Visual ou Haptic e métodos de entrada alternativos.
+Acessibilidade refere-se ao conceito de criação de interfaces do usuário do aplicativo que funcionam bem com recursos de entrada e de exibição do sistema operacional, como tipo grande, alto contraste, zoom, leitura de tela (conversão de texto em fala), indicações de comentários Visual ou Haptic e métodos de entrada alternativos.
 
 As plataformas desktop e móvel, como iOS, Android e Windows, fornecem APIs internas que ajudam os desenvolvedores a criarem aplicativos acessíveis, como o [Google Talkback](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) e o [VoiceOver da Apple](https://www.apple.com/accessibility/ios/voiceover/).
 
@@ -30,7 +30,7 @@ Para implementar as diretrizes deste documento, use as APIs fornecidas por cada 
 - [**Acessibilidade do OS X**](~/mac/app-fundamentals/accessibility.md)
 - [**Xamarin. Forms**](~/xamarin-forms/app-fundamentals/accessibility/index.md)
 
-<a name="checklist" />
+<a name="checklist"></a>
 
 ## <a name="accessibility-checklist"></a>Lista de verificação de acessibilidade
 
@@ -74,4 +74,4 @@ Descrições de acessibilidade podem (e devem) ser localizadas onde o aplicativo
 - [Acessibilidade do Android](~/android/app-fundamentals/accessibility.md)
 - [Acessibilidade do iOS](~/ios/app-fundamentals/accessibility.md)
 - [Acessibilidade do OS X](~/mac/app-fundamentals/accessibility.md)
-- [Acessibilidade do Xamarin. Forms](~/xamarin-forms/app-fundamentals/accessibility/index.md)
+- [Acessibilidade do Xamarin.Forms](~/xamarin-forms/app-fundamentals/accessibility/index.md)

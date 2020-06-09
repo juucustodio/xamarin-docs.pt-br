@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsChamada
-description: Este artigo explica como usar a Xamarin.Forms classe Label para exibir texto único e de várias linhas em aplicativos.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 46ea0afd3df0490837eb00b837158a26c1e4e479
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136156"
+Título: " Xamarin.Forms rótulo" Descrição: "Este artigo explica como usar a Xamarin.Forms classe Label para exibir texto único e de várias linhas em aplicativos".
+MS. Prod: xamarin MS. AssetID: 02E6C553-5670-49A0-8EE9-5153ED21EA91 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/09/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-label"></a>Xamarin.FormsChamada
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
@@ -54,7 +40,7 @@ As capturas de tela a seguir mostram os `TextDecorations` membros de enumeraçã
 ![Rótulos com decorações de texto](label-images/label-textdecorations.png)
 
 > [!NOTE]
-> As decorações de texto também podem ser aplicadas a [`Span`](xref:Xamarin.Forms.Span) instâncias. Para obter mais informações sobre a `Span` classe, consulte [texto formatado](#Formatted_Text).
+> As decorações de texto também podem ser aplicadas a [`Span`](xref:Xamarin.Forms.Span) instâncias. Para obter mais informações sobre a `Span` classe, consulte [texto formatado](#formatted-text).
 
 ## <a name="character-spacing"></a>Espaçamento de caracteres
 
@@ -147,8 +133,6 @@ Para obter mais informações sobre cores, consulte [cores](~/xamarin-forms/user
 
 Para obter mais informações sobre como especificar fontes em um `Label` , consulte [fontes](~/xamarin-forms/user-interface/text/fonts.md).
 
-<a name="Truncation_and_Wrapping" />
-
 ## <a name="truncation-and-wrapping"></a>Truncamento e encapsulamento
 
 Os rótulos podem ser definidos para manipular texto que não caiba em uma linha de várias maneiras, expostos pela `LineBreakMode` propriedade. [`LineBreakMode`](xref:Xamarin.Forms.LineBreakMode)é uma enumeração com os seguintes valores:
@@ -235,8 +219,6 @@ As capturas de tela a seguir mostram um [`Label`](xref:Xamarin.Forms.Label) HTML
 
 > [!IMPORTANT]
 > A exibição de HTML em um [`Label`](xref:Xamarin.Forms.Label) é limitada às marcas HTML com suporte na plataforma subjacente.
-
-<a name="Formatted_Text" />
 
 ## <a name="formatted-text"></a>Texto formatado
 

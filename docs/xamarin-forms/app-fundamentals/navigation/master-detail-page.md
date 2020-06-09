@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsPágina mestre-detalhes
-description: O Xamarin.Forms MasterDetailPage é uma página que gerencia duas páginas de informações relacionadas – uma página mestra que apresenta itens e uma página de detalhes que apresenta detalhes sobre os itens na página mestra. Este artigo explica como usar uma MasterDetailPage e navegar entre suas páginas de informações.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 89b1dedcb6219a32332641550018405abd4b6870
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137807"
+Título: " Xamarin.Forms página mestre-detalhes" Descrição: "o Xamarin.Forms MasterDetailPage é uma página que gerencia duas páginas de informações relacionadas – uma página mestra que apresenta itens e uma página de detalhes que apresenta detalhes sobre os itens na página mestra. Este artigo explica como usar um MasterDetailPage e navegar entre suas páginas de informações. "
+MS. Prod: xamarin MS. AssetID: 119945E3-58B8-4630-A3D2-8B561529D53B MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/01/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-master-detail-page"></a>Xamarin.FormsPágina mestre-detalhes
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
@@ -51,11 +37,11 @@ O comportamento da experiência de navegação entre páginas mestras e de detal
 
 - No iOS, a página de detalhes *desliza* para a direita enquanto a página mestra desliza para a esquerda e a parte esquerda da página de detalhes ainda está visível.
 - No Android, as páginas mestras e de detalhes são *sobrepostas* umas às outras.
-- No UWP, a página mestra desliza da esquerda sobre parte da página de detalhes, desde que a [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) Propriedade esteja definida como `Popover` . Para obter mais informações, confira [Controlando o comportamento de exibição da página de detalhes](#Controlling_the_Detail_Page_Display_Behavior).
+- No UWP, a página mestra desliza da esquerda sobre parte da página de detalhes, desde que a [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) Propriedade esteja definida como `Popover` . Para obter mais informações, confira [Controlando o comportamento de exibição da página de detalhes](#controlling-the-detail-page-display-behavior).
 
 Um comportamento semelhante será observado no modo paisagem, exceto que a página mestra no iOS e no Android tem uma largura semelhante à da página mestra no modo retrato; portanto, mais coisas da página de detalhes ficarão visíveis.
 
-Para saber como controlar o comportamento de navegação, confira [Controlling the Detail Page Display Behavior](#Controlling_the_Detail_Page_Display_Behavior) (Controlando o comportamento de exibição da página de detalhes).
+Para saber como controlar o comportamento de navegação, confira [Controlling the Detail Page Display Behavior](#controlling-the-detail-page-display-behavior) (Controlando o comportamento de exibição da página de detalhes).
 
 ## <a name="creating-a-masterdetailpage"></a>Criando um MasterDetailPage
 
@@ -249,8 +235,6 @@ O método `OnItemSelected` executa as seguintes ações:
 As capturas de tela a seguir mostram a página de detalhes `ContactPage`, mostrada depois que ela for selecionada na página mestra:
 
 ![](master-detail-page-images/detailpage.png "Detail Page Example")
-
-<a name="Controlling_the_Detail_Page_Display_Behavior" />
 
 ### <a name="controlling-the-detail-page-display-behavior"></a>Controle do comportamento de exibição da página de detalhes
 

@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 4833d8a03649341cb5c6d9f2692410b89e6cea4c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 9f4e88cdc04431660376b885faef0a855e14efc2
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021829"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572111"
 ---
 # <a name="text-input-in-xamarinios"></a>Entrada de texto no Xamarin. iOS
 
-A aceitação da entrada de texto de usuário é realizada com a `UITextField` para entradas de linha única e UITextView para texto editável de várias linhas. Você pode arrastar um desses controles para uma tela e clicar duas vezes para definir o texto inicial.
+A aceitação da entrada de texto de usuário é realizada com o `UITextField` para entradas de linha única e UITextView para texto editável de várias linhas. Você pode arrastar um desses controles para uma tela e clicar duas vezes para definir o texto inicial.
 
 As capturas de tela abaixo mostram os ícones para esses controles, localizados no painel caixa de ferramentas no Visual Studio para Mac:
 
@@ -24,13 +24,13 @@ As capturas de tela abaixo mostram os ícones para esses controles, localizados 
 
  [![](text-input-images/image13a.png "UITextView")](text-input-images/image13a.png#lightbox)
 
-Depois de ter nomeado a tomada e salvo o arquivo de storyboard, Visual Studio para Mac atualizará a `.designer.cs` classe parcial e você poderá C# adicionar um código que referencie o controle em seu arquivo de classe. Cada controle tem suas próprias propriedades e eventos exclusivos que podem ser acessados C# em seu código.
+Depois de ter nomeado a tomada e salvo o arquivo de storyboard, Visual Studio para Mac atualizará a `.designer.cs` classe parcial e você poderá adicionar código C# que referencia o controle ao seu arquivo de classe. Cada controle tem suas próprias propriedades e eventos exclusivos que podem ser acessados em seu código C#.
 
- <a name="UITextField" />
+ <a name="UITextField"></a>
 
 ## <a name="uitextfield"></a>UITextField
 
-O controle de `UITextField` é usado com mais frequência para aceitar uma única linha de entrada de texto, como um nome de usuário ou senha. Algumas das opções disponíveis para personalizar o controle são mostradas aqui:
+O `UITextField` controle é usado com mais frequência para aceitar uma única linha de entrada de texto, como um nome de usuário ou senha. Algumas das opções disponíveis para personalizar o controle são mostradas aqui:
 
  [![](text-input-images/image15a.png "UITextField Properties")](text-input-images/image15a.png#lightbox)
 
@@ -46,7 +46,7 @@ Esses controles são explicados abaixo:
 - **Chave de retorno** – altere o rótulo na chave de retorno para refletir melhor qual ação será tomada. Os valores com suporte incluem Go, junção, avançar, rota, concluído e pesquisa.
 - **Seguro** – identifica se a entrada é mascarada (por exemplo, para uma entrada de senha).
 
-Se um UITextField chamado `textfield1` tiver sido adicionado a uma tela com o designer, você poderá definir ou alterar suas propriedades no C# da seguinte maneira:
+Se um UITextField chamado `textfield1` tiver sido adicionado a uma tela com o designer, você poderá definir ou alterar suas propriedades em C# da seguinte maneira:
 
 ```csharp
 textfield1.Placeholder = "type email here...";
@@ -56,11 +56,11 @@ textfield1.MinimumFontSize = 17f;
 textfield1.AdjustsFontSizeToFitWidth = true;
 ```
 
-O Xamarin. iOS fornece enumerações quando apropriado para facilitar a seleção das configurações desejadas, como a `UIKeyboardType` e `UIReturnKeyType` no trecho de código acima.
+O Xamarin. iOS fornece enumerações quando apropriado para facilitar a seleção das configurações desejadas, como `UIKeyboardType` e `UIReturnKeyType` no trecho de código acima.
 
 ### <a name="display-text-programmatically"></a>Exibir texto programaticamente
 
-Se você não quiser projetar sua tela com o designer ou se desejar adicionar dinamicamente algum texto em tempo de execução, poderá criar e exibir um UITextField programaticamente no método de `ViewDidLoad` de um controlador de exibição como este:
+Se você não quiser projetar sua tela com o designer ou se desejar adicionar dinamicamente algum texto em tempo de execução, poderá criar e exibir um UITextField programaticamente no `ViewDidLoad` método de um controlador de exibição como este:
 
 ```csharp
 var frame = new CGRect(10, 10, 300, 40);
@@ -68,11 +68,11 @@ textfield1 = new UITextField(frame);
 View.Add(textfield1);
 ```
 
- <a name="UITextView" />
+ <a name="UITextView"></a>
 
 ## <a name="uitextview"></a>UITextView
 
-O controle de `UITextView` pode ser usado para exibir texto somente leitura ou para aceitar a entrada de texto de várias linhas. Ele tem muitas das mesmas opções que o `UITextField` (como capitalização, correção, etc.).
+O `UITextView` controle pode ser usado para exibir texto somente leitura ou para aceitar a entrada de texto de várias linhas. Ele tem muitas das mesmas opções que o `UITextField` (como capitalização, correção, etc.).
 
  [![](text-input-images/image16a.png "UITextView Properties")](text-input-images/image16a.png#lightbox)
 

@@ -7,20 +7,20 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 2b8fede37354fd8a899a14c0710bf46e5a82b86a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 007d835b71c16a51cf5f6aca3c9fe1edd5be0034
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73026197"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572384"
 ---
 # <a name="storyboards-in-xamarinmac-quick-start"></a>Storyboards no Xamarin. Mac – Início Rápido
 
-Como uma rápida introdução ao uso de storyboards para definir uma interface do usuário do aplicativo Xamarin. Mac, vamos iniciar um novo projeto Xamarin. Mac. Selecione **Aplicativo** > **Mac** > **Aplicativo Cocoa** e clique no botão **Avançar**:
+Como uma rápida introdução ao uso de storyboards para definir uma interface do usuário do aplicativo Xamarin. Mac, vamos iniciar um novo projeto Xamarin. Mac. Selecione aplicativo **Mac**  >  **App**  >  **Cocoa app** e clique no botão **Avançar** :
 
 [![](quickstart-images/qs01.png "Adding a new Cocoa App")](quickstart-images/qs01.png#lightbox)
 
-Use o **nome do aplicativo** de `MacStoryboard` e clique no botão **Avançar** :
+Use o **nome** do aplicativo `MacStoryboard` e clique no botão **Avançar** :
 
 [![](quickstart-images/qs02.png "Setting the App Name")](quickstart-images/qs02.png#lightbox)
 
@@ -28,7 +28,7 @@ Use o nome do **projeto** padrão e o **nome da solução** e clique no botão *
 
 [![](quickstart-images/qs03.png "The project and solution names")](quickstart-images/qs03.png#lightbox)
 
-No **Gerenciador de soluções**, clique duas vezes no arquivo `Main.storyboard` para abri-lo para edição no interface Builder do Xcode:
+No **Gerenciador de soluções**, clique duas vezes no `Main.storyboard` arquivo para abri-lo para edição no interface Builder do Xcode:
 
 [![](quickstart-images/qs04.png "Editing the storyboard in Xcode")](quickstart-images/qs04.png#lightbox)
 
@@ -60,7 +60,7 @@ Se retornarmos para Visual Studio para Mac e executar o projeto, observe que a e
 
 [![](quickstart-images/qs10.png "An example of the app running")](quickstart-images/qs10.png#lightbox)
 
-Como vamos usar o lado direito do modo de exibição de divisão como uma área de Inspetor, queremos que ele tenha um tamanho menor e permitir que ele seja recolhido. Retorne ao Xcode e edite o modo de exibição do lado direito selecionando-o na Design Surface e clicando no **Inspetor de tamanho**. Aqui, insira uma **largura** de `250`:
+Como vamos usar o lado direito do modo de exibição de divisão como uma área de Inspetor, queremos que ele tenha um tamanho menor e permitir que ele seja recolhido. Retorne ao Xcode e edite o modo de exibição do lado direito selecionando-o na Design Surface e clicando no **Inspetor de tamanho**. A partir daqui, insira uma **largura** de `250` :
 
 [![](quickstart-images/qs11.png "Setting the width")](quickstart-images/qs11.png#lightbox)
 
@@ -72,7 +72,7 @@ Se retornarmos para Visual Studio para Mac e executar o projeto agora, observe q
 
 [![](quickstart-images/qs13.png "An example of the app running")](quickstart-images/qs13.png#lightbox)
 
-<a name="Defining-a-Presentation-Segue" />
+<a name="Defining-a-Presentation-Segue"></a>
 
 ## <a name="defining-a-presentation-segue"></a>Definindo um transição de apresentação
 
@@ -94,7 +94,7 @@ Se voltarmos para Visual Studio para Mac, execute o aplicativo e clique no botã
 
 [![](quickstart-images/qs17.png "An example of the segue running")](quickstart-images/qs17.png#lightbox)
 
-<a name="Creating-App-Preferences" />
+<a name="Creating-App-Preferences"></a>
 
 ## <a name="creating-app-preferences"></a>Criando preferências de aplicativo
 
@@ -120,7 +120,7 @@ Se salvarmos nossas alterações, retorne para Visual Studio para Mac, execute o
 
 [![](quickstart-images/qs22.png "An example of the segue running")](quickstart-images/qs22.png#lightbox)
 
-Você pode observar que isso não se parece com uma janela de diálogo de preferência de aplicativo macOS padrão. Para corrigir isso, inclua dois arquivos de imagem na pasta `Resources` do aplicativo Xamarin. Mac no **Gerenciador de soluções** e retorne ao interface Builder do Xcode.
+Você pode observar que isso não se parece com uma janela de diálogo de preferência de aplicativo macOS padrão. Para corrigir isso, inclua dois arquivos de imagem na pasta do aplicativo Xamarin. Mac `Resources` na **Gerenciador de soluções** e retorne ao interface Builder do Xcode.
 
 Selecione o controlador de exibição de guia e mude seu **estilo** para **barra de ferramentas**: 
 

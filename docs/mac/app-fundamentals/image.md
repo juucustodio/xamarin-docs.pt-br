@@ -1,41 +1,41 @@
 ---
 title: Imagens no Xamarin. Mac
-description: Este artigo aborda como trabalhar com imagens e ícones em um aplicativo Xamarin. Mac. Ele descreve a criação e a manutenção das imagens necessárias para criar o ícone do aplicativo e usar imagens C# no interface Builder do código e do Xcode.
+description: Este artigo aborda como trabalhar com imagens e ícones em um aplicativo Xamarin. Mac. Ele descreve a criação e a manutenção das imagens necessárias para criar o ícone do aplicativo e o uso de imagens no código C# e no Interface Builder do Xcode.
 ms.prod: xamarin
 ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
 ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 233d4429915530dcb44013a9b4ab82cfe7656977
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b6681832ce83bbc2783ba874c5902c30013c8c94
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030144"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572421"
 ---
 # <a name="images-in-xamarinmac"></a>Imagens no Xamarin. Mac
 
-_Este artigo aborda como trabalhar com imagens e ícones em um aplicativo Xamarin. Mac. Ele descreve a criação e a manutenção das imagens necessárias para criar o ícone do aplicativo e usar imagens C# no interface Builder do código e do Xcode._
+_Este artigo aborda como trabalhar com imagens e ícones em um aplicativo Xamarin. Mac. Ele descreve a criação e a manutenção das imagens necessárias para criar o ícone do aplicativo e o uso de imagens no código C# e no Interface Builder do Xcode._
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
-Ao trabalhar com C# o e o .net em um aplicativo Xamarin. Mac, você tem acesso às mesmas ferramentas de imagem e ícone que um desenvolvedor trabalhando no *Objective-C* e no *Xcode* .
+Ao trabalhar com C# e .NET em um aplicativo Xamarin. Mac, você tem acesso às mesmas ferramentas de imagem e ícone que um desenvolvedor trabalhando no *Objective-C* e no *Xcode* .
 
-Há várias maneiras de os ativos de imagem serem usados dentro de um aplicativo macOS (anteriormente conhecido como Mac OS X). De simplesmente exibir uma imagem como parte da interface do usuário do seu aplicativo para o, atribuí-la a um controle de interface do usuário, como uma barra de ferramentas ou um item de lista de origem, para fornecer ícones, o Xamarin. Mac facilita a adição de um grande trabalho artístico aos seus aplicativos macOS das seguintes maneiras : 
+Há várias maneiras de os ativos de imagem serem usados dentro de um aplicativo macOS (anteriormente conhecido como Mac OS X). De simplesmente exibir uma imagem como parte da interface do usuário do seu aplicativo para o, atribuí-la a um controle de interface do usuário, como uma barra de ferramentas ou um item de lista de origem, para fornecer ícones, o Xamarin. Mac facilita a adição de um grande trabalho artístico aos seus aplicativos macOS das seguintes maneiras: 
 
-- **Elementos de interface do usuário** -as imagens podem ser exibidas como planos de fundo ou como parte de seu aplicativo em uma exibição de imagem (`NSImageView`).
-- As imagens de **botão** podem ser exibidas em botões (`NSButton`).
-- **Célula de imagem** -como parte de um controle baseado em tabela (`NSTableView` ou `NSOutlineView`), as imagens podem ser usadas em uma célula de imagem (`NSImageCell`).
-- **Item de barra de ferramentas** -as imagens podem ser adicionadas a uma barra de ferramentas (`NSToolbar`) como um item de barra de ferramentas de imagem (`NSToolbarItem`).
-- **Ícone de lista de origem** – como parte de uma lista de origem (um `NSOutlineView` especialmente formatado).
-- **Ícone do aplicativo** – uma série de imagens pode ser agrupada em um conjunto de `.icns` e usada como o ícone do seu aplicativo. Consulte a documentação do [ícone do aplicativo](~/mac/deploy-test/app-icon.md) para obter mais informações.
+- **Elementos de interface do usuário** -as imagens podem ser exibidas como planos de fundo ou como parte de seu aplicativo em uma exibição de imagem ( `NSImageView` ).
+- As imagens de **botão** podem ser exibidas em botões ( `NSButton` ).
+- **Célula de imagem** -como parte de um controle baseado em tabela ( `NSTableView` ou `NSOutlineView` ), as imagens podem ser usadas em uma célula de imagem ( `NSImageCell` ).
+- **Item de barra de ferramentas** -imagens podem ser adicionadas a uma barra de ferramentas ( `NSToolbar` ) como um item de barra de ferramentas de imagem ( `NSToolbarItem` ).
+- **Ícone da lista de origem** – como parte de uma lista de origem (especialmente formatada `NSOutlineView` ).
+- **Ícone do aplicativo** – uma série de imagens pode ser agrupada em um `.icns` conjunto e usada como o ícone do seu aplicativo. Consulte a documentação do [ícone do aplicativo](~/mac/deploy-test/app-icon.md) para obter mais informações.
 
 Além disso, o macOS fornece um conjunto de imagens predefinidas que podem ser usadas em todo o seu aplicativo.
 
 [![Um exemplo de execução do aplicativo](image-images/intro01.png "Um exemplo de execução do aplicativo")](image-images/intro01-large.png#lightbox)
 
-Neste artigo, abordaremos as noções básicas de como trabalhar com imagens e ícones em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos em Este artigo.
+Neste artigo, abordaremos as noções básicas de como trabalhar com imagens e ícones em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos neste artigo.
 
 ## <a name="adding-images-to-a-xamarinmac-project"></a>Adicionando imagens a um projeto Xamarin. Mac
 
@@ -43,10 +43,10 @@ Ao adicionar uma imagem para uso em um aplicativo Xamarin. Mac, há vários loca
 
 - **Árvore de projeto principal [preterido]** -as imagens podem ser adicionadas diretamente à árvore de projetos. Ao chamar imagens armazenadas na árvore de projeto principal do código, nenhum local de pasta é especificado. Por exemplo: `NSImage image = NSImage.ImageNamed("tags.png");`. 
 - **Pasta de recursos [preterido]** – a pasta de **recursos** especiais é para qualquer arquivo que se tornará parte do pacote do aplicativo, como ícone, tela de inicialização ou imagens gerais (ou qualquer outra imagem ou arquivo que o desenvolvedor deseja adicionar). Ao chamar imagens armazenadas na pasta de **recursos** do código, assim como as imagens armazenadas na árvore de projeto principal, nenhum local de pasta é especificado. Por exemplo: `NSImage.ImageNamed("tags.png")`.
-- **Pasta personalizada ou subpasta [preterido]** -o desenvolvedor pode adicionar uma pasta personalizada à árvore de origem de projetos e armazenar as imagens nela. O local onde o arquivo é adicionado pode ser aninhado em uma subpasta para ajudar a organizar o projeto. Por exemplo, se o desenvolvedor adicionou uma pasta `Card` ao projeto e uma subpasta de `Hearts` a essa pasta, armazene um conector de imagem **. png** na pasta `Hearts`, `NSImage.ImageNamed("Card/Hearts/Jack.png")` carregaria a imagem em tempo de execução.
+- **Pasta personalizada ou subpasta [preterido]** -o desenvolvedor pode adicionar uma pasta personalizada à árvore de origem de projetos e armazenar as imagens nela. O local onde o arquivo é adicionado pode ser aninhado em uma subpasta para ajudar a organizar o projeto. Por exemplo, se o desenvolvedor adicionou uma `Card` pasta ao projeto e uma subpasta do `Hearts` a essa pasta, armazene um conector de imagem **. png** na `Hearts` pasta, `NSImage.ImageNamed("Card/Hearts/Jack.png")` carregaria a imagem em tempo de execução.
 - **Conjuntos de imagens do catálogo de ativos [preferencial]** -adicionado no os X El Capitan, os **conjuntos de imagens de catálogos de ativos** contêm todas as versões ou representações de uma imagem que são necessárias para dar suporte a vários dispositivos e fatores de escala para seu aplicativo. Em vez de depender do nome de arquivo de ativos de imagem ( **@1x** , **@2x** ).
 
-<a name="asset-catalogs" />
+<a name="asset-catalogs"></a>
 
 ### <a name="adding-images-to-an-asset-catalog-image-set"></a>Adicionando imagens a um conjunto de imagens do catálogo de ativos
 
@@ -66,15 +66,15 @@ Como mencionado acima, os **conjuntos de imagens de catálogos de ativos** cont�
 
     [![Editando o nome do conjunto de imagens](image-images/imageset04.png "Editando o nome do conjunto de imagens")](image-images/imageset04-large.png#lightbox)
     
-Uma classe de **vetor** especial, como adicionada a **conjuntos de imagens** que nos permite incluir uma imagem de vetor formatada em _PDF_ no Casset, em vez disso, incluindo arquivos de bitmap individuais em resoluções diferentes. Usando esse método, você fornece um único arquivo de vetor para a resolução de **@1x** (formatada como um arquivo PDF vetorial) e as versões **@2x** e **@3x** do arquivo serão geradas no momento da compilação e incluídas no pacote do aplicativo .
+Uma classe de **vetor** especial, como adicionada a **conjuntos de imagens** que nos permite incluir uma imagem de vetor formatada em _PDF_ no Casset, em vez disso, incluindo arquivos de bitmap individuais em resoluções diferentes. Usando esse método, você fornece um único arquivo de vetor para a **@1x** resolução (formatado como um arquivo PDF vetorial) e **@2x** as **@3x** versões e do arquivo serão geradas no momento da compilação e incluídas no pacote do aplicativo.
 
 [![A interface do editor de conjunto de imagens](image-images/imageset05.png "A interface do editor de conjunto de imagens")](image-images/imageset05-large.png#lightbox)
 
-Por exemplo, se você incluir um arquivo de `MonkeyIcon.pdf` como o vetor de um catálogo de ativos com uma resolução de 150px x 150px, os seguintes ativos de bitmap seriam incluídos no pacote de aplicativo final quando ele foi compilado:
+Por exemplo, se você incluir um `MonkeyIcon.pdf` arquivo como o vetor de um catálogo de ativos com uma resolução de 150px x 150px, os seguintes ativos de bitmap seriam incluídos no pacote de aplicativo final quando ele foi compilado:
 
-1. resolução de 150px x 150px. **MonkeyIcon@1x.png**
-2. resolução de 300px x 300px. **MonkeyIcon@2x.png**
-3. resolução de 450px x 450px. **MonkeyIcon@3x.png**
+1. **MonkeyIcon@1x.png**-resolução de 150px x 150px.
+2. **MonkeyIcon@2x.png**-resolução de 300px x 300px.
+3. **MonkeyIcon@3x.png**-resolução de 450px x 450px.
 
 O seguinte deve ser levado em consideração ao usar imagens de vetor de PDF em catálogos de ativos:
 
@@ -85,7 +85,7 @@ Ao usar um **conjunto de imagens** no interface Builder do Xcode, você pode sim
 
 ![Selecionando um conjunto de imagens no Interface Builder do Xcode](image-images/imageset06.png "Selecionando um conjunto de imagens no Interface Builder do Xcode")
 
-<a name="Adding-new-Assets-Collections"/>
+<a name="Adding-new-Assets-Collections"></a>
 
 ### <a name="adding-new-assets-collections"></a>Adicionando novas coleções de ativos
 
@@ -93,8 +93,8 @@ Ao trabalhar com imagens em catálogos de ativos, pode haver ocasiões em que vo
 
 Para adicionar um novo catálogo de ativos ao seu projeto:
 
-1. Clique com o botão direito do mouse no projeto na **painel de soluções** e selecione **Adicionar**  > **novo arquivo...**
-2. Selecione **Mac**  > **Catálogo de ativos**, insira um **nome** para a coleção e clique no botão **novo** : 
+1. Clique com o botão direito do mouse no projeto na **painel de soluções** e selecione **Adicionar**  >  **novo arquivo...**
+2. Selecione **Mac**  >  **Catálogo de ativos**do Mac, insira um **nome** para a coleção e clique no botão **novo** : 
 
     ![Adicionando um novo catálogo de ativos](image-images/asset01.png "Adicionando um novo catálogo de ativos")
 
@@ -105,9 +105,9 @@ A partir daqui, você pode trabalhar com a coleção da mesma maneira que a cole
 > [!IMPORTANT]
 > Esse método de trabalhar com imagens em um aplicativo macOS foi preterido pela Apple. Você deve usar os [conjuntos de imagens do catálogo de ativos](#asset-catalogs) para modelar as imagens do aplicativo.
 
-Antes de usar um arquivo de imagem em seu aplicativo Xamarin. Mac (no C# código ou a partir de interface Builder), ele precisa ser incluído na pasta **recursos** do projeto como um **recurso de pacote**. Para adicionar um arquivo a um projeto, faça o seguinte:
+Antes de usar um arquivo de imagem em seu aplicativo Xamarin. Mac (em código C# ou de Interface Builder), ele precisa ser incluído na pasta **recursos** do projeto como um recurso de **pacote**. Para adicionar um arquivo a um projeto, faça o seguinte:
 
-1. Clique com o botão direito do mouse na pasta **recursos** em seu projeto na **painel de soluções** e selecione **Adicionar**  > **Adicionar arquivos...** : 
+1. Clique com o botão direito do mouse na pasta **recursos** em seu projeto na **painel de soluções** e selecione **Adicionar**  >  **Adicionar arquivos...**: 
 
     ![Adicionando um arquivo](image-images/add01.png "Adicionando um arquivo")
 2. Na caixa de diálogo **Adicionar arquivos** , selecione os arquivos de imagens a serem adicionados ao projeto, selecione `BundleResource` para a **ação substituir compilação** e clique no botão **abrir** :
@@ -124,29 +124,29 @@ Antes de usar um arquivo de imagem em seu aplicativo Xamarin. Mac (no C# código
 Você pode usar qualquer arquivo PNG, jpg ou PDF como uma imagem de origem em seu aplicativo Xamarin. Mac. Na próxima seção, veremos como adicionar versões de alta resolução de nossas imagens e ícones para dar suporte a Macs baseados em retina.
 
 > [!IMPORTANT]
-> Se você estiver adicionando imagens à pasta **recursos** , poderá deixar a **ação substituir compilação** definida como **padrão**. A ação de compilação padrão para essa pasta é `BundleResource`.
+> Se você estiver adicionando imagens à pasta **recursos** , poderá deixar a **ação substituir compilação** definida como **padrão**. A ação de compilação padrão para essa pasta é `BundleResource` .
 
 ## <a name="provide-high-resolution-versions-of-all-app-graphics-resources"></a>Fornecer versões de alta resolução de todos os recursos de gráficos do aplicativo
 
 Qualquer ativo gráfico que você adiciona a um aplicativo Xamarin. Mac (ícones, controles personalizados, cursores personalizados, arte personalizada, etc.) precisa ter versões de alta resolução, além de suas versões de resolução padrão. Isso é necessário para que seu aplicativo tenha a melhor aparência quando executado em um computador Mac equipado com vídeo de retina.
 
-### <a name="adopt-the-2x-naming-convention"></a>Adotar a Convenção de nomenclatura de @2x
+### <a name="adopt-the-2x-naming-convention"></a>Adote a @2x Convenção de nomenclatura
 
 > [!IMPORTANT]
 > Esse método de trabalhar com imagens em um aplicativo macOS foi preterido pela Apple. Você deve usar os [conjuntos de imagens do catálogo de ativos](#asset-catalogs) para modelar as imagens do aplicativo.
 
 Quando você cria as versões padrão e de alta resolução de uma imagem, siga esta Convenção de nomenclatura para o par de imagens ao incluí-los em seu projeto do Xamarin. Mac:
 
-- **Resolução padrão**   - **ImageName. FileName-Extension** (exemplo: **Tags. png**)
-- **ImageName@2x.filename-extension** **de  - de alta resolução** (exemplo: **tags@2x.png** )
+- **Resolução padrão**   -  **ImageName. FileName-Extension** (exemplo: **Tags. png**)
+- **Alta resolução**   -  **ImageName@2x.filename-extension** (Exemplo: **tags@2x.png** )
 
 Quando adicionados a um projeto, eles seriam exibidos da seguinte maneira:
 
 ![Os arquivos de imagem no Painel de Soluções](image-images/add03.png "Os arquivos de imagem no Painel de Soluções")
 
-Quando uma imagem é atribuída a um elemento de interface do usuário no Interface Builder você simplesmente escolhe o arquivo no _ImageName_ **.** _nome do arquivo-_ formato da extensão (exemplo: **Tags. png**). O mesmo para usar uma imagem no C# código, você escolherá o arquivo no _ImageName_ **.** _nome do arquivo-_ formato da extensão.
+Quando uma imagem é atribuída a um elemento de interface do usuário no Interface Builder você simplesmente escolhe o arquivo no _ImageName_**.** _nome do arquivo-_ formato da extensão (exemplo: **Tags. png**). O mesmo para usar uma imagem no código C#, você escolherá o arquivo no _ImageName_**.** _nome do arquivo-_ formato da extensão.
 
-Quando o aplicativo Xamarin. Mac é executado em um Mac, o _ImageName_ **.** o _nome de arquivo-imagem de_ formato de extensão será usado nas exibições de resolução padrão, a **ImageName@2x.filename-extension** imagem será automaticamente selecionada na tela de exibição da retina com Macs.
+Quando o aplicativo Xamarin. Mac é executado em um Mac, o _ImageName_**.** o _nome de arquivo-imagem de_ formato de extensão será usado em exibições de resolução padrão, a **ImageName@2x.filename-extension** imagem será automaticamente selecionada na tela de exibição da retina com Macs.
 
 ## <a name="using-images-in-interface-builder"></a>Usando imagens no Interface Builder
 
@@ -154,7 +154,7 @@ Qualquer recurso de imagem que você adicionou à pasta **Resources** em seu pro
 
 Para usar uma imagem no construtor de interface, faça o seguinte:
 
-1. Adicione uma imagem à pasta de **recursos** com uma **ação de compilação** de `BundleResource`: 
+1. Adicione uma imagem à pasta de **recursos** com uma **ação de compilação** de `BundleResource` : 
 
      ![Um recurso de imagem no Painel de Soluções](image-images/ib00.png "Um recurso de imagem no Painel de Soluções")
 2. Clique duas vezes no arquivo **Main. Storyboard** para abri-lo para edição no interface Builder: 
@@ -171,20 +171,20 @@ Para usar uma imagem no construtor de interface, faça o seguinte:
      ![A imagem que está sendo exibida no editor de barra de ferramentas](image-images/ib04.png "A imagem que está sendo exibida no editor de barra de ferramentas")
 6. Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
-As etapas acima funcionam para qualquer elemento de interface do usuário que permita que sua propriedade de imagem seja definida no **Inspetor de atributo**. Novamente, se você tiver incluído uma versão **@2x** do arquivo de imagem, ela será usada automaticamente em Macs com base em exibição de retina.
+As etapas acima funcionam para qualquer elemento de interface do usuário que permita que sua propriedade de imagem seja definida no **Inspetor de atributo**. Novamente, se você tiver incluído uma **@2x** versão do arquivo de imagem, ela será usada automaticamente em Macs com base em tela de retina.
 
 > [!IMPORTANT]
-> Se a imagem não estiver disponível na lista suspensa **nome da imagem** , feche o projeto. Storyboard no Xcode e reabra-o em Visual Studio para Mac. Se a imagem ainda não estiver disponível, verifique se sua **ação de compilação** está `BundleResource` e se a imagem foi adicionada à pasta **recursos** .
+> Se a imagem não estiver disponível na lista suspensa **nome da imagem** , feche o projeto. Storyboard no Xcode e reabra-o em Visual Studio para Mac. Se a imagem ainda não estiver disponível, verifique se sua **ação de compilação** é `BundleResource` e se a imagem foi adicionada à pasta **recursos** .
 
-## <a name="using-images-in-c-code"></a>Usando imagens no C# código
+## <a name="using-images-in-c-code"></a>Usando imagens em código C#
 
-Ao carregar uma imagem na memória usando C# código em seu aplicativo Xamarin. Mac, a imagem será armazenada em um objeto `NSImage`. Se o arquivo de imagem tiver sido incluído no pacote de aplicativos Xamarin. Mac (incluído nos recursos), use o seguinte código para carregar a imagem:
+Ao carregar uma imagem na memória usando código C# em seu aplicativo Xamarin. Mac, a imagem será armazenada em um `NSImage` objeto. Se o arquivo de imagem tiver sido incluído no pacote de aplicativos Xamarin. Mac (incluído nos recursos), use o seguinte código para carregar a imagem:
 
 ```csharp
 NSImage image = NSImage.ImageNamed("tags.png");
 ```
 
-O código acima usa o método estático `ImageNamed("...")` da classe `NSImage` para carregar a imagem específica na memória da pasta **recursos** , se a imagem não puder ser encontrada, `null` será retornado. Assim como as imagens atribuídas no Interface Builder, se você tiver incluído uma versão **@2x** do arquivo de imagem, ela será automaticamente usada em Macs baseados em tela de retina.
+O código acima usa o `ImageNamed("...")` método estático da `NSImage` classe para carregar a imagem fornecida na memória da pasta **recursos** , se a imagem não puder ser encontrada, `null` será retornada. Assim como as imagens atribuídas no Interface Builder, se você tiver incluído uma **@2x** versão do arquivo de imagem, ela será usada automaticamente em Macs baseados em tela de retina.
 
 Para carregar imagens fora do pacote do aplicativo (do sistema de arquivos Mac), use o seguinte código:
 
@@ -192,7 +192,7 @@ Para carregar imagens fora do pacote do aplicativo (do sistema de arquivos Mac),
 NSImage image = new NSImage("/Users/KMullins/Documents/photo.jpg")
 ```
 
-<a name="Working-with-Template-Images"/>
+<a name="Working-with-Template-Images"></a>
 
 ## <a name="working-with-template-images"></a>Trabalhando com imagens de modelo
 
@@ -229,9 +229,9 @@ public NSImage ImageTintedWithColor(NSImage sourceImage, NSColor tintColor)
 ```
 
 > [!IMPORTANT]
-> Especialmente com o advento do modo escuro no macOS Mojave, é importante evitar a API `LockFocus` quando reating objetos de `NSImage` renderizados personalizados. Essas imagens tornam-se estáticas e não serão atualizadas automaticamente para considerar a aparência ou exibir alterações de densidade.
+> Especialmente com o advento do modo escuro no macOS Mojave, é importante evitar a `LockFocus` API quando reating objetos renderizados personalizados `NSImage` . Essas imagens tornam-se estáticas e não serão atualizadas automaticamente para considerar a aparência ou exibir alterações de densidade.
 >
-> Ao empregar o mecanismo baseado em manipulador acima, a rerenderização de condições dinâmicas ocorrerá automaticamente quando o `NSImage` for hospedado, por exemplo, em um `NSImageView`.
+> Ao empregar o mecanismo baseado em manipulador acima, a rerenderização de condições dinâmicas ocorrerá automaticamente quando o `NSImage` for hospedado, por exemplo, em um `NSImageView` .
 
 Por fim, para colorir uma imagem de modelo, chame essa função em relação à imagem para Colorize:
 
@@ -239,11 +239,11 @@ Por fim, para colorir uma imagem de modelo, chame essa função em relação à 
 MyIcon.Image = ImageTintedWithColor (MyIcon.Image, NSColor.Red);
 ```
 
-<a name="Using_Images_with_Table_Views" />
+<a name="Using_Images_with_Table_Views"></a>
 
 ## <a name="using-images-with-table-views"></a>Usando imagens com exibições de tabela
 
-Para incluir uma imagem como parte da célula em um `NSTableView`, você precisará alterar a forma como os dados são retornados pelo método `NSTableViewDelegate's` `GetViewForItem` da exibição de tabela para usar um `NSTableCellView` em vez do `NSTextField` típico. Por exemplo:
+Para incluir uma imagem como parte da célula em um `NSTableView` , você precisará alterar a forma como os dados são retornados pelo método da exibição de tabela `NSTableViewDelegate's` `GetViewForItem` para usar um `NSTableCellView` em vez do típico `NSTextField` . Por exemplo:
 
 ```csharp
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
@@ -302,7 +302,7 @@ public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tabl
 }
 ```
 
-Há algumas linhas de interesse aqui. Primeiro, para colunas que desejamos incluir uma imagem, criamos um novo `NSImageView` do tamanho e do local necessários, também criamos uma nova `NSTextField` e colocamos sua posição padrão com base em se estamos usando ou não uma imagem :
+Há algumas linhas de interesse aqui. Primeiro, para colunas que desejamos incluir uma imagem, criamos um novo `NSImageView` tamanho e local necessários, também criamos uma nova `NSTextField` e colocamos sua posição padrão com base em se estamos usando ou não uma imagem:
 
 ```csharp
 if (tableColumn.Title == "Product") {
@@ -314,7 +314,7 @@ if (tableColumn.Title == "Product") {
 }
 ```
 
-Em segundo lugar, precisamos incluir o novo modo de exibição de imagem e o campo de texto na `NSTableCellView` pai:
+Em segundo lugar, precisamos incluir o novo modo de exibição de imagem e o campo de texto no pai `NSTableCellView` :
 
 ```csharp
 view.AddSubview (view.ImageView);
@@ -337,11 +337,11 @@ Saída de exemplo:
 
 Para obter mais informações sobre como trabalhar com exibições de tabela, consulte a documentação de [exibições de tabela](~/mac/user-interface/table-view.md) .
 
-<a name="Using_Images_with_Outline_Views" />
+<a name="Using_Images_with_Outline_Views"></a>
 
 ## <a name="using-images-with-outline-views"></a>Usando imagens com exibições de estrutura de tópicos
 
-Para incluir uma imagem como parte da célula em um `NSOutlineView`, você precisará alterar a forma como os dados são retornados pelo método `NSTableViewDelegate's` `GetView` do modo de exibição de estrutura de tópicos para usar um `NSTableCellView` em vez do `NSTextField` típico. Por exemplo:
+Para incluir uma imagem como parte da célula em um `NSOutlineView` , você precisará alterar a forma como os dados são retornados pelo método da exibição de estrutura de tópicos `NSTableViewDelegate's` `GetView` para usar um `NSTableCellView` em vez do típico `NSTextField` . Por exemplo:
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {
@@ -405,7 +405,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 }
 ```
 
-Há algumas linhas de interesse aqui. Primeiro, para colunas que desejamos incluir uma imagem, criamos um novo `NSImageView` do tamanho e do local necessários, também criamos uma nova `NSTextField` e colocamos sua posição padrão com base em se estamos usando ou não uma imagem :
+Há algumas linhas de interesse aqui. Primeiro, para colunas que desejamos incluir uma imagem, criamos um novo `NSImageView` tamanho e local necessários, também criamos uma nova `NSTextField` e colocamos sua posição padrão com base em se estamos usando ou não uma imagem:
 
 ```csharp
 if (tableColumn.Title == "Product") {
@@ -417,7 +417,7 @@ if (tableColumn.Title == "Product") {
 }
 ```
 
-Em segundo lugar, precisamos incluir o novo modo de exibição de imagem e o campo de texto na `NSTableCellView` pai:
+Em segundo lugar, precisamos incluir o novo modo de exibição de imagem e o campo de texto no pai `NSTableCellView` :
 
 ```csharp
 view.AddSubview (view.ImageView);
@@ -442,7 +442,7 @@ Para obter mais informações sobre como trabalhar com exibições de estrutura 
 
 ## <a name="summary"></a>Resumo
 
-Este artigo deu uma visão detalhada de como trabalhar com imagens e ícones em um aplicativo Xamarin. Mac. Vimos os diferentes tipos e usos de imagens, como usar imagens e ícones no Interface Builder do Xcode e como trabalhar com imagens e ícones no C# código.
+Este artigo deu uma visão detalhada de como trabalhar com imagens e ícones em um aplicativo Xamarin. Mac. Vimos os diferentes tipos e usos de imagens, como usar imagens e ícones no Interface Builder do Xcode e como trabalhar com imagens e ícones em código C#.
 
 ## <a name="related-links"></a>Links relacionados
 

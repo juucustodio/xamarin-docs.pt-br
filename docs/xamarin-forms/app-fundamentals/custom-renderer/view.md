@@ -1,21 +1,6 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: e565a2bcddf292d37bc3dd07a8edbbabec709d8a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133556"
+Título: "Implementando uma exibição" Descrição: "Este artigo explica como criar um renderizador personalizado para um Xamarin.Forms controle personalizado que é usado para exibir um fluxo de vídeo de visualização da câmera do dispositivo."
+MS. Prod: xamarin MS. AssetID: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 # <a name="implementing-a-view"></a>Implementando uma exibição
 
@@ -31,13 +16,11 @@ O diagrama a seguir ilustra a relação entre o [`View`](xref:Xamarin.Forms.View
 
 O processo de renderização pode ser usado para implementar personalizações específicas da plataforma criando um renderizador personalizado para um [`View`](xref:Xamarin.Forms.View) em cada plataforma. O processo para fazer isso é o seguinte:
 
-1. [Crie](#Creating_the_Custom_Control) um Xamarin.Forms controle personalizado.
-1. [Consuma](#Consuming_the_Custom_Control) o controle personalizado do Xamarin.Forms .
-1. [Criar](#Creating_the_Custom_Renderer_on_each_Platform) o renderizador personalizado para o controle em cada plataforma.
+1. [Crie](#creating-the-custom-control) um Xamarin.Forms controle personalizado.
+1. [Consuma](#consuming-the-custom-control) o controle personalizado do Xamarin.Forms .
+1. [Criar](#creating-the-custom-renderer-on-each-platform) o renderizador personalizado para o controle em cada plataforma.
 
 Agora, cada item será discutido separadamente, a fim de implementar um renderizador `CameraPreview` que exibe um fluxo de vídeo de visualização usando a câmera do dispositivo. Tocar no fluxo de vídeo o interromperá e iniciará.
-
-<a name="Creating_the_Custom_Control" />
 
 ## <a name="creating-the-custom-control"></a>Criando o controle personalizado
 
@@ -60,8 +43,6 @@ public class CameraPreview : View
 ```
 
 O controle personalizado `CameraPreview` é criado no projeto da biblioteca do .NET Standard e define a API para o controle. O controle personalizado expõe uma propriedade `Camera` que é usada para controlar se o fluxo de vídeo deve ser exibido na parte frontal ou traseira da câmera do dispositivo. Se não for especificado um valor para a propriedade `Camera` quando o controle for criado, o comportamento padrão será especificar a câmera traseira.
-
-<a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>Consumindo o controle personalizado
 
@@ -108,8 +89,6 @@ public class MainPageCS : ContentPage
 Uma instância do controle personalizado `CameraPreview` será usada para exibir o fluxo de vídeo de visualização da câmera do dispositivo. Além de, opcionalmente, especificar um valor para a propriedade `Camera`, a personalização do controle será realizada no renderizador personalizado.
 
 Agora, é possível adicionar um renderizador personalizado a cada projeto de aplicativo para criar controles de visualização de câmera específicos da plataforma.
-
-<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>Criando o renderizador personalizado em cada plataforma
 

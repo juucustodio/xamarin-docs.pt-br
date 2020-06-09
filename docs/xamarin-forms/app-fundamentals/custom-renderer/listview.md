@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Um Xamarin.Forms ListView é uma exibição que exibe uma coleção de dados como uma lista vertical. Este artigo demonstra como criar um renderizador personalizado que encapsula os controles de lista e layouts de célula nativa específicos a uma plataforma, permitindo mais controle sobre o desempenho do controle de lista nativo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 3403948c2853289610a73bb36073f09c0c86137d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135298"
+Título: "Personalizando uma ListView" Descrição: "um Xamarin.Forms ListView é uma exibição que exibe uma coleção de dados como uma lista vertical. Este artigo demonstra como criar um renderizador personalizado que encapsula controles de lista específicos da plataforma e layouts de células nativas, permitindo mais controle sobre o desempenho do controle de lista nativa. "
+MS. Prod: xamarin MS. AssetID: 2FBCB8C8-4F32-45E7-954F-63AD29D5F1B5 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 11/29/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="customizing-a-listview"></a>Personalizando uma ListView
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-listview)
@@ -31,13 +17,11 @@ O diagrama a seguir ilustra a relação entre o [`ListView`](xref:Xamarin.Forms.
 
 O processo de renderização pode ser aproveitado para implementar personalizações específicas da plataforma criando um renderizador personalizado para um [`ListView`](xref:Xamarin.Forms.ListView) em cada plataforma. O processo para fazer isso é o seguinte:
 
-1. [Crie](#Creating_the_Custom_ListView_Control) um Xamarin.Forms controle personalizado.
-1. [Consuma](#Consuming_the_Custom_Control) o controle personalizado do Xamarin.Forms .
-1. [Criar](#Creating_the_Custom_Renderer_on_each_Platform) o renderizador personalizado para o controle em cada plataforma.
+1. [Crie](#creating-the-custom-listview-control) um Xamarin.Forms controle personalizado.
+1. [Consuma](#consuming-the-custom-control) o controle personalizado do Xamarin.Forms .
+1. [Criar](#creating-the-custom-renderer-on-each-platform) o renderizador personalizado para o controle em cada plataforma.
 
 Agora, cada item será abordado separadamente, a fim de implementar um renderizador de `NativeListView` que tira proveito dos layouts de célula nativos e dos controles de lista específicos da plataforma. Esse cenário é útil ao portar um aplicativo nativo existente que contém código de lista e de célula pode ser reutilizado. Além disso, ele permite a personalização detalhada de recursos de controle de lista que podem afetar o desempenho, como a virtualização de dados.
-
-<a name="Creating_the_Custom_ListView_Control" />
 
 ## <a name="creating-the-custom-listview-control"></a>Criando o controle ListView personalizado
 
@@ -66,8 +50,6 @@ public class NativeListView : ListView
 ```
 
 A `NativeListView` é criada no projeto da biblioteca .NET Standard e define a API para o controle personalizado. Esse controle expõe uma propriedade `Items` que é usada para popular o `ListView` com os dados e que pode ser associada a dados para fins de exibição. Ele também expõe um evento `ItemSelected` que será disparado sempre que um item for selecionado em um controle de lista nativo específico da plataforma. Para obter mais informações sobre vinculação de dados, veja [Noções básicas de vinculação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
-
-<a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>Consumindo o controle personalizado
 
@@ -142,8 +124,6 @@ O controle personalizado `NativeListView` usa renderizadores personalizados espe
 > Como o `NativeListView` controle personalizado será renderizado usando controles de lista específicos da plataforma que incluem a capacidade de rolagem, o controle personalizado não deve ser hospedado em controles de layout rolável, como o [`ScrollView`](xref:Xamarin.Forms.ScrollView) .
 
 Agora, é possível adicionar um renderizador personalizado a cada projeto de aplicativo para criar layouts de célula nativa e controles de lista específicos da plataforma.
-
-<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>Criando o renderizador personalizado em cada plataforma
 

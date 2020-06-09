@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 943148a642a1dec7e84f74ae96983c21f30319ab
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139263"
+Título: "gerenciamento de configuração" Descrição: "Este capítulo explica como o aplicativo móvel eShopOnContainers implementa o gerenciamento de configuração para fornecer configurações de aplicativo e configurações de usuário".
+MS. Prod: xamarin MS. AssetID: 50d6e780-e768-47F8-9361-3af11e56b87b MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="configuration-management"></a>Gerenciamento de configuração
 
 As configurações permitem a separação de dados que configuram o comportamento de um aplicativo do código, permitindo que o comportamento seja alterado sem recriar o aplicativo. Há dois tipos de configurações: configurações de aplicativo e configurações de usuário.
@@ -25,7 +11,7 @@ As configurações do aplicativo são dados que um aplicativo cria e gerencia. E
 
 As configurações de usuário são as configurações personalizáveis de um aplicativo que afetam o comportamento do aplicativo e não exigem um reajuste frequente. Por exemplo, um aplicativo pode permitir que o usuário especifique para onde recuperar dados e como exibi-los na tela.
 
-Xamarin.Formsinclui um dicionário persistente que pode ser usado para armazenar dados de configurações. Esse dicionário pode ser acessado usando a [`Application.Current.Properties`](xref:Xamarin.Forms.Application.Properties) propriedade, e todos os dados colocados nele são salvos quando o aplicativo entra em um estado de suspensão e é restaurado quando o aplicativo é retomado ou iniciado novamente. Além disso, a [`Application`](xref:Xamarin.Forms.Application) classe também tem um [`SavePropertiesAsync`](xref:Xamarin.Forms.Application.SavePropertiesAsync) método que permite que um aplicativo tenha suas configurações salvas quando necessário. Para obter mais informações sobre esse dicionário, consulte o [dicionário de propriedades](~/xamarin-forms/app-fundamentals/application-class.md#Properties_Dictionary).
+Xamarin.Formsinclui um dicionário persistente que pode ser usado para armazenar dados de configurações. Esse dicionário pode ser acessado usando a [`Application.Current.Properties`](xref:Xamarin.Forms.Application.Properties) propriedade, e todos os dados colocados nele são salvos quando o aplicativo entra em um estado de suspensão e é restaurado quando o aplicativo é retomado ou iniciado novamente. Além disso, a [`Application`](xref:Xamarin.Forms.Application) classe também tem um [`SavePropertiesAsync`](xref:Xamarin.Forms.Application.SavePropertiesAsync) método que permite que um aplicativo tenha suas configurações salvas quando necessário. Para obter mais informações sobre esse dicionário, consulte o [dicionário de propriedades](~/xamarin-forms/app-fundamentals/application-class.md#properties-dictionary).
 
 Uma desvantagem de armazenar dados usando o Xamarin.Forms dicionário persistente é que ele não é vinculado aos dados com facilidade. Portanto, o aplicativo móvel eShopOnContainers usa a biblioteca XAM. plugins. Settings, disponível no [NuGet](https://www.nuget.org/packages/Xam.Plugins.Settings/). Essa biblioteca fornece uma abordagem consistente, de tipo seguro e de plataforma cruzada para persistir e recuperar configurações de aplicativo e de usuário, ao usar o gerenciamento de configurações nativas fornecido por cada plataforma. Além disso, é simples usar a vinculação de dados para acessar os dados de configurações expostos pela biblioteca.
 
@@ -128,7 +114,7 @@ No aplicativo móvel eShopOnContainers, o `SettingsView` expõe duas configuraç
 
 **Figura 7-1**: configurações de usuário expostas pelo aplicativo móvel eShopOnContainers
 
-A ligação de dados pode ser usada para recuperar e definir as configurações expostas pela `Settings` classe. Isso é obtido por controles na associação de modo de exibição para exibir propriedades de modelo que, por sua vez, acessam Propriedades na `Settings` classe, e gerando uma notificação de alteração de propriedade se o valor das configurações tiver sido alterado. Para obter informações sobre como o aplicativo móvel eShopOnContainers constrói modelos de exibição e os associa a exibições, consulte [criando automaticamente um modelo de exibição com um localizador de modelo de exibição](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
+A ligação de dados pode ser usada para recuperar e definir as configurações expostas pela `Settings` classe. Isso é obtido por controles na associação de modo de exibição para exibir propriedades de modelo que, por sua vez, acessam Propriedades na `Settings` classe, e gerando uma notificação de alteração de propriedade se o valor das configurações tiver sido alterado. Para obter informações sobre como o aplicativo móvel eShopOnContainers constrói modelos de exibição e os associa a exibições, consulte [criando automaticamente um modelo de exibição com um localizador de modelo de exibição](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically-creating-a-view-model-with-a-view-model-locator).
 
 O exemplo de código a seguir mostra o [`Entry`](xref:Xamarin.Forms.Entry) controle do `SettingsView` que permite ao usuário inserir uma URL de ponto de extremidade base para os microserviços em contêineres:
 
@@ -178,7 +164,7 @@ public override Task InitializeAsync(object navigationData)
 }
 ```
 
-O método define a `Endpoint` propriedade como o valor da `UrlBase` Propriedade na `Settings` classe. O acesso à `UrlBase` propriedade faz com que a biblioteca XAM. plugins. Settings recupere o valor das configurações do armazenamento específico da plataforma. Para obter informações sobre como o `InitializeAsync` método é invocado, consulte [passando parâmetros durante a navegação](~/xamarin-forms/enterprise-application-patterns/navigation.md#passing_parameters_during_navigation).
+O método define a `Endpoint` propriedade como o valor da `UrlBase` Propriedade na `Settings` classe. O acesso à `UrlBase` propriedade faz com que a biblioteca XAM. plugins. Settings recupere o valor das configurações do armazenamento específico da plataforma. Para obter informações sobre como o `InitializeAsync` método é invocado, consulte [passando parâmetros durante a navegação](~/xamarin-forms/enterprise-application-patterns/navigation.md#passing-parameters-during-navigation).
 
 Esse mecanismo garante que sempre que um usuário navegar para o SettingsView, as configurações de usuário serão recuperadas do armazenamento específico da plataforma e apresentadas por meio da vinculação de dados. Em seguida, se o usuário alterar os valores das configurações, a vinculação de dados garantirá que eles sejam persistidos imediatamente no armazenamento específico da plataforma.
 

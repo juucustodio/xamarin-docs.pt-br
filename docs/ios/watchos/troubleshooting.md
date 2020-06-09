@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 06524163fadc4300d55ec90f35723fd1561bb8a0
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 17ccc67b2976b93fbb290a1d2425168cab50228e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79303907"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84568783"
 ---
 # <a name="watchos-troubleshooting"></a>Solução de problemas do watchOS
 
@@ -27,36 +27,36 @@ Esta página contém informações adicionais e soluções alternativas para os 
 
 - [Iniciando o WatchApp da linha de comando](#command_line).
 
-<a name="knownissues" />
+<a name="knownissues"></a>
 
 ## <a name="known-issues"></a>Problemas conhecidos
 
 ### <a name="general"></a>Geral
 
-<a name="deploy" />
+<a name="deploy"></a>
 
 - Versões anteriores do Visual Studio para Mac mostram incorretamente um dos ícones de **AppleCompanionSettings** como sendo 88x88 pixels; que resulta em um **erro de ícone ausente** se você tentar enviar para a loja de aplicativos.
-    Esse ícone deve ser 87x87 pixels (29 unidades para telas **@3x** retina). Não é possível corrigir isso em Visual Studio para Mac-edite o ativo da imagem no Xcode ou edite manualmente o arquivo **Contents. JSON** .
+    Esse ícone deve ser 87x87 pixels (29 unidades para **@3x** telas da retina). Não é possível corrigir isso em Visual Studio para Mac-edite o ativo da imagem no Xcode ou edite manualmente o arquivo **Contents. JSON** .
 
-- Se o info. plist do projeto de extensão de inspeção **> ID do pacote WKApp** não estiver [definido corretamente](~/ios/watchos/get-started/project-references.md) para corresponder à **ID do pacote**do aplicativo de inspeção, o depurador não conseguirá se conectar e Visual Studio para Mac aguardará a mensagem *"aguardando o depurador para se conectar"* .
+- Se o info. plist do projeto de extensão de inspeção **> ID do pacote WKApp** não estiver [definido corretamente](~/ios/watchos/get-started/project-references.md) para corresponder à **ID do pacote**do aplicativo de inspeção, o depurador não conseguirá se conectar e Visual Studio para Mac aguardará a mensagem *"aguardando o depurador para se conectar"*.
 
-- A depuração tem suporte no modo de **notificações** , mas pode ser não confiável. Tentar novamente, às vezes, funcionará. Confirme se o `WKCompanionAppBundleIdentifier` **info. plist** do aplicativo de inspeção está definido para corresponder ao identificador do pacote do aplicativo pai/contêiner do IOS (ou seja, aquele que é executado no iPhone).
+- A depuração tem suporte no modo de **notificações** , mas pode ser não confiável. Tentar novamente, às vezes, funcionará. Confirme se o **info. plist** do aplicativo de inspeção `WKCompanionAppBundleIdentifier` está definido para corresponder ao identificador do pacote do aplicativo pai/contêiner do IOS (ou seja, aquele que é executado no iPhone).
 
 - o iOS designer não mostra as setas de ponto de entrada para os controladores da interface de notificação e resumido.
 
 - Você não pode adicionar dois `WKNotificationControllers` a um Storyboard.
-    Solução alternativa: o elemento `notificationCategory` no XML do storyboard é sempre inserido com o mesmo `id`. Para contornar esse problema, você pode adicionar dois (ou mais) controladores de notificação, abrir o arquivo de storyboard em um editor de texto e alterar manualmente o elemento `id` para ser exclusivo.
+    Solução alternativa: o `notificationCategory` elemento no XML do storyboard é sempre inserido com o mesmo `id` . Para contornar esse problema, você pode adicionar dois (ou mais) controladores de notificação, abrir o arquivo de storyboard em um editor de texto e alterar manualmente o `id` elemento para ser exclusivo.
 
     [![](troubleshooting-images/duplicate-id-sml.png "Opening the storyboard file in a text editor and manually change the id element to be unique")](troubleshooting-images/duplicate-id.png#lightbox)
 
 - Você pode ver um erro "o aplicativo não foi criado" ao tentar iniciar o aplicativo. Isso ocorre depois de uma **limpeza** quando o projeto de inicialização é definido como o projeto de extensão de inspeção.
     A correção é selecionar **compilar > Recompilar tudo** e, em seguida, reiniciar o aplicativo.
 
-### <a name="visual-studio"></a>{1&gt;Visual Studio&lt;1}
+### <a name="visual-studio"></a>Visual Studio
 
 O suporte ao designer do iOS para o kit de inspeção *requer* que a solução seja configurada corretamente. Se as referências do projeto não estiverem definidas (consulte [como definir referências](~/ios/watchos/get-started/project-references.md)), a superfície de design não funcionará corretamente.
 
-<a name="noalpha" />
+<a name="noalpha"></a>
 
 ## <a name="removing-the-alpha-channel-from-icon-images"></a>Removendo o canal alfa de imagens de ícone
 
@@ -70,7 +70,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
 É fácil remover o canal alfa em Mac OS X usando o aplicativo de **Visualização** :
 
-1. Abra a imagem do ícone na **Visualização** e escolha **arquivo > Exportar**.
+1. Abra a imagem do ícone na **Visualização** e escolha **arquivo > exportar**.
 
 2. O diálogo que aparece incluirá uma caixa de seleção **alfa** se um canal alfa estiver presente.
 
@@ -80,20 +80,20 @@ with an alpha channel. Icons should not have an alpha channel.
 
 4. A imagem do ícone agora deve passar nas verificações de validação da Apple.
 
-<a name="add" />
+<a name="add"></a>
 
 ## <a name="manually-adding-interface-controller-files"></a>Adicionando manualmente os arquivos do controlador de interface
 
 > [!IMPORTANT]
-> O suporte do WatchKit da Xamarin inclui o design de storyboards de inspeção no designer do iOS (no Visual Studio para Mac e no Visual Studio), que não requer as etapas descritas abaixo. Basta dar a um controlador de interface um nome de classe no painel de propriedades C# Visual Studio para Mac e os arquivos de código serão criados automaticamente.
+> O suporte do WatchKit da Xamarin inclui o design de storyboards de inspeção no designer do iOS (no Visual Studio para Mac e no Visual Studio), que não requer as etapas descritas abaixo. Basta dar a um controlador de interface um nome de classe no painel de propriedades Visual Studio para Mac e os arquivos de código C# serão criados automaticamente.
 
-*Se* você estiver usando o Interface Builder do Xcode, siga estas etapas para criar novos controladores de interface para seu aplicativo Watch e habilitar a sincronização com o Xcode para que as saídas e C#ações estejam disponíveis em:
+*Se* você estiver usando o Interface Builder do Xcode, siga estas etapas para criar novos controladores de interface para seu aplicativo Watch e habilitar a sincronização com o Xcode para que as saídas e ações estejam disponíveis em C#:
 
 1. Abra a interface do aplicativo Watch **. Storyboard** no **Xcode Interface Builder**.
 
     ![](troubleshooting-images/add-6.png "Opening the storyboard in Xcode Interface Builder")
 
-2. Arraste um novo `InterfaceController` para o storyboard:
+2. Arraste um novo `InterfaceController` no storyboard:
 
     ![](troubleshooting-images/add-1.png "A InterfaceController")
 
@@ -101,7 +101,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
     ![](troubleshooting-images/add-2.png "A button in the layout")
 
-4. Feche o storyboard e retorne para Visual Studio para Mac. Crie um novo C# arquivo **MyInterfaceController.cs** (ou qualquer nome que desejar) no projeto de **extensão do aplicativo Watch** (não o aplicativo Watch em si, onde está o storyboard). Adicione o seguinte código (Atualizando o namespace, ClassName e o nome do Construtor):
+4. Feche o storyboard e retorne para Visual Studio para Mac. Crie um novo arquivo C# **MyInterfaceController.cs** (ou qualquer nome que desejar) no projeto de **extensão do aplicativo Watch** (não o próprio aplicativo Watch onde o storyboard é). Adicione o seguinte código (Atualizando o namespace, ClassName e o nome do Construtor):
 
     ```csharp
     using System;
@@ -137,7 +137,7 @@ with an alpha channel. Icons should not have an alpha channel.
     }
     ```
 
-5. Crie outro novo C# arquivo **MyInterfaceController.designer.cs** no projeto de **extensão do aplicativo Watch** e adicione o código abaixo. Certifique-se de atualizar o namespace, o nome de classe e o atributo de `Register`:
+5. Crie outro novo arquivo C# **MyInterfaceController.designer.cs** no projeto de **extensão do aplicativo Watch** e adicione o código abaixo. Certifique-se de atualizar o namespace, o nome de classe e o `Register` atributo:
 
     ```csharp
     using Foundation;
@@ -156,17 +156,17 @@ with an alpha channel. Icons should not have an alpha channel.
     ```
 
     > [!TIP]
-    > Você pode (opcionalmente) tornar esse arquivo um nó filho do primeiro arquivo arrastando-o para o outro C# arquivo na Painel de Soluções de Visual Studio para Mac. Ele será exibido assim:
+    > Você pode (opcionalmente) tornar esse arquivo um nó filho do primeiro arquivo arrastando-o para o outro arquivo C# na Painel de Soluções de Visual Studio para Mac. Ele será exibido assim:
 
     ![](troubleshooting-images/add-5.png "The Solution pad")
 
-6. Selecione **compilar > compilar tudo** para que a sincronização do Xcode reconheça a nova classe (por meio do atributo `Register`) que usamos.
+6. Selecione **compilar > compilar tudo** para que a sincronização do Xcode reconheça a nova classe (por meio do `Register` atributo) que usamos.
 
 7. Abra novamente o storyboard clicando com o botão direito do mouse no arquivo de storyboard do aplicativo de inspeção e selecionando **abrir com > Xcode Interface Builder**:
 
     ![](troubleshooting-images/add-6.png "Opening the storyboard in Interface Builder")
 
-8. Selecione o novo controlador de interface e dê a ele o ClassName que você definiu acima, por exemplo, `MyInterfaceController`
+8. Selecione o novo controlador de interface e dê a ele o ClassName que você definiu acima, por exemplo, `MyInterfaceController`.
     Se tudo funcionou corretamente, ele deverá aparecer automaticamente na lista suspensa **classe:** e você poderá selecioná-lo a partir daí.
 
     ![](troubleshooting-images/add-4.png "Setting a custom class")
@@ -206,9 +206,9 @@ with an alpha channel. Icons should not have an alpha channel.
     }
     ```
 
-Agora você pode referenciar o controle (ou implementar a ação) C#no!
+Agora você pode referenciar o controle (ou implementar a ação) em C#!
 
-<a name="command_line" />
+<a name="command_line"></a>
 
 ## <a name="launching-the-watch-app-from-the-command-line"></a>Iniciando o aplicativo Watch na linha de comando
 
@@ -224,7 +224,7 @@ Aqui está um exemplo completo (executado como uma única linha no terminal):
 --launchsimwatch=/path/to/watchkitproject/watchsample/bin/iPhoneSimulator/Debug/watchsample.app
 ```
 
-O parâmetro que você precisa atualizar para refletir seu aplicativo é `launchsimwatch`:
+O parâmetro que você precisa atualizar para refletir seu aplicativo é `launchsimwatch` :
 
 ### <a name="--launchsimwatch"></a>--launchsimwatch
 
@@ -241,7 +241,7 @@ Exemplo:
 
 ## <a name="notification-mode"></a>Modo de notificação
 
-Para testar o modo de [ **notificação** ](~/ios/watchos/platform/notifications.md)do aplicativo, defina o parâmetro `watchlaunchmode` como `Notification` e forneça um caminho para um arquivo JSON que contenha uma carga de notificação de teste.
+Para testar o modo de [ **notificação** ](~/ios/watchos/platform/notifications.md)do aplicativo, defina o `watchlaunchmode` parâmetro como `Notification` e forneça um caminho para um arquivo JSON que contenha uma carga de notificação de teste.
 
 O parâmetro payload é *necessário* para o modo de notificação.
 
@@ -257,7 +257,7 @@ Os argumentos restantes são explicados abaixo:
 
 ### <a name="--sdkroot"></a>--sdkroot
 
-Obrigatório. Especifica o caminho para o Xcode (6,2 ou posterior).
+Obrigatórios. Especifica o caminho para o Xcode (6,2 ou posterior).
 
 Exemplo:
 
@@ -291,7 +291,7 @@ Exemplo:
 --device=:v2:runtime=com.apple.CoreSimulator.SimRuntime.iOS-8-2,devicetype=com.apple.CoreSimulator.SimDeviceType.iPhone-6
 ```
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [WatchKitCatalog (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [WatchTables (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)

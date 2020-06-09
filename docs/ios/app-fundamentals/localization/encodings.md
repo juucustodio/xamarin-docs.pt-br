@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/28/2017
-ms.openlocfilehash: 2d204aeac18fc08bf6eb2221b6f64ecbbded8121
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 78c048d793fd792576e2482491ebf11460d5b511
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73009999"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571799"
 ---
 # <a name="internationalization-encodings-in-xamarinios"></a>Codificações de internacionalização no Xamarin. iOS
 
@@ -35,7 +35,7 @@ Você pode selecionar um destes:
 - Oeste: idiomas latinos, Páscoa e Europa Ocidental
 - all
 
- <a name="cjk" />
+ <a name="cjk"></a>
 
 ## <a name="cjk"></a>CJK
 
@@ -46,7 +46,7 @@ Você pode selecionar um destes:
 - CP950
 - CP54936
 
- <a name="mideast" />
+ <a name="mideast"></a>
 
 ## <a name="mideast"></a>Oriente Médio
 
@@ -58,9 +58,9 @@ Você pode selecionar um destes:
 - CP28599
 - CP38598
 
- <a name="other" />
+ <a name="other"></a>
 
-## <a name="other"></a>outras
+## <a name="other"></a>outros
 
 - CP1251
 - CP1257
@@ -72,7 +72,7 @@ Você pode selecionar um destes:
 - CP57002
 - CP874
 
- <a name="rare" />
+ <a name="rare"></a>
 
 ## <a name="rare"></a>encontrar
 
@@ -114,9 +114,9 @@ Você pode selecionar um destes:
 - CP870
 - CP875
 
- <a name="west" />
+ <a name="west"></a>
 
-## <a name="west"></a>noroeste
+## <a name="west"></a>oeste
 
 - CP10000
 - CP10079

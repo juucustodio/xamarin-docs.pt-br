@@ -9,8 +9,6 @@ MS. Prod: xamarin MS. AssetID: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2 MS. Technolo
 
 É importante considerar como seu aplicativo será usado e como a orientação paisagem pode ser incorporada para melhorar a experiência do usuário. Layouts individuais podem ser criados para acomodar várias orientações e usar melhor o espaço disponível. No nível do aplicativo, a rotação pode ser desabilitada ou habilitada.
 
-<a name="Controlling_Orientation" />
-
 ## <a name="controlling-orientation"></a>Controlando a orientação
 
 Ao usar o Xamarin.Forms , o método com suporte para controlar a orientação do dispositivo é usar as configurações para cada projeto individual.
@@ -74,8 +72,6 @@ Observe que as APIs nativas do Android fornecem muito controle sobre como a orie
 
 No Plataforma Universal do Windows (UWP), as orientações com suporte são definidas no arquivo **Package. appxmanifest** . Abrir o manifesto revelará um painel de configuração onde as orientações com suporte podem ser selecionadas.
 
-<a name="Reacting_to_Changes_in_Orientation" />
-
 ## <a name="reacting-to-changes-in-orientation"></a>Reagindo a alterações na orientação
 
 Xamarin.Formsnão oferece nenhum evento nativo para notificar seu aplicativo sobre alterações de orientação no código compartilhado. No entanto, [Xamarin.Essentials](~/essentials/index.md) contém uma `DeviceDisplay` classe [] que fornece notificações de alterações de orientação.
@@ -120,8 +116,6 @@ e paisagem:
 ![](device-orientation-images/calculator-landscape.png "Calculator Application in Landscape")
 
 Observe que os aplicativos tiram proveito do espaço disponível adicionando mais funcionalidade em paisagem.
-
-<a name="Responsive_Layout" />
 
 ## <a name="responsive-layout"></a>Layout responsivo
 

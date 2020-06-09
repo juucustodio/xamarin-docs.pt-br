@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: f314f3145b3573184cb8cdf7370394c975c66859
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127069"
+title: "passando argumentos em XAML" Descrição: "Este artigo demonstra como usar os atributos XAML que podem ser usados para passar argumentos para construtores não padrão, para chamar métodos de fábrica e para especificar o tipo de um argumento genérico."
+MS. Prod: xamarin MS. AssetID: 8F3B267F-499E-4D79-9193-FCA99F199519 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/25/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="passing-arguments-in-xaml"></a>Passando argumentos em XAML
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
@@ -27,12 +13,10 @@ _Este artigo demonstra como usar os atributos XAML que podem ser usados para pas
 
 Geralmente, é necessário criar uma instância de objetos com construtores que exigem argumentos ou chamando um método de criação estático. Isso pode ser obtido em XAML usando os `x:Arguments` atributos e `x:FactoryMethod` :
 
-- O `x:Arguments` atributo é usado para especificar argumentos de construtor para um construtor não padrão ou para uma declaração de objeto de método de fábrica. Para obter mais informações, consulte [passando argumentos de Construtor](#constructor_arguments).
-- O `x:FactoryMethod` atributo é usado para especificar um método de fábrica que pode ser usado para inicializar um objeto. Para obter mais informações, consulte [chamando métodos de fábrica](#factory_methods).
+- O `x:Arguments` atributo é usado para especificar argumentos de construtor para um construtor não padrão ou para uma declaração de objeto de método de fábrica. Para obter mais informações, consulte [passando argumentos de Construtor](#passing-constructor-arguments).
+- O `x:FactoryMethod` atributo é usado para especificar um método de fábrica que pode ser usado para inicializar um objeto. Para obter mais informações, consulte [chamando métodos de fábrica](#calling-factory-methods).
 
-Além disso, o `x:TypeArguments` atributo pode ser usado para especificar os argumentos de tipo genérico para o construtor de um tipo genérico. Para obter mais informações, consulte [especificando um argumento de tipo genérico](#generic_type_arguments).
-
-<a name="constructor_arguments" />
+Além disso, o `x:TypeArguments` atributo pode ser usado para especificar os argumentos de tipo genérico para o construtor de um tipo genérico. Para obter mais informações, consulte [especificando um argumento de tipo genérico](#specifying-a-generic-type-argument).
 
 ## <a name="passing-constructor-arguments"></a>Passando argumentos de Construtor
 
@@ -96,8 +80,6 @@ As capturas de tela a seguir mostram o resultado da chamada de cada [`Color`](xr
 
 ![BoxView. Color especificada com x:Arguments](passing-arguments-images/passing-arguments.png)
 
-<a name="factory_methods" />
-
 ## <a name="calling-factory-methods"></a>Chamando métodos de fábrica
 
 Os métodos de fábrica podem ser chamados em XAML especificando o nome do método usando o `x:FactoryMethod` atributo e seus argumentos usando o `x:Arguments` atributo. Um método de fábrica é um `public static` método que retorna objetos ou valores do mesmo tipo da classe ou estrutura que define os métodos.
@@ -145,8 +127,6 @@ O número de elementos dentro da `x:Arguments` marca e os tipos desses elementos
 As capturas de tela a seguir mostram o resultado da chamada de cada [`Color`](xref:Xamarin.Forms.Color) método de fábrica com os valores de argumento especificados:
 
 ![BoxView. Color especificada com x:FactoryMethod e x:Arguments](passing-arguments-images/factory-methods.png)
-
-<a name="generic_type_arguments" />
 
 ## <a name="specifying-a-generic-type-argument"></a>Especificando um argumento de tipo genérico
 

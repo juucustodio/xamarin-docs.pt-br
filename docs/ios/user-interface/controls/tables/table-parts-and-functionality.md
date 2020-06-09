@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 0e8014263d417cef39147b440ed3b38155f226bb
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: bf023543d3159f5d5baf7f7036a576b8a746cf9e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021848"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572124"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Partes de tabela e funcionalidade no Xamarin. iOS
 
@@ -21,7 +21,7 @@ Um UITableView pode ter um estilo ' agrupado ' ou ' Plain ' e consiste nas segui
 - [Cabeçalho da seção](#Section_Header)
 - [Células](#Cells) (ou linhas, se você preferir)
 - [Rodapé da seção](#Section_Footer)
-- [Índice](#Index)
+- [Index](#Index)
 - [Modo de edição](#Edit_Features) (inclui "passar o dedo para excluir" e arrastar identificadores para alterar a ordem da linha) 
 
 Essas capturas de tela mostram como as linhas de seção, os cabeçalhos, os rodapés, os controles de edição e o índice são exibidos.
@@ -30,32 +30,32 @@ Essas capturas de tela mostram como as linhas de seção, os cabeçalhos, os rod
 
 Essas partes são descritas em mais detalhes abaixo:
 
-<a name="Section_Header" />
+<a name="Section_Header"></a>
 
 ## <a name="section-header"></a>Cabeçalho da seção
 
 As células podem, opcionalmente, ser agrupadas em seções, rotuladas com um cabeçalho personalizado e/ou rotuladas com um rodapé. O cabeçalho pode ser definido com um valor de cadeia de caracteres ou um modo de exibição personalizado pode ser fornecido para permitir um layout ou estilo diferente.
 
-<a name="Cells" />
+<a name="Cells"></a>
 
 ## <a name="cells"></a>Células
 
 As células são o elemento principal da interface do usuário para uma tabela. Quando implementadas corretamente, as células são reutilizadas para a eficiência da memória. Há quatro estilos de célula internos, e você pode criar suas próprias células personalizadas, seja no código, ou no designer ao usar storyboards.
 
-<a name="Section_Footer"/>
+<a name="Section_Footer"></a>
 
 ## <a name="section-footer"></a>Rodapé da seção
 
 O rodapé de seção opcional pode ser definido com um valor de cadeia de caracteres ou um modo de exibição personalizado pode ser fornecido para permitir um layout ou estilo diferente. Cabeçalhos e rodapés de seção podem ser definidos de forma independente.
 
-<a name="Index" />
+<a name="Index"></a>
 
 ## <a name="index"></a>Índice
 
 O índice aparece como uma faixa de caracteres na borda direita da tabela.
 Tocar ou arrastar no índice acelera a rolagem para essa parte da tabela. Um índice é opcional, mas é recomendado para ajudar a navegar por listas longas. Um índice geralmente não é usado com o estilo agrupado.
 
-<a name="Edit_Features" />
+<a name="Edit_Features"></a>
 
 ## <a name="editing-mode"></a>Modo de edição
 
@@ -77,7 +77,7 @@ As classes primárias usadas para exibir exibições de tabela são mostradas aq
 A finalidade de cada classe é descrita abaixo:
 
 - **UITableView** – uma exibição que contém uma coleção de células dentro de um contêiner de rolagem. A exibição de tabela normalmente usa a tela inteira em um aplicativo do iPhone, mas pode existir como parte de uma exibição maior no iPad (ou aparecer em um popover). 
-- **UITableViewCell** – uma exibição que representa uma única célula (ou linha) em uma exibição de tabela. Há quatro tipos de célula internos e é possível criar células personalizadas no ou com o designer do C# Ios. 
+- **UITableViewCell** – uma exibição que representa uma única célula (ou linha) em uma exibição de tabela. Há quatro tipos de célula internos e é possível criar células personalizadas em C# ou com o designer do iOS. 
 - **UITableViewSource** – Xamarin. Ios-classe abstrata exclusiva que fornece todos os métodos necessários para exibir uma tabela, incluindo a contagem de linhas, retornando uma exibição de célula para cada linha, manipulando a seleção de linhas e muitos outros recursos opcionais. Você *deve* fazer uma subclasse para obter um UITableView funcionando. 
 - **NSIndexPath** – contém propriedades de linha e seção que identificam exclusivamente a posição de uma célula em uma tabela. 
 - **UITableViewController** – uma UIViewController pronta para uso que tem um UITableView codificado como sua exibição e acessível por meio da propriedade Tableview. 

@@ -1,22 +1,8 @@
 ---
-title: Criar um layout personalizado emXamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 2beb00e0587a0e47a29d6f5628a5d6623514eade
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137326"
+Título: "criar um layout personalizado em Xamarin.Forms " Descrição: "Este artigo explica como escrever uma classe de layout personalizada e demonstra uma classe WrapLayout sensível à orientação que organiza seus filhos horizontalmente na página e, em seguida, encapsula a exibição de filhos subsequentes em linhas adicionais."
+MS. Prod: xamarin MS. AssetID: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 03/29/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="create-a-custom-layout-in-xamarinforms"></a>Criar um layout personalizado emXamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
@@ -66,29 +52,27 @@ No entanto, a `Layout` classe tenta restringir o impacto de uma alteração no t
 
 A [`Layout`](xref:Xamarin.Forms.Layout) classe também define um [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) método que tem uma finalidade semelhante ao [`InvalidateMeasure`](xref:Xamarin.Forms.VisualElement.InvalidateMeasure) método. O `InvalidateLayout` método deve ser invocado sempre que for feita uma alteração que afeta como o layout posiciona e dimensiona seus filhos. Por exemplo, a `Layout` classe invoca o `InvalidateLayout` método sempre que um filho é adicionado ou removido de um layout.
 
-O [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) pode ser substituído para implementar um cache para minimizar invocações repetitivas do [ `Measure` ] (xref: Xamarin.Forms . Visualelement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) métodos de filhos do layout. Substituir o `InvalidateLayout` método fornecerá uma notificação de quando os filhos são adicionados ou removidos do layout. Da mesma forma, o [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) método pode ser substituído para fornecer uma notificação quando um dos filhos do layout muda de tamanho. Para as duas substituições de método, um layout personalizado deve responder limpando o cache. Para obter mais informações, consulte [calculando e armazenando dados em cache](#caching).
+O [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) pode ser substituído para implementar um cache para minimizar invocações repetitivas do [ `Measure` ] (xref: Xamarin.Forms . Visualelement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) métodos de filhos do layout. Substituir o `InvalidateLayout` método fornecerá uma notificação de quando os filhos são adicionados ou removidos do layout. Da mesma forma, o [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) método pode ser substituído para fornecer uma notificação quando um dos filhos do layout muda de tamanho. Para as duas substituições de método, um layout personalizado deve responder limpando o cache. Para obter mais informações, consulte [Calculate and cache layout data](#calculate-and-cache-layout-data).
 
 ## <a name="create-a-custom-layout"></a>Criar um layout personalizado
 
 O processo para criar um layout personalizado é o seguinte:
 
-1. Crie uma classe que derive da classe `Layout<View>`. Para obter mais informações, consulte [Creating a WrapLayout](#creating).
-1. [*opcional*] Adicione Propriedades, apoiadas por propriedades vinculáveis, para quaisquer parâmetros que devem ser definidos na classe layout. Para obter mais informações, consulte [adicionando Propriedades apoiadas por propriedades vinculáveis](#adding_properties).
-1. Substitua o [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) método para invocar [ `Measure` ] (xref: Xamarin.Forms . Visualelement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) em todos os filhos do layout e retorna um tamanho solicitado para o layout. Para obter mais informações, consulte [substituindo o método onmeasure](#onmeasure).
-1. Substitua o [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) método para invocar [ `Layout` ] (xref: Xamarin.Forms . Visualelement. layout ( Xamarin.Forms . Rectangle)) do método em todos os filhos do layout. Falha ao invocar [ `Layout` ] (xref: Xamarin.Forms . Visualelement. layout ( Xamarin.Forms . Rectangle)) o método em cada filho em um layout resultará no filho nunca recebendo um tamanho ou posição correto e, portanto, o filho não ficará visível na página. Para obter mais informações, consulte [substituindo o método LayoutChildren](#layoutchildren).
+1. Crie uma classe que derive da classe `Layout<View>`. Para obter mais informações, consulte [criar um WrapLayout](#create-a-wraplayout).
+1. [*opcional*] Adicione Propriedades, apoiadas por propriedades vinculáveis, para quaisquer parâmetros que devem ser definidos na classe layout. Para obter mais informações, consulte [Adicionar propriedades apoiadas por propriedades vinculáveis](#add-properties-backed-by-bindable-properties).
+1. Substitua o [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) método para invocar [ `Measure` ] (xref: Xamarin.Forms . Visualelement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) em todos os filhos do layout e retorna um tamanho solicitado para o layout. Para obter mais informações, consulte [substituir o método onmeasure](#override-the-onmeasure-method).
+1. Substitua o [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) método para invocar [ `Layout` ] (xref: Xamarin.Forms . Visualelement. layout ( Xamarin.Forms . Rectangle)) do método em todos os filhos do layout. Falha ao invocar [ `Layout` ] (xref: Xamarin.Forms . Visualelement. layout ( Xamarin.Forms . Rectangle)) o método em cada filho em um layout resultará no filho nunca recebendo um tamanho ou posição correto e, portanto, o filho não ficará visível na página. Para obter mais informações, consulte [substituir o método LayoutChildren](#override-the-layoutchildren-method).
 
     > [!NOTE]
     > Ao enumerar filhos nas [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) substituições e, ignore qualquer filho cuja [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) Propriedade esteja definida como `false` . Isso garantirá que o layout personalizado não deixará espaço para filhos invisíveis.
 
-1. [*opcional*] Substitua o [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) método a ser notificado quando os filhos forem adicionados ou removidos do layout. Para obter mais informações, consulte [substituindo o método InvalidateLayout](#invalidatelayout).
-1. [*opcional*] Substitua o [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) método a ser notificado quando um dos filhos do layout mudar de tamanho. Para obter mais informações, consulte [substituindo o método OnChildMeasureInvalidated](#onchildmeasureinvalidated).
+1. [*opcional*] Substitua o [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) método a ser notificado quando os filhos forem adicionados ou removidos do layout. Para obter mais informações, consulte [substituir o método InvalidateLayout](#override-the-invalidatelayout-method).
+1. [*opcional*] Substitua o [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) método a ser notificado quando um dos filhos do layout mudar de tamanho. Para obter mais informações, consulte [substituir o método OnChildMeasureInvalidated](#override-the-onchildmeasureinvalidated-method).
 
 > [!NOTE]
-> Observe que a [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) substituição não será invocada se o tamanho do layout for regido por seu pai, em vez de seus filhos. No entanto, a substituição será invocada se uma ou ambas as restrições forem infinitas ou se a classe de layout tiver [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) valores de propriedade ou não padrão [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) . Por esse motivo, a [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) substituição não pode depender de tamanhos filho obtidos durante a [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) chamada do método. Em vez disso, `LayoutChildren` deve invocar [ `Measure` ] (xref: Xamarin.Forms . Visualelement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) para o método nos filhos do layout, antes de invocar [ `Layout` ] (xref: Xamarin.Forms . Visualelement. layout ( Xamarin.Forms . Rectangle)). Como alternativa, o tamanho dos filhos obtidos na `OnMeasure` substituição pode ser armazenado em cache para evitar `Measure` invocações posteriores na `LayoutChildren` substituição, mas a classe de layout precisará saber quando os tamanhos precisam ser obtidos novamente. Para obter mais informações, consulte [calculando e armazenando em cache os dados de layout](#caching).
+> Observe que a [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) substituição não será invocada se o tamanho do layout for regido por seu pai, em vez de seus filhos. No entanto, a substituição será invocada se uma ou ambas as restrições forem infinitas ou se a classe de layout tiver [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) valores de propriedade ou não padrão [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) . Por esse motivo, a [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) substituição não pode depender de tamanhos filho obtidos durante a [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) chamada do método. Em vez disso, `LayoutChildren` deve invocar [ `Measure` ] (xref: Xamarin.Forms . Visualelement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) para o método nos filhos do layout, antes de invocar [ `Layout` ] (xref: Xamarin.Forms . Visualelement. layout ( Xamarin.Forms . Rectangle)). Como alternativa, o tamanho dos filhos obtidos na `OnMeasure` substituição pode ser armazenado em cache para evitar `Measure` invocações posteriores na `LayoutChildren` substituição, mas a classe de layout precisará saber quando os tamanhos precisam ser obtidos novamente. Para obter mais informações, consulte [Calculate and cache layout data](#calculate-and-cache-layout-data).
 
-A classe de layout pode ser consumida adicionando-a a um [`Page`](xref:Xamarin.Forms.Page) e adicionando filhos ao layout. Para obter mais informações, consulte [consumindo o WrapLayout](#consuming).
-
-<a name="creating" />
+A classe de layout pode ser consumida adicionando-a a um [`Page`](xref:Xamarin.Forms.Page) e adicionando filhos ao layout. Para obter mais informações, consulte [consumir o WrapLayout](#consume-the-wraplayout).
 
 ### <a name="create-a-wraplayout"></a>Criar um WrapLayout
 
@@ -105,8 +89,6 @@ public class WrapLayout : Layout<View>
   ...
 }
 ```
-
-<a name="caching" />
 
 #### <a name="calculate-and-cache-layout-data"></a>Calcular e armazenar em cache os dados de layout
 
@@ -199,8 +181,6 @@ O `GetLayoutData` método executa as seguintes operações:
 - Desde que haja pelo menos um filho visível, ele calcula o número de linhas e colunas necessárias e, em seguida, calcula um tamanho de célula para os filhos com base nas dimensões do `WrapLayout` . Observe que o tamanho da célula é geralmente um pouco mais largo do que o tamanho do filho máximo, mas isso também pode ser menor se o `WrapLayout` não for grande o suficiente para o filho mais largo ou o suficiente para o filho mais alto.
 - Ele armazena o novo `LayoutData` valor no cache.
 
-<a name="adding_properties" />
-
 #### <a name="add-properties-backed-by-bindable-properties"></a>Adicionar propriedades com suporte pelas propriedades vinculáveis
 
 A `WrapLayout` classe define `ColumnSpacing` e `RowSpacing` Propriedades, cujos valores são usados para separar as linhas e colunas no layout e que são apoiadas pelas propriedades vinculáveis. As propriedades vinculáveis são mostradas no exemplo de código a seguir:
@@ -227,9 +207,7 @@ public static readonly BindableProperty RowSpacingProperty = BindableProperty.Cr
   });
 ```
 
-O manipulador de propriedade alterada de cada propriedade vinculável invoca a `InvalidateLayout` substituição do método para disparar uma nova passagem de layout no `WrapLayout` . Para obter mais informações, consulte [substituindo o método InvalidateLayout](#invalidatelayout) e [substituindo o método OnChildMeasureInvalidated](#onchildmeasureinvalidated).
-
-<a name="onmeasure" />
+O manipulador de propriedade alterada de cada propriedade vinculável invoca a `InvalidateLayout` substituição do método para disparar uma nova passagem de layout no `WrapLayout` . Para obter mais informações, consulte [substituir o método InvalidateLayout](#override-the-invalidatelayout-method) e [substituir o método OnChildMeasureInvalidated](#override-the-onchildmeasureinvalidated-method).
 
 #### <a name="override-the-onmeasure-method"></a>Substituir o método onmeasure
 
@@ -250,12 +228,10 @@ protected override SizeRequest OnMeasure(double widthConstraint, double heightCo
 }
 ```
 
-A substituição invoca o `GetLayoutData` método e constrói um `SizeRequest` objeto a partir dos dados retornados, enquanto também leva em conta os `RowSpacing` valores de `ColumnSpacing` propriedade e. Para obter mais informações sobre o `GetLayoutData` método, consulte [calculando e armazenando dados em cache](#caching).
+A substituição invoca o `GetLayoutData` método e constrói um `SizeRequest` objeto a partir dos dados retornados, enquanto também leva em conta os `RowSpacing` valores de `ColumnSpacing` propriedade e. Para obter mais informações sobre o `GetLayoutData` método, consulte [Calculate and cache layout data](#calculate-and-cache-layout-data).
 
 > [!IMPORTANT]
 > O [ `Measure` ] (xref: Xamarin.Forms . Visualelement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) e os [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) métodos nunca devem solicitar uma dimensão infinita retornando um [`SizeRequest`](xref:Xamarin.Forms.SizeRequest) valor com uma propriedade definida como `Double.PositiveInfinity` . No entanto, pelo menos um dos argumentos de restrição `OnMeasure` pode ser `Double.PositiveInfinity` .
-
-<a name="layoutchildren" />
 
 #### <a name="override-the-layoutchildren-method"></a>Substituir o método LayoutChildren
 
@@ -304,11 +280,9 @@ A substituição começa com uma chamada para o `GetLayoutData` método e, em se
 > [!NOTE]
 > Observe que o retângulo passado para o `LayoutChildIntoBoundingRegion` método inclui a área inteira na qual o filho pode residir.
 
-Para obter mais informações sobre o `GetLayoutData` método, consulte [calculando e armazenando dados em cache](#caching).
+Para obter mais informações sobre o `GetLayoutData` método, consulte [Calculate and cache layout data](#calculate-and-cache-layout-data).
 
-<a name="invalidatelayout" />
-
-#### <a name="overridethe-invalidatelayout-method"></a>Método Overridethe InvalidateLayout
+#### <a name="override-the-invalidatelayout-method"></a>Substituir o método InvalidateLayout
 
 A [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) substituição é invocada quando os filhos são adicionados ou removidos do layout, ou quando uma das `WrapLayout` Propriedades altera o valor, conforme mostrado no exemplo de código a seguir:
 
@@ -325,8 +299,6 @@ A substituição invalida o layout e descarta todas as informações de layout a
 > [!NOTE]
 > Para interromper a [`Layout`](xref:Xamarin.Forms.Layout) classe [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) que está chamando o método sempre que um filho é adicionado ou removido de um layout, substitua o [ `ShouldInvalidateOnChildAdded` ] (xref: Xamarin.Forms . Layout. ShouldInvalidateOnChildAdded ( Xamarin.Forms . View)) e [ `ShouldInvalidateOnChildRemoved` ] (xref: Xamarin.Forms . Layout. ShouldInvalidateOnChildRemoved ( Xamarin.Forms . View)) e Return `false` . A classe de layout pode então implementar um processo personalizado quando os filhos são adicionados ou removidos.
 
-<a name="onchildmeasureinvalidated" />
-
 #### <a name="override-the-onchildmeasureinvalidated-method"></a>Substituir o método OnChildMeasureInvalidated
 
 A [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) substituição é invocada quando um dos filhos do layout muda de tamanho e é mostrado no exemplo de código a seguir:
@@ -340,8 +312,6 @@ protected override void OnChildMeasureInvalidated()
 ```
 
 A substituição invalida o layout filho e descarta todas as informações de layout em cache.
-
-<a name="consuming" />
 
 ### <a name="consume-the-wraplayout"></a>Consumir o WrapLayout
 

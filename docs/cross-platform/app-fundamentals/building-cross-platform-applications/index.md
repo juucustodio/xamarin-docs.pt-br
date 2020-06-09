@@ -6,18 +6,18 @@ ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
 author: davidortinau
 ms.author: daortin
 ms.date: 01/28/2016
-ms.openlocfilehash: 551e9b1fc6298ddc2cf64e2e9ef60d90f6c1abac
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 2f7d09405f90ac9fc4c3ce80181baafa447df637
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78291543"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571228"
 ---
 # <a name="building-cross-platform-applications"></a>Compilando aplicativos multiplataforma
 
 Há duas opções para compartilhar código entre aplicativos móveis de plataforma cruzada: projetos de ativos compartilhados e bibliotecas de classes portáteis. Essas opções são [discutidas aqui](~/cross-platform/app-fundamentals/code-sharing.md); mais informações sobre [bibliotecas de classes portáteis](~/cross-platform/app-fundamentals/pcl.md) e [projetos compartilhados](~/cross-platform/app-fundamentals/shared-projects.md) também estão disponíveis.
 
-<a name="Sections" />
+<a name="Sections"></a>
 
  [Visão geral](~/cross-platform/app-fundamentals/building-cross-platform-applications/overview.md)
 
@@ -31,22 +31,22 @@ Há duas opções para compartilhar código entre aplicativos móveis de platafo
 
  [Parte 5 – estratégias de compartilhamento de código práticas](~/cross-platform/app-fundamentals/building-cross-platform-applications/practical-code-sharing-strategies.md)
 
- [Parte 6 – Teste e aprovações da App Store](~/cross-platform/app-fundamentals/building-cross-platform-applications/testing-and-app-store-approvals.md)
+ [Parte 6-aprovações de aplicativos de teste e de loja](~/cross-platform/app-fundamentals/building-cross-platform-applications/testing-and-app-store-approvals.md)
 
- <a name="Cross-Platform_Mobile_Application_Case_Studies" />
+ <a name="Cross-Platform_Mobile_Application_Case_Studies"></a>
 
 ## <a name="case-studies"></a>Estudos de Caso
 
 Os princípios descritos neste documento são colocados em prática na *tarefa*de aplicativo de exemplo, bem como [aplicativos pré-criados](https://xamarin.com/prebuilt) como o [Xamarin CRM](https://xamarin.com/prebuilt/#xamarincrm).
 
- <a name="Tasky" />
+ <a name="Tasky"></a>
 
 ### <a name="tasky"></a>Tasky
 
 A tarefa é um aplicativo simples de lista de tarefas pendentes para iOS, Android e Windows Phone.
 Ele demonstra as noções básicas de criação de um aplicativo de plataforma cruzada com o Xamarin e usa um banco de dados SQLite local.
 
- lista de [tarefas de![](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) [![lista de tarefas](images/iphone-list-sml.png)](images/iphone-list.png#lightbox)
+ [ ![ lista de tarefas](images/iphone-list-sml.png)](images/iphone-list.png#lightbox) da [ ![ lista de tarefas](images/iphone-list-sml.png)](images/iphone-list.png#lightbox)
 
 Leia o [estudo de caso de tarefa](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md).
 
@@ -65,5 +65,5 @@ Por fim, ele aborda brevemente os testes e fornece referências a um estudo de c
 - [Opções de código de compartilhamento](~/cross-platform/app-fundamentals/code-sharing.md)
 - [Estudo de caso: Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
 - [Aplicativo de exemplo de tarefa (github)](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
-- [Desenvolvimento de aplicativo móvel do xamarin: multiplataforma C# e fundamentos do Xamarin. Forms (Amazon)](https://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
+- [Desenvolvimento de aplicativo móvel xamarin: fundamentos de plataforma cruzada e C# e Xamarin. Forms (Amazon)](https://www.amazon.com/Xamarin-Mobile-Application-Development-Cross-Platform/dp/1484202155/)
 - [Desenvolvimento móvel com C# por Greg Shackles (o ' Reilly)](https://shop.oreilly.com/product/0636920024002.do)

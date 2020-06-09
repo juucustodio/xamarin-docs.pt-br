@@ -7,20 +7,20 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 01ab48f68656dcabdf2a6cfc286dfcd8850454f8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 68c0fb9e034f432c619bc188553996bd7bacdee8
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030758"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573684"
 ---
 # <a name="configure-your-tvos-app-in-itunes-connect"></a>Configurar seu aplicativo tvOS no iTunes Connect
 
 _Este artigo fornece um guia suplementar para o iOS configurar seu aplicativo no iTunes Connect para as configurações específicas do tvOS._
 
-Além das configurações e configuração que você precisará fazer seguindo o guia [configurar seu aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) , este documento aborda as configurações específicas que serão necessárias para liberar um aplicativo Xamarin. TvOS no aplicativo da Apple TV Armazenadas.
+Além das configurações e configuração que você precisará fazer seguindo o guia [configurar seu aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) , este documento abrange as configurações específicas que serão necessárias para liberar um aplicativo Xamarin. TvOS na loja de aplicativos da Apple TV.
 
-<a name="Adding-a-tvOS-Release-Version" />
+<a name="Adding-a-tvOS-Release-Version"></a>
 
 ## <a name="adding-a-tvos-release-version"></a>Adicionando uma versão de lançamento do tvOS
 
@@ -34,7 +34,7 @@ Se você estiver criando um novo aplicativo a ser lançado na loja de aplicativo
 Opcionalmente, você também pode exigir:
 
 - [Manutenção de informações do Game Center](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md#game-center)
-- [Manutenção de informações de compra no aplicativo](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md#iap)
+- [Mantendo informações de compra no aplicativo](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md#iap)
 
 Com todas as etapas acima concluídas, abra o registro do iTunes Connect do seu aplicativo e selecione para adicionar suporte a tvOS usando a barra lateral esquerda:
 
@@ -44,7 +44,7 @@ As telas de informações específicas do tvOS estarão disponíveis para o regi
 
 [![](itunes-connect-images/connect02.png "The tvOS specific information screen")](itunes-connect-images/connect02.png#lightbox)
 
-<a name="tvOS-Version-Information" />
+<a name="tvOS-Version-Information"></a>
 
 ## <a name="tvos-version-information"></a>Informações de versão do tvOS
 
@@ -64,7 +64,7 @@ Depois de inserir as informações necessárias, clique no botão **salvar** no 
 
 [![](itunes-connect-images/connect04.png "tvOS Version Information ready for submission")](itunes-connect-images/connect04.png#lightbox)
 
-<a name="Submitting-for-Review" />
+<a name="Submitting-for-Review"></a>
 
 ## <a name="preparing-to-submit-for-review"></a>Preparando para enviar para revisão
 
@@ -72,7 +72,7 @@ Quando você finalmente estiver pronto para enviar seu aplicativo Xamarin. tvOS 
 
 [![](itunes-connect-images/connect05.png "Submit for Review")](itunes-connect-images/connect05.png#lightbox)
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>Resumo
 
@@ -80,7 +80,7 @@ Este artigo forneceu uma visão geral da configuração específica do tvOS nece
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guias de interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

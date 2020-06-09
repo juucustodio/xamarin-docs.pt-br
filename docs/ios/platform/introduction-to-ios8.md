@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 9353cffd924688058c1495b9258cc7f0e0ce7b82
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 1fae83f60f819da9767e14612a7f778dc49ddf52
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304880"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84564623"
 ---
 # <a name="introduction-to-ios-8"></a>Introdução ao iOS 8
 
@@ -26,7 +26,7 @@ Este guia apresenta as novas APIs para desenvolvedores do Xamarin. iOS.
 
 Também há algumas APIs que foram preteridas no iOS 8, que são detalhadas no final deste documento.
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos
 
 Os itens a seguir são necessários para criar aplicativos iOS 8 no Visual Studio para Mac:
 
@@ -50,7 +50,7 @@ O diagrama a seguir mostra a hierarquia básica da configuração dos acessório
 
 ![](introduction-to-ios8-images/image1.png "This diagram shows the basic hierarchy of the configuration of HomeKit accessories")
 
-Para começar a usar o HomeKit, os desenvolvedores precisarão certificar-se de que seu perfil de provisionamento tenha o serviço HomeKit selecionado. A Apple também forneceu aos desenvolvedores um suplemento do HomeKit Simulator para o Xcode. Isso pode ser encontrado no [centro de desenvolvedores da Apple](https://developer.apple.com/downloads/index.action), em `Hardware IO Tools for Xcode`. 
+Para começar a usar o HomeKit, os desenvolvedores precisarão certificar-se de que seu perfil de provisionamento tenha o serviço HomeKit selecionado. A Apple também forneceu aos desenvolvedores um suplemento do HomeKit Simulator para o Xcode. Isso pode ser encontrado no [centro de desenvolvedores da Apple](https://developer.apple.com/downloads/index.action), em `Hardware IO Tools for Xcode` . 
 
 Para obter mais informações, consulte nosso guia de [homekit](~/ios/platform/homekit.md) .
 
@@ -68,7 +68,7 @@ As extensões de aplicativo, para simplificar, são uma maneira para que aplicat
 
 A primeira etapa na criação de uma extensão de aplicativo é definir o ponto de extensão correto — isso é importante para garantir o comportamento e a disponibilidade das APIs corretas. Para criar uma extensão de aplicativo no Visual Studio para Mac, adicione-a a um aplicativo existente adicionando um novo projeto à sua solução.
 
-Na caixa de diálogo **novo projeto** , **C#** navegue até >  > **Ios** **API unificada** > **extensões**, conforme ilustrado na captura de tela abaixo:
+Na caixa de diálogo **novo projeto** , navegue até **C#**  >  **Ios**  >  **API unificada**  >  **extensões**, conforme ilustrado na captura de tela abaixo:
 
 ![](introduction-to-ios8-images/image2.png "Creating a new extension")
 
@@ -91,7 +91,7 @@ Agora há duas maneiras de usar o Touch ID como um mecanismo de autenticação e
 
 Em primeiro lugar, ele ajuda os serviços de conjunto de chaves existentes por meio do uso de novas listas de controle de acesso (ACLs) do conjunto de chaves. Os dados do conjunto de chaves podem ser desbloqueados com a autenticação bem-sucedida de uma impressão digital dos usuários.
 
-Em segundo lugar, o LocalAuthentication fornece dois métodos para autenticar seu aplicativo localmente. Os desenvolvedores devem usar `CanEvaluatePolicy` para determinar se o dispositivo é capaz de aceitar o Touch ID e, em seguida, `EvaluatePolicy` iniciar a operação de autenticação.
+Em segundo lugar, o LocalAuthentication fornece dois métodos para autenticar seu aplicativo localmente. Os desenvolvedores devem usar `CanEvaluatePolicy` o para determinar se o dispositivo é capaz de aceitar a ID de toque e, em seguida, `EvaluatePolicy` iniciar a operação de autenticação.
 
 Para obter mais informações sobre o Touch ID e saber como integrá-lo a um aplicativo Xamarin. iOS, consulte [ID de toque e ID facial nos guias do xamarin. Ios](~/ios/platform/touch-id-face-id.md) .
 
@@ -101,7 +101,7 @@ O seletor de documento funciona com uma unidade iCloud de usuários para permiti
 
 Para saber mais sobre o seletor de documentos mais detalhadamente e para saber como integrá-lo a um aplicativo Xamarin. iOS, consulte a [introdução ao guia do seletor de documento](~/ios/platform/document-picker.md) .
 
-### <a name="handoff"></a>Handoff
+### <a name="handoff"></a>Entrega
 
 A entrega, que faz parte do recurso de continuidade maior, leva mais adiante em direção à integração do OS X e do iOS. Isso inclui o essoltar de plataforma cruzada, a capacidade de fazer chamadas do iPhone, SMS no iPad e no Mac e aprimoramentos no compartilhamento de Internet do seu iPhone.
 
@@ -112,7 +112,7 @@ Para obter mais informações, consulte nosso guia de [entrega](~/ios/platform/h
 ## <a name="unified-storyboards"></a>Storyboards unificadas
 o iOS 8 inclui um novo mecanismo mais simples de usar para criar a interface do usuário — o storyboard unificado. Com um único Storyboard para cobrir todos os diferentes tamanhos de tela de hardware, as exibições rápidas e responsivas podem ser criadas em um "design Once" de uma vez, usar muitos ".
 
-Antes do iOS8, os desenvolvedores usaram `UIInterfaceOrientation` para distinguir entre os modos retrato e paisagem e `UIInterfaceIdiom` para distinguir entre dispositivos iOS. No iOS8, não é mais necessário criar storyboards separados para dispositivos iPhone e iPad – a orientação e o dispositivo são determinados usando *classes de tamanho*.
+Antes do iOS8, os desenvolvedores usaram `UIInterfaceOrientation` a distinção entre os modos retrato e paisagem e `UIInterfaceIdiom` para distinguir entre os dispositivos IOS. No iOS8, não é mais necessário criar storyboards separados para dispositivos iPhone e iPad – a orientação e o dispositivo são determinados usando *classes de tamanho*.
 
 Cada dispositivo é definido por uma classe de tamanho, tanto na vertical quanto no eixo horizontal, e há dois tipos de classes de tamanho no iOS 8:
 
@@ -132,7 +132,7 @@ Para obter mais informações, consulte nosso guia de [PhotoKit](~/ios/platform/
 
 ## <a name="games"></a>Jogos
 
-<a name="scenekit" />
+<a name="scenekit"></a>
 
 ### <a name="scene-kit"></a>Kit de cena
 
@@ -140,7 +140,7 @@ O Scene kit é uma API de grafo de cena 3D que simplifica o trabalho com gráfic
 
 Para obter mais informações, consulte nossa documentação do [SceneKit](~/ios/platform/gaming/scenekit.md) .
 
-<a name="spritekit" />
+<a name="spritekit"></a>
 
 ### <a name="sprite-kit"></a>Kit de Sprite
 
@@ -164,7 +164,7 @@ Com todos os aprimoramentos feitos no iOS 8, várias APIs foram preteridas. Algu
 ## <a name="summary"></a>Resumo
 Neste artigo, examinamos alguns dos novos recursos introduzidos pela Apple no iOS 8.
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [UIKitEnhancements (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-uikitenhancements)
 - [Introdução às extensões de aplicativo](~/ios/platform/extensions.md)

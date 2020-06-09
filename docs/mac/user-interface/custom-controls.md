@@ -7,50 +7,50 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 15a117ce2b0ccc84d73909eac183eeb6ea109711
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c4bec7d77e7778d8922640c75d23f4b1464f864f
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73025608"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573918"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Criando controles personalizados no Xamarin. Mac
 
-Ao trabalhar com C# o e o .net em um aplicativo Xamarin. Mac, você tem acesso aos mesmos controles de usuário que um desenvolvedor trabalhando em *Objective-C*, *Swift* e *Xcode* . Como o Xamarin. Mac se integra diretamente com o Xcode, você pode usar o _interface Builder_ do Xcode para criar e manter seus controles de usuário (ou, opcionalmente, criá-los diretamente no C# código).
+Ao trabalhar com C# e .NET em um aplicativo Xamarin. Mac, você tem acesso aos mesmos controles de usuário que um desenvolvedor trabalhando em *Objective-C*, *Swift* e *Xcode* . Como o Xamarin. Mac se integra diretamente com o Xcode, você pode usar o _interface Builder_ do Xcode para criar e manter seus controles de usuário (ou, opcionalmente, criá-los diretamente no código C#).
 
 Embora o macOS forneça uma infinidade de controles de usuário internos, pode haver ocasiões em que você precise criar um controle personalizado para fornecer funcionalidade não fornecida pronta para uso ou para corresponder a um tema personalizado da interface do usuário (como uma interface de jogo).
 
 [![](custom-controls-images/intro01.png "Example of a custom UI control")](custom-controls-images/intro01.png#lightbox)
 
-Neste artigo, abordaremos as noções básicas da criação de um controle de interface do usuário personalizada reutilizável em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos em Este artigo.
+Neste artigo, abordaremos as noções básicas da criação de um controle de interface do usuário personalizada reutilizável em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos neste artigo.
 
-Talvez você queira dar uma olhada na seção [ C# expondo classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os comandos`Register`e`Export`usados para conectar suas C# classes ao Objective-C objetos e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [expondo classes/métodos C# para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os `Register` `Export` comandos e usados para conectar suas classes C# a objetos Objective-C e elementos de interface do usuário.
 
-<a name="Introduction-to-Outline-Views" />
+<a name="Introduction-to-Outline-Views"></a>
 
 ## <a name="introduction-to-custom-controls"></a>Introdução aos controles personalizados
 
 Conforme mencionado acima, pode haver ocasiões em que você precisa criar um controle de interface do usuário reutilizável e personalizado para fornecer uma funcionalidade exclusiva para a interface do usuário do aplicativo Xamarin. Mac ou para criar um tema de interface de usuário personalizado (como uma interface de jogo).
 
-Nessas situações, você pode herdar facilmente de `NSControl` e criar uma ferramenta personalizada que pode ser adicionada à interface do usuário do seu C# aplicativo por meio de código ou por meio de interface Builder do Xcode. Ao herdar de `NSControl` seu controle personalizado terá automaticamente todos os recursos padrão que um controle de interface do usuário interno tem (como `NSButton`).
+Nessas situações, você pode herdar facilmente de `NSControl` e criar uma ferramenta personalizada que pode ser adicionada à interface do usuário do seu aplicativo por meio de código C# ou por meio do Interface Builder do Xcode. Herdar de `NSControl` seu controle personalizado terá automaticamente todos os recursos padrão que um controle de interface do usuário interno tem (como `NSButton` ).
 
-Se o controle de interface do usuário personalizado apenas exibir informações (como uma ferramenta gráfica e gráfico personalizados), talvez você queira herdar de `NSView` em vez de `NSControl`.
+Se o controle de interface do usuário personalizado apenas exibir informações (como uma ferramenta gráfica e gráfico personalizados), talvez você queira herdar de `NSView` em vez de `NSControl` .
 
 Não importa qual classe base é usada, as etapas básicas para criar um controle personalizado são as mesmas.
 
 Neste artigo, você criará um componente de comutador de flip personalizado que fornece um tema de interface de usuário exclusivo e um exemplo de criação de um controle de interface de usuário personalizado totalmente funcional.
 
-<a name="Building-the-Custom-Control" />
+<a name="Building-the-Custom-Control"></a>
 
 ## <a name="building-the-custom-control"></a>Criando o controle personalizado
 
-Como o controle personalizado que estamos criando estará respondendo à entrada do usuário (cliques do botão esquerdo do mouse), vamos herdar de `NSControl`. Dessa forma, nosso controle personalizado terá automaticamente todos os recursos padrão que um controle de interface do usuário interno tem e responde como um controle padrão do macOS.
+Como o controle personalizado que estamos criando estará respondendo à entrada do usuário (cliques do botão esquerdo do mouse), vamos herdar de `NSControl` . Dessa forma, nosso controle personalizado terá automaticamente todos os recursos padrão que um controle de interface do usuário interno tem e responde como um controle padrão do macOS.
 
-No Visual Studio para Mac, abra o projeto Xamarin. Mac para o qual você deseja criar um controle de interface de usuário personalizado (ou criar um novo). Adicione uma nova classe e chame-a `NSFlipSwitch`:
+No Visual Studio para Mac, abra o projeto Xamarin. Mac para o qual você deseja criar um controle de interface de usuário personalizado (ou criar um novo). Adicione uma nova classe e chame-a `NSFlipSwitch` :
 
 [![](custom-controls-images/custom01.png "Adding a new class")](custom-controls-images/custom01.png#lightbox)
 
-Em seguida, edite a classe `NSFlipSwitch.cs` e faça com que seja semelhante ao seguinte:
+Em seguida, edite a `NSFlipSwitch.cs` classe e faça com que ela fique parecida com a seguinte:
 
 ```csharp
 using Foundation;
@@ -126,7 +126,7 @@ namespace MacCustomControl
 }
 ```
 
-A primeira coisa a ser observada sobre nossa classe personalizada no que estamos herdando de `NSControl` e usando o comando **Register** para expor essa classe a interface Builder Objective-C e Xcode:
+A primeira coisa a ser observada sobre nossa classe personalizada no que estamos herdando `NSControl` e usando o comando **Register** para expor essa classe para o Objective-C e o Interface Builder do Xcode:
 
 ```csharp
 [Register("NSFlipSwitch")]
@@ -135,11 +135,11 @@ public class NSFlipSwitch : NSControl
 
 Nas seções a seguir, vamos dar uma olhada no restante do código acima em detalhes.
 
-<a name="Tracking-the-Controls-State" />
+<a name="Tracking-the-Controls-State"></a>
 
 ### <a name="tracking-the-controls-state"></a>Controlando o estado do controle
 
-Como nosso controle personalizado é um comutador, precisamos de uma maneira de acompanhar o estado ligado/desligado do comutador. Tratamos disso com o seguinte código no `NSFlipSwitch`:
+Como nosso controle personalizado é um comutador, precisamos de uma maneira de acompanhar o estado ligado/desligado do comutador. Tratamos disso com o seguinte código em `NSFlipSwitch` :
 
 ```csharp
 private bool _value = false;
@@ -155,7 +155,7 @@ public bool Value {
 }
 ```
 
-Quando o estado do comutador muda, precisamos de uma maneira de atualizar a interface do usuário. Fazemos isso forçando o controle a redesenhar sua interface do usuário com `NeedsDisplay = true`.
+Quando o estado do comutador muda, precisamos de uma maneira de atualizar a interface do usuário. Fazemos isso forçando o controle a redesenhar sua interface do usuário `NeedsDisplay = true` .
 
 Se o nosso controle exigisse mais que um único estado ligado/desligado (por exemplo, um comutador de vários Estados com 3 posições), poderíamos ter usado uma **Enumeração** para acompanhar o estado. Para nosso exemplo, um **bool** simples fará.
 
@@ -170,7 +170,7 @@ private void FlipSwitchState() {
 
 Posteriormente, expandiremos essa classe auxiliar para informar ao chamador quando o estado switches for alterado.
 
-<a name="Drawing-the-Controls-Interface" />
+<a name="Drawing-the-Controls-Interface"></a>
 
 ### <a name="drawing-the-controls-interface"></a>Desenhando a interface do controle
 
@@ -193,7 +193,7 @@ public NSFlipSwitch (IntPtr handle) : base (handle)
 }
 ```
 
-Em seguida, precisamos substituir o método `DrawRect` e adicionar as principais rotinas gráficas para desenhar o controle:
+Em seguida, precisamos substituir o `DrawRect` método e adicionar as principais rotinas gráficas para desenhar o controle:
 
 ```csharp
 public override void DrawRect (CGRect dirtyRect)
@@ -206,9 +206,9 @@ public override void DrawRect (CGRect dirtyRect)
 }
 ```
 
-Ajustaremos a representação visual do controle quando seu estado for alterado (como, por exemplo, de **ativado** para **desativado**). Sempre que o estado é alterado, podemos usar o comando `NeedsDisplay = true` para forçar o controle a redesenhar para o novo estado.
+Ajustaremos a representação visual do controle quando seu estado for alterado (como, por exemplo, de **ativado** para **desativado**). Sempre que o estado é alterado, podemos usar o `NeedsDisplay = true` comando para forçar o controle a redesenhar para o novo estado.
 
-<a name="Responding-to-User-Input" />
+<a name="Responding-to-User-Input"></a>
 
 ### <a name="responding-to-user-input"></a>Respondendo à entrada do usuário
 
@@ -217,11 +217,11 @@ Há duas maneiras básicas de adicionar a entrada do usuário ao nosso controle 
 > [!IMPORTANT]
 > Para qualquer controle personalizado que você criar, você deve usar os **métodos de substituição** _ou_ os **reconhecedores de gesto**, mas não ambos ao mesmo tempo que eles podem entrar em conflito entre si.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 #### <a name="handling-user-input-with-override-methods"></a>Manipulando a entrada do usuário com métodos de substituição
 
-Os objetos que herdam de `NSControl` (ou `NSView`) têm vários métodos de substituição para manipular a entrada do mouse ou do teclado. Para nosso controle de exemplo, queremos inverter o estado da opção entre **on** e **off** quando o usuário clica no controle com o botão esquerdo do mouse. Podemos adicionar os seguintes métodos de substituição à classe `NSFlipSwitch` para lidar com isso:
+Objetos que herdam de `NSControl` (ou `NSView` ) têm vários métodos de substituição para manipular a entrada do mouse ou do teclado. Para nosso controle de exemplo, queremos inverter o estado da opção entre **on** e **off** quando o usuário clica no controle com o botão esquerdo do mouse. Podemos adicionar os seguintes métodos de substituição à `NSFlipSwitch` classe para lidar com isso:
 
 ```csharp
 #region Mouse Handling Methods
@@ -253,13 +253,13 @@ public override void MouseMoved (NSEvent theEvent)
 ## endregion
 ```
 
-No código acima, chamamos o método `FlipSwitchState` (definido acima) para virar o estado ligado/desligado da opção no método `MouseDown`. Isso também forçará o controle a ser redesenhado para refletir o estado atual.
+No código acima, chamamos o `FlipSwitchState` método (definido acima) para virar o estado ligado/desligado da opção no `MouseDown` método. Isso também forçará o controle a ser redesenhado para refletir o estado atual.
 
-<a name="Handling-User-Input-with-Gesture-Recognizers" />
+<a name="Handling-User-Input-with-Gesture-Recognizers"></a>
 
 #### <a name="handling-user-input-with-gesture-recognizers"></a>Manipulando a entrada do usuário com reconhecedores de gesto
 
-Opcionalmente, você pode usar reconhecedores de gesto para manipular o usuário interagindo com o controle. Remova as substituições adicionadas acima, edite o método `Initialize` e faça com que seja semelhante ao seguinte:
+Opcionalmente, você pode usar reconhecedores de gesto para manipular o usuário interagindo com o controle. Remova as substituições adicionadas acima, edite o `Initialize` método e faça com que ele se pareça com o seguinte:
 
 ```csharp
 private void Initialize() {
@@ -277,17 +277,17 @@ private void Initialize() {
 }
 ```
 
-Aqui, estamos criando um novo `NSClickGestureRecognizer` e chamando nosso método de `FlipSwitchState` para alterar o estado do comutador quando o usuário clica nele com o botão esquerdo do mouse. O método `AddGestureRecognizer (click)` adiciona o reconhecedor de gesto ao controle.
+Aqui, estamos criando um novo `NSClickGestureRecognizer` e chamando nosso `FlipSwitchState` método para alterar o estado do comutador quando o usuário clica nele com o botão esquerdo do mouse. O `AddGestureRecognizer (click)` método adiciona o reconhecedor de gestos ao controle.
 
 Novamente, o método que usamos depende do que estamos tentando realizar com nosso controle personalizado. Se precisar de acesso de baixo nível à interação do usuário, use os métodos de substituição. Se precisar de funcionalidades predefinidas, como cliques do mouse, use reconhecedores de gesto.
 
-<a name="Responding-to-State-Change-Events" />
+<a name="Responding-to-State-Change-Events"></a>
 
 ### <a name="responding-to-state-change-events"></a>Respondendo a eventos de alteração de estado
 
 Quando o usuário altera o estado de nosso controle personalizado, precisamos de uma maneira de responder à alteração de estado no código (como fazer algo quando clica em um botão personalizado).
 
-Para fornecer essa funcionalidade, edite a classe `NSFlipSwitch` e adicione o seguinte código:
+Para fornecer essa funcionalidade, edite a `NSFlipSwitch` classe e adicione o seguinte código:
 
 ```csharp
 #region Events
@@ -305,7 +305,7 @@ internal void RaiseValueChanged() {
 ## endregion
 ```
 
-Em seguida, edite o método `FlipSwitchState` e faça com que ele se pareça com o seguinte:
+Em seguida, edite o `FlipSwitchState` método e faça parecer com o seguinte:
 
 ```csharp
 private void FlipSwitchState() {
@@ -315,9 +315,9 @@ private void FlipSwitchState() {
 }
 ```
 
-Primeiro, fornecemos um evento `ValueChanged` que podemos adicionar um manipulador no C# código para que possamos executar uma ação quando o usuário alterar o estado do comutador.
+Primeiro, fornecemos um `ValueChanged` evento que podemos adicionar um manipulador no código C# para que possamos executar uma ação quando o usuário alterar o estado do comutador.
 
-Segundo, como nosso controle personalizado herda de `NSControl`, ele automaticamente tem uma **ação** que pode ser atribuída no interface Builder do Xcode. Para chamar essa **ação** quando o estado for alterado, usamos o seguinte código:
+Segundo, como o nosso controle personalizado é herdado `NSControl` , ele automaticamente tem uma **ação** que pode ser atribuída no interface Builder do Xcode. Para chamar essa **ação** quando o estado for alterado, usamos o seguinte código:
 
 ```csharp
 if (this.Action !=null)
@@ -326,29 +326,29 @@ if (this.Action !=null)
 
 Primeiro, verificamos se uma **ação** foi atribuída ao controle. Em seguida, chamamos a **ação** se ela tiver sido definida.
 
-<a name="Using-the-Custom-Control" />
+<a name="Using-the-Custom-Control"></a>
 
 ## <a name="using-the-custom-control"></a>Usando o controle personalizado
 
-Com o nosso controle personalizado totalmente definido, podemos adicioná-lo à interface do usuário do aplicativo Xamarin. Mac C# usando código ou na interface Builder do Xcode.
+Com o nosso controle personalizado totalmente definido, podemos adicioná-lo à interface do usuário do aplicativo Xamarin. Mac usando código C# ou no Interface Builder do Xcode.
 
-Para adicionar o controle usando Interface Builder, primeiro faça uma compilação limpa do projeto Xamarin. Mac e clique duas vezes no arquivo `Main.storyboard` para abri-lo no Interface Builder para edição:
+Para adicionar o controle usando Interface Builder, primeiro faça uma compilação limpa do projeto Xamarin. Mac e clique duas vezes no `Main.storyboard` arquivo para abri-lo em interface Builder para edição:
 
 [![](custom-controls-images/custom02.png "Editing the storyboard in Xcode")](custom-controls-images/custom02.png#lightbox)
 
-Em seguida, arraste uma `Custom View` para o design da interface do usuário:
+Em seguida, arraste um `Custom View` para o design da interface do usuário:
 
 [![](custom-controls-images/custom03.png "Selecting a Custom View from the Library")](custom-controls-images/custom03.png#lightbox)
 
-Com a exibição personalizada ainda selecionada, alterne para o **Inspetor de identidade** e altere a **classe** da exibição para `NSFlipSwitch`:
+Com a exibição personalizada ainda selecionada, alterne para o **Inspetor de identidade** e altere a **classe** da exibição para `NSFlipSwitch` :
 
 [![](custom-controls-images/custom04.png "Setting the View's class")](custom-controls-images/custom04.png#lightbox)
 
-Alterne para o **Editor do assistente** e crie uma **tomada** para o controle personalizado (assegurando associá-lo no arquivo de `ViewController.h` e não no arquivo de `.m`):
+Alterne para o **Editor do assistente** e crie uma **tomada** para o controle personalizado (assegurando associá-lo ao `ViewController.h` arquivo e não ao `.m` arquivo):
 
 [![](custom-controls-images/custom05.png "Configuring a new Outlet")](custom-controls-images/custom05.png#lightbox)
 
-Salve suas alterações, retorne ao Visual Studio para Mac e permita que as alterações sejam sincronizadas. Edite o arquivo `ViewController.cs` e faça com que o método `ViewDidLoad` seja semelhante ao seguinte:
+Salve suas alterações, retorne ao Visual Studio para Mac e permita que as alterações sejam sincronizadas. Edite o `ViewController.cs` arquivo e faça com que o `ViewDidLoad` método se pareça com o seguinte:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -363,13 +363,13 @@ public override void ViewDidLoad ()
 }
 ```
 
-Aqui, respondemos ao evento `ValueChanged` que definimos acima na classe `NSFlipSwitch` e escrevemos o **valor** atual quando o usuário clica no controle.
+Aqui, respondemos ao `ValueChanged` evento que definimos acima na `NSFlipSwitch` classe e escrevemos o **valor** atual quando o usuário clica no controle.
 
 Opcionalmente, poderíamos retornar para Interface Builder e definir uma **ação** no controle:
 
 [![](custom-controls-images/custom06.png "Configuring a new Action")](custom-controls-images/custom06.png#lightbox)
 
-Novamente, edite o arquivo de `ViewController.cs` e adicione o seguinte método:
+Novamente, edite o `ViewController.cs` arquivo e adicione o seguinte método:
 
 ```csharp
 partial void OptionTwoFlipped (Foundation.NSObject sender) {
@@ -381,7 +381,7 @@ partial void OptionTwoFlipped (Foundation.NSObject sender) {
 > [!IMPORTANT]
 > Você deve usar o **evento** ou definir uma **ação** no interface Builder, mas não deve usar ambos os métodos ao mesmo tempo ou pode entrar em conflito entre si.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>Resumo
 

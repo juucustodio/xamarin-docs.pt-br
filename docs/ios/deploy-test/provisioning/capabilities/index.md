@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/06/2018
-ms.openlocfilehash: 6250dfa24361601c2b9929d80fec3cc7a18cab2d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: bff3b2a7c1e273c7a03ae341dd663ebc722791eb
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73028562"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571734"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Trabalhando com recursos no Xamarin.iOS
 
-_Adicionar recursos a um aplicativo geralmente requer configuração de provisionamento adicional. Este guia explica a configuração necessária para todas as capacidades._
+_A adição de recursos a um aplicativo geralmente requer configuração de provisionamento adicional. Este guia explica a configuração necessária para todos os recursos do._
 
 A Apple fornece _capacidades_ aos desenvolvedores, geralmente conhecidas como _serviços de aplicativos_, como uma forma de estender as funcionalidades e ampliar o escopo daquilo que os aplicativos iOS podem fazer. As capacidades permitem que os desenvolvedores adicionem uma integração mais profunda dos recursos de plataforma em seus aplicativo, como: a capacidade de realizar transações monetárias iniciadas no aplicativo, serviços de dispositivo adicionais como Siri e muito mais.
 Essas capacidades podem ser usadas com projetos Xamarin.iOS. A lista completa de serviços está descrita abaixo:
@@ -41,7 +41,7 @@ Essas capacidades podem ser usadas com projetos Xamarin.iOS. A lista completa de
 - Compartilhamento de conjunto de chaves
 - Extensões de rede
 - Configuração de hotspot
-- Múltiplos caminhos
+- Multipath
 - Leitura da marca NFC
 
 As funcionalidades podem ser habilitadas por meio do Visual Studio para Mac e do Visual Studio 2019 ou manualmente no Portal do Desenvolvedor da Apple. Determinadas capacidades, como Wallet, Apple Pay e iCloud, exigem a configuração adicional das IDs do aplicativo.
@@ -66,7 +66,7 @@ Esta seção explica como usar o provisionamento automático do Visual Studio ou
 >- Ponto de acesso 
 >- Extensões de rede 
 >- Leitura da marca NFC
->- Múltiplos caminhos 
+>- Multipath 
 >
 >No momento, as funcionalidades Notificações por push, Game Center, Compra no aplicativo, Mapas, Compartilhamento de conjunto de chaves, Domínios associados e Proteção de dados não são compatíveis. Para adicionar essas funcionalidades, use o provisionamento manual e siga as etapas na seção [Central de Desenvolvedores](#devcenter).
 
@@ -80,7 +80,7 @@ Os recursos são adicionados ao **Entitlements.plist** no Visual Studio para Mac
 
     ![Opção Gerenciar assinatura automaticamente](images/manage-signing.png)
 
-2. Abra o arquivo **Direitos.plist** e selecione o recurso que deseja adicionar:
+2. Abra o arquivo **. plist de direitos** e selecione a funcionalidade que você deseja adicionar:
 
     ![Adicionar funcionalidades ao arquivo entitlements.plist](images/image17.png)
 
@@ -113,7 +113,7 @@ As funcionalidades são adicionadas ao arquivo **Entitlements.plist**. Para adic
 
 -----
 
-<a name="devcenter" />
+<a name="devcenter"></a>
 
 ## <a name="using-the-developer-center"></a>Usando a Central de Desenvolvedores
 
@@ -130,7 +130,7 @@ Usar a central de desenvolvedores é um processo de duas etapas que requer a cri
 
     ![Seleção de ID do aplicativo na Central de desenvolvedores](images/image6.png)
 
-4. Pressione **+** o botão no canto superior direito para criar uma nova ID do aplicativo.
+4. Pressione o **+** botão no canto superior direito para criar uma nova ID de aplicativo.
 5. Insira uma descrição de ID do Aplicativo, selecione ID do Aplicativo Explícita e insira uma ID de lote no formato `com.domain.appname`. Esta ID de lote deve corresponder à ID de lote em seu projeto:
 
     ![Adicionando detalhes da ID do aplicativo](images/image7.png)
@@ -146,7 +146,7 @@ Usar a central de desenvolvedores é um processo de duas etapas que requer a cri
 
 9. Clique em **Registrar** e em **Concluído**. A ID do aplicativo recém-criada deve ser exibida na lista de IDs do aplicativo iOS.
 
-<a name="provisioningprofile" />
+<a name="provisioningprofile"></a>
 
 ### <a name="creating-a-provisioning-profile"></a>Criando um perfil de provisionamento
 
@@ -156,7 +156,7 @@ Agora, crie um perfil de provisionamento que contenha essa ID do aplicativo. Sig
 
     ![Seção Perfil de provisionamento](images/image10.png)
 
-2. Pressione **+** o botão no canto superior direito para criar um novo perfil de provisionamento.
+2. Pressione o **+** botão no canto superior direito para criar um novo perfil de provisionamento.
 3. Selecione o tipo de perfil de provisionamento que você precisa e clique em **Continuar**:
 
     ![Seleção do perfil de provisionamento](images/image11.png)
@@ -188,7 +188,7 @@ Agora, crie um perfil de provisionamento que contenha essa ID do aplicativo. Sig
 > [!IMPORTANT]
 > Talvez você também precise definir as chaves de direito no arquivo Entitlement.plist e as chaves de privacidade no arquivo Info.plist. Mais informações sobre esses direitos são fornecidas no guia [Trabalhando com direitos](~/ios/deploy-test/provisioning/entitlements.md).
 
-<a name="nextsteps" />
+<a name="nextsteps"></a>
 
 ## <a name="next-steps"></a>Próximas etapas
 
@@ -197,7 +197,7 @@ Quando uma capacidade tiver sido habilitada no lado do servidor, ainda haverá t
 - Use o namespace do framework em seu aplicativo.
 - Adicione os direitos necessários para seu aplicativo. As informações sobre os direitos necessários e como adicioná-los estão detalhadas no guia [Introdução aos direitos](~/ios/deploy-test/provisioning/entitlements.md).
 
-<a name="troubleshooting" />
+<a name="troubleshooting"></a>
 
 ## <a name="troubleshooting-capabilities"></a>Solução de problemas de capacidades
 
@@ -210,7 +210,7 @@ A lista a seguir detalha alguns dos problemas mais comuns que podem criar obstá
 - Verifique se as chaves de privacidade apropriadas estão definidas no info.plist
 - Na **Assinatura de Pacote do iOS** do aplicativo, certifique-se de que **Direitos Personalizados** está definido como **Entitlements.plist**. Esta _não_ é a configuração padrão para builds de depuração e do simulador do iOS.
 
-<a name="summary" />
+<a name="summary"></a>
 
 ## <a name="summary"></a>Resumo
 

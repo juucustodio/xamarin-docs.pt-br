@@ -6,12 +6,12 @@ ms.assetid: 191c71fb-44a4-4e6c-af4b-7b1107dce6af
 author: davidortinau
 ms.author: daortin
 ms.date: 07/18/2018
-ms.openlocfilehash: eee76c056d05edccd1e039bc5e4cb8107d1aceb5
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b8be06b9da4561ffc0d628b53f8daf639b5e3179
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016692"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571085"
 ---
 # <a name="shared-projects-code-sharing"></a>Compartilhamento de código de projetos compartilhados
 
@@ -35,7 +35,7 @@ Um projeto compartilhado não é compilado por conta própria, ele existe purame
 
 Observe que os projetos de aplicativo Android não podem fazer referência a outros projetos de aplicativo Android, por exemplo, um projeto de teste de unidade Android não pode fazer referência a um projeto de aplicativo Android. Para obter mais informações sobre essa limitação, consulte esta discussão sobre o [Fórum](https://forums.xamarin.com/discussion/comment/98092/).
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 ## <a name="visual-studio-for-mac-walkthrough"></a>Passo a passo do Visual Studio para Mac
 
@@ -43,7 +43,7 @@ Esta seção explica como criar e usar um projeto compartilhado usando Visual St
 
 ## <a name="creating-a-shared-project"></a>Criando um projeto compartilhado
 
-Para criar um novo projeto compartilhado, navegue até **arquivo > nova solução...** (ou clique com o botão direito do mouse em uma solução existente e escolha **Adicionar > adicionar novo projeto...** ):
+Para criar um novo projeto compartilhado, navegue até **arquivo > nova solução...** (ou clique com o botão direito do mouse em uma solução existente e escolha **Adicionar > adicionar novo projeto...**):
 
 [![Novo projeto compartilhado](shared-projects-images/xs-newsolution-sml.png "Nova solução")](shared-projects-images/xs-newsolution.png#lightbox)
 
@@ -69,7 +69,7 @@ A tela de **Opções** é mostrada abaixo-o **nome** do projeto e o **namespace 
 
 ![](shared-projects-images/xs-sharedprojectoptions.png "Shared Project Options")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ## <a name="visual-studio-walkthrough"></a>Passo a passo do Visual Studio
 
@@ -77,7 +77,7 @@ Esta seção explica como criar e usar um projeto compartilhado usando o Visual 
 
 ### <a name="creating-a-shared-project"></a>Criando um projeto compartilhado
 
-Para criar um novo projeto compartilhado, navegue até **arquivo**  > **novo** **projeto**de  > .
+Para criar um novo projeto compartilhado, navegue até **arquivo**  >  **novo**  >  **projeto**.
 
 No Visual Studio 2019, insira **compartilhado** na caixa de pesquisa na página **criar um novo projeto** . Selecione o modelo de **projeto compartilhado** e, em seguida, selecione **Avançar**. Insira um nome para o projeto e, em seguida, selecione **criar**.
 
@@ -107,19 +107,19 @@ O painel **Propriedades** é mostrado abaixo-o **namespace raiz** é a única co
 
 -----
 
-<a name="Shared_Project_Example"/>
+<a name="Shared_Project_Example"></a>
 
 ## <a name="shared-project-example"></a>Exemplo de projeto compartilhado
 
-O exemplo de [tarefa](https://github.com/xamarin/mobile-samples/tree/master/Tasky) usa um projeto compartilhado para conter o código comum usado pelos aplicativos Ios, Android e Windows Phone. O `SQLite.cs` e `TaskRepository.cs` arquivos de código-fonte Utilise diretivas de compilador (por exemplo, `#if __ANDROID__`) para produzir uma saída diferente para cada um dos aplicativos que fazem referência a eles.
+O exemplo de [tarefa](https://github.com/xamarin/mobile-samples/tree/master/Tasky) usa um projeto compartilhado para conter o código comum usado pelos aplicativos Ios, Android e Windows Phone. Os `SQLite.cs` arquivos de `TaskRepository.cs` código-fonte e as diretivas de compilador Utilise (por exemplo, `#if __ANDROID__`) para produzir uma saída diferente para cada um dos aplicativos que fazem referência a eles.
 
 A estrutura de solução completa é mostrada abaixo (no Visual Studio para Mac e no Visual Studio, respectivamente):
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 ![](shared-projects-images/xs-examplesolution.png "Visual Studio for Mac solution")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![](shared-projects-images/vs-examplesolution.png "Visual Studio solution")
 

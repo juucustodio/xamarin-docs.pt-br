@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 763165f1e09f847745b820987f8dbbae8f834fd7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f7b27c9f1010be313810b4b0f289ef792efd47a3
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021959"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84568640"
 ---
 # <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Controles deslizantes, comutadores e controle segmentados no Xamarin. iOS
 
-<a name="Sliders" />
+<a name="Sliders"></a>
 
 ## <a name="sliders"></a>Controles deslizantes
 
@@ -28,7 +28,7 @@ A captura de tela a seguir mostra as propriedades que são editáveis no designe
 
  [![](slider-switch-segmented-controls-images/image26a.png "Slider Properties")](slider-switch-segmented-controls-images/image25a.png#lightbox)
 
-Você pode definir esses valores no código, conforme mostrado abaixo, incluindo a conexão de um manipulador para exibir o valor selecionado no momento em um controle de `UILabel`:
+Você pode definir esses valores no código, conforme mostrado abaixo, incluindo a conexão de um manipulador para exibir o valor selecionado no momento em um `UILabel` controle:
 
 ```csharp
 slider1.MinValue = -1;
@@ -50,13 +50,13 @@ O controle deslizante personalizado tem esta aparência:
  [![](slider-switch-segmented-controls-images/image27a.png "Custom Slider")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 > [!IMPORTANT]
-> Atualmente, há um [bug](https://stackoverflow.com/a/19496179) que faz com que o `ThumbTint` não seja processado em tempo de execução conforme o esperado. Você pode adicionar a seguinte linha de código **antes** do código acima como uma solução alternativa. [[Origem](https://stackoverflow.com/a/21396794)]:
+> Atualmente, há um [bug](https://stackoverflow.com/a/19496179) fazendo com que o `ThumbTint` não seja renderizado em tempo de execução conforme o esperado. Você pode adicionar a seguinte linha de código **antes** do código acima como uma solução alternativa. [[Origem](https://stackoverflow.com/a/21396794)]:
 >
 > `slider1.SetThumbImage(UIImage.FromBundle("thumb.png"),UIControlState.Normal);`
 > 
 > Você pode usar qualquer imagem, pois ela será substituída, mas certifique-se de que ela seja colocada _no_ diretório de recursos e seja chamada em seu código.
 
-<a name="Switch" />
+<a name="Switch"></a>
 
 ## <a name="switch"></a>Alternar
 
@@ -68,13 +68,13 @@ A aparência da opção pode ser personalizada na **painel de propriedades** do 
 
  [![](slider-switch-segmented-controls-images/image29a.png "Switch Properties")](slider-switch-segmented-controls-images/image29a.png#lightbox)
 
-As propriedades da opção também podem ser definidas no código, por exemplo, o código a seguir mostrará uma opção com o valor padrão de `On`:
+As propriedades da opção também podem ser definidas no código, por exemplo, o código a seguir mostrará uma opção com o valor padrão de `On` :
 
 ```csharp
 switch1.On = true;
 ```
 
- <a name="Segmented_Controls" />
+ <a name="Segmented_Controls"></a>
 
 ## <a name="segmented-controls"></a>Controles segmentados
 

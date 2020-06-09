@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 2f5d04b49658abe9d366e264d8f1a659732a2c33
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 86b887b7aa913572d5fb6093fe682cd2933b282e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79304201"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573177"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Usando TestFlight para distribuir aplicativos Xamarin.iOS
 
-_TestFlight agora é propriedade da Apple, e é a principal maneira de testar seus aplicativos Xamarin.iOS. Este artigo irá guiá-lo através de todas as etapas do Processo TestFlight – desde o upload do seu aplicativo, até o trabalho com o iTunes Connect._
+_O TestFlight agora é de propriedade da Apple e é a principal maneira de testar os aplicativos do Xamarin. iOS em beta. Este artigo orientará você em todas as etapas do processo de TestFlight – desde o carregamento de seu aplicativo até o trabalho com o iTunes Connect._
 
 Teste beta é parte integrante do ciclo de desenvolvimento de software e há muitos aplicativos de plataforma cruzada oferecendo-se para simplificar esse processo, como [HockeyApp](https://hockeyapp.net/features/), [Applause](https://www.applause.com/mobile-app-testing) e, é claro, o Teste Beta de Aplicativo Nativo do Google Play para aplicativos Android. Este documento concentra-se no TestFlight da Apple.
 
@@ -61,7 +61,7 @@ O fluxo de trabalho a seguir descreve as etapas necessárias para começar a usa
 ## <a name="create-an-itunes-connect-record"></a>Criar um registro do iTunes Connect
 
 1. Faça logon no [Portal do iTunes Connect](https://itunesconnect.apple.com/) usando suas credenciais de desenvolvedor da Apple.
-2. Selecione **meus aplicativos:**
+2. Selecione **meus aplicativos**:
 
     [![](testflight-images/my-apps.png "Select My Apps")](testflight-images/my-apps.png#lightbox)
 
@@ -81,7 +81,7 @@ O formulário deve refletir exatamente as informações no arquivo Info.plist do
 - **Nome** – o nome descritivo usado ao configurar o Pacote de Aplicativo. Deve ser uma correspondência exata da entrada de **Nome do aplicativo** em seu `Info.plist`.
 - **Idioma primário** – o idioma de base usado no aplicativo. Geralmente é qualquer idioma que você fale.
 - **ID do pacote** – um menu suspenso listando todas as IDs do Aplicativo criadas em sua conta de desenvolvedor.
-  - **Sufixo ID do pacote** — Se você tiver selecionado um ID do Pacote de cartão selvagem (ou seja, terminando com um *, como no nosso exemplo acima), uma caixa adicional aparecerá, solicitando o sufixo Bundle ID. No exemplo, a **ID do pacote** é `mobi.chkn.*`, o sufixo é **PageView**. Juntos, estes compõem o `Info.plist` **Identificador bundle** em nosso .
+  - **Sufixo de ID de pacote** — se você tiver selecionado uma ID de pacote curinga (ou seja, terminando com um *, como no nosso exemplo acima), uma caixa adicional será exibida, solicitando o sufixo de ID do pacote. No exemplo, a **ID do pacote** é `mobi.chkn.*`, o sufixo é **PageView**. Juntos, eles compõem o **identificador de pacote** em nosso `Info.plist` .
 - **Versão** – número de versão do aplicativo que está sendo carregado. Ele é escolhido pelo desenvolvedor.
 - **SKU** – SKU é uma ID exclusiva para seu aplicativo, que não será vista pelos usuários. Pode ser considerada de maneira semelhante a uma ID do produto. No exemplo acima, escolhi a data junto com um número de versão para essa data.
 
@@ -109,7 +109,7 @@ Primeiro, compile o [distribuível final](~/ios/deploy-test/app-distribution/app
 
 [![](testflight-images/archive-view.png "Creating an archive will automatically open the Archives View")](testflight-images/archive-view.png#lightbox)
 
- Isso abrirá o assistente de publicação. Selecione o canal de distribuição **da App Store** para criar um pacote e abra o Application Loader. Na tela de Perfil de Provisionamento, selecione sua identidade de assinatura e o perfil de provisionamento ou assine novamente com outra identidade. Verifique os detalhes do seu pacote e, em seguida, clique em **Publicar** para salvar seu `.ipa`
+ Isso abrirá o assistente de publicação. Selecione o canal de distribuição da **loja de aplicativos** para criar um pacote e abra o carregador de aplicativos. Na tela de Perfil de Provisionamento, selecione sua identidade de assinatura e o perfil de provisionamento ou assine novamente com outra identidade. Verifique os detalhes do seu pacote e, em seguida, clique em **Publicar** para salvar seu `.ipa`
 
 [![](testflight-images/group.png "Select your signing identity and provisioning profile, or re-sign with another identity")](testflight-images/group.png#lightbox)
 
@@ -165,7 +165,7 @@ Em **Informações de Teste**, você pode fornecer aos testadores informações 
 
 Observe que esses metadados **não são** necessários para testadores internos, mas **são** necessários para testadores externos.
 
-<a name="beta-testing" />
+<a name="beta-testing"></a>
 
 ### <a name="enable-beta-testing"></a>Habilitar Testes Beta
 
@@ -197,7 +197,7 @@ Usuários do iTunes Connect existentes aparecerão na lista. Para selecioná-los
 
 [![](testflight-images/internal-tester.png "Turn on the Internal Tester switch")](testflight-images/internal-tester.png#lightbox)
 
-Para adicionar um usuário que não está **+** na lista, selecione o botão ao lado *de Usuários*e forneça um primeiro nome, sobrenome e endereço de e-mail para criar uma conta. O usuário precisará confirmar seu email para ativar a conta:
+Para adicionar um usuário que não está na lista, selecione o **+** botão ao lado de *usuários*e forneça um nome, sobrenome e endereço de email para criar uma conta. O usuário precisará confirmar seu email para ativar a conta:
 
 [![](testflight-images/add-new-user.png "Adding a user")](testflight-images/add-new-user.png#lightbox)
 

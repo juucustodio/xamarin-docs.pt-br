@@ -1,22 +1,8 @@
 ---
-title: Autenticar usuários com um banco de dados de documento Azure Cosmos DB eXamarin.Forms
-description: Este artigo explica como combinar o controle de acesso com Azure Cosmos DB coleções particionadas, para que um usuário possa acessar somente seus próprios documentos em um Xamarin.Forms aplicativo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b0322db5ebcc70347bf35157e3dc7c057e58cf18
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136091"
+Título: "autenticar usuários com um Azure Cosmos DB banco de dados de documento e Xamarin.Forms " Descrição: "Este artigo explica como combinar o controle de acesso com Azure Cosmos DB coleções particionadas, para que um usuário possa acessar somente seus próprios documentos em um Xamarin.Forms aplicativo."
+MS. Prod: xamarin MS. AssetID: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 06/16/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Autenticar usuários com um banco de dados de documento Azure Cosmos DB eXamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
@@ -55,16 +41,14 @@ Para obter mais informações sobre o particionamento de Cosmos DB, consulte [co
 
 O processo de integração do agente de token de recurso em um Xamarin.Forms aplicativo é o seguinte:
 
-1. Crie uma conta de Cosmos DB que usará o controle de acesso. Para obter mais informações, consulte [configuração de Cosmos DB](#cosmosdb_configuration).
-1. Crie um serviço de Azure App para hospedar o agente de token de recurso. Para obter mais informações, consulte [Azure app Service Configuration](#app_service_configuration).
-1. Crie um aplicativo do Facebook para realizar a autenticação. Para obter mais informações, consulte [configuração de aplicativo do Facebook](#facebook_configuration).
-1. Configure o serviço de Azure App para executar a autenticação fácil com o Facebook. Para obter mais informações, consulte [Azure app configuração de autenticação do serviço](#app_service_authentication_configuration).
-1. Configure o Xamarin.Forms aplicativo de exemplo para se comunicar com o serviço Azure app e Cosmos DB. Para obter mais informações, consulte [ Xamarin.Forms configuração do aplicativo](#forms_application_configuration).
+1. Crie uma conta de Cosmos DB que usará o controle de acesso. Para obter mais informações, consulte [configuração de Azure Cosmos DB](#azure-cosmos-db-configuration).
+1. Crie um serviço de Azure App para hospedar o agente de token de recurso. Para obter mais informações, consulte [Azure app Service Configuration](#azure-app-service-configuration).
+1. Crie um aplicativo do Facebook para realizar a autenticação. Para obter mais informações, consulte [configuração de aplicativo do Facebook](#facebook-app-configuration).
+1. Configure o serviço de Azure App para executar a autenticação fácil com o Facebook. Para obter mais informações, consulte [Azure app configuração de autenticação do serviço](#azure-app-service-authentication-configuration).
+1. Configure o Xamarin.Forms aplicativo de exemplo para se comunicar com o serviço Azure app e Cosmos DB. Para obter mais informações, consulte [ Xamarin.Forms configuração do aplicativo](#xamarinforms-application-configuration).
 
 > [!NOTE]
 > Se você não tiver uma [assinatura do Azure](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), crie uma [conta gratuita](https://aka.ms/azfree-docs-mobileapps) antes de começar.
-
-<a name="cosmosdb_configuration" />
 
 ### <a name="azure-cosmos-db-configuration"></a>Configuração de Azure Cosmos DB
 
@@ -72,8 +56,6 @@ O processo para criar uma conta de Cosmos DB que usará o controle de acesso é 
 
 1. Crie uma conta de Cosmos DB. Para obter mais informações, consulte [criar uma conta de Azure Cosmos DB](/azure/cosmos-db/sql-api-dotnetcore-get-started#step-1-create-an-azure-cosmos-db-account).
 1. Na conta Cosmos DB, crie uma nova coleção denominada `UserItems` especificando uma chave de partição de `/userid` .
-
-<a name="app_service_configuration" />
 
 ### <a name="azure-app-service-configuration"></a>Configuração do serviço de Azure App
 
@@ -93,8 +75,6 @@ O processo para hospedar o agente de token de recurso no serviço Azure App é o
 
 1. Publique a solução do agente de token de recurso no aplicativo Web do serviço de Azure App.
 
-<a name="facebook_configuration" />
-
 ### <a name="facebook-app-configuration"></a>Configuração de aplicativo do Facebook
 
 O processo para criar um aplicativo do Facebook para realizar a autenticação é o seguinte:
@@ -112,8 +92,6 @@ O processo para criar um aplicativo do Facebook para realizar a autenticação �
 
 Para obter mais informações, consulte [registrar seu aplicativo com o Facebook](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-nameregister-aregister-your-application-with-facebook).
 
-<a name="app_service_authentication_configuration" />
-
 ### <a name="azure-app-service-authentication-configuration"></a>Configuração de autenticação do serviço Azure App
 
 O processo para configurar a autenticação fácil do serviço de aplicativo é o seguinte:
@@ -128,8 +106,6 @@ O processo para configurar a autenticação fácil do serviço de aplicativo é 
     [![](azure-cosmosdb-auth-images/app-service-authentication-settings.png "App Service Web App Authentication Settings")](azure-cosmosdb-auth-images/app-service-authentication-settings-large.png#lightbox "App Service Web App Authentication Settings")
 
 O aplicativo Web do serviço de aplicativo também deve ser configurado para se comunicar com o aplicativo do Facebook para habilitar o fluxo de autenticação. Isso pode ser feito selecionando o provedor de identidade do Facebook e inserindo os valores de **ID** do aplicativo e **segredo do aplicativo** nas configurações do aplicativo do Facebook no centro de desenvolvimento do Facebook. Para obter mais informações, consulte [adicionar informações do Facebook ao seu aplicativo](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application).
-
-<a name="forms_application_configuration" />
 
 ### <a name="xamarinforms-application-configuration"></a>Xamarin.FormsConfiguração do aplicativo
 
@@ -237,7 +213,7 @@ O `CreateDocumentQuery<T>` método especifica um `Uri` argumento que representa 
 > [!NOTE]
 > Observe que os documentos de permissão, que são criados pelo agente de token de recurso, são armazenados na mesma coleção de documentos que os documentos criados pelo Xamarin.Forms aplicativo. Portanto, a consulta de documento contém uma `Where` cláusula que aplica um predicado de filtragem à consulta na coleção de documentos. Essa cláusula garante que os documentos de permissão não sejam retornados da coleção de documentos.
 
-Para obter mais informações sobre como recuperar documentos de uma coleção de documentos, consulte [recuperando documentos de coleção de documentos](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md#document_query).
+Para obter mais informações sobre como recuperar documentos de uma coleção de documentos, consulte [recuperando documentos de coleção de documentos](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md#retrieving-document-collection-documents).
 
 ## <a name="inserting-documents"></a>Inserindo documentos
 
@@ -250,7 +226,7 @@ await client.CreateDocumentAsync(collectionLink, item);
 
 Isso garante que o documento será inserido na coleção particionada do usuário.
 
-Para obter mais informações sobre como inserir um documento em uma coleção de documentos, consulte [inserindo um documento em uma coleção de documentos](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md#inserting_document).
+Para obter mais informações sobre como inserir um documento em uma coleção de documentos, consulte [inserindo um documento em uma coleção de documentos](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md#inserting-a-document-into-a-document-collection).
 
 ## <a name="deleting-documents"></a>Excluindo documentos
 
@@ -266,7 +242,7 @@ await client.DeleteDocumentAsync(UriFactory.CreateDocumentUri(Constants.Database
 
 Isso garante que Cosmos DB saiba em qual coleção particionada excluir o documento.
 
-Para obter mais informações sobre como excluir um documento de uma coleção de documentos, consulte [excluindo um documento de uma coleção de documentos](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md#deleting_document).
+Para obter mais informações sobre como excluir um documento de uma coleção de documentos, consulte [excluindo um documento de uma coleção de documentos](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md#deleting-a-document-from-a-document-collection).
 
 ## <a name="summary"></a>Resumo
 

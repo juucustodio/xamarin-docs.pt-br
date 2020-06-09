@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: d8c9d6fe36b457a000e96d1ad8990debad8ac915
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b311f3121ea6a58975d41b9690e31a44daa0951e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030742"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573697"
 ---
 # <a name="tvos-app-distribution-overview"></a>Visão geral da distribuição de aplicativos tvOS
 
@@ -20,17 +20,17 @@ _Este documento fornece uma visão geral das técnicas de distribuição dispon�
 
 Depois que o aplicativo Xamarin. tvOS tiver sido desenvolvido, a próxima etapa no ciclo de vida do desenvolvimento de software será distribuir seu aplicativo aos usuários, conforme mostrado na seção realçada do diagrama abaixo:
 
-[![visão geral do ciclo de vida do desenvolvimento de software](images/publishingdiagram.png)](images/publishingdiagram.png#lightbox)
+[![Visão geral do ciclo de vida do desenvolvimento de software](images/publishingdiagram.png)](images/publishingdiagram.png#lightbox)
 
 A Apple fornece as seguintes maneiras de distribuir um aplicativo tvOS, que tem suporte do Xamarin. tvOS:
 
 1. [**App Store**](#Apple-TV-App-Store-Distribution)
-2. [**Interno (Enterprise)** ](#In-House-Distribution) 
-3. [**Ad Hoc**](#Ad_Hoc_Distribution) 
+2. [**Interno (Enterprise)**](#In-House-Distribution) 
+3. [**Ad hoc**](#Ad_Hoc_Distribution) 
 
 Todos esses cenários exigem que os aplicativos sejam provisionados usando o *perfil de provisionamento* apropriado. Perfis de provisionamento são arquivos que contêm informações de assinatura de código, bem como a identidade do aplicativo e o mecanismo de distribuição desejado. Para a distribuição fora da App Store, também há informações sobre em quais dispositivos o aplicativo pode ser implantado.
 
-<a name="Apple-TV-App-Store-Distribution" />
+<a name="Apple-TV-App-Store-Distribution"></a>
 
 ## <a name="apple-tv-app-store-distribution"></a>Distribuição da loja de aplicativos da Apple TV
 
@@ -59,15 +59,15 @@ Se você estiver tendo problemas para enviar seu aplicativo Xamarin. tvOS para a
 
 Para obter mais informações, visite o guia [publicando na loja de aplicativos da Apple TV](~/ios/tvos/deploy-test/app-distribution/app-store-publishing.md) .
 
-<a name="In-House-Distribution" />
+<a name="In-House-Distribution"></a>
 
 ## <a name="in-house-distribution"></a>Distribuição Interna
 
-Às vezes chamada de *Distribuição Corporativa*, a distribuição interna permite que membros do **Programa de Desenvolvedores Corporativos da Apple** distribuam aplicativos internamente para outros membros da mesma organização. A distribuição interna tem as vantagens de não exigir uma análise da App Store e não ter nenhum limite de número de dispositivos nos quais um aplicativo pode ser instalado. No entanto, é importante observar que membros do **Programa de Desenvolvedor Corporativo da Apple** **não** têm acesso ao iTunes Connect e, portanto, o licenciado é responsável por distribuir o aplicativo.
+Às vezes chamada de *Distribuição Corporativa*, a distribuição interna permite que membros do **Programa de Desenvolvedores Corporativos da Apple** distribuam aplicativos internamente para outros membros da mesma organização. A distribuição interna tem as vantagens de não exigir uma análise da App Store e não ter nenhum limite de número de dispositivos nos quais um aplicativo pode ser instalado. No entanto, é importante observar que membros do **Programa de Desenvolvedor Corporativo da Apple****não** têm acesso ao iTunes Connect e, portanto, o licenciado é responsável por distribuir o aplicativo.
 
 Para obter mais informações sobre como obter a configuração e como distribuir seu aplicativo internamente, consulte o [Guia de distribuição interna](~/ios/deploy-test/app-distribution/in-house-distribution.md). Este documento é específico para iOS, mas as mesmas técnicas são usadas para aplicativos tvOS.
 
-<a name="Ad_Hoc_Distribution"/>
+<a name="Ad_Hoc_Distribution"></a>
 
 ## <a name="ad-hoc-distribution"></a>Distribuição Ad Hoc
 
@@ -75,7 +75,7 @@ Os aplicativos Xamarin. tvOS podem ser testados pelo usuário por meio da distri
 
 Para obter mais informações sobre como obter a configuração e como distribuir seu aplicativo internamente, consulte o [Guia de distribuição ad hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md). Novamente, este documento é específico do iOS, mas as mesmas técnicas são usadas para aplicativos tvOS.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>Resumo
 
@@ -83,7 +83,7 @@ Este artigo forneceu uma breve visão geral dos mecanismos de distribuição que
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guias de interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

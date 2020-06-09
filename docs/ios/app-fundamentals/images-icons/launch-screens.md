@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2018
-ms.openlocfilehash: ef1a97df5648d0f120b58f6206f18f74a6f50f92
-ms.sourcegitcommit: 52fb214c0e0243587d4e9ad9306b75e92a8cc8b7
+ms.openlocfilehash: a2f15c8385b7df7afc3f04e033a085cb00bc9005
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "78292171"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84573853"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Iniciar telas para aplicativos Xamarin. iOS
 
@@ -22,7 +22,7 @@ Antes do iOS 8, a criação de uma tela de inicialização para um aplicativo iO
 
 Esta breve explicação explica como criar uma tela de inicialização com um storyboard fornecido por padrão em um novo projeto ou com um storyboard adicionado manualmente a um projeto existente. Em seguida, ele demonstra como usar o designer do iOS para adicionar uma exibição de imagem e um rótulo ao storyboard, definir restrições nessas exibições e verificar se o storyboard parece correto para vários dispositivos e orientações.
 
-<a name="storyboard" />
+<a name="storyboard"></a>
 
 ## <a name="managing-launch-screens-with-storyboards"></a>Gerenciando telas de inicialização com storyboards
 
@@ -97,7 +97,7 @@ No iOS 8 (e posterior), o desenvolvedor pode criar um storyboard unificado espec
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Criar um novo projeto. No Visual Studio, selecione **arquivo > novo > projeto > Visual C# > iPhone & iPad > aplicativo IOS (Xamarin)** :
+1. Criar um novo projeto. No Visual Studio, selecione **arquivo > novo > projeto > Visual C# > iPhone & iPad > aplicativo IOS (Xamarin)**:
 
     ![A janela novo projeto, com aplicativo iOS (Xamarin) selecionado](launch-screens-images/launch01.w157.png)
 
@@ -189,24 +189,24 @@ Para obter mais informações sobre como criar uma tela de inicialização com u
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-Ao atualizar um aplicativo existente para usar storyboards para suas telas de inicialização, clique com o botão direito do mouse no **nome do projeto** na **Gerenciador de soluções** e selecione **Adicionar** > **novo arquivo...** . Selecione tela de **inicialização** do **Ios** > e clique no botão **novo** :
+Ao atualizar um aplicativo existente para usar storyboards para suas telas de inicialização, clique com o botão direito do mouse no **nome do projeto** na **Gerenciador de soluções** e selecione **Adicionar**  >  **novo arquivo...**. Selecione **iOS**  >  **tela de inicialização** do IOS e clique no botão **novo** :
 
 ![](launch-screens-images/storyboard02.png "Select an iOS Launch Screen")
 
-Em seguida, clique duas vezes no arquivo `Info.plist` no **Gerenciador de soluções** para abri-lo para edição. Na **tela iniciar**, selecione o novo arquivo de storyboard criado acima.
+Em seguida, clique duas vezes no `Info.plist` arquivo no **Gerenciador de soluções** para abri-lo para edição. Na **tela iniciar**, selecione o novo arquivo de storyboard criado acima.
 
 ![](launch-screens-images/storyboard09.png "Select the new Storyboard file created above")
 
 Para usar o novo storyboard como uma tela de inicialização, faça o seguinte:
 
-1. Clique duas vezes no arquivo `Info.plist` no **Gerenciador de soluções** para abri-lo para edição.
+1. Clique duas vezes no `Info.plist` arquivo no **Gerenciador de soluções** para abri-lo para edição.
 2. Role até a seção **imagens de inicialização universal** do editor, abra a lista suspensa **tela de inicialização** e selecione o nome do storyboard criado acima: 
 
     ![](launch-screens-images/storyboard08.png "Setting the launch screen to the storyboard")
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. Clique com o botão direito do mouse no nome do projeto na **Gerenciador de soluções** e selecione **Adicionar** > **novo arquivo...** : 
+1. Clique com o botão direito do mouse no nome do projeto na **Gerenciador de soluções** e selecione **Adicionar**  >  **novo arquivo...**: 
 
     ![](launch-screens-images/image012.png "Add new file")
 2. Insira um nome para a tela de inicialização e clique no botão **Adicionar** : 
@@ -216,7 +216,7 @@ Para usar o novo storyboard como uma tela de inicialização, faça o seguinte:
 4. Verifique se a **classe size** está definida como **any: any** e a **exibição como** é **genérica**: 
 
     ![](launch-screens-images/image016.png "Ensure that the Size Class is set to any:any and the View As is Generic")
-5. Assembly a tela de inicialização de classes de tamanho, elementos simples da interface do usuário (como `UIImageView`) e imagens que você incluiu no pacote do aplicativo: 
+5. Assembly a tela de inicialização de classes de tamanho, elementos simples da interface do usuário (como `UIImageView` ) e imagens que você incluiu no pacote do aplicativo: 
 
     ![](launch-screens-images/image017.png "Assembly the launch screen in the iOS Designer")
 6. Salve as alterações no storyboard.

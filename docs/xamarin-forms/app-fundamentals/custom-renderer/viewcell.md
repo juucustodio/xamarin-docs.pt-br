@@ -1,9 +1,6 @@
 ---
-Título: Descrição: ' um Xamarin.Forms ViewCell é uma célula que pode ser adicionada a ListView ou Tableview, que contém uma exibição definida pelo desenvolvedor. Este artigo demonstra como criar um renderizador personalizado para um ViewCell que é hospedado dentro de um Xamarin.Forms controle ListView.
-MS. Prod: MS. AssetID: MS. Technology: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+Título: "Personalizando uma ViewCell" Descrição: "um Xamarin.Forms ViewCell é uma célula que pode ser adicionada a ListView ou Tableview, que contém uma exibição definida pelo desenvolvedor. Este artigo demonstra como criar um renderizador personalizado para um ViewCell que é hospedado dentro de um Xamarin.Forms controle ListView. "
+MS. Prod: xamarin MS. AssetID: 61F378C9-6DEF-436B-ACC3-2324B25D404E MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/07/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="customizing-a-viewcell"></a>Personalizando um ViewCell
@@ -20,13 +17,11 @@ O diagrama a seguir ilustra a relação entre o [`ViewCell`](xref:Xamarin.Forms.
 
 O processo de renderização pode ser aproveitado para implementar personalizações específicas da plataforma criando um renderizador personalizado para um [`ViewCell`](xref:Xamarin.Forms.ViewCell) em cada plataforma. O processo para fazer isso é o seguinte:
 
-1. [Criar](#Creating_the_Custom_Cell) uma Xamarin.Forms célula Personalizada.
-1. [Consuma](#Consuming_the_Custom_Cell) a célula Personalizada de Xamarin.Forms .
-1. [Criar](#Creating_the_Custom_Renderer_on_each_Platform) o renderizador personalizado para a célula em cada plataforma.
+1. [Criar](#creating-the-custom-cell) uma Xamarin.Forms célula Personalizada.
+1. [Consuma](#consuming-the-custom-cell) a célula Personalizada de Xamarin.Forms .
+1. [Criar](#creating-the-custom-renderer-on-each-platform) o renderizador personalizado para a célula em cada plataforma.
 
 Cada item agora será discutido, por sua vez, para implementar um `NativeCell` renderizador que aproveita um layout específico da plataforma para cada célula hospedada dentro de um Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) controle. Isso impede Xamarin.Forms que os cálculos de layout sejam chamados repetidamente durante a `ListView` rolagem.
-
-<a name="Creating_the_Custom_Cell" />
 
 ## <a name="creating-the-custom-cell"></a>Criando a célula personalizada
 
@@ -62,8 +57,6 @@ public class NativeCell : ViewCell
 ```
 
 A classe `NativeCell` é criada no projeto da biblioteca .NET Standard e define a API para a célula personalizada. A célula personalizada expõe as propriedades `Name`, `Category` e `ImageFilename`, que podem ser exibidas por meio da associação de dados. Para obter mais informações sobre vinculação de dados, veja [Noções básicas de vinculação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
-
-<a name="Consuming_the_Custom_Cell" />
 
 ## <a name="consuming-the-custom-cell"></a>Consumindo a célula personalizada
 
@@ -143,8 +136,6 @@ Um Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) controle é usado par
 Cada linha na lista contém três itens de dados – um nome, uma categoria e um nome de arquivo de imagem. O layout de cada linha na lista é definido pelo `DataTemplate` que é referenciado por meio da [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) propriedade vinculável. O `DataTemplate` define que cada linha de dados na lista será um `NativeCell` que exibe suas propriedades `Name`, `Category` e `ImageFilename` por meio da associação de dados. Para obter mais informações sobre o controle `ListView`, veja [ListView](~/xamarin-forms/user-interface/listview/index.md).
 
 Agora, um renderizador personalizado pode ser adicionado a cada projeto de aplicativo para personalizar o layout específico à plataforma para cada célula.
-
-<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## <a name="creating-the-custom-renderer-on-each-platform"></a>Criando o renderizador personalizado em cada plataforma
 

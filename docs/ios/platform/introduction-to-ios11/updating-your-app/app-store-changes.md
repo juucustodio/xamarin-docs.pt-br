@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016
-ms.openlocfilehash: 356509fb6f588b96a2a1224879675bbad36f8524
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2aee2a8dc37d6a1a73569322a97cdd0aebfbfa1c
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032129"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574204"
 ---
 # <a name="app-store-changes-in-ios-11"></a>Alterações na loja de aplicativos no iOS 11
 
@@ -50,7 +50,7 @@ Para disponibilizar suas compras no aplicativo para promover, abra seu aplicativ
 
 ![Seção promoção da loja de aplicativos no iTune Connect](app-store-changes-images/image4.png)
 
-Você também precisa adicionar o método `ShouldAddStorePayment` ao protocolo `SKPaymentTransactionObserver` em seu aplicativo.
+Você também precisa adicionar o `ShouldAddStorePayment` método ao `SKPaymentTransactionObserver` protocolo em seu aplicativo.
 
 Para obter mais informações sobre promoções de compra no aplicativo, consulte [a página promovendo compras no aplicativo](https://developer.apple.com/app-store/promoting-in-app-purchases/) da Apple.
 
@@ -84,7 +84,7 @@ Há algumas coisas a serem consideradas ao responder aos usuários:
 
 Para obter mais informações, consulte [a página respondendo às revisões](https://developer.apple.com/app-store/responding-to-reviews/) da Apple.
 
-<a name="Phased_Release"/>
+<a name="Phased_Release"></a>
 
 ## <a name="phased-release"></a>Versão em fases
 

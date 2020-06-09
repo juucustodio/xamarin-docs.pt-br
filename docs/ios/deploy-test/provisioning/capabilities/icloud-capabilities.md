@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: c8c1a5d284e5faaffae33a724c461b6fd74cf39b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 1932bc8bf5362a284ed62aa241170264826baa9e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73028583"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567548"
 ---
 # <a name="icloud-capabilities-in-xamarinios"></a>Recursos iCloud no Xamarin.iOS
 
-_Adicionar recursos a um aplicativo geralmente requer configuração de provisionamento adicional. Este guia explica a configuração necessária para os recursos do iCloud._
+_A adição de recursos a um aplicativo geralmente requer configuração de provisionamento adicional. Este guia explica a configuração necessária para os recursos do iCloud._
 
 O iCloud fornece aos usuários do iOS uma maneira fácil e simples de armazenar conteúdo e compartilhá-lo entre dispositivos. Os desenvolvedores podem usar o iCloud de quatro maneiras para fornecer um meio de armazenamento para seus usuários: armazenamento de chave-valor, armazenamento de UIDocument, CoreData e usando o CloudKit diretamente para fornecer armazenamento para arquivos e diretórios individuais. Para obter mais informações sobre essas maneiras, consulte o guia [Introdução ao iCloud](~/ios/data-cloud/introduction-to-icloud.md).
 
@@ -25,7 +25,7 @@ Adicionar a capacidade do iCloud a um aplicativo é um pouco mais difícil do qu
 > [!IMPORTANT]
 > A Apple [fornece ferramentas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ajudar os desenvolvedores a lidar adequadamente com o GDPR (Regulamento Geral sobre a Proteção de Dados) da União Europeia.
 
-<a name="icloud-developer-center" />
+<a name="icloud-developer-center"></a>
 
 ## <a name="developer-center"></a>Central de Desenvolvedores
 
@@ -59,11 +59,11 @@ Para criar uma nova ID do aplicativo e adicionar um contêiner, faça o seguinte
     
     ![Seção Identificador de seção na Central de Desenvolvedores](icloud-capabilities-images/image26.png)
 
-2. Selecione **+** o botão para adicionar um novo ID do aplicativo: 
+2. Selecione o **+** botão para adicionar uma nova ID do aplicativo: 
     
     ![Botão Adicionar nova ID do aplicativo](icloud-capabilities-images/image27.png)
 
-3. Digite um **nome** para o ID do aplicativo e dê-lhe um **ID de aplicativo explícito**:
+3. Insira um **nome** para a ID do aplicativo e dê a ela uma **ID explícita do aplicativo**:
     
     ![Insira os detalhes da nova ID do aplicativo](icloud-capabilities-images/image28.png)
 
@@ -93,7 +93,7 @@ Para criar uma nova ID do aplicativo e adicionar um contêiner, faça o seguinte
 
 10. Confirme as atribuições do contêiner e pressione **Atribuir**.
 
-Este ID do aplicativo agora pode ser usado para gerar, ou para regerar, um novo perfil de provisionamento, conforme descrito no guia [Trabalhando com Recursos.](~/ios/deploy-test/provisioning/capabilities/index.md) 
+Essa ID do aplicativo agora pode ser usada para gerar, ou para gerar novamente, um novo perfil de provisionamento, conforme descrito no guia [trabalhando com recursos](~/ios/deploy-test/provisioning/capabilities/index.md) . 
 
 Para obter mais informações sobre como usar o iCloud, consulte os seguintes guias:
 
@@ -107,6 +107,6 @@ A lista a seguir descreve as etapas adicionais que precisam ser executadas:
 
 * Use o namespace do framework em seu aplicativo.
 * Adicione os direitos necessários para seu aplicativo. As informações sobre os direitos necessários e como adicioná-los estão detalhadas no guia [Trabalhando com direitos](~/ios/deploy-test/provisioning/entitlements.md).
-* Na **Assinatura de Pacote do iOS** do Aplicativo, verifique se a opção **Direitos Personalizados** está definida como **Entitlements.plist**.Esta _não_ é a configuração padrão para compilações de Debug e iOS Simulator.
+* Na **Assinatura de Pacote do iOS** do Aplicativo, verifique se a opção **Direitos Personalizados** está definida como **Entitlements.plist**.Essa _não_é   a configuração padrão para compilações de depuração e do IOS Simulator.
 
 Se você encontrar problemas com serviços de aplicativos, consulte a seção [Solução de problemas](~/ios/deploy-test/provisioning/capabilities/index.md) do guia principal.

@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 8714297c4948dbb65c521d6a32bac3e437b40733
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 683915d238f6c8aee10957285ad4438316e1e037
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78291479"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84567097"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Dicas de solução de problemas do Xamarin. Mac
 
@@ -35,7 +35,7 @@ Com qualquer um desses recursos, há algumas etapas de preparação que você po
 
 ### <a name="what-to-do-when-your-app-crashes-with-no-output"></a>O que fazer quando seu aplicativo falhar sem nenhuma saída
 
-Na maioria dos casos, o depurador no Visual Studio para Mac detectará exceções e falhas em seu aplicativo e ajudará você a rastrear a causa raiz. No entanto, há alguns casos em que seu aplicativo irá devolver o Dock e, em seguida, sair com pouca ou nenhuma saída. Eles podem incluir:
+Na maioria dos casos, o depurador no Visual Studio para Mac detectará exceções e falhas em seu aplicativo e ajudará você a rastrear a causa raiz. No entanto, há alguns casos em que seu aplicativo irá devolver o Dock e, em seguida, sair com pouca ou nenhuma saída. Isso inclui:
 
 - Problemas de assinatura de código.
 - Determinadas falhas de tempo de execução mono.
@@ -47,20 +47,20 @@ Na maioria dos casos, o depurador no Visual Studio para Mac detectará exceçõe
 A depuração desses programas pode ser frustrante, pois encontrar as informações necessárias pode ser difícil. Aqui estão algumas abordagens que podem ajudar:
 
 - Verifique se a versão do macOS listada no **info. plist** é a mesma que a versão do MacOS instalada no momento no computador.
-- Verifique a saída do aplicativo Visual Studio para Mac (**exibir** -> **pads** -> **saída do aplicativo**) para rastreamentos de pilha ou saída em vermelho de Cocoa que possa descrever a saída.
+- Verifique a saída do aplicativo Visual Studio para Mac (saída do aplicativo**View**  ->  **pads**  ->  **Application Output**) para rastreamentos de pilha ou saída em vermelho de Cocoa que pode descrever a saída.
 - Execute o aplicativo na linha de comando e examine a saída (no aplicativo de **terminal** ) usando:
 
-  `MyApp.app/Contents/MacOS/MyApp` (em que `MyApp` é o nome do seu aplicativo)
+  `MyApp.app/Contents/MacOS/MyApp`(onde `MyApp` é o nome do seu aplicativo)
 - Você pode aumentar a saída adicionando "MONO_LOG_LEVEL" ao comando na linha de comando, por exemplo:
 
   `MONO_LOG_LEVEL=debug MyApp.app/Contents/MacOS/MyApp`
-- Você pode anexar um depurador nativo (`lldb`) ao processo para ver se isso fornece mais informações (isso requer uma licença paga). Por exemplo, proceda da seguinte maneira:
+- Você pode anexar um depurador nativo ( `lldb` ) ao processo para ver se isso fornece mais informações (isso requer uma licença paga). Por exemplo, proceda da seguinte maneira:
 
   1. Insira `lldb MyApp.app/Contents/MacOS/MyApp` no terminal.
   2. Insira `run` no terminal.
   3. Insira `c` no terminal.
   4. Sair quando terminar a depuração.
-- Como último recurso, antes de chamar `NSApplication.Init` em seu método de `Main` (ou em outros locais, conforme necessário), você pode gravar texto em um arquivo em um local conhecido para rastrear em qual etapa de lançamento você está executando problemas.
+- Como último recurso, antes de chamar `NSApplication.Init` em seu `Main` método (ou em outros locais, conforme necessário), você pode gravar o texto em um arquivo em um local conhecido para rastrear em qual etapa da inicialização você está executando problemas.
 
 ## <a name="known-issues"></a>Problemas conhecidos
 
@@ -68,17 +68,17 @@ As seções a seguir abordam problemas conhecidos e suas soluções.
 
 ### <a name="unable-to-connect-to-the-debugger-in-sandboxed-apps"></a>Não é possível conectar-se ao depurador em aplicativos em área restrita
 
-O depurador se conecta a aplicativos Xamarin. Mac por meio de TCP, o que significa que, por padrão, quando você habilita a área restrita, ele não consegue se conectar ao aplicativo, portanto, se você tentar executar o aplicativo sem as permissões apropriadas habilitadas, você receberá um erro *"não é possível conectar ao depurador"* .
+O depurador se conecta a aplicativos Xamarin. Mac por meio de TCP, o que significa que, por padrão, quando você habilita a área restrita, ele não consegue se conectar ao aplicativo, portanto, se você tentar executar o aplicativo sem as permissões apropriadas habilitadas, você receberá um erro *"não é possível conectar ao depurador"*.
 
 [![Editando os direitos](troubleshooting-images/debug01.png "Editando os direitos")](troubleshooting-images/debug01-large.png#lightbox)
 
-A permissão **permitir conexões de rede de saída (cliente)** é a necessária para o depurador, permitindo que a depuração seja normalmente ativada. Como não é possível depurar sem ele, atualizamos o destino de `CompileEntitlements` para `msbuild` adicionar automaticamente essa permissão aos direitos de qualquer aplicativo que esteja em área restrita somente para compilações de depuração. As compilações de versão devem usar os direitos especificados no arquivo de direitos, sem modificações.
+A permissão **permitir conexões de rede de saída (cliente)** é a necessária para o depurador, permitindo que a depuração seja normalmente ativada. Como não é possível depurar sem ele, atualizamos o `CompileEntitlements` destino do para `msbuild` adicionar automaticamente essa permissão aos direitos de qualquer aplicativo que esteja em área restrita somente para compilações de depuração. As compilações de versão devem usar os direitos especificados no arquivo de direitos, sem modificações.
 
 ### <a name="systemnotsupportedexception-no-data-is-available-for-encoding-437"></a>System. NotSupportedException: não há dados disponíveis para codificação 437
 
-Ao incluir bibliotecas de terceiros em seu aplicativo Xamarin. Mac, você pode receber um erro no formato "System. NotSupportedException: nenhum dado está disponível para codificação 437" ao tentar compilar e executar o aplicativo. Por exemplo, bibliotecas, como `Ionic.Zip.ZipFile`, podem gerar essa exceção durante a operação.
+Ao incluir bibliotecas de terceiros em seu aplicativo Xamarin. Mac, você pode receber um erro no formato "System. NotSupportedException: nenhum dado está disponível para codificação 437" ao tentar compilar e executar o aplicativo. Por exemplo, bibliotecas, como `Ionic.Zip.ZipFile` , podem gerar essa exceção durante a operação.
 
-Isso pode ser resolvido abrindo as opções para o projeto Xamarin. Mac, indo para o **Build do mac** > **internacionalização** e verificando a internacionalização **oeste** :
+Isso pode ser resolvido abrindo as opções para o projeto Xamarin. Mac, indo para a **Mac Build**  >  **internacionalização** de Build do Mac e verificando a internacionalização **oeste** :
 
 [![Editar as opções de build](troubleshooting-images/issue01.png "Editar as opções de build")](troubleshooting-images/issue01-large.png#lightbox)
 
@@ -102,7 +102,7 @@ Se você clicar duas vezes no arquivo **retitles. plist** , o editor de direitos
 
 [![Editando os direitos](troubleshooting-images/entitlements02.png "Editando os direitos")](troubleshooting-images/entitlements02-large.png#lightbox)
 
-Para projetos Xamarin. Mac existentes, você precisará criar manualmente o arquivo **pretitles. plist** clicando com o botão direito do mouse no projeto na **painel de soluções** e selecionando **Adicionar** > **novo arquivo...** . Em seguida, selecione **Xamarin. Mac** > **lista de propriedades vazia**:
+Para projetos Xamarin. Mac existentes, você precisará criar manualmente o arquivo Rights **. plist** clicando com o botão direito do mouse no projeto na **painel de soluções** e selecionando **Adicionar**  >  **novo arquivo...**. Em seguida, selecione lista de propriedades vazia do **Xamarin. Mac**  >  **Empty Property List**:
 
 ![Adicionando uma nova lista de propriedades](troubleshooting-images/entitlements03.png "Adicionando uma nova lista de propriedades")
 
@@ -114,7 +114,7 @@ Insira `Entitlements` para o nome e clique no botão **novo** . Se o projeto tiv
 
 A comunidade de desenvolvedores que usam produtos Xamarin é incrível e muitos visitam nossos [fóruns do xamarin. Mac](https://forums.xamarin.com/categories/xamarin-mac) para compartilhar experiências e seus conhecimentos. Além disso, os engenheiros do Xamarin visitam periodicamente o fórum para ajudar.
 
-<a name="filing-a-bug"/>
+<a name="filing-a-bug"></a>
 
 ## <a name="filing-a-bug"></a>Arquivando um bug
 

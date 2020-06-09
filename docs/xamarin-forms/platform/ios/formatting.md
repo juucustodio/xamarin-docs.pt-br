@@ -1,34 +1,18 @@
 ---
-title: ''
-description: Este artigo explica como definir a aparência específica do iOS sem usar um Xamarin.Forms renderizador personalizado.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: eb44b7d756fee4fa4f452b79292effb45ab98154
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138509"
+Título: "adicionando formatação específica ao iOS" Descrição: "Este artigo explica como definir a aparência específica do iOS sem usar um Xamarin.Forms processador personalizado".
+MS. Prod: xamarin MS. AssetID: CE50E207-D092-4D88-8439-1B51F178E7ED MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/29/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="adding-ios-specific-formatting"></a>Adicionando formatação específica do iOS
 
 Uma maneira de definir a formatação específica do iOS é criar um [renderizador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) para um controle e definir estilos e cores específicos da plataforma para cada plataforma.
 
 Outras opções para controlar o modo como a Xamarin.Forms aparência do aplicativo IOS inclui:
 
-- Configurando opções de exibição no [ **info. plist**](#info-plist)
-- Configurando estilos de controle por meio da [ `UIAppearance` API](#uiappearance)
+- Configurando opções de exibição no [ **info. plist**](#customizing-infoplist)
+- Configurando estilos de controle por meio da [ `UIAppearance` API](#uiappearance-api)
 
 Essas alternativas são discutidas abaixo.
-
-<a name="info-plist"/>
 
 ## <a name="customizing-infoplist"></a>Personalizando o info. plist
 
@@ -62,8 +46,6 @@ ou edite o arquivo **info. plist** correspondente diretamente para incluir:
 Agora, quando o aplicativo é executado, a barra de navegação fica verde e seu texto é branco (devido à Xamarin.Forms formatação) *e* o texto da barra de status também é branco graças à configuração específica do IOS:
 
 ![](theme-images/status-white-sml.png "iOS Theming")
-
-<a name="uiappearance"/>
 
 ## <a name="uiappearance-api"></a>API UIAppearance
 

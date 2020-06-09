@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 12fe9645ab832db1db37e36b0342664bbd2fe9f8
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 9a45e87165101a8e8afcfc51d15d085982b6499e
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030411"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569927"
 ---
 # <a name="working-with-tvos-page-controls-in-xamarin"></a>Trabalhando com controles de página tvOS no Xamarin
 
@@ -27,15 +27,15 @@ A Apple tem as seguintes sugestões ao usar um controle de página:
 - **Usar somente em coleções completas** – os controles de página funcionam melhor em um ambiente de tela inteira para exibir várias páginas que existem em uma única coleção.
 - **Limitar o número de páginas que os** controles de página funcionam melhor para dez (10) ou menos páginas e um máximo de vinte (20) páginas. Para mais de vinte páginas, considere usar uma [exibição de coleção](~/ios/tvos/user-interface/collection-views.md) e exibir as páginas em uma grade.
 
-<a name="Page-Controls-and-Storyboards" />
+<a name="Page-Controls-and-Storyboards"></a>
 
 ## <a name="page-controls-and-storyboards"></a>Controles de página e storyboards
 
 A maneira mais fácil de trabalhar com controles de página em um aplicativo Xamarin. tvOS é adicioná-los à interface do usuário do aplicativo usando o designer do iOS.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-1. No **painel de soluções**, clique duas vezes no arquivo de `Main.storyboard` e abra-o para edição.
+1. No **painel de soluções**, clique duas vezes no `Main.storyboard` arquivo e abra-o para edição.
 1. Arraste um **controle de página** da **caixa de ferramentas** e solte-o na exibição:
 
     [![](page-controls-images/page02.png "A Page Control")](page-controls-images/page02.png#lightbox)
@@ -43,14 +43,14 @@ A maneira mais fácil de trabalhar com controles de página em um aplicativo Xam
 
     [![](page-controls-images/page03.png "The Widget Tab")](page-controls-images/page03.png#lightbox)
 1. Em seguida, adicione controles ou gestos à exibição para voltar e avançar pela coleção de páginas.
-1. Por fim, atribua **nomes** aos controles para que você possa respondê-los no C# código. Por exemplo:
+1. Por fim, atribua **nomes** aos controles para que você possa respondê-los em código C#. Por exemplo:
 
     [![](page-controls-images/page04.png "Name the control")](page-controls-images/page04.png#lightbox)
-1. Salve as alterações.
+1. Salve suas alterações.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. No **Gerenciador de soluções**, clique duas vezes no arquivo de `Main.storyboard` e abra-o para edição.
+1. No **Gerenciador de soluções**, clique duas vezes no `Main.storyboard` arquivo e abra-o para edição.
 1. Arraste um **controle de página** da **caixa de ferramentas** e solte-o na exibição:
 
     [![](page-controls-images/page02-vs.png "A Page Control")](page-controls-images/page02-vs.png#lightbox)
@@ -58,17 +58,17 @@ A maneira mais fácil de trabalhar com controles de página em um aplicativo Xam
 
     [![](page-controls-images/page03-vs.png "The Widget tab")](page-controls-images/page03-vs.png#lightbox)
 1. Em seguida, adicione controles ou gestos à exibição para voltar e avançar pela coleção de páginas.
-1. Por fim, atribua **nomes** aos controles para que você possa respondê-los no C# código. Por exemplo:
+1. Por fim, atribua **nomes** aos controles para que você possa respondê-los em código C#. Por exemplo:
 
     [![](page-controls-images/page04-vs.png "Name the control")](page-controls-images/page04-vs.png#lightbox)
-1. Salve as alterações.
+1. Salve suas alterações.
 
 -----
 
 > [!IMPORTANT]
-> Embora seja possível atribuir eventos como `TouchUpInside` a um elemento de interface do usuário (como um UIButton) no designer do iOS, ele nunca será chamado porque a Apple TV não tem uma tela sensível ao toque ou dá suporte a eventos de toque. Você sempre deve usar o evento `Primary Action` ao criar manipuladores de eventos para elementos da interface do usuário do tvOS.
+> Embora seja possível atribuir eventos como `TouchUpInside` a um elemento de interface do usuário (como um UIButton) no designer do IOS, ele nunca será chamado porque o Apple TV não tem uma tela sensível ao toque ou dá suporte a eventos de toque. Você sempre deve usar o `Primary Action` evento ao criar manipuladores de eventos para elementos da interface do usuário do tvOS.
 
-Edite o arquivo do controlador de exibição (exemplo `ViewController.cs`) e adicione o código para lidar com as páginas que estão sendo alteradas. Por exemplo:
+Edite o arquivo do controlador de exibição (exemplo `ViewController.cs` ) e adicione o código para manipular as páginas que estão sendo alteradas. Por exemplo:
 
 ```csharp
 using System;
@@ -154,11 +154,11 @@ Para alterar o número de página atual, use o seguinte código:
 PageView.CurrentPage = PageNumber;
 ```
 
-A propriedade `CurrentPage` é zero (0) com base, portanto, a primeira página será zero e a última será uma menos a quantidade máxima de páginas.
+A `CurrentPage` propriedade é zero (0) com base, portanto, a primeira página será zero e a última será uma menos a quantidade máxima de páginas.
 
 Para obter mais informações sobre como trabalhar com storyboards, consulte nossa [Guia de início rápido Olá, tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## <a name="summary"></a>Resumo
 
@@ -166,7 +166,7 @@ Este artigo abordou a criação e o trabalho com o controle de página dentro de
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guias de interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

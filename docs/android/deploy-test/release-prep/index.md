@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2018
-ms.openlocfilehash: 5f0b72772a386aa71d4ceec25b88546930b06f4f
-ms.sourcegitcommit: 51006a4eed7bf99b563df6fc1cea9074d0218448
+ms.openlocfilehash: 2676565a62b4b9d4414e9a69737b287bcc992c0b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166333"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572007"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparar um aplicativo para lançamento
 
@@ -35,7 +35,7 @@ Use as seguintes etapas para criar o aplicativo para versão:
 
 Cada uma dessas etapas é descrita abaixo em mais detalhes.
 
-<a name="Specify_the_Application_Icon" />
+<a name="Specify_the_Application_Icon"></a>
 
 ## <a name="specify-the-application-icon"></a>Especificar o ícone do aplicativo
 
@@ -65,7 +65,7 @@ Nesses exemplos, `@drawable/icon` refere-se a um arquivo de ícone localizado em
 
 Normalmente, `using Android.App` é declarado na parte superior de **AssemblyInfo.cs** (o namespace do atributo `Application` é `Android.App`), mas talvez você precisará adicionar esta instrução `using` se ela ainda não estiver presente.
 
-<a name="Versioning" />
+<a name="Versioning"></a>
 
 ## <a name="version-the-application"></a>Controle de versão do aplicativo
 
@@ -89,7 +89,7 @@ Esses valores podem ser definidos na seção **Compilar > Aplicativo Android** e
 
 -----
 
-<a name="shrink_apk" />
+<a name="shrink_apk"></a>
 
 ## <a name="shrink-the-apk"></a>Reduzir o APK
 
@@ -158,11 +158,11 @@ O ProGuard é desabilitado por padrão. A opção **Habilitar o ProGuard** só e
 
 Para obter mais informações sobre como usar a ferramenta do ProGuard, consulte [ProGuard](~/android/deploy-test/release-prep/proguard.md).
 
-<a name="protect_app" />
+<a name="protect_app"></a>
 
 ## <a name="protect-the-application"></a>Proteger o aplicativo
 
-<a name="Disable_Debugging" />
+<a name="Disable_Debugging"></a>
 
 ### <a name="disable-debugging"></a>Desabilitar a depuração
 
@@ -183,7 +183,7 @@ O manifesto do Android contém o atributo `android:debuggable`, que controla se 
 
 Observe que as compilações de depuração definem automaticamente algumas permissões para facilitar a depuração (como **Internet** e **ReadExternalStorage**). Compilações de versão, no entanto, usam apenas permissões explicitamente configuradas. Se você achar que alternar para o build de versão faz com que o aplicativo perca uma permissão que estava disponível no build de depuração, verifique se habilitou essa permissão explicitamente na lista **Permissões necessárias** conforme descrito em [Permissões](~/android/app-fundamentals/permissions.md). 
 
-<a name="dotfuscator" id="dotfuscator" />
+<a name="dotfuscator" id="dotfuscator"></a>
 
 ### <a name="application-protection-with-dotfuscator"></a>Proteção de aplicativo com o Dotfuscator
 
@@ -208,7 +208,7 @@ Quando estiver configurado, o Dotfuscator CE protegerá automaticamente cada bui
 
 -----
 
-<a name="bundle" />
+<a name="bundle"></a>
 
 ### <a name="bundle-assemblies-into-native-code"></a>Agrupar assemblies em código nativo
 
@@ -218,7 +218,7 @@ Essa opção requer uma licença corporativa e só está disponível quando a op
 
 Observe que a opção **Agrupar em Código Nativo***não* significa que os assemblies são compilados em código nativo. Não é possível usar a [**compilação AOT**](#aot) para compilar assemblies em código nativo.
 
-<a name="aot" />
+<a name="aot"></a>
 
 ### <a name="aot-compilation"></a>Compilação AOT
 
@@ -233,7 +233,7 @@ O _compilador de otimização LLVM_ criará código compilado mais rápido e men
 > [!NOTE]
 > A opção **Compilador de otimização LLVM** requer uma licença Enterprise.  
 
-<a name="Set_Packaging_Properties" />
+<a name="Set_Packaging_Properties"></a>
 
 ## <a name="set-packaging-properties"></a>Definir propriedades de empacotamento
 
@@ -273,13 +273,13 @@ Para obter mais informações sobre Multi-Dex, consulte [Configurar aplicativos 
 
 Os pacotes de aplicativo diferem do APKs, pois não podem ser implantados diretamente em um dispositivo. Em vez disso, é um formato que deve ser carregado com todos os seus códigos e recursos compilados. Depois de carregar seu pacote de aplicativo assinado, Google Play terá tudo o que precisa para criar e assinar o APKs do seu aplicativo e atendê-los para seus usuários usando a entrega dinâmica.
 
-Para habilitar o suporte para os pacotes de aplicativos do Android, você precisará aceitar o `bundle` valor da propriedade formato de pacote do **Android** em suas opções de projeto do Android. Antes de fazer isso, certifique-se de alterar seu projeto `Release` para uma configuração, já que os pacotes de aplicativos são destinados apenas a lançamentos de versão.
+Para habilitar o suporte para os pacotes de aplicativos do Android, você precisará aceitar o `bundle` valor da propriedade **formato de pacote do Android** em suas opções de projeto do Android. Antes de fazer isso, certifique-se de alterar seu projeto para uma `Release` configuração, já que os pacotes de aplicativos são destinados apenas a lançamentos de versão.
 
 Agora você pode gerar um pacote de aplicativo seguindo o [fluxo de arquivo morto](#archive). Isso irá gerar um pacote de aplicativo para seu aplicativo.
 
 Para obter mais informações sobre os pacotes de aplicativos do Android, consulte [pacotes de aplicativos do Android](https://developer.android.com/guide/app-bundle/).
 
-<a name="Compile" />
+<a name="Compile"></a>
 
 ## <a name="compile"></a>Compilar
 
@@ -295,7 +295,7 @@ Depois de concluir todas as etapas acima, compile o aplicativo (selecione **Comp
 
 -----
 
-<a name="archive" />
+<a name="archive"></a>
 
 ## <a name="archive-for-publishing"></a>Arquivo morto para publicação
 

@@ -9,16 +9,16 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 10a46c916654f8421dc5a9af93de3abbbae5e934
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 2f8c6a80b00a4a91c40c70af05ac0ebe18daaed3
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79304033"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571435"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: aprofundamento
 
-_Neste guia de duas partes, você construirá seu primeiro aplicativo Xamarin.Android e desenvolverá uma compreensão dos fundamentos do desenvolvimento de aplicativos Android com xamarin. Ao longo do caminho, você será apresentado às ferramentas, conceitos e etapas necessárias para construir e implantar um aplicativo Xamarin.Android._
+_Neste guia de duas partes, você criará seu primeiro aplicativo Xamarin. Android e desenvolverá uma compreensão dos conceitos básicos do desenvolvimento de aplicativos Android com o Xamarin. Ao longo do caminho, você será apresentado às ferramentas, aos conceitos e às etapas necessárias para criar e implantar um aplicativo Xamarin. Android._
 
 Em [Início rápido do Hello, Android](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md), você compilou e executou seu primeiro aplicativo Xamarin.Android. Agora é hora de desenvolver uma compreensão mais profunda de como funcionam os aplicativos Android para que você possa criar programas mais sofisticados. Este guia examina as etapas que você seguiu no passo a passo Hello, Android, para que você possa entender o que você fez e comece a desenvolver um entendimento fundamental do desenvolvimento de aplicativos Android.
 
@@ -36,7 +36,7 @@ Este guia citará os tópicos a seguir:
 
 - **Atividades e o ciclo de vida da atividade** &ndash; uma introdução ao ciclo de vida da atividade e à preparação da interface do usuário em código.
 
-- **Testes, implantação e toques de acabamento** &ndash; Complete seu aplicativo com conselhos sobre testes, implantação, geração de obras de arte e muito mais.
+- **Testes, implantação e toques finais** &ndash; conclua o aplicativo tirando proveito de conselhos sobre testes, implantação, criação de arte final e muito mais.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -45,13 +45,13 @@ Este guia citará os tópicos a seguir:
 
 - **Anatomia de um aplicativo Xamarin.Android** &ndash; apresentação das partes essenciais de um aplicativo Xamarin.Android.
 
-- **Fundamentos do aplicativo e noções básicas de** &ndash; arquitetura Introdução às atividades, o Manifesto Android e o sabor geral do desenvolvimento do Android.
+- **Conceitos básicos do aplicativo e noções básicas** &ndash; da arquitetura Introdução às atividades, ao manifesto do Android e ao tipo geral de desenvolvimento do Android.
 
 - **IU (interface do usuário)** &ndash; criação de interfaces do usuário com o Android Designer.
 
-- **Atividades e o ciclo de vida da** &ndash; atividade Uma introdução ao ciclo de vida da atividade e a fiação da interface do usuário em código.
+- **Atividades e o ciclo de vida** &ndash; da atividade Uma introdução ao ciclo de vida da atividade e a conexão da interface do usuário no código.
 
-- **Testes, implantação e toques finais** &ndash; conclua o aplicativo tirando proveito de conselhos sobre testes, implantação, criação de arte final e muito mais.
+- Toques de teste **, implantação e acabamento** &ndash; Conclua seu aplicativo com conselhos sobre testes, implantação, geração de arte e muito mais.
 
 ::: zone-end
 
@@ -76,7 +76,7 @@ O Visual Studio para Mac segue a prática do Visual Studio de organizar o códig
 
 ::: zone-end
 
-<a name="anatomy" />
+<a name="anatomy"></a>
 
 ## <a name="anatomy-of-a-xamarinandroid-application"></a>Anatomia de um aplicativo Xamarin.Android
 
@@ -142,7 +142,7 @@ Esse recurso exclusivo do Android pode ser extremamente útil ao projetar aplica
 
 Quando você abrir o aplicativo **Phoneword** pela primeira vez em um dispositivo ou emulador, o sistema operacional criará a primeira *Atividade*. Uma Atividade é uma classe especial Android que corresponde a uma única tela de aplicativo e é responsável por desenhar e acionar a interface do usuário. Quando o Android cria a primeira Atividade de um aplicativo, ele carrega o aplicativo inteiro:
 
-[![Carga de atividade](hello-android-deepdive-images/01-activity-load-sml.png)](hello-android-deepdive-images/01-activity-load.png#lightbox)
+[![Carga da atividade](hello-android-deepdive-images/01-activity-load-sml.png)](hello-android-deepdive-images/01-activity-load.png#lightbox)
 
 Já que não há nenhuma progressão linear em um aplicativo do Android (você pode iniciar o aplicativo de vários pontos), o Android tem uma maneira exclusiva de controlar quais arquivos e classes constituem um aplicativo. No exemplo **Phoneword**, todas as partes que compõem o aplicativo são registradas com um arquivo XML especial chamado de **Manifesto do Android**. A função do **manifesto do Android** é manter o controle de conteúdo, propriedades e permissões do aplicativo e divulgá-los para o sistema operacional Android. Você pode pensar no aplicativo **Phoneword** como uma única atividade (tela) e uma coleção de arquivos de ajuda e de recursos vinculados pelo arquivo de Manifesto do Android, conforme é ilustrado pelo diagrama abaixo:
 
@@ -176,7 +176,7 @@ No aplicativo **Phoneword**, a ID do **TranslateButton** é definida como `@+id/
 
 No aplicativo **Phoneword**, a ID do **TranslateButton** é definida como `@+id/TranslateButton`:
 
-[![Traduzir configuração de id de botão](hello-android-deepdive-images/xs/04-translatebutton-sml.png)](hello-android-deepdive-images/xs/04-translatebutton.png#lightbox)
+[![Configuração de ID do TranslateButton](hello-android-deepdive-images/xs/04-translatebutton-sml.png)](hello-android-deepdive-images/xs/04-translatebutton.png#lightbox)
 
 ::: zone-end
 
@@ -197,7 +197,7 @@ Tudo que está definido na área de design é traduzido em XML para o Xamarin.An
 
 ::: zone-end
 
-Este código-fonte XML deve conter quatro elementos de controle: Dois **TextView**s, um **EditText** e um elemento **Button.** Para fazer um tour mais detalhado sobre o Android Designer, consulte o guia [Visão geral do Designer](~/android/user-interface/android-designer/index.md) de Android do Xamarin.
+Este código-fonte XML deve conter quatro elementos de controle: dois **TextView**s, um **EDITTEXT** e um elemento **Button** . Para fazer um tour mais detalhado sobre o Android Designer, consulte o guia [Visão geral do Designer](~/android/user-interface/android-designer/index.md) de Android do Xamarin.
 
 As ferramentas e os conceitos por trás da parte visual da interface do usuário foram agora abordados. Em seguida, é hora de se aprofundar no código que aciona a interface do usuário conforme as atividades e o ciclo de vida da atividade são explorados.
 
@@ -339,19 +339,19 @@ Depois que o dispositivo estiver configurado, você poderá implantar nele conec
 
 Depois que o dispositivo estiver configurado, você poderá implantar nele conectando-o, pressionando **Iniciar (reproduzir)**, selecionando-o na caixa de diálogo **Selecionar Dispositivo** e pressionando **OK**:
 
-[![Selecione dispositivo de depuração](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png#lightbox)
+[![Selecionar dispositivo de depuração](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png#lightbox)
 
 ::: zone-end
 
 Isso inicia o aplicativo no dispositivo:
 
-[![Digite Phoneword](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png#lightbox)
+[![Insira Phoneword](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png#lightbox)
 
 ### <a name="set-icons-for-different-screen-densities"></a>Definir ícones para diferentes densidades de tela
 
 Dispositivos Android vêm em diferentes tamanhos e resoluções de tela e nem todas as imagens têm uma boa aparência em todas as telas. Por exemplo, aqui está uma captura de tela de um ícone de baixa densidade em um Nexus 5 de alta densidade. Observe quão desfocado ele está em comparação com os ícones ao redor:
 
-[![Ícone embaçado](hello-android-deepdive-images/06-blurry-icon-sml.png)](hello-android-deepdive-images/06-blurry-icon.png#lightbox)
+[![Ícone de desfoque](hello-android-deepdive-images/06-blurry-icon-sml.png)](hello-android-deepdive-images/06-blurry-icon.png#lightbox)
 
 Como precaução para isso, é recomendável adicionar ícones de resoluções diferentes à pasta **Resources**. O Android fornece versões diferentes da pasta **mipmap** para lidar com ícones do inicializador de diferentes densidades, incluindo *mdpi* para telas de densidade média, *hdpi* para telas de densidade alta e *xhdpi*, *xxhdpi* e *xxxhdpi* para telas de densidade muito alta. Ícones de tamanhos variados são armazenados nas pastas **mipmap-** apropriadas:
 
@@ -362,17 +362,17 @@ Como precaução para isso, é recomendável adicionar ícones de resoluções d
 ::: zone-end
 ::: zone pivot="windows"
 
-[![Pastas Mipmap](hello-android-deepdive-images/xs/07-mipmap-folders-sml.png)](hello-android-deepdive-images/xs/07-mipmap-folders.png#lightbox)
+[![Pastas mipmap](hello-android-deepdive-images/xs/07-mipmap-folders-sml.png)](hello-android-deepdive-images/xs/07-mipmap-folders.png#lightbox)
 
 ::: zone-end
 
 O Android selecionará o ícone com a densidade apropriada:
 
-[![Ícones em densidade apropriada](hello-android-deepdive-images/07-appropriate-density-sml.png)](hello-android-deepdive-images/07-appropriate-density.png#lightbox)
+[![Ícones na densidade apropriada](hello-android-deepdive-images/07-appropriate-density-sml.png)](hello-android-deepdive-images/07-appropriate-density.png#lightbox)
 
 ### <a name="generate-custom-icons"></a>Gerar ícones personalizados
 
-Nem todo mundo tem um designer disponível para criar os ícones personalizados e lançar imagens que um aplicativo precisa destacar. Aqui estão várias abordagens alternativas para gerar trabalhos de arte personalizados do aplicativo:
+Nem todos têm um designer disponível para criar os ícones personalizados e iniciar imagens que um aplicativo precisa destacar. Aqui estão várias abordagens alternativas para gerar arte do aplicativo personalizado:
 
 ::: zone pivot="windows"
 
@@ -404,11 +404,11 @@ Anteriormente, as associações para todas as bibliotecas do Google Play Service
 
 Para adicionar uma ou mais bibliotecas do Google Play Services, clique com o botão direito do mouse no nó **Pacotes** na sua árvore de projeto e clique em **Adicionar Google Play Service...**:
 
-[![Adicionar o Google Play Service](hello-android-deepdive-images/xs/08-add-google-play-services-sml.png)](hello-android-deepdive-images/xs/08-add-google-play-services.png#lightbox)
+[![Adicionar serviço de Google Play](hello-android-deepdive-images/xs/08-add-google-play-services-sml.png)](hello-android-deepdive-images/xs/08-add-google-play-services.png#lightbox)
 
 Quando a caixa de diálogo **Adicionar Google Play Services** é apresentada, selecione os pacotes (nugets) que você deseja adicionar ao seu projeto:
 
-[![Selecione pacotes](hello-android-deepdive-images/xs/09-add-dialog-sml.png)](hello-android-deepdive-images/xs/09-add-dialog.png#lightbox)
+[![Selecionar pacotes](hello-android-deepdive-images/xs/09-add-dialog-sml.png)](hello-android-deepdive-images/xs/09-add-dialog.png#lightbox)
 
 Quando você seleciona um serviço e clica em **Adicionar Pacote**, o Visual Studio para Mac baixa e instala o pacote que você seleciona, bem como eventuais pacotes dependentes do Google Play Services exigidos por ele. Em alguns casos, você pode ver uma caixa de diálogo **Aceitação da Licença** que exige que você clique em **Aceitar** antes que os pacotes sejam instalados:
 

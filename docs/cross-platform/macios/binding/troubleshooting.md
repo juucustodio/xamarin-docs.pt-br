@@ -6,12 +6,12 @@ ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
 author: davidortinau
 ms.author: daortin
 ms.date: 10/19/2016
-ms.openlocfilehash: 8194c369aa0e4f8bb17a1a162354b4f72c6aaa41
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: e43e32b2ad598a7c80e04d8e28d67e85d5a0f9f5
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78292104"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84570941"
 ---
 # <a name="binding-troubleshooting"></a>Solução de problemas de associação
 
@@ -23,22 +23,22 @@ Embora o Xamarin. Mac cubra grande parte das APIs da Apple, às vezes, talvez se
 
 Se você estiver lidando com uma API da Apple, a primeira etapa é permitir que o Xamarin saiba que você está atingindo uma seção da API que ainda não temos cobertura. [Arquivo um bug](#reporting-bugs) indicando a API ausente. Usamos relatórios de clientes para priorizar quais APIs trabalhamos em seguida. Além disso, se você tiver uma licença comercial ou empresarial e essa falta de uma associação estiver bloqueando seu progresso, também siga as instruções em [suporte](https://visualstudio.microsoft.com/vs/support/) para arquivar um tíquete. Não podemos prometer uma ligação, mas, em alguns casos, podemos obter uma solução alternativa.
 
-Depois de notificar o Xamarin (se aplicável) de sua associação ausente, a próxima etapa é considerar sua associação por conta própria. Temos um guia completo [aqui](~/cross-platform/macios/binding/overview.md) e algumas documentações não oficiais [aqui](https://brendanzagaeski.appspot.com/xamarin/0002.html) para encapsular associações de Objective-C manualmente. Se você estiver chamando uma C API, você pode usar C#o mecanismo P/Invoke, a documentação está [aqui](https://www.mono-project.com/docs/advanced/pinvoke/).
+Depois de notificar o Xamarin (se aplicável) de sua associação ausente, a próxima etapa é considerar sua associação por conta própria. Temos um guia completo [aqui](~/cross-platform/macios/binding/overview.md) e algumas documentações não oficiais [aqui](https://brendanzagaeski.appspot.com/xamarin/0002.html) para encapsular associações de Objective-C manualmente. Se você estiver chamando uma C API, você pode usar o mecanismo P/Invoke do C#, a documentação está [aqui](https://www.mono-project.com/docs/advanced/pinvoke/).
 
-Se você decidir trabalhar na associação por conta própria, lembre-se de que os erros na associação podem produzir todos os tipos de falhas interessantes no tempo de execução nativo. Em particular, seja muito cuidadoso que sua assinatura no C# corresponda à assinatura nativa em número de argumentos e ao tamanho de cada argumento. Não fazer isso pode corromper a memória e/ou a pilha, e você pode falhar imediatamente ou em algum ponto arbitrário nos dados futuros ou corrompidos.
+Se você decidir trabalhar na associação por conta própria, lembre-se de que os erros na associação podem produzir todos os tipos de falhas interessantes no tempo de execução nativo. Em particular, tenha cuidado para que sua assinatura em C# corresponda à assinatura nativa em número de argumentos e ao tamanho de cada argumento. Não fazer isso pode corromper a memória e/ou a pilha, e você pode falhar imediatamente ou em algum ponto arbitrário nos dados futuros ou corrompidos.
 
 ## <a name="argument-exceptions-when-passing-null-to-a-binding"></a>Exceções de argumento ao passar NULL para uma associação
 
-Embora o Xamarin funcione para fornecer associações de alta qualidade e bem testadas para as APIs da Apple, às vezes erros e erros são guiados no. De longe, o problema mais comum que você pode encontrar é uma API que gera `ArgumentNullException` quando você passa NULL quando a API subjacente aceita `nil`. Os arquivos de cabeçalho nativos que definem a API geralmente não fornecem informações suficientes nas quais as APIs aceitam nil e que falharão se você passá-la.
+Embora o Xamarin funcione para fornecer associações de alta qualidade e bem testadas para as APIs da Apple, às vezes erros e erros são guiados no. De longe, o problema mais comum que você pode encontrar é um lançamento de API `ArgumentNullException` quando você passa NULL quando a API subjacente aceita `nil` . Os arquivos de cabeçalho nativos que definem a API geralmente não fornecem informações suficientes nas quais as APIs aceitam nil e que falharão se você passá-la.
 
-Se você se deparar com um caso em que a passagem de `null` gera um `ArgumentNullException` mas você acredita que ele deve funcionar, siga estas etapas:
+Se você se deparar com um caso em que a passagem `null` gera um, `ArgumentNullException` mas você acredita que ele deve funcionar, siga estas etapas:
 
-1. Verifique a documentação e/ou exemplos da Apple para ver se você pode encontrar uma prova de que ela aceita `nil`. Se você estiver familiarizado com o Objective-C, poderá escrever um pequeno programa de teste para verificá-lo.
+1. Verifique a documentação e/ou exemplos da Apple para ver se você pode encontrar a prova de que ele aceita `nil` . Se você estiver familiarizado com o Objective-C, poderá escrever um pequeno programa de teste para verificá-lo.
 2. [Arquivo um bug](#reporting-bugs).
-3. Você pode contornar o bug? Se você puder evitar chamar a API com `null`, uma verificação nula simples em volta das chamadas pode ser um trabalho fácil.
-4. No entanto, algumas APIs exigem a passagem de NULL para desativar ou desabilitar alguns recursos. Nesses casos, você pode contornar o problema ao colocar o navegador de assembly (consulte [encontrando o C# membro para um determinado seletor](~/mac/app-fundamentals/mac-apis.md#finding_selector)), copiando a associação e removendo a verificação nula. Certifique-se de arquivar um bug (etapa 2) se você fizer isso, pois sua associação copiada não receberá atualizações e correções que fazemos no Xamarin. Mac, e isso deve ser considerado um trabalho a curto prazo.
+3. Você pode contornar o bug? Se você puder evitar chamar a API com o `null` , uma verificação nula simples em volta das chamadas pode ser um trabalho fácil.
+4. No entanto, algumas APIs exigem a passagem de NULL para desativar ou desabilitar alguns recursos. Nesses casos, você pode contornar o problema ao colocar o navegador de assembly (consulte [encontrando o membro do C# para um determinado seletor](~/mac/app-fundamentals/mac-apis.md#finding_selector)), copiando a associação e removendo a verificação nula. Certifique-se de arquivar um bug (etapa 2) se você fizer isso, pois sua associação copiada não receberá atualizações e correções que fazemos no Xamarin. Mac, e isso deve ser considerado um trabalho a curto prazo.
 
-<a name="reporting-bugs"/>
+<a name="reporting-bugs"></a>
 
 ## <a name="reporting-bugs"></a>Relatando bugs
 

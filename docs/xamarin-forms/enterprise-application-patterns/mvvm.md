@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d2e335535b508a6cd5e2f497e2c681152a7e5cda
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130943"
+title: "o padrão Model-View-ViewModel" Descrição: "Este capítulo explica como o aplicativo móvel eShopOnContainers usa o padrão MVVM para separar de forma limpa a lógica de negócios e de apresentação do aplicativo de sua interface do usuário."
+MS. Prod: xamarin MS. AssetID: dd8c1813-df44-4947-BCEE-1a1ff2334b87 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="the-model-view-viewmodel-pattern"></a>O padrão Model-View-ViewModel
 
 A Xamarin.Forms experiência do desenvolvedor normalmente envolve a criação de uma interface do usuário em XAML e, em seguida, a adição do code-behind que opera na interface do usuário. À medida que os aplicativos são modificados e aumentam em tamanho e escopo, podem surgir problemas complexos de manutenção. Esses problemas incluem o forte acoplamento entre os controles da interface do usuário e a lógica de negócios, o que aumenta o custo de fazer modificações na interface do usuário e a dificuldade de teste de unidade desse código.
@@ -124,8 +110,6 @@ A construção programática e a atribuição do modelo de exibição dentro do 
 ### <a name="creating-a-view-defined-as-a-data-template"></a>Criando uma exibição definida como um modelo de dados
 
 Uma exibição pode ser definida como um modelo de dados e associada a um tipo de modelo de exibição. Os modelos de dados podem ser definidos como recursos ou podem ser definidos embutidos dentro do controle que exibirá o modelo de exibição. O conteúdo do controle é a instância do modelo de exibição e o modelo de dados é usado para representá-lo visualmente. Essa técnica é um exemplo de uma situação na qual o modelo de exibição é instanciado primeiro, seguido pela criação da exibição.
-
-<a name="automatically_creating_a_view_model_with_a_view_model_locator" />
 
 ### <a name="automatically-creating-a-view-model-with-a-view-model-locator"></a>Criando automaticamente um modelo de exibição com um localizador de modelo de exibição
 
@@ -279,13 +263,11 @@ O exemplo de código a seguir mostra como um [`Grid`](xref:Xamarin.Forms.Grid) n
 
 Um parâmetro de comando também pode ser definido opcionalmente usando a [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) propriedade. O tipo do argumento esperado é especificado nos métodos de `Execute` `CanExecute` destino e. O [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) irá invocar automaticamente o comando de destino quando o usuário interage com o controle anexado. O parâmetro de comando, se fornecido, será passado como o argumento para o delegado do comando `Execute` .
 
-<a name="implementing_behaviors" />
-
 ### <a name="implementing-behaviors"></a>Implementando comportamentos
 
 Os comportamentos permitem que a funcionalidade seja adicionada aos controles da interface do usuário sem a necessidade de subclasse deles. Em vez disso, a funcionalidade é implementada em uma classe de comportamento e anexada ao controle como se fizesse parte do próprio controle. Os comportamentos permitem que você implemente código que normalmente teria que escrever como code-behind, pois ele interage diretamente com a API do controle, de forma que possa ser anexado de maneira concisa ao controle e empacotado para reutilização em mais de uma exibição ou aplicativo. No contexto do MVVM, os comportamentos são uma abordagem útil para conectar controles a comandos.
 
-Um comportamento que é anexado a um controle por meio de propriedades anexadas é conhecido como um *comportamento anexado*. O comportamento pode então usar a API exposta do elemento ao qual ele está anexado para adicionar funcionalidade a esse controle, ou outros controles, na árvore visual da exibição. O aplicativo móvel eShopOnContainers contém a `LineColorBehavior` classe, que é um comportamento anexado. Para obter mais informações sobre esse comportamento, consulte [exibindo erros de validação](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying_validation_errors).
+Um comportamento que é anexado a um controle por meio de propriedades anexadas é conhecido como um *comportamento anexado*. O comportamento pode então usar a API exposta do elemento ao qual ele está anexado para adicionar funcionalidade a esse controle, ou outros controles, na árvore visual da exibição. O aplicativo móvel eShopOnContainers contém a `LineColorBehavior` classe, que é um comportamento anexado. Para obter mais informações sobre esse comportamento, consulte [exibindo erros de validação](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying-validation-errors).
 
 Um Xamarin.Forms comportamento é uma classe derivada da [`Behavior`](xref:Xamarin.Forms.Behavior) [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) classe ou, em que `T` é o tipo do controle ao qual o comportamento deve ser aplicado. Essas classes fornecem `OnAttachedTo` `OnDetachingFrom` métodos e, que devem ser substituídos para fornecer lógica que será executada quando o comportamento for anexado e desanexado dos controles.
 

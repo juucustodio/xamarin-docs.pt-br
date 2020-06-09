@@ -19,8 +19,6 @@ As classes que derivam de `Layout` podem ser divididas em duas categorias:
 
 Essas classes derivam de [`Layout`](xref:Xamarin.Forms.Layout) , que define [`Padding`](xref:Xamarin.Forms.Layout.Padding) e [`IsClippedToBounds`](xref:Xamarin.Forms.Layout.IsClippedToBounds) Propriedades.
 
-<a name="contentView" />
-
 ### <a name="contentview"></a>ContentView
 
 |     |     |
@@ -28,29 +26,25 @@ Essas classes derivam de [`Layout`](xref:Xamarin.Forms.Layout) , que define [`Pa
 | [`ContentView`](xref:Xamarin.Forms.ContentView)contém um único filho que é definido com a [`Content`](xref:Xamarin.Forms.ContentView.Content) propriedade. A `Content` propriedade pode ser definida para qualquer `View` derivativo, incluindo outros `Layout` derivativos. `ContentView`é usado principalmente como um elemento estrutural e serve como uma classe base para [`Frame`](#frame) .<br /><br />[Documentação](xref:Xamarin.Forms.ContentView)  /  da API [Guia](~/xamarin-forms/user-interface/layouts/contentview.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/) de | [![Exemplo de ContentView](layouts-images/ContentView.png "Exemplo de ContentView")](layouts-images/ContentView-Large.png#lightbox "Exemplo de ContentView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentViewDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentViewDemoPage.xaml) |
 |     |     |
 
-<a named="frame" />
-
 ### <a name="frame"></a>Quadro
 
 |     |     |
 | --- | --- |
-| A [`Frame`](xref:Xamarin.Forms.Frame) classe deriva de [`ContentView`](#contentView) e exibe uma borda, ou quadro, em torno de seu filho. A `Frame` classe tem um [`Padding`](xref:Xamarin.Forms.Layout.Padding) valor padrão de 20 e também define [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor) [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius) as propriedades, e [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) .<br /><br />[Documentação](xref:Xamarin.Forms.Frame)  /  da API [Guia](~/xamarin-forms/user-interface/layouts/frame.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/) de | [![Exemplo de quadro](layouts-images/Frame.png "Exemplo de quadro")](layouts-images/Frame-Large.png#lightbox "Exemplo de quadro")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FrameDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FrameDemoPage.xaml) |
+| A [`Frame`](xref:Xamarin.Forms.Frame) classe deriva de [`ContentView`](#contentview) e exibe uma borda, ou quadro, em torno de seu filho. A `Frame` classe tem um [`Padding`](xref:Xamarin.Forms.Layout.Padding) valor padrão de 20 e também define [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor) [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius) as propriedades, e [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) .<br /><br />[Documentação](xref:Xamarin.Forms.Frame)  /  da API [Guia](~/xamarin-forms/user-interface/layouts/frame.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/) de | [![Exemplo de quadro](layouts-images/Frame.png "Exemplo de quadro")](layouts-images/Frame-Large.png#lightbox "Exemplo de quadro")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FrameDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FrameDemoPage.xaml) |
 |     |     |
-
-<a name="scrollView" />
 
 ### <a name="scrollview"></a>ScrollView
 
 |     |     |
 | --- | --- |
-| [`ScrollView`](xref:Xamarin.Forms.ScrollView)o é capaz de rolar seu conteúdo. Defina a [`Content`](xref:Xamarin.Forms.ScrollView.Content) propriedade como uma exibição ou layout muito grande para caber na tela. (O conteúdo de a `ScrollView` é muitas vezes um [`StackLayout`](#stackLayout) .) Defina a [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) propriedade para indicar se a rolagem deve ser vertical, horizontal ou ambas.<br /><br />[Documentação](xref:Xamarin.Forms.ScrollView)  /  da API [Guia](~/xamarin-forms/user-interface/layouts/scrollview.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) de | [![Exemplo de ScrollView](layouts-images/ScrollView.png "Exemplo de ScrollView")](layouts-images/ScrollView-Large.png#lightbox "Exemplo de ScrollView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ScrollViewDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ScrollViewDemoPage.xaml) |
+| [`ScrollView`](xref:Xamarin.Forms.ScrollView)o é capaz de rolar seu conteúdo. Defina a [`Content`](xref:Xamarin.Forms.ScrollView.Content) propriedade como uma exibição ou layout muito grande para caber na tela. (O conteúdo de a `ScrollView` é muitas vezes um [`StackLayout`](#stacklayout) .) Defina a [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) propriedade para indicar se a rolagem deve ser vertical, horizontal ou ambas.<br /><br />[Documentação](xref:Xamarin.Forms.ScrollView)  /  da API [Guia](~/xamarin-forms/user-interface/layouts/scrollview.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) de | [![Exemplo de ScrollView](layouts-images/ScrollView.png "Exemplo de ScrollView")](layouts-images/ScrollView-Large.png#lightbox "Exemplo de ScrollView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ScrollViewDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ScrollViewDemoPage.xaml) |
 |     |     |
 
 ### <a name="templatedview"></a>TemplatedView
 
 |     |     |
 | --- | --- |
-| [`TemplatedView`](xref:Xamarin.Forms.TemplatedView)exibe o conteúdo com um modelo de controle e é a classe base para [`ContentView`](#contentView) .<br /><br />[Documentação](xref:Xamarin.Forms.TemplatedView)  /  da API [Guia](~/xamarin-forms/app-fundamentals/templates/control-template.md) | [![Exemplo de TemplatedView](layouts-images/TemplatedView.png "Exemplo de TemplatedView")](layouts-images/TemplatedView.png#lightbox "Exemplo de TemplatedView") |
+| [`TemplatedView`](xref:Xamarin.Forms.TemplatedView)exibe o conteúdo com um modelo de controle e é a classe base para [`ContentView`](#contentview) .<br /><br />[Documentação](xref:Xamarin.Forms.TemplatedView)  /  da API [Guia](~/xamarin-forms/app-fundamentals/templates/control-template.md) | [![Exemplo de TemplatedView](layouts-images/TemplatedView.png "Exemplo de TemplatedView")](layouts-images/TemplatedView.png#lightbox "Exemplo de TemplatedView") |
 |     |     |
 
 ### <a name="contentpresenter"></a>ContentPresenter
@@ -64,16 +58,12 @@ Essas classes derivam de [`Layout`](xref:Xamarin.Forms.Layout) , que define [`Pa
 
 Essas classes derivam de [`Layout<View>`](xref:Xamarin.Forms.Layout`1) .
 
-<a name="stackLayout" />
-
 ### <a name="stacklayout"></a>StackLayout
 
 |     |     |
 | --- | --- |
 | [`StackLayout`](xref:Xamarin.Forms.StackLayout)posiciona os elementos filho em uma pilha horizontal ou verticalmente com base na [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) propriedade. A [`Spacing`](xref:Xamarin.Forms.StackLayout.Spacing) Propriedade governa o espaçamento entre os filhos e tem um valor padrão de 6.<br /><br />[Documentação](xref:Xamarin.Forms.StackLayout)  /  da API [Guia](~/xamarin-forms/user-interface/layouts/stacklayout.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout) de| [![Exemplo de StackLayout](layouts-images/StackLayout.png "Exemplo de StackLayout")](layouts-images/StackLayout-Large.png#lightbox "Exemplo de StackLayout")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StackLayoutDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StackLayoutDemoPage.xaml) |
 |     |     |
-
-<a name="grid" />
 
 ### <a name="grid"></a>Grade
 

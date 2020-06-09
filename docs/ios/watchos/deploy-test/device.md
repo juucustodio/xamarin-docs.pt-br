@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: c049fb0bd05749db30d99603fb9179e710f815f7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: cbbf8194505e9caa09587471020026d495f9f99b
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028362"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84569682"
 ---
 # <a name="testing-on-apple-watch-devices"></a>Testando em dispositivos Apple Watch
 
@@ -22,7 +22,7 @@ Depois de seguir as [etapas de implantação](~/ios/watchos/deploy-test/index.md
 - [Criar perfis de provisionamento de desenvolvimento](#profiles)e, em seguida,
 - [Implantar e testar](#testing) em um Apple Watch.
 
-<a name="devices" />
+<a name="devices"></a>
 
 ## <a name="devices"></a>Dispositivos
 
@@ -44,7 +44,7 @@ Depois que o dispositivo observado tiver sido adicionado, certifique-se de que e
 
 Não se esqueça de editar um perfil de provisionamento existente para baixar e reinstalar o!
 
-<a name="profiles" />
+<a name="profiles"></a>
 
 ## <a name="development-provisioning-profiles"></a>Perfis de provisionamento de desenvolvimento
 
@@ -64,7 +64,7 @@ A lista de **perfis de provisionamento** mostrará todos os perfis de correspond
 
 ![](device-images/options-selectprofile.png "The Provisioning Profile list")
 
-<a name="testing" />
+<a name="testing"></a>
 
 ## <a name="testing-on-a-watch-device"></a>Testando em um dispositivo de inspeção
 
@@ -120,7 +120,7 @@ Se essas mensagens aparecerem *na tela Watch* depois que o aplicativo tentar ins
 
 - Os perfis de provisionamento de desenvolvimento que estão sendo usados para teste não tinham o dispositivo de observação incluído; ou depois que o relógio foi adicionado aos perfis de provisionamento, eles não foram rebaixados e reinstalados. Siga as instruções para [configurar os perfis de provisionamento corretamente](#profiles).
 
-- Se o **log do dispositivo IOS** contiver `The system version is lower than the minimum OS version specified for bundle...Have 8.2; need 8.3`, o **info. plist** do aplicativo de inspeção terá o valor de **MinimumOSVersion** errado.
+- Se o **log do dispositivo IOS** contiver `The system version is lower than the minimum OS version specified for bundle...Have 8.2; need 8.3` , o **info. plist** do aplicativo de inspeção terá o valor de **MinimumOSVersion** errado.
   Isso deve ser **8,2** -se você tiver instalado o Xcode 6,3, talvez seja necessário editar manualmente a origem para inserir defini-la como 8,2.
 
 - Os direitos do aplicativo Watch **. o plist** tem um direito habilitado (como grupos de aplicativos) que ele não deveria ter.

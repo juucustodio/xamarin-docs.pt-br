@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 786afa6967731fb1bd508fa3c835b980639eb282
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 45b7c1081571b52bb8760b4207e3a05a4ffa77ae
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032379"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572306"
 ---
 # <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Noções básicas de compra no aplicativo e configuração no Xamarin. iOS
 
@@ -94,7 +94,7 @@ Observe que a **compra no aplicativo** será habilitada automaticamente na lista
 
 Crie perfis de provisionamento de desenvolvimento e produção como faria normalmente, selecionando a ID do aplicativo que você configurou para a compra no aplicativo. Consulte o [provisionamento do dispositivo IOS](~/ios/get-started/installation/device-provisioning/index.md) e a [publicação nos guias da loja de aplicativos](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) para obter mais informações.
 
-## <a name="itunes-connect"></a>Conexão do iTunes
+## <a name="itunes-connect"></a>iTunes Connect
 
 Clique em **meus aplicativos** no iTunes Connect para criar ou editar uma entrada de aplicativo Ios. A página Visão geral do aplicativo é mostrada aqui:
 
@@ -134,7 +134,7 @@ Essa convenção de nomenclatura não é imposta, simplesmente uma recomendaçã
 
 A ID do produto não é exibida para os usuários, mas é usada para fazer referência ao produto no código do aplicativo.
 
-### <a name="product-type"></a>Tipo de produto
+### <a name="product-type"></a>Tipo do Produto
 
 Há cinco tipos de produtos de compra no aplicativo que você pode oferecer:
 
@@ -146,7 +146,7 @@ Há cinco tipos de produtos de compra no aplicativo que você pode oferecer:
 
  *Este documento atualmente aborda apenas os dois primeiros tipos de produtos (consumíveis e não consumíveis).*
 
- <a name="Price_Tiers" />
+ <a name="Price_Tiers"></a>
 
 ### <a name="price-tiers"></a>Tipos de preço
 
@@ -156,7 +156,7 @@ A Apple fornece uma matriz de preços para ajudá-lo a selecionar a camada corre
 
  [![](in-app-purchase-basics-and-configuration-images/image10.png "An excerpt of the price matrix August 2012")](in-app-purchase-basics-and-configuration-images/image10.png#lightbox)
 
-No momento da gravação (junho de 2013), há 87 camadas de USD 0,99 a USD 999,99. A matriz de preços mostra o preço que seus clientes pagarão e também o valor que você receberá da Apple – isso é menos de 30% de cobrança e também quaisquer impostos locais que precisam ser coletados (Observe no exemplo que os vendedores dos EUA e Canadá recebem 70C para um 99C p roduto, enquanto os vendedores australianos recebem apenas 63c devido a ' mercadorias &amp; imposto sobre os serviços ' arrecadado no preço de venda).
+No momento da gravação (junho de 2013), há 87 camadas de USD 0,99 a USD 999,99. A matriz de preços mostra o preço que seus clientes pagarão e também o valor que você receberá da Apple – essa é menos a sua taxa de 30% e também quaisquer impostos locais que precisam ser coletados (Observe que, no exemplo, os vendedores dos EUA e Canadá recebem 70C para um produto 99C, enquanto os vendedores da Austrália recebem apenas 63c devido ao " &amp; imposto dos serviços de mercadorias" arrecada
 
 O preço do produto pode ser atualizado a qualquer momento, incluindo alterações de preço agendadas que entram em vigor em uma data futura. Esta captura de tela mostra como uma alteração de preço no futuro é adicionada – o preço está sendo alterado temporariamente da camada 1 para a camada 3 apenas para o mês de setembro:
 

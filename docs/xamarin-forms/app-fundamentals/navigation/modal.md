@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsPáginas modais
-description: Xamarin.Formsfornece suporte para páginas modais. Uma página modal incentiva os usuários a concluir uma tarefa independente da qual não se pode sair via navegação até que essa tarefa seja concluída ou cancelada. Este artigo demonstra como navegar até as páginas modais.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4f6547049f2801e5d15115c0ae80af9a07034731
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137820"
+Título: " Xamarin.Forms páginas modais" Descrição: " Xamarin.Forms fornece suporte para páginas modais. Uma página modal incentiva os usuários a concluir uma tarefa independente da qual não se pode sair via navegação até que essa tarefa seja concluída ou cancelada. Este artigo demonstra como navegar até páginas modais.
+MS. Prod: xamarin MS. AssetID: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/01/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-modal-pages"></a>Xamarin.FormsPáginas modais
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)
@@ -25,8 +11,8 @@ _O Xamarin. Forms fornece suporte para páginas modais. Uma página modal incent
 
 Este artigo discute os seguintes tópicos:
 
-- [Executar a navegação](#Performing_Navigation) – enviar páginas por push para a pilha modal, remover páginas da pilha modal, desabilitar o botão Voltar e animar transições de página.
-- [Passar dados ao navegar](#Passing_Data_when_Navigating) – passar dados por meio de um construtor de página e de um `BindingContext`.
+- [Executar a navegação](#performing-navigation) – enviar páginas por push para a pilha modal, remover páginas da pilha modal, desabilitar o botão Voltar e animar transições de página.
+- [Passar dados ao navegar](#passing-data-when-navigating) – passar dados por meio de um construtor de página e de um `BindingContext`.
 
 ## <a name="overview"></a>Visão geral
 
@@ -38,18 +24,14 @@ Para retornar à página anterior, o aplicativo removerá a página atual da pil
 
 ![](modal-images/popping.png "Popping a Page from the Modal Stack")
 
-<a name="Performing_Navigation" />
-
 ## <a name="performing-navigation"></a>Executando a navegação
 
-Os métodos de navegação modais são expostos pela [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) propriedade em qualquer [`Page`](xref:Xamarin.Forms.Page) tipo derivado. Esses métodos possibilitam [enviar páginas modais por push](#Pushing_Pages_to_the_Modal_Stack) para a pilha modal e [remover páginas modais](#Popping_Pages_from_the_Modal_Stack) da pilha modal.
+Os métodos de navegação modais são expostos pela [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) propriedade em qualquer [`Page`](xref:Xamarin.Forms.Page) tipo derivado. Esses métodos possibilitam [enviar páginas modais por push](#pushing-pages-to-the-modal-stack) para a pilha modal e [remover páginas modais](#popping-pages-from-the-modal-stack) da pilha modal.
 
 A [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) propriedade também expõe uma [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) propriedade da qual as páginas modais na pilha modal podem ser obtidas. No entanto, não há nenhum conceito de realização de manipulação de pilha modal ou remoção do item mais recente da pilha até a página raiz na navegação modal. Isso ocorre porque não há suporte universal para essas operações pelas plataformas subjacentes.
 
 > [!NOTE]
 >  Uma instância de [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) não é necessária para executar a navegação de página modal.
-
-<a name="Pushing_Pages_to_the_Modal_Stack" />
 
 ### <a name="pushing-pages-to-the-modal-stack"></a>Enviando páginas por push para a pilha modal
 
@@ -80,8 +62,6 @@ No entanto, a ordem exata em que esses eventos ocorrem depende da plataforma. Pa
 
 > [!NOTE]
 > Chamadas para as [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) substituições e não podem ser tratadas como indicações Garantidas da navegação de página. Por exemplo, no iOS, a substituição `OnDisappearing` é chamada na página ativa quando o aplicativo é encerrado.
-
-<a name="Popping_Pages_from_the_Modal_Stack" />
 
 ### <a name="popping-pages-from-the-modal-stack"></a>Removendo páginas da pilha modal
 
@@ -127,8 +107,6 @@ async void OnDismissButtonClicked (object sender, EventArgs args)
 ```
 
 Definir o parâmetro `boolean` como `false` desabilita a animação de transição de página, enquanto definir o parâmetro como `true` habilita a animação de transição de página, desde que ela tenha suporte da plataforma subjacente. No entanto, os métodos de envio por push e remoção que não têm esse parâmetro habilitam a animação por padrão.
-
-<a name="Passing_Data_when_Navigating" />
 
 ## <a name="passing-data-when-navigating"></a>Transmitindo dados ao navegar
 

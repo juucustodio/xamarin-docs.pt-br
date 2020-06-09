@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 48aba9ead925d3404146795eb9a3e0588d7b600d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 141d268e7a5670f9ba8002ae9edda828538a01a4
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76724690"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84571786"
 ---
 # <a name="debugging-xamarinios-apps"></a>Depurando aplicativos Xamarin.iOS
 
@@ -41,7 +41,7 @@ Quando estiver pronto para iniciar a depuração de seu aplicativo, a primeira e
 
 -----
 
-Você pode visualizar todos os pontos de interrupção que foram definidos em seu código indo para o **bloco Pontos de interrupção**:
+Você pode exibir todos os pontos de interrupção que foram definidos em seu código acessando o **painel pontos de interrupção**:
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -144,8 +144,8 @@ Estes são:
 
 - **Executar/Parar** – isso iniciará/interromperá a execução do código até o próximo ponto de interrupção.
 - **Passar** – isso executará a próxima linha de código. Se a próxima linha for uma chamada de função, passar executará a função e parará na próxima linha de código _depois_ da função.
-- **Step Into** – Isso também executará a próxima linha de código. Se a próxima linha é uma chamada de função, Intervir parará na primeira linha da função, permitindo que você continue a depuração da função linha a linha. Se a próxima linha não for uma função, ela se comportará como Passar.
-- **Step Out** – Isso retornará à linha onde a função atual foi chamada.
+- **Entrar – isso** também executará a próxima linha de código. Se a próxima linha é uma chamada de função, Intervir parará na primeira linha da função, permitindo que você continue a depuração da função linha a linha. Se a próxima linha não for uma função, ela se comportará como Passar.
+- **Sair** – isso retornará à linha em que a função atual foi chamada.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -174,7 +174,7 @@ Isso significa que é quase impossível definir pontos de interrupção no códi
 
 Se houver um erro ao configurar o depurador, você poderá habilitar o diagnóstico detalhado adicionando "-v -v -v" aos argumentos adicionais mtouch em suas Opções de Projeto. Isso imprimirá informações de erro detalhadas no console do dispositivo.
 
- <a name="WiFi_Debugging" />
+ <a name="WiFi_Debugging"></a>
 
 ## <a name="wireless-debugging"></a>Depuração Sem Fio
 
@@ -182,7 +182,7 @@ O padrão no Xamarin.iOS é depurar seu aplicativo em dispositivos pela conexão
 
 Para mais informações sobre Depuração e Implantação Sem Fio, consulte o guia [Implantação Sem Fio](~/ios/deploy-test/wireless-deployment.md).
 
-<a name="Technical_Details" />
+<a name="Technical_Details"></a>
 
 ## <a name="technical-details"></a>Detalhes técnicos
 
@@ -192,7 +192,7 @@ Na inicialização, um aplicativo a ser depurados contata o depurador e o depura
 
 Esse depurador flexível requer um esquema de depuração cooperativo quando está em execução no dispositivo. Isso significa que seus builds binários ao depurar serão maiores, uma vez que o código é instrumentado para conter código extra em cada ponto de sequência para dar suporte à depuração.
 
-<a name="Accessing_the_Console" />
+<a name="Accessing_the_Console"></a>
 
 ## <a name="accessing-the-console"></a>Acesso ao console
 
@@ -204,7 +204,7 @@ Para usuários do Visual Studio, há alguns logs disponíveis na janela de saíd
 
 -----
 
-<a name="Debugging_Mono's_Class_Libraries" />
+<a name="Debugging_Mono's_Class_Libraries"></a>
 
 ## <a name="debugging-monos-class-libraries"></a>Depuração de bibliotecas de classes Mono
 

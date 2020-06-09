@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 13891100d3571f9e847243172aa974072f46e7fe
-ms.sourcegitcommit: eca3b01098dba004d367292c8b0d74b58c4e1206
+ms.openlocfilehash: 7005b7a675af084db6d0563acd3ba4b9c0190832
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79304964"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84572358"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Storyboards unificados no Xamarin. iOS
 
@@ -20,15 +20,15 @@ o iOS 8 inclui um mecanismo novo e mais simples de usar para criar a interface d
 
 Como o desenvolvedor não precisa mais criar um storyboard separado e específico para dispositivos iPhone e iPad, eles têm a flexibilidade de criar aplicativos com uma interface comum e, em seguida, personalizar essa interface para diferentes classes de tamanho. Dessa forma, um aplicativo pode ser adaptado para os pontos fortes de cada fator forma e cada interface do usuário pode ser ajustada para fornecer a melhor experiência.
 
-<a name="size-classes" />
+<a name="size-classes"></a>
 
 ## <a name="size-classes"></a>Classes de tamanho
 
-Antes do iOS 8, o desenvolvedor usava `UIInterfaceOrientation` e `UIInterfaceIdiom` para diferenciar os modos retrato e paisagem, e entre os dispositivos iPhone e iPad. No iOS8, a orientação e o dispositivo são determinados com o uso de *classes de tamanho*.
+Antes do iOS 8, o desenvolvedor usava `UIInterfaceOrientation` e `UIInterfaceIdiom` a diferenciar entre os modos retrato e paisagem e entre os dispositivos iPhone e iPad. No iOS8, a orientação e o dispositivo são determinados com o uso de *classes de tamanho*.
 
 Os dispositivos são definidos por classes de tamanho, em ambos os eixos vertical e horizontal, e há dois tipos de classes de tamanho no iOS 8:
 
-- **Regular** – isso é para um tamanho de tela grande (como um iPad) ou um gadget que dá a impressão de um tamanho grande (como um `UIScrollView`
+- **Regular** – isso é para um tamanho de tela grande (como um iPad) ou um gadget que dá a impressão de um tamanho grande (como um`UIScrollView`
 - **Compact** – é para dispositivos menores (como um iPhone). Esse tamanho leva em consideração a orientação do dispositivo.
 
 Se os dois conceitos forem usados juntos, o resultado será uma grade 2 x 2 que define os diferentes tamanhos possíveis que podem ser usados nas orientações diferentes, como visto no diagrama a seguir:
@@ -64,37 +64,37 @@ Como o iPhone 6 Plus tem uma tela grande o suficiente, ele é capaz de ter uma c
 
 O iPhone 6 Plus usa uma nova exibição HD de retina com um fator de escala de tela de 3,0 (três vezes a resolução de tela original do iPhone). Para fornecer a melhor experiência possível nesses dispositivos, inclua um novo trabalho artístico criado para essa escala de tela. No Xcode 6 e superior, os catálogos de ativos podem incluir imagens em tamanhos 1x, 2x e 3x; Basta adicionar os ativos da nova imagem e o iOS escolherá os ativos corretos ao executar em um iPhone 6 Plus.
 
-O comportamento de carregamento de imagens no iOS também reconhece um sufixo de `@3x` em arquivos de imagem. Por exemplo, se o desenvolvedor incluir um ativo de imagem (em resoluções diferentes) no pacote do aplicativo com os seguintes nomes de arquivo: `MonkeyIcon.png`, `MonkeyIcon@2x.png`e `MonkeyIcon@3x.png`. No iPhone 6, mais a imagem de `MonkeyIcon@3x.png` será usada automaticamente se o desenvolvedor carregar uma imagem usando o código a seguir:
+O comportamento de carregamento de imagem no iOS também reconhece um `@3x` sufixo em arquivos de imagem. Por exemplo, se o desenvolvedor incluir um ativo de imagem (em resoluções diferentes) no pacote do aplicativo com os seguintes nomes de arquivo: `MonkeyIcon.png` , `MonkeyIcon@2x.png` e `MonkeyIcon@3x.png` . No iPhone 6 mais, a `MonkeyIcon@3x.png` imagem será usada automaticamente se o desenvolvedor carregar uma imagem usando o código a seguir:
 
 ```csharp
 UIImage icon = UIImage.FromFile("MonkeyImage.png");
 ```
 
-Ou, se eles atribuirem a imagem a um elemento de interface do usuário usando o designer do iOS como `MonkeyIcon.png`, o `MonkeyIcon@3x.png` será usado, novamente automaticamente, no iPhone 6 Plus.
+Ou, se eles atribuirem a imagem a um elemento de interface do usuário usando o designer do iOS como `MonkeyIcon.png` , o `MonkeyIcon@3x.png` será usado novamente automaticamente no iPhone 6 Plus.
 
-<a name="dynamic-launch-screens" />
+<a name="dynamic-launch-screens"></a>
 
 ### <a name="dynamic-launch-screens"></a>Telas de inicialização dinâmica
 
-O arquivo da tela de inicialização é exibido como uma tela inicial enquanto um aplicativo iOS está sendo iniciado para fornecer comentários ao usuário de que o aplicativo está realmente sendo inicializado. Antes do iOS 8, o desenvolvedor teria que incluir vários ativos de imagem `Default.png` para cada tipo de dispositivo, orientação e resolução de tela em que o aplicativo estaria em execução.
+O arquivo da tela de inicialização é exibido como uma tela inicial enquanto um aplicativo iOS está sendo iniciado para fornecer comentários ao usuário de que o aplicativo está realmente sendo inicializado. Antes do iOS 8, o desenvolvedor teria que incluir vários `Default.png` ativos de imagem para cada tipo de dispositivo, orientação e resolução de tela em que o aplicativo estaria em execução.
 
-Novo no iOS 8, o desenvolvedor pode criar um único arquivo `.xib` atômico no Xcode que usa o layout automático e classes de tamanho para criar uma *tela de inicialização dinâmica* que funcionará para cada dispositivo, resolução e orientação. Isso não apenas reduz a quantidade de trabalho necessária do desenvolvedor para criar e manter todos os ativos de imagem necessários, mas reduz o tamanho do grupo instalado do aplicativo.
+Novo no iOS 8, o desenvolvedor pode criar um único arquivo atômico `.xib` no Xcode que usa o layout automático e classes de tamanho para criar uma *tela de inicialização dinâmica* que funcionará para cada dispositivo, resolução e orientação. Isso não apenas reduz a quantidade de trabalho necessária do desenvolvedor para criar e manter todos os ativos de imagem necessários, mas reduz o tamanho do grupo instalado do aplicativo.
 
 ## <a name="traits"></a>Características
 
-As características são propriedades que podem ser usadas para determinar como um layout é alterado conforme seu ambiente é alterado. Eles consistem em um conjunto de Propriedades (o `HorizontalSizeClass` e `VerticalSizeClass` com base em `UIUserInterfaceSizeClass`), bem como o idioma da interface (`UIUserInterfaceIdiom`) e a escala de exibição.
+As características são propriedades que podem ser usadas para determinar como um layout é alterado conforme seu ambiente é alterado. Eles consistem em um conjunto de Propriedades (o `HorizontalSizeClass` e `VerticalSizeClass` baseado em `UIUserInterfaceSizeClass` ), bem como o idioma da interface ( `UIUserInterfaceIdiom` ) e a escala de exibição.
 
-Todos os Estados acima são empacotados em um contêiner ao qual a Apple se refere como uma coleção de características (`UITraitCollection`), que contém não apenas as propriedades, mas também seus valores.
+Todos os Estados acima são empacotados em um contêiner ao qual a Apple se refere como uma coleção de características ( `UITraitCollection` ), que contém não apenas as propriedades, mas também seus valores.
 
 ## <a name="trait-environment"></a>Ambiente de características
 
 Ambientes de características são uma nova interface no iOS 8 e são capazes de retornar uma coleção de características para os seguintes objetos:
 
-- Telas (`UIScreens`).
-- Windows (`UIWindows`).
-- Exibir controladores (`UIViewController`).
-- Exibições (`UIView`).
-- Controlador de apresentação (`UIPresentationController`).
+- Telas ( `UIScreens` ).
+- Windows ( `UIWindows` ).
+- Exibir controladores ( `UIViewController` ).
+- Exibições ( `UIView` ).
+- Controlador de apresentação ( `UIPresentationController` ).
 
 O desenvolvedor usa a coleção de características retornada por um ambiente de características para determinar como uma interface do usuário deve ser disposta.
 
@@ -104,7 +104,7 @@ Todos os ambientes de características fazem uma hierarquia como visto no diagra
 
 A coleção de características que cada um dos ambientes de características acima fluirá, por padrão, do pai para o ambiente filho.
 
-Além de obter a coleção de características atual, o ambiente de características tem um método `TraitCollectionDidChange`, que pode ser substituído nas subclasses View ou View Controller. O desenvolvedor pode usar esse método para modificar qualquer um dos elementos da interface do usuário que dependem de características quando essas características foram alteradas.
+Além de obter a coleção de características atual, o ambiente de características tem um `TraitCollectionDidChange` método, que pode ser substituído nas subclasses View ou View Controller. O desenvolvedor pode usar esse método para modificar qualquer um dos elementos da interface do usuário que dependem de características quando essas características foram alteradas.
 
 ## <a name="typical-trait-collections"></a>Coleções de características típicas
 
@@ -112,51 +112,51 @@ Esta seção abordará os tipos típicos de coleções de características que o
 
 Veja a seguir uma coleção de características típica que o desenvolvedor pode ver em um iPhone:
 
-|Propriedade|{1&gt;Valor&lt;1}|
+|Propriedade|Valor|
 |--- |--- |
-|`HorizontalSizeClass`|Compactá|
-|`VerticalSizeClass`|Normal|
-|`UserInterfaceIdom`|Phone|
-|`DisplayScale`|2.0|
+|`HorizontalSizeClass`|Compacto|
+|`VerticalSizeClass`|Regular|
+|`UserInterfaceIdom`|Telefone|
+|`DisplayScale`|2,0|
 
 O conjunto acima representaria uma coleção de características totalmente qualificada, pois ela tem valores para todas as suas propriedades de característica.
 
 Também é possível ter uma coleção de características que não tenha alguns de seus valores (que a Apple se refere como *não especificado*):
 
-|Propriedade|{1&gt;Valor&lt;1}|
+|Propriedade|Valor|
 |--- |--- |
-|`HorizontalSizeClass`|Compactá|
-|`VerticalSizeClass`|Não especificado|
-|`UserInterfaceIdom`|Não especificado|
-|`DisplayScale`|Não especificado|
+|`HorizontalSizeClass`|Compacto|
+|`VerticalSizeClass`|Não Especificado|
+|`UserInterfaceIdom`|Não Especificado|
+|`DisplayScale`|Não Especificado|
 
 No entanto, em geral, quando o desenvolvedor solicita o ambiente de características para sua coleção de características, ele retornará uma coleção totalmente qualificada, como visto no exemplo acima.
 
 Se um ambiente de características (como um modo de exibição ou de exibição) não estiver dentro da hierarquia de exibição atual, o desenvolvedor poderá obter valores não especificados novamente para uma ou mais das propriedades de característica.
 
-O desenvolvedor também receberá uma coleção de características parcialmente qualificada se usar um dos métodos de criação fornecidos pela Apple, como `UITraitCollection.FromHorizontalSizeClass`, para criar uma nova coleção.
+O desenvolvedor também receberá uma coleção de características parcialmente qualificada se usar um dos métodos de criação fornecidos pela Apple, como `UITraitCollection.FromHorizontalSizeClass` , para criar uma nova coleção.
 
 Uma operação que pode ser executada em várias coleções de características é compará-las entre si, o que envolve a solicitação de uma coleção de características se ela contiver outra. O que significa *contenção* é que, para qualquer característica especificada na segunda coleção, o valor deve corresponder exatamente ao valor na primeira coleção.
 
-Para testar duas características, use o método `Contains` do `UITraitCollection` passando o valor da característica a ser testada.
+Para testar duas características, use o `Contains` método de `UITraitCollection` passar o valor da característica a ser testada.
 
-O desenvolvedor pode executar as comparações manualmente no código para determinar como fazer layout de exibições ou controladores de exibição. No entanto, o `UIKit` usa esse método internamente para fornecer algumas de suas funcionalidades, como no proxy de aparência, por exemplo.
+O desenvolvedor pode executar as comparações manualmente no código para determinar como fazer layout de exibições ou controladores de exibição. No entanto, `UIKit` o usa esse método internamente para fornecer algumas de suas funcionalidades, como no proxy de aparência, por exemplo.
 
 ## <a name="appearance-proxy"></a>Proxy de aparência
 
 O proxy de aparência foi introduzido em versões anteriores do iOS para permitir que os desenvolvedores personalizem as propriedades de suas exibições. Ele foi estendido no iOS 8 para dar suporte a coleções de características.
 
-Os proxies de aparência agora incluem um novo método, `AppearanceForTraitCollection`, que retorna um novo proxy de aparência para a coleção de características determinada que foi passada. Todas as personalizações que o desenvolvedor executa nesse proxy de aparência só terão efeito em exibições que estejam de acordo com a coleção de características especificada.
+Os proxies de aparência agora incluem um novo método, `AppearanceForTraitCollection` , que retorna um novo proxy de aparência para a coleção de características determinada que foi passada. Todas as personalizações que o desenvolvedor executa nesse proxy de aparência só terão efeito em exibições que estejam de acordo com a coleção de características especificada.
 
-Geralmente, o desenvolvedor passará uma coleção de características parcialmente especificada para o método `AppearanceForTraitCollection`, como um que acaba de especificar uma classe de tamanho horizontal de Compact, para que pudesse personalizar qualquer exibição no aplicativo que seja compactada horizontalmente.
+Geralmente, o desenvolvedor passará uma coleção de características parcialmente especificada para o `AppearanceForTraitCollection` método, como uma que acaba de especificar uma classe de tamanho horizontal de Compact, para que pudesse personalizar qualquer exibição no aplicativo que seja compactada horizontalmente.
 
 ## <a name="uiimage"></a>UIImage
 
-Outra classe à qual a Apple adicionou a coleção de características é `UIImage`. No passado, o desenvolvedor tinha que especificar um @1X e @2x versão de qualquer ativo gráfico de bitmap que ele iria incluir no aplicativo (como um ícone).
+Outra classe à qual a Apple adicionou a coleção de características é `UIImage` . No passado, o desenvolvedor tinha que especificar uma @1X versão e um @2x ativo gráfico de bitmap que eles vão incluir no aplicativo (como um ícone).
 
 o iOS 8 foi expandido para permitir que o desenvolvedor inclua várias versões de uma imagem em um catálogo de imagens com base em uma coleção de características. Por exemplo, o desenvolvedor pode incluir uma imagem menor para trabalhar com uma classe de característica compacta e uma imagem de tamanho completo para qualquer outra coleção.
 
-Quando uma das imagens for usada dentro de uma classe de `UIImageView`, a exibição de imagem exibirá automaticamente a versão correta da imagem para sua coleção de características. Se o ambiente de características mudar (como o usuário alternando o dispositivo de retrato para paisagem), a exibição de imagem selecionará automaticamente o novo tamanho da imagem para corresponder à nova coleção de características e alterará seu tamanho para corresponder à versão atual da imagem que está sendo visível.
+Quando uma das imagens é usada dentro de uma `UIImageView` classe, a exibição de imagem exibe automaticamente a versão correta da imagem para sua coleção de características. Se o ambiente de características mudar (como o usuário alternando o dispositivo de retrato para paisagem), a exibição de imagem selecionará automaticamente o novo tamanho da imagem para corresponder à nova coleção de características e alterará seu tamanho para corresponder à versão atual da imagem que está sendo exibida.
 
 ## <a name="uiimageasset"></a>UIImageAsset
 
@@ -168,7 +168,7 @@ Para obter mais informações sobre ativos de imagem, consulte a documentação 
 
 ## <a name="combining-trait-collections"></a>Combinando coleções de características
 
-Outra função que um desenvolvedor pode executar em coleções de características é adicionar duas juntas que resultarão na coleção combinada, em que os valores não especificados de uma coleção são substituídos pelos valores especificados em um segundo. Isso é feito usando o método `FromTraitsFromCollections` da classe `UITraitCollection`.
+Outra função que um desenvolvedor pode executar em coleções de características é adicionar duas juntas que resultarão na coleção combinada, em que os valores não especificados de uma coleção são substituídos pelos valores especificados em um segundo. Isso é feito usando o `FromTraitsFromCollections` método da `UITraitCollection` classe.
 
 Como mencionado acima, se qualquer uma das características não for especificada em uma das coleções de características e for especificado em outro, o valor será definido como a versão especificada. No entanto, se houver várias versões de um determinado valor especificado, o valor da última coleção de características será o valor usado.
 
@@ -178,9 +178,9 @@ Esta seção abordará os detalhes de como os controladores de exibição e de e
 
 ### <a name="split-view-controller"></a>Controlador de exibição de divisão
 
-Uma das classes do controlador de exibição que mudou mais no iOS 8 é a classe `UISplitViewController`. No passado, o desenvolvedor geralmente usaria um controlador de exibição de divisão na versão do iPad do aplicativo e, em seguida, teria que fornecer uma versão completamente diferente de sua hierarquia de exibição para a versão do iPhone do aplicativo.
+Uma das classes do controlador de exibição que mudou mais no iOS 8 é a `UISplitViewController` classe. No passado, o desenvolvedor geralmente usaria um controlador de exibição de divisão na versão do iPad do aplicativo e, em seguida, teria que fornecer uma versão completamente diferente de sua hierarquia de exibição para a versão do iPhone do aplicativo.
 
-No iOS 8, a classe `UISplitViewController` está disponível em ambas as plataformas (iPad e iPhone), que permite que o desenvolvedor crie uma hierarquia de controlador de exibição que funcionará para iPhone e iPad.
+No iOS 8, a `UISplitViewController` classe está disponível em ambas as plataformas (iPad e iPhone), que permite ao desenvolvedor criar uma hierarquia de controlador de exibição que funcionará para iPhone e iPad.
 
 Quando um iPhone estiver em paisagem, o controlador de exibição de divisão apresentará suas exibições lado a lado, assim como faria quando fosse exibida em um iPad.
 
@@ -200,9 +200,9 @@ Em um aplicativo em que o desenvolvedor deseja exibir a exibição mestre e de d
 
  [![](unified-storyboards-images/cascadingclasses03.png "The developer must insert a parent container for the Split View Controller and override the Trait Collection")](unified-storyboards-images/cascadingclasses03.png#lightbox)
 
-Um `UIView` é definido como o pai do controlador de exibição de divisão e o método `SetOverrideTraitCollection` é chamado na exibição passando em uma nova coleção de características e direcionando o controlador de exibição de divisão. A nova coleção de características substitui a `HorizontalSizeClass`, definindo-a como `Regular`, de modo que o controlador de exibição de divisão exibirá as exibições mestre e de detalhes em um iPhone na orientação paisagem.
+Um `UIView` é definido como o pai do controlador de exibição de divisão e o `SetOverrideTraitCollection` método é chamado na exibição passando em uma nova coleção de características e direcionando o controlador de exibição de divisão. A nova coleção de características substitui o `HorizontalSizeClass` , definindo-o como `Regular` , para que o controlador de exibição de divisão exiba as exibições mestre e de detalhes em um iPhone na orientação paisagem.
 
-Observe que o `VerticalSizeClass` foi definido como `unspecified`, que permite que a nova coleção de características seja adicionada à coleção de características no pai, resultando em uma `Compact VerticalSizeClass` para o controlador de exibição de divisão filho.
+Observe que o `VerticalSizeClass` foi definido como `unspecified` , que permite que a nova coleção de características seja adicionada à coleção de características no pai, resultando em um `Compact VerticalSizeClass` para o controlador de exibição de divisão filho.
 
 ### <a name="trait-changes"></a>Alterações de características
 
@@ -217,68 +217,68 @@ o iOS 8 fornece vários retornos de chamada que o desenvolvedor pode usar para p
 |Fase|Callback|Descrição|
 |--- |--- |--- |
 |Instalação|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Esse método é chamado no início de uma alteração de característica antes que uma coleção de características seja definida para o novo valor.</li><li>O método é chamado quando o valor da coleção de características é alterado, mas antes de qualquer animação ocorrer.</li></ul>|
-|Animação|`WillTransitionToTraitCollection`|O coordenador de transição que é passado para esse método tem uma propriedade `AnimateAlongside` que permite ao desenvolvedor adicionar animações que serão executadas junto com as animações padrão.|
+|Animação|`WillTransitionToTraitCollection`|O coordenador de transição que é passado para esse método tem uma `AnimateAlongside` propriedade que permite ao desenvolvedor adicionar animações que serão executadas junto com as animações padrão.|
 |Limpar|`WillTransitionToTraitCollection`|Fornece um método para que os desenvolvedores incluam seu próprio código de limpeza depois que a transição ocorre.|
 
-O método `WillTransitionToTraitCollection` é ótimo para animar controladores de exibição junto com as alterações de coleção de características. O método `WillTransitionToTraitCollection` só está disponível em controladores de exibição (`UIViewController`) e não em outros ambientes de características, como `UIViews`.
+O `WillTransitionToTraitCollection` método é ótimo para animar controladores de exibição junto com as alterações de coleção de características. O `WillTransitionToTraitCollection` método só está disponível em controladores de exibição ( `UIViewController` ) e não em outros ambientes de características, como `UIViews` .
 
-O `TraitCollectionDidChange` é ótimo para trabalhar com a classe `UIView`, em que o desenvolvedor deseja atualizar a interface do usuário à medida que as características estão sendo alteradas.
+O `TraitCollectionDidChange` é ótimo para trabalhar com a `UIView` classe, em que o desenvolvedor deseja atualizar a interface do usuário à medida que as características estão mudando.
 
 ### <a name="collapsing-the-split-view-controllers"></a>Recolhendo os controladores de exibição de divisão
 
 Agora vamos examinar mais de perto o que acontece quando um controlador de exibição de divisão recolhe de uma coluna de duas colunas para uma coluna. Como parte dessa alteração, há dois processos que precisam ocorrer:
 
-- Por padrão, o controlador de exibição de divisão usará o controlador de exibição primário como a exibição depois que o recolhimento ocorrer. O desenvolvedor pode substituir esse comportamento substituindo o método `GetPrimaryViewControllerForCollapsingSplitViewController` do `UISplitViewControllerDelegate` e fornecendo qualquer controlador de exibição que deseje exibir no estado recolhido.
-- O controlador de exibição secundário precisa ser mesclado no controlador de exibição primário. Geralmente, o desenvolvedor não precisa realizar nenhuma ação para esta etapa; o controlador de exibição de divisão inclui o tratamento automático desta fase com base no dispositivo de hardware. No entanto, pode haver alguns casos especiais em que o desenvolvedor vai querer interagir com essa alteração. Chamar o método `CollapseSecondViewController` da `UISplitViewControllerDelegate` permite que o controlador de exibição mestre seja exibido quando o recolhimento ocorre, em vez da exibição de detalhes.
+- Por padrão, o controlador de exibição de divisão usará o controlador de exibição primário como a exibição depois que o recolhimento ocorrer. O desenvolvedor pode substituir esse comportamento substituindo o `GetPrimaryViewControllerForCollapsingSplitViewController` método do `UISplitViewControllerDelegate` e fornecendo qualquer controlador de exibição que desejam exibir no estado recolhido.
+- O controlador de exibição secundário precisa ser mesclado no controlador de exibição primário. Geralmente, o desenvolvedor não precisa realizar nenhuma ação para esta etapa; o controlador de exibição de divisão inclui o tratamento automático desta fase com base no dispositivo de hardware. No entanto, pode haver alguns casos especiais em que o desenvolvedor vai querer interagir com essa alteração. Chamar o `CollapseSecondViewController` método de `UISplitViewControllerDelegate` permite que o controlador de exibição mestre seja exibido quando o recolhimento ocorre, em vez da exibição de detalhes.
 
 ### <a name="expanding-the-split-view-controller"></a>Expandindo o controlador de exibição de divisão
 
 Agora vamos examinar mais de perto o que acontece quando um controlador de exibição de divisão é expandido de um estado recolhido. Mais uma vez, há dois estágios que precisam ocorrer:
 
-- Primeiro, defina o novo controlador de exibição primário. Por padrão, o controlador de exibição de divisão usará automaticamente o controlador de exibição primário do modo de exibição recolhido. Novamente, o desenvolvedor pode substituir esse comportamento usando o método `GetPrimaryViewControllerForExpandingSplitViewController` da `UISplitViewControllerDelegate`.
-- Depois que o controlador de exibição primário tiver sido escolhido, o controlador de exibição secundário deverá ser recriado. Novamente, o controlador de exibição de divisão inclui o tratamento automático desta fase com base no dispositivo de hardware. O desenvolvedor pode substituir esse comportamento chamando o método `SeparateSecondaryViewController` da `UISplitViewControllerDelegate`.
+- Primeiro, defina o novo controlador de exibição primário. Por padrão, o controlador de exibição de divisão usará automaticamente o controlador de exibição primário do modo de exibição recolhido. Novamente, o desenvolvedor pode substituir esse comportamento usando o `GetPrimaryViewControllerForExpandingSplitViewController` método do `UISplitViewControllerDelegate` .
+- Depois que o controlador de exibição primário tiver sido escolhido, o controlador de exibição secundário deverá ser recriado. Novamente, o controlador de exibição de divisão inclui o tratamento automático desta fase com base no dispositivo de hardware. O desenvolvedor pode substituir esse comportamento chamando o `SeparateSecondaryViewController` método do `UISplitViewControllerDelegate` .
 
-Em um controlador de exibição de divisão, o controlador de exibição primário desempenha uma parte na expansão e no recolhimento das exibições implementando os métodos `CollapseSecondViewController` e `SeparateSecondaryViewController` do `UISplitViewControllerDelegate`. `UINavigationController` implementa esses métodos para enviar e pop automaticamente o controlador de exibição secundário.
+Em um controlador de exibição de divisão, o controlador de exibição primário desempenha uma parte na expansão e no recolhimento das exibições implementando `CollapseSecondViewController` os `SeparateSecondaryViewController` métodos e do `UISplitViewControllerDelegate` . `UINavigationController`implementa esses métodos para enviar e pop automaticamente o controlador de exibição secundário.
 
 ### <a name="showing-view-controllers"></a>Mostrando controladores de exibição
 
-Outra alteração que a Apple fez no iOS 8 é a forma como o desenvolvedor mostra os controladores de exibição. No passado, se o aplicativo tivesse um controlador de exibição de folha (como um controlador de exibição de tabela) e o desenvolvedor mostrasse um diferente (por exemplo, em resposta ao usuário tocando em uma célula), o aplicativo voltaria para a hierarquia do controlador para o controlador de exibição de navegação e chamaria o método `PushViewController` em relação a ele para exibir a nova exibição.
+Outra alteração que a Apple fez no iOS 8 é a forma como o desenvolvedor mostra os controladores de exibição. No passado, se o aplicativo tivesse um controlador de exibição de folha (como um controlador de exibição de tabela) e o desenvolvedor mostrasse um diferente (por exemplo, em resposta ao usuário tocando em uma célula), o aplicativo voltaria para a hierarquia do controlador para o controlador de exibição de navegação e chamaria o `PushViewController` método em relação a ele para exibir o novo modo de exibição.
 
 Isso apresentou um acoplamento muito rígido entre o controlador de navegação e o ambiente em que ele estava sendo executado. No iOS 8, a Apple o desacoplado fornecendo dois novos métodos:
 
-- `ShowViewController` – adapta-se para exibir o novo controlador de exibição com base em seu ambiente. Por exemplo, em um `UINavigationController` ele simplesmente envia por push a nova exibição para a pilha. Em um controlador de exibição de divisão, o novo controlador de exibição será apresentado no lado esquerdo como o novo controlador de exibição primário. Se nenhum controlador de exibição de contêiner estiver presente, o novo modo de exibição será exibido como um controlador de exibição modal.
-- `ShowDetailViewController` – funciona de maneira semelhante ao `ShowViewController`, mas é implementado em um controlador de exibição de divisão para substituir o modo de exibição de detalhes pelo novo controlador de exibição que está sendo passado. Se o controlador de exibição de divisão estiver recolhido (como pode ser visto em um aplicativo do iPhone), a chamada será redirecionada para o método `ShowViewController`, e a nova exibição será mostrada como o controlador de exibição primário. Novamente, se nenhum controlador de exibição de contêiner estiver presente, o novo modo de exibição será exibido como um controlador de exibição modal.
+- `ShowViewController`– Adapta-se para exibir o novo controlador de exibição com base em seu ambiente. Por exemplo, em um `UINavigationController` ele simplesmente envia por push a nova exibição para a pilha. Em um controlador de exibição de divisão, o novo controlador de exibição será apresentado no lado esquerdo como o novo controlador de exibição primário. Se nenhum controlador de exibição de contêiner estiver presente, o novo modo de exibição será exibido como um controlador de exibição modal.
+- `ShowDetailViewController`– Funciona de maneira semelhante ao `ShowViewController` , mas é implementado em um controlador de exibição de divisão para substituir o modo de exibição de detalhes pelo novo controlador de exibição que está sendo passado. Se o controlador de exibição de divisão estiver recolhido (como pode ser visto em um aplicativo do iPhone), a chamada será redirecionada para o `ShowViewController` método e a nova exibição será mostrada como o controlador de exibição primário. Novamente, se nenhum controlador de exibição de contêiner estiver presente, o novo modo de exibição será exibido como um controlador de exibição modal.
 
 Esses métodos funcionam iniciando no controlador de exibição de folha e orientam a hierarquia de exibição até encontrarem o controlador de exibição de contêiner correto para manipular a exibição da nova exibição.
 
-Os desenvolvedores podem implementar `ShowViewController` e `ShowDetailViewController` em seus próprios controladores de exibição personalizados para obter a mesma funcionalidade automatizada que `UINavigationController` e `UISplitViewController` fornece.
+Os desenvolvedores podem implementar `ShowViewController` e `ShowDetailViewController` em seus próprios controladores de exibição personalizados para obter a mesma funcionalidade automatizada que o `UINavigationController` e o `UISplitViewController` fornece.
 
 ### <a name="how-it-works"></a>Como ele funciona
 
-Nesta seção, vamos dar uma olhada em como esses métodos são realmente implementados no iOS 8. Primeiro, vamos examinar o novo método `GetTargetForAction`:
+Nesta seção, vamos dar uma olhada em como esses métodos são realmente implementados no iOS 8. Primeiro, vamos examinar o novo `GetTargetForAction` método:
 
  [![](unified-storyboards-images/gettargetforaction.png "The new GetTargetForAction method")](unified-storyboards-images/gettargetforaction.png#lightbox)
 
 Esse método percorre a cadeia de hierarquia até que o controlador de exibição de contêiner correto seja encontrado. Por exemplo:
 
-1. Se um método de `ShowViewController` for chamado, o primeiro controlador de exibição na cadeia que implementa esse método é o controlador de navegação, portanto, ele é usado como o pai da nova exibição.
-1. Se um método de `ShowDetailViewController` foi chamado em vez disso, o controlador de exibição de divisão é o primeiro controlador de exibição para implementá-lo, portanto, ele é usado como o pai.
+1. Se um `ShowViewController` método for chamado, o primeiro controlador de exibição na cadeia que implementa esse método é o controlador de navegação, portanto, ele é usado como o pai da nova exibição.
+1. Se um `ShowDetailViewController` método foi chamado em vez disso, o controlador de exibição de divisão é o primeiro controlador de exibição para implementá-lo, portanto, ele é usado como o pai.
 
-O método `GetTargetForAction` funciona localizando um controlador de exibição que implementa uma determinada ação e, em seguida, solicitando o controlador de exibição se desejar receber essa ação. Como esse método é público, os desenvolvedores podem criar seus próprios métodos personalizados que funcionam exatamente como os métodos internos `ShowViewController` e `ShowDetailViewController`.
+O `GetTargetForAction` método funciona localizando um controlador de exibição que implementa uma determinada ação e, em seguida, solicitando o controlador de exibição se desejar receber essa ação. Como esse método é público, os desenvolvedores podem criar seus próprios métodos personalizados que funcionam exatamente como os `ShowViewController` métodos internos e `ShowDetailViewController` .
 
 ## <a name="adaptive-presentation"></a>Apresentação adaptável
 
-No iOS 8, a Apple também fez a adaptação de apresentações popover (`UIPopoverPresentationController`). Portanto, um controlador de exibição de apresentação popover apresentará automaticamente uma exibição normal de popover em uma classe de tamanho regular, mas exibirá a tela inteira em uma classe de tamanho horizontalmente compacta (como em um iPhone).
+No iOS 8, a Apple também fez a adaptação de apresentações ( `UIPopoverPresentationController` ) popover. Portanto, um controlador de exibição de apresentação popover apresentará automaticamente uma exibição normal de popover em uma classe de tamanho regular, mas exibirá a tela inteira em uma classe de tamanho horizontalmente compacta (como em um iPhone).
 
-Para acomodar as alterações no sistema de storyboard unificado, um novo objeto de controlador foi criado para gerenciar os controladores de exibição apresentados – `UIPresentationController`. Esse controlador é criado a partir do momento em que o controlador de exibição é apresentado até ser Descartado. Como é uma classe de gerenciamento, ela pode ser considerada uma superclasse no controlador de exibição, pois responde às alterações de dispositivo que afetam o controlador de exibição (como orientação) que, em seguida, são alimentadas de volta para o controlador de exibição, os controles do controlador de apresentação.
+Para acomodar as alterações no sistema de storyboard unificado, um novo objeto de controlador foi criado para gerenciar os controladores de exibição apresentados — `UIPresentationController` . Esse controlador é criado a partir do momento em que o controlador de exibição é apresentado até ser Descartado. Como é uma classe de gerenciamento, ela pode ser considerada uma superclasse no controlador de exibição, pois responde às alterações de dispositivo que afetam o controlador de exibição (como orientação) que, em seguida, são alimentadas de volta para o controlador de exibição, os controles do controlador de apresentação.
 
-Quando o desenvolvedor apresenta um controlador de exibição usando o método `PresentViewController`, o gerenciamento do processo de apresentação é enviado para `UIKit`. Identificadores UIKit (entre outras coisas) o controlador correto para o estilo que está sendo criado, com a única exceção sendo quando um controlador de exibição tem o estilo definido como `UIModalPresentationCustom`. Aqui, o aplicativo pode fornecer seu próprio PresentationController em vez de usar o controlador de `UIKit`.
+Quando o desenvolvedor apresenta um controlador de exibição usando o `PresentViewController` método, o gerenciamento do processo de apresentação é enviado para o `UIKit` . Identificadores UIKit (entre outras coisas) o controlador correto para o estilo que está sendo criado, com a única exceção sendo quando um controlador de exibição tem o estilo definido como `UIModalPresentationCustom` . Aqui, o aplicativo pode fornecer seu próprio PresentationController em vez de usar o `UIKit` controlador.
 
 ### <a name="custom-presentation-styles"></a>Estilos de apresentação personalizados
 
 Com um estilo de apresentação personalizado, os desenvolvedores têm a opção de usar um controlador de apresentação personalizado. Esse controlador personalizado pode ser usado para modificar a aparência e o comportamento da exibição para a qual ele está Allied.
 
-<a name="size-classes"/>
+<a name="size-classes"></a>
 
 ## <a name="working-with-size-classes"></a>Trabalhando com classes de tamanho
 
@@ -294,7 +294,7 @@ Ao executar o aplicativo de fotos adaptáveis em um iPhone, quando o usuário gi
 
  [![](unified-storyboards-images/rotation.png "The Split View Controller will display both the master and details view as seen here")](unified-storyboards-images/rotation.png#lightbox)
 
-Isso é feito substituindo o método `UpdateConstraintsForTraitCollection` do controlador de exibição e ajustando as restrições com base no valor da `VerticalSizeClass`. Por exemplo:
+Isso é feito substituindo o `UpdateConstraintsForTraitCollection` método do controlador de exibição e ajustando as restrições com base no valor do `VerticalSizeClass` . Por exemplo:
 
 ```csharp
 public void UpdateConstraintsForTraitCollection (UITraitCollection collection)
@@ -350,7 +350,7 @@ public void UpdateConstraintsForTraitCollection (UITraitCollection collection)
 
 ### <a name="adding-transition-animations"></a>Adicionando animações de transição
 
-Quando o controlador de exibição de divisão no aplicativo de fotos adaptáveis passa de recolhido para expandido, as animações são adicionadas às animações padrão, substituindo o método `WillTransitionToTraitCollection` do controlador de exibição. Por exemplo:
+Quando o controlador de exibição de divisão no aplicativo de fotos adaptáveis passa de recolhido para expandido, as animações são adicionadas às animações padrão substituindo o `WillTransitionToTraitCollection` método do controlador de exibição. Por exemplo:
 
 ```csharp
 public override void WillTransitionToTraitCollection (UITraitCollection traitCollection, IUIViewControllerTransitionCoordinator coordinator)
@@ -405,7 +405,7 @@ public void UpdateForcedTraitCollection ()
 
 ### <a name="expanding-and-collapsing-the-split-view-controller"></a>Expandindo e recolhendo o controlador de exibição de divisão
 
-Em seguida, vamos examinar como o comportamento de expansão e recolhimento do controlador de exibição de divisão foi implementado no Xamarin. No `AppDelegate`, quando o controlador de exibição de divisão é criado, seu delegado é atribuído para lidar com essas alterações:
+Em seguida, vamos examinar como o comportamento de expansão e recolhimento do controlador de exibição de divisão foi implementado no Xamarin. No `AppDelegate` , quando o controlador de exibição de divisão é criado, seu delegado é atribuído para lidar com essas alterações:
 
 ```csharp
 public class SplitViewControllerDelegate : UISplitViewControllerDelegate
@@ -454,13 +454,13 @@ public class SplitViewControllerDelegate : UISplitViewControllerDelegate
 }
 ```
 
-O método `SeparateSecondaryViewController` testa para ver se uma foto está sendo exibida e executa ações com base nesse estado. Se nenhuma foto estiver sendo mostrada, ela recolherá o controlador de exibição secundário para que o controlador de exibição mestre seja exibido.
+O `SeparateSecondaryViewController` método testa para ver se uma foto está sendo exibida e executa ações com base nesse estado. Se nenhuma foto estiver sendo mostrada, ela recolherá o controlador de exibição secundário para que o controlador de exibição mestre seja exibido.
 
-O método `CollapseSecondViewController` é usado ao expandir o controlador de exibição de divisão para ver se há alguma foto na pilha, se ela for recolhida novamente para essa exibição.
+O `CollapseSecondViewController` método é usado ao expandir o controlador de exibição de divisão para ver se há alguma foto na pilha, se ela for recolhida novamente para essa exibição.
 
 ### <a name="moving-between-view-controllers"></a>Movendo entre os controladores de exibição
 
-Em seguida, vamos dar uma olhada em como o aplicativo de fotos adaptáveis se move entre os controladores de exibição. Na classe `AAPLConversationViewController` quando o usuário seleciona uma célula da tabela, o método `ShowDetailViewController` é chamado para exibir a exibição de detalhes:
+Em seguida, vamos dar uma olhada em como o aplicativo de fotos adaptáveis se move entre os controladores de exibição. Na `AAPLConversationViewController` classe quando o usuário seleciona uma célula da tabela, o `ShowDetailViewController` método é chamado para exibir a exibição de detalhes:
 
 ```csharp
 public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
@@ -510,7 +510,7 @@ public bool Aapl_willShowingDetailViewControllerPushWithSender ()
 }
 ```
 
-Eles são implementados usando o método `GetTargetViewControllerForAction` discutido em detalhes acima.
+Eles são implementados usando o `GetTargetViewControllerForAction` método discutido em detalhes acima.
 
 Quando um controlador de exibição de tabela está exibindo dados, ele usa os métodos implementados acima para ver se um envio por push ocorrerá ou não, e se deseja ou não exibir ou ocultar o indicador de divulgação de acordo:
 
@@ -527,9 +527,9 @@ public override void WillDisplay (UITableView tableView, UITableViewCell cell, N
 }
 ```
 
-### <a name="new-showdetailtargetdidchangenotification-type"></a>Novo tipo de `ShowDetailTargetDidChangeNotification`
+### <a name="new-showdetailtargetdidchangenotification-type"></a>Novo `ShowDetailTargetDidChangeNotification` tipo
 
-A Apple adicionou um novo tipo de notificação para trabalhar com classes de tamanho e ambientes de características de dentro de um controlador de exibição de divisão, `ShowDetailTargetDidChangeNotification`. Essa notificação é enviada sempre que a exibição de detalhes de destino de um controlador de exibição de divisão é alterada, como quando o controlador se expande ou recolhe.
+A Apple adicionou um novo tipo de notificação para trabalhar com classes de tamanho e ambientes de características de dentro de um controlador de exibição de divisão, `ShowDetailTargetDidChangeNotification` . Essa notificação é enviada sempre que a exibição de detalhes de destino de um controlador de exibição de divisão é alterada, como quando o controlador se expande ou recolhe.
 
 O aplicativo de fotos adaptáveis usa essa notificação para atualizar o estado do indicador de divulgação quando o controlador de exibição de detalhes muda:
 
@@ -558,7 +558,7 @@ Os principais benefícios dos storyboards unificados são:
 
 Esse recurso tem suporte total no Visual Studio para Mac
 
-<a name="enabling-size-classes" />
+<a name="enabling-size-classes"></a>
 
 ### <a name="enabling-size-classes"></a>Habilitando classes de tamanho
 
@@ -672,22 +672,22 @@ E quando o aplicativo é executado no simulador do iPhone, o elemento está ause
 
  [![](unified-storyboards-images/exclude05.png "The element missing when the running app in the iPhone Simulator")](unified-storyboards-images/exclude05.png#lightbox)
 
-Para remover um caso de exclusão de um elemento, basta selecionar o elemento na **design Surface**, rolar até a parte inferior do **Gerenciador de propriedades** e clicar no botão **-** ao lado do caso a ser removido.
+Para remover um caso de exclusão de um elemento, basta selecionar o elemento na **design Surface**, rolar até a parte inferior do **Gerenciador de propriedades** e clicar no **-** botão ao lado do caso a ser removido.
 
-Para ver uma implementação de storyboards unificados, consulte o `UnifiedStoryboard` aplicativo Xamarin iOS 8 de exemplo anexado a este documento.
+Para ver uma implementação de storyboards unificados, examine o `UnifiedStoryboard` aplicativo Xamarin Ios 8 de exemplo anexado a este documento.
 
 ## <a name="dynamic-launch-screens"></a>Telas de inicialização dinâmica
 
-O arquivo da tela de inicialização é exibido como uma tela inicial enquanto um aplicativo iOS está sendo iniciado para fornecer comentários ao usuário de que o aplicativo está realmente sendo inicializado. Antes do iOS 8, o desenvolvedor teria que incluir vários ativos de imagem `Default.png` para cada tipo de dispositivo, orientação e resolução de tela em que o aplicativo estaria em execução. Por exemplo, `Default@2x.png`, `Default-Landscape@2x~ipad.png`, `Default-Portrait@2x~ipad.png`, etc.
+O arquivo da tela de inicialização é exibido como uma tela inicial enquanto um aplicativo iOS está sendo iniciado para fornecer comentários ao usuário de que o aplicativo está realmente sendo inicializado. Antes do iOS 8, o desenvolvedor teria que incluir vários `Default.png` ativos de imagem para cada tipo de dispositivo, orientação e resolução de tela em que o aplicativo estaria em execução. Por exemplo,,,, `Default@2x.png` `Default-Landscape@2x~ipad.png` `Default-Portrait@2x~ipad.png` etc.
 
-A fatoração nos novos dispositivos iPhone 6 e iPhone 6 Plus (e o próximo Apple Watch) com todos os dispositivos iPhone e iPad existentes representa uma grande variedade de tamanhos, orientações e resoluções de `Default.png` de imagem da tela de inicialização que devem ser criados e mantidos. Além disso, esses arquivos podem ser muito grandes e "inchar" o pacote de aplicativos de entrega, aumentando a quantidade de tempo necessária para baixar o aplicativo da iTunes App Store (possivelmente mantendo a capacidade de ser entregue em uma rede de celular) e aumentar a quantidade de armazenamento necessária no dispositivo do usuário final.
+A fatoração nos novos dispositivos iPhone 6 e iPhone 6 Plus (e o futuro Apple Watch) com todos os dispositivos iPhone e iPad existentes representa uma grande variedade de tamanhos, orientações e resoluções de `Default.png` ativos de imagem da tela de inicialização que devem ser criados e mantidos. Além disso, esses arquivos podem ser muito grandes e "ininflar" o pacote de aplicativos de entrega, aumentando a quantidade de tempo necessária para baixar o aplicativo da iTunes App Store (possivelmente mantendo a capacidade de ser entregue por uma rede de celular) e aumentando a quantidade de armazenamento necessária no dispositivo do usuário final.
 
-Novo no iOS 8, o desenvolvedor pode criar um único arquivo `.xib` atômico no Xcode que usa o layout automático e classes de tamanho para criar uma *tela de inicialização dinâmica* que funcionará para cada dispositivo, resolução e orientação. Isso não apenas reduz a quantidade de trabalho necessária do desenvolvedor para criar e manter todos os ativos de imagem necessários, mas reduz consideravelmente o tamanho do grupo instalado do aplicativo.
+Novo no iOS 8, o desenvolvedor pode criar um único arquivo atômico `.xib` no Xcode que usa o layout automático e classes de tamanho para criar uma *tela de inicialização dinâmica* que funcionará para cada dispositivo, resolução e orientação. Isso não apenas reduz a quantidade de trabalho necessária do desenvolvedor para criar e manter todos os ativos de imagem necessários, mas reduz consideravelmente o tamanho do grupo instalado do aplicativo.
 
 As telas de inicialização dinâmica têm as seguintes limitações e considerações:
 
-- Use somente classes `UIKit`.
-- Use uma única exibição de raiz que seja um objeto `UIView` ou `UIViewController`.
+- Use somente `UIKit` classes.
+- Use uma única exibição raiz que seja um `UIView` `UIViewController` objeto ou.
 - Não faça nenhuma conexão com o código do aplicativo (não adicione **ações** ou **saídas**).
 - Não adicione `UIWebView` objetos.
 - Não use nenhuma classe personalizada.
@@ -698,13 +698,13 @@ Com as diretrizes acima em mente, vamos examinar a adição de uma tela de inici
 Faça o seguinte:
 
 1. Abra **Visual Studio para Mac** e carregue a **solução** para adicionar a tela de inicialização dinâmica ao.
-2. Na **Gerenciador de soluções**, clique com o botão direito do mouse no arquivo `MainStoryboard.storyboard` e selecione **abrir com** > **Xcode Interface Builder**:
+2. Na **Gerenciador de soluções**, clique com o botão direito do mouse no `MainStoryboard.storyboard` arquivo e selecione **abrir com**o  >  **Xcode Interface Builder**:
 
     [![](unified-storyboards-images/dls01.png "Open With Xcode Interface Builder")](unified-storyboards-images/dls01.png#lightbox)
-3. No Xcode, selecione **arquivo** > **novo** arquivo de >  **...** :
+3. No Xcode, selecione **arquivo**  >  **novo**  >  **arquivo...**:
 
     [![](unified-storyboards-images/dls02.png "Select File / New")](unified-storyboards-images/dls02.png#lightbox)
-4. Selecione a **interface do usuário** do **Ios** >  > **tela de inicialização** e clique no botão **Avançar** :
+4. Selecione **iOS**  >  tela de inicialização da**interface do usuário**do IOS  >  **Launch Screen** e clique no botão **Avançar** :
 
     [![](unified-storyboards-images/dls03.png "Select iOS / User Interface / Launch Screen")](unified-storyboards-images/dls03.png#lightbox)
 5. Nomeie o arquivo `LaunchScreen.xib` e clique no botão **criar** :
@@ -720,18 +720,18 @@ Faça o seguinte:
 9. Clique no botão **escolher info. plist** , selecione o `Info.plist` para o aplicativo Xamarin e clique no botão **escolher** :
 
     [![](unified-storyboards-images/dls07.png "Select the Info.plist for the Xamarin app")](unified-storyboards-images/dls07.png#lightbox)
-10. Na seção **ícones de aplicativos e imagens de inicialização** , abra o menu suspenso **Iniciar arquivo de tela** e escolha o `LaunchScreen.xib` criado acima:
+10. Na seção **ícones de aplicativo e imagens de inicialização** , abra o menu suspenso **Iniciar arquivo de tela** e escolha o `LaunchScreen.xib` criado acima:
 
     [![](unified-storyboards-images/dls08.png "Choose the LaunchScreen.xib")](unified-storyboards-images/dls08.png#lightbox)
 11. Salve as alterações no arquivo e retorne a Visual Studio para Mac.
 12. Aguarde Visual Studio para Mac concluir a sincronização das alterações com o Xcode.
-13. Na **Gerenciador de soluções**, clique com o botão direito do mouse na pasta de **recursos** e selecione **Adicionar** > **Adicionar arquivos...** :
+13. Na **Gerenciador de soluções**, clique com o botão direito do mouse na pasta **recurso** e selecione **Adicionar**  >  **Adicionar arquivos...**:
 
     [![](unified-storyboards-images/dls09.png "Select Add / Add Files...")](unified-storyboards-images/dls09.png#lightbox)
-14. Selecione o arquivo de `LaunchScreen.xib` criado acima e clique no botão **abrir** :
+14. Selecione o `LaunchScreen.xib` arquivo criado acima e clique no botão **abrir** :
 
     [![](unified-storyboards-images/dls10.png "Select the LaunchScreen.xib file")](unified-storyboards-images/dls10.png#lightbox)
-15. Compile o aplicativo.
+15. Construa o aplicativo.
 
 ### <a name="testing-the-dynamic-launch-screen"></a>Testando a tela de inicialização dinâmica
 
@@ -747,17 +747,17 @@ Retorne para Visual Studio para Mac e interrompa a execução do aplicativo.
 
 ### <a name="working-with-ios-7"></a>Trabalhando com o iOS 7
 
-Para manter a compatibilidade com versões anteriores do iOS 7, basta incluir os ativos de imagem de `Default.png` usuais normalmente no aplicativo iOS 8. o iOS retornará ao comportamento anterior e usará esses arquivos como a tela de inicialização ao ser executado em um dispositivo iOS 7.
+Para manter a compatibilidade com versões anteriores do iOS 7, basta incluir os ativos de imagem usuais normalmente `Default.png` no aplicativo IOS 8. o iOS retornará ao comportamento anterior e usará esses arquivos como a tela de inicialização ao ser executado em um dispositivo iOS 7.
 
 Para ver uma implementação de uma tela de inicialização dinâmica no Xamarin, examine as [telas de inicialização dinâmica](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen) aplicativo de exemplo do IOS 8 anexado a este documento.
 
 ## <a name="summary"></a>Resumo
 
-Este artigo resumiu rapidamente as classes de tamanho e como elas afetam o layout em dispositivos iPhone e iPad. Ele abordou como as características, os ambientes de características e as coleções de características funcionam com classes de tamanho para criar interfaces unificadas. Foi uma breve visão dos controladores de exibição adaptável e como eles funcionam com classes de tamanho dentro de interfaces unificadas. Ele examinou a implementação de classes de tamanho e interfaces C# unificadas completamente do código em um aplicativo Xamarin Ios 8.
+Este artigo resumiu rapidamente as classes de tamanho e como elas afetam o layout em dispositivos iPhone e iPad. Ele abordou como as características, os ambientes de características e as coleções de características funcionam com classes de tamanho para criar interfaces unificadas. Foi uma breve visão dos controladores de exibição adaptável e como eles funcionam com classes de tamanho dentro de interfaces unificadas. Ele examinou a implementação de classes de tamanho e interfaces unificadas completamente do código C# dentro de um aplicativo Xamarin iOS 8.
 
 Por fim, este artigo abordou os conceitos básicos da criação de storyboards unificados com o Xamarin iOS designer, que funcionará em dispositivos iOS e criará uma tela única de inicialização dinâmica que será exibida como a tela de inicialização em cada dispositivo iOS 8.
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Fotos adaptáveis (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-adaptivephotos)
 - [Telas de inicialização dinâmica (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)

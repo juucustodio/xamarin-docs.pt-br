@@ -1,23 +1,8 @@
 ---
-title: ''
-description: Este artigo explica como usar a indexação de aplicativos e a vinculação profunda para tornar o Xamarin.Forms conteúdo do aplicativo pesquisável em dispositivos IOS e Android.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d93f9bbcfafc3cb71d6b71159f6d3368f50c08be
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135727"
+Título: "indexação de aplicativos e vinculação profunda" Descrição: "Este artigo explica como usar a indexação de aplicativos e a vinculação profunda para tornar o Xamarin.Forms conteúdo do aplicativo pesquisável em dispositivos IOS e Android".
+MS. Prod: xamarin MS. AssetID: 410C5D19-AA3C-4E0D-B799-E288C5803226 MS. Technology: xamarin-Forms MS. Custom: xamu-vídeo autor: davidbritch MS. Author: dabritch MS. Date: 11/28/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="application-indexing-and-deep-linking"></a>Indexação de aplicativo e vinculação profunda
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
@@ -155,8 +140,6 @@ Isso remove a [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instância da co
 
 > [!NOTE]
 > No Android, não é possível remover o conteúdo indexado dos resultados da pesquisa.
-
-<a name="responding" />
 
 ## <a name="responding-to-a-deep-link"></a>Responder a um Link Profundo
 
