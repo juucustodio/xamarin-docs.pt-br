@@ -6,12 +6,12 @@ ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 4012b648bd451907bdb91221aba13df5ed3d34e3
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 06a3197cfcd3b49538cfa5fa97e40a9f50c7a244
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571019"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84655104"
 ---
 # <a name="introduction-to-web-services"></a>Introdução aos serviços Web
 
@@ -437,8 +437,6 @@ Em seguida, as credenciais de autenticação básica podem ser especificadas:
 client.ClientCredentials.UserName.UserName = @"foo";
 client.ClientCredentials.UserName.Password = @"mrsnuggles";
 ```
-
-No exemplo acima, se você receber a mensagem "ficou sem trampolines do tipo 0", poderá aumentar o número do tipo 0 trampolines adicionando o `–aot “trampolines={number of trampolines}”` argumento à compilação. Para saber mais, consulte a [Solução de problemas](~/ios/troubleshooting/troubleshooting.md#trampolines).
 
 Para obter mais informações sobre a autenticação básica HTTP, embora no contexto de um serviço Web REST, consulte [Autenticando um serviço Web RESTful](~/xamarin-forms/data-cloud/authentication/rest.md).
 

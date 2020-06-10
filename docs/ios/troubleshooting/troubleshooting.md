@@ -7,13 +7,13 @@ ms.assetid: B50FE9BD-9E01-AE88-B178-10061E3986DA
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
-ms.date: 05/22/2018
-ms.openlocfilehash: 6368c3a4b128c06687b23b965b308ad6a788188b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.date: 06/10/2020
+ms.openlocfilehash: 1b3eb61bf08eb006890b8b879c560163bd131844
+ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574481"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84655091"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Dicas de solução de problemas para o Xamarin. iOS
 
@@ -166,7 +166,7 @@ Os populares utilitários de Mac QuickSilver, barra de ferramentas do Google e b
 
 ## <a name="visual-studio-for-mac-complains-about-mono-24-required"></a>Visual Studio para Mac reclamações sobre o mono 2,4 necessário
 
-Se você atualizou Visual Studio para Mac devido a uma atualização recente e, ao tentar iniciá-lo novamente, o mono 2,4 não está presente, tudo o que você precisa fazer é [atualizar sua instalação do mono 2,4](http://www.go-mono.com/mono-downloads/download.html).  
+Se você atualizou Visual Studio para Mac devido a uma atualização recente e, ao tentar iniciá-lo novamente, o mono 2,4 não está presente, tudo o que você precisa fazer é [atualizar sua instalação do mono 2,4](http://www.go-mono.com/mono-downloads/download.html).
 
 O mono 2.4.2.3 _6 corrige alguns problemas importantes que impediam Visual Studio para Mac de serem executados de forma confiável, às vezes suspensos Visual Studio para Mac na inicialização ou impediram a geração do banco de dados de conclusão de código.
 
@@ -217,7 +217,7 @@ Anexe os logs XS, **~/library/logs/XamarinStudio-{Version}/IDE-{timestamp}.log**
 
 Para dar suporte à depuração, as compilações de depuração contêm código adicional. Os projetos criados no modo de versão são uma fração do tamanho.
 
-A partir do Xamarin. iOS 1,3, as compilações de depuração incluíram suporte à depuração para cada componente único do mono (todos os métodos em todas as classes das estruturas).  
+A partir do Xamarin. iOS 1,3, as compilações de depuração incluíram suporte à depuração para cada componente único do mono (todos os métodos em todas as classes das estruturas).
 
 Com o Xamarin. iOS 1,4, apresentaremos um método mais refinado para depuração, o padrão será fornecer apenas Instrumentação de depuração para seu código e suas bibliotecas, e não fazer isso para todos os [assemblies do mono](~/cross-platform/internals/available-assemblies.md) (isso ainda será possível, mas você precisará optar pela depuração desses assemblies).
 
@@ -226,33 +226,6 @@ Com o Xamarin. iOS 1,4, apresentaremos um método mais refinado para depuração
 Os instaladores mono e Xamarin. iOS travarão se você tiver o simulador do iPhone em execução. Esse problema não se limita a mono ou Xamarin. iOS, esse é um problema consistente em qualquer software que tente instalar o software no MacOS neve leopardo se o simulador do iPhone estiver sendo executado no momento da instalação.
 
 Feche o simulador do iPhone e tente a instalação novamente.
-
-<a name="trampolines"></a>
-
-## <a name="ran-out-of-trampolines-of-type-0"></a>Ficou sem trampolines do tipo 0
-
-Se você receber essa mensagem durante a execução do dispositivo, poderá criar mais tipo 0 trampolines (específico do tipo) modificando as opções de projeto seção "Build do iPhone".  Você deseja adicionar argumentos extras para os destinos de compilação do dispositivo:
-
- `-aot "ntrampolines=2048"`
-
-O número padrão de trampolines é 1024. Tente aumentar esse número até que você tenha o suficiente para o seu aplicativo.
-
-## <a name="ran-out-of-trampolines-of-type-1"></a>Ficou sem trampolines do tipo 1
-
-Se você fizer uso intensivo de genéricos recursivos, poderá receber essa mensagem no dispositivo.  Você pode criar mais tipo 1 trampolines (tipo RGCTX) modificando a seção Opções de seu projeto "Build do iPhone".  Você deseja adicionar argumentos extras para os destinos de compilação do dispositivo:
-
- `-aot "nrgctx-trampolines=2048"`
-
-O número padrão de trampolines é 1024. Tente aumentar esse número até que você tenha o suficiente para o uso de genéricos.
-
-## <a name="ran-out-of-trampolines-of-type-2"></a>Ficou sem trampolines do tipo 2
-
-Se você fizer interfaces pesadas de uso, poderá receber essa mensagem no dispositivo.
-Você pode criar mais tipo 2 trampolines (conversão de IMT) modificando a seção Opções de seu projeto "Build do iPhone".  Você deseja adicionar argumentos extras para os destinos de compilação do dispositivo:
-
- `-aot "nimt-trampolines=512"`
-
-O número padrão de trampolines de conversão IMT é 128. Tente aumentar esse número até que você tenha o suficiente para o uso de interfaces.
 
 ## <a name="debugger-is-unable-to-connect-with-the-device"></a>O depurador não pode se conectar ao dispositivo
 
@@ -384,7 +357,7 @@ Se você obtiver uma falha de tempo de execução (SIGSEGV) dentro do simulador 
   at (wrapper runtime-invoke) <Module>.runtime_invoke_void_object (object,intptr,intptr,intptr)
 ```
 
-... em seguida, você provavelmente tem um (ou mais) assembly obsoleto no diretório de aplicativo do simulador. Esses assemblies podem existir desde que o simulador do iOS da Apple adiciona e atualiza arquivos, mas nunca os exclui. Se isso acontecer, a solução mais fácil é selecionar "redefinir e conteúdo e configurações..." no menu simulador.   
+... em seguida, você provavelmente tem um (ou mais) assembly obsoleto no diretório de aplicativo do simulador. Esses assemblies podem existir desde que o simulador do iOS da Apple adiciona e atualiza arquivos, mas nunca os exclui. Se isso acontecer, a solução mais fácil é selecionar "redefinir e conteúdo e configurações..." no menu simulador.
 
 > [!WARNING]
 > Isso removerá todos os arquivos, aplicativos e dados do simulador.   Na próxima vez que você executar o aplicativo, Visual Studio para Mac o implantará no simulador e não haverá nenhum assembly antigo e obsoleto para causar a falha.
@@ -413,3 +386,18 @@ Para verificar a ação de Build, clique com o botão direito do mouse no arquiv
 Ao incluir bibliotecas de terceiros em seu aplicativo Xamarin. iOS, você pode receber um erro no formato "System. NotSupportedException: nenhum dado está disponível para codificação 437" ao tentar compilar e executar o aplicativo. Por exemplo, bibliotecas, como `Ionic.Zip.ZipFile` , podem gerar essa exceção durante a operação.
 
 Isso pode ser resolvido abrindo as opções para o projeto Xamarin. Ios, indo para a **iOS Build**  >  **internacionalização** de Build do IOS e verificando a internacionalização **oeste** .
+
+## <a name="could-not-launch-xamarinlauncher-could-not-find-the-executable-mlaunchexe"></a>Não foi possível iniciar o Xamarin. Launcher não pôde localizar o executável ' mlaunch. exe '
+
+Em alguns casos, o software antivírus pode sinalizar incorretamente o SDK do Xamarin. iOS como malware e remover os arquivos necessários, corrompendo o SDK. Isso resultará em erros como "não foi possível iniciar o Xamarin. o Launcher não pôde encontrar o executável ' mlaunch. exe '".
+
+Se você tiver sido afetado, exclua mlaunch. exe do scanner antivírus para evitar a ocorrência. Para obter mais informações, consulte [como criar uma exceção de aplicativo no Endpoint Protection Manager symantex para a](https://knowledge.broadcom.com/external/article/180778/how-to-create-an-application-exception-i.html) Symantec e [Excluir arquivos e pastas das verificações de proteção automática do Norton, sonar e download de inteligência](https://support.norton.com/sp/en/uk/home/current/solutions/v3672136) para o Norton. Além disso, considere relatar um falso positivo para [Symantec](https://symsubmit.symantec.com) ou [Norton](https://submit.norton.com/?type=FP).
+
+Depois de adicionar uma exclusão para mlaunch. exe, uma reinstalação será necessária para restaurar os arquivos ausentes. A abordagem mais simples para fazer isso é alternar os canais no atualizador:
+
+- O menu do **Visual Studio** > **verificar se há atualizações**.
+- Selecione um canal de atualização diferente na lista suspensa e pressione o botão **alternar canal** .
+- Aguarde as atualizações serem baixadas.
+- Volte para o canal original e instale as atualizações.
+
+Se essas instruções não resolverem o problema, adicione um comentário ao seguinte problema do GitHub: [8736](https://github.com/xamarin/xamarin-macios/issues/8736).
