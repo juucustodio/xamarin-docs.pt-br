@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a83e3ae4069657df06967b7157809c7dc86ad941
-ms.sourcegitcommit: 99aa05bd9b5e3f66d134066b860f41b54fa2d850
+ms.openlocfilehash: 58ed33adbc25e026431609370075c24c3b6ba690
+ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82109559"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84574649"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -20,7 +20,7 @@ ms.locfileid: "82109559"
 
     Esse código define a propriedade [`Aspect`](xref:Xamarin.Forms.Image.Aspect), que define o modo de escala da imagem, como [`Fill`](xref:Xamarin.Forms.Aspect.Fill). O membro `Fill` é definido na enumeração [`Aspect`](xref:Xamarin.Forms.Aspect) e alonga a imagem para preencher completamente a exibição, independentemente de se a imagem está distorcida. Para obter mais informações sobre o dimensionamento de imagem, confira [Exibindo imagens](~/xamarin-forms/user-interface/images.md#display-images) no guia [Imagens no Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
 
-    A extensão de marcação `OnPlatform` permite que você personalize a aparência da interface do usuário por plataforma. Neste exemplo, a extensão de marcação é usada para definir as propriedades [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) e [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) como 300 unidades independentes de dispositivo em iOS e 250 unidades independentes de dispositivo em Android. Para obter mais informações sobre a extensão de marcação `OnPlatform`, confira [extensão de marcação OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform) no guia [Consumindo extensões de marcação XAML](~/xamarin-forms/xaml/markup-extensions/consuming.md).
+    A extensão de marcação `OnPlatform` permite que você personalize a aparência da interface do usuário por plataforma. Neste exemplo, a extensão de marcação é usada para definir as propriedades [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) e [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) como 300 unidades independentes de dispositivo em iOS e 250 unidades independentes de dispositivo em Android. Para obter mais informações sobre a extensão de marcação `OnPlatform`, confira [extensão de marcação OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension) no guia [Consumindo extensões de marcação XAML](~/xamarin-forms/xaml/markup-extensions/consuming.md).
 
     Além disso, a propriedade [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) especifica que a imagem será centralizada horizontalmente.
 
@@ -42,7 +42,7 @@ ms.locfileid: "82109559"
 
     Esse código define a propriedade [`Aspect`](xref:Xamarin.Forms.Image.Aspect), que define o modo de escala da imagem, como [`Fill`](xref:Xamarin.Forms.Aspect.Fill). O membro `Fill` é definido na enumeração [`Aspect`](xref:Xamarin.Forms.Aspect) e alonga a imagem para preencher completamente a exibição, independentemente de se a imagem está distorcida. Para obter mais informações sobre o dimensionamento de imagem, confira [Exibindo imagens](~/xamarin-forms/user-interface/images.md#display-images) no guia [Imagens no Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
 
-    A extensão de marcação `OnPlatform` permite que você personalize a aparência da interface do usuário por plataforma. Neste exemplo, a extensão de marcação é usada para definir as propriedades [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) e [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) como 300 em iOS e 250 em Android. Para obter mais informações sobre a extensão de marcação `OnPlatform`, confira [extensão de marcação OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform) no guia [Consumindo extensões de marcação XAML](~/xamarin-forms/xaml/markup-extensions/consuming.md).
+    A extensão de marcação `OnPlatform` permite que você personalize a aparência da interface do usuário por plataforma. Neste exemplo, a extensão de marcação é usada para definir as propriedades [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) e [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) como 300 em iOS e 250 em Android. Para obter mais informações sobre a extensão de marcação `OnPlatform`, confira [extensão de marcação OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension) no guia [Consumindo extensões de marcação XAML](~/xamarin-forms/xaml/markup-extensions/consuming.md).
 
     Além disso, a propriedade [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) especifica que a imagem será centralizada horizontalmente.
 
