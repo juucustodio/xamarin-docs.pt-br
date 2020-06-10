@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: e8d11add988828fa4e26d3f6728dd0b4319b3630
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133296"
+Título: "transformações de matriz na SkiaSharp" Descrição: "Este artigo se aprofunda em transformações de SkiaSharp com a matriz de transformação versátil e demonstra isso com o código de exemplo".
+MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4 autor: davidbritch MS. Author: dabritch MS. Date: 04/12/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="matrix-transforms-in-skiasharp"></a>Transformações de matriz em SkiaSharp
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsNavegação do Shell
-description: Xamarin.FormsOs aplicativos de shell podem utilizar uma experiência de navegação baseada em URI que permite a navegação para qualquer página no aplicativo, sem a necessidade de seguir uma hierarquia de navegação de conjunto.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: e67d49f300a8a98ec5685c33abf98f5b2ded08ed
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84132386"
+Título: Descrição de " Xamarin.Forms navegação do Shell": " Xamarin.Forms os aplicativos Shell podem utilizar uma experiência de navegação baseada em URI que permite a navegação para qualquer página no aplicativo, sem a necessidade de seguir uma hierarquia de navegação definida".
+MS. Prod: xamarin MS. AssetID: 57079D89-D1CB-48BD-9FEE-539CEC29EABB MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/02/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-shell-navigation"></a>Xamarin.FormsNavegação do Shell
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
@@ -244,7 +230,7 @@ A classe `Tab` define uma propriedade `Stack`, do tipo `IReadOnlyList<Page>`, qu
 
 A classe `Shell` define um evento `Navigating`, que é acionado quando a navegação está prestes a ser realizada, devido à navegação programática ou à interação do usuário. O objeto `ShellNavigatingEventArgs` que acompanha o evento `Navigating` fornece as seguintes propriedades:
 
-| Propriedade | Tipo | Descrição |
+| Propriedade | Type | Descrição |
 |---|---|---|
 | `Current` | `ShellNavigationState` | O URI da página atual. |
 | `Source` | `ShellNavigationSource` | O tipo de navegação que ocorreu. |
@@ -259,7 +245,7 @@ Além disso, a classe `ShellNavigatingEventArgs` fornece um método `Cancel` que
 
 A classe `Shell` também define um evento`Navigated`, que é acionado quando a navegação é concluída. O objeto `ShellNavigatedEventArgs` que acompanha o evento `Navigating` fornece as seguintes propriedades:
 
-| Propriedade | Tipo | Descrição |
+| Propriedade | Type | Descrição |
 |---|---|---|
 | `Current` | `ShellNavigationState` | O URI da página atual. |
 | `Previous`| `ShellNavigationState` | O URI da página anterior. |

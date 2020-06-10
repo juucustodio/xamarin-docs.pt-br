@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Este artigo explica como implementar um aplicativo de player de vídeo usando o Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 08bfb86f040bfbce834df5a5d98231afae92e78d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133753"
+Título: "Implementando um player de vídeo" Descrição: "Este artigo explica como implementar um aplicativo de player de vídeo usando Xamarin.Forms ".
+MS. Prod: xamarin MS. AssetID: 0CE9BEE7-4F81-4A00-B9B3-5E2535CD3050 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 02/12/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="implementing-a-video-player"></a>Implementar um player de vídeo
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

@@ -1,9 +1,6 @@
 ---
-Título: Descrição: ' as especificações de plataforma permitem consumir funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do iOS que desabilita o Xamarin.Forms modo de cor herdado.
-MS. Prod: MS. AssetID: MS. Technology: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+Título: "modo de cor herdado do Visualelement na iOS" Descrição: "as especificações da plataforma permitem consumir funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do iOS que desabilita o Xamarin.Forms modo de cor herdado. "
+MS. Prod: xamarin MS. AssetID: 60FFBA67-6E06-439B-A5EB-8C808285E2CD MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="visualelement-legacy-color-mode-on-ios"></a>Modo de cor herdado do visualelement no iOS

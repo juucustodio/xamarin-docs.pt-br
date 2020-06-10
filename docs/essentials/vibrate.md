@@ -25,7 +25,7 @@ Abra o arquivo **AssemblyInfo.cs** na pasta **Propriedades** e adicione:
 
 OU Atualize o Manifesto do Android:
 
-Abra o arquivo **AndroidManifest. xml** na pasta **Propriedades** e adicione o seguinte dentro do nó do **manifesto** .
+Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o seguinte no nó do **manifesto** .
 
 ```xml
 <uses-permission android:name="android.permission.VIBRATE" />

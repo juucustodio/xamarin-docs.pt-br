@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsControle de Mapeamento
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 32564b48b6d5e7acc619a966af30a086fb56d5e6
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84129396"
+Título: " Xamarin.Forms controle de mapeamento" Descrição: "o controle de mapa é uma exibição de plataforma cruzada para exibir e anotar mapas. Ele usa o controle de mapa nativo para cada plataforma, fornecendo uma experiência de mapas rápida e familiar para os usuários. "
+MS. Prod: xamarin MS. AssetID: 22C99029-0B16-43A6-BF58-26B48C4AED38 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/29/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-map-control"></a>Xamarin.FormsControle de Mapeamento
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)

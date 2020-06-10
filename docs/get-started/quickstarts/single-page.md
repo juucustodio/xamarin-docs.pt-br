@@ -1,24 +1,8 @@
 ---
-title: Criar um aplicativo de página única Xamarin.Forms
-description: Este artigo explica como criar um aplicativo de plataforma cruzada de página única Xamarin.Forms , que permite que você insira uma anotação e persista-a no armazenamento do dispositivo.
-zone_pivot_groups: ''
-ms.topic: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b9a3017fc8188d3669b64d95c968b2d0a5325358
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136065"
+Título: "criar um aplicativo de página única Xamarin.Forms " Descrição: "Este artigo explica como criar um aplicativo de plataforma cruzada de página única Xamarin.Forms , que permite que você insira uma anotação e persista no armazenamento do dispositivo."
+zone_pivot_groups: plataforma-dev16 MS. Topic: início rápido MS. Prod: xamarin MS. AssetID: E8CF05B1-54B9-428B-8518-D068837BD61E MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/01/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="create-a-single-page-xamarinforms-application"></a>Criar um aplicativo de página única Xamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)

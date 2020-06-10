@@ -1,23 +1,8 @@
 ---
-title: Xamarin.Forms Acessibilidade
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.custom: ''
-ms.openlocfilehash: 7ac8b305ae09e005013aea9f83fb4a3e4740f2b2
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84129786"
+Título: Xamarin.Forms Descrição de "acessibilidade": "a criação de um aplicativo acessível garante que o aplicativo seja utilizável por pessoas que se aproximam da interface do usuário com uma variedade de necessidades e experiências".
+MS. Prod: xamarin MS. AssetID: 99B8A8E8-6F5E-46BC-9639-1C4A6D301049 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/28/2019 não-loc: [ Xamarin.Forms , Xamarin.Essentials ] MS. Custom: vídeo
 ---
+
 # <a name="xamarinforms-accessibility"></a>Xamarin.Forms Acessibilidade
 
 _Criar um aplicativo acessível garante que o aplicativo seja utilizável por pessoas que abordem a interface do usuário com uma variedade de necessidades e experiências._

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Formsrecursos de dispositivo de tela dupla
-description: Este guia explica como usar a Xamarin.Forms classe DualScreenInfo para otimizar sua experiência de aplicativo para dispositivos de tela dupla, como Surface Duo e Surface neo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 59575823a9ec29847a60209e846ba244e51ca0c0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138925"
+Título: " Xamarin.Forms recursos de dispositivo de tela dupla" Descrição: "este guia explica como usar Xamarin.Forms a classe DualScreenInfo para otimizar sua experiência de aplicativo para dispositivos de tela dupla, como Surface Duo e Surface neo."
+MS. Prod: xamarin MS. AssetID: dd5eb074-f4cb-4ab4-b47d-76f862ac7cfa MS. Technology: xamarin-Forms autor: davidortinau MS. Author: daortin MS. Date: 02/08/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-dual-screen-device-capabilities"></a>Xamarin.Formsrecursos de dispositivo de tela dupla
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

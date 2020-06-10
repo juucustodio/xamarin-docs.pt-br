@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Este artigo explica como implementar um renderizador personalizado do player de vídeo em cada plataforma usando o Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d026ecc3288da155aefb0f68ee0c70721106c0da
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133738"
+Título: "criando a plataforma de players de vídeo" Descrição: "Este artigo explica como implementar um renderizador personalizado de player de vídeo em cada plataforma usando Xamarin.Forms ."
+MS. Prod: xamarin MS. AssetID: EEE2FB9B-EB73-4A3F-A859-7A1D4808E149 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 02/12/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="creating-the-platform-video-players"></a>Criando os players de vídeo de plataforma
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

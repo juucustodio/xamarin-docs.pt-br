@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Formsguias
-description: Guias de início rápido sobre como desenvolver Xamarin.Forms aplicativos com o Visual Studio e o Visual Studio para Mac.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 03d20114fb84bf17be40d9166e32c3d631786069
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84132503"
+Título: " Xamarin.Forms início rápido" Descrição: "guias de início rápido sobre como desenvolver Xamarin.Forms aplicativos com o Visual Studio e o Visual Studio para Mac".
+MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: 3318B8F8-3B24-489E-8E7B-28FA948796F8 autor: davidbritch MS. Author: dabritch MS. Date: 01/06/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-quickstarts"></a>Xamarin.Formsguias
 
 _Saiba como criar aplicativos móveis com o Xamarin.Forms ._

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsFotos
-description: Este guia apresenta o Xamarin.Forms ListView, que pode ser usado para apresentar dados em listas interativas.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a1ff8dd5c8a8a4051cea8ce4b288c42bdbaa8d31
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139900"
+title: Xamarin.Forms Descrição de "ListView": "este guia apresenta o Xamarin.Forms ListView, que pode ser usado para apresentar dados em listas interativas".
+MS. Prod: xamarin MS. AssetID: FEFDF7E0-720F-4BD1-863F-4477226AA695 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 09/04/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-listview"></a>Xamarin.FormsFotos
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistview)

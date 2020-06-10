@@ -1,9 +1,6 @@
 ---
-Título: Descrição: ' as especificações de plataforma permitem consumir funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma Android específica que desabilita o Xamarin.Forms modo de cor herdado.
-MS. Prod: MS. AssetID: MS. Technology: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+Título: "modo de cor herdado do Visualelement no Android" Descrição: "as especificações da plataforma permitem consumir funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma Android específica que desabilita o Xamarin.Forms modo de cor herdado.
+MS. Prod: xamarin MS. AssetID: 37D95A2D-74AC-488A-B903-2BDD799EAA5C MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 07/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="visualelement-legacy-color-mode-on-android"></a>Modo de cor herdado do visualelement no Android

@@ -1,22 +1,8 @@
 ---
-title: Inicie o aplicativo de mapa nativo deXamarin.Forms
-description: O aplicativo de mapas nativo em cada plataforma pode ser iniciado de um Xamarin.Forms aplicativo pela Xamarin.Essentials classe do iniciador.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c135d5dd02bba5102f5a93132f079526c84865d5
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84129331"
+Título: "iniciar o aplicativo de mapa nativo de Xamarin.Forms " Descrição: "o aplicativo de mapas nativos em cada plataforma pode ser iniciado a partir de um Xamarin.Forms aplicativo pela Xamarin.Essentials classe do iniciador".
+MS. Prod: xamarin MS. AssetID: 5CF7CD67-3F20-4D80-B99E-D35A5FD1019A MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/30/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="launch-the-native-map-app-from-xamarinforms"></a>Inicie o aplicativo de mapa nativo deXamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)

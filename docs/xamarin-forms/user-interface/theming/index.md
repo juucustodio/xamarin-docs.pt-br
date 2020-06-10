@@ -1,22 +1,8 @@
 ---
-title: Um Xamarin.Forms aplicativo
-description: Xamarin.Formsos aplicativos dão suporte a eles criando um ResourceDictionary para cada tema e, em seguida, carregando os recursos com a extensão de marcação DynamicResource.
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 80660ae7d3af0fe5948a5ae4ffdb35d2f9c2a40f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136130"
+title: Descrição de "tema de um Xamarin.Forms aplicativo": "os Xamarin.Forms aplicativos dão suporte à criação de um ResourceDictionary para cada tema e, em seguida, carregando os recursos com a extensão de marcação DynamicResource".
+MS. Prod: xamarin MS. AssetID: BF92AEDD-EF23-4D08-A972-B089066E75F9 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/22/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="theming-a-xamarinforms-application"></a>Um Xamarin.Forms aplicativo
 
 ## <a name="theme-an-application"></a>[Aplicar tema a um aplicativo](theming.md)

@@ -1,9 +1,6 @@
 ---
-Título: ' Xamarin.Forms posição de mapa e distância ' Descrição: ' o Xamarin.Forms . O namespace Maps contém uma struct de posição que é normalmente usada ao posicionar um mapa e seus PINs e uma estrutura de distância que pode, opcionalmente, ser usada ao posicionar um mapa. '
-MS. Prod: MS. AssetID: MS. Technology: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+Título: " Xamarin.Forms posição de mapa e distância" Descrição: "o Xamarin.Forms . O namespace Maps contém uma struct de posição que é normalmente usada ao posicionar um mapa e seus Pins, e uma estrutura de distância que pode, opcionalmente, ser usada ao posicionar um mapa. "
+MS. Prod: xamarin MS. AssetID: 2F4EA3D2-1351-40AD-A71D-CF7F1F18F1E8 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 03/10/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinforms-map-position-and-distance"></a>Xamarin.FormsPosição e distância do mapa

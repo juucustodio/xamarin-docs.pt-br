@@ -1,9 +1,6 @@
 ---
-Título: Xamarin.Forms Descrição dos renderizadores personalizados do Shell: ' Xamarin.Forms os aplicativos do shell são altamente personalizáveis por meio das propriedades e métodos que as várias classes Shell expõem. No entanto, também é possível criar um renderizador personalizado do shell quando são necessárias personalizações mais sofisticadas específicas da plataforma. '
-MS. Prod: MS. AssetID: MS. Technology: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: Xamarin.Forms Descrição de "renderizadores personalizados do Shell": " Xamarin.Forms os aplicativos shell são altamente personalizáveis por meio das propriedades e métodos que as várias classes Shell expõem. No entanto, também é possível criar um renderizador personalizado do shell quando são necessárias personalizações mais sofisticadas específicas da plataforma. "
+MS. Prod: xamarin MS. AssetID: 3B1A6AE8-1D1E-4C34-B9AB-48F4444FEF32 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/06/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinforms-shell-custom-renderers"></a>Xamarin.FormsRenderizadores personalizados do Shell

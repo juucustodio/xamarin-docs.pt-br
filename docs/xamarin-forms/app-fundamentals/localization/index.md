@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsLocalizar
-description: A estrutura de localização interna do .NET pode ser usada para criar aplicativos multilíngües entre plataformas com o Xamarin.Forms . Texto e imagens podem ser localizados e os aplicativos podem dar suporte a uma direção de fluxo da direita para esquerda.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: dddb80e8fb683547d2bf6ba0b74e870fe240695c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137560"
+Título: " Xamarin.Forms localização" Descrição: "a estrutura de localização interna do .net pode ser usada para criar aplicativos multilíngües entre plataformas com o Xamarin.Forms . Textos e imagens podem ser localizados, e os aplicativos podem dar suporte a uma direção de fluxo da direita para a esquerda. "
+MS. Prod: xamarin MS. AssetID: 97BF843B-BDAA-4CEA-8189-6DB54B291D7F MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 11/07/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-localization"></a>Xamarin.FormsLocalizar
 
 _A estrutura de localização interna do .NET pode ser usada para criar aplicativos multilíngües entre plataformas com o Xamarin.Forms ._

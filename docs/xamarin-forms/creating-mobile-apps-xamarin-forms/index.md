@@ -94,7 +94,7 @@ A biblioteca .NET Standard 2,0 também permite que Xamarin.Forms os aplicativos 
 
 O XAML agora tem uma função muito maior no Xamarin.Forms . Os Xamarin.Forms modelos de solução distribuídos com o Visual Studio criam arquivos de página baseados em XAML. Um desenvolvedor que usa o Xamarin.Forms deve se familiarizar com o XAML o mais cedo possível. A seção [Extensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.yml) da Xamarin.Forms documentação contém vários artigos sobre XAML para você começar.
 
-### <a name="supported-platforms"></a>Plataformas com suporte
+### <a name="supported-platforms"></a>Plataformas com Suporte
 
 Xamarin.FormsNão dá mais suporte a Windows 8.1 e Windows Phone 8,1.
 

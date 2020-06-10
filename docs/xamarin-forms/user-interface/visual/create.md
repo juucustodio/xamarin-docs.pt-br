@@ -1,22 +1,8 @@
 ---
-title: Criar um Xamarin.Forms renderizador Visual
-description: Crie Xamarin.Forms visuais para serem aplicados seletivamente a objetos visualelement, sem precisar de Xamarin.Forms exibições de subclasse.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 23edbb007e912d13858686d1c5ec574c9e3349c7
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127134"
+Título: "criar um Xamarin.Forms processador visual" Descrição: "criar Xamarin.Forms visuais para serem aplicados seletivamente a objetos visualelement, sem precisar de Xamarin.Forms exibições de subclasse".
+MS. Prod: xamarin MS. AssetID: 80BF9C72-AC28-4AAF-9DDD-B60CBDD1CD59 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 03/12/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="create-a-xamarinforms-visual-renderer"></a>Criar um Xamarin.Forms renderizador Visual
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)

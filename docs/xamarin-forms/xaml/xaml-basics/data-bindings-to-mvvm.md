@@ -1,23 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.custom: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 047cf963394325e8f88759ffe9da7dcf2ca3ad12
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127524"
+Título: "parte 5. De ligações de dados para o MVVM "Descrição:" o padrão MVVM impõe uma separação entre três camadas de software — a interface do usuário XAML, chamada de exibição; os dados subjacentes, chamados de modelo; e um intermediário entre a exibição e o modelo, chamado ViewModel. "
+MS. Prod: xamarin MS. Custom: vídeo MS. AssetID: 48B37D44-4FB1-41B2-9A5E-6D383B041F81 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/25/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Parte 5. De associações de dados a MVVM
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

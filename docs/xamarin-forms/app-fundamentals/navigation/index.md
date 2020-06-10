@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsNavega
-description: Este guia explica como executar a navegação em Xamarin.Forms aplicativos. Xamarin.Formsfornece várias experiências de navegação de página diferentes, dependendo do tipo de página que está sendo usado.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8c907cd8a4a1d14b936dee309610bffc67ef363f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137833"
+Título: " Xamarin.Forms navegação" Descrição: "este guia explica como executar navegação em Xamarin.Forms aplicativos. Xamarin.Formsfornece várias experiências de navegação de página diferentes, dependendo do tipo de página que está sendo usado. "
+MS. Prod: xamarin MS. AssetID: BC5D0C6C-D5A9-4B12-A492-ED1F570CEC87 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/01/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-navigation"></a>Xamarin.FormsNavega
 
 _O Xamarin. Forms fornece várias experiências de navegação de página diferentes, dependendo do tipo de página que está sendo usado._

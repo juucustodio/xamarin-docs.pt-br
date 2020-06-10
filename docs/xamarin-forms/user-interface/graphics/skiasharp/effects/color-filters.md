@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b9c89d4d426884d678e77687ffa226cced97be58
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136377"
+Título: "filtros de cor SkiaSharp" Descrição: "usar filtros de cor para converter cores com transformações ou tabelas".
+MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 774E7B55-AEC8-4F12-B657-1C0CEE01AD63 autor: davidbritch MS. Author: dabritch MS. Date: 08/28/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="skiasharp-color-filters"></a>SkiaSharp filtros de cores
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

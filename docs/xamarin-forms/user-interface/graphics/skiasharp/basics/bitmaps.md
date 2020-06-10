@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Este artigo explica como carregar bitmaps no SkiaSharp de várias fontes e exibi-los em Xamarin.Forms aplicativos e demonstra isso com o código de exemplo.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1e4c170f818dc62640b1cd72ec3b70f48d227d93
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137729"
+Título: "Noções básicas de bitmap em SkiaSharp" Descrição: "Este artigo explica como carregar bitmaps no SkiaSharp de várias fontes e exibi-los em Xamarin.Forms aplicativos e demonstra isso com o código de exemplo".
+MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 32C95DFF-9065-42D7-966C-D3DBD16906B3 autor: davidbritch MS. Author: dabritch MS. Date: 07/17/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="bitmap-basics-in-skiasharp"></a>Noções básicas de bitmap no SkiaSharp
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -104,9 +90,9 @@ O `SKBitmap.Decode` método estático é responsável por decodificar arquivos d
 
 ## <a name="loading-a-bitmap-resource"></a>Carregando um recurso de bitmap
 
-Em termos de código, a abordagem mais fácil para carregar bitmaps está incluindo um recurso de bitmap diretamente em seu aplicativo. O programa **SkiaSharpFormsDemos** inclui uma pasta chamada **Media** contendo vários arquivos de bitmap, incluindo um **macaco nomeado. png**. Para bitmaps armazenados como recursos de programa, você deve usar a caixa de diálogo **Propriedades** para dar ao arquivo uma **ação de compilação** do **recurso incorporado**!
+Em termos de código, a abordagem mais fácil para carregar bitmaps está incluindo um recurso de bitmap diretamente em seu aplicativo. O programa **SkiaSharpFormsDemos** inclui uma pasta chamada **Media** contendo vários arquivos de bitmap, incluindo um chamado **monkey.png**. Para bitmaps armazenados como recursos de programa, você deve usar a caixa de diálogo **Propriedades** para dar ao arquivo uma **ação de compilação** do **recurso incorporado**!
 
-Cada recurso inserido tem uma *ID de recurso* que consiste no nome do projeto, na pasta e no nome do arquivo, todos conectados por pontos: **SkiaSharpFormsDemos. Media. macaco. png**. Você pode obter acesso a esse recurso especificando essa ID de recurso como um argumento para o [`GetManifestResourceStream`](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) método da [`Assembly`](xref:System.Reflection.Assembly) classe:
+Cada recurso inserido tem uma *ID de recurso* que consiste no nome do projeto, na pasta e no nome do arquivo, todos conectados por pontos: **SkiaSharpFormsDemos.Media.monkey.png**. Você pode obter acesso a esse recurso especificando essa ID de recurso como um argumento para o [`GetManifestResourceStream`](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) método da [`Assembly`](xref:System.Reflection.Assembly) classe:
 
 ```csharp
 string resourceID = "SkiaSharpFormsDemos.Media.monkey.png";

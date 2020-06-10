@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsPropriedades, métodos e eventos de controle comum
-description: ''
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: deb894cccd5b6a2a9d908ef8967de91f00e7d297
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136416"
+title: " Xamarin.Forms Descrição de propriedades, métodos e eventos de controle comum": Este artigo descreve Propriedades, métodos e eventos comuns definidos na classe visualelement, que são comumente usados na derivação de classes. "
+MS. Prod: xamarin MS. AssetID: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D MS. Technology: xamarin-Forms autor: profexorgeek MS. Author: jusjohns MS. Date: 08/21/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-common-control-properties-methods-and-events"></a>Xamarin.FormsPropriedades, métodos e eventos de controle comum
 
 A Xamarin.Forms `VisualElement` classe é a classe base para a maioria dos controles usados em um Xamarin.Forms aplicativo. A `VisualElement` classe define muitas [Propriedades](#properties), [métodos](#methods)e [eventos](#events) que são usados na derivação de classes.

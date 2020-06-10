@@ -4,7 +4,7 @@ title: "configuração de plataforma GTK #" Descrição: " Xamarin.Forms agora t
 
 # <a name="gtk-platform-setup"></a>Configuração da plataforma GTK #
 
-![Versão Prévia](~/media/shared/preview.png)
+![Visualização](~/media/shared/preview.png)
 
 Xamarin.FormsAgora tem suporte de visualização para aplicativos GTK #. O GTK # é um kit de ferramentas de interface gráfica do usuário que vincula o GTK + Toolkit e uma variedade de bibliotecas GNOME, permitindo o desenvolvimento de aplicativos gráficos GNOME totalmente nativos usando mono e .NET. Este artigo demonstra como adicionar um projeto GTK # a uma Xamarin.Forms solução.
 
@@ -52,7 +52,7 @@ Siga estas instruções para adicionar um aplicativo GTK # que será executado n
 
     ![Referenciar o projeto compartilhado](gtk-images/win/reference-shared-project.png "Referenciar o projeto compartilhado")
 
-8. Na caixa de diálogo **Gerenciador de referências** , pressione o botão **procurar** e navegue até a pasta **C:\Program Files (x86) \GtkSharp\2.12\lib** e selecione os arquivos **ATK-Sharp. dll**, **GDK-Sharp. dll**, **Glade-Sharp.** dll, **GLib-Sharp**. dll, GTK-dotnet. **dll**, GTK-Sharp **.** dll.
+8. Na caixa de diálogo **Gerenciador de referências** , pressione o botão **procurar** e navegue até a pasta **C:\Program Files (x86) \GtkSharp\2.12\lib** e selecione os arquivos **atk-sharp.dll**, **gdk-sharp.dll**, **glade-sharp.dll**, **glib-sharp.dll**, **gtk-dotnet.dll**, **gtk-sharp.dll** .
 
     ![Referenciar as bibliotecas do GTK #](gtk-images/win/reference-gtk-libraries.png "Referenciar as bibliotecas do GTK #")
 

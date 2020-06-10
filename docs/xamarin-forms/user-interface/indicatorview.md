@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsIndicatorView
-description: ''
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a6bf11fd80dd5226ae26dd392e80f784a9b296bf
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131975"
+Título: " Xamarin.Forms IndicatorView" Descrição: "o IndicatorView é um controle que exibe os indicadores que representam o número de itens e a posição atual em um CarouselView".
+MS. Prod: xamarin MS. AssetID: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 02/27/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-indicatorview"></a>Xamarin.FormsIndicatorView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

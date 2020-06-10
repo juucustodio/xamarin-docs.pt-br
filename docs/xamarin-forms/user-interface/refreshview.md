@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsRefreshView
-description: O Xamarin.Forms RefreshView é um controle de contêiner que fornece a funcionalidade de pull para atualizar para conteúdo rolável.
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d84e6bb6ed41f2fbc213cd15051d071521f588cd
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127589"
+Título: " Xamarin.Forms RefreshView" Descrição: "o Xamarin.Forms RefreshView é um controle de contêiner que fornece a funcionalidade de pull para atualização para conteúdo rolável".
+MS. Prod: xamarin MS. AssetID: 58DBD23B-ADB9-40DA-B331-4DDB6E698990 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 09/19/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-refreshview"></a>Xamarin.FormsRefreshView
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)

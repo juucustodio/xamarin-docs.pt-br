@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsTimePicker
-description: O timeseparar é uma Xamarin.Forms exibição que permite ao usuário selecionar uma hora. Este artigo explica como consumir um seletor de em um Xamarin.Forms aplicativo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 7c2e6b97f2207ebb6543fb6a720cd430331f989b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138223"
+Título: " Xamarin.Forms timeseparar" Descrição: "o é uma Xamarin.Forms exibição que permite ao usuário selecionar uma hora. Este artigo explica como consumir um seletor de em um Xamarin.Forms aplicativo.
+MS. Prod: xamarin MS. AssetID: 2E99FB23-B82D-4EB4-AFB3-5002E736E7B2 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/16/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-timepicker"></a>Xamarin.FormsTimePicker
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-timepicker)

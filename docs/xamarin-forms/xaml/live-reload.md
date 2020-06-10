@@ -1,23 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-robots: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: b67594e2675c774512f3bf64f2e91ef10dbff444
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134206"
+Título: "Xamarin Live reload (visualização)" Descrição: "Veja as alterações em seu XAML refletidas em tempo real, sem exigir outra compilação e implantação".
+MS. Prod: xamarin MS. AssetID: 4917273d-32f9-401A-a52c-5cfb53a2170d MS. Technology: xamarin-Forms autor: pierceboggan MS. Author: piboggan robots: noindex MS. Date: 10/26/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarin-live-reload-preview"></a>Recarregamento do Xamarin Live (versão prévia)
 
 > [!NOTE]

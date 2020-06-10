@@ -1,22 +1,8 @@
 ---
-title: Criando um Xamarin.Forms DataTemplateSelector
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 74650eb2c52f1da9d0c539b711784896267ed183
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135948"
+Título: "criando uma Xamarin.Forms DataTemplateSelector" Descrição: "Este artigo demonstra como criar e consumir um DataTemplateSelector, que pode ser usado para escolher um DataTemplate em tempo de execução com base no valor de uma propriedade associada a dados".
+MS. Prod: xamarin MS. AssetID: A4629E8F-2BAF-45CE-A76E-DF225FE8D26C MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 03/08/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="creating-a-xamarinforms-datatemplateselector"></a>Criando um Xamarin.Forms DataTemplateSelector
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)

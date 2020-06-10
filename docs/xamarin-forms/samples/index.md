@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsAmostras
-description: Xamarin.Formsaplicativos de exemplo e demonstrações de código para ajudá-lo a começar e entender os conceitos no Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 896b5880b92cecc7bd9eb360306d902ff0f876c5
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135935"
+Título: Xamarin.Forms Descrição de "exemplos": " Xamarin.Forms aplicativos de exemplo e demonstrações de código para ajudá-lo a começar e entender os conceitos no Xamarin.Forms ."
+MS. Prod: xamarin MS. AssetID: AB986E8E-E831-4E0A-9F1D-6C3D88F35E9C MS. Technology: xamarin-Forms autor: profexorgeek MS. Author: jusjohns MS. Date: 12/27/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-samples"></a>Xamarin.FormsAmostras
 
 Xamarin.Formsaplicativos de exemplo e demonstrações de código para ajudá-lo a começar e entender os conceitos no Xamarin.Forms .

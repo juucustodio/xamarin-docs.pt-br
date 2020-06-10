@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsMarcação C#
-description: A marcação C# é um conjunto opcional de métodos e classes auxiliares fluentes para simplificar o processo de criação de interfaces de usuário declarativas Xamarin.Forms em C#.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 939727d3dd8d419cdc020d33d3e7241dcedb8158
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137735"
+Título: " Xamarin.Forms marcação c#" Descrição: "a marcação c# é um conjunto opcional de classes e métodos auxiliares fluentes para simplificar o processo de criação de interfaces de usuário declarativas Xamarin.Forms em C#".
+MS. Prod: xamarin MS. AssetID: D41B9DCD-5C34-4C2F-B177-FC082AB2E9E0 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/15/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-c-markup"></a>Xamarin.FormsMarcação C#
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
@@ -90,7 +76,7 @@ Este exemplo é idêntico ao exemplo anterior, mas a API Fluent de marcação do
 > [!NOTE]
 > A marcação C# inclui métodos de extensão que definem propriedades de exibição específicas. Esses métodos de extensão não se destinam a substituir todos os setters de propriedade. Em vez disso, eles foram projetados para melhorar a legibilidade do código e podem ser usados em combinação com setters de propriedade. É recomendável sempre usar um método de extensão quando houver um para uma propriedade, mas você pode escolher seu saldo preferido.
 
-## <a name="data-binding"></a>Vinculação de dados
+## <a name="data-binding"></a>Associação de dados
 
 A marcação C# inclui um `Bind` método de extensão, juntamente com sobrecargas, que cria uma associação de dados entre uma propriedade de exibição vinculável e uma propriedade especificada. O `Bind` método conhece a propriedade vinculável padrão para a maioria dos controles incluídos no Xamarin.Forms . Portanto, normalmente não é necessário especificar a propriedade de destino ao usar esse método. No entanto, você também pode registrar a propriedade vinculável padrão para controles adicionais:
 
@@ -235,7 +221,7 @@ Como um reconhecedor de gesto é um `BindableObject` , você pode usar os `Bind`
 
 A marcação C# inclui uma série de métodos de extensão de layout que dão suporte ao posicionamento de exibições em layouts e conteúdo em exibições:
 
-| Tipo | Métodos de extensão |
+| Type | Métodos de extensão |
 |---|---|
 | `FlexLayout` | `AlignSelf`, `Basis`, `Grow`, `Menu`, `Order`, `Shrink` |
 | `Grid` | `Row`, `Column`, `RowSpan`, `ColumnSpan` |
@@ -253,7 +239,7 @@ Para tornar o conjunto correto de métodos de extensão esquerdo e direito dispo
 
 Para a marcação C# projetada para dar suporte à direção de fluxo da esquerda para a direita e da direita para a esquerda, é recomendável usar os métodos de extensão na tabela a seguir, em vez de um dos namespaces acima:
 
-| Tipo | Métodos de extensão |
+| Type | Métodos de extensão |
 |---|---|
 | `Label` | `TextStart`, `TextEnd` |
 | `LayoutOptions` | `Start`, `End` <br/> `StartExpand`, `EndExpand` |

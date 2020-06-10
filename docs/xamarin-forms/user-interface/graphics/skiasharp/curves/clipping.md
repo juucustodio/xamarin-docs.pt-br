@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a4bb6c30ada13691146d00d2094df8f13ca453b9
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140251"
+Título: "recorte com caminhos e regiões" Descrição: "Este artigo explica como usar caminhos SkiaSharp para recortar elementos gráficos para áreas específicas, e para criar regiões e demonstra isso com código de exemplo".
+MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F autor: davidbritch MS. Author: dabritch MS. Date: 06/16/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="clipping-with-paths-and-regions"></a>Recorte com caminhos de regiões
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

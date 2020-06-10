@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsMessagingCenter
-description: A Xamarin.Forms classe MessagingCenter implementa o padrão de publicação-assinatura, permitindo a comunicação baseada em mensagem entre componentes que são inconvenientes de vincular por referências de objeto e tipo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d1407c3c948afe764854cbd99f5c29332f7041aa
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137534"
+Título: " Xamarin.Forms MessagingCenter" Descrição: "a Xamarin.Forms classe MessagingCenter implementa o padrão de publicação-assinatura, permitindo a comunicação baseada em mensagem entre componentes que são inconvenientes vincular por referências de objeto e tipo".
+MS. Prod: xamarin MS. AssetID: EDFE7B19-C5FD-40D5-816C-FAE56532E885 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/08/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-messagingcenter"></a>Xamarin.FormsMessagingCenter
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)

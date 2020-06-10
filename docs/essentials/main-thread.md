@@ -1,8 +1,6 @@
 ---
-Título: ' ' Xamarin.Essentials : MainThread ' ' Descrição: MS. AssetID: autor: MS. Custom: MS. autor: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: " Xamarin.Essentials : MainThread" Descrição: "a classe MainThread permite que os aplicativos executem código no thread de execução principal".
+MS. AssetID: CD6D51E7-D933-4FE7-A7F7-392EF27812E1 autor: jamesmontemagno MS. Custom: vídeo MS. Author: Jamont MS. Date: 08/20/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread

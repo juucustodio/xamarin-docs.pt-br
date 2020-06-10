@@ -1,8 +1,6 @@
 ---
-Título: ' ' Xamarin.Essentials : giroscópio ' ' Descrição: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: " Xamarin.Essentials : giroscópio" Descrição: "a classe giroscópio no Xamarin.Essentials permite monitorar o sensor de giroscópio do dispositivo, que mede a rotação em todos os três eixos principais do dispositivo".
+MS. AssetID: DA4F968A-D988-41F5-8745-1BEE693660A1 autor: jamesmontemagno MS. Author: Jamont MS. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinessentials-gyroscope"></a>Xamarin.Essentials: Giroscópio

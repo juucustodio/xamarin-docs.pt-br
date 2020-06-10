@@ -32,7 +32,7 @@ No entanto, há muitos problemas que devem ser resolvidos ao particionar um apli
 - Determinando como validar a entrada do usuário para exatidão. A decisão deve incluir como validar a entrada do usuário e como notificar o usuário sobre erros de validação. Para obter mais informações, consulte [validação](~/xamarin-forms/enterprise-application-patterns/validation.md).
 - Decidindo como realizar a autenticação e como proteger recursos com autorização. Para obter mais informações, consulte [autenticação e autorização](~/xamarin-forms/enterprise-application-patterns/authentication-and-authorization.md).
 - Determinando como acessar dados remotos de serviços da Web, incluindo como recuperar dados de maneira confiável e como armazenar dados em cache. Para obter mais informações, consulte [acessando dados remotos](~/xamarin-forms/enterprise-application-patterns/accessing-remote-data.md).
-- Decidindo como testar o aplicativo. Para obter mais informações, consulte [testes de unidade](~/xamarin-forms/enterprise-application-patterns/unit-testing.md).
+- Decidindo como testar o aplicativo. Para obter mais informações, confira [Teste de Unidade](~/xamarin-forms/enterprise-application-patterns/unit-testing.md).
 
 Este guia fornece orientação sobre esses problemas e se concentra nos padrões básicos e na arquitetura para criar um aplicativo empresarial de plataforma cruzada usando o Xamarin.Forms . As diretrizes visam ajudar a produzir código adaptável, passível de manutenção e de teste, abordando Xamarin.Forms cenários comuns de desenvolvimento de aplicativos empresariais e separando as preocupações da apresentação, da lógica de apresentação e das entidades por meio do suporte para o padrão MVVM (Model-View-ViewModel).
 
@@ -108,7 +108,7 @@ Além disso, os testes de unidade são fornecidos para algumas das classes no ap
 
 A solução de aplicativo móvel eShopOnContainers organiza o código-fonte e outros recursos em projetos. Todos os projetos usam pastas para organizar o código-fonte e outros recursos em categorias. A tabela a seguir descreve os projetos que compõem o aplicativo móvel eShopOnContainers:
 
-|Project|Description|
+|Project|Descrição|
 |--- |--- |
 |eShopOnContainers. Core|Este projeto é o projeto de PCL (biblioteca de classes portátil) que contém o código compartilhado e a interface do usuário compartilhada.|
 |eShopOnContainers. Droid|Este projeto mantém o código específico do Android e é o ponto de entrada para o aplicativo do Android.|
@@ -125,7 +125,7 @@ As classes do aplicativo móvel eShopOnContainers podem ser usadas novamente em 
 
 O projeto eShopOnContainers. Core PCL contém as seguintes pastas:
 
-|Pasta|Description|
+|Pasta|Descrição|
 |--- |--- |
 |Animações|Contém classes que permitem que as animações sejam consumidas em XAML.|
 |Comportamentos|Contém comportamentos que são expostos para exibir classes.|

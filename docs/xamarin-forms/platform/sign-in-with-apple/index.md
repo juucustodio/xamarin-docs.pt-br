@@ -1,22 +1,8 @@
 ---
-title: Entre com a Apple noXamarin.Forms
-description: Entrar com a Apple fornece a proteção de identidade para usuários e pode ser implementada para cenários móveis de plataforma cruzada no Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 84c7fdef5d12dfe6fca6294b3125e90761349002
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139445"
+Título: "entrar com a Apple em Xamarin.Forms " Descrição: "entrar com a Apple fornece a proteção de identidade para usuários e pode ser implementada para cenários móveis de plataforma cruzada no Xamarin.Forms ".
+MS. Prod: xamarin MS. AssetID: 414465F8-0CC8-4078-B3D1-F36983069658 MS. Technology: xamarin-Forms autor: davidortinau MS. Author: daortin MS. Date: 09/10/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="sign-in-with-apple-in-xamarinforms"></a>Entre com a Apple noXamarin.Forms
 
 Entrar com a Apple apresenta um novo serviço que fornece proteção de identidade para os usuários. A partir do iOS 13, a Apple requer que todos os aplicativos que usam provedores de autenticação de terceiros também ofereçam a entrada com a Apple. Para obter instruções sobre como usar esse recurso com o Xamarin. iOS, [Leia mais aqui](~/ios/platform/ios13/sign-in.md).

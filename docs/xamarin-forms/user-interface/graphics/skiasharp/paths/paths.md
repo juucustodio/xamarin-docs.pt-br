@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 6ceac2d866e67af5cf3496fcf8c072ae83ecfe38
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140238"
+Título: "Noções básicas de caminho em SkiaSharp" Descrição: "Este artigo explora o objeto SkiaSharp SKPath para combinar linhas e curvas conectadas e demonstra isso com o código de exemplo".
+MS. Prod: xamarin MS. AssetID: A7EDA6C2-3921-4021-89F3-211551E430F1 MS. Technology: xamarin-skiasharp autor: davidbritch MS. Author: dabritch MS. Date: 03/10/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="path-basics-in-skiasharp"></a>Noções básicas de caminho em SkiaSharp
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsDependencyService
-description: A Xamarin.Forms classe DependencyService é um localizador de serviço que permite que Xamarin.Forms os aplicativos invoquem a funcionalidade de plataforma nativa do código compartilhado.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 126e2d2373bad923fe1d66fe355ad811c15fbe4f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138366"
+title: " Xamarin.Forms DependencyService" Descrição: "a Xamarin.Forms classe DependencyService é um localizador de serviço que permite que Xamarin.Forms os aplicativos invoquem a funcionalidade de plataforma nativa do código compartilhado".
+MS. Prod: xamarin MS. AssetID: 403479F2-6751-41F2-ADCE-3AF595062FE4 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 06/05/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-dependencyservice"></a>Xamarin.FormsDependencyService
 
 ## <a name="introduction"></a>[Introdução](introduction.md)

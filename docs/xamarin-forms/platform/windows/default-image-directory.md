@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d5c5e6db8ddcf3cef32bde5c387adc378afd0058
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135568"
+Título: "diretório de imagem padrão no Windows" Descrição: "as especificações de plataforma permitem que você consuma a funcionalidade disponível apenas em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do Windows que define o diretório no projeto do qual os ativos de imagem serão carregados. "
+MS. Prod: xamarin MS. AssetID: 537A032B-74DD-4D43-864E-7D7113286D0D MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/16/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="default-image-directory-on-windows"></a>Diretório de imagens padrão no Windows
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

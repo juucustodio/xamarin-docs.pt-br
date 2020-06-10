@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsCarouselView rolagem
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 462948905f40679e2b931d4aa0039308c64a0a8f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136484"
+Título: " Xamarin.Forms CarouselView rolando" Descrição: "quando um usuário passa o dedo para iniciar uma rolagem, a posição final da rolagem pode ser controlada para que os itens sejam totalmente exibidos. Além disso, o CarouselView define dois métodos roleto, que rolam programaticamente os itens para a exibição. "
+MS. Prod: xamarin MS. AssetID: 92D7B618-07FA-4343-9D0F-212525E92C39 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/28/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-carouselview-scrolling"></a>Xamarin.FormsCarouselView rolagem
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
@@ -135,7 +121,7 @@ Este código de exemplo resulta na rolagem mínima necessária para rolar o item
 > [!NOTE]
 > O [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) membro será usado por padrão, se o `position` argumento não for especificado ao chamar o `ScrollTo` método.
 
-### <a name="start"></a>Iniciar
+### <a name="start"></a>Inicie o
 
 O [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) membro indica que o item deve ser rolado até o início da exibição:
 
@@ -231,7 +217,7 @@ A [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) enumeração d
 > [!IMPORTANT]
 > O valor da [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) propriedade é respeitado somente quando a [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) propriedade é definida como `Mandatory` , ou `MandatorySingle` .
 
-#### <a name="start"></a>Iniciar
+#### <a name="start"></a>Inicie o
 
 O `SnapPointsAlignment.Start` membro indica que os pontos de ajuste estão alinhados com a borda à esquerda dos itens. O exemplo de XAML a seguir mostra como definir esse membro de enumeração:
 

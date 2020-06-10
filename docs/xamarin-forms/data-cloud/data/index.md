@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Formsarmazenamento de dados local
-description: Saiba como executar a manipulação de arquivos do Xamarin.Forms código compartilhado e como ler e gravar dados em um banco de dados SQLite local usando o SQLite.net.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 997a659dd01e410f791af28d1b657055296081c8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84127095"
+Título: " Xamarin.Forms armazenamento de dados local" Descrição: "saiba como executar a manipulação de arquivos do Xamarin.Forms código compartilhado e como ler e gravar dados em um banco de dados SQLite local usando o SQLite.net".
+MS. Prod: xamarin MS. AssetID: A324C247-7DA8-4B14-A813-25F85525E32B MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 06/27/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-local-data-storage"></a>Xamarin.Formsarmazenamento de dados local
 
 ## <a name="files"></a>[Arquivos](files.md)

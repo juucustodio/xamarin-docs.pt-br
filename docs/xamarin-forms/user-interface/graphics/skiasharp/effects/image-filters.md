@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: eedbca080fce9f3001a7b1e2358845fd63c6121b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136338"
+Título: "filtros de imagem SkiaSharp" Descrição: "saiba como usar o filtro de imagem para criar desfoques e sombras."
+MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 173E7B22-AEC8-4F12-B657-1C0CEE01AD63 autor: davidbritch MS. Author: dabritch MS. Date: 08/27/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="skiasharp-image-filters"></a>Filtros de imagem SkiaSharp
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

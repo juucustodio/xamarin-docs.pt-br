@@ -1,9 +1,6 @@
 ---
-Título: ' ' Xamarin.Essentials : acelerômetro ' ' Descrição: ' a classe acelerômetro no Xamarin.Essentials permite monitorar o sensor de acelerômetro do dispositivo, que indica a aceleração do dispositivo em três espaços dimensionais. '
-MS. AssetID: autor: MS. Author: MS. Data: MS. Custom: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+title: " Xamarin.Essentials : acelerômetro" Descrição: "a classe acelerômetro no Xamarin.Essentials permite monitorar o sensor de acelerômetro do dispositivo, que indica a aceleração do dispositivo em três espaços dimensionais."
+MS. AssetID: 97883573-F0D9-4854-AC7C-A654814401C5 autor: jamesmontemagno MS. Author: Jamont MS. Data: 04/02/2019 MS. Custom: vídeo no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials: Acelerômetro

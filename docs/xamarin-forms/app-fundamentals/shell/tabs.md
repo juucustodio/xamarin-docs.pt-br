@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsLayout do Shell
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: fa49cdb7944e3ab942ccda611af906e2822b072a
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139952"
+Título: " Xamarin.Forms layout do Shell" Descrição: "após um submenu, o próximo nível de navegação em um aplicativo de Shell é a barra de guia inferior. Como alternativa, o padrão de navegação de um aplicativo pode começar com as guias inferiores e sem o uso de um submenu. Em ambos os casos, quando uma guia inferior contiver mais de uma página, as páginas serão navegáveis pelas guias superiores. "
+MS. Prod: xamarin MS. AssetID: 318D81DB-E456-4E44-B083-36A27DBD9523 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 11/06/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-shell-tabs"></a>Xamarin.FormsGuias do Shell
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

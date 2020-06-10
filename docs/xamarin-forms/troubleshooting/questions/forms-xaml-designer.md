@@ -1,9 +1,6 @@
 ---
-Título: ' por que o designer XAML do Visual Studio não funciona para Xamarin.Forms arquivos XAML? '
-MS. Topic: MS. Prod: MS. AssetID: MS. Technology: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+Título: "por que o designer XAML do Visual Studio não funciona para Xamarin.Forms arquivos XAML?"
+MS. Topic: solução de problemas MS. Prod: xamarin MS. AssetID: cab2eefb-c52f-4d81-866e-8f1feabbdd64 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/25/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="why-doesnt-the-visual-studio-xaml-designer-work-for-xamarinforms-xaml-files"></a>Por que o designer XAML do Visual Studio não funciona para Xamarin.Forms arquivos XAML?

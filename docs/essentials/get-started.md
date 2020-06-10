@@ -1,21 +1,8 @@
 ---
-title: Introdução aoXamarin.Essentials
-description: Xamarin.Essentialsfornece uma única API de plataforma cruzada que funciona com qualquer aplicativo iOS, Android ou UWP que pode ser acessado do código compartilhado, independentemente de como a interface do usuário é criada.
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.custom: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 0c0052b35475522ffb3634ebe22f69f66fe3b22b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84129305"
+Título: "introdução à Xamarin.Essentials " Descrição: " Xamarin.Essentials fornece uma única API de plataforma cruzada que funciona com qualquer aplicativo IOS, Android ou UWP que pode ser acessado do código compartilhado, independentemente de como a interface do usuário é criada."
+MS. AssetID: B2669C48-B659-4854-BD80-FEB0E876F5B9 autor: jamesmontemagno MS. autor: Jamont MS. Custom: vídeo MS. Date: 05/11/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="get-started-with-xamarinessentials"></a>Introdução aoXamarin.Essentials
 
 Xamarin.Essentialsfornece uma única API de plataforma cruzada que funciona com qualquer aplicativo iOS, Android ou UWP que pode ser acessado do código compartilhado, independentemente de como a interface do usuário é criada. Confira o [guia de suporte a plataformas e recursos](platform-feature-support.md) para obter mais informações sobre os sistemas operacionais compatíveis.

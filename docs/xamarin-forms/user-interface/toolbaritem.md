@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsToolbarItem
-description: ''
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 46aba32ebbae1646b9af00877bba530b619210cd
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138210"
+Título: " Xamarin.Forms ToolbarItem" Descrição: "a classe ToolbarItem é um tipo especial de botão usado na barra de navegação de um aplicativo."
+MS. Prod: xamarin MS. AssetID: CC737D54-0280-46BD-A2BC-A0FB67DDD6A1 MS. Technology: xamarin-Forms autor: profexorgeek MS. Author: jusjohns MS. Date: 07/29/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-toolbaritem"></a>Xamarin.FormsToolbarItem
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)

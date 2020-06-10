@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsAssociação de dados
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 4b99877342ddbaf9ad5606ec5dc284818fcfeffd
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139692"
+Título: " Xamarin.Forms vinculação de dados" Descrição: "a vinculação de dados é a técnica de vincular propriedades de dois objetos para que as alterações em uma propriedade sejam refletidas automaticamente na outra propriedade. A vinculação de dados é parte integrante da arquitetura do aplicativo MVVM (Model-View-ViewModel).
+MS. Prod: xamarin MS. AssetID: 938E85C8-521D-43B9-92CB-D591A06D98A6 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 03/23/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-data-binding"></a>Xamarin.FormsAssociação de dados
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

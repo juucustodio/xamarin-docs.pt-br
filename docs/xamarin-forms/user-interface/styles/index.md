@@ -1,22 +1,8 @@
 ---
-title: Aplicativos de estilo Xamarin.Forms
-description: Este guia explica como estilizar Xamarin.Forms aplicativos usando estilos XAML e usando folhas de estilos em cascata.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8775793c2d9ae1ba6e1eba38fe48647b43056bf8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84140106"
+Título: "aplicativos de estilo Xamarin.Forms " Descrição: "este guia explica como estilizar Xamarin.Forms aplicativos usando estilos XAML e usando folhas de estilos em cascata".
+MS. Prod: xamarin MS. AssetID: EABF5072-B89B-4356-B7B3-1C6B40358926 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/28/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="styling-xamarinforms-apps"></a>Aplicativos de estilo Xamarin.Forms
 
 ## <a name="styling-xamarinforms-apps-using-xaml-stylesxamlindexmd"></a>[Estilizando Xamarin.Forms aplicativos usando estilos XAML](xaml/index.md)

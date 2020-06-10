@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsFallbacks de associação
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: f3aadef1960618731c3749507233933b8bf7630e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133452"
+Título: Xamarin.Forms Descrição de "fallbacks de associação": "Este artigo explica como tornar as associações mais robustas definindo valores de fallback que serão usados se a associação falhar."
+MS. Prod: xamarin MS. AssetID: 637ACD9D-3E5D-4014-86DE-A77D1FEF238A MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/16/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-binding-fallbacks"></a>Xamarin.FormsFallbacks de associação
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

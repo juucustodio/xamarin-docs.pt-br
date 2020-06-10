@@ -1,9 +1,6 @@
 ---
-Título: Descrição: ' Este artigo explica o suporte à plataforma Windows que está disponível em Xamarin.Forms . '
-MS. Prod: MS. AssetID: MS. Technology: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+Título: "recursos da plataforma Windows" Descrição: "Este artigo explica o suporte da plataforma Windows que está disponível no Xamarin.Forms ."
+MS. Prod: xamarin MS. AssetID: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/16/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="windows-platform-features"></a>Recursos da plataforma Windows

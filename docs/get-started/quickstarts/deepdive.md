@@ -1,25 +1,8 @@
 ---
-title: Xamarin.FormsAprofundamento do guia de início rápido
-description: Este artigo examina os conceitos básicos do desenvolvimento de aplicativos usando o Xamarin.Forms . Os tópicos abordados incluíam a anatomia de um Xamarin.Forms aplicativo, conceitos básicos de aplicativos e de arquitetura e a interface do usuário.
-zone_pivot_groups: ''
-ms.topic: ''
-ms.prod: ''
-ms.custom: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1bfb76f71a2ac9d8bc9ae84152501909000b9623
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84132516"
+Título: " Xamarin.Forms aprofundamento do guia de início rápido": "Este artigo examina os conceitos básicos do desenvolvimento de aplicativos usando o Xamarin.Forms . Os tópicos abordados incluíam a anatomia de um Xamarin.Forms aplicativo, os conceitos básicos do aplicativo e da arquitetura e a interface do usuário. "
+zone_pivot_groups: plataforma MS. Topic: início rápido MS. Prod: xamarin MS. Custom: vídeo MS. AssetID: 7B2340A1-6883-41D8-860C-0BB6C4E0C316 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 11/27/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-quickstart-deep-dive"></a>Xamarin.FormsAprofundamento do guia de início rápido
 
 No [ Xamarin.Forms início rápido](~/get-started/index.yml), o aplicativo Notes foi criado. Este artigo revisa o que foi criado para compreender os conceitos básicos de como Xamarin.Forms os aplicativos funcionam.
@@ -382,7 +365,7 @@ await Navigation.PopAsync();
 
 Para obter mais informações sobre navegação hierárquica, veja [Navegação hierárquica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
 
-## <a name="data-binding"></a>Vinculação de dados
+## <a name="data-binding"></a>Associação de dados
 
 A vinculação de dados é usada para simplificar a forma como um Xamarin.Forms aplicativo exibe e interage com seus dados. Ela estabelece uma conexão entre a interface do usuário e o aplicativo subjacente. A [`BindableObject`](xref:Xamarin.Forms.BindableObject) classe contém grande parte da infraestrutura para dar suporte à vinculação de dados.
 
@@ -536,7 +519,7 @@ Como alternativa, [_criar aplicativos móveis com o Xamarin. Forms_](~/xamarin-f
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Linguagem XAML](~/xamarin-forms/xaml/index.yml)
+- [XAML (linguagem XAML)](~/xamarin-forms/xaml/index.yml)
 - [Associação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Referência de Controles](~/xamarin-forms/user-interface/controls/index.md)
 - [Extensões de marcação do XAML](~/xamarin-forms/xaml/markup-extensions/index.md)

@@ -1,23 +1,7 @@
 ---
-title: ''
-description: ''
-Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 28. Location and maps''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 301dc65c7909603e117717a993959e3c73fa2d32
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84133400"
+Título: "Resumo do capítulo 28. Local e mapas "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 28. Local e mapeia "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: F6E20077-687C-45C4-A375-31D4F49BBFA4 autor: davidbritch MS. Author: dabritch MS. Date: 07/19/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="summary-of-chapter-28-location-and-maps"></a>Resumo do capítulo 28. Localização e mapas
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)
@@ -92,7 +76,7 @@ Para o iOS, o arquivo **info. plist** deve incluir itens que contenham o texto d
 
 #### <a name="location-permissions-for-android"></a>Permissões de local para Android
 
-Os aplicativos Android que obtêm o local do usuário devem ter uma permissão ACCESS_FILE_LOCATION no arquivo AndroidManifest. xml.
+Os aplicativos Android que obtêm o local do usuário devem ter uma permissão ACCESS_FILE_LOCATION no arquivo AndroidManifest.xml.
 
 #### <a name="location-permissions-for-the-uwp"></a>Permissões de local para o UWP
 
@@ -120,7 +104,7 @@ Um aplicativo iOS usando `Map` precisa de duas linhas no arquivo info. plist.
 
 #### <a name="enabling-android-maps"></a>Habilitando mapas do Android
 
-Uma chave de autorização é necessária para usar os serviços do Google Map. Essa chave é inserida no arquivo **AndroidManifest. xml** . Além disso, o arquivo **AndroidManifest. xml** requer `manifest` marcas envolvidas na obtenção do local do usuário.
+Uma chave de autorização é necessária para usar os serviços do Google Map. Essa chave é inserida no arquivo **AndroidManifest.xml** . Além disso, o arquivo **AndroidManifest.xml** requer `manifest` marcas envolvidas na obtenção do local do usuário.
 
 #### <a name="enabling-uwp-maps"></a>Habilitando mapas UWP
 
@@ -219,7 +203,7 @@ Por fim, a `Map` classe define uma [`Pins`](xref:Xamarin.Forms.Maps.Map.Pins) Pr
 - [`Position`](xref:Xamarin.Forms.Maps.Pin.Position)do tipo `Position` , indicando onde o PIN é exibido no mapa
 - [`Type`](xref:Xamarin.Forms.Maps.Pin.Type)do tipo [`PinType`](xref:Xamarin.Forms.Maps.PinType) , uma enumeração, que não é usada
 
-O projeto **MapDemos** contém o arquivo [ScienceMuseums. xml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Data/ScienceMuseums.xml), que lista os museus de ciência no Estados Unidos e [`Locations`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Locations.cs) as [`Site`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Site.cs) classes para desserializar esses dados.
+O projeto **MapDemos** contém o arquivo [ScienceMuseums.xml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Data/ScienceMuseums.xml), que lista os museus de ciência na Estados Unidos e [`Locations`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Locations.cs) as [`Site`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Site.cs) classes para desserializar esses dados.
 
 O arquivo [ScienceMuseumsPage. XAML](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ScienceMuseumsPage.xaml) e os pinos de exibição de arquivo [ScienceMuseumsPage.XAML.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ScienceMuseumsPage.xaml.cs) code-behind para esses museuss de ciência no mapa. Quando o usuário toca em um PIN, ele exibe o endereço e um site para o Museu.
 

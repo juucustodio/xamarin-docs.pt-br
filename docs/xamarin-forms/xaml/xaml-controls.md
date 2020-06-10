@@ -1,23 +1,8 @@
 ---
-title: ''
-description: Todas as exibições definidas em Xamarin.Forms podem ser referenciadas de arquivos XAML.
-ms.topic: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 445ef85f661d945bda25203f35dea787e64dc9b0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138418"
+Título: "controles XAML" Descrição: "todas as exibições definidas em Xamarin.Forms podem ser referenciadas de arquivos XAML".
+MS. Topic: artigo MS. Prod: xamarin MS. AssetID: 639BD392-1496-41BB-BB09-7652273AC9D8 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/17/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xaml-controls"></a>Controles XAML
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
@@ -33,7 +18,7 @@ Todas as exibições definidas em Xamarin.Forms podem ser referenciadas de arqui
 | <h3>BoxView</h3>Exibe um retângulo de uma cor específica.<p align="center">![Captura de tela de um BoxView](xaml-controls-images/BoxView.png "BoxView")</p>[API](xref:Xamarin.Forms.BoxView)  /  do [Guia](~/xamarin-forms/user-interface/boxview.md) | <pre valign="center">&lt;BoxView Color="Accent"<br />         WidthRequest="150"<br />         HeightRequest="150"<br />         HorizontalOptions="Center"&gt;</pre></p> |
 | <h3>Expansor</h3>Fornece um contêiner expansível para hospedar qualquer conteúdo.<p align="center">![Captura de tela de um expansor](xaml-controls-images/Expander.png "Expansor")</p>[Guia](~/xamarin-forms/user-interface/expander.md) | <pre>&lt;Expander&gt;<br />    &lt;Expander.Header&gt;<br />        &lt;Label Text=&quot;Baboon&quot; /&gt;<br />    &lt;/Expander.Header&gt;<br />    &lt;Image Source=&quot;Baboon.png&quot;<br />           Aspect=&quot;AspectFill&quot; /&gt;<br />&lt;/Expander&gt;</pre></p> |
 | <h3>Imagem</h3>Exibe um bitmap.<p align="center">![Captura de tela de uma imagem](xaml-controls-images/Image.png "Image")</p>[API](xref:Xamarin.Forms.Image)  /  do [Guia](~/xamarin-forms/user-interface/images.md) | <pre>&lt;Image Source="https://aka.ms/campus.jpg"<br />       Aspect="AspectFit"<br />       HorizontalOptions="Center" /&gt;</pre></p> |
-| <h3>Rótulo</h3>Exibe uma ou mais linhas de texto.<p align="center">![Captura de tela de um rótulo](xaml-controls-images/Label.png "Rotular")</p>[API](xref:Xamarin.Forms.Label)  /  do [Guia](~/xamarin-forms/user-interface/text/label.md) | <p valign="center"><pre>&lt;Label Text="Hello, Xamarin.Forms!"<br />       FontSize="Large"<br />       FontAttributes="Italic"<br />       HorizontalTextAlignment="Center" /&gt;</pre></p> |
+| <h3>Label</h3>Exibe uma ou mais linhas de texto.<p align="center">![Captura de tela de um rótulo](xaml-controls-images/Label.png "Rotular")</p>[API](xref:Xamarin.Forms.Label)  /  do [Guia](~/xamarin-forms/user-interface/text/label.md) | <p valign="center"><pre>&lt;Label Text="Hello, Xamarin.Forms!"<br />       FontSize="Large"<br />       FontAttributes="Italic"<br />       HorizontalTextAlignment="Center" /&gt;</pre></p> |
 | <h3>Mapear</h3>Exibe um mapa.<p align="center">![Captura de tela de um mapa](xaml-controls-images/Map.png "Mapa")</p>[API](xref:Xamarin.Forms.Maps.Map)  /  do [Guia](~/xamarin-forms/user-interface/map/index.md) | <p valign="center"><pre>&lt;maps:Map ItemsSource="{Binding Locations}" /&gt;</pre></p> |
 | <h3>MediaElement</h3>Reproduzir vídeo ou áudio.<p align="center">![Captura de tela de um MediaElement](xaml-controls-images/MediaElement.png "MediaELement")</p>[API](xref:Xamarin.Forms.MediaElement)  /  do [Guia](~/xamarin-forms/user-interface/mediaelement.md) | <p valign="center"><pre>&lt;MediaElement Source="https://sec.ch9.ms/ch9/XamarinShow_mid.mp4"<br />              AutoPlay="True"<br />              ShowsPlaybackControls="True" /&gt;</pre></p> |
 | <h3>WebView</h3>Exibe páginas da Web ou conteúdo HTML.<p align="center">![Captura de tela de um WebView](xaml-controls-images/WebView.png "WebView")</p>[API](xref:Xamarin.Forms.WebView)  /  do [Guia](~/xamarin-forms/user-interface/webview.md) | <p valign="center"><pre>&lt;WebView Source="https://docs.microsoft.com/xamarin/"<br/>         VerticalOptions="FillAndExpand" /&gt;</pre></p> |
@@ -68,7 +53,7 @@ Todas as exibições definidas em Xamarin.Forms podem ser referenciadas de arqui
 |     |     |
 | --- | --- |
 | <h3>Entrada</h3>Permite que uma única linha de texto seja inserida e editada.<p align="center">![Captura de tela de uma entrada](xaml-controls-images/Entry.png "Entrada")</p>[API](xref:Xamarin.Forms.Entry)  /  do [Guia](~/xamarin-forms/user-interface/text/entry.md) | <p valign="center"><pre>&lt;Entry Keyboard="Email"<br />       Placeholder="Enter email address"<br />       VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
-| <h3>Editor</h3>Permite que várias linhas de texto sejam inseridas e editadas.<p align="center">![Captura de tela de um editor](xaml-controls-images/Editor.png "Rótulo")</p>[API](xref:Xamarin.Forms.Editor)  /  do [Guia](~/xamarin-forms/user-interface/text/editor.md) | <p valign="center"><pre>&lt;Editor VerticalOptions="FillAndExpand" /&gt;</pre></p> |
+| <h3>Editor</h3>Permite que várias linhas de texto sejam inseridas e editadas.<p align="center">![Captura de tela de um editor](xaml-controls-images/Editor.png "Label")</p>[API](xref:Xamarin.Forms.Editor)  /  do [Guia](~/xamarin-forms/user-interface/text/editor.md) | <p valign="center"><pre>&lt;Editor VerticalOptions="FillAndExpand" /&gt;</pre></p> |
 |     |     |
 
 ## <a name="views-to-indicate-activity"></a>Exibições para indicar atividade

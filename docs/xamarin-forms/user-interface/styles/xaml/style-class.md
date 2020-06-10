@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsClasses de estilo
-description: Xamarin.Formsas classes de estilo permitem que vários estilos sejam aplicados a um controle, sem reclassificar para a herança de estilo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 2afb06c2d97e6f15c2041b9c2e9cad092b13d90d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138756"
+Título: " Xamarin.Forms classes de estilo" Descrição: " Xamarin.Forms classes de estilo permitem que vários estilos sejam aplicados a um controle, sem reclassificar para a herança de estilo".
+MS. Prod: xamarin MS. AssetID: 4762401E-2B48-48F1-B6E4-61F7AF8AA46F MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/30/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-style-classes"></a>Xamarin.FormsClasses de estilo
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)

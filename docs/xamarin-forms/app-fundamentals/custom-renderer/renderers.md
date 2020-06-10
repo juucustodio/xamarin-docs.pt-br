@@ -26,7 +26,7 @@ A classe `MapRenderer` pode ser encontrada nos seguintes namespaces:
 > [!NOTE]
 > Para obter informações sobre como criar renderizadores personalizados para aplicativos de Shell, consulte [ Xamarin.Forms renderizadores personalizados do Shell](~/xamarin-forms/app-fundamentals/shell/customrenderers.md).
 
-## <a name="pages"></a>Pages (Páginas)
+## <a name="pages"></a>Páginas
 
 A tabela a seguir lista as classes de processador e de controle nativo que implementam cada tipo de Xamarin.Forms [página](~/xamarin-forms/user-interface/controls/pages.md) :
 
@@ -71,7 +71,7 @@ A tabela a seguir lista as classes de processador e de controle nativo que imple
 |[`DatePicker`](xref:Xamarin.Forms.DatePicker)|DatePickerRenderer|UITextField|EditText||DatePicker|
 |[`Editor`](xref:Xamarin.Forms.Editor)|EditorRenderer|UITextView|EditText||TextBox|
 |[`Entry`](xref:Xamarin.Forms.Entry)|[EntryRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/entry.md)|UITextField|EditText||TextBox|
-|[`Image`](xref:Xamarin.Forms.Image)|ImageRenderer|UIImageView|ImageView||Image|
+|[`Image`](xref:Xamarin.Forms.Image)|ImageRenderer|UIImageView|ImageView||Imagem|
 |[`ImageButton`](xref:Xamarin.Forms.ImageButton)|ImageButtonRenderer|UIButton||AppCompatImageButton|Botão|
 |`IndicatorView`|IndicatorViewRenderer|UIPageControl||LinearLayout||
 |[`Label`](xref:Xamarin.Forms.Label)|LabelRenderer|UILabel|TextView||TextBlock|

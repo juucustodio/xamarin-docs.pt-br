@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Este artigo explica como adicionar interatividade a um Xamarin.Forms ListView implementando seleções, ações de contexto e pull para atualização.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5142965216b328172ae7fa04cdc0c13590f5ff38
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139880"
+Título: Descrição da "interatividade de ListView": "Este artigo explica como adicionar interatividade a um Xamarin.Forms ListView implementando seleções, ações de contexto e pull para atualização".
+MS. Prod: xamarin MS. AssetID: CD14EB90-B08C-4E8F-A314-DA0EEC76E647 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 09/25/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="listview-interactivity"></a>Interatividade do ListView
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)

@@ -1,22 +1,8 @@
 ---
-title: Use entrar com a Apple paraXamarin.Forms
-description: Saiba como implementar a entrada com a Apple em seus Xamarin.Forms aplicativos móveis.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: fb37f8fb2d01154bf2e749e685c4e96c12d6bc5e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139484"
+Título: "usar entrar com a Apple para Xamarin.Forms " Descrição: "saiba como implementar a entrada com a Apple em seus Xamarin.Forms aplicativos móveis".
+MS. Prod: xamarin MS. AssetID: 2E47E7F2-93D4-4CA3-9E66-247466D25E4D MS. Technology: xamarin-Forms autor: davidortinau MS. Author: daortin MS. Date: 09/10/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="use-sign-in-with-apple-in-xamarinforms"></a>Use entrar com a Apple noXamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/signinwithapple/)

@@ -1,20 +1,8 @@
 ---
-title: Xamarin.Essentials
-description: Este documento contém links para vários guias que descrevem Xamarin.Essentials , que fornece aos desenvolvedores APIs de plataforma cruzada para seus aplicativos móveis.
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 27421ecc8b089321cd2331829d87365f3cf37a65
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139458"
+Título: " Xamarin.Essentials " Descrição: "este documento é vinculado a vários guias que descrevem Xamarin.Essentials , que fornece aos desenvolvedores APIs de plataforma cruzada para seus aplicativos móveis.
+MS. AssetID: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A autor: jamesmontemagno MS. Author: Jamont MS. Date: 02/26/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # Xamarin.Essentials
 
 Xamarin.Essentialsfornece aos desenvolvedores APIs de plataforma cruzada para seus aplicativos móveis.

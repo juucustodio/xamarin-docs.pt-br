@@ -1,9 +1,6 @@
 ---
-Título: ' ' Xamarin.Essentials : detectar agite ' ' Descrição: ' a classe acelerômetro no Xamarin.Essentials permite que você detecte uma movimentação de uma mistura do dispositivo. '
-MS. AssetID: autor: MS. Author: MS. Data: MS. Custom: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+Título: " Xamarin.Essentials : detectar agite" Descrição: "a classe acelerômetro no Xamarin.Essentials permite que você detecte uma movimentação de uma mistura do dispositivo".
+MS. AssetID: 07513D32-120F-4F12-8757-A47802A8027B autor: jamesmontemagno MS. Author: Jamont MS. Data: 05/28/2019 MS. Custom: vídeo no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: Detectar agite

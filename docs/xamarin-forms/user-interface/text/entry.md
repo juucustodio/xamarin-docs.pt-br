@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsInicial
-description: Este artigo explica como usar a Xamarin.Forms classe de entrada para aceitar entrada de texto ou senha de linha única em um aplicativo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5c17d6a106474c4c5b183bd41923533ffc95789b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136195"
+Título: " Xamarin.Forms entrada" Descrição: "Este artigo explica como usar a Xamarin.Forms classe de entrada para aceitar entrada de texto ou senha de linha única em um aplicativo".
+MS. Prod: xamarin MS. AssetID: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 09/25/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-entry"></a>Xamarin.FormsInicial
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)

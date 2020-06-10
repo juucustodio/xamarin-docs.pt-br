@@ -1,23 +1,7 @@
 ---
-title: ''
-description: ''
-ms.topic: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 237dfd637d5456636afd19ea0175cb388773d273
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135909"
+Título: "solução de problemas" Descrição: "condições de erro comuns e como resolvê-las" MS. Topic: solução de problemas MS. Prod: xamarin MS. AssetID: 63291951-7375-4CBF-BCC3-2E4AD157A2C8 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/25/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="troubleshooting"></a>Solução de problemas
 
 _Condições de erro comuns e como resolvê-las_

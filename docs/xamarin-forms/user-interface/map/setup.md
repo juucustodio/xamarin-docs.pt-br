@@ -1,9 +1,6 @@
 ---
-Título: ' Xamarin.Forms mapa de inicialização e configuração ' Descrição: ' o Xamarin.Forms . O pacote NuGet de mapas é necessário para usar a funcionalidade de mapas em um aplicativo. Além disso, o acesso ao local do usuário exige que as permissões de localização tenham sido concedidas ao aplicativo.
-MS. Prod: MS. AssetID: MS. Technology: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+Título: " Xamarin.Forms inicialização e configuração do mapa" Descrição: "o Xamarin.Forms . O pacote NuGet de mapas é necessário para usar a funcionalidade de mapas em um aplicativo. Além disso, o acesso ao local do usuário exige que as permissões de localização tenham sido concedidas ao aplicativo. "
+MS. Prod: xamarin MS. AssetID: 59CD1344-8248-406C-9144-0C8A67141E5B MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 02/07/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinforms-map-initialization-and-configuration"></a>Xamarin.FormsInicialização e configuração do mapa
@@ -87,13 +84,13 @@ O processo de configuração para exibir e interagir com um mapa no Android é:
 1. adicional Especifique as permissões de local no manifesto.
 1. adicional Solicitar permissões de local de tempo de execução na `MainActivity` classe.
 
-Para obter um exemplo de um arquivo de manifesto configurado corretamente, consulte [AndroidManifest. xml](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithMaps/WorkingWithMaps/WorkingWithMaps.Android/Properties/AndroidManifest.xml) do aplicativo de exemplo.
+Para obter um exemplo de um arquivo de manifesto configurado corretamente, consulte [AndroidManifest.xml](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithMaps/WorkingWithMaps/WorkingWithMaps.Android/Properties/AndroidManifest.xml) do aplicativo de exemplo.
 
 #### <a name="get-a-google-maps-api-key"></a>Obter uma chave de API do Google Maps
 
 Para usar a [API do Google Maps](https://developers.google.com/maps/documentation/android/) no Android, você deve gerar uma chave de API. Para fazer isso, siga as instruções em [obtendo uma chave de API do Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
 
-Depois de obter uma chave de API, ela deve ser adicionada dentro do `<application>` elemento do arquivo **Properties/AndroidManifest. xml** :
+Depois de obter uma chave de API, ela deve ser adicionada dentro do `<application>` elemento do arquivo de **propriedades/AndroidManifest.xml** :
 
 ```xml
 <application ...>
@@ -110,7 +107,7 @@ Para que seu APK acesse o Google Maps, você deve incluir impressões digitais e
 
 #### <a name="specify-the-google-play-services-version-number"></a>Especificar o número de versão dos serviços de Google Play
 
-Adicione a seguinte declaração dentro do `<application>` elemento de **AndroidManifest. xml**:
+Adicione a seguinte declaração dentro do `<application>` elemento de **AndroidManifest.xml**:
 
 ```xml
 <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
@@ -120,7 +117,7 @@ Isso incorpora a versão do Google Play Services com a qual o aplicativo foi com
 
 #### <a name="specify-the-requirement-for-the-apache-http-legacy-library"></a>Especifique o requisito para a biblioteca herdada do Apache HTTP
 
-Se seu Xamarin.Forms aplicativo for destinado à API 28 ou superior, você deverá adicionar a seguinte declaração dentro do `<application>` elemento de **AndroidManifest. xml**:
+Se seu Xamarin.Forms aplicativo for destinado à API 28 ou superior, você deverá adicionar a seguinte declaração dentro do `<application>` elemento de **AndroidManifest.xml**:
 
 ```xml
 <uses-library android:name="org.apache.http.legacy" android:required="false" />    

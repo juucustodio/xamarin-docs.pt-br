@@ -72,7 +72,7 @@ Xamarin.Essentialsé uma biblioteca que fornece APIs de plataforma cruzada para 
 - Conversão de texto em fala
 - Bloqueio de tela
 
-Para obter mais informações, confira [Xamarin.Essentials](~/essentials/index.md).
+Para obter mais informações, consulte [Xamarin.Essentials](~/essentials/index.md).
 
 ### Xamarin.Forms
 
@@ -84,7 +84,7 @@ Xamarin.Formsé uma estrutura de interface do usuário de código-fonte aberto. 
 - Efeitos
 - Estilo
 
-Para obter mais informações, confira [Xamarin.Forms](~/xamarin-forms/index.yml).
+Para obter mais informações, consulte [Xamarin.Forms](~/xamarin-forms/index.yml).
 
 ## <a name="get-started"></a>Introdução
 

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsFormatação de cadeia de caracteres
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d08a89d5394a227e3cee76603e4e97d2cf9495e0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135753"
+title: " Xamarin.Forms formatação de cadeia de caracteres" Descrição: "Este artigo explica como usar as associações de dados do Xamarin. FOrms para formatar e exibir objetos como cadeias de caracteres. Isso é feito definindo o StringFormat da associação com uma cadeia de caracteres de formatação .NET padrão com um espaço reservado. "
+MS. Prod: xamarin MS. AssetID: 978C85B7-CB58-4483-A131-21B381A865E0 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/05/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-string-formatting"></a>Xamarin.FormsFormatação de cadeia de caracteres
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

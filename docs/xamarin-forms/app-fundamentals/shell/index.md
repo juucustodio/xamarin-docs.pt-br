@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsShell
-description: Este guia explica como usar o Xamarin.Forms shell, que reduz a complexidade dos Xamarin.Forms aplicativos, fornecendo os recursos fundamentais que a maioria dos aplicativos exige.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 0acf00d85c2bfb823ec1cfba099179bb6743117c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138743"
+Título: " Xamarin.Forms shell" Descrição: "este guia explica como usar o Xamarin.Forms shell, que reduz a complexidade dos Xamarin.Forms aplicativos, fornecendo os recursos fundamentais que a maioria dos aplicativos exige."
+MS. Prod: xamarin MS. AssetID: 85B322AA-808F-41B6-953A-5877264AE643 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/28/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-shell"></a>Xamarin.FormsShell
 
 ## <a name="introduction"></a>[Introdução](introduction.md)
@@ -31,7 +17,7 @@ O processo de criação de um Xamarin.Forms aplicativo de Shell é criar um arqu
 
 O submenu é o menu raiz de um aplicativo Shell e é acessível por meio de um ícone ou passando o dedo na lateral da tela. O submenu consiste em um cabeçalho opcional, itens de submenu e itens de menu opcionais.
 
-## <a name="tabs"></a>[Guias](tabs.md)
+## <a name="tabs"></a>[Temas](tabs.md)
 
 Depois de um submenu, o próximo nível de navegação em um aplicativo Shell é a barra de guias inferior. Como alternativa, o padrão de navegação de um aplicativo pode começar com as guias inferiores e sem o uso de um submenu. Em ambos os casos, quando uma guia inferior contiver mais de uma página, as páginas poderão ser navegadas pelas guias superiores.
 

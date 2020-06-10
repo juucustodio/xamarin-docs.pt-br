@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Este artigo explica como converter Xamarin.Forms aplicativos Android existentes para usar AppCompat e design de material.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 24206f6d6764c73f13a4b06fb44fa746f9d353af
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135701"
+Título: "adicionando AppCompat e design de material" Descrição: "Este artigo explica como converter Xamarin.Forms aplicativos Android existentes para usar AppCompat e design de material".
+MS. Prod: xamarin MS. AssetID: 045FBCDF-4D45-48BB-9911-BD3938C87D58 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 06/27/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="adding-appcompat-and-material-design"></a>Adicionando AppCompat e design de material
 
 _Siga estas etapas para converter os Xamarin.Forms aplicativos Android existentes para usar AppCompat e design de material_
@@ -43,7 +29,7 @@ Verifique se a estrutura de destino do projeto Android é Android 6,0 (marshmall
 
 Crie os três arquivos a seguir em seu projeto Android e cole o conteúdo abaixo. O Google fornece um [Guia de estilo](https://www.google.com/design/spec/style/color.html#color-color-palette) e um gerador de paleta de [cores](https://www.materialpalette.com/) para ajudá-lo a escolher um esquema de cores alternativo para aquele especificado.
 
-**Recursos/valores/cores. xml**
+**Recursos/valores/colors.xml**
 
 ```xml
 <resources>
@@ -54,7 +40,7 @@ Crie os três arquivos a seguir em seu projeto Android e cole o conteúdo abaixo
 </resources>
 ```
 
-**Recursos/valores/Style. xml**
+**Recursos/valores/style.xml**
 
 ```xml
 <resources>
@@ -72,7 +58,7 @@ Crie os três arquivos a seguir em seu projeto Android e cole o conteúdo abaixo
 
 Um estilo adicional deve ser incluído na pasta **Values-v21** para aplicar propriedades específicas ao ser executado em Android pirulito e mais recente.
 
-**Resources/Values-v21/Style. xml**
+**Recursos/valores-v21/style.xml**
 
 ```xml
 <resources>
@@ -84,11 +70,11 @@ Um estilo adicional deve ser incluído na pasta **Values-v21** para aplicar prop
 </resources>
 ```
 
-### <a name="4-update-androidmanifestxml"></a>4. atualizar AndroidManifest. xml
+### <a name="4-update-androidmanifestxml"></a>4. atualizar AndroidManifest.xml
 
 Para garantir que essas novas informações de tema sejam usadas, defina o tema no arquivo **AndroidManifest** adicionando `android:theme="@style/MyTheme"` (Deixe o restante do XML como ele era).
 
-**Propriedades/AndroidManifest. xml**
+**Propriedades/AndroidManifest.xml**
 
 ```xml
 ...

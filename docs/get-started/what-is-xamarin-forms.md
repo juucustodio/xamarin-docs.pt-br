@@ -47,7 +47,7 @@ Xamarin.Essentialsé uma biblioteca que fornece APIs de plataforma cruzada para 
 - Conversão de texto em fala
 - Bloqueio de tela
 
-Para obter mais informações, confira [Xamarin.Essentials](~/essentials/index.md).
+Para obter mais informações, consulte [Xamarin.Essentials](~/essentials/index.md).
 
 ### <a name="shell"></a>Shell
 

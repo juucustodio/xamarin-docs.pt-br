@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Este artigo explora as diferenças entre coordenadas geoSkiaSharps e Xamarin.Forms coordenadas e demonstra isso com o código de exemplo.
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 6d01018f4393ac5562220fa1f9524bc0d9872c67
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137664"
+Título: "unidades de pixels e independentes de dispositivo" Descrição: "Este artigo explora as diferenças entre coordenadas SkiaSharps e Xamarin.Forms coordenadas e demonstra isso com o código de exemplo".
+MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 26C25BB8-FBE8-4B77-B01D-16A163A16890 autor: davidbritch MS. Author: dabritch MS. Date: 02/09/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="pixels-and-device-independent-units"></a>Unidades independentes de dispositivo e pixels
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

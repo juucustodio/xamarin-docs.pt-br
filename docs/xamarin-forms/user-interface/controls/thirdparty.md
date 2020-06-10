@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsControles de terceiros
-description: Controles adicionais para Xamarin.Forms desenvolvimento estão disponíveis de empresas como Telerik, SyncFusion, DevExpress, Infragistics, ComponentOne e Steema.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: e0881296664ec20eeefe02c9db57a2fd76cd999b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84132412"
+title: " Xamarin.Forms controles de terceiros" Descrição: "controles adicionais para Xamarin.Forms desenvolvimento estão disponíveis de empresas como Telerik, SyncFusion, DevExpress, Infragistics, ComponentOne e Steema."
+MS. Prod: xamarin MS. AssetID: C33A4848-3FC8-4A20-8275-387039F541AD MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/08/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-third-party-controls"></a>Xamarin.FormsControles de terceiros
 
 Além dos controles fornecidos com, os Xamarin.Forms controles de terceiros estão disponíveis nas seguintes empresas:

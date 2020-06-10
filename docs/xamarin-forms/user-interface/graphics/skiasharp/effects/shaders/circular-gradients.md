@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 418d29010a8cce81d2bb8c365608c54b61739622
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135636"
+Título: "a descrição dos gradientes circulares do SkiaSharp": "Saiba mais sobre os diferentes tipos de gradientes com base em círculos".
+MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 400AE23A-6A0B-4FA8-BD6B-DE4146B04732 autor: davidbritch MS. Author: dabritch MS. Date: 08/23/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="the-skiasharp-circular-gradients"></a>Os gradientes circulares do SkiaSharp
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

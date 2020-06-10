@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsMenuItem
-description: ''
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: de8c6bff2c9dc72821692708f5852cd874c31ede
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139198"
+Título: " Xamarin.Forms MENUITEM" Descrição: "a classe MenuItem é usada para criar itens de menu para menus como menus de contexto de item ListView e menus flutuantes de aplicativo Shell".
+MS. Prod: xamarin MS. AssetID: 62655C21-6053-466D-A7F4-DE2BE36538F5 MS. Technology: xamarin-Forms autor: profexorgeek MS. Author: jusjohns MS. Date: 08/01/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-menuitem"></a>Xamarin.FormsMenuItem
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)

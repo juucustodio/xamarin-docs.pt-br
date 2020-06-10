@@ -1,22 +1,8 @@
 ---
-title: Layouts vinculáveis emXamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 9d0497c0c0593b54f69bac84307976c4050e9c95
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138236"
+Título: "layouts vinculáveis em Xamarin.Forms " Descrição: "os layouts vinculáveis permitem que classes de layout gerem seu conteúdo ligando-se a uma coleção de itens, com a opção de definir a aparência de cada item com um DataTemplate."
+MS. Prod: xamarin MS. AssetID: 824C3319-20A0-42D0-8632-CDECD98349C3 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 03/09/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="bindable-layouts-in-xamarinforms"></a>Layouts vinculáveis emXamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)

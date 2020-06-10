@@ -1,9 +1,6 @@
 ---
-Título: ' XAML quente recarregar para Xamarin.Forms ' Descrição: ' recarregar alterações no arquivo XAML instantaneamente em seu aplicativo em execução para que você não precise compilar seu Xamarin.Forms projeto após cada alteração em XAML. '
-MS. Prod: MS. AssetID: MS. Technology: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+Título: "XAML quente recarregar para Xamarin.Forms " Descrição: "recarregar alterações no arquivo XAML instantaneamente em seu aplicativo em execução para que você não precise compilar seu Xamarin.Forms projeto após cada alteração em XAML."
+MS. Prod: xamarin MS. AssetID: E220F054-32EE-424C-A7E5-6156BE271519 MS. Technology: xamarin-Forms autor: maddyleger1 MS. Author: maleger MS. Date: 03/14/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xaml-hot-reload-for-xamarinforms"></a>Hot recarregamento de XAML paraXamarin.Forms
@@ -18,54 +15,10 @@ Os Hot recarregamento de XAML são conectados ao fluxo de trabalho existente par
 ## <a name="system-requirements"></a>Requisitos do sistema
 
 | IDE/estrutura | Versão necessária |
-|---
-Título: ' XAML quente recarregar para Xamarin.Forms ' Descrição: ' recarregar alterações no arquivo XAML instantaneamente em seu aplicativo em execução para que você não precise compilar seu Xamarin.Forms projeto após cada alteração em XAML. '
-MS. Prod: MS. AssetID: MS. Technology: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
----|---Título: ' XAML quente recarregar para Xamarin.Forms ' Descrição: ' recarregar as alterações no arquivo XAML instantaneamente em seu aplicativo em execução para que você não precise compilar seu Xamarin.Forms projeto após cada alteração em XAML. '
-MS. Prod: MS. AssetID: MS. Technology: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: ' XAML quente recarregar para Xamarin.Forms ' Descrição: ' recarregar alterações no arquivo XAML instantaneamente em seu aplicativo em execução para que você não precise compilar seu Xamarin.Forms projeto após cada alteração em XAML. '
-MS. Prod: MS. AssetID: MS. Technology: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: ' XAML quente recarregar para Xamarin.Forms ' Descrição: ' recarregar alterações no arquivo XAML instantaneamente em seu aplicativo em execução para que você não precise compilar seu Xamarin.Forms projeto após cada alteração em XAML. '
-MS. Prod: MS. AssetID: MS. Technology: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: ' XAML quente recarregar para Xamarin.Forms ' Descrição: ' recarregar alterações no arquivo XAML instantaneamente em seu aplicativo em execução para que você não precise compilar seu Xamarin.Forms projeto após cada alteração em XAML. '
-MS. Prod: MS. AssetID: MS. Technology: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: ' XAML quente recarregar para Xamarin.Forms ' Descrição: ' recarregar alterações no arquivo XAML instantaneamente em seu aplicativo em execução para que você não precise compilar seu Xamarin.Forms projeto após cada alteração em XAML. '
-MS. Prod: MS. AssetID: MS. Technology: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: ' XAML quente recarregar para Xamarin.Forms ' Descrição: ' recarregar alterações no arquivo XAML instantaneamente em seu aplicativo em execução para que você não precise compilar seu Xamarin.Forms projeto após cada alteração em XAML. '
-MS. Prod: MS. AssetID: MS. Technology: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: ' XAML quente recarregar para Xamarin.Forms ' Descrição: ' recarregar alterações no arquivo XAML instantaneamente em seu aplicativo em execução para que você não precise compilar seu Xamarin.Forms projeto após cada alteração em XAML. '
-MS. Prod: MS. AssetID: MS. Technology: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
----------| | Visual Studio 2019 | 16,4 ou superior Visual Studio 2019 para Mac | 8,4 ou superior Xamarin.Forms | 4,1 ou superior
+|------|------------------|
+|Visual Studio 2019 | 16,4 ou superior
+Visual Studio 2019 para Mac | 8,4 ou superior
+Xamarin.Forms | 4,1 ou superior
 
 ## <a name="enable-xaml-hot-reload-for-xamarinforms"></a>Habilitar o Hot recarregamento de XAML paraXamarin.Forms
 

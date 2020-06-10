@@ -1,22 +1,8 @@
 ---
-title: ''
-description: O API de Detecção Facial usa uma expressão facial em uma imagem como uma entrada e retorna dados que incluem níveis de confiança em um conjunto de emoções para cada face na imagem. Este artigo explica como usar o API de Detecção Facial para reconhecer emoções, para classificar um Xamarin.Forms aplicativo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: ff384605b35f6406b628da99de500b550da811c9
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136052"
+Título: "reconhecimento de emoções percebido usando a API de Detecção Facial" Descrição: "o API de Detecção Facial usa uma expressão facial em uma imagem como uma entrada e retorna dados que incluem níveis de confiança em um conjunto de emoções para cada face na imagem. Este artigo explica como usar o API de Detecção Facial para reconhecer emoções, para classificar um Xamarin.Forms aplicativo. "
+MS. Prod: xamarin MS. AssetID: 19D36A7C-E8D8-43D1-BE80-48DE6C02879A MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="perceived-emotion-recognition-using-the-face-api"></a>Reconhecimento de emoções percebido usando o API de Detecção Facial
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

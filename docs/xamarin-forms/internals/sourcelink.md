@@ -1,23 +1,8 @@
 ---
-title: Link de origem comXamarin.Forms
-description: Este artigo explica como usar o link de origem para depurar o Xamarin.Forms .
-zone_pivot_groups: ''
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 57db314538c42ef9d58691ba16ab68371ff092b7
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138279"
+Título: "link de origem com Xamarin.Forms " Descrição: "Este artigo explica como usar o link de origem para depurar Xamarin.Forms ."
+zone_pivot_groups: "plataforma" MS. Prod: xamarin MS. AssetID: 1E13FCD9-5607-46E8-80E4-87A58B389BEB MS. Technology: xamarin-Forms autor: profexorgeek MS. Author: jusjohns MS. Date: 09/26/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="source-link-with-xamarinforms"></a>Link de origem comXamarin.Forms
 
 Xamarin.FormsOs pacotes NuGet incluem mapeamentos de link de origem. O link de origem mapeia as bibliotecas compiladas, contidas em um pacote NuGet, para um repositório de código-fonte. O Visual Studio baixará os arquivos de código-fonte durante a depuração e permitirá que os desenvolvedores percorram o código, habilitando a depuração de pacotes sem compilar da origem.
