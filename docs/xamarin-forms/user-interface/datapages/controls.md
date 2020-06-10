@@ -33,7 +33,7 @@ Os exemplos a seguir incluem `DynamicResource` referências que precisam existir
 
 O `HeroImage` controle tem quatro propriedades:
 
-* Texto
+* Text
 * Detalhe
 * ImageSource
 * Aspecto
@@ -92,7 +92,7 @@ O objetivo desse controle personalizado `CardView` é se assemelhar ao Android C
 
 Ele conterá três propriedades:
 
-* Texto
+* Text
 * Detalhe
 * ImageSource
 
