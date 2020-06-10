@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: cf03d0c32d80d7a1821e323acdc84a351413efec
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138873"
+Título: "passando parâmetros de efeito como propriedades anexadas" Descrição: "Propriedades anexadas podem ser usadas para definir parâmetros de efeito que respondem às alterações de propriedade de tempo de execução. Este artigo demonstra como usar propriedades anexadas para passar parâmetros para um efeito e alterar um parâmetro em tempo de execução. "
+MS. Prod: xamarin MS. AssetID: DFCDCB9F-17DD-4117-BD53-B4FB206BB387 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/05/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="passing-effect-parameters-as-attached-properties"></a>Passando parâmetros de efeito como propriedades anexadas
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)

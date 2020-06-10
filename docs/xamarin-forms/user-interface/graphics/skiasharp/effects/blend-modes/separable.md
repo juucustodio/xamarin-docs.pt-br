@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c1939c30cbefdbf8d6546761a8c6ac7199bfff62
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139679"
+title: "separáveis Blend Modes" Description: "Use the separáveis Blend Modes to ALTER Red, Green e Blue Colors".
+MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 66D1A537-A247-484E-B5B9-FBCB7838FBE9 autor: davidbritch MS. Author: dabritch MS. Date: 08/23/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="the-separable-blend-modes"></a>Os modos de mesclagem separáveis
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -151,45 +137,20 @@ Os componentes vermelho, verde e azul são tratados separadamente, motivo pelo q
 A tabela a seguir mostra todos os modos de combinação de separáveis com explicações breves sobre o que eles fazem. A segunda coluna mostra a cor de origem que não produz nenhuma alteração:
 
 | Modo de mesclagem   | Nenhuma alteração | Operação |
-| ---
-Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------- | ---Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------ | ---Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------ | | `Plus`       | Preto | Clareia adicionando cores: SC + DC | | `Modulate`   | Branco | Escurece multiplicando as cores: SC · DC | | `Screen`     | Preto | Complementa o produto de Complementos: SC + DC &ndash; SC · DC | | `Overlay`    | Cinza | Inverso de `HardLight` | | `Darken`     | Branco | Mínimo de cores: mín. (SC, DC) | | `Lighten`    | Preto | Máximo de cores: máx. (SC, DC) | | `ColorDodge` | Preto | Claree o destino com base na origem | | `ColorBurn`  | Branco | Escurece o destino com base na origem | | `HardLight`  | Cinza | Semelhante ao efeito de refletor de destaque "| | `SoftLight`  | Cinza | Semelhante ao efeito do Spotlight reversível | | `Difference` | Preto | Subtrai o mais escuro do mais claro: ABS (DC &ndash; SC) | | `Exclusion`  | Preto | Semelhante a `Difference` mas menor contraste | | `Multiply`   | Branco | Escurece multiplicando as cores: SC · DC |
+| ------------ | --------- | --------- |
+| `Plus`       | Preto     | Clareia adicionando cores: SC + DC |
+| `Modulate`   | Branco     | Escurece multiplicando as cores: SC · Origem | 
+| `Screen`     | Preto     | Complementa o produto de Complementos: SC + DC &ndash; SC · Origem |
+| `Overlay`    | Cinza      | Inverso de`HardLight` |
+| `Darken`     | Branco     | Mínimo de cores: mín. (SC, DC) |
+| `Lighten`    | Preto     | Máximo de cores: máx. (SC, DC) |
+| `ColorDodge` | Preto     | Claree o destino com base na origem |
+| `ColorBurn`  | Branco     | Escurece o destino com base na origem | 
+| `HardLight`  | Cinza      | Semelhante ao efeito de refletor de destaque |
+| `SoftLight`  | Cinza      | Semelhante ao efeito de destaque suave | 
+| `Difference` | Preto     | Subtrai o mais escuro do mais claro: ABS (DC &ndash; SC) | 
+| `Exclusion`  | Preto     | Semelhante a `Difference` mas menor contraste |
+| `Multiply`   | Branco     | Escurece multiplicando as cores: SC · Origem |
 
 Algoritmos mais detalhados podem ser encontrados na especificação W3C de [**composição e mesclagem de nível 1**](https://www.w3.org/TR/compositing-1/) e na referência de skia [**SkBlendMode**](https://skia.org/user/api/SkBlendMode_Reference), embora a notação nessas duas fontes não seja a mesma. Tenha em mente que `Plus` normalmente é considerado um modo de mesclagem carregador-Duff e `Modulate` não faz parte da especificação W3C.
 

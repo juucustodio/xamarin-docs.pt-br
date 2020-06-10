@@ -1,26 +1,10 @@
 ---
-title: ''
-description: Xamarin.FormsAgora tem suporte de visualização para a plataforma WPF
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-ms.custom: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: bbb9ea950c9f1daa1b5ee4762527d689f3cdd483
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139523"
+Título: "configuração da plataforma WPF" Descrição: " Xamarin.Forms agora tem suporte de visualização para a plataforma WPF" MS. Prod: xamarin MS. AssetID: 650723F2-4279-4B7B-B0A1-D7F8FF26BF1E MS. Technology: xamarin-Forms MS. Custom: xamu-vídeo Author: davidbritch MS. Author: dabritch MS. Date: 04/09/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="wpf-platform-setup"></a>Configuração da plataforma WPF
 
-![Versão Prévia](~/media/shared/preview.png)
+![Visualização](~/media/shared/preview.png)
 
 Xamarin.FormsAgora tem suporte de visualização para o Windows Presentation Foundation (WPF). Este artigo demonstra como adicionar um projeto do WPF a uma Xamarin.Forms solução.
 

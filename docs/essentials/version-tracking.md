@@ -1,9 +1,6 @@
 ---
-Título: ' ' Xamarin.Essentials : controle de versão ' ' Descrição: ' a classe VersionTracking no Xamarin.Essentials permite que você verifique a versão dos aplicativos e os números de compilação juntamente com a exibição de informações adicionais, como se fosse a primeira vez que o aplicativo foi iniciado sempre ou para a versão atual, obtenha as informações de compilação anteriores e muito mais. '
-MS. AssetID: autor: MS. Author: MS. Data: MS. Custom: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+Título: " Xamarin.Essentials : controle de versão" Descrição: "a classe VersionTracking no Xamarin.Essentials permite que você verifique a versão dos aplicativos e os números de compilação juntamente com a exibição de informações adicionais, como se fosse a primeira vez que o aplicativo foi iniciado ou para a versão atual, obtenha as informações de compilação anteriores e muito mais."
+MS. AssetID: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3 autor: jamesmontemagno MS. Author: Jamont MS. Data: 05/28/2019 MS. Custom: vídeo no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials: Acompanhamento de versão

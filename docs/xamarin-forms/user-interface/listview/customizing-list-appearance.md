@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Este artigo explica como personalizar ListViews em Xamarin.Forms aplicativos usando cabeçalhos, rodapés, grupos e células de altura variável.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c7fdecdb0ce209c88dbe9e6f4e6e6588ec4fd3fd
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139913"
+Título: "aparência de ListView" Descrição: "Este artigo explica como personalizar ListViews em Xamarin.Forms aplicativos usando cabeçalhos, rodapés, grupos e células de altura variável".
+MS. Prod: xamarin MS. AssetID: DC8009B0-4371-4D60-885A-5362FC7EE3E5 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/13/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="listview-appearance"></a>Aparência de ListView
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
