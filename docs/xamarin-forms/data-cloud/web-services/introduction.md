@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsIntrodução aos serviços Web
-description: Este guia fornece uma explicação do Xamarin.Forms exemplo de aplicativo que demonstra como se comunicar com diferentes serviços Web. Embora cada serviço Web Use um aplicativo de exemplo separado, eles são funcionalmente semelhantes e compartilham classes comuns.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: d714b4c9d598d8cca26ae992abf3f15df703d11b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139172"
+Título: " Xamarin.Forms introdução aos serviços Web": "este guia fornece uma explicação do Xamarin.Forms aplicativo de exemplo que demonstra como se comunicar com diferentes serviços Web. Embora cada serviço Web Use um aplicativo de exemplo separado, eles são funcionalmente semelhantes e compartilham classes comuns. "
+MS. Prod: xamarin MS. AssetID: A3FEB262-0D79-42E6-8F8B-A565618C490B MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 02/28/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-web-services-introduction"></a>Xamarin.FormsIntrodução aos serviços Web
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)

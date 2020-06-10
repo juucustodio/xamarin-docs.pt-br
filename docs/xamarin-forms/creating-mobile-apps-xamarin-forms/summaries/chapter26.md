@@ -1,23 +1,7 @@
 ---
-title: ''
-description: ''
-Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 26. Custom layouts''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: deb46d1a70e7c707c998be8669b4af3b8e8d7ead
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136598"
+Título: "Resumo do capítulo 26. Layouts personalizados "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 26. Layouts personalizados "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: 2B7F4346-414E-49FF-97FB-B85E92D98A21 autor: davidbritch MS. Author: dabritch MS. Date: 11/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="summary-of-chapter-26-custom-layouts"></a>Resumo do capítulo 26. Layouts personalizados
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26)
@@ -26,7 +10,7 @@ Xamarin.Formsinclui várias classes derivadas de [`Layout<View>`](xref:Xamarin.F
 
 - `StackLayout`,
 - `Grid`,
-- `AbsoluteLayout` e 
+- `AbsoluteLayout`e
 - `RelativeLayout`.
 
 Este capítulo descreve como criar suas próprias classes que derivam de `Layout<View>` .

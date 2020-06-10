@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsRolagem de CollectionView
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 04d190971fa5ef16e08091600558f7f016bc8605
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134505"
+Título: " Xamarin.Forms rolagem de CollectionView" Descrição: "quando um usuário passa o dedo para iniciar uma rolagem, a posição final da rolagem pode ser controlada para que os itens sejam totalmente exibidos. Além disso, CollectionView define dois métodos roleto, que rolam programaticamente os itens para a exibição. "
+MS. Prod: xamarin MS. AssetID: 2ED719AF-33D2-434D-949A-B70B479C9BA5 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 09/17/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-collectionview-scrolling"></a>Xamarin.FormsRolagem de CollectionView
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
@@ -137,7 +123,7 @@ Este código de exemplo resulta na rolagem mínima necessária para rolar o item
 > [!NOTE]
 > O [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) membro será usado por padrão, se o `position` argumento não for especificado ao chamar o `ScrollTo` método.
 
-### <a name="start"></a>Iniciar
+### <a name="start"></a>Inicie o
 
 O [`ScrollToPosition.Start`](xref:Xamarin.Forms.ScrollToPosition) membro indica que o item deve ser rolado até o início da exibição:
 
@@ -237,7 +223,7 @@ A [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) enumeração d
 > [!IMPORTANT]
 > O valor da [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) propriedade é respeitado somente quando a [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) propriedade é definida como `Mandatory` , ou `MandatorySingle` .
 
-#### <a name="start"></a>Iniciar
+#### <a name="start"></a>Inicie o
 
 O `SnapPointsAlignment.Start` membro indica que os pontos de ajuste estão alinhados com a borda à esquerda dos itens.
 

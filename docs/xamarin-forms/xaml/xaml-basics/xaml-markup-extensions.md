@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 3fcea963b253ea34601a36434007f18d925975eb
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131333"
+Título: "parte 3. Extensões de marcação XAML "Descrição:" as extensões de marcação XAML constituem um recurso importante em XAML que permite que as propriedades sejam definidas para objetos ou valores que são referenciados indiretamente de outras fontes. "
+MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: F4A37564-B18B-42FF-B841-9A1949895AB6 autor: davidbritch MS. Author: dabritch MS. Date: 03/27/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensões de marcação do XAML
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

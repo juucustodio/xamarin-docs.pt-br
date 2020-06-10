@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a1e6290c0f85b54c3fd8958bc43667714bdece20
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131047"
+Título: "carregador-Duff modos de mesclagem" Descrição: "Use os modos de combinação carregador-Duff para compor cenas com base nas imagens de origem e de destino."
+MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 57F172F8-BA03-43EC-A215-ED6B78696BB5 autor: davidbritch MS. Author: dabritch MS. Date: 08/23/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="porter-duff-blend-modes"></a>Modos de mesclagem carregador-Duff
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -71,60 +57,22 @@ Skia adiciona um modo 14 chamado `Modulate` que é muito semelhante a `Plus` , e
 
 Aqui estão os 14 modos carregador Duff, conforme definido em SkiaSharp. A tabela mostra como elas colorem cada uma das três áreas que não estão em branco no diagrama acima:
 
-| Modo       | Destino | Interseção | Fonte |
-| ---
-Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------|:---Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
-------:|:---Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
-------:|:---Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
----:| | `Clear`    |             |              |        | | `Src`      |             | Origem | X | | `Dst`      | X | Destino |        | | `SrcOver`  | X | Origem | X | | `DstOver`  | X | Destino | X | | `SrcIn`    |             | Origem |        | | `DstIn`    |             | Destino |        | | `SrcOut`   |             |              | X | | `DstOut`   | X |              |        | | `SrcATop`  | X | Origem |        | | `DstATop`  |             | Destino | X | | `Xor`      | X |              | X | | `Plus`     | X | Soma | X | | `Modulate` |             | Produto |        | 
+| Mode       | Destino | Interseção | Fonte |
+| ---------- |:-----------:|:------------:|:------:|
+| `Clear`    |             |              |        |
+| `Src`      |             | Fonte       | X      |
+| `Dst`      | X           | Destino  |        |
+| `SrcOver`  | X           | Fonte       | X      |
+| `DstOver`  | X           | Destino  | X      |
+| `SrcIn`    |             | Fonte       |        |
+| `DstIn`    |             | Destino  |        |
+| `SrcOut`   |             |              | X      |
+| `DstOut`   | X           |              |        |
+| `SrcATop`  | X           | Fonte       |        |
+| `DstATop`  |             | Destino  | X      |
+| `Xor`      | X           |              | X      |
+| `Plus`     | X           | SUM          | X      |
+| `Modulate` |             | Produto      |        | 
 
 Esses modos de mesclagem são simétricos. A origem e o destino podem ser trocados e todos os modos ainda estão disponíveis.
 
@@ -320,11 +268,11 @@ Pode haver uma tentação de substituir os bitmaps na página de **grade carrega
 
 ## <a name="using-mattes-with-porter-duff"></a>Usando Matts com carregador-Duff
 
-A página de **composição do Brick-Wall** mostra um exemplo de uma tarefa de composição clássica: uma imagem precisa ser montada de várias partes, incluindo um bitmap com um plano de fundo que precisa ser eliminado. Aqui está o bitmap **SeatedMonkey. jpg** com o plano de fundo problemático:
+A página de **composição do Brick-Wall** mostra um exemplo de uma tarefa de composição clássica: uma imagem precisa ser montada de várias partes, incluindo um bitmap com um plano de fundo que precisa ser eliminado. Aqui está o bitmap **SeatedMonkey.jpg** com o plano de fundo problemático:
 
 ![Macaco sentado](porter-duff-images/SeatedMonkey.jpg "Macaco sentado")
 
-Na preparação para a composição, um _fosco_ correspondente foi criado, que é outro bitmap que é preto onde você deseja que a imagem seja exibida e transparente caso contrário. Esse arquivo é denominado **SeatedMonkeyMatte. png** e está entre os recursos na pasta de **mídia** no exemplo de [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
+Na preparação para a composição, um _fosco_ correspondente foi criado, que é outro bitmap que é preto onde você deseja que a imagem seja exibida e transparente caso contrário. Esse arquivo é denominado **SeatedMonkeyMatte.png** e está entre os recursos na pasta de **mídia** no exemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
 
 ![Macaco encaixado fosco](porter-duff-images/SeatedMonkeyMatte.png "Macaco encaixado fosco")
 
@@ -406,7 +354,7 @@ Quando o programa é executado pela primeira vez, nada é visível, exceto `Butt
 
 [![Etapa 0 da composição de mural de tijolo](porter-duff-images/BrickWallCompositing0.png "Etapa 0 da composição de mural de tijolo")](porter-duff-images/BrickWallCompositing0-Large.png#lightbox)
 
-Pressionar as `Button` causas a `step` serem incrementadas para 1 e o `PaintSurface` manipulador agora exibe **SeatedMonkey. jpg**:
+Pressionar as `Button` causas a serem `step` incrementadas para 1 e o `PaintSurface` manipulador agora exibe **SeatedMonkey.jpg**:
 
 ```csharp
 public partial class BrickWallCompositingPage : ContentPage
@@ -432,7 +380,7 @@ Não há nenhum `SKPaint` objeto e, portanto, não há nenhum modo de mesclagem.
 
 [![Etapa 1 da composição de parede de Brick](porter-duff-images/BrickWallCompositing1.png "Etapa 1 da composição de parede de Brick")](porter-duff-images/BrickWallCompositing1-Large.png#lightbox)
 
-Pressione a `Button` novamente e `step` incrementa para 2. Essa é a etapa crucial de exibir o arquivo **SeatedMonkeyMatte. png** :
+Pressione a `Button` novamente e `step` incrementa para 2. Esta é a etapa crucial de exibir o arquivo de **SeatedMonkeyMatte.png** :
 
 ```csharp
 public partial class BrickWallCompositingPage : ContentPage
@@ -550,32 +498,22 @@ As cores RGB são previamente multiplicadas pelo valor alfa. Por exemplo, se **S
 
 O resultado é mostrado entre colchetes com o canal alfa e a cor RGB, separados por uma vírgula: **[alfa, cor]**. Para a cor, o cálculo é executado separadamente para os componentes vermelho, verde e azul:
 
-| Modo       | Operação |
-| ---
-Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------ | ---Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
--
-Título: Descrição: MS. Prod: MS. Technology: MS. AssetID: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
------ | | `Clear`    | [0, 0] | | `Src`      | [SA, SC] | | `Dst`      | [Da, DC] | | `SrcOver`  | [SA + da · (1 – SA), SC + DC · (1 – SA) | | `DstOver`  | [Da + SA · (1 – da), DC + SC · (1 – da) | | `SrcIn`    | Administrador Da, SC · Da] | | `DstIn`    | Auditoria SA, DC · SA] | | `SrcOut`   | Administrador (1 – da), SC · (1 – da)] | | `DstOut`   | Auditoria (1 – SA), DC · (1 – SA)] | | `SrcATop`  | [Da, SC · Da + DC · (1 – SA)] | | `DstATop`  | [SA, DC · SA + SC · (1 – da)] | | `Xor`      | [SA + da – 2 · Administrador Da, SC · (1 – da) + DC · (1 – SA)] | | `Plus`     | [SA + da, SC + DC] | | `Modulate` | Administrador Da, SC · DC] | 
+| Mode       | Operação |
+| ---------- | --------- |
+| `Clear`    | [0, 0]    |
+| `Src`      | [SA, SC]  |
+| `Dst`      | [Da, DC]  |
+| `SrcOver`  | [SA + da · (1 – SA), SC + DC · (1 – SA) | 
+| `DstOver`  | [Da + SA · (1 – da), DC + SC · (1 – da) |
+| `SrcIn`    | Administrador Da, SC · Auditoria |
+| `DstIn`    | Auditoria SA, DC · Administrador |
+| `SrcOut`   | Administrador (1 – da), SC · (1 – da)] |
+| `DstOut`   | Auditoria (1 – SA), DC · (1 – SA)] |
+| `SrcATop`  | [Da, SC · Da + DC · (1 – SA)] |
+| `DstATop`  | [SA, DC · SA + SC · (1 – da)] |
+| `Xor`      | [SA + da – 2 · Administrador Da, SC · (1 – da) + DC · (1 – SA)] |
+| `Plus`     | [SA + da, SC + DC] |
+| `Modulate` | Administrador Da, SC · Origem | 
 
 Essas operações são mais fáceis de analisar quando o **da** e **SA** são 0 ou 1. Por exemplo, para o `SrcOver` modo padrão, se **SA** for 0, **SC** também será 0 e o resultado será **[da, DC]**, o alfa de destino e a cor. Se o **SA** for 1, o resultado será **[SA, SC]**, a fonte alfa e a cor, ou **[1, SC]**.
 

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Este artigo explica como implementar uma barra de posição personalizada em um aplicativo de player de vídeo, usando o Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 97d32a03ee10e2f3b0a7442d1d70dab9236059b4
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84135077"
+Título: "posicionamento de vídeo personalizado" Descrição: "Este artigo explica como implementar uma barra de posição personalizada em um aplicativo de player de vídeo, usando Xamarin.Forms ".
+MS. Prod: xamarin MS. AssetID: 6D792264-30FF-46F7-8C1B-2FEF9D277DF4 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 02/12/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="custom-video-positioning"></a>Posicionamento de vídeo personalizado
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsGrade
-description: A Xamarin.Forms grade é um layout que organiza seus filhos em linhas e colunas de células.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: c4e63d6c1701d9eb247ecb7c52188e5dbc045934
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138067"
+Título: Descrição de " Xamarin.Forms grade": "a Xamarin.Forms grade é um layout que organiza seus filhos em linhas e colunas de células".
+MS. Prod: xamarin MS. AssetID: 762B1802-D185-494C-B643-74EED55882FE MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/15/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-grid"></a>Xamarin.FormsGrade
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)

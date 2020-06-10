@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 64529b81a375ee5a8cc8a96ec557c03401e60495
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130566"
+Título: "autenticar usuários com Azure Active Directory B2C" Descrição: "Azure Active Directory B2C fornece gerenciamento de identidade de nuvem para aplicativos móveis e Web voltados para o consumidor. Este artigo mostra como usar Azure Active Directory B2C para integrar o gerenciamento de identidades em um aplicativo móvel com a biblioteca de autenticação da Microsoft. "
+MS. Prod: xamarin MS. AssetID: B0A5DB65-0585-4A00-B908-22CCC286E6B6 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/04/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Autenticar usuários com o Azure Active Directory B2C
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
@@ -70,7 +56,7 @@ A biblioteca de autenticação da Microsoft espera que a **URL de redirecionamen
 
 ![URI de redirecionamento personalizado na exibição de propriedades do aplicativo do Azure](azure-ad-b2c-images/azure-redirect-uri.png)
 
-A URL será usada posteriormente no Android **ApplicationManifest. xml** e no Ios **info. plist**.
+A URL será usada posteriormente no Android **ApplicationManifest.xml** e no Ios **info. plist**.
 
 No projeto de exemplo, edite o arquivo **Constants.cs** para definir o `clientId` campo para a ID do **aplicativo**. O código a seguir mostra como esse valor deve ser definido se a ID do aplicativo for `1234abcd` :
 
@@ -286,7 +272,7 @@ namespace TodoAzure.iOS
 
 ### <a name="android"></a>Android
 
-No Android, o esquema de URL personalizado que foi registrado com Azure Active Directory B2C deve ser registrado no **AndroidManifest. xml**. MSAL espera que o esquema de URL obedeça a um padrão específico, descrito anteriormente em [registrar seu aplicativo móvel com Azure Active Directory B2C](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). O exemplo a seguir mostra o esquema de URL personalizado no **AndroidManifest. xml**.
+No Android, o esquema de URL personalizado que foi registrado com Azure Active Directory B2C deve ser registrado no **AndroidManifest.xml**. MSAL espera que o esquema de URL obedeça a um padrão específico, descrito anteriormente em [registrar seu aplicativo móvel com Azure Active Directory B2C](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). O exemplo a seguir mostra o esquema de URL personalizado no **AndroidManifest.xml**.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -307,7 +293,7 @@ No Android, o esquema de URL personalizado que foi registrado com Azure Active D
 </manifest>
 ```
 
-A `MainActivity` classe deve ser modificada para fornecer o `UIParent` objeto ao aplicativo durante a `OnCreate` chamada. Quando Azure Active Directory B2C conclui a solicitação de autorização, ela redireciona para o esquema de URL registrado do **AndroidManifest. xml**. O esquema de URI registrado resulta no Android chamando o `OnActivityResult` método com a URL como um parâmetro de inicialização, onde ele é processado pelo `SetAuthenticationContinuationEventArgs` método.
+A `MainActivity` classe deve ser modificada para fornecer o `UIParent` objeto ao aplicativo durante a `OnCreate` chamada. Quando Azure Active Directory B2C conclui a solicitação de autorização, ela redireciona para o esquema de URL registrado do **AndroidManifest.xml**. O esquema de URI registrado resulta no Android chamando o `OnActivityResult` método com a URL como um parâmetro de inicialização, onde ele é processado pelo `SetAuthenticationContinuationEventArgs` método.
 
 ```csharp
 public class MainActivity : FormsAppCompatActivity

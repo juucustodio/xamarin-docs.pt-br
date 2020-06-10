@@ -1,9 +1,6 @@
 ---
-Título: ' ' Xamarin.Essentials : Descrição de conversão de texto em fala: ' a classe TextToSpeech no Xamarin.Essentials habilita um aplicativo a utilizar os mecanismos internos de conversão de texto em fala para falar sobre o texto do dispositivo e também para consultar os idiomas disponíveis aos quais o mecanismo pode dar suporte. '
-MS. AssetID: autor: MS. Custom: MS. autor: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+Título: " Xamarin.Essentials : conversão de texto em fala": "a classe TextToSpeech no Xamarin.Essentials habilita um aplicativo a utilizar os mecanismos internos de conversão de texto em fala para falar sobre o texto do dispositivo e também para consultar os idiomas disponíveis para os quais o mecanismo pode dar suporte."
+MS. AssetID: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351 autor: jamesmontemagno MS. Custom: vídeo MS. Author: Jamont MS. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Conversão de texto em fala

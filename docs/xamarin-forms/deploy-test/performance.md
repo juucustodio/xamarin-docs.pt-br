@@ -1,22 +1,8 @@
 ---
-title: Melhorar o Xamarin.Forms desempenho do aplicativo
-description: Há muitas técnicas para aumentar o desempenho dos Xamarin.Forms aplicativos. Coletivamente, essas técnicas podem reduzir de forma considerável a quantidade de trabalho que está sendo executado por uma CPU e a quantidade de memória consumida por um aplicativo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 96b5939fd1f8448d45d1398fd56770f9032de083
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139107"
+Título: "melhorar Xamarin.Forms o desempenho do aplicativo" Descrição: "há muitas técnicas para aumentar o desempenho dos Xamarin.Forms aplicativos. Coletivamente, essas técnicas podem reduzir muito a quantidade de trabalho que está sendo executado por uma CPU e a quantidade de memória consumida por um aplicativo. "
+MS. Prod: xamarin MS. AssetID: 0be84c56-6698-448d-be5a-b4205f1caa9f MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 11/27/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="improve-xamarinforms-app-performance"></a>Melhorar o Xamarin.Forms desempenho do aplicativo
 
 > [!VIDEO https://youtube.com/embed/RZvdql3Ev0E]
@@ -340,7 +326,7 @@ Para obter mais informações sobre renderizadores personalizados, consulte [Com
 - [Compilando XAML](~/xamarin-forms/xaml/xamlc.md)
 - [Associações compiladas](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)
 - [Renderizadores Rápidos](~/xamarin-forms/internals/fast-renderers.md)
-- [Compactação de layout](~/xamarin-forms/user-interface/layouts/layout-compression.md)
+- [Compactação de Layout](~/xamarin-forms/user-interface/layouts/layout-compression.md)
 - [Xamarin.FormsShell](~/xamarin-forms/app-fundamentals/shell/index.md)
 - [Xamarin.FormsCollectionView](~/xamarin-forms/user-interface/collectionview/index.md)
 - [Desempenho de ListView](~/xamarin-forms/user-interface/listview/performance.md)

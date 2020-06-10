@@ -1,9 +1,6 @@
 ---
-Título: ' resolução de dependência em Xamarin.Forms ' Descrição: ' Este artigo explica como injetar um método de resolução Xamarin.Forms de dependência no para que o contêiner de injeção de dependência de um aplicativo tenha controle sobre a criação e o tempo de vida de renderizadores personalizados, efeitos e implementações de DependencyService. '
-MS. Prod: MS. AssetID: MS. Technology: autor: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+Título: "resolução de dependência em Xamarin.Forms " Descrição: "Este artigo explica como injetar um método de resolução Xamarin.Forms de dependência no para que o contêiner de injeção de dependência de um aplicativo tenha controle sobre a criação e o tempo de vida de renderizadores personalizados, efeitos e implementações de DependencyService."
+MS. Prod: xamarin MS. AssetID: 491B87DC-14CB-4ADC-AC6C-40A7627B2524 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 07/27/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="dependency-resolution-in-xamarinforms"></a>Resolução de dependência emXamarin.Forms

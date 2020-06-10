@@ -1,24 +1,8 @@
 ---
-title: ''
-description: ''
-Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 16. Data binding''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: ece93730100001e8339a5f50cdb7ac437d96fa62
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136728"
+Título: "Resumo do capítulo 16. Vinculação de dados "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 16. Vinculação de dados "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: ED997DB0-C229-4868-A5FB-928703B377D6 autor: davidbritch MS. Author: dabritch MS. Date: 07/18/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
-# <a name="summary-of-chapter-16-data-binding"></a>Resumo do capítulo 16. Vinculação de dados
+
+# <a name="summary-of-chapter-16-data-binding"></a>Resumo do capítulo 16. Associação de dados
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16)
 

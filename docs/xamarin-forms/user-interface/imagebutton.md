@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsImageButton
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 7d81c0ce4dc2a46a840a34cc9084c8f2388a0169
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137638"
+Título: " Xamarin.Forms ImageButton" Descrição: "o ImageButton exibe uma imagem e responde a um toque ou clique que direciona um aplicativo para executar uma tarefa específica".
+MS. Prod: xamarin MS. AssetID: B5906AB6-3F79-4FCB-8C78-1F0AF18AB39E MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/04/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-imagebutton"></a>Xamarin.FormsImageButton
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)

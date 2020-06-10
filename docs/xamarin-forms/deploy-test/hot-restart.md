@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 45b7d0d20c43aa22ebde3a17552f10ceea77a48b
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139133"
+Título: "Xamarin Hot restart" Descrição: "este documento descreve como configurar e usar o Xamarin Hot restart para depurar um aplicativo iOS".
+MS. Prod: xamarin MS. AssetID: 6BC62A88-9368-41BB-8494-760F2A4805DB MS. Technology: xamarin-Forms autor: maddyleger1 MS. Author: maleger MS. Date: 03/16/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarin-hot-restart-preview"></a>Xamarin Hot Restart (versão prévia)
 
 ![Versão prévia do recurso](~/media/shared/preview.png)
@@ -48,7 +34,7 @@ O Xamarin Hot Restart permite que você teste rapidamente as alterações em seu
 
 3. Se o iTunes não estiver instalado, clique em **Baixar iTunes** para baixar o instalador. Clique em **Avançar** quando a instalação do iTunes for concluída.
 
-4. Conecte um dispositivo iOS a seu computador. Se um dispositivo já estava conectado, desconecte-o e, em seguida, reconecte-o. O nome do dispositivo aparecerá no assistente assim que for detectado. Clique em **Avançar**.
+4. Conecte um dispositivo iOS a seu computador. Se um dispositivo já estava conectado, desconecte-o e, em seguida, reconecte-o. O nome do dispositivo aparecerá no assistente assim que for detectado. Clique em **Próximo**.
 
 5. Insira suas credenciais de conta de Desenvolvedor da Apple e clique em **Avançar**.
 

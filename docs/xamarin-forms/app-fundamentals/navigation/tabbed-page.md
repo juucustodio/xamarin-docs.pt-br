@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsTabbedPage
-description: O Xamarin.Forms TabbedPage consiste em uma lista de guias e uma área de detalhes maior, com cada guia carregando conteúdo na área de detalhes. Este artigo demonstra como usar uma TabbedPage para navegar por uma coleção de páginas.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 38389867ba52e63d8310e3b59d7838f58e8cf488
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137508"
+Título: " Xamarin.Forms TabbedPage" Descrição: "o Xamarin.Forms TabbedPage consiste em uma lista de guias e uma área de detalhes maior, com cada guia carregando conteúdo na área de detalhes. Este artigo demonstra como usar um TabbedPage para navegar por uma coleção de páginas. "
+MS. Prod: xamarin MS. AssetID: C946057F-C77C-412D-82A0-DAF475A24EF5 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 11/07/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-tabbedpage"></a>Xamarin.FormsTabbedPage
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)

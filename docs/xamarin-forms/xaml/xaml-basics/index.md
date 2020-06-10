@@ -1,23 +1,8 @@
 ---
-title: Xamarin.FormsNoções básicas do XAML
-description: Este guia explica como começar a usar o XAML de plataforma cruzada para dispositivos móveis. O XAML permite aos desenvolvedores definir interfaces de usuário em Xamarin.Forms aplicativos usando marcação em vez de código.
-ms.prod: ''
-ms.custom: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8f5f69038f7d5cfe7ad46f013acb1519c4e9569f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138613"
+Título: " Xamarin.Forms XAML Basics" Description: "este guia explica como começar a usar o XAML de plataforma cruzada para dispositivos móveis. O XAML permite que os desenvolvedores definam interfaces de usuário em Xamarin.Forms aplicativos usando marcação em vez de código. "
+MS. Prod: xamarin MS. Custom: vídeo MS. AssetID: 67CC2CD6-D10A-4B14-9696-1D3A410EFFBF MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/25/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-xaml-basics"></a>Xamarin.FormsNoções básicas do XAML
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

@@ -1,23 +1,7 @@
 ---
-title: ''
-description: ''
-Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 20. Async and file I/O''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: ad71dc5f5389f1676698a761a138b3f76ffa9fa0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136676"
+Título: "Resumo do capítulo 20. Async e e/s de arquivo "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 20. Async e e/s de arquivo "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: D595862D-64FD-4C0D-B0AD-C1F440564247 autor: davidbritch MS. Author: dabritch MS. Date: 07/18/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Resumo do capítulo 20. E/S assíncrona e de arquivo
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)

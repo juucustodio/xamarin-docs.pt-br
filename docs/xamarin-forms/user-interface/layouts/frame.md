@@ -1,21 +1,6 @@
 ---
-title: Xamarin.FormsQuadro
-description: A Xamarin.Forms classe frame é um layout usado para encapsular uma exibição ou um layout com uma borda que pode ser configurada com cores, sombra e outras opções.
-ms.prod: ''
-ms.assetId: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 42192111befbefda7e0f62b7691a8392c2828818
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137183"
+Título: " Xamarin.Forms quadro" Descrição: "a Xamarin.Forms classe frame é um layout usado para encapsular uma exibição ou um layout com uma borda que pode ser configurada com cores, sombra e outras opções."
+MS. Prod: xamarin MS. AssetID: 4E074714-0928-41C8-A468-B60E23236A8C MS. Technology: xamarin-Forms autor: profexorgeek MS. Author: jusjohns MS. Date: 08/06/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 # <a name="xamarinforms-frame"></a>Xamarin.FormsQuadro
 
@@ -189,7 +174,7 @@ Frame circleImageFrame = new Frame
 };
 ```
 
-A imagem em **áreas de. jpg** deve ser adicionada a cada projeto de plataforma e como isso é feito varia de acordo com a plataforma. Para obter mais informações, consulte [imagens Xamarin.Forms em ](~/xamarin-forms/user-interface/images.md).
+A imagem de **outdoors.jpg** deve ser adicionada a cada projeto de plataforma e como isso é feito varia de acordo com a plataforma. Para obter mais informações, consulte [imagens Xamarin.Forms em ](~/xamarin-forms/user-interface/images.md).
 
 > [!NOTE]
 > Os cantos arredondados têm um comportamento ligeiramente diferente entre as plataformas. O `Image` objeto `Margin` deve ser metade da diferença entre a largura da imagem e a largura do quadro pai e deve ser negativo para centralizar a imagem uniformemente dentro do `Frame` objeto. No entanto, a largura e a altura solicitadas não são garantidas, portanto `Margin` , as `HeightRequest` `WidthRequest` Propriedades e podem precisar ser alteradas com base no tamanho da imagem e em outras opções de layout.

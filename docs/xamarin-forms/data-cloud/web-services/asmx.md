@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Este artigo demonstra como consumir um serviço SOAP do ASMX de um Xamarin.Forms aplicativo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 1f7a0d04d1e7b6abc9931c05c0e46ef49f8ba09c
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138452"
+Título: "consumir uma descrição do serviço Web ASP.NET (ASMX)": "Este artigo demonstra como consumir um serviço de SOAP do ASMX de um Xamarin.Forms aplicativo".
+MS. Prod: xamarin MS. AssetID: D5533964-5528-4D35-9C2B-FAFB632472AC MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/02/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="consume-an-aspnet-web-service-asmx"></a>Consumir um Serviço Web ASP.NET (ASMX)
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)

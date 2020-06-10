@@ -1,22 +1,8 @@
 ---
-title: Xamarin.Formsconceitos avançados & internos
-description: Saiba mais sobre os conceitos avançados e os internos do Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 410aadcb885ed66283eb306cb9aa4c5e764fa8ec
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84139029"
+Título: " Xamarin.Forms conceitos avançados & internos" Descrição: "Saiba mais sobre conceitos avançados e os internos de Xamarin.Forms ".
+MS. Prod: xamarin MS. AssetID: 2273a31c-4022-42ba-befe-0d23ce2ff3b5 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 03/20/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-advanced-concepts--internals"></a>Xamarin.Formsconceitos avançados & internos
 
 _Saiba mais sobre os conceitos avançados e os internos do Xamarin.Forms ._
@@ -37,6 +23,6 @@ Xamarin.Formsos sinalizadores experimentais permitem que a equipe de engenharia 
 
 Saiba mais sobre renderizadores rápidos, que reduzem os custos de inflação e renderização de um Xamarin.Forms controle no Android, nivelando a hierarquia de controle nativo resultante.
 
-## <a name="source-link"></a>[Source Link](sourcelink.md)
+## <a name="source-link"></a>[Link de origem](sourcelink.md)
 
 Saiba como depurar seu aplicativo no Xamarin.Forms código-fonte.

@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Este artigo explica como popular o Xamarin.Forms ListView com dados e como usar a vinculação de dados com um ListView.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 38a895c9064fc012aec35b37eac78bb16ff009a9
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84131502"
+Título: "fontes de dados ListView" Descrição: "Este artigo explica como preencher o Xamarin.Forms ListView com dados e como usar a vinculação de dados com um ListView".
+MS. Prod: xamarin MS. AssetID: B5571660-1E82-4379-95C3-0725288CF5D9 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 03/23/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="listview-data-sources"></a>Fontes de dados ListView
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)

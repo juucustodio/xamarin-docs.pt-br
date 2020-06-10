@@ -1,23 +1,7 @@
 ---
-title: ''
-description: ''
-Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 13. Bitmaps''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 43caf088ad6cb816f049e7862a287c17839c2170
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136767"
+Título: "Resumo do capítulo 13. Bitmaps "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 13. Bitmaps "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: 5D153857-B6B7-4A14-8FB9-067DE198C2C7 autor: davidbritch MS. Author: dabritch MS. Date: 07/18/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="summary-of-chapter-13-bitmaps"></a>Resumo do capítulo 13. Bitmaps
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
@@ -143,11 +127,11 @@ No iOS, esses bitmaps são diferenciados por um sufixo no nome do arquivo:
 
 Um bitmap destinado a ser exibido como um quadrado de uma polegada existirá em três versões:
 
-- MyImage. jpg às 160 pixels quadrados
+- MyImage.jpg a 160 pixels de quadrado
 - MyImage@2x.jpga 320 pixels quadrado
 - MyImage@3x.jpga 480 pixels quadrado
 
-O programa se referiria a esse bitmap como MyImage. jpg, mas a versão apropriada é recuperada em tempo de execução com base na resolução da tela. Quando irrestrito, o bitmap sempre será renderizado em unidades independentes de dispositivo 160.
+O programa se referiria a esse bitmap como MyImage.jpg, mas a versão apropriada é recuperada em tempo de execução com base na resolução da tela. Quando irrestrito, o bitmap sempre será renderizado em unidades independentes de dispositivo 160.
 
 Para o Android, os bitmaps são armazenados em várias subpastas da pasta de **recursos** :
 
@@ -160,18 +144,18 @@ Para o Android, os bitmaps são armazenados em várias subpastas da pasta de **r
 
 Para um bitmap destinado a ser renderizado em uma polegada quadrada, as várias versões do bitmap terão o mesmo nome, mas um tamanho diferente, e serão armazenadas nessas pastas:
 
-- Drawable-ldpi/MyImage. jpg às 120 pixels quadrados
-- Drawable-mdpi/MyImage. jpg às 160 pixels quadrados
-- Drawable-hdpi/MyImage. jpg às 240 pixels quadrados
-- Drawable-xhdpi/MyImage. jpg às 320 pixels quadrados
-- Drawable-xxhdpi/MyImage. jpg às 480 pixels quadrados
-- Drawable-xxxhdpi/MyImage. jpg às 640 pixels quadrados
+- estilododesenho-ldpi/MyImage.jpg a 120 pixels quadrados
+- estilododesenho-mdpi/MyImage.jpg a 160 pixels quadrados
+- estilododesenho-hdpi/MyImage.jpg a 240 pixels quadrados
+- estilododesenho-xhdpi/MyImage.jpg a 320 pixels quadrados
+- estilododesenho-xxhdpi/MyImage.jpg a 480 pixels quadrados
+- estilododesenho-xxxhdpi/MyImage.jpg a 640 pixels quadrados
 
 O bitmap sempre será renderizado em unidades independentes de dispositivo 160. (O Xamarin.Forms modelo de solução padrão inclui apenas as pastas hdpi, xhdpi e xxhdpi.)
 
 O projeto UWP dá suporte a um esquema de nomenclatura de bitmap que consiste em um fator de dimensionamento em pixels por unidade independente de dispositivo como uma porcentagem, por exemplo:
 
-- MyImage. Scale-200. jpg às 320 pixels quadrados
+- MyImage.scale-200.jpg a 320 pixels de quadrado
 
 Apenas algumas porcentagens são válidas. Os programas de exemplo para este livro incluem apenas imagens com sufixos **de escala-200** , mas os Xamarin.Forms modelos de solução atuais incluem **Scale-100**, **dimension-125**, **Scale-150**e **Scale-400**.
 

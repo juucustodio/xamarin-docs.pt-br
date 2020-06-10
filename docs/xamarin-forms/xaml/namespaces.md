@@ -1,22 +1,8 @@
 ---
-title: Namespaces XAML emXamarin.Forms
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 7f35342134767ccdadfab086bfa14f6b610b325d
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84130371"
+Título: "XAML Namespaces in Xamarin.Forms " Descrição: "XAML usa o atributo XML xmlns para declarações de namespace. Este artigo apresenta a sintaxe XAML namespace e demonstra como declarar um namespace XAML para acessar um tipo. "
+MS. Prod: xamarin MS. AssetID: C03B5553-B199-4A19-9F0F-E5BCE1DB268F MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/21/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xaml-namespaces-in-xamarinforms"></a>Namespaces XAML emXamarin.Forms
 
 _O XAML usa o atributo XML xmlns para declarações de namespace. Este artigo apresenta a sintaxe XAML namespace e demonstra como declarar um namespace XAML para acessar um tipo._

@@ -1,23 +1,7 @@
 ---
-title: ''
-description: ''
-Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 15. The interactive interface''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 9bb930c2d0e4b6281b1aa48589ea5245eedc1a60
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136741"
+Título: "Resumo do capítulo 15. A interface interativa "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 15. A interface interativa "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: F54E86F4-1CDA-474E-9B09-242060C2C13D autor: davidbritch MS. Author: dabritch MS. Date: 11/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>Resumo do capítulo 15. A interface interativa
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
@@ -248,6 +232,6 @@ O programa [**SetTimer**](https://github.com/xamarin/xamarin-forms-book-samples/
 - [Capítulo 15 texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch15-Apr2016.pdf)
 - [Capítulo 15 amostras](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
 - [Controle deslizante](~/xamarin-forms/user-interface/slider.md)
-- [Inicial](~/xamarin-forms/user-interface/text/entry.md)
+- [Entrada](~/xamarin-forms/user-interface/text/entry.md)
 - [Editor](~/xamarin-forms/user-interface/text/editor.md)
 - [DatePicker](~/xamarin-forms/user-interface/datepicker.md)

@@ -1,23 +1,7 @@
 ---
-title: ''
-description: ''
-Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 3. Deeper into text''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 5423a9f716f384eca107003bdeca69615f8b459f
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136897"
+Título: "Resumo do capítulo 3. Mais detalhes sobre o texto "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 3. Mais profundo do texto "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734 autor: davidbritch MS. Author: dabritch MS. Date: 07/18/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Resumo do capítulo 3. Aprofundamento no texto
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03)
@@ -113,7 +97,7 @@ O `Color.Accent` valor resulta em uma cor específica da plataforma (e, às veze
 
 As várias plataformas têm um esquema de cores padrão, conforme mostrado na lista acima.
 
-Ao direcionar o Android, é possível alternar para um esquema escuro na luz especificando um tema claro no arquivo Android. manifest. xml ou [adicionando AppCompat e design de material](~/xamarin-forms/platform/android/appcompat-material-design.md).
+Ao direcionar o Android, é possível mudar para um esquema escuro na luz especificando um tema claro no arquivo Android.Manifest.xml ou [adicionando AppCompat e design de material](~/xamarin-forms/platform/android/appcompat-material-design.md).
 
 Para as plataformas Windows, o tema de cores normalmente é selecionado pelo usuário, mas você pode adicionar um `RequestedTheme` conjunto de atributos a `Light` ou `Dark` no arquivo app. XAML da plataforma. Por padrão, o arquivo app. XAML no projeto UWP contém um `RequestedTheme` atributo definido como `Light` .
 

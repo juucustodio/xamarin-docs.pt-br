@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsModos de exibição
-description: Xamarin.Formsas exibições são os blocos de construção de interfaces de usuário móvel de plataforma cruzada. Este artigo lista os modos de exibição incluídos no Xamarin.Forms .
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8c15626e405645d28a785c32d276860f9751ea25
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84132360"
+Título: " Xamarin.Forms exibições" Descrição: " Xamarin.Forms os modos de exibição são os blocos de construção das interfaces de usuário móvel entre plataformas. Este artigo lista os modos de exibição incluídos no Xamarin.Forms .
+MS. Prod: xamarin MS. AssetID: AC070686-A423-4A98-8BB6-0B9F94C062CC MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/16/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-views"></a>Xamarin.FormsModos de exibição
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
@@ -41,7 +27,7 @@ As exibições são objetos de interface do usuário, como rótulos, botões e c
 | `Expander`fornece um contêiner expansível para hospedar qualquer conteúdo e é composto por um cabeçalho e um conteúdo. Defina a `Header` propriedade como a [`View`](xref:Xamarin.Forms.View) que será exibida como o cabeçalho e a `Content` propriedade para a [`View`](xref:Xamarin.Forms.View) que será exibida quando o cabeçalho for expandido por um toque.<br /><br />[Guia](~/xamarin-forms/user-interface/expander.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos) de | [![Exemplo de expansor](views-images/Expander.png "Exemplo de expansor")](views-images/Expander-Large.png#lightbox "Exemplo de expansor")<br /> [Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ExpanderDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ExpanderDemoPage.xaml) |
 |     |     |
 
-### <a name="label"></a>Rótulo
+### <a name="label"></a>Label
 
 |     |     |
 | --- | --- |

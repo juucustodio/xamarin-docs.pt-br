@@ -1,22 +1,8 @@
 ---
-title: Escolher um Xamarin.Forms layout
-description: Xamarin.Formsas classes de layout permitem que você organize e agrupe controles de interface do usuário em seu aplicativo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 16a48423d05ce1cede75c0020bf18f4f398f5adc
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138496"
+Título: "escolher um Xamarin.Forms Layout" Descrição: " Xamarin.Forms classes de layout permitem organizar e agrupar controles de interface do usuário em seu aplicativo".
+MS. Prod: xamarin MS. AssetID: 05A39752-A174-447E-A30D-3CC9EF98CB96 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/21/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="choose-a-xamarinforms-layout"></a>Escolher um Xamarin.Forms layout
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
@@ -78,7 +64,7 @@ Isso é um desperdício porque cálculos de layout desnecessário são executado
 
 Para obter mais informações, consulte [ Xamarin.Forms StackLayout](stacklayout.md).
 
-## <a name="grid"></a>Grid
+## <a name="grid"></a>Grade
 
 Um [`Grid`](xref:Xamarin.Forms.Grid) é usado para exibir elementos em linhas e colunas, que podem ter tamanhos proporcionais ou absolutos. As linhas e colunas de uma grade são especificadas com [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions) as [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions) Propriedades e.
 

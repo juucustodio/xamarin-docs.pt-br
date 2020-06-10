@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsPáginas de
-description: Este artigo apresenta Xamarin.Forms as páginas de dados, que fornecem uma API para associar de forma rápida e fácil as exibições predefinidas.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 7d99870dd975d0996ffcd05d4aef153f3515ec9e
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134310"
+Título: " Xamarin.Forms DataPages" Descrição: "Este artigo apresenta Xamarin.Forms as páginas de dados, que fornecem uma API para associar de forma rápida e fácil as exibições predefinidas."
+MS. Prod: xamarin MS. AssetID: DF16EAEE-DB78-42CA-9C59-51D9D6CB6B95 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/01/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-datapages"></a>Xamarin.FormsPáginas de
 
 ![](~/media/shared/preview.png "This API is currently in preview")

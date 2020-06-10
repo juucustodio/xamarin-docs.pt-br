@@ -1,8 +1,5 @@
 ---
-Título: ' ' Xamarin.Essentials : Descrição da discagem telefônica ' ': ' a classe PhoneDialer no Xamarin.Essentials permite que um aplicativo Abra um número de telefone na discagem ' MS. AssetID: autor: MS. Custom: MS. Author: MS. Date: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+Título: " Xamarin.Essentials : discagem telefônica" Descrição: "a classe PhoneDialer no Xamarin.Essentials permite que um aplicativo Abra um número de telefone na discagem" MS. AssetID: E7457942-4D7B-4195-A2FF-417919B9537F autor: jamesmontemagno MS. Custom: vídeo MS. Author: Jamont MS. date: 07/02/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: Discagem telefônica

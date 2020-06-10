@@ -1,9 +1,6 @@
 ---
-Título: ' ' Xamarin.Essentials : área de transferência ' ' Descrição: ' este documento descreve a classe de área de transferência no Xamarin.Essentials , que permite copiar e colar texto na área de transferência do sistema entre aplicativos. '
-MS. AssetID: autor: MS. Author: MS. Data: MS. Custom: no-loc:
-- 'Xamarin.Forms'
-- 'Xamarin.Essentials'
-
+Título: " Xamarin.Essentials : Clipboard" Descrição: "este documento descreve a classe Clipboard no Xamarin.Essentials , que permite copiar e colar texto na área de transferência do sistema entre aplicativos".
+MS. AssetID: C52AE99A-0FB3-425D-9106-3DA5777FEFA0 autor: jamesmontemagno MS. Author: Jamont MS. Data: 01/06/2020 MS. Custom: vídeo no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
 
 # <a name="xamarinessentials-clipboard"></a>Xamarin.Essentials: Área de transferência

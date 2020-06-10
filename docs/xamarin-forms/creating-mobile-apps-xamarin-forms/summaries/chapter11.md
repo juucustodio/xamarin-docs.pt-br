@@ -1,23 +1,7 @@
 ---
-title: ''
-description: ''
-Creating Mobile Apps with Xamarin.Forms: Summary of Chapter 11. The Bindable infrastructure''
-ms.prod: ''
-ms.technology: ''
-ms.assetid: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: edc3dfd97457fe93a04edd82574f6ed419f5fdc1
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84136793"
+Título: "Resumo do capítulo 11. A infraestrutura vinculável "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 11. A infraestrutura vinculável "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: 34671C48-0ED4-4B76-A33D-D6505390DC5B autor: davidbritch MS. Author: dabritch MS. Date: 07/19/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>Resumo do capítulo 11. A infraestrutura vinculável
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)

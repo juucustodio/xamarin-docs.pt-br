@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsRenderizadores personalizados
-description: Os renderizadores personalizados permitem que os desenvolvedores substituam a renderização dos controles nativos em cada plataforma, para personalizar a aparência e o comportamento dos Xamarin.Forms controles.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: be281f9b7987a8d23ba6ac93f0771e432f277d45
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138912"
+Título: Xamarin.Forms Descrição de "renderizadores personalizados": "renderizadores personalizados permitem que os desenvolvedores substituam a renderização dos controles nativos em cada plataforma para personalizar a aparência e o comportamento dos Xamarin.Forms controles".
+MS. Prod: xamarin MS. AssetID: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/03/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-custom-renderers"></a>Xamarin.FormsRenderizadores personalizados
 
 _As interfaces de usuário do Xamarin. Forms são renderizadas usando os controles nativos da plataforma de destino, permitindo que os Xamarin.Forms aplicativos mantenham a aparência apropriada para cada plataforma. Os renderizadores personalizados permitem que os desenvolvedores substituam esse processo para personalizar a aparência e o comportamento dos Xamarin.Forms controles em cada plataforma._

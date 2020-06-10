@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 53122991811c06360e8d015a753096cb35c1cca0
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137625"
+Título: "adicionando um reconhecedor de gesto de Pan" Descrição: "Este artigo explica como usar um gesto de panorâmica para deslocar horizontal e verticalmente uma imagem, para que todo o conteúdo da imagem possa ser exibido quando ele estiver sendo exibido em um visor menor do que as dimensões da imagem."
+MS. Prod: xamarin MS. AssetID: 42CBD2CF-432D-4F19-A05E-D569BB7F8713 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/21/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="adding-a-pan-gesture-recognizer"></a>Adicionando um reconhecedor de gesto de panorâmica
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pangesture)

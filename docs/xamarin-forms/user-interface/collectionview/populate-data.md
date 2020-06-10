@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsDados CollectionView
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: e381184271d4a7bfa9872d2502d2281b1f3864bf
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134557"
+title: Descrição de " Xamarin.Forms dados CollectionView": "um CollectionView é populado com dados definindo sua propriedade ItemsSource para qualquer coleção que implemente IEnumerable".
+MS. Prod: xamarin MS. AssetID: E1783E34-1C0F-401A-80D5-B2BE5508F5F8 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/29/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-collectionview-data"></a>Xamarin.FormsDados CollectionView
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
@@ -84,7 +70,7 @@ Por padrão, [`CollectionView`](xref:Xamarin.Forms.CollectionView) o exibe itens
 
 Para obter informações sobre como alterar o [`CollectionView`](xref:Xamarin.Forms.CollectionView) layout, consulte [ Xamarin.Forms layout CollectionView](layout.md). Para obter informações sobre como definir a aparência de cada item no `CollectionView` , consulte [definir a aparência do item](#define-item-appearance).
 
-### <a name="data-binding"></a>Vinculação de dados
+### <a name="data-binding"></a>Associação de dados
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView)pode ser preenchido com dados usando a vinculação de dados para associar sua [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) Propriedade a uma `IEnumerable` coleção. Em XAML, isso é obtido com a `Binding` extensão de marcação:
 

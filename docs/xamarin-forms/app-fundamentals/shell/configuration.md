@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsConfiguração da página do Shell
-description: A classe Shell define as propriedades anexadas que podem ser usadas para configurar a aparência de páginas em Xamarin.Forms aplicativos Shell. Isso inclui a configuração das cores da página, a desabilitação da barra de navegação, a desabilitação da barra de guias e a exibição dos modos de exibição na barra de navegação.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 102070fc478b42e9fbc0c7d0006197c81a49c9b8
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84137495"
+title: " Xamarin.Forms configuração da página do Shell" Descrição: "a classe Shell define propriedades anexadas que podem ser usadas para configurar a aparência de páginas em Xamarin.Forms aplicativos Shell. Isso inclui a definição de cores da página, a desabilitação da barra de navegação, a desabilitação da barra de guias e a exibição de exibições na barra de navegação. "
+MS. Prod: xamarin MS. AssetID: 3FC2FBD1-C30B-4408-97B2-B04E3A2E4F03 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/29/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-shell-page-configuration"></a>Xamarin.FormsConfiguração da página do Shell
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

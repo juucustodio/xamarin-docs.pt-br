@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: a05de34089fdf6ad90740067b88edea0b62f55a7
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84134648"
+Título: "teste de unidade de aplicativos empresariais" Descrição: "Este capítulo explica como o teste de unidade é executado no aplicativo móvel eShopOnContainers."
+MS. Prod: xamarin MS. AssetID: 4af82e52-f99b-4cad-b278-1745f190c240 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="unit-testing-enterprise-apps"></a>Aplicativos empresariais de teste de unidade
 
 Os aplicativos móveis têm problemas exclusivos que os aplicativos baseados na área de trabalho e na Web não precisam se preocupar. Os usuários móveis serão diferentes pelos dispositivos que usam, por conectividade de rede, pela disponibilidade de serviços e uma variedade de outros fatores. Portanto, os aplicativos móveis devem ser testados, pois serão usados no mundo real para melhorar sua qualidade, confiabilidade e desempenho. Há muitos tipos de teste que devem ser executados em um aplicativo, incluindo testes de unidade, testes de integração e testes de interface do usuário, com o teste de unidade sendo a forma mais comum de teste.

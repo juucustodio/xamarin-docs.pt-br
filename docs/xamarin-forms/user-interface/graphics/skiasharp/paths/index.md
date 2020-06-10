@@ -1,22 +1,8 @@
 ---
-title: ''
-description: Este artigo explica como usar o SkiaSharp para desenhar linhas e caminhos de gráficos em Xamarin.Forms aplicativos e demonstra isso com o código de exemplo.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 97c7305e59a023e65535186bbbe39a9c2b7d4c26
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138990"
+Título: "SkiaSharp linhas e caminhos" Descrição: "Este artigo explica como usar o SkiaSharp para desenhar linhas e caminhos de gráficos em Xamarin.Forms aplicativos e demonstra isso com o código de exemplo".
+MS. Prod: xamarin MS. AssetID: 316A15FE-383D-4D06-8641-BAC7EE7474CA MS. Technology: xamarin-skiasharp autor: davidbritch MS. Author: dabritch MS. Date: 03/10/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="skiasharp-lines-and-paths"></a>Caminhos e linhas de SkiaSharp
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

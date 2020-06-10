@@ -1,22 +1,8 @@
 ---
-title: ''
-description: ''
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 40af5aeaa51025dae70113faa6f7ff83edf43c73
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138017"
+Título: "compactação de layout" Descrição: "a compactação de layout remove layouts especificados da árvore visual em uma tentativa de melhorar o desempenho de renderização de página. Este artigo explica como habilitar a compactação de layout e os benefícios que ele pode trazer. "
+MS. Prod: xamarin MS. AssetID: da9e1b26-9d31-4762-94c3-4039f306b7f2 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/13/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="layout-compression"></a>Compactação de Layout
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)

@@ -1,22 +1,8 @@
 ---
-title: Xamarin.FormsPadrões de design de tela dupla
-description: Este guia explica como o Xamarin.Forms dá suporte a uma variedade de padrões de design diferentes, otimizados para dispositivos de tela dupla.
-ms.prod: ''
-ms.assetid: ''
-ms.technology: ''
-author: ''
-ms.author: ''
-ms.date: ''
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 277fb67eeea465239d9340e755240288286d2359
-ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84138782"
+Título: " Xamarin.Forms padrões de design de tela dupla" Descrição: "este guia explica como o Xamarin.Forms dá suporte a uma variedade de padrões de design diferentes, otimizados para dispositivos de tela dupla".
+MS. Prod: xamarin MS. AssetID: 3176d792-6dba-4E00-b463-497c58678ee9 MS. Technology: xamarin-Forms autor: davidortinau MS. Author: daortin MS. Date: 02/08/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
 ---
+
 # <a name="xamarinforms-dual-screen-design-patterns"></a>Xamarin.Formspadrões de design de tela dupla
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
