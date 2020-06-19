@@ -1,8 +1,20 @@
 ---
-title: " Xamarin.Essentials : indicador" Descrição: "a classe indicador no Xamarin.Essentials permite monitorar o sensor de indicador do dispositivo, que mede a pressão".
-MS. AssetID: DA4F968A-D988-41F5-8745-1BEE693660A1 autor: jamesmontemagno MS. Author: Jamont MS. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Indicador'
+description: A classe indicador no Xamarin.Essentials permite que você monitore o sensor indicador do dispositivo, que mede a pressão.
+ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9a2742a5d515c864611361e85ea0678e9c5611ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802497"
 ---
-
 # <a name="xamarinessentials-barometer"></a>Xamarin.Essentials: Indicador
 
 A classe **Barometer** permite que você monitore o sensor do barômetro do dispositivo. Esse sensor mede a pressão.
@@ -84,5 +96,5 @@ Sem detalhes da implementação específica da plataforma.
 
 ## <a name="api"></a>API
 
-- [Código-fonte do Barometer](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Barometer)
+- [Código-fonte do Barometer](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Barometer)
 - [Documentação da API do Barometer](xref:Xamarin.Essentials.Barometer)

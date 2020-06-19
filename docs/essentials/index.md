@@ -1,8 +1,20 @@
 ---
-Título: " Xamarin.Essentials " Descrição: "este documento é vinculado a vários guias que descrevem Xamarin.Essentials , que fornece aos desenvolvedores APIs de plataforma cruzada para seus aplicativos móveis.
-MS. AssetID: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A autor: jamesmontemagno MS. Author: Jamont MS. Date: 02/26/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Essentials
+description: Este documento contém links para vários guias que descrevem Xamarin.Essentials , que fornece aos desenvolvedores APIs de plataforma cruzada para seus aplicativos móveis.
+ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 02/26/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 27421ecc8b089321cd2331829d87365f3cf37a65
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139458"
 ---
-
 # Xamarin.Essentials
 
 Xamarin.Essentialsfornece aos desenvolvedores APIs de plataforma cruzada para seus aplicativos móveis.
@@ -58,7 +70,7 @@ Siga os guias para integrar esses Xamarin.Essentials recursos em seus aplicativo
 
 Encontre ajuda se você estiver tendo problemas.
 
-## <a name="release-notes"></a>[Notas sobre a versão](https://docs.microsoft.com/xamarin/essentials/release-notes/)
+## <a name="release-notes"></a>[Notas de Versão](https://docs.microsoft.com/xamarin/essentials/release-notes/)
 
 Encontre notas de versão completas para cada versão do Xamarin.Essentials .
 

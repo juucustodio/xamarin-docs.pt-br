@@ -1,8 +1,21 @@
 ---
-title: Xamarin.Essentials Descrição de "conversores de cor": "a classe ColorConverters no Xamarin.Essentials fornece vários métodos auxiliares e métodos de extensão para trabalhar com System. Drawing. Color."
-MS. AssetID: B10428D6-89E2-4714-A39F-7E6E626391B2 autor: jamesmontemagno MS. Author: Jamont MS. Data: 01/06/2020 MS. Custom: vídeo no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.EssentialsConversores de cor
+description: A classe ColorConverters no Xamarin.Essentials fornece vários métodos auxiliares e métodos de extensão para trabalhar com System. Drawing. Color.
+ms.assetid: B10428D6-89E2-4714-A39F-7E6E626391B2
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 01/06/2020
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ff6a5bed600f45dcd48867596a7fc8aa45decb82
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802439"
 ---
-
 # <a name="xamarinessentials-color-converters"></a>Xamarin.Essentials: Conversores de cor
 
 A classe **ColorConverters** no Xamarin.Essentials fornece vários métodos auxiliares para System. Drawing. Color.
@@ -70,9 +83,9 @@ O método `ToSystemColor` se aplica a Android.Graphics.Color, UIKit.UIColor e Wi
 
 ## <a name="api"></a>API
 
-- [Código-fonte de conversores de cor](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Types/ColorConverters.shared.cs)
+- [Código-fonte de conversores de cor](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Types/ColorConverters.shared.cs)
 - [Documentação da API de conversores de cor](xref:Xamarin.Essentials.ColorConverters)
-- [Código-fonte de extensões de cor](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Types/ColorConverters.shared.cs)
+- [Código-fonte de extensões de cor](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Types/ColorConverters.shared.cs)
 - [Documentação da API de extensões de cor](xref:Xamarin.Essentials.ColorExtensions)
 
 ## <a name="related-video"></a>Vídeo relacionados

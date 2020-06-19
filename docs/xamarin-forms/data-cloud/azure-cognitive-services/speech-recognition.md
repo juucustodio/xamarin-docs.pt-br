@@ -1,8 +1,22 @@
 ---
-Título: "reconhecimento de fala usando a API do serviço de fala" Descrição: "Este artigo explica como usar a API do serviço de fala do Azure para transcrever a fala em texto em um Xamarin.Forms aplicativo".
-MS. Prod: xamarin MS. AssetID: B435FF6B-8785-48D9-B2D9-1893F5A87EA1 MS. Technology: xamarin-Forms autor: profexorgeek MS. Author: jusjohns MS. Date: 01/14/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Reconhecimento de fala usando a API do serviço de fala
+description: Este artigo explica como usar a API do serviço de fala do Azure para transcrever a fala em texto em um Xamarin.Forms aplicativo.
+ms.prod: xamarin
+ms.assetid: B435FF6B-8785-48D9-B2D9-1893F5A87EA1
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 01/14/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 171ecc02fda304135e5f535c3e798067595d7047
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139315"
 ---
-
 # <a name="speech-recognition-using-azure-speech-service"></a>Reconhecimento de fala usando o serviço de fala do Azure
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-cognitivespeechservice)

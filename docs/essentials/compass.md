@@ -1,8 +1,21 @@
 ---
-Título: " Xamarin.Essentials : bússola" Descrição: "este documento descreve a classe Compass no Xamarin.Essentials , que permite monitorar o cabeçalho do norte magnético do dispositivo".
-MS. AssetID: BF85B0C3-C686-43D9-811A-07DCAF8CDD86 autor: jamesmontemagno MS. Custom: vídeo MS. Author: Jamont MS. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Bússola'
+description: Este documento descreve a classe Compass no Xamarin.Essentials , que permite monitorar o rumo do norte magnético do dispositivo.
+ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f85c6c1d262606ce75131e6ba39f326526bb8eb7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802461"
 ---
-
 # <a name="xamarinessentials-compass"></a>Xamarin.Essentials: Bússola
 
 A classe **Compass** permite que você monitore o norte magnético do dispositivo.
@@ -87,7 +100,7 @@ Isso só é aplicado na plataforma Android, e o parâmetro é ignorado no iOS e 
 
 ## <a name="api"></a>API
 
-- [Código-fonte da Bússola](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Compass)
+- [Código-fonte da Bússola](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Compass)
 - [Documentação da API de Bússola](xref:Xamarin.Essentials.Compass)
 
 ## <a name="related-video"></a>Vídeo relacionados

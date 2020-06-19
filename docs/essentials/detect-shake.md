@@ -1,8 +1,21 @@
 ---
-Título: " Xamarin.Essentials : detectar agite" Descrição: "a classe acelerômetro no Xamarin.Essentials permite que você detecte uma movimentação de uma mistura do dispositivo".
-MS. AssetID: 07513D32-120F-4F12-8757-A47802A8027B autor: jamesmontemagno MS. Author: Jamont MS. Data: 05/28/2019 MS. Custom: vídeo no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Detectar agite'
+description: A classe acelerômetro no Xamarin.Essentials permite que você detecte um movimento agitado do dispositivo.
+ms.assetid: 07513D32-120F-4F12-8757-A47802A8027B
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 05/28/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 4fd4c7d0e3ffe04ebbb936cff0992272a9085649
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802423"
 ---
-
 # <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: Detectar agite
 
 A classe **[Accelerometer](accelerometer.md)** permite monitorar o sensor de acelerômetro do dispositivo, que indica a aceleração do dispositivo no espaço tridimensional. Além disso, ele permite que você se registre para eventos quando o usuário sacudir o dispositivo.
@@ -68,7 +81,7 @@ A API de detecção de movimento usa leituras brutas do acelerômetro para calcu
 
 ## <a name="api"></a>API
 
-- [Código-fonte do acelerômetro](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Accelerometer)
+- [Código-fonte do acelerômetro](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Accelerometer)
 - [Documentação da API do acelerômetro](xref:Xamarin.Essentials.Accelerometer)
 
 ## <a name="related-video"></a>Vídeo relacionados

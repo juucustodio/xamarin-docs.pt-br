@@ -1,8 +1,22 @@
 ---
-Título: "carregando XAML em tempo de execução em Xamarin.Forms " Descrição: "XAML pode ser carregado e analisado em tempo de execução com os métodos de extensão LoadFromXaml."
-MS. Prod: xamarin MS. AssetID: 25F73FBF-2DD3-468E-A2D8-0897414F0F4A MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/12/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Carregando XAML em tempo de execução noXamarin.Forms
+description: O XAML pode ser carregado e analisado em tempo de execução com os métodos de extensão LoadFromXaml.
+ms.prod: xamarin
+ms.assetid: 25F73FBF-2DD3-468E-A2D8-0897414F0F4A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/12/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d750aa84a48ad4c8015a619d819134cefc63c3d9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139341"
 ---
-
 # <a name="loading-xaml-at-runtime-in-xamarinforms"></a>Carregando XAML em tempo de execução noXamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)

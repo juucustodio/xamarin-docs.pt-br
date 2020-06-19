@@ -1,6 +1,19 @@
 ---
-Título: " Xamarin.Essentials : OrientationSensor" Descrição: "a classe OrientationSensor permite que você monitore a orientação de um dispositivo em um espaço tridimensional".
-MS. AssetID: F3091D93-E779-41BA-8696-23D296F2F6F5 autor: jamesmontemagno MS. Author: Jamont MS. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: OrientationSensor'
+description: A classe OrientationSensor permite monitorar a orientação de um dispositivo no espaço tridimensional.
+ms.assetid: F3091D93-E779-41BA-8696-23D296F2F6F5
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e61a3730e80c8fb60aee076b028ee54bed6887b3
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802225"
 ---
 # <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials: OrientationSensor
 
@@ -100,5 +113,5 @@ Exemplos:
 
 ## <a name="api"></a>API
 
-- [Código-fonte do OrientationSensor](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/OrientationSensor)
+- [Código-fonte do OrientationSensor](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/OrientationSensor)
 - [Documentação da API do OrientationSensor](xref:Xamarin.Essentials.OrientationSensor)

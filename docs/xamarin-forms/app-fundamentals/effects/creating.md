@@ -1,8 +1,22 @@
 ---
-Título: "criando um efeito" Descrição: "os efeitos simplificam a personalização de um controle. Este artigo demonstra como criar um efeito que altera a cor do plano de fundo do controle de entrada quando o controle ganha foco. "
-MS. Prod: xamarin MS. AssetID: 9E2C8DB0-36A2-4F13-8E3C-A66D7021DB13 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/24/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Criando um efeito
+description: Efeitos simplificam a personalização de um controle. Este artigo demonstra como criar um efeito que altera a cor da tela de fundo do controle Entry quando o controle obtém foco.
+ms.prod: xamarin
+ms.assetid: 9E2C8DB0-36A2-4F13-8E3C-A66D7021DB13
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0ed11ccacec73dd3c5c220c41bffd090af6c5b27
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139380"
 ---
-
 # <a name="creating-an-effect"></a>Criando um efeito
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-focuseffect)

@@ -1,8 +1,21 @@
 ---
-Título: " Xamarin.Essentials : informações de exibição do dispositivo" Descrição: "este documento descreve a classe DeviceDisplay no Xamarin.Essentials , que fornece métricas de tela para o dispositivo no qual o aplicativo está sendo executado".
-MS. AssetID: 2821C908-C613-490D-8E8C-1BD3269FCEEA autor: jamesmontemagno MS. Custom: vídeo MS. Author: Jamont MS. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Informações de exibição do dispositivo'
+description: Este documento descreve a classe DeviceDisplay no Xamarin.Essentials , que fornece métricas de tela para o dispositivo no qual o aplicativo está sendo executado.
+ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 867e6bd1828d4158f70226dbaad678f9d6037bb0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802406"
 ---
-
 # <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: Informações de exibição do dispositivo
 
 A classe **DeviceDisplay** fornece informações sobre as métricas de tela do dispositivo no qual o aplicativo está sendo executado e pode solicitar para evitar que a tela fique suspensa quando o aplicativo está em execução.
@@ -92,7 +105,7 @@ Sem diferenças.
 
 ## <a name="api"></a>API
 
-- [Código-fonte de DeviceDisplay](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DeviceDisplay)
+- [Código-fonte de DeviceDisplay](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/DeviceDisplay)
 - [Documentação da API de DeviceDisplay](xref:Xamarin.Essentials.DeviceDisplay)
 
 ## <a name="related-video"></a>Vídeo relacionados

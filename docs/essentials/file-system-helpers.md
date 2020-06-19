@@ -1,8 +1,21 @@
 ---
-Título: " Xamarin.Essentials : auxiliares do sistema de arquivos" Descrição: "a classe FileSystem no Xamarin.Essentials contém uma série de auxiliares para localizar o cache e os diretórios de dados do aplicativo e abrir arquivos dentro do pacote do aplicativo."
-MS. AssetID: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84 autor: jamesmontemagno MS. Custom: vídeo MS. Author: Jamont MS. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Auxiliares do sistema de arquivos'
+description: A classe FileSystem no Xamarin.Essentials contém uma série de auxiliares para localizar o cache e os diretórios de dados do aplicativo e abrir arquivos dentro do pacote do aplicativo.
+ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5fafc24d9c4bd35d4ef0010ae4530341316c878a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802360"
 ---
-
 # <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: Auxiliares do sistema de arquivos
 
 A classe **FileSystem** contém uma série de auxiliares para localizar o cache e os diretórios de dados do aplicativo e abrir arquivos dentro do pacote de aplicativos.
@@ -70,7 +83,7 @@ Adicionar qualquer arquivo à raiz do projeto UWP e marque a Ação de Compilaç
 
 ## <a name="api"></a>API
 
-- [Código-fonte de Auxiliares do sistema de arquivos](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/FileSystem)
+- [Código-fonte de Auxiliares do sistema de arquivos](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/FileSystem)
 - [Documentação da API do Sistema de Arquivos](xref:Xamarin.Essentials.FileSystem)
 
 ## <a name="related-video"></a>Vídeo relacionados

@@ -1,8 +1,22 @@
 ---
-Título: "introdução aos efeitos" Descrição: "os efeitos permitem que os controles nativos em cada plataforma sejam personalizados e normalmente são usados para alterações de estilo pequeno. Este artigo fornece uma introdução aos efeitos, descreve o limite entre efeitos e renderizadores personalizados, além de descrever a classe PlatformEffect ".
-MS. Prod: xamarin MS. AssetID: 30CB8615-8F39-4762-BDB7-333D2B57D112 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 03/08/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Introdução aos efeitos
+description: Efeitos permitem que os controles nativos em cada plataforma sejam personalizados e são geralmente usados para pequenas alterações de estilo. Este artigo fornece uma introdução aos efeitos, descreve o limite entre efeitos e renderizadores personalizados e descreve a classe PlatformEffect.
+ms.prod: xamarin
+ms.assetid: 30CB8615-8F39-4762-BDB7-333D2B57D112
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/08/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a891ec70f6f83984ed463fe914442758bdf57a2e
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139302"
 ---
-
 # <a name="introduction-to-effects"></a>Introdução aos efeitos
 
 _Os efeitos permitem que os controles nativos em cada plataforma sejam personalizados e normalmente são usados para alterações de estilo pequeno. Este artigo fornece uma introdução aos efeitos, descreve o limite entre efeitos e renderizadores personalizados, além de descrever a classe PlatformEffect._
@@ -31,7 +45,7 @@ A tabela a seguir lista o namespace para a classe `PlatformEffect` em cada plata
 |--- |--- |--- |--- |
 |iOS|Xamarin.Forms. Platform. iOS|UIView|UIView|
 |Android|Xamarin.Forms. Platform. Android|ViewGroup|Visualizar|
-|UWP (Plataforma Universal do Windows)|Xamarin.Forms. Platform. UWP|FrameworkElement|FrameworkElement|
+|Plataforma Universal do Windows (UWP)|Xamarin.Forms. Platform. UWP|FrameworkElement|FrameworkElement|
 
 Cada classe `PlatformEffect` específica da plataforma expõe as propriedades a seguir:
 

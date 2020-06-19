@@ -1,8 +1,22 @@
 ---
-Título: "verificação ortográfica usando a API de Verificação Ortográfica do Bing" Descrição: "Verificação Ortográfica do Bing executa a verificação ortográfica contextual para o texto, fornecendo sugestões embutidas para palavras incorretas. Este artigo explica como usar a API REST do Verificação Ortográfica do Bing para corrigir erros de ortografia em um Xamarin.Forms aplicativo ".
-MS. Prod: xamarin MS. AssetID: B40EB103-FDC0-45C6-9940-FB4ACDC2F4F9 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 02/08/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Verificação ortográfica usando a API de Verificação Ortográfica do Bing
+description: Verificação Ortográfica do Bing executa a verificação ortográfica contextual para texto, fornecendo sugestões embutidas para palavras incorretas. Este artigo explica como usar a API REST do Verificação Ortográfica do Bing para corrigir erros de ortografia em um Xamarin.Forms aplicativo.
+ms.prod: xamarin
+ms.assetid: B40EB103-FDC0-45C6-9940-FB4ACDC2F4F9
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/08/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1703f0049408381a86da73fb28696ef8708cc790
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139289"
 ---
-
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Verificação ortográfica usando a API de Verificação Ortográfica do Bing
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
