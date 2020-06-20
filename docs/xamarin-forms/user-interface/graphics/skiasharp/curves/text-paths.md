@@ -1,8 +1,22 @@
 ---
-Título: "caminhos e texto em SkiaSharp" Descrição: "Este artigo explora a interseção de caminhos e texto do SkiaSharp e demonstra isso com o código de exemplo".
-MS. Prod: xamarin MS. AssetID: C14C07F6-4A84-4A8C-BDB4-CD61FBF0F79B MS. Technology: xamarin-skiasharp autor: davidbritch MS. Author: dabritch MS. Date: 08/01/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Caminhos e texto em SkiaSharp
+description: Este artigo explora a interseção de caminhos e texto do SkiaSharp e demonstra isso com o código de exemplo.
+ms.prod: xamarin
+ms.assetid: C14C07F6-4A84-4A8C-BDB4-CD61FBF0F79B
+ms.technology: xamarin-skiasharp
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/01/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b0cbb7d26a2aea02a3255fc75947c20a3d803b86
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84131892"
 ---
-
 # <a name="paths-and-text-in-skiasharp"></a>Caminhos e texto em SkiaSharp
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

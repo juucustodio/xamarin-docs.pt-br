@@ -1,8 +1,22 @@
 ---
-Título: "principais atualizações de controle de thread no iOS": "as especificações de plataforma permitem consumir funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do iOS que permite que o layout de controle e as atualizações de renderização sejam executadas no thread principal. "
-MS. Prod: xamarin MS. AssetID: 945E711D-9BD2-4BF9-9FB3-CBE0D5B25A49 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Principais atualizações de controle de thread no iOS
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma do iOS específica que permite que o layout de controle e as atualizações de renderização sejam executadas no thread principal.
+ms.prod: xamarin
+ms.assetid: 945E711D-9BD2-4BF9-9FB3-CBE0D5B25A49
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 005e8216b887b694b33916179ca276cf8091e006
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135974"
 ---
-
 # <a name="main-thread-control-updates-on-ios"></a>Principais atualizações de controle de thread no iOS
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

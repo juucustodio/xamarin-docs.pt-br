@@ -1,6 +1,21 @@
 ---
-title: "Editar Xamarin.Forms XAML usando a caixa de ferramentas" Description: "a caixa de ferramentas XAML contém todos os layouts e controles internos, que podem ser arrastados diretamente para um arquivo XAML aberto".
-MS. Prod: xamarin MS. AssetID: 513D1247-8AD0-4611-8660-1D277CD369E1 MS. Technology: xamarin-Forms autor: conceptdev MS. Author: crdun MS. Date: 08/29/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Editar Xamarin.Forms XAML usando a caixa de ferramentas
+description: A caixa de ferramentas XAML contém todos os layouts e controles internos, que podem ser arrastados diretamente para um arquivo XAML aberto.
+ms.prod: xamarin
+ms.assetid: 513D1247-8AD0-4611-8660-1D277CD369E1
+ms.technology: xamarin-forms
+author: conceptdev
+ms.author: crdun
+ms.date: 08/29/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 76d6a6f39692445f208f250ca7f6141a1e1ad450
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84197996"
 ---
 # <a name="xamarinforms-xaml-toolbox"></a>Xamarin.FormsCaixa de ferramentas XAML
 

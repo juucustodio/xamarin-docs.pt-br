@@ -1,8 +1,21 @@
 ---
-title: " Xamarin.Essentials : Permissions" Descrição: "este documento descreve a classe Permissions no Xamarin.Essentials , que fornece a capacidade de verificar e solicitar permissões de tempo de execução".
-MS. AssetID: 34062D84-3E55-4AF7-A688-8551068B1E57 autor: jamesmontemagno MS. autor: Jamont MS. Custom: vídeo MS. Date: 01/06/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Permissões'
+description: Este documento descreve a classe Permissions no Xamarin.Essentials , que fornece a capacidade de verificar e solicitar permissões de tempo de execução.
+ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
+author: jamesmontemagno
+ms.author: jamont
+ms.custom: video
+ms.date: 01/06/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5de10511d73614570d6308b6f4deb7b4ca55549a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802238"
 ---
-
 # <a name="xamarinessentials-permissions"></a>Xamarin.Essentials: Permissões
 
 A classe **Permissions** fornece a capacidade de verificar e solicitar permissões de tempo de execução.
@@ -214,7 +227,7 @@ Leia mais sobre a documentação da [declaração de capacidade do aplicativo](h
 
 ## <a name="api"></a>API
 
-- [Código-fonte de permissões](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Permissions)
+- [Código-fonte de permissões](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Permissions)
 - [Documentação da API de permissões](xref:Xamarin.Essentials.Permissions)
 
 

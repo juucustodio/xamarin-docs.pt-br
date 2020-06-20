@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms controle de mapeamento" Descrição: "o controle de mapa é uma exibição de plataforma cruzada para exibir e anotar mapas. Ele usa o controle de mapa nativo para cada plataforma, fornecendo uma experiência de mapas rápida e familiar para os usuários. "
-MS. Prod: xamarin MS. AssetID: 22C99029-0B16-43A6-BF58-26B48C4AED38 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/29/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsControle de Mapeamento
+description: O controle de mapa é uma exibição de plataforma cruzada para exibir e anotar mapas. Ele usa o controle de mapa nativo para cada plataforma, fornecendo uma experiência de mapas rápida e familiar para os usuários.
+ms.prod: xamarin
+ms.assetid: 22C99029-0B16-43A6-BF58-26B48C4AED38
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/20/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1aee81b6988e1f3a7099c2722b6f336f071ad8c0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946358"
 ---
-
 # <a name="xamarinforms-map-control"></a>Xamarin.FormsControle de Mapeamento
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
@@ -23,6 +37,7 @@ A [`Map`](xref:Xamarin.Forms.Maps.Map) classe define as seguintes propriedades q
 - [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType), do tipo [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType) , indica o estilo de exibição do mapa.
 - `MoveToLastRegionOnLayoutChange`, do tipo `bool` , controla se a região de mapa exibida será movida de sua região atual para sua região definida anteriormente quando ocorrer uma alteração de layout.
 - [`Pins`](xref:Xamarin.Forms.Maps.Map.Pins), do tipo `IList<Pin>` representa a lista de Pins no mapa.
+- `TrafficEnabled`, do tipo `bool` , indica se os dados de tráfego estão sobrepostos no mapa.
 - [`VisibleRegion`](xref:Xamarin.Forms.Maps.Map.VisibleRegion), do tipo [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) , retorna a região exibida no momento do mapa.
 
 Essas propriedades, com exceção das `MapElements` `Pins` Propriedades, e `VisibleRegion` , são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que podem ser destinos de associações de dados.
@@ -172,7 +187,7 @@ MapSpan mapSpan = MapSpan.FromCenterAndRadius(position, Distance.FromKilometers(
 map.MoveToRegion(mapSpan);
 ```
 
-## <a name="zoom-the-map"></a>Aplicar zoom ao mapa
+## <a name="zoom-the-map"></a>Ampliar o mapa
 
 O nível de zoom de um [`Map`](xref:Xamarin.Forms.Maps.Map) pode ser alterado sem alterar seu local. Isso pode ser feito usando a interface do usuário do mapa ou programaticamente chamando o [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion*) método com um [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) argumento que usa o local atual como o [`Position`](xref:Xamarin.Forms.Maps.Position) argumento:
 
@@ -196,6 +211,23 @@ O comportamento de um [`Map`](xref:Xamarin.Forms.Maps.Map) pode ser personalizad
 
 > [!NOTE]
 > A personalização de comportamento de mapa adicional pode ser obtida com a criação de um renderizador personalizado de mapa. Para obter mais informações, consulte [Personalizando um Xamarin.Forms mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md).
+
+### <a name="show-traffic-data"></a>Mostrar dados de tráfego
+
+A [`Map`](xref:Xamarin.Forms.Maps.Map) classe define uma `TrafficEnabled` Propriedade do tipo `bool` . Por padrão, essa propriedade é `false` , que indica que os dados de tráfego não serão sobrepostos no mapa. Quando essa propriedade é definida como `true` , os dados de tráfego são sobrepostos no mapa. O exemplo a seguir mostra a configuração desta propriedade:
+
+```xaml
+<maps:Map TrafficEnabled="true" />
+```
+
+Este é o código C# equivalente:
+
+```csharp
+Map map = new Map
+{
+    TrafficEnabled = true
+};
+```
 
 ### <a name="disable-scroll"></a>Desabilitar rolagem
 

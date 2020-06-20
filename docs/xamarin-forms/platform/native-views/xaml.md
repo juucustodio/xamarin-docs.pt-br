@@ -1,8 +1,22 @@
 ---
-Título: "exibições nativas em XAML" Descrição: "exibições nativas do iOS, Android e Plataforma Universal do Windows podem ser referenciadas diretamente de Xamarin.Forms arquivos XAML. As propriedades e os manipuladores de eventos podem ser definidos em exibições nativas e podem interagir com Xamarin.Forms exibições. Este artigo demonstra como consumir exibições nativas de Xamarin.Forms arquivos XAML.
-MS. Prod: xamarin MS. AssetID: 7A856D31-B300-409E-9AEB-F8A4DB99B37E MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 03/23/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Exibições nativas em XAML
+description: Exibições nativas do iOS, Android e Plataforma Universal do Windows podem ser referenciadas diretamente de Xamarin.Forms arquivos XAML. As propriedades e os manipuladores de eventos podem ser definidos em exibições nativas e podem interagir com Xamarin.Forms exibições. Este artigo demonstra como consumir exibições nativas de Xamarin.Forms arquivos XAML.
+ms.prod: xamarin
+ms.assetid: 7A856D31-B300-409E-9AEB-F8A4DB99B37E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/23/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0d6aa84a886d450d1dc42ec31edf16380b795404
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84564622"
 ---
-
 # <a name="native-views-in-xaml"></a>Exibições nativas em XAML
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)

@@ -1,8 +1,22 @@
 ---
-Título: "fontes em Xamarin.Forms " Descrição: "Este artigo explica como especificar informações sobre fontes em controles que exibem texto em Xamarin.Forms aplicativos".
-MS. Prod: xamarin MS. AssetID: 49DD2249-C575-41AE-AE06-08F890FD6031 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/01/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Fontes emXamarin.Forms
+description: Este artigo explica como especificar informações sobre fontes em controles que exibem texto em Xamarin.Forms aplicativos.
+ms.prod: xamarin
+ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/01/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a657915edb41573f9637128b4c88233d58a5909a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572202"
 ---
-
 # <a name="fonts-in-xamarinforms"></a>Fontes emXamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)
@@ -44,8 +58,8 @@ Xamarin.Formstambém define os campos na [`NamedSize`](xref:Xamarin.Forms.NamedS
 
 Estilos de fonte, como **negrito** e *itálico* , podem ser definidos na `FontAttributes` propriedade. Atualmente, há suporte para os seguintes valores:
 
-- **Nenhum**
-- **Bold**
+- **Nenhuma**
+- **Negrito**
 - **Colocadas**
 
 A `FontAttribute` enumeração pode ser usada da seguinte maneira (você pode especificar um único atributo ou `OR` eles juntos):

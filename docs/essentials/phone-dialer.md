@@ -1,7 +1,21 @@
 ---
-Título: " Xamarin.Essentials : discagem telefônica" Descrição: "a classe PhoneDialer no Xamarin.Essentials permite que um aplicativo Abra um número de telefone na discagem" MS. AssetID: E7457942-4D7B-4195-A2FF-417919B9537F autor: jamesmontemagno MS. Custom: vídeo MS. Author: Jamont MS. date: 07/02/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Discagem telefônica'
+description: A classe PhoneDialer no Xamarin.Essentials permite que um aplicativo Abra um número de telefone na discagem
+ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 07/02/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d642005e9aed663570c251e955c6a3af4704ed5c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802207"
 ---
-
 # <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: Discagem telefônica
 
 A classe **PhoneDialer** permite que um aplicativo abra um número de telefone pelo discador.
@@ -47,7 +61,7 @@ public class PhoneDialerTest
 
 ## <a name="api"></a>API
 
-- [Código-fonte de Discagem telefônica](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/PhoneDialer)
+- [Código-fonte de Discagem telefônica](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/PhoneDialer)
 - [Documentação da API de Discagem Telefônica](xref:Xamarin.Essentials.PhoneDialer)
 
 ## <a name="related-video"></a>Vídeo relacionados

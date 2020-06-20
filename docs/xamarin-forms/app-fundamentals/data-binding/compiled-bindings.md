@@ -1,8 +1,22 @@
 ---
-Título: Xamarin.Forms Descrição de "associações compiladas": "Este artigo explica como usar associações compiladas para melhorar o desempenho de vinculação de dados em Xamarin.Forms aplicativos".
-MS. Prod: xamarin MS. AssetID: ABE6B7F7-875E-4402-A1D2-845CE374402B MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 09/18/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsAssociações compiladas
+description: Este artigo explica como usar associações compiladas para melhorar o desempenho de vinculação de dados em Xamarin.Forms aplicativos.
+ms.prod: xamarin
+ms.assetid: ABE6B7F7-875E-4402-A1D2-845CE374402B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/18/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 094691796fed9653f2a2e468ccb1c33d1a408a49
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84571552"
 ---
-
 # <a name="xamarinforms-compiled-bindings"></a>Xamarin.FormsAssociações compiladas
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

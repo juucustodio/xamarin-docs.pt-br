@@ -1,8 +1,22 @@
 ---
-Título: "a rolagem rápida do ListView no Android" Descrição: "as especificações da plataforma permitem que você consuma a funcionalidade disponível apenas em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma Android específica que permite a rolagem rápida por meio de dados em um ListView. "
-MS. Prod: xamarin MS. AssetID: 37D95A2D-74AC-488A-B903-2BDD799EAA5C MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 07/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Rolagem rápida de ListView no Android
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma Android específica que permite a rolagem rápida por meio de dados em um ListView.
+ms.prod: xamarin
+ms.assetid: 37D95A2D-74AC-488A-B903-2BDD799EAA5C
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 30e6a39b1a7649fbb9e09dfeeb85ee889da68fc1
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128798"
 ---
-
 # <a name="listview-fast-scrolling-on-android"></a>Rolagem rápida de ListView no Android
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

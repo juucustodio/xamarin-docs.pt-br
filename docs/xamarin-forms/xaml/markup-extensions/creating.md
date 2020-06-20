@@ -1,8 +1,22 @@
 ---
-Título: "criando extensões de marcação XAML" Descrição: "Este artigo explica como definir suas próprias Xamarin.Forms extensões de marcação XAML personalizadas. Uma extensão de marcação XAML é uma classe que implementa a interface IMarkupExtension ou IMarkupExtension <T> . "
-MS. Prod: xamarin MS. AssetID: 797C1EF9-1C8E-4208-8610-9B79CCF17D46 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/05/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Criação de extensões de marcação do XAML
+description: Este artigo explica como definir suas próprias extensões de Xamarin.Forms marcação XAML personalizadas. Uma extensão de marcação XAML é uma classe que implementa a interface IMarkupExtension ou IMarkupExtension <T> .
+ms.prod: xamarin
+ms.assetid: 797C1EF9-1C8E-4208-8610-9B79CCF17D46
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/05/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 878ebcaa5249261afac2776a9e7cf47c0c047135
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84130527"
 ---
-
 # <a name="creating-xaml-markup-extensions"></a>Criação de extensões de marcação do XAML
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)

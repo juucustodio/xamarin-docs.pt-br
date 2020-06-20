@@ -1,8 +1,22 @@
 ---
-Título: Descrição de " Xamarin.Forms grade": "a Xamarin.Forms grade é um layout que organiza seus filhos em linhas e colunas de células".
-MS. Prod: xamarin MS. AssetID: 762B1802-D185-494C-B643-74EED55882FE MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/15/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsGrade
+description: A Xamarin.Forms grade é um layout que organiza seus filhos em linhas e colunas de células.
+ms.prod: xamarin
+ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/15/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9d2e697a07e033fd7c3c8d3efffa1d67f6c097c3
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946332"
 ---
-
 # <a name="xamarinforms-grid"></a>Xamarin.FormsGrade
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
@@ -274,6 +288,21 @@ grid.Children.Add(bottomRight, 1, 2, 1, 2); // second column, second row
 
 > [!NOTE]
 > Além disso, modos de exibição filho podem ser adicionados a um [`Grid`](xref:Xamarin.Forms.Grid) com os [`AddHorizontal`](xref:Xamarin.Forms.Grid.IGridList`1.AddHorizontal*) [`AddVertical`](xref:Xamarin.Forms.Grid.IGridList`1.AddVertical*) métodos e, que adicionam filhos a uma única linha ou a uma única coluna `Grid` . O `Grid` , em seguida, é expandido em linhas ou colunas conforme essas chamadas são feitas, bem como posicionar filhos automaticamente nas células corretas.
+
+### <a name="simplify-row-and-column-definitions"></a>Simplificar as definições de linha e coluna
+
+Em XAML, as características de linha e coluna de um [`Grid`](xref:Xamarin.Forms.Grid) podem ser especificadas usando uma sintaxe simplificada que evita a definição [`RowDefinition`](xref:Xamarin.Forms.RowDefinition) de [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) objetos e para cada linha e coluna. Em vez disso, as [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions) [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions) Propriedades e podem ser definidas como cadeias de caracteres que contêm valores delimitados por vírgula [`GridUnitType`](xref:Xamarin.Forms.GridUnitType) , a partir dos quais conversores de tipo são criados para Xamarin.Forms criar `RowDefinition` e `ColumnDefinition` objetos:
+
+```xaml
+<Grid RowDefinitions="1*, Auto, 25, 14, 20"
+      ColumnDefinitions="*, 2*, Auto, 300">
+    ...
+</Grid>
+```
+
+Neste exemplo, o [`Grid`](xref:Xamarin.Forms.Grid) tem cinco linhas e quatro colunas. As terceira, acima e quinta linhas são definidas como alturas absolutas, com a segunda linha de dimensionamento automático para seu conteúdo. A altura restante é alocada para a primeira linha.
+
+A coluna em diante é definida como uma largura absoluta, com o terceiro dimensionamento automático de coluna para seu conteúdo. A largura restante é alocada proporcionalmente entre a primeira e a segunda colunas com base no número antes da estrela. Neste exemplo, a largura da segunda coluna é duas vezes a da primeira coluna (porque `*` é idêntica a `1*` ).
 
 ## <a name="space-between-rows-and-columns"></a>Espaço entre linhas e colunas
 

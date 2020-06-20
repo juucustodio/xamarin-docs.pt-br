@@ -1,8 +1,21 @@
 ---
-Título: " Xamarin.Essentials : controle de versão" Descrição: "a classe VersionTracking no Xamarin.Essentials permite que você verifique a versão dos aplicativos e os números de compilação juntamente com a exibição de informações adicionais, como se fosse a primeira vez que o aplicativo foi iniciado ou para a versão atual, obtenha as informações de compilação anteriores e muito mais."
-MS. AssetID: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3 autor: jamesmontemagno MS. Author: Jamont MS. Data: 05/28/2019 MS. Custom: vídeo no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Acompanhamento de versão'
+description: A classe VersionTracking no Xamarin.Essentials permite que você verifique a versão dos aplicativos e os números de compilação, juntamente com informações adicionais, como se fosse a primeira vez em que o aplicativo foi iniciado ou para a versão atual, obtenha as informações de compilação anteriores e muito mais.
+ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 05/28/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 20819d76c23ca43f60073bcc2cd762abda280374
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802042"
 ---
-
 # <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials: Acompanhamento de versão
 
 A classe **VersionTracking** permite que você verifique a versão e os números de build dos aplicativos, junto com informações adicionais, por exemplo, se é a primeira vez que o aplicativo é iniciado ou, para a versão atual, obter informações do build anterior e muito mais.
@@ -69,7 +82,7 @@ Todas as informações de versão são armazenadas usando a API de [preferência
 
 ## <a name="api"></a>API
 
-- [Código-fonte de Controle de Versão](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/VersionTracking)
+- [Código-fonte de Controle de Versão](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/VersionTracking)
 - [Documentação da API de Controle de Versão](xref:Xamarin.Essentials.VersionTracking)
 
 ## <a name="related-video"></a>Vídeo relacionados

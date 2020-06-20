@@ -1,8 +1,23 @@
 ---
-Título: " Xamarin.Forms associações básicas" Descrição: "Este artigo explica como usar a Xamarin.Forms vinculação de dados, que vincula um par de propriedades entre dois objetos, pelo menos um dos quais geralmente é um objeto de interface de usuário. Esses dois objetos são chamados de destino e origem. "
-MS. Prod: xamarin MS. AssetID: 96553DF7-12EA-4FB2-AE85-3D1D59382B40 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/22/2019 não-loc: [ Xamarin.Forms , Xamarin.Essentials ] MS. Custom: vídeo
+title: Xamarin.FormsAssociações básicas
+description: Este artigo explica como usar a Xamarin.Forms vinculação de dados, que vincula um par de propriedades entre dois objetos, pelo menos um dos quais geralmente é um objeto de interface de usuário. Esses dois objetos são chamados de destino e origem.
+ms.prod: xamarin
+ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/22/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.custom: video
+ms.openlocfilehash: c0c6bc6e1005997548952aedc09cd83a451e7caa
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84133517"
 ---
-
 # <a name="xamarinforms-basic-bindings"></a>Xamarin.FormsAssociações básicas
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

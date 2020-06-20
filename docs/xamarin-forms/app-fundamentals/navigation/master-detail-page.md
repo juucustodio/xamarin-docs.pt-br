@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms página mestre-detalhes" Descrição: "o Xamarin.Forms MasterDetailPage é uma página que gerencia duas páginas de informações relacionadas – uma página mestra que apresenta itens e uma página de detalhes que apresenta detalhes sobre os itens na página mestra. Este artigo explica como usar um MasterDetailPage e navegar entre suas páginas de informações. "
-MS. Prod: xamarin MS. AssetID: 119945E3-58B8-4630-A3D2-8B561529D53B MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/01/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsPágina mestre-detalhes
+description: O Xamarin.Forms MasterDetailPage é uma página que gerencia duas páginas de informações relacionadas – uma página mestra que apresenta itens e uma página de detalhes que apresenta detalhes sobre os itens na página mestra. Este artigo explica como usar uma MasterDetailPage e navegar entre suas páginas de informações.
+ms.prod: xamarin
+ms.assetid: 119945E3-58B8-4630-A3D2-8B561529D53B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/01/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c751a1843479f1e98739964631999dfdb0e3b634
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84569628"
 ---
-
 # <a name="xamarinforms-master-detail-page"></a>Xamarin.FormsPágina mestre-detalhes
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)

@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms páginas modais" Descrição: " Xamarin.Forms fornece suporte para páginas modais. Uma página modal incentiva os usuários a concluir uma tarefa independente da qual não se pode sair via navegação até que essa tarefa seja concluída ou cancelada. Este artigo demonstra como navegar até páginas modais.
-MS. Prod: xamarin MS. AssetID: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/01/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsPáginas modais
+description: Xamarin.Formsfornece suporte para páginas modais. Uma página modal incentiva os usuários a concluir uma tarefa independente da qual não se pode sair via navegação até que essa tarefa seja concluída ou cancelada. Este artigo demonstra como navegar até as páginas modais.
+ms.prod: xamarin
+ms.assetid: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/01/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: aecab26efaed9815ec6916877b5f42297821582c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84569602"
 ---
-
 # <a name="xamarinforms-modal-pages"></a>Xamarin.FormsPáginas modais
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)

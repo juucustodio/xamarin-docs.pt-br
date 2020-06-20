@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms e serviços do Azure" Descrição: "Este artigo explica como usar os hubs de notificação do Azure para enviar notificações por push de plataforma cruzada para Xamarin.Forms aplicativos".
-MS. Prod: xamarin MS. AssetID: 07C60A42-A9E1-4DD0-8874-BD9487DC3EA2 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 06/28/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Formse os serviços do Azure
+description: Este artigo explica como usar os hubs de notificação do Azure para enviar notificações por push de plataforma cruzada para Xamarin.Forms aplicativos.
+ms.prod: xamarin
+ms.assetid: 07C60A42-A9E1-4DD0-8874-BD9487DC3EA2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/28/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a63b6329b9e8f4bcdc18a973b538e1e2e44bca67
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84130969"
 ---
-
 # <a name="xamarinforms-and-azure-services"></a>Xamarin.Formse os serviços do Azure
 
 ## <a name="consume-an-azure-cosmos-db-document-database-in-xamarinformsazure-cosmosdbmd"></a>[Consumir um banco de dados de documentos Azure Cosmos DB noXamarin.Forms](azure-cosmosdb.md)

@@ -1,8 +1,22 @@
 ---
-Título: Xamarin.Forms Descrição de "sinalizadores experimentais": " Xamarin.Forms sinalizadores experimentais permitem que a equipe de engenharia envie novos recursos aos usuários mais rapidamente, enquanto ainda pode alterar as APIs de recursos antes que elas se movam para uma versão estável".
-MS. Prod: xamarin MS. AssetID: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/14/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Formssinalizadores experimentais
+description: Xamarin.Formsos sinalizadores experimentais permitem que a equipe de engenharia envie novos recursos aos usuários mais rapidamente, enquanto ainda pode alterar as APIs de recursos antes que elas passem para uma versão estável.
+ms.prod: xamarin
+ms.assetid: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/15/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 17fcc996b4dc8013a23a598ece8e240caba3f775
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946111"
 ---
-
 # <a name="xamarinforms-experimental-flags"></a>Xamarin.Formssinalizadores experimentais
 
 Quando um novo Xamarin.Forms recurso é implementado, às vezes ele é colocado atrás de um sinalizador experimental. Isso permite que a equipe de engenharia forneça novos recursos para você com mais rapidez e, ao mesmo tempo, possa alterar as APIs de recursos antes que elas se movam para uma versão estável. O sinalizador experimental é removido quando o recurso passa para uma versão estável.
@@ -12,10 +26,10 @@ Xamarin.Formsinclui os seguintes sinalizadores experimentais:
 - `AppTheme_Experimental`
 - `CarouselView_Experimental`
 - `Expander_Experimental`
-- `IndicatorView_Experimental`
 - `Markup_Experimental`
 - `MediaElement_Experimental`
 - `RadioButton_Experimental`
+- `Shapes_Experimental`
 - `Shell_UWP_Experimental`
 - `StateTriggers_Experimental`
 - `SwipeView_Experimental`
@@ -44,7 +58,7 @@ O `SetFlags` método deve ser invocado em sua `AppDelegate` classe no Ios, em su
 O `Xamarin.Forms.Forms.SetFlags` método aceita um `string` argumento de matriz, o que torna possível habilitar vários sinalizadores experimentais em uma única chamada de método:
 
 ```csharp
-Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental", "IndicatorView_Experimental", "SwipeView_Experimental" });
+Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental", "MediaElement_Experimental", "SwipeView_Experimental" });
 ```
 
 > [!WARNING]

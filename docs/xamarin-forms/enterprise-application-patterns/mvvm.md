@@ -1,8 +1,22 @@
 ---
-title: "o padrão Model-View-ViewModel" Descrição: "Este capítulo explica como o aplicativo móvel eShopOnContainers usa o padrão MVVM para separar de forma limpa a lógica de negócios e de apresentação do aplicativo de sua interface do usuário."
-MS. Prod: xamarin MS. AssetID: dd8c1813-df44-4947-BCEE-1a1ff2334b87 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: O padrão Model-View-ViewModel
+description: Este capítulo explica como o aplicativo móvel eShopOnContainers usa o padrão MVVM para separar com clareza a lógica de negócios e de apresentação do aplicativo de sua interface do usuário.
+ms.prod: xamarin
+ms.assetid: dd8c1813-df44-4947-bcee-1a1ff2334b87
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c07fc9f42c4175b4e4569ab95a951b24c130c4f3
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572046"
 ---
-
 # <a name="the-model-view-viewmodel-pattern"></a>O padrão Model-View-ViewModel
 
 A Xamarin.Forms experiência do desenvolvedor normalmente envolve a criação de uma interface do usuário em XAML e, em seguida, a adição do code-behind que opera na interface do usuário. À medida que os aplicativos são modificados e aumentam em tamanho e escopo, podem surgir problemas complexos de manutenção. Esses problemas incluem o forte acoplamento entre os controles da interface do usuário e a lógica de negócios, o que aumenta o custo de fazer modificações na interface do usuário e a dificuldade de teste de unidade desse código.

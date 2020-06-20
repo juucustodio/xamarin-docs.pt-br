@@ -1,8 +1,22 @@
 ---
-title: "definindo a propriedade ItemsSource de um seletor" Descrição: "a exibição do seletor é um controle para selecionar um item de texto de uma lista de dados. Este artigo explica como preencher um seletor com dados definindo a propriedade ItemsSource e como responder à seleção de itens pelo usuário. "
-MS. Prod: xamarin MS. AssetID: 8ECF390C-9DB2-4441-B9A3-101AE7E5AEC5 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 02/26/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Definir a propriedade ItemsSource de um seletor
+description: A exibição do seletor é um controle para selecionar um item de texto de uma lista de dados. Este artigo explica como preencher um seletor com dados definindo a propriedade ItemsSource e como responder à seleção de itens pelo usuário.
+ms.prod: xamarin
+ms.assetid: 8ECF390C-9DB2-4441-B9A3-101AE7E5AEC5
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/26/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8c4fc732082a77a2e471465af448a487862b513c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136286"
 ---
-
 # <a name="setting-a-pickers-itemssource-property"></a>Definir a propriedade ItemsSource de um seletor
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)

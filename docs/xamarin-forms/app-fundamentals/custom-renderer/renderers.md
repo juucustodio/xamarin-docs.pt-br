@@ -1,8 +1,22 @@
 ---
-title: "classes base do renderizador e controles nativos" Descrição: "cada Xamarin.Forms controle tem um processador incluído para cada plataforma que cria uma instância de um controle nativo. Este artigo lista as classes de processador e controle nativo que implementam cada Xamarin.Forms página, layout, exibição e célula. "
-MS. Prod: xamarin MS. AssetID: A8909AE3-ED0E-4D24-BF96-B49E732E3B93 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/17/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Classes base de renderizador e controles nativos
+description: Cada Xamarin.Forms controle tem um renderizador que acompanha para cada plataforma que cria uma instância de um controle nativo. Este artigo lista as classes de processador e controle nativo que implementam cada Xamarin.Forms página, layout, exibição e célula.
+ms.prod: xamarin
+ms.assetid: A8909AE3-ED0E-4D24-BF96-B49E732E3B93
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/17/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9f6eff831f3eb653e281dd9ee750bae7f7dfda06
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198383"
 ---
-
 # <a name="renderer-base-classes-and-native-controls"></a>Classes base de renderizador e controles nativos
 
 _Cada Xamarin.Forms controle tem um renderizador que acompanha para cada plataforma que cria uma instância de um controle nativo. Este artigo lista as classes de processador e controle nativo que implementam cada Xamarin.Forms página, layout, exibição e célula._

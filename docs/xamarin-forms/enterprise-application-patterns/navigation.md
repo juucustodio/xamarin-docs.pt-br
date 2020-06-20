@@ -1,8 +1,22 @@
 ---
-Título: "navegação do aplicativo empresarial" Descrição: "Este capítulo explica como o aplicativo móvel do eShopOnContainers executa o modelo de exibição-primeira navegação de modelos de exibição".
-MS. Prod: xamarin MS. AssetID: 4cad57b5-7fe4-4527-a988-d9b60c9620b4 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Navegação de aplicativo empresarial
+description: Este capítulo explica como o aplicativo móvel eShopOnContainers executa o modelo de exibição-primeira navegação de modelos de exibição.
+ms.prod: xamarin
+ms.assetid: 4cad57b5-7fe4-4527-a988-d9b60c9620b4
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ca562120a819d4d9fe09b2ee5891a78f1010b1a5
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572020"
 ---
-
 # <a name="enterprise-app-navigation"></a>Navegação de aplicativo empresarial
 
 Xamarin.Formsinclui suporte para a navegação de página, que normalmente resulta da interação do usuário com a interface do usuário ou do próprio aplicativo como resultado de alterações de estado controladas pela lógica interna. No entanto, a navegação pode ser complexa para ser implementada em aplicativos que usam o padrão Model-View-ViewModel (MVVM), pois os seguintes desafios devem ser atendidos:

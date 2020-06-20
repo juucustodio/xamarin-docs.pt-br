@@ -1,8 +1,21 @@
 ---
-Título: " Xamarin.Essentials : lanterna" Descrição: "este documento descreve a classe lanterna no Xamarin.Essentials , que tem a capacidade de ativar ou desativar o flash de câmera do dispositivo para transformá-lo em uma lanterna".
-MS. AssetID: 06A03553-D212-43A2-9E6E-C2D2D93EB136 autor: jamesmontemagno MS. Custom: vídeo MS. Author: Jamont MS. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Lanterna'
+description: Este documento descreve a classe lanterna no Xamarin.Essentials , que tem a capacidade de ativar ou desativar o flash de câmera do dispositivo para transformá-lo em uma lanterna.
+ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7a8a90674b395c90f698a4a0854dc0dc3fc5fe15
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802343"
 ---
-
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Lanterna
 
 A classe **Flashlight** tem a capacidade de ativar ou desativar o flash da câmera do dispositivo para transformá-lo em uma lanterna.
@@ -113,7 +126,7 @@ Uma textura de superfície da câmera é criada para ativar ou desativar o `Flas
 
 ## <a name="api"></a>API
 
-- [Código-fonte de Lanterna](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
+- [Código-fonte de Lanterna](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Flashlight)
 - [Documentação da API de Lanterna](xref:Xamarin.Essentials.Flashlight)
 
 ## <a name="related-video"></a>Vídeo relacionados

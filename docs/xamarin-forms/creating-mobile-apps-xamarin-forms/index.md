@@ -1,8 +1,22 @@
 ---
-Título: "Criando aplicativos móveis com Xamarin.Forms o livro" Descrição: "Aprenda Xamarin.Forms o desenvolvimento de aplicativos com a versão eletrônica da criação de aplicativos móveis com o Xamarin.Forms livro de Charles Petzold".
-MS. Prod: xamarin MS. AssetID: CDE99818-689B-4376-9DC4-C4102AC0F931 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 07/19/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Criando aplicativos móveis com o Xamarin.Forms livro
+description: Aprenda Xamarin.Forms o desenvolvimento de aplicativos com a versão eletrônica da criação de aplicativos móveis com o Xamarin.Forms livro por Charles Petzold.
+ms.prod: xamarin
+ms.assetid: CDE99818-689B-4376-9DC4-C4102AC0F931
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e38c319db0d0adf23a2ec0d328ccc3822e33f66d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198289"
 ---
-
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Criando aplicativos móveis com o Xamarin.Forms livro
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples)
@@ -94,7 +108,7 @@ A biblioteca .NET Standard 2,0 também permite que Xamarin.Forms os aplicativos 
 
 O XAML agora tem uma função muito maior no Xamarin.Forms . Os Xamarin.Forms modelos de solução distribuídos com o Visual Studio criam arquivos de página baseados em XAML. Um desenvolvedor que usa o Xamarin.Forms deve se familiarizar com o XAML o mais cedo possível. A seção [Extensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.yml) da Xamarin.Forms documentação contém vários artigos sobre XAML para você começar.
 
-### <a name="supported-platforms"></a>Plataformas com Suporte
+### <a name="supported-platforms"></a>Plataformas compatíveis
 
 Xamarin.FormsNão dá mais suporte a Windows 8.1 e Windows Phone 8,1.
 

@@ -1,8 +1,22 @@
 ---
-Título: "início do indicador inicial na iOS" Descrição: "as especificações da plataforma permitem que você consuma a funcionalidade disponível apenas em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma do iOS específica que define a visibilidade do indicador inicial em uma página ".
-MS. Prod: xamarin MS. AssetID: F81022E0-3C6C-49C0-A000-FAF6574D3FB7 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/09/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Visibilidade do indicador de página inicial no iOS
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do iOS que define a visibilidade do indicador inicial em uma página.
+ms.prod: xamarin
+ms.assetid: F81022E0-3C6C-49C0-A000-FAF6574D3FB7
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/09/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e76684ffb293380c283153c35c907acc50e40aab
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128070"
 ---
-
 # <a name="home-indicator-visibility-on-ios"></a>Visibilidade do indicador de página inicial no iOS
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

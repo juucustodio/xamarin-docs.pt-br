@@ -1,8 +1,22 @@
 ---
-Título: "Personalizando uma entrada" Descrição: "o Xamarin.Forms controle de entrada permite que uma única linha de texto seja editada. Este artigo demonstra como criar um renderizador personalizado para o controle de entrada, permitindo que os desenvolvedores substituam a renderização nativa padrão por sua própria personalização específica da plataforma. "
-MS. Prod: xamarin MS. AssetID: 7B5DD10D-0411-424F-88D8-8A474DF16D8D MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 11/26/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Personalizando uma entrada
+description: O Xamarin.Forms controle de entrada permite que uma única linha de texto seja editada. Este artigo demonstra como criar um renderizador personalizado para o controle Entry, permitindo que os desenvolvedores substituam a renderização nativa padrão por sua própria personalização específica da plataforma.
+ms.prod: xamarin
+ms.assetid: 7B5DD10D-0411-424F-88D8-8A474DF16D8D
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/26/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d28a9079d27310dde0e5ea5bf80c83895bbcf1d4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84571565"
 ---
-
 # <a name="customizing-an-entry"></a>Personalizando uma entrada
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)

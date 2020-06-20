@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms RelativeLayout" Descrição: "Este artigo explica como usar a Xamarin.Forms classe RelativeLayout para criar interfaces do arquivo que são dimensionadas de acordo com qualquer tamanho de tela".
-MS. Prod: xamarin MS. AssetID: 2530BCB8-01B8-4C4F-BF14-CA53659F1B5A MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 11/25/2015 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsRelativeLayout
+description: Este artigo explica como usar a Xamarin.Forms classe RelativeLayout para criar UIs que são dimensionadas de acordo com qualquer tamanho de tela.
+ms.prod: xamarin
+ms.assetid: 2530BCB8-01B8-4C4F-BF14-CA53659F1B5A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/25/2015
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f250b109f759bcf6bb7fa4ac0573743ac12c4bc1
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127183"
 ---
-
 # <a name="xamarinforms-relativelayout"></a>Xamarin.FormsRelativeLayout
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)

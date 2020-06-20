@@ -1,8 +1,22 @@
 ---
-Título: "configurar projetos do Windows" Descrição: " Xamarin.Forms soluções mais antigas (ou aquelas criadas no MacOS) não terão projetos de plataforma universal do Windows e, portanto, este artigo explica como adicionar um novo projeto UWP a uma Xamarin.Forms solução existente."
-MS. Prod: xamarin MS. AssetID: A0774D2E-6994-4D91-84E8-DAB66FC92320 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Configurar projetos do Windows
+description: Xamarin.FormsAs soluções mais antigas (ou aquelas criadas no MacOS) não terão projetos de plataforma universal do Windows e, portanto, este artigo explica como adicionar um novo projeto UWP a uma Xamarin.Forms solução existente.
+ms.prod: xamarin
+ms.assetid: A0774D2E-6994-4D91-84E8-DAB66FC92320
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 13b46fd06b0116332241b0d523aea707d56b39ec
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573359"
 ---
-
 # <a name="setup-windows-projects"></a>Configurar projetos do Windows
 
 _Adicionando novos projetos do Windows a uma Xamarin.Forms solução existente_

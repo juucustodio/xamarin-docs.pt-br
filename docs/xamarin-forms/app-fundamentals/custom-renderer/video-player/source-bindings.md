@@ -1,8 +1,22 @@
 ---
-Título: "associando fontes de vídeo ao Player" Descrição: "Este artigo explica como associar fontes de vídeo ao Player de vídeo usando Xamarin.Forms ".
-MS. Prod: xamarin MS. AssetID: 504E0C7E-051A-4AF2-B654-BAB4D0957928 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 02/12/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Associando fontes de vídeo ao player
+description: Este artigo explica como associar fontes de vídeo ao Player de vídeo usando o Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 504E0C7E-051A-4AF2-B654-BAB4D0957928
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/12/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c02764d6160bb8ce2481a3cf67e357933d25934f
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84133725"
 ---
-
 # <a name="binding-video-sources-to-the-player"></a>Associando fontes de vídeo ao player
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

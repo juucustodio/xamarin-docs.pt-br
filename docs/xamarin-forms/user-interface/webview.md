@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms WebView" Descrição: "Este artigo explica como usar a Xamarin.Forms classe WebView para apresentar conteúdo da Web local ou de rede e documentos para os usuários".
-MS. Prod: xamarin MS. AssetID: E44F5D0F-DB8E-46C7-8789-114F1652A6C5 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/06/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsWebView
+description: Este artigo explica como usar a Xamarin.Forms classe WebView para apresentar conteúdo da Web local ou de rede e documentos aos usuários.
+ms.prod: xamarin
+ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/06/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9b07e044e55f99a7a183e55c566bf59dbd082655
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198164"
 ---
-
 # <a name="xamarinforms-webview"></a>Xamarin.FormsWebView
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)

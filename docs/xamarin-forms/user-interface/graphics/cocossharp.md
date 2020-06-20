@@ -1,7 +1,22 @@
 ---
-Título: "usando CocosSharp em Xamarin.Forms " Descrição: "CocosSharp pode ser usado para adicionar processamento preciso de forma, imagem e texto a um aplicativo para visualização avançada" MS. Prod: xamarin MS. AssetID: E0F404D5-5C6B-4288-92EC-78996C674E4E MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/03/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Usando CocosSharp emXamarin.Forms
+description: CocosSharp pode ser usado para adicionar processamento preciso de forma, imagem e texto a um aplicativo para visualização avançada
+ms.prod: xamarin
+ms.assetid: E0F404D5-5C6B-4288-92EC-78996C674E4E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/03/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a3183997eb229fd3548a1afeccf82670cf651a71
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84565298"
 ---
-
 # <a name="using-cocossharp-in-xamarinforms"></a>Usando CocosSharp emXamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/CocosSharpForms)

@@ -1,8 +1,23 @@
 ---
-Título: "a Xamarin.Forms FlexLayout" Descrição: "usar FlexLayout para empilhar ou encapsular uma coleção de exibições filho".
-MS. Prod: xamarin MS. AssetID: 6A91EA70-268C-462C-AAAF-F8DA011403F8 MS. Technology: xamarin-Forms MS. Custom: xamu-vídeo autor: davidbritch MS. Author: dabritch MS. Date: 05/07/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: O Xamarin.Forms FlexLayout
+description: Use FlexLayout para empilhar ou encapsular uma coleção de exibições filho.
+ms.prod: xamarin
+ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
+ms.technology: xamarin-forms
+ms.custom: xamu-video
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/07/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 518bf97be3dd9d906d574b15434b0bfa67612516
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570681"
 ---
-
 # <a name="the-xamarinforms-flexlayout"></a>O Xamarin.Forms FlexLayout
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)

@@ -1,8 +1,22 @@
 ---
-Título: "carregando vídeos de recursos de aplicativo" Descrição: "Este artigo explica como carregar vídeos armazenados como recursos de aplicativo em um aplicativo de player de vídeo, usando Xamarin.Forms ".
-MS. Prod: xamarin MS. AssetID: F75BD540-9354-4C17-A119-57F3DEC66D54 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 02/12/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Carregando vídeos de recursos do aplicativo
+description: Este artigo explica como carregar vídeos armazenados como recursos de aplicativo em um aplicativo de player de vídeo, usando o Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: F75BD540-9354-4C17-A119-57F3DEC66D54
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/12/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 472c6c2a7c5a084520aee6b8ae160d9329c3f593
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84133751"
 ---
-
 # <a name="loading-application-resource-videos"></a>Carregando vídeos de recursos do aplicativo
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

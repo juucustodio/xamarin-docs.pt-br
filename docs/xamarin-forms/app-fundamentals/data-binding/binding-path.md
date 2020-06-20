@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms caminho de associação" Descrição: "Este artigo explica como usar Xamarin.Forms associações de dados para acessar subpropriedades e membros da coleção com a propriedade Path da classe Binding".
-MS. Prod: xamarin MS. AssetID: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/05/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsCaminho de associação
+description: Este artigo explica como usar Xamarin.Forms associações de dados para acessar subpropriedades e membros da coleção com a propriedade Path da classe Binding.
+ms.prod: xamarin
+ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/05/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a0ac8a568c3e8c46fa7e53112461aa0bff5684ae
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570785"
 ---
-
 # <a name="xamarinforms-binding-path"></a>Xamarin.FormsCaminho de associação
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

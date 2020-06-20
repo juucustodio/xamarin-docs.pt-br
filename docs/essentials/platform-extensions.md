@@ -1,8 +1,20 @@
 ---
-Título: " Xamarin.Essentials extensões de plataforma" Descrição: " Xamarin.Essentials fornece vários métodos de extensão de plataforma ao ter que trabalhar com tipos de plataforma como Rect, size e Point."
-MS. AssetID: AB4D198A-4FD7-479E-8627-01F887A6D056 autor: jamesmontemagno MS. Author: Jamont MS. Date: 03/13/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.EssentialsExtensões de plataforma
+description: Xamarin.Essentialsfornece vários métodos de extensão de plataforma ao ter que trabalhar com tipos de plataforma como Rect, size e Point.
+ms.assetid: AB4D198A-4FD7-479E-8627-01F887A6D056
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 03/13/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 56cb9619a4132f6568cee8fbf590965934024639
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801888"
 ---
-
 # <a name="xamarinessentials-platform-extensions"></a>Xamarin.Essentials: Extensões de plataforma
 
 Xamarin.Essentialsfornece vários métodos de extensão de plataforma ao ter que trabalhar com tipos de plataforma como Rect, size e Point. Isso significa que você pode converter entre a versão `System` desses tipos para iOS, Android e tipos específicos de UWP.
@@ -135,7 +147,7 @@ var system2 = platform.ToSystemRectangle();
 
 ## <a name="api"></a>API
 
-- [Código-fonte de conversores](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Types/PlatformExtensions)
+- [Código-fonte de conversores](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Types/PlatformExtensions)
 - [Documentação da API de conversores de ponto](xref:Xamarin.Essentials.PointExtensions)
 - [Documentação da API de conversores de retângulo](xref:Xamarin.Essentials.RectangleExtensions)
 - [Documentação da API de conversores de tamanho](xref:Xamarin.Essentials.SizeExtensions)

@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms autenticação de serviço Web" Descrição: "este guia explica como integrar serviços de autenticação em um Xamarin.Forms aplicativo para permitir que os usuários compartilhem um back-end enquanto têm acesso a seus próprios dados."
-MS. Prod: xamarin MS. AssetID: E6FCFAE1-4F83-4F93-9190-EC5290360C54 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 06/27/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsAutenticação do serviço Web
+description: Este guia explica como integrar os serviços de autenticação em um Xamarin.Forms aplicativo para permitir que os usuários compartilhem um back-end enquanto têm acesso apenas a seus próprios dados.
+ms.prod: xamarin
+ms.assetid: E6FCFAE1-4F83-4F93-9190-EC5290360C54
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/27/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 59130739617f38ce32e0d241f8e068cf077997ac
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136078"
 ---
-
 # <a name="xamarinforms-web-service-authentication"></a>Xamarin.FormsAutenticação do serviço Web
 
 ## <a name="authenticate-a-restful-web-service"></a>[Autenticar um serviço Web RESTful](rest.md)

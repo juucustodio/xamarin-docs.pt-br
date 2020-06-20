@@ -1,8 +1,22 @@
 ---
-Título: "corte de bitmaps SkiaSharp" Descrição: "saiba como usar o SkiaSharp para criar uma interface do usuário para desribing interativamente um retângulo de corte".
-MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 0A79AB27-C69F-4376-8FFE-FF46E4783F30 autor: davidbritch MS. Author: dabritch MS. Date: 07/17/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Corte de bitmaps SkiaSharp
+description: Saiba como usar o SkiaSharp para criar uma interface do usuário para desribing interativamente um retângulo de corte.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/17/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d613c4f73c0a377a599b0137ce2f2b557c04ad6a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572332"
 ---
-
 # <a name="cropping-skiasharp-bitmaps"></a>Corte de bitmaps SkiaSharp
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

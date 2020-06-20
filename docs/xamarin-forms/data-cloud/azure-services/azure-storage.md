@@ -1,8 +1,22 @@
 ---
-Título: "armazenar e acessar dados no armazenamento do Azure de Xamarin.Forms " Descrição: "o armazenamento do Azure é uma solução de armazenamento em nuvem escalonável que pode ser usada para armazenar dados não estruturados e estruturados. Este artigo explica como usar Xamarin.Forms o para armazenar texto e dados binários no armazenamento do Azure e como acessar os dados. "
-MS. Prod: xamarin MS. AssetID: 5B10D37B-839B-4CD0-9C65-91014A93F3EB MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/28/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Armazene e acesse dados no armazenamento do Azure deXamarin.Forms
+description: O armazenamento do Azure é uma solução de armazenamento em nuvem escalonável que pode ser usada para armazenar dados não estruturados e estruturados. Este artigo explica como usar Xamarin.Forms o para armazenar texto e dados binários no armazenamento do Azure e como acessar os dados.
+ms.prod: xamarin
+ms.assetid: 5B10D37B-839B-4CD0-9C65-91014A93F3EB
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/28/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a69edd3bf014809cc479dcb7cba0e430dcefbe5b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84564674"
 ---
-
 # <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Armazene e acesse dados no armazenamento do Azure deXamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)

@@ -1,6 +1,21 @@
 ---
-Título: "Implementando uma exibição" Descrição: "Este artigo explica como criar um renderizador personalizado para um Xamarin.Forms controle personalizado que é usado para exibir um fluxo de vídeo de visualização da câmera do dispositivo."
-MS. Prod: xamarin MS. AssetID: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Implementando uma exibição
+description: Este artigo explica como criar um renderizador personalizado para um Xamarin.Forms controle personalizado que é usado para exibir um fluxo de vídeo de visualização da câmera do dispositivo.
+ms.prod: xamarin
+ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c239955a093120c3a16ea3236946eb645ea9a4b4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570798"
 ---
 # <a name="implementing-a-view"></a>Implementando uma exibição
 

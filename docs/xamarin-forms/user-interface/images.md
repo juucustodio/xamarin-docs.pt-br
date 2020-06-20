@@ -1,8 +1,22 @@
 ---
-Título: "imagens em Xamarin.Forms " Descrição: "imagens podem ser compartilhadas entre plataformas com o Xamarin.Forms , elas podem ser carregadas especificamente para cada plataforma ou podem ser baixadas para exibição."
-MS. Prod: xamarin MS. AssetID: C025AB53-05CC-49BA-9815-75D6DF9E40B7 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/04/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Imagens emXamarin.Forms
+description: As imagens podem ser compartilhadas entre plataformas com o Xamarin.Forms , elas podem ser carregadas especificamente para cada plataforma ou podem ser baixadas para exibição.
+ms.prod: xamarin
+ms.assetid: C025AB53-05CC-49BA-9815-75D6DF9E40B7
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/19/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7117bb809c43ab5edb67e8367840b17cd1d97ef9
+ms.sourcegitcommit: c000c0ed15b7b2ef2a8f46a39171e11b6d9f8a5d
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84980084"
 ---
-
 # <a name="images-in-xamarinforms"></a>Imagens emXamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages)
@@ -15,7 +29,7 @@ As imagens específicas da plataforma também são necessárias para ícones e t
 
 ## <a name="display-images"></a>Exibir imagens
 
-Xamarin.Formsusa a [`Image`](xref:Xamarin.Forms.Image) exibição para exibir imagens em uma página. Ele tem duas propriedades importantes:
+Xamarin.Formsusa a [`Image`](xref:Xamarin.Forms.Image) exibição para exibir imagens em uma página. Ele tem várias propriedades importantes:
 
 - [`Source`](xref:Xamarin.Forms.Image.Source)-Uma [`ImageSource`](xref:Xamarin.Forms.ImageSource) instância, o arquivo, o URI ou o recurso, que define a imagem a ser exibida.
 - [`Aspect`](xref:Xamarin.Forms.Image.Aspect)-Como dimensionar a imagem dentro dos limites que ela está sendo exibida em (seja para alongar, cortar ou Letterbox).
@@ -30,7 +44,7 @@ Xamarin.Formsusa a [`Image`](xref:Xamarin.Forms.Image) exibição para exibir im
 A [`Aspect`](xref:Xamarin.Forms.Image.Aspect) propriedade determina como a imagem será dimensionada para se ajustar à área de exibição:
 
 - [`Fill`](xref:Xamarin.Forms.Aspect.Fill)– Alonga a imagem para preencher completamente e exatamente a área de exibição. Isso pode resultar na distorção da imagem.
-- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill)-Corta a imagem para que ela preencha a área de exibição enquanto preserva o aspecto (isto é, sem distorção).
+- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill)-Corta a imagem para que ela preencha a área de exibição enquanto preserva o aspecto (ou seja, sem distorção).
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit)-Letterboxes a imagem (se necessário) para que toda a imagem caiba na área de exibição, com espaço em branco adicionado à parte superior/inferior ou aos lados, dependendo se a imagem for larga ou comprida.
 
 As imagens podem ser carregadas de um [arquivo local](#local-images), de um [recurso inserido](#embedded-images), [baixado](#download-images)ou carregado a partir de um fluxo. Além disso, os ícones de fonte podem ser exibidos pelo [`Image`](xref:Xamarin.Forms.Image) modo de exibição especificando os dados de ícone de fonte em um `FontImageSource` objeto. Para obter mais informações, consulte [exibir ícones de fonte](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) no guia [fontes](~/xamarin-forms/user-interface/text/fonts.md) .
@@ -231,14 +245,13 @@ var imageSource = ImageSource.FromResource("filename.png",
 As imagens podem ser baixadas automaticamente para exibição, conforme mostrado no XAML a seguir:
 
 ```xaml
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
        x:Class="WorkingWithImages.DownloadImagesXaml">
   <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
     <Label Text="Image UriSource Xaml" />
-    <Image Source="https://xamarin.com/content/images/pages/forms/example-app.png" />
-    <Label Text="example-app.png gets downloaded from xamarin.com" />
+    <Image Source="https://aka.ms/campus.jpg" />
+    <Label Text="campus.jpg gets downloaded from microsoft.com" />
   </StackLayout>
 </ContentPage>
 ```
@@ -248,7 +261,7 @@ O código C# equivalente é o seguinte:
 ```csharp
 var webImage = new Image {
      Source = ImageSource.FromUri(
-        new Uri("https://xamarin.com/content/images/pages/forms/example-app.png")
+        new Uri("https://aka.ms/campus.jpg")
      ) };
 ```
 
@@ -257,7 +270,7 @@ O [`ImageSource.FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)) m�
 Há também uma conversão implícita para cadeias de caracteres de URI, portanto, o exemplo a seguir também funcionará:
 
 ```csharp
-webImage.Source = "https://xamarin.com/content/images/pages/forms/example-app.png";
+webImage.Source = "https://aka.ms/campus.jpg";
 ```
 
 As capturas de tela a seguir mostram o resultado da exibição de uma imagem remota em cada plataforma:
@@ -274,7 +287,7 @@ Um [`UriImageSource`](xref:Xamarin.Forms.UriImageSource) também dá suporte ao 
 O Caching é habilitado por padrão e armazenará a imagem localmente por 24 horas. Para desabilitar o cache de uma imagem específica, crie uma instância da origem da imagem da seguinte maneira:
 
 ```csharp
-image.Source = new UriImageSource { CachingEnabled = false, Uri = new Uri("http://server.com/image") };
+image.Source = new UriImageSource { CachingEnabled = false, Uri = new Uri("https://server.com/image") };
 ```
 
 Para definir um período de cache específico (por exemplo, 5 dias), crie uma instância da origem da imagem da seguinte maneira:
@@ -282,7 +295,7 @@ Para definir um período de cache específico (por exemplo, 5 dias), crie uma in
 ```csharp
 webImage.Source = new UriImageSource
 {
-    Uri = new Uri("https://xamarin.com/content/images/pages/forms/example-app.png"),
+    Uri = new Uri("https://aka.ms/campus.jpg"),
     CachingEnabled = true,
     CacheValidity = new TimeSpan(5,0,0,0)
 };

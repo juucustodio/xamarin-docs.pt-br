@@ -1,7 +1,22 @@
 ---
-Título: "Resumo do capítulo 28. Local e mapas "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 28. Local e mapeia "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: F6E20077-687C-45C4-A375-31D4F49BBFA4 autor: davidbritch MS. Author: dabritch MS. Date: 07/19/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Resumo do capítulo 28. Localização e mapas
+description: 'Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 28. Localização e mapas'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 301dc65c7909603e117717a993959e3c73fa2d32
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84133400"
 ---
-
 # <a name="summary-of-chapter-28-location-and-maps"></a>Resumo do capítulo 28. Localização e mapas
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28)

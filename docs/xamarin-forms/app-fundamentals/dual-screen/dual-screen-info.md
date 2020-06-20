@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms recursos de dispositivo de tela dupla" Descrição: "este guia explica como usar Xamarin.Forms a classe DualScreenInfo para otimizar sua experiência de aplicativo para dispositivos de tela dupla, como Surface Duo e Surface neo."
-MS. Prod: xamarin MS. AssetID: dd5eb074-f4cb-4ab4-b47d-76f862ac7cfa MS. Technology: xamarin-Forms autor: davidortinau MS. Author: daortin MS. Date: 02/08/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Formsrecursos de dispositivo de tela dupla
+description: Este guia explica como usar a Xamarin.Forms classe DualScreenInfo para otimizar sua experiência de aplicativo para dispositivos de tela dupla, como Surface Duo e Surface neo.
+ms.prod: xamarin
+ms.assetid: dd5eb074-f4cb-4ab4-b47d-76f862ac7cfa
+ms.technology: xamarin-forms
+author: davidortinau
+ms.author: daortin
+ms.date: 05/19/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 12f3ac86d2418c6516d000371753fc8ae65d557c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946340"
 ---
-
 # <a name="xamarinforms-dual-screen-device-capabilities"></a>Xamarin.Formsrecursos de dispositivo de tela dupla
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
@@ -18,15 +32,15 @@ A classe `DualScreenInfo` permite determinar o painel de sua exibição, o taman
 - `IsLandscape` indica se o dispositivo está no modo paisagem. Isso é útil porque as APIs de orientação nativas não relatam corretamente a orientação quando o aplicativo é estendido.
 - `SpanMode` indica se o layout está no modo alto, largo ou de painel único.
 
-Além disso, um evento `PropertyChanged` é acionado quando qualquer propriedade é alterada.
+Além disso, o `PropertyChanged` evento é acionado quando qualquer propriedade é alterada e o `HingeAngleChanged` evento é acionado quando o ângulo da dobradiça é alterado.
 
-## <a name="poll-hinge-angle-on-android"></a>Verificar o ângulo da dobradiça no Android
+## <a name="poll-hinge-angle-on-android-and-uwp"></a>Ângulo da dobradiça da sondagem no Android e no UWP
 
-A propriedade a seguir está disponível ao acessar `DualScreenInfo` no projeto da plataforma Android:
+O método a seguir está disponível ao acessar os `DualScreenInfo` projetos de plataforma Android e UWP:
 
 - `GetHingeAngleAsync` recupera o ângulo atual da dobradiça do dispositivo. Ao usar o simulador, o HingeAngle pode ser configurado modificando o sensor de Pressão.
 
-Esta propriedade pode ser usada em um renderizador personalizado do Android:
+Esse método pode ser invocado de renderizadores personalizados no Android e no UWP. O código a seguir mostra um exemplo de renderizador personalizado do Android:
 
 ```csharp
 public class HingeAngleLabelRenderer : Xamarin.Forms.Platform.Android.FastRenderers.LabelRenderer

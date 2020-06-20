@@ -1,8 +1,22 @@
 ---
-title: "informações de caminho e enumeração" Descrição: "Este artigo explica como obter informações sobre caminhos SkiaSharp e enumerar o conteúdo e demonstra isso com código de exemplo".
-MS. Prod: xamarin MS. AssetID: 8E8C5C6A-F324-4155-8652-7A77D231B3E5 MS. Technology: xamarin-skiasharp autor: davidbritch MS. Author: dabritch MS. Date: 09/12/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Enumeração e informações de caminho
+description: Este artigo explica como obter informações sobre caminhos SkiaSharp e enumerar o conteúdo e demonstra isso com código de exemplo.
+ms.prod: xamarin
+ms.assetid: 8E8C5C6A-F324-4155-8652-7A77D231B3E5
+ms.technology: xamarin-skiasharp
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/12/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 931b8d0946f1af5e697e581a04c0feefb31ba2d3
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84131918"
 ---
-
 # <a name="path-information-and-enumeration"></a>Enumeração e informações de caminho
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

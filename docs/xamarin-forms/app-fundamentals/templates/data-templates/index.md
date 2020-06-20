@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms modelos de dados" Descrição: "um DataTemplate é usado para especificar a aparência de dados em controles com suporte e, em geral, é associado aos dados a serem exibidos."
-MS. Prod: xamarin MS. AssetID: 838F4BDB-B719-457F-8633-27E9B267A2A0 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 09/11/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsModelos de dados
+description: Um DataTemplate é usado para especificar a aparência dos dados em controles compatíveis e geralmente é associado aos dados a serem exibidos.
+ms.prod: xamarin
+ms.assetid: 838F4BDB-B719-457F-8633-27E9B267A2A0
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/11/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e0961fad18ccd961a5b84b2a5535bca70781dd8d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136117"
 ---
-
 # <a name="xamarinforms-data-templates"></a>Xamarin.FormsModelos de dados
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)

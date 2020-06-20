@@ -1,7 +1,22 @@
 ---
-Título: "Resumo do capítulo 4. Rolando a pilha "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 4. Rolando a pilha "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44 autor: davidbritch MS. Author: dabritch MS. Date: 07/19/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Resumo do capítulo 4. Rolagem da pilha
+description: 'Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 4. Rolagem da pilha'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6b86bfe1e343cd50f4a133726d16364b3efb8bee
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198267"
 ---
-
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Resumo do capítulo 4. Rolagem da pilha
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)

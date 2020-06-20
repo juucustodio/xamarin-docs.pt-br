@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms submenu do Shell" Descrição: "o submenu é o menu raiz de um aplicativo de shell e pode ser acessado por meio de um ícone ou passando o dedo do lado da tela. O submenu consiste em um cabeçalho opcional, itens de submenu e itens de menu opcionais. "
-MS. Prod: xamarin MS. AssetID: FEDE51EB-577E-4B3E-9890-B7C1A5E52516 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/22/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsSubmenu do Shell
+description: O submenu é o menu raiz de um aplicativo Shell e é acessível por meio de um ícone ou passando o dedo na lateral da tela. O submenu consiste em um cabeçalho opcional, itens de submenu e itens de menu opcionais.
+ms.prod: xamarin
+ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/10/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1a1d47b2b37fa532b3e2a64ada5f367e612f557d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946254"
 ---
-
 # <a name="xamarinforms-shell-flyout"></a>Xamarin.FormsSubmenu do Shell
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

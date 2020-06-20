@@ -1,8 +1,22 @@
 ---
-Título: "criando uma Xamarin.Forms DataTemplate" Descrição: "modelos de dados podem ser criados embutidos, em um ResourceDictionary ou de um tipo personalizado ou Xamarin.Forms tipo de célula apropriado. Este artigo explora cada técnica. "
-MS. Prod: xamarin MS. AssetID: CFF4AB5E-9069-461C-84D8-F9F6C38510AB MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 09/11/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Criando um Xamarin.Forms DataTemplate
+description: Os modelos de dados podem ser criados embutidos, em um ResourceDictionary ou de um tipo personalizado ou de um Xamarin.Forms tipo de célula apropriado. Este artigo explora cada técnica.
+ms.prod: xamarin
+ms.assetid: CFF4AB5E-9069-461C-84D8-F9F6C38510AB
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/11/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3054180a9deb1357357c90db7b7fbdd8058b6773
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84565493"
 ---
-
 # <a name="creating-a-xamarinforms-datatemplate"></a>Criando um Xamarin.Forms DataTemplate
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)

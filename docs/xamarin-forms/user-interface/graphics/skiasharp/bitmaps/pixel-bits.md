@@ -1,8 +1,22 @@
 ---
-Título: "acessando SkiaSharp bits de pixel de bitmap" Descrição: "Descubra as várias técnicas para acessar e modificar os bits de pixel de bitmaps SkiaSharp".
-MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: DBB58522-F816-4A8C-96A5-E0236F16A5C6 autor: davidbritch MS. Author: dabritch MS. Date: 07/11/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Acessando bits de pixel de bitmap SkiaSharp
+description: Descubra as várias técnicas para acessar e modificar os bits de pixel de bitmaps SkiaSharp.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/11/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9018cbe6e41350b22a0f1f91858017531c75a0ac
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135572"
 ---
-
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>Acessando bits de pixel de bitmap SkiaSharp
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

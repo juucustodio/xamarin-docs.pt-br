@@ -1,8 +1,22 @@
 ---
-Título: "conteúdo misto do WebView no Android" Descrição: "as especificações da plataforma permitem consumir funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma Android específica que exibe conteúdo misto em uma WebView em aplicativos direcionados à API 21 ou superior. "
-MS. Prod: xamarin MS. AssetID: 68F908F3-04C5-4B91-B6E5-B7E8357B4154 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 07/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Conteúdo misto do WebView no Android
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma Android específica que exibe conteúdo misto em uma WebView em aplicativos direcionados à API 21 ou superior.
+ms.prod: xamarin
+ms.assetid: 68F908F3-04C5-4B91-B6E5-B7E8357B4154
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7269b0617be7199c365f350fc26ecd42256e28f3
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128447"
 ---
-
 # <a name="webview-mixed-content-on-android"></a>Conteúdo misto do WebView no Android
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

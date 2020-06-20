@@ -1,8 +1,22 @@
 ---
-Título: "Exibir pop-ups" Descrição: " Xamarin.Forms fornece três elementos de interface do usuário pop-up – um alerta, uma planilha de ação e um prompt. Este artigo demonstra como usar o alerta, a folha de ações e as APIs de prompt para exibir caixas de diálogo que perguntam aos usuários perguntas simples, orientam os usuários por meio de tarefas e exibem prompts. "
-MS. Prod: xamarin MS. AssetID: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 03/10/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Exibir pop-ups
+description: Xamarin.Formsfornece três elementos de interface do usuário pop-up – um alerta, uma planilha de ação e um prompt. Este artigo demonstra como usar o alerta, a folha de ações e as APIs de prompt para exibir caixas de diálogo que perguntam aos usuários perguntas simples, orientam os usuários por meio de tarefas e exibem prompts.
+ms.prod: xamarin
+ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a7ddd9134b7214b84a883e171d7b0cadaba3390b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136312"
 ---
-
 # <a name="display-pop-ups"></a>Exibir pop-ups
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)

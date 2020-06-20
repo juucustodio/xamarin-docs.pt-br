@@ -1,8 +1,22 @@
 ---
-Título: "preceda to Enterprise app Development" Descrição: "Este capítulo fornece um prefácio para padrões de aplicativos empresariais usando Xamarin.Forms ".
-MS. Prod: xamarin MS. AssetID: fbf32a44-1d33-4e16-A904-dc7ee5991e7c MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Preceder para o desenvolvimento de aplicativos empresariais
+description: Este capítulo fornece um prefácio para padrões de aplicativos empresariais usando o Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: fbf32a44-1d33-4e16-a904-dc7ee5991e7c
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6ea63fc483025fc6f9b0c7f379b6dfdc6ca30de8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198093"
 ---
-
 # <a name="preface-to-enterprise-app-development"></a>Preceder para o desenvolvimento de aplicativos empresariais
 
 Este livro eletrônico fornece orientação sobre a criação de aplicativos empresariais de plataforma cruzada usando o Xamarin.Forms . Xamarin.Formso é um kit de ferramentas de interface do usuário de plataforma cruzada que permite aos desenvolvedores criar facilmente layouts de interface nativa de usuários que podem ser compartilhados entre plataformas, incluindo iOS, Android e o Plataforma Universal do Windows (UWP). Ele fornece uma solução abrangente para os aplicativos Business to Employee (B2E), Business to Business (B2B) e Business to Consumer (B2C), fornecendo a capacidade de compartilhar código em todas as plataformas de destino e ajudando a reduzir o TCO (custo total de propriedade).

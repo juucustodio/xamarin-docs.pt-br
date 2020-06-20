@@ -1,8 +1,22 @@
 ---
-Título: "introdução ao desenvolvimento de aplicativo empresarial" Descrição: "Este capítulo fornece uma introdução ao desenvolvimento de aplicativos empresariais e apresenta o aplicativo móvel eShopOnContainers".
-MS. Prod: xamarin MS. AssetID: cbce0659-fa03-447A-86ec-140438143230 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Introdução ao desenvolvimento de aplicativos empresariais
+description: Este capítulo fornece uma introdução ao desenvolvimento de aplicativos empresariais e apresenta o aplicativo móvel eShopOnContainers.
+ms.prod: xamarin
+ms.assetid: cbce0659-fa03-447a-86ec-140438143230
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e78e7c3056d4f1e22114819f54c1df261aec70e1
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198112"
 ---
-
 # <a name="introduction-to-enterprise-app-development"></a>Introdução ao desenvolvimento de aplicativos empresariais
 
 Independentemente da plataforma, os desenvolvedores de aplicativos empresariais enfrentam vários desafios:
@@ -23,7 +37,7 @@ Uma solução eficaz para esses desafios é particionar um aplicativo em compone
 - Ele promove a reutilização e uma separação limpa das preocupações entre os recursos horizontais do aplicativo, como autenticação e acesso a dados e os recursos verticais, como a funcionalidade comercial específica do aplicativo. Isso permite que as dependências e as interações entre os componentes do aplicativo sejam gerenciadas mais facilmente.
 - Ele ajuda a manter uma separação de funções permitindo que pessoas diferentes, ou equipes, se concentrem em uma tarefa específica ou uma parte da funcionalidade de acordo com sua experiência. Em particular, ele fornece uma separação mais clara entre a interface do usuário e a lógica de negócios do aplicativo.
 
-No entanto, há muitos problemas que devem ser resolvidos ao particionar um aplicativo em componentes discretos e livremente acoplados. Elas incluem:
+No entanto, há muitos problemas que devem ser resolvidos ao particionar um aplicativo em componentes discretos e livremente acoplados. Eles incluem:
 
 - Decidindo como fornecer uma separação clara de preocupações entre os controles de interface do usuário e sua lógica. Uma das decisões mais importantes ao criar um Xamarin.Forms aplicativo empresarial é colocar a lógica de negócios em arquivos code-behind ou criar uma separação limpa das preocupações entre os controles de interface do usuário e sua lógica, para tornar o aplicativo mais passível de manutenção e de teste. Para obter mais informações, consulte [Model-View-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
 - Determinando se um contêiner de injeção de dependência deve ser usado. Contêineres de injeção de dependência reduzem a dependência entre objetos fornecendo um recurso para construir instâncias de classes com suas dependências injetadas e gerenciar seu tempo de vida com base na configuração do contêiner. Para obter mais informações, consulte [injeção de dependência](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).

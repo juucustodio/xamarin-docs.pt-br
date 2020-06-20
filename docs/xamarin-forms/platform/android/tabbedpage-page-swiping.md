@@ -1,8 +1,22 @@
 ---
-Título: "TabbedPage de página deslizando sobre o Android" Descrição: "as especificações da plataforma permitem consumir funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma Android específica que permite passar o dedo com um gesto de dedo horizontal entre as páginas em um TabbedPage. "
-MS. Prod: xamarin MS. AssetID: D1C09CCB-7246-41A4-8BD2-FA6FABCF1C72 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 07/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: TabbedPagendo o toque no Android
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma Android específica que permite passar o dedo com um gesto de dedo horizontal entre as páginas de um TabbedPage.
+ms.prod: xamarin
+ms.assetid: D1C09CCB-7246-41A4-8BD2-FA6FABCF1C72
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 61c0137788303363769fdec80a16542e2d8bea5e
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128603"
 ---
-
 # <a name="tabbedpage-page-swiping-on-android"></a>TabbedPagendo o toque no Android
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

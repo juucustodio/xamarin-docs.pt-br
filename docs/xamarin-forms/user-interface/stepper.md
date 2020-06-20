@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms stepper" Descrição: "o Xamarin.Forms stepper permite que um usuário selecione um valor numérico de um intervalo de valores. Ele consiste em dois botões rotulados com sinais de menos e mais. A manipulação dos dois botões altera o valor selecionado incrementalmente. "
-MS. Prod: xamarin MS. AssetID: 62571B3E-D84B-4F52-9FC7-C105D6733B16 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/17/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsStepper
+description: O Xamarin.Forms stepper permite que um usuário selecione um valor numérico de um intervalo de valores. Ele consiste em dois botões rotulados com sinais de menos e mais. A manipulação dos dois botões altera o valor selecionado de forma incremental.
+ms.prod: xamarin
+ms.assetid: 62571B3E-D84B-4F52-9FC7-C105D6733B16
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/17/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 4f071530fb17de44d8ede786ca1b42f5e11f4f7c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84130540"
 ---
-
 # <a name="xamarinforms-stepper"></a>Xamarin.FormsStepper
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)

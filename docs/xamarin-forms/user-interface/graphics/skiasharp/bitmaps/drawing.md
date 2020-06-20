@@ -1,8 +1,22 @@
 ---
-Título: "Criando e desenhando bitmaps SkiaSharp" Descrição: "saiba como criar bitmaps do SkiaSharp e, em seguida, desenhe esses bitmaps criando uma tela com base neles".
-MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 79BD3266-D457-4E50-BDDF-33450035FA0F autor: davidbritch MS. Author: dabritch MS. Date: 07/17/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Criando e desenhando bitmaps SkiaSharp
+description: Saiba como criar bitmaps SkiaSharp e, em seguida, desenhar esses bitmaps criando uma tela com base neles.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/17/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c045e297beca675c0582efc2f75b1d6b2bcedcf8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573283"
 ---
-
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Criando e desenhando bitmaps SkiaSharp
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
@@ -188,7 +202,7 @@ Essa melhoria de desempenho é o motivo `SkiaSharp` pelo qual os bitmaps por pad
 
 Não é necessário criar um novo bitmap para desenhar nele. Você também pode desenhar em um bitmap existente.
 
-A página **macaco Moustache** usa seu construtor para carregar a imagem **MonkeyFace. png** . Em seguida, ele cria um `SKCanvas` objeto com base nesse bitmap e `SKPaint` usa `SKPath` objetos e para desenhar um Moustache nele:
+A página **macaco Moustache** usa seu construtor para carregar a imagem de **MonkeyFace.png** . Em seguida, ele cria um `SKCanvas` objeto com base nesse bitmap e `SKPaint` usa `SKPath` objetos e para desenhar um Moustache nele:
 
 ```csharp
 public partial class MonkeyMoustachePage : ContentPage

@@ -1,8 +1,22 @@
 ---
-title: "acessibilidade de teclado" Descrição: "em vez de usar a sequência de tabulação padrão, às vezes é necessário ajustar a acessibilidade da interface do usuário especificando a sequência de tabulação com uma combinação das propriedades TabIndex e IsTabStop."
-MS. Prod: xamarin MS. AssetID: 8be8f498-558a-4894-a01f-91a0d3ef927e MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/09/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Acessibilidade do teclado
+description: Em vez de usar a sequência de tabulação padrão, às vezes é necessário ajustar a acessibilidade da interface do usuário especificando a sequência de tabulação com uma combinação das propriedades TabIndex e IsTabStop.
+ms.prod: xamarin
+ms.assetid: 8be8f498-558a-4894-a01f-91a0d3ef927e
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/09/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e1590d0a4f9716541f18bc4f50a2c480c5e4478a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84129773"
 ---
-
 # <a name="keyboard-accessibility-in-xamarinforms"></a>Acessibilidade de teclado noXamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)

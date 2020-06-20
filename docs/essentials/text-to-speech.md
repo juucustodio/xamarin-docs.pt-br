@@ -1,8 +1,21 @@
 ---
-Título: " Xamarin.Essentials : conversão de texto em fala": "a classe TextToSpeech no Xamarin.Essentials habilita um aplicativo a utilizar os mecanismos internos de conversão de texto em fala para falar sobre o texto do dispositivo e também para consultar os idiomas disponíveis para os quais o mecanismo pode dar suporte."
-MS. AssetID: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351 autor: jamesmontemagno MS. Custom: vídeo MS. Author: Jamont MS. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Conversão de texto em fala'
+description: A classe TextToSpeech no Xamarin.Essentials habilita um aplicativo a utilizar os mecanismos internos de conversão de texto em fala para falar sobre o texto do dispositivo e também para consultar os idiomas disponíveis para os quais o mecanismo pode dar suporte.
+ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 452a54637c270f80c2e1add4d6cadedbb4b27077
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801823"
 ---
-
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Conversão de texto em fala
 
 A classe **TextToSpeech** permite que um aplicativo utilize os mecanismos internos de conversão de texto em fala para repetir o texto do dispositivo e, também, consulte os idiomas disponíveis, compatíveis com o mecanismo.
@@ -139,7 +152,7 @@ public async Task SpeakNow()
 
 ## <a name="api"></a>API
 
-- [Código-fonte TextToSpeech](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/TextToSpeech)
+- [Código-fonte TextToSpeech](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/TextToSpeech)
 - [Documentação da API do TextToSpeech](xref:Xamarin.Essentials.TextToSpeech)
 
 ## <a name="related-video"></a>Vídeo relacionados

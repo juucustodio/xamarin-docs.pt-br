@@ -1,12 +1,28 @@
 ---
-Título: "configuração da plataforma WPF" Descrição: " Xamarin.Forms agora tem suporte de visualização para a plataforma WPF" MS. Prod: xamarin MS. AssetID: 650723F2-4279-4B7B-B0A1-D7F8FF26BF1E MS. Technology: xamarin-Forms MS. Custom: xamu-vídeo Author: davidbritch MS. Author: dabritch MS. Date: 04/09/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Configuração da plataforma WPF
+description: Xamarin.Formstem suporte de visualização para a plataforma WPF.
+ms.prod: xamarin
+ms.assetid: 650723F2-4279-4B7B-B0A1-D7F8FF26BF1E
+ms.technology: xamarin-forms
+ms.custom: xamu-video
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/20/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 774ae964643b9b78f424d96b3dd382f244205dcf
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946319"
 ---
-
 # <a name="wpf-platform-setup"></a>Configuração da plataforma WPF
 
 ![Visualização](~/media/shared/preview.png)
 
-Xamarin.FormsAgora tem suporte de visualização para o Windows Presentation Foundation (WPF). Este artigo demonstra como adicionar um projeto do WPF a uma Xamarin.Forms solução.
+Xamarin.Formstem suporte de visualização para o Windows Presentation Foundation (WPF), em .NET Framework e no .NET Core 3. Este artigo demonstra como adicionar um projeto do WPF que se destina .NET Framework a uma Xamarin.Forms solução.
 
 > [!IMPORTANT]
 > Xamarin.Formso suporte para o WPF é fornecido pela Comunidade. Para obter mais informações, consulte [ Xamarin.Forms suporte a plataformas](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
@@ -24,6 +40,9 @@ Siga estas instruções para adicionar um aplicativo WPF que será executado no 
     ![Adicionar um novo projeto do WPF](wpf-images/add-project.png "Adicionar um novo projeto do WPF")
 
     Pressione o botão **Avançar** .
+
+    > [!NOTE]
+    > Xamarin.Forms4,7 inclui suporte para aplicativos do WPF que são executados no .NET Core 3.
 
 3. Na janela **configurar seu novo projeto** , digite um nome para o projeto com uma extensão do **WPF** , por exemplo, **BoxViewClock. WPF**. Clique no botão **procurar** , selecione a pasta **BoxViewClock** e pressione **Selecionar pasta** para colocar o projeto do WPF no mesmo diretório que os outros projetos na solução:
 

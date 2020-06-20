@@ -1,8 +1,22 @@
 ---
-Título: "altura da barra de NavigationPage no Android" Descrição: "as especificações da plataforma permitem consumir funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma do Android específica que define a altura da barra de navegação em um NavigationPage. "
-MS. Prod: xamarin MS. AssetID: C8A73B64-FE70-408A-A72E-8AF147F0C52C MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 07/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Altura da barra de NavigationPage no Android
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma do Android específica que define a altura da barra de navegação em um NavigationPage.
+ms.prod: xamarin
+ms.assetid: C8A73B64-FE70-408A-A72E-8AF147F0C52C
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2dcabe3c0067734250834c2927fd4cbb83906943
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128785"
 ---
-
 # <a name="navigationpage-bar-height-on-android"></a>Altura da barra de NavigationPage no Android
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

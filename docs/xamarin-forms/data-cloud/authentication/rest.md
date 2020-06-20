@@ -1,8 +1,22 @@
 ---
-Título: "autenticar um serviço Web RESTful" Descrição: "a autenticação básica fornece acesso a recursos somente para os clientes que têm as credenciais corretas. Este artigo explica como usar a autenticação básica para proteger o acesso aos recursos do serviço Web RESTful.
-MS. Prod: xamarin MS. AssetID: 7B5FFDC4-F2AA-4B12-A30A-1DACC7FECBF1 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/22/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Autenticar um serviço Web RESTful
+description: A autenticação básica fornece acesso a recursos somente para os clientes que têm as credenciais corretas. Este artigo explica como usar a autenticação básica para proteger o acesso aos recursos do serviço Web RESTful.
+ms.prod: xamarin
+ms.assetid: 7B5FFDC4-F2AA-4B12-A30A-1DACC7FECBF1
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/22/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d62e533d127294c77c0779c20fd9c78ef2231200
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135714"
 ---
-
 # <a name="authenticate-a-restful-web-service"></a>Autenticar um serviço Web RESTful
 
 _O HTTP dá suporte ao uso de vários mecanismos de autenticação para controlar o acesso aos recursos. A autenticação básica fornece acesso a recursos somente para os clientes que têm as credenciais corretas. Este artigo demonstra como usar a autenticação básica para proteger o acesso aos recursos do serviço Web RESTful._

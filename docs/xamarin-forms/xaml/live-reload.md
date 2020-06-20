@@ -1,8 +1,23 @@
 ---
-Título: "Xamarin Live reload (visualização)" Descrição: "Veja as alterações em seu XAML refletidas em tempo real, sem exigir outra compilação e implantação".
-MS. Prod: xamarin MS. AssetID: 4917273d-32f9-401A-a52c-5cfb53a2170d MS. Technology: xamarin-Forms autor: pierceboggan MS. Author: piboggan robots: noindex MS. Date: 10/26/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Recarregamento do Xamarin Live (versão prévia)
+description: Veja as alterações em seu XAML refletidas em tempo real, sem a necessidade de outra compilação e implantação.
+ms.prod: xamarin
+ms.assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d
+ms.technology: xamarin-forms
+author: pierceboggan
+ms.author: piboggan
+robots: noindex
+ms.date: 10/26/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b67594e2675c774512f3bf64f2e91ef10dbff444
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84134206"
 ---
-
 # <a name="xamarin-live-reload-preview"></a>Recarregamento do Xamarin Live (versão prévia)
 
 > [!NOTE]
@@ -103,7 +118,7 @@ Não. Na verdade, você pode até mesmo iniciar todos os seus destinos de aplica
 * Há suporte apenas para o recarregamento de XAML.
 * O estado da interface do usuário não pode ser mantido entre reimplantações, a menos que o MVVM seja usado.
 
-## <a name="known-issues"></a>Problemas conhecidos
+## <a name="known-issues"></a>Problemas Conhecidos
 
 * Somente com suporte no Visual Studio.
 * A vinculação deve ser definida para **não vincular** ou **vincular somente SDKs de estrutura** 

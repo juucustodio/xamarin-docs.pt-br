@@ -1,8 +1,22 @@
 ---
-Título: "estilo do cabeçalho do grupo ListView na iOS" Descrição: "as especificações da plataforma permitem consumir funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do iOS que controla se as células do cabeçalho ListView flutuam durante a rolagem. "
-MS. Prod: xamarin MS. AssetID: 099B2C7F-727F-4BCF-903B-87E728108C24 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Estilo do cabeçalho do grupo ListView no iOS
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma do iOS específica que controla se as células do cabeçalho ListView flutuam durante a rolagem.
+ms.prod: xamarin
+ms.assetid: 099B2C7F-727F-4BCF-903B-87E728108C24
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 46e8dec3d5644defdeb8a2265a73815adfde92d8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136026"
 ---
-
 # <a name="listview-group-header-style-on-ios"></a>Estilo do cabeçalho do grupo ListView no iOS
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

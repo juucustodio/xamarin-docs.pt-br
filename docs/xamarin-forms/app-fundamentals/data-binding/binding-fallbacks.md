@@ -1,13 +1,27 @@
 ---
-Título: Xamarin.Forms Descrição de "fallbacks de associação": "Este artigo explica como tornar as associações mais robustas definindo valores de fallback que serão usados se a associação falhar."
-MS. Prod: xamarin MS. AssetID: 637ACD9D-3E5D-4014-86DE-A77D1FEF238A MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/16/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsFallbacks de associação
+description: Este artigo explica como tornar as associações mais robustas definindo valores de fallback que serão usados se a associação falhar.
+ms.prod: xamarin
+ms.assetid: 637ACD9D-3E5D-4014-86DE-A77D1FEF238A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/16/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2c5ce10aa0a1137ad4e4832d5dc931c902b82810
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946202"
 ---
-
 # <a name="xamarinforms-binding-fallbacks"></a>Xamarin.FormsFallbacks de associação
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
-Às vezes, as associações de dados falham porque a origem da associação não pode ser resolvida ou porque a associação tem êxito, mas retorna um valor `null`. Embora esses cenários possam ser manipulados com conversores de valor ou outro código adicional, as associações de dados poderão se tornar mais robustas com a definição de valores de fallback a serem usados se o processo de associação falhar. Isso pode ser feito definindo as [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) Propriedades e [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) em uma expressão de associação. Como essas propriedades residem na [`BindingBase`](xref:Xamarin.Forms.BindingBase) classe, elas podem ser usadas com associações, associações compiladas e com a `Binding` extensão de marcação.
+Às vezes, as associações de dados falham porque a origem da associação não pode ser resolvida ou porque a associação tem êxito, mas retorna um valor `null`. Embora esses cenários possam ser manipulados com conversores de valor ou outro código adicional, as associações de dados poderão se tornar mais robustas com a definição de valores de fallback a serem usados se o processo de associação falhar. Isso pode ser feito definindo as [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) Propriedades e [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) em uma expressão de associação. Como essas propriedades residem na [`BindingBase`](xref:Xamarin.Forms.BindingBase) classe, elas podem ser usadas com associações, associações múltiplas, associações compiladas e com a `Binding` extensão de marcação.
 
 > [!NOTE]
 > O uso das [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) Propriedades e em uma expressão de associação é opcional.

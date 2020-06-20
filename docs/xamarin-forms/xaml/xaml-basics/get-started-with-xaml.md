@@ -1,8 +1,22 @@
 ---
-Título: "parte 1. Introdução com XAML "Description:" em um Xamarin.Forms aplicativo, o XAML é usado principalmente para definir o conteúdo visual de uma página e funciona junto com um arquivo code-behind. "
-MS. Prod: xamarin MS. AssetID: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 09/30/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Parte 1. Introdução ao XAML
+description: Em um Xamarin.Forms aplicativo, o XAML é usado principalmente para definir o conteúdo visual de uma página e funciona junto com um arquivo code-behind.
+ms.prod: xamarin
+ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/30/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e38080fc9bc4ef0b74eb8c12c3a3f646c4888f53
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198076"
 ---
-
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Introdução ao XAML
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

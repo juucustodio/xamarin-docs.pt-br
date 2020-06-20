@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms DataPages" Descrição: "Este artigo apresenta Xamarin.Forms as páginas de dados, que fornecem uma API para associar de forma rápida e fácil as exibições predefinidas."
-MS. Prod: xamarin MS. AssetID: DF16EAEE-DB78-42CA-9C59-51D9D6CB6B95 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/01/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsPáginas de
+description: Este artigo apresenta Xamarin.Forms as páginas de dados, que fornecem uma API para associar de forma rápida e fácil as exibições predefinidas.
+ms.prod: xamarin
+ms.assetid: DF16EAEE-DB78-42CA-9C59-51D9D6CB6B95
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/01/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7d99870dd975d0996ffcd05d4aef153f3515ec9e
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84134310"
 ---
-
 # <a name="xamarinforms-datapages"></a>Xamarin.FormsPáginas de
 
 ![](~/media/shared/preview.png "This API is currently in preview")
@@ -24,7 +38,7 @@ As fontes de dados e as páginas de dados associadas permitem aos desenvolvedore
 
 As páginas de DataPage são adicionadas a um Xamarin.Forms aplicativo, incluindo o ** Xamarin.Forms . **Pacote NuGet de páginas.
 
-### <a name="data-sources"></a>Data Sources
+### <a name="data-sources"></a>Fontes de dados
 
 A visualização tem algumas fontes de dados predefinidas disponíveis para uso:
 

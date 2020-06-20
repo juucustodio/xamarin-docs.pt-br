@@ -1,8 +1,22 @@
 ---
-Título: Xamarin.Forms Descrição de "plataformas com suporte": "requisitos de sistema de plataforma e desenvolvimento para Xamarin.Forms ."
-MS. Prod: xamarin MS. AssetID: eecaf6a5-567C-49b2-ac83-2a195596c5bf MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/22/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Formsplataformas com suporte
+description: Requisitos do sistema de plataforma e desenvolvimento para o Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/22/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f93af19587cf962ac0c852599157261a087dadbc
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84197537"
 ---
-
 # <a name="xamarinforms-supported-platforms"></a>Xamarin.Formsplataformas com suporte
 
 Xamarin.Formsos aplicativos podem ser escritos para os seguintes sistemas operacionais:

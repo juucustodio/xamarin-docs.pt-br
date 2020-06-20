@@ -1,8 +1,21 @@
 ---
-Título: " Xamarin.Essentials iniciador" Descrição: "a classe do iniciador no Xamarin.Essentials permite que um aplicativo Abra um URI pelo sistema".
-MS. AssetID: BABF40CC-8BEE-43FD-BE12-6301DF27DD33 autor: jamesmontemagno MS. Custom: vídeo MS. Author: Jamont MS. Date: 08/20/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.EssentialsIniciador
+description: A classe do iniciador no Xamarin.Essentials permite que um aplicativo Abra um URI pelo sistema.
+ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 08/20/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: dcb236c47cf2eec77b3b90da798b0cf0d58f3c1d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84802308"
 ---
-
 # <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Iniciador
 
 A classe **Launcher** permite que um aplicativo abra um URI pelo sistema. Isso geralmente é utilizado quando a vinculação profunda é usada em esquemas de URI personalizados de outro aplicativo. Se quiser abrir o navegador em um site, confira a API do **[Browser](open-browser.md)**.
@@ -108,7 +121,7 @@ Sem diferenças entre plataformas.
 
 ## <a name="api"></a>API
 
-- [Código-fonte do Inicializador](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Launcher)
+- [Código-fonte do Inicializador](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Launcher)
 - [Documentação da API do Inicializador](xref:Xamarin.Essentials.Launcher)
 
 ## <a name="related-video"></a>Vídeo relacionados

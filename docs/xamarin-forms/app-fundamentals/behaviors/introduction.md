@@ -1,8 +1,22 @@
 ---
-Título: "introdução aos comportamentos" Descrição: "os comportamentos permitem que você adicione funcionalidade aos controles da interface do usuário sem precisar subclasseá-los. Em vez disso, a funcionalidade é implementada em uma classe de comportamento e anexada ao controle como se fizesse parte do próprio controle. Este artigo fornece uma introdução aos comportamentos. "
-MS. Prod: xamarin MS. AssetID: 0DF1EF8C-A212-4142-A3C6-DF760A82A757 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/06/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Introdução aos comportamentos
+description: Comportamentos permitem adicionar funcionalidade a controles de interface do usuário sem precisar dividi-los em subclasses. Em vez disso, a funcionalidade é implementada em uma classe de comportamento e anexada ao controle como se fizesse parte do próprio controle. Este artigo fornece uma introdução a comportamentos.
+ms.prod: xamarin
+ms.assetid: 0DF1EF8C-A212-4142-A3C6-DF760A82A757
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/06/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d5bee3baa08387a1ed67384ba4089d63aad08d2c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135766"
 ---
-
 # <a name="introduction-to-behaviors"></a>Introdução aos comportamentos
 
 _Os comportamentos permitem que você adicione funcionalidade aos controles da interface do usuário sem precisar subclasseá-los. Em vez disso, a funcionalidade é implementada em uma classe de comportamento e anexada ao controle como se fosse parte do próprio controle. Este artigo fornece uma introdução aos comportamentos._

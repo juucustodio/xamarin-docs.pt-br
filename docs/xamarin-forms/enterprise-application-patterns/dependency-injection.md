@@ -1,8 +1,22 @@
 ---
-title: Descrição da "injeção de dependência": "Este capítulo explica como o aplicativo móvel eShopOnContainers usa injeção de dependência para desacoplar tipos concretos do código que depende desses tipos".
-MS. Prod: xamarin MS. AssetID: a150f2d1-06f8-4aed-ab4e-7a847d69f103 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 11/04/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Injeção de dependência
+description: Este capítulo explica como o aplicativo móvel eShopOnContainers usa injeção de dependência para desacoplar tipos concretos do código que depende desses tipos.
+ms.prod: xamarin
+ms.assetid: a150f2d1-06f8-4aed-ab4e-7a847d69f103
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/04/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 99cac3c597cf1d7351d3214ce59fd0a0a0a46400
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572345"
 ---
-
 # <a name="dependency-injection"></a>Injeção de dependência
 
 Normalmente, um construtor de classe é invocado ao instanciar um objeto e quaisquer valores que o objeto precisa são passados como argumentos para o construtor. Este é um exemplo de injeção de dependência e, especificamente, é conhecido como *injeção de Construtor*. As dependências que o objeto precisa são injetadas no construtor.

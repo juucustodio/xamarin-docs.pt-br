@@ -1,8 +1,22 @@
 ---
-Título: "referência de controles de DataPages" Descrição: "Este artigo apresenta os controles que estão disponíveis no Xamarin.Forms pacote NuGet de DataPages."
-MS. Prod: xamarin MS. AssetID: 891615D0-E8BD-4ACC-A7F0-4C3725FBCC31 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/01/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Referência de controles de páginas de DataPages
+description: Este artigo apresenta os controles que estão disponíveis no Xamarin.Forms pacote NuGet de DataPages.
+ms.prod: xamarin
+ms.assetid: 891615D0-E8BD-4ACC-A7F0-4C3725FBCC31
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/01/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 86b526fff305b195221aca3fb6a86ad0823cb145
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84569394"
 ---
-
 # <a name="datapages-controls-reference"></a>Referência de controles de páginas de DataPages
 
 ![](~/media/shared/preview.png "This API is currently in preview")
@@ -33,7 +47,7 @@ Os exemplos a seguir incluem `DynamicResource` referências que precisam existir
 
 O `HeroImage` controle tem quatro propriedades:
 
-* Text
+* Texto
 * Detalhe
 * ImageSource
 * Aspecto
@@ -60,7 +74,7 @@ O `ListItem` layout do controle é semelhante às linhas nativas de lista ou tab
 
 Há cinco propriedades:
 
-* Título
+* Title
 * Detalhe
 * ImageSource
 * PlaceholdImageSource
@@ -92,7 +106,7 @@ O objetivo desse controle personalizado `CardView` é se assemelhar ao Android C
 
 Ele conterá três propriedades:
 
-* Text
+* Texto
 * Detalhe
 * ImageSource
 

@@ -1,8 +1,22 @@
 ---
-Título: "SkiaSharp de ruído e composição" Descrição: "gerar sombreadores de ruído de Perlm e combinar com outros sombreadores".
-MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 90C2D00A-2876-43EA-A836-538C3318CF93 autor: davidbritch MS. Author: dabritch MS. Date: 08/23/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Ruído e composição do SkiaSharp
+description: Gere sombreadores de ruído de Perlm e combine com outros sombreadores.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 90C2D00A-2876-43EA-A836-538C3318CF93
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/23/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 45ec48c0b7b58e26fa47d7343e96bb49591cb339
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127758"
 ---
-
 # <a name="skiasharp-noise-and-composing"></a>Ruído e composição do SkiaSharp
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

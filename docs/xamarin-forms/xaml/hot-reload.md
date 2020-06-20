@@ -1,8 +1,22 @@
 ---
-Título: "XAML quente recarregar para Xamarin.Forms " Descrição: "recarregar alterações no arquivo XAML instantaneamente em seu aplicativo em execução para que você não precise compilar seu Xamarin.Forms projeto após cada alteração em XAML."
-MS. Prod: xamarin MS. AssetID: E220F054-32EE-424C-A7E5-6156BE271519 MS. Technology: xamarin-Forms autor: maddyleger1 MS. Author: maleger MS. Date: 03/14/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Hot recarregamento de XAML paraXamarin.Forms
+description: Recarregue imediatamente as alterações no arquivo XAML em seu aplicativo em execução para que você não precise compilar o Xamarin.Forms projeto após cada alteração de XAML.
+ms.prod: xamarin
+ms.assetid: E220F054-32EE-424C-A7E5-6156BE271519
+ms.technology: xamarin-forms
+author: maddyleger1
+ms.author: maleger
+ms.date: 03/14/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0655739c95ba58b8d93aae6d3987d54bd0582c7b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127446"
 ---
-
 # <a name="xaml-hot-reload-for-xamarinforms"></a>Hot recarregamento de XAML paraXamarin.Forms
 
 Os Hot recarregamento de XAML são conectados ao fluxo de trabalho existente para aumentar a produtividade e poupar tempo. Sem o Hot recarregamento de XAML, você precisa compilar e implantar seu aplicativo toda vez que desejar ver uma alteração XAML. Com a recarga a quente, quando você salva o arquivo XAML, as alterações são refletidas em seu aplicativo em execução. Além disso, o estado de navegação e os dados serão mantidos, permitindo que você itere rapidamente na interface do usuário sem perder seu lugar no aplicativo. Portanto, com o Hot recarregamento de XAML, você gastará menos tempo recriando e implantando seus aplicativos para validar as alterações na interface do usuário.
@@ -12,7 +26,7 @@ Os Hot recarregamento de XAML são conectados ao fluxo de trabalho existente par
 >
 > O Hot recarregamento de Xamarin.Forms XAML _para não_ funciona atualmente para Xamarin.Forms projetos UWP.
 
-## <a name="system-requirements"></a>Requisitos do sistema
+## <a name="system-requirements"></a>Requisitos de sistema
 
 | IDE/estrutura | Versão necessária |
 |------|------------------|

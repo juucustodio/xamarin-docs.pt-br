@@ -1,8 +1,21 @@
 ---
-title: " Xamarin.Essentials : Preferences" Description: "este documento descreve a classe Preferences no Xamarin.Essentials , que salva as preferências do aplicativo em um repositório de chave/valor. Ele aborda como usar a classe e os tipos de dados que podem ser armazenados. "
-MS. AssetID: AA81BCBD-79BA-448F-942B-BA4415CA50FF autor: jamesmontemagno MS. Author: Jamont MS. Data: 01/15/2019 MS. Custom: vídeo no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Preferências'
+description: Este documento descreve a classe Preferences no Xamarin.Essentials , que salva as preferências do aplicativo em um repositório de chave/valor. Ele mostra como usar a classe e os tipos de dados que podem ser armazenados.
+ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 01/15/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: acc0c48776c7a91e9e5a060928564bc6e0c1d775
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801810"
 ---
-
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferências
 
 A classe **Preferences** ajuda a armazenar as preferências do aplicativo em um repositório de chave/valor.
@@ -59,7 +72,7 @@ Os tipos de dados a seguir têm suporte em **Preferences**:
 - **double**
 - **int**
 - **float**
-- **long**
+- **Longas**
 - **cadeia de caracteres**
 - **DateTime**
 
@@ -104,7 +117,7 @@ Ao armazenar uma cadeia de caracteres, essa API destina-se a armazenar pequenas 
 
 ## <a name="api"></a>API
 
-- [Código-fonte de Preferências](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Preferences)
+- [Código-fonte de Preferências](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Preferences)
 - [Documentação da API de Preferências](xref:Xamarin.Essentials.Preferences)
 
 ## <a name="related-video"></a>Vídeo relacionados

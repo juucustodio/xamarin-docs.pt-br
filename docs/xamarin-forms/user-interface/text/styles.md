@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms estilos de texto" Descrição: "Este artigo explica como estilizar o texto em Xamarin.Forms aplicativos. Os estilos podem ser definidos uma vez e usados por muitas exibições, mas um estilo só pode ser usado com exibições de um tipo. "
-MS. Prod: xamarin MS. AssetID: 57C0CFD6-A568-46B8-ADA1-BF25681893CF MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/22/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsEstilos de texto
+description: Este artigo explica como estilizar o texto em Xamarin.Forms aplicativos. Os estilos podem ser definidos uma vez e usados por muitas exibições, mas um estilo só pode ser usado com exibições de um tipo.
+ms.prod: xamarin
+ms.assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/22/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7d82348231c4b4905f2f70b80f73c45f2f0bf66b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84571994"
 ---
-
 # <a name="xamarinforms-text-styles"></a>Xamarin.FormsEstilos de texto
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)

@@ -1,8 +1,21 @@
 ---
-title: " Xamarin.Essentials : SMS" Descrição: "a classe SMS no Xamarin.Essentials permite que um aplicativo Abra o aplicativo SMS padrão com uma mensagem especificada para enviar para um destinatário".
-MS. AssetID: 81A757F2-6F2A-458F-B9BE-770ADEBFAB58 autor: jamesmontemagno MS. Custom: vídeo MS. Author: Jamont MS. Date: 11/04/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: SMS'
+description: A classe SMS no Xamarin.Essentials permite que um aplicativo Abra o aplicativo SMS padrão com uma mensagem especificada para enviar a um destinatário.
+ms.assetid: 81A757F2-6F2A-458F-B9BE-770ADEBFAB58
+author: jamesmontemagno
+ms.custom: video
+ms.author: jamont
+ms.date: 11/04/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c3518befc9f26895514bf582a763c1323f336277
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801836"
 ---
-
 # <a name="xamarinessentials-sms"></a>Xamarin.Essentials: SMS
 
 A classe **Sms** permite que um aplicativo abra o aplicativo de SMS padrão com uma determinada mensagem para enviar para um destinatário.
@@ -69,7 +82,7 @@ public class SmsTest
 
 ## <a name="api"></a>API
 
-- [Código-fonte do SMS](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Sms)
+- [Código-fonte do SMS](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Sms)
 - [Documentação da API do SMS](xref:Xamarin.Essentials.Sms)
 
 ## <a name="related-video"></a>Vídeo relacionados

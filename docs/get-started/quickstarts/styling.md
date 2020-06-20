@@ -1,8 +1,24 @@
 ---
-Título: "estilo um aplicativo multiplataforma Xamarin.Forms " Descrição: "Este artigo explica como estilizar um aplicativo de plataforma cruzada Xamarin.Forms com estilos XAML".
-zone_pivot_groups: plataforma MS. Topic: início rápido MS. Prod: xamarin MS. AssetID: CCCF8E57-D021-4542-8709-5808570FC26A MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 02/07/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Estilizar um aplicativo de plataforma cruzada Xamarin.Forms
+description: Este artigo explica como estilizar um aplicativo de plataforma cruzada Xamarin.Forms com estilos XAML.
+zone_pivot_groups: platform
+ms.topic: quickstart
+ms.prod: xamarin
+ms.assetid: CCCF8E57-D021-4542-8709-5808570FC26A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/07/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2d458bafc5bb1c8dcffc7858fd15734187f7612b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84134063"
 ---
-
 # <a name="style-a-cross-platform-xamarinforms-application"></a>Estilizar um aplicativo de plataforma cruzada Xamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)

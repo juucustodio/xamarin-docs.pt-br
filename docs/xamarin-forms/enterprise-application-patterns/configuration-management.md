@@ -1,8 +1,22 @@
 ---
-Título: "gerenciamento de configuração" Descrição: "Este capítulo explica como o aplicativo móvel eShopOnContainers implementa o gerenciamento de configuração para fornecer configurações de aplicativo e configurações de usuário".
-MS. Prod: xamarin MS. AssetID: 50d6e780-e768-47F8-9361-3af11e56b87b MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Gerenciamento de configuração
+description: Este capítulo explica como o aplicativo móvel eShopOnContainers implementa o gerenciamento de configuração para fornecer configurações de aplicativo e configurações de usuário.
+ms.prod: xamarin
+ms.assetid: 50d6e780-e768-47f8-9361-3af11e56b87b
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f6f61503f619c08ed3e4eae2adf6ddb2c474f99f
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84571474"
 ---
-
 # <a name="configuration-management"></a>Gerenciamento de configuração
 
 As configurações permitem a separação de dados que configuram o comportamento de um aplicativo do código, permitindo que o comportamento seja alterado sem recriar o aplicativo. Há dois tipos de configurações: configurações de aplicativo e configurações de usuário.

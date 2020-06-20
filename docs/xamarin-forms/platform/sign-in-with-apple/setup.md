@@ -1,8 +1,22 @@
 ---
-Título: "etapas de instalação-entrar com a Apple para Xamarin.Forms " Descrição: "entrar com a instalação da Apple difere dependendo das diferentes plataformas para as quais seu aplicativo móvel se destina".
-MS. Prod: xamarin MS. AssetID: 8F712802-395B-469B-B5BE-C927AD1A8391 MS. Technology: xamarin-Forms autor: davidortinau MS. Author: daortin MS. Date: 09/10/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Etapas de instalação-entrar com a Apple paraXamarin.Forms
+description: Entrar com a configuração da Apple difere dependendo das diferentes plataformas que seu aplicativo móvel tem como destino.
+ms.prod: xamarin
+ms.assetid: 8F712802-395B-469B-B5BE-C927AD1A8391
+ms.technology: xamarin-forms
+author: davidortinau
+ms.author: daortin
+ms.date: 09/10/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 95fc2547dd2f17f7aa2b2e8ca4c70915c6542318
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198042"
 ---
-
 # <a name="setup-sign-in-with-apple-for-xamarinforms"></a>Instalação entre com a Apple paraXamarin.Forms
 
 Este guia aborda a série de etapas necessárias para configurar seus aplicativos de plataforma cruzada para que sejam avançados de entrar com a Apple. Embora a configuração da Apple seja direta no portal do desenvolvedor da Apple, etapas adicionais são necessárias para criar uma relação segura entre o Android e a Apple. 
@@ -91,19 +105,11 @@ Além disso, anote sua **ID de chave** nesta etapa. Isso será usado para o `Key
 Você terá baixado um `.p8` arquivo de chave.  Você pode abrir esse arquivo no bloco de notas ou VSCode para ver o conteúdo do texto.  Eles devem ter uma aparência semelhante a:
 
 ```
----
-title: "Setup Steps - Sign In with Apple for Xamarin.Forms"
-description: Sign In with Apple setup differs depending on the different platforms your mobile application targets.
-ms.prod: xamarin
-ms.assetid: 8F712802-395B-469B-B5BE-C927AD1A8391
-ms.technology: xamarin-forms
-author: davidortinau
-ms.author: daortin
-ms.date: 09/10/2019
-no-loc:
-- "Xamarin.Forms"
-- "Xamarin.Essentials"
-
+-----BEGIN PRIVATE KEY-----
+MIGTAgEAMBMGBasGSM49AgGFCCqGSM49AwEHBHkwdwIBAQQg3MX8n6VnQ2WzgEy0
+Skoz9uOvatLMKTUIPyPCAejzzUCgCgYIKoZIzj0DAQehRANCAARZ0DoM6QPqpJxP
+JKSlWz0AohFhYre10EXPkjrih4jTm+b0AeG2BGuoIWd18i8FimGDgK6IzHHPsEqj
+DHF5Svq0
 -----END PRIVATE KEY-----
 ```
 

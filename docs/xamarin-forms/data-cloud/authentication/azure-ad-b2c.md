@@ -1,8 +1,22 @@
 ---
-Título: "autenticar usuários com Azure Active Directory B2C" Descrição: "Azure Active Directory B2C fornece gerenciamento de identidade de nuvem para aplicativos móveis e Web voltados para o consumidor. Este artigo mostra como usar Azure Active Directory B2C para integrar o gerenciamento de identidades em um aplicativo móvel com a biblioteca de autenticação da Microsoft. "
-MS. Prod: xamarin MS. AssetID: B0A5DB65-0585-4A00-B908-22CCC286E6B6 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/04/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Autenticar usuários com o Azure Active Directory B2C
+description: O Azure Active Directory B2C fornece gerenciamento de identidade de nuvem para aplicativos Web e móveis voltados para o consumidor. Este artigo mostra como usar Azure Active Directory B2C para integrar o gerenciamento de identidades em um aplicativo móvel com a biblioteca de autenticação da Microsoft.
+ms.prod: xamarin
+ms.assetid: B0A5DB65-0585-4A00-B908-22CCC286E6B6
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/04/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 64529b81a375ee5a8cc8a96ec557c03401e60495
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84130566"
 ---
-
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Autenticar usuários com o Azure Active Directory B2C
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)

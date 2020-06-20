@@ -1,8 +1,22 @@
 ---
-Título: Descrição de "microservices em contêineres": "Este capítulo explica como usar os microserviços e contêineres para criar aplicativos de nuvem modernos ágeis, escalonáveis e confiáveis".
-MS. Prod: xamarin MS. AssetID: 5872ad92-04e0-4F1A-9691-79d5602f5683 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Microsserviços em contêineres
+description: Este capítulo explica como usar os microserviços e contêineres para criar aplicativos de nuvem modernos ágeis, escalonáveis e confiáveis.
+ms.prod: xamarin
+ms.assetid: 5872ad92-04e0-4f1a-9691-79d5602f5683
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 3ebd3940cbd61342977bde60addc773460a08854
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84569563"
 ---
-
 # <a name="containerized-microservices"></a>Microsserviços em contêineres
 
 O desenvolvimento de aplicativos cliente-servidor resultou em um foco na criação de aplicativos em camadas que usam tecnologias específicas em cada camada. Esses aplicativos costumam ser chamados de aplicativos *monolíticos* e empacotados em hardware previamente dimensionado para picos de carga. As principais desvantagens dessa abordagem de desenvolvimento são o acoplamento rígido entre os componentes de cada camada, que os componentes individuais não podem ser dimensionados com facilidade e o custo do teste. Uma atualização simples pode ter efeitos imprevistos no restante da camada e, portanto, uma alteração em um componente de aplicativo requer que sua camada inteira seja testada novamente e reimplantada.

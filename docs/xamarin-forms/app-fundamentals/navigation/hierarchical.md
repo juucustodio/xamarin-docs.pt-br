@@ -1,8 +1,22 @@
 ---
-Título: "navegação hierárquica" Descrição: "Este artigo demonstra como usar a classe NavigationPage para realizar a navegação em uma pilha de páginas de UEPS (última entrada, primeiro a sair)".
-MS. Prod: xamarin MS. AssetID: C8A5EEFF-5A3B-4163-838A-147EE3939FAA MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 03/10/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Navegação hierárquica
+description: Este artigo demonstra como usar a classe NavigationPage para executar a navegação em uma pilha de páginas UEPS (último a entrar, primeiro a sair).
+ms.prod: xamarin
+ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ec35b03e7e96f0730813918bdd96e1408cfabde7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84571487"
 ---
-
 # <a name="hierarchical-navigation"></a>Navegação hierárquica
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)

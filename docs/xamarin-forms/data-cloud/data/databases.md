@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms bancos de dados locais" Descrição: " Xamarin.Forms dá suporte a aplicativos controlados por banco de dados usando o mecanismo de banco de dados SQLite, o que torna possível carregar e salvar objetos no código compartilhado. Este artigo descreve como Xamarin.Forms os aplicativos podem ler e gravar dados em um banco de dados SQLite local usando o SQLite.net.
-MS. Prod: xamarin MS. AssetID: F687B24B-7DF0-4F8E-A21A-A9BB507480EB MS. Technology: xamarin-Forms autor: profexorgeek MS. Author: jusjohns MS. Date: 12/05/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsBancos de dados locais
+description: Xamarin.Formsdá suporte a aplicativos controlados por banco de dados usando o mecanismo de banco de dados SQLite, que possibilita carregar e salvar objetos no código compartilhado. Este artigo descreve como Xamarin.Forms os aplicativos podem ler e gravar dados em um banco de dados SQLite local usando o SQLite.net.
+ms.prod: xamarin
+ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 12/05/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f7cef5fd39d82cf0a4b55337835c0fe1d57b8bf9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84197600"
 ---
-
 # <a name="xamarinforms-local-databases"></a>Xamarin.FormsBancos de dados locais
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)

@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms rótulo" Descrição: "Este artigo explica como usar a Xamarin.Forms classe Label para exibir texto único e de várias linhas em aplicativos".
-MS. Prod: xamarin MS. AssetID: 02E6C553-5670-49A0-8EE9-5153ED21EA91 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/09/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsChamada
+description: Este artigo explica como usar a Xamarin.Forms classe Label para exibir texto único e de várias linhas em aplicativos.
+ms.prod: xamarin
+ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/09/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8bf6517e3624ad80c2fd4d209e5a77472460be76
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84570499"
 ---
-
 # <a name="xamarinforms-label"></a>Xamarin.FormsChamada
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)

@@ -1,8 +1,22 @@
 ---
-title: "NavigationPage bar Translucency on iOS" Descrição: "as especificações da plataforma permitem consumir funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do iOS que altera a transparência da barra de navegação em um NavigationPage. "
-MS. Prod: xamarin MS. AssetID: 1150941B-56DB-4781-BE36-A4C4F9F2C500 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: NavigationPage bar Translucency no iOS
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do iOS que altera a transparência da barra de navegação em um NavigationPage.
+ms.prod: xamarin
+ms.assetid: 1150941B-56DB-4781-BE36-A4C4F9F2C500
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: be7e95df0ac247c5cd97c1715e4af67b48275180
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128109"
 ---
-
 # <a name="navigationpage-bar-translucency-on-ios"></a>NavigationPage bar Translucency no iOS
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

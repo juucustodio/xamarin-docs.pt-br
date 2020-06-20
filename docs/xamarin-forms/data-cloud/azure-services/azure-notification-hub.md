@@ -1,8 +1,23 @@
 ---
-Título: "enviar e receber notificações por push com os hubs de notificação do Azure e Xamarin.Forms " Descrição: "Este artigo explica como usar os hubs de notificação do Azure para enviar notificações por push de plataforma cruzada para Xamarin.Forms aplicativos."
-MS. Prod: xamarin MS. AssetID: 07D13195-3A0D-4C95-ACF0-143A9084973C MS. Technology: xamarin-Forms autor: profexorgeek MS. Author: jusjohns MS. Date: 11/27/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials , Firebase ]
+title: Enviar e receber notificações por push com os hubs de notificação do Azure eXamarin.Forms
+description: Este artigo explica como usar os hubs de notificação do Azure para enviar notificações por push de plataforma cruzada para Xamarin.Forms aplicativos.
+ms.prod: xamarin
+ms.assetid: 07D13195-3A0D-4C95-ACF0-143A9084973C
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 11/27/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+- Firebase
+ms.openlocfilehash: 5f7b83c1fc907de790b382aabde0c5a957e5a8bb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84565415"
 ---
-
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-xamarinforms"></a>Enviar e receber notificações por push com os hubs de notificação do Azure eXamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)

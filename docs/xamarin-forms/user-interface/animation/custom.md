@@ -1,8 +1,22 @@
 ---
-Título: "animações personalizadas em Xamarin.Forms " Descrição: "Este artigo demonstra como usar a classe de animação Xamarin. FOrms para criar e cancelar animações, sincronizar várias animações e criar animações personalizadas que animam propriedades que não são animadas pelos métodos de animação existentes."
-MS. Prod: xamarin MS. AssetID: 03B2E3FC-E720-4D45-B9A0-711081FC1907 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 02/10/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Animações personalizadas emXamarin.Forms
+description: Este artigo demonstra como usar a classe de animação Xamarin. FOrms para criar e cancelar animações, sincronizar várias animações e criar animações personalizadas que animam propriedades que não são animadas pelos métodos de animação existentes.
+ms.prod: xamarin
+ms.assetid: 03B2E3FC-E720-4D45-B9A0-711081FC1907
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/10/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 573f18de0d7593d832505eb6bb2b492caea024a1
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946098"
 ---
-
 # <a name="custom-animations-in-xamarinforms"></a>Animações personalizadas emXamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
@@ -37,7 +51,7 @@ Os seguintes argumentos são especificados no `Commit` método:
 
 - O primeiro argumento (*proprietário*) identifica o proprietário da animação. Esse pode ser o elemento visual no qual a animação é aplicada ou outro elemento visual, como a página.
 - O segundo argumento (*Name*) identifica a animação com um nome. O nome é combinado com o proprietário para identificar exclusivamente a animação. Essa identificação exclusiva pode ser usada para determinar se a animação está em execução ([ `AnimationIsRunning` ] (xref: Xamarin.Forms . AnimationExtensions. AnimationIsRunning ( Xamarin.Forms . IAnimatable, System. String)) ou para cancelá-lo ([ `AbortAnimation` ] (xref: Xamarin.Forms . AnimationExtensions. AbortAnimation ( Xamarin.Forms . IAnimatable, System. String)).
-- O terceiro argumento (*Rate*) indica o número de milissegundos entre cada chamada para o método de retorno de chamada definido no [`Animation`](xref:Xamarin.Forms.Animation) Construtor
+- O terceiro argumento (*Rate*) indica o número de milissegundos entre cada chamada para o método de retorno de chamada definido no [`Animation`](xref:Xamarin.Forms.Animation) Construtor.
 - O quarto argumento (*comprimento*) indica a duração da animação, em milissegundos.
 - O quinto argumento (*facilitando*) define a função de atenuação a ser usada na animação. Como alternativa, a função de atenuação pode ser especificada como um argumento para o [`Animation`](xref:Xamarin.Forms.Animation) Construtor. Para obter mais informações sobre as funções de atenuação, consulte [facilitando funções](~/xamarin-forms/user-interface/animation/easing.md).
 - O sexto argumento (*concluído*) é um retorno de chamada que será executado quando a animação for concluída. Esse retorno de chamada usa dois argumentos, com o primeiro argumento que indica um valor final, e o segundo argumento `bool` é definido como `true` se a animação foi cancelada. Como alternativa, o retorno de chamada *concluído* pode ser especificado como um argumento para o [`Animation`](xref:Xamarin.Forms.Animation) Construtor. No entanto, com uma única animação, se as chamadas de retorno *concluídas* forem especificadas tanto no `Animation` Construtor quanto no `Commit` método, somente o retorno de chamada especificado no `Commit` método será executado.

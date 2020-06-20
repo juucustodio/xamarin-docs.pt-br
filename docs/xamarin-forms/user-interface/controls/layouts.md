@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms layouts" Descrição: "os Xamarin.Forms layouts são usados para compor controles de interface do usuário em estruturas visuais. Este artigo lista os layouts incluídos no Xamarin.Forms .
-MS. Prod: xamarin MS. AssetID: F4180997-BA21-453A-9958-D1E2940DF050 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/21/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsLayouts
+description: Xamarin.FormsOs layouts são usados para compor controles de interface do usuário em estruturas visuais. Este artigo lista os layouts incluídos no Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: F4180997-BA21-453A-9958-D1E2940DF050
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/21/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 751a004e0051fcbfd0592654b0e73f26874b15d3
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84567080"
 ---
-
 # <a name="xamarinforms-layouts"></a>Xamarin.FormsLayouts
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)

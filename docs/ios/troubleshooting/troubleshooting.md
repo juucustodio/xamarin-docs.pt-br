@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/10/2020
-ms.openlocfilehash: 1b3eb61bf08eb006890b8b879c560163bd131844
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: c3b0749fae9a035c234961880a4a7059ccba2349
+ms.sourcegitcommit: 8f558dba59bfb95da0ee9154c94d7121b6a59037
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84655091"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767339"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Dicas de solução de problemas para o Xamarin. iOS
 
@@ -48,7 +48,7 @@ O membro provavelmente foi removido pelo vinculador e, portanto, não existe no 
 - Adicione o [`[Preserve]`](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute) atributo ao membro.  Isso impedirá que o vinculador o remova.
 - Ao invocar [**mTouch**](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29), use as opções **-nolink** ou **-linksdkonly** :
   - **-nolink** desabilita toda a vinculação.
-  - **-linksdkonly** vinculará somente os assemblies Xamarin. Ios fornecidos, como **Xamarin. Ios. dll**, enquanto preserva todos os tipos em assemblies criados pelo usuário (ou seja, seus projetos de aplicativo).
+  - **-linksdkonly** vinculará somente os assemblies Xamarin. Ios fornecidos, como **xamarin.ios.dll**, enquanto preserva todos os tipos em assemblies criados pelo usuário (ou seja, seus projetos de aplicativo).
 
 Observe que os assemblies são vinculados para que o executável resultante seja menor; Portanto, desabilitar a vinculação pode resultar em um executável maior do que o desejado.
 
@@ -186,7 +186,7 @@ Stacktrace:
 
 Isso significa que você está vinculando uma biblioteca estática compilada com código Thumb em seu projeto. A partir da versão 3,1 do SDK do iPhone (ou mais recente no momento da elaboração deste artigo), a Apple introduziu um bug em seu vinculador ao vincular código não-Thumb (Xamarin. iOS) com código de Thumb (sua biblioteca estática). Você precisará vincular com uma versão não-Thumb da sua biblioteca estática para atenuar esse problema.
 
-## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1get_count-"></a>System. ExecutionEngineException: tentando o método de compilação JIT (wrapper gerenciado para gerenciado) foo []: System. Collections. Generic. ICollection ' 1. get_Count ()
+## <a name="systemexecutionengineexception-attempting-to-jit-compile-method-wrapper-managed-to-managed-foosystemcollectionsgenericicollection1get_count-"></a>System.ExecutionEngineException: tentando o método de compilação JIT (wrapper gerenciado para gerenciado) foo []: System. Collections. Generic. ICollection ' 1. get_Count ()
 
 O sufixo [] indica que você ou a biblioteca de classes está chamando um método em uma matriz por meio de uma coleção genérica, como IEnumerable<>, ICollection<> ou IList<>. Como alternativa, você pode forçar explicitamente o compilador de AOT a incluir esse método chamando o método por conta própria e certificando-se de que esse código seja executado antes da chamada que disparou a exceção. Nesse caso, você poderia escrever:
 
@@ -387,13 +387,16 @@ Ao incluir bibliotecas de terceiros em seu aplicativo Xamarin. iOS, você pode r
 
 Isso pode ser resolvido abrindo as opções para o projeto Xamarin. Ios, indo para a **iOS Build**  >  **internacionalização** de Build do IOS e verificando a internacionalização **oeste** .
 
-## <a name="could-not-launch-xamarinlauncher-could-not-find-the-executable-mlaunchexe"></a>Não foi possível iniciar o Xamarin. Launcher não pôde localizar o executável ' mlaunch. exe '
+## <a name="could-not-launch-xamarinlauncher-could-not-find-the-executable-mlaunchexe"></a>Não foi possível iniciar o Xamarin. Launcher não pôde localizar o executável ' mlaunch.exe '
 
-Em alguns casos, o software antivírus pode sinalizar incorretamente o SDK do Xamarin. iOS como malware e remover os arquivos necessários, corrompendo o SDK. Isso resultará em erros como "não foi possível iniciar o Xamarin. o Launcher não pôde encontrar o executável ' mlaunch. exe '".
+Em alguns casos, o software antivírus pode sinalizar incorretamente o SDK do Xamarin. iOS como malware e remover os arquivos necessários, corrompendo o SDK. Isso resultará em erros como "não foi possível iniciar o Xamarin. o iniciador não pôde localizar o executável ' mlaunch.exe '".
 
-Se você tiver sido afetado, exclua mlaunch. exe do scanner antivírus para evitar a ocorrência. Para obter mais informações, consulte [como criar uma exceção de aplicativo no Endpoint Protection Manager symantex para a](https://knowledge.broadcom.com/external/article/180778/how-to-create-an-application-exception-i.html) Symantec e [Excluir arquivos e pastas das verificações de proteção automática do Norton, sonar e download de inteligência](https://support.norton.com/sp/en/uk/home/current/solutions/v3672136) para o Norton. Além disso, considere relatar um falso positivo para [Symantec](https://symsubmit.symantec.com) ou [Norton](https://submit.norton.com/?type=FP).
+Se você tiver sido afetado, exclua mlaunch.exe do scanner antivírus para evitar a ocorrência. Para obter mais informações, consulte [como criar uma exceção de aplicativo no Endpoint Protection Manager symantex para a](https://knowledge.broadcom.com/external/article/180778/how-to-create-an-application-exception-i.html) Symantec e [Excluir arquivos e pastas das verificações de proteção automática do Norton, sonar e download de inteligência](https://support.norton.com/sp/en/uk/home/current/solutions/v3672136) para o Norton. Além disso, considere relatar um falso positivo para [Symantec](https://symsubmit.symantec.com) ou [Norton](https://submit.norton.com/?type=FP).
 
-Depois de adicionar uma exclusão para mlaunch. exe, uma reinstalação será necessária para restaurar os arquivos ausentes. A abordagem mais simples para fazer isso é alternar os canais no atualizador:
+> [!IMPORTANT]
+> Para usuários do Norton, os membros da Comunidade também relataram que talvez seja necessário desabilitar a verificação ociosa conforme discutido aqui: [Windows](https://community.norton.com/en/comment/5179683#comment-5179683), [Mac](https://github.com/xamarin/xamarin-macios/issues/8736#issuecomment-642874505).
+
+Depois de adicionar uma exclusão para mlaunch.exe, uma reinstalação será necessária para restaurar os arquivos ausentes. A abordagem mais simples para fazer isso é alternar os canais no atualizador:
 
 - O menu do **Visual Studio** > **verificar se há atualizações**.
 - Selecione um canal de atualização diferente na lista suspensa e pressione o botão **alternar canal** .

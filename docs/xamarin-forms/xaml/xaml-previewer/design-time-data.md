@@ -1,8 +1,22 @@
 ---
-Título: "usar dados de tempo de design com o modelo de visualização XAML" Descrição: "Este artigo explica como usar dados de tempo de design para mostrar layouts com dados pesados no visualizador XAML sem executar seu aplicativo."
-MS. Prod: xamarin MS. AssetID: 0F608019-5951-4BE6-80E0-9EEE1733D642 MS. Technology: xamarin-Forms autor: maddyleger1 MS. Author: maleger MS. Date: 03/27/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Usar dados de tempo de design com o previsor XAML
+description: Este artigo explica como usar dados de tempo de design para mostrar layouts com dados pesados no visualizador XAML sem executar seu aplicativo.
+ms.prod: xamarin
+ms.assetid: 0F608019-5951-4BE6-80E0-9EEE1733D642
+ms.technology: xamarin-forms
+author: maddyleger1
+ms.author: maleger
+ms.date: 03/27/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 182256fd572a370a7b322898b1e24ade12e971fd
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127333"
 ---
-
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Usar dados de tempo de design com o previsor XAML
 
 _Alguns layouts são difíceis de Visualizar sem dados. Use essas dicas para tirar o máximo proveito da visualização de páginas pesadas de dados no visualizador XAML._

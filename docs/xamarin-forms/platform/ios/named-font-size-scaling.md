@@ -1,8 +1,22 @@
 ---
-Título: "dimensionamento de acessibilidade para tamanhos de fonte nomeados no iOS" Descrição: "as especificações de plataforma permitem consumir funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir a plataforma do iOS específica que desabilita o dimensionamento de acessibilidade para tamanhos de fonte nomeados.
-MS. Prod: xamarin MS. AssetID: B443BAF6-E6F6-4A0E-80B5-CAACE6B550EF MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 06/28/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Dimensionamento de acessibilidade para tamanhos de fonte nomeados no iOS
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma do iOS específica que desabilita o dimensionamento de acessibilidade para tamanhos de fonte nomeados.
+ms.prod: xamarin
+ms.assetid: B443BAF6-E6F6-4A0E-80B5-CAACE6B550EF
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/28/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9aa29ba4d8e6bda9126ec211af1b4febebd5bab9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84128265"
 ---
-
 # <a name="accessibility-scaling-for-named-font-sizes-on-ios"></a>Dimensionamento de acessibilidade para tamanhos de fonte nomeados no iOS
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

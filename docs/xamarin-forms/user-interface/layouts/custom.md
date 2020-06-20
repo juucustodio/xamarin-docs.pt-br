@@ -1,8 +1,22 @@
 ---
-Título: "criar um layout personalizado em Xamarin.Forms " Descrição: "Este artigo explica como escrever uma classe de layout personalizada e demonstra uma classe WrapLayout sensível à orientação que organiza seus filhos horizontalmente na página e, em seguida, encapsula a exibição de filhos subsequentes em linhas adicionais."
-MS. Prod: xamarin MS. AssetID: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 03/29/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Criar um layout personalizado emXamarin.Forms
+description: Este artigo explica como escrever uma classe de layout personalizada e demonstra uma classe WrapLayout sensível à orientação que organiza seus filhos horizontalmente na página e, em seguida, encapsula a exibição de filhos subsequentes em linhas adicionais.
+ms.prod: xamarin
+ms.assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/29/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2c1a958bd4cb56096f554acf26756019eeb0693c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84572228"
 ---
-
 # <a name="create-a-custom-layout-in-xamarinforms"></a>Criar um layout personalizado emXamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)

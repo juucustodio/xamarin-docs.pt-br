@@ -1,8 +1,23 @@
 ---
-Título: "parte 5. De ligações de dados para o MVVM "Descrição:" o padrão MVVM impõe uma separação entre três camadas de software — a interface do usuário XAML, chamada de exibição; os dados subjacentes, chamados de modelo; e um intermediário entre a exibição e o modelo, chamado ViewModel. "
-MS. Prod: xamarin MS. Custom: vídeo MS. AssetID: 48B37D44-4FB1-41B2-9A5E-6D383B041F81 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/25/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Parte 5. De associações de dados a MVVM
+description: O padrão MVVM impõe uma separação entre três camadas de software — a interface do usuário XAML, chamada de exibição; os dados subjacentes, chamados de modelo; e um intermediário entre a exibição e o modelo, chamado ViewModel.
+ms.prod: xamarin
+ms.custom: video
+ms.assetid: 48B37D44-4FB1-41B2-9A5E-6D383B041F81
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/25/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 047cf963394325e8f88759ffe9da7dcf2ca3ad12
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84127524"
 ---
-
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Parte 5. De associações de dados a MVVM
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

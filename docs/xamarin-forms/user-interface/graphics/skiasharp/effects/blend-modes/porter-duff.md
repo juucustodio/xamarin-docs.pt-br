@@ -1,8 +1,22 @@
 ---
-Título: "carregador-Duff modos de mesclagem" Descrição: "Use os modos de combinação carregador-Duff para compor cenas com base nas imagens de origem e de destino."
-MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 57F172F8-BA03-43EC-A215-ED6B78696BB5 autor: davidbritch MS. Author: dabritch MS. Date: 08/23/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Modos de mesclagem carregador-Duff
+description: Use os modos de mesclagem carregador-Duff para compor cenas com base em imagens de origem e de destino.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 57F172F8-BA03-43EC-A215-ED6B78696BB5
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/23/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a1e6290c0f85b54c3fd8958bc43667714bdece20
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84131047"
 ---
-
 # <a name="porter-duff-blend-modes"></a>Modos de mesclagem carregador-Duff
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

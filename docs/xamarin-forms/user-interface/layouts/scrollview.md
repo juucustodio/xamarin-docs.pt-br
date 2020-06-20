@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms ScrollView" Descrição: "o Xamarin.Forms ScrollView é um layout que é capaz de rolar seu conteúdo".
-MS. Prod: xamarin MS. AssetID: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/27/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsScrollView
+description: O Xamarin.Forms ScrollView é um layout que é capaz de rolar seu conteúdo.
+ms.prod: xamarin
+ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/27/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f527acabe3b051cbfd6450ba6f5328449b1a728c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84199137"
 ---
-
 # <a name="xamarinforms-scrollview"></a>Xamarin.FormsScrollView
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-scrollviewdemos)

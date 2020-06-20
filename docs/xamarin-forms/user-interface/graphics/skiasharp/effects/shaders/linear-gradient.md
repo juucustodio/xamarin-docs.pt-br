@@ -1,8 +1,22 @@
 ---
-Título: "o gradiente linear SkiaSharp" Descrição: "Descubra como traçar linhas ou áreas de preenchimento com gradientes compostos por uma mistura gradual de duas cores".
-MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 20A2A8C4-FEB7-478D-BF57-C92E26117B6A autor: davidbritch MS. Author: dabritch MS. Date: 08/23/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: O gradiente linear SkiaSharp
+description: Descubra como traçar linhas ou áreas de preenchimento com gradientes compostos por uma mistura gradual de duas cores.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 20A2A8C4-FEB7-478D-BF57-C92E26117B6A
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/23/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 43aa429046c1b0f72a1cbe6a5b921da9b8907a49
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84132217"
 ---
-
 # <a name="the-skiasharp-linear-gradient"></a>O gradiente linear SkiaSharp
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

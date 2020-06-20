@@ -1,8 +1,22 @@
 ---
-title: "SkiaSharp Effects" Descrição: "saiba como alterar a exibição normal de elementos gráficos com gradientes, bitmap de blocos de mesclagem, modos de mistura, Desfoque e outros efeitos."
-MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: B3E06572-8E2A-49FA-90D1-444C394CD516 autor: davidbritch MS. Author: dabritch MS. Date: 08/22/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Efeitos de SkiaSharp
+description: Saiba como alterar a exibição normal de elementos gráficos com gradientes, bitmap em blocos gráficos, modos de mesclagem, Desfoque e outros efeitos.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: B3E06572-8E2A-49FA-90D1-444C394CD516
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/22/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d9fa710f5dfc61c2892b8fc409a39b37cf449018
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136299"
 ---
-
 # <a name="skiasharp-effects"></a>Efeitos de SkiaSharp
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

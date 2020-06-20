@@ -1,8 +1,21 @@
 ---
-Título: " Xamarin.Essentials : armazenamento seguro" Descrição: "este documento descreve a classe SecureStorage no Xamarin.Essentials , que ajuda a armazenar com segurança pares de chave/valor simples. Ele aborda como usar a classe, as especificações de implementação de plataforma e as limitações. "
-MS. AssetID: 78856C0D-76BB-406E-A880-D5A3987B7D64 autor: jamesmontemagno MS. Author: Jamont MS. Data: 04/02/2019 MS. Custom: vídeo no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: 'Xamarin.Essentials: Armazenamento seguro'
+description: Este documento descreve a classe SecureStorage no Xamarin.Essentials , que ajuda a armazenar com segurança pares de chave/valor simples. Ele aborda como usar a classe, os detalhes da implementação da plataforma e as limitações.
+ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 04/02/2019
+ms.custom: video
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 061bc1cfe785ad080092ba21340f7d38bc499ed9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84801940"
 ---
-
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Armazenamento seguro
 
 A classe **SecureStorage** ajuda a armazenar com segurança os pares de chave/valor simples.
@@ -155,7 +168,7 @@ Essa API destina-se a armazenar pequenas quantidades de texto.  O desempenho pod
 
 ## <a name="api"></a>API
 
-- [Código-fonte de SecureStorage](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/SecureStorage)
+- [Código-fonte de SecureStorage](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/SecureStorage)
 - [Documentação da API de SecureStorage](xref:Xamarin.Essentials.SecureStorage)
 
 ## <a name="related-video"></a>Vídeo relacionados

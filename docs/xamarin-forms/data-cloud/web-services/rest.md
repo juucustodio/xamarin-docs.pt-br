@@ -1,8 +1,22 @@
 ---
-Título: "consumir um serviço Web RESTful" Descrição: "integrar um serviço Web em um aplicativo é um cenário comum. Este artigo demonstra como consumir um serviço Web RESTful de um Xamarin.Forms aplicativo. "
-MS. Prod: xamarin MS. AssetID: B540910C-9C51-416A-AAB9-057BF76489C3 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/28/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Consumir um serviço Web RESTful
+description: A integração de um serviço Web em um aplicativo é um cenário comum. Este artigo demonstra como consumir um serviço Web RESTful de um Xamarin.Forms aplicativo.
+ms.prod: xamarin
+ms.assetid: B540910C-9C51-416A-AAB9-057BF76489C3
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/28/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8d7ae5eb16b8a94f16b6eca013b4ec7a93f427bd
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84198124"
 ---
-
 # <a name="consume-a-restful-web-service"></a>Consumir um serviço Web RESTful
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)

@@ -1,8 +1,22 @@
 ---
-Título: "validação em aplicativos empresariais" Descrição: "Este capítulo explica como o aplicativo móvel eShopOnContainers executa a validação da entrada do usuário. Isso inclui a especificação de regras de validação, o disparo da validação e a exibição de erros de validação. "
-MS. Prod: xamarin MS. AssetID: 56e4f0fc-48D9-4033-91ec-173bb46a5e4d MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Validação em aplicativos empresariais
+description: Este capítulo explica como o aplicativo móvel eShopOnContainers executa a validação da entrada do usuário. Isso inclui a especificação de regras de validação, o disparo da validação e a exibição de erros de validação.
+ms.prod: xamarin
+ms.assetid: 56e4f0fc-48d9-4033-91ec-173bb46a5e4d
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a4b82552956ab0e75d0a76a14ce7c919c744e09a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84565324"
 ---
-
 # <a name="validation-in-enterprise-apps"></a>Validação em aplicativos empresariais
 
 Qualquer aplicativo que aceite entrada de usuários deve garantir que a entrada seja válida. Um aplicativo poderia, por exemplo, verificar se há entradas que contenham apenas caracteres em um intervalo específico, tem um determinado comprimento ou corresponde a um formato específico. Sem a validação, um usuário pode fornecer dados que causam falha no aplicativo. A validação impõe regras de negócio e impede que um invasor insira dados mal-intencionados.

@@ -1,8 +1,23 @@
 ---
-Título: " Xamarin.Forms classe de aplicativo" Descrição: "Este artigo explica os recursos da classe de aplicativo padrão, que inclui uma propriedade a ser definida para a página inicial do aplicativo e um dicionário persistente para armazenar valores simples entre alterações de estado do ciclo de vida."
-MS. Prod: xamarin MS. AssetID: 421F8294-1944-46A4-8459-D2BD5AAABC9D MS. Technology: xamarin – Forms MS. Custom: vídeo autor: davidbritch MS. Author: dabritch MS. Date: 02/19/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsClasse de aplicativo
+description: Este artigo explica os recursos da classe App padrão, que inclui uma propriedade para definir a página inicial do aplicativo e um dicionário persistente para armazenar valores simples durante as alterações de estado do ciclo de vida.
+ms.prod: xamarin
+ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D
+ms.technology: xamarin-forms
+ms.custom: video
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/19/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1e761830fb08662a82a8bf98b4544aafaa6eccf7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573346"
 ---
-
 # <a name="xamarinforms-app-class"></a>Xamarin.FormsClasse de aplicativo
 
 A classe base `Application` oferece os seguintes recursos, que são expostos na subclasse `App` padrão de seus projetos:

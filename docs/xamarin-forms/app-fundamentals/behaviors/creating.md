@@ -1,8 +1,22 @@
 ---
-Título: "criar Xamarin.Forms comportamentos" Descrição: "os Xamarin.Forms comportamentos são criados pela derivação da classe de comportamento ou comportamento <T> . Este artigo demonstra como criar e consumir Xamarin.Forms comportamentos. "
-MS. Prod: xamarin MS. AssetID: 300C16FE-A7E0-445B-9099-8E93ABB6F73D MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/06/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Criar Xamarin.Forms comportamentos
+description: Xamarin.Formsos comportamentos são criados pela derivação da classe de comportamento ou comportamento <T> . Este artigo demonstra como criar e consumir Xamarin.Forms comportamentos.
+ms.prod: xamarin
+ms.assetid: 300C16FE-A7E0-445B-9099-8E93ABB6F73D
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/06/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 67db30b5caadce75a41755530db2b245562d0304
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84135818"
 ---
-
 # <a name="create-xamarinforms-behaviors"></a>Criar Xamarin.Forms comportamentos
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior)

@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms Editor" Descrição: "Este artigo explica como usar o Xamarin.Forms controle editor para aceitar a entrada de texto de várias linhas em um aplicativo".
-MS. Prod: xamarin MS. AssetID: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 09/26/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Forms Editor
+description: Este artigo explica como usar o Xamarin.Forms controle editor para aceitar a entrada de texto de várias linhas em um aplicativo.
+ms.prod: xamarin
+ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/26/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 02749c9f8f55427bb1742e78464bbc003f1f7358
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136161"
 ---
-
 # <a name="xamarinforms-editor"></a>Xamarin.Forms Editor
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
