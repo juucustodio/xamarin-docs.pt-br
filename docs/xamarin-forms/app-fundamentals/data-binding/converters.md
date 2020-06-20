@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms conversão de valor de associação" Descrição: "Este artigo explica como converter ou converter valores em uma Xamarin.Forms Associação de dados implementando um conversor de valor (que também é conhecido como um conversor de associação ou conversor de valor de associação)".
-MS. Prod: xamarin MS. AssetID: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/05/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsConversores de valor de associação
+description: Este artigo explica como converter ou converter valores em uma Xamarin.Forms Associação de dados implementando um conversor de valor (que também é conhecido como um conversor de associação ou conversor de valor de associação).
+ms.prod: xamarin
+ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/05/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e1a4faabc8f0703b497062a8c5d587221692dab7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139747"
 ---
-
 # <a name="xamarinforms-binding-value-converters"></a>Xamarin.FormsConversores de valor de associação
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

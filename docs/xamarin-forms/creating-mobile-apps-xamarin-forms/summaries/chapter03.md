@@ -1,7 +1,22 @@
 ---
-Título: "Resumo do capítulo 3. Mais detalhes sobre o texto "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 3. Mais profundo do texto "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734 autor: davidbritch MS. Author: dabritch MS. Date: 07/18/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Resumo do capítulo 3. Aprofundamento no texto
+description: 'Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 3. Aprofundamento no texto'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/18/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5423a9f716f384eca107003bdeca69615f8b459f
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136897"
 ---
-
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Resumo do capítulo 3. Aprofundamento no texto
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03)

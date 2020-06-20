@@ -1,8 +1,22 @@
 ---
-Título: Descrição de " Xamarin.Forms gatilhos": "Este artigo explica como usar Xamarin.Forms gatilhos para responder a alterações de interface do usuário com XAML. Os gatilhos permitem expressar ações declarativamente no XAML que alteram a aparência de controles com base em eventos ou alterações de propriedade. "
-MS. Prod: xamarin MS. AssetID: 60460F57-63C6-4916-BBB5-A870F1DF53D7 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/17/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsGatilhos
+description: Este artigo explica como usar Xamarin.Forms gatilhos para responder a alterações de interface do usuário com XAML. Os gatilhos permitem expressar ações declarativamente em XAML que alteram a aparência dos controles com base em eventos ou alterações de propriedade.
+ms.prod: xamarin
+ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/17/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f92ad47ae883f4b1b413ae5192a9add83045bb77
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136949"
 ---
-
 # <a name="xamarinforms-triggers"></a>Xamarin.FormsGatilhos
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)

@@ -1,7 +1,22 @@
 ---
-Título: "Resumo do capítulo 6. Cliques no botão "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 6. O botão clica em "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: D4F9C429-A6CF-40FA-AC68-3F149307A5F9 autor: davidbritch MS. Author: dabritch MS. Date: 07/18/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Resumo do capítulo 6. Cliques no botão
+description: 'Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 6. Cliques no botão'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/18/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f9bafbf4af2a89acd02d436604e882be87cbde8c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136832"
 ---
-
 # <a name="summary-of-chapter-6-button-clicks"></a>Resumo do capítulo 6. Cliques no botão
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)

@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms botão" Descrição: "o botão responde a um toque ou clique que direciona um aplicativo para executar uma tarefa específica".
-MS. Prod: xamarin MS. AssetID: 62CAEB63-0800-44F4-9B8C-EE632138C2F5 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/04/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsButton
+description: O botão responde a um toque ou clique que direciona um aplicativo para executar uma tarefa específica.
+ms.prod: xamarin
+ms.assetid: 62CAEB63-0800-44F4-9B8C-EE632138C2F5
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/04/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 595367d94bcc4ac384763e915a0a19db7517341d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573385"
 ---
-
 # <a name="xamarinforms-button"></a>Xamarin.FormsButton
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
@@ -755,18 +769,18 @@ Todos os três bitmaps receberam uma **ação de compilação** de **BundleResou
 
 Para o projeto do Android, todos os bitmaps têm o mesmo nome, mas eles são armazenados em subpastas diferentes da pasta de **recursos** :
 
-- Um bitmap quadrado de 72 pixels armazenado como **/Resources/Drawable-hdpi/MonkeyFace.png**
-- Um bitmap quadrado de 96 pixels armazenado como **/Resources/Drawable-xhdpi/MonkeyFace.png**
-- Um bitmap quadrado de 144 pixels armazenado como **/Resources/Drawable-xxhdpi/MonkeyFace.png**
-- Um bitmap quadrado de 192 pixels armazenado como **/Resources/Drawable-xxxhdpi/MonkeyFace.png**
+- Um bitmap quadrado de 72 pixels armazenado como **/Resources/drawable-hdpi/MonkeyFace.png**
+- Um bitmap quadrado de 96 pixels armazenado como **/Resources/drawable-xhdpi/MonkeyFace.png**
+- Um bitmap quadrado de 144 pixels armazenado como **/Resources/drawable-xxhdpi/MonkeyFace.png**
+- Um bitmap quadrado de 192 pixels armazenado como **/Resources/drawable-xxxhdpi/MonkeyFace.png**
 
 Elas receberam uma **ação de compilação** de **AndroidResource**.
 
 No projeto UWP, os bitmaps podem ser armazenados em qualquer lugar no projeto, mas geralmente são armazenados em uma pasta personalizada ou na pasta de **ativos** existentes. O projeto UWP contém estes bitmaps:
 
-- Um bitmap quadrado de 48 pixels armazenado como **/assets/MonkeyFace.Scale-100.png**
-- Um bitmap quadrado de 96 pixels armazenado como **/assets/MonkeyFace.Scale-200.png**
-- Um bitmap quadrado de 192 pixels armazenado como **/assets/MonkeyFace.Scale-400.png**
+- Um bitmap quadrado de 48 pixels armazenado como **/Assets/MonkeyFace.scale-100.png**
+- Um bitmap quadrado de 96 pixels armazenado como **/Assets/MonkeyFace.scale-200.png**
+- Um bitmap quadrado de 192 pixels armazenado como **/Assets/MonkeyFace.scale-400.png**
 
 Todos eles receberam uma **ação de compilação** de **conteúdo**.
 

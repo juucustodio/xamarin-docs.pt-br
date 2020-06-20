@@ -1,8 +1,22 @@
 ---
-Título: "SkiaSharp de bitmap em cascata": "peça uma área usando bitmaps repetidos horizontal e verticalmente".
-MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 9ED14E07-4DC8-4B03-8A33-772838BF51EA autor: davidbritch MS. Author: dabritch MS. Date: 08/23/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: SkiaSharp bitmap em blocos
+description: Peça uma área usando bitmaps repetidos horizontal e verticalmente.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 9ED14E07-4DC8-4B03-8A33-772838BF51EA
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/23/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6a28dd20eb8978334365ac217df1241e5288fd28
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137417"
 ---
-
 # <a name="skiasharp-bitmap-tiling"></a>SkiaSharp bitmap em blocos
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

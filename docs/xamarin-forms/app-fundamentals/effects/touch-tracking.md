@@ -1,8 +1,22 @@
 ---
-Título: "invocando eventos de efeitos" Descrição: "um efeito pode definir e invocar um evento, sinalizando alterações na exibição nativa subjacente. Este artigo mostra como implementar o acompanhamento de dedos com vários toques de nível baixo e como gerar eventos que sinalizam atividade de toque. "
-MS. Prod: xamarin MS. AssetID: 6A724681-55EB-45B8-9EED-7E412AB19DD2 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/14/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Invocando eventos por meio de efeitos
+description: Um efeito pode definir e invocar um evento, sinalizando as alterações na exibição nativa subjacente. Este artigo mostra como implementar o acompanhamento de dedos multitoque de nível baixo e como gerar eventos que sinalizam a atividade de toque.
+ms.prod: xamarin
+ms.assetid: 6A724681-55EB-45B8-9EED-7E412AB19DD2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/14/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 892bffa4027a1a61d6c22cc26d1556fb007432d8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136967"
 ---
-
 # <a name="invoking-events-from-effects"></a>Invocando eventos por meio de efeitos
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)

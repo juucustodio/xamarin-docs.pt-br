@@ -1,8 +1,22 @@
 ---
-Título: "parte 4. Noções básicas de ligação de dados "Descrição:" as ligações de dados permitem que as propriedades de dois objetos sejam vinculadas para que uma alteração em uma cause uma alteração no outro. "
-MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: 342288C3-BB4C-4924-B178-72E112D777BA autor: davidbritch MS. Author: dabritch MS. Date: 10/25/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Parte 4. Conceitos básicos da associação de dados
+description: As ligações de dados permitem que as propriedades de dois objetos sejam vinculadas para que uma alteração em um cause uma alteração no outro.
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/25/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 08be571d3ba69891a56c08efd556a999e51431c8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139848"
 ---
-
 # <a name="part-4-data-binding-basics"></a>Parte 4. Conceitos básicos da associação de dados
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

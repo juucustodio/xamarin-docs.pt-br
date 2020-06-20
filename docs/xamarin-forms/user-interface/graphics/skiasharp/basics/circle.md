@@ -1,8 +1,22 @@
 ---
-Título: "desenho de um círculo simples em SkiaSharp" Descrição: "Este artigo explica os conceitos básicos do desenho do SkiaSharp, incluindo telas e objetos de pintura, em Xamarin.Forms aplicativos e demonstra isso com o código de exemplo".
-MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: E3A4E373-F65D-45C8-8E77-577A804AC3F8 autor: davidbritch MS. Author: dabritch MS. Date: 03/10/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Desenhando um círculo simples em SkiaSharp
+description: Este artigo explica os conceitos básicos do desenho do SkiaSharp, incluindo telas e objetos de pintura, em Xamarin.Forms aplicativos, e demonstra isso com o código de exemplo.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: fb873102bfb8568b8298a39ea2429fb6c27af175
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137716"
 ---
-
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Desenhando um círculo simples em SkiaSharp
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

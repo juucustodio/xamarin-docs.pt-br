@@ -1,8 +1,22 @@
 ---
-Título: "Salvando bitmaps SkiaSharp em arquivos" Descrição: "Explore os vários formatos de arquivo com suporte do SkiaSharp para salvar bitmaps na biblioteca de fotos do usuário".
-MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C autor: davidbritch MS. Author: dabritch MS. Date: 07/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Salvando bitmaps SkiaSharp em arquivos
+description: Explore os vários formatos de arquivo com suporte pelo SkiaSharp para salvar bitmaps na biblioteca de fotos do usuário.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 01f4fcf1953658af44d2a8996913860a3b605abf
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138652"
 ---
-
 # <a name="saving-skiasharp-bitmaps-to-files"></a>Salvando bitmaps SkiaSharp em arquivos
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

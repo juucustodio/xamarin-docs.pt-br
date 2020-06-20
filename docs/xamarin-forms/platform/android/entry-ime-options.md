@@ -1,8 +1,22 @@
 ---
-title: "inserir opções do editor de método de entrada no Android" Descrição: "as especificações da plataforma permitem consumir funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma do Android específica que define as opções do editor de método de entrada para o teclado virtual para uma entrada. "
-MS. Prod: xamarin MS. AssetID: 7909C738-04B2-4476-9A3B-A6D79BC3B9B2 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 07/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Opções do editor de método de entrada de entrada no Android
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma Android específica que define as opções do editor de método de entrada para o teclado virtual para uma entrada.
+ms.prod: xamarin
+ms.assetid: 7909C738-04B2-4476-9A3B-A6D79BC3B9B2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: bb77e9fafe39bf76a7d4290dba0bc658cd15094f
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140030"
 ---
-
 # <a name="entry-input-method-editor-options-on-android"></a>Opções do editor de método de entrada de entrada no Android
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

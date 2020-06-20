@@ -1,8 +1,22 @@
 ---
-Título: "SkiaSharp Drawing Basics" Descrição: "este guia explica as noções básicas dos conceitos e das coordenadas de gráficos do SkiaSharp em Xamarin.Forms aplicativos".
-MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 25141E3E-D22E-44B1-A647-7E6FA0C9737B autor: davidbritch MS. Author: dabritch MS. Date: 03/10/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Noções básicas de desenho do SkiaSharp
+description: Este guia explica as noções básicas de conceitos e coordenadas de elementos gráficos do SkiaSharp em Xamarin.Forms aplicativos.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 25141E3E-D22E-44B1-A647-7E6FA0C9737B
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: fd82f7ffe135c12c9dfc59c3353d7d9f5d73068c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137703"
 ---
-
 # <a name="skiasharp-drawing-basics"></a>Noções básicas de desenho do SkiaSharp
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

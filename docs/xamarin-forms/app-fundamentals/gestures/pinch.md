@@ -1,8 +1,22 @@
 ---
-Título: "adicionando uma descrição do reconhecedor de gestos de pinça": Este artigo explica como usar o gesto de pinçar para executar o zoom interativo de uma imagem no local de pinçagem. "
-MS. Prod: xamarin MS. AssetID: 832F7810-F0CF-441A-B04A-3975F3FB8B29 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/21/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Adicionando um reconhecedor de gestos de pinçagem
+description: Este artigo explica como usar o gesto de pinçagem para aplicar zoom de forma interativa a uma imagem na localização da pinçagem.
+ms.prod: xamarin
+ms.assetid: 832F7810-F0CF-441A-B04A-3975F3FB8B29
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/21/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: da4a8bc66a7986efd3683de6dce1f6af618b85cc
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137846"
 ---
-
 # <a name="adding-a-pinch-gesture-recognizer"></a>Adicionando um reconhecedor de gestos de pinçagem
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pinchgesture)

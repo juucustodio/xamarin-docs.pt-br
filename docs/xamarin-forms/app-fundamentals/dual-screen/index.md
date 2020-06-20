@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms tela dupla" Descrição: "este guia explica como criar Xamarin.Forms aplicativos para dispositivos de tela dupla".
-MS. Prod: xamarin MS. AssetID: f9906e83-f8ae-48f9-997b-e1540b96ee8e MS. Technology: xamarin-Forms autor: davidortinau MS. Author: daortin MS. Date: 02/08/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsTela dupla
+description: Este guia explica como criar Xamarin.Forms aplicativos para dispositivos de tela dupla.
+ms.prod: xamarin
+ms.assetid: f9906e83-f8ae-48f9-997b-e1540b96ee8e
+ms.technology: xamarin-forms
+author: davidortinau
+ms.author: daortin
+ms.date: 02/08/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: aeaaeb732adaea45446d6baf833027801abf4d2a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138899"
 ---
-
 # <a name="xamarinforms-dual-screen"></a>Xamarin.Formstela dupla
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

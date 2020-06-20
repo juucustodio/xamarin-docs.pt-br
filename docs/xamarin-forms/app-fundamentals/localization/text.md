@@ -1,8 +1,23 @@
 ---
-title: "cadeia de caracteres e localização da imagem em Xamarin.Forms " Descrição: " Xamarin.Forms os aplicativos podem ser localizados usando arquivos de recursos do .net."
-zone_pivot_groups: "plataforma" MS. Prod: xamarin MS. AssetID: 852B4ED3-2D2D-48A5-A759-A6591F6A1509 MS. Technology: xamarin-Forms autor: profexorgeek MS. Author: jusjohns MS. Date: 11/01/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Localização de cadeia de caracteres e imagem emXamarin.Forms
+description: Xamarin.Formsos aplicativos podem ser localizados usando arquivos de recursos do .NET.
+zone_pivot_groups: platform
+ms.prod: xamarin
+ms.assetid: 852B4ED3-2D2D-48A5-A759-A6591F6A1509
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 11/01/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: af15dc5a23404a11be6207bef7b4fc3e4bf9fad7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137592"
 ---
-
 # <a name="xamarinforms-string-and-image-localization"></a>Xamarin.FormsLocalização de cadeia de caracteres e imagem
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingresxlocalization)

@@ -1,8 +1,22 @@
 ---
-title: "a Xamarin.Forms interface de comando" Descrição: "Este artigo explica como implementar a propriedade Command com Xamarin.Forms associações de dados. A interface de comando fornece uma abordagem alternativa para implementar comandos que é muito mais adequada para a arquitetura MVVM. "
-MS. Prod: xamarin MS. AssetID: 69922284-F398-45C3-B4CC-B8E29BB4C533 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/05/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: A Xamarin.Forms interface de comando
+description: Este artigo explica como implementar a propriedade Command com Xamarin.Forms associações de dados. A interface de comando oferece uma abordagem alternativa à implementação de comandos, que é bem mais adequada à arquitetura MVVM.
+ms.prod: xamarin
+ms.assetid: 69922284-F398-45C3-B4CC-B8E29BB4C533
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/05/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 253255f08cec6f08e03df94798c8572f7cf10f30
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139718"
 ---
-
 # <a name="the-xamarinforms-command-interface"></a>A Xamarin.Forms interface de comando
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

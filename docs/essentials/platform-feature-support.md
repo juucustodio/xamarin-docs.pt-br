@@ -1,8 +1,20 @@
 ---
-Título: " Xamarin.Essentials suporte a recursos de plataforma &" Descrição: " Xamarin.Essentials fornece uma única API de plataforma cruzada que funciona com qualquer aplicativo IOS, Android ou UWP que pode ser acessado do código compartilhado, independentemente de como a interface do usuário é criada."
-MS. AssetID: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4 autor: jamesmontemagno MS. Author: Jamont MS. Date: 08/20/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.EssentialsSuporte ao recurso de & de plataforma
+description: Xamarin.Essentialsfornece uma única API de plataforma cruzada que funciona com qualquer aplicativo iOS, Android ou UWP que pode ser acessado do código compartilhado, independentemente de como a interface do usuário é criada.
+ms.assetid: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4
+author: jamesmontemagno
+ms.author: jamont
+ms.date: 08/20/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b052e03f3ca57229988a29b7d3f38f5fa7bb6f97
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137170"
 ---
-
 # <a name="platform-support"></a>Suporte de plataforma
 
 Xamarin.Essentialso oferece suporte às seguintes plataformas e sistemas operacionais:
@@ -44,7 +56,7 @@ Guia de ícones:
 | [Conectividade](connectivity.md?context=xamarin/xamarin-forms) | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![watchOS não tem suporte](~/media/shared/no.png "watchOS não tem suporte") | ![tvOS com suporte](~/media/shared/yes.png "tvOS com suporte") | ![Tizen com suporte](~/media/shared/yes.png "Tizen com suporte") |
 | [Detectar movimento](detect-shake.md?context=xamarin/xamarin-forms) | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![watchOS com suporte](~/media/shared/yes.png "watchOS com suporte") | ![tvOS com suporte](~/media/shared/yes.png "tvOS com suporte") | ![Tizen com suporte](~/media/shared/yes.png "Tizen com suporte") |
 | [Informações sobre DeviceDisplay](device-display.md?context=xamarin/xamarin-forms) | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![watchOS não tem suporte](~/media/shared/no.png "watchOS não tem suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen não tem suporte](~/media/shared/no.png "Tizen não tem suporte") |
-| [Informações sobre o dispositivo](device-information.md?context=xamarin/xamarin-forms) | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![watchOS com suporte](~/media/shared/yes.png "watchOS com suporte") | ![tvOS com suporte](~/media/shared/yes.png "tvOS com suporte") | ![Tizen com suporte](~/media/shared/yes.png "Tizen com suporte") |
+| [Informações do dispositivo](device-information.md?context=xamarin/xamarin-forms) | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![watchOS com suporte](~/media/shared/yes.png "watchOS com suporte") | ![tvOS com suporte](~/media/shared/yes.png "tvOS com suporte") | ![Tizen com suporte](~/media/shared/yes.png "Tizen com suporte") |
 | [Email](email.md?context=xamarin/xamarin-forms) | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![watchOS não tem suporte](~/media/shared/no.png "watchOS não tem suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen com suporte](~/media/shared/yes.png "Tizen com suporte") |
 | [Auxiliares do sistema de arquivos](file-system-helpers.md?context=xamarin/xamarin-forms) | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![watchOS com suporte](~/media/shared/yes.png "watchOS com suporte") | ![tvOS com suporte](~/media/shared/yes.png "tvOS com suporte") | ![Tizen com suporte](~/media/shared/yes.png "Tizen com suporte") |
 | [Lanterna](flashlight.md?context=xamarin/xamarin-forms) | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![watchOS não tem suporte](~/media/shared/no.png "watchOS não tem suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen com suporte](~/media/shared/yes.png "Tizen com suporte") |

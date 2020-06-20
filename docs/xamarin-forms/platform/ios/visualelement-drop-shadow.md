@@ -1,8 +1,22 @@
 ---
-Título: "Visualelement soltar sombras na iOS" Descrição: "as especificações da plataforma permitem consumir funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do iOS que habilita uma sombra em um Visualelement. "
-MS. Prod: xamarin MS. AssetID: 2147FD66-058E-4BE5-840A-369842B26EC4 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Sombras de soltar do visualelement no iOS
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do iOS que habilita uma sombra em um Visualelement.
+ms.prod: xamarin
+ms.assetid: 2147FD66-058E-4BE5-840A-369842B26EC4
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 7410386e10f605fdeed452fe37755c1e48e6b9b9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136988"
 ---
-
 # <a name="visualelement-drop-shadows-on-ios"></a>Sombras de soltar do visualelement no iOS
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

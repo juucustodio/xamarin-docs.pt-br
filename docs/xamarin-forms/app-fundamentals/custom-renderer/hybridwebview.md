@@ -1,8 +1,22 @@
 ---
-Título: "Personalizando uma descrição da WebView": "um WebView Xamarin.Forms é uma exibição que exibe conteúdo Web e HTML em seu aplicativo. Este artigo explica como criar um renderizador personalizado que estende o WebView para permitir que o código C# seja invocado do JavaScript. "
-MS. Prod: xamarin MS. AssetID: 58DFFA52-4057-49A8-8682-50A58C7E842C MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 03/31/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Personalizando uma WebView
+description: Um WebView Xamarin.Forms é uma exibição que exibe conteúdo Web e HTML em seu aplicativo. Este artigo explica como criar um renderizador personalizado que estende a exibição da Web para permitir que o código C# seja invocado do JavaScript.
+ms.prod: xamarin
+ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/31/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8c83742896af4a22bcff327df82c1b14ff983bb2
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138964"
 ---
-
 # <a name="customizing-a-webview"></a>Personalizando uma WebView
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)

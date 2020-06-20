@@ -1,8 +1,22 @@
 ---
-Título: "InputView ordem de leitura no Windows" Descrição: "as especificações da plataforma permitem que você consuma a funcionalidade disponível apenas em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do Windows que permite que a ordem de leitura do texto bidirecional seja detectada dinamicamente. "
-MS. Prod: xamarin MS. AssetID: E61BAEE0-C8B7-4F33-8DDC-FA1B9CA8E81D MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: InputView ordem de leitura no Windows
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do Windows que permite que a ordem de leitura do texto bidirecional seja detectada dinamicamente.
+ms.prod: xamarin
+ms.assetid: E61BAEE0-C8B7-4F33-8DDC-FA1B9CA8E81D
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f5f0bcdc2d2c8eb1b51ad8dcd1014c649af80c90
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137755"
 ---
-
 # <a name="inputview-reading-order-on-windows"></a>InputView ordem de leitura no Windows
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

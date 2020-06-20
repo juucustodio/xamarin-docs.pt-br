@@ -1,7 +1,22 @@
 ---
-Título: "Resumo do capítulo 20. Async e e/s de arquivo "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 20. Async e e/s de arquivo "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: D595862D-64FD-4C0D-B0AD-C1F440564247 autor: davidbritch MS. Author: dabritch MS. Date: 07/18/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Resumo do capítulo 20. E/S assíncrona e de arquivo
+description: 'Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 20. E/S assíncrona e de arquivo'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/18/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: ad71dc5f5389f1676698a761a138b3f76ffa9fa0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136676"
 ---
-
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Resumo do capítulo 20. E/S assíncrona e de arquivo
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)

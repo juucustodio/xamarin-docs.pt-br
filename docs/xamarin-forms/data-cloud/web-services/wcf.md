@@ -1,8 +1,22 @@
 ---
-title: "" consumir um serviço Web do Windows Communication Foundation (WCF) "Descrição:" Este artigo demonstra como consumir um serviço de protocolo SOAP (Simple Object Access Protocol) do WCF de um Xamarin.Forms aplicativo ".
-MS. Prod: xamarin MS. AssetID: 5696FF04-EF21-4B7A-8C8B-26DE28B5C0AD MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 03/28/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Consumir um serviço Web Windows Communication Foundation (WCF)
+description: Este artigo demonstra como consumir um serviço de protocolo SOAP (Simple Object Access Protocol) do WCF a partir de um Xamarin.Forms aplicativo.
+ms.prod: xamarin
+ms.assetid: 5696FF04-EF21-4B7A-8C8B-26DE28B5C0AD
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/28/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: cf95427807e0179a608b428bc7e02499c9616fe7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139146"
 ---
-
 # <a name="consume-a-windows-communication-foundation-wcf-web-service"></a>Consumir um serviço Web Windows Communication Foundation (WCF)
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)

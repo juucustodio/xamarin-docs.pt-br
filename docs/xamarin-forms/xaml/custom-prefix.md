@@ -1,8 +1,22 @@
 ---
-title: "XAML namespace recomendado prefixos em Xamarin.Forms " Description: "a classe XmlnsPrefixAttribute pode ser usada por autores de controle para especificar um prefixo recomendado para associar a um namespace XAML, para uso XAML."
-MS. Prod: xamarin MS. AssetID: 7B315BEC-7A35-48F4-A9C7-EF40255E95FF MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 02/28/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Prefixos recomendados do namespace XAML emXamarin.Forms
+description: A classe XmlnsPrefixAttribute pode ser usada por autores de controle para especificar um prefixo recomendado para associar a um namespace XAML, para uso XAML.
+ms.prod: xamarin
+ms.assetid: 7B315BEC-7A35-48F4-A9C7-EF40255E95FF
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/28/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 71ae523f40f3f7529c12f853778404e224fbae30
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138132"
 ---
-
 # <a name="xaml-namespace-recommended-prefixes-in-xamarinforms"></a>Prefixos recomendados do namespace XAML emXamarin.Forms
 
 A `XmlnsPrefixAttribute` classe pode ser usada por autores de controle para especificar um prefixo recomendado para associar a um namespace XAML, para uso XAML. O prefixo é útil ao dar suporte à serialização da árvore de objetos para XAML ou ao interagir com um ambiente de design que tem recursos de edição XAML. Por exemplo:

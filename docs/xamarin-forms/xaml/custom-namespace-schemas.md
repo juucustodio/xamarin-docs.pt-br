@@ -1,8 +1,22 @@
 ---
-Título: "esquemas de namespace personalizado XAML em Xamarin.Forms " Descrição: "um esquema de namespace personalizado XAML pode ser definido com a classe XmlnsDefinitionAttribute, que especifica um mapeamento entre uma URL personalizada e um ou mais namespaces CLR. O esquema de namespace personalizado pode então ser usado em declarações de namespace XAML. "
-MS. Prod: xamarin MS. AssetID: FDF201A1-8C35-4569-A728-F9B0A0C5B31A MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/21/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Esquemas de namespace personalizado XAML emXamarin.Forms
+description: Um esquema de namespace personalizado XAML pode ser definido com a classe XmlnsDefinitionAttribute, que especifica um mapeamento entre uma URL personalizada e um ou mais namespaces CLR. O esquema de namespace personalizado pode então ser usado em declarações de namespace XAML.
+ms.prod: xamarin
+ms.assetid: FDF201A1-8C35-4569-A728-F9B0A0C5B31A
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/21/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 41a95b1a82ab8aa1f6938e5a2bcdebcef368e72d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138158"
 ---
-
 # <a name="xaml-custom-namespace-schemas-in-xamarinforms"></a>Esquemas de namespace personalizado XAML emXamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)

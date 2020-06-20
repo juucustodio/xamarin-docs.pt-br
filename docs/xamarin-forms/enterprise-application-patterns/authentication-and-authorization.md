@@ -1,8 +1,22 @@
 ---
-Título: Descrição de "autenticação e autorização": "Este capítulo explica como o aplicativo móvel do eShopOnContainers executa autenticação e autorização em relação aos microservices em contêineres".
-MS. Prod: xamarin MS. AssetID: e3f27b4c-f7f5-4839-a48c-30bcb919c59e MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/08/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Autenticação e autorização
+description: Este capítulo explica como o aplicativo móvel eShopOnContainers executa a autenticação e a autorização em relação aos microservices em contêineres.
+ms.prod: xamarin
+ms.assetid: e3f27b4c-f7f5-4839-a48c-30bcb919c59e
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/08/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8b712b2a5d7eeb2ee5e71047b9e6c460eb10d72a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573827"
 ---
-
 # <a name="authentication-and-authorization"></a>Autenticação e autorização
 
 A autenticação é o processo de obter credenciais de identificação, como nome e senha de um usuário, e validar essas credenciais em uma autoridade. Se as credenciais forem válidas, a entidade que enviou as credenciais será considerada uma identidade autenticada. Depois que uma identidade é autenticada, um processo de autorização determina se a identidade tem acesso a um determinado recurso.

@@ -1,8 +1,22 @@
 ---
-Título: "Personalizando um pino de mapa" Descrição: "Este artigo demonstra como criar um renderizador personalizado para o controle de mapa, que exibe um mapa nativo com um PIN personalizado e uma exibição personalizada dos dados de PIN em cada plataforma".
-MS. Prod: xamarin MS. AssetID: C5481D86-80E9-4E3D-9FB6-57B0F93711A6 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 11/06/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Personalizando um marcador de mapa
+description: Este artigo demonstra como criar um renderizador personalizado para o Controle de Mapeamento, que exibe um mapa nativo com um marcador personalizado e uma exibição personalizada dos dados de marcador em cada plataforma.
+ms.prod: xamarin
+ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/06/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 06ff88f1d4f272d9b77737d2168418c007afe8bc
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573892"
 ---
-
 # <a name="customizing-a-map-pin"></a>Personalizando um marcador de mapa
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)

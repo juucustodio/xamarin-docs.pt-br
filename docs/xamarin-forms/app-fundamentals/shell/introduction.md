@@ -1,8 +1,22 @@
 ---
-Título: Xamarin.Forms Descrição de "Shell Introduction": " Xamarin.Forms o Shell fornece os recursos fundamentais que a maioria dos aplicativos exigem, incluindo uma experiência de usuário de navegação comum, um esquema de navegação baseado em URI e um manipulador de pesquisa integrado".
-MS. Prod: xamarin MS. AssetID: 4604DCB5-83DA-458A-8B02-6508A740BE0E MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 09/20/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsIntrodução ao shell
+description: Xamarin.FormsO Shell fornece os recursos fundamentais que a maioria dos aplicativos exigem, incluindo uma experiência de usuário de navegação comum, um esquema de navegação baseado em URI e um manipulador de pesquisa integrado.
+ms.prod: xamarin
+ms.assetid: 4604DCB5-83DA-458A-8B02-6508A740BE0E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/20/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 29a99161ff2ef2d71b6c803db994522bfe80ed03
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138730"
 ---
-
 # <a name="xamarinforms-shell-introduction"></a>Xamarin.FormsIntrodução ao shell
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

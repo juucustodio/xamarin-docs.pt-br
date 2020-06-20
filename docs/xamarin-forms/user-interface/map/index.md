@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms mapa" Descrição: "o controle de mapa exibe um mapa e requer o Xamarin.Forms . Mapeia o pacote NuGet. "
-MS. Prod: xamarin MS. AssetID: B669B5EE-D24C-4C69-93E1-2CA5CC9108B5 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/29/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsMapeada
+description: O controle de mapa exibe um mapa e requer o Xamarin.Forms . Mapeia o pacote NuGet.
+ms.prod: xamarin
+ms.assetid: B669B5EE-D24C-4C69-93E1-2CA5CC9108B5
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/29/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 2461ffa8168207e6a57fae005f752be48772a34a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139822"
 ---
-
 # <a name="xamarinforms-map"></a>Xamarin.FormsMapeada
 
 ## <a name="initialization-and-configuration"></a>[Inicialização e configuração](setup.md)

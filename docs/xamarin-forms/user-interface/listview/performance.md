@@ -1,8 +1,22 @@
 ---
-Título: "desempenho de ListView" Descrição: "embora ListView seja uma exibição poderosa para exibir dados, ele tem algumas limitações. Este artigo explica como garantir um ótimo desempenho com um Xamarin.Forms ListView em um aplicativo. "
-MS. Prod: xamarin MS. AssetID: 1B085639-652C-4862-86EB-5D55D32B9395 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 12/11/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Desempenho de ListView
+description: Embora ListView seja uma exibição poderosa para a exibição de dados, ele tem algumas limitações. Este artigo explica como garantir um ótimo desempenho com um Xamarin.Forms ListView em um aplicativo.
+ms.prod: xamarin
+ms.assetid: 1B085639-652C-4862-86EB-5D55D32B9395
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 12/11/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: e2b8e057d9687cd0a472451fc73cc578f9358277
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139874"
 ---
-
 # <a name="listview-performance"></a>Desempenho de ListView
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)

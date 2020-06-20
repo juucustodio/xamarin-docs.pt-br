@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms gestos" Descrição: "este guia explica como os Xamarin.Forms reconhecedores de gestos podem ser usados para detectar a interação do usuário com exibições em um Xamarin.Forms aplicativo".
-MS. Prod: xamarin MS. AssetID: 0E197A51-2304-4C09-A710-C7FF24A89F15 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 07/25/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Formsgestos
+description: Este guia explica como os Xamarin.Forms reconhecedores de gestos podem ser usados para detectar a interação do usuário com exibições em um Xamarin.Forms aplicativo.
+ms.prod: xamarin
+ms.assetid: 0E197A51-2304-4C09-A710-C7FF24A89F15
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/25/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5e1e93f74ab8ef6d63213a8fbdc7ec45a794cf55
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137871"
 ---
-
 # <a name="xamarinforms-gestures"></a>Xamarin.Formsgestos
 
 _Os reconhecedores de gestos podem ser usados para detectar a interação do usuário com exibições em um Xamarin.Forms aplicativo._

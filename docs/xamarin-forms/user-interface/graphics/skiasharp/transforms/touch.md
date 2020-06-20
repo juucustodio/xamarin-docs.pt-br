@@ -1,8 +1,22 @@
 ---
-Título: Descrição de "manipulação de toque": "Este artigo explica como usar transformações de matriz para implementar o toque, a pinçagem e a rotação de toques e demonstra isso com o código de exemplo".
-MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: A0B8DD2D-7392-4EC5-BFB0-6209407AD650 autor: davidbritch MS. Author: dabritch MS. Date: 09/14/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Manipulações de toque
+description: Este artigo explica como usar transformações de matriz para implementar arrastar, apertar e girar por toque e demonstra isso com o código de exemplo.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/14/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f5738f376e2a814ef1af455178c2e68135184402
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140160"
 ---
-
 # <a name="touch-manipulations"></a>Manipulações de toque
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

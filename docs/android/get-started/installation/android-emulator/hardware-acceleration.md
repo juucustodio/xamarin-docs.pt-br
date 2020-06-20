@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: jondouglas
 ms.author: jodou
 ms.date: 02/13/2020
-ms.openlocfilehash: a776dbb2ecfaf0942d79c2b403c13f98cdc7c2e2
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 2a9260bc782d2b19e6fd74356738276e1648dcf2
+ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571968"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104351"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>Aceleração de hardware para o desempenho do emulador (Hyper-V e HAXM)
 
@@ -142,9 +142,9 @@ Se o computador tiver suporte para HAXM, mas o HAXM não estiver instalado, siga
 
 ### <a name="installing-haxm"></a>Instalando o HAXM
 
-Pacotes de instalação do HAXM para Windows estão disponíveis na página [Intel Hardware Accelerated Execution Manager](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager). Use as etapas a seguir para baixar e instalar o HAXM:
+Os pacotes de instalação do HAXM para Windows estão disponíveis na página de versões do GitHub do [Intel hardware Accelerated Execution Manager](https://github.com/intel/haxm/releases) . Use as etapas a seguir para baixar e instalar o HAXM:
 
-1. No site da Intel, baixe a versão mais recente do [mecanismo de virtualização do HAXM](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager/) para o Windows. A vantagem de baixar o instalador do HAXM diretamente do site da Intel é que você pode ter certeza de usar a versão mais recente.
+1. No site da Intel, baixe a versão mais recente do [mecanismo de virtualização do HAXM](https://github.com/intel/haxm/releases) para o Windows. A vantagem de baixar o instalador do HAXM diretamente do site da Intel é que você pode ter certeza de usar a versão mais recente.
 
 2. Execute o arquivo **intelhaxm-android.exe** para iniciar o instalador do HAXM. Aceite os valores padrão nas caixas de diálogo do instalador:
 

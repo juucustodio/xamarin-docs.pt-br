@@ -1,8 +1,22 @@
 ---
-Título: "pontos e traços na SkiaSharp" Descrição: "Este artigo explora como dominar as complicações do desenho de linhas pontilhadas e tracejadas em SkiaSharp e demonstra isso com o código de exemplo".
-MS. Prod: xamarin MS. AssetID: 8E9BCC13-830C-458C-9FC8-ECB4EAE66078 MS. Technology: xamarin-skiasharp autor: davidbritch MS. Author: dabritch MS. Date: 03/10/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Pontos e traços em SkiaSharp
+description: Este artigo explora como dominar as complexidades do desenho de linhas pontilhadas e tracejadas em SkiaSharp e demonstra isso com o código de exemplo.
+ms.prod: xamarin
+ms.assetid: 8E9BCC13-830C-458C-9FC8-ECB4EAE66078
+ms.technology: xamarin-skiasharp
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8698bacd7257df431b12166c749f5826e8d6fd3c
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138444"
 ---
-
 # <a name="dots-and-dashes-in-skiasharp"></a>Pontos e traços em SkiaSharp
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,8 +1,22 @@
 ---
-Título: "recursos da plataforma Windows" Descrição: "Este artigo explica o suporte da plataforma Windows que está disponível no Xamarin.Forms ."
-MS. Prod: xamarin MS. AssetID: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/16/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Recursos da plataforma Windows
+description: Este artigo explica o suporte à plataforma Windows que está disponível no Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/16/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 52246ce5d54ba97e91777f598f25c187901f89c4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137768"
 ---
-
 # <a name="windows-platform-features"></a>Recursos da plataforma Windows
 
 O desenvolvimento Xamarin.Forms de aplicativos para plataformas Windows requer o Visual Studio. A [página plataformas com suporte](~/get-started/supported-platforms.md) contém mais informações sobre os pré-requisitos.

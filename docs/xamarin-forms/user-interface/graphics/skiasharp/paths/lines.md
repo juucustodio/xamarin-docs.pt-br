@@ -1,8 +1,22 @@
 ---
-Título: "linhas e traços" Descrição: "Este artigo explica como usar o SkiaSharp para desenhar linhas com limites de traço diferentes em Xamarin.Forms aplicativos e demonstra isso com o código de exemplo".
-MS. Prod: xamarin MS. AssetID: 1F854DDD-5D1B-4DE4-BD2D-584439429FDB MS. Technology: xamarin-skiasharp autor: davidbritch MS. Author: dabritch MS. Date: 03/10/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Limites de linha e de traço
+description: Este artigo explica como usar o SkiaSharp para desenhar linhas com limites de traço diferentes em Xamarin.Forms aplicativos e demonstra isso com o código de exemplo.
+ms.prod: xamarin
+ms.assetid: 1F854DDD-5D1B-4DE4-BD2D-584439429FDB
+ms.technology: xamarin-skiasharp
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 87b97ad913e08c42d16bbf055f168c07b9bd60e8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137196"
 ---
-
 # <a name="lines-and-stroke-caps"></a>Limites de linha e de traço
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

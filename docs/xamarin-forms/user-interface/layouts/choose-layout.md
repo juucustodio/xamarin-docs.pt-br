@@ -1,8 +1,22 @@
 ---
-Título: "escolher um Xamarin.Forms Layout" Descrição: " Xamarin.Forms classes de layout permitem organizar e agrupar controles de interface do usuário em seu aplicativo".
-MS. Prod: xamarin MS. AssetID: 05A39752-A174-447E-A30D-3CC9EF98CB96 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/21/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Escolher um Xamarin.Forms layout
+description: Xamarin.Formsas classes de layout permitem que você organize e agrupe controles de interface do usuário em seu aplicativo.
+ms.prod: xamarin
+ms.assetid: 05A39752-A174-447E-A30D-3CC9EF98CB96
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/21/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 16a48423d05ce1cede75c0020bf18f4f398f5adc
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138496"
 ---
-
 # <a name="choose-a-xamarinforms-layout"></a>Escolher um Xamarin.Forms layout
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)

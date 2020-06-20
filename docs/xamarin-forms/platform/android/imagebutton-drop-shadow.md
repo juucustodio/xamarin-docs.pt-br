@@ -1,8 +1,22 @@
 ---
-Título: "detalhes da remoção do ImageButton na Android" Descrição: "as especificações da plataforma permitem consumir funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma Android específica que habilita uma sombra em um ImageButton. "
-MS. Prod: xamarin MS. AssetID: D3604D87-9F9F-4FE2-8B10-DF3B143C0734 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 07/10/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Sombras suspensas de ImageButton no Android
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma Android específica que habilita uma sombra em um ImageButton.
+ms.prod: xamarin
+ms.assetid: D3604D87-9F9F-4FE2-8B10-DF3B143C0734
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/10/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5e2ad97eb5e7db3b832e8fb4340c86904b766b9a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139993"
 ---
-
 # <a name="imagebutton-drop-shadows-on-android"></a>Sombras suspensas de ImageButton no Android
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

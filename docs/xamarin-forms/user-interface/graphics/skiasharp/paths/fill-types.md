@@ -1,8 +1,22 @@
 ---
-Título: "a descrição dos tipos de preenchimento de caminho": "Este artigo examina os diferentes efeitos possíveis com os tipos de preenchimento de caminho SkiaSharp e demonstra isso com o código de exemplo".
-MS. Prod: xamarin MS. AssetID: 57103A7A-49A2-46AE-894C-7C2664682644 MS. Technology: xamarin-skiasharp autor: davidbritch MS. Author: dabritch MS. Date: 03/10/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Os tipos de preenchimento do caminho
+description: Este artigo examina os diferentes efeitos possíveis com os tipos de preenchimento de caminho SkiaSharp e demonstra isso com o código de exemplo.
+ms.prod: xamarin
+ms.assetid: 57103A7A-49A2-46AE-894C-7C2664682644
+ms.technology: xamarin-skiasharp
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c8c54f3d3815e418d2f71960dc7733711cb40ae2
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139042"
 ---
-
 # <a name="the-path-fill-types"></a>Os tipos de preenchimento do caminho
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms seleção CollectionView" Descrição: "por padrão, a seleção CollectionView está desabilitada. No entanto, uma seleção única e múltipla pode ser habilitada. "
-MS. Prod: xamarin MS. AssetID: 423D91C7-1E58-4735-9E80-58F11CDFD953 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/06/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsSeleção CollectionView
+description: Por padrão, a seleção CollectionView está desabilitada. No entanto, uma seleção única e múltipla pode ser habilitada.
+ms.prod: xamarin
+ms.assetid: 423D91C7-1E58-4735-9E80-58F11CDFD953
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/06/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 39f118d7073fc551923f891681c8c6cf6a4c5ddd
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137378"
 ---
-
 # <a name="xamarinforms-collectionview-selection"></a>Xamarin.FormsSeleção CollectionView
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)

@@ -1,8 +1,22 @@
 ---
-Título: "ListView SelectionMode no Windows" Descrição: "as especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma Windows específica que controla se os itens em um ListView podem responder a gestos de toque. "
-MS. Prod: xamarin MS. AssetID: 57EF3A7F-1407-4B31-AE21-D149293D4228 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: ListView SelectionMode no Windows
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma Windows específica que controla se os itens em um ListView podem responder a gestos de toque.
+ms.prod: xamarin
+ms.assetid: 57EF3A7F-1407-4B31-AE21-D149293D4228
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6c73f46d2845be7bb54e24cd02ec22f3c2cd386d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137235"
 ---
-
 # <a name="listview-selectionmode-on-windows"></a>ListView SelectionMode no Windows
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

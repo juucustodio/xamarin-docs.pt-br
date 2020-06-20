@@ -1,7 +1,22 @@
 ---
-Título: "Resumo do capítulo 26. Layouts personalizados "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 26. Layouts personalizados "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: 2B7F4346-414E-49FF-97FB-B85E92D98A21 autor: davidbritch MS. Author: dabritch MS. Date: 11/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Resumo do capítulo 26. Layouts personalizados
+description: 'Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 26. Layouts personalizados'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: deb46d1a70e7c707c998be8669b4af3b8e8d7ead
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136598"
 ---
-
 # <a name="summary-of-chapter-26-custom-layouts"></a>Resumo do capítulo 26. Layouts personalizados
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26)

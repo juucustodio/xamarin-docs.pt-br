@@ -1,23 +1,29 @@
 ---
-Título: " Xamarin.Forms IndicatorView" Descrição: "o IndicatorView é um controle que exibe os indicadores que representam o número de itens e a posição atual em um CarouselView".
-MS. Prod: xamarin MS. AssetID: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 02/27/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsIndicatorView
+description: O IndicatorView é um controle que exibe os indicadores que representam o número de itens e a posição atual em um CarouselView.
+ms.prod: xamarin
+ms.assetId: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/27/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0e6d223fd10e7b792f2d145a7cdd417865a095bb
+ms.sourcegitcommit: d86b7a18cf8b1ef28cd0fe1d311f1c58a65101a8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85101437"
 ---
-
 # <a name="xamarinforms-indicatorview"></a>Xamarin.FormsIndicatorView
-
-![](~/media/shared/preview.png "This API is currently pre-release")
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/)
 
 O `IndicatorView` é um controle que exibe os indicadores que representam o número de itens e a posição atual, em um `CarouselView` :
 
 [![Captura de tela de um CarouselView e IndicatorView, no iOS e no Android](indicatorview-images/circles.png "Círculos de IndicatorView")](indicatorview-images/circles-large.png#lightbox "Círculos de IndicatorView")
-
-`IndicatorView`está disponível em Xamarin.Forms 4,4 nas plataformas Ios e Android e em 4,5 no plataforma universal do Windows. No entanto, ele é experimental e só pode ser usado adicionando a linha de código a seguir à sua `AppDelegate` classe no Ios ou à sua `MainActivity` classe no Android, antes de chamar `Forms.Init` :
-
-```csharp
-Forms.SetFlags("IndicatorView_Experimental");
-```
 
 `IndicatorView` define as propriedades a seguir:
 

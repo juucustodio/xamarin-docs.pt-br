@@ -1,8 +1,22 @@
 ---
-Título: "o primeiro respondente do Visualelement no iOS" Descrição: "as especificações da plataforma permitem que você consuma a funcionalidade disponível apenas em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do iOS que permite que um objeto Visualelement se torne o primeiro Respondente para eventos de toque. "
-MS. Prod: xamarin MS. AssetID: 3A77BA02-B87A-44EC-AC51-9D3130EF314C MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/15/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Primeiro respondente do visualelement no iOS
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma do iOS específica que permite que um objeto do Visualelement se torne o primeiro Respondente para eventos de toque.
+ms.prod: xamarin
+ms.assetid: 3A77BA02-B87A-44EC-AC51-9D3130EF314C
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/15/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d8bd539c2bb0e8963afae3392b6f8e99d79af9af
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136962"
 ---
-
 # <a name="visualelement-first-responder-on-ios"></a>Primeiro respondente do visualelement no iOS
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

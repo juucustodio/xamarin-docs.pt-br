@@ -1,8 +1,22 @@
 ---
-Título: "cor de plano de fundo da célula na iOS" Descrição: "as especificações da plataforma permitem consumir funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir a plataforma específica do iOS que define a cor de plano de fundo padrão das células no iOS. "
-MS. Prod: xamarin MS. AssetID: 2A3FDACF-5AE2-40DE-8488-6FE41733712F MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Cor do plano de fundo da célula no iOS
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do iOS que define a cor de plano de fundo padrão de células no iOS.
+ms.prod: xamarin
+ms.assetid: 2A3FDACF-5AE2-40DE-8488-6FE41733712F
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 90282262926fef663183be247e37d64dd1be9124
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138561"
 ---
-
 # <a name="cell-background-color-on-ios"></a>Cor do plano de fundo da célula no iOS
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

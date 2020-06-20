@@ -1,8 +1,22 @@
 ---
-Título: "direção de pull do RefreshView no Windows" Descrição: "as especificações da plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma Windows específica que permite que a direção de pull de um RefreshView seja alterada. "
-MS. Prod: xamarin MS. AssetID: 407A862B-281E-4384-9696-C0655830B84D MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 09/20/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Direção de pull de RefreshView no Windows
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma Windows específica que permite que a direção de pull de um RefreshView seja alterada.
+ms.prod: xamarin
+ms.assetid: 407A862B-281E-4384-9696-C0655830B84D
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/20/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 46a1b4d00b9eea276b9a3b3d5bffbdac3d31e0ef
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136572"
 ---
-
 # <a name="refreshview-pull-direction-on-windows"></a>Direção de pull de RefreshView no Windows
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

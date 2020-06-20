@@ -1,7 +1,22 @@
 ---
-Título: "Resumo do capítulo 8. Código e XAML em harmonia "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 8. Código e XAML em harmonia "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: 5970DEEB-1FC9-4F78-B4F6-D403E16D22ED autor: davidbritch MS. Author: dabritch MS. Date: 07/19/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Resumo do capítulo 8. Código e XAML em harmonia
+description: 'Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 8. Código e XAML em harmonia'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 5970DEEB-1FC9-4F78-B4F6-D403E16D22ED
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 90db8b4f11095a2a56c82c3f563844efbcf7e2b1
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136819"
 ---
-
 # <a name="summary-of-chapter-8-code-and-xaml-in-harmony"></a>Resumo do capítulo 8. Código e XAML em harmonia
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08)

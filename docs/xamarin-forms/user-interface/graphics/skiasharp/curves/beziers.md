@@ -1,8 +1,22 @@
 ---
-Título: "três tipos de curvas Bézier" Descrição: "Este artigo explica como usar SkiaSharp para renderizar curvas Bézier cúbicas, quadráticas e cônicas em Xamarin.Forms aplicativos e demonstra isso com código de exemplo".
-MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 8FE0F6DC-16BC-435F-9626-DD1790C0145A autor: davidbritch MS. Author: dabritch MS. Date: 05/25/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Três tipos de curvas de bézier
+description: Este artigo explica como usar SkiaSharp para renderizar curvas Bézier cúbicas, quadráticas e cônicas em Xamarin.Forms aplicativos e demonstra isso com o código de exemplo.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/25/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1ad548846500ccbacc2a3d117919bfb4df1a1d79
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138678"
 ---
-
 # <a name="three-types-of-bzier-curves"></a>Três tipos de curvas de bézier
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

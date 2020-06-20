@@ -1,6 +1,21 @@
 ---
-Título: " Xamarin.Forms quadro" Descrição: "a Xamarin.Forms classe frame é um layout usado para encapsular uma exibição ou um layout com uma borda que pode ser configurada com cores, sombra e outras opções."
-MS. Prod: xamarin MS. AssetID: 4E074714-0928-41C8-A468-B60E23236A8C MS. Technology: xamarin-Forms autor: profexorgeek MS. Author: jusjohns MS. Date: 08/06/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsQuadro
+description: A Xamarin.Forms classe frame é um layout usado para encapsular uma exibição ou um layout com uma borda que pode ser configurada com cores, sombra e outras opções.
+ms.prod: xamarin
+ms.assetId: 4E074714-0928-41C8-A468-B60E23236A8C
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 08/06/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 42192111befbefda7e0f62b7691a8392c2828818
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137183"
 ---
 # <a name="xamarinforms-frame"></a>Xamarin.FormsQuadro
 

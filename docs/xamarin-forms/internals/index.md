@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms conceitos avançados & internos" Descrição: "Saiba mais sobre conceitos avançados e os internos de Xamarin.Forms ".
-MS. Prod: xamarin MS. AssetID: 2273a31c-4022-42ba-befe-0d23ce2ff3b5 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 03/20/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.Formsconceitos avançados & internos
+description: Saiba mais sobre os conceitos avançados e os internos do Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 2273a31c-4022-42ba-befe-0d23ce2ff3b5
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/20/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 410aadcb885ed66283eb306cb9aa4c5e764fa8ec
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139029"
 ---
-
 # <a name="xamarinforms-advanced-concepts--internals"></a>Xamarin.Formsconceitos avançados & internos
 
 _Saiba mais sobre os conceitos avançados e os internos do Xamarin.Forms ._

@@ -1,8 +1,22 @@
 ---
-Título: "barra de guias TabbedPage translúcida na iOS" Descrição: "as especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do iOS que define o modo Translucency da barra de guias em um TabbedPage. "
-MS. Prod: xamarin MS. AssetID: 9581AE81-9557-47AD-8B07-25A1AC5F055B MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/16/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Barra de guias translúcida TabbedPage no iOS
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do iOS que define o modo Translucency da barra de guias em um TabbedPage.
+ms.prod: xamarin
+ms.assetid: 9581AE81-9557-47AD-8B07-25A1AC5F055B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/16/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8127191aab80d81fc2e532e3d5e14931b834eeae
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137027"
 ---
-
 # <a name="tabbedpage-translucent-tab-bar-on-ios"></a>Barra de guias translúcida TabbedPage no iOS
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

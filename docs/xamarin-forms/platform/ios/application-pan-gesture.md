@@ -1,8 +1,22 @@
 ---
-Título: "reconhecimento de gesto de Pan simultâneo na iOS" Descrição: "as especificações da plataforma permitem consumir funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do iOS, que permite que o reconhecimento de gesto de Pan simultâneo seja usado em um aplicativo. "
-MS. Prod: xamarin MS. AssetID: 883D89DA-F8FF-4B97-9C3F-2DD05C96A495 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Reconhecimento de gesto de Pan simultânea no iOS
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do iOS, que permite que o reconhecimento de gesto de Pan simultâneo seja usado em um aplicativo.
+ms.prod: xamarin
+ms.assetid: 883D89DA-F8FF-4B97-9C3F-2DD05C96A495
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 125685150243ba8e8099cbfbdfec90e5a0b4d6b7
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138570"
 ---
-
 # <a name="simultaneous-pan-gesture-recognition-on-ios"></a>Reconhecimento de gesto de Pan simultânea no iOS
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

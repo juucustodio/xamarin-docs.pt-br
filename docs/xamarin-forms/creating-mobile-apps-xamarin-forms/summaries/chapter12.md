@@ -1,7 +1,22 @@
 ---
-Título: "Resumo do capítulo 12. Estilos "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 12. Estilos "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3 autor: davidbritch MS. Author: dabritch MS. Date: 07/19/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Resumo do capítulo 12. Estilos
+description: 'Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 12. Estilos'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 22f7272751c30bed350fe7aada8d5dacf0acc809
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136780"
 ---
-
 # <a name="summary-of-chapter-12-styles"></a>Resumo do capítulo 12. Estilos
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12)

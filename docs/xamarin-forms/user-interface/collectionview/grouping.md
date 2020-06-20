@@ -1,8 +1,22 @@
 ---
-Título: Xamarin.Forms Descrição de "Agrupamento CollectionView": "CollectionView pode exibir dados agrupados corretamente definindo sua propriedade Isgroupd como true".
-MS. Prod: xamarin MS. AssetID: 7E494245-FDBD-49D6-B7FA-CEF976EB59BB MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 09/17/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsAgrupamento CollectionView
+description: CollectionView pode exibir dados agrupados corretamente definindo sua propriedade isgroupd como true.
+ms.prod: xamarin
+ms.assetid: 7E494245-FDBD-49D6-B7FA-CEF976EB59BB
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 09/17/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 51661d6573d78386f4ca8bfea0063b752295c2d8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136455"
 ---
-
 # <a name="xamarinforms-collectionview-grouping"></a>Xamarin.FormsAgrupamento CollectionView
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)

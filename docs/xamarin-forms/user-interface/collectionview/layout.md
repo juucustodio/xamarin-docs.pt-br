@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms layout CollectionView" Descrição: "por padrão, um CollectionView exibirá seus itens em uma lista vertical. No entanto, listas e grades verticais e horizontais podem ser especificadas. "
-MS. Prod: xamarin MS. AssetID: 5FE78207-1BD6-4706-91EF-B13932321FC9 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/22/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsLayout CollectionView
+description: Por padrão, um CollectionView exibirá seus itens em uma lista vertical. No entanto, listas e grades verticais e horizontais podem ser especificadas.
+ms.prod: xamarin
+ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/22/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 425eb7abc14fb941dbfc28219907d98558cbfabb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137423"
 ---
-
 # <a name="xamarinforms-collectionview-layout"></a>Xamarin.FormsLayout CollectionView
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)

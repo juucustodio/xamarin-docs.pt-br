@@ -1,8 +1,22 @@
 ---
-Título: "introdução aos Xamarin.Forms estilos" Descrição: "os estilos permitem que a aparência de elementos visuais seja personalizada. Os estilos são definidos para um tipo específico e contêm valores para as propriedades disponíveis nesse tipo. "
-MS. Prod: xamarin MS. AssetID: 3FF899C0-6CFB-4C1D-837D-9E9E10181967 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/27/2016 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Introdução aos Xamarin.Forms estilos
+description: Os estilos permitem que a aparência de elementos visuais seja personalizada. Os estilos são definidos para um tipo específico e contêm valores para as propriedades disponíveis nesse tipo.
+ms.prod: xamarin
+ms.assetid: 3FF899C0-6CFB-4C1D-837D-9E9E10181967
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/27/2016
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 5766af7da3a0cf550a2ccb3a926dad25fd7962eb
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138809"
 ---
-
 # <a name="introduction-to-xamarinforms-styles"></a>Introdução aos Xamarin.Forms estilos
 
 _Os estilos permitem que a aparência de elementos visuais seja personalizada. Os estilos são definidos para um tipo específico e contêm valores para as propriedades disponíveis nesse tipo._

@@ -1,8 +1,22 @@
 ---
-Título: "a transformação de conversão" Descrição: "Este artigo examina como usar a transformação traduzir para deslocar gráficos SkiaSharp em Xamarin.Forms aplicativos e demonstra isso com o código de exemplo".
-MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: BD28ADA1-49F9-44E2-A548-46024A29882F autor: davidbritch MS. Author: dabritch MS. Date: 03/10/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: A transformação de conversão
+description: Este artigo examina como usar a transformação traduzir para deslocar gráficos SkiaSharp em Xamarin.Forms aplicativos e demonstra isso com o código de exemplo.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0eb3b4a6b37d59363984c9248cc39de91a6819e0
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138249"
 ---
-
 # <a name="the-translate-transform"></a>A transformação de conversão
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

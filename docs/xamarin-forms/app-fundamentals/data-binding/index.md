@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms vinculação de dados" Descrição: "a vinculação de dados é a técnica de vincular propriedades de dois objetos para que as alterações em uma propriedade sejam refletidas automaticamente na outra propriedade. A vinculação de dados é parte integrante da arquitetura do aplicativo MVVM (Model-View-ViewModel).
-MS. Prod: xamarin MS. AssetID: 938E85C8-521D-43B9-92CB-D591A06D98A6 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 03/23/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsAssociação de dados
+description: A associação de dados é a técnica de vinculação de propriedades de dois objetos para que as alterações em uma propriedade sejam automaticamente refletidas na outra propriedade. A associação de dados é parte integrante da arquitetura do aplicativo MVVM (Model-View-ViewModel).
+ms.prod: xamarin
+ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/21/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9abbe60865cbf5fb9082b5f4882c27fe095b36ac
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84946449"
 ---
-
 # <a name="xamarinforms-data-binding"></a>Xamarin.FormsAssociação de dados
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
@@ -55,6 +69,10 @@ Use associações relativas para definir a origem da associação em relação �
 ## <a name="binding-fallbacks"></a>[Associação de fallbacks](binding-fallbacks.md)
 
 Torne as associações de dados mais robustas definindo valores de fallback que deverão ser usados se o processo de associação falhar.
+
+## <a name="multi-bindings"></a>[Associações múltiplas](multibinding.md)
+
+Anexe uma coleção de [`Binding`](xref:Xamarin.Forms.Binding) objetos a uma única propriedade de destino de associação.
 
 ## <a name="the-command-interface"></a>[A interface de comando](commanding.md)
 

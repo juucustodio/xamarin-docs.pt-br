@@ -1,8 +1,22 @@
 ---
-Título: "padrões de aplicativos empresariais usando o Xamarin.Forms eBook" Descrição: "este ebook fornece diretrizes arquitetônicas para o desenvolvimento de aplicativos empresariais adaptáveis, que podem ser mantidos e que podem ser testados Xamarin.Forms ".
-MS. Prod: xamarin MS. AssetID: 28cfed6c-6175-4223-a8cc-798d40bf0832 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Padrões de aplicativos empresariais usando o Xamarin.Forms ebook
+description: Este livro eletrônico fornece diretrizes arquitetônicas para o desenvolvimento de aplicativos empresariais adaptáveis, que podem ser mantidos e que podem ser testados Xamarin.Forms .
+ms.prod: xamarin
+ms.assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: cc0f98d94c76ff63e7a002dfb92b51eae153d7b4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139393"
 ---
-
 # <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Padrões de aplicativos empresariais usando o Xamarin.Forms ebook
 
 _Diretrizes arquitetônicas para o desenvolvimento de aplicativos empresariais adaptáveis, que podem ser mantidos e que podem ser testados Xamarin.Forms_
@@ -61,7 +75,7 @@ Há muitas abordagens para integrar a autenticação e a autorização em um Xam
 
 Muitas soluções modernas baseadas na Web fazem uso de serviços Web, hospedados por servidores Web, para fornecer funcionalidade para aplicativos cliente remotos. As operações que um serviço Web expõe constituem uma API Web, e os aplicativos cliente devem ser capazes de utilizar a API Web sem saber como os dados ou as operações que a API expõe são implementados.
 
-## <a name="unit-testing"></a>[Teste de Unidade](unit-testing.md)
+## <a name="unit-testing"></a>[Testes de unidade](unit-testing.md)
 
 Os modelos de teste e os modelos de exibição dos aplicativos MVVM são idênticos ao teste de todas as outras classes, e as mesmas ferramentas e técnicas podem ser usadas. No entanto, há alguns padrões típicos para modelar e exibir classes de modelo, que podem se beneficiar de técnicas de teste de unidade específicas.
 

@@ -1,8 +1,22 @@
 ---
-Título: "Xamarin Hot restart" Descrição: "este documento descreve como configurar e usar o Xamarin Hot restart para depurar um aplicativo iOS".
-MS. Prod: xamarin MS. AssetID: 6BC62A88-9368-41BB-8494-760F2A4805DB MS. Technology: xamarin-Forms autor: maddyleger1 MS. Author: maleger MS. Date: 03/16/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin Hot Restart
+description: Este documento descreve como configurar e usar o Xamarin Hot Restart para depurar um aplicativo iOS.
+ms.prod: xamarin
+ms.assetid: 6BC62A88-9368-41BB-8494-760F2A4805DB
+ms.technology: xamarin-forms
+author: maddyleger1
+ms.author: maleger
+ms.date: 03/16/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 45b7d0d20c43aa22ebde3a17552f10ceea77a48b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139133"
 ---
-
 # <a name="xamarin-hot-restart-preview"></a>Xamarin Hot Restart (versão prévia)
 
 ![Versão prévia do recurso](~/media/shared/preview.png)

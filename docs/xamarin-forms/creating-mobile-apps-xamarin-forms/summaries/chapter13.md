@@ -1,7 +1,22 @@
 ---
-Título: "Resumo do capítulo 13. Bitmaps "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 13. Bitmaps "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: 5D153857-B6B7-4A14-8FB9-067DE198C2C7 autor: davidbritch MS. Author: dabritch MS. Date: 07/18/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Resumo do capítulo 13. Bitmaps
+description: 'Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 13. Bitmaps'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/18/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 43caf088ad6cb816f049e7862a287c17839c2170
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136767"
 ---
-
 # <a name="summary-of-chapter-13-bitmaps"></a>Resumo do capítulo 13. Bitmaps
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)

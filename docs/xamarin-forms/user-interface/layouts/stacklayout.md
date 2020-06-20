@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms StackLayout" Descrição: "um StackLayout organiza exibições filhas em uma pilha unidimensional, horizontal ou verticalmente."
-MS. Prod: xamarin MS. AssetID: 6A91EA70-268C-462C-AAAF-F8DA011403F8 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/11/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsStackLayout
+description: Um StackLayout organiza exibições filhas em uma pilha unidimensional, horizontal ou verticalmente.
+ms.prod: xamarin
+ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/11/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: f624674cc6d4ba1bdc34a42fb52fb63ff8a7135a
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137963"
 ---
-
 # <a name="xamarinforms-stacklayout"></a>Xamarin.FormsStackLayout
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)

@@ -1,8 +1,22 @@
 ---
-Título: "posicionamento da barra de ferramentas da página no Windows" Descrição: "as especificações da plataforma permitem que você consuma a funcionalidade disponível apenas em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do Windows que altera o posicionamento de uma barra de ferramentas em uma página. "
-MS. Prod: xamarin MS. AssetID: 99F29E95-0C36-4A3B-BDE8-7E9F119E844E MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Posicionamento da barra de ferramentas da página no Windows
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma específica do Windows que altera o posicionamento de uma barra de ferramentas em uma página.
+ms.prod: xamarin
+ms.assetid: 99F29E95-0C36-4A3B-BDE8-7E9F119E844E
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 76b4633e6b224e234f9d5f693f4e01ed7a35d6db
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138041"
 ---
-
 # <a name="page-toolbar-placement-on-windows"></a>Posicionamento da barra de ferramentas da página no Windows
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

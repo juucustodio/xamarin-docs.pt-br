@@ -1,8 +1,22 @@
 ---
-Título: "seleção do item do timeseparar na iOS" Descrição: "as especificações da plataforma permitem consumir funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores personalizados ou efeitos. Este artigo explica como consumir a plataforma do iOS específica que controla quando a seleção de itens ocorre em um timeseparar.
-MS. Prod: xamarin MS. AssetID: 554AC877-8698-4B8C-A676-80DD64305A06 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 01/15/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Seleção de item do timeseparar no iOS
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma do iOS específica que controla quando a seleção de itens ocorre em um timeseparar.
+ms.prod: xamarin
+ms.assetid: 554AC877-8698-4B8C-A676-80DD64305A06
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 01/15/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 009482c8f1e90aaa2f592ea04d8fd4f0f31324e8
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137014"
 ---
-
 # <a name="timepicker-item-selection-on-ios"></a>Seleção de item do timeseparar no iOS
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

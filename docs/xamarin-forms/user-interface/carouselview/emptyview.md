@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms CarouselView EmptyView" Descrição: "em CarouselView, um modo de exibição vazio pode ser especificado para fornecer comentários ao usuário quando não há dados disponíveis para exibição. O modo de exibição vazio pode ser uma cadeia de caracteres, uma exibição ou várias exibições. "
-MS. Prod: xamarin MS. AssetID: C6DEE1A9-63FC-4889-BC77-F401D5D7DF32 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/03/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsCarouselView EmptyView
+description: No CarouselView, é possível especificar uma exibição vazia que fornece comentários ao usuário quando não há dados disponíveis para exibição. O modo de exibição vazio pode ser uma cadeia de caracteres, uma exibição ou várias exibições.
+ms.prod: xamarin
+ms.assetid: C6DEE1A9-63FC-4889-BC77-F401D5D7DF32
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/03/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a9f952da75e68e9ad39e0a15f57fbd0379233d7e
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137391"
 ---
-
 # <a name="xamarinforms-carouselview-emptyview"></a>Xamarin.FormsCarouselView EmptyView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")

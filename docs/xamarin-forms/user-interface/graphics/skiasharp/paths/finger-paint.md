@@ -1,8 +1,22 @@
 ---
-Título: "pintura de dedos em SkiaSharp" Descrição: "Este artigo explica como usar seus dedos para pintar na tela do SkiaSharp em um Xamarin.Forms aplicativo e demonstra isso com o código de exemplo".
-MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B autor: davidbritch MS. Author: dabritch MS. Date: 04/05/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Pintura de dedos em SkiaSharp
+description: Este artigo explica como usar seus dedos para pintar na tela do SkiaSharp em um Xamarin.Forms aplicativo e demonstra isso com o código de exemplo.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/05/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 61ae651a2402204f69f642235d74d8d641b47988
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139016"
 ---
-
 # <a name="finger-painting-in-skiasharp"></a>Pintura de dedos em SkiaSharp
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

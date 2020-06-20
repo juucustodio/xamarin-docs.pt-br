@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms caixa de seleção" Descrição: "a Xamarin.Forms caixa de seleção é um tipo de botão que pode ser marcado ou vazio. Quando uma caixa de seleção é marcada, ela é considerada como ativada. Quando uma caixa de seleção está vazia, ela é considerada como off. "
-MS. Prod: xamarin MS. AssetID: B8B9268B-BCB8-42B9-B08C-C0F22C137238 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 06/11/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsVerificação
+description: A Xamarin.Forms caixa de seleção é um tipo de botão que pode ser marcado ou vazio. Quando uma caixa de seleção é marcada, ela é considerada como ativada. Quando uma caixa de seleção está vazia, ela é considerada como off.
+ms.prod: xamarin
+ms.assetid: B8B9268B-BCB8-42B9-B08C-C0F22C137238
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 06/11/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8399dde2e4e2c9fb53b38fca2923eb0e3bfc6ce3
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136468"
 ---
-
 # <a name="xamarinforms-checkbox"></a>Xamarin.FormsVerificação
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)

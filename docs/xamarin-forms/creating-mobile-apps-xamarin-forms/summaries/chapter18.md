@@ -1,7 +1,22 @@
 ---
-Título: "Resumo do capítulo 18. MVVM "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 18. MVVM "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: 6A774510-7709-4F60-8EF5-29D478176F8F autor: davidbritch MS. Author: dabritch MS. Date: 11/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Resumo do capítulo 18. MVVM
+description: 'Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 18. MVVM'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 6A774510-7709-4F60-8EF5-29D478176F8F
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 1f180173a42654c54c5686e423ba20d9586271ea
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136702"
 ---
-
 # <a name="summary-of-chapter-18-mvvm"></a>Resumo do capítulo 18. MVVM
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)

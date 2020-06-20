@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms inicialização e configuração do mapa" Descrição: "o Xamarin.Forms . O pacote NuGet de mapas é necessário para usar a funcionalidade de mapas em um aplicativo. Além disso, o acesso ao local do usuário exige que as permissões de localização tenham sido concedidas ao aplicativo. "
-MS. Prod: xamarin MS. AssetID: 59CD1344-8248-406C-9144-0C8A67141E5B MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 02/07/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsInicialização e configuração do mapa
+description: O Xamarin.Forms . O pacote NuGet de mapas é necessário para usar a funcionalidade de mapas em um aplicativo. Além disso, o acesso ao local do usuário exige que as permissões de localização tenham sido concedidas ao aplicativo.
+ms.prod: xamarin
+ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 02/07/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 52e2ac5f8075c57f533fcba064223f355e07ba48
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139835"
 ---
-
 # <a name="xamarinforms-map-initialization-and-configuration"></a>Xamarin.FormsInicialização e configuração do mapa
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)

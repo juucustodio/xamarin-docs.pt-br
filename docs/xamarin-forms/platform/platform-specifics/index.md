@@ -1,8 +1,22 @@
 ---
-Título: Descrição de "especificações da plataforma": "as especificações de plataforma permitem que você consuma a funcionalidade disponível apenas em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir e criar especificações específicas da plataforma.
-MS. Prod: xamarin MS. AssetID: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/01/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Elementos específicos à plataforma
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir e criar especificações específicas da plataforma.
+ms.prod: xamarin
+ms.assetid: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/01/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 8478db85bd9904ee6c5cfeab9b2af390e7d3096d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139497"
 ---
-
 # <a name="platform-specifics"></a>Elementos específicos à plataforma
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)

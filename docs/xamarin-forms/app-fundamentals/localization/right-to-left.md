@@ -1,8 +1,23 @@
 ---
-Título: "localização da direita para a esquerda" Descrição: "a localização da direita para a esquerda adiciona suporte para direção de fluxo da direita para a esquerda para Xamarin.Forms aplicativos".
-MS. Prod: xamarin MS. AssetID: 90E0CB16-C42A-4CC8-A70E-0C2CFB64A429 MS. Technology: xamarin-Forms MS. Custom: xamu-vídeo autor: davidbritch MS. Author: dabritch MS. Date: 05/07/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Localização da direita para a esquerda
+description: A localização da direita para a esquerda adiciona suporte à direção de fluxo da direita para a esquerda para Xamarin.Forms aplicativos.
+ms.prod: xamarin
+ms.assetid: 90E0CB16-C42A-4CC8-A70E-0C2CFB64A429
+ms.technology: xamarin-forms
+ms.custom: xamu-video
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/07/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 212674472706a36c66436a3955ab7b988f8e246b
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137547"
 ---
-
 # <a name="right-to-left-localization"></a>Localização da direita para a esquerda
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)
@@ -84,7 +99,7 @@ O arquivo **AndroidManifest.xml** do aplicativo deve ser atualizado para que o n
 
 A localização da direita para a esquerda pode então ser testada, alterando o dispositivo/emulador para usar o idioma da direita para a esquerda ou habilitando a opção **Forçar direção do layout da direita para esquerda** em **Configurações > Opções do Desenvolvedor**.
 
-### <a name="universal-windows-platform-uwp"></a>UWP (Plataforma Universal do Windows)
+### <a name="universal-windows-platform-uwp"></a>Plataforma Universal do Windows (UWP)
 
 Os recursos de idioma necessários devem ser especificados no nó `<Resources>` do arquivo **Package.appxmanifest**. O seguinte exemplo mostra o árabe adicionado ao nó `<Resources>`:
 

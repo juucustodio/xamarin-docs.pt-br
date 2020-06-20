@@ -1,8 +1,22 @@
 ---
-title: "separáveis Blend Modes" Description: "Use the separáveis Blend Modes to ALTER Red, Green e Blue Colors".
-MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 66D1A537-A247-484E-B5B9-FBCB7838FBE9 autor: davidbritch MS. Author: dabritch MS. Date: 08/23/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Os modos de mesclagem separáveis
+description: Use os modos de combinação separáveis para alterar as cores vermelha, verde e azul.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 66D1A537-A247-484E-B5B9-FBCB7838FBE9
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/23/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c1939c30cbefdbf8d6546761a8c6ac7199bfff62
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139679"
 ---
-
 # <a name="the-separable-blend-modes"></a>Os modos de mesclagem separáveis
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

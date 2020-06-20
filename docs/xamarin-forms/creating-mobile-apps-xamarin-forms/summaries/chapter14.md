@@ -1,7 +1,22 @@
 ---
-Título: "Resumo do capítulo 14. Layout absoluto "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 14. Layout absoluto "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: 88882A48-3226-42D1-96ED-241250B64A84 autor: davidbritch MS. Author: dabritch MS. Date: 07/19/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Resumo do capítulo 14. Layout absoluto
+description: 'Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 14. Layout absoluto'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 72ee9c4a481388e69aeeb52dbd5b8eeaabb164f6
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136754"
 ---
-
 # <a name="summary-of-chapter-14-absolute-layout"></a>Resumo do capítulo 14. Layout absoluto
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)

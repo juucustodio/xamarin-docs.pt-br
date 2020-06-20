@@ -1,8 +1,22 @@
 ---
-Título: "AndroidX Migration in Xamarin.Forms " Descrição: "Este artigo explica por que AndroidX existe e como migrar para o AndroidX em seu Xamarin.Forms aplicativo".
-MS. Prod: xamarin MS. AssetID: 98884003-E65A-4EB4-842D-66CFE27344A4 MS. Technology: xamarin-Forms autor: profexorgeek MS. Author: jusjohns MS. Date: 01/22/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Migração do AndroidX noXamarin.Forms
+description: Este artigo explica por que o AndroidX existe e como migrar para o AndroidX em seu Xamarin.Forms aplicativo.
+ms.prod: xamarin
+ms.assetid: 98884003-E65A-4EB4-842D-66CFE27344A4
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 01/22/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c2df309a8a12a05a4b492bb66977aa2411142850
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84138262"
 ---
-
 # <a name="androidx-migration-in-xamarinforms"></a>Migração do AndroidX noXamarin.Forms
 
 AndroidX substitui a biblioteca de suporte do Android. Este artigo explica por que o AndroidX existe, como ele afeta Xamarin.Forms e como migrar seu aplicativo para usar as bibliotecas do AndroidX.

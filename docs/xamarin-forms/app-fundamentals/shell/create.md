@@ -1,8 +1,22 @@
 ---
-Título: "criar um Xamarin.Forms aplicativo de Shell" Descrição: "o processo para criar um Xamarin.Forms aplicativo de Shell é criar um arquivo XAML que crie uma subclasse da classe Shell, defina a propriedade MainPage da classe App do aplicativo para o objeto de Shell de subclasse e, em seguida, descreva a hierarquia visual do aplicativo na classe de Shell de subclasse."
-MS. Prod: xamarin MS. AssetID: 2A51D78F-6CD5-4BC4-A62E-11CEFA799987 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/24/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Criar um Xamarin.Forms aplicativo de Shell
+description: O processo para criar um Xamarin.Forms aplicativo de Shell é criar um arquivo XAML que crie subclasses da classe Shell, defina a propriedade MainPage da classe App do aplicativo para o objeto Shell de subclasse e, em seguida, descreva a hierarquia visual do aplicativo na classe Shell de subclasse.
+ms.prod: xamarin
+ms.assetid: 2A51D78F-6CD5-4BC4-A62E-11CEFA799987
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/24/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 62c323dd73f656d5b4f4e06c672fd952845efb22
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137794"
 ---
-
 # <a name="create-a-xamarinforms-shell-application"></a>Criar um Xamarin.Forms aplicativo de Shell
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

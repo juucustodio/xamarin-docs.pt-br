@@ -1,8 +1,22 @@
 ---
-Título: "texto em Xamarin.Forms " Descrição: " Xamarin.Forms tem três exibições principais para trabalhar com texto, e este artigo explica como usá-las para inserir e exibir texto em Xamarin.Forms aplicativos".
-MS. Prod: xamarin MS. AssetID: 4DBA7689-E5C8-4583-8FB4-02AB208B4416 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/26/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Texto emXamarin.Forms
+description: Xamarin.Formstem três exibições principais para trabalhar com texto, e este artigo explica como usá-las para inserir e exibir texto em Xamarin.Forms aplicativos.
+ms.prod: xamarin
+ms.assetid: 4DBA7689-E5C8-4583-8FB4-02AB208B4416
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/26/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: b44a0b3e3542638874ee366a86967d73c0d53652
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84573788"
 ---
-
 # <a name="text-in-xamarinforms"></a>Texto emXamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)

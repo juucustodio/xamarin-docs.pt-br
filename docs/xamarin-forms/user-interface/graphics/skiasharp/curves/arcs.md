@@ -1,8 +1,22 @@
 ---
-Título: "três maneiras de desenhar um arco" Descrição: "Este artigo explica como usar o SkiaSharp para definir arcos de três maneiras diferentes e demonstra isso com o código de exemplo".
-MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: F1DA55E4-0182-4388-863C-5C340213BF3C autor: davidbritch MS. Author: dabritch MS. Date: 05/10/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Três formas de desenhar um arco
+description: Este artigo explica como usar o SkiaSharp para definir arcos de três maneiras diferentes e demonstra isso com o código de exemplo.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/10/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 4eea7d500876793357113453493fa2fe2ede6cc4
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139991"
 ---
-
 # <a name="three-ways-to-draw-an-arc"></a>Três formas de desenhar um arco
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

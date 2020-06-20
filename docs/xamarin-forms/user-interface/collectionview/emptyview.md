@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms CollectionView EmptyView" Descrição: "em CollectionView, um modo de exibição vazio pode ser especificado para fornecer comentários ao usuário quando nenhum dado está disponível para exibição. O modo de exibição vazio pode ser uma cadeia de caracteres, uma exibição ou várias exibições. "
-MS. Prod: xamarin MS. AssetID: 6CEBCFE6-5577-4F68-9709-431062609153 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/06/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsEmptyView CollectionView
+description: Em CollectionView, um modo de exibição vazio pode ser especificado para fornecer comentários ao usuário quando nenhum dado está disponível para exibição. O modo de exibição vazio pode ser uma cadeia de caracteres, uma exibição ou várias exibições.
+ms.prod: xamarin
+ms.assetid: 6CEBCFE6-5577-4F68-9709-431062609153
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/06/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: d35e39e55d66452e47c7a3e3faf86a7a7d6adaca
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136481"
 ---
-
 # <a name="xamarinforms-collectionview-emptyview"></a>Xamarin.FormsEmptyView CollectionView
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)

@@ -1,9 +1,22 @@
 ---
-Título: "Resumo do capítulo 1. Como o Xamarin.Forms se encaixa? "
-Descrição: "Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 1. Como o Xamarin.Forms se encaixa? "
-MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: F3F864FF-EE70-49D0-90D1-388889037625 autor: davidbritch MS. Author: dabritch MS. Date: 07/19/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Resumo do capítulo 1. Como o Xamarin.Forms se encaixa?
+description: 'Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 1. Como o Xamarin.Forms se encaixa?'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/19/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 48b2fb429d206f6582886c94d4d99839d790dc8d
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136919"
 ---
-
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Resumo do capítulo 1. Como o Xamarin.Forms se encaixa?
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter01)

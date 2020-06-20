@@ -1,7 +1,22 @@
 ---
-Título: "Resumo do capítulo 15. A interface interativa "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 15. A interface interativa "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: F54E86F4-1CDA-474E-9B09-242060C2C13D autor: davidbritch MS. Author: dabritch MS. Date: 11/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Resumo do capítulo 15. A interface interativa
+description: 'Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 15. A interface interativa'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
+author: davidbritch
+ms.author: dabritch
+ms.date: 11/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 9bb930c2d0e4b6281b1aa48589ea5245eedc1a60
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136741"
 ---
-
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>Resumo do capítulo 15. A interface interativa
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)

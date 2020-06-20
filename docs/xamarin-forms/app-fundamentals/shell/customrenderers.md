@@ -1,8 +1,22 @@
 ---
-title: Xamarin.Forms Descrição de "renderizadores personalizados do Shell": " Xamarin.Forms os aplicativos shell são altamente personalizáveis por meio das propriedades e métodos que as várias classes Shell expõem. No entanto, também é possível criar um renderizador personalizado do shell quando são necessárias personalizações mais sofisticadas específicas da plataforma. "
-MS. Prod: xamarin MS. AssetID: 3B1A6AE8-1D1E-4C34-B9AB-48F4444FEF32 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/06/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsRenderizadores personalizados do Shell
+description: Xamarin.FormsOs aplicativos shell são altamente personalizáveis por meio das propriedades e métodos que as várias classes Shell expõem. No entanto, também será possível criar um renderizador personalizado do Shell quando personalizações específicas de plataforma mais sofisticadas forem necessárias.
+ms.prod: xamarin
+ms.assetid: 3B1A6AE8-1D1E-4C34-B9AB-48F4444FEF32
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/06/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 321539f877a86804245d27a2d76d1edeb1abd1e9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137781"
 ---
-
 # <a name="xamarinforms-shell-custom-renderers"></a>Xamarin.FormsRenderizadores personalizados do Shell
 
 Uma das vantagens dos Xamarin.Forms aplicativos Shell é que sua aparência e comportamento é altamente personalizável por meio das propriedades e dos métodos que as várias classes Shell expõem. No entanto, também será possível criar um renderizador personalizado do Shell quando personalizações específicas de plataforma mais sofisticadas forem necessárias. Assim como acontece com outros renderizadores personalizados, um renderizador personalizado do Shell pode ser adicionado a apenas um projeto de plataforma para personalizar a aparência e o comportamento, permitindo o comportamento padrão na outra plataforma; ou um renderizador personalizado do Shell diferente pode ser adicionado a cada projeto de plataforma para personalizar a aparência e o comportamento no iOS e no Android.

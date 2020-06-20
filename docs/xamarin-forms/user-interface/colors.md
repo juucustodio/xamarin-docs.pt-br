@@ -1,8 +1,22 @@
 ---
-Título: "cores em Xamarin.Forms " Descrição: " Xamarin.Forms fornece uma classe de cor de plataforma cruzada flexível. Este artigo explica a funcionalidade fornecida pela classe Color e como usá-la. "
-MS. Prod: xamarin MS. AssetID: 22288ABF-57BE-47A9-ACC3-AC604D787C46 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 04/02/2020 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Cores emXamarin.Forms
+description: Xamarin.Formsfornece uma classe de cor de plataforma cruzada flexível. Este artigo explica a funcionalidade fornecida pela classe Color e como usá-la.
+ms.prod: xamarin
+ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 04/02/2020
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: a02fe7451702367d85d322b756df4a547a009454
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137339"
 ---
-
 # <a name="colors-in-xamarinforms"></a>Cores emXamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithcolors)

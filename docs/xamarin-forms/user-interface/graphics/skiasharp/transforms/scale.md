@@ -1,8 +1,22 @@
 ---
-Título: "a transformação de escala" Descrição: "o artigo Thhis explora a transformação de escala SkiaSharp para dimensionar objetos para vários tamanhos e demonstra isso com o código de exemplo".
-MS. Prod: xamarin MS. Technology: xamarin-skiasharp MS. AssetID: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B autor: davidbritch MS. Author: dabritch MS. Date: 03/23/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: A transformação de escala
+description: O artigo Thhis explora a transformação de escala SkiaSharp para dimensionar objetos em vários tamanhos e demonstra isso com o código de exemplo.
+ms.prod: xamarin
+ms.technology: xamarin-skiasharp
+ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/23/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: bdf33f499bf43d99436cef815c03d35b27866b80
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140173"
 ---
-
 # <a name="the-scale-transform"></a>A transformação de escala
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,8 +1,22 @@
 ---
-title: " Xamarin.Forms modo de ligação" Descrição: "Este artigo explica como controlar o fluxo de informações entre a origem e o destino usando um modo de associação, que é especificado com um membro da enumeração BindingMode. Todas as propriedades vinculáveis têm um modo de associação padrão, que indica o modo em vigor quando essa propriedade é um destino de vinculação de dados. "
-MS. Prod: xamarin MS. AssetID: D087C389-2E9E-47B9-A341-5B14AC732C45 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/01/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsModo de ligação
+description: Este artigo explica como controlar o fluxo de informações entre a origem e o destino usando um modo de associação, que é especificado com um membro da enumeração BindingMode. Cada propriedade associável tem um modo de associação padrão, que indica o modo em vigor quando essa propriedade é um destino da associação de dados.
+ms.prod: xamarin
+ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/01/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c14215071a1d9d3ec804c307fa6edbbe4ddcf8e9
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139770"
 ---
-
 # <a name="xamarinforms-binding-mode"></a>Xamarin.FormsModo de ligação
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

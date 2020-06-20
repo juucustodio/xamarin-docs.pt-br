@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms mapa de geocodificação" Descrição: "Este artigo explica como geocodificar e reverter dados de mapa de código, usando o Xamarin.Forms . Mapeia a classe geocodificadora ".
-MS. Prod: xamarin MS. AssetID: DE7DB31A-8921-4614-8B49-DAEF1E7B03B3 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/22/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsMapear geocodificação
+description: Este artigo explica como geocodificar e reverter dados de mapa de código, usando o Xamarin.Forms . Mapeia a classe geocodificadora.
+ms.prod: xamarin
+ms.assetid: DE7DB31A-8921-4614-8B49-DAEF1E7B03B3
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/22/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: fe099235857f6bd0531539e3aa84e41bf59b50ba
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84139861"
 ---
-
 # <a name="xamarinforms-map-geocoding"></a>Xamarin.FormsMapear geocodificação
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)

@@ -1,7 +1,22 @@
 ---
-Título: "Resumo do capítulo 19. Exibições de coleção "Descrição:" Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 19. Exibições de coleção "MS. Prod: xamarin MS. Technology: xamarin-Forms MS. AssetID: 0AEC3A5C-586E-4D0F-9895-67E99A053A79 autor: davidbritch MS. Author: dabritch MS. Date: 07/18/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Resumo do capítulo 19. Exibições de coleção
+description: 'Criando aplicativos móveis com Xamarin.Forms : Resumo do capítulo 19. Exibições de coleção'
+ms.prod: xamarin
+ms.technology: xamarin-forms
+ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
+author: davidbritch
+ms.author: dabritch
+ms.date: 07/18/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 0eafdeffb6783a0ed54fdf23e6d10de24e2b4c6f
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84136689"
 ---
-
 # <a name="summary-of-chapter-19-collection-views"></a>Resumo do capítulo 19. Exibições de coleção
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19)

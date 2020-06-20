@@ -1,7 +1,22 @@
 ---
-Título: "comunicação entre componentes menos rígidos" Descrição: "Este capítulo explica como o aplicativo móvel eShopOnContainers implementa o padrão de publicação/assinatura, permitindo a comunicação baseada em mensagens entre componentes que são inconvenientes de vincular por objeto e tipo referencia" MS. Prod: xamarin MS. AssetID: 1194af33-8a91-48d2-88b5-b84d77f2ce69 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 08/07/2017 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Comunicação entre componentes flexíveis
+description: 'Este capítulo explica como o aplicativo móvel eShopOnContainers implementa o padrão de publicação-assinatura, permitindo a comunicação baseada em mensagens entre componentes que são inconvenientes de vincular por referências de objeto e tipo '
+ms.prod: xamarin
+ms.assetid: 1194af33-8a91-48d2-88b5-b84d77f2ce69
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 08/07/2017
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: c35cd6e30e7843cda0431581025aa7440a21cc29
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84140043"
 ---
-
 # <a name="communicating-between-loosely-coupled-components"></a>Comunicação entre componentes flexíveis
 
 O padrão de publicação-assinatura é um padrão de troca de mensagens em que os publicadores enviam mensagens sem ter conhecimento de nenhum receptor, conhecido como assinante. Da mesma forma, os assinantes escutam mensagens específicas, sem ter conhecimento de nenhum publicador.

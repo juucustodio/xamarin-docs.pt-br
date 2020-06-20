@@ -1,8 +1,22 @@
 ---
-Título: " Xamarin.Forms MENUITEM" Descrição: "a classe MenuItem é usada para criar itens de menu para menus como menus de contexto de item ListView e menus flutuantes de aplicativo Shell".
-MS. Prod: xamarin MS. AssetID: 62655C21-6053-466D-A7F4-DE2BE36538F5 MS. Technology: xamarin-Forms autor: profexorgeek MS. Author: jusjohns MS. Date: 08/01/2019 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Xamarin.FormsMenuItem
+description: A classe MenuItem é usada para criar itens de menu para menus como menus de contexto de item de ListView e menus flutuantes de aplicativo Shell.
+ms.prod: xamarin
+ms.assetId: 62655C21-6053-466D-A7F4-DE2BE36538F5
+ms.technology: xamarin-forms
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 08/01/2019
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 6b27f778a417a2bc0b458af4214ee8cb914fd93d
+ms.sourcegitcommit: 34fa3086c55b1e01838419c930f839c20662c362
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990851"
 ---
-
 # <a name="xamarinforms-menuitem"></a>Xamarin.FormsMenuItem
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
@@ -218,13 +232,13 @@ public class MyViewModel : INotifyPropertyChanged
 
     public Command MyCommand { get; private set; }
 
-    public ToolbarItemViewModel()
+    public MyViewModel()
     {
         MyCommand = new Command(() =>
         {
             // Execute logic here
         },
-        () => IsToolbarItemEnabled);
+        () => IsMenuItemEnabled);
     }
 }
 ```

@@ -1,8 +1,22 @@
 ---
-Título: "toque no polegar deslizante na iOS" Descrição: "as especificações da plataforma permitem consumir funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma do iOS específica que permite que a Propriedade Slider. Value seja definida tocando na barra de controle deslizante.
-MS. Prod: xamarin MS. AssetID: D0915D37-9A59-4728-BB6A-FE094A661275 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 10/24/2018 no-loc: [ Xamarin.Forms , Xamarin.Essentials ]
+title: Toque deslizante do slider no iOS
+description: As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados. Este artigo explica como consumir a plataforma do iOS específica que permite que a Propriedade Slider. Value seja definida tocando na barra de controle deslizante.
+ms.prod: xamarin
+ms.assetid: D0915D37-9A59-4728-BB6A-FE094A661275
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/24/2018
+no-loc:
+- Xamarin.Forms
+- Xamarin.Essentials
+ms.openlocfilehash: 93b4dba3e8543bd2cc2a4f2187f617aae5daff77
+ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84137066"
 ---
-
 # <a name="slider-thumb-tap-on-ios"></a>Toque deslizante do slider no iOS
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
