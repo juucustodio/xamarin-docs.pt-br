@@ -10,18 +10,18 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c0abf7b30192ac9183c28e89d7917ea8d08dfc4f
-ms.sourcegitcommit: d86b7a18cf8b1ef28cd0fe1d311f1c58a65101a8
+ms.openlocfilehash: 8df87f0ee3be78749d70dfc535b5d4d50874f194
+ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85101325"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85133016"
 ---
 # <a name="xamarinforms-shapes-path-transforms"></a>Xamarin.FormsFormas: transformações de caminho
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 Um `Transform` define como transformar um `Path` objeto de um espaço de coordenadas em outro espaço de coordenadas. Esse mapeamento é descrito por uma transformação `Matrix` , que é uma coleção de três linhas com três colunas de `double` valores.
 
@@ -352,5 +352,5 @@ Neste exemplo, a `Matrix` propriedade é especificada como uma cadeia de caracte
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ShapeDemos (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+- [ShapeDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.FormsExistentes](index.md)

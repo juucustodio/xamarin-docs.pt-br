@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/20/2019
-ms.openlocfilehash: b3f96f342679d8be6d2f8fbc0ad5962ca675d2a5
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: ce7df59d41efdd2d151fd2ea73cf26b40ee7fa10
+ms.sourcegitcommit: 834466c9d9cf35e9659e467ce0123e5f5ade6138
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71213789"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85129903"
 ---
 # <a name="multiple-windows-for-ipad"></a>Várias janelas para iPad
 
@@ -20,7 +20,7 @@ o iOS 13 agora dá suporte a janelas lado a lado para o mesmo aplicativo no iPad
 
 ## <a name="project-configuration"></a>Configuração do projeto
 
-Para configurar seu projeto para várias janelas, modifique o `info.plist` para declarar `NSUserActivityTypes` dizendo ao Ios seu aplicativo tratará as atividades desse tipo e `UIApplicationSceneManifest` para habilitar `UIApplicationSupportsMultipleScenes` o para várias janelas `UISceneConfigurations` e associar seu cena com um Storyboard.
+Para configurar seu projeto para várias janelas, modifique o `info.plist` para declarar `NSUserActivityTypes` dizendo ao Ios que seu aplicativo manipulará as atividades desse tipo e `UIApplicationSceneManifest` para permitir `UIApplicationSupportsMultipleScenes` várias janelas e `UISceneConfigurations` associar sua cena a um Storyboard.
 
 ```xml
 <key>NSUserActivityTypes</key>
@@ -58,7 +58,7 @@ Com seu aplicativo aberto e em execução em um iPad, há algumas maneiras de ab
 
 As interações adicionais para entrar em um modo de janela múltipla estão disponíveis no seu aplicativo.
 
-**Arrastar do aplicativo** -use uma interação de arrastar dentro de seu aplicativo para iniciar `NSUserActivity` um novo, assim como arrastando o ícone do aplicativo nos exemplos anteriores.
+**Arrastar do aplicativo** -use uma interação de arrastar dentro de seu aplicativo para iniciar um novo, `NSUserActivity` assim como arrastando o ícone do aplicativo nos exemplos anteriores.
 
 Ao usar uma [interação de arrastar e soltar][0], você cria um `NSUserActivity` e associa os dados a serem passados para a nova janela que está solicitando que o Ios abra para você.
 
@@ -79,14 +79,14 @@ public UIDragItem [] GetItemsForBeginningDragSession (UICollectionView collectio
 }
 ```
 
-No código acima, o objeto `selectedPhoto` de modelo tem um método para retornar um `NSUserActivity` chamado `OpenDetailUserActivity()`. Quando o gesto de arrastar estiver concluído, `UIDragItem` o com apresentará o `NSItemProvider` `userActivity` por meio do.
+No código acima, o `selectedPhoto` objeto de modelo tem um método para retornar um `NSUserActivity` chamado `OpenDetailUserActivity()` . Quando o gesto de arrastar estiver concluído, o `UIDragItem` com apresentará o `userActivity` por meio do `NSItemProvider` .
 
 **Ações explícitas** – gestos do usuário em botões ou links oferecem a capacidade de abrir uma nova janela.
 
-No, você pode iniciar um novo `UISceneSession` chamando `RequestSceneSessionActivation`. `UIApplication` Se já existir uma cena existente, você deverá usá-la. Por padrão, uma nova cena será criada para você.
+No `UIApplication` , você pode iniciar um novo `UISceneSession` chamando `RequestSceneSessionActivation` . Se já existir uma cena existente, você deverá usá-la. Por padrão, uma nova cena será criada para você.
 
 ```csharp
-pubic void ItemSelected(UICollectionView collectionView, NSIndexPath indexPath)
+public void ItemSelected(UICollectionView collectionView, NSIndexPath indexPath)
 {
     var userActivity = selectedPhoto.OpenDetailUserActivity ();
 
@@ -99,7 +99,7 @@ pubic void ItemSelected(UICollectionView collectionView, NSIndexPath indexPath)
 }
 ```
 
-Neste exemplo, `userActivity` o é o único valor passado para o `RequestSceneSessionActivation` método a fim de abrir uma nova janela do aplicativo com base em uma ação explícita do usuário; nesse caso, um `ItemSelected` manipulador de um `UICollectionView`.
+Neste exemplo, o `userActivity` é o único valor passado para o `RequestSceneSessionActivation` método a fim de abrir uma nova janela do aplicativo com base em uma ação explícita do usuário; nesse caso, um `ItemSelected` manipulador de um `UICollectionView` .
 
 ## <a name="related-links"></a>Links relacionados
 

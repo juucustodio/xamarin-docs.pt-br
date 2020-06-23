@@ -10,18 +10,18 @@ ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 263b77371e6fc991704fd86f2616d567584c832a
-ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
+ms.openlocfilehash: 943636ac82163c3c575577bb4c56f6433cf73339
+ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104336"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85132865"
 ---
 # <a name="xamarinforms-shapes-path-markup-syntax"></a>Xamarin.FormsFormas: sintaxe de marcação de caminho
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 Xamarin.Formsa sintaxe de marcação de caminho permite especificar de forma compacta geometrias de caminho em XAML. A sintaxe é especificada como um valor de cadeia de caracteres para a `Path.Data` Propriedade:
 
@@ -170,5 +170,5 @@ Além disso, você também pode usar notação científica sem diferenciação d
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ShapeDemos (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+- [ShapeDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.FormsGeometrias](geometries.md)

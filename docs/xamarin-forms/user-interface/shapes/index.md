@@ -6,16 +6,16 @@ ms.assetid: 4E749FE8-852C-46DA-BB1E-652936106357
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/16/2020
+ms.date: 06/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9c7c552abe724dca6b06265b73346a399d35c3cb
-ms.sourcegitcommit: d86b7a18cf8b1ef28cd0fe1d311f1c58a65101a8
+ms.openlocfilehash: c01aac4b415e9b6620f0faa059bf99d42b688b40
+ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85101397"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85132896"
 ---
 # <a name="xamarinforms-shapes"></a>Xamarin.FormsExistentes
 
@@ -31,8 +31,8 @@ Xamarin.FormsAs formas estão disponíveis no `Xamarin.Forms.Shapes` namespace n
 `Shape` define as propriedades a seguir:
 
 - `Aspect`, do tipo `Stretch` , descreve como a forma preenche seu espaço alocado. O valor padrão dessa propriedade é `Stretch.None`.
-- `Fill`, do tipo `Color` , indica a cor usada para pintar o interior da forma.
-- `Stroke`, do tipo `Color` , indica a cor usada para pintar o contorno da forma.
+- `Fill`, do tipo [`Color`](xref:Xamarin.Forms.Color) , indica a cor usada para pintar o interior da forma.
+- `Stroke`, do tipo [`Color`](xref:Xamarin.Forms.Color) , indica a cor usada para pintar o contorno da forma.
 - `StrokeDashArray`, do tipo `DoubleCollection` , que representa uma coleção de `double` valores que indicam o padrão de traços e lacunas que são usados para estruturar uma forma.
 - `StrokeDashOffset`, do tipo `double` , especifica a distância dentro do padrão de tracejado onde um traço começa. O valor padrão dessa propriedade é 0,0.
 - `StrokeLineCap`, do tipo `PenLineCap` , descreve a forma no início e no fim de uma linha ou segmento. O valor padrão dessa propriedade é `PenLineCap.Flat`.
@@ -41,8 +41,138 @@ Xamarin.FormsAs formas estão disponíveis no `Xamarin.Forms.Shapes` namespace n
 
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que eles podem ser destinos de associações de dados e com estilo.
 
-Xamarin.Formsdefine um número de objetos que derivam da `Shape` classe. Eles incluem `Ellipse`, `Line`, `Path`, `Polygon`, `Polyline` e `Rectangle`.
+Xamarin.Formsdefine um número de objetos que derivam da `Shape` classe. São eles `Ellipse` , `Line` ,,, `Path` `Polygon` `Polyline` e `Rectangle` .
+
+## <a name="paint-shapes"></a>Formas de pintura
+
+[`Color`](xref:Xamarin.Forms.Color)os objetos são usados para pintar as formas `Stroke` e `Fill` :
+
+```xaml
+<Ellipse Fill="DarkBlue"
+         Stroke="Red"
+         StrokeThickness="4"
+         WidthRequest="150"
+         HeightRequest="50"
+         HorizontalOptions="Start" />
+```
+
+Neste exemplo, o traço e o preenchimento de um `Ellipse` são especificados:
+
+![Formas de pintura](images/ellipse.png "Formas de pintura")
+
+> [!IMPORTANT]
+> Se você não especificar um [`Color`](xref:Xamarin.Forms.Color) valor para `Stroke` , ou se definir `StrokeThickness` como 0, a borda ao redor da forma não será desenhada.
+
+Para obter mais informações sobre [`Color`](xref:Xamarin.Forms.Color) valores válidos, consulte [cores Xamarin.Forms em ](~/xamarin-forms/user-interface/colors.md).
+
+## <a name="stretch-shapes"></a>Alongar formas
+
+`Shape`os objetos têm uma `Aspect` propriedade, do tipo `Stretch` . Essa propriedade determina como o `Shape` conteúdo de um objeto é ampliado para preencher o `Shape` espaço de layout do objeto. O `Shape` espaço de layout de um objeto é a quantidade de espaço `Shape` alocada pelo Xamarin.Forms sistema de layout, devido a uma `WidthRequest` configuração explícita `HeightRequest` ou por causa de suas `HorizontalOptions` `VerticalOptions` configurações e.
+
+A enumeração `Stretch` define os seguintes membros:
+
+- `None`, que indica que o conteúdo preserva seu tamanho original. Este é o valor padrão da propriedade `Shape.Aspect`.
+- `Fill`, que indica que o conteúdo é redimensionado para preencher as dimensões de destino. A taxa de proporção não é preservada.
+- `Uniform`, que indica que o conteúdo é redimensionado para se ajustar às dimensões de destino, preservando a taxa de proporção.
+- `UniformToFill`, indica que o conteúdo é redimensionado para preencher as dimensões de destino, preservando a taxa de proporção. Se a taxa de proporção do retângulo de destino for diferente da origem, o conteúdo de origem será cortado para se ajustar às dimensões de destino.
+
+O XAML a seguir mostra como definir a `Aspect` Propriedade:
+
+```xaml
+<Path Aspect="Uniform"
+      Stroke="Yellow"
+      StrokeThickness="1"
+      Fill="Red"
+      BackgroundColor="LightGray"
+      HorizontalOptions="Start"
+      HeightRequest="100"
+      WidthRequest="100">
+    <Path.Data>
+        <!-- Path data goes here -->
+    </Path.Data>  
+</Path>      
+```
+
+Neste exemplo, um `Path` objeto desenha um coração. As `Path` `WidthRequest` Propriedades e do objeto `HeightRequest` são definidas como 100 unidades independentes do dispositivo e sua `Aspect` propriedade é definida como `Uniform` . Como resultado, o conteúdo do objeto é redimensionado para se ajustar às dimensões de destino, preservando a taxa de proporção:
+
+![Alongar formas](images/aspect.png "Alongar formas")
+
+## <a name="dashed-shapes"></a>Formas tracejadas
+
+`Shape`os objetos têm uma `StrokeDashArray` propriedade, do tipo `DoubleCollection` . Essa propriedade representa uma coleção de `double` valores que indicam o padrão de traços e lacunas que são usados para estruturar uma forma. Um `DoubleCollection` é um `ObservableCollection` dos `double` valores. Cada `double` uma na coleção especifica o comprimento de um traço ou intervalo. O primeiro item na coleção, localizado no índice 0, especifica o comprimento de um traço. O segundo item na coleção, localizado no índice 1, especifica o comprimento de uma lacuna. Portanto, os objetos com um valor de índice par especificam traços, enquanto os objetos com um valor de índice ímpar especificam lacunas.
+
+`Shape`os objetos também têm uma `StrokeDashOffset` propriedade, do tipo `double` , que especifica a distância dentro do padrão de tracejado onde um traço começa. A falha ao definir essa propriedade resultará na `Shape` existência de uma estrutura de tópicos sólida.
+
+Formas tracejadas podem ser desenhadas definindo as `StrokeDashArray` `StrokeDashOffset` Propriedades e. A `StrokeDashArray` propriedade deve ser definida como um ou mais `double` valores, com cada par delimitado por uma única vírgula e/ou um ou mais espaços. Por exemplo, "0,5 1,0" e "0.5, 1,0" são válidos.
+
+O exemplo de XAML a seguir mostra como desenhar um retângulo tracejado:
+
+```xaml
+<Rectangle Fill="DarkBlue"
+           Stroke="Red"
+           StrokeThickness="4"
+           StrokeDashArray="1,1"
+           StrokeDashOffset="6"
+           WidthRequest="150"
+           HeightRequest="50"
+           HorizontalOptions="Start" />
+```
+
+Neste exemplo, um retângulo preenchido com um traço tracejado é desenhado:
+
+![Retângulo tracejado](images/dashed-rectangle.png "Linha tracejada")
+
+## <a name="line-ends"></a>Extremidades de linha
+
+Uma linha tem três partes: início, corpo da linha e ponta da extremidade. As arremates inicial e final descrevem a forma no início e no fim de uma linha ou segmento.
+
+`Shape`os objetos têm uma `StrokeLineCap` propriedade, do tipo `PenLineCap` , que descreve a forma no início e no fim de uma linha, ou segmento. A enumeração `PenLineCap` define os seguintes membros:
+
+- `Flat`, que representa um limite que não ultrapassa o último ponto da linha. Isso é comparável a sem limite de linha e é o valor padrão da `StrokeLineCap` propriedade.
+- `Square`, que representa um retângulo com uma altura igual à espessura da linha e um comprimento igual à metade da espessura da linha.
+- `Round`, que representa um semicírculo que tem um diâmetro igual à espessura da linha.
+
+> [!IMPORTANT]
+> A `StrokeLineCap` propriedade não terá efeito se você defini-la em uma forma que não tem nenhum ponto inicial ou final. Por exemplo, essa propriedade não terá efeito se você defini-la em um `Ellipse` , ou `Rectangle` .
+
+O XAML a seguir mostra como definir a `StrokeLineCap` Propriedade:
+
+```xaml
+<Line X1="0"
+      Y1="20"
+      X2="300"
+      Y2="20"
+      StrokeLineCap="Round"
+      Stroke="Red"
+      StrokeThickness="12" />
+```
+
+Neste exemplo, a linha vermelha é arredondada no início e no final da linha:
+
+![Limites de linha](images/linecap.png "Limites de linha")
+
+## <a name="line-joins"></a>Junções de linha
+
+`Shape`os objetos têm uma `StrokeLineJoin` propriedade, do tipo `PenLineJoin` , que especifica o tipo de junção que é usado nos vértices da forma. A enumeração `PenLineJoin` define os seguintes membros:
+
+- `Miter`, que representa vértices angulares regulares. Este é o valor padrão da propriedade `StrokeLineJoin`.
+- `Bevel`, que representa vértices chanfrados.
+- `Round`, que representa vértices arredondados.
+
+O XAML a seguir mostra como definir a `StrokeLineJoin` Propriedade:
+
+```xaml
+<Polyline Points="20 20,250 50,20 120"
+          Stroke="DarkBlue"
+          StrokeThickness="20"
+          StrokeLineJoin="Round" />
+```
+
+Neste exemplo, a polilinha azul escura tem junções arredondadas em seus vértices:
+
+![Junções de linha](images/linejoin.png "Junções de linha")
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ShapeDemos (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+- [ShapeDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Cores emXamarin.Forms](~/xamarin-forms/user-interface/colors.md)

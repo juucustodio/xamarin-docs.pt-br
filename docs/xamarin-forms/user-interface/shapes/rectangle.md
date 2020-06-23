@@ -6,24 +6,24 @@ ms.assetid: 2DD663D3-DAEC-495C-AB6D-8A143FC97637
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/16/2020
+ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: da9649a4abb2cb65930d98576eda81739b711886
-ms.sourcegitcommit: d86b7a18cf8b1ef28cd0fe1d311f1c58a65101a8
+ms.openlocfilehash: 1ca92efc612653e40973087bf7577366018c08d0
+ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85101369"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85132979"
 ---
 # <a name="xamarinforms-shapes-rectangle"></a>Xamarin.FormsFormas: retângulo
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
-A `Rectangle` classe deriva da `Shape` classe e pode ser usada para desenhar retângulos. Para obter informações sobre as propriedades que a `Rectangle` classe herda da `Shape` classe, consulte [ Xamarin.Forms formas](index.md).
+A `Rectangle` classe deriva da `Shape` classe e pode ser usada para desenhar retângulos e quadrados. Para obter informações sobre as propriedades que a `Rectangle` classe herda da `Shape` classe, consulte [ Xamarin.Forms formas](index.md).
 
 `Rectangle` define as propriedades a seguir:
 
@@ -32,24 +32,49 @@ A `Rectangle` classe deriva da `Shape` classe e pode ser usada para desenhar ret
 
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que eles podem ser destinos de associações de dados e com estilo.
 
-A `Rectangle` classe define a `Aspect` propriedade, herdada da `Shape` classe, para `Stretch.Fill` .
+A `Rectangle` classe define a `Aspect` propriedade, herdada da `Shape` classe, para `Stretch.Fill` . Para obter mais informações sobre a `Aspect` propriedade, consulte [Stretch Shapes](index.md#stretch-shapes).
 
 ## <a name="create-a-rectangle"></a>Criar um retângulo
 
-O exemplo de XAML a seguir mostra como desenhar um retângulo preenchido, com cantos arredondados:
+Para desenhar um retângulo, crie um `Rectangle` objeto e defina suas `WidthRequest` `HeightRequest` Propriedades e. Para pintar o interior do retângulo, defina sua `Fill` propriedade como a [`Color`](xref:Xamarin.Forms.Color) . Para dar um esboço ao retângulo, defina sua `Stroke` propriedade como a [`Color`](xref:Xamarin.Forms.Color) . A `StrokeThickness` propriedade especifica a espessura da estrutura de tópicos do retângulo.
+
+Para dar os cantos arredondados do retângulo, defina suas `RadiusX` `RadiusY` Propriedades e. Essas propriedades definem o raios do eixo x e do eixo y que é usado para arredondar os cantos do retângulo.
+
+Para desenhar um quadrado, torne as `WidthRequest` `HeightRequest` Propriedades e do `Rectangle` objeto igual.
+
+O exemplo de XAML a seguir mostra como desenhar um retângulo preenchido:
 
 ```xaml
-<Rectangle Fill="DarkBlue"
-           Stroke="Red"
-           StrokeThickness="4"
-           RadiusX="12"
-           RadiusY="24"           
+<Rectangle Fill="Red"
            WidthRequest="150"
            HeightRequest="50"
            HorizontalOptions="Start" />
 ```
 
+Neste exemplo, um retângulo vermelho preenchido com dimensões 150x50 (unidades independentes de dispositivo) é desenhado:
+
+![Retângulo preenchido](rectangle-images/filled.png "Retângulo preenchido")
+
+O exemplo de XAML a seguir mostra como desenhar um retângulo preenchido, com cantos arredondados:
+
+```xaml
+<Rectangle Fill="Blue"
+           Stroke="Black"
+           StrokeThickness="3"
+           RadiusX="50"
+           RadiusY="10"
+           WidthRequest="200"
+           HeightRequest="100"
+           HorizontalOptions="Start" />
+```
+
+Neste exemplo, um retângulo de preenchimento azul com cantos arredondados é desenhado:
+
+![Retângulo com cantos arredondados](rectangle-images/rounded.png "Retângulo com cantos arredondados")
+
+Para obter informações sobre como desenhar um retângulo tracejado, consulte [formas tracejadas](index.md#dashed-shapes).
+
 ## <a name="related-links"></a>Links relacionados
 
-- [ShapeDemos (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+- [ShapeDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.FormsExistentes](index.md)
