@@ -543,6 +543,8 @@
                   href: user-interface/shapes/index.md
                 - name: Elipse
                   href: user-interface/shapes/ellipse.md
+                - name: Regras de preenchimento
+                  href: user-interface/shapes/fillrules.md
                 - name: Geometrias
                   href: user-interface/shapes/geometries.md
                 - name: Linha
