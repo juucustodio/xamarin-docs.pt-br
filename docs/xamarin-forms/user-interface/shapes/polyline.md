@@ -10,12 +10,12 @@ ms.date: 06/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fee7dd2a2e5b713b3a82fc2e1227b21caddbceaa
-ms.sourcegitcommit: ef3d4a70e70927c4f231b763842c5355f1571d15
+ms.openlocfilehash: 5ffbf452816eb9e60d70175a995419a124bcc457
+ms.sourcegitcommit: 8f6cc5208f675c8cfb645bd9ffb0fc1f8ea71411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85243775"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326171"
 ---
 # <a name="xamarinforms-shapes-polyline"></a>Xamarin.FormsFormas: polilinha
 
@@ -34,10 +34,7 @@ Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.Bin
 
 O `PointsCollection` tipo é um `ObservableCollection` de [`Point`](xref:Xamarin.Forms.Point) objetos. A `Point` estrutura define `X` e `Y` Propriedades, do tipo `double` , que representam um par de coordenadas x e y em espaço 2D. Portanto, a `Points` propriedade deve ser definida como uma lista de pares x e coordenada y que descrevem os pontos de vértice da polilinha, delimitadas por uma única vírgula e/ou um ou mais espaços. Por exemplo, "40, 10 70, 80" e "40 10, 70 80" são válidos.
 
-A enumeração `FillRule` define os seguintes membros:
-
-- `EvenOdd`representa uma regra que determina se um ponto está na região de preenchimento da polilinha. Ele desenha um raio do ponto para o infinito em qualquer direção e conta o número de segmentos dentro da forma que o raio cruza. Se esse número for ímpar, o ponto estará dentro. Se esse número for par, o ponto estará fora do.
-- `Nonzero`representa uma regra que determina se um ponto está na região de preenchimento da polilinha. Ele desenha um raio do ponto para o infinito em qualquer direção e, em seguida, examina os locais em que um segmento da forma cruza o raio. Começando com uma contagem de zero, a contagem é incrementada toda vez que um segmento cruza o raio da esquerda para a direita e diminui cada vez que um segmento cruza o raio da direita para a esquerda. Depois de contar os cruzamentos, se o resultado for zero, o ponto estará fora da polilinha. Caso contrário, ele estará dentro de.
+Para obter mais informações sobre a `FillRule` enumeração, consulte [ Xamarin.Forms formas: regras de preenchimento](fillrules.md).
 
 ## <a name="create-a-polyline"></a>Criar uma polilinha
 
@@ -104,3 +101,4 @@ Neste exemplo, o comportamento de preenchimento da polilinha é determinado usan
 
 - [ShapeDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.FormsExistentes](index.md)
+- [Xamarin.FormsFormas: regras de preenchimento](fillrules.md)
