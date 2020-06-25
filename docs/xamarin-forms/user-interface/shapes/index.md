@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c01aac4b415e9b6620f0faa059bf99d42b688b40
-ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
+ms.openlocfilehash: fdab7d422040aee5a00b16bb1e301f917b0c4883
+ms.sourcegitcommit: ef3d4a70e70927c4f231b763842c5355f1571d15
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85132896"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243757"
 ---
 # <a name="xamarinforms-shapes"></a>Xamarin.FormsExistentes
 
@@ -97,7 +97,7 @@ Neste exemplo, um `Path` objeto desenha um coração. As `Path` `WidthRequest` P
 
 ![Alongar formas](images/aspect.png "Alongar formas")
 
-## <a name="dashed-shapes"></a>Formas tracejadas
+## <a name="draw-dashed-shapes"></a>Desenhar formas tracejadas
 
 `Shape`os objetos têm uma `StrokeDashArray` propriedade, do tipo `DoubleCollection` . Essa propriedade representa uma coleção de `double` valores que indicam o padrão de traços e lacunas que são usados para estruturar uma forma. Um `DoubleCollection` é um `ObservableCollection` dos `double` valores. Cada `double` uma na coleção especifica o comprimento de um traço ou intervalo. O primeiro item na coleção, localizado no índice 0, especifica o comprimento de um traço. O segundo item na coleção, localizado no índice 1, especifica o comprimento de uma lacuna. Portanto, os objetos com um valor de índice par especificam traços, enquanto os objetos com um valor de índice ímpar especificam lacunas.
 
@@ -122,7 +122,7 @@ Neste exemplo, um retângulo preenchido com um traço tracejado é desenhado:
 
 ![Retângulo tracejado](images/dashed-rectangle.png "Linha tracejada")
 
-## <a name="line-ends"></a>Extremidades de linha
+## <a name="control-line-ends"></a>Extremidades de linha de controle
 
 Uma linha tem três partes: início, corpo da linha e ponta da extremidade. As arremates inicial e final descrevem a forma no início e no fim de uma linha ou segmento.
 
@@ -151,7 +151,7 @@ Neste exemplo, a linha vermelha é arredondada no início e no final da linha:
 
 ![Limites de linha](images/linecap.png "Limites de linha")
 
-## <a name="line-joins"></a>Junções de linha
+## <a name="control-line-joins"></a>Junções de linha de controle
 
 `Shape`os objetos têm uma `StrokeLineJoin` propriedade, do tipo `PenLineJoin` , que especifica o tipo de junção que é usado nos vértices da forma. A enumeração `PenLineJoin` define os seguintes membros:
 

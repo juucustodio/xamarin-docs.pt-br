@@ -10,12 +10,12 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c3b869d10d454453172065b30eb7ce32da81c8ce
-ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
+ms.openlocfilehash: 412b0255dafcbd752c7b350ddc25ecd13f8f98d8
+ms.sourcegitcommit: 8f6cc5208f675c8cfb645bd9ffb0fc1f8ea71411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85133029"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326177"
 ---
 # <a name="xamarinforms-shapes-geometries"></a>Xamarin.FormsFormas: geometrias
 
@@ -124,6 +124,8 @@ A `PathGeometry` classe define as seguintes propriedades:
 
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que eles podem ser destinos de associações de dados e com estilo.
 
+Para obter mais informações sobre a `FillRule` enumeração, consulte [ Xamarin.Forms formas: regras de preenchimento](fillrules.md).
+
 Um `PathGeometry` é composto de uma coleção de `PathFigure` objetos, com cada `PathFigure` um deles descrevendo uma forma na geometria. Cada `PathFigure` um deles é composto de um ou mais `PathSegment` objetos, cada um deles descreve um segmento da forma. Há muitos tipos de segmentos:
 
 - `ArcSegment`, que cria um arco elíptico entre dois pontos.
@@ -226,3 +228,4 @@ A `GeometryHelper` classe fornece os seguintes métodos auxiliares:
 
 - [ShapeDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.FormsExistentes](index.md)
+- [Xamarin.FormsFormas: regras de preenchimento](fillrules.md)

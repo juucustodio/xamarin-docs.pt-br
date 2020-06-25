@@ -10,12 +10,12 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1ca92efc612653e40973087bf7577366018c08d0
-ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
+ms.openlocfilehash: 1fd985aa2997be2b35fe3b22606b891aa0b66cf3
+ms.sourcegitcommit: ef3d4a70e70927c4f231b763842c5355f1571d15
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85132979"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243731"
 ---
 # <a name="xamarinforms-shapes-rectangle"></a>Xamarin.FormsFormas: retângulo
 
@@ -72,7 +72,7 @@ Neste exemplo, um retângulo de preenchimento azul com cantos arredondados é de
 
 ![Retângulo com cantos arredondados](rectangle-images/rounded.png "Retângulo com cantos arredondados")
 
-Para obter informações sobre como desenhar um retângulo tracejado, consulte [formas tracejadas](index.md#dashed-shapes).
+Para obter informações sobre como desenhar um retângulo tracejado, consulte [desenhar formas tracejadas](index.md#draw-dashed-shapes).
 
 ## <a name="related-links"></a>Links relacionados
 

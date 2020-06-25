@@ -10,12 +10,12 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: aed8d902291272a6bcbdc1ec542b5edacb7668e2
-ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
+ms.openlocfilehash: 725f892a667b4e89d55266abcf69e5394b09b6a5
+ms.sourcegitcommit: ef3d4a70e70927c4f231b763842c5355f1571d15
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85133042"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243774"
 ---
 # <a name="xamarinforms-shapes-ellipse"></a>Xamarin.FormsFormas: elipse
 
@@ -60,7 +60,7 @@ Neste exemplo, um círculo vermelho com dimensões 150x150 (unidades independent
 
 ![Multiplica](ellipse-images/circle.png "Circle")
 
-Para obter informações sobre como desenhar uma elipse tracejada, consulte [formas tracejadas](index.md#dashed-shapes).
+Para obter informações sobre como desenhar uma elipse tracejada, consulte [desenhar formas tracejadas](index.md#draw-dashed-shapes).
 
 ## <a name="related-links"></a>Links relacionados
 

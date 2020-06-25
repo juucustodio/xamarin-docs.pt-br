@@ -10,12 +10,12 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c33c6408a901a1726e37ddda5e24a4c82f671738
-ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
+ms.openlocfilehash: f97e6930f543f47383e2b8da09b36573bd3192d0
+ms.sourcegitcommit: ef3d4a70e70927c4f231b763842c5355f1571d15
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85132862"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243744"
 ---
 # <a name="xamarinforms-shapes-line"></a>Xamarin.FormsFormas: linha
 
@@ -34,7 +34,7 @@ A `Line` classe deriva da `Shape` classe e pode ser usada para desenhar linhas. 
 
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que eles podem ser destinos de associações de dados e com estilo.
 
-Para obter informações sobre como controlar como terminações de linha são desenhadas, consulte [extremidades de linha](index.md#line-ends).
+Para obter informações sobre como controlar como terminações de linha são desenhadas, consulte [extremidades de linha de controle](index.md#control-line-ends).
 
 ## <a name="create-a-line"></a>Criar uma linha
 
@@ -82,7 +82,7 @@ Neste exemplo, uma linha diagonal pontilhada azul escura é desenhada de (40, 0)
 
 ![Linha tracejada](line-images/dashed-line.png "Linha tracejada")
 
-Para obter mais informações sobre como desenhar uma linha tracejada, consulte [formas tracejadas](index.md#dashed-shapes).
+Para obter mais informações sobre como desenhar uma linha tracejada, consulte [desenhar formas tracejadas](index.md#draw-dashed-shapes).
 
 ## <a name="related-links"></a>Links relacionados
 

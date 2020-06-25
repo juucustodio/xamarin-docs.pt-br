@@ -10,12 +10,12 @@ ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 943636ac82163c3c575577bb4c56f6433cf73339
-ms.sourcegitcommit: 7fc658bbdcb8130cd9d611e55e79a1830fc5d5a2
+ms.openlocfilehash: d2eb0ac68bf754e45ffcd2a1c77e4347bb3bcf4c
+ms.sourcegitcommit: 8f6cc5208f675c8cfb645bd9ffb0fc1f8ea71411
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85132865"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326212"
 ---
 # <a name="xamarinforms-shapes-path-markup-syntax"></a>Xamarin.FormsFormas: sintaxe de marcação de caminho
 
@@ -35,7 +35,7 @@ A sintaxe de marcação de caminho é composta por um `FillRule` valor opcional 
 
 Nesta sintaxe:
 
-- *fillRule* é um opcional `Xamarin.Forms.Shapes.FillRule` que especifica se a geometria deve usar `EvenOdd` ou `Nonzero` `FillRule` . `F0`Especifica a `EvenOdd` regra de preenchimento, enquanto `F1` especifica a `Nonzero` regra de preenchimento.
+- *fillRule* é um opcional `Xamarin.Forms.Shapes.FillRule` que especifica se a geometria deve usar `EvenOdd` ou `Nonzero` `FillRule` . `F0`Especifica a `EvenOdd` regra de preenchimento, enquanto `F1` especifica a `Nonzero` regra de preenchimento. Para obter mais informações sobre regras de preenchimento, consulte [ Xamarin.Forms formas: regras de preenchimento](fillrules.md).
 -  *figureDescription* representa uma figura composta por um comando de movimentação, comandos de desenho e um comando de fechamento opcional. Um comando move especifica o ponto inicial da figura. Os comandos Draw descrevem o conteúdo da figura e o comando opcional Close fecha a figura.
 
 No exemplo acima, a sintaxe de marcação de caminho Especifica um ponto de partida usando o comando Move ( `M` ), uma série de linhas retas usando o comando line ( `L` ) e fecha o caminho com o comando Close ( `Z` ).
@@ -172,3 +172,4 @@ Além disso, você também pode usar notação científica sem diferenciação d
 
 - [ShapeDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.FormsGeometrias](geometries.md)
+- [Xamarin.FormsFormas: regras de preenchimento](fillrules.md)
