@@ -10,12 +10,12 @@ ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 68b7f4a245a60df1723f5a6442f30dc2b1a15932
-ms.sourcegitcommit: 91b4d2f93687fadec5c3f80aadc8f7298d911624
+ms.openlocfilehash: 124c739f68ce8a3fcbc359a07513a2bcb178578f
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85794972"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853121"
 ---
 # <a name="xamarinforms-shapes-path-markup-syntax"></a>Xamarin.FormsFormas: sintaxe de marcação de caminho
 
@@ -59,11 +59,11 @@ Um comando de desenho pode consistir em vários comandos de formas. Os seguintes
 - Linha ( `L` ou `l` ).
 - Linha horizontal ( `H` ou `h` ).
 - Linha vertical ( `V` ou `v` ).
+- Arco elíptico ( `A` ou `a` ).
 - Curva de Bézier cúbica ( `C` ou `c` ).
 - Curva de Bézier quadrática ( `Q` ou `q` ).
 - Curva de Bézier cubica suave ( `S` ou `s` ).
 - Curva de Bézier quadrática suave ( `T` ou `t` ).
-- Arco elíptico ( `A` ou `a` ).
 
 Cada comando Draw é especificado com uma letra que não diferencia maiúsculas de minúsculas. Ao inserir sequencialmente mais de um comando do mesmo tipo, você pode omitir a entrada de comando duplicada. Por exemplo, `L 100,200 300,400` é equivalente a `L 100,200 L 300,400` .
 
@@ -74,6 +74,8 @@ O comando linha cria uma linha reta entre o ponto atual e o ponto de extremidade
 Nessa sintaxe, *Endpoint* é um [`Point`](xref:Xamarin.Forms.Point) que representa o ponto final da linha.
 
 `L 20,30`e `L 20 30` são exemplos de comandos de linha válidos.
+
+Para obter informações sobre como criar uma linha reta como um `PathGeometry` objeto, consulte [criar um LineSegment](geometries.md#create-a-linesegment).
 
 ### <a name="horizontal-line-command"></a>Comando de linha horizontal
 
@@ -91,6 +93,22 @@ Nessa sintaxe, *y* é um `double` que representa a coordenada y do ponto de extr
 
 `V 90` é um exemplo de um comando de linha vertical válido.
 
+### <a name="elliptical-arc-command"></a>Comando de arco elíptico
+
+O comando de arco elíptico cria um arco elíptico entre o ponto atual e o ponto de extremidade especificado. A sintaxe para esse comando é: `A` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *Endpoint* ou `a` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *Endpoint*.
+
+Nesta sintaxe:
+
+- `size`é um [`Size`](xref:Xamarin.Forms.Size) que representa o raio x e y do arco.
+- `rotationAngle`é um `double` que representa a rotação da elipse, em graus.
+- `isLargeArcFlag`deve ser definido como 1 se o ângulo do arco deve ser 180 graus ou maior, caso contrário, defina-o como 0.
+- `sweepDirectionFlag`deve ser definido como 1 se o arco for desenhado em uma direção de ângulo positivo; caso contrário, defina-o como 0.
+- `endPoint`é um [`Point`](xref:Xamarin.Forms.Point) para o qual o arco é desenhado.
+
+`A 150,150 0 1,0 150,-150`é um exemplo de um comando de arco elíptico válido.
+
+Para obter informações sobre como criar um arco elíptico como um `PathGeometry` objeto, consulte [criar um ArcSegment](geometries.md#create-an-arcsegment).
+
 ### <a name="cubic-bezier-curve-command"></a>Comando de curva de Bézier cúbica
 
 O comando de curva de Bézier cúbica cria uma curva de Bézier cúbica entre o ponto atual e o ponto de extremidade especificado usando o ponto de controle especificado dois. A sintaxe para esse comando é: `C` *ControlPoint1* *ControlPoint2* *Endpoint* ou `c` *ControlPoint1* *ControlPoint2* *Endpoint*.
@@ -103,6 +121,8 @@ Nesta sintaxe:
 
 `C 100,200 200,400 300,200`é um exemplo de um comando de curva de Bézier cúbica válido.
 
+Para obter informações sobre como criar uma curva de Bézier cúbica como um `PathGeometry` objeto, consulte [criar um BezierSegment](geometries.md#create-a-beziersegment).
+
 ### <a name="quadratic-bezier-curve-command"></a>Comando de curva de Bézier quadrática
 
 O comando de curva de Bézier quadrática cria uma curva de Bezier quadrática entre o ponto atual e o ponto de extremidade especificado usando o ponto de controle especificado. A sintaxe para este comando é: `Q` *ControlPoint* *Endpoint* ou `q` *ControlPoint* *Endpoint*.
@@ -113,6 +133,8 @@ Nesta sintaxe:
 - o *ponto de extremidade* é um [`Point`](xref:Xamarin.Forms.Point) que representa o ponto para o qual a curva é desenhada.
 
 `Q 100,200 300,200` é um exemplo de um comando de curva de Bezier quadrática válido.
+
+Para obter informações sobre como criar uma curva de Bézier quadrática como um `PathGeometry` objeto, consulte [criar um QuadraticBezierSegment](geometries.md#create-a-quadraticbeziersegment).
 
 ### <a name="smooth-cubic-bezier-curve-command"></a>Comando de curva de Bézier cubica suave
 
@@ -136,20 +158,6 @@ Nessa sintaxe, *Endpoint* é um [`Point`](xref:Xamarin.Forms.Point) que represen
 O ponto de controle é assumido ser a reflexão do ponto de controle do comando anterior relativo ao ponto atual. Se não houver nenhum comando anterior ou se o comando anterior não fosse uma curva de Bézier quadrática ou um comando Smooth de curva de Bézier quadrática, o ponto de controle será considerado como coincidente com o ponto atual.
 
 `T 100,30`é um exemplo de um comando de curva de Bezier cubica quadrática válido.
-
-### <a name="elliptical-arc-command"></a>Comando de arco elíptico
-
-O comando de arco elíptico cria um arco elíptico entre o ponto atual e o ponto de extremidade especificado. A sintaxe para esse comando é: `A` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *Endpoint* ou `a` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *Endpoint*.
-
-Nesta sintaxe:
-
-- `size`é um [`Size`](xref:Xamarin.Forms.Size) que representa o raio x e y do arco.
-- `rotationAngle`é um `double` que representa a rotação da elipse, em graus.
-- `isLargeArcFlag`deve ser definido como 1 se o ângulo do arco deve ser 180 graus ou maior, caso contrário, defina-o como 0.
-- `sweepDirectionFlag`deve ser definido como 1 se o arco for desenhado em uma direção de ângulo positivo; caso contrário, defina-o como 0.
-- `endPoint`é um [`Point`](xref:Xamarin.Forms.Point) para o qual o arco é desenhado.
-
-`A 150,150 0 1,0 150,-150`é um exemplo de um comando de arco elíptico válido.
 
 ## <a name="close-command"></a>Comando de fechamento
 

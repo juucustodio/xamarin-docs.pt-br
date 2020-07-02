@@ -1,20 +1,23 @@
 ---
 title: Associar bibliotecas Swift do iOS
-description: Este documento descreve como criar C# associações para código Swift, possibilitando o consumo de bibliotecas nativas e CocoaPods em um aplicativo Xamarin. Ios.
+description: Este documento descreve como criar associações em C# para o código Swift, possibilitando o consumo de bibliotecas nativas e CocoaPods em um aplicativo Xamarin. iOS.
 ms.prod: xamarin
 ms.assetid: 890EFCCA-A2A2-4561-88EA-30DE3041F61D
 ms.technology: xamarin-ios
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 02/11/2020
-ms.openlocfilehash: 9a683f31016a9db4271e3909e421f27ef83c2080
-ms.sourcegitcommit: b751605179bef8eee2df92cb484011a7dceb6fda
+ms.openlocfilehash: 72ab1d9f10ee308313569528d152d5930a258207
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "78292258"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85852974"
 ---
 # <a name="bind-ios-swift-libraries"></a>Associar bibliotecas Swift do iOS
+
+> [!IMPORTANT]
+> No momento, estamos investigando o uso de associação personalizada na plataforma Xamarin. Faça [**esta pesquisa**](https://www.surveymonkey.com/r/KKBHNLT) para informar os futuros esforços de desenvolvimento.
 
 A plataforma iOS, juntamente com suas ferramentas e linguagens nativas, está constantemente evoluindo e há muitas bibliotecas de terceiros que foram desenvolvidas usando as ofertas mais recentes. Maximizar o código e a reutilização de componentes é um dos principais objetivos do desenvolvimento de várias plataformas. A capacidade de reutilizar os componentes criados com o Swift tornou-se cada vez mais importante para os desenvolvedores do Xamarin, pois sua popularidade entre os desenvolvedores continua crescendo. Talvez você já esteja familiarizado com o processo de vinculação de bibliotecas [Objective-C](https://docs.microsoft.com/xamarin/ios/platform/binding-objective-c/walkthrough) regulares. A documentação adicional agora está disponível, descrevendo o processo de [vinculação de uma estrutura Swift](walkthrough.md), para que eles sejam consumíveis por um aplicativo Xamarin da mesma maneira. A finalidade deste documento é descrever uma abordagem de alto nível para criar uma associação Swift para o Xamarin.
 
@@ -23,7 +26,7 @@ A plataforma iOS, juntamente com suas ferramentas e linguagens nativas, está co
 Com o Xamarin, você pode associar qualquer biblioteca nativa de terceiros a ser consumível por um aplicativo Xamarin. O Swift é a nova linguagem e a criação de associação para bibliotecas criadas com esse idioma requer algumas etapas e ferramentas adicionais. Essa abordagem envolve as quatro etapas a seguir:
 
 1. Criando a biblioteca nativa
-1. Preparando os metadados do Xamarin, que permitem que as ferramentas do C# xamarin gerem classes
+1. Preparando os metadados do Xamarin, que permitem que as ferramentas do Xamarin gerem classes C#
 1. Criando uma biblioteca de associação do Xamarin usando a biblioteca nativa e os metadados
 1. Consumindo a biblioteca de associação do Xamarin em um aplicativo Xamarin
 
@@ -31,14 +34,14 @@ As seções a seguir descrevem essas etapas com detalhes adicionais.
 
 ### <a name="build-the-native-library"></a>Criar a biblioteca nativa
 
-A primeira etapa é ter uma estrutura Swift nativa pronta com o cabeçalho Objective-C criado. Esse arquivo é um cabeçalho gerado automaticamente que expõe as classes, métodos e campos Swift desejados, tornando-os acessíveis para o Objective-C e, por fim C# , por meio de uma biblioteca de associação do Xamarin. Esse arquivo está localizado na estrutura sob o seguinte caminho: **\<FrameworkName >. Framework/Headers/\<FrameworkName >-Swift. h**. Se a interface exposta tiver todos os membros necessários, você poderá pular para a próxima etapa. Caso contrário, serão necessárias mais etapas para expor esses membros. A abordagem dependerá se você tem acesso ao código-fonte do Swift Framework:
+A primeira etapa é ter uma estrutura Swift nativa pronta com o cabeçalho Objective-C criado. Esse arquivo é um cabeçalho gerado automaticamente que expõe as classes, métodos e campos Swift desejados, tornando-os acessíveis para o Objective-C e, por fim, C# por meio de uma biblioteca de associação do Xamarin. Esse arquivo está localizado na estrutura sob o seguinte caminho: ** \<FrameworkName> . Framework/Headers/ \<FrameworkName> -Swift. h**. Se a interface exposta tiver todos os membros necessários, você poderá pular para a próxima etapa. Caso contrário, serão necessárias mais etapas para expor esses membros. A abordagem dependerá se você tem acesso ao código-fonte do Swift Framework:
 
-- Se você tiver acesso ao código, poderá decorar os membros Swift necessários com o atributo `@objc` e aplicar algumas regras adicionais para permitir que as ferramentas de Build do Xcode saibam que esses membros devem ser expostos ao mundo Objective-C e ao cabeçalho.
-- Se você não tiver o acesso ao código-fonte, será necessário criar um proxy Swift Framework, que encapsula a estrutura Swift original e define a interface pública exigida pelo seu aplicativo usando o atributo `@objc`.
+- Se você tiver acesso ao código, poderá decorar os membros Swift necessários com o `@objc` atributo e aplicar algumas regras adicionais para permitir que as ferramentas de Build do Xcode saibam que esses membros devem ser expostos ao mundo Objective-C e ao cabeçalho.
+- Se você não tiver o acesso ao código-fonte, será necessário criar um proxy Swift Framework, que encapsula a estrutura Swift original e define a interface pública exigida pelo seu aplicativo usando o `@objc` atributo.
 
 ### <a name="prepare-the-xamarin-metadata"></a>Preparar os metadados do Xamarin
 
-A segunda etapa é preparar as interfaces de definição de API, que são usadas por um projeto de C# Associação para gerar classes. Essas definições podem ser criadas manualmente ou automaticamente pela ferramenta de [nitidez do objetivo](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) e pelo arquivo de cabeçalho gerado automaticamente **\<FrameworkName >-Swift. h** . Depois que os metadados são gerados, eles devem ser verificados e validados manualmente.
+A segunda etapa é preparar as interfaces de definição de API, que são usadas por um projeto de associação para gerar classes C#. Essas definições podem ser criadas manualmente ou automaticamente pela ferramenta de [nitidez do objetivo](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) e pelo arquivo de cabeçalho AutoGenerated ** \<FrameworkName> -Swift. h** mencionado anteriormente. Depois que os metadados são gerados, eles devem ser verificados e validados manualmente.
 
 ### <a name="build-the-xamarinios-binding-library"></a>Compilar a biblioteca de associação do Xamarin. iOS
 

@@ -7,14 +7,17 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 328633bc58f17216c071a2b2cd779704da2bbf74
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: c36159984f314ecbf90f98df6472eee2149eee92
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569407"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853164"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Walkthrough: associando uma biblioteca de Objective do iOS-C
+
+> [!IMPORTANT]
+> No momento, estamos investigando o uso de associação personalizada na plataforma Xamarin. Faça [**esta pesquisa**](https://www.surveymonkey.com/r/KKBHNLT) para informar os futuros esforços de desenvolvimento.
 
 _Este artigo fornece uma explicação prática de como criar uma associação do Xamarin. iOS para uma biblioteca Objective-C existente, InfColorPicker. Ele aborda tópicos como a compilação de uma biblioteca Objective-C estática, sua associação e o uso da associação em um aplicativo Xamarin. iOS._
 
@@ -274,7 +277,7 @@ A solução será criada e dois arquivos padrão serão incluídos:
 
 1. No menu **arquivo** , selecione **novo**  >  **projeto...**:
 
-    ![Iniciando um novo projeto](walkthrough-images/bind01vs.png "Iniciando um novo projeto")
+    ![Criar um projeto](walkthrough-images/bind01vs.png "Criar um projeto")
 
 1. Na caixa de diálogo novo projeto, selecione **Visual C# > iPhone & iPad > biblioteca de associações do IOS (Xamarin)**:
 
@@ -717,7 +720,7 @@ Execute o aplicativo. Agora ele deve se comportar exatamente como fazia antes, m
 
 Este artigo descreveu o processo de criação e uso de um projeto de associação do Xamarin. iOS. Primeiro, discutimos como compilar uma biblioteca Objective-C existente em uma biblioteca estática. Em seguida, abordamos como criar um projeto de associação Xamarin. iOS e como usar a nitidez objetiva para gerar as definições de API para a biblioteca Objective-C. Discutimos como atualizar e ajustar as definições de API geradas para torná-las adequadas para o consumo público. Após a conclusão do projeto de associação do Xamarin. iOS, passamos para o consumo de associação em um aplicativo Xamarin. iOS, com foco no uso de delegados fortes e de delegados fracos.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Associação de bibliotecas Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [Detalhes da Associação](~/cross-platform/macios/binding/overview.md)

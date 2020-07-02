@@ -7,14 +7,17 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/09/2018
-ms.openlocfilehash: 2a88888b2306589930ad6386fb69bbd3b48924b7
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 5439e213c0016ea01935d617f5f6b5a3edf3eee8
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571370"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853009"
 ---
 # <a name="java-bindings-metadata"></a>Metadados de associações de Java
+
+> [!IMPORTANT]
+> No momento, estamos investigando o uso de associação personalizada na plataforma Xamarin. Faça [**esta pesquisa**](https://www.surveymonkey.com/r/KKBHNLT) para informar os futuros esforços de desenvolvimento.
 
 _O código C# no Xamarin. Android chama bibliotecas Java por meio de associações, que são um mecanismo que abstrai os detalhes de baixo nível especificados na interface nativa Java (JNI). O Xamarin. Android fornece uma ferramenta que gera essas associações. Essas ferramentas permitem que o desenvolvedor controle como uma associação é criada usando metadados, que permite procedimentos como a modificação de namespaces e a renomeação de membros. Este documento discute como os metadados funcionam, resume os atributos aos quais os metadados dão suporte e explica como resolver problemas de ligação modificando esses metadados._
 
@@ -22,10 +25,10 @@ _O código C# no Xamarin. Android chama bibliotecas Java por meio de associaçõ
 
 Uma **biblioteca de associação Java** do Xamarin. Android tenta automatizar grande parte do trabalho necessário para associar uma biblioteca Android existente com a ajuda de uma ferramenta, às vezes conhecida como o _gerador de associações_. Ao associar uma biblioteca Java, o Xamarin. Android inspecionará as classes Java e gerará uma lista de todos os pacotes, tipos e membros que serão associados. Essa lista de APIs é armazenada em um arquivo XML que pode ser encontrado no ** \{ diretório do projeto} \obj\Release\api.xml** para uma compilação de **versão** e no ** \{ diretório do projeto} \obj\Debug\api.xml** para uma compilação de **depuração** .
 
-![Local do arquivo API. xml na pasta obj/Debug](java-bindings-metadata-images/java-bindings-metadata-01.png)
+![Local do arquivo de api.xml na pasta obj/Debug](java-bindings-metadata-images/java-bindings-metadata-01.png)
 
-O gerador de associações usará o arquivo **API. xml** como uma diretriz para gerar as classes de wrapper C# necessárias. O conteúdo desse arquivo XML é uma variação do formato de projeto de software livre _Android_ do Google.
-O trecho a seguir é um exemplo do conteúdo de **API. xml**:
+O gerador de associações usará o arquivo de **api.xml** como uma diretriz para gerar as classes de wrapper C# necessárias. O conteúdo desse arquivo XML é uma variação do formato de projeto de software livre _Android_ do Google.
+O trecho a seguir é um exemplo do conteúdo de **api.xml**:
 
 ```xml
 <api>
@@ -45,22 +48,22 @@ O trecho a seguir é um exemplo do conteúdo de **API. xml**:
 </api>
 ```
 
-Neste exemplo, o **API. xml** declara uma classe no `android` pacote chamado `Manifest` que estende o `java.lang.Object` .
+Neste exemplo, **api.xml** declara uma classe no `android` pacote chamado `Manifest` que estende o `java.lang.Object` .
 
 Em muitos casos, a assistência humana é necessária para fazer com que a API Java sinta mais ".NET como" ou corrija problemas que impeçam o assembly de associação de compilação. Por exemplo, pode ser necessário alterar nomes de pacote Java para namespaces do .NET, renomear uma classe ou alterar o tipo de retorno de um método.
 
-Essas alterações não são obtidas modificando o **API. xml** diretamente.
+Essas alterações não são realizadas com a modificação de **api.xml** diretamente.
 Em vez disso, as alterações são registradas em arquivos XML especiais fornecidos pelo modelo de biblioteca de associação Java. Ao compilar o assembly de associação do Xamarin. Android, o gerador de associações será influenciado por esses arquivos de mapeamento ao criar o assembly de associação
 
 Esses arquivos de mapeamento XML podem ser encontrados na pasta **transformações** do projeto:
 
-- O **Metadata. xml** &ndash; permite que as alterações sejam feitas na API final, como alterar o namespace da Associação gerada. 
+- **MetaData.xml** &ndash; Permite que as alterações sejam feitas na API final, como alterar o namespace da Associação gerada. 
 
-- **EnumFields. xml** &ndash; contém o mapeamento entre as `int` constantes Java e o C# `enums` . 
+- **EnumFields.xml** &ndash; Contém o mapeamento entre as `int` constantes Java e o C# `enums` . 
 
-- O **EnumMethods. xml** &ndash; permite alterar os parâmetros do método e retornar os tipos de `int` constantes Java para C# `enums` . 
+- **EnumMethods.xml** &ndash; Permite alterar os parâmetros do método e retornar tipos de `int` constantes Java para C# `enums` . 
 
-O arquivo **Metadata. xml** é a mais importação desses arquivos, pois permite alterações de uso geral na associação, como:
+O arquivo de **MetaData.xml** é a mais importação desses arquivos, pois permite alterações de uso geral na associação, como:
 
 - Renomeando namespaces, classes, métodos ou campos para que sigam as convenções .NET. 
 
@@ -70,18 +73,18 @@ O arquivo **Metadata. xml** é a mais importação desses arquivos, pois permite
 
 - Adicionar classes de suporte adicionais para fazer o design da Associação seguir os padrões do .NET Framework. 
 
-Permite passar para discutir **Metadata. xml** mais detalhadamente.
+Vamos continuar a discutir **Metadata.xml** mais detalhadamente.
 
-## <a name="metadataxml-transform-file"></a>Arquivo de transformação Metadata. xml
+## <a name="metadataxml-transform-file"></a>Metadata.xml arquivo de transformação
 
-Como já aprendimos, o arquivo **Metadata. xml** é usado pelo gerador de associações para influenciar a criação do assembly de associação.
+Como já aprendimos, o arquivo **Metadata.xml** é usado pelo gerador de associações para influenciar a criação do assembly de associação.
 O formato de metadados usa a sintaxe [XPath](https://www.w3.org/TR/xpath/) e é quase idêntico aos *metadados GAPI* descritos no guia de [metadados do GAPI](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) . Essa implementação é quase uma implementação completa do XPath 1,0 e, portanto, dá suporte a itens no padrão 1,0. Esse arquivo é um poderoso mecanismo baseado em XPath para alterar, adicionar, ocultar ou mover qualquer elemento ou atributo no arquivo de API. Todos os elementos de regra na especificação de metadados incluem um atributo de caminho para identificar o nó ao qual a regra deve ser aplicada. As regras são aplicadas na seguinte ordem:
 
 - **adicionar nó** &ndash; Anexa um nó filho ao nó especificado pelo atributo Path.
 - **attr** &ndash; Define o valor de um atributo do elemento especificado pelo atributo Path.
 - **remover nó** &ndash; Remove os nós que correspondem a um XPath especificado.
 
-Veja a seguir um exemplo de um arquivo **Metadata. xml** :
+Veja a seguir um exemplo de um arquivo de **Metadata.xml** :
 
 ```xml
 <metadata>
@@ -111,7 +114,7 @@ Veja a seguir uma lista de alguns dos elementos XPath usados com mais frequênci
 
 ### <a name="adding-types"></a>Adicionando tipos
 
-O `add-node` elemento informará ao projeto de associação Xamarin. Android para adicionar uma nova classe wrapper a **API. xml**. Por exemplo, o trecho a seguir direcionará o gerador de associação para criar uma classe com um construtor e um único campo:
+O `add-node` elemento informará ao projeto de associação Xamarin. Android para adicionar uma nova classe de wrapper a **api.xml**. Por exemplo, o trecho a seguir direcionará o gerador de associação para criar uma classe com um construtor e um único campo:
 
 ```xml
 <add-node path="/api/package[@name='org.alljoyn.bus']">
@@ -124,7 +127,7 @@ O `add-node` elemento informará ao projeto de associação Xamarin. Android par
 
 ### <a name="removing-types"></a>Removendo tipos
 
-É possível instruir o gerador de associações do Xamarin. Android para ignorar um tipo Java e não associá-lo. Isso é feito adicionando um `remove-node` elemento XML ao arquivo **Metadata. xml** :
+É possível instruir o gerador de associações do Xamarin. Android para ignorar um tipo Java e não associá-lo. Isso é feito adicionando um `remove-node` elemento XML ao arquivo de **metadata.xml** :
 
 ```xml
 <remove-node path="/api/package[@name='{package_name}']/class[@name='{name}']" />
@@ -132,10 +135,10 @@ O `add-node` elemento informará ao projeto de associação Xamarin. Android par
 
 ### <a name="renaming-members"></a>Renomeando Membros
 
-A renomeação de membros não pode ser feita editando diretamente o arquivo **API. xml** , pois o Xamarin. Android requer os nomes de JNI (interface nativa do Java) originais. Portanto, o `//class/@name` atributo não pode ser alterado; se for, a associação não funcionará.
+A renomeação de membros não pode ser feita editando diretamente o arquivo de **api.xml** porque o Xamarin. Android requer os nomes de JNI (interface nativa do Java) originais. Portanto, o `//class/@name` atributo não pode ser alterado; se for, a associação não funcionará.
 
 Considere o caso em que desejamos renomear um tipo, `android.Manifest` .
-Para fazer isso, podemos tentar editar o **API. xml** diretamente e renomear a classe da seguinte forma:
+Para fazer isso, podemos tentar editar diretamente **api.xml** e renomear a classe da seguinte forma:
 
 ```xml
 <attr path="/api/package[@name='android']/class[@name='Manifest']" 
@@ -293,13 +296,13 @@ Esse atributo é usado para alterar a visibilidade de uma classe, método ou pro
 <attr path="/api/package[@name='namespace']/class[@name='ClassName']/method[@name='MethodName']" name="visibility">public</attr>
 ```
 
-## <a name="enumfieldsxml-and-enummethodsxml"></a>EnumFields. xml e EnumMethods. xml
+## <a name="enumfieldsxml-and-enummethodsxml"></a>EnumFields.xml e EnumMethods.xml
 
-Há casos em que as bibliotecas do Android usam constantes inteiras para representar Estados que são passados para propriedades ou métodos das bibliotecas. Em muitos casos, é útil associar essas constantes de inteiro a enums em C#. Para facilitar esse mapeamento, use os arquivos **EnumFields. xml** e **EnumMethods. xml** em seu projeto de associação. 
+Há casos em que as bibliotecas do Android usam constantes inteiras para representar Estados que são passados para propriedades ou métodos das bibliotecas. Em muitos casos, é útil associar essas constantes de inteiro a enums em C#. Para facilitar esse mapeamento, use os arquivos de **EnumFields.xml** e **EnumMethods.xml** em seu projeto de associação. 
 
-### <a name="defining-an-enum-using-enumfieldsxml"></a>Definindo uma enumeração usando EnumFields. xml
+### <a name="defining-an-enum-using-enumfieldsxml"></a>Definindo uma enumeração usando EnumFields.xml
 
-O arquivo **EnumFields. xml** contém o mapeamento entre as `int` constantes Java e o C# `enums` . Vamos pegar o exemplo a seguir de um enum C# que está sendo criado para um conjunto de `int` constantes: 
+O arquivo de **EnumFields.xml** contém o mapeamento entre as `int` constantes Java e o C# `enums` . Vamos pegar o exemplo a seguir de um enum C# que está sendo criado para um conjunto de `int` constantes: 
 
 ```xml 
 <mapping jni-class="com/skobbler/ngx/map/realreach/SKRealReachSettings" clr-enum-type="Skobbler.Ngx.Map.RealReach.SKMeasurementUnit">
@@ -311,11 +314,11 @@ O arquivo **EnumFields. xml** contém o mapeamento entre as `int` constantes Jav
 
 Aqui, tiramos a classe Java `SKRealReachSettings` e definimos uma enumeração C# chamada `SKMeasurementUnit` no namespace `Skobbler.Ngx.Map.RealReach` . As `field` entradas definem o nome da constante Java (exemplo `UNIT_SECOND` ), o nome da entrada de enumeração (exemplo `Second` ) e o valor inteiro representado por ambas as entidades (exemplo `0` ). 
 
-### <a name="defining-gettersetter-methods-using-enummethodsxml"></a>Definindo métodos getter/setter usando EnumMethods. xml
+### <a name="defining-gettersetter-methods-using-enummethodsxml"></a>Definindo métodos getter/setter usando EnumMethods.xml
 
-O arquivo **EnumMethods. xml** permite alterar os parâmetros do método e retornar tipos de `int` constantes Java para C# `enums` . Em outras palavras, ele mapeia a leitura e a gravação de enumerações C# (definidas no arquivo **EnumFields. xml** ) para `int` constantes `get` e métodos Java `set` .
+O arquivo **EnumMethods.xml** permite alterar os parâmetros do método e retornar tipos de `int` constantes Java para C# `enums` . Em outras palavras, ele mapeia a leitura e a gravação de enumerações C# (definidas no arquivo **EnumFields.xml** ) para `int` constantes `get` e métodos Java `set` .
 
-Dada a `SKRealReachSettings` Enumeração definida acima, o seguinte arquivo **EnumMethods. xml** definiria o getter/setter para esta enumeração:
+Considerando a `SKRealReachSettings` Enumeração definida acima, o arquivo de **EnumMethods.xml** a seguir definirá o getter/setter para esta enumeração:
 
 ```xml
 <mapping jni-class="com/skobbler/ngx/map/realreach/SKRealReachSettings">
@@ -334,9 +337,9 @@ realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 
 ## <a name="summary"></a>Resumo
 
-Este artigo abordou como o Xamarin. Android usa metadados para transformar uma definição de API do formato *Google* *AOSP*. Depois de abranger as alterações que são possíveis usando *Metadata. xml*, ele examinou as limitações encontradas ao renomear Membros e apresentou a lista de atributos XML com suporte, descrevendo quando cada atributo deve ser usado.
+Este artigo abordou como o Xamarin. Android usa metadados para transformar uma definição de API do formato *Google* *AOSP*. Depois de abranger as alterações que são possíveis usando *Metadata.xml*, ele examinou as limitações encontradas ao renomear os membros e apresentou a lista de atributos XML com suporte, descrevendo quando cada atributo deve ser usado.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Trabalhando com JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Associação de uma biblioteca Java](~/android/platform/binding-java-library/index.md)

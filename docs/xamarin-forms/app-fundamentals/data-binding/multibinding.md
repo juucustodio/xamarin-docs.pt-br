@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/18/2020
-ms.openlocfilehash: dfe6da8a76b447bf0c2a6c0a3bea9823e498d5e4
-ms.sourcegitcommit: 8a18471b3d96f3f726b66f9bc50a829f1c122f29
+ms.openlocfilehash: 0aafe01fcbde6cf1aacf3e2dd47444d4b77021e2
+ms.sourcegitcommit: 79ba3deb031c8a60d0841bb3dbeaaf65daf2b224
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84988187"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85846381"
 ---
 # <a name="xamarinforms-multi-bindings"></a>Várias associações do Xamarin. Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 As várias associações fornecem a capacidade de anexar uma coleção de [`Binding`](xref:Xamarin.Forms.Binding) objetos a uma única propriedade de destino de associação. Eles são criados com a `MultiBinding` classe, que avalia todos os seus `Binding` objetos e retorna um único valor por meio de uma `IMultiValueConverter` instância fornecida pelo seu aplicativo. Além disso, `MultiBinding` o reavalia todos os seus `Binding` objetos quando qualquer um dos dados ligados é alterado.
 
@@ -44,7 +44,7 @@ O valor da `Mode` propriedade determina a funcionalidade do `MultiBinding` e é 
 
 ## <a name="define-a-imultivalueconverter"></a>Definir um IMultiValueConverter
 
-A `IMultiValueConverter` interface permite que a lógica personalizada seja aplicada a um `MultiBinding` . Para associar um conversor a um `MultiBinding` , crie uma classe que implemente a interface e, `IValueConverter` em seguida, implemente os `Convert` `ConvertBack` métodos e:
+A `IMultiValueConverter` interface permite que a lógica personalizada seja aplicada a um `MultiBinding` . Para associar um conversor a um `MultiBinding` , crie uma classe que implemente a interface e, `IMultiValueConverter` em seguida, implemente os `Convert` `ConvertBack` métodos e:
 
 ```csharp
 public class AllTrueMultiConverter : IMultiValueConverter

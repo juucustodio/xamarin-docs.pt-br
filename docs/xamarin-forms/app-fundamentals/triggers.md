@@ -10,16 +10,16 @@ ms.date: 04/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f92ad47ae883f4b1b413ae5192a9add83045bb77
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a287ff28ab62fcfcc00c88858cf3595ba2fa5118
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136949"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853144"
 ---
 # <a name="xamarinforms-triggers"></a>Xamarin.FormsGatilhos
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 
 Os gatilhos permitem expressar ações declarativamente em XAML que alteram a aparência dos controles com base em eventos ou alterações de propriedade. Além disso, os gatilhos de estado, que são um grupo especializado de gatilhos, definem quando um [`VisualState`](xref:Xamarin.Forms.VisualState) deve ser aplicado.
 
@@ -319,11 +319,7 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
 
 ## <a name="state-triggers"></a>Gatilhos de estado
 
-Os gatilhos de estado foram introduzidos em Xamarin.Forms 4,5 e são um grupo especializado de gatilhos que definem as condições sob as quais um [`VisualState`](xref:Xamarin.Forms.VisualState) deve ser aplicado. No entanto, eles são experimentais no momento e só podem ser usados adicionando a seguinte linha de código ao arquivo *app.XAML.cs* :
-
-```csharp
-Device.SetFlags(new string[]{ "StateTriggers_Experimental" });
-```
+Os gatilhos de estado são um grupo especializado de gatilhos que definem as condições sob as quais um [`VisualState`](xref:Xamarin.Forms.VisualState) deve ser aplicado. 
 
 Os gatilhos de estado são adicionados à [`StateTriggers`](xref:Xamarin.Forms.VisualState.StateTriggers) coleção de um [`VisualState`](xref:Xamarin.Forms.VisualState) . Essa coleção pode conter um único gatilho de estado ou vários gatilhos de estado. Um [`VisualState`](xref:Xamarin.Forms.VisualState) será aplicado quando qualquer gatilho de estado na coleção estiver ativo.
 

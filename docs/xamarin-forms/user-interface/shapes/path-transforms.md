@@ -6,16 +6,16 @@ ms.assetid: 07DE3D66-1820-4642-BDDF-84146D40C99D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/16/2020
+ms.date: 07/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 554a9dd0ca8be54c35d1891b60149bbbb66c3e7c
-ms.sourcegitcommit: 91b4d2f93687fadec5c3f80aadc8f7298d911624
+ms.openlocfilehash: 41de95c452212dce77d6365265e4813170c9b9b9
+ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85795000"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853044"
 ---
 # <a name="xamarinforms-shapes-path-transforms"></a>Xamarin.FormsFormas: transformações de caminho
 
@@ -23,22 +23,9 @@ ms.locfileid: "85795000"
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
-Um `Transform` define como transformar um `Path` objeto de um espaço de coordenadas em outro espaço de coordenadas. Esse mapeamento é descrito por uma transformação `Matrix` , que é uma coleção de três linhas com três colunas de `double` valores.
+Um `Transform` define como transformar um `Path` objeto de um espaço de coordenadas em outro espaço de coordenadas. Quando uma transformação é aplicada a um `Path` objeto, ela altera como o objeto é renderizado na interface do usuário.
 
-Uma matriz 3x3 é usada para transformações em um plano 2D x-y. As matrizes de transformação afim podem ser multiplicadas para formar qualquer número de transformações lineares, como rotação e distorção, seguida por tradução. A tabela a seguir mostra a estrutura de uma Xamarin.Forms matriz:
-
-| | | |
-|---------|---------|-----|
-| M11     | M12     | 0,0 |
-| M21     | M22     | 0,0 |
-| OffsetX | OffsetY | 1.0 |
-
-Ao manipular valores de matriz, você pode girar, dimensionar, inclinar e converter `Path` objetos. Por exemplo, se você alterar o `OffsetX` valor para 100, poderá usá-lo mover um `Path` objeto 100 unidades independentes de dispositivo ao longo do eixo x. Se você alterar o `M22` valor para 3, poderá usá-lo para alongar um `Path` objeto para três vezes sua altura atual. Se você alterar os dois valores, moverá o `Path` objeto 100 unidades independentes de dispositivo ao longo do eixo x e ampliará sua altura por um fator de 3.
-
-> [!NOTE]
-> Uma matriz de transformação afim tem sua coluna final igual a (0, 0, 1), portanto, somente os membros nas duas primeiras colunas precisam ser especificados. Os membros na linha final `OffsetX` e `OffsetY` representam valores de tradução.
-
-Embora você possa usar uma `Matrix` estrutura diretamente para traduzir pontos individuais, Xamarin.Forms o também fornece as seguintes classes que permitem transformar `Path` objetos sem trabalhar diretamente com matrizes:
+As transformações podem ser categorizadas em quatro classificações gerais: rotação, dimensionamento, distorção e tradução. Xamarin.Formsdefine uma classe para cada uma dessas classificações de transformação:
 
 - `RotateTransform`, que gira um `Path` por um especificado `Angle` .
 - `ScaleTransform`, que dimensiona um `Path` objeto por especificado `ScaleX` e por `ScaleY` valores.
@@ -47,11 +34,11 @@ Embora você possa usar uma `Matrix` estrutura diretamente para traduzir pontos 
 
 Xamarin.Formstambém fornece as seguintes classes para criar transformações mais complexas:
 
-- `TransformGroup`, que representa uma composição `Transform` composta de outros `Transform` objetos.
-- `CompositeTransform`, que representa uma composição `Transform` composta de outros `Transform` objetos.
-- `MatrixTransform`, que cria transformações personalizadas que não são fornecidas pelas outras `Transform` classes.
+- `TransformGroup`, que representa uma transformação composta composta por vários objetos de transformação.
+- `CompositeTransform`, que aplica várias operações de transformação a um `Path` objeto.
+- `MatrixTransform`, que cria transformações personalizadas que não são fornecidas pelas outras classes de transformação.
 
-Todas essas classes derivam da `Transform` classe, que define uma `Value` Propriedade do tipo `Matrix` . Essa propriedade representa a transformação atual como um `Matrix` objeto.
+Todas essas classes derivam da `Transform` classe, que define uma `Value` Propriedade do tipo `Matrix` . Essa propriedade representa a transformação atual como um `Matrix` objeto. Para obter mais informações sobre a `Matrix` estrutura, consulte [transformar matriz](#transform-matrix).
 
 Para aplicar uma transformação a um `Path` , crie uma classe de transformação e defina-a como o valor da `Path.RenderTransform` propriedade.
 
@@ -125,13 +112,13 @@ O exemplo a seguir mostra como dimensionar um `Path` objeto:
     <Path.RenderTransform>
         <ScaleTransform CenterX="0"
                         CenterY="0"
-                        ScaleX="2"
-                        ScaleY="2" />
+                        ScaleX="1.5"
+                        ScaleY="1.5" />
     </Path.RenderTransform>
 </Path>
 ```
 
-Neste exemplo, o `Path` objeto é dimensionado para dobrar o tamanho.
+Neste exemplo, o `Path` objeto é dimensionado para 1,5 vezes o tamanho.
 
 ## <a name="skew-transform"></a>Transformação de distorção
 
@@ -148,7 +135,8 @@ Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.Bin
 
 Para prever o efeito de uma transformação de distorção, considere que o `AngleX` distorce valores do eixo x em relação ao sistema de coordenadas original. Portanto, para um `AngleX` de 30, o eixo y gira 30 graus pela origem e distorce os valores em x por 30 graus dessa origem. Da mesma forma, um `AngleY` de 30 inclina os valores y do `Path` objeto por 30 graus da origem.
 
-Para distorcer um `Path` objeto no local, defina as `CenterX` `CenterY` Propriedades e como o ponto central do objeto.
+> [!NOTE]
+> Para distorcer um `Path` objeto no local, defina as `CenterX` `CenterY` Propriedades e como o ponto central do objeto.
 
 O exemplo a seguir mostra como distorcer um `Path` objeto:
 
@@ -201,7 +189,7 @@ O exemplo a seguir mostra como converter um `Path` objeto:
 
 Neste exemplo, o `Path` objeto é movido 50 unidades independentes do dispositivo para a direita e 50 as unidades independentes do dispositivo.
 
-## <a name="apply-multiple-transforms"></a>Aplicar várias transformações
+## <a name="multiple-transforms"></a>Várias transformações
 
 Xamarin.Formstem duas classes que dão suporte à aplicação de várias transformações em um `Path` objeto. São eles `TransformGroup` , e `CompositeTransform` . Um `TransformGroup` executa transformações em qualquer ordem desejada, enquanto um `CompositeTransform` executa transformações em uma ordem específica.
 
@@ -209,11 +197,7 @@ Xamarin.Formstem duas classes que dão suporte à aplicação de várias transfo
 
 Grupos de transformação representam transformações compostas compostas de vários `Transform` objetos.
 
-A `TransformGroup` classe, que deriva da `Transform` classe, define as seguintes propriedades:
-
-- `Children`, do tipo `TransformCollection` , que representa uma coleção de `Transform` objetos.
-
-Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que eles podem ser destinos de associações de dados e com estilo.
+A `TransformGroup` classe, que deriva da `Transform` classe, define uma `Children` propriedade, do tipo `TransformCollection` , que representa uma coleção de `Transform` objetos. Essa propriedade é apoiada por um [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto, o que significa que ele pode ser o destino de associações de dados e com estilo.
 
 A ordem das transformações é importante em uma transformação composta que usa a `TransformGroup` classe. Por exemplo, girar, ajustar a escala e mover terá um resultado diferente de mover, girar e ajustar a escala. Uma ordem de motivo é significativa é que as transformações como rotação e dimensionamento são executadas em relação à origem do sistema de coordenadas. Dimensionar um objeto que é centralizado na origem produz um resultado diferente para dimensionar um objeto que foi movido para fora da origem. Da mesma forma, girar um objeto centralizado na origem produz um resultado diferente de girar um objeto movido para fora da origem.
 
@@ -228,14 +212,15 @@ O exemplo a seguir mostra como executar uma transformação composta usando a `T
       Data="M13.908992,16.207977L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983z">
     <Path.RenderTransform>
         <TransformGroup>
-            <ScaleTransform ScaleY="2" />
+            <ScaleTransform ScaleX="1.5"
+                            ScaleY="1.5" />
             <RotateTransform Angle="45" />
         </TransformGroup>
     </Path.RenderTransform>
 </Path>
 ```
 
-Neste exemplo, o `Path` objeto é dimensionado para duas vezes seu tamanho e girado por 45 graus.
+Neste exemplo, o `Path` objeto é dimensionado para 1,5 vezes seu tamanho e, em seguida, girado por 45 graus.
 
 ## <a name="composite-transforms"></a>Transformações de composição
 
@@ -277,8 +262,8 @@ O exemplo a seguir mostra como executar uma transformação composta usando a `C
       WidthRequest="100"
       Data="M13.908992,16.207977L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983z">
     <Path.RenderTransform>
-        <CompositeTransform ScaleX="2"
-                            ScaleY="2"
+        <CompositeTransform ScaleX="1.5"
+                            ScaleY="1.5"
                             Rotation="45"
                             TranslateX="50"
                             TranslateY="50" />
@@ -286,19 +271,47 @@ O exemplo a seguir mostra como executar uma transformação composta usando a `C
 </Path>
 ```
 
-Neste exemplo, o `Path` objeto é dimensionado para duas vezes seu tamanho, girado por 45 graus e traduzido por 50 unidades independentes de dispositivo.
+Neste exemplo, o `Path` objeto é dimensionado para 1,5 vezes seu tamanho, girado por 45 graus e, em seguida, traduzido por 50 unidades independentes de dispositivo.
+
+## <a name="transform-matrix"></a>Transformar matriz
+
+Uma transformação pode ser descrita em termos de matriz de transformação afim de 3x3, que executa transformações em espaço 2D. Essa matriz 3x3 é representada pela `Matrix` struct, que é uma coleção de três linhas e três colunas de `double` valores.
+
+A `Matrix` estrutura define as seguintes propriedades:
+
+- `Determinant`, do tipo `double` , que obtém o determinante da matriz.
+- `HasInverse`, do tipo `bool` , que indica se a matriz é invertível.
+- `Identity`, do tipo `Matrix` , que obtém uma matriz de identidade.
+- `HasIdentity`, do tipo `bool` , que indica se a matriz é uma matriz de identidade.
+- `M11`, do tipo `double` , que representa o valor da primeira linha e a primeira coluna da matriz.
+- `M12`, do tipo `double` , que representa o valor da primeira linha e segunda coluna da matriz.
+- `M21`, do tipo `double` , que representa o valor da segunda linha e a primeira coluna da matriz.
+- `M22`, do tipo `double` , que representa o valor da segunda linha e segunda coluna da matriz.
+- `OffsetX`, do tipo `double` , que representa o valor da terceira linha e da primeira coluna da matriz.
+- `OffsetY`, do tipo `double` , que representa o valor da terceira linha e segunda coluna da matriz.
+
+As `OffsetX` `OffsetY` Propriedades e são tão nomeadas porque especificam o valor para converter o espaço de coordenadas ao longo do eixo x e eixo y, respectivamente.
+
+Além disso, a `Matrix` estrutura expõe uma série de métodos que podem ser usados para manipular os valores de matriz, `Append` incluindo `Invert` , `Multiply` , `Prepend` e muitos outros.
+
+A tabela a seguir mostra a estrutura de uma Xamarin.Forms matriz:
+
+| | | |
+|---------|---------|-----|
+| M11     | M12     | 0,0 |
+| M21     | M22     | 0,0 |
+| OffsetX | OffsetY | 1.0 |
+
+> [!NOTE]
+> Uma matriz de transformação afim tem sua coluna final igual a (0, 0, 1), portanto, somente os membros nas duas primeiras colunas precisam ser especificados.
+
+Ao manipular valores de matriz, você pode girar, dimensionar, inclinar e converter `Path` objetos. Por exemplo, se você alterar o `OffsetX` valor para 100, poderá usá-lo mover um `Path` objeto 100 unidades independentes de dispositivo ao longo do eixo x. Se você alterar o `M22` valor para 3, poderá usá-lo para alongar um `Path` objeto para três vezes sua altura atual. Se você alterar os dois valores, moverá o `Path` objeto 100 unidades independentes de dispositivo ao longo do eixo x e ampliará sua altura por um fator de 3. Além disso, as matrizes de transformação afim podem ser multiplicadas para formar qualquer número de transformações lineares, como rotação e distorção, seguida de tradução.
 
 ## <a name="custom-transforms"></a>Transformações personalizadas
 
-Uma transformação de matriz manipula objetos ou coordena sistemas em um plano 2D, usando uma matriz afim. Uma matriz 3x3 é usada para transformações. Você pode multiplicar as transformações de matriz de afinidade para formar transformações lineares, como rotação e distorção que são seguidas pela tradução.
+A `MatrixTransform` classe, que deriva da `Transform` classe, define uma `Matrix` propriedade, do tipo `Matrix` , que representa a matriz que define a transformação. Essa propriedade é apoiada por um [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto, o que significa que ele pode ser o destino de associações de dados e com estilo.
 
-A `MatrixTransform` classe, que deriva da `Transform` classe, define as seguintes propriedades:
-
-- `Matrix`, do tipo `Matrix` , que representa a matriz que define a transformação.
-
-Essas propriedades são apoiadas por um [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto, o que significa que ele pode ser destinos de associações de dados e com estilo.
-
-A `MatrixTransform` classe é usada para criar uma transformação personalizada que não é fornecida `RotateTransform` pelas `ScaleTransform` classes,, `SkewTransform` ou `TranslateTransform` .
+Qualquer transformação que você possa descrever com um `TranslateTransform` `ScaleTransform` objeto,, `RotateTransform` ou `SkewTransform` pode ser descrita igualmente por um `MatrixTransform` . No entanto, as `TranslateTransform` `ScaleTransform` classes,, `RotateTransform` e `SkewTransform` são mais fáceis de conceituar do que definir os componentes de vetor em um `Matrix` . Portanto, a `MatrixTransform` classe é normalmente usada para criar transformações personalizadas que não são fornecidas pelas `RotateTransform` `ScaleTransform` classes,, `SkewTransform` ou `TranslateTransform` .
 
 O exemplo a seguir mostra como transformar um `Path` objeto usando um `MatrixTransform` :
 
@@ -306,8 +319,6 @@ O exemplo a seguir mostra como transformar um `Path` objeto usando um `MatrixTra
 <Path Stroke="Black"
       Aspect="Uniform"
       HorizontalOptions="Center"
-      HeightRequest="100"
-      WidthRequest="100"
       Data="M13.908992,16.207977L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983z">
     <Path.RenderTransform>
         <MatrixTransform>
@@ -315,8 +326,8 @@ O exemplo a seguir mostra como transformar um `Path` objeto usando um `MatrixTra
                 <!-- M11 stretches, M12 skews -->
                 <Matrix OffsetX="10"
                         OffsetY="100"
-                        M11="3"
-                        M12="2" />
+                        M11="1.5"
+                        M12="1" />
             </MatrixTransform.Matrix>
         </MatrixTransform>
     </Path.RenderTransform>
@@ -325,22 +336,30 @@ O exemplo a seguir mostra como transformar um `Path` objeto usando um `MatrixTra
 
 Neste exemplo, o `Path` objeto é alongado, inclinado e deslocado nas dimensões X e Y.
 
-Como alternativa, isso pode ser escrito em um formato simplificado que usa um conversor de tipo que é incorporado em Xamarin.Forms :
+Como alternativa, isso pode ser escrito em um formulário simplificado que usa um conversor de tipo interno do Xamarin.Forms :
 
 ```xaml
 <Path Stroke="Black"
       Aspect="Uniform"
       HorizontalOptions="Center"
-      HeightRequest="100"
-      WidthRequest="100"
       Data="M13.908992,16.207977L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983z">
     <Path.RenderTransform>
-        <MatrixTransform Matrix="3,2,0,1,10,100" />
+        <MatrixTransform Matrix="1.5,1,0,1,10,100" />
     </Path.RenderTransform>
 </Path>
 ```
 
-Neste exemplo, a `Matrix` propriedade é especificada como uma cadeia de caracteres delimitada por vírgula que consiste em seis membros:,,,,, `M11` `M12` `M21` `M22` `OffsetX` `OffsetY` .
+Neste exemplo, a `Matrix` propriedade é especificada como uma cadeia de caracteres delimitada por vírgula que consiste em seis membros:,,,,, `M11` `M12` `M21` `M22` `OffsetX` `OffsetY` . Embora os membros sejam delimitados por vírgulas neste exemplo, eles também podem ser delimitados por um ou mais espaços.
+
+Além disso, o exemplo anterior pode ser simplificado ainda mais, especificando os mesmos seis membros que o valor da `RenderTransform` Propriedade:
+
+```xaml
+<Path Stroke="Black"
+      Aspect="Uniform"
+      HorizontalOptions="Center"
+      RenderTransform="1.5 1 0 1 10 100"
+      Data="M13.908992,16.207977L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983z" />
+```
 
 ## <a name="related-links"></a>Links relacionados
 
