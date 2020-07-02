@@ -10,12 +10,12 @@ ms.date: 06/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f3ab70dc20dda78e3acf400cf51d0ee9df84ff93
-ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
+ms.openlocfilehash: 9afad335de60e605ef6551b0878455674a40750f
+ms.sourcegitcommit: 91b4d2f93687fadec5c3f80aadc8f7298d911624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104320"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85795027"
 ---
 # <a name="xamarinforms-common-control-properties-methods-and-events"></a>Xamarin.FormsPropriedades, métodos e eventos de controle comum
 
@@ -47,7 +47,7 @@ A `Bounds` propriedade é um objeto somente leitura `Rectangle` que representa o
 
 ### `Clip`
 
-A `Clip` propriedade é um `Geometry` objeto que define o contorno do conteúdo de um elemento. Para definir um clipe, use um `Geometry` objeto como `EllipseGeometry` para definir a propriedade do elemento `Clip` . Somente a área que está dentro da região da geometria estará visível. Para obter mais informações, consulte [geometrias de clipe](~/xamarin-forms/user-interface/shapes/geometries.md#clip-geometries).
+A `Clip` propriedade é um `Geometry` objeto que define o contorno do conteúdo de um elemento. Para definir um clipe, use um `Geometry` objeto como `EllipseGeometry` para definir a propriedade do elemento `Clip` . Somente a área que está dentro da região da geometria estará visível. Para obter mais informações, consulte [cortar com uma geometria](~/xamarin-forms/user-interface/shapes/geometries.md#clip-with-a-geometry).
 
 ### [`Effects`](xref:Xamarin.Forms.Element.Effects)
 
