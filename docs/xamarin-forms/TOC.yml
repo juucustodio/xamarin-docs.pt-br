@@ -405,6 +405,32 @@
                   href: user-interface/map/native-map-app.md
             - name: MediaElement
               href: user-interface/mediaelement.md
+            - name: Formas
+              items:
+                - name: Visão geral
+                  href: user-interface/shapes/index.md
+                - name: Elipse
+                  href: user-interface/shapes/ellipse.md
+                - name: Regras de preenchimento
+                  href: user-interface/shapes/fillrules.md
+                - name: Geometrias
+                  href: user-interface/shapes/geometries.md
+                - name: Linha
+                  href: user-interface/shapes/line.md
+                - name: Caminhos
+                  items:
+                    - name: Caminho
+                      href: user-interface/shapes/path.md
+                    - name: Sintaxe de marcação de caminho
+                      href: user-interface/shapes/path-markup-syntax.md
+                    - name: Transformações de caminho
+                      href: user-interface/shapes/path-transforms.md
+                - name: Polygon
+                  href: user-interface/shapes/polygon.md
+                - name: Linha poligonal
+                  href: user-interface/shapes/polyline.md
+                - name: Retângulo
+                  href: user-interface/shapes/rectangle.md
             - name: WebView
               href: user-interface/webview.md
         - name: Iniciar comandos
@@ -537,32 +563,6 @@
               href: user-interface/text/fonts.md
             - name: Elementos gráficos com SkiaSharp
               href: user-interface/graphics/skiasharp/index.md
-            - name: Formas
-              items:
-                - name: Visão geral
-                  href: user-interface/shapes/index.md
-                - name: Elipse
-                  href: user-interface/shapes/ellipse.md
-                - name: Regras de preenchimento
-                  href: user-interface/shapes/fillrules.md
-                - name: Geometrias
-                  href: user-interface/shapes/geometries.md
-                - name: Linha
-                  href: user-interface/shapes/line.md
-                - name: Caminhos
-                  items:
-                    - name: Caminho
-                      href: user-interface/shapes/path.md
-                    - name: Sintaxe de marcação de caminho
-                      href: user-interface/shapes/path-markup-syntax.md
-                    - name: Transformações de caminho
-                      href: user-interface/shapes/path-transforms.md
-                - name: Polygon
-                  href: user-interface/shapes/polygon.md
-                - name: Linha poligonal
-                  href: user-interface/shapes/polyline.md
-                - name: Retângulo
-                  href: user-interface/shapes/rectangle.md
             - name: Tela inicial
               href: user-interface/splashscreen.md
             - name: Estilos
