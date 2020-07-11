@@ -8,12 +8,12 @@ ms.date: 03/26/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6b094ddd7334da777d39d403eb06d72558c96ed2
-ms.sourcegitcommit: 82eabb0eaa4a674897aa6d5e64efb91fd580c330
+ms.openlocfilehash: e86ebcd55f3a36da1ad5c7c13bb50e7fc9094010
+ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100194"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226801"
 ---
 # <a name="xamarinessentials-web-authenticator"></a>Xamarin.Essentials: Autenticador da Web
 
@@ -131,7 +131,7 @@ A `WebAuthenticator` API se encarrega de iniciar a URL no navegador e aguardar a
 
 ![Fluxo de autenticação da Web típico](images/web-authenticator.png)
 
-Se o usuário cancelar o fluxo em qualquer ponto, um `null` resultado será retornado.
+Se o usuário cancelar o fluxo em qualquer ponto, um `TaskCanceledException` será lançado.
 
 ## <a name="platform-differences"></a>Diferenças de plataforma
 

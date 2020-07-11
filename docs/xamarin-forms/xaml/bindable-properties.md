@@ -10,16 +10,16 @@ ms.date: 01/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 33b3763075b64ea8af615465825313a527d20db2
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 7d83728edc161a89b381330884e86f09b7788e3d
+ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138171"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226775"
 ---
 # <a name="xamarinforms-bindable-properties"></a>Xamarin.FormsPropriedades vinculáveis
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 
 As propriedades vinculáveis estendem a funcionalidade da propriedade CLR ao fazer o backup de uma propriedade com um [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) tipo, em vez de fazer backup de uma propriedade com um campo. A finalidade das propriedades vinculáveis é fornecer um sistema de propriedades que ofereça suporte a vinculação de dados, estilos, modelos e valores definidos por meio de relações pai-filho. Além disso, as propriedades vinculáveis podem fornecer valores padrão, validação de valores de propriedade e retornos de chamada que monitoram alterações de propriedade.
 
@@ -55,6 +55,9 @@ No mínimo, um identificador deve ser especificado ao criar um [`BindablePropert
 - O tipo do objeto proprietário.
 - O valor padrão para a propriedade. Isso garante que a propriedade sempre retorna um valor padrão específico quando ela é desdefinida e pode ser diferente do valor padrão para o tipo da propriedade. O valor padrão será restaurado quando [ `ClearValue` ] (xref: Xamarin.Forms . Acopláble. ClearValue ( Xamarin.Forms . Vinculproperty)) é chamado na propriedade vinculável.
 
+> [!IMPORTANT]
+> A Convenção de nomenclatura para propriedades vinculáveis é que o identificador de propriedade vinculável deve corresponder ao nome de propriedade especificado no `Create` método, com "Property" acrescentado a ele. 
+
 O código a seguir mostra um exemplo de uma propriedade vinculável, com um identificador e valores para os quatro parâmetros necessários:
 
 ```csharp
@@ -62,7 +65,7 @@ public static readonly BindableProperty EventNameProperty =
   BindableProperty.Create ("EventName", typeof(string), typeof(EventToCommandBehavior), null);
 ```
 
-Isso cria uma [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instância chamada `EventName` , do tipo `string` . A propriedade pertence à `EventToCommandBehavior` classe e tem um valor padrão de `null` . A Convenção de nomenclatura para propriedades vinculáveis é que o identificador de propriedade vinculável deve corresponder ao nome de propriedade especificado no `Create` método, com "Property" acrescentado a ele. Portanto, no exemplo acima, o identificador de propriedade vinculável é `EventNameProperty` .
+Isso cria uma [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instância chamada `EventNameProperty` , do tipo `string` . A propriedade pertence à `EventToCommandBehavior` classe e tem um valor padrão de `null` .
 
 Opcionalmente, ao criar uma [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instância, os seguintes parâmetros podem ser especificados:
 

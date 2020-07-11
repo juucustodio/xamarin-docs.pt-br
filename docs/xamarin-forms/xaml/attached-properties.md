@@ -10,16 +10,16 @@ ms.date: 06/02/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1f26a4415a75b2b02fd7d6893e366ef81156f077
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1277b3cd875c1b4e05e45202a8e30ef2ff93972a
+ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138184"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226788"
 ---
 # <a name="attached-properties"></a>Propriedades Anexadas
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
 
 
 As propriedades anexadas permitem que um objeto atribua um valor para uma propriedade que sua própria classe não define. Por exemplo, elementos filho podem usar propriedades anexadas para informar o elemento pai de como eles devem ser apresentados na interface do usuário. O [`Grid`](xref:Xamarin.Forms.Grid) controle permite que a linha e a coluna de um filho sejam especificadas definindo as `Grid.Row` `Grid.Column` Propriedades anexadas e. `Grid.Row`e `Grid.Column` são propriedades anexadas porque são definidas em elementos que são filhos de a `Grid` , e não por `Grid` si só.
@@ -44,6 +44,9 @@ Ao criar uma propriedade anexada para uso em outros tipos, a classe na qual a pr
 
 Uma propriedade anexada pode ser criada declarando-se uma `public static readonly` Propriedade do tipo [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) . A propriedade vinculável deve ser definida como o valor retornado de um dos [ `BindableProperty.CreateAttached` ] (xref: Xamarin.Forms . Associável. createanexado (System. String, System. Type, System. Type, System. Object, Xamarin.Forms . BindingMode, Xamarin.Forms . Vinculproperty. ValidateValueDelegate, Xamarin.Forms . Vinculproperty. BindingPropertyChangedDelegate, Xamarin.Forms . Vinculproperty. BindingPropertyChangingDelegate, Xamarin.Forms . Vinculproperty. CoerceValueDelegate, Xamarin.Forms . O método acopláproperty. CreateDefaultValueDelegate)) é sobrecarregado. A declaração deve estar dentro do corpo da classe proprietária, mas fora de qualquer definição de membro.
 
+> [!IMPORTANT]
+> A Convenção de nomenclatura para propriedades anexadas é que o identificador de Propriedade anexado deve corresponder ao nome de propriedade especificado no `CreateAttached` método, com "Property" acrescentado a ele.
+
 O código a seguir mostra um exemplo de uma propriedade anexada:
 
 ```csharp
@@ -51,7 +54,7 @@ public static readonly BindableProperty HasShadowProperty =
   BindableProperty.CreateAttached ("HasShadow", typeof(bool), typeof(ShadowEffect), false);
 ```
 
-Isso cria uma propriedade anexada chamada `HasShadow` , do tipo `bool` . A propriedade pertence à `ShadowEffect` classe e tem um valor padrão de `false` . A Convenção de nomenclatura para propriedades anexadas é que o identificador de Propriedade anexado deve corresponder ao nome de propriedade especificado no `CreateAttached` método, com "Property" acrescentado a ele. Portanto, no exemplo acima, o identificador de Propriedade anexado é `HasShadowProperty` .
+Isso cria uma propriedade anexada chamada `HasShadowProperty` , do tipo `bool` . A propriedade pertence à `ShadowEffect` classe e tem um valor padrão de `false` .
 
 Para obter mais informações sobre como criar propriedades vinculáveis, incluindo parâmetros que podem ser especificados durante a criação, consulte [criar uma propriedade vinculável](~/xamarin-forms/xaml/bindable-properties.md#consume-a-bindable-property).
 
@@ -140,7 +143,7 @@ Ao criar uma propriedade anexada, há vários parâmetros opcionais que podem se
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Propriedades associáveis](~/xamarin-forms/xaml/bindable-properties.md)
+- [Propriedades vinculáveis](~/xamarin-forms/xaml/bindable-properties.md)
 - [Namespaces XAML](~/xamarin-forms/xaml/namespaces.md)
 - [Efeito de sombra (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
 - [API vinculproperty](xref:Xamarin.Forms.BindableProperty)

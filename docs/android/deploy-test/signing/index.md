@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/02/2018
-ms.openlocfilehash: c6a606bf326d1e59398ab77c51b1de5ed3e497e0
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 66d2f66f0118e84778b25fc0e872099439510ce2
+ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571526"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226840"
 ---
 # <a name="signing-the-android-application-package"></a>Assinatura do Pacote de Aplicativos Android
 
@@ -20,7 +20,7 @@ Em [Preparar um Aplicativo para Lançamento](~/android/deploy-test/release-prep/
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Em [arquivo para publicação](~/android/deploy-test/release-prep/index.md#archive), a caixa de diálogo **canal de distribuição** apresentou duas opções para distribuição. Selecione **Ad Hoc**:
+Em [arquivo para publicação](~/android/deploy-test/release-prep/index.md#archive), a caixa de diálogo **canal de distribuição** apresenta duas opções para distribuição. Selecione **Ad Hoc**:
 
 [![Caixa de diálogo canal de distribuição](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
@@ -46,7 +46,7 @@ Um certificado existente pode ser usado ao clicar no botão **Importar** e, em s
 
 [![Identidade de assinatura ad hoc](images/vs/02-ad-hoc-signing-identity-vs-sml.png)](images/vs/02-ad-hoc-signing-identity-vs.png#lightbox)
 
-A caixa de diálogo **Criar Repositório de Chaves do Android** é exibida. Use esta caixa de diálogo para criar um novo certificado de assinatura que pode ser usado para assinar aplicativos Android. Insira as informações necessárias (destacadas em vermelho), conforme mostrado nesta caixa de diálogo:
+A caixa de diálogo **criar repositório de chaves do Android** é exibida; Use esta caixa de diálogo para criar um novo certificado de assinatura que pode ser usado para assinar aplicativos Android. Insira as informações necessárias (destacadas em vermelho), conforme mostrado nesta caixa de diálogo:
 
 [![Caixa de diálogo Criar repositório de chaves do Android](images/vs/03-create-android-key-store-vs-sml.png)](images/vs/03-create-android-key-store-vs.png#lightbox)
 
@@ -62,8 +62,10 @@ Por exemplo, ao usar **chimp** como alias, as etapas acima podem criar uma nova 
 
 **C:\\Usuários\\*NOMEDEUSUÁRIO*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\chimp\\chimp.keystore**
 
-> [!NOTE]
-> Não deixe de fazer backup do arquivo de repositório de chaves resultante e da senha em um local seguro &ndash; isso não está incluído na solução. Se perder seu arquivo de repositório de chaves (por exemplo, porque passou a usar outro computador ou reinstalou o Windows), você não conseguirá assinar seu aplicativo com o mesmo certificado das versões anteriores.
+> [!IMPORTANT]
+> A pasta AppData fica oculta por padrão e talvez seja necessário reocultá-la para acessá-la.
+>
+> Além disso, não se esqueça de fazer backup do arquivo e da senha do repositório de chaves resultante em um local seguro &ndash; que não esteja incluído na solução. Se perder seu arquivo de repositório de chaves (por exemplo, porque passou a usar outro computador ou reinstalou o Windows), você não conseguirá assinar seu aplicativo com o mesmo certificado das versões anteriores.
 
 Para obter mais informações sobre o repositório de chaves, consulte [Localizando sua Assinatura MD5 ou SHA1 do Repositório de Chaves](~/android/deploy-test/signing/keystore-signature.md).
 
@@ -129,7 +131,7 @@ A caixa de diálogo **Publicar como Ad Hoc** fornece um resumo do aplicativo ass
 
 [![Caixa de diálogo Publicar como ad hoc](images/xs/05-publish-ad-hoc-sml.png)](images/xs/05-publish-ad-hoc.png#lightbox)
 
-A caixa de diálogo **Arquivo de saída do APK** salvará o APK para o caminho especificado. Clique em **Save** (Salvar).
+A caixa de diálogo **Arquivo de saída do APK** salvará o APK para o caminho especificado. Clique em **Salvar**.
 
 ![Caixa de diálogo Arquivo APK de Saída](images/xs/06-output-apk-file.png)
 

@@ -10,16 +10,16 @@ ms.date: 12/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f7cef5fd39d82cf0a4b55337835c0fe1d57b8bf9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2268f9034a4b09adce697f5fb7b6652baa4feed6
+ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84197600"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226814"
 ---
 # <a name="xamarinforms-local-databases"></a>Xamarin.FormsBancos de dados locais
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
 O mecanismo de banco de dados SQLite permite que Xamarin.Forms os aplicativos carreguem e salvem objetos de dados em código compartilhado. O aplicativo de exemplo usa uma tabela de banco de dados SQLite para armazenar itens de tarefas. Este artigo descreve como usar o SQLite.Net em código compartilhado para armazenar e recuperar informações em um banco de dados local.
 
@@ -39,8 +39,10 @@ Use o Gerenciador de pacotes NuGet para pesquisar o **SQLite-net-PCL** e adicion
 
 Há diversos pacotes NuGet com nomes semelhantes. O pacote correto tem estes atributos:
 
-- **Criado por:** Frank A. Krueger (praeclarum)
 - **ID:** sqlite-net-pcl
+- **Autor (es):** SQLite-net
+- **Proprietário (s):** praeclarum
+- **URL do projeto:**https://github.com/praeclarum/sqlite-net
 - **Link do NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]
@@ -285,7 +287,7 @@ Em geral, mover, renomear ou copiar um arquivo de banco de dados é o mesmo proc
 
 Para obter mais informações, consulte [manipulação de Xamarin.Forms arquivos em ](~/xamarin-forms/data-cloud/data/files.md).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Aplicativo de exemplo todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 - [Pacote NuGet do SQLite.NET](https://www.nuget.org/packages/sqlite-net-pcl/)

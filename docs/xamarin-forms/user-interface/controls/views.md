@@ -6,22 +6,22 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/16/2020
+ms.date: 07/09/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8c15626e405645d28a785c32d276860f9751ea25
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: bd503ce9fd04d80fc0f791131f67f6f1a86ae84a
+ms.sourcegitcommit: cd0c0999b53e825b60471bfbfd4144cfcd783587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84132360"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86225597"
 ---
 # <a name="xamarinforms-views"></a>Xamarin.FormsModos de exibição
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
-_As exibições do Xamarin. Forms são os blocos de construção de interfaces de usuário móvel de plataforma cruzada._
+_Xamarin.Formsas exibições são os blocos de construção de interfaces de usuário móvel de plataforma cruzada._
 
 As exibições são objetos de interface do usuário, como rótulos, botões e controles deslizantes que normalmente são conhecidos como *controles* ou *widgets* em outros ambientes de programação gráfica. As exibições com suporte de Xamarin.Forms todos derivam da [`View`](xref:Xamarin.Forms.View) classe. Eles podem ser divididos em várias categorias:
 
@@ -34,18 +34,32 @@ As exibições são objetos de interface do usuário, como rótulos, botões e c
 | [`BoxView`](xref:Xamarin.Forms.BoxView)exibe um retângulo sólido colorido pela [`Color`](xref:Xamarin.Forms.BoxView.Color) propriedade. `BoxView`tem uma solicitação de tamanho padrão de 40x40. Para outros tamanhos, atribua as [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) Propriedades e.<br /><br />[Documentação](xref:Xamarin.Forms.BoxView)  /  da API [Guia](~/xamarin-forms/user-interface/boxview.md)  /  [Exemplo 1](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview), [2](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-textdecoration), [3](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-listviewcolors/), [4](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife), [5](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-dotmatrixclock)e [6](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock) | [![Exemplo de BoxView](views-images/BoxView.png "Exemplo de BoxView")](views-images/BoxView-Large.png#lightbox "Exemplo de BoxView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/BoxViewDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/BoxViewDemoPage.xaml) |
 |     |     |
 
+### <a name="ellipse"></a>Elipse
+
+|     |    |
+| --- | ---|
+| [`Ellipse`](xref:Xamarin.Forms.Shapes.Ellipse)exibe uma elipse ou um círculo de tamanho [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) x [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) . Para pintar o interior da elipse, defina sua [`Fill`](xref:Xamarin.Forms.Shapes.Shape.Fill) propriedade como a [`Color`](xref:Xamarin.Forms.Color) . Para dar à elipse um contorno, defina sua [`Stroke`](xref:Xamarin.Forms.Shapes.Shape.Stroke) propriedade como a `Color` .<br /><br />[Documentação](xref:Xamarin.Forms.Shapes.Ellipse)  /  da API [Guia](~/xamarin-forms/user-interface/shapes/ellipse.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos) de | [![Exemplo de elipse](views-images/Ellipse.png "Exemplo de elipse")](views-images/Ellipse-Large.png#lightbox "Exemplo de elipse")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EllipseDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EllipseDemoPage.xaml) |
+|     |     |
+
 ### <a name="expander"></a>Expansor
 
 |     |     |
 | --- | --- |
-| `Expander`fornece um contêiner expansível para hospedar qualquer conteúdo e é composto por um cabeçalho e um conteúdo. Defina a `Header` propriedade como a [`View`](xref:Xamarin.Forms.View) que será exibida como o cabeçalho e a `Content` propriedade para a [`View`](xref:Xamarin.Forms.View) que será exibida quando o cabeçalho for expandido por um toque.<br /><br />[Guia](~/xamarin-forms/user-interface/expander.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos) de | [![Exemplo de expansor](views-images/Expander.png "Exemplo de expansor")](views-images/Expander-Large.png#lightbox "Exemplo de expansor")<br /> [Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ExpanderDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ExpanderDemoPage.xaml) |
+| [`Expander`](xref:Xamarin.Forms.Expander)fornece um contêiner expansível para hospedar qualquer conteúdo e é composto por um cabeçalho e um conteúdo. Defina a `Header` propriedade como a [`View`](xref:Xamarin.Forms.View) que será exibida como o cabeçalho e a `Content` propriedade para a [`View`](xref:Xamarin.Forms.View) que será exibida quando o cabeçalho for expandido por um toque.<br /><br />[Documentação](xref:Xamarin.Forms.Expander)  /  da API [Guia](~/xamarin-forms/user-interface/expander.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos) de | [![Exemplo de expansor](views-images/Expander.png "Exemplo de expansor")](views-images/Expander-Large.png#lightbox "Exemplo de expansor")<br /> [Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ExpanderDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ExpanderDemoPage.xaml) |
 |     |     |
 
-### <a name="label"></a>Rótulo
+### <a name="label"></a>Rotular
 
 |     |     |
 | --- | --- |
 | [`Label`](xref:Xamarin.Forms.Label)exibe cadeias de texto de linha única ou blocos de texto de várias linhas, com a formatação constante ou variável. Defina a [`Text`](xref:Xamarin.Forms.Label.Text) propriedade como uma cadeia de caracteres para formatação constante ou defina a [`FormattedText`](xref:Xamarin.Forms.Label.FormattedText) propriedade como um [`FormattedString`](xref:Xamarin.Forms.FormattedString) objeto para formatação de variável.<br /><br />[Documentação](xref:Xamarin.Forms.Label)  /  da API [Guia](~/xamarin-forms/user-interface/text/label.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text) de | [![Exemplo de rótulo](views-images/Label.png "Exemplo de rótulo")](views-images/Label-Large.png#lightbox "Exemplo de rótulo")<br /> [Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/LabelDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/LabelDemoPage.xaml) |
+|     |     |
+
+### <a name="line"></a>Linha
+
+|     |     |
+| --- | --- |
+| [`Line`](xref:Xamarin.Forms.Shapes.Line)exibe uma linha de um ponto inicial para um ponto de extremidade. O ponto de partida é representado pelas [`X1`](xref:Xamarin.Forms.Shapes.Line.X1) [`Y1`](xref:Xamarin.Forms.Shapes.Line.Y1) Propriedades e, enquanto o ponto de extremidade é representado pelas [`X2`](xref:Xamarin.Forms.Shapes.Line.X2) [`Y2`](xref:Xamarin.Forms.Shapes.Line.Y2) Propriedades e. Para colorir a linha, defina sua [`Stroke`](xref:Xamarin.Forms.Shapes.Shape.Stroke) propriedade como a [`Color`](xref:Xamarin.Forms.Color) .<br /><br />[Documentação](xref:Xamarin.Forms.Shapes.Line)  /  da API [Guia](~/xamarin-forms/user-interface/shapes/line.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos) de | [![Exemplo de linha](views-images/Line.png "Exemplo de linha")](views-images/Line-Large.png#lightbox "Exemplo de linha")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/LineDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/LineDemoPage.xaml) |
 |     |     |
 
 ### <a name="image"></a>Imagem
@@ -55,7 +69,7 @@ As exibições são objetos de interface do usuário, como rótulos, botões e c
 | [`Image`](xref:Xamarin.Forms.Image)exibe um bitmap. Os bitmaps podem ser baixados pela Web, inseridos como recursos no projeto comum ou projetos de plataforma, ou criados com o uso de um `Stream` objeto .net.<br /><br />[Documentação](xref:Xamarin.Forms.Image)  /  da API [Guia](~/xamarin-forms/user-interface/images.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages) de | [![Exemplo de imagem](views-images/Image.png "Exemplo de imagem")](views-images/Image-Large.png#lightbox "Exemplo de imagem")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageDemoPage.xaml) |
 |     |     |
 
-### <a name="map"></a>Mapeamento
+### <a name="map"></a>Mapa
 
 |     |     |
 | --- | --- |
@@ -74,6 +88,34 @@ As exibições são objetos de interface do usuário, como rótulos, botões e c
 |     |     |
 | --- | --- |
 | [`OpenGLView`](xref:Xamarin.Forms.OpenGLView)exibe gráficos OpenGL em projetos iOS e Android. Não há suporte para o Plataforma Universal do Windows. Os projetos iOS e Android exigem uma referência ao assembly **OpenTK-1,0** ou ao assembly da versão 1.0.0.0 do **OpenTK** . `OpenGLView`é mais fácil de usar em um projeto compartilhado; Se usado em uma biblioteca de .NET Standard, um serviço de dependência também será necessário (conforme mostrado no código de exemplo).<br /><br />Esse é o único recurso de gráficos interno do Xamarin.Forms , mas um Xamarin.Forms aplicativo também pode renderizar gráficos usando o [`SkiaSharp`](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) ou o [`UrhoSharp`](~/xamarin-forms/user-interface/graphics/urhosharp.md) .<br /><br />[Documentação da API](xref:Xamarin.Forms.OpenGLView)<br /><br /> | [![Exemplo de OpenGLView](views-images/OpenGLView.png "Exemplo de OpenGLView")](views-images/OpenGLView-Large.png#lightbox "Exemplo de OpenGLView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) com [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) |
+|     |     |
+
+### <a name="path"></a>Caminho
+
+|     |     |
+| --- | --- |
+| [`Path`](xref:Xamarin.Forms.Shapes.Path)exibe curvas e formas complexas. A [`Data`](xref:Xamarin.Forms.Shapes.Path.Data) propriedade especifica a forma a ser desenhada. Para colorir a forma, defina sua [`Stroke`](xref:Xamarin.Forms.Shapes.Shape.Stroke) propriedade como a [`Color`](xref:Xamarin.Forms.Color) .<br /><br />[Documentação](xref:Xamarin.Forms.Shapes.Path)  /  da API [Guia](~/xamarin-forms/user-interface/shapes/path.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos) de | [![Exemplo de caminho](views-images/Path.png "Exemplo de caminho")](views-images/Path-Large.png#lightbox "Exemplo de caminho")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/PathDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PathDemoPage.xaml) |
+|     |     |
+
+### <a name="polygon"></a>Polygon
+
+|     |     |
+| --- | --- |
+| [`Polygon`](xref:Xamarin.Forms.Shapes.Polygon)exibe um polígono. A [`Points`](xref:Xamarin.Forms.Shapes.Polygon.Points) propriedade especifica os pontos de vértice do polígono, enquanto a [`FillRule`](xref:Xamarin.Forms.Shapes.Polygon.FillRule) propriedade especifica como o preenchimento interior do polígono é determinado. Para pintar o interior do polígono, defina sua [`Fill`](xref:Xamarin.Forms.Shapes.Shape.Fill) propriedade como a [`Color`](xref:Xamarin.Forms.Color) . Para dar um contorno ao polígono, defina sua [`Stroke`](xref:Xamarin.Forms.Shapes.Shape.Stroke) propriedade como a `Color` .<br /><br />[Documentação](xref:Xamarin.Forms.Shapes.Polygon)  /  da API [Guia](~/xamarin-forms/user-interface/shapes/polygon.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos) de | [![Exemplo de polígono](views-images/Polygon.png "Exemplo de polígono")](views-images/Polygon-Large.png#lightbox "Exemplo de polígono")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/PolygonDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PolygonDemoPage.xaml) |
+|     |     |
+
+### <a name="polyline"></a>Linha poligonal
+
+|     |     |
+| --- | --- |
+| [`Polyline`](xref:Xamarin.Forms.Shapes.Polyline)exibe uma série de linhas retas conectadas. A [`Points`](xref:Xamarin.Forms.Shapes.Polygon.Points) propriedade especifica os pontos de vértice da polilinha, enquanto a [`FillRule`](xref:Xamarin.Forms.Shapes.Polygon.FillRule) propriedade especifica como o preenchimento interior da polilinha é determinado. Para pintar o interior da polilinha, defina sua [`Fill`](xref:Xamarin.Forms.Shapes.Shape.Fill) propriedade como a [`Color`](xref:Xamarin.Forms.Color) . Para dar um contorno à polilinha, defina sua [`Stroke`](xref:Xamarin.Forms.Shapes.Shape.Stroke) propriedade como a `Color` .<br /><br />[Documentação](xref:Xamarin.Forms.Shapes.Polyline)  /  da API [Guia](~/xamarin-forms/user-interface/shapes/polyline.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos) de | [![Exemplo de polilinha](views-images/Polyline.png "Exemplo de polilinha")](views-images/Polyline-Large.png#lightbox "Exemplo de polilinha")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/PolylineDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PolylineDemoPage.xaml) |
+|     |     |
+
+### <a name="rectangle"></a>Retângulo
+
+|     |     |
+| --- | --- |
+| [`Rectangle`](xref:Xamarin.Forms.Shapes.Rectangle)exibe um retângulo ou quadrado. Para pintar o interior do retângulo, defina sua [`Fill`](xref:Xamarin.Forms.Shapes.Shape.Fill) propriedade como a [`Color`](xref:Xamarin.Forms.Color) . Para dar um esboço ao retângulo, defina sua [`Stroke`](xref:Xamarin.Forms.Shapes.Shape.Stroke) propriedade como a `Color` .<br /><br />[Documentação](xref:Xamarin.Forms.Shapes.Rectangle)  /  da API [Guia](~/xamarin-forms/user-interface/shapes/rectangle.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos) de | [![Exemplo de retângulo](views-images/Rectangle.png "Exemplo de retângulo")](views-images/Rectangle-Large.png#lightbox "Exemplo de retângulo")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RectangleDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RectangleDemoPage.xaml) |
 |     |     |
 
 ### <a name="webview"></a>WebView
@@ -96,21 +138,21 @@ As exibições são objetos de interface do usuário, como rótulos, botões e c
 
 |     |     |
 | --- | --- |
-| `ImageButton`é um objeto retangular que exibe uma imagem e que dispara um `Clicked` evento quando ele é pressionado.<br /><br /> [Guia](~/xamarin-forms/user-interface/imagebutton.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) de | [![Exemplo de ImageButton](views-images/ImageButton.png "Exemplo de ImageButton")](views-images/ImageButton-Large.png#lightbox "Exemplo de ImageButton")<br /> [Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageButtonDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml) com [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml.cs) |
+| [`ImageButton`](xref:Xamarin.Forms.ImageButton)é um objeto retangular que exibe uma imagem e que dispara um `Clicked` evento quando ele é pressionado.<br /><br />[Documentação](xref:Xamarin.Forms.ImageButton)  /  da API [Guia](~/xamarin-forms/user-interface/imagebutton.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) de | [![Exemplo de ImageButton](views-images/ImageButton.png "Exemplo de ImageButton")](views-images/ImageButton-Large.png#lightbox "Exemplo de ImageButton")<br /> [Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageButtonDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml) com [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml.cs) |
 |     |     |
 
 ### <a name="radiobutton"></a>RadioButton
 
 |     |     |
 | --- | --- |
-| `RadioButton`permite a seleção de uma opção de um conjunto e dispara um `CheckedChanged` evento quando a seleção ocorre.<br /><br />[Guia](~/xamarin-forms/user-interface/radiobutton.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/) de | [![Exemplo de RadioButton](views-images/RadioButton.png "Exemplo de RadioButton")](views-images/RadioButton-Large.png#lightbox "Exemplo de RadioButton")<br /> [Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RadioButtonDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RadioButtonDemoPage.xaml) com [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RadioButtonDemoPage.xaml.cs) |
+| [`RadioButton`](xref:Xamarin.Forms.RadioButton)permite a seleção de uma opção de um conjunto e dispara um `CheckedChanged` evento quando a seleção ocorre.<br /><br />[Documentação](xref:Xamarin.Forms.RadioButton)  /  da API [Guia](~/xamarin-forms/user-interface/radiobutton.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/) de | [![Exemplo de RadioButton](views-images/RadioButton.png "Exemplo de RadioButton")](views-images/RadioButton-Large.png#lightbox "Exemplo de RadioButton")<br /> [Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RadioButtonDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RadioButtonDemoPage.xaml) com [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RadioButtonDemoPage.xaml.cs) |
 |     |     |
 
 ### <a name="refreshview"></a>RefreshView
 
 |     |     |
 | --- | --- |
-| `RefreshView`é um controle de contêiner que fornece a funcionalidade de pull para atualização para conteúdo rolável. O `ICommand` definido pela `Command` propriedade é executado quando uma atualização é disparada e a `IsRefreshing` propriedade indica o estado atual do controle.<br /><br /> [Guia](~/xamarin-forms/user-interface/refreshview.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) de | [![Exemplo de RefreshView](views-images/RefreshView.png "Exemplo de RefreshView")](views-images/RefreshView-Large.png#lightbox "Exemplo de RefreshView")<br /> [Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RefreshViewDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RefreshViewDemoPage.xaml) com [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RefreshViewDemoPage.xaml.cs) |
+| [`RefreshView`](xref:Xamarin.Forms.RefreshView)é um controle de contêiner que fornece a funcionalidade de pull para atualização para conteúdo rolável. O `ICommand` definido pela `Command` propriedade é executado quando uma atualização é disparada e a `IsRefreshing` propriedade indica o estado atual do controle.<br /><br />[Documentação](xref:Xamarin.Forms.RefreshView)  /  da API [Guia](~/xamarin-forms/user-interface/refreshview.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) de | [![Exemplo de RefreshView](views-images/RefreshView.png "Exemplo de RefreshView")](views-images/RefreshView-Large.png#lightbox "Exemplo de RefreshView")<br /> [Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RefreshViewDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RefreshViewDemoPage.xaml) com [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RefreshViewDemoPage.xaml.cs) |
 |     |     |
 
 ### <a name="searchbar"></a>SearchBar
@@ -124,7 +166,7 @@ As exibições são objetos de interface do usuário, como rótulos, botões e c
 
 |     |     |
 | --- | --- |
-| `SwipeView`é um controle de contêiner que envolve um item de conteúdo e fornece itens de menu de contexto que são revelados por um gesto de passar o dedo. Cada item de menu é representado por um `SwipeItem` , que tem uma `Command` propriedade que executa um `ICommand` quando o item é tocado.<br /><br /> [Guia](~/xamarin-forms/user-interface/swipeview.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) de | [![Exemplo de SwipeView](views-images/SwipeView.png "Exemplo de SwipeView")](views-images/SwipeView-Large.png#lightbox "Exemplo de SwipeView")<br /> [Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwipeViewDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml) com [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml.cs) |
+| [`SwipeView`](xref:Xamarin.Forms.SwipeView)é um controle de contêiner que envolve um item de conteúdo e fornece itens de menu de contexto que são revelados por um gesto de passar o dedo. Cada item de menu é representado por um `SwipeItem` , que tem uma `Command` propriedade que executa um `ICommand` quando o item é tocado.<br /><br />[Documentação](xref:Xamarin.Forms.SwipeView)  /  da API [Guia](~/xamarin-forms/user-interface/swipeview.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) de | [![Exemplo de SwipeView](views-images/SwipeView.png "Exemplo de SwipeView")](views-images/SwipeView-Large.png#lightbox "Exemplo de SwipeView")<br /> [Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwipeViewDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml) com [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml.cs) |
 |     |     |
 
 ## <a name="views-for-setting-values"></a>Exibições para definir valores
@@ -133,7 +175,7 @@ As exibições são objetos de interface do usuário, como rótulos, botões e c
 
 |     |     |
 | --- | --- |
-| `CheckBox`permite que o usuário selecione um valor booliano usando um tipo de botão que pode ser marcado ou vazio. A `IsChecked` propriedade é o estado do `CheckBox` e o `CheckedChanged` evento é acionado quando o estado é alterado.<br /><br />Documentação da API [Guide](~/xamarin-forms/user-interface/checkbox.md)/  /  [exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos) de guia | [![Exemplo da caixa de seleção](views-images/CheckBox.png "Exemplo da caixa de seleção")](views-images/CheckBox-Large.png#lightbox "Exemplo da caixa de seleção")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CheckBoxPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CheckBoxPage.xaml) |
+| [`CheckBox`](xref:Xamarin.Forms.CheckBox)permite que o usuário selecione um valor booliano usando um tipo de botão que pode ser marcado ou vazio. A `IsChecked` propriedade é o estado do `CheckBox` e o `CheckedChanged` evento é acionado quando o estado é alterado.<br /><br />[Documentação](xref:Xamarin.Forms.CheckBox)  /  da API [Guia](~/xamarin-forms/user-interface/checkbox.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos) de | [![Exemplo da caixa de seleção](views-images/CheckBox.png "Exemplo da caixa de seleção")](views-images/CheckBox-Large.png#lightbox "Exemplo da caixa de seleção")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CheckBoxPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CheckBoxPage.xaml) |
 |     |     |
 
 ### <a name="slider"></a>Controle deslizante
@@ -225,7 +267,7 @@ Essas duas classes derivam da [`InputView`](xref:Xamarin.Forms.InputView) classe
 
 |     |     |
 | --- | --- |
-| `IndicatorView`exibe os indicadores que representam o número de itens em um `CarouselView` . Defina a `CarouselView.IndicatorView` propriedade como o `IndicatorView` objeto para exibir os indicadores para o `CarouselView` . <br /><br />[Guia](~/xamarin-forms/user-interface/indicatorview.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/) de | [![Exemplo de IndicatorView](views-images/IndicatorView.png "Exemplo de IndicatorView")](views-images/IndicatorView-Large.png#lightbox "Exemplo de IndicatorView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/IndicatorViewDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/IndicatorViewDemoPage.xaml) |
+| [`IndicatorView`](xref:Xamarin.Forms.IndicatorView)exibe os indicadores que representam o número de itens em um `CarouselView` . Defina a `CarouselView.IndicatorView` propriedade como o `IndicatorView` objeto para exibir os indicadores para o `CarouselView` .<br /><br />[Documentação](xref:Xamarin.Forms.IndicatorView)  /  da API [Guia](~/xamarin-forms/user-interface/indicatorview.md)  /  [Exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/) de | [![Exemplo de IndicatorView](views-images/IndicatorView.png "Exemplo de IndicatorView")](views-images/IndicatorView-Large.png#lightbox "Exemplo de IndicatorView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/IndicatorViewDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/IndicatorViewDemoPage.xaml) |
 |     |     |
 
 ### <a name="listview"></a>ListView

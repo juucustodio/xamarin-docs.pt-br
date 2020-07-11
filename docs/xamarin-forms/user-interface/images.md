@@ -10,16 +10,16 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7117bb809c43ab5edb67e8367840b17cd1d97ef9
-ms.sourcegitcommit: c000c0ed15b7b2ef2a8f46a39171e11b6d9f8a5d
+ms.openlocfilehash: 7ae6e5e764dc066940971dd9b5a8fdc36c7a1970
+ms.sourcegitcommit: cd0c0999b53e825b60471bfbfd4144cfcd783587
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84980084"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86225488"
 ---
 # <a name="images-in-xamarinforms"></a>Imagens emXamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages)
 
 _As imagens podem ser compartilhadas entre plataformas com o Xamarin.Forms , elas podem ser carregadas especificamente para cada plataforma ou podem ser baixadas para exibição._
 
@@ -152,11 +152,10 @@ Se você inserir imagens incorporadas em pastas dentro de seu projeto, os nomes 
 O código para carregar uma imagem inserida simplesmente passa a **ID do recurso** para o [`ImageSource.FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*) método, conforme mostrado abaixo:
 
 ```csharp
-var embeddedImage = new Image {
-      Source = ImageSource.FromResource(
-        "WorkingWithImages.beach.jpg",
-        typeof(EmbeddedImages).GetTypeInfo().Assembly
-      ) };
+Image embeddedImage = new Image
+{
+    Source = ImageSource.FromResource("WorkingWithImages.beach.jpg", typeof(MyClass).GetTypeInfo().Assembly)
+};
 ```
 
 > [!NOTE]
@@ -222,7 +221,7 @@ Como, às vezes, é difícil entender por que um determinado recurso de imagem n
 using System.Reflection;
 // ...
 // NOTE: use for debugging, not in released app code!
-var assembly = typeof(EmbeddedImages).GetTypeInfo().Assembly;
+var assembly = typeof(MyClass).GetTypeInfo().Assembly;
 foreach (var res in assembly.GetManifestResourceNames())
 {
     System.Diagnostics.Debug.WriteLine("found resource: " + res);

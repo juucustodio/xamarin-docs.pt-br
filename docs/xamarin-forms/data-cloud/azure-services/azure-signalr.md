@@ -9,16 +9,16 @@ ms.date: 06/07/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ffa44beb68dc845a64d8bf2a9f86f6d7e56df8f9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4ef1f9aadd93c971adb66ede442796c2b72c2c9a
+ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139432"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226827"
 ---
 # <a name="azure-signalr-service-with-xamarinforms"></a>Serviço do Azure Signalr comXamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresignalr/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresignalr/)
 
 ASP.NET Core Signalr é um modelo de aplicativo que simplifica o processo de adicionar comunicação em tempo real aos aplicativos. O serviço de Signaler do Azure permite o desenvolvimento e a implantação rápidos de aplicativos Signaler escalonáveis. Azure Functions são métodos de código sem servidor de curta duração que podem ser combinados para formar aplicativos escalonáveis e orientados a eventos.
 
@@ -310,7 +310,7 @@ Depois que essas etapas forem concluídas e o aplicativo for executado, clicar n
 
 ## <a name="related-links"></a>Links relacionados
 
-* [Criando aplicativos móveis em tempo real com o Xamarin e o Signalr](https://mybuild.techcommunity.microsoft.com/sessions/77333/)
+* [Criando aplicativos móveis em tempo real com o Xamarin e o Signalr](https://www.youtube.com/watch?v=AlqZ1LpUXeg)
 * [Introdução ao SignalR](/aspnet/signalr/overview/getting-started/introduction-to-signalr)
 * [Introdução ao Azure Functions](/azure/azure-functions/functions-overview)
 * [Documentação do Azure Functions](/azure/azure-functions/)
