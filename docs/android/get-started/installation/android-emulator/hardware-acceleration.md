@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: jondouglas
 ms.author: jodou
 ms.date: 02/13/2020
-ms.openlocfilehash: 2a9260bc782d2b19e6fd74356738276e1648dcf2
-ms.sourcegitcommit: 16847681df17ed59b3b3528761c02e8fb48ffc4f
+ms.openlocfilehash: 93336f5a741cf9643288163f2bf1d8ef44ea52d2
+ms.sourcegitcommit: d42dadc6da584953865b1adb616489d91a7b25d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104351"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473431"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>Aceleração de hardware para o desempenho do emulador (Hyper-V e HAXM)
 
@@ -49,7 +49,7 @@ Para obter a melhor experiência no Windows, recomendamos usar o WHPX para acele
 - O emulador está executando uma imagem do sistema criada para um dispositivo virtual com base em **x86**.
 
 > [!IMPORTANT]
-> Não é possível executar um emulador acelerado por VM dentro de outra VM, como uma VM hospedada por VirtualBox, VMWare ou Docker. Execute o Android Emulator [diretamente no hardware do sistema](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
+> Você não pode executar um emulador com aceleração de VM dentro de outra VM, como uma VM hospedada por VirtualBox, VMware ou Docker. Execute o Android Emulator [diretamente no hardware do sistema](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
 
 Para obter informações sobre como iniciar e depurar com o Android Emulator, consulte [Depurando no Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md).
 
@@ -177,7 +177,7 @@ Recomendamos usar o Framework de Hipervisor para acelerar o Android Emulator. Se
 
 > [!IMPORTANT]
 >
-> Não é possível executar um emulador acelerado por VM dentro de outra VM, como uma VM hospedada por VirtualBox, VMWare ou Docker. Execute o Android Emulator [diretamente no hardware do sistema](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
+> Você não pode executar um emulador com aceleração de VM dentro de outra VM, como uma VM hospedada por VirtualBox, VMware ou Docker. Execute o Android Emulator [diretamente no hardware do sistema](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
 
 Para obter informações sobre como iniciar e depurar com o Android Emulator, consulte [Depurando no Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md).
 
@@ -247,6 +247,6 @@ Para obter ajuda para solucionar problemas de aceleração de hardware, confira 
 
 ::: zone-end
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Run Apps on the Android Emulator](https://developer.android.com/studio/run/emulator) (Executar aplicativos no Android Emulator)
