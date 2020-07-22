@@ -10,35 +10,56 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: aeaaeb732adaea45446d6baf833027801abf4d2a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 967c38895faded88f7d102317f0d767daac738bd
+ms.sourcegitcommit: 60f475a3d6ca880aff34f1177f76eff0b0f96233
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138899"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869829"
 ---
 # <a name="xamarinforms-dual-screen"></a>Xamarin.Formstela dupla
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-O Surface Duo (Android) e o Surface Neo (Windows 10X) introduzem novos padrões para aplicativos de toque. Xamarin.Formsinclui `TwoPaneView` `DualScreenInfo` classes e para que você possa desenvolver aplicativos para esses dispositivos.
+Dispositivos de tela dupla como o Microsoft Surface Duo facilitam novas possibilidades de experiência do usuário para seus aplicativos. Xamarin.Formsinclui `TwoPaneView` `DualScreenInfo` classes e para que você possa desenvolver aplicativos para dispositivos de tela dupla.
 
-## <a name="dual-screen-design-patterns"></a>[Padrões de design de tela dupla](design-patterns.md)
+## <a name="get-started"></a>Introdução
 
-Ao considerar a melhor maneira de usar várias telas em um dispositivo de tela dupla, consulte nossas diretrizes sobre os padrões para encontrar qual opção se ajusta melhor à interface do seu aplicativo.
+Siga estas etapas para adicionar recursos de tela dupla a um Xamarin.Forms aplicativo:
 
-## <a name="dual-screen-layout"></a>[Layout de tela dupla](twopaneview.md)
+1. Abra a caixa de diálogo **Gerenciador de pacotes NuGet** para sua solução.
+2. Na guia **Procurar**, pesquise por `Xamarin.Forms.DualScreen`.
+3. Instale o `Xamarin.Forms.DualScreen` pacote em sua solução.
+4. Adicione a seguinte chamada de método de inicialização à classe do projeto Android `MainActivity` , no `OnCreate` evento:
 
-A Xamarin.Forms `TwoPaneView` classe, inspirado pelo controle UWP do mesmo nome, é um layout de plataforma cruzada otimizado para dispositivos de tela dupla.
+    ```csharp
+    Xamarin.Forms.DualScreen.DualScreenService.Init(this);
+    ```
 
-## <a name="dual-screen-device-capabilities"></a>[Funcionalidades de tela dupla do dispositivo](dual-screen-info.md)
+    Esse método é necessário para que o aplicativo possa detectar alterações no estado do aplicativo, como distribuídas em duas telas.
 
-A classe `DualScreenInfo` permite determinar o painel de sua exibição, o tamanho máximo dele, a posição do dispositivo, o ângulo da dobradiça e muito mais.
+5. Atualize o `Activity` atributo na classe do projeto do Android `MainActivity` , para que ele inclua _todas_ essas `ConfigurationChanges` opções:
 
-## <a name="dual-screen-platform-helpers"></a>[Auxiliares de plataforma de tela dupla](dual-screen-helper.md)
+    ```@csharp
+    ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation 
+        | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.UiMode
+    ```
 
-A classe `DualScreenHelper` permite verificar se a plataforma é compatível com a abertura de uma nova janela Picture in Picture. Para o Neo, isso permite abrir uma janela que será exibida no Wonderbar quando o dispositivo estiver no modo de redação.
+    Esses valores são necessários para que as alterações de configuração e o estado de extensão possam ser relatados de forma confiável. Por padrão, somente dois são adicionados a Xamarin.Forms projetos, portanto, lembre-se de adicionar o restante para obter suporte confiável de tela dupla.
 
-## <a name="dual-screen-triggers"></a>[Gatilhos de tela dupla](triggers.md)
+## <a name="troubleshooting"></a>Solução de problemas
 
-O [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) namespace inclui dois gatilhos de estado que disparam uma [`VisualState`](xref:Xamarin.Forms.VisualState) alteração quando o modo de exibição do layout anexado, ou janela, é alterado.
+Se a `DualScreenInfo` classe ou o `TwoPaneView` layout não estiver funcionando conforme o esperado, verifique as instruções de configuração nesta página. Omitir ou configurar o `Init` método ou os `ConfigurationChanges` valores de atributo são causas comuns de erros.
+
+Examine os [ Xamarin.Forms exemplos de tela dupla](https://docs.microsoft.com/dual-screen/xamarin/samples) para obter orientações adicionais e implementação de referência.
+
+## <a name="next-steps"></a>Próximas etapas
+
+Depois de adicionar o NuGet, adicione recursos de tela dupla ao seu aplicativo com as seguintes diretrizes:
+
+- [Padrões de design de tela dupla](design-patterns.md) -ao considerar como usar melhor as várias telas em um dispositivo de tela dupla, consulte estas diretrizes de padrão para encontrar a melhor opção para a interface do aplicativo.
+- [Layout TwoPaneView](twopaneview.md) – a Xamarin.Forms `TwoPaneView` classe, inspirado pelo controle UWP do mesmo nome, é um layout de plataforma cruzada otimizado para dispositivos de tela dupla.
+- [Classe auxiliar DualScreenInfo](dual-screen-info.md) – a `DualScreenInfo` classe permite que você determine em qual painel sua exibição está, qual é o tamanho máximo, em que situação o dispositivo está, o ângulo da dobradiça e muito mais.
+- [Gatilhos de tela dupla](triggers.md) : o [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) namespace inclui dois gatilhos de estado que disparam uma [`VisualState`](xref:Xamarin.Forms.VisualState) alteração quando o modo de exibição do layout anexado, ou janela, é alterado.
+
+Visite os [documentos do desenvolvedor de tela dupla](https://docs.microsoft.com/dual-screen/) para obter mais informações.
