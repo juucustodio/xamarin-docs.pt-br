@@ -10,41 +10,48 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 28d4b3da44cc1a022b70c0de0720be747e047f9f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e4805634addaf68ac91eea928b7476ba42fa36c4
+ms.sourcegitcommit: 60f475a3d6ca880aff34f1177f76eff0b0f96233
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138886"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86869842"
 ---
-# <a name="xamarinforms-dual-screen-layout"></a>Xamarin.Formslayout de tela dupla
+# <a name="xamarinforms-twopaneview-layout"></a>Xamarin.FormsLayout de TwoPaneView
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
 A classe `TwoPaneView` representa um contêiner com duas exibições que dimensionam e posicionam o conteúdo no espaço disponível, lado a lado ou de cima para baixo. `TwoPaneView` herda de `Grid`, portanto, a maneira mais fácil de entender essas propriedades é imaginar que elas estão sendo aplicadas a uma grade.
 
 ## <a name="set-up-twopaneview"></a>Configurar o TwoPaneView
 
-A propriedade `TwoPaneView.Source` pode usar um URI ou um caminho de arquivo local. A reprodução será iniciada imediatamente após a abertura da mídia:
+Siga estas instruções para criar um layout de tela dupla em seu aplicativo:
 
-```xaml
-<ContentPage xmlns:dualScreen="clr-namespace:Xamarin.Forms.DualScreen;assembly=Xamarin.Forms.DualScreen">
-    <dualScreen:TwoPaneView>
-        <dualScreen:TwoPaneView.Pane1>
-            <StackLayout>
-                <Label Text="Pane1 Content" />
-            </StackLayout>
-        </dualScreen:TwoPaneView.Pane1>
-        <dualScreen:TwoPaneView.Pane2>
-            <StackLayout>
-                <Label Text="Pane2 Content" />
-            </StackLayout>
-        </dualScreen:TwoPaneView.Pane2>
-    </dualScreen:TwoPaneView>
-</ContentPage>
-```
+1. Siga as instruções de [introdução](index.md) para adicionar o NuGet e configurar a classe do Android `MainActivity` .
+1. Comece com um básico `TwoPaneView` usando o seguinte XAML:
+
+    ```xaml
+    <ContentPage 
+        xmlns:dualScreen="clr-namespace:Xamarin.Forms.DualScreen;assembly=Xamarin.Forms.DualScreen">
+        <dualScreen:TwoPaneView>
+            <dualScreen:TwoPaneView.Pane1>
+                <StackLayout>
+                    <Label Text="Pane1 Content" />
+                </StackLayout>
+            </dualScreen:TwoPaneView.Pane1>
+            <dualScreen:TwoPaneView.Pane2>
+                <StackLayout>
+                    <Label Text="Pane2 Content" />
+                </StackLayout>
+            </dualScreen:TwoPaneView.Pane2>
+        </dualScreen:TwoPaneView>
+    </ContentPage>
+    ```
+
+> [!TIP]
+> O XAML acima omite muitos atributos comuns do `ContentPage` elemento. Ao adicionar um `TwoPaneView` ao seu aplicativo, lembre-se de declarar o `xmlns:dualScreen` namespace conforme mostrado.
 
 ## <a name="understand-twopaneview-modes"></a>Entender os modos do TwoPaneView
 
