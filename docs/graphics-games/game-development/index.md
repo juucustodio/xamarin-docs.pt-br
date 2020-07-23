@@ -6,12 +6,12 @@ ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: 5992e8df3080bb35fd123483e5ffb5e64f268b1a
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 8f7ec5175895a31746710fad9ea7372052b698ff
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78291732"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936481"
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>Introdução ao desenvolvimento de jogos com o Xamarin
 
@@ -34,7 +34,7 @@ Um jogo típico requer movimento constante ou alteração para estar acontecendo
 
 Veja a seguir um diagrama de um loop de jogo simples:
 
-![](images/image1.png "This is a diagram of a simple game loop")
+![Este é um diagrama de um loop de jogo simples](images/image1.png)
 
 As tecnologias que discutimos abaixo abstrairão o loop while real, mas apesar dessa abstração, o conceito de atualizações de cada quadro estará presente.
 
@@ -61,13 +61,13 @@ O carregamento e o descarregamento manual do conteúdo (ou descartar) podem ser 
 
 Os formatos de arquivo personalizados podem precisar de processamento no tempo de carregamento, exigindo código de carregamento personalizado.
 
-### <a name="math"></a>Math
+### <a name="math"></a>Matemática
 
 Muitos jogos exigem matemática mais avançada do que aplicativos que não são do jogo. É claro que o nível de matemática depende da complexidade do jogo. Em jogos 3D gerais, é necessário mais matemática do que o 2D. Felizmente, você sempre pode começar a usar jogos simples e aprender como usar. O desenvolvimento de jogos pode ser uma ótima maneira de aprender a matemática!
 
 Se você estiver familiarizado com o plano cartesiano, que está usando coordenadas X e Y para posicionar objetos, então você sabe o suficiente para começar a usar o desenvolvimento de jogos. O seguinte mostra um plano cartesiano com Y positivo apontando para cima:
 
-![](images/image2.png "This shows a Cartesian plane with positive Y pointing upward")
+![Mostra um plano cartesiano com Y positivo apontando para cima](images/image2.png)
 
 > [!IMPORTANT]
 > Alguns mecanismos/APIs usam um sistema de coordenadas em que o aumento do valor Y de um objeto vai movê-lo para baixo, enquanto outros sistemas usam um sistema de coordenadas onde Y positivo está ativo. Tenha isso em mente se estiver mudando entre sistemas.
@@ -121,11 +121,11 @@ Exemplos notáveis de jogos que usam o monogame incluem:
 
 FEZ:
 
-![](images/image7.png "FEZ")
+![FEZ](images/image7.png)
 
 Bastiões
 
-![](images/image8.jpg "Bastion")
+![Bastion](images/image8.jpg)
 
 Para começar a trabalhar com monojogo, acesse nossos [guias de monojogo](~/graphics-games/monogame/index.md).
 
@@ -133,7 +133,7 @@ Para começar a trabalhar com monojogo, acesse nossos [guias de monojogo](~/grap
 
 O UrhoSharp é um mecanismo 3D e 2D de alto nível de plataforma cruzada que pode ser usado para criar cenas 3D e 2D animadas para seus aplicativos usando geometrias, materiais, luzes e câmeras.
 
-![](images/urhosharp.gif "UrhoSharp is a cross-platform high-level 3D and 2D engine that can be used to create animated 3D and 2D scenes")
+![UrhoSharp é um mecanismo 3D e 2D de alto nível entre plataformas que pode ser usado para criar cenas 3D e 2D animadas](images/urhosharp.gif)
 
 Confira os [guias do UrhoSharp](~/graphics-games/urhosharp/index.md) para começar.
 
@@ -141,11 +141,11 @@ Confira os [guias do UrhoSharp](~/graphics-games/urhosharp/index.md) para começ
 
 As tecnologias realçadas acima são apenas uma amostra das tecnologias disponíveis. Outras tecnologias notáveis incluem:
 
-- **Kit de Sprite** – o Xamarin fornece suporte para a estrutura de jogos do kit de Sprite da Apple, que fornece acesso a todas as funcionalidades da API nativa. Como o sprite kit é a tecnologia criada pela Apple, ele fornece uma integração profunda com o restante do ecossistema do iOS. É claro que o sprite kit não é uma plataforma cruzada, portanto não pode ser usado no Android. Para obter mais informações sobre como usar o kit Sprite, consulte esta postagem: [https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
-- **Kit de cena** – o Xamarin também fornece suporte para a estrutura de kit de cena da Apple, que simplifica a implementação de gráficos 3D em aplicativos Ios. O Scene Kit também é uma tecnologia fornecida pela Apple, portanto, ela tem considerações específicas de plataforma e integração mencionadas acima para o kit de Sprite. Para obter mais informações sobre o kit de cena, consulte esta postagem: [https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
-- **OpenTK –** OpenTK (que significa o Open Tool Kit) fornece acesso OpenGL de baixo nível a hardware do iOS, da Apple e do Mac. Para obter mais informações sobre o OpenTK, consulte a página principal em: [https://opentk.net/](https://opentk.net/)
+- **Kit de Sprite** – o Xamarin fornece suporte para a estrutura de jogos do kit de Sprite da Apple, que fornece acesso a todas as funcionalidades da API nativa. Como o sprite kit é a tecnologia criada pela Apple, ele fornece uma integração profunda com o restante do ecossistema do iOS. É claro que o sprite kit não é uma plataforma cruzada, portanto não pode ser usado no Android. Para obter mais informações sobre como usar o kit Sprite, consulte esta postagem:[https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](https://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
+- **Kit de cena** – o Xamarin também fornece suporte para a estrutura de kit de cena da Apple, que simplifica a implementação de gráficos 3D em aplicativos Ios. O Scene Kit também é uma tecnologia fornecida pela Apple, portanto, ela tem considerações específicas de plataforma e integração mencionadas acima para o kit de Sprite. Para obter mais informações sobre o kit de cena, consulte esta postagem:[https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](https://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
+- **OpenTK –** OpenTK (que significa o Open Tool Kit) fornece acesso OpenGL de baixo nível a hardware do iOS, da Apple e do Mac. Para obter mais informações sobre o OpenTK, consulte a página principal em:[https://opentk.net/](https://opentk.net/)
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Guias de monojogo](~/graphics-games/monogame/index.md)
 - [Guias de UrhoSharp](~/graphics-games/urhosharp/index.md)

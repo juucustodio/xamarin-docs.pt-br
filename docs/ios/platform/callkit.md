@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 8f8b92e48578c08e491f92bcc7e2a9add67ee0cd
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 116ae63619aa90defb25db31b959e36b8b44edf2
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032605"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934726"
 ---
 # <a name="callkit-in-xamarinios"></a>CallKit no Xamarin. iOS
 
@@ -38,9 +38,9 @@ A experiência é igualmente complicada se o telefone estiver desbloqueado. Nova
 
 Ao implementar as novas APIs CallKit no aplicativo MonkeyCall, a experiência do usuário com uma chamada VOIP de entrada pode ser muito melhorada no iOS 10. Veja o exemplo do usuário que está recebendo uma chamada VOIP quando seu telefone está bloqueado acima. Ao implementar CallKit, a chamada será exibida na tela de bloqueio do iPhone, da mesma forma que faria se a chamada estivesse sendo recebida do aplicativo de telefone interno, com a interface do usuário de tela inteira e nativa e a funcionalidade padrão de toque para resposta.
 
-Novamente, se o iPhone for desbloqueado quando uma chamada VOIP MonkeyCall for recebida, será apresentada a mesma funcionalidade de tela inteira, interface do usuário nativa e plano de toque padrão para resposta e tocar para recusar do aplicativo de telefone interno e MonkeyCall tem a opção de reproduzir um toque personalizado .
+Novamente, se o iPhone for desbloqueado quando uma chamada de VOIP MonkeyCall for recebida, será apresentada a mesma funcionalidade de tela inteira, interface do usuário nativa e padrão de toque para resposta e "tocar para recusar" do aplicativo de telefone interno e MonkeyCall tem a opção de reproduzir um toque personalizado.
 
-O CallKit fornece funcionalidade adicional para o MonkeyCall, permitindo que suas chamadas VOIP interajam com outros tipos de chamadas, apareçam nas listas recentes e favoritas internas, para usar os recursos internos não incomodar e bloquear, iniciar chamadas MonkeyCall de siri e oferece a capacidade dos usuários de atribuir chamadas MonkeyCall a pessoas no aplicativo de contatos.
+O CallKit fornece funcionalidade adicional para o MonkeyCall, permitindo que suas chamadas de VOIP interajam com outros tipos de chamadas, apareçam nos recentes e nas listas favoritas, para usar os recursos internos não incomodar e bloquear, iniciar chamadas MonkeyCall de siri e oferece a capacidade para os usuários atribuirem chamadas de MonkeyCall a pessoas no aplicativo de contatos.
 
 As seções a seguir abordarão a arquitetura do CallKit, os fluxos de chamada de entrada e saída e a API do CallKit em detalhes.
 
@@ -48,16 +48,16 @@ As seções a seguir abordarão a arquitetura do CallKit, os fluxos de chamada d
 
 No iOS 10, a Apple adotou o CallKit em todos os serviços do sistema, de modo que as chamadas feitas em CarPlay, por exemplo, são conhecidas pela interface do usuário do sistema via CallKit. No exemplo fornecido abaixo, como o MonkeyCall adota o CallKit, ele é conhecido pelo sistema da mesma forma que os serviços internos do sistema e obtém todos os mesmos recursos:
 
-[![](callkit-images/callkit01.png "The CallKit Service Stack")](callkit-images/callkit01.png#lightbox)
+[![A pilha de serviço CallKit](callkit-images/callkit01.png)](callkit-images/callkit01.png#lightbox)
 
 Examine com mais detalhes o aplicativo MonkeyCall do diagrama acima. O aplicativo contém todo o seu código para se comunicar com sua própria rede e contém suas próprias interfaces de usuário. Ele vincula no CallKit para se comunicar com o sistema:
 
-[![](callkit-images/callkit02.png "MonkeyCall App Architecture")](callkit-images/callkit02.png#lightbox)
+[![Arquitetura de aplicativo MonkeyCall](callkit-images/callkit02.png)](callkit-images/callkit02.png#lightbox)
 
 Há duas interfaces principais no CallKit que o aplicativo usa:
 
-- `CXProvider`-isso permite que o aplicativo MonkeyCall informe o sistema de quaisquer notificações fora de banda que possam ocorrer.
-- `CXCallController`-permite que o aplicativo MonkeyCall informe o sistema de ações de usuário local.
+- `CXProvider`-Isso permite que o aplicativo MonkeyCall informe o sistema de quaisquer notificações fora de banda que possam ocorrer.
+- `CXCallController`– Permite que o aplicativo MonkeyCall informe o sistema de ações de usuário local.
 
 ### <a name="the-cxprovider"></a>O CXProvider
 
@@ -69,13 +69,13 @@ Um aplicativo deve usar o `CXProvider` para o seguinte:
 - Relatar que uma chamada de saída foi conectada ao sistema.
 - Relate o usuário remoto que está encerrando a chamada para o sistema.
 
-Quando o aplicativo quer se comunicar com o sistema, ele usa a classe `CXCallUpdate` e quando o sistema precisa se comunicar com o aplicativo, ele usa a classe `CXAction`:
+Quando o aplicativo quer se comunicar com o sistema, ele usa a `CXCallUpdate` classe e quando o sistema precisa se comunicar com o aplicativo, ele usa a `CXAction` classe:
 
-[![](callkit-images/callkit03.png "Communicating with the system via a CXProvider")](callkit-images/callkit03.png#lightbox)
+[![Comunicando-se com o sistema por meio de um CXProvider](callkit-images/callkit03.png)](callkit-images/callkit03.png#lightbox)
 
 ### <a name="the-cxcallcontroller"></a>O CXCallController
 
-O `CXCallController` permite que um aplicativo informe o sistema de ações de usuário local, como o usuário que inicia uma chamada VOIP. Ao implementar um `CXCallController` o aplicativo é executado para Interplay com outros tipos de chamadas no sistema. Por exemplo, se já houver uma chamada de telefonia ativa em andamento, `CXCallController` poderá permitir que o aplicativo VOIP Coloque essa chamada em espera e inicie ou responda a uma chamada VOIP.
+O `CXCallController` permite que um aplicativo informe o sistema de ações de usuário local, como o usuário que inicia uma chamada VoIP. A implementação de um `CXCallController` aplicativo é para Interplay com outros tipos de chamadas no sistema. Por exemplo, se já houver uma chamada de telefonia ativa em andamento, `CXCallController` o poderá permitir que o aplicativo VoIP Coloque essa chamada em espera e inicie ou responda a uma chamada VoIP.
 
 Um aplicativo deve usar o `CXCallController` para o seguinte:
 
@@ -83,9 +83,9 @@ Um aplicativo deve usar o `CXCallController` para o seguinte:
 - Relatar quando o usuário responder a uma chamada de entrada para o sistema.
 - Relatar quando o usuário terminar uma chamada para o sistema.
 
-Quando o aplicativo deseja comunicar ações de usuário local para o sistema, ele usa a classe `CXTransaction`:
+Quando o aplicativo deseja comunicar ações de usuário local para o sistema, ele usa a `CXTransaction` classe:
 
-[![](callkit-images/callkit04.png "Reporting to the system using a CXCallController")](callkit-images/callkit04.png#lightbox)
+[![Relatórios para o sistema usando um CXCallController](callkit-images/callkit04.png)](callkit-images/callkit04.png#lightbox)
 
 ## <a name="implementing-callkit"></a>Implementando CallKit
 
@@ -93,7 +93,7 @@ As seções a seguir mostrarão como implementar o CallKit em um aplicativo de V
 
 ### <a name="the-activecall-class"></a>A classe ActiveCall
 
-A classe `ActiveCall` é usada pelo aplicativo MonkeyCall para armazenar todas as informações sobre uma chamada VOIP que está atualmente ativa da seguinte maneira:
+A `ActiveCall` classe é usada pelo aplicativo MonkeyCall para armazenar todas as informações sobre uma chamada VoIP que está atualmente ativa da seguinte maneira:
 
 ```csharp
 using System;
@@ -217,11 +217,11 @@ namespace MonkeyCall
 }
 ```
 
-`ActiveCall` mantém várias propriedades que definem o estado da chamada e dois eventos que podem ser gerados quando o estado da chamada é alterado. Como este é apenas um exemplo, há três métodos usados para iniciar, responder e encerrar uma chamada simulada.
+`ActiveCall`mantém várias propriedades que definem o estado da chamada e dois eventos que podem ser gerados quando o estado da chamada é alterado. Como este é apenas um exemplo, há três métodos usados para iniciar, responder e encerrar uma chamada simulada.
 
 ### <a name="the-startcallrequest-class"></a>A classe StartCallRequest
 
-A classe estática `StartCallRequest`, fornece alguns métodos auxiliares que serão usados ao trabalhar com chamadas de saída:
+A `StartCallRequest` classe estática fornece alguns métodos auxiliares que serão usados ao trabalhar com chamadas de saída:
 
 ```csharp
 using System;
@@ -278,11 +278,11 @@ namespace MonkeyCall
 }
 ```
 
-As classes `CallHandleFromURL` e `CallHandleFromActivity` são usadas no AppDelegate para obter o identificador de contato da pessoa que está sendo chamada em uma chamada de saída. Para obter mais informações, consulte a seção [manipulando chamadas de saída](#handling-outgoing-calls) abaixo.
+As `CallHandleFromURL` `CallHandleFromActivity` classes e são usadas no AppDelegate para obter o identificador de contato da pessoa que está sendo chamada em uma chamada de saída. Para obter mais informações, consulte a seção [manipulando chamadas de saída](#handling-outgoing-calls) abaixo.
 
 ### <a name="the-activecallmanager-class"></a>A classe ActiveCallManager
 
-A classe `ActiveCallManager` manipula todas as chamadas abertas no aplicativo MonkeyCall.
+A `ActiveCallManager` classe manipula todas as chamadas abertas no aplicativo MonkeyCall.
 
 ```csharp
 using System;
@@ -392,11 +392,11 @@ namespace MonkeyCall
 }
 ```
 
-Novamente, como essa é apenas uma simulação, a `ActiveCallManager` mantém apenas uma coleção de objetos `ActiveCall` e tem uma rotina para localizar uma determinada chamada por sua propriedade `UUID`. Ele também inclui métodos para iniciar, encerrar e alterar o estado de manutenção de uma chamada de saída. Para obter mais informações, consulte a seção [manipulando chamadas de saída](#handling-outgoing-calls) abaixo.
+Novamente, como essa é apenas uma simulação, o `ActiveCallManager` só mantém uma coleção de `ActiveCall` objetos e tem uma rotina para localizar uma determinada chamada por sua `UUID` propriedade. Ele também inclui métodos para iniciar, encerrar e alterar o estado de manutenção de uma chamada de saída. Para obter mais informações, consulte a seção [manipulando chamadas de saída](#handling-outgoing-calls) abaixo.
 
 ### <a name="the-providerdelegate-class"></a>A classe ProviderDelegate
 
-Conforme discutido acima, um `CXProvider` fornece comunicação bidirecional entre o aplicativo e o sistema para notificações fora de banda. O desenvolvedor precisa fornecer um `CXProviderDelegate` personalizado e anexá-lo ao `CXProvider` para que o aplicativo manipule eventos CallKit fora de banda. O MonkeyCall usa os seguintes `CXProviderDelegate`:
+Conforme discutido acima, um `CXProvider` fornece comunicação bidirecional entre o aplicativo e o sistema para notificações fora de banda. O desenvolvedor precisa fornecer um personalizado `CXProviderDelegate` e anexá-lo ao `CXProvider` para que o aplicativo manipule eventos CallKit fora de banda. MonkeyCall usa o seguinte `CXProviderDelegate` :
 
 ```csharp
 using System;
@@ -599,7 +599,7 @@ namespace MonkeyCall
 }
 ```
 
-Quando uma instância desse delegado é criada, ela passa a `ActiveCallManager` que ela usará para lidar com qualquer atividade de chamada. Em seguida, ele define os tipos de identificadores (`CXHandleType`) aos quais o `CXProvider` responderá:
+Quando uma instância desse delegado é criada, ela é passada ao `ActiveCallManager` que será usada para lidar com qualquer atividade de chamada. Em seguida, ele define os tipos de identificadores ( `CXHandleType` ) que o `CXProvider` responderá a:
 
 ```csharp
 // Define handle types
@@ -613,7 +613,7 @@ E obtém a imagem de modelo que será aplicada ao ícone do aplicativo quando um
 var templateImage = UIImage.FromFile ("telephone_receiver.png");
 ```
 
-Esses valores são agrupados em um `CXProviderConfiguration` que será usado para configurar o `CXProvider`:
+Esses valores são agrupados em um `CXProviderConfiguration` que será usado para configurar `CXProvider` :
 
 ```csharp
 // Setup the initial configurations
@@ -625,7 +625,7 @@ Configuration = new CXProviderConfiguration ("MonkeyCall") {
 };
 ```
 
-Em seguida, o delegado cria uma nova `CXProvider` com essas configurações e se anexa a ela:
+Em seguida, o delegado cria um novo `CXProvider` com essas configurações e se anexa a ela:
 
 ```csharp
 // Create a new provider
@@ -637,7 +637,7 @@ Provider.SetDelegate (this, null);
 
 Ao usar CallKit, o aplicativo não criará mais e tratará suas próprias sessões de áudio, em vez disso, ele precisará configurar e usar uma sessão de áudio que o sistema criará e tratará para ela. 
 
-Se esse fosse um aplicativo real, o método `DidActivateAudioSession` seria usado para iniciar a chamada com um `AVAudioSession` pré-configurado que o sistema forneceu:
+Se esse fosse um aplicativo real, o `DidActivateAudioSession` método seria usado para iniciar a chamada com um pré-configurado `AVAudioSession` que o sistema forneceu:
 
 ```csharp
 public override void DidActivateAudioSession (CXProvider provider, AVFoundation.AVAudioSession audioSession)
@@ -646,7 +646,7 @@ public override void DidActivateAudioSession (CXProvider provider, AVFoundation.
 }
 ```
 
-Ele também usaria o método `DidDeactivateAudioSession` para finalizar e liberar sua conexão com a sessão de áudio fornecida pelo sistema:
+Ele também usaria o `DidDeactivateAudioSession` método para finalizar e liberar sua conexão com a sessão de áudio fornecida pelo sistema:
 
 ```csharp
 public override void DidDeactivateAudioSession (CXProvider provider, AVFoundation.AVAudioSession audioSession)
@@ -728,7 +728,7 @@ namespace MonkeyCall
 }
 ```
 
-Os métodos de substituição `OpenUrl` e `ContinueUserActivity` são usados quando o aplicativo está processando uma chamada de saída. Para obter mais informações, consulte a seção [manipulando chamadas de saída](#handling-outgoing-calls) abaixo.
+Os `OpenUrl` `ContinueUserActivity` métodos e substituem são usados quando o aplicativo está processando uma chamada de saída. Para obter mais informações, consulte a seção [manipulando chamadas de saída](#handling-outgoing-calls) abaixo.
 
 ## <a name="handling-incoming-calls"></a>Manipulando chamadas de entrada
 
@@ -744,13 +744,13 @@ As seções a seguir terão uma visão detalhada de como um aplicativo pode usar
 
 Quando um usuário remoto inicia uma conversa VOIP com o usuário local, ocorre o seguinte:
 
-[![](callkit-images/callkit05.png "A remote user has started a VOIP conversation")](callkit-images/callkit05.png#lightbox)
+[![Um usuário remoto iniciou uma conversa VOIP](callkit-images/callkit05.png)](callkit-images/callkit05.png#lightbox)
 
 1. O aplicativo obtém uma notificação de sua rede de comunicações de que há uma chamada VOIP de entrada.
-2. O aplicativo usa o `CXProvider` para enviar um `CXCallUpdate` ao sistema informando-o da chamada.
+2. O aplicativo usa o `CXProvider` para enviar um `CXCallUpdate` ao sistema informando-o sobre a chamada.
 3. O sistema publica a chamada à interface do usuário do sistema, serviços do sistema e qualquer outro aplicativo VOIP usando o CallKit.
 
-Por exemplo, no `CXProviderDelegate`:
+Por exemplo, no `CXProviderDelegate` :
 
 ```csharp
 public void ReportIncomingCall (NSUuid uuid, string handle)
@@ -773,19 +773,19 @@ public void ReportIncomingCall (NSUuid uuid, string handle)
 }
 ```
 
-Esse código cria uma nova instância de `CXCallUpdate` e anexa um identificador a ela que identificará o chamador. Em seguida, ele usa o método `ReportNewIncomingCall` da classe `CXProvider` para informar o sistema da chamada. Se for bem-sucedida, a chamada será adicionada à coleção de chamadas ativas do aplicativo, se não for, o erro precisará ser relatado ao usuário.
+Esse código cria uma nova `CXCallUpdate` instância e anexa um identificador a ela que identificará o chamador. Em seguida, ele usa o `ReportNewIncomingCall` método da `CXProvider` classe para informar o sistema da chamada. Se for bem-sucedida, a chamada será adicionada à coleção de chamadas ativas do aplicativo, se não for, o erro precisará ser relatado ao usuário.
 
 ### <a name="user-answering-incoming-call"></a>Usuário respondendo chamada de entrada
 
 Se o usuário quiser responder à chamada VOIP de entrada, ocorrerá o seguinte:
 
-[![](callkit-images/callkit06.png "The user answers the incoming VOIP call")](callkit-images/callkit06.png#lightbox)
+[![O usuário responde à chamada VOIP de entrada](callkit-images/callkit06.png)](callkit-images/callkit06.png#lightbox)
 
 1. A interface de usuário do sistema informa ao sistema que o usuário deseja responder à chamada VOIP.
-2. O sistema envia um `CXAnswerCallAction` para o `CXProvider` do aplicativo informando-o sobre a tentativa de resposta.
+2. O sistema envia um `CXAnswerCallAction` para o aplicativo `CXProvider` informando-o sobre a tentativa de resposta.
 3. O aplicativo informa sua rede de comunicação que o usuário está respondendo à chamada e a chamada VOIP continua como de costume.
 
-Por exemplo, no `CXProviderDelegate`:
+Por exemplo, no `CXProviderDelegate` :
 
 ```csharp
 public override void PerformAnswerCallAction (CXProvider provider, CXAnswerCallAction action)
@@ -814,7 +814,7 @@ public override void PerformAnswerCallAction (CXProvider provider, CXAnswerCallA
 }
 ```
 
-Esse código procura pela chamada fornecida em sua lista de chamadas ativas. Se a chamada não puder ser encontrada, o sistema é notificado e o método é encerrado. Se for encontrado, o método `AnswerCall` da classe `ActiveCall` será chamado para iniciar a chamada e o sistema será informativo se for bem-sucedida ou falhar.
+Esse código procura pela chamada fornecida em sua lista de chamadas ativas. Se a chamada não puder ser encontrada, o sistema é notificado e o método é encerrado. Se for encontrado, o `AnswerCall` método da `ActiveCall` classe será chamado para iniciar a chamada e o sistema será informações se for bem-sucedida ou falhar.
 
 ### <a name="user-ending-incoming-call"></a>Usuário encerrando chamada recebida
 
@@ -822,11 +822,11 @@ Se o usuário quiser encerrar a chamada de dentro da interface do usuário do ap
 
 [![](callkit-images/callkit07.png "The user terminates the call from within the app's UI")](callkit-images/callkit07.png#lightbox)
 
-1. O aplicativo cria `CXEndCallAction` que são agrupados em um `CXTransaction` que é enviado ao sistema para informá-lo de que a chamada está terminando.
-2. O sistema verifica a intenção de chamada final e envia o `CXEndCallAction` de volta para o aplicativo por meio do `CXProvider`.
+1. O aplicativo cria `CXEndCallAction` um pacote em um `CXTransaction` que é enviado ao sistema para informá-lo de que a chamada está terminando.
+2. O sistema verifica a intenção de chamada final e envia o de `CXEndCallAction` volta para o aplicativo por meio do `CXProvider` .
 3. Em seguida, o aplicativo informa sua rede de comunicação de que a chamada está terminando.
 
-Por exemplo, no `CXProviderDelegate`:
+Por exemplo, no `CXProviderDelegate` :
 
 ```csharp
 public override void PerformEndCallAction (CXProvider provider, CXEndCallAction action)
@@ -858,23 +858,23 @@ public override void PerformEndCallAction (CXProvider provider, CXEndCallAction 
 }
 ```
 
-Esse código procura pela chamada fornecida em sua lista de chamadas ativas. Se a chamada não puder ser encontrada, o sistema é notificado e o método é encerrado. Se for encontrado, o método `EndCall` da classe `ActiveCall` será chamado para encerrar a chamada e o sistema será informações se for bem-sucedida ou falhar. Se for bem-sucedido, a chamada será removida da coleção de chamadas ativas.
+Esse código procura pela chamada fornecida em sua lista de chamadas ativas. Se a chamada não puder ser encontrada, o sistema é notificado e o método é encerrado. Se for encontrado, o `EndCall` método da `ActiveCall` classe será chamado para encerrar a chamada e o sistema será informações se for bem-sucedida ou falhar. Se for bem-sucedido, a chamada será removida da coleção de chamadas ativas.
 
 ## <a name="managing-multiple-calls"></a>Gerenciando várias chamadas
 
 A maioria dos aplicativos VOIP pode lidar com várias chamadas de uma só vez. Por exemplo, se atualmente houver uma chamada VOIP ativa e o aplicativo receber uma notificação de que há uma nova chamada de entrada, o usuário poderá pausar ou desligar na primeira chamada para responder à segunda.
 
-Na situação em que for mostrado acima, o sistema enviará um `CXTransaction` ao aplicativo que incluirá uma lista de várias ações (como a `CXEndCallAction` e a `CXAnswerCallAction`). Todas essas ações precisarão ser atendidas individualmente, para que o sistema possa atualizar a interface do usuário adequadamente.
+Na situação em que for mostrado acima, o sistema enviará um `CXTransaction` para o aplicativo que incluirá uma lista de várias ações (como o `CXEndCallAction` e o `CXAnswerCallAction` ). Todas essas ações precisarão ser atendidas individualmente, para que o sistema possa atualizar a interface do usuário adequadamente.
 
 ## <a name="handling-outgoing-calls"></a>Manipulando chamadas de saída
 
 Se o usuário tocar em uma entrada da lista recentes (no aplicativo de telefone), por exemplo, que é de uma chamada pertencente ao aplicativo, ele receberá uma tentativa de _chamada inicial_ pelo sistema:
 
-[![](callkit-images/callkit08.png "Receiving a Start Call Intent")](callkit-images/callkit08.png#lightbox)
+[![Recebendo uma tentativa de chamada inicial](callkit-images/callkit08.png)](callkit-images/callkit08.png#lightbox)
 
 1. O aplicativo criará uma _ação iniciar chamada_ com base na intenção iniciar chamada recebida do sistema. 
 2. O aplicativo usará o `CXCallController` para solicitar a ação iniciar chamada do sistema.
-3. Se o sistema aceitar a ação, ele será retornado ao aplicativo por meio do `XCProvider` delegado.
+3. Se o sistema aceitar a ação, ele será retornado para o aplicativo por meio do `XCProvider` delegado.
 4. O aplicativo inicia a chamada de saída com sua rede de comunicação.
 
 Para obter mais informações sobre tentativas, consulte nossa documentação [de extensões de interface do usuário de tentativas e](~/ios/platform/sirikit/understanding-sirikit.md) intenções. 
@@ -923,7 +923,7 @@ public void StartCall (string contact)
 }
 ```
 
-Ele cria uma `CXHandle` e a usa para configurar uma `CXStartCallAction` que é agrupada em uma `CXTransaction` que é enviada ao sistema usando o método `RequestTransaction` da classe `CXCallController`. Ao chamar o método `RequestTransaction`, o sistema pode fazer qualquer chamada existente em espera, independentemente da origem (aplicativo de telefone, FaceTime, VOIP, etc.), antes de iniciar a nova chamada.
+Ele cria um `CXHandle` e o usa para configurar um `CXStartCallAction` que é agrupado em um `CXTransaction` que é enviado para o sistema usando o `RequestTransaction` método da `CXCallController` classe. Ao chamar o `RequestTransaction` método, o sistema pode fazer qualquer chamada existente em espera, independentemente da origem (aplicativo de telefone, FaceTime, VoIP, etc.), antes de iniciar a nova chamada.
 
 A solicitação para iniciar uma chamada VOIP de saída pode vir de várias fontes diferentes, como Siri, uma entrada em um cartão de visita (no aplicativo de contatos) ou na lista recentes (no aplicativo de telefone). Nessas situações, o aplicativo será enviado uma intenção iniciar chamada dentro de um `NSUserActivity` e o AppDelegate precisará tratá-lo:
 
@@ -945,9 +945,9 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 }
 ```
 
-Aqui, o método `CallHandleFromActivity` da classe auxiliar `StartCallRequest` está sendo usado para obter o identificador para a pessoa que está sendo chamada (consulte [a classe StartCallRequest](#the-startcallrequest-class) acima).
+Aqui, o `CallHandleFromActivity` método da classe auxiliar `StartCallRequest` está sendo usado para obter o identificador para a pessoa que está sendo chamada (consulte [a classe StartCallRequest](#the-startcallrequest-class) acima).
 
-O método `PerformStartCallAction` da [classe ProviderDelegate](#the-providerdelegate-class) é usado para finalmente iniciar a chamada real de saída e informar o sistema de seu ciclo de vida:
+O `PerformStartCallAction` método da [classe ProviderDelegate](#the-providerdelegate-class) é usado para, por fim, iniciar a chamada real de saída e informar o sistema de seu ciclo de vida:
 
 ```csharp
 public override void PerformStartCallAction (CXProvider provider, CXStartCallAction action)
@@ -987,7 +987,7 @@ public override void PerformStartCallAction (CXProvider provider, CXStartCallAct
 }
 ```
 
-Ele cria uma instância da classe `ActiveCall` (para armazenar informações sobre a chamada em andamento) e preenche com a pessoa que está sendo chamada. Os eventos `StartingConnectionChanged` e `ConnectedChanged` são usados para monitorar e relatar o ciclo de vida da chamada de saída. A chamada é iniciada e o sistema informava que a ação foi atendida.
+Ele cria uma instância da `ActiveCall` classe (para armazenar informações sobre a chamada em andamento) e preenche com a pessoa que está sendo chamada. Os `StartingConnectionChanged` `ConnectedChanged` eventos e são usados para monitorar e relatar o ciclo de vida da chamada de saída. A chamada é iniciada e o sistema informava que a ação foi atendida.
 
 ### <a name="ending-an-outgoing-call"></a>Finalizando uma chamada de saída
 
@@ -1025,13 +1025,13 @@ public void EndCall (ActiveCall call)
 }
 ```
 
-Se o criar um `CXEndCallAction` com o UUID da chamada para End, o agrupará em uma `CXTransaction` que é enviada ao sistema usando o método `RequestTransaction` da classe `CXCallController`. 
+Se o criar um `CXEndCallAction` com o UUID da chamada para End, o agrupará em um `CXTransaction` que é enviado ao sistema usando o `RequestTransaction` método da `CXCallController` classe. 
 
 ## <a name="additional-callkit-details"></a>Detalhes adicionais do CallKit
 
 Esta seção abordará alguns detalhes adicionais que o desenvolvedor precisará levar em consideração ao trabalhar com CallKit como:
 
-- Configuração do provedor
+- Configuração do Provedor
 - Erros de ação
 - Restrições do sistema
 - Áudio VOIP
@@ -1054,12 +1054,12 @@ Considere o seguinte exemplo:
 
 1. O aplicativo recebeu uma ação iniciar chamada e começou o processo de inicializar uma nova chamada VOIP com sua rede de comunicação.
 2. Devido à capacidade de comunicação limitada ou sem rede, essa conexão falha.
-3. O aplicativo *deve* enviar a mensagem de **falha** de volta para a ação iniciar chamada (`Action.Fail()`) para informar o sistema da falha.
+3. O aplicativo *deve* enviar a mensagem de **falha** de volta para a ação iniciar chamada ( `Action.Fail()` ) para informar o sistema da falha.
 4. Isso permite que o sistema informe o usuário sobre o status da chamada. Por exemplo, para exibir a interface do usuário de falha de chamada.
 
 Além disso, um aplicativo VOIP 10 do iOS precisa responder a _erros de tempo limite_ que podem ocorrer quando uma ação esperada não pode ser processada dentro de um determinado período de tempo. Cada tipo de ação fornecido pelo CallKit tem um valor de tempo limite máximo associado a ele. Esses valores de tempo limite garantem que qualquer ação CallKit solicitada pelo usuário seja tratada de maneira responsiva, mantendo o sistema operacional fluido e responsivo também.
 
-Há vários métodos no delegado do provedor (`CXProviderDelegate`) que devem ser substituídos para lidar normalmente com essas situações de tempo limite também.
+Há vários métodos no delegado do provedor ( `CXProviderDelegate` ) que devem ser substituídos para lidar normalmente com essas situações de tempo limite também.
 
 ### <a name="system-restrictions"></a>Restrições do sistema
 
@@ -1115,12 +1115,12 @@ Além disso, o CallKit tem acesso a outras dicas de roteamento de áudio que pod
 
 Durante o ciclo de vida de uma chamada VOIP típica usando CallKit, o aplicativo precisará configurar o fluxo de áudio que o CallKit fornecerá. Veja o exemplo a seguir:
 
-[![](callkit-images/callkit09.png "The Start Call Action Sequence")](callkit-images/callkit09.png#lightbox)
+[![A sequência de ação iniciar chamada](callkit-images/callkit09.png)](callkit-images/callkit09.png#lightbox)
 
 1. Uma ação iniciar chamada é recebida pelo aplicativo para responder a uma chamada recebida.
-2. Antes que essa ação seja atendida pelo aplicativo, ela fornecerá a configuração que será necessária para seu `AVAudioSession`.
+2. Antes que essa ação seja atendida pelo aplicativo, ela fornece a configuração que será necessária para seu `AVAudioSession` .
 3. O aplicativo informa ao sistema que a ação foi atendida.
-4. Antes que a chamada se conecte, o CallKit fornece uma `AVAudioSession` de alta prioridade que corresponde à configuração solicitada pelo aplicativo. O aplicativo será notificado por meio do método `DidActivateAudioSession` de seu `CXProviderDelegate`.
+4. Antes que a chamada se conecte, o CallKit fornece uma `AVAudioSession` correspondência de alta prioridade com a configuração solicitada pelo aplicativo. O aplicativo será notificado por meio do `DidActivateAudioSession` método de seu `CXProviderDelegate` .
 
 ## <a name="working-with-call-directory-extensions"></a>Trabalhando com extensões de diretório de chamada
 
@@ -1130,32 +1130,32 @@ Ao trabalhar com CallKit, _as extensões de diretório de chamada_ fornecem uma 
 
 Para implementar uma extensão de diretório de chamada em um aplicativo Xamarin. iOS, faça o seguinte:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Abra a solução do aplicativo no Visual Studio para Mac.
-2. Clique com o botão direito do mouse no nome da solução na **Gerenciador de soluções** e selecione **Adicionar** > **Adicionar novo projeto**.
-3. Selecione **extensões** de > do **Ios** > extensões de **diretório de chamada** e clique no botão **Avançar** : 
+2. Clique com o botão direito do mouse no nome da solução na **Gerenciador de soluções** e selecione **Adicionar**  >  **Adicionar novo projeto**.
+3. Selecione **iOS**  >  **extensões**  >  **do IOS extensões de diretório** e clique no botão **Avançar** : 
 
-    [![](callkit-images/calldir01.png "Creating a new Call Directory Extension")](callkit-images/calldir01.png#lightbox)
+    [![Criando uma nova extensão de diretório de chamada](callkit-images/calldir01.png)](callkit-images/calldir01.png#lightbox)
 4. Insira um **nome** para a extensão e clique no botão **Avançar** : 
 
-    [![](callkit-images/calldir02.png "Entering a name for the extension")](callkit-images/calldir02.png#lightbox)
+    [![Inserindo um nome para a extensão](callkit-images/calldir02.png)](callkit-images/calldir02.png#lightbox)
 5. Ajuste o **nome do projeto** e/ou o **nome da solução** , se necessário, e clique no botão **criar** : 
 
-    [![](callkit-images/calldir03.png "Creating the project")](callkit-images/calldir03.png#lightbox) 
+    [![Criação do projeto](callkit-images/calldir03.png)](callkit-images/calldir03.png#lightbox) 
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Abra a solução do aplicativo no Visual Studio.
-2. Clique com o botão direito do mouse no nome da solução na **Gerenciador de soluções** e selecione **Adicionar** > **Adicionar novo projeto**.
-3. Selecione **extensões** de > do **Ios** > extensões de **diretório de chamada** e clique no botão **Avançar** : 
+2. Clique com o botão direito do mouse no nome da solução na **Gerenciador de soluções** e selecione **Adicionar**  >  **Adicionar novo projeto**.
+3. Selecione **iOS**  >  **extensões**  >  **do IOS extensões de diretório** e clique no botão **Avançar** : 
 
-    [![](callkit-images/calldir01w.png "Creating a new Call Directory Extension")](callkit-images/calldir01.png#lightbox)
+    [![Criando uma nova extensão de diretório de chamada](callkit-images/calldir01w.png)](callkit-images/calldir01.png#lightbox)
 4. Insira um **nome** para a extensão e clique no botão **OK**
 
 -----
 
-Isso adicionará uma classe de `CallDirectoryHandler.cs` ao projeto semelhante ao seguinte:
+Isso adicionará uma `CallDirectoryHandler.cs` classe ao projeto semelhante ao seguinte:
 
 ```csharp
 using System;
@@ -1249,15 +1249,15 @@ namespace MonkeyCallDirExtension
 }
 ```
 
-O método `BeginRequest` no manipulador de diretório de chamada precisará ser modificado para fornecer a funcionalidade necessária. No caso do exemplo acima, ele tenta definir a lista de números bloqueados e disponíveis no banco de dados de contatos do aplicativo VOIP. Se qualquer uma das solicitações falhar por qualquer motivo, crie um `NSError` para descrever a falha e passá-la para o método `CancelRequest` da classe `CXCallDirectoryExtensionContext`.
+O `BeginRequest` método no manipulador de diretório de chamada precisará ser modificado para fornecer a funcionalidade necessária. No caso do exemplo acima, ele tenta definir a lista de números bloqueados e disponíveis no banco de dados de contatos do aplicativo VOIP. Se qualquer uma das solicitações falhar por qualquer motivo, crie um `NSError` para descrever a falha e passá-la para o `CancelRequest` método da `CXCallDirectoryExtensionContext` classe.
 
-Para definir os números bloqueados, use o método `AddBlockingEntry` da classe `CXCallDirectoryExtensionContext`. Os números fornecidos para o método _devem_ estar em ordem numérica crescente. Para obter o melhor desempenho e uso de memória quando há muitos números de telefone, considere carregar apenas um subconjunto de números em um determinado momento e usar pools de lançamentos para liberar objetos alocados durante cada lote de números que são carregados.
+Para definir os números bloqueados, use o `AddBlockingEntry` método da `CXCallDirectoryExtensionContext` classe. Os números fornecidos para o método _devem_ estar em ordem numérica crescente. Para obter o melhor desempenho e uso de memória quando há muitos números de telefone, considere carregar apenas um subconjunto de números em um determinado momento e usar pools de lançamentos para liberar objetos alocados durante cada lote de números que são carregados.
 
-Para informar para contatar o aplicativo dos números de contato conhecidos pelo aplicativo VOIP, use o método `AddIdentificationEntry` da classe `CXCallDirectoryExtensionContext` e forneça o número e um rótulo de identificação. Novamente, os números fornecidos para o método _devem_ estar em ordem numérica crescente. Para obter o melhor desempenho e uso de memória quando há muitos números de telefone, considere carregar apenas um subconjunto de números em um determinado momento e usar pools de lançamentos para liberar objetos alocados durante cada lote de números que são carregados.
+Para informar para contatar o aplicativo dos números de contato conhecidos pelo aplicativo VOIP, use o `AddIdentificationEntry` método da `CXCallDirectoryExtensionContext` classe e forneça o número e um rótulo de identificação. Novamente, os números fornecidos para o método _devem_ estar em ordem numérica crescente. Para obter o melhor desempenho e uso de memória quando há muitos números de telefone, considere carregar apenas um subconjunto de números em um determinado momento e usar pools de lançamentos para liberar objetos alocados durante cada lote de números que são carregados.
 
 ## <a name="summary"></a>Resumo
 
-Este artigo abordou a nova API do CallKit lançada pela Apple no iOS 10 e como implementá-la em aplicativos de VOIP do Xamarin. iOS. Ele mostrou como o CallKit permite que um aplicativo se integre ao sistema iOS, como ele fornece paridade de recursos com aplicativos internos (como telefone) e como ele aumenta a visibilidade de um aplicativo em todo o iOS em locais como telas de bloqueio e página inicial, por meio de interações de siri e via os aplicativos de contatos.
+Este artigo abordou a nova API do CallKit lançada pela Apple no iOS 10 e como implementá-la em aplicativos de VOIP do Xamarin. iOS. Ele mostrou como o CallKit permite que um aplicativo se integre ao sistema iOS, como ele fornece a paridade de recursos com aplicativos internos (como telefone) e como ele aumenta a visibilidade de um aplicativo durante o iOS em locais como as telas de bloqueio e de página inicial, por meio de interações de siri e por meio dos aplicativos de contatos.
 
 ## <a name="related-links"></a>Links relacionados
 

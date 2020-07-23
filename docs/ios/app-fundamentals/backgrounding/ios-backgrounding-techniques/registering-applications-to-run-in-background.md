@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 61b7926f28253acbcc45bc204c466d76a00c72b0
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: bef29bfc526a5f378368390c1ec25b1bbf1d8a5a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73010827"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932958"
 ---
 # <a name="registering-xamarinios-apps-to-run-in-the-background"></a>Registrando aplicativos Xamarin. iOS para serem executados em segundo plano
 
@@ -34,7 +34,7 @@ Os aplicativos registrados podem se enquadrar em várias categorias:
 
 Os aplicativos podem ser registrados definindo a propriedade de **modos de segundo plano necessária** no *info. plist*do aplicativo. Um aplicativo pode se registrar em quantas categorias forem necessárias:
 
- [![](registering-applications-to-run-in-background-images/bgmodes.png "Setting the background modes")](registering-applications-to-run-in-background-images/bgmodes.png#lightbox)
+ [![Configurando os modos de segundo plano](registering-applications-to-run-in-background-images/bgmodes.png)](registering-applications-to-run-in-background-images/bgmodes.png#lightbox)
 
 Para obter um guia passo a passo para registrar um aplicativo para atualizações de local de segundo plano, consulte o [passo a passos local do plano de fundo](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md).
 
@@ -42,7 +42,7 @@ Para obter um guia passo a passo para registrar um aplicativo para atualizaçõe
 
 Outra propriedade que pode ser definida em *info. plist* é o *aplicativo não é executado em segundo plano*ou `UIApplicationExitsOnSuspend` Propriedade:
 
- [![](registering-applications-to-run-in-background-images/plist.png "Disabling Background Running")](registering-applications-to-run-in-background-images/plist.png#lightbox)
+ [![Desabilitando a execução em segundo plano](registering-applications-to-run-in-background-images/plist.png)](registering-applications-to-run-in-background-images/plist.png#lightbox)
 
 Isso tem exatamente o mesmo efeito que definir a configuração de atualização do aplicativo em segundo plano como off no iOS 7 +, exceto que só pode ser alterada no lado do desenvolvedor e está disponível para o iOS 4 e superior. O aplicativo será suspenso imediatamente após a inserção do plano de fundo e não poderá fazer nenhum processamento.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2018
-ms.openlocfilehash: ae32588d75ec3152a1b8b8558d40abbe2e76d1b4
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 2650bda7115cd132e87bf669914320f63214e295
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73022483"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933218"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introdução ao Xamarin.iOS para Visual Studio
 
@@ -32,7 +32,7 @@ Há alguns requisitos que devem ser seguidos ao desenvolver para iOS no Visual S
 
 Há várias opções de configuração disponíveis para você escolher a que funciona melhor para suas necessidades de desenvolvimento. Elas estão listadas abaixo:
 
-- Usar um Mac como seu computador de desenvolvimento principal e executar uma máquina virtual Windows com Visual Studio instalado. Recomendamos o uso de softwarevm como [Parallels](https://www.parallels.com/products/desktop/) ou [VMWare](https://www.vmware.com/products/fusion/) .
+- Usar um Mac como seu computador de desenvolvimento principal e executar uma máquina virtual Windows com Visual Studio instalado. É recomendável usar o software de VM, como [paralelos](https://www.parallels.com/products/desktop/) ou [VMware](https://www.vmware.com/products/fusion/) .
 - Usar um Mac apenas como um host de build. Nesse cenário, estaria conectado à mesma rede que um computador Windows com as ferramentas [necessárias](~/get-started/installation/windows.md#installation) instaladas.
 
 Em qualquer caso, você deve seguir estas etapas:
@@ -53,7 +53,7 @@ As funções dessas barras de ferramentas são explicadas abaixo.
 
 Os controles relevantes para o desenvolvimento do Xamarin iOS estão circulados em vermelho:
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/03.png "The controls relevant to Xamarin iOS development are circled in red")](introduction-to-xamarin-ios-for-visual-studio-images/03.png#lightbox "The controls relevant to Xamarin iOS development are circled in red")
+[![Os controles relevantes para o desenvolvimento do Xamarin iOS são circulados em vermelho](introduction-to-xamarin-ios-for-visual-studio-images/03.png)](introduction-to-xamarin-ios-for-visual-studio-images/03.png#lightbox "Os controles relevantes para o desenvolvimento do Xamarin iOS são circulados em vermelho")
 
 - **Iniciar** – inicia a depuração ou a execução do aplicativo na plataforma selecionada. Deve haver um Mac conectado (consulte o indicador de status na barra de ferramentas do iOS).
 - **Configurações da Solução** – permite selecionar a configuração a ser utilizada (por exemplo, Depuração, Liberação).
@@ -63,7 +63,7 @@ Os controles relevantes para o desenvolvimento do Xamarin iOS estão circulados 
 
 A barra de ferramentas do iOS no Visual Studio é semelhante em cada versão do Visual Studio. Elas são mostradas abaixo:
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png "iOS Toolbar")](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png#lightbox)
+[![Barra de ferramentas do iOS](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png)](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png#lightbox)
 
 Cada item é explicado a seguir:
 
@@ -79,41 +79,41 @@ Há opções no painel *Saída* que você pode exibir para detectar erros e mens
 
 Captura de tela abaixo mostra as janelas de saída disponíveis, que podem ser diferente conforme o tipo de projeto:
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/output-sml.png "The available output windows")](introduction-to-xamarin-ios-for-visual-studio-images/output-large.png#lightbox)
+[![As janelas de saída disponíveis](introduction-to-xamarin-ios-for-visual-studio-images/output-sml.png)](introduction-to-xamarin-ios-for-visual-studio-images/output-large.png#lightbox)
 
 - **Xamarin** – contém informações relacionadas apenas ao Xamarin, como a conexão ao Mac e o status de ativação.
 
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png "Information relating solely to Xamarin, such as the connection to the Mac and activation status")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
+  [![Informações relacionadas somente ao Xamarin, como a conexão com o Mac e o status de ativação](introduction-to-xamarin-ios-for-visual-studio-images/output3-sml.png)](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 - **Diagnóstico do Xamarin** – mostra informações mais detalhadas sobre seu projeto Xamarin, como a interação com Android.
 
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png "Detailed information about the Xamarin project")](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
+  [![Informações detalhadas sobre o projeto do Xamarin](introduction-to-xamarin-ios-for-visual-studio-images/output4-sml.png)](introduction-to-xamarin-ios-for-visual-studio-images/output3-large.png#lightbox)
 
 Outros painéis de Saída do Visual Studio padrão, como Depuração e Build, ainda estão disponíveis na exibição Saída e são usados para Saída de Depuração e Saída do MSBuild:
 
-- **Depuração**
+- **Depurar**
 
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "Debugging Output")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
+  [![Saída de depuração](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png)](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
 
-- **Construir** & **ordem de construção**
+- **Criar**  &  **Ordem de compilação**
 
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "MSBuild Output")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
+  [![Saída do MSBuild](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png)](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
 
 ## <a name="ios-project-properties"></a>Propriedades do projeto iOS
 
 As Propriedades do Projeto do Visual Studio podem ser acessadas clicando com o botão direito do mouse no nome do Projeto e selecionando *Propriedades* no menu de contexto. Isso permitirá configurar seu aplicativo iOS, como mostra a captura de tela abaixo:
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/iosproperties.png "Configuring an iOS application")
+![Configurando um aplicativo iOS](introduction-to-xamarin-ios-for-visual-studio-images/iosproperties.png)
 
-- *Assinatura de pacote sinortiza -* conecta-se ao Mac para preencher as identidades de assinatura de código e perfis de provisionamento:
+- *assinatura de pacote do IOS* – conecta-se ao Mac para popular as identidades de assinatura de código e os perfis de provisionamento:
 
   ![Preencha as identidades de assinatura de código e os perfis de provisionamento](introduction-to-xamarin-ios-for-visual-studio-images/bundlesigning.png)
 
-- *Opções ipa do iOS* – o arquivo IPA será salvo no sistema de arquivos do Mac:
+- *Opções do IOS IPA* – o arquivo IPA será salvo no sistema de arquivos do Mac:
 
   ![Opções de IPA do iOS](introduction-to-xamarin-ios-for-visual-studio-images/ipaoptions.png)
 
-- *Opções de execução do iOS* – Configure parâmetros adicionais:
+- *Opções de execução do IOS* – configurar parâmetros adicionais:
 
   ![Opções de Execução do iOS](introduction-to-xamarin-ios-for-visual-studio-images/iosrunoptions.png)
 
@@ -133,11 +133,11 @@ Arquivos Storyboard e .xib podem ser editados no Visual Studio usando o Designer
 
 Para começar a criar ou editar o Storyboard, clique duas vezes em `Main.storyboard` para abri-lo no Designer do iOS:
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/iosdesigner.png "The Main.storyboard in the iOS Designer")
+![O Main.storyboard no Designer de iOS](introduction-to-xamarin-ios-for-visual-studio-images/iosdesigner.png)
 
 Para adicionar objetos à exibição, use o painel **Caixa de Ferramentas** para arrastar e soltar itens na Superfície de Design. A Caixa de Ferramentas poderá ser adicionada selecionando **Exibir > Caixa de Ferramentas**, se ainda não tiver adicionada. As propriedades de objeto podem ser modificadas, seus layouts podem ser ajustados e eventos podem ser criados usando o painel **Propriedades**, conforme ilustrado abaixo:
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/properties.png "The Properties pane")
+![O painel Propriedades](introduction-to-xamarin-ios-for-visual-studio-images/properties.png)
 
  Para saber mais sobre como usar o designer do iOS, consulte os guias do [Designer](~/ios/user-interface/designer/index.md).
 
@@ -163,7 +163,7 @@ Essa janela de ferramentas fornece: uma tabela de entradas de log, uma lista sus
 
 Pontos de interrupção podem ser definidos a qualquer momento em seu aplicativo para sinalizar para o depurador interromper temporariamente a execução do programa. Para definir um ponto de interrupção no Visual Studio, clique na área de margem do editor ao lado do número de linha do código que você deseja interromper em:
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/image18.png "Setting a debug point")
+![Configuração de um ponto de depuração](introduction-to-xamarin-ios-for-visual-studio-images/image18.png)
 
 Iniciar depuração e use o simulador ou dispositivo para navegar de seu aplicativo para um ponto de interrupção. Quando um ponto de interrupção for atingido, a linha será realçada e o comportamento de depuração normal do Visual Studio será habilitado: você pode intervir, encerrar ou sair do código, examinar variáveis locais ou usar a Janela Imediata.
 
@@ -179,9 +179,9 @@ Esta captura de tela mostra o Simulador de iOS em execução ao lado do Visual S
 
 Este artigo descreveu como usar o Xamarin iOS para Visual Studio. Ele listou os diversos recursos disponíveis para criar, compilar e testar um aplicativo iOS de dentro do Visual Studio e percorreu a criação e a depuração de um aplicativo simples do iOS.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Instalação do Xamarin.iOS](~/ios/get-started/installation/windows/index.md)
+- [Instalação do Xamarin. iOS](~/ios/get-started/installation/windows/index.md)
 - [Provisionamento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md)
 - [Criando a interface do usuário iOS no Código](~/ios/app-fundamentals/ios-code-only.md)
 - [Conectar um Mac ao seu ambiente do Visual Studio com XMA (vídeo)](https://university.xamarin.com/lightninglectures/xamarin-mac-agent)

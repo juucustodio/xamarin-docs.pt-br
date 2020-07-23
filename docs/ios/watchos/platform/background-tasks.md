@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2017
-ms.openlocfilehash: 0ca65c56a742aaf23874f581b976ef50b3d16192
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 60e7c2b5771f7f65c07926b2fb5958fdc3f419fb
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574334"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931028"
 ---
 # <a name="watchos-background-tasks-in-xamarin"></a>Tarefas em segundo plano do watchOS no Xamarin
 
@@ -26,9 +26,9 @@ Com o watchOS 3, há três maneiras principais de que um aplicativo Watch possa 
 
 Antes de discutir todas as maneiras como um desenvolvedor pode manter os dados e a interface do usuário de um aplicativo watchOS atualizados, esta seção examinará um conjunto típico de padrões de uso e como um usuário pode se mover entre o iPhone e seus Apple Watch ao longo do dia com base na hora do dia e na atividade que estão fazendo no momento (como dirigir).
 
-Veja o exemplo a seguir:
+Veja o exemplo seguinte:
 
-[![](background-tasks-images/update00.png "How a user might move between their iPhone and their Apple Watch throughout the day")](background-tasks-images/update00.png#lightbox)
+[![Como um usuário pode se mover entre seu iPhone e seus Apple Watch ao longo do dia](background-tasks-images/update00.png)](background-tasks-images/update00.png#lightbox)
 
 1. Na manhã, enquanto esperava em linha para um café, o usuário procura as notícias atuais em seu iPhone por vários minutos.
 2. Antes de sair do café, eles verificam rapidamente o clima com a complicação de sua face de inspeção.
@@ -41,7 +41,7 @@ Por causa da natureza de "visão rápida" (menos de três segundos) de como um u
 
 Usando as novas APIs que a Apple incluiu no watchOS 3, o aplicativo pode agendar uma _atualização em segundo plano_ e ter as informações desejadas prontas antes que o usuário a solicite. Veja o exemplo da complicação do clima discutida acima:
 
-[![](background-tasks-images/update01.png "An example of the Weather Complication")](background-tasks-images/update01.png#lightbox)
+[![Um exemplo da complicação do clima](background-tasks-images/update01.png)](background-tasks-images/update01.png#lightbox)
 
 1. O aplicativo é agendado para ser ativadosdo pelo sistema em um momento específico. 
 2. O aplicativo busca as informações necessárias para gerar a atualização.
@@ -50,7 +50,7 @@ Usando as novas APIs que a Apple incluiu no watchOS 3, o aplicativo pode agendar
 
 Como visto acima, o sistema watchOS ativa o aplicativo usando uma ou mais tarefas, das quais ele tem um pool muito limitado disponível:
 
-[![](background-tasks-images/update02.png "The watchOS system wakes the app using one or more Tasks")](background-tasks-images/update02.png#lightbox)
+[![O sistema watchOS ativa o aplicativo usando uma ou mais tarefas](background-tasks-images/update02.png)](background-tasks-images/update02.png#lightbox)
 
 A Apple sugere aproveitar ao máximo essa tarefa (já que é um recurso limitado para o aplicativo), mantendo-a até que o aplicativo tenha concluído o processo de atualização.
 
@@ -84,7 +84,7 @@ namespace MonkeyWatch.MonkeySeeExtension
 
 Quando o aplicativo concluir a tarefa determinada, ele a retornará ao sistema marcando-a como concluída:
 
-[![](background-tasks-images/update03.png "The Task returns to the system by marking it completed")](background-tasks-images/update03.png#lightbox)
+[![A tarefa retorna ao sistema marcando-a como concluída](background-tasks-images/update03.png)](background-tasks-images/update03.png#lightbox)
 
 <a name="New-Background-Tasks"></a>
 
@@ -105,7 +105,7 @@ Essas tarefas serão abordadas em detalhes nas seções abaixo.
 
 O `WKApplicationRefreshBackgroundTask` é uma tarefa genérica que pode ser agendada para ter o aplicativo ativados em uma data futura:
 
-[![](background-tasks-images/update04.png "A WKApplicationRefreshBackgroundTask woken at a future date")](background-tasks-images/update04.png#lightbox)
+[![Um WKApplicationRefreshBackgroundTask ativados em uma data futura](background-tasks-images/update04.png)](background-tasks-images/update04.png#lightbox)
 
 Dentro do tempo de execução da tarefa, o aplicativo pode fazer qualquer tipo de processamento local, como atualizar uma linha do tempo de complicação ou buscar alguns dados necessários com um `NSUrlSession` .
 
@@ -115,7 +115,7 @@ Dentro do tempo de execução da tarefa, o aplicativo pode fazer qualquer tipo d
 
 O sistema enviará um `WKURLSessionRefreshBackgroundTask` quando os dados terminarem de baixar e estiverem prontos para serem processados pelo aplicativo:
 
-[![](background-tasks-images/update05.png "The WKURLSessionRefreshBackgroundTask when the data has finished downloading")](background-tasks-images/update05.png#lightbox)
+[![O WKURLSessionRefreshBackgroundTask quando os dados concluíram o download](background-tasks-images/update05.png)](background-tasks-images/update05.png#lightbox)
 
 Um aplicativo não é deixado em execução enquanto os dados estão sendo baixados em segundo plano. Em vez disso, o aplicativo agenda a solicitação de dados e, em seguida, é suspenso e o sistema manipula o download dos dados, apenas reativando o aplicativo quando o download é concluído.
 
@@ -125,17 +125,17 @@ Um aplicativo não é deixado em execução enquanto os dados estão sendo baixa
 
 No watchOS 3, a Apple adicionou o Dock, onde os usuários podem fixar seus aplicativos favoritos e acessá-los rapidamente. Quando o usuário pressiona o botão lateral na Apple Watch, uma galeria de instantâneos de aplicativo afixados será exibida. O usuário pode passar o dedo para a esquerda ou direita para localizar o aplicativo desejado e, em seguida, tocar no aplicativo para iniciá-lo, substituindo o instantâneo pela interface do aplicativo em execução.
 
-[![](background-tasks-images/update06.png "Replacing the Snapshot with the running apps interface")](background-tasks-images/update06.png#lightbox)
+[![Substituindo o instantâneo pela interface de aplicativos em execução](background-tasks-images/update06.png)](background-tasks-images/update06.png#lightbox)
 
 Periodicamente, o sistema usa instantâneos da interface do usuário do aplicativo (enviando um `WKSnapshotRefreshBackgroundTask` ) e usa esses instantâneos para popular o encaixe. o watchOS dá ao aplicativo a oportunidade de atualizar seu conteúdo e a interface do usuário antes que esse instantâneo seja feito.
 
 Os instantâneos são muito importantes no watchOS 3, já que funcionam como as imagens de versão prévia e de inicialização para o aplicativo. Se o usuário se liquidar em um aplicativo no Dock, ele será expandido para tela inteira, entrará no primeiro plano e começará a ser executado, portanto, é imperativo que o instantâneo esteja atualizado:
 
-[![](background-tasks-images/update07.png "If the user settles on an app in the Dock, it will expand to full screen")](background-tasks-images/update07.png#lightbox)
+[![Se o usuário se liquidar em um aplicativo no Dock, ele será expandido para tela inteira](background-tasks-images/update07.png)](background-tasks-images/update07.png#lightbox)
 
 Novamente, o sistema emitirá um `WKSnapshotRefreshBackgroundTask` para que o aplicativo possa se preparar (atualizando os dados e a interface do usuário) antes que o instantâneo seja obtido:
 
-[![](background-tasks-images/update08.png "The app can prepare by updating the data and the UI before the snapshot is taken")](background-tasks-images/update08.png#lightbox)
+[![O aplicativo pode se preparar atualizando os dados e a interface do usuário antes que o instantâneo seja tomado](background-tasks-images/update08.png)](background-tasks-images/update08.png#lightbox)
 
 Quando o aplicativo marcar a `WKSnapshotRefreshBackgroundTask` conclusão, o sistema tirará automaticamente um instantâneo da interface do usuário do aplicativo.
 
@@ -144,7 +144,7 @@ Quando o aplicativo marcar a `WKSnapshotRefreshBackgroundTask` conclusão, o sis
 
 Além disso, quando o usuário recebe uma notificação do aplicativo e a toca para colocar o aplicativo em primeiro plano, o instantâneo precisa estar atualizado, pois também está agindo como a tela de inicialização:
 
-[![](background-tasks-images/update09.png "The user receives a notification from the app and taps it to bring the app to the foreground")](background-tasks-images/update09.png#lightbox)
+[![O usuário recebe uma notificação do aplicativo e a toca para colocar o aplicativo em primeiro plano](background-tasks-images/update09.png)](background-tasks-images/update09.png#lightbox)
 
 Se tiver sido mais de uma hora desde que o usuário interage com um aplicativo watchOS, ele poderá retornar ao seu estado padrão. O estado padrão pode significar diferentes coisas para diferentes aplicativos e, com base no design de um aplicativo, ele pode não ter um estado padrão.
 
@@ -156,13 +156,13 @@ Se tiver sido mais de uma hora desde que o usuário interage com um aplicativo w
 
 No watchOS 3, a Apple integrou a conectividade com a API de atualização em segundo plano por meio do novo `WKWatchConnectivityRefreshBackgroundTask` . Usando esse novo recurso, um aplicativo do iPhone pode entregar dados atualizados à sua contraparte do aplicativo Watch, enquanto o aplicativo watchOS está em execução em segundo plano:
 
-[![](background-tasks-images/update10.png "An iPhone app can deliver fresh data to its watch app counterpart, while the watchOS app is running in the background")](background-tasks-images/update10.png#lightbox)
+[![Um aplicativo do iPhone pode entregar dados atualizados à sua contraparte do aplicativo Watch, enquanto o aplicativo watchOS está em execução em segundo plano](background-tasks-images/update10.png)](background-tasks-images/update10.png#lightbox)
 
 Iniciar um push de complicação, o contexto do aplicativo, o envio de um arquivo ou a atualização das informações do usuário do aplicativo do iPhone ativará o aplicativo Apple Watch em segundo plano.
 
 Quando o aplicativo Watch for ativados por meio de `WKWatchConnectivityRefreshBackgroundTask` , será necessário usar os métodos de API padrão para receber os dados do aplicativo do iPhone.
 
-[![](background-tasks-images/update11.png "The WKWatchConnectivityRefreshBackgroundTask data flow")](background-tasks-images/update11.png#lightbox)
+[![O fluxo de dados WKWatchConnectivityRefreshBackgroundTask](background-tasks-images/update11.png)](background-tasks-images/update11.png#lightbox)
 
 1. Verifique se a sessão foi ativada.
 2. Monitore a nova `HasContentPending` propriedade, desde que o valor seja `true` , o aplicativo ainda tem dados a serem processados. Como antes, o aplicativo deve manter a tarefa até concluir o processamento de todos os dados.
@@ -174,7 +174,7 @@ Quando o aplicativo Watch for ativados por meio de `WKWatchConnectivityRefreshBa
 
 Ao colocar todas as partes da nova API de tarefas em segundo plano, um conjunto típico de interações seria semelhante ao seguinte:
 
-[![](background-tasks-images/update12.png "The Background API Lifecycle")](background-tasks-images/update12.png#lightbox)
+[![O ciclo de vida da API de segundo plano](background-tasks-images/update12.png)](background-tasks-images/update12.png#lightbox)
 
 1. Primeiro, o aplicativo watchOS agenda uma tarefa em segundo plano para ser ativo como um ponto no futuro.
 2. O aplicativo é ativados pelo sistema e enviou uma tarefa.
@@ -207,7 +207,7 @@ Por exemplo, este documento usará o aplicativo de esportes MonkeySoccer ilegít
 
 Veja o seguinte cenário de uso típico:
 
-[![](background-tasks-images/update14.png "The typical usage scenario")](background-tasks-images/update14.png#lightbox)
+[![O cenário de uso típico](background-tasks-images/update14.png)](background-tasks-images/update14.png#lightbox)
 
 A equipe de futebol favorita do usuário está reproduzindo uma grande correspondência de 7:00 às 9:00, então o aplicativo deve esperar que o usuário esteja verificando a pontuação regularmente e decide em um intervalo de atualização de 30 minutos.
 
@@ -256,7 +256,7 @@ O sistema retornará um `NSError` se não for possível agendar a tarefa solicit
 
 Em seguida, dê uma olhada mais de perto na janela de 5 minutos mostrando as etapas necessárias para atualizar a Pontuação:
 
-[![](background-tasks-images/update15.png "The 5 minute window showing the steps required to update the score")](background-tasks-images/update15.png#lightbox)
+[![A janela de 5 minutos mostrando as etapas necessárias para atualizar a Pontuação](background-tasks-images/update15.png)](background-tasks-images/update15.png#lightbox)
 
 1. Às 7:30:02 PM, o aplicativo é ativado pelo sistema e recebeu a tarefa de atualização em segundo plano. Sua primeira prioridade é obter as pontuações mais recentes do servidor. Consulte [agendando um NSUrlSession](#Scheduling-a-NSUrlSession) abaixo.
 2. Às 7:30:05 o aplicativo conclui a tarefa original, o sistema coloca o aplicativo em suspensão e continua a baixar os dados solicitados em segundo plano.
@@ -523,7 +523,7 @@ Além disso, ele também informa à tarefa de instantâneo que o aplicativo não
 
 Como visto no exemplo acima da janela de cinco minutos que o aplicativo MonkeySoccer levou para atualizar suas pontuações, trabalhando de maneira eficiente e usando as novas tarefas em segundo plano do watchOS 3, o aplicativo esteve ativo apenas por um total de 15 segundos: 
 
-[![](background-tasks-images/update16.png "The app was only active for a total of 15 seconds")](background-tasks-images/update16.png#lightbox)
+[![O aplicativo esteve ativo somente por um total de 15 segundos](background-tasks-images/update16.png)](background-tasks-images/update16.png#lightbox)
 
 Isso reduz o impacto que o aplicativo terá nos recursos de Apple Watch disponíveis e na vida útil da bateria e também permite que o aplicativo funcione melhor com outros aplicativos em execução no relógio.
 
@@ -611,7 +611,7 @@ Ele usa a `RemainingComplicationUserInfoTransfers` Propriedade do `WCSession` pa
 
 No watchOS 3, a Apple adicionou o Dock, onde os usuários podem fixar seus aplicativos favoritos e acessá-los rapidamente. Quando o usuário pressiona o botão lateral na Apple Watch, uma galeria de instantâneos de aplicativo afixados será exibida. O usuário pode passar o dedo para a esquerda ou direita para localizar o aplicativo desejado e, em seguida, tocar no aplicativo para iniciá-lo, substituindo o instantâneo pela interface do aplicativo em execução.
 
-[![](background-tasks-images/dock01.png "The Dock")](background-tasks-images/dock01.png#lightbox)
+[![O Dock](background-tasks-images/dock01.png)](background-tasks-images/dock01.png#lightbox)
 
 Periodicamente, o sistema usa instantâneos da interface do usuário do aplicativo e usa esses instantâneos para preencher os documentos. o watchOS dá ao aplicativo a oportunidade de atualizar seu conteúdo e a interface do usuário antes que esse instantâneo seja feito.
 
@@ -670,7 +670,7 @@ Ao trabalhar com atualizações de instantâneo, a Apple faz as seguintes sugest
 
 A Apple sugere o seguinte para trabalhar com o fluxo de dados:
 
-[![](background-tasks-images/update17.png "App Data Flow Diagram")](background-tasks-images/update17.png#lightbox)
+[![Diagrama de fluxo de dados de aplicativo](background-tasks-images/update17.png)](background-tasks-images/update17.png#lightbox)
 
 Um evento externo (como a conectividade de inspeção) ativa o aplicativo. Isso força o aplicativo a atualizar seu modelo de dados (que representa o estado atual dos aplicativos). Como resultado da alteração do modelo de dados, o aplicativo precisará atualizar suas complicações, solicitar um novo instantâneo, possivelmente iniciar um plano `NSURLSession` de fundo para extrair mais dados e agendar mais atualizações em segundo plano.
 
@@ -697,6 +697,6 @@ A Apple tem as seguintes sugestões:
 
 Este artigo abordou os aprimoramentos que a Apple fez no watchOS e como eles podem ser usados para manter um aplicativo observado atualizado. Primeiro, ele abordou toda a nova tarefa em segundo plano que a Apple adicionou no watchOS 3. Em seguida, ele abordou o ciclo de vida da API de segundo plano e como implementar tarefas em segundo plano em um aplicativo Xamarin watchOS. Por fim, ele abordou como o agendamento funciona e deu algumas práticas recomendadas.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Amostras do iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)

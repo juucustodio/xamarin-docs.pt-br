@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 63d59d9f11932343c6ca57e0b3735077eabb6a9a
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: a8259cf47f8af6e356c9a860c61ad0eea0c8927a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571812"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932971"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>Operação em segundo plano no iOS com tarefas
 
@@ -113,11 +113,11 @@ A maior alteração no iOS 7 em relação às tarefas em segundo plano não é c
 
 Lembre-se de que, antes do iOS 7, uma tarefa em execução em segundo plano tinha 600 segundos para ser concluída. Um motivo para esse limite é que uma tarefa em execução em segundo plano manteria o dispositivo ativo durante a tarefa:
 
- [![](ios-backgrounding-with-tasks-images/ios6.png "Graph of the task keeping the app awake pre-iOS 7")](ios-backgrounding-with-tasks-images/ios6.png#lightbox)
+ [![Grafo da tarefa que mantém o aplicativo ativo pré-iOS 7](ios-backgrounding-with-tasks-images/ios6.png)](ios-backgrounding-with-tasks-images/ios6.png#lightbox)
 
 o processamento em segundo plano do iOS 7 é otimizado para duração mais longa da bateria. No iOS 7, o plano de fundo se torna oportunista: em vez de manter o dispositivo ativo, as tarefas respeitam quando o dispositivo entra em suspensão e, em vez disso, faz seu processamento em partes quando o dispositivo é ativado para lidar com chamadas telefônicas, notificações, emails de entrada e outras interrupções comuns. O diagrama a seguir fornece informações sobre como uma tarefa pode ser dividida:
 
- [![](ios-backgrounding-with-tasks-images/ios7.png "Graph of the task being broken into chunks post-iOS 7")](ios-backgrounding-with-tasks-images/ios7.png#lightbox)
+ [![Grafo da tarefa que está sendo dividida em partes posteriores ao iOS 7](ios-backgrounding-with-tasks-images/ios7.png)](ios-backgrounding-with-tasks-images/ios7.png#lightbox)
 
 Como o tempo de execução da tarefa não é mais contínuo, as tarefas que executam transferências de rede devem ser tratadas de forma diferente no iOS 7. Os desenvolvedores são incentivados a usar a `NSURlSession` API para lidar com as transferências de rede. A próxima seção é uma visão geral das transferências em segundo plano.
 

@@ -10,22 +10,22 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 87b97ad913e08c42d16bbf055f168c07b9bd60e8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 644e6ab4acffa7acf2d86733d68fed8db07a752a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137196"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932360"
 ---
 # <a name="lines-and-stroke-caps"></a>Limites de linha e de traço
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Saiba como usar o SkiaSharp para desenhar linhas com limites de traço diferentes_
 
 No SkiaSharp, a renderização de uma única linha é muito diferente da renderização de uma série de linhas retas conectadas. No entanto, mesmo ao desenhar linhas únicas, muitas vezes é necessário dar uma largura de traço específica a linhas. Como essas linhas se tornam mais largas, a aparência das extremidades das linhas também se torna importante. A aparência do final da linha é chamada de ponta do *traço*:
 
-![](lines-images/strokecapsexample.png "The three stroke caps options")
+![As três opções de Caps Stroke](lines-images/strokecapsexample.png)
 
 Para desenhar linhas únicas, `SKCanvas` define um [`DrawLine`](xref:SkiaSharp.SKCanvas.DrawLine(System.Single,System.Single,System.Single,System.Single,SkiaSharp.SKPaint)) método simples cujos argumentos indicam as coordenadas inicial e final da linha com um `SKPaint` objeto:
 
@@ -97,7 +97,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Para cada membro da `SKStrokeCap` enumeração, o manipulador desenha duas linhas, uma com uma espessura de traço de 50 pixels e outra linha posicionada na parte superior com uma espessura de traço de dois pixels. Essa segunda linha destina-se a ilustrar o início e o término geométricos da linha, independentemente da espessura da linha e da ponta do traço:
 
-[![](lines-images/strokecaps-small.png "Triple screenshot of the Stroke Caps page")](lines-images/strokecaps-large.png#lightbox "Triple screenshot of the Stroke Caps page")
+[![Captura de tela tripla da página de Caps de traço](lines-images/strokecaps-small.png)](lines-images/strokecaps-large.png#lightbox "Captura de tela tripla da página de Caps de traço")
 
 Como você pode ver, as `Square` `Round` arremates de e de traço efetivamente estendem o comprimento da linha por metade da largura do traço no início da linha e novamente no final. Essa extensão se torna importante quando é necessário determinar as dimensões de um objeto gráfico renderizado.
 
@@ -231,7 +231,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 As capturas de tela mostram uma variedade de `Picker` seleções:
 
-[![](lines-images/multiplelines-small.png "Triple screenshot of the Multiple Lines page")](lines-images/multiplelines-large.png#lightbox "Triple screenshot of the Multiple Lines page")
+[![Captura de tela tripla da página de várias linhas](lines-images/multiplelines-small.png)](lines-images/multiplelines-large.png#lightbox "Captura de tela tripla da página de várias linhas")
 
 O iPhone à esquerda mostra como o `SKPointMode.Points` membro de enumeração faz com que o `DrawPoints` processe cada um dos pontos na `SKPoint` matriz como um quadrado se a extremidade da linha for `Butt` ou `Square` . Os círculos serão renderizados se a extremidade da linha for `Round` .
 
@@ -241,7 +241,7 @@ Quando você usa `SKPointMode.Polygon` , uma linha é desenhada entre os pontos 
 
 Se as linhas estão conectadas ou não, o aspecto crucial do trabalho com caminhos gráficos.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

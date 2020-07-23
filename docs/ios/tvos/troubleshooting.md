@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: c73be27ed82a643b01528ccba3887f59beeceb53
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 91ead74f1ae26e10046b1e57d722e84014546108
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574048"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929019"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Solução de problemas de aplicativos tvOS criados com o Xamarin
 
@@ -21,7 +21,7 @@ _Este artigo aborda os problemas conhecidos que você pode encontrar ao trabalha
 
 <a name="Known-Issues"></a>
 
-## <a name="known-issues"></a>Problemas conhecidos
+## <a name="known-issues"></a>Problemas Conhecidos
 
 A versão atual do suporte do tvOS do Xamarin tem os seguintes problemas conhecidos:
 
@@ -47,7 +47,7 @@ Para resolver esse problema, faça o seguinte:
 1. Em Visual Studio para Mac, clique com o botão direito do mouse no arquivo de projeto Xamarin. tvOS na **Gerenciador de soluções** e selecione **Opções**.
 2. Selecione **TvOS Build** e verifique se você está na configuração de **versão** : 
 
-    [![](troubleshooting-images/ts01.png "Select tvOS Build options")](troubleshooting-images/ts01.png#lightbox)
+    [![Selecione as opções de Build do tvOS](troubleshooting-images/ts01.png)](troubleshooting-images/ts01.png#lightbox)
 3. Adicione `--bitcode=asmonly` ao campo **argumentos mTouch adicionais** e clique no botão **OK** .
 4. Recrie seu aplicativo na configuração de **versão** .
 
@@ -125,7 +125,7 @@ Recompile seu aplicativo para liberação e reenvie para o iTunes Connect.
 
 Se você estiver usando uma biblioteca de terceiros (como monogames) e a compilação da versão falhar com uma longa série de mensagens de erro terminando em `Task "MTouch" execution -- FAILED` , tente adicionar `-gcc_flags="-framework OpenAL"` aos seus **argumentos de toque adicionais**:
 
-[![](troubleshooting-images/mtouch01.png "Task MTouch execution")](troubleshooting-images/mtouch01.png#lightbox)
+[![Execução de MTouch de tarefa](troubleshooting-images/mtouch01.png)](troubleshooting-images/mtouch01.png#lightbox)
 
 Você também deve incluir os `--bitcode=asmonly` **argumentos de toque adicionais**, ter suas opções de vinculador definidas para **vincular tudo** e fazer uma compilação limpa.
 
@@ -200,7 +200,7 @@ Observe que o número do perfil no caminho deve corresponder ao número de perfi
 
 Com esse arquivo em vigor, você deve ser capaz de adicionar com êxito o arquivo PCL ao projeto Xamarin. tvOS.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)

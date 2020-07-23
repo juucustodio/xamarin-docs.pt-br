@@ -10,18 +10,18 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f97e6930f543f47383e2b8da09b36573bd3192d0
-ms.sourcegitcommit: ef3d4a70e70927c4f231b763842c5355f1571d15
+ms.openlocfilehash: 9d79f232a77972b6abbce23ba65d9c277b090311
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85243744"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935441"
 ---
 # <a name="xamarinforms-shapes-line"></a>Xamarin.FormsFormas: linha
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![API de pré-lançamento](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 A `Line` classe deriva da `Shape` classe e pode ser usada para desenhar linhas. Para obter informações sobre as propriedades que a `Line` classe herda da `Shape` classe, consulte [ Xamarin.Forms formas](index.md).
 
@@ -55,7 +55,7 @@ O exemplo de XAML a seguir mostra como desenhar uma linha:
 
 Neste exemplo, uma linha diagonal vermelha é desenhada de (40, 0) para (0120):
 
-![Linha](line-images/line.png "Linha")
+![Descritos](line-images/line.png "Linha")
 
 Como as `X1` `Y1` Propriedades,, e `X2` `Y2` têm valores padrão de 0, é possível desenhar algumas linhas com a sintaxe mínima:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/14/2017
-ms.openlocfilehash: 1fae83f60f819da9767e14612a7f778dc49ddf52
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 6f2a188617b00a008dafa20012c0997bc399045d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84564623"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930956"
 ---
 # <a name="introduction-to-ios-8"></a>Introdução ao iOS 8
 
@@ -48,7 +48,7 @@ Com o HomeKit, aplicativos de terceiros e Siri podem descobrir acessórios e adi
 
 O diagrama a seguir mostra a hierarquia básica da configuração dos acessórios do HomeKit:
 
-![](introduction-to-ios8-images/image1.png "This diagram shows the basic hierarchy of the configuration of HomeKit accessories")
+![Este diagrama mostra a hierarquia básica da configuração de acessórios do HomeKit](introduction-to-ios8-images/image1.png)
 
 Para começar a usar o HomeKit, os desenvolvedores precisarão certificar-se de que seu perfil de provisionamento tenha o serviço HomeKit selecionado. A Apple também forneceu aos desenvolvedores um suplemento do HomeKit Simulator para o Xcode. Isso pode ser encontrado no [centro de desenvolvedores da Apple](https://developer.apple.com/downloads/index.action), em `Hardware IO Tools for Xcode` . 
 
@@ -70,7 +70,7 @@ A primeira etapa na criação de uma extensão de aplicativo é definir o ponto 
 
 Na caixa de diálogo **novo projeto** , navegue até **C#**  >  **Ios**  >  **API unificada**  >  **extensões**, conforme ilustrado na captura de tela abaixo:
 
-![](introduction-to-ios8-images/image2.png "Creating a new extension")
+![Criando uma nova extensão](introduction-to-ios8-images/image2.png)
 
 A caixa de diálogo novo projeto fornece sete novos modelos de projeto para a criação de extensões de aplicativo e são discutidos abaixo. Observe que muitas das extensões se relacionam com outras novas APIs no iOS, como o seletor de documento:
 
@@ -121,7 +121,7 @@ Cada dispositivo é definido por uma classe de tamanho, tanto na vertical quanto
 
 Se os dois conceitos forem usados juntos, o resultado será uma grade 2 x 2 que define os diferentes tamanhos possíveis que podem ser usados nas orientações diferentes, como visto no diagrama a seguir:
 
-![](introduction-to-ios8-images/image3.png "A diagram representing the 2 x 2 grid that defines the different possible sizes that can be used in both the differing orientations")
+![Um diagrama que representa a grade 2 x 2 que define os diferentes tamanhos possíveis que podem ser usados nas orientações diferentes](introduction-to-ios8-images/image3.png)
 
 Para obter mais informações sobre classes de tamanho, consulte a [introdução aos storyboards unificados](~/ios/user-interface/storyboards/unified-storyboards.md).
 
@@ -164,7 +164,7 @@ Com todos os aprimoramentos feitos no iOS 8, várias APIs foram preteridas. Algu
 ## <a name="summary"></a>Resumo
 Neste artigo, examinamos alguns dos novos recursos introduzidos pela Apple no iOS 8.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [UIKitEnhancements (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-uikitenhancements)
 - [Introdução às extensões de aplicativo](~/ios/platform/extensions.md)

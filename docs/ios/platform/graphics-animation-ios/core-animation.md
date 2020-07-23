@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 74d6dfb2b6a722e5af4dc97cdf23b84aa4bd95d0
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: ddd46da0787f853e949d08c45dff5be17b9451fd
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84565038"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932750"
 ---
 # <a name="core-animation-in-xamarinios"></a>Animação de núcleo no Xamarin. iOS
 
@@ -70,7 +70,7 @@ PresentViewController (vc2, true, null);
 
 A captura de tela a seguir mostra a aparência da transição para o `PartialCurl` caso:
 
- ![](core-animation-images/06-view-transitions.png "This screenshot shows the PartialCurl transition")
+ ![Esta captura de tela mostra a transição PartialCurl](core-animation-images/06-view-transitions.png)
 
 ### <a name="view-transitions"></a>Exibir transições
 
@@ -92,7 +92,7 @@ UIView.Transition (
 
 A captura de tela abaixo mostra a transição animada entre as exibições de imagem quando `TransitionFlipFromTop` é usado:
 
- ![](core-animation-images/07-animated-transition.png "This screenshot shows the animated transition between the image views when TransitionFlipFromTop is used")
+ ![Esta captura de tela mostra a transição animada entre as exibições de imagem quando TransitionFlipFromTop é usado](core-animation-images/07-animated-transition.png)
 
 ### <a name="view-property-animations"></a>Exibir animações de propriedade
 
@@ -125,11 +125,11 @@ UIView.Animate (
 
 Isso resulta em uma animação de imagem para frente e para trás na parte superior da tela, conforme mostrado abaixo:
 
- ![](core-animation-images/08-animate-center.png "An image animating back and forth across the top of the screen as the output")
+ ![Uma animação de imagem para frente e para trás na parte superior da tela como a saída](core-animation-images/08-animate-center.png)
 
 Assim como com o `Transition` método, `Animate` permite que a duração seja definida, juntamente com a função de atenuação. Este exemplo também usou a `UIViewAnimationOptions.Autoreverse` opção, que faz com que a animação Anime o valor de volta para o inicial. No entanto, o código também define de `Center` volta para seu valor inicial em um manipulador de conclusão. Embora uma animação esteja interpolando valores de propriedade ao longo do tempo, o valor do modelo real da propriedade é sempre o valor final que foi definido. Neste exemplo, o valor é um ponto próximo do lado direito da superexibição. Sem definir o `Center` para o ponto inicial, que é onde a animação é concluída devido ao `Autoreverse` que está sendo definido, a imagem seria ajustada para o lado direito após a conclusão da animação, como mostrado abaixo:
 
- ![](core-animation-images/09-animation-complete.png "Without setting the Center to the initial point, the image would snap back to the right side after the animation completes")
+ ![Sem definir o centro para o ponto inicial, a imagem seria ajustada para o lado direito após a conclusão da animação](core-animation-images/09-animation-complete.png)
 
 ## <a name="using-core-animation"></a>Usando a animação de núcleo
 
@@ -184,11 +184,11 @@ Esse código também anima a camada `Position` , que é o local do ponto de anco
 
 A figura a seguir mostra a posição e o ponto de ancoragem:
 
- ![](core-animation-images/10-postion-anchorpt.png "This figure shows the position and anchor point")
+ ![Esta figura mostra a posição e o ponto de ancoragem](core-animation-images/10-postion-anchorpt.png)
 
 Quando o exemplo é executado, o `Position` `BorderWidth` e o `BorderColor` animam conforme mostrado nas seguintes capturas de tela:
 
- ![](core-animation-images/11-implicit-animation.png "When the example is run, the Position, BorderWidth and BorderColor animate as shown")
+ ![Quando o exemplo é executado, a posição, BorderWidth e BorderColor são animadas conforme mostrado](core-animation-images/11-implicit-animation.png)
 
 ### <a name="explicit-animations"></a>Animações explícitas
 
@@ -229,13 +229,13 @@ Esse código altera o `Position` da camada criando um caminho que é usado para 
 
 As capturas de tela a seguir mostram a camada que contém a animação da imagem por meio do caminho especificado:
 
- ![](core-animation-images/12-explicit-animation.png "This screenshot shows the layer containing the image animating through the specified path")
+ ![Esta captura de tela mostra a camada que contém a animação da imagem por meio do caminho especificado](core-animation-images/12-explicit-animation.png)
 
 ## <a name="summary"></a>Resumo
 
 Neste artigo, examinamos os recursos de animação fornecidos por meio das estruturas de *animação de núcleo* . Examinamos a animação principal, mostrando como ele alimenta animações em UIKit e como ela pode ser usada diretamente para controle de animação de nível inferior.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Exemplo de animação de núcleo](https://docs.microsoft.com/samples/xamarin/ios-samples/graphicsandanimation)
 - [Gráficos principais](~/ios/platform/graphics-animation-ios/core-graphics.md)

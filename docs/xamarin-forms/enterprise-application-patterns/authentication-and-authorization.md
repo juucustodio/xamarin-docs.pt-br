@@ -10,12 +10,12 @@ ms.date: 08/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8b712b2a5d7eeb2ee5e71047b9e6c460eb10d72a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5550ea7a355492f724459449f3b37cdcb8d05b1e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573827"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932139"
 ---
 # <a name="authentication-and-authorization"></a>Autenticação e autorização
 
@@ -42,7 +42,7 @@ A combinação do OpenID Connect e do OAuth 2,0 combina as duas preocupações f
 
 Em aplicativos que usam comunicação direta de cliente para microserviço, como o aplicativo de referência eShopOnContainers, um microserviço de autenticação dedicado agindo como um serviço de token de segurança (STS) pode ser usado para autenticar usuários, como mostra a Figura 9-1. Para obter mais informações sobre comunicação direta entre cliente e microserviço, consulte [comunicação entre o cliente e os microserviços](~/xamarin-forms/enterprise-application-patterns/containerized-microservices.md#communication-between-client-and-microservices).
 
-![](authentication-and-authorization-images/authentication.png "Authentication by a dedicated authentication microservice")
+![Autenticação por um microserviço de autenticação dedicado](authentication-and-authorization-images/authentication.png)
 
 **Figura 9-1:** Autenticação por um microserviço de autenticação dedicado
 
@@ -224,7 +224,7 @@ Para que o IdentityServer emita tokens em nome de um usuário, o usuário deve e
 
 O aplicativo móvel eShopOnContainers autentica com IdentityServer com o fluxo de autenticação híbrida, ilustrado na Figura 9-2.
 
-![](authentication-and-authorization-images/sign-in.png "High-level overview of the sign-in process")
+![Visão geral de alto nível do processo de entrada](authentication-and-authorization-images/sign-in.png)
 
 **Figura 9-2:** Visão geral de alto nível do processo de entrada
 
@@ -232,7 +232,7 @@ Uma solicitação de entrada é feita para `<base endpoint>:5105/connect/authori
 
 O aplicativo móvel eShopOnContainers se desconecta do IdentityServer enviando uma solicitação para `<base endpoint>:5105/connect/endsession` , com parâmetros adicionais. Depois que a saída ocorre, o IdentityServer responde enviando um URI de redirecionamento de logout post para o aplicativo móvel. A Figura 9-3 ilustra esse processo.
 
-![](authentication-and-authorization-images/sign-out.png "High-level overview of the sign-out process")
+![Visão geral de alto nível do processo de saída](authentication-and-authorization-images/sign-out.png)
 
 **Figura 9-3:** Visão geral de alto nível do processo de saída
 
@@ -288,7 +288,7 @@ Esse método cria o URI para o [ponto de extremidade de autorização](https://i
 
 O URI retornado é armazenado na `LoginUrl` propriedade da `LoginViewModel` classe. Quando a `IsLogin` propriedade se torna `true` , o [`WebView`](xref:Xamarin.Forms.WebView) no `LoginView` torna-se visível. Os `WebView` dados associam sua [`Source`](xref:Xamarin.Forms.WebView.Source) Propriedade à `LoginUrl` propriedade da `LoginViewModel` classe e, portanto, fazem uma solicitação de entrada para IdentityServer quando a `LoginUrl` propriedade é definida como o ponto de extremidade de autorização do IdentityServer. Quando o IdentityServer receber essa solicitação e o usuário não estiver autenticado, o `WebView` será redirecionado para a página de logon configurada, que é mostrada na figura 9-4.
 
-![](authentication-and-authorization-images/login.png "Login page displayed by the WebView")
+![Página de logon exibida pelo WebView](authentication-and-authorization-images/login.png)
 
 **Figura 9-4:** Página de logon exibida pelo WebView
 
@@ -409,7 +409,7 @@ Se um usuário não autorizado tentar acessar um controlador ou uma ação marca
 
 O IdentityServer pode ser integrado ao fluxo de trabalho de autorização para que os tokens de acesso forneçam autorização de controle. Essa abordagem é mostrada na Figura 9-5.
 
-![](authentication-and-authorization-images/authorization.png "Authorization by access token")
+![Autorização por token de acesso](authentication-and-authorization-images/authorization.png)
 
 **Figura 9-5:** Autorização por token de acesso
 
@@ -477,7 +477,7 @@ Há muitas abordagens para integrar a autenticação e a autorização em um Xam
 
 O aplicativo móvel solicita tokens de segurança do IdentityServer, seja para autenticar um usuário ou para acessar um recurso. Ao acessar um recurso, um token de acesso deve ser incluído na solicitação para APIs que exigem autorização. O middleware da IdentityServer valida tokens de acesso de entrada para garantir que eles sejam enviados de um emissor confiável e que sejam válidos para serem usados com a API que os recebe.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Download do eBook (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (exemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

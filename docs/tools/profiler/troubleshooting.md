@@ -6,12 +6,12 @@ ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: davidortinau
 ms.author: daortin
 ms.date: 10/27/2017
-ms.openlocfilehash: 5b4b4bdf85ec79a46a4e4c06504eb8b9b85af329
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 93c3f4dcb56710c72cdc61c25aa6481fbd27582e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84566951"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934908"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Solução de problemas Xamarin Profiler
 
@@ -43,11 +43,11 @@ O **. MLPD** para uma sessão atual também pode ser salvo escolhendo **arquivo 
 
 **Visual Studio para Mac**:
 
-![](troubleshooting-images/image17.png "Saving .mlpd file in Visual Studio for Mac")
+![Salvando arquivo. MLPD no Visual Studio para Mac](troubleshooting-images/image17.png)
 
 **Visual Studio**:
 
-![](troubleshooting-images/image17-vs.png "Saving .mlpd file in Visual Studio")
+![Salvando arquivo. MLPD no Visual Studio](troubleshooting-images/image17-vs.png)
 
 É importante observar que **. MLPD** contêm muitas informações e o tamanho do arquivo será grande.
 
@@ -73,7 +73,7 @@ Verifique as seguintes configurações para resolver isso:
 
 Se você encontrar essa caixa de erro ao usar o criador de perfil no Visual Studio:
 
-![](troubleshooting-images/error.png "Error box when using the profiler in Visual Studio")
+![Caixa de erro ao usar o criador de perfil no Visual Studio](troubleshooting-images/error.png)
 
 Normalmente, é porque não é possível iniciar o simulador/emulador. Tente executar o aplicativo normalmente, corrija os problemas que ele fornece e tente usar o criador de perfil novamente.
 
@@ -87,8 +87,8 @@ RunOnUiThread (() => {
 });
 ```
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Walkthrough – usando o Xamarin Profiler](~/tools/profiler/index.md)
 - [Práticas recomendadas de memória e desempenho](~/cross-platform/deploy-test/memory-perf-best-practices.md)
-- [Notas sobre a versão](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/profiler/preview/index.md)
+- [Notas de Versão](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/profiler/preview/index.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: ac746c8489dae600bc2d8c6d1752d8fb10d4e016
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 84e21378a8ac7b61bc1a389352eb53b75881592a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84564713"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929643"
 ---
 # <a name="core-graphics-in-xamarinios"></a>Principais gráficos no Xamarin. iOS
 
@@ -133,7 +133,7 @@ Depois que o caminho é criado, ele é adicionado ao contexto de gráficos para 
 
 A exibição resultante é mostrada abaixo:
 
- ![](core-graphics-images/00-bluetriangle.png "The sample output triangle")
+ ![O triângulo de saída de exemplo](core-graphics-images/00-bluetriangle.png)
 
 ## <a name="creating-gradient-fills"></a>Criando Preenchimentos graduais
 
@@ -167,7 +167,7 @@ Definir o caminho atual como o caminho de recorte restringe todo o desenho subse
 
 Essas alterações produzem um preenchimento gradual, conforme mostrado abaixo:
 
- ![](core-graphics-images/01-gradient-fill.png "The example with a gradient fill")
+ ![O exemplo com um preenchimento gradual](core-graphics-images/01-gradient-fill.png)
 
 ## <a name="modifying-line-patterns"></a>Modificando padrões de linha
 
@@ -180,7 +180,7 @@ g.SetLineDash (0, new nfloat[] { 10, 4 * (nfloat)Math.PI });
 
 A adição desse código antes de qualquer operação de desenho resulta em traços tracejados de 10 unidades, com 4 unidades de espaçamento entre traços, conforme mostrado abaixo:
 
- ![](core-graphics-images/02-dashed-stroke.png "Adding this code before any drawing operations results in dashed strokes")
+ ![Adicionar este código antes de qualquer operação de desenho resultar em traços tracejados](core-graphics-images/02-dashed-stroke.png)
 
 Observe que, ao usar o API Unificada no Xamarin. iOS, o tipo de matriz precisa ser um `nfloat` e também precisa ser convertido explicitamente em Math. PI.
 
@@ -203,7 +203,7 @@ public override void Draw (CGRect rect)
 
 No entanto, isso produz uma imagem desenhada de cabeça para baixo, como mostrado abaixo:
 
- ![](core-graphics-images/03-upside-down-monkey.png "An image drawn upside down")
+ ![Uma imagem desenhada de cabeça para baixo](core-graphics-images/03-upside-down-monkey.png)
 
 A razão para isso é a origem dos gráficos principais para desenho de imagem no canto inferior esquerdo, enquanto a exibição tem sua origem na parte superior esquerda. Portanto, para exibir a imagem corretamente, a origem precisa ser modificada, o que pode ser feito modificando a *matriz de transformação atual* *(CTM)*. O CTM define onde os pontos residem, também conhecidos como *espaço do usuário*. Inverter o CTM na direção y e deslocar-o pela altura dos limites na direção y negativa pode virar a imagem.
 
@@ -225,7 +225,7 @@ public override void Draw (CGRect rect)
 
 A imagem resultante é exibida verticalmente:
 
- ![](core-graphics-images/04-upright-monkey.png "The sample image displayed upright")
+ ![A imagem de exemplo exibida na vertical](core-graphics-images/04-upright-monkey.png)
 
 > [!IMPORTANT]
 > As alterações no contexto de gráficos se aplicam a todas as operações de desenho subsequentes. Portanto, quando o CTM é transformado, ele afetará qualquer desenho adicional. Por exemplo, se você desenhou o triângulo após a transformação CTM, ele pareceria de cabeça para baixo.
@@ -264,7 +264,7 @@ Como você pode ver, a definição do estado de gráficos para desenho de texto 
 
 O texto resultante é exibido com a imagem, conforme mostrado abaixo:
 
- ![](core-graphics-images/05-text-on-image.png "The resulting text is displayed with the image")
+ ![O texto resultante é exibido com a imagem](core-graphics-images/05-text-on-image.png)
 
 ## <a name="memory-backed-images"></a>Imagens com suporte de memória
 
@@ -425,7 +425,7 @@ O texto resultante é desenhado no PDF, que é então contido em um `NSData` que
 
 Neste artigo, examinamos os recursos gráficos fornecidos por meio da estrutura *gráfica principal* . Vimos como usar gráficos de núcleo para desenhar geometria, imagens e PDFs dentro do contexto de um `UIView,` , bem como contextos gráficos com suporte de memória.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Exemplo de gráficos de núcleo](https://docs.microsoft.com/samples/xamarin/ios-samples/graphicsandanimation)
 - [Instruções de gráficos e animação](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)

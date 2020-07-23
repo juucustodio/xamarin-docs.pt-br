@@ -10,22 +10,22 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b435e99180791b64e0a8ad975527fb3cb5316b7d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8ffa7ab7c9d2cebb9854ed155c3a00fe65e497c9
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140212"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936130"
 ---
 # <a name="polylines-and-parametric-equations"></a>Polilinhas e equações paramétricas
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Use SkiaSharp para renderizar qualquer linha que você possa definir com equações paramétricas_
 
 Na seção [**curvas e caminhos do SkiaSharp**](../curves/index.md) deste guia, você verá os vários métodos que o [`SKPath`](xref:SkiaSharp.SKPath) define para processar determinados tipos de curvas. No entanto, às vezes é necessário desenhar um tipo de curva que não seja diretamente suportado pelo `SKPath` . Nesse caso, você pode usar uma polilinha (uma coleção de linhas conectadas) para desenhar qualquer curva que possa ser definida matematicamente. Se você tornar as linhas pequenas o suficiente e inúmeras, o resultado será semelhante a uma curva. Essa espiral tem, na verdade, 3.600 pequenas linhas:
 
-![](polylines-images/spiralexample.png "A spiral")
+![Uma espiral](polylines-images/spiralexample.png)
 
 Em geral, é melhor definir uma curva em termos de um par de equações paramétricas. Essas são equações para coordenadas X e Y que dependem de uma terceira variável, às vezes chamada `t` de tempo. Por exemplo, as equações paramétricas a seguir definem um círculo com um raio de 1 centralizado no ponto (0, 0) para *t* de 0 a 1:
 
@@ -120,11 +120,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 O resultado também é chamado de *espiral aritmético* porque o deslocamento entre cada loop é constante:
 
-[![](polylines-images/archimedeanspiral-small.png "Triple screenshot of the Archimedean Spiral page")](polylines-images/archimedeanspiral-large.png#lightbox "Triple screenshot of the Archimedean Spiral page")
+[![Captura de tela tripla da página de espiral do Archimedean](polylines-images/archimedeanspiral-small.png)](polylines-images/archimedeanspiral-large.png#lightbox "Captura de tela tripla da página de espiral do Archimedean")
 
 Observe que o `SKPath` é criado em um `using` bloco. Isso `SKPath` consome mais memória do que os `SKPath` objetos nos programas anteriores, o que sugere que um `using` bloco é mais apropriado para descartar todos os recursos não gerenciados.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

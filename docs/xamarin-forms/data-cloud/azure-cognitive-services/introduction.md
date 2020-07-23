@@ -10,16 +10,16 @@ ms.date: 02/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7c2a63c40d1006c7d83c9dde871e17d4b194bdca
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cce5b0fc9c3d1d04c20b1be242197e3bc9e4f901
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84129708"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929331"
 ---
 # <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Xamarin.Formse introdução aos serviços cognitivas do Azure
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Os serviços cognitivas da Microsoft são um conjunto de APIs, SDKs e serviços disponíveis aos desenvolvedores para tornar seus aplicativos mais inteligentes, adicionando recursos como reconhecimento facial, reconhecimento de fala e compreensão da linguagem. Este artigo fornece uma introdução ao aplicativo de exemplo que demonstra como invocar algumas das APIs de serviço cognitiva da Microsoft._
 
@@ -42,17 +42,17 @@ As tarefas são armazenadas em um banco de dados SQLite local. Para obter mais i
 
 O `TodoListPage` é exibido quando o aplicativo é iniciado. Esta página exibe uma lista de todas as tarefas armazenadas no banco de dados local e permite que o usuário crie uma nova tarefa ou avalie o aplicativo:
 
-![](introduction-images/sample-application-1.png "TodoListPage")
+![TodoListPage](introduction-images/sample-application-1.png)
 
 Novos itens podem ser criados clicando-se no *+* botão, que navega para o `TodoItemPage` . Essa página também pode ser navegada selecionando uma tarefa:
 
-![](introduction-images/sample-application-2.png "TodoItemPage")
+![TodoItemPage](introduction-images/sample-application-2.png)
 
 O `TodoItemPage` permite que as tarefas sejam criadas, editadas, verificadas por ortografia, traduzidas, salvas e excluídas. O reconhecimento de fala pode ser usado para criar ou editar uma tarefa. Isso é feito pressionando o botão de microfone para iniciar a gravação e pressionando o mesmo botão uma segunda vez para parar a gravação, o que envia a gravação para a API de reconhecimento de Fala do Bing.
 
 Clicar no botão smils no `TodoListPage` navega para o `RateAppPage` , que é usado para executar o reconhecimento de emoções em uma imagem de uma expressão facial:
 
-![](introduction-images/sample-application-3.png "RateAppPage")
+![RateAppPage](introduction-images/sample-application-3.png)
 
 O `RateAppPage` permite que o usuário tire uma foto de sua face, que é enviada para a API de detecção facial com a emoção retornada sendo exibida.
 

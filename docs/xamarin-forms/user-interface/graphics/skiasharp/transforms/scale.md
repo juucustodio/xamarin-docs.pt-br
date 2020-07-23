@@ -10,22 +10,22 @@ ms.date: 03/23/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bdf33f499bf43d99436cef815c03d35b27866b80
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5cb43bfe572b98a6530dfeb8d923ac71b5b633a7
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140173"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932035"
 ---
 # <a name="the-scale-transform"></a>A transformação de escala
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Descobrir a transformação de escala de SkiaSharp para dimensionar objetos para vários tamanhos_
 
 Como você viu no artigo [**converter transformação**](translate.md) , a transformação Converter pode mover um objeto gráfico de um local para outro. Por outro lado, a transformação escala altera o tamanho do objeto gráfico:
 
-![](scale-images/scaleexample.png "A tall word scaled in size")
+![Uma palavra alta dimensionada em tamanho](scale-images/scaleexample.png)
 
 A transformação de escala também faz com que as coordenadas de elementos gráficos sejam movidas à medida que são feitas maiores.
 
@@ -109,7 +109,7 @@ Você pode estar imaginando: como os fatores de dimensionamento afetam o valor r
 
 Como você pode ver, tudo desenhado após a `Scale` chamada aumenta proporcionalmente:
 
-[![](scale-images/basicscale-small.png "Triple screenshot of the Basic Scale page")](scale-images/basicscale-large.png#lightbox "Triple screenshot of the Basic Scale page")
+[![Captura de tela tripla da página de escala básica](scale-images/basicscale-small.png)](scale-images/basicscale-large.png#lightbox "Captura de tela tripla da página de escala básica")
 
 O texto, a largura da linha tracejada, o comprimento dos traços nessa linha, o arredondamento dos cantos e a margem de 10 pixels entre as bordas esquerda e superior da tela e o retângulo arredondado estão todos sujeitos aos mesmos fatores de dimensionamento.
 
@@ -171,7 +171,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 O canto superior esquerdo do retângulo arredondado é posicionado `margin` em pixels à esquerda da tela e `margin` pixels da parte superior. Os dois últimos argumentos para o `Scale` método são definidos para esses valores mais a largura e a altura do texto, que também é a largura e a altura do retângulo arredondado. Isso significa que todo o dimensionamento é relativo ao centro desse retângulo:
 
-[![](scale-images/centeredscale-small.png "Triple screenshot of the Centered Scale page")](scale-images/centeredscale-large.png#lightbox "Triple screenshot of the Centered Scale page")
+[![Captura de tela tripla da página de escala centralizada](scale-images/centeredscale-small.png)](scale-images/centeredscale-large.png#lightbox "Captura de tela tripla da página de escala centralizada")
 
 Os `Slider` elementos neste programa têm um intervalo de &ndash; 10 a 10. Como você pode ver, valores negativos de dimensionamento vertical (como na tela do Android no centro) fazem com que os objetos virem em volta do eixo horizontal que passa pelo centro do dimensionamento. Valores negativos de escala horizontal (como na tela UWP à direita) fazem com que os objetos virem em volta do eixo vertical que passa pelo centro do dimensionamento.
 
@@ -252,7 +252,7 @@ using (SKPaint strokePaint = new SKPaint
 
 O `pathBounds` retângulo é obtido próximo à parte superior desse código e, em seguida, usado posteriormente com a largura e a altura da tela na `Scale` chamada. Essa chamada por si só dimensionará as coordenadas do caminho quando ela for renderizada pela `DrawPath` chamada, mas a estrela será centralizada no canto superior direito da tela. Ele precisa ser deslocado para baixo e para a esquerda. Esse é o trabalho da `Translate` chamada. Essas duas propriedades de `pathBounds` são aproximadamente – 100, portanto, os fatores de conversão são cerca de 100. Como a `Translate` chamada é após a `Scale` chamada, esses valores são efetivamente dimensionados pelos fatores de dimensionamento, de modo que movem o centro da estrela para o centro da tela:
 
-[![](scale-images/anisotropicscaling-small.png "Triple screenshot of the Anisotropic Scaling page")](scale-images/anisotropicscaling-large.png#lightbox "Triple screenshot of the Anisotropic Scaling page")
+[![Captura de tela tripla da página de dimensionamento de anisotropic](scale-images/anisotropicscaling-small.png)](scale-images/anisotropicscaling-large.png#lightbox "Captura de tela tripla da página de dimensionamento de anisotropic")
 
 Outra maneira de pensar sobre as `Scale` chamadas e `Translate` é determinar o efeito na sequência inversa: a `Translate` chamada muda o caminho para que ele se torne totalmente visível, mas orientado no canto superior esquerdo da tela. `Scale`Em seguida, o método torna essa estrela maior em relação ao canto superior esquerdo.
 
@@ -295,7 +295,7 @@ using (SKPaint textPaint = new SKPaint
 
 É uma lógica semelhante, e o texto se expande para o tamanho da página com base no retângulo de limites de texto retornado `MeasureText` (que é um pouco maior do que o texto real):
 
-[![](scale-images/anisotropictext-small.png "Triple screenshot of the Anisotropic Test page")](scale-images/anisotropictext-large.png#lightbox "Triple screenshot of the Anisotropic Test page")
+[![Captura de tela tripla da página de teste do anisotropic](scale-images/anisotropictext-small.png)](scale-images/anisotropictext-large.png#lightbox "Captura de tela tripla da página de teste do anisotropic")
 
 Se você precisar preservar a taxa de proporção dos objetos gráficos, convém usar o dimensionamento de isotropic. A página de **dimensionamento isotropic** demonstra isso para a estrela de 11 pontas. Conceitualmente, as etapas para exibir um objeto gráfico no centro da página com o dimensionamento de isotropic são:
 
@@ -344,9 +344,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 O código também exibe a estrela 10 mais vezes, cada vez que diminui o fator de dimensionamento em 10% e altera progressivamente a cor de vermelho para azul:
 
-[![](scale-images/isotropicscaling-small.png "Triple screenshot of the Isotropic Scaling page")](scale-images/isotropicscaling-large.png#lightbox "Triple screenshot of the Isotropic Scaling page")
+[![Captura de tela tripla da página de dimensionamento de isotropic](scale-images/isotropicscaling-small.png)](scale-images/isotropicscaling-large.png#lightbox "Captura de tela tripla da página de dimensionamento de isotropic")
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

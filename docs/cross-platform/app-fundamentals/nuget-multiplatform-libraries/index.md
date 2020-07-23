@@ -6,12 +6,12 @@ ms.assetid: F0A5A9BB-86CD-44C9-8EE8-74D1E5E74A30
 author: davidortinau
 ms.author: daortin
 ms.date: 07/25/2018
-ms.openlocfilehash: 5744bb9947b196ee319535729338bcf64a5cd09e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: ac8e4b2eef0905ba50cb24b9eb035d50a05dd84a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73016756"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932231"
 ---
 # <a name="nuget-multiplatform-library-projects-nugetizer-3000"></a>Projetos de biblioteca multiplataforma do NuGet (Nugetizer 3000)
 
@@ -19,13 +19,13 @@ _Crie pacotes NuGet automaticamente para compartilhar código entre plataformas 
 
 É possível criar automaticamente pacotes NuGet para compartilhar código entre plataformas usando o _Nugetizer 3000_. Isso torna possível criar pacotes NuGet a partir de projetos de biblioteca existentes ou criando um novo **projeto de biblioteca multiplataforma**.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-O Nugetizer 3000 está incluído com Visual Studio para Mac &ndash; procurar a biblioteca > tipo de projeto de **biblioteca Mulitplatform** no **arquivo > Nova** janela:
+O Nugetizer 3000 está incluído com Visual Studio para Mac &ndash; procurar a **biblioteca >** tipo de projeto de biblioteca Mulitplatform no **arquivo > nova** janela:
 
-[![](images/mulitplatform-library-sml.png "Create new Multiplatform Library window")](images/mulitplatform-library.png#lightbox)
+[![Criar nova janela de biblioteca multiplataforma](images/mulitplatform-library-sml.png)](images/mulitplatform-library.png#lightbox)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 Para usar o Nugetizer 3000 no Visual Studio, [Baixe e execute o instalador do VSIX](https://bit.ly/nugetizer-2017).
 
@@ -59,7 +59,7 @@ A [documentação do NuGet](https://docs.microsoft.com/nuget/) da Microsoft cont
 
 A discussão de design para projetos de pacote NuGet (também conhecido como NuGetizer 3000) está disponível no [repositório GitHub do NuGet](https://github.com/NuGet/Home/wiki/NuGetizer-3000).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Casos de uso de NuGetizer-3000](https://github.com/NuGet/Home/wiki/NuGetizer-Core-Scenarios)
 - [Criar manualmente pacotes NuGet para o Xamarin](~/cross-platform/app-fundamentals/nuget-manual.md)

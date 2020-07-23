@@ -11,12 +11,12 @@ ms.date: 04/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 237dfd637d5456636afd19ea0175cb388773d273
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5a84b7a5ca336b5823f1e0d2201e17cb4f152c27
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135909"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930839"
 ---
 # <a name="troubleshooting"></a>Solução de problemas
 
@@ -39,7 +39,7 @@ Unable to find a version of 'Xamarin.Forms' that is compatible with 'Xamarin.And
 
 Visual Studio para Mac (ou Visual Studio) podem indicar que as atualizações estão disponíveis para o Xamarin.Forms NuGet packge *e todas as suas dependências*. No Xamarin Studio, o nó **pacotes** da solução pode parecer com o seguinte (os números de versão podem ser diferentes):
 
-![](images/updates-available.png "Android Project Packages Folder")
+![Pasta de pacotes do projeto Android](images/updates-available.png)
 
 Esse erro pode ocorrer se você tentar atualizar _todos_ os pacotes.
 

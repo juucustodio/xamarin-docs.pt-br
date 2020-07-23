@@ -10,16 +10,16 @@ ms.date: 02/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f0f43f8f2113b6bd0a800ed3e0bd96b641575b1c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 38c7f11ecf65a2a9ec9ef54b5beb270f51d24dda
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139276"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929942"
 ---
 # <a name="text-translation-using-the-translator-api"></a>Conversão de texto usando a API do Tradutor
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _A API do Microsoft Translator pode ser usada para traduzir a fala e o texto por meio de uma API REST. Este artigo explica como usar o API de Tradução de Texto da Microsoft para traduzir texto de um idioma para outro em um Xamarin.Forms aplicativo._
 
@@ -143,13 +143,13 @@ A resposta da API é retornada no formato XML. Os dados XML a seguir mostram uma
 
 No aplicativo de exemplo, a resposta XML é analisada em uma `XDocument` instância, com o valor raiz XML que está sendo retornado ao método de chamada para exibição, conforme mostrado nas seguintes capturas de tela:
 
-![](text-translation-images/text-translation.png "Text Translation to German")
+![Conversão de texto em alemão](text-translation-images/text-translation.png)
 
 ## <a name="summary"></a>Resumo
 
 Este artigo explicou como usar o API de Tradução de Texto da Microsoft para converter texto de um idioma em um texto de outro idioma em um Xamarin.Forms aplicativo. Além de traduzir o texto, a API do Microsoft Translator também pode transcrever a fala de um idioma para o texto de outra linguagem.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Documentação da API do Conversor de Texto](/azure/cognitive-services/translator/)
 - [Consumir um serviço Web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)

@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 5fadd1ba556b15cb92134471f007e41f04fce69e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 60c62bf4d2887cec3d68d44e7d384daae35c066f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79304607"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929037"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS – Aprofundamento
 
@@ -28,9 +28,9 @@ Este guia ajudará você a desenvolver as habilidades e o conhecimento necessár
 
 O Visual Studio para Mac é um IDE gratuito de software livre que combina funcionalidades do Visual Studio e do XCode. Ele conta com um designer visual totalmente integrado, um editor de texto complementado com ferramentas de refatoração, um navegador de assembly, integração de código-fonte e muito mais. Este guia apresenta alguns recursos básicos do Visual Studio para Mac, mas, se você for novo no Visual Studio para Mac, confira a documentação [Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/).
 
-Visual Studio para Mac segue a prática do Visual Studio de organizar códigoem *soluções* e *projetos.* Uma solução é um contêiner que pode conter um ou mais projetos. Um projeto pode ser um aplicativo (por exemplo, iOS ou Android), uma biblioteca com suporte, um aplicativo de teste e muito mais. No aplicativo Phoneword, um novo projeto de iPhone foi adicionado usando o modelo de **Aplicativo de exibição única**. A solução inicial tinha esta aparência:
+Visual Studio para Mac segue a prática do Visual Studio de organizar o código em *soluções* e *projetos*. Uma solução é um contêiner que pode conter um ou mais projetos. Um projeto pode ser um aplicativo (por exemplo, iOS ou Android), uma biblioteca com suporte, um aplicativo de teste e muito mais. No aplicativo Phoneword, um novo projeto de iPhone foi adicionado usando o modelo de **Aplicativo de exibição única**. A solução inicial tinha esta aparência:
 
-![](hello-ios-deepdive-images/image30.png "A screenshot of the initial solution")
+![Uma captura de tela da solução inicial](hello-ios-deepdive-images/image30.png)
 
 ::: zone-end
 ::: zone pivot="windows"
@@ -41,7 +41,7 @@ O Visual Studio é um IDE avançado da Microsoft. Ele conta com um designer visu
 
 O Visual Studio organiza o código em soluções e projetos. Uma solução é um contêiner que pode conter um ou mais projetos. Um projeto pode ser um aplicativo (por exemplo, iOS ou Android), uma biblioteca com suporte, um aplicativo de teste e muito mais. No aplicativo Phoneword, um novo projeto de iPhone foi adicionado usando o modelo de **Aplicativo de exibição única**. A solução inicial tinha esta aparência:
 
-![](hello-ios-deepdive-images/vs-image30.png "A screenshot of the initial solution")
+![Uma captura de tela da solução inicial](hello-ios-deepdive-images/vs-image30.png)
 
 ::: zone-end
 
@@ -49,29 +49,29 @@ O Visual Studio organiza o código em soluções e projetos. Uma solução é um
 
 ::: zone pivot="macos"
 
-À esquerda está a **solução Pad**, que contém a estrutura do diretório e todos os arquivos associados à solução:
+À esquerda está o **painel de solução**, que contém a estrutura de diretório e todos os arquivos associados à solução:
 
-![](hello-ios-deepdive-images/image31.png "The solution Pad, which contains the directory structure and all the files associated with the solution")
+![O Painel de soluções, que contém a estrutura de diretórios e todos os arquivos associados à solução](hello-ios-deepdive-images/image31.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-À direita está a **solução Pane,** que contém a estrutura do diretório e todos os arquivos associados à solução:
+À direita está o **painel solução**, que contém a estrutura de diretório e todos os arquivos associados à solução:
 
-![](hello-ios-deepdive-images/vs-image31.png "The solution Pane, which contains the directory structure and all the files associated with the solution")
+![O Painel da solução, que contém a estrutura de diretórios e todos os arquivos associados à solução](hello-ios-deepdive-images/vs-image31.png)
 
 ::: zone-end
 
-No passo a passo [hello, iOS,](~/ios/get-started/hello-ios/hello-ios-quickstart.md) você criou uma solução chamada **Phoneword** e colocou um projeto iOS - **Phoneword_iOS** - dentro dele. Os itens dentro do projeto incluem:
+Nas instruções [Hello, Ios](~/ios/get-started/hello-ios/hello-ios-quickstart.md) , você criou uma solução chamada **Phoneword** e colocou um projeto do IOS- **Phoneword_iOS** -dentro dele. Os itens dentro do projeto incluem:
 
-- **Referências** - Contém os conjuntos necessários para construir e executar o aplicativo. Expanda o diretório para ver referências a assemblies do .NET como [System](https://docs.microsoft.com/dotnet/api/system), System.Core e [System.Xml](https://docs.microsoft.com/dotnet/api/system.xml), bem como uma referência ao assembly Xamarin.iOS.
+- **Referências** -contém os assemblies necessários para compilar e executar o aplicativo. Expanda o diretório para ver referências a assemblies do .NET como [System](https://docs.microsoft.com/dotnet/api/system), System.Core e [System.Xml](https://docs.microsoft.com/dotnet/api/system.xml), bem como uma referência ao assembly Xamarin.iOS.
 - **Pacotes** – o diretório de pacotes contém pacotes do NuGet prontos.
-- **Recursos** - A pasta de recursos armazena outras mídias.
+- **Recursos** – a pasta de recursos armazena outras mídias.
 - **Main.cs** – isso contém o ponto de entrada principal do aplicativo. Para iniciar o aplicativo, o nome da classe principal do aplicativo, a `AppDelegate`, é passado.
 - **AppDelegate.cs** – esse arquivo contém a classe principal do aplicativo e é responsável por criar a janela, criar a interface do usuário e escutar eventos do sistema operacional.
 - **Main.Storyboard** – o storyboard contém o design visual da interface do usuário do aplicativo. Arquivos de storyboard abertos em um editor gráfico chamado Designer iOS.
-- **ViewController.cs** – O controlador de visualização alimenta a tela (View) que um usuário vê e toca. O controlador de exibição é responsável por lidar com as interações entre o usuário e a exibição.
-- **ViewController.designer.cs** – `designer.cs` É um arquivo gerado automaticamente que serve como cola entre controles na Exibição e suas representações de código no controlador de exibição. Como esse é um arquivo de conexão interna, o IDE substituirá todas as alterações manuais e, na maioria das vezes, esse arquivo poderá ser ignorado. Para obter mais informações sobre a relação entre o Designer visual e o código subjacente, consulte o guia [Introdução ao Designer do iOS](~/ios/user-interface/designer/introduction.md).
+- **ViewController.cs** – o controlador de exibição alimenta a tela (exibição) que um usuário vê e toca. O controlador de exibição é responsável por lidar com as interações entre o usuário e a exibição.
+- **ViewController.designer.cs** – o `designer.cs` é um arquivo gerado automaticamente que serve como a cola entre os controles na exibição e suas representações de código no controlador de exibição. Como esse é um arquivo de conexão interna, o IDE substituirá todas as alterações manuais e, na maioria das vezes, esse arquivo poderá ser ignorado. Para obter mais informações sobre a relação entre o Designer visual e o código subjacente, consulte o guia [Introdução ao Designer do iOS](~/ios/user-interface/designer/introduction.md).
 - **Info.plist** – **Info.plist** é onde as propriedades do aplicativo, como o nome do aplicativo, ícones, imagens de inicialização, entre outros, são definidos. Esse é um arquivo poderoso e uma introdução completa sobre ele está disponível no guia [Como trabalhar com listas de propriedades](~/ios/app-fundamentals/property-lists.md).
 - **Entitlements.plist** – a lista de propriedades de direito nos permite especificar as *funcionalidades* do aplicativo (também chamadas de tecnologias de repositório de aplicativo) como iCloud, PassKit e muito mais. Mais informações sobre **Entitlements.plist** podem ser encontradas no guia [Como trabalhar com listas de propriedades](~/ios/app-fundamentals/property-lists.md). Para obter uma introdução geral a direitos, consulte o guia [Provisionamento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md).
 
@@ -81,7 +81,7 @@ Antes que um aplicativo iOS possa carregar uma interface do usuário, duas coisa
 
 Esta seção estuda as relações ilustradas no diagrama a seguir:
 
-[![](hello-ios-deepdive-images/image32.png "The Architecture and App Fundamentals relationships are illustrated in this diagram")](hello-ios-deepdive-images/image32.png#lightbox)
+[![As relações dos conceitos básicos de arquitetura e aplicativo estão ilustradas neste diagrama](hello-ios-deepdive-images/image32.png)](hello-ios-deepdive-images/image32.png#lightbox)
 
 ### <a name="main-method"></a>Método Principal
 
@@ -136,7 +136,7 @@ Depois que o aplicativo define sua janela, ele pode começar a carregar a interf
 
 ## <a name="user-interface"></a>Interface do usuário
 
-A interface do usuário de um aplicativo iOS é como uma vitrine – o aplicativo normalmente obtém uma Janela, mas ele pode preencher a janela com o número de objetos que precisar e as disposições e objetos podem ser alterados dependendo do que o aplicativo deseja exibir. Os objetos nesse cenário – as coisas que o usuário vê – são chamados de exibições. Para construir uma única tela em um aplicativo, as exibições são empilhadas em cima uma da outra em uma *Hierarquia de exibição*de conteúdo , e a hierarquia é gerenciada por um único controlador de exibição. Aplicativos com várias telas têm várias hierarquias de exibição de conteúdo, cada uma com seu próprio controlador de exibição; o aplicativo coloca as exibições na janela para criar uma hierarquia de exibição de conteúdo diferente com base na tela na qual o usuário está.
+A interface do usuário de um aplicativo iOS é como uma vitrine – o aplicativo normalmente obtém uma Janela, mas ele pode preencher a janela com o número de objetos que precisar e as disposições e objetos podem ser alterados dependendo do que o aplicativo deseja exibir. Os objetos nesse cenário – as coisas que o usuário vê – são chamados de exibições. Para criar uma única tela em um aplicativo, as exibições são empilhadas umas sobre as outras em uma *hierarquia de exibição de conteúdo*e a hierarquia é gerenciada por um único controlador de exibição. Aplicativos com várias telas têm várias hierarquias de exibição de conteúdo, cada uma com seu próprio controlador de exibição; o aplicativo coloca as exibições na janela para criar uma hierarquia de exibição de conteúdo diferente com base na tela na qual o usuário está.
 
 Esta seção aprofunda-se na interface do usuário, descrevendo as exibições, hierarquias exibição de conteúdo e o Designer do iOS.
 
@@ -146,62 +146,62 @@ O Designer do iOS é uma ferramenta visual para criar interfaces do usuário no 
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image33.png "iOS Designer Interface")
+![Interface do Designer do iOS](hello-ios-deepdive-images/image33.png)
 
-Um *Storyboard* é um arquivo que contém os designs visuais das telas do nosso aplicativo, bem como as transições e as relações entre as telas. A representação da tela de um aplicativo em um Storyboard é chamada de _cena_. Cada cena representa um controlador de exibição e a pilha de exibições que ele gerencia (hierarquia de exibição de conteúdo). Quando um novo projeto **de aplicativo de exibição única** é criado a partir `Main.storyboard` de um modelo, o Visual Studio for Mac gera automaticamente um arquivo do Storyboard chamado e o preenche com uma única cena, conforme ilustrado pela captura de tela abaixo:
+Um *Storyboard* é um arquivo que contém os designs visuais das telas do nosso aplicativo, bem como as transições e as relações entre as telas. A representação da tela de um aplicativo em um Storyboard é chamada de _cena_. Cada cena representa um controlador de exibição e a pilha de exibições que ele gerencia (hierarquia de exibição de conteúdo). Quando um novo projeto de **aplicativo de exibição única** é criado a partir de um modelo, Visual Studio para Mac gera automaticamente um arquivo de storyboard chamado `Main.storyboard` e o preenche com uma única cena, conforme ilustrado pela captura de tela abaixo:
 
-![](hello-ios-deepdive-images/image34.png "Visual Studio for Mac automatically generates a Storyboard file called Main.storyboard and populates it with a single Scene")
+![O Visual Studio para Mac gera automaticamente um arquivo do Storyboard chamado Main.storyboard e o preenche com uma única cena](hello-ios-deepdive-images/image34.png)
 
-A barra preta na parte inferior da tela do storyboard pode ser selecionada para escolher o controlador de exibição da cena. O controlador de exibição é uma instância da classe `UIViewController` que contém o código subjacente para a hierarquia de exibição de conteúdo. As propriedades deste controlador de exibição podem ser visualizadas e definidas dentro do **Bloco de Propriedades,** conforme ilustrado pela captura de tela abaixo:
+A barra preta na parte inferior da tela do storyboard pode ser selecionada para escolher o controlador de exibição da cena. O controlador de exibição é uma instância da classe `UIViewController` que contém o código subjacente para a hierarquia de exibição de conteúdo. As propriedades nesse controlador de exibição podem ser exibidas e definidas dentro do **painel de propriedades**, conforme ilustrado pela captura de tela abaixo:
 
-![](hello-ios-deepdive-images/image35.png "The Properties Pane")
+![O Painel Propriedades](hello-ios-deepdive-images/image35.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image33.png "iOS Designer Interface")
+![Interface do Designer do iOS](hello-ios-deepdive-images/vs-image33.png)
 
-Um *Storyboard* é um arquivo que contém os designs visuais das telas do nosso aplicativo, bem como as transições e as relações entre as telas. A representação da tela de um aplicativo em um Storyboard é chamada de _cena_. Cada cena representa um controlador de exibição e a pilha de exibições que ele gerencia (hierarquia de exibição de conteúdo). Quando um novo projeto **de aplicativo de exibição única** é criado a `Main.storyboard` partir de um modelo, o Visual Studio gera automaticamente um arquivo do Storyboard chamado e o preenche com uma única cena, conforme ilustrado pela captura de tela abaixo:
+Um *Storyboard* é um arquivo que contém os designs visuais das telas do nosso aplicativo, bem como as transições e as relações entre as telas. A representação da tela de um aplicativo em um Storyboard é chamada de _cena_. Cada cena representa um controlador de exibição e a pilha de exibições que ele gerencia (hierarquia de exibição de conteúdo). Quando um novo projeto de **aplicativo de exibição única** é criado a partir de um modelo, o Visual Studio gera automaticamente um arquivo de storyboard chamado `Main.storyboard` e o preenche com uma única cena, conforme ilustrado pela captura de tela abaixo:
 
-![](hello-ios-deepdive-images/vs-image34.png "Visual Studio automatically generates a Storyboard file called Main.storyboard and populates it with a single Scene")
+![O Visual Studio gera automaticamente um arquivo do Storyboard chamado Main.storyboard e o preenche com uma única cena](hello-ios-deepdive-images/vs-image34.png)
 
-A barra na parte inferior da tela do storyboard pode ser selecionada para escolher o controlador de exibição da cena. O controlador de exibição é uma instância da classe `UIViewController` que contém o código subjacente para a hierarquia de exibição de conteúdo. As propriedades deste controlador de exibição podem ser visualizadas e definidas dentro do **Painel de Propriedades,** conforme ilustrado pela captura de tela abaixo:
+A barra na parte inferior da tela do storyboard pode ser selecionada para escolher o controlador de exibição da cena. O controlador de exibição é uma instância da classe `UIViewController` que contém o código subjacente para a hierarquia de exibição de conteúdo. As propriedades nesse controlador de exibição podem ser exibidas e definidas dentro do **painel Propriedades**, conforme ilustrado pela captura de tela abaixo:
 
-![](hello-ios-deepdive-images/vs-image35.png "The Properties Pane")
+![O Painel Propriedades](hello-ios-deepdive-images/vs-image35.png)
 
 ::: zone-end
 
-A _Exibição_ pode ser selecionada clicando dentro da parte branca da cena. A exibição é uma instância da classe `UIView` que define uma área da tela e fornece interfaces para trabalhar com o conteúdo nessa área. A exibição padrão é uma única *visualização raiz* que preenche toda a tela do dispositivo.
+A _Exibição_ pode ser selecionada clicando dentro da parte branca da cena. A exibição é uma instância da classe `UIView` que define uma área da tela e fornece interfaces para trabalhar com o conteúdo nessa área. A exibição padrão é uma única *exibição raiz* que preenche toda a tela do dispositivo.
 
 À esquerda da cena há uma seta cinza com um ícone de sinalizador, conforme ilustrado pela captura de tela abaixo:
 
- [![](hello-ios-deepdive-images/image37.png "A gray arrow with a flag icon")](hello-ios-deepdive-images/image37.png#lightbox)
+ [![Uma seta cinza com um ícone de bandeira](hello-ios-deepdive-images/image37.png)](hello-ios-deepdive-images/image37.png#lightbox)
 
 A seta cinza representa uma transição de storyboard chamada *Segue* (pronuncia-se "seg-uêi"). Como este segue não tem nenhuma origem, ele é chamado de *Segue sem origem*. Um segue sem origem aponta para a primeira cena cujas exibições são carregadas na janela do aplicativo na inicialização do aplicativo. A cena e as exibições dentro dela serão a primeira coisa que o usuário verá quando o aplicativo for carregado.
 
-Ao construir uma interface de usuário, visualizações adicionais podem ser arrastadas da caixa de **ferramentas** para a visão principal na superfície do design, conforme ilustrado pela captura de tela abaixo:
+Ao criar uma interface do usuário, modos de exibição adicionais podem ser arrastados da **caixa de ferramentas** para a exibição principal na superfície de design, conforme ilustrado pela captura de tela abaixo:
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image38.png "Additional Views can be dragged from the Toolbox onto the main View on the design surface")
+![As exibições adicionais podem ser arrastadas da caixa de ferramentas para a exibição principal na superfície de design](hello-ios-deepdive-images/image38.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image38.png "Additional Views can be dragged from the Toolbox onto the main View on the design surface")
+![As exibições adicionais podem ser arrastadas da caixa de ferramentas para a exibição principal na superfície de design](hello-ios-deepdive-images/vs-image38.png)
 
 ::: zone-end
 
-Essas exibições adicionais são chamadas de *subexibições*. Juntos, a exibição raiz e os subpontos fazem parte de `ViewController`uma hierarquia de *exibição* de conteúdo gerenciada pelo . O esboço de todos os elementos da cena pode ser visto examinando-o no bloco **Delineamento de** Documentos:
+Essas exibições adicionais são chamadas de *subexibições*. Juntas, a exibição raiz e as subexibições fazem parte de uma *hierarquia de exibição de conteúdo* que é gerenciada pelo `ViewController` . O contorno de todos os elementos na cena pode ser exibido examinando-o no bloco de **Tópicos do documento** :
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image39.png "The Document Outline pad")
+![O painel de Estrutura de Tópicos do Documento](hello-ios-deepdive-images/image39.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image39.png "The Document Outline pad")
+![O painel de Estrutura de Tópicos do Documento](hello-ios-deepdive-images/vs-image39.png)
 
 ::: zone-end
 
@@ -209,12 +209,12 @@ As subexibições são realçadas no diagrama a seguir:
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image40.png "The Subviews are highlighted in the diagram")
+![As subexibições são realçadas no diagrama](hello-ios-deepdive-images/image40.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image40.png "The Subviews are highlighted in the diagram")
+![As subexibições são realçadas no diagrama](hello-ios-deepdive-images/vs-image40.png)
 
 ::: zone-end
 
@@ -224,24 +224,24 @@ A próxima seção divide a hierarquia de exibição de conteúdo representado p
 
 Uma _hierarquia de exibição de conteúdo_ é uma pilha de exibições e subexibições gerenciadas por um único controlador de exibição, conforme ilustrado pelo diagrama a seguir:
 
- [![](hello-ios-deepdive-images/image41.png "The Content View Hierarchy")](hello-ios-deepdive-images/image41.png#lightbox)
+ [![A hierarquia de exibição de conteúdo](hello-ios-deepdive-images/image41.png)](hello-ios-deepdive-images/image41.png#lightbox)
 
 Podemos tornar mais fácil a visualização da hierarquia de exibição de conteúdo de nosso `ViewController` alterando temporariamente a cor da tela de fundo da exibição raiz para amarelo na seção de Exibição do **Painel Propriedades**, conforme ilustrado pela captura de tela abaixo:
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image42.png "Changing the background color of the root View to yellow in the View section of the Properties Pad")
+![Alterar a cor da tela de fundo da exibição raiz para amarelo na seção de exibição do Painel de Propriedades](hello-ios-deepdive-images/image42.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image42.png "Changing the background color of the root View to yellow in the View section of the Properties Pad")
+![Alterar a cor da tela de fundo da exibição raiz para amarelo na seção de exibição do Painel de Propriedades](hello-ios-deepdive-images/vs-image42.png)
 
 ::: zone-end
 
 O diagrama a seguir ilustra as relações entre a janela, exibições, subexibições e controlador de exibição que levam a interface do usuário para a tela do dispositivo:
 
-[![](hello-ios-deepdive-images/image43.png "The relationships between the Window, Views, Subviews, and view controller")](hello-ios-deepdive-images/image43.png#lightbox)
+[![As relações entre a janela, as exibições, as subexibições e o controlador de exibição](hello-ios-deepdive-images/image43.png)](hello-ios-deepdive-images/image43.png#lightbox)
 
 A próxima seção discute como trabalhar com exibições no código e aprender programação voltada à interação do usuário usando os controladores de exibição e o ciclo de vida da exibição.
 
@@ -255,22 +255,22 @@ Cada hierarquia de exibição de conteúdo tem um controlador de exibição corr
 
 O controlador de exibição é representado em um storyboard como uma barra na parte inferior da cena. Selecionar o controlador de exibição exibe suas propriedades no **Painel de Propriedades**:
 
-![](hello-ios-deepdive-images/image44.png "Selecting the view controller brings up its properties in the Properties Pane")
+![Ao selecionar o controlador de exibição, as propriedades são exibidas no Painel Propriedades](hello-ios-deepdive-images/image44.png)
 
-Uma classe controladora de exibição personalizada para a Hierarquia de exibição de conteúdo representada por esta Cena pode ser definida editando a propriedade **Classe** na seção **Identidade** do Bloco de **Propriedades**. Por exemplo, nosso aplicativo **Phoneword** define o `ViewController` como o controlador de exibição para nossa primeira tela, conforme ilustrado pela captura de tela abaixo:
+Uma classe de controlador de exibição personalizada para a hierarquia de exibição de conteúdo representada por essa cena pode ser definida editando-se a propriedade de **classe** na seção de **identidade** do **painel de propriedades**. Por exemplo, nosso aplicativo **Phoneword** define o `ViewController` como o controlador de exibição para nossa primeira tela, conforme ilustrado pela captura de tela abaixo:
 
-![](hello-ios-deepdive-images/image45new.png "The Phoneword application sets the ViewController as the view controller")
+![O aplicativo Phoneword define o ViewController como o controlador de exibição](hello-ios-deepdive-images/image45new.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-O controlador de exibição é representado em um storyboard como uma barra na parte inferior da cena. Selecionar o controlador de exibição traz suas propriedades no **Painel de Propriedades**:
+O controlador de exibição é representado em um storyboard como uma barra na parte inferior da cena. A seleção do controlador de exibição traz suas propriedades no **painel Propriedades**:
 
-![](hello-ios-deepdive-images/vs-image44.png "Selecting the view controller brings up its properties in the Properties Pane")
+![Ao selecionar o controlador de exibição, as propriedades são exibidas no Painel Propriedades](hello-ios-deepdive-images/vs-image44.png)
 
 Uma classe de controlador de exibição personalizada para a hierarquia de exibição de conteúdo representada por essa cena pode ser definida por meio da edição da propriedade **Classe**, na seção **Identidade** do **Painel Propriedades**. Por exemplo, nosso aplicativo **Phoneword** define o `ViewController` como o controlador de exibição para nossa primeira tela, conforme ilustrado pela captura de tela abaixo:
 
-![](hello-ios-deepdive-images/vs-image45.png "The Phoneword application sets the ViewController as the view controller")
+![O aplicativo Phoneword define o ViewController como o controlador de exibição](hello-ios-deepdive-images/vs-image45.png)
 
 ::: zone-end
 
@@ -297,14 +297,14 @@ O controlador de exibição é responsável por carregar e descarregar hierarqui
 
 Estes são os métodos de ciclo de vida básicos e suas funções:
 
-- **ViewDidLoad** - Chamado *uma vez* que o controlador de exibição carrega sua hierarquia de exibição de conteúdo na memória. Esse é um bom lugar para realizar a configuração inicial, porque é quando as subexibições se tornam disponíveis no código pela primeira vez.
-- **ViewWillAppear** - Chamado sempre que a exibição de um controlador de exibição está prestes a ser adicionada a uma Hierarquia de exibição de conteúdo e aparecer na tela.
-- **ViewWillDisappear** - Chamado toda vez que a exibição de um controlador de exibição estiver prestes a ser removida de uma hierarquia de exibição de conteúdo e desaparecer da tela. Esse evento de ciclo de vida é usado para limpeza e para salvar estados.
+- **ViewDidLoad** – chamado *uma vez* na primeira vez que o controlador de exibição carrega sua hierarquia de exibição de conteúdo na memória. Esse é um bom lugar para realizar a configuração inicial, porque é quando as subexibições se tornam disponíveis no código pela primeira vez.
+- **ViewWillAppear** – chamado sempre que o modo de exibição de um controlador de exibição está prestes a ser adicionado a uma hierarquia de exibição de conteúdo e aparece na tela.
+- **ViewWillDisappear** – chamado sempre que o modo de exibição de um controlador de exibição está prestes a ser removido de uma hierarquia de exibição de conteúdo e desaparece da tela. Esse evento de ciclo de vida é usado para limpeza e para salvar estados.
 - **ViewDidAppear** e **ViewDidDisappear** – chamados quando uma exibição é adicionada ou removida da hierarquia de exibição de conteúdo, respectivamente.
 
 Quando o código personalizado é adicionado a qualquer estágio do ciclo de vida, a *implementação base* desse método de ciclo de vida deve ser *substituída*. Isso é realizado usando-se para derivação o método de ciclo de vida existente (que já tem algum código anexado a ele) e estendendo-o com código adicional. A implementação base é chamada de dentro do método para certificar-se de que o código original é executado antes do novo código. Um exemplo disso é demonstrado na próxima seção.
 
-Para obter mais informações sobre como trabalhar com controladores de exibição, consulte o guia de programação do controlador de visualização da Apple [para iOS](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457-CH2-SW1) e a [referência UIViewController](https://developer.apple.com/documentation/uikit/uiviewcontroller?language=objc).
+Para obter mais informações sobre como trabalhar com controladores de exibição, consulte o [Guia de programação do controlador de exibição da Apple para IOS](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html#//apple_ref/doc/uid/TP40007457-CH2-SW1) e a referência de [UIViewController](https://developer.apple.com/documentation/uikit/uiviewcontroller?language=objc).
 
 ### <a name="responding-to-user-interaction"></a>Respondendo à interação do usuário
 
@@ -313,7 +313,7 @@ A função mais importante do controlador de exibição é responder a interaç�
 Vamos explorar como isso funciona.
 No projeto `Phoneword_iOS`, um botão chamado `TranslateButton` foi adicionado à hierarquia de exibição de conteúdo:
 
-[![](hello-ios-deepdive-images/image1.png "A button was added called TranslateButton to the Content View Hierarchy")](hello-ios-deepdive-images/image1.png#lightbox)
+[![Um botão chamado TranslateButton foi adicionado à hierarquia de exibição de conteúdo](hello-ios-deepdive-images/image1.png)](hello-ios-deepdive-images/image1.png#lightbox)
 
 Quando um **Name** é atribuído ao controle **Button** no **Painel Propriedades**, o Designer do iOS o mapeia automaticamente para um controle no **ViewController.designer.cs**, tornando o `TranslateButton` disponível dentro da classe `ViewController`. Controles serão disponibilizados primeiro no estágio `ViewDidLoad` do ciclo de vida de exibição, portanto, esse método de ciclo de vida é usado para responder ao toque do usuário:
 
@@ -387,7 +387,7 @@ O aplicativo Phoneword introduziu vários conceitos não abordados neste guia. E
     }
     ```
 
-- **Mostrar um alerta** – Quando um usuário tenta fazer uma chamada telefônica em um dispositivo que não suporta chamadas – por exemplo, o simulador ou um iPod Touch – uma caixa de diálogo de alerta é exibida para que o usuário saiba que a chamada telefônica não pode ser colocada. O código a seguir cria e popula um controlador de alerta:
+- **Mostrar um alerta** – quando um usuário tenta fazer uma chamada telefônica em um dispositivo que não dá suporte a chamadas – por exemplo, o simulador ou um iPod Touch – uma caixa de diálogo de alerta é exibida para permitir que o usuário saiba que a chamada telefônica não pode ser colocada. O código a seguir cria e popula um controlador de alerta:
 
     ```csharp
     if (!UIApplication.SharedApplication.OpenUrl (url)) {
@@ -420,22 +420,22 @@ Depois que o dispositivo é configurado você pode implantar para ele conectando
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image46new.png "Pressing Start/Play")
+![Pressionar Iniciar/Reproduzir](hello-ios-deepdive-images/image46new.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image46.png "Pressing Start/Play")
+![Pressionar Iniciar/Reproduzir](hello-ios-deepdive-images/vs-image46.png)
 
 ::: zone-end
 
 O aplicativo será implantado no dispositivo iOS:
 
-[![](hello-ios-deepdive-images/image1.png "The app will deploy to the iOS device and run")](hello-ios-deepdive-images/image1.png#lightbox)
+[![O aplicativo será implantado no dispositivo iOS e executado](hello-ios-deepdive-images/image1.png)](hello-ios-deepdive-images/image1.png#lightbox)
 
 ### <a name="generate-custom-icons-and-launch-images"></a>Gerar ícones personalizados e imagens de inicialização
 
-Nem todo mundo tem um designer disponível para criar os ícones personalizados e lançar imagens que um aplicativo precisa para se destacar. Aqui estão várias abordagens alternativas para gerar trabalhos de arte personalizados do aplicativo:
+Nem todos têm um designer disponível para criar os ícones personalizados e iniciar imagens que um aplicativo precisa destacar. Aqui estão várias abordagens alternativas para gerar arte do aplicativo personalizado:
 
 ::: zone pivot="macos"
 

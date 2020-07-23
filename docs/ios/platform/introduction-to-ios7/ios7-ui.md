@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 49ea0cf7bd45a7fc261f6be3dc3becd2c847ad0c
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: c02b810cc61779f5c3b5ee5eb61169e8c3fceab4
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84564895"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931203"
 ---
 # <a name="ios-7-user-interface-overview"></a>Visão geral da interface do usuário do iOS 7
 
@@ -32,7 +32,7 @@ Todas as exibições no UIKit estão em conformidade com a nova aparência do iO
 
 Os botões criados da `UIButton` classe agora são sem borda, sem nenhum plano de fundo por padrão, conforme mostrado abaixo:
 
- ![](ios7-ui-images/button.png "Sample UIButton")
+ ![UIButton de exemplo](ios7-ui-images/button.png)
 
 O `UIButtonType.RoundedRect` estilo foi preterido. Se usado no iOS 7, `UIButtonType.RoundedRect` resultará em `UIButtonType.System` uso, que produz o estilo de botão padrão sem bordas de plano de fundo ou visíveis, como mostrado acima.
 
@@ -40,13 +40,13 @@ O `UIButtonType.RoundedRect` estilo foi preterido. Se usado no iOS 7, `UIButtonT
 
 Semelhante a `UIButton` , os botões de barra também são sem bordas, o que usa como padrão o novo `UIBarButtonItemStyle.Plain` estilo mostrado abaixo:
 
- ![](ios7-ui-images/barbuttonplain.png "Sample UIBarButtonItem")
+ ![UIBarButtonItem de exemplo](ios7-ui-images/barbuttonplain.png)
 
 Além disso, o `UIBarButtonItemStyle.Bordered` estilo foi preterido. `UIBarButtonItemStyle.Bordered`A configuração no Ios 7 fará com `UIBarButtonItemStyle.Plain` que o estilo seja usado.
 
 O `UIBarButtonItemStyle.Done` estilo não foi preterido. No entanto, ele também criará um botão sem borda, apenas com um estilo de texto em negrito, como mostrado:
 
- ![](ios7-ui-images/barbuttondone.png "Sample UIBarButtonItem in the Done style")
+ ![Exemplo de UIBarButtonItem no estilo concluído](ios7-ui-images/barbuttondone.png)
 
 ### <a name="uialertview"></a>UIAlertView
 
@@ -68,7 +68,7 @@ UIBarButtonItem button = new UIBarButtonItem ("Bar Button", UIBarButtonItemStyle
 
 Isso produz uma exibição de alerta padrão, com a subexibição ignorada, conforme mostrado abaixo:
 
- ![](ios7-ui-images/alert.png "Sample UIAlertView")
+ ![UIAlertView de exemplo](ios7-ui-images/alert.png)
 
  Observação: UIAlertView foi preterido no iOS 8. Exiba a receita do [controlador de alerta](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller) em usando uma exibição de alerta no Ios 8 e superior.
 
@@ -76,7 +76,7 @@ Isso produz uma exibição de alerta padrão, com a subexibição ignorada, conf
 
 Os controles segmentados no iOS 7 são transparentes e dão suporte à cor de tonalidade. A cor da tonalidade é usada para a cor do texto e da borda. Quando um segmento é selecionado, a cor é trocada entre o plano de fundo e o texto, com a cor de tonalidade usada para realçar o segmento selecionado, como mostrado abaixo:
 
- ![](ios7-ui-images/segmentedcontrol.png "Sample UISegmentedControl")
+ ![UISegmentedControl de exemplo](ios7-ui-images/segmentedcontrol.png)
 
 Além disso, o `UISegmentedControlStyle` foi preterido no Ios 7.
 
@@ -84,7 +84,7 @@ Além disso, o `UISegmentedControlStyle` foi preterido no Ios 7.
 
 A API para exibições do seletor está amplamente inalterada; no entanto, as diretrizes de design do iOS 7 agora as exibições do seletor de estado devem ser apresentadas em linha, e não como modos de exibição de entrada animados na parte inferior da tela ou por um novo controlador enviado para a pilha de um controlador de navegação, como nas versões anteriores do iOS. Isso pode ser visto no aplicativo de calendário do sistema:
 
- ![](ios7-ui-images/inlinepicker.png "This can be seen in the system calendar app")
+ ![Isso pode ser visto no aplicativo de calendário do sistema](ios7-ui-images/inlinepicker.png)
 
 ### <a name="uisearchdisplaycontroller"></a>UISearchDisplayController
 
@@ -92,7 +92,7 @@ A barra de pesquisa agora é mostrada dentro da barra de navegação quando a `U
 
 A captura de tela a seguir mostra a barra de pesquisa em um `UISearchDisplayController` :
 
- ![](ios7-ui-images/searchbar.png "Sample UISearchDisplayController")
+ ![UISearchDisplayController de exemplo](ios7-ui-images/searchbar.png)
 
 ### <a name="uitableview"></a>UITableView
 
@@ -102,7 +102,7 @@ As APIs `UITableView` são, principalmente, inalteradas; no entanto, o estilo mu
 
 O estilo agrupado alterado foi atualizado, com o conteúdo agora estendido para as bordas da tela, conforme mostrado abaixo:
 
- ![](ios7-ui-images/table1.png "Sample Grouped Table Style")
+ ![Exemplo de estilo de tabela agrupada](ios7-ui-images/table1.png)
 
 #### <a name="separatorinset"></a>SeparatorInset
 
@@ -114,13 +114,13 @@ cell.SeparatorInset = new UIEdgeInsets (0, 50, 0, 0);
 
 Isso produz na exibição de tabela com células recuadas, conforme mostrado abaixo:
 
- ![](ios7-ui-images/separatorinset.png "Sample UITableView SeparatorInset")
+ ![UITableView SeparatorInset de amostra](ios7-ui-images/separatorinset.png)
 
 #### <a name="table-button-styles"></a>Estilos de botão de tabela
 
 Os vários botões usados em exibições de tabela foram alterados. A captura de tela a seguir apresenta uma exibição de tabela no modo de edição:
 
- ![](ios7-ui-images/table2.png "This screenshot presents a table view in editing mode")
+ ![Esta captura de tela apresenta uma exibição de tabela no modo de edição](ios7-ui-images/table2.png)
 
 ### <a name="additional-control-changes"></a>Alterações de controle adicionais
 
@@ -146,7 +146,7 @@ Ao preparar seu aplicativo para o iOS 7, você pode realinhar as subexibições 
 
  `TopLayoutGuide`e `BottomLayoutGuide` serve como uma referência para onde as exibições devem começar ou terminar, para que o conteúdo não seja sobreposto por uma `UIKit` barra translúcida, como no exemplo a seguir:
 
- [![](ios7-ui-images/clipped.png "Sample content not overlapped by a translucent UIKit bar")](ios7-ui-images/clipped.png#lightbox)
+ [![Conteúdo de exemplo não sobreposto por uma barra UIKit translúcida](ios7-ui-images/clipped.png)](ios7-ui-images/clipped.png#lightbox)
 
 Essas APIs podem ser usadas para calcular o deslocamento de uma exibição na parte superior ou inferior da tela e ajustar o posicionamento do conteúdo de acordo:
 
@@ -166,7 +166,7 @@ public override void ViewDidLayoutSubviews ()
 
 Podemos usar o valor calculado acima para definir o `ImageView` deslocamento de nossa parte superior da tela, para que toda a imagem fique visível:
 
- [![](ios7-ui-images/good2.png "Example ImageViews displacement from the top of the screen")](ios7-ui-images/good2.png#lightbox)
+ [![Exemplo de substituição de ImageViews na parte superior da tela](ios7-ui-images/good2.png)](ios7-ui-images/good2.png#lightbox)
 
 Consulte o [ImageViewer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates/) para obter um exemplo funcional.
 
@@ -179,15 +179,15 @@ O valor de deslocamento é gerado dinamicamente depois que a exibição é adici
 
 Essa API especifica quais bordas de uma exibição devem ser estendidas para a tela inteira, independentemente da barra translucency. No iOS 7, barras de navegação e barras de ferramentas aparecem em camadas acima da exibição do controlador – ao contrário das versões anteriores do iOS, onde não ocupam o mesmo espaço. O aplicativo de fotos do iOS 7 ilustra o `UIViewController.EdgesForExtendedLayout` valor padrão, `UIRectEdge.All` . Essa configuração preenche todas as quatro bordas na exibição com conteúdo, criando o efeito de sobreposição e de tela inteira:
 
- [![](ios7-ui-images/photos.png "Sample EdgesForExtendedLayout")](ios7-ui-images/photos.png#lightbox)
+ [![EdgesForExtendedLayout de exemplo](ios7-ui-images/photos.png)](ios7-ui-images/photos.png#lightbox)
 
 Tocar na imagem remove as barras e mostra a imagem em tela inteira:
 
- [![](ios7-ui-images/photos2.png "EdgesForExtendedLayout with the bars removed")](ios7-ui-images/photos2.png#lightbox)
+ [![EdgesForExtendedLayout com as barras removidas](ios7-ui-images/photos2.png)](ios7-ui-images/photos2.png#lightbox)
 
 Como o conteúdo de tela inteira é o padrão, os aplicativos configurados para iOS 6 terão parte da exibição recortada, como na captura de tela abaixo:
 
- [![](ios7-ui-images/clipped.png "Apps configured for iOS 6 will have part of the view clipped, as in this screenshot")](ios7-ui-images/clipped.png#lightbox)
+ [![Os aplicativos configurados para iOS 6 terão parte da exibição recortada, como nesta captura de tela](ios7-ui-images/clipped.png)](ios7-ui-images/clipped.png#lightbox)
 
 A modificação da `UIViewController.EdgesForExtendedLayout` propriedade é ajustada para esse comportamento. Podemos especificar que a exibição não preenche nenhuma borda, portanto, nossa exibição evitará exibir o conteúdo no espaço ocupado por navegação ou barras de ferramentas (a cada orientação):
 
@@ -199,7 +199,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) {
 
 Em nosso aplicativo, veremos que a exibição é reposicionada novamente, de modo que toda a imagem é visível:
 
- [![](ios7-ui-images/good.png "Example with whole image visible")](ios7-ui-images/good.png#lightbox)
+ [![Exemplo com imagem inteira visível](ios7-ui-images/good.png)](ios7-ui-images/good.png#lightbox)
 
 Observe que, embora os efeitos das `TopLayoutGuide/BottomLayoutGuide` `EdgesForExtendedLayout` APIs e sejam semelhantes, eles destinam-se a preencher metas diferentes. A alteração da `EdgesForExtendedLayout` configuração do padrão pode corrigir exibições recortadas em aplicativos criados para IOS 6, mas um bom design do IOS 7 deve respeitar a estética de tela inteira e fornecer uma experiência de exibição de tela inteira, contando com `TopLayoutGuide` e `BottomLayoutGuide` posicionar corretamente o conteúdo que pretende ser manipulado em um local confortável para o usuário.
 
@@ -209,7 +209,7 @@ Consulte o [ImageViewer](https://docs.microsoft.com/samples/xamarin/ios-samples/
 
 A barra de status e as barras de navegação são renderizadas com transparência. As barras de status são transparentes, enquanto as barras de ferramentas e as barras de navegação são translúcidas e desfocadas para transmitir a sensação de profundidade na interface do usuário. A captura de tela a seguir mostra esse desfoque e transparência, em que a cor da tela de fundo azul da exibição de coleção mostra o status e as barras de navegação, dando a eles uma aparência azul clara:
 
- ![](ios7-ui-images/transparent-navbar.png "Sample Status and Navigation Bar blurring")
+ ![Status de exemplo e desfoque de barra de navegação](ios7-ui-images/transparent-navbar.png)
 
 #### <a name="status-bar-styles"></a>Estilos da barra de status
 
@@ -226,7 +226,7 @@ public override UIStatusBarStyle PreferredStatusBarStyle ()
 
 Isso faz com que a barra de status apareça como abaixo:
 
- ![](ios7-ui-images/light-status-bar.png "Sample Status Bar")
+ ![Barra de status de exemplo](ios7-ui-images/light-status-bar.png)
 
 Para ocultar a barra de status do código do controlador de exibição, substitua `PrefersStatusBarHidden` , conforme mostrado abaixo:
 
@@ -239,7 +239,7 @@ public override bool PrefersStatusBarHidden ()
 
 Isso oculta a barra de status:
 
- ![](ios7-ui-images/status-bar-hidden.png "Status Bar hidden")
+ ![Barra de status oculta](ios7-ui-images/status-bar-hidden.png)
 
 ### <a name="tint-color"></a>Cor da tonalidade
 
@@ -247,7 +247,7 @@ Agora, os botões são exibidos como texto sem cromo. A cor do texto pode ser co
 
 Por exemplo, a captura de tela a seguir mostra o efeito de alterar a cor de tonalidade em uma exibição do controlador de navegação para roxo:
 
- ![](ios7-ui-images/tint-color.png "Purple tint color on a navigation controllers view")
+ ![Cor de tonalidade roxa em uma exibição de controladores de navegação](ios7-ui-images/tint-color.png)
 
 A cor da tonalidade também pode ser aplicada a imagens quando o `RenderingMode` é definido como `UIImageRenderingMode.AlwaysTemplate` .
 
@@ -262,6 +262,6 @@ No iOS 7, o usuário pode especificar o tamanho do texto nas configurações do 
 
 Este artigo aborda as alterações nos elementos da interface do usuário no iOS 7. Ele examina várias das alterações feitas nas exibições e nos controles no UIKit, destacando as alterações visuais, bem como as alterações nas APIs relacionadas. Por fim, ele introduz novas APIs para trabalhar com conteúdo de tela inteira, novo suporte a cores de tonalidade e tipo dinâmico.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [ImageViewer (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates)

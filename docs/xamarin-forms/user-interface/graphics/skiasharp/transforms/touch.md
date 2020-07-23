@@ -10,22 +10,22 @@ ms.date: 09/14/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f5738f376e2a814ef1af455178c2e68135184402
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6de2caf95d4ce983f7e97e0bc017932df534aedb
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140160"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931853"
 ---
 # <a name="touch-manipulations"></a>Manipulações de toque
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Usar transformações de matriz para implementar arrastar, apertar e girar toque_
 
 Em ambientes multitoque, como aqueles em dispositivos móveis, os usuários geralmente usam seus dedos para manipular objetos na tela. Gestos comuns, como um "arrastar de um dedo" e um pinça de dois dedos, podem mover e dimensionar objetos ou até mesmo girá-los. Esses gestos geralmente são implementados usando matrizes de transformação, e este artigo mostra como fazer isso.
 
-![](touch-images/touchmanipulationsexample.png "A bitmap subjected to translation, scaling, and rotation")
+![Um bitmap que está sujeito à tradução, ao dimensionamento e à rotação](touch-images/touchmanipulationsexample.png)
 
 Todos os exemplos mostrados aqui usam o Xamarin.Forms efeito de controle de toque apresentado no artigo [**invocando eventos de efeitos**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md).
 
@@ -920,7 +920,7 @@ public partial class TouchManipulationPage : ContentPage
 
 O `PaintSurface` manipulador é concluído exibindo um `MatrixDisplay` objeto que mostra a matriz de toque acumulada:
 
-[![](touch-images/touchmanipulation-small.png "Triple screenshot of the Touch Manipulation page")](touch-images/touchmanipulation-large.png#lightbox "Triple screenshot of the Touch Manipulation page")
+[![Captura de tela tripla da página de manipulação de toque](touch-images/touchmanipulation-small.png)](touch-images/touchmanipulation-large.png#lightbox "Captura de tela tripla da página de manipulação de toque")
 
 ## <a name="manipulating-multiple-bitmaps"></a>Manipulando vários bitmaps
 
@@ -1058,7 +1058,7 @@ public partial class BitmapScatterViewPage : ContentPage
 
 O código percorre a coleção e exibe a pilha de bitmaps desde o início da coleção até o final:
 
-[![](touch-images/bitmapscatterview-small.png "Triple screenshot of the Bitmap Scatter View page")](touch-images/bitmapscatterview-large.png#lightbox "Triple screenshot of the Bitmap Scatter View page")
+[![Captura de tela tripla da página de exibição de dispersão de bitmap](touch-images/bitmapscatterview-small.png)](touch-images/bitmapscatterview-large.png#lightbox "Captura de tela tripla da página de exibição de dispersão de bitmap")
 
 ## <a name="single-finger-scaling"></a>Dimensionamento de dedo único
 
@@ -1271,7 +1271,7 @@ else
 
 Esse código divide efetivamente a área do bitmap em uma forma de losango interior e quatro triângulos nos cantos. Isso permite áreas muito maiores nos cantos para pegar e dimensionar o bitmap.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

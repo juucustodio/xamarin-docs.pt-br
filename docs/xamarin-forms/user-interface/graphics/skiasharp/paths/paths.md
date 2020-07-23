@@ -10,22 +10,22 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6ceac2d866e67af5cf3496fcf8c072ae83ecfe38
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a7a4e8c4467438d1f732508a15bee7045310109b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140238"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931216"
 ---
 # <a name="path-basics-in-skiasharp"></a>Noções básicas de caminho em SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explorar o objeto SkiaSharp SKPath para combinar linhas e curvas conectadas_
 
 Um dos recursos mais importantes do caminho gráfico é a capacidade de definir quando várias linhas devem ser conectadas e quando elas não devem ser conectadas. A diferença pode ser significativa, pois a parte superior desses dois triângulos demonstra:
 
-![](paths-images/connectedlinesexample.png "Two triangles showing the difference between connected and disconnected lines")
+![Dois triângulos que mostram a diferença entre as linhas conectadas e desconectadas](paths-images/connectedlinesexample.png)
 
 Um caminho de gráfico é encapsulado pelo [`SKPath`](xref:SkiaSharp.SKPath) objeto. Um caminho é uma coleção de um ou mais *contornos*. Cada contorno é uma coleção de linhas retas e curvas *conectadas* . Os contornos não estão conectados entre si, mas podem se sobrepor visualmente. Às vezes, uma única delimitação pode se sobrepor.
 
@@ -104,7 +104,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 A primeira contorno consiste em uma chamada para [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo(System.Single,System.Single)) usar coordenadas X e Y em vez de um `SKPoint` valor, seguido por três chamadas para [`LineTo`](xref:SkiaSharp.SKPath.LineTo(System.Single,System.Single)) para desenhar os três lados do triângulo. A segunda delimitação tem apenas duas chamadas para `LineTo` , mas termina a delimitação com uma chamada para [`Close`](xref:SkiaSharp.SKPath.Close) , que fecha a delimitação. A diferença é significativa:
 
-[![](paths-images/twotrianglecontours-small.png "Triple screenshot of the Two Triangle Contours page")](paths-images/twotrianglecontours-large.png#lightbox "Triple screenshot of the Two Triangle Contours page")
+[![Captura de tela tripla da página de contornos de dois triângulos](paths-images/twotrianglecontours-small.png)](paths-images/twotrianglecontours-large.png#lightbox "Captura de tela tripla da página de contornos de dois triângulos")
 
 Como você pode ver, a primeira delimitação é, obviamente, uma série de três linhas conectadas, mas o final não se conecta com o início. As duas linhas se sobrepõem na parte superior. A segunda delimitação é obviamente fechada e foi realizada com uma quantidade menor de `LineTo` chamadas porque o `Close` método adiciona automaticamente uma linha final para fechar a delimitação.
 
@@ -194,11 +194,11 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Este é o programa em execução:
 
-[![](paths-images/strokejoins-small.png "Triple screenshot of the Stroke Joins page")](paths-images/strokejoins-large.png#lightbox "Triple screenshot of the Stroke Joins page")
+[![Captura de tela tripla da página de junções de traço](paths-images/strokejoins-small.png)](paths-images/strokejoins-large.png#lightbox "Captura de tela tripla da página de junções de traço")
 
 A junção de mitra consiste em um ponto nítido onde as linhas se conectam. Quando duas linhas entram em um ângulo pequeno, a junção de mitre pode se tornar muito longa. Para evitar junções de mitra excessivamente longas, o comprimento da junção de Mitre é limitado pelo valor da [`StrokeMiter`](xref:SkiaSharp.SKPaint.StrokeMiter) propriedade de `SKPaint` . Uma junção de mitra que excede esse comprimento é cortados para se tornar uma junção chanfrada.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

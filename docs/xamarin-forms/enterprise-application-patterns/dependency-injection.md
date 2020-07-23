@@ -10,12 +10,12 @@ ms.date: 11/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 99cac3c597cf1d7351d3214ce59fd0a0a0a46400
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8aea3ad36f6c35e9faf2771fc6b54c378c304afb
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84572345"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933595"
 ---
 # <a name="dependency-injection"></a>Injeção de dependência
 
@@ -62,7 +62,7 @@ Há muitos contêineres de injeção de dependência disponíveis, com o aplicat
 
 No TinyIoC, o `TinyIoCContainer` tipo fornece o contêiner de injeção de dependência. A Figura 3-1 mostra as dependências ao usar esse contêiner, que instancia um `IOrderService` objeto e o injeta na `ProfileViewModel` classe.
 
-![](dependency-injection-images/dependencyinjection.png "Dependencies example when using dependency injection")
+![Exemplo de dependências ao usar injeção de dependência](dependency-injection-images/dependencyinjection.png)
 
 **Figura 3-1:** Dependências ao usar injeção de dependência
 
@@ -166,7 +166,7 @@ A injeção de dependência permite o desacoplamento de tipos concretos do códi
 
 O TinyIoC é um contêiner leve que apresenta desempenho superior em plataformas móveis em comparação com a maioria dos contêineres bem conhecidos. Ele facilita a criação de aplicativos menos rígidos e fornece todos os recursos normalmente encontrados em contêineres de injeção de dependência, incluindo métodos para registrar mapeamentos de tipo, resolver objetos, gerenciar tempos de vida de objeto e injetar objetos dependentes em construtores de objetos resolvidos.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Download do eBook (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (exemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

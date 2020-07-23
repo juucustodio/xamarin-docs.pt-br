@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 0d5ec4bc10747a287def3fd9a83a703d2ec4b2a2
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 0f3c91e175e5ccdefeaf3d6c9c83e9eb3e012e14
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572371"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935389"
 ---
 # <a name="working-with-tvos-navigation-bars-in-xamarin"></a>Trabalhando com barras de navegação do tvOS no Xamarin
 
 As barras de navegação podem ser adicionadas à parte superior das exibições para exibir um título e botões de barra de navegação opcionais. Normalmente, eles são usados quando o usuário navegou de uma página principal, como uma exibição de tabela, uma coleção ou um menu para uma subexibição mostrando os detalhes do item selecionado.
 
-[![](navigation-bars-images/navbar01.png "Sample Navigation Bar")](navigation-bars-images/navbar01.png#lightbox)
+[![Barra de navegação de exemplo](navigation-bars-images/navbar01.png)](navigation-bars-images/navbar01.png#lightbox)
 
 Além do título (exibido no centro), as barras de navegação podem conter um ou mais botões da barra de navegação ( `UIBarButtonItem` ) nos lados esquerdo e direito da barra.
 
@@ -36,34 +36,34 @@ A maneira mais fácil de trabalhar com barras de navegação em um aplicativo Xa
 1. Na **painel de soluções**, clique duas vezes no `Main.storyboard` arquivo e abra-o para edição.
 1. Arraste uma **barra de navegação** da **caixa de ferramentas** e solte-a na exibição na parte superior da tela:
 
-    [![](navigation-bars-images/navbar02.png "A Navigation Bar")](navigation-bars-images/navbar02.png#lightbox)
+    [![Uma barra de navegação](navigation-bars-images/navbar02.png)](navigation-bars-images/navbar02.png#lightbox)
 1. Clique duas vezes na **barra de navegação** para selecionar o **item de navegação**. Na guia **widget** da **painel de propriedades**, você pode definir o **título**:
 
-    [![](navigation-bars-images/navbar03.png "Set the Title")](navigation-bars-images/navbar03.png#lightbox)
+    [![Definir o título](navigation-bars-images/navbar03.png)](navigation-bars-images/navbar03.png#lightbox)
 1. Em seguida, você pode adicionar um ou mais **itens de botão de barra** para qualquer fim da barra:
 
-    [![](navigation-bars-images/navbar04.png "A Bar Button Item")](navigation-bars-images/navbar04.png#lightbox)
+    [![Um item de botão de barra](navigation-bars-images/navbar04.png)](navigation-bars-images/navbar04.png#lightbox)
 1. Por fim, conecte os **itens do botão de barra** a ações na guia **eventos** do **Gerenciador de propriedades**:
 
-    [![](navigation-bars-images/navbar05.png "A Bar Button Item Action")](navigation-bars-images/navbar05.png#lightbox)
-1. Salve suas alterações.
+    [![Uma ação de item de botão de barra](navigation-bars-images/navbar05.png)](navigation-bars-images/navbar05.png#lightbox)
+1. Salve as alterações.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Na **Gerenciador de soluções**, clique duas vezes no `Main.storyboard` arquivo e abra-o para edição.
 1. Arraste uma **barra de navegação** da **caixa de ferramentas** e solte-a na exibição na parte superior da tela:
 
-    [![](navigation-bars-images/navbar02-vs.png "A Navigation Bar")](navigation-bars-images/navbar02-vs.png#lightbox)
+    [![Uma barra de navegação](navigation-bars-images/navbar02-vs.png)](navigation-bars-images/navbar02-vs.png#lightbox)
 1. Clique duas vezes na **barra de navegação** para selecionar o **item de navegação**. Na guia **widget** do Gerenciador de **Propriedades**, você pode definir o **título**:
 
-    [![](navigation-bars-images/navbar03-vs.png "Set the Title")](navigation-bars-images/navbar03-vs.png#lightbox)
+    [![Definir o título](navigation-bars-images/navbar03-vs.png)](navigation-bars-images/navbar03-vs.png#lightbox)
 1. Em seguida, você pode adicionar um ou mais **itens de botão de barra** para qualquer fim da barra:
 
-    [![](navigation-bars-images/navbar04-vs.png "A Bar Button Items")](navigation-bars-images/navbar04-vs.png#lightbox)
+    [![Itens de botão de barra](navigation-bars-images/navbar04-vs.png)](navigation-bars-images/navbar04-vs.png#lightbox)
 1. Por fim, conecte os **itens do botão de barra** a ações na guia **eventos** do **Gerenciador de propriedades**:
 
-    [![](navigation-bars-images/navbar05-vs.png "A Bar Button Item Actions")](navigation-bars-images/navbar05-vs.png#lightbox)
-1. Salve suas alterações.
+    [![Ações de item de botão de barra](navigation-bars-images/navbar05-vs.png)](navigation-bars-images/navbar05-vs.png#lightbox)
+1. Salve as alterações.
 
 -----
 
@@ -131,7 +131,7 @@ Para obter mais informações sobre como trabalhar com storyboards, consulte nos
 
 Este artigo abordou a criação e o trabalho com barras de navegação dentro de um aplicativo Xamarin. tvOS.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)

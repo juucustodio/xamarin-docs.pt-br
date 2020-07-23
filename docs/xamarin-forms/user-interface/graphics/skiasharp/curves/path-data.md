@@ -10,22 +10,22 @@ ms.date: 05/24/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 680c924280f8f3a6080b2fcc1968ecaf308f33a0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2571375e7ad28acbf367870b5c48e19d3a7525e7
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138054"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931242"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>Dados do caminho SVG em SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Definir caminhos usando cadeias de caracteres de texto no formato gráfico de vetor escalonável_
 
 A [`SKPath`](xref:SkiaSharp.SKPath) classe oferece suporte à definição de objetos de caminho inteiros a partir de cadeias de caracteres de texto em um formato estabelecido pela especificação SVG (gráficos de vetor escalonáveis). Você verá mais adiante neste artigo como você pode representar um caminho inteiro como este em uma cadeia de texto:
 
-![](path-data-images/pathdatasample.png "A sample path defined with SVG path data")
+![Um caminho de exemplo definido com dados de caminho SVG](path-data-images/pathdatasample.png)
 
 O SVG é uma linguagem de programação gráfica baseada em XML para páginas da Web. Como o SVG deve permitir que os caminhos sejam definidos na marcação, em vez de uma série de chamadas de função, o padrão SVG inclui uma maneira extremamente concisa de especificar um caminho gráfico inteiro como uma cadeia de texto.
 
@@ -222,7 +222,7 @@ public class PathDataHelloPage : ContentPage
 
 O caminho preenche a tela, o que parece mais razoável quando exibido no modo paisagem:
 
-[![](path-data-images/pathdatahello-small.png "Triple screenshot of the Path Data Hello page")](path-data-images/pathdatahello-large.png#lightbox "Triple screenshot of the Path Data Hello page")
+[![Captura de tela tripla da página de saudação de dados de caminho](path-data-images/pathdatahello-small.png)](path-data-images/pathdatahello-large.png#lightbox "Captura de tela tripla da página de saudação de dados de caminho")
 
 A página **Cat de dados de caminho** é semelhante. Os objetos Path e Paint são definidos como campos na [`PathDataCatPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) classe:
 
@@ -293,7 +293,7 @@ public class PathDataCatPage : ContentPage
 
 Este é o programa em execução:
 
-[![](path-data-images/pathdatacat-small.png "Triple screenshot of the Path Data Cat page")](path-data-images/pathdatacat-large.png#lightbox "Triple screenshot of the Path Data Cat page")
+[![Captura de tela tripla da página Cat de dados do caminho](path-data-images/pathdatacat-small.png)](path-data-images/pathdatacat-large.png#lightbox "Captura de tela tripla da página Cat de dados do caminho")
 
 Normalmente, quando um `SKPath` objeto é definido como um campo, os contornos do caminho devem ser definidos no construtor ou em outro método. No entanto, ao usar dados de caminho SVG, você viu que o caminho pode ser totalmente especificado na definição de campo.
 
@@ -430,9 +430,9 @@ public class PrettyAnalogClockPage : ContentPage
 
 No entanto, algo especial é feito com a segunda mão. Como o relógio é atualizado a cada 16 milissegundos, a `Millisecond` Propriedade do `DateTime` valor pode potencialmente ser usada para animar uma varredura de segunda mão, em vez de uma que se move em saltos discretos de segundo para segundo. Mas esse código não permite que a movimentação seja suave. Em vez disso, ele usa as Xamarin.Forms [`SpringIn`](xref:Xamarin.Forms.Easing.SpringIn) [`SpringOut`](xref:Xamarin.Forms.Easing.SpringOut) funções de atenuação de animação e para um tipo diferente de movimento. Essas funções de atenuação fazem com que a segunda mão se mova de um jerkier de forma que &mdash; retorne um pouco antes de se mover e, em seguida, migre um pouco o seu destino, um efeito que infelizmente não pode ser reproduzido nessas capturas de tela estáticas:
 
-[![](path-data-images/prettyanalogclock-small.png "Triple screenshot of the Pretty Analog Clock page")](path-data-images/prettyanalogclock-large.png#lightbox "Triple screenshot of the Pretty Analog Clock page")
+[![Captura de tela tripla da página de relógio muito analógica](path-data-images/prettyanalogclock-small.png)](path-data-images/prettyanalogclock-large.png#lightbox "Captura de tela tripla da página de relógio muito analógica")
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

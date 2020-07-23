@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: d7491af1ced4e8e0309bb3e22298d33ee5a042be
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 25de402742978ed9d2a4e16e87d786a014f596a0
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571539"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933766"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>Alterações no StoreKit no iOS 6
 
@@ -34,7 +34,7 @@ Os recursos do kit de loja discutidos neste documento exigem o iOS 6 e o Xcode 4
 O novo recurso de compra no aplicativo no iOS permite que os usuários exibam informações do produto e comprem ou baixem o produto de dentro de seu aplicativo.
 Anteriormente, os aplicativos teriam de disparar o iTunes, a App Store ou o eróticos da iBookstore, o que resultaria no usuário deixar o aplicativo original. Esse novo recurso retorna automaticamente o usuário para seu aplicativo quando eles são concluídos.
 
-[![](changes-to-storekit-images/image1.png "Automatically returning to an app after purchase")](changes-to-storekit-images/image1.png#lightbox)
+[![Retornando automaticamente para um aplicativo após a compra](changes-to-storekit-images/image1.png)](changes-to-storekit-images/image1.png#lightbox)
 
 Exemplos de como isso pode ser usado incluem:
 
@@ -88,7 +88,7 @@ void Buy (int productId)
 
 O aplicativo se parece com a captura de tela abaixo ao executar – o download ou a compra ocorre inteiramente dentro do `SKStoreProductViewController` :
 
-[![](changes-to-storekit-images/image2.png "The app looks like this when running")](changes-to-storekit-images/image2.png#lightbox)
+[![O aplicativo tem a seguinte aparência quando executado](changes-to-storekit-images/image2.png)](changes-to-storekit-images/image2.png#lightbox)
 
 ### <a name="supporting-older-operating-systems"></a>Suporte a sistemas operacionais mais antigos
 
@@ -107,7 +107,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (6,0)) {
 }
 ```
 
-### <a name="errors"></a>Errors
+### <a name="errors"></a>Erros
 
 O seguinte erro ocorrerá se a ID da Apple usada não for válida, o que pode ser confuso, pois implica um problema de rede ou de autenticação de algum tipo.
 
@@ -125,7 +125,7 @@ A ID da Apple exigida pelo `SKStoreProductViewController` é um *número* (não 
 
 Para aplicativos que você publica, é fácil encontrar a ID da **Apple** no iTunes Connect:
 
-[![](changes-to-storekit-images/image3.png "Finding the Apple ID in iTunes Connect")](changes-to-storekit-images/image3.png#lightbox)
+[![Encontrando a ID da Apple no iTunes Connect](changes-to-storekit-images/image3.png)](changes-to-storekit-images/image3.png#lightbox)
 
  <a name="Search_API"></a>
 
@@ -185,7 +185,7 @@ Antes do iOS 6, havia duas maneiras de fornecer um produto (descrito mais detalh
 
 No iOS 6, a Apple oferece uma variação de produtos entregues por servidor: eles hospedarão seus arquivos de conteúdo em seus servidores. Isso torna muito mais simples a criação de produtos entregues por servidor, pois não é necessário operar um servidor separado, e o kit de armazenamento fornece a funcionalidade de download em segundo plano que você tinha que escrever anteriormente. Para aproveitar a hospedagem da Apple, habilite a hospedagem de conteúdo para novos produtos de compra no aplicativo e modifique seu código do kit de loja para tirar proveito dele. Os arquivos de conteúdo do produto são então criados usando o Xcode e carregados nos servidores da Apple para revisão e liberação.
 
-[![](changes-to-storekit-images/image4.png "The build and deliver process")](changes-to-storekit-images/image4.png#lightbox)
+[![O processo de Build e entrega](changes-to-storekit-images/image4.png)](changes-to-storekit-images/image4.png#lightbox)
 
 Usar a App Store para fornecer compras no aplicativo *com conteúdo hospedado* requer a seguinte configuração e configuração:
 
@@ -198,11 +198,11 @@ As seções a seguir explicam como implementar conteúdo hospedado, desde a cria
 
 ### <a name="sample-code"></a>Exemplo de código
 
-O projeto de exemplo *HostedNonConsumables* (em StoreKitiOS6. zip) usa conteúdo hospedado. O aplicativo oferece dois "capítulos de livros" para venda, o conteúdo para o qual é hospedado nos servidores da Apple. O conteúdo consiste em um arquivo de texto e uma imagem, embora um conteúdo muito mais complexo possa ser usado em um aplicativo real.
+O projeto de exemplo *HostedNonConsumables* (em StoreKitiOS6.zip) usa conteúdo hospedado. O aplicativo oferece dois "capítulos de livros" para venda, o conteúdo para o qual é hospedado nos servidores da Apple. O conteúdo consiste em um arquivo de texto e uma imagem, embora um conteúdo muito mais complexo possa ser usado em um aplicativo real.
 
 O aplicativo tem esta aparência antes, durante e após uma compra:
 
- [![](changes-to-storekit-images/image5.png "The app looks like this before, during and after a purchase")](changes-to-storekit-images/image5.png#lightbox)
+ [![O aplicativo tem esta aparência antes, durante e após uma compra](changes-to-storekit-images/image5.png)](changes-to-storekit-images/image5.png#lightbox)
 
 O arquivo de texto e a imagem são baixados e copiados para o diretório de documentos do aplicativo. Para obter mais informações sobre os diferentes diretórios disponíveis para o armazenamento de aplicativos, consulte a [documentação do sistema de arquivos](~/ios/app-fundamentals/file-system.md).
 
@@ -210,19 +210,19 @@ O arquivo de texto e a imagem são baixados e copiados para o diretório de docu
 
 Ao criar novos produtos que usarão a hospedagem de conteúdo da Apple, certifique-se de selecionar o tipo de produto **não consumível** . Outros tipos de produtos não dão suporte à Hospedagem de conteúdo. Além disso, você não deve habilitar a hospedagem de conteúdo para os produtos *existentes* que vende; Ative apenas a hospedagem de conteúdo para novos produtos.
 
- [![](changes-to-storekit-images/image6.png "Select the Non-Consumable product type")](changes-to-storekit-images/image6.png#lightbox)
+ [![Selecione o tipo de produto não consumível](changes-to-storekit-images/image6.png)](changes-to-storekit-images/image6.png#lightbox)
 
 Insira uma **ID de produto**. Essa ID será necessária mais tarde quando você criar o conteúdo para este produto.
 
- [![](changes-to-storekit-images/image7.png "Enter a Product ID")](changes-to-storekit-images/image7.png#lightbox)
+ [![Insira uma ID de produto](changes-to-storekit-images/image7.png)](changes-to-storekit-images/image7.png#lightbox)
 
 A hospedagem de conteúdo é definida na seção detalhes. Antes de a compra no aplicativo ficar ativa, desmarque a caixa de seleção **conteúdo do host com Apple** se você quiser cancelar (mesmo que tenha carregado algum conteúdo de teste). No entanto, a hospedagem de conteúdo não pode ser removida depois que a compra no aplicativo tiver ficado em tempo real.
 
- [![](changes-to-storekit-images/image8.png "Hosting content with Apple")](changes-to-storekit-images/image8.png#lightbox)
+ [![Hospedando conteúdo com a Apple](changes-to-storekit-images/image8.png)](changes-to-storekit-images/image8.png#lightbox)
 
 Depois de ativar o conteúdo de hospedagem, o produto entrará em **espera pelo status de carregamento** e mostrará esta mensagem:
 
- [![](changes-to-storekit-images/image9.png "The product will enter Waiting for Upload status and show this message")](changes-to-storekit-images/image9.png#lightbox)
+ [![O produto entrará em espera pelo status de carregamento e mostrará esta mensagem](changes-to-storekit-images/image9.png)](changes-to-storekit-images/image9.png#lightbox)
 
 O pacote de conteúdo deve ser criado com o Xcode e carregado usando a ferramenta de arquivamento. As instruções para criar pacotes de conteúdo são fornecidas na próxima seção **criando. Arquivos PKG**.
 
@@ -249,17 +249,17 @@ Nosso aplicativo de exemplo tem capítulos de livros para venda – cada pacote 
 
 Comece selecionando **arquivo > novo projeto** no menu e escolhendo **conteúdo de compra no aplicativo**:
 
- [![](changes-to-storekit-images/image10.png "Choose In-App Purchase Content")](changes-to-storekit-images/image10.png#lightbox)
+ [![Escolher conteúdo de compra no aplicativo](changes-to-storekit-images/image10.png)](changes-to-storekit-images/image10.png#lightbox)
 
 Insira o **nome do produto** e o **identificador da empresa** de modo que o **identificador do pacote** corresponda à ID do **produto** que você inseriu no iTunes Connect para este produto.
 
-[![](changes-to-storekit-images/image11.png "Enter the  Name and Identifier")](changes-to-storekit-images/image11.png#lightbox)
+[![Insira o nome e o identificador](changes-to-storekit-images/image11.png)](changes-to-storekit-images/image11.png#lightbox)
 
 Agora você terá um projeto **de conteúdo de compra no aplicativo** em branco. Você pode clicar com o botão direito e **Adicionar arquivos...** ou arraste-os para o **navegador do projeto**. Verifique se o **ContentVersion** está correto (ele deve começar em 1,0, mas se você optar por atualizar o conteúdo mais tarde, lembre-se de incrementar).
 
 Esta captura de tela mostra o Xcode com os arquivos de conteúdo incluídos no projeto e as entradas do plist visíveis na janela principal:
 
-[![](changes-to-storekit-images/image12.png "This screenshot shows Xcode with the content files included in the project and the plist entries visible in the main window")](changes-to-storekit-images/image12.png#lightbox)
+[![Esta captura de tela mostra o Xcode com os arquivos de conteúdo incluídos no projeto e as entradas do plist visíveis na janela principal](changes-to-storekit-images/image12.png)](changes-to-storekit-images/image12.png#lightbox)
 
 Depois de adicionar todos os arquivos de conteúdo, você pode salvar este projeto e editá-lo novamente mais tarde, ou iniciar o processo de carregamento.
 
@@ -267,20 +267,20 @@ Depois de adicionar todos os arquivos de conteúdo, você pode salvar este proje
 
 A maneira mais fácil de carregar pacotes de conteúdo é com a **ferramenta de arquivamento Xcode**. Escolha **produto > arquivo morto** no menu para começar:
 
-![](changes-to-storekit-images/image13.png "Choose Archiven")
+![Escolha arquivamento](changes-to-storekit-images/image13.png)
 
 O pacote de conteúdo será exibido no arquivo, conforme mostrado abaixo.
 O tipo e o ícone de arquivamento mostram essa linha é um **arquivo de conteúdo de compra no aplicativo**. Clique em **validar...** para verificar se há erros no nosso pacote de conteúdo sem realmente executar o carregamento.
 
-[![](changes-to-storekit-images/image14.png "Validate the package")](changes-to-storekit-images/image14.png#lightbox)
+[![Validar o pacote](changes-to-storekit-images/image14.png)](changes-to-storekit-images/image14.png#lightbox)
 
 Faça logon com suas credenciais do iTunes Connect:
 
-[![](changes-to-storekit-images/image15.png "Login with your iTunes Connect credentials")](changes-to-storekit-images/image15.png#lightbox)
+[![Faça logon com suas credenciais do iTunes Connect](changes-to-storekit-images/image15.png)](changes-to-storekit-images/image15.png#lightbox)
 
 Escolha o aplicativo correto e a compra no aplicativo para associar este conteúdo a:
 
-[![](changes-to-storekit-images/image16.png "Choose the correct application and in-app purchase to associate this content with")](changes-to-storekit-images/image16.png#lightbox)
+[![Escolha o aplicativo correto e a compra no aplicativo para associar esse conteúdo](changes-to-storekit-images/image16.png)](changes-to-storekit-images/image16.png#lightbox)
 
 Você deverá ver uma mensagem como esta captura de tela:
 
@@ -296,23 +296,23 @@ Selecione a primeira opção para carregar o conteúdo:
 
 Entrar novamente:
 
-[![](changes-to-storekit-images/image15.png "Login in")](changes-to-storekit-images/image15.png#lightbox)
+[![Logon em](changes-to-storekit-images/image15.png)](changes-to-storekit-images/image15.png#lightbox)
 
 Escolha o aplicativo correto e o registro de compra no aplicativo para carregar o conteúdo:
 
-[![](changes-to-storekit-images/image20.png "Choose the application and in-app purchase record")](changes-to-storekit-images/image20.png#lightbox)
+[![Escolha o aplicativo e o registro de compra no aplicativo](changes-to-storekit-images/image20.png)](changes-to-storekit-images/image20.png#lightbox)
 
 Aguarde enquanto os arquivos são carregados:
 
-[![](changes-to-storekit-images/image21.png "The content upload dialog")](changes-to-storekit-images/image21.png#lightbox)
+[![A caixa de diálogo de carregamento de conteúdo](changes-to-storekit-images/image21.png)](changes-to-storekit-images/image21.png#lightbox)
 
 Quando o upload for concluído, uma mensagem será exibida para avisá-lo que o conteúdo foi enviado para a loja de aplicativos.
 
-[![](changes-to-storekit-images/image22.png "An example successful upload message")](changes-to-storekit-images/image22.png#lightbox)
+[![Um exemplo de mensagem de upload bem-sucedido](changes-to-storekit-images/image22.png)](changes-to-storekit-images/image22.png#lightbox)
 
 Depois que isso for feito, quando você retornar para a página do produto no iTunes Connect, ele mostrará os detalhes do pacote e estará **pronto para enviar** o status. Quando o produto estiver nesse status, você poderá começar a testar no ambiente de área restrita. Você não precisa enviar o produto para teste na área restrita.
 
-[![](changes-to-storekit-images/image23.png "iTunes Connect it will show the package details and be in Ready to Submit status")](changes-to-storekit-images/image23.png#lightbox)
+[![o iTunes Connect irá mostrar os detalhes do pacote e estar pronto para enviar o status](changes-to-storekit-images/image23.png)](changes-to-storekit-images/image23.png#lightbox)
 
 Pode levar algum tempo (por exemplo, alguns minutos) entre o carregamento do arquivo morto e o status do iTunes Connect sendo atualizado. Você pode enviar o produto para revisão separadamente ou enviá-lo em conjunto com um binário de aplicativo. Somente após a Apple ter aprovado oficialmente o conteúdo, ele estará disponível na loja de aplicativos de produção para compra em seu aplicativo.
 
@@ -320,7 +320,7 @@ Pode levar algum tempo (por exemplo, alguns minutos) entre o carregamento do arq
 
 Usar o Xcode e a ferramenta de arquivamento para criar e carregar um pacote de conteúdo hospedado significa que você nunca vê o conteúdo do pacote em si. Os arquivos e diretórios nos pacotes criados para o aplicativo de exemplo são parecidos com a captura de tela abaixo, com o arquivo **plist** na raiz e os arquivos do produto em um subdiretório de **conteúdo** :
 
-[![](changes-to-storekit-images/image24.png "The plist file in the root and the product files in a Contents subdirectory")](changes-to-storekit-images/image24.png#lightbox)
+[![O arquivo plist na raiz e os arquivos do produto em um subdiretório de conteúdo](changes-to-storekit-images/image24.png)](changes-to-storekit-images/image24.png#lightbox)
 
 Observe a estrutura de diretório do pacote (especialmente o local dos arquivos no `Contents` subdiretório), pois você precisará entender essas informações para extrair os arquivos do pacote no dispositivo.
 
@@ -340,7 +340,7 @@ Antes de ler esta seção, examine a [documentação de compra no aplicativo](~/
 
 A sequência de eventos que ocorre quando um produto com conteúdo hospedado é comprado e o download é ilustrado neste diagrama:
 
-[![](changes-to-storekit-images/image25.png "The sequence of events that occurs when a product with hosted content is purchased and download")](changes-to-storekit-images/image25.png#lightbox)
+[![A sequência de eventos que ocorre quando um produto com conteúdo hospedado é comprado e baixado](changes-to-storekit-images/image25.png)](changes-to-storekit-images/image25.png#lightbox)
 
 1. Novos produtos podem ser criados no iTunes Connect com conteúdo hospedado habilitado. O conteúdo real é construído separadamente no Xcode (como simplesmente arrastar arquivos para uma pasta) e, em seguida, arquivado e carregado no iTunes (nenhuma codificação é necessária). Em seguida, cada produto é enviado para aprovação, após o qual ele fica disponível para compra. No código de exemplo, essas IDs de produto são codificadas, mas a hospedagem de conteúdo com a Apple será mais flexível se você armazenar a lista de produtos disponíveis em um servidor remoto para que ele possa ser atualizado quando você enviar novos produtos e conteúdo ao iTunes Connect.
 1. Quando o usuário adquire um produto, uma transação é colocada na fila de pagamento para processamento.
@@ -376,7 +376,7 @@ Detalhes da nova `SKDownload` classe:
 
 As interações entre as classes no código de exemplo são mostradas neste diagrama (o código específico para compras de conteúdo hospedado é mostrado em verde):
 
-[![](changes-to-storekit-images/image26.png "Hosted content purchases is shown in green in this diagram")](changes-to-storekit-images/image26.png#lightbox)
+[![As compras de conteúdo hospedado são mostradas em verde neste diagrama](changes-to-storekit-images/image26.png)](changes-to-storekit-images/image26.png#lightbox)
 
 O código de exemplo em que essas classes foram usadas é mostrado no restante desta seção:
 
@@ -519,7 +519,7 @@ As diretrizes de backup do iCloud da Apple sugerem que o conteúdo de não-usuá
 
 Este artigo introduziu dois novos recursos do Store Kit no iOS6: comprando o iTunes e outro conteúdo de dentro de seu aplicativo e utilizando o servidor da Apple para hospedar suas próprias compras no aplicativo. Essa introdução deve ser lida em conjunto com a [documentação de compra no aplicativo](~/ios/platform/in-app-purchasing/index.md) existente para obter uma cobertura completa da funcionalidade da implementação do kit de armazenamento.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [StoreKit (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit)
 - [Compras no aplicativo](~/ios/platform/in-app-purchasing/index.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 9acdde897a3a700d0138cb67db6735a8cce07120
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 48aeaf8e3036c9b4e1ed548208b7daa822a00913
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84570824"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933413"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Populando uma tabela com dados no Xamarin. iOS
 
@@ -89,7 +89,7 @@ public override void ViewDidLoad ()
 
 A tabela resultante é parecida com esta:
 
- [![](populating-a-table-with-data-images/image3.png "Sample table running")](populating-a-table-with-data-images/image3.png#lightbox)
+ [![Exemplo de tabela em execução](populating-a-table-with-data-images/image3.png)](populating-a-table-with-data-images/image3.png#lightbox)
 
 A maioria das tabelas permite que o usuário toque em uma linha para selecioná-la e executar alguma outra ação (como reproduzir uma música ou chamar um contato ou mostrar outra tela). Para conseguir isso, há algumas coisas que precisamos fazer. Primeiro, vamos criar um AlertController para exibir uma mensagem quando o usuário clicar em uma linha adicionando o seguinte ao `RowSelected` método:
 
@@ -141,7 +141,7 @@ public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 
 Agora, o usuário pode tocar em uma linha e um alerta será exibido:
 
- [![](populating-a-table-with-data-images/image4.png "The row selected alert")](populating-a-table-with-data-images/image4.png#lightbox)
+ [![O alerta de linha selecionada](populating-a-table-with-data-images/image4.png)](populating-a-table-with-data-images/image4.png#lightbox)
 
 ## <a name="cell-reuse"></a>Reutilização de célula
 
@@ -220,7 +220,7 @@ Você pode ver exemplos dos tópicos explicados acima no exemplo **basictable** 
 
 Um índice ajuda o usuário a rolar por listas longas, normalmente ordenadas alfabeticamente, embora você possa indexar por qualquer critério que desejar. O exemplo **BasicTableIndex** carrega uma lista muito mais longa de itens de um arquivo para demonstrar o índice. Cada item no índice corresponde a uma "seção" da tabela.
 
- [![](populating-a-table-with-data-images/image5.png "The Index display")](populating-a-table-with-data-images/image5.png#lightbox)
+ [![A exibição do índice](populating-a-table-with-data-images/image5.png)](populating-a-table-with-data-images/image5.png#lightbox)
 
 Para dar suporte a ' seções ', os dados por trás da tabela precisam ser agrupados; portanto, o exemplo BasicTableIndex cria um `Dictionary<>` da matriz de cadeias de caracteres usando a primeira letra de cada item como a chave de dicionário:
 
@@ -268,7 +268,7 @@ Geralmente, os índices são usados apenas com o estilo de tabela simples.
 Cabeçalhos e rodapés podem ser usados para agrupar visualmente linhas em uma tabela. A estrutura de dados necessária é muito semelhante à adição de um índice – um `Dictionary<>` funciona muito bem. Em vez de usar o alfabeto para agrupar as células, este exemplo agrupará o "etc." por tipo botânico.
 A saída se parece com esta:
 
- [![](populating-a-table-with-data-images/image6.png "Sample Headers and Footers")](populating-a-table-with-data-images/image6.png#lightbox)
+ [![Cabeçalhos e rodapés de exemplo](populating-a-table-with-data-images/image6.png)](populating-a-table-with-data-images/image6.png#lightbox)
 
 Para exibir cabeçalhos e rodapés, a `UITableViewSource` subclasse requer estes métodos adicionais:
 
@@ -290,6 +290,6 @@ public override string TitleForFooter (UITableView tableView, nint section)
 
 Você pode personalizar ainda mais a aparência do cabeçalho e do rodapé com um objeto View, usando `GetViewForHeader` as `GetViewForFooter` substituições de método e em `UITableViewSource` .
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [WorkingWithTables (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)

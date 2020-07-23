@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c35cd6e30e7843cda0431581025aa7440a21cc29
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0a43ce2d27c8152137101d616302f6e56a57bd39
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140043"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931970"
 ---
 # <a name="communicating-between-loosely-coupled-components"></a>Comunicação entre componentes flexíveis
 
@@ -29,7 +29,7 @@ A Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) classe i
 
 A [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) classe fornece a funcionalidade de publicação/assinatura de multicast. Isso significa que pode haver vários Publicadores que publicam uma única mensagem, e pode haver vários assinantes ouvindo a mesma mensagem. A Figura 4-1 ilustra essa relação:
 
-![](communicating-between-loosely-coupled-components-images/messagingcenter.png "Multicast publish-subscribe functionality")
+![Funcionalidade de publicação-assinatura multicast](communicating-between-loosely-coupled-components-images/messagingcenter.png)
 
 **Figura 4-1:** Funcionalidade de publicação-assinatura de multicast
 
@@ -127,7 +127,7 @@ Neste exemplo, a [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*
 
 A Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) classe implementa o padrão de publicação-assinatura, permitindo a comunicação baseada em mensagem entre componentes que são inconvenientes de vincular por referências de objeto e tipo. Esse mecanismo permite que publicadores e assinantes se comuniquem sem ter uma referência entre si, ajudando a reduzir as dependências entre os componentes, permitindo também que os componentes sejam desenvolvidos e testados de forma independente.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Download do eBook (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (exemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

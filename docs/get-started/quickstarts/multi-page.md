@@ -12,16 +12,16 @@ ms.date: 04/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b3616d0cf4804dfb37d4fe65034796c672dec828
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8858a66d2caeea815bf06d5d2741bfc3623598f5
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127875"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933725"
 ---
 # <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>Executar a navegação em um aplicativo de várias páginas Xamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/)
 
 Neste guia de início rápido, você aprenderá a:
 
@@ -31,8 +31,8 @@ Neste guia de início rápido, você aprenderá a:
 
 O guia de início rápido explica como transformar um aplicativo de plataforma cruzada em uma única página Xamarin.Forms , capaz de armazenar uma única nota, em um aplicativo de várias páginas, capaz de armazenar várias notas. O aplicativo final é mostrado abaixo:
 
-[![](multi-page-images/screenshots1-sml.png "Notes Page")](multi-page-images/screenshots1.png#lightbox "Notes Page")
-[![](multi-page-images/screenshots2-sml.png "Note Entry Page")](multi-page-images/screenshots2.png#lightbox "Note Entry Page")
+Página de entrada de observação [ ![ da página de anotações](multi-page-images/screenshots1-sml.png)](multi-page-images/screenshots1.png#lightbox "Página de Observações") 
+ [ ![ ](multi-page-images/screenshots2-sml.png)](multi-page-images/screenshots2.png#lightbox "Página de Entrada de Observação")
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
@@ -44,23 +44,23 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
 1. Inicie o Visual Studio. Na janela inicial, clique na solução **Notes** na lista projetos/soluções recentes ou clique em **Abrir um projeto ou solução** e, na caixa de diálogo **Abrir Projeto/Solução**, selecione o arquivo de solução para o projeto Notes:
 
-    ![](multi-page-images/vs/open-solution.png "Open Project")
+    ![Abrir Projeto](multi-page-images/vs/open-solution.png)
 
 2. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto **Notes** e selecione **Adicionar > Nova Pasta**:
 
-    ![](multi-page-images/vs/add-new-item.png "Add New Item")
+    ![Adicionar Novo Item](multi-page-images/vs/add-new-item.png)
 
 3. Em **Gerenciador de Soluções**, dê à pasta o nome **Modelos**:
 
-    ![](multi-page-images/vs/name-folder.png "Models Folder")
+    ![Pasta de Modelos](multi-page-images/vs/name-folder.png)
 
 4. No **Gerenciador de Soluções**, selecione a pasta **Modelos**, clique com o botão direito do mouse e selecione **Adicionar > Novo Item…**:
 
-    ![](multi-page-images/vs/add-new-models-file.png "Add New File")
+    ![Adicionar Novo Arquivo](multi-page-images/vs/add-new-models-file.png)
 
 5. Na caixa de diálogo **Adicionar novo item**, selecione **Visual C# > Itens > Classe**, nomeie o novo arquivo **Note** e clique no botão **Adicionar**:
 
-    ![](multi-page-images/vs/add-note-class.png "Add Note Class")
+    ![Adicionar Classe de Observação](multi-page-images/vs/add-note-class.png)
 
     Isso adicionará uma classe chamada **Observação** à pasta **Modelos** do projeto **Notes**.
 
@@ -86,7 +86,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
 7. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto do **Notes** e selecione **Adicionar > novo item..**. Na caixa de diálogo **Adicionar novo item** , selecione **itens do Visual C# > Xamarin.Forms página > conteúdo**, nomeie o novo arquivo **NoteEntryPage**e clique no botão **Adicionar** :
 
-    ![](multi-page-images/vs/add-note-entry-page.png "Add Xamarin.Forms ContentPage")
+    ![Adicionar Xamarin.Forms Contentpage](multi-page-images/vs/add-note-entry-page.png)
 
     Isso adicionará uma nova página chamada **NoteEntryPage** à pasta raiz do projeto. Essa página será a segunda página do aplicativo.
 
@@ -327,23 +327,23 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
 1. Inicialize o Visual Studio para Mac. Na janela inicial, clique em **Abrir** e, na caixa de diálogo, selecione o arquivo de solução para o projeto Notes:
 
-    ![](multi-page-images/vsmac/open-solution.png "Open Solution")
+    ![Abrir Solução](multi-page-images/vsmac/open-solution.png)
 
 2. No **Painel de Soluções**, selecione o projeto **Observações**, clique com o botão direito do mouse e selecione **Adicionar > Nova Pasta**:
 
-    ![](multi-page-images/vsmac/add-new-folder.png "Add New Folder")
+    ![Adicionar Nova Pasta](multi-page-images/vsmac/add-new-folder.png)
 
 3. No **Painel de Soluções**, dê à nova pasta o nome de **Modelos**:
 
-    ![](multi-page-images/vsmac/name-folder.png "Models Folder")
+    ![Pasta de Modelos](multi-page-images/vsmac/name-folder.png)
 
 4. No **Painel de Soluções**, selecione a pasta **Modelos**, clique com o botão direito do mouse e selecione **Adicionar > Novo Arquivo…**:
 
-    ![](multi-page-images/vsmac/add-new-models-file.png "Add New File")
+    ![Adicionar Novo Arquivo](multi-page-images/vsmac/add-new-models-file.png)
 
 5. Na caixa de diálogo **Novo Arquivo**, selecione **Geral > Classe Vazia**, dê ao novo arquivo o nome **Note** e clique no botão **Novo**:
 
-    ![](multi-page-images/vsmac/add-note-class.png "Add Note Class")
+    ![Adicionar Classe de Observação](multi-page-images/vsmac/add-note-class.png)
 
     Isso adicionará uma classe chamada **Observação** à pasta **Modelos** do projeto **Notes**.
 
@@ -369,7 +369,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
 7. Na **painel de soluções**, selecione o projeto **notas** , clique com o botão direito do mouse e selecione **Adicionar > novo arquivo...**. Na caixa de diálogo **novo arquivo** , selecione **Forms > Forms Contentpage XAML**, nomeie o novo arquivo **NoteEntryPage**e clique no botão **novo** :
 
-    ![](multi-page-images/vsmac/add-note-entry-page.png "Add Xamarin.Forms ContentPage")
+    ![Adicionar Xamarin.Forms Contentpage](multi-page-images/vsmac/add-note-entry-page.png)
 
     Isso adicionará uma nova página chamada **NoteEntryPage** à pasta raiz do projeto. Essa página será a segunda página do aplicativo.
 

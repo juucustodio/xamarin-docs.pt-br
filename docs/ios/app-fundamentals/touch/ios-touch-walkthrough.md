@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: ca1acd58ba9b5c598e19424f46cc0bcb838315aa
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: b547d21b19d223aebb345f7c4a1dc8dc126fb0d6
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571773"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86928777"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>Walkthrough: usando o touch no Xamarin. iOS
 
@@ -34,7 +34,7 @@ Neste exemplo, demonstraremos algumas das APIs de toque. Siga estas etapas para 
 
 1. Abra o projeto **Touch_Start**. Primeiro, execute o projeto para verificar se tudo está OK e toque no botão **amostras de toque** . Você verá uma tela semelhante à seguinte (embora nenhum dos botões funcione):
 
-    [![](ios-touch-walkthrough-images/image4.png "Sample app run with non-working buttons")](ios-touch-walkthrough-images/image4.png#lightbox)
+    [![Aplicativo de exemplo executado com botões que não são de trabalho](ios-touch-walkthrough-images/image4.png)](ios-touch-walkthrough-images/image4.png#lightbox)
 
 1. Edite o arquivo **TouchViewController.cs** e adicione as duas variáveis de instância a seguir à classe `TouchViewController` :
 
@@ -163,9 +163,9 @@ Neste exemplo, demonstraremos algumas das APIs de toque. Siga estas etapas para 
 
 1. Neste ponto, a tela de exemplos de toque é concluída. Observe como a tela muda à medida que você interage com cada uma das imagens, conforme mostrado na seguinte captura:
 
-    [![](ios-touch-walkthrough-images/image4.png "The starting app screen")](ios-touch-walkthrough-images/image4.png#lightbox)
+    [![A tela inicial do aplicativo](ios-touch-walkthrough-images/image4.png)](ios-touch-walkthrough-images/image4.png#lightbox)
 
-    [![](ios-touch-walkthrough-images/image5.png "The screen after the user drags a button")](ios-touch-walkthrough-images/image5.png#lightbox)
+    [![A tela depois que o usuário arrasta um botão](ios-touch-walkthrough-images/image5.png)](ios-touch-walkthrough-images/image5.png#lightbox)
 
 <a name="Gesture_Recognizer_Samples"></a>
 
@@ -294,7 +294,7 @@ Observe que atribuímos um destino ao gesto na forma do método `HandleDrag` –
 1. Execute o aplicativo e interaja com as duas imagens.
 A captura de tela a seguir é um exemplo dessas interações:
 
-    [![](ios-touch-walkthrough-images/image7.png "This screenshot shows a drag interaction")](ios-touch-walkthrough-images/image7.png#lightbox)
+    [![Esta captura de tela mostra uma interação de arrastar](ios-touch-walkthrough-images/image7.png)](ios-touch-walkthrough-images/image7.png#lightbox)
 
 <a name="Custom_Gesture_Recognizer"></a>
 
@@ -302,7 +302,7 @@ A captura de tela a seguir é um exemplo dessas interações:
 
 Nesta seção, aplicaremos os conceitos de seções anteriores para criar um reconhecedor de gestos personalizado. O reconhecedor de gestor personalizado criará subclasses `UIGestureRecognizer` e reconhecerá quando o usuário desenha um "V" na tela e, em seguida, alterna um bitmap. A captura de tela a seguir é um exemplo disso:
 
- [![](ios-touch-walkthrough-images/image8.png "The app will recognize when the user draws a `V` on the screen")](ios-touch-walkthrough-images/image8.png#lightbox)
+ [![O aplicativo reconhecerá quando o usuário desenha um ' V ' na tela](ios-touch-walkthrough-images/image8.png)](ios-touch-walkthrough-images/image8.png#lightbox)
 
 Siga estas etapas para criar um reconhecedor de gestos personalizado:
 
@@ -476,12 +476,12 @@ Agora, a classe pode começar na próxima vez que o usuário interage com o apli
 
 1. Execute o aplicativo e tente desenhar um "V" na tela. Você deve ver a imagem sendo exibida, conforme mostrado nas seguintes capturas de tela:
 
-    [![](ios-touch-walkthrough-images/image9.png "The button checked")](ios-touch-walkthrough-images/image9.png#lightbox)
+    [![O botão marcado](ios-touch-walkthrough-images/image9.png)](ios-touch-walkthrough-images/image9.png#lightbox)
 
-    [![](ios-touch-walkthrough-images/image10.png "The button unchecked")](ios-touch-walkthrough-images/image10.png#lightbox)
+    [![O botão está desmarcado](ios-touch-walkthrough-images/image10.png)](ios-touch-walkthrough-images/image10.png#lightbox)
 
 As três seções acima demonstraram diferentes maneiras de responder a eventos de toque no iOS: usando eventos de toque, reconhecedores de gestos internos ou com um reconhecedor de gestos personalizado.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Final do iOS Touch (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final)

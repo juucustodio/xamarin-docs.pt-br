@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: cdb8505bd8c25b6e591dd86daf6a4d1e174012f6
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 177701b8b50edea965e97da225265912f1f0c198
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569030"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932321"
 ---
 # <a name="maps-in-xamarinios"></a>Mapas no Xamarin. iOS
 
@@ -30,7 +30,7 @@ View = map;
 
 `MKMapView`é uma `UIView` subclasse que exibe um mapa. Simplesmente adicionar o mapa usando o código acima produz um mapa interativo:
 
-![](images/00-map.png "A sample map")
+![Um mapa de exemplo](images/00-map.png)
 
 ## <a name="map-style"></a>Estilo do mapa
 
@@ -44,7 +44,7 @@ map.MapType = MKMapType.Hybrid;
 
 A captura de tela a seguir mostra os diferentes estilos de mapa disponíveis:
 
-![](images/01-mapstyles.png "This screenshot show the different map styles that are available")
+![Esta captura de tela mostra os diferentes estilos de mapa que estão disponíveis](images/01-mapstyles.png)
 
 ## <a name="panning-and-zooming"></a>Panorâmica e zoom
 
@@ -85,13 +85,13 @@ Depois de atualizar o **info. plist** e solicitar ao usuário permissão para ac
 map.ShowsUserLocation = true;
 ```
 
- ![](images/02-location-alert.png "The allow location access alert")
+ ![O alerta de permissão de acesso ao local](images/02-location-alert.png)
 
 ## <a name="annotations"></a>Anotações
 
  `MKMapView`também dá suporte à exibição de imagens, conhecidas como anotações, em um mapa. Elas podem ser imagens personalizadas ou Pins definidos pelo sistema de várias cores. Por exemplo, a captura de tela a seguir mostra um mapa com um PIN e uma imagem personalizada:
 
- ![](images/03-annotations.png "This screenshot shows a map with a both a pin and a custom image")
+ ![Esta captura de tela mostra um mapa com um PIN e uma imagem personalizada](images/03-annotations.png)
 
 ### <a name="adding-an-annotation"></a>Adicionando uma anotação
 
@@ -149,7 +149,7 @@ MKAnnotationView pinView = (MKPinAnnotationView)mapView.DequeueReusableAnnotatio
 
 Como mencionado anteriormente, uma anotação pode, opcionalmente, mostrar um texto explicativo. Para mostrar um texto explicativo, basta definir `CanShowCallout` como true no `MKAnnotationView` . Isso resulta na exibição do título da anotação quando a anotação é tocada, conforme mostrado:
 
- ![](images/04-callout.png "The annotations title being displayed")
+ ![O título das anotações que está sendo exibido](images/04-callout.png)
 
 ### <a name="customizing-the-callout"></a>Personalizando o texto explicativo
 
@@ -162,7 +162,7 @@ pinView.LeftCalloutAccessoryView = new UIImageView(UIImage.FromFile ("monkey.png
 
 Esse código resulta no seguinte texto explicativo:
 
- ![](images/05-callout-accessories.png "An example callout")
+ ![Um balão de exemplo](images/05-callout-accessories.png)
 
 Para manipular o usuário tocando no acessório à direita, basta implementar o `CalloutAccessoryControlTapped` método no `MKMapViewDelegate` :
 
@@ -215,7 +215,7 @@ public override MKOverlayView GetViewForOverlay (MKMapView mapView, NSObject ove
 
 Isso exibe um círculo no mapa, conforme mostrado:
 
- ![](images/06-circle-overlay.png "A circle displayed on the map")
+ ![Um círculo exibido no mapa](images/06-circle-overlay.png)
 
 ## <a name="local-search"></a>Pesquisa local
 
@@ -273,7 +273,7 @@ Vamos dar uma olhada em como implementar o `searchResultsController` e o `search
 
 Isso resulta em uma barra de pesquisa exibida sobre o mapa, conforme mostrado abaixo:
 
- ![](images/07-searchbar.png "A search bar displayed over the map")
+ ![Uma barra de pesquisa exibida sobre o mapa](images/07-searchbar.png)
 
 ### <a name="displaying-the-search-results"></a>Exibindo os resultados da pesquisa
 
@@ -393,7 +393,7 @@ public class SearchResultsUpdator : UISearchResultsUpdating
 
 A implementação acima adiciona uma anotação ao mapa quando um item é selecionado nos resultados, conforme mostrado abaixo:
 
- ![](images/08-search-results.png "An annotation added to the map when an item is selected from the results")
+ ![Uma anotação adicionada ao mapa quando um item é selecionado nos resultados](images/08-search-results.png)
 
 > [!IMPORTANT]
 > `UISearchController`foi implementado no iOS 8. Se você quiser dar suporte a dispositivos anteriores a isso, será necessário usar o `UISearchDisplayController` .
@@ -402,7 +402,7 @@ A implementação acima adiciona uma anotação ao mapa quando um item é seleci
 
 Este artigo examinou a estrutura do *Kit* de *mapa* para Ios. Primeiro, ele examinou como a `MKMapView` classe permite que mapas interativos sejam incluídos em um aplicativo. Em seguida, ele demonstrou como personalizar mapas usando anotações e sobreposições. Por fim, ele examinou os recursos de pesquisa local que foram adicionados ao MAP kit com iOS 6,1, mostrando como usar as consultas de executar localização com base em pontos de interesse e adicioná-las a um mapa.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [SearchController](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/search-controller)
 - [MapDemo (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/mapdemo)

@@ -10,12 +10,12 @@ ms.date: 02/01/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0ecbc850960465296dc4047277bdafe78ac800a4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8c53b1e58ad97f7d0e17972a2b232c16e05ecc1a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573242"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934882"
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Layout para aplicativos Tablet e desktop
 
@@ -43,7 +43,7 @@ Para fornecer uma experiência de inicialização agradável e garantir que a re
 Antes do iOS 9, todos os aplicativos usavam a tela inteira no dispositivo, mas alguns iPads agora podem executar [multitarefas de tela dividida](~/ios/platform/multitasking.md).
 Isso significa que seu aplicativo pode ocupar apenas uma coluna fina no lado da tela, 50% da largura da tela ou na tela inteira.
 
-[![](tablet-images/ipad-sml.png "iPad Split Screen Example")](tablet-images/ipad.png#lightbox "iPad Split Screen Example")
+[![Exemplo de tela de divisão do iPad](tablet-images/ipad-sml.png)](tablet-images/ipad.png#lightbox "Exemplo de tela de divisão do iPad")
 
 A funcionalidade de tela de divisão significa que você deve projetar seu aplicativo para funcionar bem com apenas 320 pixels de largura ou até 1366 pixels de largura.
 
@@ -60,7 +60,7 @@ Para dar suporte a tablets e computadores desktop que executam o Windows, você 
 
 Os aplicativos executados em tablets e desktops Windows podem ser redimensionados para dimensões arbitrárias, além da execução de tela inteira.
 
-[![](tablet-images/splitscreen-sml.png "Windows Split Screen Example")](tablet-images/splitscreen.png#lightbox "Windows Split Screen Example")
+[![Exemplo de divisão de tela do Windows](tablet-images/splitscreen-sml.png)](tablet-images/splitscreen.png#lightbox "Exemplo de divisão de tela do Windows")
 
 ## <a name="optimize-for-tablet-and-desktop"></a>Otimizar para Tablet e desktop
 
@@ -87,7 +87,7 @@ O [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) é ideal para telas 
 
 Leia [esta postagem no blog do Xamarin](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/) para ver como você pode adaptar sua interface do usuário para que os telefones usem um layout e telas maiores possam usar outro (com o `MasterDetailPage` ).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Blog do Xamarin](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/)
 - [Exemplo de MyShoppe](https://github.com/jamesmontemagno/myshoppe)

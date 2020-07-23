@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f6f61503f619c08ed3e4eae2adf6ddb2c474f99f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6def31ebfe2a619f1d5db1e0fba071494afbcd3e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84571474"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931957"
 ---
 # <a name="configuration-management"></a>Gerenciamento de configuração
 
@@ -124,7 +124,7 @@ Cada vez que a `BaseEndpoint` propriedade é definida, o `UpdateEndpoint` métod
 
 No aplicativo móvel eShopOnContainers, o `SettingsView` expõe duas configurações de usuário. Essas configurações permitem a configuração de se o aplicativo deve recuperar dados de microserviços que são implantados como contêineres do Docker ou se o aplicativo deve recuperar dados de serviços fictícios que não exigem uma conexão com a Internet. Ao optar por recuperar dados de microservices em contêineres, uma URL de ponto de extremidade base para os microserviços deve ser especificada. A Figura 7-1 mostra `SettingsView` quando o usuário optou por recuperar dados de microservices em contêineres.
 
-![](configuration-management-images/settings-endpoint.png "User settings exposed by the eShopOnContainers mobile app")
+![Configurações de usuário expostas pelo aplicativo móvel eShopOnContainers](configuration-management-images/settings-endpoint.png)
 
 **Figura 7-1**: configurações de usuário expostas pelo aplicativo móvel eShopOnContainers
 
@@ -188,7 +188,7 @@ As configurações permitem a separação de dados que configuram o comportament
 
 A biblioteca XAM. plugins. Settings fornece uma abordagem consistente, de tipo seguro e de plataforma cruzada para persistir e recuperar as configurações do aplicativo e do usuário, e a vinculação de dados pode ser usada para acessar as configurações criadas com a biblioteca.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Download do eBook (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (exemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

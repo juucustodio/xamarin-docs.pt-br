@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/07/2017
-ms.openlocfilehash: 63aa344ec94730ebe448aba090e2d91af9da64b5
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 0de41379800d3f8fcb26e2bc58497010b8e3bf95
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574035"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931372"
 ---
 # <a name="working-with-tvos-buttons-in-xamarin"></a>Trabalhando com botões tvOS no Xamarin
 
 Use uma instância da `UIButton` classe para criar um botão de foco e selecionável em uma janela tvOS. Quando o usuário seleciona um botão, ele envia uma mensagem de ação para o objeto de destino, permitindo que seu aplicativo Xamarin. tvOS responda à entrada do usuário.
 
-[![](buttons-images/buttons01.png "Example buttons")](buttons-images/buttons01.png#lightbox)
+[![Botões de exemplo](buttons-images/buttons01.png)](buttons-images/buttons01.png#lightbox)
 
 Para saber mais sobre como trabalhar com o foco e navegar com o Siri remoto, Confira nossa documentação sobre [como trabalhar com navegação e foco](~/ios/tvos/app-fundamentals/navigation-focus.md) e [controladores remotos e Bluetooth do Siri](~/ios/tvos/platform/remote-bluetooth.md) .
 
@@ -28,7 +28,7 @@ Para saber mais sobre como trabalhar com o foco e navegar com o Siri remoto, Con
 
 No tvOS, os botões são usados para ações específicas do aplicativo e podem conter um título, um ícone ou ambos. À medida que o usuário navega pela interface do usuário do aplicativo usando o [Siri remoto](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote), o foco muda para o botão fornecido, fazendo com que ele altere o texto e as cores do plano de fundo. Uma sombra também é aplicada ao botão adicionando um efeito 3D, o que parece aumentar acima do restante da interface do usuário.
 
-[![](buttons-images/buttons01.png "Example buttons")](buttons-images/buttons01.png#lightbox)
+[![Botões de exemplo](buttons-images/buttons01.png)](buttons-images/buttons01.png#lightbox)
 
 A Apple tem as seguintes sugestões para trabalhar com botões:
 
@@ -66,19 +66,19 @@ A maneira mais fácil de trabalhar com botões em um aplicativo Xamarin. tvOS é
 1. No **Gerenciador de soluções**, clique duas vezes no `Main.storyboard` arquivo e abra-o para edição.
 1. Arraste um **botão** da **biblioteca** e solte-o na exibição: 
 
-    [![](buttons-images/storyboard01.png "A button")](buttons-images/storyboard01.png#lightbox)
+    [![Botão A](buttons-images/storyboard01.png)](buttons-images/storyboard01.png#lightbox)
 1. No **Gerenciador de propriedades**, você pode ajustar várias propriedades do botão, como seu **título** e a **cor do texto**: 
 
-    [![](buttons-images/storyboard02.png "Button properties")](buttons-images/storyboard02.png#lightbox)
+    [![Propriedades do botão](buttons-images/storyboard02.png)](buttons-images/storyboard02.png#lightbox)
 1. Em seguida, alterne para a **guia eventos** e conecte um **evento** do **botão** e chame-o `ButtonPressed` : 
 
-    [![](buttons-images/storyboard03.png "The Events Tab")](buttons-images/storyboard03.png#lightbox)
+    [![A guia eventos](buttons-images/storyboard03.png)](buttons-images/storyboard03.png#lightbox)
 1. Você será alternado automaticamente para a `ViewController.cs` exibição em que você pode posicionar a nova ação em seu código usando as teclas de seta para **cima** e **para baixo** : 
 
-    [![](buttons-images/storyboard04.png "Placing a new Action in code")](buttons-images/storyboard04.png#lightbox)
+    [![Colocando uma nova ação no código](buttons-images/storyboard04.png)](buttons-images/storyboard04.png#lightbox)
 1. Pressione **Enter** para selecionar o local: 
 
-    [![](buttons-images/storyboard05.png "The code editor")](buttons-images/storyboard05.png#lightbox)
+    [![O editor de código](buttons-images/storyboard05.png)](buttons-images/storyboard05.png#lightbox)
 1. Salve as alterações em todos os arquivos.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
@@ -86,13 +86,13 @@ A maneira mais fácil de trabalhar com botões em um aplicativo Xamarin. tvOS é
 1. No **Gerenciador de soluções**, clique duas vezes no `Main.storyboard` arquivo e abra-o para edição.
 1. Arraste um **botão** da **biblioteca** e solte-o na exibição: 
 
-    [![](buttons-images/storyboard01vs.png "A button")](buttons-images/storyboard01vs.png#lightbox)
+    [![Botão A](buttons-images/storyboard01vs.png)](buttons-images/storyboard01vs.png#lightbox)
 1. No **Gerenciador de propriedades**, você pode ajustar várias propriedades do botão, como seu **título** e a **cor do texto**: 
 
-    [![](buttons-images/storyboard02vs.png "The Properties Explorer")](buttons-images/storyboard02vs.png#lightbox)
+    [![O Gerenciador de propriedades](buttons-images/storyboard02vs.png)](buttons-images/storyboard02vs.png#lightbox)
 1. Em seguida, alterne para a **guia eventos** e conecte um **evento** do **botão** e chame-o `ButtonPressed` : 
 
-    [![](buttons-images/storyboard03vs.png "The Events Tab")](buttons-images/storyboard03vs.png#lightbox)
+    [![A guia eventos](buttons-images/storyboard03vs.png)](buttons-images/storyboard03vs.png#lightbox)
 1. Salve as alterações em todos os arquivos.
 
 Edite o arquivo do controlador de exibição (exemplo `ViewController.cs` ) e adicione o seguinte código para manipular o botão que está sendo selecionado:
@@ -252,7 +252,7 @@ Use a `TintColor` propriedade para definir uma tonalidade de cor que é aplicada
 
 Este artigo abordou a criação e o trabalho com botões dentro de um aplicativo Xamarin. tvOS. Ele mostrou como trabalhar com botões no designer do iOS e como criar botões em código C#. Por fim, ele mostrou como modificar o título de um botão e alterar seu estilo e sua aparência.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)

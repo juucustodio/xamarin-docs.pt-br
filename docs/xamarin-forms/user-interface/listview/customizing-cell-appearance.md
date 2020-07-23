@@ -10,16 +10,16 @@ ms.date: 09/12/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cdede547e3ef7cf9f7b6d89751c7476a2ce66d3d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 05a001d3b49f38b2cb5306d8a19a08b4f8392425
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84129006"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935558"
 ---
 # <a name="customizing-listview-cell-appearance"></a>Personalizando a aparência da célula ListView
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
 
 A Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) classe é usada para apresentar listas roláveis, que podem ser personalizadas por meio do uso de `ViewCell` elementos. Um `ViewCell` elemento pode exibir texto e imagens, indicar um estado verdadeiro/falso e receber entrada do usuário.
 
@@ -37,7 +37,7 @@ Os [`SwitchCell`](~/xamarin-forms/user-interface/tableview.md#switchcell) [`Entr
 
 [`TextCell`](xref:Xamarin.Forms.TextCell)é uma célula para exibir texto, opcionalmente com uma segunda linha como texto detalhado. A captura de tela a seguir mostra `TextCell` itens no Ios e no Android:
 
-![](customizing-cell-appearance-images/text-cell-default.png "Default TextCell Example")
+![Exemplo de textcell padrão](customizing-cell-appearance-images/text-cell-default.png)
 
 Textcéls são renderizados como controles nativos em tempo de execução, portanto, o desempenho é muito bom em comparação com um personalizado `ViewCell` . Textcéls são personalizáveis, permitindo que você defina as seguintes propriedades:
 
@@ -48,7 +48,7 @@ Textcéls são renderizados como controles nativos em tempo de execução, porta
 
 A captura de tela a seguir mostra `TextCell` itens com propriedades de cores personalizadas:
 
-![](customizing-cell-appearance-images/text-cell-custom.png "Custom TextCell Example")
+![Exemplo de textcell personalizado](customizing-cell-appearance-images/text-cell-custom.png)
 
 ### <a name="imagecell"></a>ImageCell
 
@@ -256,7 +256,7 @@ var listView = new ListView
 
 No iOS e no Android, se os [`ListView`](xref:Xamarin.Forms.ListView) elementos is Recycling e a célula Personalizada usarem um renderizador personalizado, o renderizador personalizado deverá implementar corretamente a notificação de alteração de propriedade. Quando as células forem reutilizadas, seus valores de propriedade serão alterados quando o contexto de associação for atualizado para o de uma célula disponível, com `PropertyChanged` eventos sendo gerados. Para obter mais informações, consulte [Personalizando um ViewCell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md). Para obter mais informações sobre a reciclagem de célula, consulte [estratégia de cache](~/xamarin-forms/user-interface/listview/performance.md#caching-strategy).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Células internas (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-builtincells)
 - [Células personalizadas (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)

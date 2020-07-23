@@ -10,16 +10,16 @@ ms.date: 05/09/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e1590d0a4f9716541f18bc4f50a2c480c5e4478a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 47770b4f57da530677dead051fc657ab24e776f5
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84129773"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933803"
 ---
 # <a name="keyboard-accessibility-in-xamarinforms"></a>Acessibilidade de teclado noXamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
 Os usuários que utilizam leitores de tela ou que tenham problemas de mobilidade podem ter dificuldade para usar aplicativos que não fornecem acesso apropriado por teclado. Xamarin.Formsos aplicativos podem ter uma ordem de tabulação esperada especificada para melhorar sua usabilidade e acessibilidade. Especificar uma ordem de tabulação para os controles habilita a navegação por teclado, prepara as páginas do aplicativo para receber as entradas em uma ordem específica e possibilita aos leitores de tela a leitura de elementos focalizáveis para o usuário.
 
@@ -56,7 +56,7 @@ Por padrão, a ordem de tabulação dos controles é a mesma ordem em que eles s
 
 A captura de tela a seguir mostra a ordem de tabulação padrão para este exemplo de código:
 
-![](keyboard-images/default-tab-order.png "Default Row-based Tab Order")
+![Ordem de tabulação baseada em linha padrão](keyboard-images/default-tab-order.png)
 
 A ordem de tabulação aqui é baseada nas linhas e é a ordem em que os controles são listados no XAML. Portanto, pressionar a tecla Tab navega pelas [`Entry`](xref:Xamarin.Forms.Entry) instâncias de primeiro plano, seguidas pelas `Entry` instâncias de sobrenome. No entanto, uma experiência mais intuitiva seria usar a navegação com tabulação por colunas, de modo que pressionar a tecla Tab navegaria pelos pares de primeiro nome e sobrenome. Isso pode ser feito especificando a ordem de tabulação dos controles de entrada.
 
@@ -113,7 +113,7 @@ O exemplo de XAML a seguir mostra a propriedade `TabIndex` definida nos controle
 
 A captura de tela a seguir mostra a ordem de tabulação para este exemplo de código:
 
-![](keyboard-images/correct-tab-order.png "Column-based Tab Order")
+![Ordem de tabulação baseada em colunas](keyboard-images/correct-tab-order.png)
 
 A ordem de tabulação aqui é baseada em colunas. Portanto, pressionar a tecla Tab navega pelos pares de primeiro-sobrenome [`Entry`](xref:Xamarin.Forms.Entry) .
 
@@ -147,6 +147,6 @@ As propriedades `TabIndex` e `IsTabStop` têm suporte nos seguintes controles, q
 > [!NOTE]
 > Esses controles não são focalizáveis pela tabulação em todas as plataformas.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Acessibilidade (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)

@@ -10,16 +10,16 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 070de4db34eb55980ad7ef3452c0ff8b2b2d7460
-ms.sourcegitcommit: 60f475a3d6ca880aff34f1177f76eff0b0f96233
+ms.openlocfilehash: 760d03cb5667853ab7eea021e281ebd863dd8dc4
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86869855"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935220"
 ---
 # <a name="xamarinforms-dualscreeninfo-helper-class"></a>Xamarin.FormsClasse auxiliar DualScreenInfo
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![API de pré-lançamento](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
@@ -221,7 +221,7 @@ public partial class GridUsingDualScreenInfo : ContentPage
 
 A captura de tela a seguir mostra o layout resultante:
 
-![](dual-screen-info-images/grid-on-two-screens.png "Positioning Grid on Two Screens")
+![Grade de Posicionamento em Duas Telas](dual-screen-info-images/grid-on-two-screens.png)
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -11,16 +11,16 @@ ms.date: 11/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c7f5979b93ff35b14ec7c13418a4565604f46bd7
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d2bd0bf696e652e95e0feb88cca7cf685b14433b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84570629"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936494"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexação de aplicativo e vinculação profunda
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
 
 _A indexação de aplicativos permite que os aplicativos que, de outra forma, seriam esquecidos após alguns usos para permanecerem relevantes, aparecendo nos resultados da pesquisa. A vinculação profunda permite que os aplicativos respondam a um resultado de pesquisa que contém dados de aplicativos, normalmente navegando até uma página referenciada de um link profundo. Este artigo explica como usar a indexação de aplicativos e a vinculação profunda para tornar o Xamarin.Forms conteúdo do aplicativo pesquisável em dispositivos IOS e Android._
 
@@ -32,7 +32,7 @@ Xamarin.Formsa indexação de aplicativos e a vinculação profunda fornecem uma
 
 Este aplicativo de exemplo demonstra um aplicativo de Lista de tarefas em que os dados são armazenados em um banco de dados local do SQLite, como mostrado nas seguintes capturas de tela:
 
-![](deep-linking-images/screenshots.png "TodoList Application")
+![Aplicativo TodoList](deep-linking-images/screenshots.png)
 
 Cada instância `TodoItem` criada pelo usuário é indexada. Então, a pesquisa específica da plataforma pode ser usada para localizar dados indexados do aplicativo. Quando o usuário toca em um item de resultado de pesquisa para o aplicativo, o aplicativo é iniciado, o `TodoItemPage` é navegada e o `TodoItem` referenciado do link profundo é exibido.
 
@@ -141,7 +141,7 @@ Isso adiciona a [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instância à 
 
 Depois que uma [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instância tiver sido registrada para indexação, ela poderá aparecer nos resultados da pesquisa. A captura de tela a seguir mostra o conteúdo indexado que aparece nos resultados da pesquisa na plataforma iOS:
 
-![](deep-linking-images/ios-search.png "Indexed Content in Search Results on iOS")
+![Conteúdo indexado nos resultados da pesquisa no iOS](deep-linking-images/ios-search.png)
 
 ## <a name="de-registering-indexed-content"></a>Cancelar o registro do conteúdo indexado
 
@@ -249,7 +249,7 @@ Para obter mais informações sobre a entrega, consulte [Introdução à entrega
 
 Este artigo explicou como usar a indexação de aplicativos e a vinculação profunda para tornar o Xamarin.Forms conteúdo do aplicativo pesquisável em dispositivos IOS e Android. A indexação de aplicativo permite que os aplicativos que seriam esquecidos após alguns usos permaneçam relevantes fazendo com que eles apareçam nos resultados da pesquisa.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Vinculação profunda (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
 - [APIs de pesquisa do iOS](~/ios/platform/search/index.md)

@@ -6,12 +6,12 @@ ms.assetid: 147BA370-67A7-4E6C-BF17-AA7C536C0A48
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 5e71ff86869c42d478fbf1ee3f6de5bff59431fc
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: 858d2a2399e1d294767b8afad36502b809955224
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728207"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933259"
 ---
 # <a name="editing-nuget-metadata"></a>Editando metadados do NuGet
 
@@ -25,7 +25,7 @@ A seção de **metadados** configura os valores usados no arquivo de [manifesto 
 
 A guia **geral** contém quatro campos que devem ser inseridos para gerar um pacote NuGet:
 
-[![](metadata-images/metadata-general-sml.png "NuGet package required metadata window")](metadata-images/metadata-general.png#lightbox)
+[![Janela de metadados necessária do pacote NuGet](metadata-images/metadata-general-sml.png)](metadata-images/metadata-general.png#lightbox)
 
 - **ID** – o identificador do pacote, que deve ser exclusivo no NuGet.org (ou onde quer que o pacote seja distribuído). Siga este [guia](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) e use apenas caracteres que sejam válidos em uma URL (sem espaços e evite a maioria dos caracteres especiais).
 - **Versão** – escolha um número de versão consistente com [as regras de controle de versão do NuGet](https://docs.microsoft.com/nuget/create-packages/dependency-versions).
@@ -44,7 +44,7 @@ Para obter mais informações, consulte a [referência de elementos necessários
 
 A guia **detalhes** contém campos opcionais a serem incluídos no arquivo de manifesto do pacote NuGet.
 
-[![](metadata-images/metadata-detail-sml.png "NuGet package optional metadata window")](metadata-images/metadata-detail.png#lightbox)
+[![Janela de metadados opcionais do pacote NuGet](metadata-images/metadata-detail-sml.png)](metadata-images/metadata-detail.png#lightbox)
 
 Consulte a [referência de elementos opcionais](https://docs.microsoft.com/nuget/schema/nuspec#optional-metadata-elements) para obter mais informações sobre os campos obrigatórios e opcionais.
 
@@ -53,4 +53,4 @@ Consulte a [referência de elementos opcionais](https://docs.microsoft.com/nuget
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Referência do .nuspec](https://docs.microsoft.com/nuget/schema/nuspec#general-form-and-schema)
+- [Referência de. nuspec](https://docs.microsoft.com/nuget/schema/nuspec#general-form-and-schema)

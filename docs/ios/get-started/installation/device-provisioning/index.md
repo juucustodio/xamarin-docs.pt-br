@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/06/2018
-ms.openlocfilehash: bb1ef1e948c796e6b0d91230be3c82c5a8c7d366
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: dea08895b59626da97c1ca3d97464cfc80f42b88
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79304831"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86928699"
 ---
 # <a name="device-provisioning-for-xamarinios"></a>Provisionamento de dispositivos para o Xamarin.iOS
 
@@ -20,7 +20,7 @@ Ao desenvolver um aplicativo Xamarin.iOS, é essencial testá-lo implantando o a
 
 As seções realçadas na imagem abaixo mostram as etapas necessárias para concluir a configuração para provisionamento do iOS:
 
-[![](images/provisioningdiagram.png "The highlighted sections in this image show the steps required to get set up for iOS provisioning")](images/provisioningdiagram.png#lightbox)
+[![As seções realçadas nesta imagem mostram as etapas necessárias para configurar o provisionamento do iOS](images/provisioningdiagram.png)](images/provisioningdiagram.png#lightbox)
 
 Depois disso, a próxima etapa é distribuir o aplicativo. Para obter mais informações sobre a implantação, acesse os guias de [Distribuição de aplicativos](~/ios/deploy-test/app-distribution/index.md).
 
@@ -62,6 +62,6 @@ A Apple fornece uma seleção de serviços de aplicativos especiais, também cha
 ## <a name="related-links"></a>Links relacionados
 
 - [Provisionamento gratuito](~/ios/get-started/installation/device-provisioning/free-provisioning.md)
-- [Distribuição de aplicativos](~/ios/deploy-test/app-distribution/index.md)
+- [Distribuição de aplicativo](~/ios/deploy-test/app-distribution/index.md)
 - [Solução de problemas](~/ios/deploy-test/troubleshooting.md)
 - [Apple – Guia de distribuição de aplicativo](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)

@@ -7,31 +7,31 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 7b4042d9090823fbeff89face7c00e5753666c97
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f65b4f8f97059858067df8c847bc9ed181c8cc4c
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021918"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932672"
 ---
 # <a name="customizing-a-tables-appearance-in-xamarinios"></a>Personalizando a aparência de uma tabela no Xamarin. iOS
 
-A maneira mais simples de alterar a aparência de uma tabela é usar um estilo de célula diferente. Você pode alterar qual estilo de célula é usado ao criar cada célula no método `GetCell` do `UITableViewSource`.
+A maneira mais simples de alterar a aparência de uma tabela é usar um estilo de célula diferente. Você pode alterar qual estilo de célula é usado ao criar cada célula no `UITableViewSource` `GetCell` método.
 
 ## <a name="cell-styles"></a>Estilos de célula
 
 Há quatro estilos internos:
 
-- **Padrão** – dá suporte a uma `UIImageView`.
-- **Subtítulo** – dá suporte a um `UIImageView` e subtítulo.
-- **Value1** – subtítulo alinhado à direita, dá suporte a uma `UIImageView`.
+- **Padrão** – dá suporte a um `UIImageView` .
+- **Subtítulo** – dá suporte a um `UIImageView` subtítulo e.
+- **Value1** – subtítulo alinhado à direita, dá suporte a um `UIImageView` .
 - **Value2** – o título é alinhado à direita e o subtítulo é alinhado à esquerda (mas nenhuma imagem).
 
 Essas capturas de tela mostram como cada estilo é exibido:
 
- [![](customizing-table-appearance-images/image7.png "These screenshots show how each style appears")](customizing-table-appearance-images/image7.png#lightbox)
+ [![Essas capturas de tela mostram como cada estilo aparece](customizing-table-appearance-images/image7.png)](customizing-table-appearance-images/image7.png#lightbox)
 
-O **CellDefaultTable** de exemplo contém o código para produzir essas telas. O estilo de célula é definido no construtor de `UITableViewCell`, desta forma:
+O **CellDefaultTable** de exemplo contém o código para produzir essas telas. O estilo de célula é definido no `UITableViewCell` Construtor, desta forma:
 
 ```csharp
 cell = new UITableViewCell (UITableViewCellStyle.Default, cellIdentifier);
@@ -53,15 +53,15 @@ cell.ImageView.Image = UIImage.FromFile("Images/" + tableItems[indexPath.Row].Im
 As células podem ter os seguintes acessórios adicionados à direita da exibição:
 
 - **Marca** de seleção – pode ser usada para indicar várias seleções em uma tabela.
-- **DetailButton** – responde ao toque independentemente do restante da célula, permitindo que ele execute uma função diferente para tocar a própria célula (como abrir um pop-up ou uma nova janela que não faz parte de um `UINavigationController` pilha).
+- **DetailButton** – responde ao toque independentemente do restante da célula, permitindo que ele execute uma função diferente para tocar a própria célula (como abrir um pop-up ou uma nova janela que não faz parte de uma `UINavigationController` pilha).
 - **DisclosureIndicator** – normalmente usado para indicar que tocar na célula abrirá outra exibição.
-- **DetailDisclosureButton** – uma combinação de `DetailButton` e `DisclosureIndicator`.
+- **DetailDisclosureButton** – uma combinação de `DetailButton` e `DisclosureIndicator` .
 
 Isso é o que eles parecem:
 
- [![](customizing-table-appearance-images/image8.png "Sample Accessories")](customizing-table-appearance-images/image8.png#lightbox)
+ [![Acessórios de exemplo](customizing-table-appearance-images/image8.png)](customizing-table-appearance-images/image8.png#lightbox)
 
-Para exibir um desses acessórios, você pode definir a propriedade `Accessory` no método `GetCell`:
+Para exibir um desses acessórios, você pode definir a `Accessory` propriedade no `GetCell` método:
 
 ```csharp
 cell.Accessory = UITableViewCellAccessory.Checkmark;
@@ -70,7 +70,7 @@ cell.Accessory = UITableViewCellAccessory.Checkmark;
 //cell.Accessory = UITableViewCellAccessory.None; // to clear the accessory
 ```
 
-Quando o `DetailButton` ou `DetailDisclosureButton` são mostrados, você também deve substituir o `AccessoryButtonTapped` para executar alguma ação quando ele é tocado.
+Quando o `DetailButton` ou `DetailDisclosureButton` for mostrado, você também deverá substituir o `AccessoryButtonTapped` para executar alguma ação quando ele for tocado.
 
 ```csharp
 public override void AccessoryButtonTapped (UITableView tableView, NSIndexPath indexPath)
@@ -116,9 +116,9 @@ TableView.SeparatorInset.InsetRect(new CGRect(4, 4, 150, 2));
 
 Para alterar o estilo visual de uma tabela, você precisa fornecer células personalizadas para exibição. A célula personalizada pode ter cores e layouts de controle diferentes.
 
-O exemplo CellCustomTable implementa uma subclasse `UITableViewCell` que define um layout personalizado de `UILabel`s e uma `UIImage` com fontes e cores diferentes. As células resultantes têm a seguinte aparência:
+O exemplo CellCustomTable implementa uma `UITableViewCell` subclasse que define um layout personalizado de `UILabel` s e um `UIImage` com fontes e cores diferentes. As células resultantes têm a seguinte aparência:
 
- [![](customizing-table-appearance-images/image9.png "Custom Cell Layouts")](customizing-table-appearance-images/image9.png#lightbox)
+ [![Layouts de células personalizadas](customizing-table-appearance-images/image9.png)](customizing-table-appearance-images/image9.png#lightbox)
 
 A classe de célula Personalizada consiste em apenas três métodos:
 
@@ -167,7 +167,7 @@ public class CustomVegeCell : UITableViewCell  {
 }
 ```
 
-O método `GetCell` da `UITableViewSource` precisa ser modificado para criar a célula Personalizada:
+O `GetCell` método do `UITableViewSource` precisa ser modificado para criar a célula Personalizada:
 
 ```csharp
 public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
@@ -182,6 +182,6 @@ public override UITableViewCell GetCell (UITableView tableView, NSIndexPath inde
 }
 ```
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [WorkingWithTables (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)

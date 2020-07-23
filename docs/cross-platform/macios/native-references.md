@@ -6,12 +6,12 @@ ms.assetid: E53185FB-CEF5-4AB5-94F9-CC9B57C52300
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: a06bc0cb91ff3d3894bb7be5bbb275aca35da07d
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: e2f874446b48726afc2218e5cdcac9b8736e1681
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84570954"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930436"
 ---
 # <a name="native-references-in-ios-mac-and-bindings-projects"></a>Referências nativas em projetos do iOS, Mac e bindings
 
@@ -73,13 +73,13 @@ A etapa a seguir é necessária para inserir uma estrutura em um projeto Xamarin
 1. Crie um novo ou abra um projeto Xamarin. iOS, Xamarin. Mac ou Binding existente.
 2. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nome do projeto e selecione **Adicionar**  >  **Adicionar referência nativa**: 
 
-    [![](native-references-images/ref01.png "In the Solution Explorer, right-click on the project name and select Add Native Reference")](native-references-images/ref01.png#lightbox)
+    [![Na Gerenciador de Soluções, clique com o botão direito do mouse no nome do projeto e selecione Adicionar referência nativa](native-references-images/ref01.png)](native-references-images/ref01.png#lightbox)
 3. Na caixa de diálogo **abrir** , selecione o nome da estrutura nativa que você deseja inserir e clique no botão **abrir** : 
 
-    [![](native-references-images/ref02.png "Select the name of the Native Framework to embed and click the Open button")](native-references-images/ref02.png#lightbox)
+    [![Selecione o nome da estrutura nativa a ser inserida e clique no botão abrir](native-references-images/ref02.png)](native-references-images/ref02.png#lightbox)
 4. A estrutura será adicionada à árvore do projeto: 
 
-    [![](native-references-images/ref03.png "The framework will be added to the projects tree")](native-references-images/ref03.png#lightbox)
+    [![A estrutura será adicionada à árvore de projetos](native-references-images/ref03.png)](native-references-images/ref03.png#lightbox)
 
 Quando o projeto for compilado, a estrutura nativa será inserida no pacote do aplicativo.
 

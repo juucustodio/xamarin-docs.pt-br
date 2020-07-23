@@ -10,16 +10,16 @@ ms.date: 08/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b0cbb7d26a2aea02a3255fc75947c20a3d803b86
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e0964ad7d2bf517a6a4c7cf7965c346629716166
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131892"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936013"
 ---
 # <a name="paths-and-text-in-skiasharp"></a>Caminhos e texto em SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explore a interseção de caminhos e texto_
 
@@ -29,7 +29,7 @@ Você já viu que pode traçar os contornos de caracteres de texto, bem como pre
 
 Além de usar um efeito de caminho para traçar um contorno de caractere, você também pode criar efeitos de caminho que se baseiam em um caminho derivado de uma cadeia de caracteres, e você pode até mesmo combinar os dois efeitos:
 
-![](text-paths-images/pathsandtextsample.png "Text Path Effect")
+![Efeito de caminho de texto](text-paths-images/pathsandtextsample.png)
 
 No artigo anterior sobre os [**efeitos de caminho**](effects.md), você viu como o [`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath(SkiaSharp.SKPath,SkiaSharp.SKPath,SkiaSharp.SKRect,System.Single)) método de `SKPaint` pode obter um contorno de um caminho traçado. Você também pode usar esse método com caminhos derivados de contornos de caractere.
 
@@ -49,7 +49,7 @@ O `GetTextPath` método é um exagero se você simplesmente deseja preencher ou 
 
 Uma dessas tarefas é o recorte. A página de **texto de recorte** cria um caminho de recorte com base nos contornos de caractere da palavra "código". Esse caminho é ampliado para o tamanho da página para recortar um bitmap que contém uma imagem do código-fonte do **texto de recorte** :
 
-[![](text-paths-images/clippingtext-small.png "Triple screenshot of the Clipping Text page")](text-paths-images/clippingtext-large.png#lightbox "Triple screenshot of the Clipping Text page")
+[![Captura de tela tripla da página de texto de recorte](text-paths-images/clippingtext-small.png)](text-paths-images/clippingtext-large.png#lightbox "Captura de tela tripla da página de texto de recorte")
 
 O [`ClippingTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ClippingTextPage.cs) Construtor de classe carrega o bitmap que é armazenado como um recurso incorporado na pasta de **mídia** da solução:
 
@@ -129,7 +129,7 @@ Depois que o caminho de recorte for definido, o bitmap poderá ser exibido e ele
 
 A página de **efeito de caminho de texto** converte um único caractere de e comercial em um caminho para criar um efeito de caminho 1D. Um objeto de pintura com esse efeito de caminho é usado para traçar o contorno de uma versão maior do mesmo caractere:
 
-[![](text-paths-images/textpatheffect-small.png "Triple screenshot of the Text Path Effect page")](text-paths-images/textpatheffect-large.png#lightbox "Triple screenshot of the Text Path Effect page")
+[![Captura de tela tripla da página de efeito de caminho de texto](text-paths-images/textpatheffect-small.png)](text-paths-images/textpatheffect-large.png#lightbox "Captura de tela tripla da página de efeito de caminho de texto")
 
 Grande parte do trabalho na [`TextPathEffectPath`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) classe ocorre nos campos e no construtor. Os dois `SKPaint` objetos definidos como campos são usados para duas finalidades diferentes: o primeiro (chamado `textPathPaint` ) é usado para converter o e comercial com um `TextSize` de 50 para um caminho para o efeito de caminho 1D. O segundo ( `textPaint` ) é usado para exibir a versão maior do e comercial com esse efeito de caminho. Por esse motivo, o `Style` desse segundo objeto Paint é definido como `Stroke` , mas a `StrokeWidth` propriedade não é definida porque essa propriedade não é necessária ao usar um efeito de caminho 1D:
 
@@ -274,7 +274,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 `PaintSurface`Em seguida, o manipulador cria um novo caminho chamado `outlinePath` . Isso se torna o caminho de destino na chamada para `GetFillPath` . A `StrokeWidth` propriedade de 25 faz com que você `outlinePath` Descreva o contorno de um caminho de 25 pixels, traçando os caracteres de texto. Esse caminho é exibido em vermelho com uma largura de traço de 5:
 
-[![](text-paths-images/characteroutlineoutlines-small.png "Triple screenshot of the Character Outline Outlines page")](text-paths-images/characteroutlineoutlines-large.png#lightbox "Triple screenshot of the Character Outline Outlines page")
+[![Captura de tela tripla da página contornos de tópicos de caracteres](text-paths-images/characteroutlineoutlines-small.png)](text-paths-images/characteroutlineoutlines-large.png#lightbox "Captura de tela tripla da página contornos de tópicos de caracteres")
 
 Examine com mais detalhes e você verá sobreposições onde o esboço do caminho faz um canto nítido. Esses são artefatos normais desse processo.
 
@@ -327,11 +327,11 @@ public class CircularTextPage : ContentPage
 
 A `TextSize` propriedade de `textPaint` é então ajustada para que a largura do texto corresponda à circunferência do círculo:
 
-[![](text-paths-images/circulartext-small.png "Triple screenshot of the Circular Text page")](text-paths-images/circulartext-large.png#lightbox "Triple screenshot of the Circular Text page")
+[![Captura de tela tripla da página de texto circular](text-paths-images/circulartext-small.png)](text-paths-images/circulartext-large.png#lightbox "Captura de tela tripla da página de texto circular")
 
 O texto em si foi escolhido como um pouco circular também: a palavra "Circle" é o assunto da frase e o objeto de uma frase preposicional.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

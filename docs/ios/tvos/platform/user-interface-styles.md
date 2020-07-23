@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 1d64a212dae055d6a7a5ff1005b25dc48a10d52e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: e779b874cda016a0cd6cc0444ff42a761ee7483e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84566195"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934674"
 ---
 # <a name="tvos-user-interface-styles-in-xamarin"></a>Estilos de interface do usuário tvOS no Xamarin
 
@@ -28,11 +28,11 @@ Como mencionado acima, o tvOS 10 agora dá suporte a um tema de interface do usu
 
 O usuário pode mudar esse tema acessando **configurações**  >  **General**  >  **aparência** geral e alternando entre **claro** e **escuro**:
 
-[![](user-interface-styles-images/theme01.png "The Settings app")](user-interface-styles-images/theme01.png#lightbox)
+[![O aplicativo configurações](user-interface-styles-images/theme01.png)](user-interface-styles-images/theme01.png#lightbox)
 
 Quando o tema **escuro** for selecionado, todos os elementos da interface do usuário mudarão para texto claro em um plano de fundo escuro:
 
-[![](user-interface-styles-images/theme02.png "The Dark theme")](user-interface-styles-images/theme02.png#lightbox)
+[![O tema escuro](user-interface-styles-images/theme02.png)](user-interface-styles-images/theme02.png#lightbox)
 
 O usuário tem a opção de alternar o tema a qualquer momento e pode fazer isso com base na atividade atual, onde a Apple TV está localizada ou na hora do dia.
 
@@ -50,10 +50,10 @@ Para aceitar o suporte a temas leves e escuros, faça o seguinte:
 2. Selecione o modo de exibição de **origem** (na parte inferior do editor).
 3. Adicione uma nova chave e chame-a `UIUserInterfaceStyle` :
 
-    [![](user-interface-styles-images/theme03.png "The UIUserInterfaceStyle key")](user-interface-styles-images/theme03.png#lightbox)
+    [![A chave UIUserInterfaceStyle](user-interface-styles-images/theme03.png)](user-interface-styles-images/theme03.png#lightbox)
 4. Deixe o tipo definido como `String` e insira um valor de `Automatic` :
 
-    [![](user-interface-styles-images/theme04.png "Enter Automatic")](user-interface-styles-images/theme04.png#lightbox)
+    [![Inserir automático](user-interface-styles-images/theme04.png)](user-interface-styles-images/theme04.png#lightbox)
 5. Salve as alterações no arquivo.
 
 Há três valores possíveis para a `UIUserInterfaceStyle` chave:
@@ -169,13 +169,13 @@ Para habilitar o suporte à coleta de características, faça o seguinte:
 
 1. Clique com o botão direito do mouse no arquivo de storyboard na **Gerenciador de soluções** e selecione **abrir com**o  >  **Xcode Interface Builder**:
 
-    [![](user-interface-styles-images/theme05.png "Open With Xcode Interface Builder")](user-interface-styles-images/theme05.png#lightbox)
+    [![Abrir com o Xcode Interface Builder](user-interface-styles-images/theme05.png)](user-interface-styles-images/theme05.png#lightbox)
 2. Para habilitar o suporte à coleta de características, alterne para o **Inspetor de arquivo** e marque a propriedade **usar variações de características** na seção **interface Builder documento** :
 
-    [![](user-interface-styles-images/theme06.png "Enable Trait Collection support")](user-interface-styles-images/theme06.png#lightbox)
+    [![Habilitar suporte à coleta de características](user-interface-styles-images/theme06.png)](user-interface-styles-images/theme06.png#lightbox)
 3. Confirme a alteração para usar variações de características:
 
-    [![](user-interface-styles-images/theme07.png "The use Trait Variations alert")](user-interface-styles-images/theme07.png#lightbox)
+    [![O alerta usar variações de características](user-interface-styles-images/theme07.png)](user-interface-styles-images/theme07.png#lightbox)
 4. Salve as alterações no arquivo de storyboard.
 
 A Apple adicionou as seguintes habilidades ao editar storyboards tvOS no Interface Builder:
@@ -184,20 +184,20 @@ A Apple adicionou as seguintes habilidades ao editar storyboards tvOS no Interfa
 
   - Várias propriedades agora têm um **+** ao lado delas, que podem ser clicadas para adicionar uma versão específica de tema de interface do usuário:
 
-    [![](user-interface-styles-images/theme08.png "Add a UI theme specific version")](user-interface-styles-images/theme08.png#lightbox)
+    [![Adicionar uma versão específica de tema de interface do usuário](user-interface-styles-images/theme08.png)](user-interface-styles-images/theme08.png#lightbox)
 
   - O desenvolvedor pode especificar uma nova propriedade ou clicar no botão **x** para removê-la:
 
-    [![](user-interface-styles-images/theme09.png "Specify a new property or click the x button to remove it")](user-interface-styles-images/theme09.png#lightbox)
+    [![Especifique uma nova propriedade ou clique no botão x para removê-la](user-interface-styles-images/theme09.png)](user-interface-styles-images/theme09.png#lightbox)
 - O desenvolvedor pode visualizar um design de interface do usuário no tema claro ou escuro de dentro Interface Builder:
 
   - A parte inferior da Design Surface permite que o desenvolvedor Alterne o tema da interface do usuário atual:
 
-    [![](user-interface-styles-images/theme10.png "The bottom of the Design Surface")](user-interface-styles-images/theme10.png#lightbox)
+    [![A parte inferior da Design Surface](user-interface-styles-images/theme10.png)](user-interface-styles-images/theme10.png#lightbox)
 
   - O novo tema será exibido no Interface Builder e quaisquer ajustes específicos da coleção de características serão exibidos:
 
-    [![](user-interface-styles-images/theme11.png "The theme displayed in Interface Builder")](user-interface-styles-images/theme11.png#lightbox)
+    [![O tema exibido no Interface Builder](user-interface-styles-images/theme11.png)](user-interface-styles-images/theme11.png#lightbox)
 
 Além disso, o simulador tvOS agora tem um atalho de teclado para permitir que o desenvolvedor Alterne rapidamente entre os temas leves e escuros ao depurar um aplicativo tvOS. Use a sequência de teclado **Command-Shift-D** para alternar entre Light e Dark.
 
@@ -207,7 +207,7 @@ Além disso, o simulador tvOS agora tem um atalho de teclado para permitir que o
 
 Este artigo abordou os temas de interface do usuário leves e escuros que a Apple adicionou ao tvOS 10 e como implementá-los em um aplicativo Xamarin. tvOS.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [O que há de novo no tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

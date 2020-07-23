@@ -10,16 +10,16 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c751a1843479f1e98739964631999dfdb0e3b634
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 3a65e9bb90f01bcb5e0b1182a21d998e2335da9a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84569628"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934518"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Xamarin.FormsPágina mestre-detalhes
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)
 
 _O Xamarin.Forms MasterDetailPage é uma página que gerencia duas páginas de informações relacionadas – uma página mestra que apresenta itens e uma página de detalhes que apresenta detalhes sobre os itens na página mestra. Este artigo explica como usar um MasterDetailPage e navegar entre suas páginas de informações._
 
@@ -27,7 +27,7 @@ _O Xamarin.Forms MasterDetailPage é uma página que gerencia duas páginas de i
 
 Uma página mestra normalmente exibe uma lista de itens, conforme mostrado nas capturas de tela seguir:
 
-[![](master-detail-page-images/masterpage-components.png "Master Page Components")](master-detail-page-images/masterpage-components-large.png#lightbox "Master Page Components")
+[![Componentes da página mestra](master-detail-page-images/masterpage-components.png)](master-detail-page-images/masterpage-components-large.png#lightbox "Componentes da página mestra")
 
 A localização da lista de itens é idêntico em cada plataforma e selecionar um dos itens navegará até a página de detalhes correspondente. Além disso, a página mestra também apresenta uma barra de navegação que contém um botão que pode ser usado para navegar até a página de detalhes ativa:
 
@@ -37,7 +37,7 @@ A localização da lista de itens é idêntico em cada plataforma e selecionar u
 
 Uma página de detalhes exibe dados correspondentes ao item selecionado na página mestra e os principais componentes da página de detalhes são mostrados nas capturas de tela a seguir:
 
-![](master-detail-page-images/detailpage-components.png "Detail Page Components")
+![Componentes da página de detalhes](master-detail-page-images/detailpage-components.png)
 
 A página de detalhes contém uma barra de navegação, cujo conteúdo dependem da plataforma:
 
@@ -213,7 +213,7 @@ public class MasterPageCS : ContentPage
 
 As capturas de tela a seguir mostram a página mestra em cada plataforma:
 
-![](master-detail-page-images/masterpage.png "Master Page Example")
+![Exemplo de página mestra](master-detail-page-images/masterpage.png)
 
 ### <a name="creating-and-displaying-the-detail-page"></a>Criação e exibição da página de detalhes
 
@@ -248,7 +248,7 @@ O método `OnItemSelected` executa as seguintes ações:
 
 As capturas de tela a seguir mostram a página de detalhes `ContactPage`, mostrada depois que ela for selecionada na página mestra:
 
-![](master-detail-page-images/detailpage.png "Detail Page Example")
+![Exemplo de página de detalhes](master-detail-page-images/detailpage.png)
 
 ### <a name="controlling-the-detail-page-display-behavior"></a>Controle do comportamento de exibição da página de detalhes
 
@@ -293,7 +293,7 @@ No entanto, o valor da [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.Ma
 
 Este artigo demonstrou como usar um [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) e navegar entre suas páginas de informações. O Xamarin.Forms `MasterDetailPage` é uma página que gerencia duas páginas de informações relacionadas – uma página mestra que apresenta itens e uma página de detalhes que apresenta detalhes sobre os itens na página mestra.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Variedades de páginas](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
 - [MasterDetailPage (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage)

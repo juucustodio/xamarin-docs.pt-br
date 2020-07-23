@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/26/2018
-ms.openlocfilehash: c8c5b8d0417fb7fd1069d2bf6fa5d9887d569453
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b4eaca39470e44a3d9f686fde4eedc1800124557
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73001565"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932737"
 ---
 # <a name="working-with-watchos-icons-in-xamarin"></a>Trabalhando com ícones watchOS no Xamarin
 
@@ -42,7 +42,7 @@ Consulte o [Guia de ícones do aplicativo IOS](~/ios/app-fundamentals/images-ico
 
 A cadeia de caracteres que aparece ao lado do aplicativo Watch no [aplicativo de configurações de Apple Watch](~/ios/watchos/app-fundamentals/settings.md) é configurada no **info. plist do aplicativo IOS**.
 
-Confirme se seu **info. plist** tem um `CFBundleName` chave e valor (Observação: isso é diferente para o `CFBundleDisplayName`, você pode ter ambos):
+Confirme se seu **info. plist** tem uma `CFBundleName` chave e um valor (Observação: isso é diferente para o `CFBundleDisplayName` , você pode ter ambos):
 
 ```xml
 <key>CFBundleName</key>
@@ -53,23 +53,23 @@ Confirme se seu **info. plist** tem um `CFBundleName` chave e valor (Observaçã
 
 Depois que seu [aplicativo pai](~/ios/watchos/app-fundamentals/parent-app.md) tiver seus ícones configurados, você precisará adicionar um catálogo de ativos de ícone de aplicativo ao aplicativo Watch.
 
-1. Clique com o botão direito do mouse no projeto do aplicativo de inspeção e selecione **arquivo > adicionar > novo arquivo... > o catálogo de ativos do iOS >** para adicionar um catálogo de ativos ao projeto.
+1. Clique com o botão direito do mouse no projeto do aplicativo Watch e selecione **arquivo > adicionar > novo arquivo... > iOS > catálogo de ativos** para adicionar um catálogo de ativos ao projeto.
 
-    ![](icons-images/newasset.png "Add an asset catalog to the project")
+    ![Adicionar um catálogo de ativos ao projeto](icons-images/newasset.png)
 
-2. Clique duas vezes no arquivo **appIcon. appiconset/Contents. JSON**
+2. Clique duas vezes em **appIcon. appiconset/Contents.jsno** arquivo
 
-    ![](icons-images/xcassets-iconset-sml.png "The AppIcon contents")
+    ![O conteúdo do AppIcon](icons-images/xcassets-iconset-sml.png)
 
 3. Adicione todas as imagens watchOS, conforme mostrado nesta captura de tela:
 
-    [![](icons-images/appicons-sml.png "Add all the watchOS images, as shown in this screenshot")](icons-images/appicons.png#lightbox)
+    [![Adicionar todas as imagens watchOS, conforme mostrado nesta captura de tela](icons-images/appicons-sml.png)](icons-images/appicons.png#lightbox)
 
     Consulte as [diretrizes de ícone da Apple](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) para obter os tamanhos necessários (as dimensões também são mostradas na tela). Lembre-se de que esses ícones serão recortados automaticamente para renderização em um círculo.
 
     Sua lista de ícones deve ser semelhante a esta:
 
-    ![](icons-images/xcassets-complete-sml.png "The icon list in the Solution Explorer")
+    ![A lista de ícones na Gerenciador de Soluções](icons-images/xcassets-complete-sml.png)
 
 4. Para garantir que o catálogo de ativos seja incluído no aplicativo, adicione a chave e o valor a seguir para o **info. plist do aplicativo de inspeção**:
 
@@ -83,6 +83,6 @@ Você pode verificar se os ícones estão configurados corretamente verificando 
 > [!NOTE]
 > Os ícones não podem ter um canal alfa (o aplicativo será rejeitado durante o envio da loja de aplicativos se um canal alfa estiver presente). Você pode verificar se existe um canal alfa e removê-lo [usando o aplicativo de visualização no Mac os X](~/ios/watchos/troubleshooting.md#noalpha).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Ícone de watchOS de imagem da Apple & Guia de imagens](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/)
+- [Ícone de watchOS de imagem da Apple & guia de imagens](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/)

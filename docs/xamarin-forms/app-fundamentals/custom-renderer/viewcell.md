@@ -10,16 +10,16 @@ ms.date: 12/07/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c908da816352e8b3790ded0bef932e1485170abd
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: bb6167eae394b41583195911bfac9d691e48d361
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573866"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929370"
 ---
 # <a name="customizing-a-viewcell"></a>Personalizando um ViewCell
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
 
 _Um Xamarin.Forms ViewCell é uma célula que pode ser adicionada a ListView ou Tableview, que contém uma exibição definida pelo desenvolvedor. Este artigo demonstra como criar um renderizador personalizado para um ViewCell que é hospedado dentro de um Xamarin.Forms controle ListView. Isso impede Xamarin.Forms que os cálculos de layout sejam chamados repetidamente durante a rolagem de ListView._
 
@@ -27,7 +27,7 @@ Cada Xamarin.Forms célula tem um renderizador que acompanha para cada plataform
 
 O diagrama a seguir ilustra a relação entre o [`ViewCell`](xref:Xamarin.Forms.ViewCell) e os controles nativos correspondentes que o implementam:
 
-![](viewcell-images/viewcell-classes.png "Relationship Between the ViewCell Control and the Implementing Native Controls")
+![Relação entre o controle ViewCell e a implementação de controles nativos](viewcell-images/viewcell-classes.png)
 
 O processo de renderização pode ser aproveitado para implementar personalizações específicas da plataforma criando um renderizador personalizado para um [`ViewCell`](xref:Xamarin.Forms.ViewCell) em cada plataforma. O processo para fazer isso é o seguinte:
 
@@ -164,11 +164,11 @@ O processo para criar a classe do renderizador personalizado é a seguinte:
 
 O diagrama a seguir ilustra as responsabilidades de cada projeto no aplicativo de exemplo, bem como as relações entre elas:
 
-![](viewcell-images/solution-structure.png "NativeCell Custom Renderer Project Responsibilities")
+![Responsabilidades do projeto de renderizador personalizado de NativeCell](viewcell-images/solution-structure.png)
 
 A célula personalizada `NativeCell` é renderizada por classes de renderizador específicas da plataforma, que derivam da classe `ViewCellRenderer` de cada plataforma. Isso faz com que cada célula personalizada `NativeCell` seja renderizada com o layout específico da plataforma, conforme mostrado nas capturas de tela seguir:
 
-![](viewcell-images/screenshots.png "NativeCell on each Platform")
+![NativeCell em cada plataforma](viewcell-images/screenshots.png)
 
 A classe `ViewCellRenderer` expõe métodos específicos da plataforma para renderização da célula personalizada. Trata-se do método `GetCell` na plataforma iOS, do método `GetCellCore` na plataforma Android e do método `GetTemplate` na UWP.
 
@@ -571,7 +571,7 @@ O `DataTemplate` especifica os controles usados para exibir o conteúdo da célu
 
 Este artigo demonstrou como criar um renderizador personalizado para um [`ViewCell`](xref:Xamarin.Forms.ViewCell) que está hospedado dentro de um Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) controle. Isso impede Xamarin.Forms que os cálculos de layout sejam chamados repetidamente durante a `ListView` rolagem.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Desempenho de ListView](~/xamarin-forms/user-interface/listview/performance.md)
 - [CustomRendererViewCell (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)

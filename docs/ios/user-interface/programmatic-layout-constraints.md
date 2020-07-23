@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 81ad57119ff7271094966cf9b0c372876646f81b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d8dcf64f9a905557bea69402bcaf7fcfb51fb10b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573424"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86928569"
 ---
 # <a name="programmatic-layout-constraints-in-xamarinios"></a>Restrições de layout programáticos no Xamarin. iOS
 
@@ -67,9 +67,9 @@ OrangeView.TrailingAnchor.ConstraintEqualTo (margins.TrailingAnchor).Active = tr
 OrangeView.HeightAnchor.ConstraintEqualTo (OrangeView.WidthAnchor, 2.0f);
 ```
 
-Uma restrição de layout típica pode ser expressa simplesmente como uma expressão linear. Veja o exemplo a seguir:
+Uma restrição de layout típica pode ser expressa simplesmente como uma expressão linear. Veja o exemplo seguinte:
 
-[![](programmatic-layout-constraints-images/graph01.png "A Layout Constraint expressed as a linear expression")](programmatic-layout-constraints-images/graph01.png#lightbox)
+[![Uma restrição de layout expressa como uma expressão linear](programmatic-layout-constraints-images/graph01.png)](programmatic-layout-constraints-images/graph01.png#lightbox)
 
 Que seria convertido na seguinte linha de código C# usando âncoras de layout:
 
@@ -159,7 +159,7 @@ Consulte o [Apêndice de linguagem de formato Visual](https://developer.apple.co
 
 Este guia apresentou a criação e o trabalho com restrições de layout automático em C# em vez de criá-las graficamente no designer do iOS. Primeiro, ele examinou o uso de âncoras de layout ( `NSLayoutAnchor` ) para lidar com o layout automático. Em seguida, ele mostrou como trabalhar com restrições de layout ( `NSLayoutConstraint` ). Por fim, ele apresentou o uso da linguagem de formato visual para layout automático.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Introdução ao Storyboards](~/ios/user-interface/storyboards/index.md)
 - [Instruções de controles designáveis do iOS](~/ios/user-interface/designer/ios-designable-controls-walkthrough.md)

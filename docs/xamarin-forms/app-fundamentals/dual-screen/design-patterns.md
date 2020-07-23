@@ -10,18 +10,18 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 277fb67eeea465239d9340e755240288286d2359
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 79c0f41e8ed0bffce0154ee618729316aab5e8e2
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138782"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935272"
 ---
 # <a name="xamarinforms-dual-screen-design-patterns"></a>Xamarin.Formspadrões de design de tela dupla
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![API de pré-lançamento](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
 Este guia apresenta nossos padrões de design recomendados para dispositivos de tela dupla com código e amostras para ajudar você a criar interfaces que fornecem experiências de usuário envolventes e úteis.
 
@@ -29,7 +29,7 @@ Este guia apresenta nossos padrões de design recomendados para dispositivos de 
 
 O padrão de tela estendida trata as duas telas como uma tela grande para exibir um mapa, uma imagem, uma planilha ou outro conteúdo que se beneficia da difusão para consumir o máximo de espaço:
 
-![](design-patterns-images/extended-canvas-sample.png "Extended canvas sample")
+![Exemplo de tela estendida](design-patterns-images/extended-canvas-sample.png)
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"
@@ -59,7 +59,7 @@ Neste exemplo. o `Grid` e o conteúdo interno se expandirão para consumir toda 
 
 O padrão de detalhes mestre é usado quando o modo de exibição mestre, normalmente uma lista à esquerda, fornece um conteúdo que pode ser selecionado pelo usuário para exibir detalhes sobre este item à direita:
 
-![](design-patterns-images/master-detail-sample.png "Master detail sample")
+![Exemplo de detalhes mestre](design-patterns-images/master-detail-sample.png)
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"
@@ -85,7 +85,7 @@ Neste exemplo, você pode usar `TwoPaneView` para definir uma lista em um painel
 
 Esse padrão é ideal para o conteúdo destinado a um layout de duas páginas, como um leitor de documento, anotações ou um painel de arte:
 
-![](design-patterns-images/two-page-sample.png "Two page sample")
+![Exemplo de duas páginas](design-patterns-images/two-page-sample.png)
 
 ```xaml
 <Grid x:Name="layout">
@@ -126,7 +126,7 @@ O [`CollectionView`](xref:Xamarin.Forms.CollectionView) , com um layout de grade
 
 O padrão de exibição dupla pode ser semelhante à exibição de "duas páginas", mas a diferença está no conteúdo e no cenário do usuário. Nesse padrão, você está comparando o conteúdo lado a lado, talvez para editar um documento ou uma foto, comparar diferentes menus de um restaurante ou para diferenciar um conflito de mesclagem para arquivos de código:
 
-![](design-patterns-images/dual-view-sample.png "Dual view sample")
+![Exemplo de exibição dupla](design-patterns-images/dual-view-sample.png)
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"
@@ -164,7 +164,7 @@ O padrão de exibição dupla pode ser semelhante à exibição de "duas página
 
 O padrão complementar demonstra como é possível usar a segunda tela para fornecer um segundo nível de conteúdo relacionado à exibição principal, como no caso de um aplicativo de desenho, um jogo ou uma edição de mídia:
 
-![](design-patterns-images/companion-pane-sample.png "Companion pane sample")
+![Exemplo do painel complementar](design-patterns-images/companion-pane-sample.png)
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"

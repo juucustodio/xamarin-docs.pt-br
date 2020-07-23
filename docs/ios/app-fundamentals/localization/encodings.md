@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/28/2017
-ms.openlocfilehash: 78c048d793fd792576e2482491ebf11460d5b511
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 88f95f797d1230c818a635376f7b17a2264afadf
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571799"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930332"
 ---
 # <a name="internationalization-encodings-in-xamarinios"></a>Codificações de internacionalização no Xamarin. iOS
 
@@ -22,9 +22,9 @@ Para reduzir o tamanho do aplicativo, o Xamarin. iOS não inclui nenhuma codific
 
 Isso é feito selecionando as codificações extras no painel Build/avançado do iOS no Visual Studio para Mac ou no Visual Studio:
 
- [![](encodings-images/00.png "Selecting the extra encodings")](encodings-images/00.png#lightbox)
+ [![Selecionando as codificações extras](encodings-images/00.png)](encodings-images/00.png#lightbox)
 
- [![](encodings-images/00a.png "Selecting the extra encodings")](encodings-images/00a.png#lightbox)
+ [![Selecionando as codificações extras](encodings-images/00a.png)](encodings-images/00a.png#lightbox)
 
 Você pode selecionar um destes:
 

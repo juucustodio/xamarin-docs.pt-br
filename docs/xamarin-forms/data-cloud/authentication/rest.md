@@ -10,12 +10,12 @@ ms.date: 01/22/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d62e533d127294c77c0779c20fd9c78ef2231200
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2a46d099520103ba6f1552d5bda3f619c07b743d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135714"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86928517"
 ---
 # <a name="authenticate-a-restful-web-service"></a>Autenticar um serviço Web RESTful
 
@@ -31,11 +31,11 @@ A autenticação básica é o mecanismo de autenticação mais simples suportado
 
 - Se um serviço Web receber uma solicitação de um recurso protegido, ele rejeitará a solicitação com um código de status HTTP 401 (acesso negado) e definirá o cabeçalho de resposta WWW-Authenticate, conforme mostrado no diagrama a seguir:
 
-![](rest-images/basic-authentication-fail.png "Basic Authentication Failing")
+![Falha na autenticação básica](rest-images/basic-authentication-fail.png)
 
 - Se um serviço Web receber uma solicitação de um recurso protegido, com o `Authorization` cabeçalho definido corretamente, o serviço Web responderá com um código de status HTTP 200, que indica que a solicitação foi bem-sucedida e que as informações solicitadas estão na resposta. Esse cenário é mostrado no diagrama a seguir:
 
-![](rest-images/basic-authentication-success.png "Basic Authentication Succeeding")
+![Autenticação básica com sucesso](rest-images/basic-authentication-success.png)
 
 > [!NOTE]
 > A autenticação básica só deve ser usada em uma conexão HTTPS. Quando usado em uma conexão HTTP, o `Authorization` cabeçalho poderá ser facilmente decodificado se o tráfego http for capturado por um invasor.
@@ -87,7 +87,7 @@ No módulo de autenticação básica usado pelo IIS, os usuários são autentica
 > [!NOTE]
 > A autenticação básica não foi projetada para gerenciar o logout. Portanto, a abordagem de autenticação básica padrão para fazer logoff é encerrar a sessão.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Consumir um serviço Web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
 - [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)

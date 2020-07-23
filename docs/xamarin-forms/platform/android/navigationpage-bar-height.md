@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2dcabe3c0067734250834c2927fd4cbb83906943
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5f5e6311c79a88a6018526a2e1c0c06065eefb32
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128785"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929734"
 ---
 # <a name="navigationpage-bar-height-on-android"></a>Altura da barra de NavigationPage no Android
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esta plataforma Android específica define a altura da barra de navegação em um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) . Ele é consumido em XAML definindo a [`NavigationPage.BarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) propriedade vinculável como um valor inteiro:
 
@@ -51,7 +51,7 @@ O `NavigationPage.On<Android>` método especifica que essa plataforma específic
 
 O resultado é que a altura da barra de navegação em um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) pode ser definida:
 
-![](navigationpage-bar-height-images/navigationpage-barheight.png "NavigationPage navigation bar height")
+![Altura da barra de navegação do NavigationPage](navigationpage-bar-height-images/navigationpage-barheight.png)
 
 ## <a name="related-links"></a>Links relacionados
 

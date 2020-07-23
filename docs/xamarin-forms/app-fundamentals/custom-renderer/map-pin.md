@@ -10,16 +10,16 @@ ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 06ff88f1d4f272d9b77737d2168418c007afe8bc
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4a9dca7556e9e08915e7e8915a0c01cd1ce6f676
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573892"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935714"
 ---
 # <a name="customizing-a-map-pin"></a>Personalizando um marcador de mapa
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)
 
 _Este artigo demonstra como criar um renderizador personalizado para o Controle de Mapeamento, que exibe um mapa nativo com um marcador personalizado e uma exibição personalizada dos dados de marcador em cada plataforma._
 
@@ -27,7 +27,7 @@ Cada Xamarin.Forms exibição tem um renderizador que acompanha para cada plataf
 
 O diagrama a seguir ilustra a relação entre o [`Map`](xref:Xamarin.Forms.Maps.Map) e os controles nativos correspondentes que o implementam:
 
-![](map-pin-images/map-classes.png "Relationship Between the Map Control and the Implementing Native Controls")
+![Relação entre o Controle de Mapeamento e a implementação de controles nativos](map-pin-images/map-classes.png)
 
 O processo de renderização pode ser usado para implementar personalizações específicas da plataforma criando um renderizador personalizado para um [`Map`](xref:Xamarin.Forms.Maps.Map) em cada plataforma. O processo para fazer isso é o seguinte:
 
@@ -135,11 +135,11 @@ O processo para criar a classe do renderizador personalizado é a seguinte:
 
 O diagrama a seguir ilustra as responsabilidades de cada projeto no aplicativo de exemplo, bem como as relações entre elas:
 
-![](map-pin-images/solution-structure.png "CustomMap Custom Renderer Project Responsibilities")
+![Responsabilidades do projeto de renderizador personalizado de CustomMap](map-pin-images/solution-structure.png)
 
 O controle `CustomMap` é renderizado por classes de renderizador específicas da plataforma, que derivam da classe `MapRenderer` para cada plataforma. Isso faz com que cada controle `CustomMap` seja renderizado com controles específicos da plataforma, conforme mostrado nas seguintes capturas de tela:
 
-![](map-pin-images/screenshots.png "CustomMap on each Platform")
+![CustomMap em cada plataforma](map-pin-images/screenshots.png)
 
 A `MapRenderer` classe expõe o `OnElementChanged` método, que é chamado quando o Xamarin.Forms mapa personalizado é criado para renderizar o controle nativo correspondente. Esse método usa um parâmetro `ElementChangedEventArgs`, que contém as propriedades `OldElement` e `NewElement`. Essas propriedades representam o Xamarin.Forms elemento ao qual o renderizador *foi* anexado e o Xamarin.Forms elemento ao qual o renderizador *está* anexado, respectivamente. No aplicativo de exemplo, a propriedade `OldElement` será `null` e a propriedade `NewElement` conterá uma referência à instância de `CustomMap`.
 
@@ -174,7 +174,7 @@ As seções a seguir abordam a implementação de cada classe de renderizador pe
 
 As seguintes capturas de tela mostram o mapa, antes e após a personalização:
 
-![](map-pin-images/map-layout-ios.png "Map Control Before and After Customization")
+![Controle de Mapeamento antes e após a personalização](map-pin-images/map-layout-ios.png)
 
 No iOS, o marcador é chamado de *anotação* e pode ser uma imagem personalizada ou um marcador definido pelo sistema de várias cores. As anotações podem opcionalmente mostrar um *texto explicativo*, que é exibido em resposta à seleção da anotação pelo usuário. O texto explicativo exibe o `Label` e as propriedades `Address` da instância `Pin`, com as exibições acessório direita e esquerda opcionais. Na captura de tela acima, a exibição acessório esquerda é a imagem de um macaco, com a exibição acessório direita sendo o botão *Informações*.
 
@@ -347,7 +347,7 @@ Para obter mais informações sobre como personalizar uma instância `MKMapView`
 
 As seguintes capturas de tela mostram o mapa, antes e após a personalização:
 
-![](map-pin-images/map-layout-android.png "Map Control Before and After Customization")
+![Controle de Mapeamento antes e após a personalização](map-pin-images/map-layout-android.png)
 
 No Android, o marcador é chamado de *marcador* e pode ser uma imagem personalizada ou um marcador definido pelo sistema de várias cores. Os marcadores podem mostrar uma *janela de informações*, que é exibida na resposta ao toque do usuário no marcador. A janela de informações exibe as propriedades `Label` e `Address` da instância `Pin` e pode ser personalizada para incluir outros tipos de conteúdo. No entanto, apenas uma janela de informações pode ser mostrada por vez.
 
@@ -510,7 +510,7 @@ Para obter mais informações sobre como personalizar uma instância `MapView`, 
 
 As seguintes capturas de tela mostram o mapa, antes e após a personalização:
 
-![](map-pin-images/map-layout-uwp.png "Map Control Before and After Customization")
+![Controle de Mapeamento antes e após a personalização](map-pin-images/map-layout-uwp.png)
 
 No UWP, o marcador é chamado de *ícone de mapa* e pode ser uma imagem personalizada ou a imagem padrão definida pelo sistema. Um ícone de mapa pode mostrar um `UserControl`, que é exibido em resposta ao toque do usuário no ícone de mapa. O `UserControl` pode exibir qualquer conteúdo, incluindo as propriedades `Label` e `Address` da instância `Pin`.
 
@@ -652,7 +652,7 @@ Esse método abre um navegador da Web e navega para o endereço armazenado na pr
 
 Para obter mais informações sobre como personalizar uma instância `MapControl`, confira [Visão geral de mapas e localização](https://msdn.microsoft.com/library/windows/apps/mt219699.aspx) no MSDN.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Controle de mapas](~/xamarin-forms/user-interface/map/index.md)
 - [Mapas do iOS](~/ios/user-interface/controls/ios-maps/index.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/03/2017
-ms.openlocfilehash: 139b58fd1953924d5a848fc79c3a1706afb760b0
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: e3ef2a667996f3fc38008521c2804cc644cfb328
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84565625"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86928599"
 ---
 # <a name="watchos-complications-in-xamarin"></a>Complicações watchOSs no Xamarin
 
@@ -24,7 +24,7 @@ Observe que cada aplicativo watchOS pode ter apenas uma complicação.
 
 Comece lendo os [documentos da Apple](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/ManagingComplications.html) para determinar se seu aplicativo é adequado para uma complicação. Há cinco `CLKComplicationFamily` tipos de exibição dos quais escolher:
 
-[![](complications-images/all-complications-sml.png "The 5 CLKComplicationFamily types available: Circular Small, Modular Small, Modular Large, Utilitarian Small, Utilitarian Large")](complications-images/all-complications.png#lightbox)
+[![Os 5 tipos de CLKComplicationFamily disponíveis: circular pequeno, modular pequeno, modular grande, utilitário pequeno, utilitário grande](complications-images/all-complications-sml.png)](complications-images/all-complications.png#lightbox)
 
 Os aplicativos podem implementar apenas um estilo ou todos os cinco, dependendo dos dados que estão sendo exibidos.
 Você também pode dar suporte à viagem de tempo, fornecendo valores para horários passados e/ou futuros, pois o usuário transforma a Digital Crown.
@@ -41,7 +41,7 @@ As complicações podem ser adicionadas a um aplicativo de inspeção durante a 
 
 O assistente **Adicionar novo projeto...** inclui uma caixa de seleção que criará automaticamente uma classe de controlador de complicação e configurará o arquivo **info. plist** :
 
-![](complications-images/file-new-project-sml.png "The Include Complication checkbox")
+![A caixa de seleção incluir complicação](complications-images/file-new-project-sml.png)
 
 ### <a name="existing-projects"></a>Projetos existentes
 
@@ -83,7 +83,7 @@ Siga as instruções [escrevendo uma complicação](#writing) para adicionar có
 
 O arquivo **info. plist** da extensão de inspeção deve especificar o nome do `CLKComplicationDataSource` e quais famílias de complicação você deseja dar suporte:
 
-[![](complications-images/complications-config-sml.png "The complication family types")](complications-images/complications-config.png#lightbox)
+[![Os tipos de família de complicação](complications-images/complications-config-sml.png)](complications-images/complications-config.png#lightbox)
 
 A lista de entrada da **classe da fonte de dados** mostrará os nomes de classe que a subclasse subclasse `CLKComplicationDataSource` que inclui sua lógica de complicação.
 
@@ -234,7 +234,7 @@ Esses nomes de classe de modelo são todos prefixados com `CLKComplicationTempla
 Há apenas um modelo para esse estilo de complicação: `CLKComplicationTemplateUtilitarianLargeFlat` .
 Ele exibe uma única imagem e algum texto, tudo em uma única linha.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Documentos da Apple](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/ComplicationEssentials.html)
 - [Vídeo do WWDC](https://developer.apple.com/videos/play/wwdc2015-209/)

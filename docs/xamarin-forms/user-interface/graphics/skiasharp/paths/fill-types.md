@@ -10,22 +10,22 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c8c54f3d3815e418d2f71960dc7733711cb40ae2
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e82572d88e380997fb2435179dba824c1b3f0c2f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139042"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936182"
 ---
 # <a name="the-path-fill-types"></a>Os tipos de preenchimento do caminho
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Descobrir os diferentes efeitos possíveis com os tipos de preenchimento de caminho SkiaSharp_
 
-Dois contornos em um caminho podem se sobrepor e as linhas que compõem uma única delimitação podem se sobrepor. Qualquer área fechada pode potencialmente ser preenchida, mas talvez você não queira preencher todas as áreas incluídas. Aqui está um exemplo:
+Dois contornos em um caminho podem se sobrepor e as linhas que compõem uma única delimitação podem se sobrepor. Qualquer área fechada pode potencialmente ser preenchida, mas talvez você não queira preencher todas as áreas incluídas. Este é um exemplo:
 
-![](fill-types-images/filltypeexample.png "Five-pointed star partially filles")
+![Filles em estrela de cinco pontas](fill-types-images/filltypeexample.png)
 
 Você tem um pequeno controle sobre isso. O algoritmo de preenchimento é regido pela [`SKFillType`](xref:SkiaSharp.SKPath.FillType) propriedade de `SKPath` , que você define como um membro da [`SKPathFillType`](xref:SkiaSharp.SKPathFillType) enumeração:
 
@@ -173,7 +173,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Normalmente, o tipo de preenchimento de caminho deve afetar apenas os preenchimentos e não traços, mas os dois `Inverse` modos afetam os preenchimentos e os traços. Para preenchimentos, os dois `Inverse` tipos preenchem áreas de forma oposta para que a área fora da estrela seja preenchida. Para traços, os dois `Inverse` tipos colorem tudo, exceto o traço. Usar esses tipos de preenchimento inverso pode produzir alguns efeitos estranhos, como demonstra a captura de tela do iOS:
 
-[![](fill-types-images/fivepointedstar-small.png "Triple screenshot of the Five-Pointed Star page")](fill-types-images/fivepointedstar-large.png#lightbox "Triple screenshot of the Five-Pointed Star page")
+[![Captura de tela tripla da página de estrela de cinco pontas](fill-types-images/fivepointedstar-small.png)](fill-types-images/fivepointedstar-large.png#lightbox "Captura de tela tripla da página de estrela de cinco pontas")
 
 A captura de tela do Android mostra os efeitos típicos de retrocesso e ímpar, mas a ordem do traço e do preenchimento também afeta os resultados.
 
@@ -226,9 +226,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 É uma imagem interessante criada com um mínimo de código:
 
-[![](fill-types-images/overlappingcircles-small.png "Triple screenshot of the Overlapping Circles page")](fill-types-images/overlappingcircles-large.png#lightbox "Triple screenshot of the Overlapping Circles page")
+[![Captura de tela tripla da página de círculos sobrepostos](fill-types-images/overlappingcircles-small.png)](fill-types-images/overlappingcircles-large.png#lightbox "Captura de tela tripla da página de círculos sobrepostos")
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

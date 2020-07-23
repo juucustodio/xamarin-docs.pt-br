@@ -6,12 +6,12 @@ ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: f496a831c226e377f62e2a6fab8ed328bf1be0b9
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: dab6d1ff573f0f74b3b230732aa4669ba9fda0d5
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571059"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934856"
 ---
 # <a name="localization"></a>Localização
 
@@ -59,7 +59,7 @@ As cadeias de caracteres do alemão (por exemplo) podem ser muito longas; às ve
 
 Compare os comprimentos de cadeia de caracteres para alguns itens na tela inicial do iOS em inglês, alemão e japonês:
 
-[![](localization-images/language-compare-sml.png "German vs Japanese string length")](localization-images/language-compare.png#lightbox)
+[![Tamanho da cadeia de caracteres alemão versus japonês](localization-images/language-compare-sml.png)](localization-images/language-compare.png#lightbox)
 
 Observe que **as configurações** em inglês (8 caracteres) exigem 13 caracteres para a tradução do alemão, mas apenas 2 caracteres em Japonês.
 
@@ -293,7 +293,7 @@ Continue lendo os detalhes técnicos da plataforma em que você está interessad
 - Localização da plataforma nativa do [Xamarin. Ios](~/ios/app-fundamentals/localization/index.md) .
 - Localização da plataforma nativa do [Xamarin. Android](~/android/app-fundamentals/localization.md) .
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Visão geral da localização da Apple](https://developer.apple.com/internationalization/)
 - [Lista de verificação de localização do Android](https://developer.android.com/distribute/tools/localization-checklist.html)

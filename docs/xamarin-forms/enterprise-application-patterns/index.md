@@ -10,18 +10,18 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cc0f98d94c76ff63e7a002dfb92b51eae153d7b4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1d993afa7163beb0b24e496b0c876d903f2396e7
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139393"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934284"
 ---
 # <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Padrões de aplicativos empresariais usando o Xamarin.Forms ebook
 
 _Diretrizes arquitetônicas para o desenvolvimento de aplicativos empresariais adaptáveis, que podem ser mantidos e que podem ser testados Xamarin.Forms_
 
-![](images/cover-sml.png "Enterprise Application Patterns using Xamarin.Forms eBook")
+![Padrões de aplicativos empresariais usando o Xamarin.Forms ebook](images/cover-sml.png)
 
 Este eBook fornece orientação sobre como implementar o padrão MVVM (Model-View-ViewModel), injeção de dependência, navegação, validação e gerenciamento de configuração, mantendo o acoplamento flexível. Além disso, também há orientações sobre como executar a autenticação e a autorização com o IdentityServer, acessar dados de microservices em contêineres e testes de unidade.
 
@@ -83,7 +83,7 @@ Os modelos de teste e os modelos de exibição dos aplicativos MVVM são idênti
 
 Este projeto tem um site de comunidade, no qual você pode postar perguntas e fornecer comentários. O site da Comunidade está localizado no [GitHub](https://github.com/dotnet-architecture/eShopOnContainers). Como alternativa, comentários sobre o eBook podem ser enviados por email [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com) .
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Download do eBook (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (exemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

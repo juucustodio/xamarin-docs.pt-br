@@ -10,22 +10,22 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ee97ee2aae11e4e54a0d25e80ffd7bce301fa2f3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a98c7210f2e71f6f26d53da3555f3f9b5e016952
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137677"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935974"
 ---
 # <a name="integrating-text-and-graphics"></a>Integração de texto e elementos gráficos
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Consulte como determinar o tamanho da cadeia de caracteres de texto renderizado para integrar texto com gráficos SkiaSharp_
 
 Este artigo demonstra como medir texto, dimensionar o texto para um tamanho específico e integrar texto com outros elementos gráficos:
 
-![](text-images/textandgraphicsexample.png "Text surrounded by rectangles")
+![Texto rodeado por retângulos](text-images/textandgraphicsexample.png)
 
 Essa imagem também inclui um retângulo arredondado. A `Canvas` classe SkiaSharp inclui [`DrawRect`](xref:SkiaSharp.SKCanvas.DrawRect*) métodos para desenhar um retângulo e [`DrawRoundRect`](xref:SkiaSharp.SKCanvas.DrawRoundRect*) métodos para desenhar um retângulo com cantos arredondados. Esses métodos permitem que o retângulo seja definido como um `SKRect` valor ou de outras maneiras.
 
@@ -126,7 +126,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Depois disso, o restante do método é direto. Ele cria outro `SKPaint` objeto para as bordas e chamadas `DrawRoundRect` duas vezes. A segunda chamada usa um retângulo com outros 10 pixels. A primeira chamada especifica um raio de canto de 20 pixels. O segundo tem um raio de canto de 30 pixels, portanto, eles parecem ser paralelos:
 
- [![](text-images/framedtext-small.png "Triple screenshot of the Framed Text page")](text-images/framedtext-large.png#lightbox "Triple screenshot of the Framed Text page")
+ [![Captura de tela tripla da página de texto com quadros](text-images/framedtext-small.png)](text-images/framedtext-large.png#lightbox "Captura de tela tripla da página de texto com quadros")
 
 Você pode transformar seu telefone ou simulador para ver o tamanho do texto e do quadro.
 
@@ -134,7 +134,7 @@ Se você só precisa centralizar algum texto na tela, é possível fazê-lo apro
 
 O texto pode ser tratado de forma semelhante a qualquer outro objeto gráfico. Uma opção simples é exibir o contorno dos caracteres de texto:
 
-[![](text-images/outlinedtext-small.png "Triple screen shot of the Outlined Text page")](text-images/outlinedtext-large.png#lightbox "Triple screenshot of the Outlined Text page")
+[![Captura de tela tripla da página de texto contornada](text-images/outlinedtext-small.png)](text-images/outlinedtext-large.png#lightbox "Captura de tela tripla da página de texto contornada")
 
 Isso é feito simplesmente alterando a `Style` Propriedade normal do `SKPaint` objeto de sua configuração padrão de `SKPaintStyle.Fill` para `SKPaintStyle.Stroke` e especificando uma largura de traço. O `PaintSurface` manipulador da página de **texto contornada** mostra como isso é feito:
 
@@ -177,7 +177,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Outro objeto gráfico comum é o bitmap. Esse é um tópico grande abordado em detalhes na seção [**SkiaSharp bitmaps**](../bitmaps/index.md), mas o próximo artigo, [**noções básicas de bitmap no SkiaSharp**](bitmaps.md), fornece uma introdução mais rápida.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -6,12 +6,12 @@ ms.assetid: 852F8AB1-F9E2-4126-9C8A-12500315C599
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: fb96dab2d9979a365964d4993d9c7fc7fee299f5
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: f27a95481bc590814b6031cbdd9fc9606fe0e19f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73016557"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932516"
 ---
 # <a name="multi-process-debugging"></a>Depuração de vários processos
 
@@ -33,28 +33,28 @@ Por padrão, o Visual Studio para Mac exibirá um projeto individual na área **
 
 Para iniciar e depurar vários processos no Visual Studio para Mac, é necessário criar uma _configuração da solução_. Uma configuração da solução descreve quais projetos em uma solução devem ser incluídos quando uma sessão de depuração é iniciada com um clique do botão **Iniciar** ou quando &#8984;&#8617; (**Cmd-Enter**) é pressionado. A captura de tela a seguir é um exemplo de uma solução do Visual Studio para Mac que tem várias configurações da solução:
 
-![](multi-process-debugging-images/mpd01-xs.png "A solution with multiple solution configurations")
+![Uma solução com várias configurações da solução](multi-process-debugging-images/mpd01-xs.png)
 
 ### <a name="parts-of-the-debug-toolbar"></a>Partes da barra de ferramentas de depuração
 
 A barra de ferramentas de depuração foi alterada para permitir que uma configuração da solução seja selecionada por meio de um menu pop-up. Esta captura de tela mostra as partes da barra de ferramentas de depuração:
 
-![](multi-process-debugging-images/mpd02-xs.png "The parts of the debug toolbar")
+![As partes da barra de ferramentas de depuração](multi-process-debugging-images/mpd02-xs.png)
 
 1. **Configuração da Solução** – É possível definir a configuração da solução clicando na configuração da solução na barra de ferramentas de depuração e selecionando a configuração no menu pop-up:
 
-    ![](multi-process-debugging-images/mpd03-xs.png "A sample popup with solution configurations")
+    ![Um pop-up de amostra com configurações da solução](multi-process-debugging-images/mpd03-xs.png)
 
 2. **Destino de Build** – Identifica o destino de build para os projetos. Isso permanece inalterado em relação às versões anteriores do Visual Studio para Mac.
 3. **Destinos de Dispositivo** – Seleciona os dispositivos nos quais a solução será executada. É possível identificar um dispositivo ou emulador separado para cada projeto:
 
-    ![](multi-process-debugging-images/mpd04-xs.png "Popup showing the devices for a project")
+    ![Pop-up mostrando os dispositivos de um projeto](multi-process-debugging-images/mpd04-xs.png)
 
 ### <a name="multiple-debug-pads"></a>Vários painéis de depuração
 
 Quando a configuração de várias soluções for iniciada, alguns dos painéis do Visual Studio para Mac serão exibidos várias vezes, uma para cada processo. Por exemplo, a captura de tela a seguir mostra dois painéis **Saída do Aplicativo** para uma solução que está executando dois projetos:
 
-![](multi-process-debugging-images/mpd05-xs.png "Output Pad for a solution configuration")
+![Painel de Saída para uma configuração da solução](multi-process-debugging-images/mpd05-xs.png)
 
 ### <a name="multiple-processes-and-the-_active-thread_"></a>Vários processos e o _Thread Ativo_
 
@@ -64,7 +64,7 @@ Para resolver esse problema, o Visual Studio para Mac somente exibirá as inform
 
 O **Painel de Threads** exibirá informações de todos os processos e threads que estão sob inspeção na configuração da solução e fornecerá dicas visuais sobre o que é o thread ativo:
 
-![](multi-process-debugging-images/mpd06-xs.png "Thread pad for a solution configuration")
+![Painel de threads para uma configuração da solução](multi-process-debugging-images/mpd06-xs.png)
 
 Os threads são agrupados pelo processo que os está hospedando. O nome do projeto e a ID do thread ativo serão exibidos em negrito e uma seta apontando para a direita será exibida na medianiz ao lado do thread ativo. Na captura de tela anterior, o **thread n° 1** na **ID do processo 48703** (**FirstProject**) é o thread ativo.
 
@@ -88,7 +88,7 @@ Se apenas um dos projetos tiver um ponto de interrupção definido, somente esse
 
 É possível pausar ou retomar um processo clicando com o botão direito do mouse no processo e selecionando **Pausar** ou **Retomar** no menu de contexto:
 
-![](multi-process-debugging-images/mpd08-xs.png "Pause or resume in the Thread pad")
+![Pausar ou retomar no painel de Threads](multi-process-debugging-images/mpd08-xs.png)
 
 A aparência da barra de ferramentas de depuração será alterada dependendo do estado dos projetos que estão sendo depurados. Quando vários projetos estiverem em execução, a barra de ferramentas de depuração exibirá os botões **Pausar** e **Retomar** quando houver pelo menos um projeto em execução e um projeto em pausa:
 
@@ -110,7 +110,7 @@ Para criar uma nova configuração da solução no Xamaring Studio:
 
 1. Abra a caixa de diálogo **Opções da Solução** no Visual Studio para Mac e selecione **Executar > Configurações**:
 
-    ![](multi-process-debugging-images/mpd10-xs.png "Solution Configuration in the Solution Options dialog")
+    ![Configuração da Solução na caixa de diálogo Opções da Solução](multi-process-debugging-images/mpd10-xs.png)
 
 2. Clique no botão **Novo**, insira o nome da nova configuração da solução e clique em **Criar**. A nova configuração da solução será exibida na janela **Configurações**:
 
@@ -118,7 +118,7 @@ Para criar uma nova configuração da solução no Xamaring Studio:
 
 3. Selecione a nova configuração de execução na lista de configurações. A caixa de diálogo **Opções da Solução** exibirá cada projeto na solução. Marque cada projeto que deverá ser iniciado quando uma sessão de depuração for iniciada:
 
-    ![](multi-process-debugging-images/mpd12-xs.png "Selecting the project to start")
+    ![Selecionando o projeto a ser iniciado](multi-process-debugging-images/mpd12-xs.png)
 
 Agora, a configuração da solução **MultipleProjects** será exibida na **Barra de ferramentas de depuração**, permitindo que o desenvolvedor depure os dois projetos simultaneamente.
 
@@ -126,6 +126,6 @@ Agora, a configuração da solução **MultipleProjects** será exibida na **Bar
 
 Este guia discutiu a depuração de vários processos no Visual Studio para Mac. Ele abordou algumas das alterações no IDE para dar suporte à depuração de vários processos e descreveu alguns dos comportamentos associados.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Notas de versão do Xamarin Cycle 9](https://releases.xamarin.com/stable-release-cycle-9/)

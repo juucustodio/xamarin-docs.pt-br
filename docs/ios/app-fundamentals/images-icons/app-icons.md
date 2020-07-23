@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/22/2017
-ms.openlocfilehash: 41272e25570d9346751d7130ee8b52c6056f7f35
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 16ba6357c5ec31c14ecb881630d6a6b920da89c1
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84565220"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929197"
 ---
 # <a name="application-icons-in-xamarinios"></a>Ícones de aplicativo no Xamarin. iOS
 
@@ -30,13 +30,13 @@ Da mesma forma que um aplicativo Xamarin. iOS pode usar ativos de imagem para co
 
 - **Ícone de aplicativo** – todo aplicativo IOS deve definir um ícone de aplicativo. Esse é o ícone que o usuário irá tocar na tela inicial do iOS para iniciar o aplicativo. Além disso, esse ícone é usado por Game Center, se aplicável. Exemplo: 
 
-    [![](app-icons-images/000.png "Application Icon")](app-icons-images/000-full.png#lightbox)
+    [![Ícone do aplicativo](app-icons-images/000.png)](app-icons-images/000-full.png#lightbox)
 - **Ícone de destaque** – sempre que o usuário inserir o nome de um aplicativo em uma pesquisa de destaque, esse ícone será exibido. Exemplo: 
 
-    [![](app-icons-images/000a.png "Spotlight Icon")](app-icons-images/000a-full.png#lightbox)
+    [![Ícone de destaque](app-icons-images/000a.png)](app-icons-images/000a-full.png#lightbox)
 - **Ícone de configurações** – se o usuário inserir o aplicativo de **configurações** em seu dispositivo IOS, esse ícone será exibido no final da lista de **configurações** do aplicativo. Exemplo: 
 
-    [![](app-icons-images/000b.png "Settings Icon")](app-icons-images/000b-full.png#lightbox)
+    [![Ícone de configurações](app-icons-images/000b.png)](app-icons-images/000b-full.png#lightbox)
 
 Os tamanhos e resoluções de ativos de imagem a seguir serão necessários para dar suporte a todos os tipos de ícone exigidos por um aplicativo Xamarin. iOS destinado ao iOS 5 até o iOS 9 (ou superior):
 
@@ -115,15 +115,15 @@ Para usar um catálogo de ativos, siga estas etapas:
 2. Role para baixo até a seção **ícones do iPhone** .
 3. Clique no botão **migrar para o catálogo de ativos** :
 
-    ![](app-icons-images/migrate01.png "Ensure AppIcon is selected")
+    ![Verifique se AppIcon está selecionado](app-icons-images/migrate01.png)
 
 4. No **Gerenciador de soluções**, clique duas vezes no `Assets.xcassets` arquivo para abri-lo para edição: 
 
-    ![](app-icons-images/asset01.png "The Assets.xcassets file in the Solution Explorer")
+    ![O arquivo assets. xcassets no Gerenciador de Soluções](app-icons-images/asset01.png)
 
 5. Selecione `AppIcon` na lista de ativos para exibir `Icon Editor` :
 
-    ![](app-icons-images/asset02.png "The AppIcon editor")
+    ![O editor AppIcon](app-icons-images/asset02.png)
 
 6. Clique no tipo de ícone especificado e selecione um arquivo de imagem para o tipo/tamanho necessário ou arraste-o em uma imagem de uma pasta e solte-o no tamanho desejado.
 7. Clique no botão **abrir** para incluir a imagem no projeto e defini-la no xcasset.
@@ -133,21 +133,21 @@ Para usar um catálogo de ativos, siga estas etapas:
 
 1. Clique duas vezes nas informações * *.  * * arquivo no **Gerenciador de soluções**:
 
-    ![](app-icons-images/icon01w.png "Select Info.plist")
+    ![Selecione info. plist](app-icons-images/icon01w.png)
 
 2. Clique na guia **ativos visuais** e clique no botão **usar catálogo de ativos** em **ícones do aplicativo**: 
 
-    ![](app-icons-images/icon02w.png "Select the Visual Assets tab")
+    ![Selecione a guia ativos visuais](app-icons-images/icon02w.png)
 
     Se não houver nenhum botão, mas sim uma lista suspensa, um catálogo de ativos já foi adicionado a este projeto.
 
 3. No **Gerenciador de soluções**, expanda a pasta **Catálogo de ativos** : 
 
-    ![](app-icons-images/image009.png "Expand the Asset Catalog folder")
+    ![Expandir a pasta do catálogo de ativos](app-icons-images/image009.png)
 
 4. Clique duas vezes no arquivo de **mídia** para abri-lo no editor: 
 
-    ![](app-icons-images/image010.png "Open the Media file in the editor")
+    ![Abra o arquivo de mídia no editor](app-icons-images/image010.png)
 
 5. No **Gerenciador de propriedades** , o desenvolvedor pode selecionar os diferentes tipos e tamanhos de ícones necessários.
 6. Clique no tipo de ícone fornecido e selecione um arquivo de imagem para o tipo/tamanho necessário.
@@ -171,7 +171,7 @@ Para especificar a Arte do iTunes, faça o seguinte:
 1. Clique duas vezes no `Info.plist` arquivo no **Gerenciador de soluções** para abri-lo para edição.
 2. Role até a seção **trabalho artístico do iTunes** do editor: 
 
-    ![](app-icons-images/itunes01.png "Scroll to the iTunes Artwork section of the editor")
+    ![Role até a seção trabalho artístico do iTunes do editor](app-icons-images/itunes01.png)
 3. Para qualquer imagem ausente, clique na miniatura no editor, selecione o arquivo de imagem para a arte do iTunes desejada na caixa de diálogo abrir arquivo e clique no botão **OK** .
 4. Repita essa etapa até que todas as imagens necessárias tenham sido especificadas para o aplicativo.
 
@@ -181,13 +181,13 @@ Para especificar a Arte do iTunes, faça o seguinte:
 
 2. Clique na guia **ativos visuais** e expanda a **arte do iTunes**: 
 
-    ![](app-icons-images/itunes01w.png "Editing iTunes Artwork in Visual Studio")
+    ![Editando a arte do iTunes no Visual Studio](app-icons-images/itunes01w.png)
 3. Para qualquer imagem ausente, clique na miniatura no editor, selecione o arquivo de imagem para a arte do iTunes desejada na caixa de diálogo abrir arquivo e clique no botão **abrir** .
 4. Repita essa etapa até que todas as imagens necessárias tenham sido especificadas para o aplicativo.
 
 -----
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Trabalhando com imagens (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithimages)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)

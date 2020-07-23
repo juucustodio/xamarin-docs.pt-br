@@ -10,24 +10,24 @@ ms.date: 01/12/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b72564ebbb057c8154140c9845961d4c42e93db3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9df0b143bda18e0e56c3f6ea5b19c2bda21dee03
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573307"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929063"
 ---
 # <a name="xamarinforms-pages"></a>Xamarin.FormsPages
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
-_As páginas Xamarin. Forms representam telas de aplicativos móveis de plataforma cruzada._
+_Xamarin.FormsAs páginas representam telas de aplicativos móveis de plataforma cruzada._
 
 Todos os tipos de página descritos abaixo derivam da Xamarin.Forms [`Page`](xref:Xamarin.Forms.Page) classe. Esses elementos visuais ocupam toda a tela ou a maioria delas. Um `Page` objeto representa um `ViewController` no Ios e um `Page` no plataforma universal do Windows. No Android, cada página ocupa a tela como uma `Activity` , mas as Xamarin.Forms páginas *não* são `Activity` objetos.
 
-[![](pages-images/pages-sml.png "Xamarin.Forms Page Types")](pages-images/pages.png#lightbox "Xamarin.Forms Page Types")
+[![Xamarin.FormsTipos de página](pages-images/pages-sml.png)](pages-images/pages.png#lightbox "[! Parar. Tipos de página não LOC (Xamarin. Forms)]")
 
-## <a name="pages"></a>Páginas
+## <a name="pages"></a>Pages (Páginas)
 
 Xamarin.Formso oferece suporte aos seguintes tipos de página:
 
@@ -73,7 +73,7 @@ Xamarin.Formso oferece suporte aos seguintes tipos de página:
 | [`TemplatedPage`](xref:Xamarin.Forms.TemplatedPage)exibe o conteúdo de tela inteira com um modelo de controle e é a classe base para [`ContentPage`](#contentpage) .<br /><br />[Documentação](xref:Xamarin.Forms.TemplatedPage)  /  da API [Guia](~/xamarin-forms/app-fundamentals/templates/control-template.md) | [![Exemplo de TemplatedPage](pages-images/TemplatedPage.png "Exemplo de TemplatedPage")](pages-images/TemplatedPage.png "Exemplo de TemplatedPage") |
 |     |     |
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Xamarin.FormsExemplo de FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 - [Xamarin.FormsAmostras](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)

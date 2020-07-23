@@ -6,12 +6,12 @@ ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 71d5ed3512980086d244acc5a604d7b33a5dd77c
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 87ba471dad102059788695f3fe50633bc1a3de0c
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571344"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930176"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>Estudo de caso de aplicativo de plataforma cruzada: tarefa
 
@@ -42,7 +42,7 @@ Você deve considerar o uso de recursos específicos da plataforma.  A tarefa po
 Comece com um design de alto nível que pode ser implementado nas plataformas de destino. Tome cuidado para observar as restrições da interface do usuário da plataforma específico. Por exemplo, um `TabBarController` no IOS pode exibir mais de cinco botões, enquanto o equivalente Windows Phone pode exibir até quatro.
 Desenhe o fluxo de tela usando a ferramenta de sua escolha (papel funciona).
 
- [![](case-study-tasky-images/taskydesign.png "Draw the screen-flow using the tool of your choice paper works")](case-study-tasky-images/taskydesign.png#lightbox)
+ [![Desenhe o fluxo de tela usando a ferramenta de seu papel de escolha](case-study-tasky-images/taskydesign.png)](case-study-tasky-images/taskydesign.png#lightbox)
 
  <a name="Data_Model"></a>
 
@@ -79,7 +79,7 @@ Depois que o design do aplicativo tiver sido acordado, considere como ele pode s
 - **Código comum** – um projeto comum que contém código reutilizado para armazenar os dados da tarefa; expor uma classe de modelo e uma API para gerenciar o salvamento e o carregamento de dados.
 - **Código específico da plataforma** – projetos específicos da plataforma que implementam uma interface do usuário nativa para cada sistema operacional, utilizando o código comum como o ' back-end '.
 
-[![](case-study-tasky-images/taskypro-architecture.png "Platform-specific projects implement a native UI for each operating system, utilizing the common code as the back end")](case-study-tasky-images/taskypro-architecture.png#lightbox)
+[![Os projetos específicos da plataforma implementam uma interface do usuário nativa para cada sistema operacional, utilizando o código comum como back-end](case-study-tasky-images/taskypro-architecture.png)](case-study-tasky-images/taskypro-architecture.png#lightbox)
 
 Essas duas partes são descritas nas seções a seguir.
 
@@ -93,11 +93,11 @@ Todo o código comum, incluindo a camada de acesso a dados, o código e os contr
 
 O projeto PCL completo é ilustrado abaixo. Todo o código na biblioteca portátil é compatível com cada plataforma de destino. Quando implantado, cada aplicativo nativo fará referência a essa biblioteca.
 
-![](case-study-tasky-images/portable-project.png "When deployed, each native app will reference that library")
+![Quando implantado, cada aplicativo nativo fará referência a essa biblioteca](case-study-tasky-images/portable-project.png)
 
 O diagrama de classe abaixo mostra as classes agrupadas por camada. A `SQLiteConnection` classe é um código clichê do pacote SQLite-net. O restante das classes é o código personalizado para a tarefa. As `TaskItemManager` `TaskItem` classes e representam a API que é exposta aos aplicativos específicos da plataforma.
 
- [![](case-study-tasky-images/classdiagram-core.png "The TaskItemManager and TaskItem classes represent the API that is exposed to the platform-specific applications")](case-study-tasky-images/classdiagram-core.png#lightbox)
+ [![As classes TaskItemmanager e TaskItem representam a API que é exposta aos aplicativos específicos da plataforma](case-study-tasky-images/classdiagram-core.png)](case-study-tasky-images/classdiagram-core.png#lightbox)
 
 O uso de namespaces para separar as camadas ajuda a gerenciar referências entre cada camada. Os projetos específicos da plataforma devem precisar incluir apenas uma `using` instrução para a camada de negócios. A camada de acesso a dados e a camada de dados devem ser encapsuladas pela API que é exposta pelo `TaskItemManager` na camada de negócios.
 
@@ -255,11 +255,11 @@ As seções restantes abordam os detalhes de implementação específicos da pla
 
 Há apenas algumas classes necessárias para implementar o aplicativo de tarefa do iOS usando o projeto PCL comum para armazenar e recuperar dados. O projeto do Xamarin. iOS completo do iOS é mostrado abaixo:
 
- ![](case-study-tasky-images/taskyios-solution.png "iOS project is shown here")
+ ![o projeto do iOS é mostrado aqui](case-study-tasky-images/taskyios-solution.png)
 
 As classes são mostradas neste diagrama, agrupadas em camadas.
 
- [![](case-study-tasky-images/classdiagram-android.png "The classes are shown in this diagram, grouped into layers")](case-study-tasky-images/classdiagram-android.png#lightbox)
+ [![As classes são mostradas neste diagrama, agrupadas em camadas](case-study-tasky-images/classdiagram-android.png)](case-study-tasky-images/classdiagram-android.png#lightbox)
 
  <a name="References"></a>
 
@@ -270,7 +270,7 @@ O aplicativo iOS faz referência às bibliotecas de SDK específicas da platafor
 Ele também deve fazer referência ao `TaskyPortableLibrary` projeto PCL.
 A lista de referências é mostrada aqui:
 
- ![](case-study-tasky-images/taskyios-references.png "The references list is shown here")
+ ![A lista de referências é mostrada aqui](case-study-tasky-images/taskyios-references.png)
 
 A camada de aplicativo e a camada de interface do usuário são implementadas neste projeto usando essas referências.
 
@@ -328,7 +328,7 @@ A camada da interface do usuário consiste nas seguintes classes:
 
 A tela inicial é uma `MonoTouch.Dialog` tela que exibe uma lista de tarefas do banco de dados SQLite. Ele herda de `DialogViewController` e implementa o código para definir o `Root` para conter uma coleção de `TaskItem` objetos para exibição.
 
- [![](case-study-tasky-images/ios-taskylist.png "It inherits from DialogViewController and implements code to set the Root to contain a collection of TaskItem objects for display")](case-study-tasky-images/ios-taskylist.png#lightbox)
+ [![Ele herda de DialogViewController e implementa o código para definir a raiz para conter uma coleção de objetos TaskItem para exibição](case-study-tasky-images/ios-taskylist.png)](case-study-tasky-images/ios-taskylist.png#lightbox)
 
 Os dois métodos principais relacionados à exibição e interação com a lista de tarefas são:
 
@@ -345,7 +345,7 @@ O taskal usa a `MonoTouch.Dialog` API de reflexão para exibir a tela, portanto,
 
 Esta captura de tela mostra uma exibição vazia que demonstra o `Entry` atributo definindo o texto da marca d' água nos campos **Name** e **Notes** :
 
- [![](case-study-tasky-images/ios-taskydetail.png "This screenshot shows an empty screen that demonstrates the Entry attribute setting the watermark text in the Name and Notes fields")](case-study-tasky-images/ios-taskydetail.png#lightbox)
+ [![Esta captura de tela mostra uma exibição vazia que demonstra o atributo de entrada Configurando o texto da marca d' água nos campos nome e anotações](case-study-tasky-images/ios-taskydetail.png)](case-study-tasky-images/ios-taskydetail.png#lightbox)
 
 A funcionalidade da tela de **detalhes da tarefa** (como salvar ou excluir uma tarefa) deve ser implementada na `HomeScreen` classe, pois é onde o `MonoTouch.Dialog.BindingContext` é criado. Os métodos a seguir `HomeScreen` dão suporte à tela de detalhes da tarefa:
 
@@ -359,11 +359,11 @@ A funcionalidade da tela de **detalhes da tarefa** (como salvar ou excluir uma t
 
 O projeto Xamarin. Android completo é mostrado abaixo:
 
- ![](case-study-tasky-images/taskyandroid-solution.png "Android project is pictured here")
+ ![O projeto do Android é mostrado aqui](case-study-tasky-images/taskyandroid-solution.png)
 
 O diagrama de classe, com classes agrupadas por camada:
 
- [![](case-study-tasky-images/classdiagram-android.png "The class diagram, with classes grouped by layer")](case-study-tasky-images/classdiagram-android.png#lightbox)
+ [![O diagrama de classe, com classes agrupadas por camada](case-study-tasky-images/classdiagram-android.png)](case-study-tasky-images/classdiagram-android.png#lightbox)
 
  <a name="References"></a>
 
@@ -373,7 +373,7 @@ O projeto de aplicativo do Android deve fazer referência ao assembly Xamarin. A
 
 Ele também deve fazer referência ao projeto PCL (por exemplo, TaskyPortableLibrary) para acessar os dados comuns e o código da camada de negócios.
 
- ![](case-study-tasky-images/taskyandroid-references.png "TaskyPortableLibrary to access the common data and business layer code")
+ ![TaskyPortableLibrary para acessar os dados comuns e o código da camada de negócios](case-study-tasky-images/taskyandroid-references.png)
 
  <a name="Application_Layer_(AL)"></a>
 
@@ -399,7 +399,7 @@ A camada de interface do usuário do aplicativo Android é uma combinação de c
 
 A tela inicial consiste em uma subclasse de atividade `HomeScreen` e o `HomeScreen.axml` arquivo que define o layout (posição do botão e da lista de tarefas). A tela é parecida com esta:
 
- [![](case-study-tasky-images/android-taskylist.png "The screen looks like this")](case-study-tasky-images/android-taskylist.png#lightbox)
+ [![A tela é parecida com esta](case-study-tasky-images/android-taskylist.png)](case-study-tasky-images/android-taskylist.png#lightbox)
 
 O código da tela inicial define os manipuladores para clicar no botão e clicar em itens na lista, bem como preencher a lista no `OnResume` método (para que ele reflita as alterações feitas na tela de detalhes da tarefa). Os dados são carregados usando a camada de negócios `TaskItemManager` e a `TaskListAdapter` da camada de aplicativo.
 
@@ -409,7 +409,7 @@ O código da tela inicial define os manipuladores para clicar no botão e clicar
 
 A tela de detalhes da tarefa também consiste em uma `Activity` subclasse e um arquivo de layout AXML. O layout determina o local dos controles de entrada e a classe C# define o comportamento para carregar e salvar `TaskItem` objetos.
 
- [![](case-study-tasky-images/android-taskydetail.png "The class defines the behavior to load and save TaskItem objects")](case-study-tasky-images/android-taskydetail.png#lightbox)
+ [![A classe define o comportamento para carregar e salvar objetos TaskItem](case-study-tasky-images/android-taskydetail.png)](case-study-tasky-images/android-taskydetail.png#lightbox)
 
 Todas as referências à biblioteca PCL são por meio da `TaskItemManager` classe.
 
@@ -418,11 +418,11 @@ Todas as referências à biblioteca PCL são por meio da `TaskItemManager` class
 ## <a name="windows-phone-app"></a>Windows Phone aplicativo
 O projeto de Windows Phone completo:
 
- ![](case-study-tasky-images/taskywp7-solution.png "Windows Phone App The complete Windows Phone project")
+ ![Windows Phone aplicativo o projeto Windows Phone completo](case-study-tasky-images/taskywp7-solution.png)
 
 O diagrama a seguir apresenta as classes agrupadas em camadas:
 
- [![](case-study-tasky-images/classdiagram-wp7.png "This diagram presents the classes grouped into layers")](case-study-tasky-images/classdiagram-wp7.png#lightbox)
+ [![Este diagrama apresenta as classes agrupadas em camadas](case-study-tasky-images/classdiagram-wp7.png)](case-study-tasky-images/classdiagram-wp7.png#lightbox)
 
  <a name="References"></a>
 
@@ -432,7 +432,7 @@ O projeto específico da plataforma deve fazer referência às bibliotecas espec
 
 Ele também deve fazer referência ao projeto PCL (por exemplo, `TaskyPortableLibrary`) para utilizar a `TaskItem` classe e o banco de dados.
 
- ![](case-study-tasky-images/taskywp7-references.png "TaskyPortableLibrary to utilize the TaskItem class and database")
+ ![TaskyPortableLibrary utilizar a classe TaskItem e o banco de dados](case-study-tasky-images/taskywp7-references.png)
 
  <a name="Application_Layer_(AL)"></a>
 
@@ -479,7 +479,7 @@ Os aplicativos resultantes têm esta aparência em cada plataforma:
 
 O aplicativo usa o design de interface do usuário padrão iOS, como o botão "Adicionar" posicionado na barra de navegação e usando o ícone de **adição (+)** interno. Ele também usa o `UINavigationController` comportamento de botão "voltar" padrão e dá suporte a "passar o dedo para exclusão" na tabela.
 
- [![](case-study-tasky-images/ios-taskylist.png "Ele também usa o comportamento padrão do botão voltar do UINavigationController e dá suporte a passar o dedo para exclusão na tabela")](case-study-tasky-images/ios-taskylist.png#lightbox) [![](case-study-tasky-images/ios-taskylist.png "Ele também usa o comportamento padrão do botão voltar do UINavigationController e dá suporte a passar o dedo para exclusão na tabela")](case-study-tasky-images/ios-taskylist.png#lightbox)
+ [ ![ Ele também usa o comportamento padrão do botão voltar do UINavigationController e dá suporte ao passar o dedo para exclusão na tabela](case-study-tasky-images/ios-taskylist.png)](case-study-tasky-images/ios-taskylist.png#lightbox) . [ ![ ele também usa o comportamento padrão do botão voltar do UINavigationController e dá suporte a passar o dedo para exclusão na tabela](case-study-tasky-images/ios-taskylist.png)](case-study-tasky-images/ios-taskylist.png#lightbox)
 
  <a name="Android"></a>
 
@@ -487,7 +487,7 @@ O aplicativo usa o design de interface do usuário padrão iOS, como o botão "A
 
 O aplicativo do Android usa controles internos, incluindo o layout interno para linhas que exigem um ' tique ' exibido. O comportamento de retorno de hardware/sistema é suportado além de um botão voltar na tela.
 
- [![](case-study-tasky-images/android-taskylist.png "The hardware/system back behavior is supported in addition to an on-screen back button")](case-study-tasky-images/android-taskylist.png#lightbox)[![](case-study-tasky-images/android-taskylist.png "The hardware/system back behavior is supported in addition to an on-screen back button")](case-study-tasky-images/android-taskylist.png#lightbox)
+ [ ![ O comportamento de retorno de hardware/sistema é suportado além de um botão voltar na tela,](case-study-tasky-images/android-taskylist.png)](case-study-tasky-images/android-taskylist.png#lightbox)[ ![ o comportamento de back-hardware/sistema tem suporte além de um botão voltar na tela](case-study-tasky-images/android-taskylist.png)](case-study-tasky-images/android-taskylist.png#lightbox)
 
  <a name="Windows_Phone"></a>
 
@@ -495,7 +495,7 @@ O aplicativo do Android usa controles internos, incluindo o layout interno para 
 
 O aplicativo Windows Phone usa o layout padrão, preenchendo a barra de aplicativos na parte inferior da tela, em vez de uma barra de navegação na parte superior.
 
- [![](case-study-tasky-images/wp-taskylist.png "O aplicativo Windows Phone usa o layout padrão, preenchendo a barra de aplicativos na parte inferior da tela, em vez de uma barra de navegação na parte superior")](case-study-tasky-images/wp-taskylist.png#lightbox) [![](case-study-tasky-images/wp-taskylist.png "O aplicativo Windows Phone usa o layout padrão, preenchendo a barra de aplicativos na parte inferior da tela, em vez de uma barra de navegação na parte superior")](case-study-tasky-images/wp-taskylist.png#lightbox)
+ [ ![ O aplicativo Windows Phone usa o layout padrão, preenchendo a barra de aplicativos na parte inferior da tela, em vez de uma barra de navegação na parte superior](case-study-tasky-images/wp-taskylist.png)](case-study-tasky-images/wp-taskylist.png#lightbox) [ ![ , o aplicativo Windows Phone usa o layout padrão, preenchendo a barra de aplicativos na parte inferior da tela, em vez de uma barra de navegação na parte superior](case-study-tasky-images/wp-taskylist.png)](case-study-tasky-images/wp-taskylist.png#lightbox)
 
  <a name="Summary"></a>
 
@@ -507,7 +507,7 @@ Ele descreveu o processo usado para criar as camadas do aplicativo e discutiu qu
 
 O código pode ser baixado do [GitHub](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Criando aplicativos de plataforma cruzada (documento principal)](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 - [Aplicativo de exemplo portátil para tarefas (github)](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable)

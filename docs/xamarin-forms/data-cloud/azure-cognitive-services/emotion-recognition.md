@@ -10,16 +10,16 @@ ms.date: 05/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ff384605b35f6406b628da99de500b550da811c9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ac7b90fb3e70fd07fcafe78a68136338469862e0
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136052"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936351"
 ---
 # <a name="perceived-emotion-recognition-using-the-face-api"></a>Reconhecimento de emoções percebido usando o API de Detecção Facial
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 O API de Detecção Facial pode executar a detecção de emoções para detectar raiva, con, aversão, medo, felicidade, neutro, tristeza e surpresa, em uma expressão facial baseada em anotações observadas por codificadores humanos. No entanto, é importante observar que as expressões faciais sozinhas podem não representar necessariamente os Estados internos das pessoas.
 
@@ -178,7 +178,7 @@ emotionResultLabel.Text = faces.FirstOrDefault().FaceAttributes.Emotion.ToRanked
 
 A captura de tela a seguir mostra o resultado do processo de reconhecimento de emoções no aplicativo de exemplo:
 
-![](emotion-recognition-images/emotion-recognition.png "Emotion Recognition")
+![Reconhecimento de emoções](emotion-recognition-images/emotion-recognition.png)
 
 ## <a name="related-links"></a>Links relacionados
 

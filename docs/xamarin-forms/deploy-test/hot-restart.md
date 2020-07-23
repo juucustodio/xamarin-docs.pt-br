@@ -10,12 +10,12 @@ ms.date: 03/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 45b7d0d20c43aa22ebde3a17552f10ceea77a48b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5367d7933e70c59298faacff85c1d5f533bc0776
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139133"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929275"
 ---
 # <a name="xamarin-hot-restart-preview"></a>Xamarin Hot Restart (versão prévia)
 
@@ -44,7 +44,7 @@ O Xamarin Hot Restart permite que você teste rapidamente as alterações em seu
 
 2. Selecione e clique em **Dispositivo Local** na barra de ferramentas para iniciar o assistente de instalação:
 
-    [![](hot-restart-images/toolbar.png "Screenshot of the Visual Studio toolbar with local device set as the debug target.")](hot-restart-images/toolbar.png)
+    [![Captura de tela da barra de ferramentas do Visual Studio com dispositivo local definido como o alvo da depuração.](hot-restart-images/toolbar.png)](hot-restart-images/toolbar.png)
 
 3. Se o iTunes não estiver instalado, clique em **Baixar iTunes** para baixar o instalador. Clique em **Avançar** quando a instalação do iTunes for concluída.
 
@@ -62,7 +62,7 @@ Após a configuração inicial, seu dispositivo conectado aparecerá no menu sus
 
 Você pode fazer edições a seus arquivos de código durante a depuração e pressionar o botão **Reiniciar** na barra de ferramentas de depuração ou usar **Ctrl + Shift + F5** para reiniciar a sessão de depuração com as novas alterações aplicadas:
 
-[![](hot-restart-images/restart.png "Screenshot of the debug toolbar with the restart button highlighted.")](hot-restart-images/toolbar.png)
+[![Captura de tela da barra de ferramentas de depuração com o botão Reiniciar realçado.](hot-restart-images/restart.png)](hot-restart-images/toolbar.png)
 
 Você também pode usar o `HOTRESTART` símbolo de pré-processador para impedir que determinado código seja executado durante a depuração com o Xamarin Hot restart.
 

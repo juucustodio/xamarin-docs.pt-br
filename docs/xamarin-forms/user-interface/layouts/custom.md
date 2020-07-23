@@ -10,18 +10,18 @@ ms.date: 03/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2c1a958bd4cb56096f554acf26756019eeb0693c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b3063a644a48a8796b03b1a6acedbbcbfc7acbf7
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84572228"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934258"
 ---
 # <a name="create-a-custom-layout-in-xamarinforms"></a>Criar um layout personalizado emXamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
-_O Xamarin. Forms define cinco classes de layout – StackLayout, AbsoluteLayout, RelativeLayout, Grid e FlexLayout, e cada uma organiza seus filhos de uma maneira diferente. No entanto, às vezes é necessário organizar o conteúdo da página usando um layout não fornecido pelo Xamarin.Forms . Este artigo explica como escrever uma classe de layout personalizada e demonstra uma classe WrapLayout sensível à orientação que organiza seus filhos horizontalmente na página e, em seguida, encapsula a exibição de filhos subsequentes em linhas adicionais._
+_Xamarin.Formsdefine cinco classes de layout – StackLayout, AbsoluteLayout, RelativeLayout, Grid e FlexLayout, e cada uma organiza seus filhos de forma diferente. No entanto, às vezes é necessário organizar o conteúdo da página usando um layout não fornecido pelo Xamarin.Forms . Este artigo explica como escrever uma classe de layout personalizada e demonstra uma classe WrapLayout sensível à orientação que organiza seus filhos horizontalmente na página e, em seguida, encapsula a exibição de filhos subsequentes em linhas adicionais._
 
 No Xamarin.Forms , todas as classes de layout derivam da [`Layout<T>`](xref:Xamarin.Forms.Layout`1) classe e restringem o tipo genérico para [`View`](xref:Xamarin.Forms.View) e seus tipos derivados. Por sua vez, a `Layout<T>` classe deriva da [`Layout`](xref:Xamarin.Forms.Layout) classe, que fornece o mecanismo de posicionamento e dimensionamento de elementos filho.
 
@@ -40,7 +40,7 @@ A [`VisualElement`](xref:Xamarin.Forms.VisualElement) classe define um [ `Measur
 
 Esse ciclo garante que todos os elementos visuais na página recebam chamadas para `Measure` os `Layout` métodos e. O processo é mostrado no diagrama a seguir:
 
-![](custom-images/layout-cycle.png "Xamarin.Forms Layout Cycle")
+![Xamarin.FormsCiclo de layout](custom-images/layout-cycle.png)
 
 > [!NOTE]
 > Observe que os ciclos de layout também podem ocorrer em um subconjunto da árvore visual se algo mudar para afetar o layout. Isso inclui itens sendo adicionados ou removidos de uma coleção, como em um [`StackLayout`](xref:Xamarin.Forms.StackLayout) , uma alteração na [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) propriedade de um elemento ou uma alteração no tamanho de um elemento.
@@ -60,7 +60,7 @@ Os elementos invalidam a si próprios invocando o [`InvalidateMeasure`](xref:Xam
 
 A [`Layout`](xref:Xamarin.Forms.Layout) classe define um manipulador para o [`MeasureInvalidated`](xref:Xamarin.Forms.VisualElement.MeasureInvalidated) evento em cada filho adicionado à sua `Content` propriedade ou `Children` coleção e desanexa o manipulador quando o filho é removido. Portanto, todos os elementos na árvore visual que têm filhos são alertados sempre que um de seus filhos altera o tamanho. O diagrama a seguir ilustra como uma alteração no tamanho de um elemento na árvore visual pode causar alterações que propagam a árvore:
 
-![](custom-images/invalidation.png "Invalidation in the Visual Tree")
+![Invalidação na árvore visual](custom-images/invalidation.png)
 
 No entanto, a `Layout` classe tenta restringir o impacto de uma alteração no tamanho de um filho no layout de uma página. Se o layout for de tamanho restrito, uma alteração de tamanho filho não afetará nada maior do que o layout pai na árvore visual. No entanto, geralmente uma alteração no tamanho de um layout afeta como o layout organiza seus filhos. Portanto, qualquer alteração no tamanho do layout iniciará um ciclo de layout para o layout e o layout receberá chamadas para seus [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) métodos e [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) .
 
@@ -400,13 +400,13 @@ async Task<ImageList> GetImageListAsync()
 
 Quando a página que contém o `WrapLayout` é exibida, o aplicativo de exemplo acessa de forma assíncrona um arquivo JSON remoto que contém uma lista de fotos, cria um [`Image`](xref:Xamarin.Forms.Image) elemento para cada foto e a adiciona ao `WrapLayout` . Isso resulta na aparência mostrada nas capturas de tela seguir:
 
-![](custom-images/portait-screenshots.png "Sample Application Portrait Screenshots")
+![Capturas de tela retrato do aplicativo de exemplo](custom-images/portait-screenshots.png)
 
 As capturas de tela a seguir mostram o `WrapLayout` depois que ele foi girado para orientação paisagem:
 
-![](custom-images/landscape-ios.png "Sample iOS Application Landscape Screenshot")
-![](custom-images/landscape-android.png "Sample Android Application Landscape Screenshot")
-![](custom-images/landscape-uwp.png "Sample UWP Application Landscape Screenshot")
+![Exemplo de captura de tela do cenário do aplicativo iOS exemplo de captura de tela exemplo de instantâneo de cenário do ](custom-images/landscape-ios.png)
+ ![ ](custom-images/landscape-android.png)
+ ![ aplicativo UWP](custom-images/landscape-uwp.png)
 
 O número de colunas em cada linha depende do tamanho da foto, da largura da tela e do número de pixels por unidade independente de dispositivo. Os [`Image`](xref:Xamarin.Forms.Image) elementos carregam as fotos de forma assíncrona e, portanto, a `WrapLayout` classe receberá chamadas frequentes para seu [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) método, pois cada `Image` elemento recebe um novo tamanho com base na foto carregada.
 

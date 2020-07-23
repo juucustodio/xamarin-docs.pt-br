@@ -10,16 +10,16 @@ ms.date: 02/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6fa03cf5c18e21ce5ca9e7ea907f50c8de6f3e6c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1a3b9db435de49c438f458d1c4d85d3f81bbf749
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573255"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930670"
 ---
 # <a name="layout-options-in-xamarinforms"></a>Opções de layout emXamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
 
 _Cada Xamarin.Forms exibição tem as propriedades horizontaloptions e verticaloptions, do tipo layoutoptions. Este artigo explica o efeito que cada valor de Layoutoptions tem sobre o alinhamento e a expansão de uma exibição._
 
@@ -94,7 +94,7 @@ Content = new StackLayout
 
 O código resulta no layout mostrado nas seguintes capturas de tela:
 
-[![](layout-options-images/alignment.png "Alignment Layout Options")](layout-options-images/alignment-large.png#lightbox "Alignment Layout Options")
+[![Opções de layout de alinhamento](layout-options-images/alignment.png)](layout-options-images/alignment-large.png#lightbox "Opções de layout de alinhamento")
 
 ## <a name="expansion"></a>Expansão
 
@@ -147,7 +147,7 @@ Content = new StackLayout
 
 O código resulta no layout mostrado nas seguintes capturas de tela:
 
-[![](layout-options-images/expansion.png "Expansion Layout Options")](layout-options-images/expansion-large.png#lightbox "Expansion Layout Options")
+[![Opções de layout de expansão](layout-options-images/expansion.png)](layout-options-images/expansion-large.png#lightbox "Opções de layout de expansão")
 
 Cada um [`Label`](xref:Xamarin.Forms.Label) ocupa a mesma quantidade de espaço dentro do [`StackLayout`](xref:Xamarin.Forms.StackLayout) . No entanto, somente o último `Label`, que define sua propriedade [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) como [`FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand) tem um tamanho diferente. Além disso, cada `Label` um é separado por um pequeno vermelho [`BoxView`](xref:Xamarin.Forms.BoxView) , o que permite que o espaço `Label` ocupado seja facilmente exibido.
 
@@ -155,7 +155,7 @@ Cada um [`Label`](xref:Xamarin.Forms.Label) ocupa a mesma quantidade de espaço 
 
 Este artigo explicou o efeito que cada [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) valor de estrutura tem sobre o alinhamento e a expansão de uma exibição, em relação ao seu pai. Os `Start` `Center` campos,, `End` e `Fill` são usados para definir o alinhamento do modo de exibição dentro do layout pai, e os `StartAndExpand` campos,, e `CenterAndExpand` `EndAndExpand` `FillAndExpand` são usados para definir a preferência de alinhamento e para determinar se a exibição ocupará mais espaço, se disponível, em um [`StackLayout`](xref:Xamarin.Forms.StackLayout) .
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Layoutoptions (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
 - [LayoutOptions](xref:Xamarin.Forms.LayoutOptions)

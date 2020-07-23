@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 39d203cf0fb7fff026106d98cfb512aad42f83d2
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: c74f9bd17f8da5cd41a55f8b35a66e21df81a8d2
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128239"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931177"
 ---
 # <a name="navigationpage-bar-separator-on-ios"></a>Separador de barra NavigationPage no iOS
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Essa plataforma do iOS específica oculta a linha separadora e sombra que está na parte inferior da barra de navegação em um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) . Ele é consumido em XAML definindo a [`NavigationPage.HideNavigationBarSeparator`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) propriedade vinculável como `false` :
 
@@ -50,7 +50,7 @@ O `NavigationPage.On<iOS>` método especifica que essa plataforma específica se
 
 O resultado é que o separador de barra de navegação em um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) pode ser ocultado:
 
-![](navigation-bar-separator-images/navigationpage-hideseparatorbar.png "NavigationPage navigation bar hidden")
+![Barra de navegação NavigationPage ocultada](navigation-bar-separator-images/navigationpage-hideseparatorbar.png)
 
 ## <a name="related-links"></a>Links relacionados
 

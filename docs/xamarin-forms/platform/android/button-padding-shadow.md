@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5554341493b52d20c946a4bcfe2d1230e4a02759
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 3efcd5cd7c2d00e9d646c937863fd7e55d17f240
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135558"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929864"
 ---
 # <a name="button-padding-and-shadows-on-android"></a>Preenchimento de botão e sombras no Android
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Essa plataforma do Android controla se Xamarin.Forms os botões usam o preenchimento padrão e os valores de sombra dos botões do Android. Ele é consumido em XAML definindo [`Button.UseDefaultPadding`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultPaddingProperty) as [`Button.UseDefaultShadow`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultShadowProperty) Propriedades anexadas e como `boolean` valores:
 
@@ -49,7 +49,7 @@ O `Button.On<Android>` método especifica que essa plataforma específica será 
 
 O resultado é que os Xamarin.Forms botões podem usar o preenchimento padrão e os valores de sombra dos botões do Android:
 
-![](button-padding-shadow-images/button-padding-and-shadow.png "Default Padding and Shadow Values on Android Buttons")
+![Preenchimento padrão e valores de sombra em botões Android](button-padding-shadow-images/button-padding-and-shadow.png)
 
 Observe que, na captura de tela acima [`Button`](xref:Xamarin.Forms.Button) , cada uma tem definições idênticas, exceto que o lado direito `Button` usa os valores de preenchimento e sombra padrão dos botões do Android.
 

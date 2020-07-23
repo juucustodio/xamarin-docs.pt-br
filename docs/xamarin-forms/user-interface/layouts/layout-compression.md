@@ -10,16 +10,16 @@ ms.date: 12/13/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 40af5aeaa51025dae70113faa6f7ff83edf43c73
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5fa9c7592ecd2cb314ce12d7e303677447a5e104
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138017"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86931164"
 ---
 # <a name="layout-compression"></a>Compactação de Layout
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
 
 _A compactação de layout remove os layouts especificados da árvore visual em uma tentativa de melhorar o desempenho de renderização de página. Este artigo explica como habilitar a compactação de layout e os benefícios que ele pode trazer._
 
@@ -36,7 +36,7 @@ O resultado do processo de layout é uma hierarquia de controles nativos. No ent
 
 Por exemplo, considere o seguinte botão do aplicativo de exemplo para fazer logon no Facebook:
 
-![](layout-compression-images/facebook-button.png "Facebook Button")
+![Botão do Facebook](layout-compression-images/facebook-button.png)
 
 Esse botão é especificado como um controle personalizado com a seguinte hierarquia de exibição XAML:
 
@@ -60,7 +60,7 @@ Esse botão é especificado como um controle personalizado com a seguinte hierar
 
 A hierarquia de exibição aninhada resultante pode ser examinada com [Xamarin Inspector](~/tools/inspector/index.md). No Android, a hierarquia de exibição aninhada contém 17 exibições:
 
-![](layout-compression-images/no-compression.png "View Hierarchy for Facebook Button")
+![Botão Exibir hierarquia para o Facebook](layout-compression-images/no-compression.png)
 
 A compactação de layout, que está disponível para Xamarin.Forms aplicativos nas plataformas Ios e Android, tem como objetivo mesclar o aninhamento da exibição removendo os layouts especificados da árvore visual, o que pode melhorar o desempenho da renderização de página. O benefício de desempenho que é entregue varia dependendo da complexidade de uma página, da versão do sistema operacional que está sendo usada e do dispositivo no qual o aplicativo está sendo executado. No entanto, os maiores ganhos de desempenho serão observados em versões mais antigas.
 
@@ -101,7 +101,7 @@ Para o botão do Facebook, a compactação de layout pode ser habilitada nas tr�
 
 No Android, isso resulta em uma hierarquia de exibição aninhada de 14 exibições:
 
-![](layout-compression-images/layout-compression.png "View Hierarchy for Facebook Button with Layout Compression")
+![Botão Exibir hierarquia para o Facebook com compactação de layout](layout-compression-images/layout-compression.png)
 
 Em comparação com a hierarquia de exibição aninhada original de 17 exibições, isso representa uma redução no número de exibições de 17%. Embora essa redução possa parecer insignificante, a redução da exibição em uma página inteira pode ser mais significativa.
 
@@ -111,7 +111,7 @@ Renderizadores rápidos reduzem os custos de inflação e renderização de Xama
 
 Para o botão do Facebook no aplicativo de exemplo, a combinação de compactação de layout e renderizadores rápidos produz uma hierarquia de exibição aninhada de 8 exibições:
 
-![](layout-compression-images/layout-compression-with-fast-renderers.png "View Hierarchy for Facebook Button with Layout Compression and Fast Renderers")
+![Exibir a hierarquia do botão do Facebook com compactação de layout e renderizadores rápidos](layout-compression-images/layout-compression-with-fast-renderers.png)
 
 Em comparação com a hierarquia de exibição aninhada original de 17 exibições, isso representa uma redução de 52%.
 
@@ -121,7 +121,7 @@ O aplicativo de exemplo contém uma página extraída de um aplicativo real. Sem
 
 A compactação de layout remove os layouts especificados da árvore visual em uma tentativa de melhorar o desempenho de renderização de página. O benefício de desempenho que isso oferece varia dependendo da complexidade de uma página, da versão do sistema operacional que está sendo usado e do dispositivo no qual o aplicativo está sendo executado. No entanto, os maiores ganhos de desempenho serão observados em versões mais antigas.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Criar um layout personalizado](~/xamarin-forms/user-interface/layouts/custom.md)
 - [Renderizadores Rápidos](~/xamarin-forms/internals/fast-renderers.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 9a6e302885570f35bb8323a5504cc9a4d8256ac1
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: b9e32fecab7fc5048de319d35ed1a1e55f32b96c
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572098"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929799"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Controles padrão no Xamarin. Mac
 
@@ -22,7 +22,7 @@ Ao trabalhar com C# e .NET em um aplicativo Xamarin. Mac, você tem acesso aos m
 
 Os controles AppKit são os elementos da interface do usuário que são usados para criar a interface para o aplicativo Xamarin. Mac. Eles consistem em elementos como botões, rótulos, campos de texto, caixas de seleção e controles segmentados e causam ações instantâneas ou resultados visíveis quando um usuário os manipula.
 
-[![](standard-controls-images/intro01.png "The example app main screen")](standard-controls-images/intro01.png#lightbox)
+[![A tela principal do aplicativo de exemplo](standard-controls-images/intro01.png)](standard-controls-images/intro01.png#lightbox)
 
 Neste artigo, abordaremos as noções básicas de como trabalhar com controles AppKit em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos neste artigo.
 
@@ -51,7 +51,7 @@ Para obter mais informações, pleas consulte a seção [sobre controles e exibi
 
 Há um subconjunto de controles AppKit que incluem um estilo de exibição que permite que eles sejam incluídos na área de um quadro da janela. Para obter um exemplo, consulte a barra de ferramentas do aplicativo de email:
 
-[![](standard-controls-images/mailapp.png "A Mac Window frame")](standard-controls-images/mailapp.png#lightbox)
+[![Um quadro de janela Mac](standard-controls-images/mailapp.png)](standard-controls-images/mailapp.png#lightbox)
 
 - **Botão de textura arredondada** -A `NSButton` com um estilo de `NSTexturedRoundedBezelStyle` .
 - **Controle segmentado com arredondado texturizado** -a `NSSegmentedControl` com um estilo de `NSSegmentStyleTexturedRounded` .
@@ -73,15 +73,15 @@ Para obter mais informações, pleas consulte a seção [sobre controles e exibi
 
 Ao criar um novo aplicativo Xamarin. Mac Cocoa, você obtém uma janela padrão em branco, por padrão. Essas janelas são definidas em um `.storyboard` arquivo incluído automaticamente no projeto. Para editar o design do Windows, na **Gerenciador de soluções**, clique duas vezes no `Main.storyboard` arquivo:
 
-[![](standard-controls-images/edit01.png "Selecting the Main Storyboard in the Solution Explorer")](standard-controls-images/edit01.png#lightbox)
+[![Selecionando o storyboard principal no Gerenciador de Soluções](standard-controls-images/edit01.png)](standard-controls-images/edit01.png#lightbox)
 
 Isso abrirá o design da janela na Interface Builder do Xcode:
 
-[![](standard-controls-images/edit02.png "Editing the storyboard in Xcode")](standard-controls-images/edit02.png#lightbox)
+[![Editando o storyboard no Xcode](standard-controls-images/edit02.png)](standard-controls-images/edit02.png#lightbox)
 
 Para criar sua interface do usuário, você arrastará elementos da interface de usuário (controles AppKit) do **Inspetor de biblioteca** para o **Editor de interface** no interface Builder. No exemplo a seguir, um controle de **exibição de divisão vertical** tem sido um medicamento do **Inspetor de biblioteca** e colocado na janela no **Editor de interface**:
 
-[![](standard-controls-images/edit03.png "Selecting a Split View from the Library")](standard-controls-images/edit03.png#lightbox)
+[![Selecionando uma exibição de divisão da biblioteca](standard-controls-images/edit03.png)](standard-controls-images/edit03.png#lightbox)
 
 Para obter mais informações sobre como criar uma interface do usuário no Interface Builder, consulte nossa [introdução ao Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) documentação.
 
@@ -91,21 +91,21 @@ Para obter mais informações sobre como criar uma interface do usuário no Inte
 
 Depois que um controle tiver sido incluído na interface do usuário, use o **Editor de restrição** para definir seu local e tamanho inserindo valores manualmente e controle como o controle é posicionado automaticamente e dimensionado quando a janela ou exibição pai é redimensionada:
 
-[![](standard-controls-images/edit04.png "Setting the constraints")](standard-controls-images/edit04.png#lightbox)
+[![Definindo as restrições](standard-controls-images/edit04.png)](standard-controls-images/edit04.png#lightbox)
 
 Use as **transmissões vermelhas** em torno do exterior da caixa de **redimensionamento** para _fixar_ um controle em um determinado local (x, y). Por exemplo: 
 
-[![](standard-controls-images/edit05.png "Editing a constraint")](standard-controls-images/edit05.png#lightbox)
+[![Editando uma restrição](standard-controls-images/edit05.png)](standard-controls-images/edit05.png#lightbox)
 
 Especifica que o controle selecionado (no editor de interface de **exibição de hierarquia**  &  **Interface Editor**) ficará preso no local superior e direito da janela ou exibição à medida que ele for redimensionado ou movido. 
 
 Outros elementos das propriedades de controle do editor, como altura e largura:
 
-[![](standard-controls-images/edit06.png "Setting the height")](standard-controls-images/edit06.png#lightbox)
+[![Definindo a altura](standard-controls-images/edit06.png)](standard-controls-images/edit06.png#lightbox)
 
 Você também pode controlar o alinhamento dos elementos com restrições usando o **Editor de alinhamento**:
 
-[![](standard-controls-images/edit07.png "The Alignment Editor")](standard-controls-images/edit07.png#lightbox)
+[![O editor de alinhamento](standard-controls-images/edit07.png)](standard-controls-images/edit07.png#lightbox)
 
 > [!IMPORTANT]
 > Ao contrário do iOS, onde (0, 0) é o canto superior esquerdo da tela, no macOS (0, 0) é o canto inferior esquerdo. Isso ocorre porque o macOS usa um sistema de coordenadas matemáticas com os valores numéricos aumentando no valor para cima e à direita. Você precisa levar isso em consideração ao colocar os controles AppKit em uma interface do usuário.
@@ -197,7 +197,7 @@ Em que a `[Register("SourceListView")]` instrução expõe a `SourceListView` cl
 
 Com o código acima em vigor, você pode arrastar um controle AppKit, do tipo base que você está estendendo, para a superfície de design (no exemplo abaixo, uma **lista de origem**), alterne para o Inspetor de **identidade** e defina a **classe personalizada** como o nome que você expôs a Objective-C (exemplo `SourceListView` ):
 
-[![](standard-controls-images/edit10.png "Setting a custom class in Xcode")](standard-controls-images/edit10.png#lightbox)
+[![Configurando uma classe personalizada no Xcode](standard-controls-images/edit10.png)](standard-controls-images/edit10.png#lightbox)
 
 <a name="Exposing_Outlets_and_Actions"></a>
 
@@ -205,15 +205,15 @@ Com o código acima em vigor, você pode arrastar um controle AppKit, do tipo ba
 
 Antes que um controle AppKit possa ser acessado no código C#, ele precisa ser exposto como uma **tomada** ou **ação**. Para fazer isso, selecione o controle fornecido na **hierarquia de interface** ou no **Editor de interface** e alterne para o modo de exibição do **Assistente** (certifique-se de que você tenha o `.h` da sua janela selecionada para edição):
 
-[![](standard-controls-images/edit11.png "Selecting the correct file to edit")](standard-controls-images/edit11.png#lightbox)
+[![Selecionando o arquivo correto a ser editado](standard-controls-images/edit11.png)](standard-controls-images/edit11.png#lightbox)
 
 Controle-arraste do controle AppKit para o arquivo de permissão `.h` para começar a criar uma **tomada** ou **ação**:
 
-[![](standard-controls-images/edit12.png "Dragging to create an Outlet or Action")](standard-controls-images/edit12.png#lightbox)
+[![Arrastando para criar uma tomada ou ação](standard-controls-images/edit12.png)](standard-controls-images/edit12.png#lightbox)
 
 Selecione o tipo de exposição a ser criado e forneça um **nome**para a **tomada** ou **ação** : 
 
-[![](standard-controls-images/edit13.png "Configuring the Outlet or Action")](standard-controls-images/edit13.png#lightbox)
+[![Configurando a tomada ou a ação](standard-controls-images/edit13.png)](standard-controls-images/edit13.png#lightbox)
 
 Para obter mais informações sobre como trabalhar com **saídas** e **ações**, consulte a seção [saídas e ações](~/mac/get-started/hello-mac.md#outlets-and-actions) da nossa [introdução ao Xcode e à documentação Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) .
 
@@ -225,7 +225,7 @@ Quando você voltar para Visual Studio para Mac do Xcode, as alterações feitas
 
 Se você selecionar o `SplitViewController.designer.cs` no **Gerenciador de soluções** poderá ver como sua **tomada** e **ação** foram conectadas em nosso código C#:
 
-[![](standard-controls-images/sync01.png "Synchronizing Changes with Xcode")](standard-controls-images/sync01.png#lightbox)
+[![Sincronizando alterações com o Xcode](standard-controls-images/sync01.png)](standard-controls-images/sync01.png#lightbox)
 
 Observe como a definição no `SplitViewController.designer.cs` arquivo:
 
@@ -269,7 +269,7 @@ Normalmente, você nunca precisará abrir o `SplitViewController.designer.cs` me
 
 O AppKit fornece vários tipos de botão que podem ser usados no design da interface do usuário. Para obter mais informações, consulte a seção de [botões](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsButtons.html#//apple_ref/doc/uid/20000957-CH48-SW1) das [diretrizes de interface humana do os X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)da Apple. 
 
-[![](standard-controls-images/buttons01.png "An example of the different button types")](standard-controls-images/buttons01.png#lightbox)
+[![Um exemplo dos diferentes tipos de botão](standard-controls-images/buttons01.png)](standard-controls-images/buttons01.png#lightbox)
 
 Se um botão tiver sido exposto por meio de uma **tomada**, o código a seguir responderá a ele sendo pressionado:
 
@@ -310,7 +310,7 @@ Para qualquer botão que você tenha adicionado a um design de interface do usu�
 
 Para definir um botão como padrão, selecione-o no Interface Builder do Xcode. Em seguida, no **Inspetor de atributo**, selecione o campo **equivalente de chave** e pressione a tecla de **retorno/inserção** :
 
-[![](standard-controls-images/buttons03.png "Editing the Key Equivalent")](standard-controls-images/buttons03.png#lightbox)
+[![Editando a chave equivalente](standard-controls-images/buttons03.png)](standard-controls-images/buttons03.png#lightbox)
 
 Igualmente, você pode atribuir qualquer sequência de chaves que possa ser usada para ativar o botão usando o teclado em vez do mouse. Por exemplo, pressionando as teclas Command-C na imagem acima.
 
@@ -322,7 +322,7 @@ Quando o aplicativo é executado e a janela com o botão é chave e focada, se o
 
 O AppKit fornece vários tipos de caixas de seleção e grupos de botões de opção que podem ser usados no design da interface do usuário. Para obter mais informações, consulte a seção de [botões](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsButtons.html#//apple_ref/doc/uid/20000957-CH48-SW1) das [diretrizes de interface humana do os X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)da Apple. 
 
-[![](standard-controls-images/buttons02.png "An example of the available checkbox types")](standard-controls-images/buttons02.png#lightbox)
+[![Um exemplo dos tipos de caixa de seleção disponíveis](standard-controls-images/buttons02.png)](standard-controls-images/buttons02.png#lightbox)
 
 Caixas de seleção e botões de opção (expostos via **saídas**) têm um estado (como **ligado** e **desligado**), o estado pode ser marcado ou definido com a `State` propriedade em relação à `NSCellStateValue` enumeração. Por exemplo:
 
@@ -349,11 +349,11 @@ partial void SelectCar (Foundation.NSObject sender) {
 
 Para obter uma coleção de botões de opção para atuar como um grupo e lidar automaticamente com o estado selecionado, crie uma nova **ação** e anexe cada botão no grupo a ela:
 
-![](standard-controls-images/buttons04.png "Creating a new Action")
+![Criando uma nova ação](standard-controls-images/buttons04.png)
 
 Em seguida, atribua um exclusivo `Tag` a cada botão de opção no **Inspetor de atributo**:
 
-![](standard-controls-images/buttons05.png "Editing a radio button tag")
+![Editando uma marca de botão de opção](standard-controls-images/buttons05.png)
 
 Salve as alterações e retorne ao Visual Studio para Mac, adicione o código para manipular a **ação** à qual todos os botões de opção estão anexados:
 
@@ -373,7 +373,7 @@ Você pode usar a `Tag` propriedade para ver qual botão de opção foi selecion
 
 O AppKit fornece vários tipos de controles de menu que podem ser usados no design da interface do usuário. Para obter mais informações, consulte a seção [controles de menu](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlswithMenus.html#//apple_ref/doc/uid/20000957-CH100-SW1) das diretrizes de [interface humana do os X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)da Apple. 
 
-[![](standard-controls-images/menu01.png "Example menu controls")](standard-controls-images/menu01.png#lightbox)
+[![Controles de menu de exemplo](standard-controls-images/menu01.png)](standard-controls-images/menu01.png#lightbox)
 
 <a name="Providing-Menu-Control-Data"></a>
 
@@ -427,7 +427,7 @@ Os métodos a seguir estão disponíveis para ajustar a aparência do controle d
 
 Para tipos suspensos do `NSPopupButtons` , o primeiro item de menu fornece o título para o controle. Por exemplo: 
 
-[![](standard-controls-images/menu02.png "An example menu control")](standard-controls-images/menu02.png#lightbox)
+[![Um controle de menu de exemplo](standard-controls-images/menu02.png)](standard-controls-images/menu02.png#lightbox)
 
 Para alterar o título, expor este item como uma **tomada** e use um código semelhante ao seguinte:
 
@@ -479,7 +479,7 @@ Para obter mais informações sobre como trabalhar com menus e controles de menu
 
 O AppKit fornece vários tipos de controles de seleção que podem ser usados no design da interface do usuário. Para obter mais informações, consulte a seção [controles de seleção](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsSelection.html#//apple_ref/doc/uid/20000957-CH49-SW1) das diretrizes de [interface humana do os X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)da Apple. 
 
-[![](standard-controls-images/select01.png "Example selection controls")](standard-controls-images/select01.png#lightbox)
+[![Controles de seleção de exemplo](standard-controls-images/select01.png)](standard-controls-images/select01.png#lightbox)
 
 Há duas maneiras de controlar quando um controle de seleção tem interação com o usuário, expondo-a como uma **ação**. Por exemplo:
 
@@ -524,7 +524,7 @@ O `NSDatePicker` tem as seguintes propriedades para trabalhar diretamente com da
 
 O AppKit fornece vários tipos de controles de indicador que podem ser usados no design da interface do usuário. Para obter mais informações, consulte a seção [controles de indicadores](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsIndicators.html#//apple_ref/doc/uid/20000957-CH50-SW1) das diretrizes de [interface humana do os X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)da Apple. 
 
-[![](standard-controls-images/level01.png "Example indicator controls")](standard-controls-images/level01.png#lightbox)
+[![Controles de indicadores de exemplo](standard-controls-images/level01.png)](standard-controls-images/level01.png#lightbox)
 
 Há duas maneiras de controlar quando um controle de indicador tem interação do usuário, expondo-o como uma **ação** ou uma **tomada** e anexando um **delegado** ao `Activated` evento. Por exemplo:
 
@@ -555,7 +555,7 @@ Chamar o `StopAnimation` método irá parar a animação.
 
 O AppKit fornece vários tipos de controles de texto que podem ser usados no design da interface do usuário. Para obter mais informações, consulte a seção [controles de texto](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsText.html#//apple_ref/doc/uid/20000957-CH51-SW1) das diretrizes de [interface humana do os X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)da Apple. 
 
-[![](standard-controls-images/text01.png "Example text controls")](standard-controls-images/text01.png#lightbox)
+[![Controles de texto de exemplo](standard-controls-images/text01.png)](standard-controls-images/text01.png#lightbox)
 
 Para campos de texto ( `NSTextField` ), os seguintes eventos podem ser usados para rastrear a interação do usuário:
 
@@ -587,7 +587,7 @@ O código do SourceWriter foi totalmente comentado e, quando disponível, foram 
 
 O AppKit fornece vários tipos de exibições de conteúdo que podem ser usados no design da interface do usuário. Para obter mais informações, consulte a seção [exibições de conteúdo](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsView.html#//apple_ref/doc/uid/20000957-CH52-SW1) das [diretrizes de interface humana do os X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)da Apple.
 
-[![](standard-controls-images/content01.png "An example content view")](standard-controls-images/content01.png#lightbox)
+[![Um exemplo de exibição de conteúdo](standard-controls-images/content01.png)](standard-controls-images/content01.png#lightbox)
 
 <a name="Popovers"></a>
 
@@ -600,16 +600,16 @@ Para criar um popover, faça o seguinte:
 1. Abra o `.storyboard` arquivo da janela à qual você deseja adicionar um popover clicando duas vezes nele no **Gerenciador de soluções**
 2. Arraste um **controlador de exibição** do **Inspetor de biblioteca** para o **Editor de interface**: 
 
-    [![](standard-controls-images/content02.png "Selecting a View Controller from the Library")](standard-controls-images/content02.png#lightbox)
+    [![Selecionando um controlador de exibição da biblioteca](standard-controls-images/content02.png)](standard-controls-images/content02.png#lightbox)
 3. Defina o tamanho e o layout da **exibição personalizada**: 
 
-    [![](standard-controls-images/content04.png "Editing the layout")](standard-controls-images/content04.png#lightbox)
+    [![Editando o layout](standard-controls-images/content04.png)](standard-controls-images/content04.png#lightbox)
 4. Clique no botão de controle e arraste da fonte do Popup para o **controlador de exibição**: 
 
-    [![](standard-controls-images/content05.png "Dragging to create a segue")](standard-controls-images/content05.png#lightbox)
+    [![Arrastando para criar um transição](standard-controls-images/content05.png)](standard-controls-images/content05.png#lightbox)
 5. Selecione **popover** no menu pop-up: 
 
-    [![](standard-controls-images/content06.png "Setting the segue type")](standard-controls-images/content06.png#lightbox)
+    [![Configurando o tipo transição](standard-controls-images/content06.png)](standard-controls-images/content06.png#lightbox)
 6. Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
 <a name="Tab_Views"></a>
@@ -620,11 +620,11 @@ As exibições de guia consistem em uma lista de guias (que é semelhante a um c
 
 Ao trabalhar com uma exibição de guia no Interface Builder do Xcode, use o **Inspetor de atributo** para definir o número de guias:
 
-[![](standard-controls-images/content08.png "Editing the number of tabs")](standard-controls-images/content08.png#lightbox)
+[![Editando o número de guias](standard-controls-images/content08.png)](standard-controls-images/content08.png#lightbox)
 
 Selecione cada guia na **hierarquia de interface** para definir seu **título** e adicionar elementos de interface do usuário ao seu **painel**:
 
-[![](standard-controls-images/content09.png "Editing the tabs in Xcode")](standard-controls-images/content09.png#lightbox)
+[![Editando as guias no Xcode](standard-controls-images/content09.png)](standard-controls-images/content09.png#lightbox)
 
 <a name="Data_Binding_AppKit_Controls"></a>
 
@@ -642,7 +642,7 @@ Para obter mais informações, consulte a seção [vinculação de dados simples
 
 Este artigo fez uma visão detalhada do trabalho com os controles padrão do AppKit, como botões, rótulos, campos de texto, caixas de seleção e controles segmentados em um aplicativo Xamarin. Mac. Ele abordou adicioná-los a um design de interface do usuário na Interface Builder do Xcode, expô-los a código por meio de saídas e ações e trabalhar com controles AppKit no código C#.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [MacControls (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccontrols)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)

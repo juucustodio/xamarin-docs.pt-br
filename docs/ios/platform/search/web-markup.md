@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 3d5db2f060b59fc689bea99141342b0447ac8933
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: cd9e5e3fc604fc6e6993b10424a209aa6c382a10
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031520"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86935051"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Pesquisar com marcação da Web no Xamarin. iOS
 
@@ -20,12 +20,12 @@ Para aplicativos que fornecem acesso ao seu conteúdo por meio de um site (não 
 
 Se seu aplicativo iOS já dá suporte à vinculação profunda móvel e seu site apresentou links profundos para o conteúdo em seu aplicativo, o rastreador da Web _Applebot_ da Apple indexará esse conteúdo e o adicionará automaticamente ao índice de nuvem deles:
 
-[![](web-markup-images/webmarkup01.png "Cloud Index overview")](web-markup-images/webmarkup01.png#lightbox)
+[![Visão geral do índice de nuvem](web-markup-images/webmarkup01.png)](web-markup-images/webmarkup01.png#lightbox)
 
 A Apple fará a superfície desses resultados em pesquisa de destaque e nos resultados da pesquisa do Safari.
 Se o usuário toca em um desses resultados (e eles têm seu aplicativo instalado), eles serão levados ao conteúdo em seu aplicativo:
 
-[![](web-markup-images/webmarkup02.png "Deep linking from a website in search results")](web-markup-images/webmarkup02.png#lightbox)
+[![Vinculação profunda de um site nos resultados da pesquisa](web-markup-images/webmarkup02.png)](web-markup-images/webmarkup02.png#lightbox)
 
 ## <a name="enabling-web-content-indexing"></a>Habilitando a indexação de conteúdo da Web
 
@@ -87,7 +87,7 @@ Para obter mais informações, consulte a documentação de [links de aplicativo
 
 ## <a name="opening-deep-links"></a>Abrindo links profundos
 
-Você precisa adicionar suporte para abrir e exibir links profundos em seu aplicativo Xamarin. iOS. Edite o arquivo **AppDelegate.cs** e substitua o método `OpenURL` para manipular o formato de URL personalizado. Por exemplo:
+Você precisa adicionar suporte para abrir e exibir links profundos em seu aplicativo Xamarin. iOS. Edite o arquivo **AppDelegate.cs** e substitua o `OpenURL` método para manipular o formato de URL personalizado. Por exemplo:
 
 ```csharp
 public override bool OpenUrl (UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
@@ -113,7 +113,7 @@ public override bool OpenUrl (UIApplication application, NSUrl url, string sourc
 }
 ```
 
-No código acima, estamos procurando uma URL contendo `/appname` e passando o valor de `query` (`123` neste exemplo) para um controlador de exibição personalizado em nosso aplicativo para exibir o conteúdo solicitado ao usuário.
+No código acima, estamos procurando uma URL contendo `/appname` e passando o valor de `query` ( `123` neste exemplo) para um controlador de exibição personalizado em nosso aplicativo para exibir o conteúdo solicitado ao usuário.
 
 ## <a name="providing-rich-results-with-structured-data"></a>Fornecendo resultados avançados com dados estruturados
 
@@ -152,15 +152,15 @@ As mesmas informações podem ser representadas no formato JSON-LD do esquema. o
 
 Veja a seguir um exemplo de metadados do seu site fornecendo resultados de pesquisa avançados para o usuário final:
 
-[![](web-markup-images/deeplink01.png "Rich search results via Structured Data Markup")](web-markup-images/deeplink01.png#lightbox)
+[![Resultados de pesquisa avançados por meio de marcação de dados estruturados](web-markup-images/deeplink01.png)](web-markup-images/deeplink01.png#lightbox)
 
 Atualmente, a Apple dá suporte aos seguintes tipos de esquema do schema.org:
 
 - AggregateRating
 - Imageobject
 - InteractionCount
-- Ofereça
-- Organizações
+- Ofertas
+- Organização
 - PriceRange
 - Receita
 - Searchaction
@@ -203,7 +203,7 @@ Por fim, o HTML a seguir adicionaria uma ação para obter instruções do resul
 
 Para obter mais informações, consulte o [site do desenvolvedor de pesquisa de aplicativos](https://developer.apple.com/ios/search/)da Apple.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Amostras do iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 para desenvolvedores](https://developer.apple.com/ios/pre-release/)

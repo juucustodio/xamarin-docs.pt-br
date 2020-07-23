@@ -10,18 +10,18 @@ ms.date: 02/17/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b835847fea39e1c2f968e7b81fb9d22f68ea461c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 04669479bb321da4fee6c45fd0f2c00deb5bbf1a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140095"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86929721"
 ---
 # <a name="device-styles-in-xamarinforms"></a>Estilos de dispositivo emXamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
 
-_O Xamarin. Forms inclui seis estilos dinâmicos, conhecidos como estilos de dispositivo, na classe Device. Styles._
+_Xamarin.Formsinclui seis estilos dinâmicos, conhecidos como estilos de dispositivo, na classe Device. Styles._
 
 Os estilos de *dispositivo* são:
 
@@ -70,7 +70,7 @@ O exemplo de código a seguir demonstra como usar os estilos de *dispositivo* em
 
 Os estilos de dispositivo são associados ao uso da `DynamicResource` extensão de marcação. A natureza dinâmica dos estilos pode ser vista no iOS alterando as configurações de **acessibilidade** para o tamanho do texto. A aparência dos estilos de *dispositivo* é diferente em cada plataforma, conforme mostrado nas capturas de tela a seguir:
 
-![](device-images/device-styles.png "Device Styles on Each Platform")
+![Estilos de dispositivo em cada plataforma](device-images/device-styles.png)
 
 Os estilos de *dispositivo* também podem ser derivados do definindo a [`BaseResourceKey`](xref:Xamarin.Forms.Style.BaseResourceKey) propriedade como o nome da chave para o estilo do dispositivo. No exemplo de código acima, `myBodyStyle` herda de [`BodyStyle`](xref:Xamarin.Forms.Device.Styles.BodyStyle) e define uma cor de texto acentuada. Para obter mais informações sobre herança de estilo dinâmico, consulte [herança de estilo dinâmico](~/xamarin-forms/user-interface/styles/xaml/dynamic.md#dynamic-style-inheritance).
 
@@ -120,16 +120,16 @@ Os estilos de *dispositivo* respeitam as preferências de acessibilidade, portan
 
 As capturas de tela a seguir demonstram os estilos de dispositivo em cada plataforma, com o menor tamanho de fonte acessível:
 
-[![](device-images/minimum-size.png "Accessible Small Device Styles on Each Platform")](device-images/minimum-size-large.png#lightbox "Accessible Small Device Styles on Each Platform")
+[![Pequenos estilos de dispositivo acessíveis em cada plataforma](device-images/minimum-size.png)](device-images/minimum-size-large.png#lightbox "Pequenos estilos de dispositivo acessíveis em cada plataforma")
 
 As capturas de tela a seguir demonstram os estilos de dispositivo em cada plataforma, com o maior tamanho de fonte acessível:
 
-![](device-images/maximum-size.png "Accessible Large Device Styles on Each Platform")
+![Estilos de dispositivo grandes acessíveis em cada plataforma](device-images/maximum-size.png)
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Estilos de texto](~/xamarin-forms/user-interface/text/styles.md)
-- [Extensões de marcação do XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
+- [Extensões de marcação XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Estilos dinâmicos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
 - [Trabalhando com estilos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [Device. Styles](xref:Xamarin.Forms.Device.Styles)

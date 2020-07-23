@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e78e7c3056d4f1e22114819f54c1df261aec70e1
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 665971607d8c67f77ad5172778cddcd97bf79841
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84198112"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86932620"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>Introdução ao desenvolvimento de aplicativos empresariais
 
@@ -37,7 +37,7 @@ Uma solução eficaz para esses desafios é particionar um aplicativo em compone
 - Ele promove a reutilização e uma separação limpa das preocupações entre os recursos horizontais do aplicativo, como autenticação e acesso a dados e os recursos verticais, como a funcionalidade comercial específica do aplicativo. Isso permite que as dependências e as interações entre os componentes do aplicativo sejam gerenciadas mais facilmente.
 - Ele ajuda a manter uma separação de funções permitindo que pessoas diferentes, ou equipes, se concentrem em uma tarefa específica ou uma parte da funcionalidade de acordo com sua experiência. Em particular, ele fornece uma separação mais clara entre a interface do usuário e a lógica de negócios do aplicativo.
 
-No entanto, há muitos problemas que devem ser resolvidos ao particionar um aplicativo em componentes discretos e livremente acoplados. Eles incluem:
+No entanto, há muitos problemas que devem ser resolvidos ao particionar um aplicativo em componentes discretos e livremente acoplados. Elas incluem:
 
 - Decidindo como fornecer uma separação clara de preocupações entre os controles de interface do usuário e sua lógica. Uma das decisões mais importantes ao criar um Xamarin.Forms aplicativo empresarial é colocar a lógica de negócios em arquivos code-behind ou criar uma separação limpa das preocupações entre os controles de interface do usuário e sua lógica, para tornar o aplicativo mais passível de manutenção e de teste. Para obter mais informações, consulte [Model-View-ViewModel](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
 - Determinando se um contêiner de injeção de dependência deve ser usado. Contêineres de injeção de dependência reduzem a dependência entre objetos fornecendo um recurso para construir instâncias de classes com suas dependências injetadas e gerenciar seu tempo de vida com base na configuração do contêiner. Para obter mais informações, consulte [injeção de dependência](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md).
@@ -65,7 +65,7 @@ Este guia inclui um aplicativo de exemplo, eShopOnContainers, que é uma loja on
 
 A Figura 1-1 fornece uma visão geral de alto nível da arquitetura do aplicativo de exemplo.
 
-![](introduction-images/architecture.png "eShopOnContainers high-level architecture")
+![arquitetura de alto nível do eShopOnContainers](introduction-images/architecture.png)
 
 **Figura 1-1**: arquitetura de alto nível do eShopOnContainers
 
@@ -92,7 +92,7 @@ Para obter informações sobre a implementação dos serviços de back-end, cons
 
 Este guia se concentra na criação de aplicativos empresariais de plataforma cruzada usando Xamarin.Forms o e usa o aplicativo móvel eShopOnContainers como um exemplo. A Figura 1-2 mostra as páginas do aplicativo móvel eShopOnContainers que fornecem a funcionalidade descrita anteriormente.
 
-[![](introduction-images/screenshots.png "The eShopOnContainers mobile app")](introduction-images/screenshots-large.png#lightbox "The eShopOnContainers mobile app")
+[![O aplicativo móvel eShopOnContainers](introduction-images/screenshots.png)](introduction-images/screenshots-large.png#lightbox "O aplicativo móvel eShopOnContainers")
 
 **Figura 1-2**: o aplicativo móvel eShopOnContainers
 
@@ -122,7 +122,7 @@ Além disso, os testes de unidade são fornecidos para algumas das classes no ap
 
 A solução de aplicativo móvel eShopOnContainers organiza o código-fonte e outros recursos em projetos. Todos os projetos usam pastas para organizar o código-fonte e outros recursos em categorias. A tabela a seguir descreve os projetos que compõem o aplicativo móvel eShopOnContainers:
 
-|Project|Descrição|
+|Projeto|Descrição|
 |--- |--- |
 |eShopOnContainers. Core|Este projeto é o projeto de PCL (biblioteca de classes portátil) que contém o código compartilhado e a interface do usuário compartilhada.|
 |eShopOnContainers. Droid|Este projeto mantém o código específico do Android e é o ponto de entrada para o aplicativo do Android.|
@@ -167,7 +167,7 @@ As ferramentas e plataformas de desenvolvimento de aplicativo móvel entre plata
 
 Os desenvolvedores de aplicativos empresariais enfrentam vários desafios que podem alterar a arquitetura do aplicativo durante o desenvolvimento. Portanto, é importante criar um aplicativo para que ele possa ser modificado ou estendido ao longo do tempo. A criação de tal adaptabilidade pode ser difícil, mas normalmente envolve o particionamento de um aplicativo em componentes discretos e livremente acoplados que podem ser facilmente integrados em um aplicativo.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Download do eBook (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (exemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

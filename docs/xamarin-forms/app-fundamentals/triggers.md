@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsGatilhos
+title: Xamarin.Forms Gatilhos
 description: Este artigo explica como usar Xamarin.Forms gatilhos para responder a alterações de interface do usuário com XAML. Os gatilhos permitem expressar ações declarativamente em XAML que alteram a aparência dos controles com base em eventos ou alterações de propriedade.
 ms.prod: xamarin
 ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
@@ -10,14 +10,14 @@ ms.date: 04/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a287ff28ab62fcfcc00c88858cf3595ba2fa5118
-ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
+ms.openlocfilehash: 2a71f48fb9911267188e7aa4b4124cd9b7488d31
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853144"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936468"
 ---
-# <a name="xamarinforms-triggers"></a>Xamarin.FormsGatilhos
+# <a name="xamarinforms-triggers"></a>Xamarin.Forms Gatilhos
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 
@@ -257,7 +257,7 @@ O XAML é mostrado abaixo. Observe as seguintes diferenças do primeiro exemplo 
 Essas capturas de tela mostram a diferença entre os dois exemplos de gatilho múltiplo acima. Na parte superior das telas, a entrada de texto em apenas um `Entry` é suficiente para habilitar o botão **Salvar**.
 Na parte inferior das telas, o botão **Logon** permanece inativo até que ambos os campos contenham dados.
 
-![](triggers-images/multi-requireall.png "MultiTrigger Examples")
+![Exemplos de MultiTrigger](triggers-images/multi-requireall.png)
 
 ## <a name="enteractions-and-exitactions"></a>EnterActions e ExitActions
 

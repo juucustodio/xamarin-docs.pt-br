@@ -10,16 +10,16 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 967c38895faded88f7d102317f0d767daac738bd
-ms.sourcegitcommit: 60f475a3d6ca880aff34f1177f76eff0b0f96233
+ms.openlocfilehash: 737cb819cfd762e81536fba03f3ae5b563416a4e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86869829"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930735"
 ---
 # <a name="xamarinforms-dual-screen"></a>Xamarin.Formstela dupla
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![API de pré-lançamento](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
 
 Dispositivos de tela dupla como o Microsoft Surface Duo facilitam novas possibilidades de experiência do usuário para seus aplicativos. Xamarin.Formsinclui `TwoPaneView` `DualScreenInfo` classes e para que você possa desenvolver aplicativos para dispositivos de tela dupla.
 

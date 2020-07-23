@@ -10,16 +10,16 @@ ms.date: 03/08/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 74650eb2c52f1da9d0c539b711784896267ed183
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 7cbeeb9a0eed37ec109b2e71c46e3f04cd08822d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135948"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936442"
 ---
 # <a name="creating-a-xamarinforms-datatemplateselector"></a>Criando um Xamarin.Forms DataTemplateSelector
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
 
 _Um DataTemplateSelector pode ser usado para escolher um DataTemplate em tempo de execução com base no valor de uma propriedade associada a dados. Isso permite que vários DataTemplates sejam aplicados ao mesmo tipo de objeto, para personalizar a aparência de objetos específicos. Este artigo demonstra como criar e consumir um DataTemplateSelector._
 
@@ -94,7 +94,7 @@ Em tempo de execução, o [`ListView`](xref:Xamarin.Forms.ListView) chama o `Per
 
 As capturas de tela a seguir mostram o resultado da [`ListView`](xref:Xamarin.Forms.ListView) aplicação do `PersonDataTemplateSelector` para cada objeto na coleção subjacente:
 
-![](selector-images/data-template-selector.png "ListView with a Data Template Selector")
+![ListView com um Seletor de Modelo de Dados](selector-images/data-template-selector.png)
 
 Qualquer objeto `Person` que tem o valor da propriedade `DateOfBirth` maior que ou igual a 1980 é exibido em verde, com os objetos restantes sendo exibidos em vermelho.
 
@@ -137,7 +137,7 @@ A `PersonDataTemplateSelector` instância define suas `ValidTemplate` `InvalidTe
 
 Este artigo demonstrou como criar e consumir um [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) . Um `DataTemplateSelector` pode ser usado para escolher um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) em tempo de execução com base no valor de uma propriedade associada a dados. Isso permite que várias instâncias de `DataTemplate` sejam aplicadas ao mesmo tipo de objeto, para personalizar a aparência de objetos específicos.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Seletor de Modelo de Dados (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
 - [DataTemplateSelector](xref:Xamarin.Forms.DataTemplateSelector)

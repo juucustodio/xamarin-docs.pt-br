@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016
-ms.openlocfilehash: 3dcd5f17b35b9829831adcf997d8bde97c0572e7
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a7b0f0af887232da52cdca6f6506124fa5e0eef8
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030165"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86930085"
 ---
 # <a name="watchos-project-references-in-xamarin"></a>Referências de projeto watchOS no Xamarin
 
@@ -26,30 +26,30 @@ Exiba as referências clicando duas vezes nos nós de referências para cada pro
 
 - **aplicativo de observação** de referências de **aplicativo do iPhone**
 
-  ![](project-references-images/catalog-reference1.png "iPhone app references Watch App")
+  ![Aplicativo de observação de referências de aplicativo do iPhone](project-references-images/catalog-reference1.png)
 
 - **Inspecionar** referências de aplicativo **inspecionar extensão de aplicativo**
 
-  ![](project-references-images/catalog-reference2.png "iPhone app references Watch App")
+  ![Aplicativo de observação de referências de aplicativo do iPhone](project-references-images/catalog-reference2.png)
 
 - A **extensão do aplicativo de inspeção** não faz referência a nenhum dos outros projetos
 
-  ![](project-references-images/catalog-reference3.png "Watch App Extension does not reference the other projects")
+  ![A extensão do aplicativo de inspeção não faz referência a outros projetos](project-references-images/catalog-reference3.png)
 
 ## <a name="bundle-identifiers"></a>Identificadores de pacote
 
 Você também precisa ter certeza de que seus **identificadores de pacote** estão corretos.
-Todos os três projetos devem ter o *mesmo* prefixo de identificador, com os dois projetos Watch com extensões predefinidas de `watchkitextension` e `watchkitapp`, da seguinte maneira (para o exemplo de **WatchKitCatalog** ):
+Todos os três projetos devem ter o *mesmo* prefixo de identificador, com os dois projetos de inspeção com extensões predefinidas de `watchkitextension` e, da `watchkitapp` seguinte maneira (para o exemplo de **WatchKitCatalog** ):
 
 - Projeto unificado do Xamarin. iOS-`com.xamarin.WatchKitCatalog`
 
 - Projeto de extensão WatchKit-`com.xamarin.WatchKitCatalog.watchkitextension`
 
-- Assistir ao projeto de aplicativo-`com.xamarin.WatchKitCatalog.watchkitapp`
+- Inspecionar projeto de aplicativo-`com.xamarin.WatchKitCatalog.watchkitapp`
 
 Verifique também se essas configurações do **info. plist** estão corretas:
 
-- O `WKCompanionAppBundleIdentifier` do projeto do aplicativo de inspeção corresponde à ID do pacote do aplicativo pai/contêiner (por ex., aquele que é executado no iPhone);
+- O projeto do aplicativo de inspeção `WKCompanionAppBundleIdentifier` corresponde à ID do pacote do aplicativo pai/contêiner (por ex., o que é executado no iPhone);
 
 - A **ID do pacote WKApp** do projeto de extensão do Watch kit corresponde à ID do pacote do projeto do aplicativo de inspeção.
 
@@ -57,11 +57,11 @@ Você pode editar os identificadores clicando duas vezes no arquivo **info. plis
 
 Essa captura de tela é o arquivo info. plist **da extensão de inspeção** , mostrando também o identificador **do aplicativo de inspeção** :
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 ![](project-references-images/infoplist-extension.png "This screenshot is the Watch Extension's Info.plist file")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 ![](project-references-images/infoplist-extension-vs.png "This screenshot is the Watch Extension's Info.plist file")
 
@@ -70,6 +70,6 @@ Essa captura de tela é o arquivo info. plist **da extensão de inspeção** , m
 Essa captura de tela é o arquivo info. plist **do aplicativo Watch** .
 A versão atual do **sistema operacional de inspeção** é 8,2, portanto, o **destino de implantação** para o aplicativo de inspeção deve ser **8,2**. Observe que, se você tiver o Xcode 6,3 instalado, esse valor poderá ser definido como 8,3-você deve alterá-lo 8,2.
 
-![](project-references-images/infoplist-watchapp.png "The watch Info.plist file")
+![O arquivo Watch info. plist](project-references-images/infoplist-watchapp.png)
 
 O destino de implantação para o aplicativo Watch pode ser diferente da extensão Watch e do aplicativo iOS.

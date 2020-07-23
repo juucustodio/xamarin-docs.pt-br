@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a05de34089fdf6ad90740067b88edea0b62f55a7
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4f30b8be762e23f84a90595a56912587cc3aa838
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134648"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934245"
 ---
 # <a name="unit-testing-enterprise-apps"></a>Aplicativos empresariais de teste de unidade
 
@@ -55,7 +55,7 @@ public class OrderDetailViewModel : ViewModelBase
 
 A `OrderDetailViewModel` classe tem uma dependência no `IOrderService` tipo que o contêiner resolve ao criar uma instância de um `OrderDetailViewModel` objeto. No entanto, em vez de criar um `OrderService` objeto para testar unidade na `OrderDetailViewModel` classe, substitua o `OrderService` objeto por uma simulação para fins dos testes. A Figura 10-1 ilustra essa relação.
 
-![](unit-testing-images/unittesting.png "Classes that implement the IOrderService interface")
+![Classes que implementam a interface IOrderService](unit-testing-images/unittesting.png)
 
 **Figura 10-1:** Classes que implementam a interface IOrderService
 
@@ -229,7 +229,7 @@ O comportamento de um objeto em teste pode ser isolado por meio da substituiçã
 
 Os modelos de teste e os modelos de exibição dos aplicativos MVVM são idênticos ao teste de todas as outras classes, e as mesmas ferramentas e técnicas podem ser usadas.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Download do eBook (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (exemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

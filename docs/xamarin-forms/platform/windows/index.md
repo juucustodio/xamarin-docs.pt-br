@@ -10,18 +10,18 @@ ms.date: 01/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 52246ce5d54ba97e91777f598f25c187901f89c4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0cdbd39f0217b0e4d175eb2443250eb3df8dd046
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137768"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936169"
 ---
 # <a name="windows-platform-features"></a>Recursos da plataforma Windows
 
 O desenvolvimento Xamarin.Forms de aplicativos para plataformas Windows requer o Visual Studio. A [página plataformas com suporte](~/get-started/supported-platforms.md) contém mais informações sobre os pré-requisitos.
 
-![](images/allhanselman.png "Xamarin.Forms Applications Running on Windows")
+![Xamarin.FormsAplicativos em execução no Windows](images/allhanselman.png)
 
 ## <a name="platform-specifics"></a>Elementos específicos da plataforma
 
@@ -63,7 +63,7 @@ Vá para **arquivo > novo projeto de >** no Visual Studio e escolha um dos model
 
 Xamarin.FormsAs soluções mais antigas, ou aquelas criadas no MacOS, não terão todos os projetos do Windows listados acima (mas precisam ser adicionadas manualmente). Se a plataforma Windows que você deseja direcionar ainda não estiver em sua solução, visite as [instruções de instalação](installation/index.md) para adicionar o tipo/s de projeto do Windows desejado.
 
-## <a name="samples"></a>Exemplos
+## <a name="samples"></a>Amostras
 
 [Todos os exemplos](https://github.com/xamarin/xamarin-forms-book-preview-2) do livro de Charles Petzold [*criando aplicativos móveis com Xamarin.Forms *](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) os projetos include plataforma universal do Windows (para Windows 10).
 

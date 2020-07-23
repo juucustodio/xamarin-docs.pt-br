@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5ca30481fbc0e5631ff75000c688dd805793e670
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5bab1166ade7a5eeebbb720fa48f6116b4ec95d0
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128035"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933699"
 ---
 # <a name="safe-area-layout-guide-on-ios"></a>Guia de layout de área segura no iOS
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Essa plataforma específica do iOS é usada para garantir que o conteúdo da página seja posicionado em uma área da tela que seja segura para todos os dispositivos que usam o iOS 11 e superior. Especificamente, ele ajudará a garantir que o conteúdo não seja recortado por cantos do dispositivo arredondado, pelo indicador inicial ou pelo invólucro do sensor em um iPhone X. Ele é consumido em XAML definindo a `Page.UseSafeArea` Propriedade anexada como um `boolean` valor:
 
@@ -48,7 +48,7 @@ O `Page.On<iOS>` método especifica que essa plataforma específica será execut
 
 O resultado é que o conteúdo da página pode ser posicionado em uma área da tela que é segura para todos os iPhones:
 
-[![](page-safe-area-images/safe-area-layout.png "Safe Area Layout Guide")](page-safe-area-images/safe-area-layout-large.png#lightbox "Safe Area Layout Guide")
+[![Guia do Layout da Área de Segurança](page-safe-area-images/safe-area-layout.png)](page-safe-area-images/safe-area-layout-large.png#lightbox "Guia do Layout da Área de Segurança")
 
 > [!NOTE]
 > A área segura definida pela Apple é usada no Xamarin.Forms para definir a [`Page.Padding`](xref:Xamarin.Forms.Page.Padding) propriedade e substituirá quaisquer valores anteriores dessa propriedade que foram definidos.

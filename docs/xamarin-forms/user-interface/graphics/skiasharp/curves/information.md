@@ -10,16 +10,16 @@ ms.date: 09/12/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 931b8d0946f1af5e697e581a04c0feefb31ba2d3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4fee695a20cae26537beb30513423492114e5c77
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131918"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936221"
 ---
 # <a name="path-information-and-enumeration"></a>Enumeração e informações de caminho
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Obter informações sobre caminhos e enumerar o conteúdo_
 
@@ -29,7 +29,7 @@ A [`SKPath`](xref:SkiaSharp.SKPath) classe define várias propriedades e método
 
 Às vezes, também é útil obter todas as operações de desenho e os pontos que compõem um caminho. A princípio, esse recurso pode parecer desnecessário: se o programa tiver criado o caminho, o programa já saberá o conteúdo. No entanto, você viu que os caminhos também podem ser criados por [efeitos de caminho](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) e convertendo [cadeias de caracteres de texto em caminhos](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md). Você também pode obter todas as operações de desenho e os pontos que compõem esses caminhos. Uma possibilidade é aplicar uma transformação de algoritmo a todos os pontos, por exemplo, para encapsular texto em um hemisfério:
 
-![](information-images/pathenumerationsample.png "Text wrapped on a hemisphere")
+![Texto encapsulado em um hemisfério](information-images/pathenumerationsample.png)
 
 ## <a name="getting-the-path-length"></a>Obtendo o comprimento do caminho
 
@@ -115,7 +115,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 A `Length` Propriedade do `SKPathMeasure` objeto recém-criado Obtém o comprimento do caminho. O comprimento do caminho é dividido pelo `baseTextWidth` valor (que é a largura do texto com base em um tamanho de texto de 10) e, em seguida, multiplicado pelo tamanho de texto base de 10. O resultado é um novo tamanho de texto para exibir o texto ao longo desse caminho:
 
-[![](information-images/pathlength-small.png "Triple screenshot of the Path Length page")](information-images/pathlength-large.png#lightbox "Triple screenshot of the Path Length page")
+[![Captura de tela tripla da página comprimento do caminho](information-images/pathlength-small.png)](information-images/pathlength-large.png#lightbox "Captura de tela tripla da página comprimento do caminho")
 
 Como a curva de Bézier fica mais longa ou mais curta, você pode ver a alteração do tamanho do texto.
 
@@ -141,7 +141,7 @@ Os membros da [`SKPathMeasureMatrixFlags`](xref:SkiaSharp.SKPathMeasureMatrixFla
 
 A página de **meio-pipe Unicycle** anima uma figura de aderência em um unicycle que parece passar para a frente e para trás ao longo de uma curva Bézier cúbica:
 
-[![](information-images/unicyclehalfpipe-small.png "Triple screenshot of the Unicycle Half-Pipe page")](information-images/unicyclehalfpipe-large.png#lightbox "Triple screenshot of the Unicycle Half-Pipe page")
+[![Captura de tela tripla da página de meio-pipe Unicycle](information-images/unicyclehalfpipe-small.png)](information-images/unicyclehalfpipe-large.png#lightbox "Captura de tela tripla da página de meio-pipe Unicycle")
 
 O `SKPaint` objeto usado para traçar o meio-pipe e o Unicycle é definido como um campo na `UnicycleHalfPipePage` classe. Também definido é o `SKPath` objeto para o Unicycle:
 
@@ -252,7 +252,7 @@ O verbo problemático, no entanto, é `Close` . Este comando desenha uma linha r
 
 Às vezes, é desejável aplicar uma transformação de algoritmo a um caminho para malform-la de alguma maneira:
 
-![](information-images/pathenumerationsample.png "Text wrapped on a hemisphere")
+![Texto encapsulado em um hemisfério](information-images/pathenumerationsample.png)
 
 A maioria dessas letras consiste em linhas retas, embora essas linhas retas aparentemente tenham sido torcidas em curvas. Como isso é possível?
 
@@ -441,7 +441,7 @@ Observe que o método retém o primeiro ponto de cada contorno na variável cham
 
 O exemplo **GlobularText** usa esse método de extensão para, aparentemente, encapsular o texto em um hemisfério em um efeito 3D:
 
-[![](information-images/globulartext-small.png "Triple screenshot of the Globular Text page")](information-images/globulartext-large.png#lightbox "Triple screenshot of the Globular Text page")
+[![Captura de tela tripla da página de texto globular](information-images/globulartext-small.png)](information-images/globulartext-large.png#lightbox "Captura de tela tripla da página de texto globular")
 
 O [`GlobularTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) Construtor de classe executa essa transformação. Ele cria um `SKPaint` objeto para o texto e, em seguida, obtém um `SKPath` objeto do `GetTextPath` método. Esse é o caminho passado para o `CloneWithTransform` método de extensão junto com uma função de transformação:
 
@@ -524,7 +524,7 @@ public class GlobularTextPage : ContentPage
 
 Essa é uma técnica muito versátil. Se a matriz de efeitos de caminho descrito no artigo de [**efeitos de caminho**](effects.md) não abranger muito algo que você sentiu, essa é uma maneira de preencher as lacunas.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

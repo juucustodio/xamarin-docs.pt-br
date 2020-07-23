@@ -10,16 +10,16 @@ ms.date: 11/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 89f0182bfebc4d018eb083904595f0fbb211e3ba
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b13ec7ab079dcf7069b5f4b0dccbb52faf25f927
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573372"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86933790"
 ---
 # <a name="simple-animations-in-xamarinforms"></a>Animações simples emXamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
 
 _A classe ViewExtensions fornece métodos de extensão que podem ser usados para construir animações simples. Este artigo demonstra como criar e cancelar animações usando a classe ViewExtensions._
 
@@ -66,7 +66,7 @@ Esse código anima a [`Image`](xref:Xamarin.Forms.Image) instância girando até
 
 As capturas de tela a seguir mostram a rotação em andamento em cada plataforma:
 
-![](simple-images/rotateto.png "Rotation Animation")
+![Animação de rotação](simple-images/rotateto.png)
 
 > [!NOTE]
 > Além do [ `RotateTo` ] (xref: Xamarin.Forms . ViewExtensions. RotateTo ( Xamarin.Forms . Visualelement, System. Double, System. UInt32, Xamarin.Forms . Facilitando)) o método, também há [ `RotateXTo` ] (xref: Xamarin.Forms . ViewExtensions. RotateXTo ( Xamarin.Forms . Visualelement, System. Double, System. UInt32, Xamarin.Forms . Facilitando)) e [ `RotateYTo` ] (xref: Xamarin.Forms . ViewExtensions. RotateYTo ( Xamarin.Forms . Visualelement, System. Double, System. UInt32, Xamarin.Forms . Facilitando)) métodos que animam as [`RotationX`](xref:Xamarin.Forms.VisualElement.RotationX) [`RotationY`](xref:Xamarin.Forms.VisualElement.RotationY) Propriedades e, respectivamente.
@@ -83,7 +83,7 @@ Esse código anima a [`Image`](xref:Xamarin.Forms.Image) instância girando 360 
 
 As capturas de tela a seguir mostram a rotação relativa em andamento em cada plataforma:
 
-![](simple-images/relrotateto.png "Relative Rotation Animation")
+![Animação de rotação relativa](simple-images/relrotateto.png)
 
 ### <a name="scaling"></a>Scaling
 
@@ -97,7 +97,7 @@ Esse código anima a [`Image`](xref:Xamarin.Forms.Image) instância ajustando ve
 
 As capturas de tela a seguir mostram o dimensionamento em andamento em cada plataforma:
 
-![](simple-images/scaleto.png "Scaling Animation")
+![Animação em escala](simple-images/scaleto.png)
 
 > [!NOTE]
 > Além do [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo*) método, também existem `ScaleXTo` e `ScaleYTo` métodos que animam as [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) Propriedades e, respectivamente.
@@ -126,7 +126,7 @@ await image.RotateTo(360, 2000);
 
 Para girar a [`Image`](xref:Xamarin.Forms.Image) instância em todo o centro do layout, as [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX) [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY) Propriedades e devem ser definidas como valores relativos à largura e à altura do `Image` . Neste exemplo, o centro do `Image` é definido para estar no centro do layout e, portanto, o `AnchorX` valor padrão de 0,5 não requer alteração. No entanto, a `AnchorY` propriedade é redefinida para ser um valor da parte superior do `Image` até o ponto central do layout. Isso garante que o `Image` faça uma rotação completa de 360 graus em volta do ponto central do layout, conforme mostrado nas capturas de tela a seguir:
 
-![](simple-images/rotate-anchors.png "Rotation Animation with Anchors")
+![Animação de rotação com âncoras](simple-images/rotate-anchors.png)
 
 ### <a name="translation"></a>Tradução
 
@@ -140,7 +140,7 @@ Esse código anima a [`Image`](xref:Xamarin.Forms.Image) instância traduzindo-a
 
 As capturas de tela a seguir mostram a tradução em andamento em cada plataforma:
 
-![](simple-images/translateto.png "Translation Animation")
+![Animação de tradução](simple-images/translateto.png)
 
 > [!NOTE]
 > Se um elemento é inicialmente disposto fora da tela e, em seguida, convertido na tela, após a tradução, o layout de entrada do elemento permanece fora da tela e o usuário não pode interagir com ele. Portanto, é recomendável que uma exibição seja disposta em sua posição final e todas as traduções necessárias sejam executadas.
@@ -158,7 +158,7 @@ Esse código anima a [`Image`](xref:Xamarin.Forms.Image) instância esmaecido em
 
 As capturas de tela a seguir mostram o esmaecimento em andamento em cada plataforma:
 
-![](simple-images/fadeto.png "Fading Animation")
+![Animação esmaecida](simple-images/fadeto.png)
 
 ## <a name="compound-animations"></a>Animações compostas
 
@@ -218,7 +218,7 @@ Neste exemplo, a `Task.WhenAll` chamada de método contém três tarefas, cada u
 
 As capturas de tela a seguir mostram as várias rotações em andamento em cada plataforma:
 
-![](simple-images/multiple-rotations.png "Composite Animation")
+![Animação composta](simple-images/multiple-rotations.png)
 
 ## <a name="canceling-animations"></a>Cancelando animações
 
@@ -234,7 +234,7 @@ Isso cancelará imediatamente todas as animações atualmente em execução na [
 
 Este artigo demonstrou a criação e o cancelamento de animações usando a [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) classe. Essa classe fornece métodos de extensão que podem ser usados para construir animações simples que giram, dimensionam, traduzem e esmaecem as [`VisualElement`](xref:Xamarin.Forms.VisualElement) instâncias.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Visão geral do suporte assíncrono](~/cross-platform/platform/async.md)
 - [Animação básica (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)

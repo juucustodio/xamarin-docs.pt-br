@@ -6,12 +6,12 @@ ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 06a3197cfcd3b49538cfa5fa97e40a9f50c7a244
-ms.sourcegitcommit: ea9269b5d9e3d68b61bb428560a10034117ee457
+ms.openlocfilehash: 164c059b60c1b5b2aadb2cb348c6b5407da63928
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84655104"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86934700"
 ---
 # <a name="introduction-to-web-services"></a>Introdução aos serviços Web
 
@@ -190,7 +190,7 @@ Os serviços Web RESTful normalmente usam mensagens JSON para retornar dados ao 
 
 <a name="Using_System.JSON"></a>
 
-### <a name="systemjson"></a>System. JSON
+### <a name="systemjson"></a>System.JSEM
 
 A plataforma Xamarin é fornecida com suporte para JSON pronto para uso. Usando um `JsonObject` , os resultados podem ser recuperados conforme mostrado no exemplo de código a seguir:
 
@@ -293,7 +293,7 @@ A URL do serviço Web pode ser uma fonte remota hospedada ou um recurso do siste
 file:///Users/myUserName/projects/MyProjectName/service.wsdl
 ```
 
-[![](images/add-webreference-dialog.png "The web service URL can either be a hosted remote source or local file system resource accessible via the file path prefix")](images/add-webreference-dialog.png#lightbox)
+[![A URL do serviço Web pode ser uma fonte remota hospedada ou um recurso do sistema de arquivos local acessível por meio do prefixo do caminho do arquivo](images/add-webreference-dialog.png)](images/add-webreference-dialog.png#lightbox)
 
 Isso gera o proxy na pasta de referências de serviço ou Web do projeto. Como um proxy é gerado pelo código, ele não deve ser modificado.
 
@@ -301,7 +301,7 @@ Isso gera o proxy na pasta de referências de serviço ou Web do projeto. Como u
 
 #### <a name="manually-adding-a-proxy-to-a-project"></a>Adicionando manualmente um proxy a um projeto
 
-Se você tiver um proxy existente que foi gerado usando ferramentas compatíveis, essa saída poderá ser consumida quando incluída como parte do seu projeto. Em Visual Studio para Mac, use **Adicionar arquivos...** opção de menu para adicionar o proxy. Além disso, isso requer que *System. Web. Services. dll* seja referenciado explicitamente usando a **adição de referências..** . .
+Se você tiver um proxy existente que foi gerado usando ferramentas compatíveis, essa saída poderá ser consumida quando incluída como parte do seu projeto. Em Visual Studio para Mac, use **Adicionar arquivos...** opção de menu para adicionar o proxy. Além disso, isso requer que *System.Web.Services.dll* seja referenciado explicitamente usando a **adição de referências..** . .
 
 ### <a name="consuming-the-proxy"></a>Consumindo o proxy
 
@@ -352,7 +352,7 @@ Há diferenças entre o ASMX (ASP.NET Web Services) e o WCF, mas é importante e
 
 Um *proxy* deve ser gerado para consumir um serviço WCF, que permite que o aplicativo se conecte ao serviço. O proxy é construído consumindo metadados de serviço que definem os métodos e a configuração de serviço associada. Esses metadados são expostos na forma de um documento WSDL (linguagem de descrição de serviços Web) gerado pelo serviço Web. O proxy pode ser criado usando o Microsoft WCF Web Service Reference Provider no Visual Studio 2017 para adicionar uma referência de serviço para o serviço Web a uma biblioteca .NET Standard.
 
-Uma alternativa para criar o proxy usando o Microsoft WCF Web Service Reference Provider no Visual Studio 2017 é usar a ferramenta de utilitário de metadados ServiceModel (svcutil. exe). Para obter mais informações, consulte [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe).
+Uma alternativa para criar o proxy usando o Microsoft WCF Web Service Reference Provider no Visual Studio 2017 é usar a ferramenta de utilitário de metadados ServiceModel (svcutil.exe). Para obter mais informações, consulte [ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe).
 
 <a name="Calling_a_WCF_Service_with_Client_Credential_Security"></a>
 
@@ -440,8 +440,8 @@ client.ClientCredentials.UserName.Password = @"mrsnuggles";
 
 Para obter mais informações sobre a autenticação básica HTTP, embora no contexto de um serviço Web REST, consulte [Autenticando um serviço Web RESTful](~/xamarin-forms/data-cloud/authentication/rest.md).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Serviços Web no Xamarin. Forms](~/xamarin-forms/data-cloud/index.yml)
-- [Ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
+- [Ferramenta de utilitário de metadados ServiceModel (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
 - [BasicHttpBinding](https://msdn.microsoft.com/library/system.servicemodel.basichttpbinding.aspx)
