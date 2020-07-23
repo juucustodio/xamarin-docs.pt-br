@@ -10,12 +10,12 @@ ms.date: 12/11/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3045db1248aa16529d4e43b9a8afc97377cfd9cb
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9e5aeedb7dd51717a9bb987e90dffdcd9b514da0
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128931"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937937"
 ---
 # <a name="android-platform-features"></a>Recursos da plataforma Android
 
@@ -68,11 +68,11 @@ Para adicionar temas de design de material ao seu Xamarin.Forms projeto Android,
 
 Aqui está o exemplo de **todo** com o padrão `FormsApplicationActivity` :
 
-[![](images/before-appcompat-sml.png "Todo Sample Application Without AppCompat")](images/before-appcompat.png#lightbox "Todo Sample Application Without AppCompat")
+[![Aplicativo de exemplo todo sem AppCompat](images/before-appcompat-sml.png)](images/before-appcompat.png#lightbox "Aplicativo de exemplo todo sem AppCompat")
 
 E esse é o mesmo código depois de atualizar o projeto para usar `FormsAppCompatActivity` (e adicionar as informações de tema adicionais):
 
-[![](images/post-appcompat-sml.png "Todo Sample Application With AppCompat and Theming")](images/post-appcompat.png#lightbox "Todo Sample Application With AppCompat and Theming")
+[![Aplicativo de exemplo todo com AppCompat e temas](images/post-appcompat-sml.png)](images/post-appcompat.png#lightbox "Aplicativo de exemplo todo com AppCompat e temas")
 
 > [!NOTE]
 > Ao usar `FormsAppCompatActivity` o, as [classes base para alguns renderizadores personalizados do Android](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) serão diferentes.

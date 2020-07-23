@@ -10,16 +10,16 @@ ms.date: 02/28/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d714b4c9d598d8cca26ae992abf3f15df703d11b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cd9815c6448efae0bb0af982c8807c47263ae13e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139172"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938197"
 ---
 # <a name="xamarinforms-web-services-introduction"></a>Xamarin.FormsIntrodução aos serviços Web
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
 _Este tópico fornece uma explicação do Xamarin.Forms aplicativo de exemplo que demonstra como se comunicar com diferentes serviços Web. Embora cada serviço Web Use um aplicativo de exemplo separado, eles são funcionalmente semelhantes e compartilham classes comuns._
 
@@ -34,8 +34,8 @@ Em todos os casos, as tarefas são armazenadas em um back-end que é acessado po
 
 Quando o aplicativo é iniciado, é exibida uma página que lista todas as tarefas recuperadas do serviço Web e permite que o usuário crie uma nova tarefa. Clicar em uma tarefa navega o aplicativo para uma segunda página em que a tarefa pode ser editada, salva, excluída e falada. O aplicativo final é mostrado abaixo:
 
-![](introduction-images/app-example-1.png "Todo application - first page")
-![](introduction-images/app-example-2.png "Todo application - second page")
+![Aplicativo todo-página ](introduction-images/app-example-1.png)
+ ![ todo aplicativo por tarefa – segunda página](introduction-images/app-example-2.png)
 
 Cada tópico neste guia fornece um link de download para uma versão *diferente* do aplicativo que demonstra um tipo específico de back-end de serviço Web. Baixe o código de exemplo relevante na página relacionada a cada estilo de serviço Web.
 

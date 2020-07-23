@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: c3355b2696b5c40ee11a289e700239900698dcf1
-ms.sourcegitcommit: 55167ad9db910c5c0eb5a84c0923cb07acd2530e
+ms.openlocfilehash: 65ebefef0f03e2b4abd8c36fc1e0a68812e48218
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/02/2020
-ms.locfileid: "75606704"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939510"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows no Xamarin. Mac
 
 _Este artigo aborda como trabalhar com janelas e painéis em um aplicativo Xamarin. Mac. Ele descreve a criação de janelas e painéis no Xcode e Interface Builder, carregando-os de storyboards e arquivos. xib e trabalhando com eles de forma programática._
 
-Ao trabalhar com C# o e o .net em um aplicativo Xamarin. Mac, você tem acesso às mesmas janelas e painéis que um desenvolvedor trabalhando no *Objective-C* e no *Xcode* . Como o Xamarin. Mac se integra diretamente com o Xcode, você pode usar o _interface Builder_ do Xcode para criar e manter suas janelas e painéis (ou, opcionalmente C# , criá-los diretamente no código).
+Ao trabalhar com C# e .NET em um aplicativo Xamarin. Mac, você tem acesso às mesmas janelas e painéis que um desenvolvedor trabalhando no *Objective-C* e no *Xcode* . Como o Xamarin. Mac se integra diretamente com o Xcode, você pode usar o _interface Builder_ do Xcode para criar e manter suas janelas e painéis (ou, opcionalmente, criá-los diretamente no código C#).
 
 Com base em sua finalidade, um aplicativo Xamarin. Mac pode apresentar uma ou mais janelas na tela para gerenciar e coordenar as informações que ele exibe e trabalha com. As principais funções de uma janela são:
 
@@ -27,13 +27,13 @@ Com base em sua finalidade, um aplicativo Xamarin. Mac pode apresentar uma ou ma
 
 O Windows pode ser usado em um estado sem janela restrita (como um editor de texto que pode ter vários documentos abertos ao mesmo tempo) ou modal (como uma caixa de diálogo de exportação que deve ser ignorada antes que o aplicativo possa continuar).
 
-Os painéis são um tipo especial de janela (uma subclasse da classe base `NSWindow`), que normalmente atendem a uma função auxiliar em um aplicativo, como janelas do utilitário, como inspetores de formato de texto e seletor de cores do sistema.
+Os painéis são um tipo especial de janela (uma subclasse da classe base `NSWindow` ), que normalmente atendem a uma função auxiliar em um aplicativo, como janelas do utilitário, como inspetores de formato de texto e seletor de cores do sistema.
 
-[![editar uma janela no Xcode](window-images/intro01.png)](window-images/intro01.png#lightbox)
+[![Editando uma janela no Xcode](window-images/intro01.png)](window-images/intro01.png#lightbox)
 
 Neste artigo, abordaremos as noções básicas de como trabalhar com janelas e painéis em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos neste artigo.
 
-Talvez você queira dar uma olhada na seção [ C# expondo classes/métodos para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os comandos `Register` e `Export` usados para conectar suas C# classes a objetos Objective-C e elementos de interface do usuário.
+Talvez você queira dar uma olhada na seção [expondo classes/métodos C# para Objective-C](~/mac/internals/how-it-works.md) do documento [interno do Xamarin. Mac](~/mac/internals/how-it-works.md) também, explica os `Register` `Export` comandos e usados para conectar suas classes C# a objetos Objective-C e elementos de interface do usuário.
 
 ## <a name="introduction-to-windows"></a>Introdução ao Windows
 
@@ -64,7 +64,7 @@ Uma janela pode exibir uma barra de título e, quando o título é exibido, gera
 A Apple sugere as seguintes diretrizes:
 
 - Use o nome do aplicativo para o título de uma janela principal, que não seja de documento. 
-- Nomeie uma nova janela de documento `untitled`. Para o primeiro novo documento, não acrescente um número ao título (como `untitled 1`). Se o usuário criar outro documento novo antes de salvar e retítuloar o primeiro, chame essa janela `untitled 2`, `untitled 3`, etc.
+- Nomear uma nova janela de documento `untitled` . Para o primeiro novo documento, não acrescente um número ao título (como `untitled 1` ). Se o usuário criar outro documento novo antes de salvar e retítuloar o primeiro, chame essa janela `untitled 2` , `untitled 3` etc.
 
 Para obter mais informações, consulte a seção [nomenclatura do Windows](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowNaming.html#//apple_ref/doc/uid/20000957-CH35-SW1) dos [temas de design do MacOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)da Apple.
 
@@ -86,7 +86,7 @@ Para obter mais informações, consulte a seção [Windows de tela inteira](http
 
 Um painel é uma janela auxiliar que contém controles e opções que afetam o documento ativo ou a seleção (como o seletor de cores do sistema):
 
-[![um painel de cores](window-images/panel01.png)](window-images/panel01.png#lightbox)
+[![Um painel de cores](window-images/panel01.png)](window-images/panel01.png#lightbox)
 
 Os painéis podem ser _específicos do aplicativo ou de_ _todo_o setor. Os painéis específicos do aplicativo flutuam sobre a parte superior das janelas de documentos do aplicativo e desaparecem quando o aplicativo está em segundo plano. Painéis de todo o nível (como o painel **fontes** ), flutuar sobre todas as janelas abertas, independentemente do aplicativo. 
 
@@ -102,19 +102,19 @@ A Apple sugere as seguintes diretrizes:
 
 A maioria dos aplicativos macOS modernos apresenta controles auxiliares e opções que afetam o documento ativo ou seleção como _inspetores_ que fazem parte da janela principal (como o aplicativo de **páginas** mostrado abaixo), em vez de usar janelas de painel:
 
-[![um inspetor de exemplo](window-images/panel02.png)](window-images/panel02.png#lightbox)
+[![Um inspetor de exemplo](window-images/panel02.png)](window-images/panel02.png#lightbox)
 
 Para obter mais informações, consulte a seção [painéis](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowPanels.html#//apple_ref/doc/uid/20000957-CH42-SW1) dos [temas de design do MacOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/) da Apple e nosso aplicativo de exemplo [MacInspector](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) para obter uma implementação completa de uma **interface de Inspetor** em um aplicativo Xamarin. Mac.
 
 ## <a name="creating-and-maintaining-windows-in-xcode"></a>Criando e mantendo janelas no Xcode
 
-Ao criar um novo aplicativo Xamarin. Mac Cocoa, você obtém uma janela padrão em branco, por padrão. Essas janelas são definidas em um arquivo `.storyboard` incluído automaticamente no projeto. Para editar seu design do Windows, na **Gerenciador de soluções**, clique duas vezes no arquivo `Main.storyboard`:
+Ao criar um novo aplicativo Xamarin. Mac Cocoa, você obtém uma janela padrão em branco, por padrão. Essas janelas são definidas em um `.storyboard` arquivo incluído automaticamente no projeto. Para editar o design do Windows, na **Gerenciador de soluções**, clique duas vezes no `Main.storyboard` arquivo:
 
-[![selecionando o storyboard principal](window-images/edit01.png)](window-images/edit01.png#lightbox)
+[![Selecionando o storyboard principal](window-images/edit01.png)](window-images/edit01.png#lightbox)
 
 Isso abrirá o design da janela na Interface Builder do Xcode:
 
-[![editar a interface do usuário no Xcode](window-images/edit02.png)](window-images/edit02.png#lightbox)
+[![Editando a interface do usuário no Xcode](window-images/edit02.png)](window-images/edit02.png#lightbox)
 
 No **Inspetor de atributo**, há várias propriedades que você pode usar para definir e controlar sua janela:
 
@@ -130,7 +130,7 @@ No **Inspetor de atributo**, há várias propriedades que você pode usar para d
 - **Redimensionar** – a janela tem um controle de redimensionamento.
 - **Botão da barra de ferramentas** – a janela tem um botão de barra de ferramentas de ocultar/mostrar.
 - **Restaurável** -é a posição da janela e as configurações salvas e restauradas automaticamente.
-- **Visível no lançamento** – a janela é mostrada automaticamente quando o arquivo de `.xib` é carregado.
+- **Visível na inicialização** – a janela é mostrada automaticamente quando o `.xib` arquivo é carregado.
 - **Ocultar ao desativar** – a janela é ocultada quando o aplicativo entra no plano de fundo.
 - **Liberar quando fechado** – a janela é limpa da memória quando é fechada.
 - **Sempre exibir dicas** de ferramenta – as dicas de ferramenta são exibidas constantemente.
@@ -146,29 +146,29 @@ Consulte [a introdução](https://developer.apple.com/library/mac/documentation/
 
 Para definir a posição inicial da janela e controlar seu tamanho, alterne para o **Inspetor de tamanho**:
 
-[![o tamanho e o local padrão](window-images/edit07.png)](window-images/edit07.png#lightbox)
+[![O tamanho e o local padrão](window-images/edit07.png)](window-images/edit07.png#lightbox)
 
 A partir daqui, você pode definir o tamanho inicial da janela, dar a ela um tamanho mínimo e máximo, definir o local inicial na tela e controlar as bordas em torno da janela.
 
 ### <a name="setting-a-custom-main-window-controller"></a>Configurando um controlador de janela principal personalizado
 
-Para poder criar saídas e ações para expor elementos da interface do usuário ao C# código, o aplicativo Xamarin. Mac precisará usar um controlador de janela personalizado.
+Para poder criar saídas e ações para expor elementos da interface do usuário para o código C#, o aplicativo Xamarin. Mac precisará usar um controlador de janela personalizado.
 
 Faça o seguinte:
 
 1. Abra o storyboard do aplicativo no Interface Builder do Xcode.
-2. Selecione o `NSWindowController` no Design Surface.
+2. Selecione o `NSWindowController` no design Surface.
 3. Alterne para a exibição do **Inspetor de identidade** e insira `WindowController` como o **nome da classe**: 
 
-    [![definir o nome da classe](window-images/windowcontroller01.png)](window-images/windowcontroller01.png#lightbox)
+    [![Definindo o nome da classe](window-images/windowcontroller01.png)](window-images/windowcontroller01.png#lightbox)
 4. Salve as alterações e retorne ao Visual Studio para Mac para sincronização.
-5. Um arquivo de `WindowController.cs` será adicionado ao seu projeto no **Gerenciador de soluções** no Visual Studio para Mac: 
+5. Um `WindowController.cs` arquivo será adicionado ao seu projeto no **Gerenciador de Soluções** no Visual Studio para Mac: 
 
-    [![selecionando o controlador do Windows](window-images/windowcontroller02.png)](window-images/windowcontroller02.png#lightbox)
+    [![Selecionando o controlador do Windows](window-images/windowcontroller02.png)](window-images/windowcontroller02.png#lightbox)
 6. Reabra o storyboard no Interface Builder do Xcode.
-7. O arquivo de `WindowController.h` estará disponível para uso: 
+7. O `WindowController.h` arquivo estará disponível para uso: 
 
-    [![editar o arquivo WindowController. h](window-images/windowcontroller03.png)](window-images/windowcontroller03.png#lightbox)
+    [![Editando o arquivo WindowController. h](window-images/windowcontroller03.png)](window-images/windowcontroller03.png#lightbox)
 
 ### <a name="adding-ui-elements"></a>Adicionando elementos de interface do usuário
 
@@ -176,21 +176,21 @@ Para definir o conteúdo de uma janela, arraste os controles do **Inspetor de bi
 
 Como exemplo, vamos arrastar uma barra de ferramentas do **Inspetor de biblioteca** para a janela no **Editor de interface**:
 
-[![selecionando uma barra de ferramentas da biblioteca](window-images/edit03.png)](window-images/edit03.png#lightbox)
+[![Selecionando uma barra de ferramentas da biblioteca](window-images/edit03.png)](window-images/edit03.png#lightbox)
 
 Em seguida, arraste em uma **exibição de texto** e dimensione-a para preencher a área sob a barra de ferramentas:
 
-[![adicionar uma exibição de texto](window-images/edit04.png)](window-images/edit04.png#lightbox)
+[![Adicionando uma exibição de texto](window-images/edit04.png)](window-images/edit04.png#lightbox)
 
 Como queremos que a **exibição de texto** seja reduzida e cresça conforme o tamanho da janela é alterado, vamos alternar para o **Editor de restrição** e adicionar as seguintes restrições:
 
-[![restrições de edição](window-images/edit05.png)](window-images/edit05.png#lightbox)
+[![Restrições de edição](window-images/edit05.png)](window-images/edit05.png#lightbox)
 
 Ao clicar nas quatro **transmissões vermelhas** na parte superior do editor e clicar em **Adicionar 4 restrições**, estamos dizendo ao modo de exibição de texto para que as coordenadas X, Y sejam aumentadas ou reduzidas horizontal e verticalmente conforme a janela é redimensionada.
 
-Por fim, exponha a **exibição de texto** ao código usando uma **tomada** (selecionando o arquivo de `ViewController.h`):
+Por fim, exponha a **exibição de texto** ao código usando uma **tomada** (selecionando o `ViewController.h` arquivo):
 
-[![configurar uma tomada](window-images/edit06.png)](window-images/edit06.png#lightbox)
+[![Configurando uma tomada](window-images/edit06.png)](window-images/edit06.png#lightbox)
 
 Salve suas alterações e volte para Visual Studio para Mac para sincronizar com o Xcode.
 
@@ -201,33 +201,33 @@ Para obter mais informações sobre como trabalhar com **saídas** e **ações**
 Para qualquer janela que você criar e trabalhar com em seu aplicativo Xamarin. Mac, o processo é basicamente o mesmo que acabamos de fazer acima:
 
 1. Para novas janelas que não são o padrão adicionado automaticamente ao seu projeto, adicione uma nova definição de janela ao projeto. Isso será discutido em detalhes abaixo.
-1. Clique duas vezes no arquivo `Main.storyboard` para abrir o design da janela para edição no Interface Builder do Xcode.
+1. Clique duas vezes no `Main.storyboard` arquivo para abrir o design da janela para edição no interface Builder do Xcode.
 1. Arraste uma nova janela para o design da interface do usuário e conecte a janela à janela principal usando _continuações_ (para obter mais informações, consulte a seção [continuações](~/mac/platform/storyboards/indepth.md#Segues) da documentação [trabalhando com storyboards](~/mac/platform/storyboards/indepth.md) ).
 1. Defina todas as propriedades de janela necessárias no **Inspetor de atributo** e no Inspetor de **tamanho**.
 1. Arraste os controles necessários para criar sua interface e configurá-los no **Inspetor de atributo**.
 1. Use o **Inspetor de tamanho** para lidar com o redimensionamento dos elementos da interface do usuário.
-1. Expor os elementos da interface do usuário C# da janela para codificar por meio de **saídas** e **ações**.
+1. Expor os elementos da interface do usuário da janela para código C# por meio de **saídas** e **ações**.
 1. Salve suas alterações e volte para Visual Studio para Mac para sincronizar com o Xcode.
 
 Agora que temos uma janela básica criada, veremos os processos típicos que um aplicativo Xamarin. Mac faz ao trabalhar com o Windows. 
 
 ## <a name="displaying-the-default-window"></a>Exibindo a janela padrão
 
-Por padrão, um novo aplicativo Xamarin. Mac exibirá automaticamente a janela definida no arquivo `MainWindow.xib` quando ele for iniciado:
+Por padrão, um novo aplicativo Xamarin. Mac exibirá automaticamente a janela definida no `MainWindow.xib` arquivo quando ele for iniciado:
 
-[![uma janela de exemplo em execução](window-images/display01.png)](window-images/display01.png#lightbox)
+[![Uma janela de exemplo em execução](window-images/display01.png)](window-images/display01.png#lightbox)
 
-Como modificamos o design dessa janela acima, ela agora inclui uma barra de ferramentas padrão e um controle de **exibição de texto** . A seção a seguir no arquivo de `Info.plist` é responsável por exibir esta janela:
+Como modificamos o design dessa janela acima, ela agora inclui uma barra de ferramentas padrão e um controle de **exibição de texto** . A seção a seguir no `Info.plist` arquivo é responsável por exibir esta janela:
 
-[![edição do info. plist](window-images/display00.png)](window-images/display00.png#lightbox)
+[![Editando o info. plist](window-images/display00.png)](window-images/display00.png#lightbox)
 
-A lista suspensa **interface principal** é usada para selecionar o storyboard que será usado como a interface do usuário principal do aplicativo (neste caso `Main.storyboard`).
+A lista suspensa da **interface principal** é usada para selecionar o storyboard que será usado como a interface do usuário do aplicativo principal (nesse caso `Main.storyboard` ).
 
-Um controlador de exibição é adicionado automaticamente ao projeto para controlar as janelas principais que são exibidas (juntamente com sua exibição primária). Ele é definido no arquivo de `ViewController.cs` e anexado ao **proprietário do arquivo** em interface Builder sob o **Inspetor de identidade**:
+Um controlador de exibição é adicionado automaticamente ao projeto para controlar as janelas principais que são exibidas (juntamente com sua exibição primária). Ele é definido no `ViewController.cs` arquivo e anexado ao **proprietário do arquivo** em interface Builder no **Inspetor de identidade**:
 
-[![definir o proprietário do arquivo](window-images/display02.png)](window-images/display02.png#lightbox)
+[![Definindo o proprietário do arquivo](window-images/display02.png)](window-images/display02.png#lightbox)
 
-Para nossa janela, gostaríamos que ele tivesse um título de `untitled` quando ele for aberto pela primeira vez, então vamos substituir o método `ViewWillAppear` no `ViewController.cs` para ter a seguinte aparência:
+Para nossa janela, gostaríamos de ter um título de `untitled` quando ele for aberto pela primeira vez, então vamos substituir o `ViewWillAppear` método no `ViewController.cs` para se parecer com o seguinte:
 
 ```csharp
 public override void ViewWillAppear ()
@@ -240,17 +240,17 @@ public override void ViewWillAppear ()
 ```    
 
 > [!NOTE]
-> A propriedade `Title` da janela é definida no método `ViewWillAppear` em vez do método `ViewDidLoad` porque, embora a exibição possa ser carregada na memória, ela ainda não está totalmente instanciada. Ao acessar a propriedade `Title` no método `ViewDidLoad`, obteremos uma exceção `null`, já que a janela ainda não foi construída e conectada à propriedade.
+> A propriedade da janela `Title` é definida no `ViewWillAppear` método em vez do `ViewDidLoad` método porque, embora a exibição possa ser carregada na memória, ela ainda não está totalmente instanciada. Acessar a `Title` propriedade no método obteremos `ViewDidLoad` uma `null` exceção, já que a janela ainda não foi construída e conectada à propriedade.
 
 ## <a name="programmatically-closing-a-window"></a>Fechando programaticamente uma janela
 
-Pode haver ocasiões em que você deseja fechar programaticamente uma janela em um aplicativo Xamarin. Mac, além de ter o usuário clicado no botão **fechar** da janela ou usando um item de menu. o macOS fornece duas maneiras diferentes de fechar um `NSWindow` de forma programática: `PerformClose` e `Close`.
+Pode haver ocasiões em que você deseja fechar programaticamente uma janela em um aplicativo Xamarin. Mac, além de ter o usuário clicado no botão **fechar** da janela ou usando um item de menu. o macOS fornece duas maneiras diferentes de fechar um `NSWindow` programaticamente: `PerformClose` e `Close` .
 
 ### <a name="performclose"></a>PerformClose
 
-Chamar o método de `PerformClose` de um `NSWindow` simula o usuário clicando no botão **fechar** da janela, destacando momentaneamente o botão e fechando a janela.
+Chamar o `PerformClose` método de um `NSWindow` simula o usuário clicando no botão **Fechar** da janela, destacando momentaneamente o botão e fechando a janela.
 
-Se o aplicativo implementar o evento de `WillClose` do `NSWindow`, ele será gerado antes que a janela seja fechada. Se o evento retornar `false`, a janela não será fechada. Se a janela não tiver um botão **fechar** ou não puder ser fechada por algum motivo, o sistema operacional emitirá o som do alerta.
+Se o aplicativo implementar o `NSWindow` `WillClose` evento, ele será gerado antes que a janela seja fechada. Se o evento retornar `false` , a janela não será fechada. Se a janela não tiver um botão **fechar** ou não puder ser fechada por algum motivo, o sistema operacional emitirá o som do alerta.
 
 Por exemplo:
 
@@ -258,17 +258,17 @@ Por exemplo:
 MyWindow.PerformClose(this);
 ```
 
-Tentaria fechar a instância de `NSWindow` de `MyWindow`. Se tiver êxito, a janela será fechada, caso contrário, o som do alerta será emitido e o permanecerá aberto.
+Tentaria fechar a `MyWindow` `NSWindow` instância. Se tiver êxito, a janela será fechada, caso contrário, o som do alerta será emitido e o permanecerá aberto.
 
 ### <a name="close"></a>Fechar
 
-Chamar o método `Close` de um `NSWindow` não simula o usuário clicando no botão **fechar** da janela, destacando momentaneamente o botão, ele simplesmente fecha a janela.
+Chamar o `Close` método de um não `NSWindow` simula o usuário clicando no botão **Fechar** da janela, destacando momentaneamente o botão, ele simplesmente fecha a janela.
 
-Uma janela não precisa estar visível para ser fechada e uma notificação de `NSWindowWillCloseNotification` será postada no centro de notificações padrão para a janela que está sendo fechada.
+Uma janela não precisa estar visível para ser fechada e uma `NSWindowWillCloseNotification` notificação será postada no centro de notificações padrão para a janela que está sendo fechada.
 
-O método `Close` difere de duas maneiras importantes do método `PerformClose`:
+O `Close` método difere de duas maneiras importantes do `PerformClose` método:
 
-1. Ele não tenta gerar o evento `WillClose`.
+1. Ele não tenta gerar o `WillClose` evento.
 2. Ele não simula o usuário clicando no botão **fechar** , destacando momentaneamente o botão.
 
 Por exemplo:
@@ -277,17 +277,17 @@ Por exemplo:
 MyWindow.Close();
 ```
 
-Seria possível fechar a instância de `NSWindow` de `MyWindow`.
+Seria possível fechar a `MyWindow` `NSWindow` instância.
 
 ## <a name="modified-windows-content"></a>Conteúdo do Windows modificado
 
-No macOS, a Apple forneceu uma maneira de informar ao usuário que o conteúdo de uma janela (`NSWindow`) foi modificado pelo usuário e precisa ser salvo. Se a janela contiver conteúdo modificado, um pequeno ponto preto será exibido no widget de **fechamento** :
+No macOS, a Apple forneceu uma maneira de informar ao usuário que o conteúdo de uma janela ( `NSWindow` ) foi modificado pelo usuário e precisa ser salvo. Se a janela contiver conteúdo modificado, um pequeno ponto preto será exibido no widget de **fechamento** :
 
-[![uma janela com o marcador modificado](window-images/close01.png)](window-images/close01.png#lightbox)
+[![Uma janela com o marcador modificado](window-images/close01.png)](window-images/close01.png#lightbox)
 
 Se o usuário tentar fechar a janela ou sair do aplicativo Mac enquanto houver alterações não salvas no conteúdo da janela, você deverá apresentar uma [caixa de diálogo](~/mac/user-interface/dialog.md) ou uma [planilha modal](~/mac/user-interface/dialog.md) e permitir que o usuário salve suas alterações primeiro:
 
-[![uma planilha de salvamento que está sendo mostrada quando a janela é fechada](window-images/close02.png)](window-images/close02.png#lightbox)
+[![Uma planilha de salvamento que está sendo mostrada quando a janela é fechada](window-images/close02.png)](window-images/close02.png#lightbox)
 
 ### <a name="marking-a-window-as-modified"></a>Marcando uma janela como modificada
 
@@ -307,7 +307,7 @@ Window.DocumentEdited = false;
 
 ### <a name="saving-changes-before-closing-a-window"></a>Salvando alterações antes de fechar uma janela
 
-Para ver o usuário fechando uma janela e permitindo que ele salve o conteúdo modificado antecipadamente, você precisará criar uma subclasse de `NSWindowDelegate` e substituir seu método `WindowShouldClose`. Por exemplo:
+Para ver o usuário fechando uma janela e permitindo que ele salve o conteúdo modificado antecipadamente, você precisará criar uma subclasse de `NSWindowDelegate` e substituir seu `WindowShouldClose` método. Por exemplo:
 
 ```csharp
 using System;
@@ -402,7 +402,7 @@ Window.Delegate = new EditorWindowDelegate(Window);
 
 ### <a name="saving-changes-before-closing-the-app"></a>Salvando alterações antes de fechar o aplicativo
 
-Por fim, seu aplicativo Xamarin. Mac deve verificar se alguma de suas janelas contém conteúdo modificado e permitir que o usuário salve as alterações antes de sair. Para fazer isso, edite o arquivo de `AppDelegate.cs`, substitua o método `ApplicationShouldTerminate` e faça com que ele fique semelhante ao seguinte:
+Por fim, seu aplicativo Xamarin. Mac deve verificar se alguma de suas janelas contém conteúdo modificado e permitir que o usuário salve as alterações antes de sair. Para fazer isso, edite o `AppDelegate.cs` arquivo, substitua o `ApplicationShouldTerminate` método e faça com que ele se pareça com o seguinte:
 
 ```csharp
 public override NSApplicationTerminateReply ApplicationShouldTerminate (NSApplication sender)
@@ -422,11 +422,11 @@ public override NSApplicationTerminateReply ApplicationShouldTerminate (NSApplic
 
 ## <a name="working-with-multiple-windows"></a>Trabalhando com várias janelas
 
-A maioria dos aplicativos Mac baseados em documentos pode editar vários documentos ao mesmo tempo. Por exemplo, um editor de texto pode ter vários arquivos de texto abertos para edição ao mesmo tempo. Por padrão, um novo aplicativo Xamarin. Mac tem um menu **arquivo** com um **novo** item automaticamente conectado à **ação**`newDocument:`.
+A maioria dos aplicativos Mac baseados em documentos pode editar vários documentos ao mesmo tempo. Por exemplo, um editor de texto pode ter vários arquivos de texto abertos para edição ao mesmo tempo. Por padrão, um novo aplicativo Xamarin. Mac tem um menu **arquivo** com um **novo** item automaticamente conectado à `newDocument:` **ação**.
 
 O código a seguir ativará esse novo item e permitirá que o usuário abra várias cópias da janela principal para editar vários documentos ao mesmo tempo.
 
-Edite o arquivo de `AppDelegate.cs` e adicione a seguinte Propriedade computada:
+Edite o `AppDelegate.cs` arquivo e adicione a seguinte Propriedade computada:
 
 ```csharp
 public int UntitledWindowCount { get; set;} =1;
@@ -453,11 +453,11 @@ void NewDocument (NSObject sender) {
 
 Esse código cria uma nova versão do nosso controlador de janela, carrega a nova janela, transforma-a na janela principal e chave e a define como título. Agora, se executarmos nosso aplicativo e selecionarmos **novo** no menu **arquivo** , uma nova janela do editor será aberta e exibida:
 
-[![uma nova janela sem título foi adicionada](window-images/display04.png)](window-images/display04.png#lightbox)
+[![Uma nova janela sem título foi adicionada](window-images/display04.png)](window-images/display04.png#lightbox)
 
 Se abrirmos o menu do **Windows** , você poderá ver que o aplicativo está rastreando e manipulando automaticamente nossas janelas abertas:
 
-[![menu do Windows](window-images/display05.png)](window-images/display05.png#lightbox)
+[![O menu do Windows](window-images/display05.png)](window-images/display05.png#lightbox)
 
 Para obter mais informações sobre como trabalhar com menus em um aplicativo Xamarin. Mac, consulte [a documentação trabalhando com menus](~/mac/user-interface/menu.md) .
 
@@ -469,13 +469,13 @@ Em um aplicativo Xamarin. Mac que pode abrir várias janelas (documentos), há o
 var window = NSApplication.SharedApplication.KeyWindow;
 ```
 
-Ele pode ser chamado em qualquer classe ou método que precise acessar a janela de chave atual. Se nenhuma janela estiver aberta no momento, ela retornará `null`.
+Ele pode ser chamado em qualquer classe ou método que precise acessar a janela de chave atual. Se nenhuma janela estiver aberta no momento, ela retornará `null` .
 
 ### <a name="accessing-all-app-windows"></a>Acessando todas as janelas de aplicativo
 
 Pode haver ocasiões em que você precisa acessar todas as janelas que seu aplicativo Xamarin. Mac abriu atualmente. Por exemplo, para ver se um arquivo que o usuário deseja abrir já está aberto em uma janela de saída.
 
-O `NSApplication.SharedApplication` mantém uma propriedade `Windows` que contém uma matriz de todas as janelas abertas em seu aplicativo. Você pode iterar nessa matriz para acessar todas as janelas atuais do aplicativo. Por exemplo:
+O `NSApplication.SharedApplication` mantém uma `Windows` propriedade que contém uma matriz de todas as janelas abertas em seu aplicativo. Você pode iterar nessa matriz para acessar todas as janelas atuais do aplicativo. Por exemplo:
 
 ```csharp
 // Is the file already open?
@@ -489,11 +489,11 @@ for(int n=0; n<NSApplication.SharedApplication.Windows.Length; ++n) {
 }
 ```
 
-No código de exemplo, estamos convertendo cada janela retornada para a classe de `ViewController` personalizada em nosso aplicativo e o teste do valor de uma propriedade personalizada `Path` em relação ao caminho de um arquivo que o usuário deseja abrir. Se o arquivo já estiver aberto, estamos trazendo essa janela para a frente.
+No código de exemplo, estamos convertendo cada janela retornada para a `ViewController` classe personalizada em nosso aplicativo e testando o valor de uma `Path` propriedade personalizada em relação ao caminho de um arquivo que o usuário deseja abrir. Se o arquivo já estiver aberto, estamos trazendo essa janela para a frente.
 
 ## <a name="adjusting-the-window-size-in-code"></a>Ajustando o tamanho da janela no código
 
-Há ocasiões em que o aplicativo precisa redimensionar uma janela no código. Para redimensionar e reposicionar uma janela, você ajusta sua propriedade `Frame`. Ao ajustar o tamanho de uma janela, normalmente você também precisa ajustar sua origem, para manter a janela no mesmo local devido ao sistema de coordenadas do macOS.
+Há ocasiões em que o aplicativo precisa redimensionar uma janela no código. Para redimensionar e reposicionar uma janela, você ajusta sua `Frame` propriedade. Ao ajustar o tamanho de uma janela, normalmente você também precisa ajustar sua origem, para manter a janela no mesmo local devido ao sistema de coordenadas do macOS.
 
 Ao contrário do iOS, no qual o canto superior esquerdo representa (0, 0), o macOS usa um sistema de coordenadas matemáticos onde o canto inferior esquerdo da tela representa (0, 0). No iOS, as coordenadas aumentam à medida que você avança para a direita. No macOS, as coordenadas aumentam em valor para a direita. 
 
@@ -519,9 +519,9 @@ Pode haver ocasiões em que você precisa monitorar as alterações no tamanho d
 
 Para monitorar alterações de tamanho, primeiro verifique se você atribuiu uma classe personalizada para o controlador de janela no Interface Builder do Xcode. Por exemplo, `MasterWindowController` no seguinte:
 
-[![](window-images/resize01.png "The Identity Inspector")](window-images/resize01.png#lightbox)
+[![O Inspetor de identidade](window-images/resize01.png)](window-images/resize01.png#lightbox)
 
-Em seguida, edite a classe personalizada do controlador de janela e monitore o evento `DidResize` na janela do controlador para ser notificado de alterações de tamanho ao vivo. Por exemplo:
+Em seguida, edite a classe personalizada do controlador de janela e monitore o `DidResize` evento na janela do controlador para ser notificado de alterações de tamanho ao vivo. Por exemplo:
 
 ```csharp
 public override void WindowDidLoad ()
@@ -534,7 +534,7 @@ public override void WindowDidLoad ()
 }
 ```
 
-Opcionalmente, você pode usar o evento `DidEndLiveResize` para ser notificado somente depois que o usuário terminar de alterar o tamanho da janela. Por exemplo:
+Opcionalmente, você pode usar o `DidEndLiveResize` evento para ser notificado somente depois que o usuário terminar de alterar o tamanho da janela. Por exemplo:
 
 ```csharp
 public override void WindowDidLoad ()
@@ -550,9 +550,9 @@ public override void WindowDidLoad ()
 
 ## <a name="setting-a-windows-title-and-represented-file"></a>Definindo o título de uma janela e um arquivo representado
 
-Ao trabalhar com janelas que representam documentos, `NSWindow` tem uma propriedade `DocumentEdited` que, se definida como `true`, exibe um ponto pequeno no botão fechar para dar ao usuário uma indicação de que o arquivo foi modificado e deve ser salvo antes de fechar.
+Ao trabalhar com janelas que representam documentos, `NSWindow` o tem uma `DocumentEdited` propriedade que, se definida para `true` exibir um pequeno ponto no botão fechar, para dar ao usuário uma indicação de que o arquivo foi modificado e deve ser salvo antes de fechar.
 
-Vamos editar nosso arquivo de `ViewController.cs` e fazer as seguintes alterações:
+Vamos editar nosso `ViewController.cs` arquivo e fazer as seguintes alterações:
 
 ```csharp
 public bool DocumentEdited {
@@ -599,19 +599,19 @@ public override void AwakeFromNib ()
 }
 ```
 
-Também estamos monitorando o evento `WillClose` na janela e verificando o estado da propriedade `DocumentEdited`. Se for `true` precisamos dar ao usuário a capacidade de salvar as alterações no arquivo. Se executarmos nosso aplicativo e inserirmos algum texto, o ponto será exibido:
+Também estamos monitorando o `WillClose` evento na janela e verificando o estado da `DocumentEdited` propriedade. Se for `true` necessário dar ao usuário a capacidade de salvar as alterações no arquivo. Se executarmos nosso aplicativo e inserirmos algum texto, o ponto será exibido:
 
-[![](window-images/file01.png "A changed window")](window-images/file01.png#lightbox)
+[![Uma janela alterada](window-images/file01.png)](window-images/file01.png#lightbox)
 
 Se você tentar fechar a janela, receberá um alerta:
 
-[![](window-images/file02.png "Displaying a save dialog")](window-images/file02.png#lightbox)
+[![Exibindo uma caixa de diálogo salvar](window-images/file02.png)](window-images/file02.png#lightbox)
 
-Se você estiver carregando um documento de um arquivo, defina o título da janela como o nome do arquivo usando o método `window.SetTitleWithRepresentedFilename (Path.GetFileName(path));` (dado que `path` é uma cadeia de caracteres que representa o arquivo que está sendo aberto). Além disso, você pode definir a URL do arquivo usando o método `window.RepresentedUrl = url;`.
+Se você estiver carregando um documento de um arquivo, defina o título da janela como o nome do arquivo usando o `window.SetTitleWithRepresentedFilename (Path.GetFileName(path));` método (dado que `path` é uma cadeia de caracteres que representa o arquivo que está sendo aberto). Além disso, você pode definir a URL do arquivo usando o `window.RepresentedUrl = url;` método.
 
 Se a URL estiver apontando para um tipo de arquivo conhecido pelo sistema operacional, seu ícone será exibido na barra de título. Se o usuário clicar com o botão direito do mouse no ícone, o caminho para o arquivo será mostrado.
 
-Edite o arquivo de `AppDelegate.cs` e adicione o seguinte método:
+Edite o `AppDelegate.cs` arquivo e adicione o seguinte método:
 
 ```csharp
 [Export ("openDocument:")]
@@ -648,11 +648,11 @@ void OpenDialog (NSObject sender)
 
 Agora, se executarmos nosso aplicativo, selecione **abrir...** no menu **arquivo** , selecione um arquivo de texto na caixa de diálogo **abrir** e abra-o:
 
-[![uma caixa de diálogo aberta](window-images/file03.png)](window-images/file03.png#lightbox)
+[![Uma caixa de diálogo aberta](window-images/file03.png)](window-images/file03.png#lightbox)
 
 O arquivo será exibido e o título será definido com o ícone do arquivo:
 
-[![o conteúdo de um arquivo carregado](window-images/file04.png)](window-images/file04.png#lightbox)
+[![O conteúdo de um arquivo carregado](window-images/file04.png)](window-images/file04.png#lightbox)
 
 ## <a name="adding-a-new-window-to-a-project"></a>Adicionando uma nova janela a um projeto
 
@@ -660,25 +660,25 @@ Além da janela principal do documento, um aplicativo Xamarin. Mac pode precisar
 
 Para adicionar uma nova janela, faça o seguinte:
 
-1. No **Gerenciador de soluções**, clique duas vezes no arquivo de `Main.storyboard` para abri-lo para edição no interface Builder do Xcode.
+1. No **Gerenciador de soluções**, clique duas vezes no `Main.storyboard` arquivo para abri-lo para edição no interface Builder do Xcode.
 2. Arraste um novo **controlador de janela** da **biblioteca** e solte-o na **design Surface**:
 
-    [![selecionando um novo controlador de janela na biblioteca](window-images/new01.png)](window-images/new01.png#lightbox)
+    [![Selecionando um novo controlador de janela na biblioteca](window-images/new01.png)](window-images/new01.png#lightbox)
 3. No **Inspetor de identidade**, insira `PreferencesWindow` para a **ID do storyboard**: 
 
-    [![definir a ID do storyboard](window-images/new02.png)](window-images/new02.png#lightbox)
+    [![Definindo a ID do storyboard](window-images/new02.png)](window-images/new02.png#lightbox)
 4. Projete sua interface: 
 
-    [![criando a interface do usuário](window-images/new03.png)](window-images/new03.png#lightbox)
-5. Abra o menu do aplicativo (`MacWindows`), selecione **preferências...** , clique com o botão de controle e arraste para a nova janela: 
+    [![Como projetar a interface do usuário](window-images/new03.png)](window-images/new03.png#lightbox)
+5. Abra o menu do aplicativo ( `MacWindows` ), selecione **preferências...**, clique com o botão de controle e arraste para a nova janela: 
 
-    [![criar um transição](window-images/new05.png)](window-images/new05.png#lightbox)
+    [![Criando um transição](window-images/new05.png)](window-images/new05.png#lightbox)
 6. Selecione **Mostrar** no menu pop-up.
 7. Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
 Se executarmos o código e selecionarmos as **preferências...** no **menu do aplicativo**, a janela será exibida:
 
-[![um menu de preferências de exemplo](window-images/new04.png)](window-images/new04.png#lightbox)
+[![Um menu de preferências de exemplo](window-images/new04.png)](window-images/new04.png#lightbox)
 
 ## <a name="working-with-panels"></a>Trabalhando com painéis
 
@@ -687,16 +687,16 @@ Conforme mencionado no início deste artigo, um painel flutua acima de outras ja
 Assim como qualquer outro tipo de janela que você cria e trabalha em seu aplicativo Xamarin. Mac, o processo é basicamente o mesmo:
 
 1. Adicione uma nova definição de janela ao projeto.
-2. Clique duas vezes no arquivo `.xib` para abrir o design da janela para edição no Interface Builder do Xcode.
+2. Clique duas vezes no `.xib` arquivo para abrir o design da janela para edição no interface Builder do Xcode.
 3. Defina todas as propriedades de janela necessárias no **Inspetor de atributo** e no Inspetor de **tamanho**.
 4. Arraste os controles necessários para criar sua interface e configurá-los no **Inspetor de atributo**.
 5. Use o **Inspetor de tamanho** para lidar com o redimensionamento dos elementos da interface do usuário.
-6. Expor os elementos da interface do usuário C# da janela para codificar por meio de **saídas** e **ações**.
+6. Expor os elementos da interface do usuário da janela para código C# por meio de **saídas** e **ações**.
 7. Salve suas alterações e volte para Visual Studio para Mac para sincronizar com o Xcode.
 
 No **Inspetor de atributo**, você tem as seguintes opções específicas para os painéis:
 
-[![o Inspetor de atributo](window-images/panel03.png)](window-images/panel03.png#lightbox)
+[![O Inspetor de atributo](window-images/panel03.png)](window-images/panel03.png#lightbox)
 
 - **Estilo** -permite que você ajuste o estilo do painel de: painel regular (parece uma janela padrão), painel do utilitário (tem uma barra de título menor), painel HUD (é translúcida e a barra de título faz parte do plano de fundo).
 - **Não ativa** -determina no painel se torna a janela de chave.
@@ -704,36 +704,36 @@ No **Inspetor de atributo**, você tem as seguintes opções específicas para o
 
 Para adicionar um novo painel, faça o seguinte:
 
-1. Na **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar** > **novo arquivo...** .
-2. Na caixa de diálogo novo arquivo, selecione **Xamarin. Mac** > **janela Cocoa com controlador**:
+1. Na **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar**  >  **novo arquivo...**.
+2. Na caixa de diálogo novo arquivo, selecione janela **Xamarin. Mac**  >  **Cocoa com controlador**:
 
-    [![adicionar um novo controlador de janela](window-images/panels00.png)](window-images/panels00.png#lightbox)
+    [![Adicionando um novo controlador de janela](window-images/panels00.png)](window-images/panels00.png#lightbox)
 
 3. Digite `DocumentPanel` para o **Nome** e clique no botão **Novo**.
-4. Clique duas vezes no arquivo `DocumentPanel.xib` para abri-lo para edição no Interface Builder: 
+4. Clique duas vezes no `DocumentPanel.xib` arquivo para abri-lo para edição no interface Builder: 
 
-    [![editar o painel](window-images/new02.png)](window-images/new02.png#lightbox)
+    [![Editando o painel](window-images/new02.png)](window-images/new02.png#lightbox)
 
 5. Exclua a janela existente e arraste um painel do **Inspetor de biblioteca** no **Editor de interface**: 
 
-    [![excluir a janela existente](window-images/panels01.png)](window-images/panels01.png#lightbox)
+    [![Excluindo a janela existente](window-images/panels01.png)](window-images/panels01.png#lightbox)
 
-6. Conecte o painel até o **proprietário do arquivo** - **janela** - **tomada**: 
+6. Conecte o painel à tomada da **janela do proprietário do arquivo**  -  **window**  -  **Outlet**: 
 
-    [![arrastar para conectar o painel](window-images/panels02.png)](window-images/panels02.png#lightbox)
+    [![Arrastando para conectar o painel](window-images/panels02.png)](window-images/panels02.png#lightbox)
 
-7. Alterne para o **Inspetor de identidade** e defina a classe do painel como `DocumentPanel`: 
+7. Alterne para o **Inspetor de identidade** e defina a classe do painel como `DocumentPanel` : 
 
-    [![definir a classe do painel](window-images/panels03.png)](window-images/panels03.png#lightbox)
+    [![Definindo a classe do painel](window-images/panels03.png)](window-images/panels03.png#lightbox)
 
 8. Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
-9. Edite o arquivo `DocumentPanel.cs` e altere a definição de classe para o seguinte: 
+9. Edite o `DocumentPanel.cs` arquivo e altere a definição de classe para o seguinte: 
 
     `public partial class DocumentPanel : NSPanel`
 
 10. Salve as alterações no arquivo.
 
-Edite o arquivo `AppDelegate.cs` e faça com que o método `DidFinishLaunching` seja semelhante ao seguinte:
+Edite o `AppDelegate.cs` arquivo e faça com que o `DidFinishLaunching` método se pareça com o seguinte:
 
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
@@ -747,14 +747,14 @@ public override void DidFinishLaunching (NSNotification notification)
 
 Se executarmos nosso aplicativo, o painel será exibido:
 
-[![o painel em um aplicativo em execução](window-images/panels04.png)](window-images/panels04.png#lightbox)
+[![O painel em um aplicativo em execução](window-images/panels04.png)](window-images/panels04.png#lightbox)
 
 > [!IMPORTANT]
 > As janelas de painel foram preteridas pela Apple e devem ser substituídas por **interfaces de Inspetor**. Para obter um exemplo completo de criação de um **Inspetor** em um aplicativo Xamarin. Mac, consulte nosso aplicativo de exemplo [MacInspector](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) .
 
 ## <a name="summary"></a>Resumo
 
-Este artigo deu uma visão detalhada de como trabalhar com janelas e painéis em um aplicativo Xamarin. Mac. Vimos os diferentes tipos e usos de janelas e painéis, como criar e manter janelas e painéis no Interface Builder do Xcode e como trabalhar com janelas e painéis no C# código.
+Este artigo deu uma visão detalhada de como trabalhar com janelas e painéis em um aplicativo Xamarin. Mac. Vimos os diferentes tipos e usos de janelas e painéis, como criar e manter janelas e painéis no Interface Builder do Xcode e como trabalhar com janelas e painéis em código C#.
 
 ## <a name="related-links"></a>Links relacionados
 

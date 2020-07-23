@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/29/2017
-ms.openlocfilehash: e90ee165073dbbe792e4ca1916463517ad86255d
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 39a18a775946c2f139b4c032d2c360bc5680a0e7
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572293"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937911"
 ---
 # <a name="alternate-app-icons-in-xamarinios"></a>Ícones de aplicativo alternativos no Xamarin. iOS
 
@@ -25,7 +25,7 @@ A Apple adicionou vários aprimoramentos ao iOS 10,3 que permitem que um aplicat
 - `AlternateIconName`-Retorna o nome do ícone alternativo selecionado no momento ou `null` se estiver usando o ícone primário.
 - `SetAlternameIconName`-Use este método para alternar o ícone do aplicativo para o ícone alternativo fornecido.
 
-![](alternate-app-icons-images/icons04.png "A sample alert when an app changes its icon")
+![Um alerta de exemplo quando um aplicativo altera seu ícone](alternate-app-icons-images/icons04.png)
 
 <a name="Adding-Alternate-Icons"></a>
 
@@ -37,15 +37,15 @@ Faça o seguinte:
 
 1. Selecione as imagens de ícone necessárias em uma pasta, selecione tudo e arraste-as para a pasta **recursos** no **Gerenciador de soluções**:
 
-    ![](alternate-app-icons-images/icons00.png "Select the icons images from a folder")
+    ![Selecionar os ícones imagens de uma pasta](alternate-app-icons-images/icons00.png)
 
 2. Quando solicitado, selecione **copiar**, **use a mesma ação para todos os arquivos selecionados** e clique no botão **OK** :
 
-    ![](alternate-app-icons-images/icons02.png "The Add File to Folder dialog box")
+    ![A caixa de diálogo Adicionar arquivo à pasta](alternate-app-icons-images/icons02.png)
 
 3. A pasta de **recursos** deve ser semelhante ao seguinte quando concluída:
 
-    ![](alternate-app-icons-images/icons01.png "The Resources folder should look like this")
+    ![A pasta de recursos deve ser parecida com esta](alternate-app-icons-images/icons01.png)
 
 <a name="Modifying-the-Info.plist-File"></a>
 
@@ -56,7 +56,7 @@ Com as imagens necessárias adicionadas à pasta **Resources** , a chave [CFBund
 Faça o seguinte:
 
 1. No **Gerenciador de Soluções**, clique duas vezes no arquivo **Info.plist** para abri-lo para edição.
-2. Alterne para o modo de exibição de **origem** .
+2. Alterne para a exibição **Origem**.
 3. Adicione uma chave de **ícones de pacote** e deixe o **tipo** definido como **dicionário**.
 4. Adicione uma `CFBundleAlternateIcons` chave e defina o **tipo** como **Dictionary**.
 5. Adicione uma `AppIcon2` chave e defina o **tipo** como **Dictionary**. Esse será o nome do novo conjunto de ícones de aplicativo alternativo.
@@ -67,7 +67,7 @@ Faça o seguinte:
 
 O arquivo **info. plist** resultante deve ser semelhante ao seguinte quando concluído:
 
-![](alternate-app-icons-images/icons03.png "The completed Info.plist file")
+![O arquivo info. plist concluído](alternate-app-icons-images/icons03.png)
 
 Ou assim, se for aberto em um editor de texto:
 
@@ -158,11 +158,11 @@ partial void UseAlternateIcon (Foundation.NSObject sender)
 
 Quando o aplicativo é executado e o usuário seleciona um ícone alternativo, um alerta semelhante ao seguinte será exibido:
 
-![](alternate-app-icons-images/icons04.png "A sample alert when an app changes its icon")
+![Um alerta de exemplo quando um aplicativo altera seu ícone](alternate-app-icons-images/icons04.png)
 
 Se o usuário voltar ao ícone primário, um alerta semelhante ao seguinte será exibido:
 
-![](alternate-app-icons-images/icons05.png "A sample alert when an app changes to the primary icon")
+![Um alerta de exemplo quando um aplicativo é alterado para o ícone primário](alternate-app-icons-images/icons05.png)
 
 <a name="Summary"></a>
 
@@ -170,6 +170,6 @@ Se o usuário voltar ao ícone primário, um alerta semelhante ao seguinte será
 
 Este artigo abordou a adição de ícones de aplicativo alternativos a um projeto Xamarin. iOS e usá-los dentro do aplicativo.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Exemplo de iOSTenThree](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-iostenthree/)

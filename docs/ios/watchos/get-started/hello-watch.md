@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 12/14/2016
-ms.openlocfilehash: 2d8b48892a5a1106b03778ac30eca4b18f049f4d
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 3f69f10274c413a107a40b2f404b3227cfee67cf
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78291865"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936729"
 ---
 # <a name="hello-watchos--walkthrough"></a>Olá, watchOS – Walkthrough
 
@@ -24,17 +24,17 @@ Depois de criar uma solução seguindo as etapas em [instalação e instalação
 
 Verifique se suas [referências estão corretas](~/ios/watchos/get-started/project-references.md): se o aplicativo pai tem uma referência à extensão e se a extensão tem uma referência para o aplicativo Watch.
 
-Confirme que seus identificadores de pacote seguem a Convenção de \*. watchkitextension \*. watchkitapp e que o arquivo info. plist de sua extensão tem o valor de **ID de pacote WKApp** definido como o identificador de pacote do seu aplicativo Watch.
+Confirme que seus identificadores de pacote seguem a \* Convenção. watchkitextension \* . watchkitapp e que o arquivo info. plist de sua extensão tem o valor de **ID de pacote WKApp** definido como o identificador de pacote do seu aplicativo Watch.
 
 Você deve ser capaz de executar seu aplicativo Watch agora, mas como o arquivo de storyboard em seu aplicativo Watch está em branco, você não conseguiria dizer.
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-![](hello-watch-images/projectstructure.png "The Solution Explorer")
+![O Gerenciador de Soluções](hello-watch-images/projectstructure.png)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-![](hello-watch-images/vs-projectstructure.png "The Solution Explorer")
+![O Gerenciador de Soluções](hello-watch-images/vs-projectstructure.png)
 
 -----
 
@@ -47,7 +47,7 @@ Clique duas vezes na interface. Storyboard em seu aplicativo Watch para iniciar 
 1. Defina o identificador e o título do controlador de interface como **interfaceController** e **Hi Watch**,
 1. Verifique se a **classe** está definida como **InterfaceController**
 
-    ![](hello-watch-images/interfacecontrollerattributes.png "Set the Identifier and Title of the Interface Controller to interfaceController and Hi Watch")
+    ![Definir o identificador e o título do controlador de interface como interfaceController e Hi Watch](hello-watch-images/interfacecontrollerattributes.png)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -58,7 +58,7 @@ Clique duas vezes na interface. Storyboard em seu aplicativo Watch para editar c
 1. Clique no controlador de interface; e
 1. Defina o identificador e o título do controlador de interface como **interfaceController** e **Hi Watch**.
 
-    ![](hello-watch-images/vs-interfacecontrollerattributes.png "Set the Identifier and Title of the Interface Controller to interfaceController and Hi Watch")
+    ![Definir o identificador e o título do controlador de interface como interfaceController e Hi Watch](hello-watch-images/vs-interfacecontrollerattributes.png)
 
 -----
 
@@ -70,24 +70,24 @@ Crie sua interface do usuário:
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-![](hello-watch-images/draganddrop.png "Set the text and attributes of the controls as shown")
+![Definir o texto e os atributos dos controles conforme mostrado](hello-watch-images/draganddrop.png)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-![](hello-watch-images/vs-draganddrop.png "Set the text and attributes of the controls as shown")
+![Definir o texto e os atributos dos controles conforme mostrado](hello-watch-images/vs-draganddrop.png)
 
 -----
 
-1. Defina o **nome** no painel de **Propriedades** para cada controle. Neste exemplo, usamos `myButton` e `myLabel`.
+1. Defina o **nome** no painel de **Propriedades** para cada controle. Neste exemplo, usamos `myButton` e `myLabel` .
 
 1. Selecione o botão no storyboard e vá para a lista de **eventos** do painel de **Propriedades** e, em seguida,
 
 1. Crie uma nova **ação** digitando `OnButtonPress` e pressionando **Enter**.
-  A ação aparecerá na lista e um método parcial será criado automaticamente no C#.
+  A ação aparecerá na lista e um método parcial será criado automaticamente em C#.
 
-![](hello-watch-images/buttonaction.png "The OnButtonPress Action added to a button")
+![A ação OnButtonPress adicionada a um botão](hello-watch-images/buttonaction.png)
 
-Depois de salvar o storyboard, o **InterfaceController.designer.cs** é atualizado com os nomes de controle e ações. Se você abrir esse arquivo após ele ter sido atualizado, poderá ver como o `RegisterAttribute` corresponde ao controlador e como os controles da interface do C# usuário correspondem às variáveis de instância marcadas com o `OutletAttribute` e como as ações são mapeadas para os métodos parciais marcados com o `ActionAttribute`:
+Depois de salvar o storyboard, o **InterfaceController.designer.cs** é atualizado com os nomes de controle e ações. Se você abrir esse arquivo depois que ele tiver sido atualizado, você poderá ver como o `RegisterAttribute` corresponde ao controlador e como os controles da interface do usuário correspondem às variáveis da instância do C# marcadas com a `OutletAttribute` e como as ações são mapeadas para métodos parciais marcados com o `ActionAttribute` :
 
 ```csharp
 // WARNING
@@ -136,7 +136,7 @@ partial void OnButtonPress (WatchKit.WKInterfaceButton sender)
 }
 ```
 
-Esse código deve ser razoavelmente transparente: a variável de instância `clickCount` é incrementada toda vez que a função `OnButtonPress` é chamada. O texto de `myLabel` é alterado para refletir essa contagem; `myLabel`, é claro, é o nome de uma das saídas que você criou no XCode. A função `partial` é a implementação da função associada ao nome da ação especificada.
+Esse código deve ser razoavelmente transparente: a variável de instância `clickCount` é incrementada toda vez que a função `OnButtonPress` é chamada. O texto de `myLabel` é alterado para refletir essa contagem; `myLabel` , é claro, é o nome de uma das saídas que você criou no Xcode. A `partial` função é a implementação da função associada ao nome da ação especificada.
 
 Se ele ainda não for o projeto de inicialização,
 
@@ -146,14 +146,14 @@ Se ele ainda não for o projeto de inicialização,
 
 1. Pressione o botão **depurar** para disparar uma compilação e o lançamento do simulador.
 
-    [![](hello-watch-images/readytodebug-sml.png "The Visual Studio interface elements")](hello-watch-images/readytodebug.png#lightbox)
+    [![Os elementos da interface do Visual Studio](hello-watch-images/readytodebug-sml.png)](hello-watch-images/readytodebug.png#lightbox)
 
 Quando o simulador for iniciado, pressione o botão para incrementar o rótulo.
 Parabéns, você tem um aplicativo de inspeção!
 
-![](hello-watch-images/running.png "The app running in the Simulator")
+![O aplicativo em execução no simulador](hello-watch-images/running.png)
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Instalação e configuração](~/ios/watchos/get-started/installation.md)
+- [Instalação e instalação](~/ios/watchos/get-started/installation.md)
 - [Primeiro vídeo do aplicativo Watch](https://blog.xamarin.com/your-first-watch-kit-app/)

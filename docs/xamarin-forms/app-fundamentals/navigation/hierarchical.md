@@ -10,26 +10,26 @@ ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ec35b03e7e96f0730813918bdd96e1408cfabde7
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0d6a18ec55b49da2b668ccc183646d5e4dde5849
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84571487"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937222"
 ---
 # <a name="hierarchical-navigation"></a>Navegação hierárquica
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
 
 _A classe NavigationPage fornece uma experiência de navegação hierárquica em que o usuário é capaz de navegar pelas páginas, encaminhamentos e para trás, conforme desejado. A classe implementa a navegação como uma pilha UEPS (último a entrar, primeiro a sair) de objetos de página. Este artigo demonstra como usar a classe NavigationPage para realizar a navegação em uma pilha de páginas._
 
 Para ir de uma página para outra, um aplicativo enviará por push uma nova página para a pilha de navegação, na qual ela se tornará a página ativa, conforme mostrado no diagrama a seguir:
 
-![](hierarchical-images/pushing.png "Pushing a Page to the Navigation Stack")
+![Enviando uma página por push para a pilha de navegação](hierarchical-images/pushing.png)
 
 Para retornar à página anterior, o aplicativo removerá a página atual da pilha de navegação e, em seguida, a nova página de nível superior se tornará a página ativa, conforme mostrado no diagrama a seguir:
 
-![](hierarchical-images/popping.png "Popping a Page from the Navigation Stack")
+![Removendo uma página da pilha de navegação](hierarchical-images/popping.png)
 
 Os métodos de navegação são expostos pela [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) propriedade em qualquer [`Page`](xref:Xamarin.Forms.Page) tipo derivado. Esses métodos possibilitam enviar páginas por push para a pilha de navegação, remover páginas da pilha de navegação e executar a manipulação da pilha.
 
@@ -37,7 +37,7 @@ Os métodos de navegação são expostos pela [`Navigation`](xref:Xamarin.Forms.
 
 Na navegação hierárquica, a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) classe é usada para navegar por uma pilha de [`ContentPage`](xref:Xamarin.Forms.ContentPage) objetos. As capturas de tela a seguir mostram os principais componentes de `NavigationPage` em cada plataforma:
 
-![](hierarchical-images/navigationpage-components.png "NavigationPage Components")
+![Componentes de NavigationPage](hierarchical-images/navigationpage-components.png)
 
 O layout de um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) depende da plataforma:
 
@@ -63,7 +63,7 @@ public App ()
 
 Isso faz com que a `Page1Xaml` [`ContentPage`](xref:Xamarin.Forms.ContentPage) instância seja enviada para a pilha de navegação, onde se torna a página ativa e a página raiz do aplicativo. Isso é mostrado nas seguintes capturas de tela:
 
-![](hierarchical-images/mainpage.png "Root Page of Navigation Stack")
+![Página Raiz da pilha de navegação](hierarchical-images/mainpage.png)
 
 > [!NOTE]
 > A [`RootPage`](xref:Xamarin.Forms.NavigationPage.RootPage) propriedade de uma [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instância fornece acesso à primeira página na pilha de navegação.
@@ -81,7 +81,7 @@ async void OnNextPageButtonClicked (object sender, EventArgs e)
 
 Isso faz com que a instância `Page2Xaml` seja enviada por push para a pilha de navegação, em que ele se torna a página ativa. Isso é mostrado nas seguintes capturas de tela:
 
-![](hierarchical-images/secondpage.png "Page Pushed onto Navigation Stack")
+![Página enviada por push para a pilha de navegação](hierarchical-images/secondpage.png)
 
 Quando o [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) método é invocado, ocorrem os seguintes eventos:
 
@@ -181,7 +181,7 @@ public MainPage (string date)
 
 Os dados são exibidos na página definindo a [`Label.Text`](xref:Xamarin.Forms.Label.Text) propriedade, conforme mostrado nas seguintes capturas de tela:
 
-![](hierarchical-images/passing-data-constructor.png "Data Passed Through a Page Constructor")
+![Dados transmitidos por meio de um construtor de página](hierarchical-images/passing-data-constructor.png)
 
 ### <a name="passing-data-through-a-bindingcontext"></a>Transmitindo dados por meio de um BindingContext
 
@@ -267,7 +267,7 @@ public class SecondPageCS : ContentPage
 
 Os dados são exibidos na página por uma série de [`Label`](xref:Xamarin.Forms.Label) controles, conforme mostrado nas seguintes capturas de tela:
 
-![](hierarchical-images/passing-data-bindingcontext.png "Data Passed Through a BindingContext")
+![Dados transmitidos por meio de um BindingContext](hierarchical-images/passing-data-bindingcontext.png)
 
 Para obter mais informações sobre vinculação de dados, veja [Noções básicas de vinculação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
@@ -277,11 +277,11 @@ A [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) Propriedade exp
 
 O [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) método insere uma página especificada na pilha de navegação antes de uma página especificada existente, conforme mostrado no diagrama a seguir:
 
-![](hierarchical-images/insert-page-before.png "Inserting a Page in the Navigation Stack")
+![Inserindo uma página na pilha de navegação](hierarchical-images/insert-page-before.png)
 
 O [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) método remove a página especificada da pilha de navegação, conforme mostrado no diagrama a seguir:
 
-![](hierarchical-images/remove-page.png "Removing a Page from the Navigation Stack")
+![Removendo uma página da pilha de navegação](hierarchical-images/remove-page.png)
 
 Esses métodos permitem criar uma experiência de navegação personalizada, como substituir uma página de logon por uma nova página após um logon bem-sucedido. O código de exemplo a seguir demonstra esse cenário:
 
@@ -356,7 +356,7 @@ Há uma série de limitações a serem consideradas ao exibir um [`View`](xref:X
 - No Android, só é possível colocar modos de exibição na barra de navegação de um `NavigationPage` em aplicativos que usam a compatibilidade de aplicativos.
 - Não é recomendável posicionar exibições grandes e complexas, como [`ListView`](xref:Xamarin.Forms.ListView) e [`TableView`](xref:Xamarin.Forms.TableView) , na barra de navegação de um `NavigationPage` .
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Navegação de página](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
 - [Hierárquica (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)

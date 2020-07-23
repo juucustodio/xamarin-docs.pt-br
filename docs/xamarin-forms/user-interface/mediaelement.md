@@ -10,18 +10,18 @@ ms.date: 02/18/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1dfa51177bba3ebf1e3e29208cc926c77567a048
-ms.sourcegitcommit: c000c0ed15b7b2ef2a8f46a39171e11b6d9f8a5d
+ms.openlocfilehash: f1a015784dd87bc4c6da7daf99a6e463c1e65e5c
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84980097"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937157"
 ---
 # <a name="xamarinforms-mediaelement"></a>Xamarin.FormsMediaElement
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![API de pré-lançamento](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
 
 [`MediaElement`](xref:Xamarin.Forms.MediaElement)é uma exibição para reproduzir vídeo e áudio. A mídia com suporte da plataforma subjacente pode ser reproduzida a partir das seguintes fontes:
 

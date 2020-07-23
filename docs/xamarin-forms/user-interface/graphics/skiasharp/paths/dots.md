@@ -10,22 +10,22 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8698bacd7257df431b12166c749f5826e8d6fd3c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 47182578a6583dde34cb7f06e3433cdb2703f6ba
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138444"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937672"
 ---
 # <a name="dots-and-dashes-in-skiasharp"></a>Pontos e traços em SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Dominar as complexidades do desenho de linhas pontilhadas e tracejadas em SkiaSharp_
 
 O SkiaSharp permite desenhar linhas que não são sólidas, mas em vez disso, são compostas por pontos e traços:
 
-![](dots-images/dottedlinesample.png "Dotted line")
+![Linha pontilhada](dots-images/dottedlinesample.png)
 
 Você faz isso com um *efeito de caminho*, que é uma instância da [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) classe que você define para a [`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect) propriedade de `SKPaint` . Você pode criar um efeito de caminho (ou combinar efeitos de caminho) usando um dos métodos de criação estáticos definidos pelo `SKPathEffect` . ( `SKPathEffect` é um dos seis efeitos com suporte do SkiaSharp; os outros são descritos na seção [**SkiaSharp Effect**](../effects/index.md).)
 
@@ -153,7 +153,7 @@ float[] GetPickerArray(Picker picker)
 
 Nas instantâneos a seguir, a tela do iOS na extrema esquerda mostra uma linha pontilhada:
 
-[![](dots-images/dotsanddashes-small.png "Triple screenshot of the Dots and Dashes page")](dots-images/dotsanddashes-large.png#lightbox "Triple screenshot of the Dots and Dashes page")
+[![Captura de tela tripla da página pontos e traços](dots-images/dotsanddashes-small.png)](dots-images/dotsanddashes-large.png#lightbox "Captura de tela tripla da página pontos e traços")
 
 No entanto, a tela do Android também deve mostrar uma linha pontilhada usando a matriz {10, 10}, mas em vez disso, a linha é sólida. O que aconteceu? O problema é que a tela do Android também tem uma configuração de Stroke-Caps de `Square` . Isso estende todos os traços pela metade da largura do traço, fazendo com que eles preencham as lacunas.
 
@@ -214,9 +214,9 @@ public class AnimatedSpiralPage : ContentPage
 
 É claro que você precisará realmente executar o programa para ver a animação:
 
-[![](dots-images/animatedspiral-small.png "Triple screenshot of the Animated Spiral page")](dots-images/animatedspiral-large.png#lightbox "Triple screenshot of the Animated Spiral page")
+[![Captura de tela tripla da página de espiral animada](dots-images/animatedspiral-small.png)](dots-images/animatedspiral-large.png#lightbox "Captura de tela tripla da página de espiral animada")
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

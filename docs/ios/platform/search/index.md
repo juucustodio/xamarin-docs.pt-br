@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: ec63407189b635a9586b02e848647518aaf0170f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: d95261a3b884507d3fc4a68018d57c5d3e3a2c84
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031559"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939406"
 ---
 # <a name="search-apis-in-xamarinios"></a>Pesquisar APIs no Xamarin. iOS
 
@@ -22,7 +22,7 @@ A pesquisa foi expandida no iOS 9 para fornecer excelentes maneiras novas de ace
 
 Além disso, as novas APIs de pesquisa facilitam a integração da pesquisa em seu aplicativo sem a experiência de implementação anterior da pesquisa. Por isso, a Apple alega que normalmente leva algumas horas para fazer com que o conteúdo de um aplicativo iOS 9 seja pesquisado universalmente usando a pesquisa de aplicativos.
 
-[![](images/intro01.png "An example of iOS 9 app content universally searchable using App Search")](images/intro01.png#lightbox)
+[![Um exemplo de conteúdo de aplicativo do iOS 9 pesquisável universalmente usando a pesquisa de aplicativos](images/intro01.png)](images/intro01.png#lightbox)
 
 A pesquisa de aplicativo é composta por três APIs separadas:
 
@@ -64,7 +64,7 @@ A Apple fornece as seguintes sugestões sobre o conteúdo e as ações para forn
 O principal Spotlight no iOS 10 fornece vários aprimoramentos para a pesquisa de aplicativos, como:
 
 - **Crowdsourcing a popularidade do link profundo (com privacidade diferencial)** – fornece uma maneira de promover o conteúdo do aplicativo vinculado em profundidade nos resultados da pesquisa.
-- **Pesquisa no aplicativo** – use a nova classe `CSSearchQuery` para fornecer uma capacidade de pesquisa no aplicativo em destaque semelhante à forma como os aplicativos mail, messages e Notes funcionam.
+- **Pesquisa no aplicativo** – use a nova `CSSearchQuery` classe para fornecer uma capacidade de pesquisa em destaque no aplicativo, semelhante à forma como os aplicativos mail, messages e Notes funcionam.
 - **Continuação da pesquisa** – permite que um usuário inicie uma pesquisa no Spotlight ou no Safari, em seguida, abra um aplicativo e continue a pesquisa.
 - **Visualização dos resultados da validação** – a [ferramenta de validação da API de pesquisa de aplicativos](https://search.developer.apple.com/appsearch-validation-tool) da Apple agora exibe uma representação visual da marcação de um site e da vinculação profunda ao preformar testes.
 - **Compartilhamento de imagem de aplicativo de mensagem** – permite que imagens populares no aplicativo fornecidas para compartilhamento em mensagens (por meio de uma extensão de aplicativo de mensagem) apareçam em pesquisas de destaque.
@@ -90,7 +90,7 @@ Para saber mais, confira nosso guia de [sugestões proativo](~/ios/platform/sear
 
 Este artigo abordou os novos recursos de API de pesquisa que o iOS 9 fornece para aplicativos Xamarin. iOS. Ele abordou os métodos [NSUserActivity](nsuseractivity.md), [Core Spotlight](corespotlight.md) e [marcação da Web](web-markup.md) para indexar conteúdo. Ele terminou com uma breve discussão de quando uma determinada abordagem de pesquisa deve ser usada e quais tipos de conteúdo devem ser indexados.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Amostras do iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 para desenvolvedores](https://developer.apple.com/ios/pre-release/)

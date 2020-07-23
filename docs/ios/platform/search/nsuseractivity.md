@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: cbf5f8c6f53b075f587a0e7763a4019d44352f14
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: bbd3d1663c3d796768095a12e5048b18f447fa7a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84568991"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937014"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Pesquisar com NSUserActivity no Xamarin. iOS
 
@@ -21,7 +21,7 @@ Ele permite que você crie atividades em partes específicas de seu aplicativo q
 
 Novo no iOS 9, `NSUserActivity` pode ser indexado (de forma pública e privada) e pesquisado na pesquisa de destaque e no Safari. Ao marcar um `NSUserActivity` como pesquisável e adicionar metadados indexáveis, a atividade pode ser listada nos resultados da pesquisa no dispositivo IOS.
 
-[![](nsuseractivity-images/apphistory01.png "The App History overview")](nsuseractivity-images/apphistory01.png#lightbox)
+[![A visão geral do histórico do aplicativo](nsuseractivity-images/apphistory01.png)](nsuseractivity-images/apphistory01.png#lightbox)
 
 Se o usuário selecionar um resultado de pesquisa que pertença a uma atividade do seu aplicativo, o aplicativo será iniciado e a atividade descrita pelo `NSUserActivity` será reiniciada e apresentada ao usuário.
 
@@ -59,7 +59,7 @@ O identificador de tipo de atividade é usado ao criar uma `NSUserActivity` inst
 
 Para criar os identificadores de tipo de atividade necessários para dar suporte a esse comportamento, edite o arquivo **info. plist** e alterne para o modo de exibição de **origem** . Adicione uma `NSUserActivityTypes` chave e crie identificadores no seguinte formato:
 
-[![](nsuseractivity-images/type01.png "The NSUserActivityTypes key and required identifiers in the plist editor")](nsuseractivity-images/type01.png#lightbox)
+[![A chave NSUserActivityTypes e os identificadores necessários no editor do plist](nsuseractivity-images/type01.png)](nsuseractivity-images/type01.png#lightbox)
 
 No exemplo acima, criamos um novo identificador de tipo de atividade para a atividade de pesquisa ( `com.xamarin.platform` ). Ao criar seus próprios aplicativos, substitua o conteúdo da `NSUserActivityTypes` matriz pelos identificadores de tipo de atividade específicos das atividades às quais seu aplicativo dá suporte.
 
@@ -88,7 +88,7 @@ activity.BecomeCurrent();
 
 Poderíamos adicionar mais detalhes Configurando a `ContentAttributeSet` propriedade da seguinte `NSUserActivity` maneira:
 
-[![](nsuseractivity-images/apphistory02.png "Addition Search Details overview")](nsuseractivity-images/apphistory02.png#lightbox)
+[![Visão geral dos detalhes da pesquisa de adição](nsuseractivity-images/apphistory02.png)](nsuseractivity-images/apphistory02.png#lightbox)
 
 Usando um `ContentAttributeSet` , você pode criar resultados de pesquisa avançados que atraiam o usuário final para interagir com eles.
 
@@ -115,7 +115,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 
 Observe que essa é a mesma substituição de método usada para responder às solicitações de entrega. Agora, se o usuário clicar em um link de nosso aplicativo nos resultados da pesquisa de destaque, nosso aplicativo será levado para o primeiro plano (ou iniciado se ainda não estiver em execução) e o conteúdo, a navegação ou o recurso representado por esse link será exibido:
 
-[![](nsuseractivity-images/apphistory03.png "Restore Previous State from Search")](nsuseractivity-images/apphistory03.png#lightbox)
+[![Restaurar estado anterior da pesquisa](nsuseractivity-images/apphistory03.png)](nsuseractivity-images/apphistory03.png#lightbox)
 
 <a name="indexing"></a>
 
@@ -166,7 +166,7 @@ Ao adotar a pesquisa de aplicativo via `NSUserActivity` em seu aplicativo, você
 - **Siri sugestões** – juntamente com as sugestões padrão que as sugestões de Siri normalmente fazem, os ativos de seu aplicativo podem ser sugeridos automaticamente.
 - **Lembretes inteligentes do Siri** -os usuários poderão pedir ao Siri para lembrá-los sobre as atividades do seu aplicativo.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Amostras do iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 para desenvolvedores](https://developer.apple.com/ios/pre-release/)

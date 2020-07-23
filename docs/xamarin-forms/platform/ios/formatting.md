@@ -10,12 +10,12 @@ ms.date: 01/29/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 062dd77f1dc7b82f16bfbc6d46e44d4adeb73350
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4381b1fbe7b38c2695bce645903d599bdb792fc2
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84564700"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937430"
 ---
 # <a name="adding-ios-specific-formatting"></a>Adicionando formatação específica do iOS
 
@@ -42,11 +42,11 @@ nav.BarTextColor = Color.White;
 
 O resultado é mostrado no trecho de tela abaixo. Observe que os itens da barra de status são pretos (isso não pode ser definido no Xamarin.Forms porque ele é um recurso específico da plataforma).
 
-![](theme-images/status-default-sml.png "iOS Theming")
+![iOS com temas](theme-images/status-default-sml.png)
 
 O ideal é que a barra de status também seja branca – algo que possamos fazer diretamente no projeto do iOS. Adicione as seguintes entradas ao **info. plist** para forçar a barra de status a ficar branca:
 
-![](theme-images/info-plist.png "iOS Info.plist Entries")
+![Entradas do iOS info. plist](theme-images/info-plist.png)
 
 ou edite o arquivo **info. plist** correspondente diretamente para incluir:
 
@@ -59,7 +59,7 @@ ou edite o arquivo **info. plist** correspondente diretamente para incluir:
 
 Agora, quando o aplicativo é executado, a barra de navegação fica verde e seu texto é branco (devido à Xamarin.Forms formatação) *e* o texto da barra de status também é branco graças à configuração específica do IOS:
 
-![](theme-images/status-white-sml.png "iOS Theming")
+![iOS com temas](theme-images/status-white-sml.png)
 
 ## <a name="uiappearance-api"></a>API UIAppearance
 
@@ -88,7 +88,7 @@ public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 Por padrão, o ícone de barra de guias selecionado em um[`TabbedPage`](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)
 seria azul:
 
-![](theme-images/tabbar-default.png "Default iOS Tab Bar Icon in TabbedPage")
+![Ícone padrão da barra de guias iOS em TabbedPage](theme-images/tabbar-default.png)
 
 Para alterar esse comportamento, defina a `UITabBar.Appearance` Propriedade:
 
@@ -98,7 +98,7 @@ UITabBar.Appearance.SelectedImageTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); 
 
 Isso faz com que a guia selecionada fique verde:
 
-![](theme-images/tabbar-custom.png "Green iOS Tab Bar Icon in TabbedPage")
+![Ícone da barra de guias verde do iOS em TabbedPage](theme-images/tabbar-custom.png)
 
 O uso dessa API permite que você personalize a aparência doXamarin.Forms
 `TabbedPage`no iOS com muito pouco código. Consulte a [receita personalizar guias](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/customize-tabs) para obter mais detalhes sobre como usar um renderizador personalizado para definir uma fonte específica para a guia.
@@ -113,13 +113,13 @@ UISwitch.Appearance.OnTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); // green
 
 Essas duas capturas de tela mostram o `UISwitch` controle padrão à esquerda e a versão personalizada (configuração `Appearance` ) à direita no [exemplo todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo):
 
-![](theme-images/switch-default.png "Cor de UISwitch padrão") ![](theme-images/switch-custom.png "Cor de UISwitch personalizada")
+![Cor de UISwitch padrão](theme-images/switch-default.png) ![Cor de UISwitch personalizada](theme-images/switch-custom.png)
 
 ### <a name="other-controls"></a>Outros controles
 
 Muitos controles de interface de usuário do iOS podem ter suas cores padrão e outros atributos definidos usando a [ `UIAppearance` API](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [UIAppearance](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md)
 - [Personalizar guias](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/customize-tabs)

@@ -10,16 +10,16 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0a105548f869eb448a990a1cc12e6feff4197d48
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 7ecc094abf816f11dcb16d9eba7d715c8c4e4ab1
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135779"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939146"
 ---
 # <a name="reusable-effectbehavior"></a>EffectBehavior reutilizável
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
 
 _Os comportamentos são uma abordagem útil para adicionar um efeito a um controle, removendo o código de manipulação de efeito de placa de apoio dos arquivos code-behind. Este artigo demonstra como criar e consumir um Xamarin.Forms comportamento para adicionar um efeito a um controle._
 
@@ -160,7 +160,7 @@ As `Group` `Name` Propriedades e do comportamento são definidas para os valores
 
 Em tempo de execução, quando o comportamento é anexado ao [`Label`](xref:Xamarin.Forms.Label) controle, o `Xamarin.LabelShadowEffect` será adicionado à coleção do controle [`Effects`](xref:Xamarin.Forms.Element.Effects) . Isso faz com que uma sombra seja adicionada ao texto exibido pelo controle `Label`, conforme mostrado nas capturas de tela seguir:
 
-![](effect-behavior-images/screenshots.png "Sample Application with EffectsBehavior")
+![Aplicativo de exemplo com EffectsBehavior](effect-behavior-images/screenshots.png)
 
 A vantagem de usar esse comportamento para adicionar e remover efeitos de controles é que o código de manipulação de efeito clichê pode ser removido de arquivos code-behind.
 
@@ -168,9 +168,9 @@ A vantagem de usar esse comportamento para adicionar e remover efeitos de contro
 
 Este artigo demonstrou o uso de um comportamento para adicionar um efeito a um controle. A `EffectBehavior` classe é um comportamento personalizado reutilizável Xamarin.Forms que adiciona uma [`Effect`](xref:Xamarin.Forms.Effect) instância a um controle quando o comportamento é anexado ao controle e remove a `Effect` instância quando o comportamento é desanexado do controle.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Effect](~/xamarin-forms/app-fundamentals/effects/index.md)
+- [Efeitos](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [Comportamento de efeito (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
 - [Comportamento](xref:Xamarin.Forms.Behavior)
 - [Comportamento &lt; T&gt;](xref:Xamarin.Forms.Behavior`1)

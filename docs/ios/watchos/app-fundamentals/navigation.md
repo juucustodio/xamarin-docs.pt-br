@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 1ad4ecad90238436f8d2a02727596186c6205eeb
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 8b1ffe54ad199acbc7bf3918c187e198d96b51c8
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572085"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939393"
 ---
 # <a name="working-with-watchos-navigation-in-xamarin"></a>Trabalhando com a navegação do watchOS no Xamarin
 
@@ -49,7 +49,7 @@ As telas modais podem ser uma única cena ou usar um layout baseado em página.
 
 Apresenta cenas como uma pilha que pode ser navegada de volta, de forma semelhante à maneira como `UINavigationController` funciona no Ios. Os bastidores podem ser enviados para a pilha de navegação e desativados (de forma programática ou por seleção de usuário).
 
-![](navigation-images/hierarchy-1.png "Os bastidores podem ser enviados para a pilha de navegação") ![](navigation-images/hierarchy-2.png "Os bastidores podem ser retirados da pilha de navegação")
+![Os bastidores podem ser enviados para a pilha de navegação](navigation-images/hierarchy-1.png) ![Os bastidores podem ser retirados da pilha de navegação](navigation-images/hierarchy-2.png)
 
 Assim como no iOS, um dedo para a borda esquerda navega de volta para o controlador pai em uma pilha de navegação hierárquica.
 
@@ -95,7 +95,7 @@ public override NSObject GetContextForSegue (string segueIdentifier)
 
 As interfaces baseadas em página passem da esquerda para a direita, de forma semelhante à maneira como `UIPageViewController` funciona no Ios. Os pontos de indicador são exibidos na parte inferior da tela para mostrar qual página está sendo exibida no momento.
 
-![](navigation-images/paged-1.png "Primeira página de exemplo") ![](navigation-images/paged-2.png "Segunda página de exemplo") ![](navigation-images/paged-5.png "Exemplo da quinta página")
+![Primeira página de exemplo](navigation-images/paged-1.png) ![Segunda página de exemplo](navigation-images/paged-2.png) ![Exemplo da quinta página](navigation-images/paged-5.png)
 
 Para fazer uma interface baseada em página a interface do usuário principal para seu aplicativo Watch, use `ReloadRootControllers` com uma matriz de controladores de interface e contextos:
 
@@ -113,7 +113,7 @@ var contexts = new [] { "First", "Second", "Third", "Fourth", "Fifth" };
 PresentController (controllerNames, contexts);
 ```
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [WatchKitCatalog (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [WatchTables (exemplo)](https://developer.xamarin.com//samples/monotouch/watchOS/WatchTables/)

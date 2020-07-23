@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: b69328b00778b0c3c03cd4d954b2e0bef33e4784
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d50f104b8b6e3e82fb7e9d6dbea45757742a5739
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574594"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937027"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Introdução ao toque 3D no Xamarin. iOS
 
 _Este artigo aborda o uso dos novos gestos de toque do iPhone 6s e do iPhone 6s mais 3D em seu aplicativo._
 
-[![](3d-touch-images/info01.png "Examples of 3D Touch enabled apps")](3d-touch-images/info01.png#lightbox)
+[![Exemplos de aplicativos habilitados para toque 3D](3d-touch-images/info01.png)](3d-touch-images/info01.png#lightbox)
 
 Este artigo fornecerá e apresentará uma introdução ao uso das novas APIs de toque 3D para adicionar gestos sensíveis à pressão aos seus aplicativos do Xamarin. iOS que estão em execução nos novos dispositivos iPhone 6s e iPhone 6s Plus.
 
@@ -39,7 +39,7 @@ o Touch 3D fornece os seguintes recursos para seu aplicativo:
 
 Conforme mencionado acima, usando as novas propriedades da classe [UITouch](xref:UIKit.UITouch) , você pode medir a quantidade de pressão que o usuário está aplicando à tela do dispositivo IOS e usar essas informações na sua interface do usuário. Por exemplo, tornando um pincel traçado mais translúcida ou opaco com base na quantidade de pressão.
 
-[![](3d-touch-images/pressure01.png "A brush stroke rendered as more translucent or opaque based on the amount of pressure")](3d-touch-images/pressure01.png#lightbox)
+[![Um traço de pincel renderizado como mais translúcida ou opaco com base na quantidade de pressão](3d-touch-images/pressure01.png)](3d-touch-images/pressure01.png#lightbox)
 
 Como resultado do toque 3D, se seu aplicativo estiver em execução no iOS 9 (ou superior) e o dispositivo iOS for capaz de dar suporte ao toque 3D, as alterações na pressão farão com que o `TouchesMoved` evento seja gerado.
 
@@ -77,7 +77,7 @@ o Touch 3D fornece novas maneiras para um usuário interagir com informações e
 
 Por exemplo, se seu aplicativo estiver exibindo uma tabela de mensagens, o usuário poderá pressionar Hard em um item para visualizar seu conteúdo em uma exibição de sobreposição (a qual a Apple se refere como uma *inspeção*).
 
-[![](3d-touch-images/peekandpop01.png "An example of Peeking at content")](3d-touch-images/peekandpop01.png#lightbox)
+[![Um exemplo de inspeção no conteúdo](3d-touch-images/peekandpop01.png)](3d-touch-images/peekandpop01.png#lightbox)
 
 Se o usuário pressionar mais difícil, ele entrará no modo de exibição de mensagem regular (que é chamado de *pop*-ping na exibição).
 
@@ -205,7 +205,7 @@ Usando o Touch 3D e ações rápidas, você pode adicionar atalhos comuns, rápi
 
 Conforme mencionado acima, você pode considerar ações rápidas, como os menus contextuais que podem ser retirados quando um usuário clica com o botão direito do mouse em um item em um aplicativo de área de trabalho. Você deve usar ações rápidas para fornecer atalhos para as funções ou recursos mais comuns de seu aplicativo.
 
-[![](3d-touch-images/quickactions01.png "An example of a Quick Actions menu")](3d-touch-images/quickactions01.png#lightbox)
+[![Um exemplo de um menu de ações rápidas](3d-touch-images/quickactions01.png)](3d-touch-images/quickactions01.png#lightbox)
 
 ### <a name="defining-static-quick-actions"></a>Definindo ações rápidas estáticas
 
@@ -270,7 +270,7 @@ Aqui estamos definindo dois itens de ação rápida estáticos com as seguintes 
   - `UIApplicationShortcutIconTypeTime`
   - `UIApplicationShortcutIconTypeUpdate`
 
-  ![](3d-touch-images/uiapplicationshortcuticontype.png "UIApplicationShortcutIconType imagery")
+  ![Imagens de UIApplicationShortcutIconType](3d-touch-images/uiapplicationshortcuticontype.png)
 
 - `UIApplicationShortcutItemSubtitle`-Define o subtítulo do item.
 - `UIApplicationShortcutItemTitle`-Define o título do item.
@@ -430,7 +430,7 @@ Ao usar a versão mais recente do Xcode e o simulador do iOS em um Mac compatív
 
 Para habilitar essa funcionalidade, execute qualquer aplicativo no hardware simulado do iPhone que dê suporte ao Touch 3D (iPhone 6s e superior). Em seguida, selecione o menu de **hardware** no simulador de Ios e habilite o item de menu **usar trackpad Force para 3D Touch** :
 
-[![](3d-touch-images/simulator01.png "Select the Hardware menu in the iOS Simulator and enable the Use Trackpad Force for 3D touch menu item")](3d-touch-images/simulator01.png#lightbox)
+[![Selecione o menu de hardware no simulador de iOS e habilite o item de menu usar trackpad Force para 3D Touch](3d-touch-images/simulator01.png)](3d-touch-images/simulator01.png#lightbox)
 
 Com esse recurso ativo, você pode pressionar com mais dificuldade o trackpad do Mac para habilitar o toque 3D, assim como faria com hardware real do iPhone.
 
@@ -438,7 +438,7 @@ Com esse recurso ativo, você pode pressionar com mais dificuldade o trackpad do
 
 Este artigo introduziu as novas APIs 3D Touch disponibilizadas no iOS 9 para iPhone 6s e iPhone 6s Plus. Ele abordou a adição de sensibilidade à pressão a um aplicativo; usando Peek e pop para exibir rapidamente informações no aplicativo a partir do contexto atual sem navegação; e usando ações rápidas para fornecer atalhos para os recursos mais usados do seu aplicativo.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Exemplo de ViewControllerPreview do iOS 9](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-viewcontrollerpreview)
 - [Exemplo de ApplicationShortcuts do iOS 9](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-applicationshortcuts)

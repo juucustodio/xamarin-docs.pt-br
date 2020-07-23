@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 584b398deafd233fdbe6b24189a2047ae712fdcf
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 01f95641a0cf65341479c51b2f6314a0ef3ea2de
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573515"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939068"
 ---
 # <a name="working-with-the-ui-thread-in-xamarinios"></a>Trabalhando com o thread de interface do usuário no Xamarin. iOS
 
@@ -36,7 +36,7 @@ O `InvokeOnMainThread` método é definido em `NSObject` para que possa ser cham
 
 Durante a depuração de aplicativos Xamarin. iOS, um erro será gerado se o seu código tentar acessar um controle de interface do usuário a partir do thread errado. Isso ajuda a rastrear e corrigir esses problemas com o método InvokeOnMainThread. Isso ocorre apenas durante a depuração e não gera um erro nas compilações de versão. A mensagem de erro será exibida da seguinte maneira:
 
- ![](ui-thread-images/image10.png "UI Thread Execution")
+ ![Execução de thread de interface do usuário](ui-thread-images/image10.png)
 
  <a name="Background_Thread_Example"></a>
 
@@ -91,7 +91,7 @@ async partial void button2_TouchUpInside (UIButton sender)
 
 Se um método assíncrono for chamado de um thread em segundo plano (não o thread da interface do usuário principal), `InvokeOnMainThread` ainda seria necessário.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Controles (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
 - [Threading](~/ios/app-fundamentals/threading.md)

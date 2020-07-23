@@ -10,22 +10,22 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1e4c170f818dc62640b1cd72ec3b70f48d227d93
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 440a078857a940f57f5700a18f91fc8b25bdfae8
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137729"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937196"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>Noções básicas de bitmap no SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Carregue bitmaps de várias fontes e exiba-os._
 
 O suporte de bitmaps no SkiaSharp é bastante extenso. Este artigo aborda apenas as noções básicas de &mdash; como carregar bitmaps e como exibi-los:
 
-![](bitmaps-images/basicbitmaps-small.png "The display of two bitmaps")
+![A exibição de dois bitmaps](bitmaps-images/basicbitmaps-small.png)
 
 Uma exploração muito mais profunda de bitmaps pode ser encontrada na seção [bitmaps do SkiaSharp](../bitmaps/index.md).
 
@@ -208,7 +208,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 O bitmap é ampliado para as dimensões do retângulo, motivo pelo qual o macaco é alongado horizontalmente nessas capturas de tela:
 
-[![](bitmaps-images/basicbitmaps-small.png "A triple screenshot of the Basic Bitmaps page")](bitmaps-images/basicbitmaps-large.png#lightbox "A triple screenshot of the Basic Bitmaps page")
+[![Uma captura de tela tripla da página bitmaps básicos](bitmaps-images/basicbitmaps-small.png)](bitmaps-images/basicbitmaps-large.png#lightbox "Uma captura de tela tripla da página bitmaps básicos")
 
 A terceira imagem &mdash; que você só pode ver se executa o programa e carrega uma foto de sua própria biblioteca de imagens &mdash; também é exibida dentro de um retângulo, mas a posição e o tamanho do retângulo são ajustados para manter a taxa de proporção do bitmap. Esse cálculo é um pouco mais envolvido porque requer o cálculo de um fator de dimensionamento com base no tamanho do bitmap e no retângulo de destino, e centraliza o retângulo nessa área:
 
@@ -249,7 +249,7 @@ Se nenhum bitmap ainda tiver sido carregado da biblioteca de imagens, o `else` b
 
 Você pode exibir bitmaps com vários graus de transparência e o próximo artigo sobre [**transparência de SkiaSharp**](transparency.md) descreve como.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

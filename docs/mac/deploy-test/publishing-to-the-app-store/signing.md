@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: f05e763df58e6fafc4d4ed1d4007979859670c28
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 84a764054567bc504b3432a503a1072362e374dd
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76725456"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938483"
 ---
 # <a name="signing-xamarinmac-apps-with-a-developer-id"></a>Assinar aplicativos Xamarin.Mac com uma ID de Desenvolvedor
 
@@ -24,28 +24,28 @@ Leia mais sobre [ID de desenvolvedor e GateKeeper](https://developer.apple.com/d
 
 Para compilar um aplicativo para implantação diretamente no conjunto de usuários (NÃO por meio da Mac App Store), defina as **Configurações de Assinatura** para usar a **ID de Desenvolvedor**. Certifique-se de editar a configuração **Versão**.
 
- [![](signing-images/config02.png "The Mac Signing options")](signing-images/config02.png#lightbox)
+ [![As opções de assinatura do Mac](signing-images/config02.png)](signing-images/config02.png#lightbox)
 
 ## <a name="build"></a>Build
 
 Antes de compilar, verifique se a configuração correta foi selecionada e selecione para criar um pacote de instalação nas configurações do **Build do Mac**:
 
-[![](signing-images/config03.png "The build options")](signing-images/config03.png#lightbox)
+[![As opções de build](signing-images/config03.png)](signing-images/config03.png#lightbox)
 
 Ao criar o aplicativo, o desenvolvedor será solicitado a usar ambos os certificados:
 
- [![](signing-images/image57.png "Allowing keychain access")](signing-images/image57.png#lightbox)
+ [![Permitindo acesso ao conjunto de chaves](signing-images/image57.png)](signing-images/image57.png#lightbox)
 
- [![](signing-images/image58.png "Allowing keychain access")](signing-images/image58.png#lightbox)
+ [![Permitindo acesso ao conjunto de chaves](signing-images/image58.png)](signing-images/image58.png#lightbox)
 
 Depois de compilar o aplicativo, o desenvolvedor pode clicar com o botão direito do mouse no projeto e escolher **Abrir Pasta Contendo** para localizar o arquivo do pacote (no diretório `bin/Release`). Esse arquivo de pacote inclui um instalador para o aplicativo, para que ele possa ser distribuído a qualquer usuário do macOS para instalação.
 
- [![](signing-images/image59.png "Selecting the app package in Finder")](signing-images/image59.png#lightbox)
+ [![Selecionando o pacote do aplicativo no Finder](signing-images/image59.png)](signing-images/image59.png#lightbox)
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Instalação](~//mac/get-started/installation.md)
-- [Olá, amostra mac](~//mac/get-started/hello-mac.md)
+- [Olá, exemplo de Mac](~//mac/get-started/hello-mac.md)
 - [Distribua aplicativos na Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
 - [Guia de ferramentas: assinatura de código do aplicativo](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
 - [ID de Desenvolvedor e GateKeeper](https://developer.apple.com/developer-id/)

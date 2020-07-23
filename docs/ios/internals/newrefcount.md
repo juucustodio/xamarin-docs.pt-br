@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 11/25/2015
-ms.openlocfilehash: 8d8ad5b5f79b90fc415c9e3cdf6809a4e196056f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: a9d8b8fa1826c1a7dafb3d6c3e3ab45d05c1aaa8
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022297"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938704"
 ---
 # <a name="new-reference-counting-system-in-xamarinios"></a>Novo sistema de contagem de referência no Xamarin. iOS
 
@@ -22,13 +22,13 @@ O Xamarin. iOS 9.2.1 introduziu o sistema de contagem de referência aprimorado 
 
 A partir do Xamarin 9.2.1, o novo sistema de contagem de referência é habilitado para **todos os** aplicativos por padrão.
 
-Se você estiver desenvolvendo um aplicativo existente, poderá verificar o arquivo. csproj para garantir que todas as ocorrências de `MtouchUseRefCounting` sejam definidas como `true`, como abaixo:
+Se você estiver desenvolvendo um aplicativo existente, poderá verificar o arquivo. csproj para garantir que todas as ocorrências de `MtouchUseRefCounting` estejam definidas como `true` , como abaixo:
 
 ```xml
 <MtouchUseRefCounting>true</MtouchUseRefCounting>
 ```
 
-Se estiver definido como `false` seu aplicativo não usará as novas ferramentas.
+Se ele estiver definido como `false` seu aplicativo não estará usando as novas ferramentas.
 
 ### <a name="using-older-versions-of-xamarin"></a>Usando versões mais antigas do Xamarin
 
@@ -38,7 +38,7 @@ O Xamarin. iOS 7.2.1 e superior apresenta uma visualização aprimorada do nosso
 
 Para habilitar esse novo sistema de contagem de referência, marque a caixa de seleção **usar a extensão de contagem de referência** encontrada na guia **avançado** das **Opções de Build do IOS**do seu projeto, conforme mostrado abaixo: 
 
-[![](newrefcount-images/image1.png "Enable the new Reference Counting System")](newrefcount-images/image1.png#lightbox)
+[![Habilitar o novo sistema de contagem de referência](newrefcount-images/image1.png)](newrefcount-images/image1.png#lightbox)
 
 Observe que essas opções foram removidas em versões mais recentes do Visual Studio para Mac.
 
@@ -49,7 +49,7 @@ Observe que essas opções foram removidas em versões mais recentes do Visual S
 > [!IMPORTANT]
 > Uma versão anterior desse recurso já existe desde o MonoTouch 5,2, mas só estava disponível para o **SGen** como uma visualização experimental. Essa nova versão aprimorada agora também está disponível para o coletor de lixo **Boehm** .
 
-Historicamente, houve dois tipos de objetos gerenciados pelo Xamarin. iOS: aqueles que eram meramente um wrapper em um objeto nativo (objetos pares) e aqueles que ampliaram ou incorporaram novas funcionalidades (objetos derivados) – geralmente mantendo o estado de memória extra. Anteriormente, era possível aumentar um objeto de mesmo nível com o estado (por exemplo, adicionando um C# manipulador de eventos), mas que permitimos que o objeto passasse sem referência e, em seguida, coletado. Isso pode causar uma falha posteriormente (por exemplo, se o tempo de execução de Objective-C tiver sido chamado de volta para o objeto gerenciado).
+Historicamente, houve dois tipos de objetos gerenciados pelo Xamarin. iOS: aqueles que eram meramente um wrapper em um objeto nativo (objetos pares) e aqueles que ampliaram ou incorporaram novas funcionalidades (objetos derivados) – geralmente mantendo o estado de memória extra. Anteriormente, era possível aumentar um objeto par com o estado (por exemplo, adicionando um manipulador de eventos C#), mas que permitimos que o objeto não seja referenciado e, em seguida, coletado. Isso pode causar uma falha posteriormente (por exemplo, se o tempo de execução de Objective-C tiver sido chamado de volta para o objeto gerenciado).
 
 O novo sistema atualiza automaticamente os objetos pares em objetos que são gerenciados pelo tempo de execução quando armazenam informações adicionais.
 
@@ -71,7 +71,7 @@ class MyTableSource : UITableViewSource {
 }
 ```
 
-Sem a extensão de contagem de referência, esse código falharia porque `cell` se tornasse uma coleção e, portanto, seu `TouchDown` delegado, que será convertido em um ponteiro pendente.
+Sem a extensão de contagem de referência, esse código falharia porque `cell` se tornasse uma coleção e, portanto `TouchDown` , seu delegado, que será convertido em um ponteiro pendente.
 
 A extensão de contagem de referência garante que o objeto gerenciado permaneça ativo e impeça sua coleção, desde que o objeto nativo seja retido pelo código nativo.
 

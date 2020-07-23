@@ -10,16 +10,16 @@ ms.date: 04/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0b1a47d4dcc92fca4d280708a2cbbe9374c17da8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: de5ebf086af7fa8d7c6360bf3a1f48f57b834e44
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573281"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938431"
 ---
 # <a name="device-orientation"></a>Orientação do dispositivo
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
 
 É importante considerar como seu aplicativo será usado e como a orientação paisagem pode ser incorporada para melhorar a experiência do usuário. Layouts individuais podem ser criados para acomodar várias orientações e usar melhor o espaço disponível. No nível do aplicativo, a rotação pode ser desabilitada ou habilitada.
 
@@ -123,11 +123,11 @@ protected override void OnSizeAllocated(double width, double height)
 
 Depois que uma alteração na orientação do dispositivo for detectada, talvez você queira adicionar ou remover exibições adicionais de/para sua interface do usuário para reagir à alteração no espaço disponível. Por exemplo, considere a calculadora interna em cada plataforma em retrato:
 
-![](device-orientation-images/calculator-portrait.png "Calculator Application in Portrait")
+![Aplicativo de calculadora em retrato](device-orientation-images/calculator-portrait.png)
 
 e paisagem:
 
-![](device-orientation-images/calculator-landscape.png "Calculator Application in Landscape")
+![Aplicativo de calculadora em paisagem](device-orientation-images/calculator-landscape.png)
 
 Observe que os aplicativos tiram proveito do espaço disponível adicionando mais funcionalidade em paisagem.
 
@@ -147,11 +147,11 @@ As regras acima também se aplicam ao implementar interfaces para vários tamanh
 
 Considere o seguinte aplicativo, exibido em retrato:
 
-![](device-orientation-images/photo-stack-portrait.png "Photo Application in Portrait")
+![Aplicativo de foto em retrato](device-orientation-images/photo-stack-portrait.png)
 
 e paisagem:
 
-![](device-orientation-images/photo-stack-landscape.png "Photo Application in Landscape")
+![Aplicativo de fotos em paisagem](device-orientation-images/photo-stack-landscape.png)
 
 Isso é feito com o seguinte XAML:
 
@@ -221,11 +221,11 @@ Observe o seguinte:
 
 Considere o seguinte aplicativo, exibido em retrato:
 
-![](device-orientation-images/photo-abs-portrait.png "Photo Application in Portrait")
+![Aplicativo de foto em retrato](device-orientation-images/photo-abs-portrait.png)
 
 e paisagem:
 
-![](device-orientation-images/photo-abs-landscape.png "Photo Application in Landscape")
+![Aplicativo de fotos em paisagem](device-orientation-images/photo-abs-landscape.png)
 
 Isso é feito com o seguinte XAML:
 
@@ -273,11 +273,11 @@ Observe o seguinte:
 
 Considere o seguinte aplicativo, exibido em retrato:
 
-![](device-orientation-images/photo-rel-portrait.png "Photo Application in Portrait")
+![Aplicativo de foto em retrato](device-orientation-images/photo-rel-portrait.png)
 
 e paisagem:
 
-![](device-orientation-images/photo-rel-landscape.png "Photo Application in Landscape")
+![Aplicativo de fotos em paisagem](device-orientation-images/photo-rel-landscape.png)
 
 Isso é feito com o seguinte XAML:
 
@@ -360,15 +360,15 @@ Observe o seguinte:
 - Devido à maneira como a página foi disposta, não há necessidade de código de procedimento para introduzir a capacidade de resposta.
 - O `ScrollView` está sendo usado para permitir que o rótulo fique visível mesmo quando a altura da tela for menor que a soma das alturas fixas dos botões e da imagem.
 
-### <a name="grid"></a>Grade
+### <a name="grid"></a>Grid
 
 Considere o seguinte aplicativo, exibido em retrato:
 
-![](device-orientation-images/photo-grid-portrait.png "Photo Application in Portrait")
+![Aplicativo de foto em retrato](device-orientation-images/photo-grid-portrait.png)
 
 e paisagem:
 
-![](device-orientation-images/photo-grid-landscape.png "Photo Application in Landscape")
+![Aplicativo de fotos em paisagem](device-orientation-images/photo-grid-landscape.png)
 
 Isso é feito com o seguinte XAML:
 
@@ -462,7 +462,7 @@ Observe o seguinte:
 
 - Devido à maneira como a página foi disposta, há um método para alterar o posicionamento da grade dos controles.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Layout (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 - [Exemplo de BusinessTumble (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

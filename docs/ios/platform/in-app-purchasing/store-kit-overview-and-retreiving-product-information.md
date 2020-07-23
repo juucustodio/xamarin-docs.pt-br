@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 086dcb87f03ed4abbf3b82dc10add0f5698d52b3
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 718558b272ce710c3b96ada519a6864e17239503
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032327"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938691"
 ---
 # <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Visão geral do StoreKit e recuperação das informações do produto no Xamarin. iOS
 
 A interface do usuário para uma compra no aplicativo é mostrada nas capturas de tela abaixo.
 Antes que qualquer transação ocorra, o aplicativo deve recuperar o preço e a descrição do produto para exibição. Em seguida, quando o usuário pressiona a **compra**, o aplicativo faz uma solicitação para StoreKit que gerencia a caixa de diálogo de confirmação e o logon da Apple ID. Supondo que a transação seja bem sucedido, StoreKit notifica o código do aplicativo, que deve armazenar o resultado da transação e fornecer ao usuário acesso à sua compra.   
 
- [![](store-kit-overview-and-retreiving-product-information-images/image14.png "StoreKit notifies the application code, which must store the transaction result and provide the user with access to their purchase")](store-kit-overview-and-retreiving-product-information-images/image14.png#lightbox)
+ [![StoreKit notifica o código do aplicativo, que deve armazenar o resultado da transação e fornecer ao usuário acesso à sua compra](store-kit-overview-and-retreiving-product-information-images/image14.png)](store-kit-overview-and-retreiving-product-information-images/image14.png#lightbox)
 
 ## <a name="classes"></a>Classes
 
@@ -38,13 +38,13 @@ A implementação de compras no aplicativo requer as seguintes classes da estrut
 
 O diagrama a seguir mostra as relações entre as várias classes StoreKit (classes abstratas devem ser implementadas em seu aplicativo):   
 
- [![](store-kit-overview-and-retreiving-product-information-images/image15.png "The relationships between the various StoreKit classes abstract classes must be implemented in the app")](store-kit-overview-and-retreiving-product-information-images/image15.png#lightbox)   
+ [![As relações entre as classes abstratas de várias classes StoreKit devem ser implementadas no aplicativo](store-kit-overview-and-retreiving-product-information-images/image15.png)](store-kit-overview-and-retreiving-product-information-images/image15.png#lightbox)   
 
 Essas classes são explicadas em mais detalhes posteriormente neste documento.
 
 ## <a name="testing"></a>Testes
 
-A maioria das operações de StoreKit requer um dispositivo real para teste. Recuperando Informações do produto (isto é, o preço &amp; descrição) funcionará no simulador, mas as operações de compra e restauração retornarão um erro (como FailedTransaction código = 5002 ocorreu um erro desconhecido).
+A maioria das operações de StoreKit requer um dispositivo real para teste. Recuperando Informações do produto (isto é, Descrição de preço &amp; ) funcionará no simulador, mas as operações de compra e restauração retornarão um erro (como FailedTransaction Code = 5002 ocorreu um erro desconhecido).
 
 Observação: o StoreKit não funciona no simulador do iOS. Ao executar seu aplicativo no simulador de iOS, o StoreKit registrará um aviso se seu aplicativo tentar recuperar a fila de pagamento. O teste do armazenamento deve ser feito em dispositivos reais.   
 
@@ -54,21 +54,21 @@ Se você tentar entrar no real Store com uma conta de teste, ela será automatic
 
 Para testar o código StoreKit, você deve fazer logoff de sua conta de teste do iTunes regular e logon com uma conta de teste especial (criada no iTunes Connect) que esteja vinculada ao repositório de teste. Para sair da conta atual, acesse **as configurações > iTunes e App Store** , conforme mostrado aqui:
 
- [![](store-kit-overview-and-retreiving-product-information-images/image16.png "To sign out of the current account visit Settings iTunes and App Store")](store-kit-overview-and-retreiving-product-information-images/image16.png#lightbox)
+ [![Para sair da conta atual, acesse as configurações iTunes e App Store](store-kit-overview-and-retreiving-product-information-images/image16.png)](store-kit-overview-and-retreiving-product-information-images/image16.png#lightbox)
 
 em seguida, entre com uma conta de teste *quando solicitado por StoreKit em seu aplicativo*:
 
 Para criar usuários de teste no iTunes Connect, clique em **usuários e funções** na página principal.
 
- [![](store-kit-overview-and-retreiving-product-information-images/image17.png "To create test users in iTunes Connect click on Users and Roles on the main page")](store-kit-overview-and-retreiving-product-information-images/image17.png#lightbox)
+ [![Para criar usuários de teste no iTunes Connect, clique em usuários e funções na página principal](store-kit-overview-and-retreiving-product-information-images/image17.png)](store-kit-overview-and-retreiving-product-information-images/image17.png#lightbox)
 
 Selecionar **testadores da área restrita**
 
- [![](store-kit-overview-and-retreiving-product-information-images/image18.png "Selecting Sandbox Testers")](store-kit-overview-and-retreiving-product-information-images/image18.png#lightbox)
+ [![Selecionando testadores da área restrita](store-kit-overview-and-retreiving-product-information-images/image18.png)](store-kit-overview-and-retreiving-product-information-images/image18.png#lightbox)
 
 A lista de usuários existentes é exibida. Você pode adicionar um novo usuário ou excluir um registro existente. O portal não (atualmente) permite que você exiba ou edite os usuários de teste existentes, portanto, é recomendável que você mantenha um bom registro de cada usuário de teste criado (especialmente a senha que você atribui). Depois de excluir um usuário de teste, o endereço de email não poderá ser usado novamente para outra conta de teste.  
    
- [![](store-kit-overview-and-retreiving-product-information-images/image19.png "The list of existing users is displayed")](store-kit-overview-and-retreiving-product-information-images/image19.png#lightbox)   
+ [![A lista de usuários existentes é exibida](store-kit-overview-and-retreiving-product-information-images/image19.png)](store-kit-overview-and-retreiving-product-information-images/image19.png#lightbox)   
    
  Os novos usuários de teste têm atributos semelhantes a uma ID da Apple real (como nome, senha, pergunta secreta e resposta). Mantenha um registro de todos os detalhes inseridos aqui. O campo **selecionar repositório do iTunes** determinará a moeda e o idioma que as compras no aplicativo usarão quando estiverem conectados como esse usuário.
 
@@ -80,27 +80,27 @@ A primeira etapa na venda de um produto de compra no aplicativo é exibi-lo: Rec
 
 Independentemente do tipo de produtos que um aplicativo vende (consumível, não consumível ou de um tipo de assinatura), o processo de recuperação de informações do produto para exibição é o mesmo. O código InAppPurchaseSample que acompanha este artigo contém um projeto chamado *itens consumíveis* que demonstra como recuperar informações de produção para exibição. Ele mostra como:
 
-- Crie uma implementação de `SKProductsRequestDelegate` e implemente o método abstrato de `ReceivedResponse`. O código de exemplo chama essa classe de `InAppPurchaseManager`. 
-- Verifique com StoreKit para ver se os pagamentos são permitidos (usando `SKPaymentQueue.CanMakePayments`). 
-- Crie uma instância de um `SKProductsRequest` com as IDs de produto que foram definidas no iTunes Connect. Isso é feito no método de `InAppPurchaseManager.RequestProductData` do exemplo. 
-- Chame o método Start no `SKProductsRequest`. Isso dispara uma chamada assíncrona para os servidores da loja de aplicativos. O delegado (`InAppPurchaseManager`) será chamado de volta com os resultados. 
-- O método do delegado (`InAppPurchaseManager`) `ReceivedResponse` atualiza a interface do usuário com os dados retornados da loja de aplicativos (preços de produtos & descrições ou mensagens sobre produtos inválidos). 
+- Crie uma implementação de `SKProductsRequestDelegate` e implemente o `ReceivedResponse` método abstract. O código de exemplo chama essa `InAppPurchaseManager` classe. 
+- Verifique com StoreKit para ver se os pagamentos são permitidos (usando `SKPaymentQueue.CanMakePayments` ). 
+- Crie uma instância `SKProductsRequest` com as IDs de produto que foram definidas no iTunes Connect. Isso é feito no método do exemplo `InAppPurchaseManager.RequestProductData` . 
+- Chame o método Start no `SKProductsRequest` . Isso dispara uma chamada assíncrona para os servidores da loja de aplicativos. O delegado ( `InAppPurchaseManager` ) será chamado com os resultados. 
+- O método () do delegado `InAppPurchaseManager` `ReceivedResponse` atualiza a interface do usuário com os dados retornados da loja de aplicativos (preços de produtos & descrições ou mensagens sobre produtos inválidos). 
 
 A interação geral é parecida com esta (o **StoreKit** é integrado ao Ios e a **loja de aplicativos** representa os servidores da Apple):
 
- [![](store-kit-overview-and-retreiving-product-information-images/image21.png "Retrieving Product Information graph")](store-kit-overview-and-retreiving-product-information-images/image21.png#lightbox)
+ [![Recuperando grafo de informações do produto](store-kit-overview-and-retreiving-product-information-images/image21.png)](store-kit-overview-and-retreiving-product-information-images/image21.png#lightbox)
 
 ### <a name="displaying-product-information-example"></a>Exibindo o exemplo de informações do produto
 
 O código de exemplo [InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) *itens consumíveis* demonstra como as informações do produto podem ser recuperadas. A tela principal do exemplo exibe informações para dois produtos que são recuperados da loja de aplicativos:   
 
- [![](store-kit-overview-and-retreiving-product-information-images/image23.png "The main screen displays information products  retrieved from the App Store")](store-kit-overview-and-retreiving-product-information-images/image23.png#lightbox)   
+ [![A tela principal exibe produtos de informações recuperados da loja de aplicativos](store-kit-overview-and-retreiving-product-information-images/image23.png)](store-kit-overview-and-retreiving-product-information-images/image23.png#lightbox)   
 
 O código de exemplo para recuperar e exibir informações do produto é explicado em mais detalhes abaixo.
 
 #### <a name="viewcontroller-methods"></a>Métodos ViewController
 
-A classe `ConsumableViewController` gerenciará a exibição de preços para dois produtos cujas IDs de produto são codificadas na classe.
+A `ConsumableViewController` classe gerenciará a exibição de preços para dois produtos cujas IDs de produto são codificadas na classe.
 
 ```csharp
 public static string Buy5ProductId = "com.xamarin.storekit.testing.consume5credits",
@@ -115,7 +115,7 @@ public ConsumableViewController () : base()
 }
 ```
 
-No nível de classe, também deve haver um NSObject declarado que será usado para configurar um observador de `NSNotificationCenter`:
+No nível de classe, também deve haver um NSObject declarado que será usado para configurar um `NSNotificationCenter` observador:
 
 ```csharp
 NSObject priceObserver;
@@ -131,13 +131,13 @@ priceObserver = NSNotificationCenter.DefaultCenter.AddObserver (
 }
 ```
 
-No final do método `ViewWillAppear`, chame o método `RequestProductData` para iniciar a solicitação StoreKit. Depois que essa solicitação for feita, o StoreKit irá contatar os servidores da Apple de forma assíncrona para obter as informações e recolocá-las em seu aplicativo. Isso é obtido pela subclasse de `SKProductsRequestDelegate` (`InAppPurchaseManager`) que é explicada na próxima seção.
+No final do `ViewWillAppear` método, chame o `RequestProductData` método para iniciar a solicitação StoreKit. Depois que essa solicitação for feita, o StoreKit irá contatar os servidores da Apple de forma assíncrona para obter as informações e recolocá-las em seu aplicativo. Isso é obtido pela `SKProductsRequestDelegate` subclasse ( `InAppPurchaseManager` ) que é explicada na próxima seção.
 
 ```csharp
 iap.RequestProductData(products);
 ```
 
-O código para exibir o preço e a descrição simplesmente recupera as informações do SKProduct e as atribui aos controles UIKit (Observe que exibimos o `LocalizedTitle` e `LocalizedDescription` – StoreKit resolve automaticamente o texto correto e os preços com base no configurações de conta). O código a seguir pertence à notificação que criamos acima:
+O código para exibir o preço e a descrição simplesmente recupera as informações do SKProduct e as atribui aos controles UIKit (Observe que exibimos o `LocalizedTitle` e `LocalizedDescription` – StoreKit resolve automaticamente o texto correto e os preços com base nas configurações de conta do usuário). O código a seguir pertence à notificação que criamos acima:
 
 ```csharp
 priceObserver = NSNotificationCenter.DefaultCenter.AddObserver (
@@ -155,7 +155,7 @@ priceObserver = NSNotificationCenter.DefaultCenter.AddObserver (
 }
 ```
 
-Por fim, o método `ViewWillDisappear` deve garantir que o observador seja removido:
+Por fim, o `ViewWillDisappear` método deve garantir que o observador seja removido:
 
 ```csharp
 NSNotificationCenter.DefaultCenter.RemoveObserver (priceObserver);
@@ -163,7 +163,7 @@ NSNotificationCenter.DefaultCenter.RemoveObserver (priceObserver);
 
 #### <a name="skproductrequestdelegate-inapppurchasemanager-methods"></a>Métodos SKProductRequestDelegate (InAppPurchaseManager)
 
-O método `RequestProductData` é chamado quando o aplicativo deseja recuperar os preços do produto e outras informações. Ele analisa a coleção de IDs de produto no tipo de dados correto e, em seguida, cria um `SKProductsRequest` com essas informações. Chamar o método Start faz com que uma solicitação de rede seja feita aos servidores da Apple. A solicitação será executada de forma assíncrona e chamará o método `ReceivedResponse` do delegado quando ele for concluído com êxito.
+O `RequestProductData` método é chamado quando o aplicativo deseja recuperar os preços do produto e outras informações. Ele analisa a coleção de IDs de produto no tipo de dados correto e, em seguida, cria um `SKProductsRequest` com essas informações. Chamar o método Start faz com que uma solicitação de rede seja feita aos servidores da Apple. A solicitação será executada de forma assíncrona e chamará o `ReceivedResponse` método do delegado quando ela for concluída com êxito.
 
 ```csharp
 public void RequestProductData (List<string> productIds)
@@ -179,7 +179,7 @@ public void RequestProductData (List<string> productIds)
 }
 ```
 
-o iOS roteará automaticamente a solicitação para a versão "sandbox" ou "produção" da loja de aplicativos, dependendo do perfil de provisionamento com o qual o aplicativo está sendo executado – então, quando você estiver desenvolvendo ou testando seu aplicativo, a solicitação terá acesso a todos os produtos configurado no iTunes Connect (mesmo aqueles que ainda não foram enviados ou aprovados pela Apple). Quando seu aplicativo estiver em produção, as solicitações de StoreKit retornarão apenas informações para produtos **aprovados** .   
+o iOS roteará automaticamente a solicitação para a versão "sandbox" ou "produção" da loja de aplicativos, dependendo do perfil de provisionamento com o qual o aplicativo está sendo executado – então, quando você estiver desenvolvendo ou testando seu aplicativo, a solicitação terá acesso a todos os produtos configurados no iTunes Connect (mesmo aqueles que ainda não foram enviados ou aprovados pela Apple). Quando seu aplicativo estiver em produção, as solicitações de StoreKit retornarão apenas informações para produtos **aprovados** .   
 
 O `ReceivedResponse` método substituído é chamado depois que os servidores da Apple tiverem respondido com os dados. Como isso é chamado em segundo plano, o código deve analisar os dados válidos e usar uma notificação para enviar as informações do produto para qualquer ViewControllers que esteja ' ouvindo ' para essa notificação. O código para coletar informações válidas do produto e enviar uma notificação é mostrado abaixo:
 
@@ -201,7 +201,7 @@ public override void ReceivedResponse (SKProductsRequest request, SKProductsResp
 }
 ```
 
-Embora não seja mostrado no diagrama, o método `RequestFailed` também deve ser substituído para que você possa fornecer alguns comentários ao usuário caso os servidores da loja de aplicativos não estejam acessíveis (ou algum outro erro ocorra). O código de exemplo simplesmente grava no console, mas um aplicativo real pode optar por consultar `error.Code` Propriedade e implementar o comportamento personalizado (como um alerta para o usuário).
+Embora não seja mostrado no diagrama, o `RequestFailed` método também deve ser substituído para que você possa fornecer alguns comentários ao usuário caso os servidores da loja de aplicativos não estejam acessíveis (ou algum outro erro ocorra). O código de exemplo simplesmente grava no console, mas um aplicativo real pode optar por consultar a `error.Code` propriedade e implementar o comportamento personalizado (como um alerta para o usuário).
 
 ```csharp
 public override void RequestFailed (SKRequest request, NSError error)
@@ -212,7 +212,7 @@ public override void RequestFailed (SKRequest request, NSError error)
 
 Esta captura de tela mostra o aplicativo de exemplo imediatamente após o carregamento (quando nenhuma informação de produto está disponível):
 
- [![](store-kit-overview-and-retreiving-product-information-images/image24.png "The sample app immediately after loading when no product information is available")](store-kit-overview-and-retreiving-product-information-images/image24.png#lightbox)
+ [![O aplicativo de exemplo imediatamente após o carregamento quando não há informações do produto disponíveis](store-kit-overview-and-retreiving-product-information-images/image24.png)](store-kit-overview-and-retreiving-product-information-images/image24.png#lightbox)
 
 ## <a name="invalid-products"></a>Produtos inválidos
 
@@ -220,7 +220,7 @@ Um `SKProductsRequest` também pode retornar uma lista de IDs de produto inváli
 
 A **ID do produto foi digitada intipadamente** – somente IDs de produto válidas são aceitas.   
    
- O **produto não foi aprovado** – durante o teste, todos os produtos limpos para venda devem ser retornados por um `SKProductsRequest`; no entanto, em produção, apenas produtos aprovados são retornados.   
+ O **produto não foi aprovado** – durante o teste, todos os produtos limpos para venda devem ser retornados por um `SKProductsRequest` ; no entanto, em produção somente produtos aprovados são retornados.   
    
  A **ID do aplicativo não é explícita** – as IDs do aplicativo curinga (com um asterisco) não permitem a compra no aplicativo.   
    
@@ -230,7 +230,7 @@ A **ID do produto foi digitada intipadamente** – somente IDs de produto válid
    
  **O binário está no estado rejeitado** – se houver um binário enviado anteriormente no estado rejeitado (seja pela equipe da loja de aplicativos ou pelo desenvolvedor), os recursos do StoreKit não funcionarão.
 
-O método `ReceivedResponse` no código de exemplo gera os produtos inválidos para o console:
+O `ReceivedResponse` método no código de exemplo gera os produtos inválidos para o console:
 
 ```csharp
 public override void ReceivedResponse (SKProductsRequest request, SKProductsResponse response)
@@ -244,7 +244,7 @@ public override void ReceivedResponse (SKProductsRequest request, SKProductsResp
 
 ## <a name="displaying-localized-prices"></a>Exibindo preços localizados
 
-Os tipos de preço especificam um preço específico para cada produto em todas as lojas de aplicativos internacionais. Para garantir que os preços sejam exibidos corretamente para cada moeda, use o método de extensão a seguir (definido em `SKProductExtension.cs`) em vez da propriedade Price de cada `SKProduct`:
+Os tipos de preço especificam um preço específico para cada produto em todas as lojas de aplicativos internacionais. Para garantir que os preços sejam exibidos corretamente para cada moeda, use o método de extensão a seguir (definido em `SKProductExtension.cs` ) em vez da propriedade Price de cada um `SKProduct` :
 
 ```csharp
 public static class SKProductExtension {
@@ -269,7 +269,7 @@ buy5Button.SetTitle(String.Format(Buy, product.LocalizedPrice()), UIControlState
 
 Usar duas contas de teste do iTunes diferentes (uma para a loja americana e outra para a loja japonesa) resulta nas seguintes capturas de tela:   
 
- [![](store-kit-overview-and-retreiving-product-information-images/image25.png "Two different iTunes test accounts showing language specific results")](store-kit-overview-and-retreiving-product-information-images/image25.png#lightbox)   
+ [![Duas contas do iTunes Test diferentes mostrando os resultados específicos do idioma](store-kit-overview-and-retreiving-product-information-images/image25.png)](store-kit-overview-and-retreiving-product-information-images/image25.png#lightbox)   
 
 Observe que o repositório afeta o idioma usado para as informações do produto e a moeda de preço, enquanto a configuração de idioma do dispositivo afeta os rótulos e outros conteúdos localizados.   
 

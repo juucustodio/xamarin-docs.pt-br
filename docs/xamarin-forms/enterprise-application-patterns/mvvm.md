@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c07fc9f42c4175b4e4569ab95a951b24c130c4f3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cc0528e7696130a772e93be67526ea9d6b10373f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84572046"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936520"
 ---
 # <a name="the-model-view-viewmodel-pattern"></a>O padrão Model-View-ViewModel
 
@@ -27,7 +27,7 @@ O padrão MVVM (Model-View-ViewModel) ajuda a separar corretamente a lógica de 
 
 Há três componentes principais no padrão MVVM: o modelo, a exibição e o modelo de exibição. Cada um serve para uma finalidade distinta. A Figura 2-1 mostra as relações entre os três componentes.
 
-![](mvvm-images/mvvm.png "The MVVM pattern")
+![O padrão MVVM](mvvm-images/mvvm.png)
 
 **Figura 2-1**: o padrão MVVM
 
@@ -363,7 +363,7 @@ O padrão MVVM (Model-View-ViewModel) ajuda a separar corretamente a lógica de 
 
 Usando o padrão MVVM, a interface do usuário do aplicativo e a apresentação subjacente e a lógica de negócios são separadas em três classes separadas: a exibição, que encapsula a interface do usuário e a lógica da interface do usuário; o modelo de exibição, que encapsula a lógica de apresentação e o estado; e o modelo, que encapsula a lógica de negócios e os dados do aplicativo.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Download do eBook (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (exemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

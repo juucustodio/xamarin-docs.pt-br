@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: ae08d7d2d8d9de700570311f2294df737240b73f
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 2e5b7a65f565f8c4f3265c5c95e6e4a296e4681f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572150"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938093"
 ---
 # <a name="updating-a-xamarinios-app-in-the-background"></a>Atualizando um aplicativo Xamarin. iOS em segundo plano
 
@@ -43,7 +43,7 @@ No iOS 6, um aplicativo que insere o tempo de primeiro plano necessário para ca
 
 Para implementar a busca em segundo plano, edite *info. plist* e marque as caixas de seleção **habilitar modos de segundo plano** e **busca em segundo plano** :
 
- [![](updating-an-application-in-the-background-images/fetch.png "Edit the Info.plist and check the Enable Background Modes and Background Fetch check boxes")](updating-an-application-in-the-background-images/fetch.png#lightbox)
+ [![Edite o info. plist e marque as caixas de seleção Habilitar modos de segundo plano e busca em segundo plano](updating-an-application-in-the-background-images/fetch.png)](updating-an-application-in-the-background-images/fetch.png#lightbox)
 
 Em seguida, no `AppDelegate` , substitua o `FinishedLaunching` método para definir o intervalo mínimo de busca. Neste exemplo, permitimos que o sistema operacional decida com que frequência obter o novo conteúdo:
 
@@ -101,7 +101,7 @@ No iOS 6, uma notificação por push de entrada informa o sistema para alertar o
 
 Para implementar notificações remotas, edite *info. plist* e marque as caixas de seleção **habilitar modos de segundo plano** e **notificações remotas** :
 
- [![](updating-an-application-in-the-background-images/remote.png "Background Mode set to Enable Background Modes and Remote notifications")](updating-an-application-in-the-background-images/remote.png#lightbox)
+ [![Modo em segundo plano definido para habilitar modos de segundo plano e notificações remotas](updating-an-application-in-the-background-images/remote.png)](updating-an-application-in-the-background-images/remote.png#lightbox)
 
 Em seguida, defina o `content-available` sinalizador na notificação por push para 1. Isso permite que o aplicativo saiba como buscar um novo conteúdo antes de exibir o alerta:
 
@@ -147,7 +147,7 @@ A maior diferença entre as notificações normais e silenciosas da perspectiva 
 
 No entanto, o APNs deixará as notificações silenciosas "acumuladas" junto com uma notificação remota normal ou uma resposta de Keep-Alive. Como as notificações regulares não são limitadas por taxa, elas podem ser usadas para enviar notificações silenciosas do APNs para o dispositivo, conforme ilustrado pelo seguinte diagrama:
 
- [![](updating-an-application-in-the-background-images/silent.png "Regular notifications can be used to push stored silent notifications from the APNs to the device, as illustrated by this diagram")](updating-an-application-in-the-background-images/silent.png#lightbox)
+ [![Notificações regulares podem ser usadas para enviar notificações silenciosas armazenadas do APNs para o dispositivo, conforme ilustrado por este diagrama](updating-an-application-in-the-background-images/silent.png)](updating-an-application-in-the-background-images/silent.png#lightbox)
 
 > [!IMPORTANT]
 > A Apple incentiva os desenvolvedores a enviar notificações por push silenciosas sempre que o aplicativo exigir e permitir que o APNs agende sua entrega.

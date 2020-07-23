@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: bf023543d3159f5d5baf7f7036a576b8a746cf9e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 6002e5cc62dfe30c14f21943c690a5a1b15a0c12
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572124"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936585"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Partes de tabela e funcionalidade no Xamarin. iOS
 
@@ -26,7 +26,7 @@ Um UITableView pode ter um estilo ' agrupado ' ou ' Plain ' e consiste nas segui
 
 Essas capturas de tela mostram como as linhas de seção, os cabeçalhos, os rodapés, os controles de edição e o índice são exibidos.
 
- [![](table-parts-and-functionality-images/image1a.png "These screenshots show how section rows, headers, footers, edit controls and the index are displayed")](table-parts-and-functionality-images/image1a.png#lightbox)
+ [![Essas capturas de tela mostram como as linhas de seção, os cabeçalhos, os rodapés, os controles de edição e o índice são exibidos](table-parts-and-functionality-images/image1a.png)](table-parts-and-functionality-images/image1a.png#lightbox)
 
 Essas partes são descritas em mais detalhes abaixo:
 
@@ -72,7 +72,7 @@ O restante deste documento mostra como implementar todos esses recursos do UITab
 
 As classes primárias usadas para exibir exibições de tabela são mostradas aqui:
 
-[![](table-parts-and-functionality-images/classdiagram.png "The primary classes used to display table views are shown here")](table-parts-and-functionality-images/classdiagram.png#lightbox)
+[![As classes primárias usadas para exibir exibições de tabela são mostradas aqui](table-parts-and-functionality-images/classdiagram.png)](table-parts-and-functionality-images/classdiagram.png#lightbox)
 
 A finalidade de cada classe é descrita abaixo:
 
@@ -90,6 +90,6 @@ O UITableViewSource substitui as duas classes a seguir, que ainda estão dispon�
 
 Neste documento, todos os exemplos usam UITableViewSource e ignoram essas duas classes. Eles são mencionados aqui porque qualquer exemplo de Objective-C encontrado na documentação da Apple fará referência a eles, portanto, é útil entender o que eles fazem (e que você pode usar o UITableViewSource do Xamarin. iOS em vez disso).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [WorkingWithTables (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)

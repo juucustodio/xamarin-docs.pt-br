@@ -10,12 +10,12 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7ae6e5e764dc066940971dd9b5a8fdc36c7a1970
-ms.sourcegitcommit: cd0c0999b53e825b60471bfbfd4144cfcd783587
+ms.openlocfilehash: 3ad0981c0249bc81a97d5c48489167d81a1523de
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86225488"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938457"
 ---
 # <a name="images-in-xamarinforms"></a>Imagens emXamarin.Forms
 
@@ -136,7 +136,7 @@ O IDE gerou esse padrão concatenando o **namespace padrão** para esse projeto 
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-![](images-images/xs-buildaction.png "Set Build Action: EmbeddedResource")
+![Definir ação de compilação: EmbeddedResource](images-images/xs-buildaction.png)
 
 A **ação de Build** também pode ser exibida e alterada no painel de **Propriedades** de um arquivo.
 Esse painel mostra a **ID de recurso** usada para referenciar o recurso no código. Na captura de tela abaixo, a **ID do recurso** é **WorkingWithImages.beach.jpg**.

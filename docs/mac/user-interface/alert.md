@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 044792f37fbba13699a5ab31d815b4f2c5dafe17
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 00e5b2a2238763822172a1b7d7a7c3090634ed17
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84565480"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938080"
 ---
 # <a name="alerts-in-xamarinmac"></a>Alertas no Xamarin. Mac
 
@@ -22,7 +22,7 @@ Ao trabalhar com C# e .NET em um aplicativo Xamarin. Mac, você tem acesso aos m
 
 Um alerta é um tipo especial de caixa de diálogo que aparece quando ocorre um problema sério (como um erro) ou como um aviso (como a preparação para excluir um arquivo). Como um alerta é uma caixa de diálogo, ele também requer uma resposta do usuário para que possa ser fechado.
 
-[![](alert-images/alert06.png "An example alert")](alert-images/alert06.png#lightbox)
+[![Um alerta de exemplo](alert-images/alert06.png)](alert-images/alert06.png#lightbox)
 
 Neste artigo, abordaremos as noções básicas de como trabalhar com alertas em um aplicativo Xamarin. Mac. 
 
@@ -60,7 +60,7 @@ alert.RunModal ();
 
 O código acima exibe um alerta com o ícone de aplicativos sobreposto no ícone de aviso, um título, uma mensagem de aviso e um único botão **OK** :
 
-[![](alert-images/alert01.png "An alert with a OK button")](alert-images/alert01.png#lightbox)
+[![Um alerta com um botão OK](alert-images/alert01.png)](alert-images/alert01.png#lightbox)
 
 A Apple fornece várias propriedades que podem ser usadas para personalizar um alerta:
 
@@ -93,7 +93,7 @@ alert.RunModal ();
 
 Se esse código for executado, o seguinte será exibido:
 
-[![](alert-images/alert02.png "A simple alert")](alert-images/alert02.png#lightbox)
+[![Um alerta simples](alert-images/alert02.png)](alert-images/alert02.png#lightbox)
 
 O código a seguir exibe o mesmo alerta como uma planilha:
 
@@ -108,7 +108,7 @@ alert.BeginSheet (this);
 
 Se esse código for executado, o seguinte será exibido:
 
-[![](alert-images/alert03.png "An alert displayed as a sheet")](alert-images/alert03.png#lightbox)
+[![Um alerta exibido como uma planilha](alert-images/alert03.png)](alert-images/alert03.png#lightbox)
 
 <a name="Working_with_Alert_Buttons"></a>
 
@@ -136,7 +136,7 @@ O primeiro botão adicionado será o _botão padrão_ que será ativado se o usu
 
 Se executarmos o código, o seguinte será exibido:
 
-[![](alert-images/alert04.png "An alert with three button options")](alert-images/alert04.png#lightbox)
+[![Um alerta com três opções de botão](alert-images/alert04.png)](alert-images/alert04.png#lightbox)
 
 Este é o código para o mesmo alerta que uma planilha:
 
@@ -156,7 +156,7 @@ alert.BeginSheetForResponse (this, (result) => {
 
 Se esse código for executado, o seguinte será exibido:
 
-[![](alert-images/alert05.png "A three button alert displayed as a sheet")](alert-images/alert05.png#lightbox)
+[![Um alerta de três botões exibido como uma planilha](alert-images/alert05.png)](alert-images/alert05.png#lightbox)
 
 > [!IMPORTANT]
 > Você nunca deve adicionar mais de três botões a um alerta.
@@ -185,7 +185,7 @@ Se o valor de `alert.SuppressionButton.State` for `NSCellStateValue.On` , o usu�
 
 Se o código for executado, o seguinte será exibido:
 
-[![](alert-images/alert06.png "An alert with a suppress button")](alert-images/alert06.png#lightbox)
+[![Um alerta com um botão suprimir](alert-images/alert06.png)](alert-images/alert06.png#lightbox)
 
 Este é o código para o mesmo alerta que uma planilha:
 
@@ -206,7 +206,7 @@ alert.BeginSheetForResponse (this, (result) => {
 
 Se esse código for executado, o seguinte será exibido:
 
-[![](alert-images/alert07.png "An alert with a suppress button display as a sheet")](alert-images/alert07.png#lightbox)
+[![Um alerta com um botão suprimir exibido como uma planilha](alert-images/alert07.png)](alert-images/alert07.png#lightbox)
 
 <a name="Adding_a_Custom_SubView"></a>
 
@@ -236,7 +236,7 @@ As principais linhas aqui são o `var input = new NSTextField (new CGRect (0, 0,
 
 Se executarmos o código, o seguinte será exibido:
 
-[![](alert-images/alert08.png "If we run the code, the following will be displayed")](alert-images/alert08.png#lightbox)
+[![Se executarmos o código, o seguinte será exibido](alert-images/alert08.png)](alert-images/alert08.png#lightbox)
 
 Este é o mesmo alerta que uma planilha:
 
@@ -261,7 +261,7 @@ alert.BeginSheetForResponse (this, (result) => {
 
 Se executarmos esse código, o seguinte será exibido:
 
-[![](alert-images/alert09.png "An alert with a custom view")](alert-images/alert09.png#lightbox)
+[![Um alerta com uma exibição personalizada](alert-images/alert09.png)](alert-images/alert09.png#lightbox)
 
 <a name="Summary"></a>
 
@@ -269,7 +269,7 @@ Se executarmos esse código, o seguinte será exibido:
 
 Este artigo deu uma visão detalhada de como trabalhar com alertas em um aplicativo Xamarin. Mac. Vimos os diferentes tipos e usos de alertas, como criar e personalizar alertas e como trabalhar com alertas em código C#.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [MacWindows (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macwindows)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)

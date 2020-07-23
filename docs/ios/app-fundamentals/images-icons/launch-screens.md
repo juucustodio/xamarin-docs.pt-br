@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2018
-ms.openlocfilehash: a2f15c8385b7df7afc3f04e033a085cb00bc9005
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: b4191ae3c25ee5d2eeccd44377177d7d0df6f19e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573853"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937365"
 ---
 # <a name="launch-screens-for-xamarinios-apps"></a>Iniciar telas para aplicativos Xamarin. iOS
 
@@ -191,39 +191,39 @@ Para obter mais informações sobre como criar uma tela de inicialização com u
 
 Ao atualizar um aplicativo existente para usar storyboards para suas telas de inicialização, clique com o botão direito do mouse no **nome do projeto** na **Gerenciador de soluções** e selecione **Adicionar**  >  **novo arquivo...**. Selecione **iOS**  >  **tela de inicialização** do IOS e clique no botão **novo** :
 
-![](launch-screens-images/storyboard02.png "Select an iOS Launch Screen")
+![Selecionar uma tela de inicialização do iOS](launch-screens-images/storyboard02.png)
 
 Em seguida, clique duas vezes no `Info.plist` arquivo no **Gerenciador de soluções** para abri-lo para edição. Na **tela iniciar**, selecione o novo arquivo de storyboard criado acima.
 
-![](launch-screens-images/storyboard09.png "Select the new Storyboard file created above")
+![Selecione o novo arquivo de storyboard criado acima](launch-screens-images/storyboard09.png)
 
 Para usar o novo storyboard como uma tela de inicialização, faça o seguinte:
 
 1. Clique duas vezes no `Info.plist` arquivo no **Gerenciador de soluções** para abri-lo para edição.
 2. Role até a seção **imagens de inicialização universal** do editor, abra a lista suspensa **tela de inicialização** e selecione o nome do storyboard criado acima: 
 
-    ![](launch-screens-images/storyboard08.png "Setting the launch screen to the storyboard")
+    ![Configurando a tela de inicialização para o storyboard](launch-screens-images/storyboard08.png)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Clique com o botão direito do mouse no nome do projeto na **Gerenciador de soluções** e selecione **Adicionar**  >  **novo arquivo...**: 
 
-    ![](launch-screens-images/image012.png "Add new file")
+    ![Adicionar novo arquivo](launch-screens-images/image012.png)
 2. Insira um nome para a tela de inicialização e clique no botão **Adicionar** : 
 
-    ![](launch-screens-images/image013.png "Enter a name for the launch screen")
+    ![Insira um nome para a tela de inicialização](launch-screens-images/image013.png)
 3. No **Gerenciador de soluções**, clique duas vezes no arquivo de storyboard recém-criado para abri-lo para edição.
 4. Verifique se a **classe size** está definida como **any: any** e a **exibição como** é **genérica**: 
 
-    ![](launch-screens-images/image016.png "Ensure that the Size Class is set to any:any and the View As is Generic")
+    ![Certifique-se de que a classe size esteja definida como Any: qualquer e a exibição como seja genérica](launch-screens-images/image016.png)
 5. Assembly a tela de inicialização de classes de tamanho, elementos simples da interface do usuário (como `UIImageView` ) e imagens que você incluiu no pacote do aplicativo: 
 
-    ![](launch-screens-images/image017.png "Assembly the launch screen in the iOS Designer")
+    ![Assembly a tela de inicialização no designer do iOS](launch-screens-images/image017.png)
 6. Salve as alterações no storyboard.
 
 -----
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Telas de inicialização dinâmica (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
 - [Storyboards unificadas](~/ios/user-interface/storyboards/unified-storyboards.md)

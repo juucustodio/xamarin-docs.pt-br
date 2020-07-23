@@ -10,16 +10,16 @@ ms.date: 04/14/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 91a639b2d3c2f6a8437a09a70808dc6d793ba76b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b4c6569acbade7edf64c9aaf54237ebaa342ea54
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131749"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936637"
 ---
 # <a name="non-affine-transforms"></a>Transformações não afins
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Criar efeitos de perspectiva e cônico com a terceira coluna da matriz de transformação_
 
@@ -27,7 +27,7 @@ A tradução, o dimensionamento, a rotação e a distorção são classificados 
 
 No entanto, o SkiaSharp também é capaz de transformações não afim, que têm a capacidade de transformar um retângulo em qualquer diamante convexa:
 
-![](non-affine-images/nonaffinetransformexample.png "A bitmap transformed into a convex quadrilateral")
+![Um bitmap transformado em um convexa diamante](non-affine-images/nonaffinetransformexample.png)
 
 Um convexa diamante é uma figura de quatro lados com ângulos interiores sempre menor que 180 graus e lados que não se cruzam.
 
@@ -99,7 +99,7 @@ Agora, use essa transformação para renderizar uma caixa quadrada de 100 pixels
 
 Quando x é 100, o denominador z é 2, portanto, as coordenadas x e y são efetivamente divididas em metade. O lado direito da caixa torna-se menor do que o lado esquerdo:
 
-![](non-affine-images/nonaffinetransform.png "A box subjected to a non-affine transform")
+![Um box que está sujeito a uma transformação não afim](non-affine-images/nonaffinetransform.png)
 
 A `Persp` parte desses nomes de célula se refere a "Perspective" porque o foreshortening sugere que a caixa agora está inclinada no lado direito além do visualizador.
 
@@ -233,7 +233,7 @@ public partial class TestPerspectivePage : ContentPage
 
 Aqui estão algumas imagens de exemplo:
 
-[![](non-affine-images/testperspective-small.png "Triple screenshot of the Test Perspective page")](non-affine-images/testperspective-large.png#lightbox "Triple screenshot of the Test Perspective page")
+[![Captura de tela tripla da página perspectiva do teste](non-affine-images/testperspective-small.png)](non-affine-images/testperspective-large.png#lightbox "Captura de tela tripla da página perspectiva do teste")
 
 Ao experimentar os controles deslizantes, você descobrirá que os valores além de 0, 66 ou abaixo – 0, 66 fazem com que a imagem seja repentinamente interrompida e incoerente. O bitmap que está sendo transformado é quadrado de 300 pixels. Ele é transformado em relação ao seu centro, portanto, as coordenadas do intervalo de bitmap de – 150 a 150. Lembre-se de que o valor de z ' é:
 
@@ -245,7 +245,7 @@ Em geral, você não estará configurando `Persp0` e `Persp1` isoladamente. Tamb
 
 Uma transformação sem afinidade é uma *transformação cônico*. Esse tipo de transformação não afim retém as dimensões gerais de um retângulo, mas as fitas são um lado:
 
-![](non-affine-images/tapertransform.png "A box subjected to a taper transform")
+![Uma caixa sujeita a uma transformação cônico](non-affine-images/tapertransform.png)
 
 A [`TaperTransform`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TaperTransform.cs) classe executa um cálculo generalizado de uma transformação não afim com base nesses parâmetros:
 
@@ -397,13 +397,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Estes são alguns exemplos:
 
-[![](non-affine-images/tapertransform-small.png "Triple screenshot of the Taper Transform page")](non-affine-images/tapertransform-large.png#lightbox "Triple screenshot of the Taper Transform page")
+[![Captura de tela tripla da página de transformação cônico](non-affine-images/tapertransform-small.png)](non-affine-images/tapertransform-large.png#lightbox "Captura de tela tripla da página de transformação cônico")
 
 Outro tipo de transformações não afim generalizadas é a rotação 3D, que é demonstrada no próximo artigo, [**rotações 3D**](3d-rotation.md).
 
 A transformação não afim pode transformar um retângulo em qualquer diamante convexa. Isso é demonstrado pela página **Mostrar matriz não-afim** . É muito semelhante à página **Mostrar matriz de afinidade** do artigo [**transformações de matriz**](matrix.md) , exceto que ele tem um quarto `TouchPoint` objeto para manipular o quarto canto do bitmap:
 
-[![](non-affine-images/shownonaffinematrix-small.png "Triple screenshot of the Show Non-Affine Matrix page")](non-affine-images/shownonaffinematrix-large.png#lightbox "Triple screenshot of the Show Non-Affine Matrix page")
+[![Captura de tela tripla da página mostrar matriz não-afim](non-affine-images/shownonaffinematrix-small.png)](non-affine-images/shownonaffinematrix-large.png#lightbox "Captura de tela tripla da página mostrar matriz não-afim")
 
 Desde que você não tente criar um ângulo interior de um dos cantos do bitmap com mais de 180 graus ou fazer com que dois lados se cruzem, o programa calculará com êxito a transformação usando esse método da [`ShowNonAffineMatrixPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) classe:
 
@@ -472,7 +472,7 @@ Os `a` `b` valores e são calculados para que a terceira transformação seja af
 
 Outro uso de transformações não afim é a imitação de gráficos tridimensionais. No próximo artigo, [**rotações 3D**](3d-rotation.md) você verá como girar um gráfico bidimensional no espaço 3D.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

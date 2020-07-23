@@ -10,16 +10,16 @@ ms.date: 04/27/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 18cdeccbdff86a6b20aab4b33db259f1f06ee096
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4cad46bdee1b49c316947bc56bdb69a3b9e9a270
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139588"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938200"
 ---
 # <a name="native-views-in-c"></a>Exibições nativas em C\#
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
 
 _Exibições nativas do iOS, Android e UWP podem ser referenciadas diretamente de Xamarin.Forms páginas criadas usando C#. Este artigo demonstra como adicionar exibições nativas a um Xamarin.Forms layout criado usando C# e como substituir o layout de modos de exibição personalizados para corrigir o uso da API de medição._
 
@@ -29,7 +29,7 @@ Qualquer Xamarin.Forms controle que permita `Content` ser definido, ou que tenha
 
 As capturas de tela a seguir demonstram as exibições específicas da plataforma que foram adicionadas a um Xamarin.Forms [`StackLayout`](xref:Xamarin.Forms.StackLayout) :
 
-[![](code-images/screenshots-sml.png "StackLayout Containing Platform-Specific Views")](code-images/screenshots.png#lightbox "StackLayout Containing Platform-Specific Views")
+[![StackLayout contendo exibições específicas da plataforma](code-images/screenshots-sml.png)](code-images/screenshots.png#lightbox "StackLayout contendo exibições específicas da plataforma")
 
 A capacidade de adicionar exibições específicas de plataforma a um Xamarin.Forms layout é habilitada por dois métodos de extensão em cada plataforma:
 
@@ -132,7 +132,7 @@ stackLayout.Children.Add (customControl);
 
 No entanto, como a `CustomControl.SizeThatFits` substituição sempre retorna uma altura de 150, a exibição será exibida com espaço vazio acima e abaixo dela, conforme mostrado na seguinte captura de tela:
 
-![](code-images/ios-bad-measurement.png "iOS CustomControl with Bad SizeThatFits Implementation")
+![iOS CustomControl com implementação SizeThatFits inadequada](code-images/ios-bad-measurement.png)
 
 Uma solução para esse problema é fornecer uma `GetDesiredSizeDelegate` implementação, conforme demonstrado no exemplo de código a seguir:
 
@@ -163,7 +163,7 @@ stackLayout.Children.Add (customControl, FixSize);
 
 Isso faz com que a exibição personalizada seja exibida corretamente, sem espaço vazio acima e abaixo dela, conforme mostrado na seguinte captura de tela:
 
-![](code-images/ios-good-measurement.png "iOS CustomControl with GetDesiredSize Override")
+![iOS CustomControl com substituição de GetDesiredSize](code-images/ios-good-measurement.png)
 
 ### <a name="android"></a>Android
 
@@ -201,7 +201,7 @@ stackLayout.Children.Add (customControl);
 
 No entanto, como a `CustomControl.OnMeasure` substituição sempre retorna metade da largura solicitada, a exibição será exibida ocupando apenas metade da largura disponível do dispositivo, conforme mostrado na seguinte captura de tela:
 
-![](code-images/android-bad-measurement.png "Android CustomControl with Bad OnMeasure Implementation")
+![Android CustomControl com implementação de onmeasure inadequada](code-images/android-bad-measurement.png)
 
 Uma solução para esse problema é fornecer uma `GetDesiredSizeDelegate` implementação, conforme demonstrado no exemplo de código a seguir:
 
@@ -230,7 +230,7 @@ stackLayout.Children.Add (customControl, FixSize);
 
 Isso faz com que a exibição personalizada seja exibida corretamente, ocupando a largura do dispositivo, conforme mostrado na seguinte captura de tela:
 
-![](code-images/android-good-measurement.png "Android CustomControl with Custom GetDesiredSize Delegate")
+![CustomControl Android com delegado GetDesiredSize personalizado](code-images/android-good-measurement.png)
 
 ### <a name="universal-windows-platform"></a>Plataforma Universal do Windows
 
@@ -298,7 +298,7 @@ stackLayout.Children.Add(brokenControl);
 
 No entanto, como a `CustomControl.ArrangeOverride` substituição sempre retorna metade da largura solicitada, a exibição será recortada para metade da largura disponível do dispositivo, conforme mostrado na seguinte captura de tela:
 
-![](code-images/winrt-bad-measurement.png "UWP CustomControl with Bad ArrangeOverride Implementation")
+![CustomControl UWP com implementação inadequada de ArrangeOverride](code-images/winrt-bad-measurement.png)
 
 Uma solução para esse problema é fornecer uma `ArrangeOverrideDelegate` implementação, ao adicionar a exibição ao [`StackLayout`](xref:Xamarin.Forms.StackLayout) , conforme demonstrado no exemplo de código a seguir:
 
@@ -317,13 +317,13 @@ stackLayout.Children.Add(fixedControl, arrangeOverrideDelegate: (renderer, final
 
 Esse método usa a largura fornecida pelo `CustomControl.ArrangeOverride` método, mas a multiplica por dois. Isso faz com que a exibição personalizada seja exibida corretamente, ocupando a largura do dispositivo, conforme mostrado na seguinte captura de tela:
 
-![](code-images/winrt-good-measurement.png "UWP CustomControl with ArrangeOverride Delegate")
+![CustomControl UWP com delegado ArrangeOverride](code-images/winrt-good-measurement.png)
 
 ## <a name="summary"></a>Resumo
 
 Este artigo explicou como adicionar exibições nativas a um Xamarin.Forms layout criado usando C# e como substituir o layout de modos de exibição personalizados para corrigir o uso da API de medição.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [NativeEmbedding (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
 - [Formulários nativos](~/xamarin-forms/platform/native-forms.md)

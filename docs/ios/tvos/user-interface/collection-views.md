@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: aa03ab7a3663fa5e0704a605116b19147f14a10b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: fd1bf68e45fa163588d91640147d9e9dbf8ff237
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572579"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939484"
 ---
 # <a name="working-with-tvos-collection-views-in-xamarin"></a>Trabalhando com exibições de coleção tvOS no Xamarin
 
 As exibições de coleção permitem que um grupo de conteúdo seja exibido usando layouts arbitrários. Usando o suporte interno, eles permitem a criação fácil de layouts de grade ou lineares, além de oferecer suporte a layouts personalizados.
 
-[![](collection-views-images/collection01.png "Sample collection view")](collection-views-images/collection01.png#lightbox)
+[![Exibição de coleção de exemplo](collection-views-images/collection01.png)](collection-views-images/collection01.png#lightbox)
 
 A exibição de coleção mantém uma coleção de itens usando um delegado e uma fonte de dados para fornecer interação do usuário e o conteúdo da coleção. Como o modo de exibição de coleção é baseado em um subsistema de layout que é independente da própria exibição, fornecer um layout diferente pode facilmente alterar a apresentação dos dados do modo de exibição de coleção.
 
@@ -100,37 +100,37 @@ Vamos fazer o seguinte:
 1. Na **Gerenciador de soluções**, clique duas vezes no `Main.storyboard` arquivo e abra-o no designer do Ios.
 1. Adicione um modo de exibição de imagem, um rótulo e um botão à exibição existente e configure-os para que se pareçam com o seguinte: 
 
-    [![](collection-views-images/collection02.png "Sample layout")](collection-views-images/collection02.png#lightbox)
+    [![Layout de exemplo](collection-views-images/collection02.png)](collection-views-images/collection02.png#lightbox)
 1. Atribua um **nome** à exibição de imagem e o rótulo na **Guia Widget** do Gerenciador de **Propriedades**. Por exemplo: 
 
-    [![](collection-views-images/collection03.png "Setting the name")](collection-views-images/collection03.png#lightbox)
+    [![Definindo o nome](collection-views-images/collection03.png)](collection-views-images/collection03.png#lightbox)
 1. Em seguida, arraste um controlador de exibição de coleção para o storyboard: 
 
-    [![](collection-views-images/collection04.png "A Collection View Controller")](collection-views-images/collection04.png#lightbox)
+    [![Um controlador de exibição de coleção](collection-views-images/collection04.png)](collection-views-images/collection04.png#lightbox)
 1. Controle-arraste do botão para o controlador de exibição de coleção e selecione **Push** do Popup: 
 
-    [![](collection-views-images/collection05.png "Select Push from the popup")](collection-views-images/collection05.png#lightbox)
+    [![Selecionar push do pop-up](collection-views-images/collection05.png)](collection-views-images/collection05.png#lightbox)
 1. Quando o aplicativo for executado, isso fará com que o modo de exibição de coleção seja exibido sempre que o usuário clicar no botão.
 1. Selecione o modo de exibição de coleção e insira os seguintes valores na **guia layout** do **Gerenciador de propriedades**: 
 
-    [![](collection-views-images/collection06.png "The Properties Explorer")](collection-views-images/collection06.png#lightbox)
+    [![O Gerenciador de propriedades](collection-views-images/collection06.png)](collection-views-images/collection06.png#lightbox)
 1. Isso controla o tamanho das células individuais e as bordas entre as células e a borda externa da exibição de coleção.
 1. Selecione o controlador de exibição de coleção e defina sua classe como `CityCollectionViewController` na **Guia do widget**: 
 
-    [![](collection-views-images/collection07.png "Set the class to CityCollectionViewController")](collection-views-images/collection07.png#lightbox)
+    [![Definir a classe como CityCollectionViewController](collection-views-images/collection07.png)](collection-views-images/collection07.png#lightbox)
 1. Selecione o modo de exibição de coleção e defina sua classe como `CityCollectionView` na **Guia Widget**: 
 
-    [![](collection-views-images/collection08.png "Set the class to CityCollectionView")](collection-views-images/collection08.png#lightbox)
+    [![Definir a classe como CityCollectionView](collection-views-images/collection08.png)](collection-views-images/collection08.png#lightbox)
 1. Selecione a célula de exibição de coleção e defina sua classe como `CityCollectionViewCell` na **Guia Widget**: 
 
-    [![](collection-views-images/collection09.png "Set the class to CityCollectionViewCell")](collection-views-images/collection09.png#lightbox)
+    [![Definir a classe como CityCollectionViewCell](collection-views-images/collection09.png)](collection-views-images/collection09.png#lightbox)
 1. Na **Guia do widget** , verifique se o **layout** é `Flow` e se a direção da **rolagem** é `Vertical` para o modo de exibição de coleção: 
 
-    [![](collection-views-images/collection10.png "The Widget Tab")](collection-views-images/collection10.png#lightbox)
+    [![A guia do widget](collection-views-images/collection10.png)](collection-views-images/collection10.png#lightbox)
 1. Selecione a célula de exibição de coleção e defina sua **identidade** como `CityCell` na **Guia do widget**: 
 
-    [![](collection-views-images/collection11.png "Set the Identity to CityCell")](collection-views-images/collection11.png#lightbox)
-1. Salve suas alterações.
+    [![Defina a identidade como CityCell](collection-views-images/collection11.png)](collection-views-images/collection11.png#lightbox)
+1. Salve as alterações.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -138,35 +138,35 @@ Vamos fazer o seguinte:
 1. Na **Gerenciador de soluções**, clique duas vezes no `Main.storyboard` arquivo e abra-o no designer do Ios.
 1. Adicione um modo de exibição de imagem, um rótulo e um botão à exibição existente e configure-os para que se pareçam com o seguinte: 
 
-    [![](collection-views-images/collection02vs.png "Configure the layout")](collection-views-images/collection02vs.png#lightbox)
+    [![Configurar o layout](collection-views-images/collection02vs.png)](collection-views-images/collection02vs.png#lightbox)
 1. Atribua um **nome** à exibição de imagem e o rótulo na **Guia Widget** do Gerenciador de **Propriedades**. Por exemplo: 
 
-    [![](collection-views-images/collection03vs.png "The Properties Explorer")](collection-views-images/collection03vs.png#lightbox)
+    [![O Gerenciador de propriedades](collection-views-images/collection03vs.png)](collection-views-images/collection03vs.png#lightbox)
 1. Em seguida, arraste um controlador de exibição de coleção para o storyboard: 
 
-    [![](collection-views-images/collection04vs.png "A Collection View Controller")](collection-views-images/collection04vs.png#lightbox)
+    [![Um controlador de exibição de coleção](collection-views-images/collection04vs.png)](collection-views-images/collection04vs.png#lightbox)
 1. Controle-arraste do botão para o controlador de exibição de coleção e selecione **Push** do Popup: 
 
-    [![](collection-views-images/collection05vs.png "Select Push from the popup")](collection-views-images/collection05vs.png#lightbox)
+    [![Selecionar push do pop-up](collection-views-images/collection05vs.png)](collection-views-images/collection05vs.png#lightbox)
 1. Quando o aplicativo for executado, isso fará com que o modo de exibição de coleção seja exibido sempre que o usuário clicar no botão.
 1. Selecione o modo de exibição de coleção e, na **guia layout** do **Gerenciador de propriedades** , insira a **largura** como _361_ e **altura** como _256_ 
 1. Isso controla o tamanho das células individuais e as bordas entre as células e a borda externa da exibição de coleção.
 1. Selecione o controlador de exibição de coleção e defina sua classe como `CityCollectionViewController` na **Guia do widget**: 
 
-    [![](collection-views-images/collection07vs.png "Set the class to CityCollectionViewController")](collection-views-images/collection07vs.png#lightbox)
+    [![Definir a classe como CityCollectionViewController](collection-views-images/collection07vs.png)](collection-views-images/collection07vs.png#lightbox)
 1. Selecione o modo de exibição de coleção e defina sua classe como `CityCollectionView` na **Guia Widget**: 
 
-    [![](collection-views-images/collection08vs.png "Set the class to CityCollectionView")](collection-views-images/collection08vs.png#lightbox)
+    [![Definir a classe como CityCollectionView](collection-views-images/collection08vs.png)](collection-views-images/collection08vs.png#lightbox)
 1. Selecione a célula de exibição de coleção e defina sua classe como `CityCollectionViewCell` na **Guia Widget**: 
 
-    [![](collection-views-images/collection09vs.png "Set the class to CityCollectionViewCell")](collection-views-images/collection09vs.png#lightbox)
+    [![Definir a classe como CityCollectionViewCell](collection-views-images/collection09vs.png)](collection-views-images/collection09vs.png#lightbox)
 1. Na **Guia do widget** , verifique se o **layout** é `Flow` e se a direção da **rolagem** é `Vertical` para o modo de exibição de coleção: 
 
-    [![](collection-views-images/collection10vs.png "Tthe Widget Tab")](collection-views-images/collection10vs.png#lightbox)
+    [![Guia do widget Tnão](collection-views-images/collection10vs.png)](collection-views-images/collection10vs.png#lightbox)
 1. Selecione a célula de exibição de coleção e defina sua **identidade** como `CityCell` na **Guia do widget**: 
 
-    [![](collection-views-images/collection11vs.png "Set the Identity to CityCell")](collection-views-images/collection11vs.png#lightbox)
-1. Salve suas alterações.
+    [![Defina a identidade como CityCell](collection-views-images/collection11vs.png)](collection-views-images/collection11vs.png#lightbox)
+1. Salve as alterações.
 
 -----
 
@@ -797,17 +797,17 @@ public override void ViewWillAppear (bool animated)
 
 Com tudo em vigor, se você criar e executar o aplicativo, o modo de exibição principal será exibido com a cidade padrão:
 
-[![](collection-views-images/run01.png "The main screen")](collection-views-images/run01.png#lightbox)
+[![A tela principal](collection-views-images/run01.png)](collection-views-images/run01.png#lightbox)
 
 Se o usuário clicar no botão **selecionar uma exibição** , o modo de exibição de coleção será exibido:
 
-[![](collection-views-images/run02.png "The collection view")](collection-views-images/run02.png#lightbox)
+[![O modo de exibição de coleção](collection-views-images/run02.png)](collection-views-images/run02.png#lightbox)
 
 Qualquer cidade que tenha sua `CanSelect` propriedade definida como `false` será exibida esmaecida e o usuário não poderá definir o foco para ela. Quando o usuário realça um item (torná-lo em foco), o título é exibido e eles podem usar o efeito de da Parallax para inclinar a imagem em 3D.
 
 Quando o usuário clica em uma imagem de seleção, o modo de exibição de coleção é fechado e o modo de exibição principal é exibido novamente com a nova imagem:
 
-[![](collection-views-images/run03.png "A new image on the home screen")](collection-views-images/run03.png#lightbox)
+[![Uma nova imagem na tela inicial](collection-views-images/run03.png)](collection-views-images/run03.png#lightbox)
 
 <a name="Creating-Custom-Layout-and-Reordering-Items"></a>
 
@@ -823,7 +823,7 @@ Recentemente adicionados às exibições de coleção para o iOS 9 foi a capacid
 
 Este artigo abordou a criação e o trabalho com exibições de coleção dentro de um aplicativo Xamarin. tvOS. Primeiro, ele abordou todos os elementos que compõem o modo de exibição de coleção. Em seguida, ele mostrou como projetar e implementar uma exibição de coleção usando um Storyboard. Por fim, o recebe links para informações sobre a criação de layouts personalizados e a reordenação de itens.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)

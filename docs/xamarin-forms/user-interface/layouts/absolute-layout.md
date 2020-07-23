@@ -10,20 +10,20 @@ ms.date: 11/25/2015
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 110b01d6482fbe3e23a772c90194b6bf40d54877
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 923f7643bd1e137192bfb80dbbc7c5d2c25b5471
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84570525"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938418"
 ---
 # <a name="xamarinforms-absolutelayout"></a>Xamarin.FormsAbsoluteLayout
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
 [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)Posiciona e dimensiona elementos filho proporcionais ao seu próprio tamanho e posição ou por valores absolutos. Os modos de exibição filho podem ser posicionados e dimensionados usando valores proporcionais ou valores estáticos, e os valores proporcionais e estáticos podem ser misturados.
 
-[![](absolute-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](absolute-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
+[![Xamarin.FormsLayouts](absolute-layout-images/layouts-sml.png)](absolute-layout-images/layouts.png#lightbox "[! Parar. Layouts não-LOC (Xamarin. Forms)]")
 
 Este artigo abordará:
 
@@ -53,9 +53,9 @@ Devido ao modelo de posicionamento do `AbsoluteLayout` , o layout torna relativa
 
 Observe que, na captura de tela a seguir, a âncora da caixa é um ponto branco. Observe a relação entre a âncora e a caixa à medida que percorre o layout:
 
-![](absolute-layout-images/anchor-start.png "Anchor at Start")
-![](absolute-layout-images/anchor-center.png "Anchor at Center")
-![](absolute-layout-images/anchor-end.png "Anchor at End")
+![Âncora na ](absolute-layout-images/anchor-start.png)
+ ![ âncora inicial na ](absolute-layout-images/anchor-center.png)
+ ![ âncora central no final](absolute-layout-images/anchor-end.png)
 
 ### <a name="specifying-values"></a>Especificando valores
 
@@ -109,7 +109,7 @@ Title="Absolute Layout Exploration">
 </ContentPage>
 ```
 
-![](absolute-layout-images/exploration.png "AbsoluteLayout Examples")
+![Exemplos de AbsoluteLayout](absolute-layout-images/exploration.png)
 
 Observe o seguinte:
 
@@ -275,11 +275,11 @@ Title="AbsoluteLayout">
 
 O código acima resulta no seguinte layout:
 
-![](absolute-layout-images/abs.png "Complex AbsoluteLayout")
+![AbsoluteLayout complexo](absolute-layout-images/abs.png)
 
 Observe que `AbsoluteLayout` s estão aninhados, pois, em alguns casos, o aninhamento de layouts pode ser mais fácil do que apresentar todos os elementos dentro do mesmo layout.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Criando aplicativos móveis com o Xamarin.Forms , capítulo 14](https://developer.xamarin.com/r/xamarin-forms/book/chapter14.pdf)
 - [AbsoluteLayout](xref:Xamarin.Forms.AbsoluteLayout)

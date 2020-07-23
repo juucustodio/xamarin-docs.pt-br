@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fb873102bfb8568b8298a39ea2429fb6c27af175
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 785532d1a8fedfaef367c8fb8ae437220c3de9c4
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137716"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938171"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Desenhando um círculo simples em SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Aprenda as noções básicas do desenho SkiaSharp, incluindo telas e objetos de pintura_
 
@@ -27,7 +27,7 @@ Este artigo apresenta os conceitos de desenho de elementos gráficos no Xamarin.
 
 O programa [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) contém todo o código de exemplo para esta série de artigos do SkiaSharp. A primeira página é denominada **círculo simples** e invoca a classe de página [`SimpleCirclePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) . Este código mostra como desenhar um círculo no centro da página com um raio de 100 pixels. O contorno do círculo é vermelho e o interior do círculo é azul.
 
-![](circle-images/circleexample.png "A blue circle outlined in red")
+![Um círculo azul descrito em vermelho](circle-images/circleexample.png)
 
 A [`SimpleCircle`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) classe de página deriva de `ContentPage` e contém duas `using` diretivas para os namespaces SkiaSharp:
 
@@ -146,7 +146,7 @@ Desta vez, a `DrawCircle` chamada preenche o círculo usando as novas propriedad
 
 Aqui está o programa em execução no iOS e no Android:
 
-[![](circle-images/simplecircle-small.png "Triple screenshot of the Simple Circle page")](circle-images/simplecircle-large.png#lightbox "Triple screenshot of the Simple Circle page")
+[![Captura de tela tripla da página de círculo simples](circle-images/simplecircle-small.png)](circle-images/simplecircle-large.png#lightbox "Captura de tela tripla da página de círculo simples")
 
 Ao executar o programa por conta própria, você pode transformar o telefone ou o simulador no lado para ver como o gráfico é redesenhado. Cada vez que o gráfico precisa ser redesenhado, o `PaintSurface` manipulador de eventos é chamado novamente.
 
@@ -161,7 +161,7 @@ Embora a largura da estrutura de tópicos do círculo seja especificada como 25 
 
 A próxima amostra no artigo [integração com Xamarin.Forms ](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) demonstra isso visualmente.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -10,16 +10,16 @@ ms.date: 10/24/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0ed11ccacec73dd3c5c220c41bffd090af6c5b27
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d1aead9297312e190a5a04ee0f33328d81f2547a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139380"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939952"
 ---
 # <a name="creating-an-effect"></a>Criando um efeito
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-focuseffect)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-focuseffect)
 
 _Os efeitos simplificam a personalização de um controle. Este artigo demonstra como criar um efeito que altera a cor do plano de fundo do controle de entrada quando o controle ganha foco._
 
@@ -38,12 +38,12 @@ O efeito, em seguida, poderá ser consumido sendo anexado ao controle apropriado
 
 O aplicativo de exemplo demonstra um `FocusEffect` que altera a cor da tela de fundo de um controle quando ele obtém o foco. O diagrama a seguir ilustra as responsabilidades de cada projeto no aplicativo de exemplo, bem como as relações entre elas:
 
-![](creating-images/focus-effect.png "Focus Effect Project Responsibilities")
+![Responsabilidades do projeto de efeito de foco](creating-images/focus-effect.png)
 
 Um [`Entry`](xref:Xamarin.Forms.Entry) controle no `HomePage` é personalizado pela `FocusEffect` classe em cada projeto específico da plataforma. Cada classe `FocusEffect` é derivada da classe `PlatformEffect` de cada plataforma. Isso faz com que o controle `Entry` seja renderizado com uma cor da tela de fundo específica da plataforma, que muda quando o controle obtém foco, conforme mostrado nas capturas de tela seguir:
 
-![](creating-images/screenshots-1.png "Focus Effect on each Platform")
-![](creating-images/screenshots-2.png "Focus Effect on each Platform")
+![Efeito de foco em cada plataforma](creating-images/screenshots-1.png)
+![Efeito de foco em cada plataforma](creating-images/screenshots-2.png)
 
 ## <a name="creating-the-effect-on-each-platform"></a>Criando o efeito em cada plataforma
 
@@ -269,7 +269,7 @@ O [`Effect.Resolve`](xref:Xamarin.Forms.Effect.Resolve(System.String)) retorna u
 
 Este artigo demonstrou como criar um efeito que altera a cor do plano de fundo do [`Entry`](xref:Xamarin.Forms.Entry) controle quando o controle ganha foco.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
 - [Efeito](xref:Xamarin.Forms.Effect)

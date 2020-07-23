@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 0eead476fe7842ac326b61771776a83c7a35461c
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: b61d851e793d3fb0ae5e97718b151dd87f37da61
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84567379"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937040"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introdução aos storyboards no Xamarin. iOS
 
@@ -30,7 +30,7 @@ Os storyboards podem ser usados com o Xcode, o designer do iOS no Visual Studio 
 
 Um Storyboard é a representação visual de todas as telas em um aplicativo. Ele contém uma sequência de cenas, com cada cena que representa um *controlador de exibição* e suas *exibições*. Essas exibições podem conter objetos e [controles](~/ios/user-interface/controls/index.md) que permitirão que o usuário interaja com seu aplicativo. Essa coleção de exibições e controles (ou *subexibições*) é conhecida como *hierarquia de exibição de conteúdo*. As cenas são conectadas por objetos transição, que representam uma transição entre os controladores de exibição. Isso normalmente é obtido com a criação de um transição entre um objeto na exibição inicial e a exibição de conexão. As relações na superfície de design são ilustradas na imagem abaixo:
 
- [![](images/storyboardsview.png "The relationships on the design surface are illustrated in this image")](images/storyboardsview.png#lightbox)
+ [![As relações na superfície de design são ilustradas nesta imagem](images/storyboardsview.png)](images/storyboardsview.png#lightbox)
 
 Como mostrado, o storyboard fará o layout de cada um dos seus bastidores com conteúdo já renderizado e ilustra as conexões entre eles.  Vale a pena observar neste ponto que, quando falamos sobre cenas em um iPhone, é seguro pressupor que uma *cena* no storyboard seja igual a uma *tela* de conteúdo no dispositivo. No entanto, com um iPad, é possível ter várias cenas exibidas de uma vez – por exemplo, usando um controlador de exibição popover.
 
@@ -45,22 +45,22 @@ O conteúdo de um Storyboard é armazenado como um arquivo XML. No momento da co
 
 Um objeto *transição*, ou *transição*, é usado no desenvolvimento do IOS para representar uma transição entre cenas. Para criar um transição, mantenha pressionada a tecla **Ctrl** e clique-arraste de uma cena para outra. À medida que arrastamos nosso mouse, um conector azul é exibido, indicando onde o transição será levado como demonstrado na imagem abaixo:
 
- [![](images/createsegue.png "A blue connector appears, indicating where the segue will lead as demonstrated in this image")](images/createsegue.png#lightbox)
+ [![Um conector azul é exibido, indicando onde o transição levará conforme demonstrado nesta imagem](images/createsegue.png)](images/createsegue.png#lightbox)
 
 No mouse, um menu será exibido, permitindo-nos escolher a ação para nosso transição. Pode ser semelhante às imagens abaixo:
 
 **Classes anteriores ao Ios 8 e tamanho**:
 
-[![](images/segue1.png "The Action Segue dropdown without Size Classes")](images/segue1.png#lightbox)
+[![O menu suspenso transição de ação sem classes de tamanho](images/segue1.png)](images/segue1.png#lightbox)
 
 **Ao usar classes de tamanho e continuações adaptável**:
 
-[![](images/16new.png "The Action Segue dropdown with Size Classes")](images/16new.png#lightbox)
+[![O menu suspenso da ação transição com classes de tamanho](images/16new.png)](images/16new.png#lightbox)
 
 > [!IMPORTANT]
 > Se você estiver usando o VMWare para sua máquina virtual do Windows, CTRL-clique será mapeado como o botão _direito_ do mouse, por padrão. Para criar um transição, edite suas preferências de teclado por meio do teclado de **preferências**  >  **&**  >  **atalhos do mouse** do mouse e remapeie o **botão secundário** , conforme ilustrado abaixo:
 >
-> [![](images/image22.png "Keyboard and Mouse preference settings")](images/image22.png#lightbox)
+> [![Configurações de preferência de teclado e mouse](images/image22.png)](images/image22.png#lightbox)
 >
 > Agora você deve ser capaz de adicionar um transição entre seus controladores de exibição normalmente.
 
@@ -72,7 +72,7 @@ Há diferentes tipos de transições, cada uma dando controle sobre como um novo
 - **Desenrolar** – um transição de liberação pode ser usado para navegar de volta por um transição de Push ou modal – por exemplo, ignorando o controlador de exibição apresentado de modo restrito. Além disso, você pode desenrolar por não apenas um, mas uma série de continuações de push e modal e voltar várias etapas em sua hierarquia de navegação com uma única ação de desenrolamento. Para entender como usar um desenrolamento de transição no iOS, leia a receita [criando continuações de desenrolamento](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) .
 - De **origem** – um transição de origem informativa indica a cena que contém o controlador de exibição inicial e, portanto, a exibição que o usuário verá primeiro. Ele é representado pelo transição mostrado abaixo:  
 
-    [![](images/sourcelesssegue.png "A sourceless segue")](images/sourcelesssegue.png#lightbox)
+    [![Um transição de origem](images/sourcelesssegue.png)](images/sourcelesssegue.png#lightbox)
 
 ### <a name="adaptive-segue-types"></a>Tipos de transição adaptável
 
@@ -80,7 +80,7 @@ Há diferentes tipos de transições, cada uma dando controle sobre como um novo
 
 Qualquer aplicativo usando classes de tamanho também usará o novo [*continuações adaptável*](~/ios/user-interface/storyboards/unified-storyboards.md). Ao usar classes de tamanho, lembre-se de que não estamos especificando diretamente o clima que estamos usando um iPhone ou iPad. Em outras palavras, estamos criando uma interface do usuário que sempre terá a mesma aparência, independentemente da quantidade de espaço real com a qual precisa trabalhar. O continuações Adaptive funciona por julgamento o ambiente e determinando a melhor maneira de apresentar conteúdo. Os continuações adaptáveis são mostrados abaixo:
 
-[![](images/adaptivesegue.png "The Adaptive Segues dropdown")](images/adaptivesegue.png#lightbox)
+[![A lista suspensa continuações adaptável](images/adaptivesegue.png)](images/adaptivesegue.png#lightbox)
 
 |Transição|Descrição|
 |--- |--- |
@@ -132,11 +132,11 @@ Ocasionalmente, talvez seja necessário adicionar um storyboard a um arquivo ant
 
 1. Crie um novo arquivo de storyboard navegando até o **arquivo > novo arquivo > iOS > storyboard**, conforme ilustrado abaixo:
 
-    [![](images/new-storyboard-xs.png "The new file dialog")](images/new-storyboard-xs.png#lightbox)
+    [![A caixa de diálogo novo arquivo](images/new-storyboard-xs.png)](images/new-storyboard-xs.png#lightbox)
 
 2. Adicione o nome do storyboard à seção da **interface principal** do **info. plist**, conforme mostrado abaixo:
 
-    [![](images/infoplist.png "The Info.plist editor")](images/infoplist.png#lightbox)
+    [![O editor info. plist](images/infoplist.png)](images/infoplist.png#lightbox)
 
     Isso faz o equivalente à instanciação do controlador de exibição inicial no `FinishedLaunching` método dentro do delegado do aplicativo. Com essa opção definida, o aplicativo instancia uma janela (veja abaixo), carrega o storyboard principal e atribui uma instância do controlador de exibição inicial do storyboard (aquele ao lado do transição sem origem) como a `RootViewController` propriedade da janela e torna a janela visível na tela.
 
@@ -153,11 +153,11 @@ Ocasionalmente, talvez seja necessário adicionar um storyboard a um arquivo ant
 
 1. Crie um novo arquivo de storyboard clicando com o botão direito do mouse no projeto para **adicionar > novo arquivo > iOS > storyboard vazio**, conforme ilustrado abaixo:
 
-    [![](images/new-storyboard-vs.png "The new item dialog")](images/new-storyboard-vs.png#lightbox)
+    [![A caixa de diálogo novo item](images/new-storyboard-vs.png)](images/new-storyboard-vs.png#lightbox)
 
 2. Adicione o nome do storyboard à seção da **interface principal** do aplicativo IOS, conforme mostrado abaixo:
 
-    [![](images/ios-app.png "The Info.plist editor")](images/ios-app.png#lightbox)
+    [![O editor info. plist](images/ios-app.png)](images/ios-app.png#lightbox)
 
     Isso faz o equivalente à instanciação do controlador de exibição inicial no `FinishedLaunching` método dentro do delegado do aplicativo. Com essa opção definida, o aplicativo instancia uma janela (veja abaixo), carrega o storyboard principal e atribui uma instância do controlador de exibição inicial do storyboard (aquele ao lado do transição sem origem) como a `RootViewController` propriedade da janela e torna a janela visível na tela.
 
@@ -184,37 +184,37 @@ A captura de tela abaixo mostra dois controladores de exibição em nossa superf
 
 1. Adicionar um _storyboard vazio do iPhone_ a um projeto de projeto existente:
 
-    [![](images/add-storyboard2.png "Adding storyboard")](images/add-storyboard2.png#lightbox)
+    [![Adicionando storyboard](images/add-storyboard2.png)](images/add-storyboard2.png#lightbox)
 
 2. Clique com o botão direito do mouse no arquivo de storyboard e selecione **abrir com > Xcode Interface Builder** para abri-lo no Xcode.
 
     *Se preferir usar o compilador de interface do Xcode por padrão, você poderá escolher na Visual Studio para Mac preferências em **projetos > Ios**:*
 
-![](images/set-preferred-designer-tool.png "Selecting the preferred designer tool")
+![Selecionando a ferramenta de designer preferida](images/set-preferred-designer-tool.png)
 
 3. No Xcode, abra a biblioteca (por meio da **exibição > mostrar biblioteca** ou *Shift + Command + L*) para mostrar uma lista de objetos que podem ser adicionados ao storyboard. Adicione um `Navigation Controller` ao storyboard arrastando o objeto da lista para o storyboard. Por padrão, o `Navigation Controller` fornecerá duas telas; a tela à direita é a `TableViewController` que iremos substituir por uma exibição mais simples, para que possa ser removida clicando na exibição e pressionando a tecla Delete.
 
-    [![](images/add-navigation-controller.png "Adding a NavigationController from the Library")](images/add-navigation-controller.png#lightbox)
+    [![Adicionando um NavigationController da biblioteca](images/add-navigation-controller.png)](images/add-navigation-controller.png#lightbox)
 
 4. Esse controlador de exibição terá sua própria classe personalizada e também precisará de sua própria ID de storyboard. Ao clicar na caixa acima dessa exibição recém-adicionada, haverá três ícones, o mais à esquerda, que representa o controlador de exibição para a exibição. Ao selecionar esse ícone, você pode definir os valores de classe e ID na guia identidade do painel direito. Defina esses valores como `MainViewController` e certifique-se de verificar `Use Storyboard ID` .
 
-    [![](images/identity-panel.png "Setting the MainViewController in the identity panel")](images/identity-panel.png#lightbox)
+    [![Configurando o MainViewController no painel de identidade](images/identity-panel.png)](images/identity-panel.png#lightbox)
 
 5. Usando a biblioteca novamente, arraste um controlador de exibição para a tela. Isso será definido como o controlador de exibição raiz. Segurando a chave de controle, clique e arraste do controlador de navegação à esquerda para o controlador de exibição recém-adicionado à direita e clique em *controlador de exibição raiz* no menu.
 
-    [![](images/add-view-controller.png "Adding a NavigationController from the Library and setting the MainViewController as a Root View Controller")](images/add-view-controller.png#lightbox)
+    [![Adicionando um NavigationController da biblioteca e definindo MainViewController como um controlador de exibição raiz](images/add-view-controller.png)](images/add-view-controller.png#lightbox)
 
 6. Este aplicativo navegará para outra exibição, portanto, adicione mais uma exibição ao storyboard, assim como antes. Chamamos isso de a `PinkViewController` , e esses valores podem ser definidos da mesma maneira que com o `MainViewController` .
 
-    [![](images/add-additional-view-controller.png "Adding an additional View Controller")](images/add-additional-view-controller.png#lightbox)
+    [![Adicionando um controlador de exibição adicional](images/add-additional-view-controller.png)](images/add-additional-view-controller.png#lightbox)
 
 7. Como o controlador de exibição terá um plano de fundo rosa, essa propriedade poderá ser definida no painel atributos usando a lista suspensa ao lado de `Background` .
 
-    [![](images/set-pink-background.png "Adding an additional View Controller")](images/set-pink-background.png#lightbox)
+    [![Adicionando um controlador de exibição adicional](images/set-pink-background.png)](images/set-pink-background.png#lightbox)
 
 8. Como queremos que o `MainViewController` navegue para o `PinkViewController` , o primeiro precisará de um botão para interagir. Usando a biblioteca, podemos adicionar um botão ao `MainViewController` .
 
-    [![](images/add-button.png "Adding a Button to the MainViewController")](images/add-button.png#lightbox)
+    [![Adicionando um botão ao MainViewController](images/add-button.png)](images/add-button.png#lightbox)
 
 O storyboard está concluído, mas se implantarmos o projeto agora, obteremos uma tela em branco. Isso porque ainda precisamos dizer ao IDE para usar nosso storyboard e configurar um controlador de exibição raiz para servir como a primeira exibição. Normalmente, isso pode ser feito por meio de nossas opções de projeto, como mostrado acima. No entanto, neste exemplo, atingiremos o mesmo resultado no código, adicionando o seguinte ao **AppDelegate**:
 
@@ -302,7 +302,7 @@ public partial class MainViewController : UIViewController
 
 Executar o aplicativo produz um aplicativo de duas telas:
 
-![](images/finishedstoryboard.png "Sample app run screens")
+![Telas de execução do aplicativo de exemplo](images/finishedstoryboard.png)
 
 ## <a name="conditional-segues"></a>Continuações condicional
 
@@ -324,13 +324,13 @@ Antes de começar, siga as etapas 1 a 8 acima. Nestas etapas, criamos nosso stor
         - Linhas: 2
         - Caixa de seleção ' Hidden ' marcada    
 
-    [![](images/passwordvc.png "Center Lines")](images/passwordvc.png#lightbox)
+    [![Linhas centrais](images/passwordvc.png)](images/passwordvc.png#lightbox)
 
 2. Crie um transição entre o botão ir para rosa e o controlador de exibição pressionando Ctrl-arrastar do *PinkButton* para o *PinkViewController*e selecionando **Push** no mouse-up.
 
 3. Clique no transição e dê a ele o *identificador* `SegueToPink` :
 
-    [![](images/namesegue.png "Click on the Segue and give it the Identifier SegueToPink")](images/namesegue.png#lightbox)  
+    [![Clique no transição e dê a ele o identificador SegueToPink](images/namesegue.png)](images/namesegue.png#lightbox)  
 
 4. Por fim, adicione o seguinte método ShouldPerformSegue à `MainViewController` classe:
 
@@ -374,29 +374,29 @@ Para adicionar uma referência a um storyboard externo, faça o seguinte:
 
 1. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nome do projeto e selecione **Adicionar**  >  **novo arquivo...**  >  **Ios**  >  **Storyboard**. Insira um **nome** para o novo storyboard e clique no botão **novo** :
 
-    [![](images/ref01.png "The New File Dialog")](images/ref01.png#lightbox)
+    [![A caixa de diálogo novo arquivo](images/ref01.png)](images/ref01.png#lightbox)
 
 2. Projete o layout das cenas do novo storyboard como faria normalmente e salve suas alterações:
 
-    [![](images/ref02.png "The layout of the new scene")](images/ref02.png#lightbox)
+    [![O layout da nova cena](images/ref02.png)](images/ref02.png#lightbox)
 
 3. Abra o storyboard ao qual você vai adicionar a referência no designer do iOS.
 
 4. Arraste uma **referência de storyboard** da **caixa de ferramentas** para a design Surface:
 
-    [![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
+    [![Uma referência de storyboard](images/ref03.png)](images/ref03.png#lightbox)
 
 5. Na guia **widget** do Gerenciador de **Propriedades**, selecione o nome do **storyboard** que você criou acima:
 
-    [![](images/ref04.png "The Widget tab")](images/ref04.png#lightbox)
+    [![A guia do widget](images/ref04.png)](images/ref04.png#lightbox)
 
 6. Controle-clique em um widget de interface do usuário (como um botão) em uma cena existente e crie um novo transição para a **referência do storyboard** que você acabou de criar:
 
-    [![](images/ref05.png "Creating a segue")](images/ref05.png#lightbox)
+    [![Criando um transição](images/ref05.png)](images/ref05.png#lightbox)
 
 7. No menu pop-up, selecione **Mostrar** para concluir o transição:
 
-    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox)
+    [![Selecionando Mostrar para concluir o transição](images/ref06.png)](images/ref06.png#lightbox)
 
 8. Salve as alterações no storyboard.
 
@@ -412,29 +412,29 @@ Para adicionar uma referência a uma cena específica um storyboard externo (e n
 
 2. Adicione uma nova cena e projete seu layout como faria normalmente:
 
-    [![](images/ref07.png "The new scene layout")](images/ref07.png#lightbox)
+    [![O novo layout de cena](images/ref07.png)](images/ref07.png#lightbox)
 
 3. Na guia **widget** do Gerenciador de **Propriedades**, insira uma **ID de storyboard** para o controlador de exibição da nova cena:
 
-    [![](images/ref08.png "Enter a Storyboard ID for the new Scenes View Controller")](images/ref08.png#lightbox)
+    [![Insira uma ID de storyboard para o novo controlador de exibição de cenas](images/ref08.png)](images/ref08.png#lightbox)
 
 4. Abra o storyboard ao qual você vai adicionar a referência no designer do iOS.
 
 5. Arraste uma **referência de storyboard** da **caixa de ferramentas** para a design Surface:
 
-    [![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
+    [![Uma referência de storyboard](images/ref03.png)](images/ref03.png#lightbox)
 
 6. Na guia **widget** do Gerenciador de **Propriedades**, selecione o nome do **storyboard** e a ID de **referência** (ID do storyboard) da cena que você criou acima:
 
-    [![](images/ref09.png "The Widget tab ")](images/ref09.png#lightbox)
+    [![A guia do widget](images/ref09.png)](images/ref09.png#lightbox)
 
 7. Controle-clique em um widget de interface do usuário (como um botão) em uma cena existente e crie um novo transição para a **referência do storyboard** que você acabou de criar:
 
-    [![](images/ref10.png "Creating a segue")](images/ref10.png#lightbox)
+    [![Criando um transição](images/ref10.png)](images/ref10.png#lightbox)
 
 8. No menu pop-up, selecione **Mostrar** para concluir o transição:
 
-    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox)
+    [![Selecionando Mostrar para concluir o transição](images/ref06.png)](images/ref06.png#lightbox)
 
 9. Salve as alterações no storyboard.
 
@@ -450,27 +450,27 @@ Para adicionar uma referência a uma cena específica do mesmo storyboard, faça
 
 2. Adicione uma nova cena e projete seu layout como faria normalmente:
 
-    [![](images/ref11.png "The new scene layout")](images/ref11.png#lightbox)
+    [![O novo layout de cena](images/ref11.png)](images/ref11.png#lightbox)
 
 3. Na guia **widget** do Gerenciador de **Propriedades**, insira uma **ID de storyboard** para o controlador de exibição da nova cena:
 
-    [![](images/ref12.png "The Widget tab")](images/ref12.png#lightbox)
+    [![A guia do widget](images/ref12.png)](images/ref12.png#lightbox)
 
 4. Arraste uma **referência de storyboard** da **caixa de ferramentas** para a design Surface:
 
-   [![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
+   [![Uma referência de storyboard](images/ref03.png)](images/ref03.png#lightbox)
 
 5. Na guia **widget** do Gerenciador de **Propriedades**, selecione **ID de referência** (ID do storyboard) da cena que você criou acima:
 
-    [![](images/ref13.png "The Widget tab")](images/ref13.png#lightbox)
+    [![A guia do widget](images/ref13.png)](images/ref13.png#lightbox)
 
 6. Controle-clique em um widget de interface do usuário (como um botão) em uma cena existente e crie um novo transição para a **referência do storyboard** que você acabou de criar:
 
-    [![](images/ref14.png "Creating a segue")](images/ref14.png#lightbox)
+    [![Criando um transição](images/ref14.png)](images/ref14.png#lightbox)
 
 7. No menu pop-up, selecione **Mostrar** para concluir o transição:
 
-    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox)
+    [![Selecionando Mostrar para concluir o transição](images/ref06.png)](images/ref06.png#lightbox)
 
 8. Salve as alterações no storyboard.
 
@@ -480,7 +480,7 @@ Quando o aplicativo é executado e o usuário clica no elemento da interface do 
 
 Este artigo apresenta o conceito de storyboards e como eles podem ser benéficos no desenvolvimento de aplicativos iOS. Ele aborda cenas, exibir controladores, exibições e exibir hierarquias e como os bastidores são vinculados junto com tipos diferentes de continuações.  Ele também explora a instanciação de controladores de exibição manualmente de um storyboard e a criação de continuações condicional.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Storyboard manual (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard/)
 - [Introdução ao designer do iOS](~/ios/user-interface/designer/introduction.md)

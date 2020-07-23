@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: 7b254d3a7cfc04893b3b240d8d372f8df60c655c
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 55e41c01421e2cd5a0bb5c3a0a9fe2d025c8a223
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571748"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938041"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Guia de Início rápido Olá, tvOS
 
@@ -34,7 +34,7 @@ Além disso, como os aplicativos Xamarin. tvOS são escritos em C# e .NET, o có
 
 Este artigo apresentará os principais conceitos necessários para criar um aplicativo de TV da Apple usando o Xamarin. tvOS e o Visual Studio, orientando você pelo processo de criação de um aplicativo **Hello básico, tvOS** que conta o número de vezes que um botão foi clicado:
 
-[![](hello-tvos-images/run05.png "Example app run")](hello-tvos-images/run05.png#lightbox)
+[![Exemplo de execução de aplicativo](hello-tvos-images/run05.png)](hello-tvos-images/run05.png#lightbox)
 
 Abordaremos os seguintes conceitos:
 
@@ -51,21 +51,21 @@ Para começar, vamos fazer o seguinte:
 
 1. Inicie o Visual Studio para Mac:
 
-    [![](hello-tvos-images/setup01.png "Visual Studio for Mac")](hello-tvos-images/setup01.png#lightbox)
+    [![Visual Studio para Mac](hello-tvos-images/setup01.png)](hello-tvos-images/setup01.png#lightbox)
 2. Clique no link **nova solução...** no canto superior esquerdo da tela para abrir a caixa de diálogo **novo projeto** .
 3. Selecione **tvOS**aplicativo  >  **App**  >  de**exibição única** do aplicativo tvOS e clique no botão **Avançar** :
 
-    [![](hello-tvos-images/setup02.png "Select Single View App")](hello-tvos-images/setup02.png#lightbox)
+    [![Selecionar aplicativo de modo de exibição único](hello-tvos-images/setup02.png)](hello-tvos-images/setup02.png#lightbox)
 4. Insira `Hello, tvOS` para o **nome do aplicativo**, insira o **identificador da organização** e clique no botão **Avançar** :
 
-    [![](hello-tvos-images/setup04.png "Enter Hello, tvOS")](hello-tvos-images/setup04.png#lightbox)
+    [![Insira Olá, tvOS](hello-tvos-images/setup04.png)](hello-tvos-images/setup04.png#lightbox)
 5. Insira `Hello_tvOS` para o **nome do projeto** e clique no botão **criar** :
 
-    [![](hello-tvos-images/setup03.png "Enter HellotvOS")](hello-tvos-images/setup03.png#lightbox)
+    [![Insira HellotvOS](hello-tvos-images/setup03.png)](hello-tvos-images/setup03.png#lightbox)
 
 Visual Studio para Mac criará o novo aplicativo Xamarin. tvOS e exibirá os arquivos padrão que são adicionados à solução do seu aplicativo:
 
- [![](hello-tvos-images/project01.png "The default files view")](hello-tvos-images/project01.png#lightbox)
+ [![A exibição de arquivos padrão](hello-tvos-images/project01.png)](hello-tvos-images/project01.png#lightbox)
 
 O Visual Studio para Mac usa **soluções** e **projetos**, exatamente da mesma maneira que o Visual Studio. Uma solução é um contêiner que pode conter um ou mais projetos; os projetos podem incluir aplicativos, bibliotecas de suporte, aplicativos de teste, etc. Nesse caso, Visual Studio para Mac criou uma solução e um projeto de aplicativo para você.
 
@@ -253,11 +253,11 @@ Você não precisa usar Xamarin Designer para iOS para criar a interface do usu�
 
 Para começar a criar sua interface do usuário, vamos clicar duas vezes no `Main.storyboard` arquivo no **Gerenciador de soluções** para abri-lo para edição no designer do IOS:
 
-[![](hello-tvos-images/designer01.png "The Main.storyboard file in the Solution Explorer")](hello-tvos-images/designer01.png#lightbox)
+[![O arquivo. Storyboard principal no Gerenciador de Soluções](hello-tvos-images/designer01.png)](hello-tvos-images/designer01.png#lightbox)
 
 Isso deve iniciar o designer e se parecer com o seguinte:
 
-[![](hello-tvos-images/designer02.png "The Designer")](hello-tvos-images/designer02.png#lightbox)
+[![O designer](hello-tvos-images/designer02.png)](hello-tvos-images/designer02.png#lightbox)
 
 Para obter mais informações sobre o designer do iOS e como ele funciona, consulte a [introdução ao guia de Xamarin designer para IOS](~/ios/user-interface/designer/introduction.md) .
 
@@ -267,57 +267,57 @@ Faça o seguinte:
 
 1. Localize a **caixa de ferramentas**, que deve estar à direita da superfície de design:
 
-    [![](hello-tvos-images/designer03.png "The Toolbox")](hello-tvos-images/designer03.png#lightbox)
+    [![A caixa de ferramentas](hello-tvos-images/designer03.png)](hello-tvos-images/designer03.png#lightbox)
 
     Se você não conseguir localizá-lo aqui, navegue para **exibir > Pads > caixa de ferramentas** para exibi-lo.
 2. Arraste um **rótulo** da **caixa de ferramentas** para a superfície de design:
 
-    [![](hello-tvos-images/designer04.png "Drag a Label from the Toolbox")](hello-tvos-images/designer04.png#lightbox)
+    [![Arraste um rótulo da caixa de ferramentas](hello-tvos-images/designer04.png)](hello-tvos-images/designer04.png#lightbox)
 3. Clique na propriedade **título** no painel de **Propriedades** e altere o título do botão para `Hello, tvOS` e defina o **tamanho da fonte** como 128:
 
-    [![](hello-tvos-images/designer05.png "Set the title to Hello, tvOS and set the Font Size to 128")](hello-tvos-images/designer05.png#lightbox)
+    [![Defina o título como Olá, tvOS e defina o tamanho da fonte como 128](hello-tvos-images/designer05.png)](hello-tvos-images/designer05.png#lightbox)
 4. Redimensione o rótulo para que todas as palavras fiquem visíveis e coloque-o centralizado próximo à parte superior da janela:
 
-    [![](hello-tvos-images/designer06.png "Resize and center the label")](hello-tvos-images/designer06.png#lightbox)
+    [![Redimensionar e centralizar o rótulo](hello-tvos-images/designer06.png)](hello-tvos-images/designer06.png#lightbox)
 5. O rótulo agora precisará ser restrito a sua posição, para que ele seja exibido como pretendido. independentemente do tamanho da tela. Para fazer isso, clique no rótulo até que o *identificador em formato T* seja exibido:
 
-    [![](hello-tvos-images/designer07.png "The T-shaped handle")](hello-tvos-images/designer07.png#lightbox)
+    [![A alça em formato T](hello-tvos-images/designer07.png)](hello-tvos-images/designer07.png#lightbox)
 6. Para restringir o rótulo horizontalmente, selecione o quadrado central e arraste-o para a linha tracejada verticalmente:
 
-    [![](hello-tvos-images/designer08.png "Select the center square")](hello-tvos-images/designer08zoom.png#lightbox)
+    [![Selecione o quadrado central](hello-tvos-images/designer08.png)](hello-tvos-images/designer08zoom.png#lightbox)
 
      O rótulo deve ativar laranja.
 7. Selecione a alça T na parte superior do rótulo e arraste-a para a borda superior da janela:
 
-    [![](hello-tvos-images/designer09.png "Drag the handle to the top edge of the window")](hello-tvos-images/designer09.png#lightbox)
+    [![Arraste a alça até a borda superior da janela](hello-tvos-images/designer09.png)](hello-tvos-images/designer09.png#lightbox)
 8. Em seguida, clique na largura e na altura do *identificador Bone* , conforme ilustrado abaixo:
 
-    [![](hello-tvos-images/designer10.png "The width and the height bone handles")](hello-tvos-images/designer10.png#lightbox)
+    [![As alças de largura e altura do Bone](hello-tvos-images/designer10.png)](hello-tvos-images/designer10.png#lightbox)
 
      Quando cada *identificador de Bone* for clicado, selecione largura e altura, respectivamente, para definir dimensões fixas.
 9. Quando concluído, suas restrições devem ser semelhantes àquelas na guia layout do painel de propriedades:
 
-    [![](hello-tvos-images/designer11.png "Example Constraints")](hello-tvos-images/designer11.png#lightbox)
+    [![Restrições de exemplo](hello-tvos-images/designer11.png)](hello-tvos-images/designer11.png#lightbox)
 10. Arraste um **botão** da **caixa de ferramentas** e coloque-o sob o rótulo.
 11. Clique na propriedade **título** no painel de **Propriedades** e altere o título do botão para `Click Me` :
 
-    [![](hello-tvos-images/designer12.png "Change the buttons title to Click Me")](hello-tvos-images/designer12.png#lightbox)
+    [![Alterar o título dos botões para clicar em mim](hello-tvos-images/designer12.png)](hello-tvos-images/designer12.png#lightbox)
 12. Repita as etapas de 5 a 8 acima para restringir o botão na janela tvOS. No entanto, em vez de arrastar o identificador T para a parte superior da janela (como na etapa #7), arraste-o para a parte inferior do rótulo:
 
-    [![](hello-tvos-images/designer14.png "Constrain the button")](hello-tvos-images/designer14.png#lightbox)
+    [![Restringir o botão](hello-tvos-images/designer14.png)](hello-tvos-images/designer14.png#lightbox)
 13. Arraste outro rótulo sob o botão, dimensione-o para ter a mesma largura que o primeiro rótulo e defina seu **alinhamento** como **centralizado**:
 
-    [![](hello-tvos-images/designer15.png "Drag another label under the button, size it to be the same width as the first label and set its Alignment to Center")](hello-tvos-images/designer15.png#lightbox)
+    [![Arraste outro rótulo sob o botão, dimensione-o para ter a mesma largura que o primeiro rótulo e defina seu alinhamento como centralizado](hello-tvos-images/designer15.png)](hello-tvos-images/designer15.png#lightbox)
 14. Como o primeiro rótulo e botão, defina este rótulo como centralizado e fixe-o no local e no tamanho:
 
-    [![](hello-tvos-images/designer16.png "Pin the label into location and size")](hello-tvos-images/designer16.png#lightbox)
+    [![Fixar o rótulo em local e tamanho](hello-tvos-images/designer16.png)](hello-tvos-images/designer16.png#lightbox)
 15. Salve as alterações na interface do usuário.
 
 Como você estava redimensionando e movendo controles, você deve ter notado que o designer fornece dicas de ajuste úteis que se baseiam nas [diretrizes de interface humana da Apple TV](https://developer.apple.com/tvos/human-interface-guidelines/). Essas diretrizes ajudarão você a criar aplicativos de alta qualidade que terão uma aparência familiar para os usuários da Apple TV.
 
 Se você examinar a seção **estrutura de tópicos do documento** , observe como o layout e a hierarquia dos elementos que compõem a interface do usuário são mostrados:
 
-[![](hello-tvos-images/designer17.png "The Document Outline section")](hello-tvos-images/designer17.png#lightbox)
+[![A seção estrutura de tópicos do documento](hello-tvos-images/designer17.png)](hello-tvos-images/designer17.png#lightbox)
 
 A partir daqui, você pode selecionar itens para editar ou arrastar para reordenar os elementos da interface do usuário, se necessário. Por exemplo, se um elemento de interface do usuário estava sendo coberto por outro elemento, você poderia arrastá-lo para a parte inferior da lista para torná-lo o item mais alto na janela.
 
@@ -339,16 +339,16 @@ Neste aplicativo de exemplo, quando o botão é clicado, queremos que _algo_ aco
 1. No Xamarin iOS designer, selecione o botão no controlador de exibição.
 2. No painel Propriedades, selecione a guia **eventos** :
 
-    [![](hello-tvos-images/event1.png "The Events tab")](hello-tvos-images/event1.png#lightbox)
+    [![A guia Eventos](hello-tvos-images/event1.png)](hello-tvos-images/event1.png#lightbox)
 3. Localize o evento TouchUpInside e dê a ele um manipulador de eventos chamado `Clicked` :
 
-    [![](hello-tvos-images/event2.png "The TouchUpInside event")](hello-tvos-images/event2.png#lightbox)
+    [![O evento TouchUpInside](hello-tvos-images/event2.png)](hello-tvos-images/event2.png#lightbox)
 4. Quando você pressiona **Enter**, o arquivo **ViewController**. cs será aberto, sugerindo locais para seu manipulador de eventos no código. Use as teclas de direção do teclado para definir o local:
 
-    [![](hello-tvos-images/event3.png "Setting the location")](hello-tvos-images/event3.png#lightbox)
+    [![Configurando o local](hello-tvos-images/event3.png)](hello-tvos-images/event3.png#lightbox)
 5. Isso criará um método parcial, conforme mostrado abaixo:
 
-    [![](hello-tvos-images/event4.png "The partial method")](hello-tvos-images/event4.png#lightbox)
+    [![O método parcial](hello-tvos-images/event4.png)](hello-tvos-images/event4.png#lightbox)
 
 Agora estamos prontos para começar a adicionar algum código para permitir que o botão funcione.
 
@@ -359,10 +359,10 @@ Quando o botão é clicado, o rótulo deve ser atualizado com base no número de
 1. Abra o storyboard e selecione o rótulo na parte inferior do controlador de exibição.
 2. No painel Propriedades, selecione a guia **widget** :
 
-    [![](hello-tvos-images/name1.png "Select the Widget tab")](hello-tvos-images/name1.png#lightbox)
+    [![Selecione a guia widget](hello-tvos-images/name1.png)](hello-tvos-images/name1.png#lightbox)
 3. Em **identidade > nome**, adicione `ClickedLabel` :
 
-    [![](hello-tvos-images/name2.png "Set ClickedLabel")](hello-tvos-images/name2.png#lightbox)
+    [![Definir ClickedLabel](hello-tvos-images/name2.png)](hello-tvos-images/name2.png#lightbox)
 
 Agora estamos prontos para começar a atualizar o rótulo!
 
@@ -370,7 +370,7 @@ Agora estamos prontos para começar a atualizar o rótulo!
 
 Se você selecionar o `ViewController.designer.cs` no **Gerenciador de soluções** poderá ver como o `ClickedLabel` rótulo e o `Clicked` manipulador de eventos foram mapeados para uma **tomada** e **ação** em C#:
 
-[![](hello-tvos-images/accesscontrol.png "Outlets and Actions")](hello-tvos-images/accesscontrol.png#lightbox)
+[![Saídas e ações](hello-tvos-images/accesscontrol.png)](hello-tvos-images/accesscontrol.png#lightbox)
 
 Você também pode observar que `ViewController.designer.cs` é uma classe parcial, para que Visual Studio para Mac não precise modificar, `ViewController.cs` o que substituiria as alterações feitas na classe.
 
@@ -386,7 +386,7 @@ Com a interface do usuário criada e seus elementos de interface do usuário exp
 
 Em nosso aplicativo, sempre que o primeiro botão for clicado, vamos atualizar nosso rótulo para mostrar quantas vezes o botão foi clicado. Para fazer isso, precisamos abrir o `ViewController.cs` arquivo para edição clicando duas vezes nele no **painel de soluções**:
 
-[![](hello-tvos-images/code01.png "The Solution Pad")](hello-tvos-images/code01.png#lightbox)
+[![O Painel de Soluções](hello-tvos-images/code01.png)](hello-tvos-images/code01.png#lightbox)
 
 Primeiro, precisamos criar uma variável em nível de classe em nossa `ViewController` classe para controlar o número de cliques que ocorreram. Edite a definição de classe e torne-a semelhante ao seguinte:
 
@@ -440,7 +440,7 @@ Sempre que criamos um aplicativo, podemos escolher que tipo de compilação dese
 
 Você pode selecionar o tipo de compilação no **seletor de configuração** no canto superior esquerdo da tela de Visual Studio para Mac:
 
-[![](hello-tvos-images/run01.png "Select the type of build")](hello-tvos-images/run01.png#lightbox)
+[![Selecione o tipo de compilação](hello-tvos-images/run01.png)](hello-tvos-images/run01.png#lightbox)
 
 ### <a name="building-the-application"></a>Compilando o aplicativo
 
@@ -462,11 +462,11 @@ O aplicativo será criado (se ainda não tiver sido criado), começar no modo de
 
 No menu **hardware** , selecione **Mostrar Apple TV Remote** para que você possa controlar o simulador.
 
-[![](hello-tvos-images/run04.png "Select Show Apple TV Remote")](hello-tvos-images/run04.png#lightbox)
+[![Selecione Mostrar Apple TV remoto](hello-tvos-images/run04.png)](hello-tvos-images/run04.png#lightbox)
 
 Usando o remoto do simulador, se você clicar no botão algumas vezes o rótulo deverá ser atualizado com a contagem:
 
-[![](hello-tvos-images/run05.png "The label with updated count")](hello-tvos-images/run05.png#lightbox)
+[![O rótulo com contagem atualizada](hello-tvos-images/run05.png)](hello-tvos-images/run05.png#lightbox)
 
 Parabéns! Abordamos muitos aspectos aqui, mas se você seguiu este tutorial do início ao fim, agora você deve ter uma compreensão sólida dos componentes de um aplicativo Xamarin. tvOS, bem como das ferramentas usadas para criá-los.
 
@@ -490,7 +490,7 @@ Se você tiver problemas para trabalhar com o Xamarin. tvOS, consulte nossa docu
 
 Este artigo forneceu um início rápido para desenvolver aplicativos para tvOS com Visual Studio para Mac criando um aplicativo Hello, tvOS simples. Ele abordou os conceitos básicos do provisionamento de dispositivos tvOS, criação de interface, codificação para tvOS e testes no simulador de tvOS.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)

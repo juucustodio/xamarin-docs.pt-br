@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 395ac62cd4db62c02863e352ed5643958348dcff
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 8b911be4b1bf547a9a1ad5d6b795894ddba3c26d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574384"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939055"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Introdução aos storyboards no Xamarin. Mac
 
@@ -20,7 +20,7 @@ _Este artigo fornece uma introdução ao trabalho com storyboards em um aplicati
 
 Os storyboards permitem desenvolver uma interface do usuário para seu aplicativo Xamarin. Mac que não inclui apenas as definições e controles de janela, mas também contém os links entre janelas diferentes (via continuações) e Estados de exibição.
 
-[![](images/intro01.png "A sample UI in Xcode")](images/intro01.png#lightbox)
+[![Uma interface do usuário de exemplo no Xcode](images/intro01.png)](images/intro01.png#lightbox)
 
 Este artigo fornecerá uma introdução ao uso de storyboards para definir uma interface do usuário do aplicativo Xamarin. Mac.
 
@@ -36,11 +36,11 @@ Usando storyboards, toda a interface do usuário de um aplicativo Xamarin. Mac p
 
 Como mencionado acima, um storyboard define toda a interface do usuário para um determinado aplicativo dividido em uma visão geral funcional de seus _controladores de exibição_. No Interface Builder do Xcode, cada um desses controladores reside em sua própria _cena_.
 
-[![](images/intro02.png "An example view controller")](images/intro02.png#lightbox)
+[![Um controlador de exibição de exemplo](images/intro02.png)](images/intro02.png#lightbox)
 
 Cada cena representa um determinado par de controlador de exibição e exibição com um conjunto de linhas (chamado continuações) que conectam cada cena na interface do usuário, mostrando assim suas relações. Alguns continuações definem como um controlador de exibição contém uma ou mais exibições filho ou controladores de exibição. Outros continuações, definem transições entre o controlador de exibição (como exibir um popover ou uma caixa de diálogo). 
 
-[![](images/intro03.png "A sample segue")](images/intro03.png#lightbox)
+[![Um exemplo de transição](images/intro03.png)](images/intro03.png#lightbox)
 
 A coisa mais importante a observar é que cada transição representa o fluxo de alguma forma de dados entre o elemento fornecido da interface do usuário do aplicativo.
 
@@ -50,7 +50,7 @@ A coisa mais importante a observar é que cada transição representa o fluxo de
 
 Os controladores de exibição definem as relações entre uma determinada exibição de informações em um aplicativo Mac e o modelo de dados que fornece essas informações. Cada cena de nível superior no storyboard representa um controlador de exibição no código do aplicativo Xamarin. Mac.
 
-[![](images/intro04.png "An example slips view controller")](images/intro04.png#lightbox)
+[![Um controlador de exibição de guias de exemplo](images/intro04.png)](images/intro04.png#lightbox)
 
 Dessa forma, cada controlador de exibição é um emparelhamento reutilizável e independente da representação visual da informação (exibição) e da lógica para apresentar e controlar essas informações.
 
@@ -112,7 +112,7 @@ O código do SourceWriter foi totalmente comentado e, quando disponível, foram 
 
 Este artigo deu uma olhada rápida no trabalho com storyboards em um aplicativo Xamarin. Mac. Vimos como criar um novo aplicativo usando storyboards e como definir uma interface do usuário. Também vimos como navegar entre diferentes janelas e Estados de exibição usando o continuações.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Hello, Mac (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)

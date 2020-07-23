@@ -10,16 +10,16 @@ ms.date: 03/28/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cf95427807e0179a608b428bc7e02499c9616fe7
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cee301178880a62695f4208161965b01bb6f522e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139146"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938574"
 ---
 # <a name="consume-a-windows-communication-foundation-wcf-web-service"></a>Consumir um serviço Web Windows Communication Foundation (WCF)
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
 
 _O WCF é a estrutura unificada da Microsoft para a criação de aplicativos orientados a serviços. Ele permite que os desenvolvedores criem aplicativos distribuídos seguros, confiáveis, transacionados e interoperáveis. Este artigo demonstra como consumir um serviço de protocolo SOAP (Simple Object Access Protocol) do WCF a partir de um Xamarin.Forms aplicativo._
 
@@ -41,7 +41,7 @@ Há diferenças entre o ASMX (ASP.NET Web Services) e o WCF, mas o WCF dá supor
 
 A solução de aplicativo de exemplo inclui um serviço WCF que pode ser executado localmente e é mostrado na seguinte captura de tela:
 
-![](wcf-images/portal.png "Sample Application")
+![Aplicativo de exemplo](wcf-images/portal.png)
 
 > [!NOTE]
 > No iOS 9 e superior, a ATS (segurança de transporte de aplicativo) impõe conexões seguras entre os recursos da Internet (como o servidor back-end do aplicativo) e o aplicativo, impedindo, assim, a divulgação acidental de informações confidenciais. Como o ATS está habilitado por padrão em aplicativos criados para iOS 9, todas as conexões estarão sujeitas a requisitos de segurança de ATS. Se as conexões não atenderem a esses requisitos, elas falharão com uma exceção.

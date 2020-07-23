@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: aed11ff8794f79ff7e16fbb8401a95a5697d2d4b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 9280917f451d58ae864398088bec7faaf15ad96a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572059"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937339"
 ---
 # <a name="source-lists-in-xamarinmac"></a>Listas de origem no Xamarin. Mac
 
@@ -22,7 +22,7 @@ Ao trabalhar com C# e .NET em um aplicativo Xamarin. Mac, você tem acesso às m
 
 Uma lista de origem é um tipo especial de exibição de estrutura de tópicos usada para mostrar a origem de uma ação, como a barra lateral no Finder ou no iTunes.
 
-[![](source-list-images/source05.png "An example source list")](source-list-images/source05.png#lightbox)
+[![Uma lista de origem de exemplo](source-list-images/source05.png)](source-list-images/source05.png#lightbox)
 
 Neste artigo, abordaremos as noções básicas de como trabalhar com listas de origem em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos neste artigo.
 
@@ -50,7 +50,7 @@ Uma lista de origem é um tipo especial de exibição de estrutura de tópicos u
 
 Primeiro, vamos criar uma nova `SourceListItem` classe para manter os dados da nossa lista de origem. Na **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar**  >  **novo arquivo...** Selecione **General**  >  **classe vazia**geral, insira `SourceListItem` para o **nome** e clique no botão **novo** :
 
-[![](source-list-images/source01.png "Adding an empty class")](source-list-images/source01.png#lightbox)
+[![Adicionando uma classe vazia](source-list-images/source01.png)](source-list-images/source01.png#lightbox)
 
 Faça com que o `SourceListItem.cs` arquivo se pareça com o seguinte: 
 
@@ -532,19 +532,19 @@ Isso cria uma subclasse personalizada e reutilizável de `NSOutlineView` ( `Sour
 
 Agora, vamos projetar nossa lista de origem em Interface Builder. Clique duas vezes no `Main.storyboard` arquivo para abri-lo para edição no interface Builder e arraste um modo de exibição de divisão do **Inspetor de biblioteca**, adicione-o ao controlador de exibição e defina-o para redimensionar com o modo de exibição no **Editor de restrições**:
 
-[![](source-list-images/source00.png "Editing constraints")](source-list-images/source00.png#lightbox)
+[![Restrições de edição](source-list-images/source00.png)](source-list-images/source00.png#lightbox)
 
 Em seguida, arraste uma lista de origem do **Inspetor de biblioteca**, adicione-a à esquerda da exibição de divisão e defina-a para redimensionar com a exibição no editor de **restrições**:
 
-[![](source-list-images/source02.png "Editing constraints")](source-list-images/source02.png#lightbox)
+[![Restrições de edição](source-list-images/source02.png)](source-list-images/source02.png#lightbox)
 
 Em seguida, alterne para o **modo de exibição de identidade**, selecione a lista origem e altere a **classe** para `SourceListView` :
 
-[![](source-list-images/source03.png "Setting the class name")](source-list-images/source03.png#lightbox)
+[![Definindo o nome da classe](source-list-images/source03.png)](source-list-images/source03.png#lightbox)
 
 Por fim, crie uma **tomada** para nossa lista de origem chamada `SourceList` no `ViewController.h` arquivo:
 
-[![](source-list-images/source04.png "Configuring an Outlet")](source-list-images/source04.png#lightbox)
+[![Configurando uma tomada](source-list-images/source04.png)](source-list-images/source04.png#lightbox)
 
 Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
@@ -614,7 +614,7 @@ public override void DidFinishLaunching (NSNotification notification)
 
 Se executarmos nosso aplicativo, o seguinte será exibido:
 
-[![](source-list-images/source05.png "An example app run")](source-list-images/source05.png#lightbox)
+[![Uma execução de aplicativo de exemplo](source-list-images/source05.png)](source-list-images/source05.png#lightbox)
 
 <a name="Summary"></a>
 
@@ -622,7 +622,7 @@ Se executarmos nosso aplicativo, o seguinte será exibido:
 
 Este artigo deu uma visão detalhada de como trabalhar com listas de origem em um aplicativo Xamarin. Mac. Vimos como criar e manter listas de origem no Interface Builder do Xcode e como trabalhar com listas de origem em código C#.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [MacOutlines (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macoutlines)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)

@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7410386e10f605fdeed452fe37755c1e48e6b9b9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b4772299421ad26f0fbe0fced8c80a7f633341c6
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136988"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938444"
 ---
 # <a name="visualelement-drop-shadows-on-ios"></a>Sombras de soltar do visualelement no iOS
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esse recurso específico da plataforma iOS é usado para habilitar uma sombra em um [`VisualElement`](xref:Xamarin.Forms.VisualElement) . Ele é consumido em XAML definindo a [`VisualElement.IsShadowEnabled`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.IsShadowEnabledProperty) Propriedade anexada como `true` , juntamente com várias propriedades adicionais anexadas opcionais que controlam a sombra:
 
@@ -74,7 +74,7 @@ O `VisualElement.On<iOS>` método especifica que essa plataforma específica ser
 
 O resultado é que uma sombra pode ser habilitada em um [`VisualElement`](xref:Xamarin.Forms.VisualElement) :
 
-![](drop-shadow-images/drop-shadow.png "Drop shadow enabled")
+![Arrastar sombra habilitada](drop-shadow-images/drop-shadow.png)
 
 ## <a name="related-links"></a>Links relacionados
 

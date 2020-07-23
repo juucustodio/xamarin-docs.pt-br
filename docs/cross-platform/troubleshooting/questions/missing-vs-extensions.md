@@ -6,12 +6,12 @@ ms.assetid: 066d36a3-e553-48d6-8769-c972274d7641
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 6cd5acb529d617c72d8c9e1bd642a831f90b2e8c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f1e230d8851545e890c806b58ddf26647764bce9
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73013740"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938808"
 ---
 # <a name="missing-visual-studio-extensions-after-installation"></a>Extensões do Visual Studio ausentes após a instalação
 
@@ -33,7 +33,7 @@ Em determinadas situações, o instalador do Xamarin pode desmarcar automaticame
 
 4. Verifique se a opção **Xamarin para Visual Studio 2013** está definida como instalar:
 
-    ![](missing-vs-extensions-images/installer.png "Enable Xamarin for Visual Studio 2013 installation option")
+    ![Habilitar a opção de instalação do Xamarin para Visual Studio 2013](missing-vs-extensions-images/installer.png)
 
 5. Continue com o restante do Assistente de instalação.
 
@@ -65,7 +65,7 @@ Em determinadas situações, o instalador do Xamarin pode desmarcar automaticame
 
     * Xamarin para Visual Studio
 
-2. No Explorer, exclua todos os arquivos restantes nas pastas de extensão do Xamarin para Visual Studio (todas as versões, incluindo **Arquivos de Programas** e **Arquivos de Programas (x86)** ):
+2. No Explorer, exclua todos os arquivos restantes das pastas de extensão do Xamarin Visual Studio (todas as versões, incluindo **arquivos de programas** e **arquivos de programas (x86)**):
 
     `C:\Program Files*\Microsoft Visual Studio 1*.0\Common7\IDE\Extensions\Xamarin`
 
@@ -77,11 +77,11 @@ Em determinadas situações, o instalador do Xamarin pode desmarcar automaticame
 
 5. Procure por esta chave:
 
-    _HKEY\_LOCAL de\_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\SharedDlls_
+    _HKEY \_ local \_ MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\SharedDlls_
 
 6. Localize e exclua as entradas que correspondem a esse padrão:
 
-    _C:\Arquivos de programas\*\Microsoft Visual Studio 1\*. 0 \ Common7\IDE\Extensions\Xamarin_
+    _C:\Arquivos de programas \* \Microsoft Visual Studio 1 \* . 0 \ Common7\IDE\Extensions\Xamarin_
 
 7. Procure por esta chave:
 

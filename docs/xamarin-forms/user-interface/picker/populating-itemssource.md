@@ -10,16 +10,16 @@ ms.date: 02/26/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8c4fc732082a77a2e471465af448a487862b513c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a15ca2e11dabb73054f5f0a1dc3f79342d8ce7f5
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136286"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938600"
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>Definir a propriedade ItemsSource de um seletor
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
 
 _A exibição do seletor é um controle para selecionar um item de texto de uma lista de dados. Este artigo explica como preencher um seletor com dados definindo a propriedade ItemsSource e como responder à seleção de itens pelo usuário._
 
@@ -178,7 +178,7 @@ detailsLabel.SetBinding(Label.TextProperty, "SelectedMonkey.Details");
 
 Os [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) dados de propriedade são associados à `SelectedMonkey` Propriedade do modelo de exibição conectado, que é do tipo `Monkey` . Portanto, quando o usuário seleciona um item no [`Picker`](xref:Xamarin.Forms.Picker) , a `SelectedMonkey` propriedade será definida como o `Monkey` objeto selecionado. Os `SelectedMonkey` dados do objeto são exibidos na interface do usuário por [`Label`](xref:Xamarin.Forms.Label) e [`Image`](xref:Xamarin.Forms.Image) modos de exibição:
 
-![](populating-itemssource-images/monkeys.png "Picker Item Selection")
+![Seleção de item do seletor](populating-itemssource-images/monkeys.png)
 
 > [!NOTE]
 > Observe que as [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) Propriedades e dão suporte a associações bidirecionais por padrão.

@@ -10,16 +10,16 @@ ms.date: 02/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1703f0049408381a86da73fb28696ef8708cc790
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4c07f2667230695c6b884eb4902e68f7f4120f6b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139289"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939497"
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>Verificação ortográfica usando a API de Verificação Ortográfica do Bing
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Verificação Ortográfica do Bing executa a verificação ortográfica contextual para texto, fornecendo sugestões embutidas para palavras incorretas. Este artigo explica como usar a API REST do Verificação Ortográfica do Bing para corrigir erros de ortografia em um Xamarin.Forms aplicativo._
 
@@ -157,9 +157,9 @@ foreach (var flaggedToken in spellCheckResult.FlaggedTokens)
 
 Esse código faz a iteração pela `FlaggedTokens` coleção e substitui palavras gramaticalmente incorretamente ou incorretas no texto de origem pela primeira sugestão. As capturas de tela a seguir mostram antes e depois da verificação ortográfica:
 
-![](spell-check-images/before-spell-check.png "Before Spell Check")
+![Antes de Verificação Ortográfica](spell-check-images/before-spell-check.png)
 
-![](spell-check-images/after-spell-check.png "After Spell Check")
+![Após Verificação Ortográfica](spell-check-images/after-spell-check.png)
 
 > [!NOTE]
 > O exemplo acima usa `Replace` para simplificar, mas em uma grande quantidade de texto, ele pode substituir o token errado. A API fornece o `offset` valor que deve ser usado em aplicativos de produção para identificar o local correto no texto de origem para executar uma atualização.
@@ -168,7 +168,7 @@ Esse código faz a iteração pela `FlaggedTokens` coleção e substitui palavra
 
 Este artigo explicou como usar a API REST do Verificação Ortográfica do Bing para corrigir erros de ortografia em um Xamarin.Forms aplicativo. Verificação Ortográfica do Bing executa a verificação ortográfica contextual para texto, fornecendo sugestões embutidas para palavras incorretas.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Documentação do Verificação Ortográfica do Bing](/azure/cognitive-services/bing-spell-check/)
 - [Consumir um serviço Web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)

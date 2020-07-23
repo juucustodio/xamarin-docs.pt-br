@@ -9,12 +9,12 @@ ms.date: 01/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b4d644591ab85f185709e7bd53353580a6578d77
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1eae29e8531c9d401630f9d113b01eb3c2510689
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84570104"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939159"
 ---
 # <a name="uninstall-xamarin-from-visual-studio"></a>Desinstalar o Xamarin do Visual Studio
 
@@ -30,25 +30,25 @@ O Xamarin é desinstalado do Visual Studio 2019 e do Visual Studio 2017 usando o
 
 2. Pressione o botão **Modificar** da instância que deseja alterar.
 
-    [![](uninstalling-xamarin-images/vs2017-02-sml.png "Press the modify button")](uninstalling-xamarin-images/vs2017-02.png#lightbox)
+    [![Pressione o botão modificar](uninstalling-xamarin-images/vs2017-02-sml.png)](uninstalling-xamarin-images/vs2017-02.png#lightbox)
 
 3. Na guia **Cargas de trabalho**, desmarque a opção **Desenvolvimento móvel com .NET** (na seção **Móvel e Jogos**).
 
-    [![](uninstalling-xamarin-images/vs2017-03-sml.png "Uncheck the Mobile Development workload")](uninstalling-xamarin-images/vs2017-03.png#lightbox)
+    [![Desmarcar a carga de trabalho de Desenvolvimento Móvel](uninstalling-xamarin-images/vs2017-03-sml.png)](uninstalling-xamarin-images/vs2017-03.png#lightbox)
 
 4. Clique no botão **Modificar** na parte inferior direita da janela.
 
 5. O instalador removerá os componentes desmarcados (o Visual Studio 2017 deve ser fechado para que o instalador possa fazer alterações).
 
-    [![](uninstalling-xamarin-images/vs2017-04-sml.png "Press the Modify button")](uninstalling-xamarin-images/vs2017-04.png#lightbox)
+    [![Pressionar o botão Modificar](uninstalling-xamarin-images/vs2017-04-sml.png)](uninstalling-xamarin-images/vs2017-04.png#lightbox)
 
 Componentes individuais do Xamarin (como o criador de perfil ou pastas de trabalho) podem ser desinstalados alternando para a guia **componentes individuais** na etapa 3 e desmarcando componentes específicos:
 
-[![](uninstalling-xamarin-images/vs2017-components-sml.png "Uninstall individual components")](uninstalling-xamarin-images/vs2017-components.png#lightbox)
+[![Desinstalar componentes individuais](uninstalling-xamarin-images/vs2017-components-sml.png)](uninstalling-xamarin-images/vs2017-components.png#lightbox)
 
 Para desinstalar completamente o Visual Studio 2017, escolha **Desinstalar** no menu de três barras ao lado do botão **Iniciar**.
 
-[![](uninstalling-xamarin-images/vs2017-uninstall-sml.png "Uninstall Visual Studio completely")](uninstalling-xamarin-images/vs2017-uninstall.png#lightbox)
+[![Desinstalar o Visual Studio completamente](uninstalling-xamarin-images/vs2017-uninstall-sml.png)](uninstalling-xamarin-images/vs2017-uninstall.png#lightbox)
 
 > [!IMPORTANT]
 > Se houver duas (ou mais) instâncias do Visual Studio instaladas SxS (lado a lado), como uma versão de lançamento e uma versão prévia, desinstalar uma instância poderá remover algumas funcionalidades do Xamarin de outras instâncias do Visual Studio, incluindo:
@@ -70,7 +70,7 @@ Para desinstalar completamente o Visual Studio 2015, use [a resposta de suporte 
 
 O Xamarin pode ser desinstalado de um computador Windows por meio do **Painel de Controle**. Navegue até **Programas e Recursos** ou **Programas > Desinstalar um Programa** conforme ilustrado abaixo:
 
- [![](uninstalling-xamarin-images/image3.png "Navigate to Programs and Features or Programs  Uninstall a Program as illustrated here")](uninstalling-xamarin-images/image3.png#lightbox)
+ [![Navegue até Programas e Recursos ou Programas Desinstalar um Programa conforme ilustrado aqui](uninstalling-xamarin-images/image3.png)](uninstalling-xamarin-images/image3.png#lightbox)
 
 No Painel de Controle, desinstale qualquer um dos seguintes itens que estiverem presentes:
 

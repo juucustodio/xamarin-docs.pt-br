@@ -10,12 +10,12 @@ ms.date: 03/05/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1008eab6e56be7a235498e01ffd3ea1b27d2bbae
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f11100b6e13a3ace2ae3a56bcfc279294089d842
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84130163"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939029"
 ---
 # <a name="ios-platform-features-in-xamarinforms"></a>recursos da plataforma iOS noXamarin.Forms
 
@@ -76,7 +76,7 @@ Xamarin.Formspermite definir estilos e cores de interface do usuário de platafo
 
 [Leia mais](formatting.md) sobre como formatar a interface do usuário usando APIs específicas do IOS, como a configuração **info. plist** e a `UIAppearance` API.
 
-![](images/status-white-sml.png "iOS Theming")
+![iOS com temas](images/status-white-sml.png)
 
 ## <a name="other-ios-features"></a>Outros recursos do iOS
 

@@ -10,16 +10,16 @@ ms.date: 11/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: dc28cdaf78c72c219706a30c30af7f90ae7c4eec
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8892a49f2d7d93f8310293bc70d5e1acdfabe3f5
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84569615"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937079"
 ---
 # <a name="customizing-a-listview"></a>Personalizando uma ListView
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-listview)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-listview)
 
 _Um Xamarin.Forms ListView é uma exibição que exibe uma coleção de dados como uma lista vertical. Este artigo demonstra como criar um renderizador personalizado que encapsula controles de lista específicos da plataforma e layouts de células nativas, permitindo mais controle sobre o desempenho do controle de lista nativa._
 
@@ -27,7 +27,7 @@ Cada Xamarin.Forms exibição tem um renderizador que acompanha para cada plataf
 
 O diagrama a seguir ilustra a relação entre o [`ListView`](xref:Xamarin.Forms.ListView) controle e os controles nativos correspondentes que o implementam:
 
-![](listview-images/listview-classes.png "Relationship Between the ListView Control and the Implementing Native Controls")
+![Relação entre o controle ListView e a implementação de controles nativos](listview-images/listview-classes.png)
 
 O processo de renderização pode ser aproveitado para implementar personalizações específicas da plataforma criando um renderizador personalizado para um [`ListView`](xref:Xamarin.Forms.ListView) em cada plataforma. O processo para fazer isso é o seguinte:
 
@@ -152,11 +152,11 @@ O processo para criar a classe do renderizador personalizado é a seguinte:
 
 O diagrama a seguir ilustra as responsabilidades de cada projeto no aplicativo de exemplo, bem como as relações entre elas:
 
-![](listview-images/solution-structure.png "NativeListView Custom Renderer Project Responsibilities")
+![Responsabilidades do projeto de renderizador personalizado de NativeListView](listview-images/solution-structure.png)
 
 O controle personalizado `NativeListView` é renderizado por classes de renderizador específicas da plataforma, que derivam da classe `ListViewRenderer` para cada plataforma. Isso faz com que cada controle personalizado `NativeListView` seja renderizado com controles de lista específicos da plataforma e layouts de célula nativos, conforme mostrado nas capturas de tela seguir:
 
-![](listview-images/screenshots.png "NativeListView on each Platform")
+![NativeListView em cada plataforma](listview-images/screenshots.png)
 
 A `ListViewRenderer` classe expõe o `OnElementChanged` método, que é chamado quando o Xamarin.Forms controle personalizado é criado para renderizar o controle nativo correspondente. Esse método usa um parâmetro `ElementChangedEventArgs`, que contém as propriedades `OldElement` e `NewElement`. Essas propriedades representam o Xamarin.Forms elemento ao qual o renderizador *foi* anexado e o Xamarin.Forms elemento ao qual o renderizador *está* anexado, respectivamente. No aplicativo de exemplo, a propriedade `OldElement` será `null` e a propriedade `NewElement` conterá uma referência à instância de `NativeListView`.
 
@@ -561,6 +561,6 @@ O método preenche novamente o controle `ListView` nativo com os dados alterados
 
 Este artigo demonstrou como criar um renderizador personalizado que encapsula os controles de lista e layouts de célula nativa específicos a uma plataforma, permitindo mais controle sobre o desempenho do controle de lista nativo.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [CustomRendererListView (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-listview)

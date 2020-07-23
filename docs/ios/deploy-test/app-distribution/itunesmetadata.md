@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 65a89afb3f301fd88ac4819bb8c3658a2be5e29d
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 76f5a10720505796e30079d6be3506bc66636f7e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573190"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938119"
 ---
 # <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>O arquivo iTunesMetadata.plist em aplicativos Xamarin.iOS
 
@@ -300,26 +300,26 @@ Faça o seguinte:
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo de projeto Xamarin.iOS e selecione **Adicionar** > **Novo Arquivo... **
 2. Na caixa de diálogo novo arquivo, selecione lista de propriedades do **Ios**  >  **Property List**:
 
-    ![](itunesmetadata-images/image01.png "Select iOS Property List")
+    ![Selecionar a Lista de Propriedades do iOS](itunesmetadata-images/image01.png)
 3. Digite `iTunesMetadata` para o **Nome** e clique no botão **Novo**.
 4. Clique duas vezes no arquivo `iTunesMetadata.plist` no **Gerenciador de Soluções** para abri-lo para edição:
 
-    ![](itunesmetadata-images/image02.png "The iTunesMetadata.plist editor")
+    ![O editor iTunesMetadata.plist](itunesmetadata-images/image02.png)
 5. Clique no verde **+** para criar uma nova entrada e insira `UIRequiredDeviceCapabilities` como o nome da chave:
 
-    ![](itunesmetadata-images/image03.png "Create a new entry and enter UIRequiredDeviceCapabilities as the key name")
+    ![Criar uma entrada e digitar UIRequiredDeviceCapabilities como o nome da chave](itunesmetadata-images/image03.png)
 6. Clique no tipo de valor da **Cadeia de caracteres** e selecione **Dicionário** na lista pop-up:
 
-    ![](itunesmetadata-images/image04.png "Select Dictionary from the popup list")
+    ![Selecionar um Dicionário na lista pop-up](itunesmetadata-images/image04.png)
 7. Clique na dobra à esquerda do nome da Propriedade para revelar as entradas do dicionário:
 
-    ![](itunesmetadata-images/image05.png "Reveal the dictionary entries")
+    ![Revelar as entradas do dicionário](itunesmetadata-images/image05.png)
 8. Clique no texto **Adicionar nova entrada** e, em seguida, clique no **+** verde para adicionar uma entrada ao dicionário:
 
-    ![](itunesmetadata-images/image06.png "Add an entry to the dictionary")
+    ![Adicionar uma entrada ao dicionário](itunesmetadata-images/image06.png)
 9. Digite `armv7` para o nome da chave, selecione um tipo de **booliano** e digite **Sim** como o valor:
 
-    ![](itunesmetadata-images/image07.png "Enter armv7 for the key name, select a type of Boolean and enter Yes as the value")
+    ![Insira armv7 como o nome da chave, selecione um tipo de Booliano e digite Sim como o valor](itunesmetadata-images/image07.png)
 10. Repita as etapas acima até que você tenha preenchido o arquivo `iTunesMetadata.plist` com todos os pares de chave/valor necessários (confira a seção [O Conteúdo do iTunesMetadata.plist](#iTunesMetadata_contents) acima para obter mais detalhes).
 
 11. Salve as alterações no arquivo plist.
@@ -358,7 +358,7 @@ Posteriormente, selecione esse arquivo `iTunesMetadata.plist` enquanto se prepar
 
 Esse artigo abordou o arquivo `iTunesMetadata.plist` que pode ser usado para informar o iTunes sobre um aplicativo iOS ad hoc entregue. Ele discutiu a chave padrão no arquivo plist e como criar e manter o arquivo no Visual Studio e no Visual Studio para Mac.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Distribuição da loja de aplicativos](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
 - [Configurando um aplicativo no iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)

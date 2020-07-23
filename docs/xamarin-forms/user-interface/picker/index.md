@@ -10,12 +10,12 @@ ms.date: 02/26/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 50f605f4ad9839521fd4169531ad46d197f20dbf
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5e3153e796f26ef150dccc79d8ea6f90127c6a26
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139642"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938678"
 ---
 # <a name="xamarinforms-picker"></a>Xamarin.FormsSeletor
 
@@ -38,15 +38,15 @@ Todas as propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.
 
 Um [`Picker`](xref:Xamarin.Forms.Picker) não mostra dados quando é exibido pela primeira vez. Em vez disso, o valor de sua [`Title`](xref:Xamarin.Forms.Picker.Title) propriedade é mostrado como um espaço reservado nas plataformas Ios e Android:
 
-[![](images/picker-initial.png "Initial Picker Display")](images/picker-initial-large.png#lightbox "Initial Picker Display")
+[![Exibição do seletor inicial](images/picker-initial.png)](images/picker-initial-large.png#lightbox "Exibição do seletor inicial")
 
 Quando os [`Picker`](xref:Xamarin.Forms.Picker) ganhos se concentrarem, seus dados serão exibidos e o usuário poderá selecionar um item:
 
-[![](images/picker-selection.png "Picker Selecting an Item")](images/picker-selection-large.png#lightbox "Picker Selecting an Item")
+[![Seletor selecionando um item](images/picker-selection.png)](images/picker-selection-large.png#lightbox "Seletor selecionando um item")
 
 O [`Picker`](xref:Xamarin.Forms.Picker) dispara um [`SelectedIndexChanged`](xref:Xamarin.Forms.Picker.SelectedIndexChanged) evento quando o usuário seleciona um item. Após a seleção, o item selecionado é exibido pelo `Picker` :
 
-![](images/picker-after-selection.png "Picker after Selection")
+![Seletor após seleção](images/picker-after-selection.png)
 
 Há duas técnicas para popular um [`Picker`](xref:Xamarin.Forms.Picker) com dados:
 

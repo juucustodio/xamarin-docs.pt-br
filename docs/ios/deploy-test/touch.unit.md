@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 08ddf282c8839a6283b90c0736c0b4259bd01469
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: f5796ee17e947494d1e22f750bc43ff823d56d55
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73028451"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937274"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>Teste de unidade de aplicativos Xamarin.iOS
 
@@ -23,11 +23,11 @@ Os testes de unidade com o Xamarin.iOS são feitos usando a estrutura Touch.Unit
 
  Para configurar uma estrutura de teste de unidade para seu projeto, tudo o que você precisa fazer é adicionar à solução um projeto do tipo **Projeto de Testes de Unidade iOS**. Faça isso clicando com o botão direito do mouse na sua solução e selecionar **Adicionar > Adicionar Novo Projeto**. Na lista, selecione **iOS > Testes > API Unificado > Projeto de Testes de Unidade iOS** (você pode escolher C# ou F#).
 
-![](touch.unit-images/00.png "Choose either C# or F#")
+![Escolha C# ou F#](touch.unit-images/00.png)
 
 O item acima criará um projeto básico que contém um programa de execução básico e que faz referência ao novo assembly MonoTouch.NUnitLite, assim seu projeto terá esta aparência:
 
-![](touch.unit-images/01.png "The project in the Solution Explorer")
+![O projeto no Gerenciador de Soluções](touch.unit-images/01.png)
 
 A classe `AppDelegate.cs` contém o executor de teste e tem esta aparência:
 
@@ -105,14 +105,14 @@ Para executar este projeto dentro de sua solução, clique com botão direito do
 
 O executor de teste permite que você veja quais testes são registrados e selecione individualmente os testes que podem ser executados.
 
-[![](touch.unit-images/02-sml.png "The list of registered tests")](touch.unit-images/02.png#lightbox) 
-[![](touch.unit-images/03-sml.png "An individual text")](touch.unit-images/03.png#lightbox) 
+[ ![ A lista de testes registrados](touch.unit-images/02-sml.png)](touch.unit-images/02.png#lightbox)  
+ [ ![ de um texto individual](touch.unit-images/03-sml.png)](touch.unit-images/03.png#lightbox) 
 
-[![](touch.unit-images/04-sml.png "The run results")](touch.unit-images/04.png#lightbox)
+[![Os resultados da execução](touch.unit-images/04-sml.png)](touch.unit-images/04.png#lightbox)
 
 Você pode executar acessórios de teste individuais selecionando o acessório texto nas exibições aninhadas ou você pode executar todos os seus testes com "Executar tudo". Se você executar o teste padrão, ele deverá incluir um teste aprovado, um não aprovado e um ignorado. Esta é a aparência do relatório e você pode fazer uma busca detalhada diretamente nos testes não aprovados e descobrir mais informações sobre a falha:
 
-[![](touch.unit-images/05-sml.png "Um relatório amostral")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/06-sml.png "Um relatório amostral")](touch.unit-images/06.png#lightbox) [![](touch.unit-images/07-sml.png "Um relatório amostral")](touch.unit-images/07.png#lightbox)
+[ ![ Um](touch.unit-images/05-sml.png)](touch.unit-images/05.png#lightbox) exemplo de relatório [ ![ um exemplo](touch.unit-images/06-sml.png)](touch.unit-images/06.png#lightbox) [ ![ de relatório de](touch.unit-images/07-sml.png)](touch.unit-images/07.png#lightbox) exemplo
 
 Você também pode examinar a janela Saída do Aplicativo no seu IDE para ver quais testes estão sendo executados e seus status atuais.
 

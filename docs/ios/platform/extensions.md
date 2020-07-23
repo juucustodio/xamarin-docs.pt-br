@@ -1,5 +1,5 @@
 ---
-title: Extensões do iOS no Xamarin. iOS
+title: Extensões do iOS no Xamarin.iOS
 description: Este documento descreve as extensões do, que são widgets apresentados pelo iOS no contexto padrão, como no centro de notificações. Ele aborda como criar uma extensão e se comunicar com ela do aplicativo pai.
 ms.prod: xamarin
 ms.assetid: 3DEB3D43-3E4A-4099-8331-93C1E7A77095
@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 05/12/2020
-ms.openlocfilehash: 6f2f1a908a43d81b2aabf5cb2db2f7a230356fa4
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+ms.openlocfilehash: d5a51b70237c4e8a6f6a5e48ae684031697a0897
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83149925"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939835"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>extensões do iOS no Xamarin. iOS
 
@@ -27,11 +27,11 @@ Todas as extensões são instaladas em conjunto com um aplicativo de contêiner 
 
 ## <a name="extension-points"></a>Pontos de extensão
 
-|Type|Descrição|Ponto de extensão|Aplicativo host|
+|Tipo|Descrição|Ponto de extensão|Aplicativo host|
 |--- |--- |--- |--- |
 |Ação|Editor ou Visualizador especializado para um tipo de mídia específico|`com.apple.ui-services`|Qualquer|
 |Provedor de documentos|Permite que o aplicativo use um repositório de documentos remoto|`com.apple.fileprovider-ui`|Aplicativos usando um [UIDocumentPickerViewController](xref:UIKit.UIDocumentPickerViewController)|
-|Keyboard|Teclados alternativos|`com.apple.keyboard-service`|Qualquer|
+|Teclado|Teclados alternativos|`com.apple.keyboard-service`|Qualquer|
 |Edição de fotos|Manipulação e edição de fotos|`com.apple.photo-editing`|Editor de photos. app|
 |Compartilhar|Compartilha dados com redes sociais, serviços de mensagens, etc.|`com.apple.share-services`|Qualquer|
 |Hoje|"Widgets" que aparecem na tela atual ou no centro de notificações|`com.apple.widget-extensions`|Hoje e centro de notificações|
@@ -118,7 +118,7 @@ Tipos específicos de extensões podem ter requisitos adicionais. Por exemplo, u
 
 Nas instruções a seguir, você criará um widget de exemplo **hoje** que calcula o dia e o número de dias restantes no ano:
 
-[![](extensions-images/carpediemscreenshot-sm.png "An example Today widget that calculates the day and number of days remaining in the year")](extensions-images/carpediemscreenshot.png#lightbox)
+[![Um widget de exemplo hoje que calcula o dia e o número de dias restantes no ano](extensions-images/carpediemscreenshot-sm.png)](extensions-images/carpediemscreenshot.png#lightbox)
 
 ### <a name="creating-the-solution"></a>Criando a solução
 
@@ -126,26 +126,26 @@ Para criar a solução necessária, faça o seguinte:
 
 1. Primeiro, crie um novo projeto de aplicativo iOS, de **exibição única** e clique no botão **Avançar** : 
 
-    [![](extensions-images/today01.png "First, create a new iOS, Single View App project and click the Next button")](extensions-images/today01.png#lightbox)
+    [![Primeiro, crie um novo projeto de aplicativo iOS, de exibição única e clique no botão Avançar](extensions-images/today01.png)](extensions-images/today01.png#lightbox)
 2. Chame o projeto `TodayContainer` e clique no botão **Avançar** : 
 
-    [![](extensions-images/today02.png "Call the project TodayContainer and click the Next button")](extensions-images/today02.png#lightbox)
+    [![Chame o projeto TodayContainer e clique no botão Avançar](extensions-images/today02.png)](extensions-images/today02.png#lightbox)
 3. Verifique o **nome do projeto** e **SolutionName** e clique no botão **criar** para criar a solução: 
 
-    [![](extensions-images/today03.png "Verify the Project Name and SolutionName and click the Create button to create the solution")](extensions-images/today03.png#lightbox)
+    [![Verifique o nome do projeto e SolutionName e clique no botão criar para criar a solução](extensions-images/today03.png)](extensions-images/today03.png#lightbox)
 4. Em seguida, na **Gerenciador de soluções**, clique com o botão direito do mouse na solução e adicione um novo projeto de **extensão do IOS** do modelo de **extensão atual** : 
 
-    [![](extensions-images/today04.png "Next, in the Solution Explorer, right-click on the Solution and add a new iOS Extension project from the Today Extension template")](extensions-images/today04.png#lightbox)
+    [![Em seguida, na Gerenciador de Soluções, clique com o botão direito do mouse na solução e adicione um novo projeto de extensão do iOS do modelo de extensão atual](extensions-images/today04.png)](extensions-images/today04.png#lightbox)
 5. Chame o projeto `DaysRemaining` e clique no botão **Avançar** : 
 
-    [![](extensions-images/today05.png "Call the project DaysRemaining and click the Next button")](extensions-images/today05.png#lightbox)
+    [![Chame o projeto DaysRemaining e clique no botão Avançar](extensions-images/today05.png)](extensions-images/today05.png#lightbox)
 6. Examine o projeto e clique no botão **criar** para criá-lo: 
 
-    [![](extensions-images/today06.png "Review the project and click the Create button to create it")](extensions-images/today06.png#lightbox)
+    [![Examine o projeto e clique no botão criar para criá-lo](extensions-images/today06.png)](extensions-images/today06.png#lightbox)
 
 A solução resultante agora deve ter dois projetos, como mostrado aqui:
 
-[![](extensions-images/today07.png "The resulting Solution should now have two projects, as shown here")](extensions-images/today07.png#lightbox)
+[![A solução resultante agora deve ter dois projetos, como mostrado aqui](extensions-images/today07.png)](extensions-images/today07.png#lightbox)
 
 ### <a name="creating-the-extension-user-interface"></a>Criando a interface do usuário da extensão
 
@@ -157,10 +157,10 @@ Para criar a interface do usuário com um storyboard, faça o seguinte:
 
 1. No **Gerenciador de soluções**, clique duas vezes no arquivo do projeto de extensão `Main.storyboard` para abri-lo para edição: 
 
-    [![](extensions-images/today08.png "Double-click the Extension projects Main.storyboard file to open it for editing")](extensions-images/today08.png#lightbox)
+    [![Clique duas vezes no arquivo de extensão projetos Main. Storyboard para abri-lo para edição](extensions-images/today08.png)](extensions-images/today08.png#lightbox)
 2. Selecione o rótulo que foi adicionado automaticamente à interface do usuário por modelo e dê a ele o **nome** `TodayMessage` na guia **widget** do **Gerenciador de propriedades**: 
 
-    [![](extensions-images/today09.png "Select the Label that was automatically added to the UI by template and give it the Name TodayMessage in the Widget tab of the Properties Explorer")](extensions-images/today09.png#lightbox)
+    [![Selecione o rótulo que foi adicionado automaticamente à interface do usuário por modelo e dê a ele o nome TodayMessage na guia widget do Gerenciador de propriedades](extensions-images/today09.png)](extensions-images/today09.png#lightbox)
 3. Salve as alterações no storyboard.
 
 #### <a name="using-code"></a>Usando código
@@ -169,17 +169,17 @@ Para criar a interface do usuário no código, faça o seguinte:
 
 1. No **Gerenciador de soluções**, selecione o projeto **DaysRemaining** , adicione uma nova classe e chame-o `CodeBasedViewController` : 
 
-    [![](extensions-images/code01.png "Aelect the DaysRemaining project, add a new class and call it CodeBasedViewController")](extensions-images/code01.png#lightbox)
+    [![Aelect o projeto DaysRemaining, adicione uma nova classe e chame-a de CodeBasedViewController](extensions-images/code01.png)](extensions-images/code01.png#lightbox)
 2. Novamente, no **Gerenciador de soluções**, clique duas vezes no arquivo da extensão `Info.plist` para abri-lo para edição: 
 
-    [![](extensions-images/code02.png "Double-click Extensions Info.plist file to open it for editing")](extensions-images/code02.png#lightbox)
+    [![Clique duas vezes em extensões do arquivo info. plist para abri-lo para edição](extensions-images/code02.png)](extensions-images/code02.png#lightbox)
 3. Selecione o **modo de exibição de origem** (na parte inferior da tela) e abra o `NSExtension` nó: 
 
-    [![](extensions-images/code03.png "Select the Source View from the bottom of the screen and open the NSExtension node")](extensions-images/code03.png#lightbox)
+    [![Selecione o modo de exibição de origem na parte inferior da tela e abra o nó NSExtension](extensions-images/code03.png)](extensions-images/code03.png#lightbox)
 4. Remova a `NSExtensionMainStoryboard` chave e adicione uma `NSExtensionPrincipalClass` com o valor `CodeBasedViewController` : 
 
-    [![](extensions-images/code04.png "Remove the NSExtensionMainStoryboard key and add a NSExtensionPrincipalClass with the value CodeBasedViewController")](extensions-images/code04.png#lightbox)
-5. Salve suas alterações.
+    [![Remova a chave NSExtensionMainStoryboard e adicione um NSExtensionPrincipalClass com o valor CodeBasedViewController](extensions-images/code04.png)](extensions-images/code04.png#lightbox)
+5. Salve as alterações.
 
 Em seguida, edite o `CodeBasedViewController.cs` arquivo e faça com que ele se pareça com o seguinte:
 
@@ -250,7 +250,7 @@ Observe como esse processo é semelhante ao processo normal de escrever um aplic
 
 Para este passo a passos, o aplicativo de contêiner é simplesmente usado como um método para enviar e instalar a extensão e não fornece nenhuma funcionalidade própria. Edite o arquivo do TodayContainer `Main.storyboard` e adicione algum texto definindo a função da extensão e como instalá-lo:
 
-[![](extensions-images/today10.png "Edit the TodayContainers Main.storyboard file and add some text defining the Extensions function and how to install it")](extensions-images/today10.png#lightbox)
+[![Edite o arquivo TodayContainers Main. Storyboard e adicione algum texto definindo a função Extensions e como instalá-lo](extensions-images/today10.png)](extensions-images/today10.png#lightbox)
 
 Salve as alterações no storyboard.
 
@@ -258,19 +258,19 @@ Salve as alterações no storyboard.
 
 Para testar sua extensão no simulador de iOS, execute o aplicativo **TodayContainer** . O modo de exibição principal do contêiner será exibido:
 
-[![](extensions-images/run01.png "The containers main view will be displayed")](extensions-images/run01.png#lightbox)
+[![O modo de exibição principal dos contêineres será exibido](extensions-images/run01.png)](extensions-images/run01.png#lightbox)
 
 Em seguida, pressione o botão **início** no simulador, passe o dedo para baixo na parte superior da tela para abrir a **central de notificações**, selecione a guia **hoje** e clique no botão **Editar** :
 
-[![](extensions-images/run02.png "Hit the Home button in the Simulator, swipe down from the top of the screen to open the Notification Center, select the Today tab and click the Edit button")](extensions-images/run02.png#lightbox)
+[![Pressione o botão Início no simulador, passe o dedo para baixo na parte superior da tela para abrir a central de notificações, selecione a guia hoje e clique no botão Editar](extensions-images/run02.png)](extensions-images/run02.png#lightbox)
 
 Adicione a extensão **DaysRemaining** à exibição **atual** e clique no botão **concluído** :
 
-[![](extensions-images/run03.png "Add the DaysRemaining Extension to the Today view and click the Done button")](extensions-images/run03.png#lightbox)
+[![Adicione a extensão DaysRemaining à exibição atual e clique no botão concluído](extensions-images/run03.png)](extensions-images/run03.png#lightbox)
 
 O novo widget será adicionado à exibição **atual** e os resultados serão exibidos:
 
-[![](extensions-images/run04.png "The new widget will be added to the Today view and the results will be displayed")](extensions-images/run04.png#lightbox)
+[![O novo widget será adicionado à exibição atual e os resultados serão exibidos](extensions-images/run04.png)](extensions-images/run04.png#lightbox)
 
 ## <a name="communicating-with-the-host-app"></a>Comunicando-se com o aplicativo host
 

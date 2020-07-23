@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 5e1019417ff7ac93abfe2396a4acaa76c66d182f
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 534ecb6a2f779875a6934306c7f9956450d880ed
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78291475"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938496"
 ---
 # <a name="subscriptions-and-reporting-in-xamarinios"></a>Assinaturas e relatórios no Xamarin. iOS
 
@@ -50,17 +50,17 @@ O segredo compartilhado de compra no aplicativo deve ser usado na solicitação 
 
 No iTunes Connect home page selecione **meus aplicativos**:   
 
- [![](subscriptions-and-reporting-images/image2.png "Select My Apps")](subscriptions-and-reporting-images/image2.png#lightbox)  
+ [![Selecionar meus aplicativos](subscriptions-and-reporting-images/image2.png)](subscriptions-and-reporting-images/image2.png#lightbox)  
 
 Selecione um aplicativo e clique na guia **compras no aplicativo** :
 
-[![](subscriptions-and-reporting-images/image6.png "Click on the In-App Purchases tab")](subscriptions-and-reporting-images/image6.png#lightbox)
+[![Clique na guia compras no aplicativo](subscriptions-and-reporting-images/image6.png)](subscriptions-and-reporting-images/image6.png#lightbox)
 
 Na parte inferior da página, selecione **Exibir ou gerar um segredo compartilhado**:
 
- [![](subscriptions-and-reporting-images/image40.png "Select View or generate a shared secret")](subscriptions-and-reporting-images/image40.png#lightbox)
+ [![Selecione Exibir ou gerar um segredo compartilhado](subscriptions-and-reporting-images/image40.png)](subscriptions-and-reporting-images/image40.png#lightbox)
 
- [![](subscriptions-and-reporting-images/image41.png "Generate a shared secret")](subscriptions-and-reporting-images/image41.png#lightbox)   
+ [![Gerar um segredo compartilhado](subscriptions-and-reporting-images/image41.png)](subscriptions-and-reporting-images/image41.png#lightbox)   
 
 Para usar o segredo compartilhado, inclua-o no conteúdo JSON que é enviado aos servidores da Apple ao validar uma confirmação de compra no aplicativo para uma assinatura renovável automaticamente, desta forma:
 
@@ -98,7 +98,7 @@ O objeto SKPaymentTransaction não inclui o termo de assinatura – você deve u
 
 Para facilitar o teste de assinaturas, suas durações são compactadas durante o teste na área restrita. uma renovação de assinaturas de 1 semana a cada 3 minutos, as assinaturas de 1 ano são renovadas a cada hora. As assinaturas serão renovadas automaticamente no máximo seis vezes durante o teste na área restrita.
 
-## <a name="reporting"></a>Relatório
+## <a name="reporting"></a>Relatórios
 
 o iTunes Connect ( [iTunesConnect.Apple.com](https://itunesconnect.apple.com)) fornece:   
 
@@ -108,8 +108,8 @@ o iTunes Connect ( [iTunesConnect.Apple.com](https://itunesconnect.apple.com)) f
 
 Um relatório de vendas e tendências de exemplo é mostrado abaixo:   
 
- [![](subscriptions-and-reporting-images/image42.png "An example Sales and Trends report")](subscriptions-and-reporting-images/image42.png#lightbox)   
+ [![Um relatório de vendas e tendências de exemplo](subscriptions-and-reporting-images/image42.png)](subscriptions-and-reporting-images/image42.png#lightbox)   
 
  Há também um aplicativo IOS **móvel do ITC Connect** . as capturas de tela do iPhone para algumas das estatísticas disponíveis são mostradas aqui:   
 
- [![](subscriptions-and-reporting-images/image43.png "iPhone screenshots for some of the statistics available")](subscriptions-and-reporting-images/image43.png#lightbox)
+ [![capturas de tela do iPhone para algumas das estatísticas disponíveis](subscriptions-and-reporting-images/image43.png)](subscriptions-and-reporting-images/image43.png#lightbox)

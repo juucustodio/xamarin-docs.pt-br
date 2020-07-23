@@ -10,16 +10,16 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 86b526fff305b195221aca3fb6a86ad0823cb145
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e206c89de278c8b85848294e76e4431825eaee85
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84569394"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938951"
 ---
 # <a name="datapages-controls-reference"></a>Referência de controles de páginas de DataPages
 
-![](~/media/shared/preview.png "This API is currently in preview")
+![Esta API está atualmente em visualização](~/media/shared/preview.png)
 
 > [!IMPORTANT]
 > As páginas de datarequer uma Xamarin.Forms referência de tema para renderizar. Isso envolve a instalação do [ Xamarin.Forms . ](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/)O pacote NuGet do Theme. base em seu projeto, seguido pelo [ Xamarin.Forms . Theme. Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) ou [ Xamarin.Forms . ](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/)Os pacotes NuGet. Dark do tema.
@@ -62,11 +62,11 @@ O `HeroImage` controle tem quatro propriedades:
 
 **Android**
 
-![](controls-images/heroimage-light-android.png "Controle HeroImage no Android") ![](controls-images/heroimage-dark-android.png "Controle HeroImage no Android")
+![Controle HeroImage no Android](controls-images/heroimage-light-android.png) ![Controle HeroImage no Android](controls-images/heroimage-dark-android.png)
 
 **iOS**
 
-![](controls-images/heroimage-light-ios.png "Controle HeroImage no iOS") ![](controls-images/heroimage-dark-ios.png "Controle HeroImage no iOS")
+![Controle HeroImage no iOS](controls-images/heroimage-light-ios.png) ![Controle HeroImage no iOS](controls-images/heroimage-dark-ios.png)
 
 ### <a name="listitem"></a>Item
 
@@ -74,7 +74,7 @@ O `ListItem` layout do controle é semelhante às linhas nativas de lista ou tab
 
 Há cinco propriedades:
 
-* Title
+* Título
 * Detalhe
 * ImageSource
 * PlaceholdImageSource
@@ -94,11 +94,11 @@ Essas capturas de tela mostram o `ListItem` nas plataformas Ios e Android usando
 
 **Android**
 
-![](controls-images/listitem-light-android.png "Controle de ListItem no Android") ![](controls-images/listitem-dark-android.png "Controle de ListItem no Android")
+![Controle de ListItem no Android](controls-images/listitem-light-android.png) ![Controle de ListItem no Android](controls-images/listitem-dark-android.png)
 
 **iOS**
 
-![](controls-images/listitem-light-ios.png "Controle de ListItem no iOS") ![](controls-images/listitem-dark-ios.png "Controle de ListItem no iOS")
+![Controle de ListItem no iOS](controls-images/listitem-light-ios.png) ![Controle de ListItem no iOS](controls-images/listitem-dark-ios.png)
 
 ## <a name="custom-control-example"></a>Exemplo de controle personalizado
 
@@ -124,11 +124,11 @@ Ele deve ser semelhante às capturas de tela abaixo usando cores correspondentes
 
 **Android**
 
-![](controls-images/cardview-light-android.png "CardView controle personalizado no Android") ![](controls-images/cardview-dark-android.png "CardView controle personalizado no Android")
+![CardView controle personalizado no Android](controls-images/cardview-light-android.png) ![CardView controle personalizado no Android](controls-images/cardview-dark-android.png)
 
 **iOS**
 
-![](controls-images/cardview-light-ios.png "CardView controle personalizado no iOS") ![](controls-images/cardview-dark-ios.png "CardView controle personalizado no iOS")
+![CardView controle personalizado no iOS](controls-images/cardview-light-ios.png) ![CardView controle personalizado no iOS](controls-images/cardview-dark-ios.png)
 
 ### <a name="building-the-custom-cardview"></a>Criando o CardView personalizado
 

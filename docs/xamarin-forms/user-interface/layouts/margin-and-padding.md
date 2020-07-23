@@ -10,12 +10,12 @@ ms.date: 04/27/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6ae4116be99f076a7afd5ed9c2823bc12f445e18
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b8ba915f3bc701b6a100d206dc791f9572fa594b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137977"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936611"
 ---
 # <a name="margin-and-padding"></a>Margem e preenchimento
 
@@ -30,7 +30,7 @@ A margem e o preenchimento são conceitos de layout relacionados:
 
 O diagrama a seguir ilustra os dois conceitos:
 
-[![](margin-and-padding-images/margins-and-padding-sml.png "Margins and Padding Concepts")](margin-and-padding-images/margins-and-padding.png#lightbox "Margins and Padding Concepts")
+[![Conceitos de margens e preenchimento](margin-and-padding-images/margins-and-padding-sml.png)](margin-and-padding-images/margins-and-padding.png#lightbox "Conceitos de margens e preenchimento")
 
 Observe que [`Margin`](xref:Xamarin.Forms.View.Margin) os valores são aditivos. Portanto, se dois elementos adjacentes especificarem uma margem de 20 pixels, a distância entre os elementos será de 40 pixels. Além disso, a margem e o preenchimento são aditivos quando ambos são aplicados, pois a distância entre um elemento e qualquer conteúdo será a margem mais preenchimento.
 
@@ -72,7 +72,7 @@ var stackLayout = new StackLayout {
 
 Este artigo demonstrou a diferença entre as [`Margin`](xref:Xamarin.Forms.View.Margin) Propriedades e e [`Padding`](xref:Xamarin.Forms.Layout.Padding) como defini-las. O comportamento do layout de controle de propriedades quando um elemento é renderizado na interface do usuário.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Margem](xref:Xamarin.Forms.View.Margin)
 - [Preenchimento](xref:Xamarin.Forms.Layout.Padding)

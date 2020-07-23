@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0eb3b4a6b37d59363984c9248cc39de91a6819e0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ed20da1005447334a99ea40c177c8f88d59d71ce
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138249"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938460"
 ---
 # <a name="the-translate-transform"></a>A transformação de conversão
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Saiba como usar a transformação converter para deslocar gráficos SkiaSharp_
 
@@ -27,7 +27,7 @@ O tipo mais simples de Transform em SkiaSharp é a transformação *translate* o
 
 A tradução também é útil para animação e para efeitos de texto simples:
 
-![](translate-images/translateexample.png "Text shadow, engraving, and embossing with translation")
+![Sombra de texto, engraving e entalhe com tradução](translate-images/translateexample.png)
 
 O [`Translate`](xref:SkiaSharp.SKCanvas.Translate(System.Single,System.Single)) método no `SKCanvas` tem dois parâmetros que fazem com que objetos gráficos desenhados subsequentemente sejam deslocados horizontal e verticalmente:
 
@@ -74,7 +74,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Os retângulos sucessivos tricklem a página:
 
-[![](translate-images/accumulatedtranslate-small.png "Triple screenshot of the Accumulated Translate page")](translate-images/accumulatedtranslate-large.png#lightbox "Triple screenshot of the Accumulated Translate page")
+[![Captura de tela tripla da página de tradução acumulada](translate-images/accumulatedtranslate-small.png)](translate-images/accumulatedtranslate-large.png#lightbox "Captura de tela tripla da página de tradução acumulada")
 
 Se os fatores de conversão acumulados forem `dx` e `dy` , e o ponto especificado em uma função de desenho for ( `x` , `y` ), o objeto gráfico será renderizado no ponto ( `x'` , `y'` ), em que:
 
@@ -131,7 +131,7 @@ using (SKPaint textPaint = new SKPaint())
 
 Em cada um dos três exemplos, `Translate` é chamado para exibir o texto para deslocá-lo do local fornecido pelas `x` `y` variáveis e. Em seguida, o texto é exibido novamente em outra cor sem efeito de Tradução:
 
-[![](translate-images/translatetexteffects-small.png "Triple screenshot of the Translate Text Effects page")](translate-images/translatetexteffects-large.png#lightbox "Triple screenshot of the Translate Text Effects page")
+[![Captura de tela tripla da página converter efeitos de texto](translate-images/translatetexteffects-small.png)](translate-images/translatetexteffects-large.png#lightbox "Captura de tela tripla da página converter efeitos de texto")
 
 Cada um dos três exemplos mostra uma maneira diferente de negar a `Translate` chamada:
 
@@ -217,7 +217,7 @@ public class HendecagramArrayPage : ContentPage
 
 Eis o resultado:
 
-[![](translate-images/hendecagramarray-small.png "Triple screenshot of the Hendecagram Array page")](translate-images/hendecagramarray-large.png#lightbox "Triple screenshot of the Hendecagram Array page")
+[![Captura de tela tripla da página da matriz Hendecagram](translate-images/hendecagramarray-small.png)](translate-images/hendecagramarray-large.png#lightbox "Captura de tela tripla da página da matriz Hendecagram")
 
 As animações geralmente envolvem transformações. A página de **animação Hendecagram** move a estrela de 11 pontas em um círculo. A [`HendecagramAnimationPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramAnimationPage.cs) classe começa com alguns campos e substitui os `OnAppearing` métodos e `OnDisappearing` para iniciar e parar um Xamarin.Forms temporizador:
 
@@ -302,11 +302,11 @@ public class HendecagramAnimationPage : ContentPage
 
 O `PaintSurface` manipulador chama o `Translate` método duas vezes, primeiro para traduzir para o centro da tela e, em seguida, para traduzir para a circunferência de um círculo centralizado (0, 0). O raio do círculo é definido para ser o mais grande possível e, ao mesmo tempo, manter a estrela dentro dos limites da página:
 
-[![](translate-images/hendecagramanimation-small.png "Triple screenshot of the Hendecagram Animation page")](translate-images/hendecagramanimation-large.png#lightbox "Triple screenshot of the Hendecagram Animation page")
+[![Captura de tela tripla da página de animação do Hendecagram](translate-images/hendecagramanimation-small.png)](translate-images/hendecagramanimation-large.png#lightbox "Captura de tela tripla da página de animação do Hendecagram")
 
 Observe que a estrela mantém a mesma orientação que ela gira em todo o centro da página. Ele não gira. Esse é um trabalho para uma transformação girar.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

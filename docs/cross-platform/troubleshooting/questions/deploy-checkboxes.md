@@ -6,12 +6,12 @@ ms.assetid: aaf675cd-d885-4dac-9754-77dbcaea3be9
 author: davidortinau
 ms.author: daortin
 ms.date: 12/02/2016
-ms.openlocfilehash: edf471f1d9a2ee4adc11f09e0c7b7ad3cf6f78f1
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 92fe421aee6b5add84a188468856172bf8c56d15
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73014248"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939276"
 ---
 # <a name="deploy-checkboxes-disabled-in-configuration-manager"></a>Implantar caixas de seleção desabilitadas no Configuration Manager
 
@@ -23,4 +23,4 @@ Por isso, as caixas de seleção **Implantar** são intencionalmente desabilitad
 
 Essa alteração elimina um erro que pode aparecer em versões mais antigas do Xamarin (versão 3.3 e anterior) quando o projeto do aplicativo Xamarin.iOS não era definido para implantação:
 
-![](deploy-checkboxes-images/error.png "Error dialog: The project iPhoneApp1 needs to be deployed before it can be started. Verify the project is selected to be deployed in the Solution Configuration Manager.")
+![Caixa de diálogo de erro: o projeto iPhoneApp1 precisa ser implantado antes de ser iniciado. Verifique se que o projeto está selecionado para ser implantado no Configuration Manager da solução.](deploy-checkboxes-images/error.png)

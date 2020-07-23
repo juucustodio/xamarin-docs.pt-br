@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 2d554fa2f967a966195007ea67c48506eaac1e79
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 435fe894e4082f7eddf37d100bb8b2d2ed3a166f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84570876"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938002"
 ---
 # <a name="xamarinios-9--troubleshooting"></a>Xamarin. iOS 9 – solução de problemas
 
@@ -32,7 +32,7 @@ Se você tiver instalado o Xcode 7 (ou superior), ele substituirá automaticamen
 
 No Xcode, selecione o menu do **Xcode** e, em seguida, **preferências...**  >  **Downloads**:
 
-[![](troubleshooting-images/ios8.png "iOS 8 Simulators Downloads")](troubleshooting-images/ios8.png#lightbox)
+[![Downloads de simuladores do iOS 8](troubleshooting-images/ios8.png)](troubleshooting-images/ios8.png#lightbox)
 
 Clique no botão **verificar e instalar agora** para reinstalar os simuladores do IOS 8.
 
@@ -139,26 +139,26 @@ Dyld Message: no cach image with name (/System/Library/PrivateFrameworks/JavaScr
 
 Ao tentar executar a versão iOS 9 do seu aplicativo Xamarin. iOS em um hardware iOS real, você poderá receber uma mensagem informando que sua conta de desenvolvedor não é confiável no dispositivo. Por exemplo:
 
-[![](troubleshooting-images/untrusted01.png "Untrusted Enterprise Developer alert")](troubleshooting-images/untrusted01.png#lightbox)
+[![Alerta de desenvolvedor empresarial não confiável](troubleshooting-images/untrusted01.png)](troubleshooting-images/untrusted01.png#lightbox)
 
 Para resolver esse problema, faça o seguinte:
 
 1. Inicie o Xcode (a versão beta mais recente) no Mac de desenvolvimento.
 2. Selecione **dispositivos** no menu **janela** para abrir a janela dispositivos: 
 
-    [![](troubleshooting-images/untrusted02.png "The Devices Window")](troubleshooting-images/untrusted02.png#lightbox)
+    [![A janela dispositivos](troubleshooting-images/untrusted02.png)](troubleshooting-images/untrusted02.png#lightbox)
 3. No painel do lado dos **dispositivos** , selecione seu dispositivo, clique com o botão direito do mouse e selecione **Mostrar perfis de provisionamento...**: 
 
-    [![](troubleshooting-images/untrusted03.png "SShow Provisioning Profiles")](troubleshooting-images/untrusted03.png#lightbox)
+    [![Perfis de provisionamento do SShow](troubleshooting-images/untrusted03.png)](troubleshooting-images/untrusted03.png#lightbox)
 4. Selecione cada perfil de provisionamento atualmente no dispositivo e clique no **-** botão para excluí-lo: 
 
-    [![](troubleshooting-images/untrusted04.png "Deleting a provisioning profile")](troubleshooting-images/untrusted04.png#lightbox)
+    [![Excluindo um perfil de provisionamento](troubleshooting-images/untrusted04.png)](troubleshooting-images/untrusted04.png#lightbox)
 5. No menu do **Xcode** , selecione **preferências...** e **contas**: 
 
-    [![](troubleshooting-images/untrusted05.png "Xcode account preferences")](troubleshooting-images/untrusted05.png#lightbox)
+    [![Preferências de conta do Xcode](troubleshooting-images/untrusted05.png)](troubleshooting-images/untrusted05.png#lightbox)
 6. Clique no botão **Exibir detalhes...** e, em seguida, clique no botão **baixar tudo** : 
 
-    [![](troubleshooting-images/untrusted06.png "Download all profiles")](troubleshooting-images/untrusted06.png#lightbox)
+    [![Baixar todos os perfis](troubleshooting-images/untrusted06.png)](troubleshooting-images/untrusted06.png#lightbox)
 7. Quando a atualização da lista for concluída, clique no botão **concluído** e feche a janela preferências.
 8. Remova a versão existente do aplicativo Xamarin. iOS que você estava tentando testar do dispositivo iOS.
 9. Retorne ao Visual Studio para Mac, faça uma compilação limpa e tente executar novamente o aplicativo no dispositivo.
@@ -192,7 +192,7 @@ Com o Xamarin. iOS, é possível tornar a inicialização do controlador View ou
 
 Em geral, você não deve inicializar nada que possa chamar o código de Objective-C do Construtor, uma vez que não é possível ter certeza de que ele será chamado. Isso também significa que há um local melhor (outro. ctor) ou chamadas a serem substituídas (já que Objective-C não tem eventos) em que essa inicialização deve ser feita.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [iOS 9 para desenvolvedores](https://developer.apple.com/ios/pre-release/)
 - [O que há de novo no iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

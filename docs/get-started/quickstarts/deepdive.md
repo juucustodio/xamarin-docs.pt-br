@@ -13,12 +13,12 @@ ms.date: 11/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1bfb76f71a2ac9d8bc9ae84152501909000b9623
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d1670506fa78b39825368fc91d2452a44ddf8f03
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84132516"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939913"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Xamarin.FormsAprofundamento do guia de início rápido
 
@@ -30,7 +30,7 @@ No [ Xamarin.Forms início rápido](~/get-started/index.yml), o aplicativo Notes
 
 O Visual Studio organiza o código em *Soluções* e *Projetos*. Uma solução é um contêiner que pode conter um ou mais projetos. Um projeto pode ser um aplicativo, uma biblioteca com suporte, um aplicativo de teste, entre outros. O aplicativo Notes consiste em uma solução contendo quatro projetos, conforme mostrado na captura de tela a seguir:
 
-![](deepdive-images/vs/solution.png "Visual Studio Solution Explorer")
+![Gerenciador de Soluções do Visual Studio](deepdive-images/vs/solution.png)
 
 Os projetos são:
 
@@ -43,7 +43,7 @@ Os projetos são:
 
 A captura de tela a seguir mostra o conteúdo do projeto de biblioteca do .NET Standard Notes no Visual Studio:
 
-![](deepdive-images/vs/net-standard-project.png "Phoneword .NET Standard Project Contents")
+![Conteúdo do projeto do .NET Standard Phoneword](deepdive-images/vs/net-standard-project.png)
 
 O projeto tem um nó de **dependências** que contém os nós **NuGet** e **SDK** :
 
@@ -57,7 +57,7 @@ O projeto tem um nó de **dependências** que contém os nós **NuGet** e **SDK*
 
 O [Visual Studio para Mac](/visualstudio/mac/) segue a prática do Visual Studio de organizar o código em *Soluções* e *Projetos*. Uma solução é um contêiner que pode conter um ou mais projetos. Um projeto pode ser um aplicativo, uma biblioteca com suporte, um aplicativo de teste, entre outros. O aplicativo Notes consiste em uma solução contendo três projetos, conforme mostrado na captura de tela a seguir:
 
-![](deepdive-images/vsmac/solution.png "Visual Studio for Mac Solution Pane")
+![Painel de soluções do Visual Studio para Mac](deepdive-images/vsmac/solution.png)
 
 Os projetos são:
 
@@ -69,7 +69,7 @@ Os projetos são:
 
 A captura de tela a seguir mostra o conteúdo do projeto de biblioteca do .NET Standard Notes no Visual Studio para Mac:
 
-![](deepdive-images/vsmac/net-standard-project.png "Phoneword .NET Standard Library Project Contents")
+![Conteúdo do projeto de biblioteca do .NET Standard Phoneword](deepdive-images/vsmac/net-standard-project.png)
 
 O projeto tem um nó de **dependências** que contém os nós **NuGet** e **SDK** :
 
@@ -98,12 +98,12 @@ Um Xamarin.Forms aplicativo é arquitetado da mesma forma que um aplicativo trad
 
 ::: zone pivot="windows"
 
-![](deepdive-images/vs/architecture.png "Notes Architecture")
+![Arquitetura do Notes](deepdive-images/vs/architecture.png)
 
 ::: zone-end
 ::: zone pivot="macos"
 
-![](deepdive-images/vsmac/architecture.png "Notes Architecture")
+![Arquitetura do Notes](deepdive-images/vsmac/architecture.png)
 
 ::: zone-end
 
@@ -388,7 +388,7 @@ A vinculação de dados é usada para simplificar a forma como um Xamarin.Forms 
 
 A vinculação de dados conecta dois objetos, chamados de a *origem* e o *destino*. O objeto *origem* fornece os dados. O objeto *destino* consumirá (e geralmente exibirá) dados do objeto de origem. Por exemplo, um [`Editor`](xref:Xamarin.Forms.Editor) (objeto de*destino* ) normalmente vinculará sua [`Text`](xref:Xamarin.Forms.InputView.Text) Propriedade a uma `string` propriedade pública em um objeto de *origem* . O diagrama a seguir ilustra essa relação de associação:
 
-![](deepdive-images/data-binding.png "Data Binding")
+![Associação de dados](deepdive-images/data-binding.png)
 
 O principal benefício da vinculação de dados é que você não precisa se preocupar sobre a sincronização de dados entre suas exibições e a fonte de dados. As alterações no objeto de *origem* são enviadas automaticamente para o objeto de *destino* nos bastidores pela estrutura de associação, enquanto as alterações no objeto de destino podem ser opcionalmente enviadas de volta para o objeto de *origem*.
 
@@ -532,14 +532,14 @@ Esse aprofundamento examinou os conceitos básicos do desenvolvimento de aplicat
 - Efeitos também permitem que os controles nativos em cada plataforma sejam personalizados. Os efeitos são criados em projetos específicos da plataforma por meio da subclasse da [`PlatformEffect`](xref:Xamarin.Forms.PlatformEffect`2) classe e são consumidos anexando-os a um Xamarin.Forms controle apropriado. Para obter mais informações, veja [Efeitos](~/xamarin-forms/app-fundamentals/effects/index.md).
 - O código compartilhado pode acessar a funcionalidade nativa por meio da [`DependencyService`](xref:Xamarin.Forms.DependencyService) classe. Para obter mais informações, consulte [Acessar recursos nativos com DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
-Como alternativa, [_criar aplicativos móveis com o Xamarin. Forms_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md), um livro por Charles Petzold, é um bom lugar para saber mais sobre o Xamarin.Forms . O livro está disponível em PDF ou em vários formatos de livro eletrônico.
+Como alternativa, a [_criação de aplicativos Xamarin.Forms móveis com _](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)o, um livro de Charles Petzold, é um bom local para saber mais sobre o Xamarin.Forms . O livro está disponível em PDF ou em vários formatos de livro eletrônico.
 
 ## <a name="related-links"></a>Links relacionados
 
 - [XAML (linguagem XAML)](~/xamarin-forms/xaml/index.yml)
 - [Associação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Referência de Controles](~/xamarin-forms/user-interface/controls/index.md)
-- [Extensões de marcação do XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
+- [Extensões de marcação XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
 - [Xamarin.FormsAmostras](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Exemplos de Introdução](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms%20get%20started)
 - [Xamarin.FormsReferência de API](xref:Xamarin.Forms)

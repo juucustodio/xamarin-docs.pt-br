@@ -10,16 +10,16 @@ ms.date: 02/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: df10327b2ac12d2b119f1ab558d7f27e8c319507
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2e4d85077e1047f4158164d0c752570519c8ecdc
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131190"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936832"
 ---
 # <a name="xamarinforms-dual-screen-triggers"></a>Xamarin.Formsgatilhos de tela dupla
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![API de pré-lançamento](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
 
 O [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) namespace inclui dois gatilhos de Estado:
 

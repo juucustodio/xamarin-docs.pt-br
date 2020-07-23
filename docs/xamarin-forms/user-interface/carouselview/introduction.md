@@ -10,16 +10,16 @@ ms.date: 10/08/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2e67acd0188e1147481005502ad9ccdaada645d9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 49aa0ffcf7e7fa4d22024ee08f8bdf509cafd73a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140264"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937794"
 ---
 # <a name="xamarinforms-carouselview-introduction"></a>Xamarin.FormsIntrodução ao CarouselView
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![API de pré-lançamento](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView)é uma exibição para apresentar dados em um layout rolável, onde os usuários podem passar o dedo para percorrer uma coleção de itens. Por padrão, `CarouselView` o exibirá seus itens em uma orientação horizontal. Um único item será exibido na tela, com gestos de passar o dedo, resultando em encaminhamentos e navegação retroativos por meio da coleção de itens. Além disso, os indicadores podem ser exibidos para representar cada item no `CarouselView` :
 

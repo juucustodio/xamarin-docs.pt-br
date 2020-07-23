@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/25/2017
-ms.openlocfilehash: cc83fa65fd040b30d71a30fb703da866c5d0824c
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 40640f903ad82c5f154dbb74307c0003d7271561
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84570811"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936598"
 ---
 # <a name="working-with-row-actions-in-xamarinios"></a>Trabalhando com ações de linha no Xamarin. iOS
 
@@ -33,7 +33,7 @@ Há três etapas necessárias para implementar ações de passar o dedo com `UIS
 
 1. Substituir `GetLeadingSwipeActionsConfiguration` e/ou `GetTrailingSwipeActionsConfiguration` métodos. Esses métodos retornam um `UISwipeActionsConfiguration` .
 2. Instanciar o `UISwipeActionsConfiguration` a ser retornado. Essa classe usa uma matriz de `UIContextualAction` .
-3. Criará um `UIContextualAction`.
+3. Crie um `UIContextualAction`.
 
 Eles são explicados com mais detalhes nas seções a seguir.
 
@@ -175,11 +175,11 @@ table.Delegate = tableDelegate;
 
 Quando o código acima for executado e o usuário passar o dedo para a esquerda em uma linha de tabela, o botão **Hi** será exibido em vez do botão **excluir** , que é exibido por padrão:
 
-[![](row-action-images/action01.png "The Hi button being displayed instead of the Delete button")](row-action-images/action01.png#lightbox)
+[![O botão Olá que está sendo exibido em vez do botão excluir](row-action-images/action01.png)](row-action-images/action01.png#lightbox)
 
 Se o usuário tocar no botão **Olá** , ele será `Hello World!` gravado no console do no Visual Studio para Mac ou no Visual Studio quando o aplicativo for executado no modo de depuração.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [TableSwipeActions (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/tableswipeactions)
 - [WorkingWithTables (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)

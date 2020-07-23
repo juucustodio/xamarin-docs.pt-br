@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: c4bec7d77e7778d8922640c75d23f4b1464f864f
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: b319abba7cf14fe4aade35d232b5182cb202e707
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573918"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937703"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Criando controles personalizados no Xamarin. Mac
 
@@ -20,7 +20,7 @@ Ao trabalhar com C# e .NET em um aplicativo Xamarin. Mac, você tem acesso aos m
 
 Embora o macOS forneça uma infinidade de controles de usuário internos, pode haver ocasiões em que você precise criar um controle personalizado para fornecer funcionalidade não fornecida pronta para uso ou para corresponder a um tema personalizado da interface do usuário (como uma interface de jogo).
 
-[![](custom-controls-images/intro01.png "Example of a custom UI control")](custom-controls-images/intro01.png#lightbox)
+[![Exemplo de um controle de interface do usuário personalizado](custom-controls-images/intro01.png)](custom-controls-images/intro01.png#lightbox)
 
 Neste artigo, abordaremos as noções básicas da criação de um controle de interface do usuário personalizada reutilizável em um aplicativo Xamarin. Mac. É altamente recomendável que você trabalhe pelo artigo [Hello, Mac](~/mac/get-started/hello-mac.md) primeiro, especificamente a [introdução às seções Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) e [ações](~/mac/get-started/hello-mac.md#outlets-and-actions) , pois ela aborda os principais conceitos e técnicas que usaremos neste artigo.
 
@@ -48,7 +48,7 @@ Como o controle personalizado que estamos criando estará respondendo à entrada
 
 No Visual Studio para Mac, abra o projeto Xamarin. Mac para o qual você deseja criar um controle de interface de usuário personalizado (ou criar um novo). Adicione uma nova classe e chame-a `NSFlipSwitch` :
 
-[![](custom-controls-images/custom01.png "Adding a new class")](custom-controls-images/custom01.png#lightbox)
+[![Adicionando uma nova classe](custom-controls-images/custom01.png)](custom-controls-images/custom01.png#lightbox)
 
 Em seguida, edite a `NSFlipSwitch.cs` classe e faça com que ela fique parecida com a seguinte:
 
@@ -334,11 +334,11 @@ Com o nosso controle personalizado totalmente definido, podemos adicioná-lo à 
 
 Para adicionar o controle usando Interface Builder, primeiro faça uma compilação limpa do projeto Xamarin. Mac e clique duas vezes no `Main.storyboard` arquivo para abri-lo em interface Builder para edição:
 
-[![](custom-controls-images/custom02.png "Editing the storyboard in Xcode")](custom-controls-images/custom02.png#lightbox)
+[![Editando o storyboard no Xcode](custom-controls-images/custom02.png)](custom-controls-images/custom02.png#lightbox)
 
 Em seguida, arraste um `Custom View` para o design da interface do usuário:
 
-[![](custom-controls-images/custom03.png "Selecting a Custom View from the Library")](custom-controls-images/custom03.png#lightbox)
+[![Selecionando uma exibição personalizada da biblioteca](custom-controls-images/custom03.png)](custom-controls-images/custom03.png#lightbox)
 
 Com a exibição personalizada ainda selecionada, alterne para o **Inspetor de identidade** e altere a **classe** da exibição para `NSFlipSwitch` :
 
@@ -346,7 +346,7 @@ Com a exibição personalizada ainda selecionada, alterne para o **Inspetor de i
 
 Alterne para o **Editor do assistente** e crie uma **tomada** para o controle personalizado (assegurando associá-lo ao `ViewController.h` arquivo e não ao `.m` arquivo):
 
-[![](custom-controls-images/custom05.png "Configuring a new Outlet")](custom-controls-images/custom05.png#lightbox)
+[![Configurando uma nova tomada](custom-controls-images/custom05.png)](custom-controls-images/custom05.png#lightbox)
 
 Salve suas alterações, retorne ao Visual Studio para Mac e permita que as alterações sejam sincronizadas. Edite o `ViewController.cs` arquivo e faça com que o `ViewDidLoad` método se pareça com o seguinte:
 
@@ -367,7 +367,7 @@ Aqui, respondemos ao `ValueChanged` evento que definimos acima na `NSFlipSwitch`
 
 Opcionalmente, poderíamos retornar para Interface Builder e definir uma **ação** no controle:
 
-[![](custom-controls-images/custom06.png "Configuring a new Action")](custom-controls-images/custom06.png#lightbox)
+[![Configurando uma nova ação](custom-controls-images/custom06.png)](custom-controls-images/custom06.png#lightbox)
 
 Novamente, edite o `ViewController.cs` arquivo e adicione o seguinte método:
 
@@ -387,7 +387,7 @@ partial void OptionTwoFlipped (Foundation.NSObject sender) {
 
 Este artigo fez uma visão detalhada da criação de um controle de interface do usuário personalizado reutilizável em um aplicativo Xamarin. Mac. Vimos como desenhar a interface do usuário de controles personalizados, as duas maneiras principais de responder à entrada do mouse e do usuário e como expor o novo controle a ações no Interface Builder do Xcode.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [MacCustomControl (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccustomcontrol)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)

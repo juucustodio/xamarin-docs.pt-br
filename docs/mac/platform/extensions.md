@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 1d1e40de646362e9b573ad7040ab08ba6d01d6e8
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: ac4c8d7bbd28946b6089e7f22a36727d2d73ec18
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571604"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939198"
 ---
 # <a name="xamarinmac-extension-support"></a>Suporte à extensão de Xamarin.Mac
 
@@ -42,7 +42,7 @@ As dicas a seguir podem ser úteis ao trabalhar com extensões no Xamarin. Mac:
 - Quaisquer exceções não capturadas apresentarão o processo de extensão, fornecendo apenas uma pequena quantidade de informações úteis no **log do sistema**. O encapsulamento de código problemático em um `try/catch` bloco (exceção) `NSLog` antes da recriação pode ser útil.
 - O **log do sistema** pode ser acessado no aplicativo de **console** em utilitários de **aplicativos**  >  **Utilities**:
 
-    [![](extensions-images/extension02.png "The system log")](extensions-images/extension02.png#lightbox)
+    [![O log do sistema](extensions-images/extension02.png)](extensions-images/extension02.png#lightbox)
 - Conforme observado acima, a execução do aplicativo host de extensão o registrará no sistema. Excluindo o pacote de aplicativos com o cancelamento do registro. 
 - Se as versões "isoladas" das extensões de um aplicativo forem registradas, use o seguinte comando para localizá-las (para que elas possam ser excluídas):`plugin kit -mv`
 
@@ -60,7 +60,7 @@ Um projeto Xamarin. Mac de exemplo que contém exemplos pequenos e funcionais de
 
 Este artigo deu uma olhada rápida no trabalho com extensões em um aplicativo Xamarin. Mac versão 2,10 (e superior).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [ExtensionSamples](https://docs.microsoft.com/samples/xamarin/mac-samples/extensionsamples)

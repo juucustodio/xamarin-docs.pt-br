@@ -10,16 +10,16 @@ ms.date: 04/02/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1f7a0d04d1e7b6abc9931c05c0e46ef49f8ba09c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: aa600974cdf25f8f85d9152edc4a377334cc8c78
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138452"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936546"
 ---
 # <a name="consume-an-aspnet-web-service-asmx"></a>Consumir um Serviço Web ASP.NET (ASMX)
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
 
 _O ASMX fornece a capacidade de criar serviços Web que enviam mensagens usando o protocolo SOAP (Simple Object Access Protocol). SOAP é um protocolo independente de plataforma e independente de linguagem para criar e acessar serviços Web. Os consumidores de um serviço ASMX não precisam saber nada sobre a plataforma, o modelo de objeto ou a linguagem de programação usada para implementar o serviço. Eles só precisam entender como enviar e receber mensagens SOAP. Este artigo demonstra como consumir um serviço SOAP do ASMX de um Xamarin.Forms aplicativo._
 
@@ -34,7 +34,7 @@ O SOAP pode operar em vários protocolos de transporte, incluindo HTTP, SMTP, TC
 
 Este exemplo inclui os aplicativos móveis que são executados em dispositivos físicos ou emulados e um serviço ASMX que fornece métodos para obter, adicionar, editar e excluir dados. Quando os aplicativos móveis são executados, eles se conectam ao serviço ASMX hospedado localmente, conforme mostrado na seguinte captura de tela:
 
-![](asmx-images/portal.png "Sample Application")
+![Aplicativo de exemplo](asmx-images/portal.png)
 
 > [!NOTE]
 > No iOS 9 e superior, a ATS (segurança de transporte de aplicativo) impõe conexões seguras entre os recursos da Internet (como o servidor back-end do aplicativo) e o aplicativo, impedindo, assim, a divulgação acidental de informações confidenciais. Como o ATS está habilitado por padrão em aplicativos criados para iOS 9, todas as conexões estarão sujeitas a requisitos de segurança de ATS. Se as conexões não atenderem a esses requisitos, elas falharão com uma exceção.

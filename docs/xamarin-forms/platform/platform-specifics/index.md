@@ -10,16 +10,16 @@ ms.date: 10/01/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8478db85bd9904ee6c5cfeab9b2af390e7d3096d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e0c6e305287c97abac3500cba4771479b60381ac
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139497"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939796"
 ---
 # <a name="platform-specifics"></a>Elementos específicos à plataforma
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 _As especificações de plataforma permitem que você consuma a funcionalidade que só está disponível em uma plataforma específica, sem implementar renderizadores ou efeitos personalizados._
 
@@ -58,7 +58,7 @@ O resultado da exposição de um efeito como uma plataforma específica é que o
 
 O [aplicativo de exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) demonstra uma `Shadow` plataforma específica que adiciona uma sombra ao texto exibido por um [`Label`](xref:Xamarin.Forms.Label) controle:
 
-![](images/screenshots.png "Shadow Platform-Specific")
+![Específico da plataforma de sombra](images/screenshots.png)
 
 O [aplicativo de exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) implementa a `Shadow` plataforma específica em cada plataforma, para facilitar a compreensão. No entanto, além de cada implementação de efeito específica da plataforma, a implementação da classe Shadow é amplamente idêntica para cada plataforma. Portanto, este guia aborda na implementação da classe Shadow e o efeito associado em uma única plataforma.
 

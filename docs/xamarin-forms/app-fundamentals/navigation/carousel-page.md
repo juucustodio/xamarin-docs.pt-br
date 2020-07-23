@@ -10,16 +10,16 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 896f652d69bca0f186e53185926ee5c46d87fa7c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: c234af1a5d47446149c92a71e9ce592dc0366b8f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84570668"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937456"
 ---
 # <a name="xamarinforms-carousel-page"></a>Xamarin.FormsPágina do carrossel
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpage)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpage)
 
 _O Xamarin.Forms CarouselPage é uma página que os usuários podem passar do lado a lado para navegar pelas páginas de conteúdo, como uma galeria. Este artigo demonstra como usar um CarouselPage para navegar por uma coleção de páginas._
 
@@ -28,15 +28,15 @@ _O Xamarin.Forms CarouselPage é uma página que os usuários podem passar do la
 
 As capturas de tela a seguir mostram um [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) em cada plataforma:
 
-![](carousel-page-images/thirdpage.png "CarouselPage Third Item")
+![Terceiro item de CarouselPage](carousel-page-images/thirdpage.png)
 
 O layout de um [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) é idêntico em cada plataforma. As páginas podem ser navegadas passando o dedo da direita para a esquerda para navegar para frente na coleção e passando o dedo da esquerda para a direita para navegar para trás. As capturas de tela a seguir mostram a primeira página em uma [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) instância:
 
-![](carousel-page-images/firstpage.png "CarouselPage First Item")
+![Primeiro item de CarouselPage](carousel-page-images/firstpage.png)
 
 Passar o dedo da direita para a esquerda leva para a segunda página, conforme mostrado nas capturas de tela seguir:
 
-![](carousel-page-images/secondpage.png "CarouselPage Second Item")
+![Segundo item de CarouselPage](carousel-page-images/secondpage.png)
 
 Passar o dedo da direita para a esquerda novamente leva para a terceira página, enquanto passar o dedo da esquerda para a direita retorna à página anterior.
 

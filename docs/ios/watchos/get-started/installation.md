@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 12/05/2017
-ms.openlocfilehash: 5908d8493821eed54f5adee09eee1341bf458609
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 4cc321f44238a7b738e40c02656b42f1eda1155a
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84564882"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938756"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Instalando e usando o watchOS no Xamarin
 
@@ -37,11 +37,11 @@ A solução de [exemplo de catálogo do Watch kit](https://docs.microsoft.com/sa
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-![](installation-images/catalog-solution.png "The solution in Visual Studio")
+![A solução no Visual Studio](installation-images/catalog-solution.png)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-![](installation-images/catalog-solution-vs.png "The solution in Visual Studio")
+![A solução no Visual Studio](installation-images/catalog-solution-vs.png)
 
 -----
 
@@ -54,19 +54,19 @@ Você não pode criar uma nova "solução de inspeção"... em vez disso, você 
 
 1. Se você não tiver um projeto existente, primeiro escolha **arquivo > nova solução** e crie um aplicativo IOS (por exemplo, um **único aplicativo de exibição**):
 
-    [![](installation-images/cycle8-2-sml.png "Choose File > New Solution and create an iOS app")](installation-images/cycle8-2.png#lightbox)
+    [![Escolher arquivo > nova solução e criar um aplicativo iOS](installation-images/cycle8-2-sml.png)](installation-images/cycle8-2.png#lightbox)
 
 2. Depois que o aplicativo iOS for criado (ou você planeja usar seu aplicativo iOS existente), clique com o botão direito do mouse na solução e escolha **adicionar > adicionar novo projeto..**. Na janela **novo projeto** , selecione **watchOS > aplicativo > aplicativo WatchKit**:
 
-    [![](installation-images/cycle8-6-sml.png "Select watchOS > App > WatchKit App")](installation-images/cycle8-6.png#lightbox)
+    [![Selecione watchOS > aplicativo > aplicativo WatchKit](installation-images/cycle8-6-sml.png)](installation-images/cycle8-6.png#lightbox)
 
 3. A próxima tela permite que você escolha qual projeto de aplicativo iOS deve incluir o aplicativo Watch:
 
-    [![](installation-images/cycle8-7-sml.png "Choose which iOS app project should include the watch app")](installation-images/cycle8-7.png#lightbox)
+    [![Escolha qual projeto de aplicativo iOS deve incluir o aplicativo Watch](installation-images/cycle8-7-sml.png)](installation-images/cycle8-7.png#lightbox)
 
 4. Por fim, escolha o local para salvar o projeto (e, opcionalmente, o controle do código-fonte):
 
-    [![](installation-images/cycle8-8-sml.png "Choose the location to save the project")](installation-images/cycle8-8.png#lightbox)
+    [![Escolha o local para salvar o projeto](installation-images/cycle8-8-sml.png)](installation-images/cycle8-8.png#lightbox)
 
 5. Visual Studio para Mac configura automaticamente [as referências do projeto e as configurações do **info. plist** ](~/ios/watchos/get-started/project-references.md) para você.
 
@@ -80,11 +80,11 @@ Clique duas vezes na interface do aplicativo Watch **. Storyboard** para editar 
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-[![](installation-images/iosdesigner-sml.png "The storyboard in the Designer")](installation-images/iosdesigner.png#lightbox)
+[![O storyboard no designer](installation-images/iosdesigner-sml.png)](installation-images/iosdesigner.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![](installation-images/iosdesigner-sml-vs.png "The storyboard in the Designer")](installation-images/iosdesigner-vs.png#lightbox)
+[![O storyboard no designer](installation-images/iosdesigner-sml-vs.png)](installation-images/iosdesigner-vs.png#lightbox)
 
 -----
 
@@ -92,11 +92,11 @@ Você deve dar a cada novo controlador de interface uma **classe** selecionando-
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-![](installation-images/iosdesigner-classname.png "Give each new interface controller a Class")
+![Dê a cada novo controlador de interface uma classe](installation-images/iosdesigner-classname.png)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-![](installation-images/iosdesigner-classname-vs.png "Give each new interface controller a Class")
+![Dê a cada novo controlador de interface uma classe](installation-images/iosdesigner-classname-vs.png)
 
 -----
 
@@ -115,7 +115,7 @@ Abra sua solução no Visual Studio para Mac e clique com o botão direito do mo
 
 -----
 
-![](installation-images/openwith-xcode.png "Open the Interface.storyboard in Xcode Interface Builder")
+![Abra a interface. Storyboard no Xcode Interface Builder](installation-images/openwith-xcode.png)
 
 Se estiver usando o Xcode, você deverá seguir as mesmas etapas para observar aplicativos como para [storyboards normais do aplicativo IOS](~/ios/user-interface/storyboards/index.md) (como a criação de saídas e ações por **Ctrl + arrastar** para o arquivo de cabeçalho **. h** ).
 
@@ -147,7 +147,7 @@ Há dois modos para iniciar um aplicativo WatchKit:
 Depois que o Xcode 8 (ou posterior) é instalado, os simuladores de Apple Watch são separados dos simuladores do iOS (ao contrário do [Xcode 6](#xcode6), onde eles apareciam como uma *exibição externa*).
 Quando você seleciona o projeto de aplicativo Watch e o torna o projeto de inicialização, a lista de simuladores mostrará *simuladores do IOS* para escolher (como mostrado abaixo).
 
-[![](installation-images/xs-xcode8-watchos3-sml.png "Selecting the Simulator type")](installation-images/xs-xcode8-watchos3.png#lightbox)
+[![Selecionando o tipo de simulador](installation-images/xs-xcode8-watchos3-sml.png)](installation-images/xs-xcode8-watchos3.png#lightbox)
 
 Quando você inicia a depuração, *dois* simuladores devem iniciar o simulador do IOS *e* o simulador de Apple Watch. Use o **Comando + Shift + H** para navegar até o menu Watch e o relógio Clock; e use o menu de **hardware** para definir a **pressão de Force Touch**. A rolagem no trackpad ou no mouse será simulada usando o Digital Crown.
 
@@ -186,18 +186,18 @@ Visual Studio para Mac pode iniciar o aplicativo Watch com um _modo de inicializ
 
 Clique com o botão direito do mouse no projeto do aplicativo de inspeção e escolha **executar com > configuração personalizada...**:
 
-[![](installation-images/runwith-customparams-sml.png "Running a Custom Configuration")](installation-images/runwith-customparams.png#lightbox)
+[![Executando uma configuração personalizada](installation-images/runwith-customparams-sml.png)](installation-images/runwith-customparams.png#lightbox)
 
 Isso abre a janela **parâmetros personalizados** , na qual você pode selecionar **notificação** (e fornecer uma carga JSON) e, em seguida, pressione **executar** para iniciar o aplicativo Watch no simulador:
 
-[![](installation-images/runwith-execargs-sml.png "Setting the Notification and Payload")](installation-images/runwith-execargs.png#lightbox)
+[![Definindo a notificação e a carga](installation-images/runwith-execargs-sml.png)](installation-images/runwith-execargs.png#lightbox)
 
 ## <a name="debugging"></a>Depuração
 
 A depuração tem suporte no Visual Studio para Mac e no Visual Studio.
 Lembre-se de fornecer um arquivo JSON de notificação durante a depuração no modo de notificações. Esta captura de tela mostra um ponto de interrupção de depuração sendo atingido em um aplicativo de inspeção:
 
-![](installation-images/debug-sml.png "This screenshot shows a debug breakpoint being hit in a watch app")
+![Esta captura de tela mostra um ponto de interrupção de depuração sendo atingido em um aplicativo de inspeção](installation-images/debug-sml.png)
 
 Depois de seguir as instruções de inicialização, você acabará com seu aplicativo Watch em execução no **simulador do IOS (Watch)**.
 Para o modo de notificação, você pode selecionar **depurar > log do sistema aberto** (**cmd +/**) e usar `Console.WriteLine` em seu código.
@@ -214,7 +214,7 @@ To test the functionality in your  and
 
 Os arquivos de modelo watchOS (como `InterfaceController` , `ExtensionDelegate` , `NotificationController` e `ComplicationController` ) vêm com seus métodos de ciclo de vida necessários já implementados. Adicione `Console.WriteLine` chamadas e leia a **saída do aplicativo** para entender melhor o ciclo de vida do evento.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [WatchKitCatalog (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Primeiro vídeo do aplicativo Watch](https://blog.xamarin.com/your-first-watch-kit-app/)

@@ -12,16 +12,16 @@ ms.date: 02/07/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2d458bafc5bb1c8dcffc7858fd15734187f7612b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 05560ae7c3d255140c0782e5f442dd2356d86cad
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134063"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937417"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>Estilizar um aplicativo de plataforma cruzada Xamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
 
 Neste guia de início rápido, você aprenderá a:
 
@@ -29,8 +29,8 @@ Neste guia de início rápido, você aprenderá a:
 
 O guia de início rápido explica como estilizar um aplicativo de plataforma cruzada Xamarin.Forms com estilos XAML. O aplicativo final é mostrado abaixo:
 
-[![](styling-images/screenshots1-sml.png "Notes Page")](styling-images/screenshots1.png#lightbox "Notes Page")
-[![](styling-images/screenshots2-sml.png "Note Entry Page")](styling-images/screenshots2.png#lightbox "Note Entry Page")
+Página de entrada de observação [ ![ da página de anotações](styling-images/screenshots1-sml.png)](styling-images/screenshots1.png#lightbox "Página de Observações") 
+ [ ![ ](styling-images/screenshots2-sml.png)](styling-images/screenshots2.png#lightbox "Página de Entrada de Observação")
 
 ### <a name="prerequisites"></a>Pré-requisitos
 

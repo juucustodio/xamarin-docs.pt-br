@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 66d832f624bdd942f53c5f6d890457958969b1b7
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: c7cc3c74f5a26ec7e07636ebab865e9016409f89
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73028417"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939172"
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>Analisar aplicativos Xamarin.iOS com o Instrumentos
 
@@ -35,13 +35,13 @@ Selecione o dispositivo e execute o aplicativo Instrumentos:
 
 O Instrumentos será aberto e exibirá a caixa de diálogo a seguir:
 
- [![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png "Choosing a profiling template")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png#lightbox)
+ [![Escolhendo um modelo de criação de perfil](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png)](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png#lightbox)
 
 Clique para selecionar o modelo **Alocações**. Os outros modelos são válidos, mas este artigo apenas aborda o modelo de perfil **Alocações**.
 
 Em seguida, selecione o dispositivo e o aplicativo usando o menu na parte superior da janela:
 
-[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png "Select the device and application")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png#lightbox)
+[![Selecione o dispositivo e o aplicativo](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png)](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png#lightbox)
 
 O dispositivo iOS deve ser selecionado no menu na parte superior da janela e o aplicativo a ser analisado deve ser selecionado próximo dele (**MemoryDemo** na captura de tela acima).
 
@@ -49,19 +49,19 @@ Se o dispositivo não estiver listado no menu, verifique as mensagens de erro no
 
 Clique no botão **Escolher** e a próxima tela deverá aparecer:
 
-[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png "The profiling interface")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png#lightbox)
+[![A interface de criação de perfil](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png)](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png#lightbox)
 
 Clique no botão gravar (círculo vermelho no canto superior esquerdo) para iniciar a análise.
 
 A captura de tela a seguir mostra um exemplo de análise usando o **Instrumentos**:
 
-[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png "An example of profiling using Instruments")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png#lightbox)
+[![Um exemplo de criação de perfil usando instrumentos](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png)](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png#lightbox)
 
 ## <a name="summary"></a>Resumo
 
 Este guia mostrou como iniciar os Instrumentos do Xcode para monitorar um aplicativo iOS de dentro do Visual Studio para Mac. Vá para o [Passo a passo do Instrumentos](~/ios/deploy-test/walkthrough-apples-instrument.md) para obter um exemplo de como diagnosticar um problema de memória usando o Instrumentos.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Passo a passo do Instrumentos](~/ios/deploy-test/walkthrough-apples-instrument.md)
 - [Coleta de lixo do Xamarin.iOS (publicação do blog)](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)

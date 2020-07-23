@@ -10,16 +10,16 @@ ms.date: 03/23/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 38a895c9064fc012aec35b37eac78bb16ff009a9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1e5f3b6cb84081f5e167d9afe7e7f2f2dffce247
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131502"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938106"
 ---
 # <a name="listview-data-sources"></a>Fontes de dados ListView
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)
 
 Um Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) é usado para exibir listas de dados. Este artigo explica como preencher um `ListView` com dados e como associar dados ao item selecionado.
 
@@ -63,7 +63,7 @@ listView.ItemsSource = new string[]
 };
 ```
 
-![](data-and-databinding-images/itemssource-simple.png "ListView Displaying List of Strings")
+![ListView exibindo lista de cadeias de caracteres](data-and-databinding-images/itemssource-simple.png)
 
 Essa abordagem irá preencher o `ListView` com uma lista de cadeias de caracteres. Por padrão, `ListView` o chamará `ToString` e exibirá o resultado em um `TextCell` para cada linha. Para personalizar como os dados são exibidos, consulte [aparência da célula](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md).
 
@@ -144,7 +144,7 @@ O trecho a seguir demonstra um `ListView` associado a uma lista de funcionários
 
 Este exemplo de XAML define um `ContentPage` que contém um `ListView` . A fonte de dados do `ListView` é definida por meio do atributo `ItemsSource`. O layout de cada linha no `ItemsSource` é definido dentro do elemento `ListView.ItemTemplate`. Isso resulta nas seguintes capturas de tela:
 
-![](data-and-databinding-images/bound-data.png "ListView using Data Binding")
+![ListView usando Associação de dados](data-and-databinding-images/bound-data.png)
 
 > [!WARNING]
 > `ObservableCollection` não é segura para thread. Modificar um `ObservableCollection` faz com que as atualizações da interface do usuário ocorram no mesmo thread que realizou as modificações. Se o thread não for o thread de interface do usuário primário, ele causará uma exceção.
@@ -163,6 +163,6 @@ Muitas vezes, você desejará associar ao item selecionado de a `ListView` , em 
 
 Supondo `listView` `ItemsSource` que seja uma lista de cadeias de caracteres, terá `SomeLabel` sua `Text` propriedade associada ao `SelectedItem` .
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Associação de duas vias (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)

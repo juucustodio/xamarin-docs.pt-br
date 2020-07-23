@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 69886a0da53d419a0c40bdf34f91d301c9efe504
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d9e8d91b03a5a82373012da215bd29a747e67d3e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573710"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939445"
 ---
 # <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Trabalhando com navegação e foco do tvOS no Xamarin
 
@@ -20,7 +20,7 @@ _Este artigo aborda o conceito de foco e como ele é usado para apresentar e tra
 
 Este artigo aborda o conceito de [foco](#Focus-and-Selection) e como ele é usado para manipular a [navegação](#Navigation) em uma interface do usuário do aplicativo Xamarin. tvOS. Vamos examinar como os controles de navegação internos do tvOS usam o foco, o realce e a seleção para fornecer a navegação da interface do usuário do seu aplicativo Xamarin. tvOS.
 
-[![](navigation-focus-images/intro01.png "tvOS apps User Interface Navigation")](navigation-focus-images/intro01.png#lightbox)
+[![Navegação da interface do usuário de aplicativos tvOS](navigation-focus-images/intro01.png)](navigation-focus-images/intro01.png#lightbox)
 
 Em seguida, vamos dar uma olhada em como o foco pode ser usado com [da Parallax](#Focus-and-Parallax) e *imagens em camadas* para fornecer pistas visuais para o estado de navegação atual para o usuário final.
 
@@ -34,7 +34,7 @@ Os usuários do seu aplicativo Xamarin. tvOS não serão interagindo com sua int
 
 Um aplicativo tvOS bem-sucedido implementa a navegação de forma a dar suporte uniforme à finalidade do aplicativo e à estrutura dos dados que ele apresenta sem chamar atenção para a navegação em si. Projete sua navegação para que ela se sinta natural e familiar sem ter dominado a interface do usuário ou desenhar o foco fora do conteúdo e da experiência do usuário dos aplicativos.
 
-[![](navigation-focus-images/nav01.png "The tvOS settings app")](navigation-focus-images/nav01.png#lightbox)
+[![O aplicativo de configurações do tvOS](navigation-focus-images/nav01.png)](navigation-focus-images/nav01.png#lightbox)
 
 Ao usar uma Apple TV, o usuário normalmente navega por um conjunto empilhado de telas, cada uma apresentando um determinado conjunto de conteúdo. Por sua vez, cada nova tela pode levar a uma ou mais subtelas de conteúdo usando controles padrão da interface do usuário, como [botões](~/ios/tvos/user-interface/buttons.md), [barras de guias](~/ios/tvos/user-interface/tab-bars.md), tabelas, [exibições de coleção](~/ios/tvos/user-interface/collection-views.md) ou [exibições divididas](~/ios/tvos/user-interface/split-views.md).
 
@@ -57,7 +57,7 @@ A Apple sugere o seguinte em mente ao criar a navegação para seu aplicativo tv
 
 Na Apple TV, uma imagem, um botão ou outro elemento de interface do usuário é considerado _em foco_ quando é o destino da navegação atual.
 
-[![](navigation-focus-images/focus01.png "Focus and Selection example")](navigation-focus-images/focus01.png#lightbox)
+[![Exemplo de foco e seleção](navigation-focus-images/focus01.png)](navigation-focus-images/focus01.png#lightbox)
 
 Ao contrário dos dispositivos iOS em que o usuário está interagindo diretamente com elementos na tela Touch do dispositivo, os usuários interagem com elementos tvOS de toda a sala usando o Siri remoto. Para apresentar e lidar com essa interação do usuário, a Apple TV usa um modelo baseado em _foco_ .
 
@@ -134,7 +134,7 @@ No entanto, pode haver ocasiões, devido à necessidades de seu design de interf
 
 Veja o seguinte layout de interface do usuário para obter um exemplo:
 
- [![](navigation-focus-images/guide01.png "Working with Focus Guides example")](navigation-focus-images/guide01.png#lightbox)
+ [![Exemplo de trabalho com guias de foco](navigation-focus-images/guide01.png)](navigation-focus-images/guide01.png#lightbox)
 
 Como o botão **mais informações** não se enquadra em uma grade horizontal e vertical com o botão **comprar** , ele estaria inacessível ao usuário. No entanto, isso pode ser facilmente corrigido usando um _Guia de foco_ para fornecer dicas de movimentação para o mecanismo de foco. 
 
@@ -166,7 +166,7 @@ Primeiro, um novo `UIFocusGuide` é criado e adicionado à coleção de guias de
 
 Em seguida, as âncoras superior, esquerda, largura e altura do guia de foco são ajustadas em relação aos botões **mais informações** e **comprar** para posicioná-la entre elas. Consulte:
 
-[![](navigation-focus-images/guide02.png "Example Focus Guide")](navigation-focus-images/guide02.png#lightbox)
+[![Guia de foco de exemplo](navigation-focus-images/guide02.png)](navigation-focus-images/guide02.png#lightbox)
 
 Também é importante observar que as novas restrições estão sendo ativadas à medida que são criadas definindo sua `Active` propriedade como `true` :
 
@@ -274,7 +274,7 @@ Com essa propriedade definida como `true` , o modo de exibição de imagem autom
 
 Este artigo abordou o conceito de foco e como ele é usado para manipular a navegação em uma interface do usuário do aplicativo Xamarin. tvOS. Ele examina como os controles de navegação internos do tvOS usam foco, realce e seleção para fornecer navegação. Em seguida, vimos como o foco pode ser usado com da Parallax e imagens em camadas para fornecer pistas visuais para o estado de navegação atual para o usuário final. Por fim, ele examinou o trabalho com o foco, as atualizações de foco, o foco em coleções e a habilitação de da Parallax.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)

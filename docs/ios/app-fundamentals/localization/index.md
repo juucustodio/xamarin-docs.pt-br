@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/28/2017
-ms.openlocfilehash: c42b41f9b853fba58ef70b8bd2f8ab20a3369647
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 1f5f9e13607d672a6fdec5ed8fb116466973a260
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84569227"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938028"
 ---
 # <a name="localization-in-xamarinios"></a>Localização no Xamarin. iOS
 
@@ -173,9 +173,9 @@ Para localizar uma imagem no iOS:
     UIImage.FromBundle("flag");
     ```
 
-2. Coloque o arquivo de imagem padrão **Flag. png** em **base. lproj** (o diretório de linguagem de desenvolvimento nativo).
+2. Coloque o arquivo de imagem padrão **flag.png** em **base. lproj** (o diretório de linguagem de desenvolvimento nativo).
 
-3. Opcionalmente, coloque as versões localizadas da imagem em pastas **. lproj** para cada idioma (por exemplo, **es. lproj**, **ja. lproj**). Use o mesmo sinalizador de nome de arquivo **. png** em cada diretório de idioma.
+3. Opcionalmente, coloque as versões localizadas da imagem em pastas **. lproj** para cada idioma (por exemplo, **es. lproj**, **ja. lproj**). Use o mesmo nome de arquivo **flag.png** em cada diretório de idioma.
 
 Se uma imagem não estiver presente para um idioma específico, o iOS fará fallback para a pasta padrão de idioma nativo e carregará a imagem a partir daí.
 
@@ -255,9 +255,9 @@ o iOS fornece uma série de recursos para ajudar na criação de aplicativos com
 
 As capturas de tela a seguir mostram o [exemplo de tarefa localizada](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) em árabe e Hebraico (embora o inglês tenha sido inserido nos campos):
 
-[![](images/rtl-ar-sml.png "Localization in Arabic")](images/rtl-ar.png#lightbox "Arabic")
+[![Localização em árabe](images/rtl-ar-sml.png)](images/rtl-ar.png#lightbox "Árabe")
 
-[![](images/rtl-he-sml.png "Localization in Hebrew")](images/rtl-he.png#lightbox "Hebrew")
+[![Localização em Hebraico](images/rtl-he-sml.png)](images/rtl-he.png#lightbox "Hebraico")
 
 o iOS reverte automaticamente o `UINavigationController` , e os outros controles são colocados dentro `UIStackView` ou alinhados com o layout automático.
 O texto RTL é localizado usando arquivos **. Strings** da mesma forma que o texto ltr.
@@ -270,7 +270,7 @@ O exemplo de [tarefa (localizada no código)](https://github.com/conceptdev/xama
 
 ### <a name="project-structure"></a>Estrutura do Projeto
 
-![](images/solution-code.png "Resources tree")
+![Árvore de recursos](images/solution-code.png)
 
 ### <a name="localizablestrings-file"></a>Arquivo. Strings localizável
 
@@ -311,7 +311,7 @@ O diretório **base. lproj** contém o storyboard e também deve conter todas as
 
 Os outros diretórios de linguagem contêm um arquivo **localizável. Strings** para qualquer recurso de cadeia de caracteres referenciado no código, bem como um arquivo **MainStoryboard. String** que contém traduções para texto no storyboard.
 
-![](images/solution-storyboard.png "Resources tree")
+![Árvore de recursos](images/solution-storyboard.png)
 
 Os diretórios de idioma devem conter uma cópia de todas as imagens que foram localizadas, para substituir aquela presente em **base. lproj**.
 
@@ -324,7 +324,7 @@ Ao criar e editar controles em um storyboard, selecione cada controle e verifiqu
 
 Esse valor de cadeia de caracteres geralmente tem um formato como "NF3-H8-xmR", conforme mostrado na seguinte captura de tela:
 
-![](images/xs-designer-localization-id.png "Xcode view of Storyboard localization")
+![Exibição do Xcode da localização do storyboard](images/xs-designer-localization-id.png)
 
 Esse valor é usado no arquivo **. Strings** para atribuir texto traduzido automaticamente a cada controle.
 
@@ -347,7 +347,7 @@ No exemplo **Mainstoryboard. Strings** abaixo, você pode ver `UITextField` que 
 > [!IMPORTANT]
 > Usar um storyboard com classes de tamanho pode resultar em traduções que não aparecem no aplicativo. As [notas de versão do Xcode da Apple](https://developer.apple.com/library/content/releasenotes/DeveloperTools/RN-Xcode/Chapters/Introduction.html) indicam que um storyboard ou XIB não será localizado corretamente se três coisas forem verdadeiras: ele usa classes de tamanho, a localização de base e o destino da compilação são definidos como universal, e a compilação se destina a Ios 7,0. A correção é duplicar o arquivo de cadeias de caracteres de storyboard em dois arquivos idênticos: **MainStoryboard ~ iPhone. Strings** e **MainStoryboard ~ iPad. Strings**, conforme mostrado na seguinte captura de tela:
 >
-> ![](images/xs-dup-strings.png "Strings files")
+> ![Arquivos de cadeias de caracteres](images/xs-dup-strings.png)
 
 <a name="appstore"></a>
 
@@ -361,7 +361,7 @@ Este artigo aborda as noções básicas de localização de aplicativos iOS usan
 
 Você pode aprender mais sobre o i18n e o l10n para aplicativos iOS, Android e multiplataforma (incluindo Xamarin. Forms) neste [Guia de plataforma cruzada](~/cross-platform/app-fundamentals/localization.md).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Tarefa (localizada no código) (exemplo)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
 - [Tarefa (storyboard localizado) (exemplo)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10nStoryboard)

@@ -10,12 +10,12 @@ ms.date: 01/19/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e2bed4d5e8f89efa2997fb085278c4b549870245
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0eb768f5d6cabbb41b07a5aad33269fc0f493237
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135315"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939523"
 ---
 # <a name="introduction-to-custom-renderers"></a>Introdução a renderizadores personalizados
 
@@ -59,7 +59,7 @@ O prefixo do namespace `local` pode ser qualquer coisa. No entanto, os valores d
 
 O controle personalizado `MyEntry` é renderizado em cada plataforma, com uma tela de fundo cinza, conforme mostrado nas capturas de tela seguir:
 
-![](introduction-images/screenshots.png "MyEntry Custom Control on each Platform")
+![Controle personalizado MyEntry em cada plataforma](introduction-images/screenshots.png)
 
 A alteração da cor da tela de fundo do controle em cada plataforma foi feira usando apenas subclasses do controle. No entanto, há limites para o que é possível realizar com essa técnica, pois não é possível tirar proveito dos aprimoramentos e personalizações específicos da plataforma. Quando são necessários, renderizadores personalizados devem ser implementados.
 
@@ -96,6 +96,6 @@ Isso cria uma referência ao tipo `ClassInPCL`, indicando que ele é necessário
 
 Este artigo forneceu uma introdução aos renderizadores personalizados e descreveu o processo de criação de um renderizador personalizado. Os renderizadores personalizados fornecem uma abordagem poderosa para personalizar a aparência e o comportamento dos Xamarin.Forms controles. Eles podem ser usados para pequenas alterações de estilo ou personalização sofisticada de comportamento e de layout específico da plataforma.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Effect](~/xamarin-forms/app-fundamentals/effects/index.md)
+- [Efeitos](~/xamarin-forms/app-fundamentals/effects/index.md)

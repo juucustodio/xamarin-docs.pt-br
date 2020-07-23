@@ -10,16 +10,16 @@ ms.date: 11/26/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d28a9079d27310dde0e5ea5bf80c83895bbcf1d4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d5a5dc7de2835038079a1bdf8af5be44a173f86e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84571565"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939822"
 ---
 # <a name="customizing-an-entry"></a>Personalizando uma entrada
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
 
 _O Xamarin.Forms controle de entrada permite que uma única linha de texto seja editada. Este artigo demonstra como criar um renderizador personalizado para o controle de entrada, permitindo que os desenvolvedores substituam a renderização nativa padrão por sua própria personalização específica da plataforma._
 
@@ -27,7 +27,7 @@ Cada Xamarin.Forms controle tem um renderizador que acompanha para cada platafor
 
 O diagrama a seguir ilustra a relação entre o [`Entry`](xref:Xamarin.Forms.Entry) controle e os controles nativos correspondentes que o implementam:
 
-![](entry-images/entry-classes.png "Relationship Between Entry Control and Implementing Native Controls")
+![Relação entre o controle Entry e seus controles de nativos de implementação](entry-images/entry-classes.png)
 
 O processo de renderização pode ser aproveitado para implementar personalizações específicas da plataforma criando um renderizador personalizado para o [`Entry`](xref:Xamarin.Forms.Entry) controle em cada plataforma. O processo para fazer isso é o seguinte:
 
@@ -108,11 +108,11 @@ O processo para criar a classe do renderizador personalizado é a seguinte:
 
 O diagrama a seguir ilustra as responsabilidades de cada projeto no aplicativo de exemplo, bem como as relações entre elas:
 
-![](entry-images/solution-structure.png "MyEntry Custom Renderer Project Responsibilities")
+![Responsabilidades do projeto de renderizador personalizado de MyEntry](entry-images/solution-structure.png)
 
 O controle `MyEntry` é renderizado por classes `MyEntryRenderer` específicas da plataforma, que derivam da classe `EntryRenderer` para cada plataforma. Isso faz com que cada controle `MyEntry` seja renderizado com a cor da tela de fundo específica da plataforma, conforme mostrado nas seguintes capturas de tela:
 
-![](entry-images/screenshots.png "MyEntry Control on each Platform")
+![Controle MyEntry em cada plataforma](entry-images/screenshots.png)
 
 A `EntryRenderer` classe expõe o `OnElementChanged` método, que é chamado quando o Xamarin.Forms controle é criado para renderizar o controle nativo correspondente. Esse método usa um parâmetro `ElementChangedEventArgs`, que contém as propriedades `OldElement` e `NewElement`. Essas propriedades representam o Xamarin.Forms elemento ao qual o renderizador *foi* anexado e o Xamarin.Forms elemento ao qual o renderizador *está* anexado, respectivamente. No aplicativo de exemplo, a propriedade `OldElement` será `null` e a propriedade `NewElement` conterá uma referência ao controle `MyEntry`.
 
@@ -210,6 +210,6 @@ A chamada ao método `OnElementChanged` da classe base cria uma instância de um
 
 Este artigo demonstrou como criar um renderizador de controle personalizado para o Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) controle, permitindo que os desenvolvedores substituam a renderização nativa padrão por sua própria renderização específica da plataforma. Os renderizadores personalizados fornecem uma abordagem poderosa para personalizar a aparência dos Xamarin.Forms controles. Eles podem ser usados para pequenas alterações de estilo ou personalização sofisticada de comportamento e de layout específico da plataforma.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [CustomRendererEntry (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)

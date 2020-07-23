@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 17ccc67b2976b93fbb290a1d2425168cab50228e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 497096e7f422e8337498339737ab304b0d896dfe
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84568783"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938990"
 ---
 # <a name="watchos-troubleshooting"></a>Solução de problemas do watchOS
 
@@ -29,14 +29,14 @@ Esta página contém informações adicionais e soluções alternativas para os 
 
 <a name="knownissues"></a>
 
-## <a name="known-issues"></a>Problemas conhecidos
+## <a name="known-issues"></a>Problemas Conhecidos
 
 ### <a name="general"></a>Geral
 
 <a name="deploy"></a>
 
 - Versões anteriores do Visual Studio para Mac mostram incorretamente um dos ícones de **AppleCompanionSettings** como sendo 88x88 pixels; que resulta em um **erro de ícone ausente** se você tentar enviar para a loja de aplicativos.
-    Esse ícone deve ser 87x87 pixels (29 unidades para **@3x** telas da retina). Não é possível corrigir isso em Visual Studio para Mac-edite o ativo da imagem no Xcode ou edite manualmente o arquivo **Contents. JSON** .
+    Esse ícone deve ser 87x87 pixels (29 unidades para **@3x** telas da retina). Não é possível corrigir isso em Visual Studio para Mac-edite o ativo da imagem no Xcode ou edite manualmente o **Contents.jsno** arquivo.
 
 - Se o info. plist do projeto de extensão de inspeção **> ID do pacote WKApp** não estiver [definido corretamente](~/ios/watchos/get-started/project-references.md) para corresponder à **ID do pacote**do aplicativo de inspeção, o depurador não conseguirá se conectar e Visual Studio para Mac aguardará a mensagem *"aguardando o depurador para se conectar"*.
 
@@ -47,7 +47,7 @@ Esta página contém informações adicionais e soluções alternativas para os 
 - Você não pode adicionar dois `WKNotificationControllers` a um Storyboard.
     Solução alternativa: o `notificationCategory` elemento no XML do storyboard é sempre inserido com o mesmo `id` . Para contornar esse problema, você pode adicionar dois (ou mais) controladores de notificação, abrir o arquivo de storyboard em um editor de texto e alterar manualmente o `id` elemento para ser exclusivo.
 
-    [![](troubleshooting-images/duplicate-id-sml.png "Opening the storyboard file in a text editor and manually change the id element to be unique")](troubleshooting-images/duplicate-id.png#lightbox)
+    [![Abrir o arquivo de storyboard em um editor de texto e alterar manualmente o elemento de ID para ser exclusivo](troubleshooting-images/duplicate-id-sml.png)](troubleshooting-images/duplicate-id.png#lightbox)
 
 - Você pode ver um erro "o aplicativo não foi criado" ao tentar iniciar o aplicativo. Isso ocorre depois de uma **limpeza** quando o projeto de inicialização é definido como o projeto de extensão de inspeção.
     A correção é selecionar **compilar > Recompilar tudo** e, em seguida, reiniciar o aplicativo.
@@ -74,7 +74,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
 2. O diálogo que aparece incluirá uma caixa de seleção **alfa** se um canal alfa estiver presente.
 
-    ![](troubleshooting-images/remove-alpha-sml.png "The dialog that appears will include an Alpha checkbox if an alpha channel is present")
+    ![O diálogo que aparece incluirá uma caixa de seleção alfa, se um canal alfa estiver presente](troubleshooting-images/remove-alpha-sml.png)
 
 3. *Desmarque* a caixa de seleção **alfa** e **salve** o arquivo no local correto.
 
@@ -91,15 +91,15 @@ with an alpha channel. Icons should not have an alpha channel.
 
 1. Abra a interface do aplicativo Watch **. Storyboard** no **Xcode Interface Builder**.
 
-    ![](troubleshooting-images/add-6.png "Opening the storyboard in Xcode Interface Builder")
+    ![Abrindo o storyboard no Xcode Interface Builder](troubleshooting-images/add-6.png)
 
 2. Arraste um novo `InterfaceController` no storyboard:
 
-    ![](troubleshooting-images/add-1.png "A InterfaceController")
+    ![Um InterfaceController](troubleshooting-images/add-1.png)
 
 3. Agora você pode arrastar controles para o controlador de interface (por exemplo, rótulos e botões), mas você não pode criar saídas ou ações ainda, porque não há nenhum arquivo de cabeçalho **. h** . As etapas a seguir farão com que o arquivo de cabeçalho **. h** necessário seja criado.
 
-    ![](troubleshooting-images/add-2.png "A button in the layout")
+    ![Um botão no layout](troubleshooting-images/add-2.png)
 
 4. Feche o storyboard e retorne para Visual Studio para Mac. Crie um novo arquivo C# **MyInterfaceController.cs** (ou qualquer nome que desejar) no projeto de **extensão do aplicativo Watch** (não o próprio aplicativo Watch onde o storyboard é). Adicione o seguinte código (Atualizando o namespace, ClassName e o nome do Construtor):
 
@@ -158,34 +158,34 @@ with an alpha channel. Icons should not have an alpha channel.
     > [!TIP]
     > Você pode (opcionalmente) tornar esse arquivo um nó filho do primeiro arquivo arrastando-o para o outro arquivo C# na Painel de Soluções de Visual Studio para Mac. Ele será exibido assim:
 
-    ![](troubleshooting-images/add-5.png "The Solution pad")
+    ![O painel de solução](troubleshooting-images/add-5.png)
 
 6. Selecione **compilar > compilar tudo** para que a sincronização do Xcode reconheça a nova classe (por meio do `Register` atributo) que usamos.
 
 7. Abra novamente o storyboard clicando com o botão direito do mouse no arquivo de storyboard do aplicativo de inspeção e selecionando **abrir com > Xcode Interface Builder**:
 
-    ![](troubleshooting-images/add-6.png "Opening the storyboard in Interface Builder")
+    ![Abrindo o storyboard em Interface Builder](troubleshooting-images/add-6.png)
 
 8. Selecione o novo controlador de interface e dê a ele o ClassName que você definiu acima, por exemplo, `MyInterfaceController`.
     Se tudo funcionou corretamente, ele deverá aparecer automaticamente na lista suspensa **classe:** e você poderá selecioná-lo a partir daí.
 
-    ![](troubleshooting-images/add-4.png "Setting a custom class")
+    ![Definindo uma classe personalizada](troubleshooting-images/add-4.png)
 
 9. Escolha o modo de exibição **Editor do assistente** no Xcode (o ícone com dois círculos sobrepostos) para que você possa ver o storyboard e o código lado a lado:
 
-    ![](troubleshooting-images/add-7.png "The Assistant Editor toolbar item")
+    ![O item da barra de ferramentas do editor do assistente](troubleshooting-images/add-7.png)
 
     Quando o foco estiver no painel de código, verifique se você está olhando para o arquivo de cabeçalho **. h** e, se não clicar com o botão direito do mouse na barra de navegação estrutural e selecionar o arquivo correto (**MyInterfaceController. h**)
 
-    ![](troubleshooting-images/add-8.png "Select MyInterfaceController")
+    ![Selecionar MyInterfaceController](troubleshooting-images/add-8.png)
 
 10. Agora você pode criar saídas e ações por **Ctrl + arraste** do storyboard para o arquivo de cabeçalho **. h** .
 
-    ![](troubleshooting-images/add-9.png "Creating outlets and actions")
+    ![Criando saídas e ações](troubleshooting-images/add-9.png)
 
     Ao liberar o recurso arrastar, você será solicitado a selecionar se deseja criar uma tomada ou uma ação e escolher seu nome:
 
-    ![](troubleshooting-images/add-a.png "The outlet and an action dialog")
+    ![A caixa de diálogo tomada e ação](troubleshooting-images/add-a.png)
 
 11. Depois que as alterações do storyboard forem salvas e o Xcode estiver fechado, volte para Visual Studio para Mac. Ele detectará as alterações do arquivo de cabeçalho e adicionará automaticamente o código ao arquivo **. designer.cs** :
 
@@ -291,7 +291,7 @@ Exemplo:
 --device=:v2:runtime=com.apple.CoreSimulator.SimRuntime.iOS-8-2,devicetype=com.apple.CoreSimulator.SimDeviceType.iPhone-6
 ```
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [WatchKitCatalog (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [WatchTables (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)

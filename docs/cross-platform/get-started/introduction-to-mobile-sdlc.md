@@ -6,12 +6,12 @@ ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: davidortinau
 ms.author: daortin
 ms.date: 11/22/2016
-ms.openlocfilehash: c428d39911da9abff7d53d478fbe99dbe9a3604e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 32dec6b8fcdd5387e138a7812d8c3e2074673111
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76724828"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939614"
 ---
 # <a name="mobile-software-development-lifecycle"></a>O ciclo de vida do desenvolvimento de software móvel
 
@@ -19,7 +19,7 @@ Criar aplicativos móveis pode ser tão fácil quanto abrir o Visual Studio, reu
 
 Neste documento, faremos um exame introdutório minucioso da criação de aplicativos móveis, incluindo:
 
-1. **Processo** – o processo de desenvolvimento de software é chamado de SDLC (ciclo de vida de desenvolvimento do software). Examinaremos todas as fases do SDLC em relação ao desenvolvimento de aplicativos móveis, incluindo: Inicialização, Design, Desenvolvimento, Estabilização, Implantação e Manutenção.
+1. **Processo** – o processo de desenvolvimento de software é chamado de SDLC (ciclo de vida de desenvolvimento do software). Examinaremos todas as fases do SDLC em relação ao desenvolvimento de aplicativos móveis, incluindo: criação, design, desenvolvimento, estabilização, implantação e manutenção.
 1. **Considerações** – há várias considerações ao criar aplicativos móveis, especialmente em contraste com aplicativos da área de trabalho ou Web tradicionais. Examinaremos essas considerações e como eles afetam o desenvolvimento para dispositivos móveis.
 
 Este documento destina-se às perguntas fundamentais sobre o desenvolvimento de aplicativos móveis, tanto para os novos desenvolvedores de aplicativos quanto para os experientes. Ele utiliza uma abordagem bastante abrangente para introduzir a maioria dos conceitos que você executará durante todo o SDLC (ciclo de vida de desenvolvimento do software). No entanto, este documento pode não se aplicar a todos. Se você está ansioso para começar a criar aplicativos, é recomendável avançar para o guia de [Introdução ao desenvolvimento móvel](~/cross-platform/get-started/introduction-to-mobile-development.md) e, em seguida, voltar para este documento mais tarde.
@@ -72,11 +72,11 @@ Depois de terem sido determinados os recursos e funcionalidade do aplicativo, a 
 
 Geralmente, a experiência do usuário é feita por meio de delineados ou modelos com um dos vários [kits de ferramentas de design](https://docs.microsoft.com/windows/uwp/design/downloads/). Os modelos permitem criar uma experiência do usuário sem necessidade de se preocupar com o design da interface do usuário real:
 
- [![](introduction-to-mobile-sdlc-images/balsamiq.png "UX is usually done via wireframes or mockups using tools such as Balsamiq")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
+ [![Geralmente, a experiência do usuário é feita por meio de delineados ou modelos usando ferramentas como o Balsamiq](introduction-to-mobile-sdlc-images/balsamiq.png)](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
 
 Ao criar modelos de experiência do usuário, é importante considerar as diretrizes de interface para as diversas plataformas às quais o aplicativo se destinará. O aplicativo deve ficar "confortável" todas as plataformas. As diretrizes de design oficiais para cada plataforma são:
 
-1. **Apple** -  [Diretrizes de Interface Humana da](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/) Apple
+1. **Apple**  -   [Diretrizes de interface humana](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
 1. **Android** – [diretrizes de design](https://developer.android.com/design/index.html)
 1. **UWP** – [Noções básicas de design da UWP](https://docs.microsoft.com/windows/uwp/design/basics/)
 
@@ -84,11 +84,11 @@ Por exemplo, cada aplicativo tem uma metáfora para mudar entre seções em um a
 
 Além disso, o próprio hardware também determina decisões de experiência do usuário. Por exemplo, dispositivos iOS não têm nenhum botão *voltar* físico e, portanto, introduzem a metáfora do Controlador de Navegação:
 
- ![](introduction-to-mobile-sdlc-images/01-navigation-controller.png "iOS devices have no physical back button, and therefore introduce the Navigation Controller metaphor")
+ ![Os dispositivos iOS não têm botão voltar físico e, portanto, introduzem a metáfora do Controlador de Navegação](introduction-to-mobile-sdlc-images/01-navigation-controller.png)
 
 Além disso, o fator forma também influencia decisões de experiência do usuário. Um tablet tem muito mais espaço e, portanto, pode exibir mais informações. Muitas vezes, aquilo que exige várias telas em um telefone é compactado em uma única em um tablet:
 
- [![](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png "Often what needs multiple screens on a phone is compressed into one for a tablet")](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png#lightbox)
+ [![Muitas vezes, aquilo que exige várias telas em um telefone é compactado em uma única em um tablet](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png)](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png#lightbox)
 
 E devido à grande variedade de fatores de forma existentes, geralmente há fatores forma de médio porte (entre um telefone e um tablet) que você também pode usar como destino.
 
@@ -98,7 +98,7 @@ Depois que a experiência do usuário é determinada, a próxima etapa é criar 
 
 Assim como ocorre com a experiência do usuário, é importante entender o que cada plataforma tem sua própria linguagem de design, portanto, um aplicativo bem projetado ainda pode ter uma aparência diferente em cada plataforma:
 
- [![](introduction-to-mobile-sdlc-images/multiplatform-1.png "A well-designed application may still look different on each platform")](introduction-to-mobile-sdlc-images/multiplatform-1.png#lightbox)
+ [![Um aplicativo bem projetado pode ter aparências diferentes em cada plataforma](introduction-to-mobile-sdlc-images/multiplatform-1.png)](introduction-to-mobile-sdlc-images/multiplatform-1.png#lightbox)
 
 ### <a name="development"></a>Desenvolvimento
 
@@ -117,7 +117,7 @@ A estabilização é o processo de corrigir os bugs do seu aplicativo. Não apen
 
 Nunca é cedo demais para começar a testar um aplicativo. Por exemplo, se um grande problema for encontrado no estágio de protótipo, a experiência do usuário do aplicativo ainda poderá ser modificada para adequar-se a ele. Se um problema de desempenho for encontrado no estágio de alfa, será cedo suficiente para modificar a arquitetura antes que muito código tenha sido criado com base em suposições falsas.
 
-Normalmente, à medida que um aplicativo se move mais ao longo do ciclo de vida, ele é aberto a mais pessoas para experimentá-lo, testá-lo, fornecer feedback, etc. Por exemplo, os aplicativos protótipos só podem ser mostrados ou disponibilizados para os principais interessados, enquanto os aplicativos de lançamento podem ser distribuídos aos clientes que se inscreverem para acesso antecipado.
+Normalmente, à medida que um aplicativo se move mais adiante no ciclo de vida, ele é aberto para mais pessoas para experimentá-lo, testá-lo, fornecer comentários etc. Por exemplo, os aplicativos de protótipo só podem ser mostrados ou disponibilizados para as principais partes interessadas, enquanto os aplicativos candidatos à versão podem ser distribuídos para os clientes que se inscrevem para acesso antecipado.
 
 Para os primeiros testes e implantação em um número relativamente pequeno de dispositivos, geralmente a implantação direta de um computador de desenvolvimento é suficiente. No entanto, conforme o público-alvo aumenta, isso pode rapidamente tornar-se complicado. Assim, há uma série de opções de implantação de teste por aí que tornam esse processo muito mais fácil ao permitir que você convide pessoas para um pool de teste, libere builds pela web e forneça ferramentas que permitam obter comentários do usuário.
 
@@ -237,7 +237,7 @@ A execução multitarefa na UWP tem duas partes: o ciclo de vida de páginas e a
 
 A segunda parte é fornecer agentes de segundo plano para tarefas de processamento, mesmo quando o aplicativo não está em execução em primeiro plano.
 
-#### <a name="device-capabilities"></a>Funcionalidades do dispositivo
+#### <a name="device-capabilities"></a>Funcionalidades de dispositivo
 
 Embora o hardware da UWP seja bastante homogêneo, ainda há componentes opcionais que, portanto, exigem consideração especial durante a codificação. As funcionalidades opcionais do hardware incluem a câmera, a bússola e o giroscópio. Há também uma classe especial de memória insuficiente (256 MB) que requer consideração especial ou os desenvolvedores podem optar por não dar suporte a memória insuficiente.
 
@@ -252,5 +252,5 @@ Este guia forneceu uma introdução para o SDLC, pois ele diz respeito ao desenv
 ## <a name="next-steps"></a>Próximas etapas
 
 - [O que é o Xamarin?](~/cross-platform/get-started/introduction-to-mobile-development.md)
-- [Comece com Xamarin](~/get-started/index.yml)
+- [Introdução ao Xamarin](~/get-started/index.yml)
 - [Como compartilhar o código entre plataformas](~/cross-platform/app-fundamentals/index.md)

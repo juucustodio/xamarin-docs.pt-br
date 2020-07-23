@@ -10,16 +10,16 @@ ms.date: 11/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ca9a541c3d152d1b84ed682881c395f2199b9eaf
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: adbceca38fca2cbe65c739f0d7fe26f18bdf5450
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84574373"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939848"
 ---
 # <a name="customizing-a-contentpage"></a>Personalizando uma ContentPage
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
 
 _Um ContentPage é um elemento visual que exibe uma única exibição e ocupa a maior parte da tela. Este artigo demonstra como criar um renderizador personalizado para a página ContentPage, permitindo que os desenvolvedores substituam a renderização nativa padrão por sua própria personalização específica da plataforma._
 
@@ -27,7 +27,7 @@ Cada Xamarin.Forms controle tem um renderizador que acompanha para cada platafor
 
 O diagrama a seguir ilustra a relação entre o [`ContentPage`](xref:Xamarin.Forms.ContentPage) e os controles nativos correspondentes que o implementam:
 
-![](contentpage-images/contentpage-classes.png "Relationship Between ContentPage Class and Implementing Native Controls")
+![Relação entre a classe ContentPage e seus controles de implementação nativos](contentpage-images/contentpage-classes.png)
 
 O processo de renderização pode ser aproveitado para implementar personalizações específicas da plataforma criando um renderizador personalizado para um [`ContentPage`](xref:Xamarin.Forms.ContentPage) em cada plataforma. O processo para fazer isso é o seguinte:
 
@@ -102,11 +102,11 @@ O processo para criar a classe do renderizador personalizado é a seguinte:
 
 O diagrama a seguir ilustra as responsabilidades de cada projeto no aplicativo de exemplo, bem como a relação entre elas:
 
-![](contentpage-images/solution-structure.png "CameraPage Custom Renderer Project Responsibilities")
+![Responsabilidades do projeto de renderizador personalizado de CameraPage](contentpage-images/solution-structure.png)
 
 A instância de `CameraPage` é renderizada por classes de `CameraPageRenderer` específicas da plataforma, que derivam da classe `PageRenderer` para cada plataforma. Isso faz com que cada instância de `CameraPage` seja renderizada com um feed de câmera em tempo real, conforme mostrado nas capturas de tela seguir:
 
-![](contentpage-images/screenshots.png "CameraPage on each Platform")
+![CameraPage em cada plataforma](contentpage-images/screenshots.png)
 
 A `PageRenderer` classe expõe o `OnElementChanged` método, que é chamado quando a Xamarin.Forms página é criada para renderizar o controle nativo correspondente. Esse método usa um parâmetro `ElementChangedEventArgs`, que contém as propriedades `OldElement` e `NewElement`. Essas propriedades representam o Xamarin.Forms elemento ao qual o renderizador *foi* anexado e o Xamarin.Forms elemento ao qual o renderizador *está* anexado, respectivamente. No aplicativo de exemplo, a propriedade `OldElement` será `null` e a propriedade `NewElement` conterá uma referência à instância de `CameraPage`.
 
@@ -251,6 +251,6 @@ Ao implementar um renderizador personalizado que deriva de `PageRenderer` na UWP
 
 Este artigo demonstrou como criar um renderizador personalizado para a [`ContentPage`](xref:Xamarin.Forms.ContentPage) página, permitindo que os desenvolvedores substituam a renderização nativa padrão por sua própria personalização específica da plataforma. Um `ContentPage` é um elemento visual que mostra uma única exibição e ocupa a maior parte da tela.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [CustomRendererContentPage (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)

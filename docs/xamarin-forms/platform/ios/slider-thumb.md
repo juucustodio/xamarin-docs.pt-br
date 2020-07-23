@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 93b4dba3e8543bd2cc2a4f2187f617aae5daff77
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d8ca0dfb533dc5fb0b7442b85de41dcf7c18fec8
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137066"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938535"
 ---
 # <a name="slider-thumb-tap-on-ios"></a>Toque deslizante do slider no iOS
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Essa plataforma específica do iOS permite que a [`Slider.Value`](xref:Xamarin.Forms.Slider.Value) propriedade seja definida tocando em uma posição na [`Slider`](xref:Xamarin.Forms.Slider) barra, em vez de ter que arrastar o `Slider` polegar. Ele é consumido em XAML definindo a [`Slider.UpdateOnTap`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Slider.UpdateOnTapProperty) propriedade vinculável como `true` :
 
@@ -48,7 +48,7 @@ O `Slider.On<iOS>` método especifica que essa plataforma específica será exec
 
 O resultado é que um toque na [`Slider`](xref:Xamarin.Forms.Slider) barra pode mover o `Slider` polegar e definir a [`Slider.Value`](xref:Xamarin.Forms.Slider.Value) Propriedade:
 
-![](slider-thumb-images/slider-updateontap.png "Slider Update on Tap enabled")
+![Atualização do controle deslizante ao toque habilitado](slider-thumb-images/slider-updateontap.png)
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -10,16 +10,16 @@ ms.date: 12/14/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 892bffa4027a1a61d6c22cc26d1556fb007432d8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cc150ecffbf9b6b31ec2f533bcc33876100614dc
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136967"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936845"
 ---
 # <a name="invoking-events-from-effects"></a>Invocando eventos por meio de efeitos
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
 
 _Um efeito pode definir e invocar um evento, sinalizando alterações na exibição nativa subjacente. Este artigo mostra como implementar o acompanhamento de dedos com vários toques de nível baixo e como gerar eventos que sinalizam atividade de toque._
 
@@ -456,7 +456,7 @@ A lógica `Moved` move a `BoxView` alterando a propriedade anexada `LayoutBounds
 
 Você pode mover vários elementos `BoxView` simultaneamente usando dedos diferentes.
 
-[![](touch-tracking-images/boxviewdragging-small.png "Triple screenshot of the BoxView Dragging page")](touch-tracking-images/boxviewdragging-large.png#lightbox "Triple screenshot of the BoxView Dragging page")
+[![Captura de tela tripla da página Arrastar o BoxView](touch-tracking-images/boxviewdragging-small.png)](touch-tracking-images/boxviewdragging-large.png#lightbox "Captura de tela tripla da página Arrastar o BoxView")
 
 ### <a name="subclassing-the-view"></a>Criando subclasses da exibição
 
@@ -519,7 +519,7 @@ As duas próximas demonstrações exigem elementos gráficos e usam o SkiaSharp 
 
 A página **Desenho de elipse** permite que você desenhe uma elipse passando o dedo na tela. Dependendo de como você mover o dedo, você poderá desenhar a elipse do canto superior esquerdo para o canto inferior direito ou de qualquer outro canto para o canto oposto. A elipse é desenhada com uma cor e uma opacidade aleatórias.
 
-[![](touch-tracking-images/ellipsedrawing-small.png "Triple screenshot of the Ellipse Drawing page")](touch-tracking-images/ellipsedrawing-large.png#lightbox "Triple screenshot of the Ellipse Drawing page")
+[![Captura de tela tripla da página Arrastar a Elipse](touch-tracking-images/ellipsedrawing-small.png)](touch-tracking-images/ellipsedrawing-large.png#lightbox "Captura de tela tripla da página Arrastar a Elipse")
 
 Se, em seguida, você tocar uma das elipses, poderá arrastá-la para outra localização. Isso exige uma técnica conhecida como "teste de clique," que envolve a pesquisa do objeto gráfico em um ponto específico. As reticências SkiaSharp não são Xamarin.Forms elementos, portanto, não podem executar seu próprio `TouchEffect` processamento. O `TouchEffect` precisa ser aplicada a todo objeto da `SKCanvasView`.
 
@@ -691,7 +691,7 @@ case TouchActionType.Pressed:
 
 Outro exemplo do SkiaSharp é a página **Pintura a dedo**. Você pode selecionar uma cor e uma largura do traço em duas exibições `Picker` e, em seguida, desenhar com um ou mais dedos:
 
-[![](touch-tracking-images/fingerpaint-small.png "Triple screenshot of the Finger Paint page")](touch-tracking-images/fingerpaint-large.png#lightbox "Triple screenshot of the Finger Paint page")
+[![Captura de tela tripla da página Pintura a Dedo](touch-tracking-images/fingerpaint-small.png)](touch-tracking-images/fingerpaint-large.png#lightbox "Captura de tela tripla da página Pintura a Dedo")
 
 Este exemplo também exige uma classe separada para representar cada linha pintada na tela:
 
@@ -799,7 +799,7 @@ Os métodos `AddToList` e `RemoveFromList` verificam se a `List` foi alterada en
 
 Os vários elementos `WhiteKey` e `BlackKey` são organizados no [arquivo XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/SilentKeyboardPage.xaml) da página, que tem uma melhor aparência quando o telefone é segurado em um modo paisagem:
 
-[![](touch-tracking-images/silentkeyboard-small.png "Triple screenshot of the Silent Keyboard page")](touch-tracking-images/silentkeyboard-large.png#lightbox "Triple screenshot of the Silent Keyboard page")
+[![Captura de tela tripla da página Teclado Silencioso](touch-tracking-images/silentkeyboard-small.png)](touch-tracking-images/silentkeyboard-large.png#lightbox "Captura de tela tripla da página Teclado Silencioso")
 
 Se você passar o dedo entre as teclas, pelas pequenas alterações nas cores, você verá que os eventos de toque são transferidos de uma tecla para outra.
 
@@ -807,7 +807,7 @@ Se você passar o dedo entre as teclas, pelas pequenas alterações nas cores, v
 
 Este artigo demonstrou como invocar eventos em um efeito e como gravar e usar um efeito que implementa o processamento multitoque de nível baixo.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Acompanhamento de dedo multitoque no iOS](~/ios/app-fundamentals/touch/touch-tracking.md)
 - [Acompanhamento de dedo multitoque no Android](~/android/app-fundamentals/touch/touch-tracking.md)

@@ -10,16 +10,16 @@ ms.date: 03/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0d6aa84a886d450d1dc42ec31edf16380b795404
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2c271c3537c6e96497763c67c5b8128148191f16
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84564622"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937352"
 ---
 # <a name="native-views-in-xaml"></a>Exibições nativas em XAML
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
 
 _Exibições nativas do iOS, Android e Plataforma Universal do Windows podem ser referenciadas diretamente de Xamarin.Forms arquivos XAML. As propriedades e os manipuladores de eventos podem ser definidos em exibições nativas e podem interagir com Xamarin.Forms exibições. Este artigo demonstra como consumir exibições nativas de Xamarin.Forms arquivos XAML._
 
@@ -106,8 +106,8 @@ A página contém uma [`Entry`](xref:Xamarin.Forms.Entry) cuja [`IsEnabled`](xre
 
 A página também contém um comutador nativo para cada plataforma. Cada comutador nativo usa uma [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) Associação para atualizar o valor da `NativeSwitchPageViewModel.IsSwitchOn` propriedade. Portanto, quando a opção estiver desativada, o `Entry` estiver desabilitado e quando a opção estiver ativada, o `Entry` será habilitado. As capturas de tela a seguir mostram essa funcionalidade em cada plataforma:
 
-![](xaml-images/native-switch-disabled.png "Native Switch Disabled")
-![](xaml-images/native-switch-enabled.png "Native Switch Enabled")
+![Comutador nativo desabilitado para o comutador nativo ](xaml-images/native-switch-disabled.png)
+ ![ habilitado](xaml-images/native-switch-enabled.png)
 
 Associações bidirecionais são automaticamente suportadas desde que a propriedade nativa implementa `INotifyPropertyChanged` ou dá suporte à observação de valor-chave (KVO) no Ios, ou é uma `DependencyProperty` em UWP. No entanto, muitas exibições nativas não dão suporte à notificação de alteração de propriedade. Para essas exibições, você pode especificar um [`UpdateSourceEventName`](xref:Xamarin.Forms.Binding.UpdateSourceEventName) valor de propriedade como parte da expressão de associação. Essa propriedade deve ser definida como o nome de um evento no modo de exibição nativo que sinaliza quando a propriedade de destino foi alterada. Em seguida, quando o valor do comutador nativo é alterado, a `Binding` classe é notificada de que o usuário alterou o valor de opção e o `NativeSwitchPageViewModel.IsSwitchOn` valor da propriedade é atualizado.
 
@@ -178,7 +178,7 @@ O [`FontFamily`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml
 
 As capturas de tela a seguir mostram o resultado da especificação de argumentos de método e Construtor de fábrica para definir a fonte em exibições nativas diferentes:
 
-![](xaml-images/passing-arguments.png "Setting Fonts on Native Views")
+![Configurando fontes em exibições nativas](xaml-images/passing-arguments.png)
 
 Para obter mais informações sobre como passar argumentos em XAML, consulte [passando argumentos em XAML](~/xamarin-forms/xaml/passing-arguments.md).
 
@@ -265,7 +265,7 @@ A [`ContentView.Content`](xref:Xamarin.Forms.ContentView.Content) propriedade é
 
 Os botões nativos do iOS e do Android compartilham o mesmo `OnButtonTap` manipulador de eventos, porque cada botão nativo consome um `EventHandler` delegado em resposta a um evento de toque. No entanto, o Plataforma Universal do Windows (UWP) usa um separado `RoutedEventHandler` , que por sua vez consome o `OnButtonTap` manipulador de eventos neste exemplo. Portanto, quando um botão nativo é clicado, o `OnButtonTap` manipulador de eventos é executado, o que dimensiona e gira o controle nativo contido no [`ContentView`](xref:Xamarin.Forms.ContentView) nome `contentViewTextParent` . As capturas de tela a seguir demonstram isso ocorrendo em cada plataforma:
 
-![](xaml-images/contentview.png "ContentView Containing a Native Control")
+![ContentView que contém um controle nativo](xaml-images/contentview.png)
 
 ## <a name="subclass-native-views"></a>Exibições nativas de subclasse
 
@@ -306,7 +306,7 @@ A página contém um [`Label`](xref:Xamarin.Forms.Label) que exibe a fruta escol
 
 A página também contém uma exibição de seletor nativo para cada plataforma. Cada exibição nativa exibe a coleção de frutas associando sua `ItemSource` Propriedade à `SubclassedNativeControlsPageViewModel.Fruits` coleção. Isso permite que o usuário escolha uma fruta, conforme mostrado nas seguintes capturas de tela:
 
-![](xaml-images/sub-classed.png "Subclassed Native Views")
+![Exibições nativas de subclasse](xaml-images/sub-classed.png)
 
 No iOS e Android, os seletores nativos usam métodos para configurar os controles. Portanto, esses seletores devem ser subclasses para expor propriedades para torná-los amigáveis para XAML. No Plataforma Universal do Windows (UWP), o `ComboBox` já é amigável para XAML e, portanto, não requer subclasse.
 

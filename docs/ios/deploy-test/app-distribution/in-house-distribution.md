@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 854fecd7945c1090b475b3571678388b8e1cf127
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 1c70aca4812214b424820ecb5a769a871e7e703c
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573229"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937898"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Distribuição interna para aplicativos Xamarin.iOS
 
@@ -56,15 +56,15 @@ Certificados do Programa de Desenvolvedores Corporativos da Apple durão três a
 3. Clique no **+** botão para criar um novo certificado.
 4. No título *Produção*, selecione **Interna e Ad Hoc**:
 
-   [![](in-house-distribution-images/createcertmanually01.png "Select In-House and Ad Hoc")](in-house-distribution-images/createcertmanually01.png#lightbox)
+   [![Selecionar interno e ad hoc](in-house-distribution-images/createcertmanually01.png)](in-house-distribution-images/createcertmanually01.png#lightbox)
 
 5. Clique em Continuar e siga as instruções para criar uma Solicitação de Assinatura de Certificado por meio do Acesso do Conjunto de Chaves:
 
-   [![](in-house-distribution-images/createcertmanually02.png "Create a Certificate Signing Request via Keychain Access")](in-house-distribution-images/createcertmanually02.png#lightbox)
+   [![Criar uma solicitação de assinatura de certificado por meio do acesso ao conjunto de chaves](in-house-distribution-images/createcertmanually02.png)](in-house-distribution-images/createcertmanually02.png#lightbox)
 
 6. Depois de criar seu CSR, conforme instruído, clique em Continuar e carregue o CSR na Central de Associados:
 
-   [![](in-house-distribution-images/createcertmanually03.png "Upload the CSR to the Member Center")](in-house-distribution-images/createcertmanually03.png#lightbox)
+   [![Carregar o CSR no centro de membros](in-house-distribution-images/createcertmanually03.png)](in-house-distribution-images/createcertmanually03.png#lightbox)
 
 7. Clique em Generate (Gerar) para criar o certificado.
 8. Baixe o certificado concluído e clique duas vezes no arquivo para instalá-lo.
@@ -74,15 +74,15 @@ Também é possível solicitar um Certificado usando a caixa de diálogo Prefer�
 
 1. Selecione a equipe e clique em *Exibir Detalhes*:
 
-   [![](in-house-distribution-images/selectteam.png "Select your team")](in-house-distribution-images/selectteam.png#lightbox)
+   [![Selecione sua equipe](in-house-distribution-images/selectteam.png)](in-house-distribution-images/selectteam.png#lightbox)
 
 2. Em seguida, clique no botão **criar** ao lado do **certificado de distribuição do IOS**:
 
-   [![](in-house-distribution-images/selectcert.png "Create the iOS Distribution Certificate")](in-house-distribution-images/selectcert.png#lightbox)
+   [![Criar o certificado de distribuição do iOS](in-house-distribution-images/selectcert.png)](in-house-distribution-images/selectcert.png#lightbox)
 
 3. Em seguida, clique no botão de **mais (+)** e selecione **iOS App Store**:
 
-   [![](in-house-distribution-images/selectcert.png "Select iOS App Store")](in-house-distribution-images/selectcert.png#lightbox)
+   [![Selecione iOS App Store](in-house-distribution-images/selectcert.png)](in-house-distribution-images/selectcert.png#lightbox)
 
 <a name="profile"></a>
 
@@ -104,23 +104,23 @@ Depois de obter os componentes obrigatórios necessários para criar um Perfil d
 
 1. Retorne ao portal de provisionamento da Apple e selecione **Provisioning**  >  **distribuição**de provisionamento:
 
-   [![](in-house-distribution-images/distribute01.png "Select Provisioning > Distribution")](in-house-distribution-images/distribute01.png#lightbox)
+   [![Selecionar distribuição de > de provisionamento](in-house-distribution-images/distribute01.png)](in-house-distribution-images/distribute01.png#lightbox)
 
 2. Clique no **+** botão e selecione o tipo de perfil de distribuição que você deseja criar como **interno**:
 
-   [![](in-house-distribution-images/distribute02.png "Create an In-House Distribution Profile")](in-house-distribution-images/distribute02.png#lightbox)
+   [![Criar um perfil de distribuição interno](in-house-distribution-images/distribute02.png)](in-house-distribution-images/distribute02.png#lightbox)
 
 3. Clique no botão **Continue (Continuar)** e selecione a ID do Aplicativo na lista suspensa para qual você deseja criar um Perfil de Distribuição: 
 
-   [![](in-house-distribution-images/distribute03.png "Select App ID from the dropdown list")](in-house-distribution-images/distribute03.png#lightbox)
+   [![Selecione a ID do aplicativo na lista suspensa](in-house-distribution-images/distribute03.png)](in-house-distribution-images/distribute03.png#lightbox)
 
 4. Clique no botão **Continue (Continuar)** e selecione o certificado de distribuição necessário para assinar o aplicativo:
 
-   [![](in-house-distribution-images/distribute04.png "Select distribution certificate required to sign the application")](in-house-distribution-images/distribute04.png#lightbox)
+   [![Selecione o certificado de distribuição necessário para assinar o aplicativo](in-house-distribution-images/distribute04.png)](in-house-distribution-images/distribute04.png#lightbox)
 
 5. Clique no botão **Continuar** e digite um **Nome** para o novo Perfil de Distribuição:
 
-   [![](in-house-distribution-images/distribute06.png "Enter a Name for the new Distribution Profile")](in-house-distribution-images/distribute06.png#lightbox)
+   [![Insira um nome para o novo perfil de distribuição](in-house-distribution-images/distribute06.png)](in-house-distribution-images/distribute06.png#lightbox)
 
 6. Clique no botão **Generate (Gerar)** para criar o novo perfil e finalizar o processo.
 
@@ -159,7 +159,7 @@ Para obter mais informações sobre como criar um IPA, consulte [Suporte do IPA]
 
 Este artigo forneceu uma visão geral sobre a distribuição de aplicativos do Xamarin.iOS internamente.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Distribuição da loja de aplicativos](~/ios/deploy-test/app-distribution/app-store-distribution/index.md)
 - [Distribuição Ad Hoc](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md)

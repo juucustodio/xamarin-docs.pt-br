@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: ef54cebebb3881f5bb08aa6edfdc344169f179b4
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 729289c1764746f9777ef3d720e77865c9a71389
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574087"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937248"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Criando objetos da interface do usuário no Xamarin. iOS
 
@@ -42,17 +42,17 @@ Para começar a criar sua interface do usuário no designer do iOS, clique duas 
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
- [![](creating-ui-objects-images/image2b.png "Toolbox Pad")](creating-ui-objects-images/image2b.png#lightbox)
+ [![Painel caixa de ferramentas](creating-ui-objects-images/image2b.png)](creating-ui-objects-images/image2b.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
- [![](creating-ui-objects-images/image2b-vs.png "Toolbox Pad - Visual Stuio")](creating-ui-objects-images/image2b.png#lightbox)
+ [![Painel da caixa de ferramentas – Visual Stuio](creating-ui-objects-images/image2b-vs.png)](creating-ui-objects-images/image2b.png#lightbox)
 
 -----
 
 Quando um controle é selecionado na superfície de design, o **painel de propriedades** mostrará os atributos para esse controle. O **Widget > identidade > campo nome** , que é preenchido na captura de tela abaixo, é usado como o nome da *tomada* . É assim que você pode referenciar o controle em C#:
 
- [![](creating-ui-objects-images/image3b.png "Properties Widget Pad")](creating-ui-objects-images/image3b.png#lightbox)
+ [![Painel de widget de propriedades](creating-ui-objects-images/image3b.png)](creating-ui-objects-images/image3b.png#lightbox)
 
 Para obter mais detalhes sobre como usar o designer do iOS, consulte a [introdução ao guia do designer do IOS](~/ios/user-interface/designer/introduction.md) .
 
@@ -64,27 +64,27 @@ Para abrir um storyboard no Xcode, clique com o botão direito do mouse para ace
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
- [![](creating-ui-objects-images/imagexcode.png "Storyboard context menu - Xcode")](creating-ui-objects-images/imagexcode.png#lightbox)
+ [![Menu de contexto do storyboard – Xcode](creating-ui-objects-images/imagexcode.png)](creating-ui-objects-images/imagexcode.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![](creating-ui-objects-images/imagexcode-vs.png "Storyboard context menu - Xcode")](creating-ui-objects-images/imagexcode-vs.png#lightbox)
+[![Menu de contexto do storyboard – Xcode](creating-ui-objects-images/imagexcode-vs.png)](creating-ui-objects-images/imagexcode-vs.png#lightbox)
 
 -----
 
 Os controles podem ser arrastados para a Design Surface da **biblioteca de objetos** ilustrada abaixo:
 
- [![](creating-ui-objects-images/image5a.png "Xcode Object Library")](creating-ui-objects-images/image5a.png#lightbox)
+ [![Biblioteca de objetos do Xcode](creating-ui-objects-images/image5a.png)](creating-ui-objects-images/image5a.png#lightbox)
 
 Ao projetar sua interface do usuário com Interface Builder você deve criar uma **tomada** para cada controle que você deseja referenciar em C#. Isso é feito ativando o **Editor do assistente** usando o botão central **Editor** no botão da barra de ferramentas do Xcode:
 
- [![](creating-ui-objects-images/image6a.png "Assistant Editor button")](creating-ui-objects-images/image6a.png#lightbox)
+ [![Botão Editor do assistente](creating-ui-objects-images/image6a.png)](creating-ui-objects-images/image6a.png#lightbox)
 
 Clique em um objeto de interface do usuário; em seguida, **controle arraste** para o arquivo. h. Para **controlar arrastar**, mantenha pressionada a tecla Control e, em seguida, clique e mantenha pressionado o objeto de interface do usuário para o qual você está criando a tomada (ou ação). Mantenha a tecla Control pressionada enquanto você arrasta para o arquivo de cabeçalho. Terminar de arrastar para baixo da `@interface` definição. Uma linha azul deve aparecer com uma inserção de legenda ou coleção de imtomada, conforme ilustrado na captura de tela abaixo.
 
 Ao liberar o clique, você será solicitado a fornecer um nome para a tomada, que será usado para criar uma propriedade C# que pode ser referenciada no código:
 
- [![](creating-ui-objects-images/image8a.png "Creating an outlet")](creating-ui-objects-images/image8a.png#lightbox)
+ [![Criando uma tomada](creating-ui-objects-images/image8a.png)](creating-ui-objects-images/image8a.png#lightbox)
 
 Para obter mais informações sobre como o Interface Builder do Xcode se integra ao Visual Studio para Mac, consulte o documento [geração de código XIB](~/ios/internals/xib-code-generation.md#generated) .
 
@@ -118,7 +118,7 @@ public override void ViewDidLoad () {
 
 Quando os controladores de exibição são adicionados ao Design Surface, dois arquivos C# correspondentes são criados no projeto. Neste exemplo, `ControlsViewController.cs` e foram `ControlsViewController.designer.cs` criados automaticamente:
 
- [![](creating-ui-objects-images/image9b.png "ViewController partial class")](creating-ui-objects-images/image9b.png#lightbox)
+ [![Classe parcial ViewController](creating-ui-objects-images/image9b.png)](creating-ui-objects-images/image9b.png#lightbox)
 
 O `ControlsViewController.cs` arquivo é destinado ao *seu código*. É aí que os `View` métodos de ciclo de vida, como `ViewDidLoad` e `ViewWillAppear` são implementados e onde você pode adicionar suas próprias propriedades, campos e métodos.
 
@@ -169,6 +169,6 @@ O `designer.cs` arquivo não deve ser editado manualmente – o IDE (Visual Stud
 
 Quando os objetos da interface do usuário são adicionados programaticamente a um `View` ou `ViewController` , você cria uma instância e gerencia as referências de objeto por conta própria e, portanto, nenhum arquivo de designer é necessário.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Controles (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)

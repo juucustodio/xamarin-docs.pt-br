@@ -6,12 +6,12 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
-ms.openlocfilehash: a044169f86b46abff4158011e99320c528180ffc
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 99ecf661679f02bda6cfffa6093bd4a904676bce
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573879"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939341"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Instalação e requisitos de pastas de trabalho
 
@@ -93,7 +93,7 @@ Visual Studio
 - **Ajuda > sobre o Visual Studio > copiar informações**
 - Informe-nos a sua versão do sistema operacional e se você está executando o Windows de 32 bits ou 64 bits.
 
-### <a name="samples"></a>Exemplos
+### <a name="samples"></a>Amostras
 
 Se você puder anexar ou vincular ao arquivo **. Workbooks** com problemas, isso pode ajudar a resolver seu bug mais rapidamente.
 
@@ -128,7 +128,7 @@ Se você tiver instalado pastas de trabalho com um instalador baixado, ele preci
 
 > **Iniciar Configurações de > > recursos do System > aplicativos &**
 
-![](install-images/windows-remove.png "Xamarin Workbooks as listed in &quot;Apps &amp; features&quot;")
+![Xamarin Workbooks conforme listado em &quot; recursos de aplicativos &amp;&quot;](install-images/windows-remove.png)
 
 **Você ainda deve seguir o procedimento para a Instalador do Visual Studio garantir que as pastas de trabalho não sejam reinstaladas sem o seu conhecimento.**
 

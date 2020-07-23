@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: ca6ccce934b32fa0d7e48cd8f295d9acefe6e121
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: aa9d946f295b46a3aa2d9559d28907d9a30f184b
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031506"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938964"
 ---
 # <a name="search-and-home-screen-widget-enhancements-in-ios-10"></a>Aprimoramentos no widget de pesquisa e na tela inicial no iOS 10
 
@@ -24,7 +24,7 @@ Os widgets (também conhecidos como extensões atuais) são um tipo especial de 
 
 Os widgets são altamente personalizáveis e podem conter elementos de interface do usuário, como texto, imagens, botões, etc. Além disso, o desenvolvedor pode personalizar ainda mais o layout de seus widgets.
 
-[![](widgets-images/widgets01.png "Example widgets")](widgets-images/widgets01.png#lightbox)
+[![Widgets de exemplo](widgets-images/widgets01.png)](widgets-images/widgets01.png#lightbox)
 
 Há dois locais principais que um usuário pode exibir e interagir com os widgets de um aplicativo:
 
@@ -192,7 +192,7 @@ Além de definir o tamanho solicitado para cada Estado (recolhido ou expandido),
 
 Este artigo abordou os aprimoramentos que a Apple fez no sistema de widget no iOS 10 e mostrou como implementá-los no Xamarin. iOS.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Amostras do iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
 - [Introdução às extensões](~/ios/platform/extensions.md)

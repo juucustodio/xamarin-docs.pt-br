@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: e8c38ec407d13a99e2990a6d4cf39b5a23728b1d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 5c8a852a37e2cd5c679283bc4d078f19e6e5d241
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73003970"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939679"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Controles personalizados na Xamarin Designer para iOS
 
@@ -45,9 +45,9 @@ A propriedade também pode ser decorada com um [DisplayNameAttribute](xref:Syste
 
 ## <a name="initialization"></a>Inicialização
 
-Para `UIViewController` subclasses, você deve usar o método [ViewDidLoad](xref:UIKit.UIViewController.ViewDidLoad) para o código que depende das exibições criadas no designer.
+Para `UIViewController` subclasses, você deve usar o método [ViewDidLoad](xref:UIKit.UIViewController.ViewDidLoad) para o código que depende de exibições criadas no designer.
 
-Para `UIView` e outras subclasses `NSObject`, o método [AwakeFromNib](xref:Foundation.NSObject.AwakeFromNib) é o local recomendado para executar a inicialização do controle personalizado depois que ele é carregado a partir do arquivo de layout. Isso ocorre porque todas as propriedades personalizadas definidas no painel de propriedades não serão definidas quando o construtor do controle for executado, mas elas serão definidas antes que `AwakeFromNib` seja chamado:
+Para o `UIView` e outras `NSObject` subclasses, o método [AwakeFromNib](xref:Foundation.NSObject.AwakeFromNib) é o local recomendado para executar a inicialização do seu controle personalizado depois que ele é carregado a partir do arquivo de layout. Isso ocorre porque qualquer propriedade personalizada definida no painel de propriedades não será definida quando o construtor do controle for executado, mas será definido antes de ser `AwakeFromNib` chamado:
 
 ```csharp
 [Register ("CustomView"), DesignTimeVisible (true)]
@@ -122,16 +122,16 @@ public class CustomView : UIView {
 }
 ```
 
-O componente `CustomView` expõe uma propriedade `Counter` que pode ser definida pelo desenvolvedor dentro do designer do iOS. No entanto, independentemente do valor definido dentro do designer, o valor da propriedade `Counter` sempre será zero (0). Eis o porquê:
+O `CustomView` componente expõe uma `Counter` propriedade que pode ser definida pelo desenvolvedor dentro do designer do Ios. No entanto, independentemente do valor definido dentro do designer, o valor da `Counter` propriedade sempre será zero (0). Veja por quê:
 
 - Uma instância do `CustomControl` é inplanada do arquivo de storyboard.
-- Todas as propriedades modificadas no designer do iOS são definidas (como definir o valor do `Counter` como dois (2), por exemplo).
-- O método `AwakeFromNib` é executado e uma chamada é feita ao método `Initialize` do componente.
-- Dentro `Initialize` o valor da propriedade `Counter` está sendo redefinido como zero (0).
+- Todas as propriedades modificadas no designer do iOS são definidas (como definir o valor de `Counter` para dois (2), por exemplo).
+- O `AwakeFromNib` método é executado e uma chamada é feita ao método do componente `Initialize` .
+- Dentro `Initialize` do valor da `Counter` propriedade está sendo redefinida como zero (0).
 
-Para corrigir a situação acima, inicialize a propriedade `Counter` em outro lugar (como no construtor do componente) ou não substitua o método `AwakeFromNib` e chame `Initialize` se o componente não exigir nenhuma inicialização adicional fora do que está atualmente sendo manipulado por seus construtores.
+Para corrigir a situação acima, inicialize a `Counter` propriedade em outro lugar (como no construtor do componente) ou não substitua o `AwakeFromNib` método e chame `Initialize` se o componente não exigir nenhuma inicialização adicional fora do que está sendo manipulado atualmente por seus construtores.
 
-## <a name="design-mode"></a>Modo de design
+## <a name="design-mode"></a>Modo Design
 
 Na superfície de design, um controle personalizado deve aderir a algumas restrições:
 
@@ -163,7 +163,7 @@ public class DesignerAwareLabel : UILabel, IComponent {
 }
 ```
 
-Você sempre deve verificar a propriedade `Site` para `null` antes de tentar acessar qualquer um de seus membros. Se `Site` for `null`, será seguro assumir que o controle não está em execução no designer.
+Você sempre deve verificar a `Site` propriedade para `null` antes de tentar acessar qualquer um de seus membros. Se `Site` for `null` , é seguro assumir que o controle não está em execução no designer.
 No modo de design, `Site` será definido depois que o construtor do controle tiver sido executado e antes de `AwakeFromNib` ser chamado.
 
 ## <a name="debugging"></a>Depuração
@@ -173,14 +173,14 @@ Se um controle não for renderizado, verifique se há bugs no controle ou em uma
 
 A superfície de design geralmente pode capturar exceções geradas por controles individuais enquanto continua a renderizar outros controles. O controle com falha é substituído por um espaço reservado vermelho e você pode exibir o rastreamento de exceção clicando no ícone de exclamação:
 
- ![](ios-designable-controls-overview-images/exception-box.png "A faulty control as red placeholder and the exception details")
+ ![Um controle com falha como espaço reservado vermelho e os detalhes da exceção](ios-designable-controls-overview-images/exception-box.png)
 
 Se os símbolos de depuração estiverem disponíveis para o controle, o rastreamento terá nomes de arquivo e números de linha.
 Clicar duas vezes em uma linha no rastreamento de pilha vai para essa linha no código-fonte.
 
 Se o designer não puder isolar o controle com falha, uma mensagem de aviso será exibida na parte superior da superfície de design:
 
- ![](ios-designable-controls-overview-images/info-bar.png "A warning message at the top of the design surface")
+ ![Uma mensagem de aviso na parte superior da superfície de design](ios-designable-controls-overview-images/info-bar.png)
 
 A renderização completa será retomada quando o controle com falha for corrigido ou removido da superfície de design.
 

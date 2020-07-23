@@ -10,16 +10,16 @@ ms.date: 12/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a69edd3bf014809cc479dcb7cba0e430dcefbe5b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f67543a6c678e2c3a1395f816e020d69af4bf873
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84564674"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936650"
 ---
 # <a name="store-and-access-data-in-azure-storage-from-xamarinforms"></a>Armazene e acesse dados no armazenamento do Azure deXamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 
 _O armazenamento do Azure é uma solução de armazenamento em nuvem escalonável que pode ser usada para armazenar dados não estruturados e estruturados. Este artigo demonstra como usar Xamarin.Forms o para armazenar texto e dados binários no armazenamento do Azure e como acessar os dados._
 
@@ -46,7 +46,7 @@ Para obter mais informações sobre o armazenamento do Azure, consulte [introdu�
 
 O armazenamento de BLOBs consiste em três componentes, que são mostrados no diagrama a seguir:
 
-![](azure-storage-images/blob-storage.png "Blob Storage Concepts")
+![Conceitos de armazenamento de BLOBs](azure-storage-images/blob-storage.png)
 
 Todo o acesso ao armazenamento do Azure é por meio de uma conta de armazenamento. Uma conta de armazenamento pode conter um número ilimitado de contêineres, e um contêiner pode armazenar um número ilimitado de BLOBs, até o limite de capacidade da conta de armazenamento.
 
@@ -69,7 +69,7 @@ A URL para acessar um objeto em uma conta de armazenamento é compilada acrescen
 
 O processo de integração de uma conta de armazenamento do Azure em um Xamarin.Forms aplicativo é o seguinte:
 
-1. Criar uma conta de armazenamento. Para obter mais informações, consulte [criar uma conta de armazenamento](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/#create-a-storage-account).
+1. Criar uma conta de armazenamento. Para obter mais informações, consulte [Criar uma conta de armazenamento](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/#create-a-storage-account).
 1. Adicione a [biblioteca de cliente do armazenamento do Azure](https://www.nuget.org/packages/WindowsAzure.Storage/) ao Xamarin.Forms aplicativo.
 1. Configure a cadeia de conexão de armazenamento. Para obter mais informações, consulte [conectando-se ao armazenamento do Azure](#connecting-to-azure-storage).
 1. Adicione `using` diretivas para os `Microsoft.WindowsAzure.Storage` `Microsoft.WindowsAzure.Storage.Blob` namespaces e a classes que acessarão o armazenamento do Azure.
@@ -262,7 +262,7 @@ public static async Task<bool> DeleteFileAsync(ContainerType containerType, stri
 
 Depois de recuperar uma referência de contêiner, o método recupera uma referência de BLOB para o blob especificado. O blob é então excluído com o `DeleteIfExistsAsync` método.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Armazenamento do Azure (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 - [Introdução ao armazenamento](https://azure.microsoft.com/documentation/articles/storage-introduction/)

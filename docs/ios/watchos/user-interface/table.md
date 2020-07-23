@@ -7,25 +7,25 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 015f0732e4d8cdf771af3e1d0b3cc3e31b6e806c
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: c9943842d71ffa19e0691e1f9c7dca0063749463
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572243"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936897"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Controles de tabela watchOS no Xamarin
 
 O `WKInterfaceTable` controle watchOS é muito mais simples do que sua contraparte do IOS, mas executa uma função semelhante. Ele cria uma lista de rolagem de linhas que pode ter layouts personalizados e que respondem a eventos de toque.
 
-![](table-images/table-list-sml.png "Lista de tabelas de observação") ![](table-images/table-detail-sml.png)
+![Lista ](table-images/table-list-sml.png) de tabelas de observação![](table-images/table-detail-sml.png)
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 ## <a name="adding-a-table"></a>Adicionando uma tabela
 
 Arraste o controle **tabela** para uma cena. Por padrão, ele terá a seguinte aparência (mostrando um único layout de linha não especificado):
 
-[![](table-images/add-table-sml.png "Adding a table")](table-images/add-table.png#lightbox)
+[![Adicionando uma tabela](table-images/add-table-sml.png)](table-images/add-table.png#lightbox)
 
 Dê um nome à tabela na caixa **nome** do painel de **Propriedades** para que ela possa ser referenciada no código.
 
@@ -35,7 +35,7 @@ A tabela inclui automaticamente uma única linha, representada por um controlado
 
 Para definir a **classe** para o controlador de linha, selecione a linha na **estrutura de tópicos do documento** e digite um nome de classe no painel de **Propriedades** :
 
-[![](table-images/add-row-controller-sml.png "Entering a class name in the Properties pad")](table-images/add-row-controller.png#lightbox)
+[![Inserindo um nome de classe no painel de propriedades](table-images/add-row-controller-sml.png)](table-images/add-row-controller.png#lightbox)
 
 Depois que a classe do controlador da linha for definida, o IDE criará um arquivo C# correspondente no projeto. Arraste os controles (como rótulos) para a linha e dê a eles nomes para que eles possam ser referenciados no código.
 
@@ -107,11 +107,11 @@ Esses dados são passados para a cena de storyboard de destino em seu `Awake` m�
 
 Por padrão, o controle tabela tem um único tipo de linha que você pode criar. Para adicionar mais ' modelos ' de linha, use a caixa **linhas** no painel de **Propriedades** para criar mais controladores de linha:
 
-![](table-images/prototype-rows1.png "Setting the number of Prototype rows")
+![Definindo o número de linhas de protótipo](table-images/prototype-rows1.png)
 
 Definir a propriedade **Rows** como **3** criará espaços reservados de linha adicionais para você arrastar os controles para o. Para cada linha, defina o nome da **classe** no painel de **Propriedades** para garantir que a classe do controlador de linha seja criada.
 
-![](table-images/prototype-rows2.png "The prototype rows in the designer")
+![As linhas do protótipo no designer](table-images/prototype-rows2.png)
 
 Para preencher uma tabela com tipos de linha diferentes, use o `SetRowTypes` método para especificar o tipo de controlador de linha a ser usado para cada linha na tabela. Use os identificadores da linha para especificar qual controlador de linha deve ser usado para cada linha.
 
@@ -142,14 +142,14 @@ for (var i = 0; i < rows.Count; i++) {
 
 o watchOS 3 introduziu um novo recurso para tabelas: a capacidade de percorrer as páginas de detalhes relacionadas a cada linha, sem precisar voltar para a tabela e escolher outra linha. As telas de detalhes podem ser roladas passando o dedo para cima e para baixo, ou usando o Digital Crown.
 
-![](table-images/table-scroll-sml.png "Exemplo de paginação de detalhes vertical") ![](table-images/table-detail-sml.png)
+![Exemplo ](table-images/table-scroll-sml.png) de paginação de detalhes vertical![](table-images/table-detail-sml.png)
 
 > [!IMPORTANT]
 > Atualmente, esse recurso só está disponível com a edição do storyboard no Xcode Interface Builder.
 
 Para habilitar esse recurso, selecione o `WKInterfaceTable` na superfície de design e marque a opção de **paginação de detalhes vertical** :
 
-![](table-images/vertical-detail-paging-sml.png "Selecting the Vertical Detail Paging option")
+![Selecionando a opção de paginação de detalhes vertical](table-images/vertical-detail-paging-sml.png)
 
 Conforme [explicado pela Apple,](https://developer.apple.com/reference/watchkit/wkinterfacetable#1682023) a navegação de tabela deve usar continuações para que o recurso de paginação funcione. Reescreva qualquer código existente que use `PushController` para usar continuações em vez disso.
 
@@ -206,7 +206,7 @@ namespace WatchTables.OnWatchExtension
 
 As saídas e ações declaradas aqui podem ser referenciadas no código, no entanto, o arquivo **. designer.cs** não deve ser editado diretamente.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [WatchTables (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)
 - [WatchKitCatalog (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)

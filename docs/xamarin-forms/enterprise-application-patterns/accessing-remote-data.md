@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cef3c2369bb4aee81a52ddd27d6ad732d7544dfa
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: df79a9b6a7b0ab44d4fcf03f12a7b4d8aabd0a82
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573840"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939263"
 ---
 # <a name="accessing-remote-data"></a>Acesso a dados remotos
 
@@ -54,7 +54,7 @@ A `CatalogService` classe é usada para gerenciar o processo de recuperação de
 
 A Figura 10-1 mostra a interação das classes que lêem os dados do catálogo do microserviço de catálogo para exibição pelo `CatalogView` .
 
-[![](accessing-remote-data-images/catalogdata.png "Retrieving data from the catalog microservice")](accessing-remote-data-images/catalogdata-large.png#lightbox "Retrieving data from the catalog microservice")
+[![Recuperando dados do microserviço de catálogo](accessing-remote-data-images/catalogdata.png)](accessing-remote-data-images/catalogdata-large.png#lightbox "Recuperando dados do microserviço de catálogo")
 
 **Figura 10-1**: Recuperando dados do microserviço de catálogo
 
@@ -159,7 +159,7 @@ A `BasketService` classe é usada para gerenciar a recuperação de dados e o pr
 
 A Figura 10-2 mostra a interação de classes que enviam os dados da cesta exibidos pelo `BasketView` , ao microserviço da cesta.
 
-[![](accessing-remote-data-images/basketdata.png "Sending data to the basket microservice")](accessing-remote-data-images/basketdata-large.png#lightbox "Sending data to the basket microservice")
+[![Enviando dados para o microserviço da cesta](accessing-remote-data-images/basketdata.png)](accessing-remote-data-images/basketdata-large.png#lightbox "Enviando dados para o microserviço da cesta")
 
 **Figura 10-2**: enviando dados para o microserviço da cesta
 
@@ -232,7 +232,7 @@ Esse método usa uma instância da `RedisBasketRepository` classe para persistir
 
 A Figura 10-3 mostra as interações de classes que excluem dados de cesta do microserviço da cesta para o `CheckoutView` .
 
-![](accessing-remote-data-images/checkoutdata.png "Deleteing data from the basket microservice")
+![Excluindo dados do microserviço da cesta](accessing-remote-data-images/checkoutdata.png)
 
 **Figura 10-3**: excluindo dados do microserviço da cesta
 
@@ -372,7 +372,7 @@ A estratégia de repetição deve ser ajustada para corresponder aos requisitos 
 > [!NOTE]
 > Uma estratégia de repetição agressiva com atraso mínimo entre as tentativas e um grande número de tentativas, pode degradar um serviço remoto que está sendo executado perto de ou em capacidade. Além disso, essa estratégia de repetição também poderia afetar a capacidade de resposta do aplicativo se estiver tentando executar uma operação com falha continuamente.
 
-Se uma solicitação ainda falhar após várias tentativas, é melhor que o aplicativo impeça que outras solicitações vá para o mesmo recurso e relate uma falha. Depois, após um período definido, o aplicativo pode fazer uma ou mais solicitações ao recurso para ver se elas foram bem-sucedidas. Para saber mais, veja [Padrão de Disjuntor](#circuit-breaker-pattern).
+Se uma solicitação ainda falhar após várias tentativas, é melhor que o aplicativo impeça que outras solicitações vá para o mesmo recurso e relate uma falha. Depois, após um período definido, o aplicativo pode fazer uma ou mais solicitações ao recurso para ver se elas foram bem-sucedidas. Para obter mais informações, consulte [padrão de disjuntor](#circuit-breaker-pattern).
 
 > [!TIP]
 > Nunca implemente um mecanismo de repetição infinita. Use um número finito de repetições ou implemente o padrão de [disjuntor](/azure/architecture/patterns/circuit-breaker/) para permitir a recuperação de um serviço.
@@ -409,7 +409,7 @@ O desempenho de um aplicativo pode ser melhorado pelo armazenamento em cache de 
 
 Ao se comunicar com APIs Web, os aplicativos devem ser sensíveis a falhas transitórias. As falhas transitórias incluem a perda momentânea de conectividade de rede para serviços, a indisponibilidade temporária de um serviço ou tempos limite que surgem quando um serviço está ocupado. Essas falhas costumam ser autocorrigidas e, se a ação for repetida após um atraso adequado, provavelmente terá sucesso. Portanto, os aplicativos devem encapsular todas as tentativas de acessar uma API Web no código que implementa um mecanismo transitório de tratamento de falhas.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Download do eBook (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (exemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

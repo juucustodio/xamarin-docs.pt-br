@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 92bf7934b1ad4f6d959fc458f536cf3b3426df51
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 52a6c3c996e2d5df204b6d0df40368bc835e990f
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73026364"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936767"
 ---
 # <a name="ios-build-mechanics"></a>Mecânica de Compilação do iOS
 
@@ -32,8 +32,8 @@ Para habilitar os resultados de diagnóstico do MSBuild no Visual Studio para Ma
 
 1. Clique em **Visual Studio para Mac > Preferências...**
 2. No modo de exibição de árvore à esquerda, selecione **Projetos > Compilar**
-3. No painel à direita, defina a verbosidade de log para baixo como **Diagnóstico**:[![](ios-build-mechanics-images/image2.png "Configurando o nível de detalhes do Log")](ios-build-mechanics-images/image2.png#lightbox)
-4. Clique em **OK**.
+3. No painel direito, defina a lista suspensa detalhes do log para **diagnóstico**: [ ![ definindo o detalhamento do log](ios-build-mechanics-images/image2.png)](ios-build-mechanics-images/image2.png#lightbox)
+4. Clique em **OK**
 5. Reiniciar o Visual Studio para Mac
 6. Limpar e recompilar o seu pacote
 7. Exibir os resultados de diagnóstico no Painel de Erros (Exibição > Painéis > Erros) clicando no botão de Resultado de Compilação
@@ -44,8 +44,8 @@ Para habilitar os resultados de diagnóstico do MSBuild no Visual Studio para Ma
 
 1. Clique em **Ferramentas > Opções...**
 2. No modo de exibição de árvore à esquerda, selecione **Projetos e Soluções > Compilar e Executar**
-3. No painel à direita, defina a *verbosidade* de saída de compilação do MSBuild como **Diagnóstico**:[![](ios-build-mechanics-images/image2-vs.png "Configurar o detalhamento dos resultados de build do MSBuild")](ios-build-mechanics-images/image2-vs.png#lightbox)
-4. Clique em **OK**.
+3. No painel direito, defina o *menu suspenso de detalhes de saída de compilação do MSBuild* como **diagnóstico**: [ ![ definindo o detalhamento de saída de compilação do MSBuild](ios-build-mechanics-images/image2-vs.png)](ios-build-mechanics-images/image2-vs.png#lightbox)
+4. Clique em **OK**
 5. Limpe e recompile o seu pacote.
 6. Os resultados de diagnóstico estão visíveis no painel Resultados.
 
@@ -67,7 +67,7 @@ Total time: 1554 ms
 
 As ferramentas do Xamarin, tecnicamente, funcionam em qualquer Mac que possa executar o OS X 10.10 Yosemite ou posterior. No entanto, as experiências de desenvolvedor e tempos de compilação podem ser prejudicados pelo desempenho do Mac.
 
-No estado desconectado, o Visual Studio no Windows apenas executa a fase de compilação C# e não tenta realizar a compilação de linking ou AOT, empacotar o aplicativo em um _Pacote .app_ ou assinar o pacote do aplicativo. (A fase de compilação C# raramente é um gargalo de desempenho.) Tente identificar onde no pipeline a construção está diminuindo, construindo diretamente no mac building host no Visual Studio para Mac.
+No estado desconectado, o Visual Studio no Windows executa apenas a fase de compilação em C# e não tenta executar vinculação ou compilação AOT, empacotar o aplicativo em um pacote _. app_   ou assinar o pacote de aplicativo. (A fase de compilação em C# raramente é um afunilamento de desempenho.) Tentativa de identificar onde o Build está diminuindo a velocidade, criando diretamente no host de Build do Mac em Visual Studio para Mac.
 
 Além disso, um dos locais mais comuns para a lentidão é a conexão de rede entre o computador Windows e o host de compilação do Mac. Isso pode ocorrer devido a um obstáculo físico na rede, usar uma conexão sem fio ou ter que viajar por um computador saturado (como um serviço Mac na nuvem).
 
@@ -97,7 +97,7 @@ Levando em consideração as informações acima, a lista abaixo fornece algumas
 
 A captura de tela abaixo ilustra como definir essas opções para o simulador nas opções do iOS:
 
-[![](ios-build-mechanics-images/image3.png "Setting the options")](ios-build-mechanics-images/image3.png#lightbox)
+[![Definindo as opções](ios-build-mechanics-images/image3.png)](ios-build-mechanics-images/image3.png#lightbox)
 
 ## <a name="device-tricks"></a>Truques de dispositivos
 
@@ -148,7 +148,7 @@ Dicas adicionais
 
 A captura de tela abaixo ilustra como definir essas opções para o simulador nas opções do iOS:
 
-[![](ios-build-mechanics-images/image4.png "Setting the options")](ios-build-mechanics-images/image4.png#lightbox)
+[![Definindo as opções](ios-build-mechanics-images/image4.png)](ios-build-mechanics-images/image4.png#lightbox)
 
 ## <a name="using-the-linker"></a>Usar o Vinculador
 
@@ -165,7 +165,7 @@ Considere as seguintes opções ao usar o Vinculador:
   - No entanto, se você escolher **Vincular Todos** o aplicativo poderá falhar, principalmente se os componentes externos forem usados. Isso ocorre porque alguns componentes usam Reflexão em determinados tipos.
   - A reflexão e análise estática não funcionam em conjunto. 
 
-As ferramentas podem ser instruídas a manter as coisas dentro do aplicativo usando o [ `[Preserve]` atributo](~/ios/deploy-test/linker.md). 
+As ferramentas podem ser instruídas para manter as coisas dentro do aplicativo usando o [ `[Preserve]` atributo](~/ios/deploy-test/linker.md). 
 
 Caso você não tenha acesso ao código-fonte ou ele seja gerado por uma ferramenta e você não queira alterá-lo, ele ainda poderá ser vinculado criando um arquivo XML que descreve todos os tipos e membros que precisam ser preservados. Em seguida, é possível adicionar o sinalizador `--xml={file.name}.xml` às opções de projeto, que processaram o código exatamente como se você estivesse usando Atributos.
 
@@ -276,8 +276,8 @@ L3 Cache: 4 MB
 - 8 GB RAM 
 ---->
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Blog](https://blog.xamarin.com/xamarin-ios-build-improvements/)
+- [Postagem no blog](https://blog.xamarin.com/xamarin-ios-build-improvements/)
 - [Vinculação no iOS](~/ios/deploy-test/linker.md)
-- [Configuração de linker personalizado](~/cross-platform/deploy-test/linker.md)
+- [Configuração do vinculador personalizado](~/cross-platform/deploy-test/linker.md)

@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: de4b6e8b95eed33e7fb38baf51a0da73cef313c0
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: bfa2a74bf9cd30fb7b9888ecd7339a80fe472c9e
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574126"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86939081"
 ---
 # <a name="introduction-to-ios-9"></a>Introdução ao iOS 9
 
 _Este artigo apresenta todas as APIs e recursos novos e modificados disponíveis no iOS 9 para desenvolvedores do Xamarin. iOS._
 
-![](images/ios9-sml.png "The iOS 9 logo")
+![O logotipo do iOS 9](images/ios9-sml.png)
 
 A Apple adicionou várias novas APIs e serviços no iOS 9, juntamente com vários aprimoramentos nos recursos existentes.
 
@@ -201,7 +201,7 @@ Confira também as partes do iOS desses exemplos (versões do Companion Mac OS X
 - [AgentsCatalog](https://github.com/xamarin/mac-ios-samples/tree/master/AgentsCatalog)
 - [MetalKitEssentials](https://github.com/xamarin/mac-ios-samples/tree/master/MetalKitEssentials)
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Amostras do iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [Introdução ao toque 3D](~/ios/platform/3d-touch.md)

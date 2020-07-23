@@ -10,22 +10,22 @@ ms.date: 02/09/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6d01018f4393ac5562220fa1f9524bc0d9872c67
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0c1ae9e05b6671d45d8df485a89cfc0dea86632d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137664"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937300"
 ---
 # <a name="pixels-and-device-independent-units"></a>Unidades independentes de dispositivo e pixels
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explore as diferenças entre coordenadas geoSkiaSharps e Xamarin.Forms coordenadas_
 
 Este artigo explora as diferenças no sistema de coordenadas usado no SkiaSharp e no Xamarin.Forms . Você pode obter informações para converter entre os dois sistemas de coordenadas e também desenhar gráficos que preenchem uma área específica:
 
-![](pixels-images/screenfillexample.png "An oval that fills the screen")
+![Uma elipse que preenche a tela](pixels-images/screenfillexample.png)
 
 Se você já está se programando em Xamarin.Forms algum tempo, pode ter uma ideia de Xamarin.Forms coordenadas e tamanhos. Os círculos desenhados nos dois artigos anteriores podem parecer um pouco pequenos para você.
 
@@ -104,7 +104,7 @@ O método começa a primeira linha de texto com uma coordenada X de 20 (para uma
 
 Este é o programa em execução:
 
-[![](pixels-images/surfacesize-small.png "Triple screenshot of the Surface Size  page")](pixels-images/surfacesize-large.png#lightbox "Triple screenshot of the Surface Size  page")
+[![Captura de tela tripla da página tamanho da superfície](pixels-images/surfacesize-small.png)](pixels-images/surfacesize-large.png#lightbox "Captura de tela tripla da página tamanho da superfície")
 
 Como você pode ver, a `CanvasSize` propriedade de `SKCanvasView` e a `Size` Propriedade do `SKImageInfo` valor são consistentes ao relatar as dimensões de pixel. As `Height` `Width` Propriedades e de `SKCanvasView` são propriedades e Xamarin.Forms relatam o tamanho da exibição nas unidades independentes do dispositivo definidas pela plataforma.
 
@@ -147,7 +147,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Aqui está executando:
 
-[![](pixels-images/ellipsefill-small.png "Triple screenshot of the Surface Size  page")](pixels-images/ellipsefill-large.png#lightbox "Triple screenshot of the Surface Size  page")
+[![Captura de tela tripla da página tamanho da superfície](pixels-images/ellipsefill-small.png)](pixels-images/ellipsefill-large.png#lightbox "Captura de tela tripla da página tamanho da superfície")
 
 O outro [`DrawOval`](xref:SkiaSharp.SKCanvas.DrawOval(SkiaSharp.SKRect,SkiaSharp.SKPaint)) método tem um [`SKRect`](xref:SkiaSharp.SKRect) argumento, que é um retângulo definido em termos das coordenadas X e Y de seu canto superior esquerdo e canto inferior direito. A oval preenche esse retângulo, o que sugere que pode ser possível usá-lo na página de **preenchimento da elipse** como esta:
 
@@ -166,7 +166,7 @@ SKRect rect = new SKRect(strokeWidth / 2,
 canvas.DrawOval(rect, paint);
 ```
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

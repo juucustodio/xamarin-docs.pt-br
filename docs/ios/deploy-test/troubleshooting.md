@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2017
-ms.openlocfilehash: b27608642ed04216b10767d37d26699a0aef7f3e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 12194eed21fc95aaadc194be8a57319cf5c3cd3d
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573762"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937235"
 ---
 # <a name="xamarinios-testing-and-deployment---troubleshooting"></a>Teste e implantação do Xamarin.iOS – solução de problemas
 
@@ -22,7 +22,7 @@ Assinatura de Código e Provisionamento com iOS podem ser bastante complicados e
 
 - Equipes grandes devem evitar o uso do botão “Corrigir problema” no Xcode, como ilustrado aqui:
 
-    [![](troubleshooting-images/fixissue.png "The Fix Issues dialog")](troubleshooting-images/fixissue.png#lightbox)
+    [![A caixa de diálogo corrigir problemas](troubleshooting-images/fixissue.png)](troubleshooting-images/fixissue.png#lightbox)
 
     Isso criará novos perfis de provisionamento e de certificados. Na melhor das hipóteses, isso criará um perfil de provisionamento sempre que um membro da equipe clicar nele, causando desordem nos perfis. Na pior das hipóteses, ele revogará certificados para qualquer outra pessoa da empresa, fazendo com que seus aplicativos parem de funcionar.
 

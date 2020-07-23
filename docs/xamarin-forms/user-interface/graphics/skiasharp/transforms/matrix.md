@@ -10,16 +10,16 @@ ms.date: 04/12/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e8d11add988828fa4e26d3f6728dd0b4319b3630
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 020319761ba1274495b7595a0d18435f98a5f990
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84133296"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86937170"
 ---
 # <a name="matrix-transforms-in-skiasharp"></a>Transformações de matriz em SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Aprofunde-se em transformações de SkiaSharp com a matriz de transformação versátil_
 
@@ -27,7 +27,7 @@ Todas as transformações aplicadas ao `SKCanvas` objeto são consolidadas em um
 
 Como você viu, você pode usar transformações no SkiaSharp sem saber mais sobre a matriz de transformação, mas a matriz de transformação é importante de uma perspectiva teórica e é crucial ao usar transformações para modificar caminhos ou para lidar com a entrada de toque complexa, ambas demonstradas neste artigo e a próxima.
 
-![](matrix-images/matrixtransformexample.png "A bitmap subjected to an affine transform")
+![Um bitmap sujeito a uma transformação afim](matrix-images/matrixtransformexample.png)
 
 A matriz de transformação atual aplicada ao `SKCanvas` está disponível a qualquer momento acessando a propriedade somente leitura [`TotalMatrix`](xref:SkiaSharp.SKCanvas.TotalMatrix) . Você pode definir uma nova matriz de transformação usando o [`SetMatrix`](xref:SkiaSharp.SKCanvas.SetMatrix(SkiaSharp.SKMatrix)) método e pode restaurar essa matriz de transformação para valores padrão chamando [`ResetMatrix`](xref:SkiaSharp.SKCanvas.ResetMatrix) .
 
@@ -407,7 +407,7 @@ public class PathTransformPage : ContentPage
 
 Ele aparece no canto superior esquerdo da tela:
 
-[![](matrix-images/pathtransform-small.png "Triple screenshot of the Path Transform page")](matrix-images/pathtransform-large.png#lightbox "Triple screenshot of the Path Transform page")
+[![Captura de tela tripla da página de transformação de caminho](matrix-images/pathtransform-small.png)](matrix-images/pathtransform-large.png#lightbox "Captura de tela tripla da página de transformação de caminho")
 
 O Construtor deste programa aplica a matriz ao caminho com a seguinte chamada:
 
@@ -593,7 +593,7 @@ public partial class ShowAffineMatrixPage : ContentPage
 
 A tela do iOS abaixo mostra o bitmap quando a página é carregada pela primeira vez, enquanto as duas outras telas mostram isso após alguma manipulação:
 
-[![](matrix-images/showaffinematrix-small.png "Triple screenshot of the Show Affine Matrix page")](matrix-images/showaffinematrix-large.png#lightbox "Triple screenshot of the Show Affine Matrix page")
+[![Captura de tela tripla da página mostrar matriz afim](matrix-images/showaffinematrix-small.png)](matrix-images/showaffinematrix-large.png#lightbox "Captura de tela tripla da página mostrar matriz afim")
 
 Embora pareça que os pontos de toque arrastam os cantos do bitmap, isso é apenas uma ilusão. A matriz calculada a partir de pontos de toque transforma o bitmap para que os cantos coincidam com os pontos de toque.
 
@@ -653,7 +653,7 @@ A `SKMatrix` estrutura em SkiaSharp define propriedades para essa terceira linha
 
 Valores diferentes de zero `Persp0` e `Persp1` resultam em transformações que movem objetos para fora do plano bidimensional em que Z é igual a 1. O que acontece quando esses objetos são movidos de volta para esse plano é abordado no artigo sobre [**transformações não-afim**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: davidortinau
 ms.author: daortin
-ms.openlocfilehash: fc6066155a4171b106e772c1fe6fe7ee3e5c67cf
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 023a85451ca83df6c15e8b3bbc3169f2884a0a46
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573502"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936559"
 ---
 # <a name="monotouchdialog-json-markup"></a>Markup Json MonoTouch.Dialog
 
@@ -77,7 +77,7 @@ Vamos começar com um exemplo. Este é um arquivo JSON completo que pode ser pas
 
 A marcação acima produz a seguinte interface do usuário:
 
- [![](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png "The UI created by the given markup")](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png#lightbox)
+ [![A interface do usuário criada pela marcação fornecida](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png)](monotouch.dialog-json-markup-images/screen-shot-2012-03-02-at-11.31.31-am.png#lightbox)
 
 Cada elemento na árvore pode conter a propriedade `"id"` . É possível que o tempo de execução referencie seções ou elementos individuais usando o indexador Jsonelement. Dessa forma:
 
@@ -126,7 +126,7 @@ Se presente, será o título usado para o RootElement
 
  <a name="type"></a>
 
-### <a name="type"></a>type
+### <a name="type"></a>tipo
 
 Deve ser definido como `"root"` quando isso aparece em uma seção (usada para aninhar controladores).
 
@@ -322,7 +322,7 @@ A cor a ser usada para o texto.
 
  <a name="value"></a>
 
-### <a name="value"></a>valor
+### <a name="value"></a>value
 
 O valor secundário a ser mostrado no elemento de renderização. O layout disso é afetado pela `"style"` configuração. A fonte e a cor podem ser personalizadas definindo o `"detailfont"` e o `"detailcolor"` .
 
@@ -330,7 +330,7 @@ O valor secundário a ser mostrado no elemento de renderização. O layout disso
 
 ## <a name="boolean-elements"></a>Elementos boolianos
 
-Elementos boolianos devem definir o tipo como `"bool"` , pode conter um `"caption"` para exibir e o `"value"` é definido como true ou false. Se as `"on"` `"off"` Propriedades e estiverem definidas, elas serão consideradas imagens. As imagens são resolvidas em relação ao diretório de trabalho atual no aplicativo. Se você quiser referenciar arquivos relativos a pacote, poderá usar o `"~"` como um atalho para representar o diretório do pacote de aplicativos. Por exemplo `"~/favorite.png"` , será o favorito. png contido no arquivo de pacote. Por exemplo:
+Elementos boolianos devem definir o tipo como `"bool"` , pode conter um `"caption"` para exibir e o `"value"` é definido como true ou false. Se as `"on"` `"off"` Propriedades e estiverem definidas, elas serão consideradas imagens. As imagens são resolvidas em relação ao diretório de trabalho atual no aplicativo. Se você quiser referenciar arquivos relativos a pacote, poderá usar o `"~"` como um atalho para representar o diretório do pacote de aplicativos. Por exemplo `"~/favorite.png"` , será o favorite.png contido no arquivo de pacote. Por exemplo:
 
 ```json
 { 
@@ -350,7 +350,7 @@ Elementos boolianos devem definir o tipo como `"bool"` , pode conter um `"captio
 
  <a name="type"></a>
 
-### <a name="type"></a>type
+### <a name="type"></a>tipo
 
 O tipo pode ser definido como `"boolean"` ou `"checkbox"` . Se definido como booliano, ele usará uma UISlider ou imagens (se ambas `"on"` e `"off"` estiverem definidas). Se for definido como CheckBox, ele usará uma caixa de seleção. A `"group"` propriedade pode ser usada para marcar um elemento booliano como pertencente a um grupo específico. Isso será útil se a raiz que a contém também tiver uma `"group"` propriedade, pois a raiz resumirá os resultados com uma contagem de todos os Boolianos (ou caixas de seleção) que pertencem ao mesmo grupo.
 
@@ -452,7 +452,7 @@ O rótulo usado para a chave de retorno. Os valores possíveis são:
 
  <a name="value"></a>
 
-### <a name="value"></a>valor
+### <a name="value"></a>value
 
 O valor inicial para a entrada
 

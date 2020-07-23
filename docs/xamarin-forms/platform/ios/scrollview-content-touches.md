@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9b8f743b2c3d7f4b38feb4cfc5015b1113620562
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1161600ad9b587c30ef28be1828fdb9e3b94f665
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137092"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938548"
 ---
 # <a name="scrollview-content-touches-on-ios"></a>O conteúdo do ScrollView se toca no iOS
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Um temporizador implícito é disparado quando um gesto de toque começa em um [`ScrollView`](xref:Xamarin.Forms.ScrollView) no Ios e o `ScrollView` decide, com base na ação do usuário dentro do alcance do temporizador, se ele deve lidar com o gesto ou passá-lo para seu conteúdo. Por padrão, o iOS `ScrollView` atrasa os toques de conteúdo, mas isso pode causar problemas em algumas circunstâncias com o `ScrollView` conteúdo que não ganha o gesto quando deveria. Portanto, essa plataforma específica controla se um `ScrollView` gesto de toque ou o passa para o seu conteúdo. Ele é consumido em XAML definindo a `ScrollView.ShouldDelayContentTouches` Propriedade anexada como um `boolean` valor:
 
@@ -60,7 +60,7 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 
 O resultado é que um [`ScrollView`](xref:Xamarin.Forms.ScrollView) pode desabilitar o atraso de recebimento de conteúdo, de modo que, nesse cenário, o [`Slider`](xref:Xamarin.Forms.Slider) recebe o gesto em vez da [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) página do [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) :
 
-[![](scrollview-content-touches-images/scrollview-delay-content-touches.png "ScrollView Delay Content Touches Platform-Specific")](scrollview-content-touches-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Platform-Specific")
+[![ScrollViews de conteúdo de atraso da plataforma](scrollview-content-touches-images/scrollview-delay-content-touches.png)](scrollview-content-touches-images/scrollview-delay-content-touches-large.png#lightbox "ScrollViews de conteúdo de atraso da plataforma")
 
 ## <a name="related-links"></a>Links relacionados
 

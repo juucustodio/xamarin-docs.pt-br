@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 0e6edaccb9e0c163ee46c59ed11769476037aa90
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: a462e3adf4109cc9a7a2e17e775609e2c3c81906
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573541"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938873"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Trabalhando com controladores de barra de guias tvOS no Xamarin
 
 Para muitos tipos de aplicativos tvOS, a navegação principal é apresentada como uma barra de guias em execução na parte superior da tela. O usuário passa o dedo para a esquerda e para a direita na lista de categorias possíveis e a área de conteúdo abaixo das alterações para refletir a seleção do usuário.
 
-[![](tab-bars-images/tab01.png "Sample Tab Bar")](tab-bars-images/tab01.png#lightbox)
+[![Barra de guias de exemplo](tab-bars-images/tab01.png)](tab-bars-images/tab01.png#lightbox)
 
 A barra de guias é translúcida por padrão e sempre aparece na parte superior da tela. Quando estiver em foco, uma barra de guias cobrirá os primeiros 140 pixels da tela, mas será rapidamente deslizar quando o foco mudar para a área de conteúdo abaixo.
 
@@ -62,51 +62,51 @@ A maneira mais fácil de trabalhar com barras de guias em um aplicativo Xamarin.
 
 1. Inicie um novo aplicativo Xamarin. tvOS e selecione **tvOS**  >  **App**  >  **aplicativo com guias**do aplicativo tvOS: 
 
-    [![](tab-bars-images/tab02.png "Select Tabbed App")](tab-bars-images/tab02.png#lightbox)
+    [![Selecionar aplicativo com guias](tab-bars-images/tab02.png)](tab-bars-images/tab02.png#lightbox)
 1. Siga todos os prompts para criar uma nova solução Xamarin. tvOS.
 1. No **painel de soluções**, clique duas vezes no `Main.storyboard` arquivo e abra-o para edição.
 1. Para alterar o **ícone** ou o **título** de uma determinada categoria, selecione o **item de barra de guias** para o controlador de **exibição** no **contorno do documento**:
 
-    [![](tab-bars-images/tab03a.png "The Tab Bar Item for the View Controller in the Document Outline")](tab-bars-images/tab03a.png#lightbox)
+    [![O item da barra de guias do controlador de exibição na estrutura de tópicos do documento](tab-bars-images/tab03a.png)](tab-bars-images/tab03a.png#lightbox)
 1. Em seguida, defina as propriedades necessárias na **Guia Widget** do **Gerenciador de propriedades**: 
 
-    [![](tab-bars-images/tab03.png "The Widget Tab")](tab-bars-images/tab03.png#lightbox)
+    [![A guia do widget](tab-bars-images/tab03.png)](tab-bars-images/tab03.png#lightbox)
 1. Para adicionar uma nova categoria (guia), descarte um **controlador de exibição** na superfície de design: 
 
-    [![](tab-bars-images/tab04.png "A View Controller")](tab-bars-images/tab04.png#lightbox)
+    [![Um controlador de exibição](tab-bars-images/tab04.png)](tab-bars-images/tab04.png#lightbox)
 1. Clique no botão de controle e arraste-o do **controlador de exibição de guia** para o novo controlador de **exibição**.
 1. No pop-up, selecione **Exibir controladores** para adicionar a nova exibição como uma guia (categoria): 
 
-    [![](tab-bars-images/tab05.png "Select Tab")](tab-bars-images/tab05.png#lightbox)
+    [![Selecionar guia](tab-bars-images/tab05.png)](tab-bars-images/tab05.png#lightbox)
 1. Projete o layout da interface do usuário para cada área de conteúdo do Caterogies como normal, adicionando elementos da interface do usuário no designer do iOS.
 1. Expor todos os eventos necessários para trabalhar com os controles de interface do usuário no código C#.
 1. Nomeie os controles de interface do usuário que você deseja expor no código C#.
-1. Salve suas alterações.
+1. Salve as alterações.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Inicie um novo aplicativo Xamarin. tvOS e selecione **tvOS**  >  **App**  >  **aplicativo com guias**do aplicativo tvOS: 
 
-    [![](tab-bars-images/tab02vs.png "Select Tabbed App")](tab-bars-images/tab02vs.png#lightbox)
+    [![Selecionar aplicativo com guias](tab-bars-images/tab02vs.png)](tab-bars-images/tab02vs.png#lightbox)
 1. Siga todos os prompts para criar uma nova solução Xamarin. tvOS.
 1. No **Gerenciador de soluções**, clique duas vezes no `Main.storyboard` arquivo e abra-o para edição.
 1. Para alterar o **ícone** ou o **título** de uma determinada categoria, selecione o **item de barra de guias** para o controlador de **exibição** no **contorno do documento**:
 
-    [![](tab-bars-images/tab03avs.png "The View Controller in the Document Outline")](tab-bars-images/tab03avs.png#lightbox)
+    [![O controlador de exibição na estrutura de tópicos do documento](tab-bars-images/tab03avs.png)](tab-bars-images/tab03avs.png#lightbox)
 1. Em seguida, defina as propriedades necessárias na **Guia Widget** do **Gerenciador de propriedades**: 
 
-    [![](tab-bars-images/tab03vs.png "The Widget Tab")](tab-bars-images/tab03vs.png#lightbox)
+    [![A guia do widget](tab-bars-images/tab03vs.png)](tab-bars-images/tab03vs.png#lightbox)
 1. Para adicionar uma nova categoria (guia), arraste um **controlador de exibição** da **caixa de ferramentas** e solte-o na superfície de design: 
 
-    [![](tab-bars-images/tab04vs.png "A View Controller")](tab-bars-images/tab04vs.png#lightbox)
+    [![Um controlador de exibição](tab-bars-images/tab04vs.png)](tab-bars-images/tab04vs.png#lightbox)
 1. Clique no botão de controle e arraste-o do **controlador de exibição de guia** para o novo controlador de **exibição**.
 1. No pop-up, selecione **Exibir controladores** para adicionar a nova exibição como uma guia (categoria): 
 
-    [![](tab-bars-images/tab05vs.png "Select Tab")](tab-bars-images/tab05vs.png#lightbox)
+    [![Selecionar guia](tab-bars-images/tab05vs.png)](tab-bars-images/tab05vs.png#lightbox)
 1. Projete o layout da interface do usuário para cada área de conteúdo do Caterogies como normal, adicionando elementos da interface do usuário no designer do iOS.
 1. Expor todos os eventos necessários para trabalhar com os controles de interface do usuário no código C#.
 1. Nomeie os controles de interface do usuário que você deseja expor no código C#.
-1. Salve suas alterações.
+1. Salve as alterações.
 
 -----
 
@@ -134,7 +134,7 @@ TabBar.Items [2].BadgeValue = "10";
 
 O que produziria os seguintes resultados quando executado:
 
-[![](tab-bars-images/tab06.png "A Tab Bar Item with badge")](tab-bars-images/tab06.png#lightbox)
+[![Um item da barra de guias com uma notificação](tab-bars-images/tab06.png)](tab-bars-images/tab06.png#lightbox)
 
 Use a `Title` Propriedade do `UITabBarItem` para alterar o título e a `Image` propriedade para alterar o ícone.
 
@@ -144,7 +144,7 @@ Use a `Title` Propriedade do `UITabBarItem` para alterar o título e a `Image` p
 
 Este artigo abordou a criação e o trabalho com o controlador da barra de guias dentro de um aplicativo Xamarin. tvOS.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)

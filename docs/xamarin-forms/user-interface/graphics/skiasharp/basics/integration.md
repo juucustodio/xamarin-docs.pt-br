@@ -10,22 +10,22 @@ ms.date: 02/09/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9e763184f38719cda4526eb0a2dfdf39b2191a03
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 60f53fb00786b183f36f7cfefa6af9062bb682db
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137690"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86938158"
 ---
 # <a name="integrating-with-xamarinforms"></a>Integração com oXamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Criar elementos gráficos do SkiaSharp que respondem ao toque e aos Xamarin.Forms elementos_
 
 Os gráficos do SkiaSharp podem se integrar com o restante de Xamarin.Forms várias maneiras. Você pode combinar uma tela de SkiaSharp e Xamarin.Forms elementos na mesma página e até mesmo posicionar Xamarin.Forms elementos sobre uma tela SkiaSharp:
 
-![](integration-images/integrationexample.png "Selecting a color with sliders")
+![Selecionando uma cor com controles deslizantes](integration-images/integrationexample.png)
 
 Outra abordagem para criar gráficos interativos do SkiaSharp no Xamarin.Forms é por toque.
 A segunda página do programa [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) tem o direito de **tocar em Alternar Preenchimento**. Ele desenha um círculo simples de duas maneiras &mdash; sem um preenchimento e com um preenchimento &mdash; alternado por um toque. A [`TapToggleFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) classe mostra como você pode alterar os elementos gráficos do SkiaSharp em resposta à entrada do usuário.
@@ -240,9 +240,9 @@ No modelo HSV, as cores puras resultam quando a saturação e o valor são 100. 
 
 Mas a melhor maneira de ter uma ideia para os dois modelos é experimentá-los por conta própria:
 
-[![](integration-images/colorexplore-large.png "Triple screenshot of the Color Explore page")](integration-images/colorexplore-small.png#lightbox "Triple screenshot of the Color Explore page")
+[![Captura de tela tripla da página de exploração de cores](integration-images/colorexplore-large.png)](integration-images/colorexplore-small.png#lightbox "Captura de tela tripla da página de exploração de cores")
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: 263c48c5006ba0060756e1050497c38dfb7c8eae
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 7769e3d02acc9f1522c6028f88f37c1f522866af
+ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84567769"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86936754"
 ---
 # <a name="linking-xamarinios-apps"></a>Vinculando aplicativos Xamarin.iOS
 
@@ -30,7 +30,7 @@ Já que o vinculador é uma ferramenta estática, ele não pode marcar para tipo
 
 O processo de vinculação pode ser personalizado por meio do menu suspenso de comportamento do vinculador em **Opções do Projeto**. Para acessá-lo, clique duas vezes no projeto iOS e navegue até **Build do iOS > Opções do Vinculador**, conforme ilustrado abaixo:
 
-[![](linker-images/image1.png "Linker Options")](linker-images/image1.png#lightbox)
+[![Opções do vinculador](linker-images/image1.png)](linker-images/image1.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -40,10 +40,10 @@ Faça o seguinte:
 
 1. Clique com o botão direito do mouse no **Nome do Projeto** no **Gerenciador de Soluções** e selecione **Propriedades**:
 
-    ![](linker-images/linking01w.png "Right-click on the Project Name in the Solution Explorer and select Properties")
+    ![Clique com o botão direito do mouse no nome do projeto na Gerenciador de Soluções e selecione Propriedades](linker-images/linking01w.png)
 2. Nas **Propriedades do Projeto**, selecione **Build do iOS**:
 
-    ![](linker-images/linking02w.png "Select IOS Build")
+    ![Selecionar Build do iOS](linker-images/linking02w.png)
 3. Siga as instruções abaixo para alterar as opções de vinculação.
 
 -----
@@ -165,7 +165,7 @@ class LinkerSafeAttribute : System.Attribute {}
 
 Siga as [instruções para criar um arquivo de configuração do vinculador](~/cross-platform/deploy-test/linker.md).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Configuração do vinculador personalizado](~/cross-platform/deploy-test/linker.md)
 - [Usando Linker no Mac](~/mac/deploy-test/linker.md)
