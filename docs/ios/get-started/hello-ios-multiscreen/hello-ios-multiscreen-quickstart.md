@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 1b279b125ce88a37ddb3209cfe689a7fef50a256
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b937cc653275f509b7f759af5c3d995e84381cb2
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938743"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997339"
 ---
 # <a name="hello-ios-multiscreen--quickstart"></a>Olá, iOS Multitela – Guia de Início Rápido
 
@@ -67,7 +67,7 @@ Em seguida, mova a cena **Phoneword** ao lado do **controlador de navegação**:
 
 8. Na tela do **Phoneword**, clique duas vezes na barra de **Título** e altere o **Título** para **Phoneword**:
 
-    ![](hello-ios-multiscreen-quickstart-images/09.png "Change the Title to 'Phoneword'")
+    ![Altere o título para Phoneword](hello-ios-multiscreen-quickstart-images/09.png)
 
 9. Arraste um **botão** da **Caixa de Ferramentas** e coloque-o sob o **Botão Chamar**. Arraste as alças para deixar o novo **Botão** com a mesma largura do **Botão Chamar**:
 
@@ -90,7 +90,7 @@ Em seguida, mova a cena **Phoneword** ao lado do **controlador de navegação**:
     ![O arquivo CallHistoryController.cs no Painel de Soluções](hello-ios-multiscreen-quickstart-images/14new.png)
 
 13. Clique duas vezes no arquivo **CallHistoryController.cs** para abri-lo e substitua os conteúdos pelo seguinte código:
-    
+
     ```csharp
     using System;
     using Foundation;
@@ -314,7 +314,7 @@ Este passo a passo adicionará uma tela de Histórico de Chamadas ao nosso aplic
 
 10. No **Gerenciador de Propriedades**, altere o **Nome** do **Botão** para `CallHistoryButton` e altere o **Título** para **Histórico de Chamadas**:
 
-    ![](hello-ios-multiscreen-quickstart-images/image9.png "Change the Name of the Button to 'CallHistoryButton' and the Title to 'Call History'")
+    ![Altere o nome do botão para CallHistoryButton e o título para chamar o histórico](hello-ios-multiscreen-quickstart-images/image9.png)
 
 11. Crie a tela **Histórico de Chamadas**. Na **caixa de ferramentas**, arraste um controlador de **exibição de tabela** para a superfície de design:
 

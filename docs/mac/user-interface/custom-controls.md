@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: b319abba7cf14fe4aade35d232b5182cb202e707
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8ed83ee8f0bded6258b695f7a6383cda1929f542
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937703"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997079"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Criando controles personalizados no Xamarin. Mac
 
@@ -342,7 +342,7 @@ Em seguida, arraste um `Custom View` para o design da interface do usuário:
 
 Com a exibição personalizada ainda selecionada, alterne para o **Inspetor de identidade** e altere a **classe** da exibição para `NSFlipSwitch` :
 
-[![](custom-controls-images/custom04.png "Setting the View's class")](custom-controls-images/custom04.png#lightbox)
+[![Definindo a classe da exibição](custom-controls-images/custom04.png)](custom-controls-images/custom04.png#lightbox)
 
 Alterne para o **Editor do assistente** e crie uma **tomada** para o controle personalizado (assegurando associá-lo ao `ViewController.h` arquivo e não ao `.m` arquivo):
 

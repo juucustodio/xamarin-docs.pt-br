@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: c9943842d71ffa19e0691e1f9c7dca0063749463
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 0358e1570a5e38e008894a7eb9b6ca1985a0fed0
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936897"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997248"
 ---
 # <a name="watchos-table-controls-in-xamarin"></a>Controles de tabela watchOS no Xamarin
 
 O `WKInterfaceTable` controle watchOS é muito mais simples do que sua contraparte do IOS, mas executa uma função semelhante. Ele cria uma lista de rolagem de linhas que pode ter layouts personalizados e que respondem a eventos de toque.
 
-![Lista ](table-images/table-list-sml.png) de tabelas de observação![](table-images/table-detail-sml.png)
+![](table-images/table-list-sml.png)Detalhes da tabela de inspeção da lista de tabelas de inspeção ![](table-images/table-detail-sml.png)
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 ## <a name="adding-a-table"></a>Adicionando uma tabela
@@ -142,7 +142,7 @@ for (var i = 0; i < rows.Count; i++) {
 
 o watchOS 3 introduziu um novo recurso para tabelas: a capacidade de percorrer as páginas de detalhes relacionadas a cada linha, sem precisar voltar para a tabela e escolher outra linha. As telas de detalhes podem ser roladas passando o dedo para cima e para baixo, ou usando o Digital Crown.
 
-![Exemplo ](table-images/table-scroll-sml.png) de paginação de detalhes vertical![](table-images/table-detail-sml.png)
+![Exemplo de paginação de detalhes vertical](table-images/table-scroll-sml.png) ![Detalhes de paginação vertical](table-images/table-detail-sml.png)
 
 > [!IMPORTANT]
 > Atualmente, esse recurso só está disponível com a edição do storyboard no Xcode Interface Builder.

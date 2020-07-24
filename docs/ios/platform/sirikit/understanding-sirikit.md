@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: bb6a88ad5197dfe0ec37160890760028d59ac47e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2ba5d6b99a32684fd53572e0db00b19a6841ed64
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937989"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996455"
 ---
 # <a name="understanding-sirikit-concepts"></a>Noções básicas sobre os conceitos de SiriKit
 
@@ -136,7 +136,7 @@ Siri sabe que mais é necessário enviar uma mensagem do que apenas um destinat�
 
 No exemplo acima, o usuário respondeu, *"envie mais bananas"*, que Siri será agrupado em uma **intenção**estruturada:
 
-[![](understanding-sirikit-images/monkeychat05.png "Siri will bundle the user's response into a structured Intent")](understanding-sirikit-images/monkeychat05.png#lightbox)
+[![Siri irá agrupar a resposta do usuário em uma intenção estruturada](understanding-sirikit-images/monkeychat05.png)](understanding-sirikit-images/monkeychat05.png#lightbox)
 
 A intenção estruturada conterá as seguintes informações:
 

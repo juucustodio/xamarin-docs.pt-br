@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 9a5ca5988bc5bf43af4837aa689c89a016829282
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 0af77464f849971050246a1676f89fe4702737e8
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939978"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997287"
 ---
 # <a name="contacts-and-contactsui-in-xamarinios"></a>Contatos e ContactsUI no Xamarin. iOS
 
@@ -110,7 +110,7 @@ else
 
 Se esse código for executado em um dispositivo iOS 9, um novo contato será adicionado à coleção do usuário. Por exemplo:
 
-[![](contacts-images/add01.png "A new contact added to the user's collection")](contacts-images/add01.png#lightbox)
+[![Um novo contato adicionado à coleção do usuário](contacts-images/add01.png)](contacts-images/add01.png#lightbox)
 
 ### <a name="contact-formatting-and-localization"></a>Formatação e localização de contatos
 

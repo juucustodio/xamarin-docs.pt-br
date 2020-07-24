@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 116ae63619aa90defb25db31b959e36b8b44edf2
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 791ab82e0e5f47929eff561ac836ec87e6d6c134
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934726"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997313"
 ---
 # <a name="callkit-in-xamarinios"></a>CallKit no Xamarin. iOS
 
@@ -635,7 +635,7 @@ Provider = new CXProvider (Configuration);
 Provider.SetDelegate (this, null);
 ```
 
-Ao usar CallKit, o aplicativo não criará mais e tratará suas próprias sessões de áudio, em vez disso, ele precisará configurar e usar uma sessão de áudio que o sistema criará e tratará para ela. 
+Ao usar CallKit, o aplicativo não criará mais e tratará suas próprias sessões de áudio, em vez disso, ele precisará configurar e usar uma sessão de áudio que o sistema criará e tratará para ela.
 
 Se esse fosse um aplicativo real, o `DidActivateAudioSession` método seria usado para iniciar a chamada com um pré-configurado `AVAudioSession` que o sistema forneceu:
 
@@ -697,7 +697,7 @@ namespace MonkeyCall
             // Found?
             if (handle == null) {
                 // No, report to system
-                Console.WriteLine ("Unable to get call handle from URL: {0}", url); 
+                Console.WriteLine ("Unable to get call handle from URL: {0}", url);
                 return false;
             } else {
                 // Yes, start call and inform system
@@ -820,7 +820,7 @@ Esse código procura pela chamada fornecida em sua lista de chamadas ativas. Se 
 
 Se o usuário quiser encerrar a chamada de dentro da interface do usuário do aplicativo, ocorrerá o seguinte:
 
-[![](callkit-images/callkit07.png "The user terminates the call from within the app's UI")](callkit-images/callkit07.png#lightbox)
+[![O usuário encerra a chamada de dentro da interface do usuário do aplicativo](callkit-images/callkit07.png)](callkit-images/callkit07.png#lightbox)
 
 1. O aplicativo cria `CXEndCallAction` um pacote em um `CXTransaction` que é enviado ao sistema para informá-lo de que a chamada está terminando.
 2. O sistema verifica a intenção de chamada final e envia o de `CXEndCallAction` volta para o aplicativo por meio do `CXProvider` .
@@ -872,12 +872,12 @@ Se o usuário tocar em uma entrada da lista recentes (no aplicativo de telefone)
 
 [![Recebendo uma tentativa de chamada inicial](callkit-images/callkit08.png)](callkit-images/callkit08.png#lightbox)
 
-1. O aplicativo criará uma _ação iniciar chamada_ com base na intenção iniciar chamada recebida do sistema. 
+1. O aplicativo criará uma _ação iniciar chamada_ com base na intenção iniciar chamada recebida do sistema.
 2. O aplicativo usará o `CXCallController` para solicitar a ação iniciar chamada do sistema.
 3. Se o sistema aceitar a ação, ele será retornado para o aplicativo por meio do `XCProvider` delegado.
 4. O aplicativo inicia a chamada de saída com sua rede de comunicação.
 
-Para obter mais informações sobre tentativas, consulte nossa documentação [de extensões de interface do usuário de tentativas e](~/ios/platform/sirikit/understanding-sirikit.md) intenções. 
+Para obter mais informações sobre tentativas, consulte nossa documentação [de extensões de interface do usuário de tentativas e](~/ios/platform/sirikit/understanding-sirikit.md) intenções.
 
 ### <a name="the-outgoing-call-lifecycle"></a>O ciclo de vida da chamada de saída
 
@@ -1025,7 +1025,7 @@ public void EndCall (ActiveCall call)
 }
 ```
 
-Se o criar um `CXEndCallAction` com o UUID da chamada para End, o agrupará em um `CXTransaction` que é enviado ao sistema usando o `RequestTransaction` método da `CXCallController` classe. 
+Se o criar um `CXEndCallAction` com o UUID da chamada para End, o agrupará em um `CXTransaction` que é enviado ao sistema usando o `RequestTransaction` método da `CXCallController` classe.
 
 ## <a name="additional-callkit-details"></a>Detalhes adicionais do CallKit
 
@@ -1044,11 +1044,11 @@ Um aplicativo pode fazer os seguintes tipos de personalizações:
 
 - Exibir um nome localizado.
 - Habilite o suporte à chamada de vídeo.
-- Personalize os botões na interface do usuário em chamada apresentando seu próprio ícone de imagem de modelo. A interação do usuário com botões personalizados é enviada diretamente para o aplicativo a ser processado. 
+- Personalize os botões na interface do usuário em chamada apresentando seu próprio ícone de imagem de modelo. A interação do usuário com botões personalizados é enviada diretamente para o aplicativo a ser processado.
 
 ### <a name="action-errors"></a>Erros de ação
 
-os aplicativos VOIP 10 do iOS usando CallKit precisam manipular ações que falham normalmente e manter o usuário informado do estado de ação em todos os momentos. 
+os aplicativos VOIP 10 do iOS usando CallKit precisam manipular ações que falham normalmente e manter o usuário informado do estado de ação em todos os momentos.
 
 Considere o seguinte exemplo:
 
@@ -1082,7 +1082,7 @@ public class ProviderDelegate : CXProviderDelegate
         // Create update to describe the incoming call and caller
         var update = new CXCallUpdate ();
         update.RemoteHandle = new CXHandle (CXHandleType.Generic, handle);
-    
+
         // Report incoming call to system
         Provider.ReportNewIncomingCall (uuid, update, (error) => {
             // Was the call accepted
@@ -1134,21 +1134,21 @@ Para implementar uma extensão de diretório de chamada em um aplicativo Xamarin
 
 1. Abra a solução do aplicativo no Visual Studio para Mac.
 2. Clique com o botão direito do mouse no nome da solução na **Gerenciador de soluções** e selecione **Adicionar**  >  **Adicionar novo projeto**.
-3. Selecione **iOS**  >  **extensões**  >  **do IOS extensões de diretório** e clique no botão **Avançar** : 
+3. Selecione **iOS**  >  **extensões**  >  **do IOS extensões de diretório** e clique no botão **Avançar** :
 
     [![Criando uma nova extensão de diretório de chamada](callkit-images/calldir01.png)](callkit-images/calldir01.png#lightbox)
-4. Insira um **nome** para a extensão e clique no botão **Avançar** : 
+4. Insira um **nome** para a extensão e clique no botão **Avançar** :
 
     [![Inserindo um nome para a extensão](callkit-images/calldir02.png)](callkit-images/calldir02.png#lightbox)
-5. Ajuste o **nome do projeto** e/ou o **nome da solução** , se necessário, e clique no botão **criar** : 
+5. Ajuste o **nome do projeto** e/ou o **nome da solução** , se necessário, e clique no botão **criar** :
 
-    [![Criação do projeto](callkit-images/calldir03.png)](callkit-images/calldir03.png#lightbox) 
+    [![Criação do projeto](callkit-images/calldir03.png)](callkit-images/calldir03.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 1. Abra a solução do aplicativo no Visual Studio.
 2. Clique com o botão direito do mouse no nome da solução na **Gerenciador de soluções** e selecione **Adicionar**  >  **Adicionar novo projeto**.
-3. Selecione **iOS**  >  **extensões**  >  **do IOS extensões de diretório** e clique no botão **Avançar** : 
+3. Selecione **iOS**  >  **extensões**  >  **do IOS extensões de diretório** e clique no botão **Avançar** :
 
     [![Criando uma nova extensão de diretório de chamada](callkit-images/calldir01w.png)](callkit-images/calldir01.png#lightbox)
 4. Insira um **nome** para a extensão e clique no botão **OK**

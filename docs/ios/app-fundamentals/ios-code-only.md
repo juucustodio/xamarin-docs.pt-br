@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018
-ms.openlocfilehash: 42d90175b6ddc005aa34b9fb7ae558741e4a4642
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: edd49cc891a86d3323bab319ab811e85f9148640
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930631"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997092"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Criando interfaces de usuário do iOS no código no Xamarin. iOS
 
@@ -162,7 +162,7 @@ public class AppDelegate : UIApplicationDelegate
 
 Cada controlador tem uma exibição associada, que é acessível a partir da `View` propriedade. O código acima altera a propriedade da exibição `BackgroundColor` para para `UIColor.LightGray` que ela fique visível, conforme mostrado abaixo:
 
- [![](ios-code-only-images/image1.png "The View's background is a visible light gray")](ios-code-only-images/image1.png#lightbox)
+ [![O plano de fundo da exibição é um cinza claro visível](ios-code-only-images/image1.png)](ios-code-only-images/image1.png#lightbox)
 
 Poderíamos definir qualquer `UIViewController` subclasse como a `RootViewController` dessa maneira também, incluindo controladores de UIKit, bem como aqueles que nos escrevemos. Por exemplo, o código a seguir adiciona um `UINavigationController` como `RootViewController` :
 
@@ -304,7 +304,7 @@ Por exemplo, vamos editar o `CustomViewController` para criar uma tela de logon 
 
 ### <a name="adding-the-text-fields"></a>Adicionando os campos de texto
 
-Primeiro, remova o botão e manipulador de eventos que foi adicionado na seção [inicializando a exibição](#initializing-the-view) . 
+Primeiro, remova o botão e manipulador de eventos que foi adicionado na seção [inicializando a exibição](#initializing-the-view) .
 
 Adicione um controle para o nome de usuário criando e inicializando um `UITextField` e, em seguida, adicionando-o à hierarquia de exibição, conforme mostrado abaixo:
 

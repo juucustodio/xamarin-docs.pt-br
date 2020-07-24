@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/24/2018
-ms.openlocfilehash: 1b8c18dfcc1a0eef1fd4837d34c4c0b080881edc
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f9de09065d7c26c9ae98ef664be63599becb4da5
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938132"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997443"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Exibindo uma imagem no Xamarin. iOS
 
@@ -42,11 +42,11 @@ Para criar um novo conjunto de imagens e adicionar imagens a ele, faça o seguin
 
     ![O editor de conjunto de imagens](displaying-an-image-images/imageset03.png)
 4. A partir daqui, arraste as imagens para cada um dos diferentes dispositivos e resoluções necessários.
-5. Clique duas vezes no **nome** do novo conjunto de imagens na **lista ativos** para editá-lo:![](displaying-an-image-images/imageset04.png "Editando o nome do novo conjunto de imagens")
+5. Clique duas vezes no **nome** do novo conjunto de imagens na **lista ativos** para editá-lo: ![ editando o nome do novo conjunto de imagens](displaying-an-image-images/imageset04.png)
 
 Ao usar um **conjunto de imagens** no designer do IOS, basta selecionar o nome do conjunto na lista suspensa no editor de propriedades:
 
-![](displaying-an-image-images/imageset06.png "Select an image set's name from the dropdown list")
+![Selecione o nome de um conjunto de imagens na lista suspensa](displaying-an-image-images/imageset06.png)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 

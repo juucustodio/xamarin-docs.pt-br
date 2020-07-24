@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: be78e76e2a52fb6e924fd67e3f0de9e0890ee25b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b81e7b980c37f238fe9c2a299aa360cc01294ebe
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933426"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997183"
 ---
 # <a name="introduction-to-ios-6"></a>Introdução ao iOS 6
 
@@ -25,7 +25,7 @@ Este documento lista alguns dos novos recursos mais interessantes que estão dis
 
 ## <a name="introduction-to-collection-views"></a>[Introdução às exibições de coleção](~/ios/user-interface/controls/uicollectionview.md)
 
-Exibições de coleção permitem que o conteúdo seja exibido usando layouts arbitrários. Eles permitem criar facilmente layouts de grade prontos para uso, além de dar suporte a layouts personalizados. Para obter mais informações, consulte a [introdução ao guia de exibições de coleção](~/ios/user-interface/controls/uicollectionview.md) [](~/ios/user-interface/controls/uicollectionview.md) .
+Exibições de coleção permitem que o conteúdo seja exibido usando layouts arbitrários. Eles permitem criar facilmente layouts de grade prontos para uso, além de dar suporte a layouts personalizados. Para obter mais informações, consulte a [introdução ao guia de exibições de coleção](~/ios/user-interface/controls/uicollectionview.md) .
 
 ## <a name="introduction-to-passkit"></a>[Introdução ao PassKit](~/ios/platform/passkit.md)
 

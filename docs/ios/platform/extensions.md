@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 05/12/2020
-ms.openlocfilehash: d5a51b70237c4e8a6f6a5e48ae684031697a0897
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 540fd0180899f8eb7c1b171148be81c5d541613b
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939835"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997495"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>extensões do iOS no Xamarin. iOS
 
@@ -23,7 +23,7 @@ ms.locfileid: "86939835"
 
 As extensões, como introduzidas no iOS 8, são especializadas `UIViewControllers` que são apresentadas por Ios dentro de contextos padrão, como no **centro de notificações**, como tipos de teclado personalizados solicitados pelo usuário para executar entradas especializadas ou outros contextos como editar uma foto onde a extensão pode fornecer filtros de efeito especiais.
 
-Todas as extensões são instaladas em conjunto com um aplicativo de contêiner (com os dois elementos escritos usando as APIs unificadas de 64 bits) e são ativadas de um ponto de extensão específico em um aplicativo host. E, como eles serão usados como suplementos para funções de sistema existentes, eles devem ser de alto desempenho, de Lean e robustos. 
+Todas as extensões são instaladas em conjunto com um aplicativo de contêiner (com os dois elementos escritos usando as APIs unificadas de 64 bits) e são ativadas de um ponto de extensão específico em um aplicativo host. E, como eles serão usados como suplementos para funções de sistema existentes, eles devem ser de alto desempenho, de Lean e robustos.
 
 ## <a name="extension-points"></a>Pontos de extensão
 
@@ -40,7 +40,7 @@ Pontos de extensão adicionais foram adicionados no [Ios 10](~/ios/platform/intr
 
 ## <a name="limitations"></a>Limitações
 
-As extensões têm várias limitações, algumas das quais são universais para todos os tipos (por exemplo, nenhum tipo de extensão pode acessar câmeras ou microfones), enquanto outros tipos de extensão podem ter limitações específicas sobre seu uso (por exemplo, teclados personalizados não podem ser usados para proteger campos de entrada de dados, como para senhas). 
+As extensões têm várias limitações, algumas das quais são universais para todos os tipos (por exemplo, nenhum tipo de extensão pode acessar câmeras ou microfones), enquanto outros tipos de extensão podem ter limitações específicas sobre seu uso (por exemplo, teclados personalizados não podem ser usados para proteger campos de entrada de dados, como para senhas).
 
 As limitações universais são:
 
@@ -57,7 +57,7 @@ Para limitações individuais, consulte o guia de [programação de extensões d
 
 ## <a name="distributing-installing-and-running-extensions"></a>Distribuindo, instalando e executando extensões
 
-As extensões são distribuídas de dentro de um aplicativo de contêiner, que, por sua vez, é enviado e distribuído por meio da loja de aplicativos. As extensões distribuídas com o aplicativo são instaladas nesse ponto, mas o usuário deve habilitar cada extensão explicitamente. Os diferentes tipos de extensões são habilitados de maneiras diferentes; vários exigem que o usuário navegue até o aplicativo **configurações** e habilite-os a partir daí. Enquanto outros estão habilitados no ponto de uso, como habilitar uma extensão de compartilhamento ao enviar uma foto. 
+As extensões são distribuídas de dentro de um aplicativo de contêiner, que, por sua vez, é enviado e distribuído por meio da loja de aplicativos. As extensões distribuídas com o aplicativo são instaladas nesse ponto, mas o usuário deve habilitar cada extensão explicitamente. Os diferentes tipos de extensões são habilitados de maneiras diferentes; vários exigem que o usuário navegue até o aplicativo **configurações** e habilite-os a partir daí. Enquanto outros estão habilitados no ponto de uso, como habilitar uma extensão de compartilhamento ao enviar uma foto.
 
 O aplicativo no qual a extensão é usada (onde o usuário encontra o ponto de extensão) é conhecido como o **aplicativo host**, pois é o aplicativo que hospeda a extensão quando ela é executada. O aplicativo que instala a extensão é o **aplicativo de contêiner**, porque ele é o aplicativo que continha a extensão quando ela foi instalada.  
 
@@ -65,7 +65,7 @@ Normalmente, o aplicativo de contêiner descreve a extensão e orienta o usuári
 
 ## <a name="debug-and-release-versions-of-extensions"></a>Depurar e liberar versões de extensões
 
-Os limites de memória para executar extensões de aplicativo são significativamente menores do que os limites de memória aplicados a um aplicativo em primeiro plano. Os simuladores que executam o iOS têm menos restrições aplicadas às extensões e você pode executar a extensão sem problemas. No entanto, a execução da mesma extensão em um dispositivo pode levar a resultados inesperados, incluindo a falha da extensão ou que está sendo encerrada agressivamente pelo sistema. Portanto, certifique-se de criar e testar a extensão em um dispositivo antes de entregá-la. 
+Os limites de memória para executar extensões de aplicativo são significativamente menores do que os limites de memória aplicados a um aplicativo em primeiro plano. Os simuladores que executam o iOS têm menos restrições aplicadas às extensões e você pode executar a extensão sem problemas. No entanto, a execução da mesma extensão em um dispositivo pode levar a resultados inesperados, incluindo a falha da extensão ou que está sendo encerrada agressivamente pelo sistema. Portanto, certifique-se de criar e testar a extensão em um dispositivo antes de entregá-la.
 
 Você deve garantir que as seguintes configurações sejam aplicadas ao projeto de contêiner e a todas as extensões referenciadas:
 
@@ -75,7 +75,7 @@ Você deve garantir que as seguintes configurações sejam aplicadas ao projeto 
 
 ## <a name="extension-lifecycle"></a>Ciclo de vida da extensão
 
-Uma extensão pode ser tão simples quanto uma única [UIViewController](xref:UIKit.UIViewController) ou extensões mais complexas que apresentam várias telas de interface do usuário. Quando o usuário encontra um _ponto de extensão_ (como ao compartilhar uma imagem), ele terá a oportunidade de escolher entre as extensões registradas para esse ponto de extensão. 
+Uma extensão pode ser tão simples quanto uma única [UIViewController](xref:UIKit.UIViewController) ou extensões mais complexas que apresentam várias telas de interface do usuário. Quando o usuário encontra um _ponto de extensão_ (como ao compartilhar uma imagem), ele terá a oportunidade de escolher entre as extensões registradas para esse ponto de extensão.
 
 Se eles escolherem uma das extensões do seu aplicativo, ele `UIViewController` será instanciado e iniciará o ciclo de vida do controlador de exibição normal. No entanto, ao contrário de um aplicativo normal, que são suspensos, mas que não são geralmente encerrados quando o usuário termina de interagir com eles, as extensões são carregadas, executadas e encerradas repetidamente.
 
@@ -92,29 +92,29 @@ As extensões (e seus aplicativos de contêiner) devem ser binários de 64 bits 
 O aplicativo de contêiner usado para instalar a extensão tem os seguintes requisitos:
 
 - Ele deve manter uma referência ao projeto de extensão.   
-- Ele deve ser um aplicativo completo (deve ser capaz de iniciar e executar com êxito) mesmo que ele não faça nada além de fornecer uma maneira de instalar uma extensão. 
+- Ele deve ser um aplicativo completo (deve ser capaz de iniciar e executar com êxito) mesmo que ele não faça nada além de fornecer uma maneira de instalar uma extensão.
 - Ele deve ter um identificador de pacote que seja a base para o identificador de pacote do projeto de extensão (consulte a seção abaixo para obter mais detalhes).
 
 ### <a name="extension-project-requirements"></a>Requisitos do projeto de extensão
 
 Além disso, o projeto da extensão tem os seguintes requisitos:
 
-- Ele deve ter um identificador de pacote que começa com o identificador de pacote do seu aplicativo de contêiner. Por exemplo, se o aplicativo de contêiner tiver um identificador de pacote de `com.myCompany.ContainerApp` , o identificador da extensão poderá ser `com.myCompany.ContainerApp.MyExtension` : 
+- Ele deve ter um identificador de pacote que começa com o identificador de pacote do seu aplicativo de contêiner. Por exemplo, se o aplicativo de contêiner tiver um identificador de pacote de `com.myCompany.ContainerApp` , o identificador da extensão poderá ser `com.myCompany.ContainerApp.MyExtension` :
 
-  ![](extensions-images/bundleidentifiers.png) 
+  ![Identificadores de pacote](extensions-images/bundleidentifiers.png)
 - Ele deve definir a chave `NSExtensionPointIdentifier` , com um valor apropriado (por exemplo, `com.apple.widget-extension` para um widget da central de notificações **atual** ), em seu `Info.plist` arquivo.
 - Ele também *deve definir a* `NSExtensionMainStoryboard` chave ou a `NSExtensionPrincipalClass` chave em seu `Info.plist` arquivo com um valor apropriado:
   - Use a `NSExtensionMainStoryboard` chave para especificar o nome do Storyboard que apresenta a interface do usuário principal para a extensão (menos `.storyboard` ). Por exemplo, `Main` para o `Main.storyboard` arquivo.
-  - Use a `NSExtensionPrincipalClass` chave para especificar a classe que será inicializada quando a extensão for iniciada. O valor deve corresponder ao valor de **registro** de seu `UIViewController` : 
+  - Use a `NSExtensionPrincipalClass` chave para especificar a classe que será inicializada quando a extensão for iniciada. O valor deve corresponder ao valor de **registro** de seu `UIViewController` :
 
-  ![](extensions-images/registerandprincipalclass.png)
+  ![Registro da classe principal](extensions-images/registerandprincipalclass.png)
 
 Tipos específicos de extensões podem ter requisitos adicionais. Por exemplo, uma classe principal da extensão do **centro de notificação** ou de **hoje** deve implementar [INCWidgetProviding](xref:NotificationCenter.INCWidgetProviding).
 
 > [!IMPORTANT]
 > Se você iniciar seu projeto usando um dos modelos de extensões fornecidos pelo Visual Studio para Mac, a maioria (se não todos) esses requisitos serão fornecidos e atendidos automaticamente pelo modelo.
 
-## <a name="walkthrough"></a>Passo a passo 
+## <a name="walkthrough"></a>Passo a passo
 
 Nas instruções a seguir, você criará um widget de exemplo **hoje** que calcula o dia e o número de dias restantes no ano:
 
@@ -124,22 +124,22 @@ Nas instruções a seguir, você criará um widget de exemplo **hoje** que calcu
 
 Para criar a solução necessária, faça o seguinte:
 
-1. Primeiro, crie um novo projeto de aplicativo iOS, de **exibição única** e clique no botão **Avançar** : 
+1. Primeiro, crie um novo projeto de aplicativo iOS, de **exibição única** e clique no botão **Avançar** :
 
     [![Primeiro, crie um novo projeto de aplicativo iOS, de exibição única e clique no botão Avançar](extensions-images/today01.png)](extensions-images/today01.png#lightbox)
-2. Chame o projeto `TodayContainer` e clique no botão **Avançar** : 
+2. Chame o projeto `TodayContainer` e clique no botão **Avançar** :
 
     [![Chame o projeto TodayContainer e clique no botão Avançar](extensions-images/today02.png)](extensions-images/today02.png#lightbox)
-3. Verifique o **nome do projeto** e **SolutionName** e clique no botão **criar** para criar a solução: 
+3. Verifique o **nome do projeto** e **SolutionName** e clique no botão **criar** para criar a solução:
 
     [![Verifique o nome do projeto e SolutionName e clique no botão criar para criar a solução](extensions-images/today03.png)](extensions-images/today03.png#lightbox)
-4. Em seguida, na **Gerenciador de soluções**, clique com o botão direito do mouse na solução e adicione um novo projeto de **extensão do IOS** do modelo de **extensão atual** : 
+4. Em seguida, na **Gerenciador de soluções**, clique com o botão direito do mouse na solução e adicione um novo projeto de **extensão do IOS** do modelo de **extensão atual** :
 
     [![Em seguida, na Gerenciador de Soluções, clique com o botão direito do mouse na solução e adicione um novo projeto de extensão do iOS do modelo de extensão atual](extensions-images/today04.png)](extensions-images/today04.png#lightbox)
-5. Chame o projeto `DaysRemaining` e clique no botão **Avançar** : 
+5. Chame o projeto `DaysRemaining` e clique no botão **Avançar** :
 
     [![Chame o projeto DaysRemaining e clique no botão Avançar](extensions-images/today05.png)](extensions-images/today05.png#lightbox)
-6. Examine o projeto e clique no botão **criar** para criá-lo: 
+6. Examine o projeto e clique no botão **criar** para criá-lo:
 
     [![Examine o projeto e clique no botão criar para criá-lo](extensions-images/today06.png)](extensions-images/today06.png#lightbox)
 
@@ -155,28 +155,28 @@ Em seguida, você precisará criar a interface para o widget **atual** . Isso po
 
 Para criar a interface do usuário com um storyboard, faça o seguinte:
 
-1. No **Gerenciador de soluções**, clique duas vezes no arquivo do projeto de extensão `Main.storyboard` para abri-lo para edição: 
+1. No **Gerenciador de soluções**, clique duas vezes no arquivo do projeto de extensão `Main.storyboard` para abri-lo para edição:
 
     [![Clique duas vezes no arquivo de extensão projetos Main. Storyboard para abri-lo para edição](extensions-images/today08.png)](extensions-images/today08.png#lightbox)
-2. Selecione o rótulo que foi adicionado automaticamente à interface do usuário por modelo e dê a ele o **nome** `TodayMessage` na guia **widget** do **Gerenciador de propriedades**: 
+2. Selecione o rótulo que foi adicionado automaticamente à interface do usuário por modelo e dê a ele o **nome** `TodayMessage` na guia **widget** do **Gerenciador de propriedades**:
 
     [![Selecione o rótulo que foi adicionado automaticamente à interface do usuário por modelo e dê a ele o nome TodayMessage na guia widget do Gerenciador de propriedades](extensions-images/today09.png)](extensions-images/today09.png#lightbox)
 3. Salve as alterações no storyboard.
 
 #### <a name="using-code"></a>Usando código
 
-Para criar a interface do usuário no código, faça o seguinte: 
+Para criar a interface do usuário no código, faça o seguinte:
 
-1. No **Gerenciador de soluções**, selecione o projeto **DaysRemaining** , adicione uma nova classe e chame-o `CodeBasedViewController` : 
+1. No **Gerenciador de soluções**, selecione o projeto **DaysRemaining** , adicione uma nova classe e chame-o `CodeBasedViewController` :
 
     [![Aelect o projeto DaysRemaining, adicione uma nova classe e chame-a de CodeBasedViewController](extensions-images/code01.png)](extensions-images/code01.png#lightbox)
-2. Novamente, no **Gerenciador de soluções**, clique duas vezes no arquivo da extensão `Info.plist` para abri-lo para edição: 
+2. Novamente, no **Gerenciador de soluções**, clique duas vezes no arquivo da extensão `Info.plist` para abri-lo para edição:
 
     [![Clique duas vezes em extensões do arquivo info. plist para abri-lo para edição](extensions-images/code02.png)](extensions-images/code02.png#lightbox)
-3. Selecione o **modo de exibição de origem** (na parte inferior da tela) e abra o `NSExtension` nó: 
+3. Selecione o **modo de exibição de origem** (na parte inferior da tela) e abra o `NSExtension` nó:
 
     [![Selecione o modo de exibição de origem na parte inferior da tela e abra o nó NSExtension](extensions-images/code03.png)](extensions-images/code03.png#lightbox)
-4. Remova a `NSExtensionMainStoryboard` chave e adicione uma `NSExtensionPrincipalClass` com o valor `CodeBasedViewController` : 
+4. Remova a `NSExtensionMainStoryboard` chave e adicione uma `NSExtensionPrincipalClass` com o valor `CodeBasedViewController` :
 
     [![Remova a chave NSExtensionMainStoryboard e adicione um NSExtensionPrincipalClass com o valor CodeBasedViewController](extensions-images/code04.png)](extensions-images/code04.png#lightbox)
 5. Salve as alterações.
@@ -274,7 +274,7 @@ O novo widget será adicionado à exibição **atual** e os resultados serão ex
 
 ## <a name="communicating-with-the-host-app"></a>Comunicando-se com o aplicativo host
 
-A extensão de exemplo hoje que você criou acima não se comunica com seu aplicativo host (a tela **hoje** ). Se tiver feito isso, ele usaria a propriedade [ExtensionContext](xref:Foundation.NSExtensionContext) das `TodayViewController` classes ou `CodeBasedViewController` . 
+A extensão de exemplo hoje que você criou acima não se comunica com seu aplicativo host (a tela **hoje** ). Se tiver feito isso, ele usaria a propriedade [ExtensionContext](xref:Foundation.NSExtensionContext) das `TodayViewController` classes ou `CodeBasedViewController` .
 
 Para extensões que receberão dados de seus aplicativos host, os dados estarão na forma de uma matriz de objetos [NSExtensionItem](xref:Foundation.NSExtensionItem) armazenados na propriedade [InputItems](xref:Foundation.NSExtensionContext.InputItems) do [ExtensionContext](xref:Foundation.NSExtensionContext) da extensão `UIViewController` .
 
@@ -344,7 +344,7 @@ A `MobileCoreServices.UTType` classe estática define as seguintes propriedades 
 - `kUTTypeFont` - `Font`
 - `kUTTypeFramework` - `Framework`
 - `kUTTypeGIF` - `GIF`
-- `kUTTypeGNUZipArchive` - `GNUZipArchive` 
+- `kUTTypeGNUZipArchive` - `GNUZipArchive`
 - `kUTTypeHTML` - `HTML`
 - `kUTTypeICO` - `ICO`
 - `kUTTypeIconFileKey` - `IconFileKey`
@@ -363,7 +363,7 @@ A `MobileCoreServices.UTType` classe estática define as seguintes propriedades 
 - `kUTTypeJSON` - `JSON`
 - `kUTType3dObject` - `k3dObject`
 - `kUTTypeLivePhoto` - `LivePhoto`
-- `kUTTypeLog` - `Log` 
+- `kUTTypeLog` - `Log`
 - `kUTTypeM3UPlaylist` - `M3UPlaylist`
 - `kUTTypeMessage` - `Message`
 - `kUTTypeMIDIAudio` - `MIDIAudio`
@@ -395,7 +395,7 @@ A `MobileCoreServices.UTType` classe estática define as seguintes propriedades 
 - `kUTTypePythonScript` - `PythonScript`
 - `kUTTypeQuickLookGenerator` - `QuickLookGenerator`
 - `kUTTypeQuickTimeImage` - `QuickTimeImage`
-- `kUTTypeQuickTimeMovie` - `QuickTimeMovie` 
+- `kUTTypeQuickTimeMovie` - `QuickTimeMovie`
 - `kUTTypeRawImage` - `RawImage`
 - `kUTTypeReferenceURLKey` - `ReferenceURLKey`
 - `kUTTypeResolvable` - `Resolvable`
@@ -423,16 +423,16 @@ A `MobileCoreServices.UTType` classe estática define as seguintes propriedades 
 - `kUTTypeTXNTextAndMultimediaData` - `TXNTextAndMultimediaData`
 - `kUTTypeUniversalSceneDescription` - `UniversalSceneDescription`
 - `kUTTypeUnixExecutable` - `UnixExecutable`
-- `kUTTypeURL` - `URL` 
+- `kUTTypeURL` - `URL`
 - `kUTTypeURLBookmarkData` - `URLBookmarkData`
 - `kUTTypeUTF16ExternalPlainText` - `UTF16ExternalPlainText`
 - `kUTTypeUTF16PlainText` - `UTF16PlainText`
 - `kUTTypeUTF8PlainText` - `UTF8PlainText`
 - `kUTTypeUTF8TabSeparatedText` - `UTF8TabSeparatedText`
 - `kUTTypeVCard` - `VCard`
-- `kUTTypeVersionKey` - `VersionKey` 
-- `kUTTypeVideo` - `Video` 
-- `kUTTypeVolume` - `Volume` 
+- `kUTTypeVersionKey` - `VersionKey`
+- `kUTTypeVideo` - `Video`
+- `kUTTypeVolume` - `Volume`
 - `kUTTypeWaveformAudio` - `WaveformAudio`
 - `kUTTypeWebArchive` - `WebArchive`
 - `kUTTypeWindowsExecutable` - `WindowsExecutable`
@@ -464,11 +464,11 @@ Para obter mais informações, consulte a seção [grupos de aplicativos](~/ios/
 
 As extensões têm significativamente menos memória disponível para eles do que os aplicativos. Eles devem ser executados rapidamente e com intrusão mínima para o usuário e o aplicativo no qual estão hospedados. No entanto, uma extensão também deve fornecer uma função distinta e útil para o aplicativo de consumo com uma interface do usuário com marca que permite ao usuário identificar o aplicativo de contêiner ou desenvolvedor da extensão ao qual eles pertencem.
 
-Devido a esses requisitos rigorosos, você só deve implantar extensões que foram totalmente testadas e otimizadas para o consumo de desempenho e de memória. 
+Devido a esses requisitos rigorosos, você só deve implantar extensões que foram totalmente testadas e otimizadas para o consumo de desempenho e de memória.
 
 ## <a name="summary"></a>Resumo
 
-Este documento abordou as extensões, o que são, o tipo de pontos de extensão e as limitações conhecidas impostas em uma extensão pelo iOS. Ele abordou a criação, a distribuição, a instalação e a execução de extensões e o ciclo de vida da extensão. Ele forneceu um passo a passos para criar um widget de **hoje** simples, mostrando duas maneiras de criar a interface do usuário do widget usando storyboards ou código. Ele mostrou como testar uma extensão no simulador de iOS. Por fim, discutiu brevemente a comunicação com o aplicativo host e algumas precauções e considerações que devem ser tomadas durante o desenvolvimento de uma extensão. 
+Este documento abordou as extensões, o que são, o tipo de pontos de extensão e as limitações conhecidas impostas em uma extensão pelo iOS. Ele abordou a criação, a distribuição, a instalação e a execução de extensões e o ciclo de vida da extensão. Ele forneceu um passo a passos para criar um widget de **hoje** simples, mostrando duas maneiras de criar a interface do usuário do widget usando storyboards ou código. Ele mostrou como testar uma extensão no simulador de iOS. Por fim, discutiu brevemente a comunicação com o aplicativo host e algumas precauções e considerações que devem ser tomadas durante o desenvolvimento de uma extensão.
 
 ## <a name="related-links"></a>Links relacionados
 

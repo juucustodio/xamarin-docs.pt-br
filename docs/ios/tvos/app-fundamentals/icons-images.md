@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: c0f016898a18ca38b04d752f2ae4f26e583bb7f2
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 69ea9b0786170345109f0845f3af6e5fd01d2b7c
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937404"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997105"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Trabalhando com ícones e imagens do tvOS no Xamarin
 
@@ -32,7 +32,7 @@ A criação de ícones e imagens de cativante é uma parte essencial do desenvol
 
 ## <a name="launch-image"></a>Imagem de inicialização
 
-A imagem de inicialização é a primeira coisa que é exibida quando seu aplicativo Xamarin. tvOS é inicialmente iniciado na Apple TV e, dessa forma, cada aplicativo tvOS deve fornecer uma imagem de inicialização. 
+A imagem de inicialização é a primeira coisa que é exibida quando seu aplicativo Xamarin. tvOS é inicialmente iniciado na Apple TV e, dessa forma, cada aplicativo tvOS deve fornecer uma imagem de inicialização.
 
 A imagem de inicialização é exibida rapidamente e dá a impressão de que seu aplicativo é rápido e responsivo. A Apple TV substituirá a imagem de inicialização pela primeira tela do seu aplicativo, logo após.
 
@@ -55,13 +55,13 @@ A Apple faz as seguintes sugestões para criar a imagem de inicialização do se
 
 Para definir a imagem de inicialização para seu projeto tvOS, faça o seguinte:
 
-1. Na **Gerenciador de soluções**, clique duas vezes `Assets.xcassets` para abri-lo para edição: 
+1. Na **Gerenciador de soluções**, clique duas vezes `Assets.xcassets` para abri-lo para edição:
 
     [![O arquivo assets. xcassets](icons-images-images/asset01.png)](icons-images-images/asset01.png#lightbox)
-2. No **Editor de ativos**, clique no `LaunchImages` ativo: 
+2. No **Editor de ativos**, clique no `LaunchImages` ativo:
 
     [![O ativo LaunchImages](icons-images-images/asset02.png)](icons-images-images/asset02.png#lightbox)
-3. Clique na entrada **1x Apple TV** e selecione a imagem de inicialização ou, opcionalmente, arraste uma nova imagem no do sistema de arquivos: 
+3. Clique na entrada **1x Apple TV** e selecione a imagem de inicialização ou, opcionalmente, arraste uma nova imagem no do sistema de arquivos:
 
     [![Selecionar uma imagem de inicialização](icons-images-images/asset03.png)](icons-images-images/asset03.png#lightbox)
 4. Salve as alterações.
@@ -133,9 +133,9 @@ Seu aplicativo Xamarin. tvOS exigirá não apenas um ícone de aplicativo para a
 
 Cada aplicativo deve fornecer uma versão pequena e uma grande de seu ícone de aplicativo. O ícone pequeno será usado na tela inicial da Apple TV quando o aplicativo for instalado. A versão grande é usada pela loja de aplicativos. O ícone do aplicativo grande deve imitar a aparência da versão do ícone pequeno.
 
-|Ícone pequeno||Ícone grande||
+|Ícone pequeno|Resolução|Ícone grande|Resolução|
 |---|---|---|---|
-|Tamanho real|400x240px|Tamanho|1280x768px|
+|Tamanho real|400x240px||1280x768px|
 |Tamanho da zona segura|370x222px|||
 |Tamanho não focalizado|300x180px|||
 |Tamanho focado|370x222px|||
@@ -160,16 +160,16 @@ A Apple fornece as seguintes sugestões para criar os ícones do aplicativo:
 
 Para definir os ícones de aplicativo necessários para seu projeto tvOS, faça o seguinte:
 
-1. Na **Gerenciador de soluções**, clique duas vezes `Assets.xcassets` para abri-lo para edição: 
+1. Na **Gerenciador de soluções**, clique duas vezes `Assets.xcassets` para abri-lo para edição:
 
     [![Os ativos. xcassets fileg](icons-images-images/asset01.png)](icons-images-images/asset01.png#lightbox)
-2. No **Editor de ativos**, expanda o `App Icon & Top Shelf Image` ativo: 
+2. No **Editor de ativos**, expanda o `App Icon & Top Shelf Image` ativo:
 
     [![Expandir o ativo de imagem de prateleira superior](icons-images-images/asset04.png)](icons-images-images/asset04.png#lightbox)
-3. Em seguida, expanda o `App Icon - Small` ativo: 
+3. Em seguida, expanda o `App Icon - Small` ativo:
 
     [![Expandir o ícone do aplicativo-ativo pequeno](icons-images-images/asset05.png)](icons-images-images/asset05.png#lightbox)
-4. Em seguida, expanda o `Back` ativo e clique na `Contents` entrada: 
+4. Em seguida, expanda o `Back` ativo e clique na `Contents` entrada:
 
     [![Em seguida, expanda o ativo de back](icons-images-images/asset06.png)](icons-images-images/asset06.png#lightbox)
 5. Clique na **entrada 1x Apple TV** e selecione um arquivo de imagem.
@@ -203,13 +203,13 @@ A Apple fornece as seguintes sugestões para criar suas imagens de prateleira pr
 
 Para definir a imagem de prateleira superior necessária para seu projeto tvOS, faça o seguinte:
 
-1. Na **Gerenciador de soluções**, clique duas vezes `Assets.xcassets` para abri-lo para edição: 
+1. Na **Gerenciador de soluções**, clique duas vezes `Assets.xcassets` para abri-lo para edição:
 
     [![O arquivo assets. xcassets](icons-images-images/asset01.png)](icons-images-images/asset01.png#lightbox)
-2. No **Editor de ativos**, expanda o `App Icon & Top Shelf Image` ativo: 
+2. No **Editor de ativos**, expanda o `App Icon & Top Shelf Image` ativo:
 
     [![Expandir o ativo de imagem de prateleira superior](icons-images-images/asset04.png)](icons-images-images/asset04.png#lightbox)
-3. Clique no `Top Shelf Image` ativo: 
+3. Clique no `Top Shelf Image` ativo:
 
     [![O ativo da imagem da prateleira superior](icons-images-images/asset07.png)](icons-images-images/asset07.png#lightbox)
 4. Clique na **entrada 1x Apple TV** e selecione um arquivo de imagem.
@@ -231,7 +231,7 @@ O conteúdo é apresentado como uma lista de conteúdo única e de rolagem horiz
 
 Os seguintes tamanhos de conteúdo serão necessários:
 
-||Cartaz (2:3)|Quadrado (1:1)|HDTV (16:9)|
+|Tamanho|Cartaz (2:3)|Quadrado (1:1)|HDTV (16:9)|
 |---|---|---|---|
 |Tamanho real|404x608px|608x608px|908x512px|
 |Tamanho da zona segura|380x570px|570x570px|852x479px|
@@ -253,7 +253,7 @@ Além da rolagem automática, o usuário pode assumir o controle das faixas e ro
 
 **Imagem de faixa (extra de largura)**
 
-|   |   |
+| Tamanho | Resolução |
 |---|---|
 |Tamanho real|1940x624px|
 |Tamanho da zona segura|1740x620px|
@@ -279,7 +279,7 @@ Se seu aplicativo Xamarin. tvOS for um jogo e você tiver incluído Game Center 
 - **Arte do painel** -é possível fornecer uma imagem opcional que será exibida na parte superior do painel do aplicativo dentro do Game Center. Essas imagens não são de foco.
 - **Arte placar** -você deve fornecer entre uma (1) a três (3) 16:9 imagens de taxa de proporção para cada placar ao qual seu aplicativo dá suporte. Eles podem ser arquivos estáticos `.png` ou em camadas `.lsr` . A arte placar é focada.
 
-||Ícones de realização|Arte do painel|Arte placar|
+|Tamanho|Ícones de realização|Arte do painel|Arte placar|
 |---|---|---|---|
 |Tamanho visível|200x200px|923x150px|N/D|
 |Tamanho real|320x320px|N/D|659x371px|
@@ -303,10 +303,10 @@ Conforme mencionado acima, todos os aplicativos tvOS exigem uma [imagem de inici
 
 Faça o seguinte:
 
-1. Na **Gerenciador de soluções**, clique duas vezes no `Info.plist` para abri-lo para edição: 
+1. Na **Gerenciador de soluções**, clique duas vezes no `Info.plist` para abri-lo para edição:
 
     [![O arquivo info. plist](icons-images-images/info01.png)](icons-images-images/info01.png#lightbox)
-2. No **Editor info. plist**, selecione o catálogo ativos (configurado acima na seção [definir os ícones do aplicativo](#Setting-the-App-Icons) ) para os **ícones do aplicativo**: 
+2. No **Editor info. plist**, selecione o catálogo ativos (configurado acima na seção [definir os ícones do aplicativo](#Setting-the-App-Icons) ) para os **ícones do aplicativo**:
 
     [![O editor info. plist](icons-images-images/info02.png)](icons-images-images/info02.png#lightbox)
 3. Em seguida, selecione o catálogo de ativos (configurado acima na seção [definindo a imagem de inicialização](#Setting-the-Launch-Image) ) para as **imagens de inicialização**.

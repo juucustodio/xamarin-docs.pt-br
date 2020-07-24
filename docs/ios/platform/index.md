@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: bcf293b29d6ddca10ab60ae061491b60f1e30520
-ms.sourcegitcommit: b751605179bef8eee2df92cb484011a7dceb6fda
+ms.openlocfilehash: a70095c5897163d3699d03ec42c33826f6d40419
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "78291938"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997144"
 ---
 # <a name="ios-platform-features-overview"></a>Visão geral dos recursos da plataforma iOS
 
@@ -20,7 +20,7 @@ Esta página lista as versões recentes do iOS, além de destacar algumas das es
 
 ## <a name="ios-releases"></a>versões do iOS
 
-|  |  |
+| Versão | Descrição |
 |-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Introdução ao iOS 13](~/ios/platform/ios13/index.md) | Este documento descreve o Xamarin. iOS 13.|
 | [Introdução ao iOS 12](~/ios/platform/introduction-to-ios12/index.md) | Este documento descreve os recursos do iOS 12 disponíveis para uso durante a criação de aplicativos Xamarin. iOS.|
@@ -41,7 +41,7 @@ A nova API do CallKit no iOS 10 fornece uma maneira para que os aplicativos de V
 
 ## <a name="contacts-and-contactsui"></a>[Contatos e ContactsUI](~/ios/platform/contacts.md)
 
-Com a introdução do iOS 9, a Apple lançou duas novas estruturas, `Contacts` e `ContactsUI`, que substituem o catálogo de endereços existente e as estruturas de interface do usuário do catálogo de endereços usados pelo iOS 8 e versões anteriores.
+Com a introdução do iOS 9, a Apple lançou duas novas estruturas `Contacts` e `ContactsUI` , que substituem o catálogo de endereços existente e as estruturas de interface do usuário do catálogo de endereços usadas pelo Ios 8 e versões anteriores.
 
 ## <a name="document-picker"></a>[Seletor de documentos](~/ios/platform/document-picker.md)
 
@@ -53,13 +53,13 @@ o iOS tem dois aplicativos relacionados a calendário internos: o aplicativo de 
 
 ## <a name="ios-extensions"></a>[extensões do iOS](~/ios/platform/extensions.md)
 
-As extensões, como introduzidas no iOS 8, são `UIViewControllers` especializadas que são apresentadas por iOS dentro de contextos padrão, como no **centro de notificações**, como tipos de teclado personalizados solicitados pelo usuário para executar entradas especializadas ou outros contextos como editar uma foto em que a extensão pode fornecer filtros de efeito especiais.
+As extensões, como introduzidas no iOS 8, são especializadas `UIViewControllers` que são apresentadas por Ios dentro de contextos padrão, como no **centro de notificações**, como tipos de teclado personalizados solicitados pelo usuário para executar entradas especializadas ou outros contextos como editar uma foto onde a extensão pode fornecer filtros de efeito especiais.
 
-## <a name="graphics-and-animation-in-ios"></a>[Gráficos e animação no iOS](~/ios/platform/graphics-animation-ios/index.md)
+## <a name="graphics-and-animation-in-ios"></a>[Elementos gráficos e animação no iOS](~/ios/platform/graphics-animation-ios/index.md)
 
 Os gráficos e a animação no iOS abrangem os principais conceitos gráficos no iOS, como CoreImage, gráficos principais e animações de núcleo.
 
-## <a name="handoff"></a>[Handoff](~/ios/platform/handoff.md)
+## <a name="handoff"></a>[Entrega](~/ios/platform/handoff.md)
 
 A Apple introduziu a entrega no iOS 8 e no OS X Yosemite (10,10) para fornecer um mecanismo comum para o usuário transferir atividades iniciadas em um de seus dispositivos para outro dispositivo que executa o mesmo aplicativo ou outro aplicativo que ofereça suporte à mesma atividade.
 
@@ -99,7 +99,7 @@ O Photo kit é uma nova estrutura que permite que os aplicativos consultem a bib
 
 ## <a name="request-app-review"></a>[Solicitar revisão do aplicativo](~/ios/platform/request-app-review.md)
 
-Novo no iOS 10,3, o método `RequestReview()` permite que um aplicativo iOS peça ao usuário para classificá-lo ou examiná-lo. Quando esse método é chamado em um aplicativo de envio que o usuário instalou da loja de aplicativos, o iOS 10 manipulará todo o processo de classificação e revisão para o desenvolvedor. Como esse processo é regido pela política da loja de aplicativos, um alerta pode ou não ser exibido.
+Novo no iOS 10,3, o `RequestReview()` método permite que um aplicativo IOS peça ao usuário para classificá-lo ou examiná-lo. Quando esse método é chamado em um aplicativo de envio que o usuário instalou da loja de aplicativos, o iOS 10 manipulará todo o processo de classificação e revisão para o desenvolvedor. Como esse processo é regido pela política da loja de aplicativos, um alerta pode ou não ser exibido.
 
 ## <a name="search-apis"></a>[APIs de pesquisa](~/ios/platform/search/index.md)
 
@@ -139,16 +139,16 @@ o iOS 10 e o macOS Sierra aprimoram o suporte para formatos de pixel de interval
 
 ## <a name="binding-objective-c"></a>[Associação do Objective-C](binding-objective-c/index.md)
 
-Ao trabalhar no iOS, você pode encontrar casos em que deseja consumir uma biblioteca de Objective-C de terceiros. Nessas situações, você pode usar os projetos de associação do MonoTouch para C# criar uma ligação com as bibliotecas Objective-C nativas. O projeto usa as mesmas ferramentas que usamos para colocar as APIs do iOS C#. Este documento descreve como associar APIs de Objective-C.
+Ao trabalhar no iOS, você pode encontrar casos em que deseja consumir uma biblioteca de Objective-C de terceiros. Nessas situações, você pode usar os projetos de associação do MonoTouch para criar uma vinculação C# com as bibliotecas Objective-C nativas. O projeto usa as mesmas ferramentas que usamos para colocar as APIs do iOS em C#. Este documento descreve como associar APIs de Objective-C.
 
-## <a name="bind-ios-swift-libraries"></a>[Associar bibliotecas Swift do iOS](binding-swift/index.md)
+## <a name="bind-ios-swift-libraries"></a>[Associar bibliotecas do Swift do iOS](binding-swift/index.md)
 
-Este documento descreve como criar C# associações para código Swift, possibilitando o consumo de bibliotecas nativas e CocoaPods em um aplicativo Xamarin. Ios.
+Este documento descreve como criar associações em C# para o código Swift, possibilitando o consumo de bibliotecas nativas e CocoaPods em um aplicativo Xamarin. iOS.
 
 ## <a name="referencing-native-libraries"></a>[Referenciando bibliotecas nativas](native-interop.md)
 
 O Xamarin. iOS dá suporte à vinculação com bibliotecas C nativas e bibliotecas objec-C. Este documento discute como vincular suas bibliotecas nativas do C ao seu projeto do Xamarin. iOS.
 
-## <a name="embedded-frameworks"></a>[Estruturas incorporadas](embedded-frameworks.md)
+## <a name="embedded-frameworks"></a>[Estruturas inseridas](embedded-frameworks.md)
 
 Explica como inserir estruturas de usuário Objective-C em aplicativos Xamarin. iOS.

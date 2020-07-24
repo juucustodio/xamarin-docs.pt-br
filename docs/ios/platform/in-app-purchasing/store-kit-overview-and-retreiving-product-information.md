@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 718558b272ce710c3b96ada519a6864e17239503
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f05bc534b1220e6659f123a17dc57e02185fdea4
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938691"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996338"
 ---
 # <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Visão geral do StoreKit e recuperação das informações do produto no Xamarin. iOS
 
@@ -24,17 +24,17 @@ Antes que qualquer transação ocorra, o aplicativo deve recuperar o preço e a 
 ## <a name="classes"></a>Classes
 
 A implementação de compras no aplicativo requer as seguintes classes da estrutura StoreKit:   
-   
+
  **SKProductsRequest** – uma solicitação de StoreKit para produtos aprovados a serem vendidos (loja de aplicativos). Pode ser configurado com um número de IDs de produto.
 
-- **SKProductsRequestDelegate** – declara métodos para lidar com solicitações e respostas de produtos. 
-- **SKProductsResponse** – enviado de volta para o delegado de StoreKit (App Store). Contém o SKProducts que corresponde às IDs de produto enviadas com a solicitação. 
-- **SKProduct** – um produto recuperado do StoreKit (que você configurou no iTunes Connect). Contém informações sobre o produto, como ID do produto, título, descrição e preço. 
-- **SKPayment** – criado com uma ID de produto e adicionado à fila de pagamento para executar uma compra. 
-- **SKPaymentQueue** – solicitações de pagamento enfileiradas a serem enviadas à Apple. As notificações são disparadas como resultado de cada pagamento sendo processado. 
-- **SKPaymentTransaction** – representa uma transação concluída (uma solicitação de compra que foi processada pela loja de aplicativos e enviada de volta para seu aplicativo por meio de StoreKit). A transação pode ser comprada, restaurada ou falhou. 
-- **SKPaymentTransactionObserver** – subclasse personalizada que responde a eventos gerados pela fila de pagamentos do StoreKit. 
-- **As operações StoreKit são assíncronas** – depois que um SKProductRequest é iniciado ou um SKPayment é adicionado à fila, o controle é retornado ao seu código. StoreKit chamará métodos em sua subclasse SKProductsRequestDelegate ou SKPaymentTransactionObserver quando receber dados dos servidores da Apple. 
+- **SKProductsRequestDelegate** – declara métodos para lidar com solicitações e respostas de produtos.
+- **SKProductsResponse** – enviado de volta para o delegado de StoreKit (App Store). Contém o SKProducts que corresponde às IDs de produto enviadas com a solicitação.
+- **SKProduct** – um produto recuperado do StoreKit (que você configurou no iTunes Connect). Contém informações sobre o produto, como ID do produto, título, descrição e preço.
+- **SKPayment** – criado com uma ID de produto e adicionado à fila de pagamento para executar uma compra.
+- **SKPaymentQueue** – solicitações de pagamento enfileiradas a serem enviadas à Apple. As notificações são disparadas como resultado de cada pagamento sendo processado.
+- **SKPaymentTransaction** – representa uma transação concluída (uma solicitação de compra que foi processada pela loja de aplicativos e enviada de volta para seu aplicativo por meio de StoreKit). A transação pode ser comprada, restaurada ou falhou.
+- **SKPaymentTransactionObserver** – subclasse personalizada que responde a eventos gerados pela fila de pagamentos do StoreKit.
+- **As operações StoreKit são assíncronas** – depois que um SKProductRequest é iniciado ou um SKPayment é adicionado à fila, o controle é retornado ao seu código. StoreKit chamará métodos em sua subclasse SKProductsRequestDelegate ou SKPaymentTransactionObserver quando receber dados dos servidores da Apple.
 
 O diagrama a seguir mostra as relações entre as várias classes StoreKit (classes abstratas devem ser implementadas em seu aplicativo):   
 
@@ -42,7 +42,7 @@ O diagrama a seguir mostra as relações entre as várias classes StoreKit (clas
 
 Essas classes são explicadas em mais detalhes posteriormente neste documento.
 
-## <a name="testing"></a>Testes
+## <a name="testing"></a>Testando
 
 A maioria das operações de StoreKit requer um dispositivo real para teste. Recuperando Informações do produto (isto é, Descrição de preço &amp; ) funcionará no simulador, mas as operações de compra e restauração retornarão um erro (como FailedTransaction Code = 5002 ocorreu um erro desconhecido).
 
@@ -67,12 +67,12 @@ Selecionar **testadores da área restrita**
  [![Selecionando testadores da área restrita](store-kit-overview-and-retreiving-product-information-images/image18.png)](store-kit-overview-and-retreiving-product-information-images/image18.png#lightbox)
 
 A lista de usuários existentes é exibida. Você pode adicionar um novo usuário ou excluir um registro existente. O portal não (atualmente) permite que você exiba ou edite os usuários de teste existentes, portanto, é recomendável que você mantenha um bom registro de cada usuário de teste criado (especialmente a senha que você atribui). Depois de excluir um usuário de teste, o endereço de email não poderá ser usado novamente para outra conta de teste.  
-   
+
  [![A lista de usuários existentes é exibida](store-kit-overview-and-retreiving-product-information-images/image19.png)](store-kit-overview-and-retreiving-product-information-images/image19.png#lightbox)   
-   
+
  Os novos usuários de teste têm atributos semelhantes a uma ID da Apple real (como nome, senha, pergunta secreta e resposta). Mantenha um registro de todos os detalhes inseridos aqui. O campo **selecionar repositório do iTunes** determinará a moeda e o idioma que as compras no aplicativo usarão quando estiverem conectados como esse usuário.
 
- [![](store-kit-overview-and-retreiving-product-information-images/image20.png "The Select iTunes Store field will determine the user's currency and language for their in-app purchases")](store-kit-overview-and-retreiving-product-information-images/image20.png#lightbox)
+ [![O campo selecionar repositório iTunes determinará a moeda e o idioma do usuário para suas compras no aplicativo](store-kit-overview-and-retreiving-product-information-images/image20.png)](store-kit-overview-and-retreiving-product-information-images/image20.png#lightbox)
 
 ## <a name="retrieving-product-information"></a>Recuperando Informações do produto
 
@@ -80,11 +80,11 @@ A primeira etapa na venda de um produto de compra no aplicativo é exibi-lo: Rec
 
 Independentemente do tipo de produtos que um aplicativo vende (consumível, não consumível ou de um tipo de assinatura), o processo de recuperação de informações do produto para exibição é o mesmo. O código InAppPurchaseSample que acompanha este artigo contém um projeto chamado *itens consumíveis* que demonstra como recuperar informações de produção para exibição. Ele mostra como:
 
-- Crie uma implementação de `SKProductsRequestDelegate` e implemente o `ReceivedResponse` método abstract. O código de exemplo chama essa `InAppPurchaseManager` classe. 
-- Verifique com StoreKit para ver se os pagamentos são permitidos (usando `SKPaymentQueue.CanMakePayments` ). 
-- Crie uma instância `SKProductsRequest` com as IDs de produto que foram definidas no iTunes Connect. Isso é feito no método do exemplo `InAppPurchaseManager.RequestProductData` . 
-- Chame o método Start no `SKProductsRequest` . Isso dispara uma chamada assíncrona para os servidores da loja de aplicativos. O delegado ( `InAppPurchaseManager` ) será chamado com os resultados. 
-- O método () do delegado `InAppPurchaseManager` `ReceivedResponse` atualiza a interface do usuário com os dados retornados da loja de aplicativos (preços de produtos & descrições ou mensagens sobre produtos inválidos). 
+- Crie uma implementação de `SKProductsRequestDelegate` e implemente o `ReceivedResponse` método abstract. O código de exemplo chama essa `InAppPurchaseManager` classe.
+- Verifique com StoreKit para ver se os pagamentos são permitidos (usando `SKPaymentQueue.CanMakePayments` ).
+- Crie uma instância `SKProductsRequest` com as IDs de produto que foram definidas no iTunes Connect. Isso é feito no método do exemplo `InAppPurchaseManager.RequestProductData` .
+- Chame o método Start no `SKProductsRequest` . Isso dispara uma chamada assíncrona para os servidores da loja de aplicativos. O delegado ( `InAppPurchaseManager` ) será chamado com os resultados.
+- O método () do delegado `InAppPurchaseManager` `ReceivedResponse` atualiza a interface do usuário com os dados retornados da loja de aplicativos (preços de produtos & descrições ou mensagens sobre produtos inválidos).
 
 A interação geral é parecida com esta (o **StoreKit** é integrado ao Ios e a **loja de aplicativos** representa os servidores da Apple):
 
@@ -219,15 +219,15 @@ Esta captura de tela mostra o aplicativo de exemplo imediatamente após o carreg
 Um `SKProductsRequest` também pode retornar uma lista de IDs de produto inválidas. Os produtos inválidos geralmente são retornados devido a um dos seguintes:   
 
 A **ID do produto foi digitada intipadamente** – somente IDs de produto válidas são aceitas.   
-   
+
  O **produto não foi aprovado** – durante o teste, todos os produtos limpos para venda devem ser retornados por um `SKProductsRequest` ; no entanto, em produção somente produtos aprovados são retornados.   
-   
+
  A **ID do aplicativo não é explícita** – as IDs do aplicativo curinga (com um asterisco) não permitem a compra no aplicativo.   
-   
+
  **Perfil de provisionamento incorreto** – se você fizer alterações na configuração do aplicativo no portal de provisionamento (como habilitar compras no aplicativo), lembre-se de gerar novamente e usar o perfil de provisionamento correto ao compilar o aplicativo.   
-   
+
  o **contrato de aplicativos pagos do IOS não está em vigor** – os recursos do StoreKit não funcionarão, a menos que haja um contrato válido para sua conta de desenvolvedor da Apple.   
-   
+
  **O binário está no estado rejeitado** – se houver um binário enviado anteriormente no estado rejeitado (seja pela equipe da loja de aplicativos ou pelo desenvolvedor), os recursos do StoreKit não funcionarão.
 
 O `ReceivedResponse` método no código de exemplo gera os produtos inválidos para o console:

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 110aaf8d324a13a6ea2e4c5a354adbc74fd8df96
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 2f9b4dfac4909a5c68b6c53fc913925ee95313a3
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84567574"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997508"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Vinculação de dados e codificação de chave-valor no Xamarin. Mac
 
@@ -173,7 +173,7 @@ Agora, sempre que a `Name` propriedade da `Person` instância da `PersonModel` c
 
 Para obter mais informações, consulte [introdução à Apple no guia de programação de observação de valor-chave](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html#//apple_ref/doc/uid/10000177i).
 
-## <a name="data-binding"></a>Associação de dados
+## <a name="data-binding"></a>Vinculação de dados
 
 As seções a seguir mostrarão como você pode usar um código de chave-valor e um valor de chave que observa a classe compatível para associar dados aos elementos da interface do usuário no Interface Builder do Xcode, em vez de ler e gravar valores usando código C#. Dessa forma, você separa o _modelo de dados_ dos modos de exibição usados para exibi-los, tornando o aplicativo Xamarin. Mac mais flexível e mais fácil de manter. Você também diminui muito a quantidade de código a ser escrito.
 
@@ -423,7 +423,7 @@ Primeiro, vamos adicionar um novo **controlador de exibição** ao nosso arquivo
 
 [![Adicionando um novo controlador de exibição](databinding-images/simple01.png "Adicionando um novo controlador de exibição")](databinding-images/simple01-large.png#lightbox)
 
-Em seguida, retorne para Visual Studio para Mac, edite o arquivo **SimpleViewController.cs** (que foi adicionado automaticamente ao nosso projeto) e expor uma instância do `PersonModel` que iremos associar dados ao nosso formulário. Adicione os códigos a seguir:
+Em seguida, retorne para Visual Studio para Mac, edite o arquivo **SimpleViewController.cs** (que foi adicionado automaticamente ao nosso projeto) e expor uma instância do `PersonModel` que iremos associar dados ao nosso formulário. Adicione o seguinte código:
 
 ```csharp
 private PersonModel _person = new PersonModel();
@@ -507,7 +507,7 @@ Primeiro, vamos adicionar um novo **controlador de exibição** ao nosso arquivo
 
 [![Adicionando um novo controlador de exibição](databinding-images/table01.png "Adicionando um novo controlador de exibição")](databinding-images/table01-large.png#lightbox)
 
-Em seguida, vamos editar o arquivo **TableViewController.cs** (que foi adicionado automaticamente ao nosso projeto) e expor uma matriz ( `NSArray` ) de `PersonModel` classes para as quais os dados serão vinculados ao nosso formulário. Adicione os códigos a seguir:
+Em seguida, vamos editar o arquivo **TableViewController.cs** (que foi adicionado automaticamente ao nosso projeto) e expor uma matriz ( `NSArray` ) de `PersonModel` classes para as quais os dados serão vinculados ao nosso formulário. Adicione o seguinte código:
 
 ```csharp
 private NSMutableArray _people = new NSMutableArray();
@@ -622,7 +622,7 @@ Primeiro, vamos adicionar um novo **controlador de exibição** ao nosso arquivo
 
 [![Adicionando um novo controlador de exibição](databinding-images/outline01.png "Adicionando um novo controlador de exibição")](databinding-images/outline01-large.png#lightbox)
 
-Em seguida, vamos editar o arquivo **OutlineViewController.cs** (que foi adicionado automaticamente ao nosso projeto) e expor uma matriz ( `NSArray` ) de `PersonModel` classes para as quais os dados serão vinculados ao nosso formulário. Adicione os códigos a seguir:
+Em seguida, vamos editar o arquivo **OutlineViewController.cs** (que foi adicionado automaticamente ao nosso projeto) e expor uma matriz ( `NSArray` ) de `PersonModel` classes para as quais os dados serão vinculados ao nosso formulário. Adicione o seguinte código:
 
 ```csharp
 private NSMutableArray _people = new NSMutableArray();
@@ -745,7 +745,7 @@ A associação de dados com uma exibição de coleção é muito semelhante à a
 
 First, let's add a new **View Controller** to our **Main.storyboard** file in Interface Builder and name its class `CollectionViewController`:
 
-![](databinding-images/collection01.png)
+![Add a View Controller](databinding-images/collection01.png)
 
 Next, let's edit the **CollectionViewController.cs** file (that was automatically added to our project) and expose an array (`NSArray`) of `PersonModel` classes that we will be data binding our form to. Add the following code:
 
@@ -812,7 +812,7 @@ public override void AwakeFromNib ()
 
 Now we need to create our Collection View, double-click the **Main.storyboard** file to open it for editing in Interface Builder. Layout the Collection View to look something like the following:
 
-![](databinding-images/collection02.png)
+![Create the CollectionView](databinding-images/collection02.png)
 
 When you add a Collection View to a User Interface design, two extra elements are also added:
 
@@ -821,38 +821,38 @@ When you add a Collection View to a User Interface design, two extra elements ar
 
 Select the view and make it look like the following using an Image View and two Text Fields:
 
-![](databinding-images/collection03.png)
+![Add controls](databinding-images/collection03.png)
 
 One thing to note here, a `NSBox` was added behind everything in the view with the following attributes:
 
-![](databinding-images/collection04.png)
+![NSBox](databinding-images/collection04.png)
 
 We'll be using this box to provide feedback to the user when an item is selected in the Collection View.
 
 We need to add an **Array Controller** to provide bound data to our collection, do the following:
 
-1. Drag an **Array Controller** from the **Library Inspector** onto the **Interface Editor**: <br/>![](databinding-images/table03.png)
-2. Select **Array Controller** in the **Interface Hierarchy** and switch to the **Attribute Inspector**: <br/>![](databinding-images/collection05.png)
-3. Enter `PersonModel` for the **Class Name**, click the **Plus** button and add four Keys. Name them `Icon`, `Name`, `Occupation` and `isManager`: <br/>![](databinding-images/table05.png)
+1. Drag an **Array Controller** from the **Library Inspector** onto the **Interface Editor**: <br/>![Array Controller](databinding-images/table03.png)
+2. Select **Array Controller** in the **Interface Hierarchy** and switch to the **Attribute Inspector**: <br/>![Attribute inspector](databinding-images/collection05.png)
+3. Enter `PersonModel` for the **Class Name**, click the **Plus** button and add four Keys. Name them `Icon`, `Name`, `Occupation` and `isManager`: <br/>![Set the class and key names](databinding-images/table05.png)
 4. This tells the Array Controller what it is managing an array of, and which properties it should expose (via Keys).
-5. Switch to the **Bindings Inspector** and under **Content Array** select **Bind to** and **File's Owner**. Enter a **Model Key Path** of `self.personModelArray`: <br/>![](databinding-images/table06.png)
+5. Switch to the **Bindings Inspector** and under **Content Array** select **Bind to** and **File's Owner**. Enter a **Model Key Path** of `self.personModelArray`: <br/>![Bindings inspector](databinding-images/table06.png)
 6. This ties the Array Controller to the array of `PersonModels` that we exposed on our View Controller.
 
 Now we need to bind our Collection View to the Array Controller, do the following:
 
-1. Select the Collection View and the **Binding Inspector**: <br/>![](databinding-images/collection06.png)
-2. Under the **Contents** turndown, select **Bind to** and **Array Controller**. Enter `arrangedObjects` for the **Controller Key** field: <br/>![](databinding-images/collection07.png)
-3. Under the **Selection Indexes** turndown, select **Bind to** and **Array Controller**. Enter `selectionIndexes` for the **Controller Key** field: <br/>![](databinding-images/collection08.png)
-4. Select the **Image View**. In the **Bindings Inspector** under the **Value** turndown, select **Bind to** and **Person** (the name of our Collection View Item). Enter `representedObject.Icon` for the **Model Key Path**: <br/>![](databinding-images/collection09.png)
+1. Select the Collection View and the **Binding Inspector**: <br/>![Binding inspector](databinding-images/collection06.png)
+2. Under the **Contents** turndown, select **Bind to** and **Array Controller**. Enter `arrangedObjects` for the **Controller Key** field: <br/>![Contents](databinding-images/collection07.png)
+3. Under the **Selection Indexes** turndown, select **Bind to** and **Array Controller**. Enter `selectionIndexes` for the **Controller Key** field: <br/>![Selection indexes](databinding-images/collection08.png)
+4. Select the **Image View**. In the **Bindings Inspector** under the **Value** turndown, select **Bind to** and **Person** (the name of our Collection View Item). Enter `representedObject.Icon` for the **Model Key Path**: <br/>![Binding inspector values](databinding-images/collection09.png)
 5. `representedObject` is the current `PersonModel` in the array being managed by the Array Controller.
-6. Select the first **Label**. In the **Bindings Inspector** under the **Value** turndown, select **Bind to** and **Collection View Item**. Enter `representedObject.Name` for the **Model Key Path**: <br/>![](databinding-images/collection10.png)
-7. Select the second **Label**. In the **Bindings Inspector** under the **Value** turndown, select **Bind to** and **Collection View Item**. Enter `representedObject.Occupation` for the **Model Key Path**: <br/>![](databinding-images/collection11.png)
-8. Select the `NSBox`. In the **Bindings Inspector** under the **Hidden** turndown, select **Bind to** and **Collection View Item**. Enter `selected` for the **Model Key Path** and `NSNegateBoolean` for the **Value Transformer**: <br/>![](databinding-images/collection12.png)
+6. Select the first **Label**. In the **Bindings Inspector** under the **Value** turndown, select **Bind to** and **Collection View Item**. Enter `representedObject.Name` for the **Model Key Path**: <br/>![Label value](databinding-images/collection10.png)
+7. Select the second **Label**. In the **Bindings Inspector** under the **Value** turndown, select **Bind to** and **Collection View Item**. Enter `representedObject.Occupation` for the **Model Key Path**: <br/>![Label value](databinding-images/collection11.png)
+8. Select the `NSBox`. In the **Bindings Inspector** under the **Hidden** turndown, select **Bind to** and **Collection View Item**. Enter `selected` for the **Model Key Path** and `NSNegateBoolean` for the **Value Transformer**: <br/>![NSBox value](databinding-images/collection12.png)
 9. Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
 If we run the application, the table will be populated with our array of `PersonModels`:
 
-![](databinding-images/collection13.png)
+![Populated table](databinding-images/collection13.png)
 
 For more information on working with Collection Views, please see our [Collection Views](~/mac/user-interface/collection-view.md) documentation.-->
 
@@ -889,7 +889,7 @@ Essa linha está informando que a chave `Title` não existe no objeto ao qual es
 
 Este artigo deu uma visão detalhada de como trabalhar com vinculação de dados e codificação de valor de chave em um aplicativo Xamarin. Mac. Primeiro, ele analisou a exposição de uma classe C# para Objective-C usando KVC (codificação de valor chave) e KVO (key-value Observation). Em seguida, ele mostrou como usar uma classe compatível com KVO e vincular dados a elementos da interface do usuário no Interface Builder do Xcode. Por fim, ele mostrou uma ligação de dados complexa usando **controladores de matriz** e de **árvore**.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Storyboard MacDatabinding (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macdatabinding-storyboard)
 - [MacDatabinding XIBs (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macdatabinding-xibs)

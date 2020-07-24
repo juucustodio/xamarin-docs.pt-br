@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 683ac99ba46d2e23b0190d411e4911725c409f23
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: a1ff70349ca7d7b97431b2e3d07aa4c8028c38c0
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931567"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996351"
 ---
 # <a name="testing-on-apple-watch-devices"></a>Testando em dispositivos Apple Watch
 
@@ -36,7 +36,7 @@ Os Watches não são diferentes-agora você precisa adicionar seu dispositivo de
 
 Quando você souber o UDID da inspeção, adicione-o à lista de dispositivos no centro de desenvolvimento:
 
-![](device-images/devices-watch-sml.png "The Watch's UDID in the device list")
+![O UDID da inspeção na lista de dispositivos](device-images/devices-watch-sml.png)
 
 Depois que o dispositivo observado tiver sido adicionado, certifique-se de que ele esteja selecionado em qualquer desenvolvimento novo ou existente ou perfis de provisionamento ad-hoc que você criar:
 

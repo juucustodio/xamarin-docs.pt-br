@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: f020219f28ce9389c3f8d5157ddfddc32af07f0f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 1f86227573fc5e9dc39d4781125c49a067e8967d
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939965"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997482"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Usando TestFlight para distribuir aplicativos Xamarin.iOS
 
@@ -75,8 +75,8 @@ Para obter mais informações sobre como criar um novo registro do iTunes Connec
 
 O formulário deve refletir exatamente as informações no arquivo Info.plist do seu aplicativo, conforme ilustrado abaixo:
 
-[![](testflight-images/infoplist.png "O info. plist do aplicativo")](testflight-images/infoplist.png#lightbox)
-[![O formulário no iTunes Connect](testflight-images/newiosapp.png)](testflight-images/newiosapp.png#lightbox)
+O [ ![ info. plist do aplicativo](testflight-images/infoplist.png)](testflight-images/infoplist.png#lightbox) 
+ [ ![ o formulário no iTunes Connect](testflight-images/newiosapp.png)](testflight-images/newiosapp.png#lightbox)
 
 - **Nome** – o nome descritivo usado ao configurar o Pacote de Aplicativo. Deve ser uma correspondência exata da entrada de **Nome do aplicativo** em seu `Info.plist`.
 - **Idioma primário** – o idioma de base usado no aplicativo. Geralmente é qualquer idioma que você fale.
@@ -227,7 +227,7 @@ Agora você pode começar a preparar convites e adicionar até 2.000 testadores 
 
 Se você tiver um grande número de testadores externos, poderá usar o link **Importar Arquivo** link para importar um arquivo `CSV` com o seguinte formato por linha:
 
-``` 
+```
 first name, last name, email address
 ```
 

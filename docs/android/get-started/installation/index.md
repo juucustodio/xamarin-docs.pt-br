@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 0de2ed96c7b2af69e99fbd742c0fd07b27f2ef9d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 2725f189ee3999061d3dcd397eed17cc4590eaa8
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73020723"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996143"
 ---
-# <a name="setup-and-installation"></a>Instalação e Configuração
+# <a name="install-and-setup-xamarinandroid"></a>Instalar e configurar o Xamarin. Android
 
 Os tópicos desta seção explicam como instalar e configurar o Xamarin.Android para trabalhar com o Visual Studio no Windows e no macOS. Além disso, mostram como usar o Gerenciador de SDK do Android para baixar e instalar os componentes e as Android SDK Tools necessários para build e teste de aplicativo, como configurar o Android Emulator para depuração e como conectar um dispositivo Android físico ao computador de desenvolvimento para depuração e teste final do aplicativo.
 

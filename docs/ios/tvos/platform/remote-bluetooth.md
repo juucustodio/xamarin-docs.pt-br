@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 3cdfad92362efa2974b214cac5d7fa424e9ba94d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 743bdf4d843d9e427e2343bf58cc29b98ec07e2b
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938301"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997040"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Controladores remotos e Bluetooth Siri para tvOS no Xamarin
 
@@ -53,7 +53,7 @@ A superfície de toque do Siri remoto é capaz de detectar uma variedade de gest
 
 |Passar o dedo|Clique em |Toque|
 |---|---|---|
-|![](remote-bluetooth-images/Gesture01.png)|![](remote-bluetooth-images/Gesture02.png)|![](remote-bluetooth-images/Gesture03.png)|
+|![Move a seleção](remote-bluetooth-images/Gesture01.png)|![Ativa o item selecionado](remote-bluetooth-images/Gesture02.png)|![Botões direcionais](remote-bluetooth-images/Gesture03.png)|
 |Move a seleção (foco) entre os elementos da interface do usuário na tela (para cima, para baixo à esquerda, à direita). O passe do dedo pode ser usado para rolar por listas grandes de conteúdo rapidamente usando o inércia.|Ativa o item selecionado (em foco) ou atua como o botão principal em um jogo. Clicar e segurar pode ativar menus contextuais ou funções secundárias.|Tocar levemente na superfície de toque nas bordas atua como botões direcionais em um teclado D, movendo o foco para cima, para baixo, para a esquerda ou para a direita, dependendo da área tocada. Dependendo do aplicativo, o pode ser usado para revelar controles ocultos.|
 
 A Apple fornece as seguintes sugestões para trabalhar com gestos de superfície de toque:

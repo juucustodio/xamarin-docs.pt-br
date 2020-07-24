@@ -1,6 +1,6 @@
 ---
-title: Xamarin.Formslayout de tela dupla
-description: Este guia explica como usar Xamarin.Forms o TwoPaneView para otimizar sua experiência de aplicativo para dispositivos de tela dupla, como Surface Duo e Surface neo.
+title: :::no-loc(Xamarin.Forms):::layout de tela dupla
+description: 'Este guia explica como usar :::no-loc(Xamarin.Forms)::: o TwoPaneView para otimizar sua experiência de aplicativo para dispositivos de tela dupla, como Surface Duo e Surface neo.'
 ms.prod: xamarin
 ms.assetid: 17ee8afa-5e7c-4a4f-a9b6-2aca03f30fe3
 ms.technology: xamarin-forms
@@ -8,16 +8,16 @@ author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2020
 no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: fb5474c7436cb985a1404b662fcf842f22cfdc0d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+- ':::no-loc(Xamarin.Forms):::'
+- ':::no-loc(Xamarin.Essentials):::'
+ms.openlocfilehash: 4f7fdc0bb18a49e601c00ce1e3eb13371bb80be3
+ms.sourcegitcommit: 3698b35c823225a74892a47139d19e8ae8e6d9ed
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937690"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113817"
 ---
-# <a name="xamarinforms-twopaneview-layout"></a>Xamarin.FormsLayout de TwoPaneView
+# <a name="no-locxamarinforms-twopaneview-layout"></a>:::no-loc(Xamarin.Forms):::Layout de TwoPaneView
 
 ![API de pré-lançamento](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
 
@@ -34,7 +34,7 @@ Siga estas instruções para criar um layout de tela dupla em seu aplicativo:
 
     ```xaml
     <ContentPage 
-        xmlns:dualScreen="clr-namespace:Xamarin.Forms.DualScreen;assembly=Xamarin.Forms.DualScreen">
+        xmlns:dualScreen="clr-namespace::::no-loc(Xamarin.Forms):::.DualScreen;assembly=:::no-loc(Xamarin.Forms):::.DualScreen">
         <dualScreen:TwoPaneView>
             <dualScreen:TwoPaneView.Pane1>
                 <StackLayout>
@@ -77,8 +77,8 @@ As propriedades a seguir se aplicam quando `TwoPaneView` estiver ocupando uma ú
 
 As propriedades a seguir se aplicam quando `TwoPaneView` estiver ocupando uma ou duas telas:
 
-- `TallModeConfiguration` indica, quando estiver no modo alto, a organização esquerda/direita ou apenas um único painel visível se você preferir, conforme definido por TwoPaneViewPriority.
-- `WideModeConfiguration` indica, quando estiver modo largo, a organização superior/inferior ou apenas um único painel visível se você preferir, conforme definido por TwoPaneViewPriority.
+- `TallModeConfiguration`indica, quando no modo alto, a organização superior/inferior ou se você quiser apenas um único painel visível, conforme definido pelo TwoPaneViewPriority.
+- `WideModeConfiguration`indica, quando em modo largo, a organização esquerda/direita ou se você quiser apenas um único painel visível, conforme definido pelo TwoPaneViewPriority.
 - `PanePriority` determina se o Pane1 ou o Pane2 deve estar no modo SinglePane.
 
 ## <a name="related-links"></a>Links relacionados

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: c503a312db640eb24b4fec24ba484c8e0382657e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9e33f843d836ed5b66ed36397c9367dc671c51ed
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936950"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996247"
 ---
 # <a name="working-with-watchos-localization-in-xamarin"></a>Trabalhando com a localização do watchOS no Xamarin
 
@@ -185,7 +185,7 @@ As cadeias de caracteres do idioma Spansish (traduzido pelo computador):
 "Bed time" = "la hora de dormir"; // night
 ```
 
-## <a name="testing"></a>Testes
+## <a name="testing"></a>Testando
 
 O método para alterar as preferências de idioma difere entre o simulador e os dispositivos físicos.
 
@@ -199,7 +199,7 @@ No simulador, selecione o idioma a ser testado usando o aplicativo de **configur
 
 Ao testar com uma inspeção, altere o idioma do observador no aplicativo **Apple Watch** no iPhone emparelhado.
 
-  ![](localization-images/phone-settings-sml.png "Change the watch's language in the Apple Watch app on the paired iPhone")
+  ![Alterar o idioma do observador no aplicativo Apple Watch no iPhone emparelhado](localization-images/phone-settings-sml.png)
 
 ## <a name="related-links"></a>Links Relacionados
 

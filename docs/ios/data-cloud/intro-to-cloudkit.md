@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/11/2016
-ms.openlocfilehash: 3ff868ed10d59a7c1026a222f314a1166a8de45e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 588dadbfe63a46bc7658d5d29a052cebe52be65c
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930189"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997404"
 ---
 # <a name="cloudkit-in-xamarinios"></a>CloudKit no Xamarin. iOS
 
@@ -811,7 +811,7 @@ Faça o seguinte:
 
 6. Selecione o arquivo morto do aplicativo e clique no botão **Exportar...** :
 
-    [![](intro-to-cloudkit-images/shipping05.png "The application's archive")](intro-to-cloudkit-images/shipping05.png#lightbox)
+    [![O arquivo morto do aplicativo](intro-to-cloudkit-images/shipping05.png)](intro-to-cloudkit-images/shipping05.png#lightbox)
 
 7. Selecione um método para exportar e clique no botão **Avançar** :
 

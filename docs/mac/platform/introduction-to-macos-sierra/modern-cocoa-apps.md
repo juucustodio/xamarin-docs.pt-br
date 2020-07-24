@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: f8c449045de292590aa833324d443579332be999
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 5d10f1def56d73c6837587bbbd47299d208a345a
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935805"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997469"
 ---
 # <a name="building-modern-macos-apps"></a>Compilando aplicativos macOS modernos
 
@@ -64,7 +64,7 @@ namespace MacModern
 
 Esse recurso também pode ser habilitado no Interface Builder do Xcode selecionando a janela e verificando a **exibição de conteúdo de tamanho completo**:
 
-[![](modern-cocoa-apps-images/content01.png "Editing the main storyboard in Xcode's Interface Builder")](modern-cocoa-apps-images/content01.png#lightbox)
+[![Editando o storyboard principal no Interface Builder do Xcode](modern-cocoa-apps-images/content01.png)](modern-cocoa-apps-images/content01.png#lightbox)
 
 Ao usar uma exibição de conteúdo de tamanho completo, o desenvolvedor pode precisar deslocar o conteúdo abaixo das áreas de título e barra de ferramentas para que o conteúdo específico (como rótulos) não deslize para eles.
 
@@ -163,7 +163,7 @@ public override void ViewWillAppear ()
 }
 ```
 
-Esse efeito é normalmente usado para _aplicativos sapatos_ (um aplicativo de janela) como mapas, calendário, observações e preferências do sistema. 
+Esse efeito é normalmente usado para _aplicativos sapatos_ (um aplicativo de janela) como mapas, calendário, observações e preferências do sistema.
 
 <a name="Using-Accessory-View-Controllers"></a>
 
@@ -178,13 +178,13 @@ O controlador de exibição de acessório será automaticamente desfocado e redi
 Para adicionar um controlador de exibição de acessório, faça o seguinte:
 
 1. No **Gerenciador de Soluções**, clique duas vezes no arquivo `Main.storyboard` para abri-lo para edição.
-2. Arraste um **controlador de exibição personalizado** para a hierarquia da janela: 
+2. Arraste um **controlador de exibição personalizado** para a hierarquia da janela:
 
     [![Adicionando um novo controlador de exibição personalizado](modern-cocoa-apps-images/content05.png)](modern-cocoa-apps-images/content05.png#lightbox)
-3. Layout da interface do usuário da exibição de acessório: 
+3. Layout da interface do usuário da exibição de acessório:
 
     [![Criando a nova exibição](modern-cocoa-apps-images/content06.png)](modern-cocoa-apps-images/content06.png#lightbox)
-4. Expor a exibição de acessório como uma **tomada** e quaisquer outras **ações** ou **saídas** para sua interface do usuário: 
+4. Expor a exibição de acessório como uma **tomada** e quaisquer outras **ações** ou **saídas** para sua interface do usuário:
 
     [![Adicionando a tomada necessária](modern-cocoa-apps-images/content07.png)](modern-cocoa-apps-images/content07.png#lightbox)
 5. Salve as alterações.
@@ -302,7 +302,7 @@ namespace MacModern
 
             // Display
             controller.ShowWindow (this);
-        } 
+        }
         #endregion
     }
 }
@@ -496,7 +496,7 @@ namespace MacModern
         {
             base.UpdateLayer ();
 
-            // Draw view 
+            // Draw view
             Layer.BackgroundColor = NSColor.Red.CGColor;
         }
         #endregion
@@ -571,7 +571,7 @@ namespace MacModern
         {
             // Return required pasteboard writer
             ...
-            
+
             // Pasteboard writer failed
             return null;
         }
@@ -733,7 +733,7 @@ O estático `NSTableViewRowAction.FromStyle` é usado para criar uma nova ação
 
 <a name="Scroll-View-Enhancements"></a>
 
-## <a name="scroll-view-enhancements"></a>Aprimoramentos da exibição de rolagem 
+## <a name="scroll-view-enhancements"></a>Aprimoramentos da exibição de rolagem
 
 Ao usar uma exibição de rolagem ( `NSScrollView` ) diretamente ou como parte de outro controle (como `NSTableView` ), o conteúdo da exibição de rolagem pode deslizar nas áreas de título e barra de ferramentas em um aplicativo Xamarin. Mac usando uma aparência e exibições modernas.
 
@@ -760,9 +760,9 @@ Para obter mais informações, consulte o [Guia de internacionalização e local
 
 <a name="Implementing-Base-Internationalization"></a>
 
-### <a name="implementing-base-internationalization"></a>Implementando a internacionalização de base 
+### <a name="implementing-base-internationalization"></a>Implementando a internacionalização de base
 
-Ao implementar a internacionalização de base, o desenvolvedor pode fornecer um único arquivo de storyboard para representar a interface do usuário do aplicativo e separar todas as cadeias de caracteres voltadas para o usuário. 
+Ao implementar a internacionalização de base, o desenvolvedor pode fornecer um único arquivo de storyboard para representar a interface do usuário do aplicativo e separar todas as cadeias de caracteres voltadas para o usuário.
 
 Quando o desenvolvedor estiver criando o arquivo de storyboard inicial (ou arquivos) que definem a interface do usuário do aplicativo, eles serão criados na internacionalização de base (a linguagem que o desenvolvedor fala).
 
@@ -865,7 +865,7 @@ namespace MacModern
     public partial class ViewController : NSViewController
     {
         ...
-    
+
         #region Override Methods
         public override void ViewWillAppear ()
         {
@@ -898,7 +898,7 @@ Os storyboards permitem que o desenvolvedor não apenas projete os elementos ind
 
 Os controladores permitem que o desenvolvedor colete elementos em uma unidade de composição e continuações abstrato e remova o "código de União" típico necessário para se mover em toda a hierarquia de exibição:
 
-[![](modern-cocoa-apps-images/content12.png "Editing the UI in Xcode's Interface Builder")](modern-cocoa-apps-images/content12.png#lightbox)
+[![Editando a interface do usuário no Interface Builder do Xcode](modern-cocoa-apps-images/content12.png)](modern-cocoa-apps-images/content12.png#lightbox)
 
 Para obter mais informações, consulte nossa [introdução à documentação de storyboards](~/mac/platform/storyboards/index.md) .
 

@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 28dddc35ac829cb58a40a9296bb995e119b5b6e3
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8a9a38c24af3e14cd6930cbb27717ba184dd0235
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937261"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996403"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Olá, iOS multitela – análise detalhada
 
@@ -78,7 +78,7 @@ O controlador de navegação atende a três funções principais:
 
 - **Opcionalmente, fornece um botão Voltar** – quando fazemos o push de um novo item para a pilha de navegação, a barra de título pode exibir automaticamente um *botão Voltar* que permite ao usuário retornar na navegação. Pressionar o botão Voltar abre em *pop-up* o controlador de exibição atual pilha de navegação e carrega a hierarquia de Exibição de Conteúdo anterior na Janela:  
 
-    [![](hello-ios-multiscreen-deepdive-images/03.png "This diagram illustrates 'popping' a card off the stack")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
+    [![Este diagrama ilustra a retirada de um cartão para fora da pilha](hello-ios-multiscreen-deepdive-images/03.png)](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 - **Fornece uma barra de título** – a parte superior do controlador de navegação é chamada de *barra de título* . Ele é responsável por exibir o título do controlador de exibição, conforme ilustrado pelo diagrama a seguir:  
 

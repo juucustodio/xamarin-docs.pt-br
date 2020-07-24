@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: cba171760673c5b5a87760d291550e6df82fe424
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 03e6a513f367be4c19f925427c8a896b1fc87107
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939576"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996325"
 ---
 # <a name="auto-sizing-row-height-in-xamarinios"></a>Dimensionamento automático da altura da linha no Xamarin. iOS
 
@@ -24,7 +24,7 @@ o iOS 11 adicionou a capacidade de linhas a serem expandidas automaticamente. Ca
 
 Abra o storyboard do modo de exibição de tabela para o qual você deseja que o redimensionamento automático da linha seja no designer do iOS, selecione o *protótipo* da célula e projete o layout da célula. Por exemplo:
 
-[![](autosizing-row-height-images/table01.png "The Cell's Prototype design")](autosizing-row-height-images/table01.png#lightbox)
+[![O design do protótipo da célula](autosizing-row-height-images/table01.png)](autosizing-row-height-images/table01.png#lightbox)
 
 Para cada elemento no protótipo, adicione restrições para manter os elementos na posição correta, pois o modo de exibição de tabela é redimensionado para rotação ou tamanhos de tela de dispositivo iOS diferentes. Por exemplo, fixar o na `Title` parte superior, esquerda e direita da *exibição de conteúdo*da célula:
 
@@ -53,7 +53,7 @@ Para cada elemento do nosso protótipo de célula, atribua um **nome** para exp�
 
 [![Atribuir um nome para expô-lo ao código C#](autosizing-row-height-images/table05.png)](autosizing-row-height-images/table05.png#lightbox)
 
-Em seguida, adicione uma classe personalizada para o `UITableViewController` , o `UITableView` e o `UITableCell` (protótipo). Por exemplo: 
+Em seguida, adicione uma classe personalizada para o `UITableViewController` , o `UITableView` e o `UITableCell` (protótipo). Por exemplo:
 
 [![Adicionar uma classe personalizada para UITableViewController, UITableView e UITableCell](autosizing-row-height-images/table06.png)](autosizing-row-height-images/table06.png#lightbox)
 

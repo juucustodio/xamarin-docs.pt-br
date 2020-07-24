@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 09/02/2018
-ms.openlocfilehash: 767282516d9fc2ce097d13641697290dad7bd8ad
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: fe052fee9bd72164ce0d739f01cc1c21a9517cc6
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938067"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997157"
 ---
 # <a name="hello-mac-walkthrough"></a>Olá, Mac – passo a passo
 
@@ -324,7 +324,7 @@ Para usar o Interface Builder, faça o seguinte:
 
 3. Clique na propriedade **Title**, no **Inspetor de Atributos**, e altere o título do botão para **Clique em mim**:
 
-    [![](hello-mac-images/xcode09.png "Setting the button's properties")](hello-mac-images/xcode09.png#lightbox)
+    [![Definindo as propriedades do botão](hello-mac-images/xcode09.png)](hello-mac-images/xcode09.png#lightbox)
 
 4. Arraste um **rótulo** da **seção Biblioteca**:
 

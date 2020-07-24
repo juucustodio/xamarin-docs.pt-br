@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 8dc70cc8f1bf29a58cb20540fa538be2025b2ba4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: a5135d9bb481afcaefc851e392196a87b8ef80dd
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935623"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997196"
 ---
 # <a name="debugging-xamarinios-apps"></a>Depurando aplicativos Xamarin.iOS
 
@@ -216,13 +216,13 @@ Como esse recurso consome mais memória durante a depuração, ele está desliga
 
 Para habilitar esse recurso, verifique se a opção **Depurar somente o código do projeto; não intervir no código do framework** está desmarcada no menu _Visual Studio para Mac > Preferências > Depurador_, conforme ilustrado abaixo:
 
-[![](debugging-in-xamarin-ios-images/debugging6.png "Debugging Mono's Class Libraries")](debugging-in-xamarin-ios-images/debugging6.png#lightbox)
+[![Depurando bibliotecas de classes do mono](debugging-in-xamarin-ios-images/debugging6.png)](debugging-in-xamarin-ios-images/debugging6.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
  Para depurar as bibliotecas de classe no Visual Studio, desabilite **Apenas Meu Código** no menu _Depurar > Opções_. No nó _Depuração > Geral_, desmarque a caixa de seleção **Habilitar Apenas Meu Código**: 
 
-[![](debugging-in-xamarin-ios-images/debugging6vs.png "Debugging Mono's Class Libraries")](debugging-in-xamarin-ios-images/debugging6vs.png#lightbox)
+[![Depurando bibliotecas de classes do mono](debugging-in-xamarin-ios-images/debugging6vs.png)](debugging-in-xamarin-ios-images/debugging6vs.png#lightbox)
 
 -----
 

@@ -7,20 +7,20 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2017
-ms.openlocfilehash: 60e7c2b5771f7f65c07926b2fb5958fdc3f419fb
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 84953ce2ec09cc757b5719991e499dc24b708cae
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931028"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996104"
 ---
 # <a name="watchos-background-tasks-in-xamarin"></a>Tarefas em segundo plano do watchOS no Xamarin
 
-Com o watchOS 3, há três maneiras principais de que um aplicativo Watch possa manter suas informações atualizadas: 
+Com o watchOS 3, há três maneiras principais de que um aplicativo Watch possa manter suas informações atualizadas:
 
-- Usando uma das várias novas tarefas em segundo plano. 
-- Ter uma de suas complicações na face do relógio (dando a ela tempo extra para atualizar). 
-- Fazer com que o usuário fixe o aplicativo no novo encaixe (onde ele é mantido na memória e atualizado com frequência). 
+- Usando uma das várias novas tarefas em segundo plano.
+- Ter uma de suas complicações na face do relógio (dando a ela tempo extra para atualizar).
+- Fazer com que o usuário fixe o aplicativo no novo encaixe (onde ele é mantido na memória e atualizado com frequência).
 
 ## <a name="keeping-an-app-up-to-date"></a>Mantendo um aplicativo atualizado
 
@@ -43,7 +43,7 @@ Usando as novas APIs que a Apple incluiu no watchOS 3, o aplicativo pode agendar
 
 [![Um exemplo da complicação do clima](background-tasks-images/update01.png)](background-tasks-images/update01.png#lightbox)
 
-1. O aplicativo é agendado para ser ativadosdo pelo sistema em um momento específico. 
+1. O aplicativo é agendado para ser ativadosdo pelo sistema em um momento específico.
 2. O aplicativo busca as informações necessárias para gerar a atualização.
 3. O aplicativo regenera sua interface do usuário para refletir os novos dados.
 4. Quando o usuário Resumindo a complicação do aplicativo, ele tem informações atualizadas sem que o usuário precise aguardar a atualização.
@@ -190,7 +190,7 @@ Ao colocar todas as partes da nova API de tarefas em segundo plano, um conjunto 
 
 Dê uma olhada no cenário a seguir:
 
-[![](background-tasks-images/update13.png "A watchOS app limits its drain on the system's shared resources")](background-tasks-images/update13.png#lightbox)
+[![Um aplicativo watchOS limita seu dreno nos recursos compartilhados do sistema](background-tasks-images/update13.png)](background-tasks-images/update13.png#lightbox)
 
 1. O usuário inicia um aplicativo watchOS às 1:00 PM.
 2. O aplicativo agenda uma tarefa para ativar e baixar o novo conteúdo em uma hora às 2:00 PM.
@@ -203,7 +203,7 @@ Embora cada aplicativo seja diferente, a Apple sugere encontrar padrões de uso,
 
 ## <a name="implementing-background-tasks"></a>Implementando tarefas em segundo plano
 
-Por exemplo, este documento usará o aplicativo de esportes MonkeySoccer ilegítimo que relata pontuações de futebol para o usuário. 
+Por exemplo, este documento usará o aplicativo de esportes MonkeySoccer ilegítimo que relata pontuações de futebol para o usuário.
 
 Veja o seguinte cenário de uso típico:
 
@@ -215,7 +215,7 @@ A equipe de futebol favorita do usuário está reproduzindo uma grande correspon
 2. O aplicativo recebe a tarefa e atualiza seus dados e a interface do usuário e agenda para outra tarefa em segundo plano 30 minutos mais tarde. É importante que o desenvolvedor seja lembrado de agendar outra tarefa em segundo plano, ou o aplicativo nunca será acordado para obter mais atualizações.
 3. Novamente, o aplicativo recebe a tarefa e atualiza seus dados, atualiza sua interface do usuário e agenda outra tarefa em segundo plano 30 minutos depois.
 4. O mesmo processo se repete novamente.
-5. A última tarefa em segundo plano é recebida e o aplicativo atualiza seus dados e a interface do usuário novamente. Como essa é a pontuação final, ela não é agendada para uma nova atualização em segundo plano. 
+5. A última tarefa em segundo plano é recebida e o aplicativo atualiza seus dados e a interface do usuário novamente. Como essa é a pontuação final, ela não é agendada para uma nova atualização em segundo plano.
 
 <a name="Scheduling-for-Background-Update"></a>
 
@@ -229,7 +229,7 @@ private void ScheduleNextBackgroundUpdate ()
   // Create a fire date 30 minutes into the future
   var fireDate = NSDate.FromTimeIntervalSinceNow (30 * 60);
 
-  // Create 
+  // Create
   var userInfo = new NSMutableDictionary ();
   userInfo.Add (new NSString ("LastActiveDate"), NSDate.FromTimeIntervalSinceNow(0));
   userInfo.Add (new NSString ("Reason"), new NSString ("UpdateScore"));
@@ -260,7 +260,7 @@ Em seguida, dê uma olhada mais de perto na janela de 5 minutos mostrando as eta
 
 1. Às 7:30:02 PM, o aplicativo é ativado pelo sistema e recebeu a tarefa de atualização em segundo plano. Sua primeira prioridade é obter as pontuações mais recentes do servidor. Consulte [agendando um NSUrlSession](#Scheduling-a-NSUrlSession) abaixo.
 2. Às 7:30:05 o aplicativo conclui a tarefa original, o sistema coloca o aplicativo em suspensão e continua a baixar os dados solicitados em segundo plano.
-3. Quando o sistema conclui o download, ele cria uma nova tarefa para ativar o aplicativo para que ele possa processar as informações baixadas. Consulte [manipulando tarefas em segundo plano](#Handling-Background-Tasks) e [manipulando a conclusão do download](#Handling-the-Download-Completing) abaixo. 
+3. Quando o sistema conclui o download, ele cria uma nova tarefa para ativar o aplicativo para que ele possa processar as informações baixadas. Consulte [manipulando tarefas em segundo plano](#Handling-Background-Tasks) e [manipulando a conclusão do download](#Handling-the-Download-Completing) abaixo.
 4. O aplicativo salva as informações atualizadas e marca a tarefa como concluída. O desenvolvedor pode ser tentado a atualizar a interface do usuário do aplicativo no momento, no entanto, a Apple sugere o agendamento de uma tarefa de instantâneo para lidar com esse processo. Consulte [agendando uma atualização de instantâneo](#Scheduling-a-Snapshot-Update) abaixo.
 5. O aplicativo recebe a tarefa de instantâneo, atualiza sua interface do usuário e marca a tarefa como concluída. Consulte [manipulando uma atualização de instantâneo](#Handling-a-Snapshot-Update) abaixo.
 
@@ -308,7 +308,7 @@ namespace MonkeySoccer.MonkeySoccerExtension
     #endregion
 
     ...
-    
+
     #region Public Methods
     public void CompleteTask (WKRefreshBackgroundTask task)
     {
@@ -316,7 +316,7 @@ namespace MonkeySoccer.MonkeySoccerExtension
       task.SetTaskCompleted ();
       PendingTasks.Remove (task);
     }
-    #endregion 
+    #endregion
 
     #region Override Methods
     public override void HandleBackgroundTasks (NSSet<WKRefreshBackgroundTask> backgroundTasks)
@@ -341,7 +341,7 @@ namespace MonkeySoccer.MonkeySoccerExtension
       }
     }
     #endregion
-    
+
     ...
   }
 }
@@ -521,7 +521,7 @@ Além disso, ele também informa à tarefa de instantâneo que o aplicativo não
 
 ## <a name="working-efficiently"></a>Trabalhando com eficiência
 
-Como visto no exemplo acima da janela de cinco minutos que o aplicativo MonkeySoccer levou para atualizar suas pontuações, trabalhando de maneira eficiente e usando as novas tarefas em segundo plano do watchOS 3, o aplicativo esteve ativo apenas por um total de 15 segundos: 
+Como visto no exemplo acima da janela de cinco minutos que o aplicativo MonkeySoccer levou para atualizar suas pontuações, trabalhando de maneira eficiente e usando as novas tarefas em segundo plano do watchOS 3, o aplicativo esteve ativo apenas por um total de 15 segundos:
 
 [![O aplicativo esteve ativo somente por um total de 15 segundos](background-tasks-images/update16.png)](background-tasks-images/update16.png#lightbox)
 
@@ -531,7 +531,7 @@ Isso reduz o impacto que o aplicativo terá nos recursos de Apple Watch disponí
 
 ## <a name="how-scheduling-works"></a>Como funciona o agendamento
 
-Embora um aplicativo watchOS 3 esteja em primeiro plano, ele é sempre agendado para execução e pode fazer qualquer tipo de processamento necessário, como atualizar dados ou redesenhar sua interface do usuário. Quando o aplicativo passa para o plano de fundo, ele é geralmente suspenso pelo sistema e todas as operações de tempo de execução são interrompidas. 
+Embora um aplicativo watchOS 3 esteja em primeiro plano, ele é sempre agendado para execução e pode fazer qualquer tipo de processamento necessário, como atualizar dados ou redesenhar sua interface do usuário. Quando o aplicativo passa para o plano de fundo, ele é geralmente suspenso pelo sistema e todas as operações de tempo de execução são interrompidas.
 
 Enquanto o aplicativo está em segundo plano, ele pode ser direcionado pelo sistema para executar rapidamente uma tarefa específica. Portanto, no watchOS 2, o sistema pode ativar temporariamente um aplicativo em segundo plano para fazer coisas como manipular uma notificação de aparência longa ou atualizar a complicação do aplicativo. No watchOS 3, há várias maneiras novas que um aplicativo pode ser executado em segundo plano.
 
@@ -638,7 +638,7 @@ Pode haver ocasiões em que o sistema decida que precisa de um novo instantâneo
 
 <a name="Best-Practices"></a>
 
-## <a name="best-practices"></a>Práticas Recomendadas 
+## <a name="best-practices"></a>Práticas Recomendadas
 
 A Apple sugere as seguintes práticas recomendadas ao trabalhar com tarefas em segundo plano:
 
@@ -651,7 +651,7 @@ A Apple sugere as seguintes práticas recomendadas ao trabalhar com tarefas em s
   - Atualizações em segundo plano.
 - Use `ScheduleBackgroundRefresh` para tempo de execução em segundo plano de uso geral, como:
   - Sondando o sistema para obter informações.
-  - Agendar futuro `NSURLSessions` para solicitar dados em segundo plano. 
+  - Agendar futuro `NSURLSessions` para solicitar dados em segundo plano.
   - Transições de tempo conhecidas.
   - Disparando atualizações de complicação.
 
