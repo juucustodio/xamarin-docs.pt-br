@@ -1,116 +1,116 @@
 ---
-title: Recursos da plataforma de Xamarin.Android
-description: Os documentos nesta seção cobrem recursos específicos para o Android. Aqui você encontrará tópicos como usar Fragmentos, trabalhar com mapas e encapsular dados com provedores de conteúdo.
+title: Recursos de plataforma do Xamarin. Android
+description: Os documentos nesta seção abrangem recursos específicos do Android. Aqui, você encontrará tópicos como usar fragmentos, trabalhar com mapas e encapsular dados com provedores de conteúdo.
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2018
-ms.openlocfilehash: 38052eee1b71ace9795f5c16bdf714f9538e353d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 9b4b74b3dbde34cb94b2ce3b104b2b5a4e1abe21
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79303470"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996884"
 ---
-# <a name="platform-features"></a>Recursos da plataforma
+# <a name="xamarinandroid-platform-features"></a>Recursos da plataforma Xamarin. Android
 
-_Os documentos nesta seção cobrem recursos específicos para o Android. Aqui você encontrará tópicos como usar Fragmentos, trabalhar com mapas e encapsular dados com provedores de conteúdo._
+_Os documentos nesta seção abrangem recursos específicos do Android. Aqui, você encontrará tópicos como usar fragmentos, trabalhar com mapas e encapsular dados com provedores de conteúdo._
 
 ## <a name="android-beam"></a>[Beam do Android](~/android/platform/android-beam.md)
 
-Android Beam é uma nova tecnologia DE Comunicação de Campo Próximo (NFC) no Android 4 que permite que os aplicativos compartilhem informações via NFC quando estão próximos.
+O feixe do Android é uma nova tecnologia NFC (comunicação a curta distância) no Android 4 que permite que os aplicativos compartilhem informações sobre o NFC quando estiverem próximos.
 
 ## <a name="working-with-files"></a>[Trabalhando com arquivos](~/android/platform/files/index.md)
 
-Esta seção discute como acessar arquivos no Xamarin.Android.
+Esta seção discute como acessar arquivos no Xamarin. Android.
 
-## <a name="fingerprint-authentication"></a>[Autenticação de impressões digitais](~/android/platform/fingerprint-authentication/index.md)
+## <a name="fingerprint-authentication"></a>[Autenticação de impressão digital](~/android/platform/fingerprint-authentication/index.md)
 
-Esta seção discute como usar a autenticação de impressão digital, introduzida pela primeira vez no Android 6.0, em um aplicativo Xamarin.Android.
+Esta seção discute como usar a autenticação de impressão digital, introduzida pela primeira vez no Android 6,0, em um aplicativo Xamarin. Android.
 
 ## <a name="firebase-job-dispatcher"></a>[Dispatcher de trabalho do Firebase](~/android/platform/firebase-job-dispatcher.md)
 
-Este guia discute o Firebase Job Dispatcher e como usá-lo para simplificar a execução de trabalhos de fundo em um aplicativo Xamarin.Android.
+Este guia discute o Dispatcher de trabalhos do firebase e como usá-lo para simplificar a execução de trabalhos em segundo plano em um aplicativo Xamarin. Android.
 
 ## <a name="fragments"></a>[Fragmentos](~/android/platform/fragments/index.md)
 
-O Android 3.0 introduziu fragmentos, mostrando como suportar designs mais flexíveis para os diversos tamanhos de tela encontrados em telefones e tablets. Este artigo abordará como usar fragmentos para desenvolver aplicativos Xamarin.Android, e também como suportar Fragmentos em dispositivos pré-Android 3.0 (API Nível 11).
+O Android 3,0 introduziu fragmentos, mostrando como dar suporte a designs mais flexíveis para vários tamanhos de tela diferentes encontrados em telefones e tablets. Este artigo abordará como usar fragmentos para desenvolver aplicativos Xamarin. Android e também como dar suporte a fragmentos em dispositivos anteriores ao Android 3,0 (nível de API 11).
 
-## <a name="app-linking"></a>[Vinculação de aplicativos](~/android/platform/app-linking.md)
+## <a name="app-linking"></a>[Vinculação de aplicativo](~/android/platform/app-linking.md)
 
-Este guia discutirá como o Android 6.0 suporta _o link de aplicativos,_ uma técnica que permite que aplicativos móveis respondam a URLs em sites. Ele discutirá como implementar o link de aplicativo em um aplicativo Android 6.0 e como configurar um site para conceder permissões ao aplicativo móvel para lidar com links de aplicativos para o domínio.
+Este guia discutirá como o Android 6,0 dá suporte à _vinculação de aplicativos_, uma técnica que permite que os aplicativos móveis respondam a URLs em sites. Ele discutirá como implementar a vinculação de aplicativos em um aplicativo Android 6,0 e como configurar um site para conceder permissões ao aplicativo móvel para lidar com links de aplicativo para o domínio.
 
 ## <a name="androidx"></a>[AndroidX](~/android/platform/androidx.md)
 
-Este artigo fornece um esboço de uso do AndroidX dentro de seus projetos Xamarin.Android e fornece links para documentação que ilustra como migrar seu aplicativo da Biblioteca de Suporte android para AndroidX.
+Este artigo fornece uma descrição do uso do AndroidX em seus projetos do Xamarin. Android e fornece links para a documentação que ilustra como migrar seu aplicativo da biblioteca de suporte do Android para o AndroidX.
 
 ## <a name="android-10"></a>[Android 10](~/android/platform/android-10.md)
 
-Este artigo fornece um esboço dos novos recursos no Android 10, explica como preparar o Xamarin.Android para o desenvolvimento do Android 10 e fornece links para aplicativos de amostra que ilustram como usar os recursos do Android Oreo em aplicativos Xamarin.Android.
+Este artigo fornece uma descrição dos novos recursos do Android 10, explica como preparar o Xamarin. Android para desenvolvimento do Android 10 e fornece links para aplicativos de exemplo que ilustram como usar os recursos do Oreo do Android em aplicativos Xamarin. Android.
 
 ## <a name="android-9-pie"></a>[Android 9 Pie](~/android/platform/pie.md)
 
-Este artigo fornece um esboço dos novos recursos no Android Pie, explica como preparar o Xamarin.Android para o desenvolvimento do Android Pie, e fornece um aplicativo de exemplo que ilustra como usar os novos recursos de recorte e notificação do Android Pie em aplicativos Xamarin.Android.
+Este artigo fornece uma descrição dos novos recursos da pizza do Android, explica como preparar o Xamarin. Android para desenvolvimento de pizza do Android e fornece um aplicativo de exemplo que ilustra como usar os novos recursos de recorte e notificação de pizza do Android em aplicativos Xamarin. Android.
 
 ## <a name="android-8-oreo"></a>[Android 8 Oreo](~/android/platform/oreo.md)
 
-Este artigo fornece um esboço dos novos recursos no Android Oreo, explica como preparar o Xamarin.Android para o desenvolvimento do Android Oreo e fornece links para aplicativos de amostra que ilustram como usar os recursos do Android Oreo em aplicativos Xamarin.Android.
+Este artigo fornece uma descrição dos novos recursos do Android Oreo, explica como preparar o Xamarin. Android para desenvolvimento Oreo do Android e fornece links para aplicativos de exemplo que ilustram como usar recursos Oreo do Android em aplicativos Xamarin. Android.
 
 ## <a name="android-7-nougat"></a>[Android 7 Nougat](~/android/platform/nougat.md)
 
-Este artigo fornece uma visão geral de alto nível dos novos recursos introduzidos no Android 7.0 Nougat.
+Este artigo fornece uma visão geral de alto nível dos novos recursos introduzidos no Android 7,0 nougat.
 
 ## <a name="android-6-marshmallow"></a>[Android 6 Marshmallow](~/android/platform/marshmallow.md)
 
-Este artigo fornece uma visão geral de alto nível dos novos recursos introduzidos no Android 6.0 Marshmallow.
+Este artigo fornece uma visão geral de alto nível dos novos recursos introduzidos no Android 6,0 marshmallow.
 
 ## <a name="android-5-lollipop"></a>[Android 5 Lollipop](~/android/platform/lollipop.md)
 
-Este guia fornece uma visão geral dos novos recursos do Android 5.0 Lollipop, como Material Theme, CardView, RecyclerView e Heads Up Notifications, e se vincula a artigos aprofundados que ajudam você a usar esses novos recursos em seu aplicativo.
+Este guia fornece uma visão geral dos novos recursos de pirulito do Android 5,0, como o tema material, CardView, RecyclerView e notificações de cabeça e links para artigos detalhados que ajudam a usar esses novos recursos em seu aplicativo.
 
 ## <a name="android-44-kitkat"></a>[Android 4.4 KitKat](~/android/platform/kitkat.md)
 
-O Android 4.4 (KitKat) vem carregado com uma cornucópia de recursos para usuários e desenvolvedores. Este guia destaca vários desses recursos e fornece exemplos de código e detalhes de implementação para ajudá-lo a aproveitar ao máximo o KitKat.
+O Android 4,4 (KitKat) vem carregado com um infinidade de recursos para usuários e desenvolvedores. Este guia destaca vários desses recursos e fornece exemplos de código e detalhes de implementação para ajudá-lo a tirar o máximo proveito do KitKat.
 
 ## <a name="android-41-jelly-bean"></a>[Android 4.1 Jelly Bean](~/android/platform/jelly-bean.md)
 
-Este documento fornecerá uma visão geral de alto nível dos novos recursos para desenvolvedores que foram introduzidos no Android 4.1. Esses recursos incluem: notificações aprimoradas, atualizações para o Android Beam para compartilhar arquivos grandes, atualizações para multimídia, detecção de rede ponto a ponto, animações, novas permissões.
+Este documento fornecerá uma visão geral de alto nível dos novos recursos para desenvolvedores que foram introduzidos no Android 4,1. Esses recursos incluem: notificações aprimoradas, atualizações no feixe do Android para compartilhar arquivos grandes, atualizações em multimídia, descoberta de rede ponto a ponto, animações, novas permissões.
 
 ## <a name="android-40-ice-cream-sandwich"></a>[Android 4.0 Ice Cream Sandwich](~/android/platform/ice-cream-sandwich.md)
 
-Este artigo descreve vários dos novos recursos disponíveis para desenvolvedores de aplicativos com a *API Android 4 - Ice Cream Sandwich*.
-Ele cobre várias novas tecnologias de interface de usuário e, em seguida, examina uma variedade de novos recursos que o Android 4 oferece para compartilhar dados entre aplicativos e entre dispositivos.
+Este artigo descreve vários dos novos recursos disponíveis para desenvolvedores de aplicativos com a *API do Android 4-Ice de sorvete*.
+Ele abrange várias novas tecnologias de interface do usuário e, em seguida, examina uma variedade de novos recursos que o Android 4 oferece para o compartilhamento de dados entre aplicativos e entre dispositivos.
 
-## <a name="working-with-the-android-manifest"></a>[Trabalhando com o Manifesto do Android](android-manifest.md)
+## <a name="working-with-the-android-manifest"></a>[Trabalhando com o manifesto do Android](android-manifest.md)
 
-Este artigo introduz o arquivo AndroidManifest.xml, e como ele talvez seja usado para controlar a funcionalidade e descrever os requisitos de um aplicativo Mono para Android.
+Este artigo apresenta o arquivo AndroidManifest.xml e como ele pode ser usado para controlar a funcionalidade e descrever os requisitos de um aplicativo mono para Android.
 
 ## <a name="introduction-to-content-providers"></a>[Introdução aos provedores de conteúdo](~/android/platform/content-providers/index.md)
 
-Um ContentProvider encapsula um repositório de dados e fornece uma API para acessá-lo. O provedor existe como parte de um aplicativo para Android que também fornece uma interface do usuário para exibir/gerenciar os dados. O principal benefício de usar um provedor de conteúdo é permitir que outros aplicativos acessem facilmente os dados encapsulados usando um objeto cliente do provedor (chamado de ContentResolver). Juntos, um provedor de conteúdo e um resolver conteúdo oferecem uma API inter-aplicativo consistente para acesso a dados simples de construir e consumir. Este documento mostra como acessar e construir ContentProviders com Xamarin.Android.
+Um ContentProvider encapsula um repositório de dados e fornece uma API para acessá-lo. O provedor existe como parte de um aplicativo Android que também fornece uma interface do usuário para exibir/gerenciar os dados. O principal benefício de usar um provedor de conteúdo é permitir que outros aplicativos acessem facilmente os dados encapsulados usando um objeto de cliente de provedor (chamado de ContentResolver retornem). Juntos, um provedor de conteúdo e um resolvedor de conteúdo oferecem uma API entre aplicativos consistente para acesso a dados que é simples de criar e consumir. Este documento mostra como acessar e criar o ContentProviders com o Xamarin. Android.
 
-## <a name="maps-and-location"></a>[Mapas e Localização](~/android/platform/maps-and-location/index.md)
+## <a name="maps-and-location"></a>[Mapas e localização](~/android/platform/maps-and-location/index.md)
 
-Esta seção discute como usar mapas e localização com Xamarin.Android. Ele cobre tudo, desde aproveitar o aplicativo de mapas incorporados até usar diretamente o [Google Maps Android API v2.](https://developers.google.com/maps/documentation/android/) Além disso, explica como usar uma única API para trabalhar com serviços de localização, que usam triangulação celular para permitir que um aplicativo obtenha correções de localização, localização Wi-Fi e GPS.
+Esta seção discute como usar mapas e localização com o Xamarin. Android. Ele aborda tudo, desde o aproveitamento do aplicativo de mapas interno até o uso direto da [API do Google Maps para Android v2](https://developers.google.com/maps/documentation/android/) . Além disso, ele explica como usar uma única API para trabalhar com serviços de localização, que usam a triangulação de celular para permitir que um aplicativo obtenha correções de local, local de Wi-Fi e GPS.
 
-## <a name="android-speech"></a>[Discurso do Android](~/android/platform/speech.md)
+## <a name="android-speech"></a>[Fala do Android](~/android/platform/speech.md)
 
-Esta seção discute como usar as instalações android text to Speech e Speech to Text. Também abrange a instalação de pacotes de idiomas e a interpretação do texto falado com o dispositivo.
+Esta seção discute como usar o Conversão de Texto em Fala do Android e a fala para instalações de texto. Ele também aborda a instalação de pacotes de idiomas e a interpretação do texto falado no dispositivo.
 
 ## <a name="binding-a-java-library"></a>[Associação de uma biblioteca Java](binding-java-library/index.md)
 
-Este guia explica como incorporar bibliotecas Java em aplicativos Xamarin.Android criando uma Biblioteca de Vinculações.
+Este guia explica como incorporar bibliotecas Java em aplicativos Xamarin. Android criando uma biblioteca de associações.
 
 ## <a name="bind-a-kotlin-library"></a>[Associar uma biblioteca do Kotlin](binding-kotlin-library/index.md)
 
-Este guia explica como criar vinculações C# ao código Kotlin, tornando possível consumir bibliotecas nativas em um aplicativo Xamarin.Android.
+Este guia explica como criar associações em C# para Kotlin código, possibilitando o consumo de bibliotecas nativas em um aplicativo Xamarin. Android.
 
-## <a name="java-integration"></a>[Integração Java](java-integration/index.md)
+## <a name="java-integration"></a>[Integração do Java](java-integration/index.md)
 
-Este artigo fornece uma visão geral das maneiras pelas quais os desenvolvedores podem reutilizar componentes Java existentes em aplicativos Xamarin.Android.
+Este artigo fornece uma visão geral das maneiras como os desenvolvedores podem reutilizar componentes Java existentes em aplicativos Xamarin. Android.
 
 ## <a name="renderscript"></a>[Renderscript](renderscript.md)
 
-Este guia discute o Renderscript.
+Este guia discute o renderscript.

@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/29/2018
-ms.openlocfilehash: 81377d790d695b60465319aeb166eb1e62483211
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 7bc6a7ce1b8cd20aa782ddde42925e4e72374ec4
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76940937"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996940"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Emparelhar com o Mac para desenvolvimento no Xamarin.iOS
 
-_Este guia descreve como usar o Pair to Mac para conectar o Visual Studio 2019 a um host de compilação Mac. As mesmas instruções se aplicam ao Visual Studio 2017._
+_Este guia descreve como usar o Pair to Mac para conectar o Visual Studio 2019 a um host de Build do Mac. As mesmas instruções se aplicam ao Visual Studio 2017._
 
 ## <a name="overview"></a>Visão geral
 
@@ -151,7 +151,7 @@ Se não vir um Mac específico listado na caixa de diálogo **Emparelhar com Mac
 
 4. Insira o nome de usuário e a senha para o Mac:
 
-    ![Inserir um nome de usuário e uma senha](images/auth.png "Inserir um nome de usuário e uma senha")
+    ![Insira um nome de usuário e senha](images/auth.png "Inserir um nome de usuário e uma senha")
 
    > [!TIP]
    > Ao fazer logon, use seu nome de usuário do sistema em vez do nome completo.
@@ -160,7 +160,7 @@ Se não vir um Mac específico listado na caixa de diálogo **Emparelhar com Mac
 
 ## <a name="automatic-mac-provisioning"></a>Provisionamento automático do Mac
 
-Começando com [visual studio 2019 versão 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), Pair to Mac provisiona automaticamente um Mac com software necessário para a construção de aplicativos Xamarin.iOS: Mono, Xamarin.iOS (a estrutura de software, não o Visual Studio para Mac IDE), e várias ferramentas relacionadas ao Xcode (mas não xcode em si).
+A partir do [Visual Studio 2019 versão 15,6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), o par para Mac provisiona automaticamente um Mac com o software necessário para criar aplicativos Xamarin. Ios: mono, Xamarin. Ios (a estrutura de software, não o Visual Studio para Mac IDE) e várias ferramentas relacionadas ao Xcode (mas não ao Xcode em si).
 
 > [!IMPORTANT]
 >
@@ -176,9 +176,9 @@ O Emparelhar com Mac fará a verificação para certificar-se de que o Mono est�
 
 O progresso é indicado por vários prompts, conforme mostrado pelas seguintes capturas de tela (clique para ampliar):
 
-||Verificação de instalação|Baixando|Instalando
+|Mono|Verificação de instalação|Baixando|Instalando
 |---|---|---|---|
-|Mono|[![Instalação do Mono ausente](images/mono-missing.png "Instalação do Mono ausente")](images/mono-missing-large.png#lightbox)|[![Baixar o Mono](images/mono-downloading.png "Baixar Mono")](images/mono-downloading-large.png#lightbox)|[![Instalar Mono](images/mono-installing.png "Instalar Mono")](images/mono-installing-large.png#lightbox)|
+||[![Instalação do Mono ausente](images/mono-missing.png "Instalação do Mono ausente")](images/mono-missing-large.png#lightbox)|[![Baixar o Mono](images/mono-downloading.png "Baixar Mono")](images/mono-downloading-large.png#lightbox)|[![Instalar Mono](images/mono-installing.png "Instalar Mono")](images/mono-installing-large.png#lightbox)|
 
 ### <a name="xamarinios"></a>Xamarin.iOS
 
@@ -192,17 +192,17 @@ O Emparelhar com Mac faz upgrade do Xamarin.iOS no Mac para corresponder à vers
 
 O progresso é indicado por vários prompts, conforme mostrado pelas seguintes capturas de tela (clique para ampliar):
 
-||Verificação de instalação|Baixando|Instalando
+|Xamarin.iOS|Verificação de instalação|Baixando|Instalando
 |---|---|---|---|
-|Xamarin.iOS|[![Instalação do Xamarin.iOS ausente](images/xamios-missing.png "Instalação do Xamarin.iOS ausente")](images/xamios-missing-large.png#lightbox)|[![Baixar o Xamarin.iOS](images/xamios-downloading.png "Baixar Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![Instalar o Xamarin.iOS](images/xamios-installing.png "Instalando o Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
+||[![Instalação do Xamarin.iOS ausente](images/xamios-missing.png "Instalação do Xamarin.iOS ausente")](images/xamios-missing-large.png#lightbox)|[![Baixar o Xamarin.iOS](images/xamios-downloading.png "Baixar Xamarin.iOS")](images/xamios-downloading-large.png#lightbox)|[![Instalar o Xamarin.iOS](images/xamios-installing.png "Instalando o Xamarin.iOS")](images/xamios-installing-large.png#lightbox)|
 
 ### <a name="xcode-tools-and-license"></a>Licença e ferramentas Xcode
 
 O Emparelhar com Mac também fará a verificação para determinar se o Xcode foi instalado e se a licença foi aceita. Embora o Emparelhar com Mac não instale o Xcode, ele solicita a aceitação da licença, conforme mostrado nas seguintes capturas de tela (clique para ampliar):
 
-||Verificação de instalação|Aceitação da licença|
+|Xcode|Verificação de instalação|Aceitação da licença|
 |---|---|---|
-|Xcode|[![Instalação do Xcode ausente](images/xcode-missing.png "Instalação do Xcode ausente")](images/xcode-missing-large.png#lightbox)|[![Licença do Xcode](images/xcode-license.png "Licença do Xcode")](images/xcode-license-large.png#lightbox)|
+||[![Instalação do Xcode ausente](images/xcode-missing.png "Instalação do Xcode ausente")](images/xcode-missing-large.png#lightbox)|[![Licença do Xcode](images/xcode-license.png "Licença do Xcode")](images/xcode-license-large.png#lightbox)|
 
 Adicionalmente, o Emparelhar com Mac instalará ou atualizará vários pacotes distribuídos com o Xcode. Por exemplo:
 
@@ -236,7 +236,7 @@ Os parâmetros passados para `msbuild` no exemplo acima são:
 - `ServerPassword` – a senha a ser usada ao fazer logon no host de build do Mac.
 
 > [!NOTE]
-> Visual Studio `msbuild` 2019 armazena no seguinte diretório: **C:\Arquivos de programa (x86)\Microsoft Visual Studio\2019\\&lt;Versão&gt;\MSBuild\Current\Bin**
+> O Visual Studio 2019 armazena `msbuild` no seguinte diretório: **c:\Arquivos de programas (x86) \Microsoft Visual Studio\2019 \\ &lt; versão &gt; \MSBuild\Current\Bin**
 
 Na primeira vez em que o Emparelhar com Mac fizer logon em um determinado host de build do Mac usando o Visual Studio 2019 ou a linha de comando, ele configurará chaves SSH. Com essas chaves, logons futuros não exigirão um nome de usuário ou senha. As chaves recém-criadas são armazenadas em **%LOCALAPPDATA%\Xamarin\MonoTouch**.
 

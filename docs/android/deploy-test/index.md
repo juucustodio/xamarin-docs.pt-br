@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 4b7d3d19ce8766ccdbfc41163fcad44074e832b8
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: bec2bef92433320925c4179535c8371b69b9bf22
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "80159751"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996546"
 ---
-# <a name="deployment-and-testing"></a>Implantação e Teste
+# <a name="deployment-and-testing-of-xamarinandroid-apps"></a>Implantação e teste de aplicativos Xamarin. Android
 
 Os guias desta seção explicam como testar um aplicativo, otimizar seu desempenho, prepará-lo para lançamento, assiná-lo com um certificado e publicá-lo em uma loja de aplicativos.
 
@@ -24,7 +24,7 @@ Este artigo examina as partes que constituem um pacote do aplicativo do Xamarin.
 
 ## <a name="apply-changes"></a>[Aplicar alterações](apply-changes.md)
 
-Este guia abrange o recurso Aplicar alterações, que permite que você empurre alterações de recursos para o aplicativo em execução sem reiniciar o aplicativo.
+Este guia aborda o recurso aplicar alterações, que permite que você envie por push alterações de recursos para seu aplicativo em execução sem reiniciar o aplicativo.
 
 ## <a name="building-apps"></a>[Compilar aplicativos](building-apps/index.md)
 
@@ -66,11 +66,11 @@ Há várias técnicas para aumentar o desempenho dos aplicativos criados com o X
 
 Este guia explica como usar ferramentas de criação de perfil para examinar o desempenho e o uso de memória de um aplicativo Android.
 
-## <a name="preparing-an-application-for-release"></a>[Preparar um Aplicativo para Lançamento](~/android/deploy-test/release-prep/index.md)
+## <a name="preparing-an-application-for-release"></a>[Preparando um aplicativo para a versão](~/android/deploy-test/release-prep/index.md)
 
 Depois que um aplicativo tiver sido codificado e testado, será necessário preparar um pacote para distribuição. A primeira tarefa na preparação desse pacote é compilar o aplicativo para a versão, o que envolve principalmente a configuração de alguns atributos do aplicativo.
 
-## <a name="signing-the-android-application-package"></a>[Assinatura do Pacote de Aplicativos Android](~/android/deploy-test/signing/index.md)
+## <a name="signing-the-android-application-package"></a>[Assinando o pacote de aplicativos do Android](~/android/deploy-test/signing/index.md)
 
 Saiba como criar uma identidade de assinatura do Android, criar um novo certificado de autenticação para aplicativos Android e assinar um aplicativo com o certificado de autenticação. Além disso, este tópico explica como exportar o aplicativo para o disco, para distribuição *ad-hoc*. O APK resultante pode ter o sideload realizado em dispositivos Android sem passar por uma loja de aplicativos.
 

@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 71c31bc9c1fde34a4b9a6dc90d28218ae7b13f5a
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: d60cc4a8730c765b0e1ee8f06237250afdcefa05
+ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030346"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86996732"
 ---
-# <a name="platform-features"></a>Recursos da plataforma
+# <a name="wear-os-platform-features-with-xamarinandroid"></a>Recursos da plataforma de sistema operacional de desgaste com Xamarin. Android
 
 Os documentos nesta seção abrangem recursos específicos para o desgaste do Android. Aqui você encontrará um tópico que descreve como criar um WatchFace.
 
-## <a name="creating-a-watch-faceandroidwearplatformcreating-a-watchfacemd"></a>[Criar uma mostrador de relógio](~/android/wear/platform/creating-a-watchface.md)
+## <a name="creating-a-watch-face"></a>[Como criar um mostrador de relógio](~/android/wear/platform/creating-a-watchface.md)
 
 Uma explicação passo a passo para implementar um serviço de acompanhamento de inspeção personalizado para o desgaste do Android. As instruções são fornecidas para a criação de um serviço de face de inspeção digital retirado e, em seguida, mais códigos são adicionados para criar uma face de inspeção de estilo analógico com recursos adicionais.
