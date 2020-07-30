@@ -10,16 +10,16 @@ ms.date: 11/07/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 38389867ba52e63d8310e3b59d7838f58e8cf488
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 733ec985f4d285f26aca62930868970026847825
+ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137508"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87426871"
 ---
-# <a name="xamarinforms-tabbedpage"></a>Xamarin.FormsTabbedPage
+# <a name="no-locxamarinforms-tabbedpage"></a>Xamarin.FormsTabbedPage
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
 
 O Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) consiste em uma lista de guias e uma área de detalhes maior, com cada guia carregando conteúdo na área de detalhes. As capturas de tela a seguir mostram um `TabbedPage` no Ios e no Android:
 
@@ -33,7 +33,7 @@ No iOS, a lista de guias é exibida na parte inferior da tela e a área do detal
 No Android, a lista de guias é exibida na parte superior da tela, e a área de detalhes está abaixo. Cada guia consiste em um título e um ícone, que deve ser um arquivo PNG com um canal alfa. No entanto, as guias podem ser movidas para a parte inferior da tela com uma plataforma específica. Se houver mais de cinco guias e a lista de guias estiver na parte inferior da tela, será exibida uma guia *mais* que pode ser usada para acessar as guias adicionais. Para obter informações sobre os requisitos de ícone, consulte [guias](https://material.io/components/tabs/#) em material.Io e [suporte a diferentes densidades de pixel](https://developer.android.com/training/multiscreen/screendensities) em developer.Android.com. Para obter informações sobre como mover as guias para a parte inferior da tela, consulte [definindo o posicionamento e a cor da barra de ferramentas TabbedPage](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md).
 
 > [!TIP]
-> O `TabbedPageRenderer` para Android AppCompat tem um método substituível `GetIconDrawable` que pode ser usado para carregar ícones de guia de um personalizado `Drawable` . Essa substituição possibilita o uso de imagens SVG como ícones em uma `TabbedPage` e funciona com barras de guia superior e inferior. Como alternativa, o método `SetTabIcon` substituível pode ser usado para carregar ícones de guia de um `Drawable` personalizado para barras de guia superior.
+> O `TabbedPageRenderer` para Android AppCompat tem um método substituível `SetTabIconImageSource` que pode ser usado para carregar ícones de guia de um personalizado `Drawable` . Essa substituição possibilita o uso de imagens SVG como ícones em uma `TabbedPage` e funciona com barras de guia superior e inferior.
 
 Na Plataforma Universal do Windows (UWP), a lista de guias é exibida na parte superior da tela e a área de detalhes está abaixo. Cada guia consiste em um título. No entanto, os ícones podem ser adicionados a cada guia com uma plataforma específica. Para obter mais informações, consulte [ícones de TabbedPage no Windows](~/xamarin-forms/platform/windows/tabbedpage-icons.md).
 

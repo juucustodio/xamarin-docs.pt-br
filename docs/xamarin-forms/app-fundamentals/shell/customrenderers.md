@@ -6,18 +6,18 @@ ms.assetid: 3B1A6AE8-1D1E-4C34-B9AB-48F4444FEF32
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
+ms.date: 07/29/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 321539f877a86804245d27a2d76d1edeb1abd1e9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 76f9b4e243af908e5d00ba8b812dfd143104fe65
+ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137781"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87426845"
 ---
-# <a name="xamarinforms-shell-custom-renderers"></a>Xamarin.FormsRenderizadores personalizados do Shell
+# <a name="no-locxamarinforms-shell-custom-renderers"></a>Xamarin.FormsRenderizadores personalizados do Shell
 
 Uma das vantagens dos Xamarin.Forms aplicativos Shell é que sua aparência e comportamento é altamente personalizável por meio das propriedades e dos métodos que as várias classes Shell expõem. No entanto, também será possível criar um renderizador personalizado do Shell quando personalizações específicas de plataforma mais sofisticadas forem necessárias. Assim como acontece com outros renderizadores personalizados, um renderizador personalizado do Shell pode ser adicionado a apenas um projeto de plataforma para personalizar a aparência e o comportamento, permitindo o comportamento padrão na outra plataforma; ou um renderizador personalizado do Shell diferente pode ser adicionado a cada projeto de plataforma para personalizar a aparência e o comportamento no iOS e no Android.
 
@@ -42,14 +42,14 @@ O processo para criar uma classe de renderizador personalizado é a seguinte:
 
 A classe `ShellRenderer` expõe os seguintes métodos substituíveis:
 
-| iOS | Android |
-| --- | --- |
-| `SetElementSize`<br />`CreateFlyoutRenderer`<br />`CreateNavBarAppearanceTracker`<br />`CreatePageRendererTracker`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellItemTransition`<br />`CreateShellSearchResultsRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTabBarAppearanceTracker`<br />`Dispose`<br />`OnCurrentItemChanged`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`UpdateBackgroundColor` | `CreateFragmentForPage`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellFlyoutRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTrackerForToolbar`<br />`CreateToolbarAppearanceTracker`<br />`CreateTabLayoutAppearanceTracker`<br />`CreateBottomNavViewAppearanceTracker`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`SwitchFragment`<br />`Dispose` |
+| iOS | Android | UWP |
+| --- | --- | --- |
+| `SetElementSize`<br />`CreateFlyoutRenderer`<br />`CreateNavBarAppearanceTracker`<br />`CreatePageRendererTracker`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellItemTransition`<br />`CreateShellSearchResultsRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTabBarAppearanceTracker`<br />`Dispose`<br />`OnCurrentItemChanged`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`UpdateBackgroundColor` | `CreateFragmentForPage`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellFlyoutRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTrackerForToolbar`<br />`CreateToolbarAppearanceTracker`<br />`CreateTabLayoutAppearanceTracker`<br />`CreateBottomNavViewAppearanceTracker`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`SwitchFragment`<br />`Dispose` | `CreateShellFlyoutTemplateSelector`<br />`CreateShellHeaderRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellSectionRenderer`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`UpdateFlyoutBackdropColor`<br />`UpdateFlyoutBackgroundColor` |
 
 As classes `FlyoutItem` e `TabBar` são aliases da classe `ShellItem`, e a classe `Tab` é um alias da classe `ShellSection`. Portanto, o método `CreateShellItemRenderer` deve ser substituído ao criar um renderizador personalizado para objetos `FlyoutItem`, e o método `CreateShellSectionRenderer` deve ser substituído ao criar um renderizador personalizado para objetos `Tab`.
 
 > [!IMPORTANT]
-> Há classes de renderizador do Shell adicionais, como `ShellSectionRenderer` e `ShellItemRenderer`, no iOS e no Android. No entanto, elas são criadas por substituições na classe `ShellRenderer`. Portanto, a personalização do comportamento dessas classes de renderizador adicionais pode ser obtida por meio da criação de subclasses, e a criação de uma instância da subclasse na substituição apropriada na classe `ShellRenderer` com subclasse.
+> Há classes adicionais de processador de Shell, como `ShellSectionRenderer` e `ShellItemRenderer` , em Ios, Android e UWP. No entanto, elas são criadas por substituições na classe `ShellRenderer`. Portanto, a personalização do comportamento dessas classes de renderizador adicionais pode ser obtida por meio da criação de subclasses, e a criação de uma instância da subclasse na substituição apropriada na classe `ShellRenderer` com subclasse.
 
 ### <a name="ios-example"></a>Exemplo de iOS
 

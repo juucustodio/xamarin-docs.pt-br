@@ -10,16 +10,16 @@ ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fa49cdb7944e3ab942ccda611af906e2822b072a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 7c4ed503e0379c2c7f235bd91621a031bd660c85
+ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139952"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87426884"
 ---
-# <a name="xamarinforms-shell-tabs"></a>Xamarin.FormsGuias do Shell
+# <a name="no-locxamarinforms-shell-tabs"></a>Xamarin.FormsGuias do Shell
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Quando o padrão de navegação de um aplicativo inclui um submenu, o próximo nível de navegação no aplicativo é a barra de guias inferior. Além disso, quando o submenu é fechado, a barra de guias inferior pode ser considerada o nível principal da navegação.
 
@@ -268,7 +268,7 @@ Em um aplicativo de Shell, cada [`ContentPage`](xref:Xamarin.Forms.ContentPage) 
 </Shell>
 ```
 
-Esse XAML cria e exibe `CatsPage`, pois esse é o primeiro item do conteúdo declarado no objeto `Shell` na subclasse. `CatsPage` e `MonkeysPage` podem ser navegados por meio das guias inferiores, e essas páginas são criadas apenas quando o usuário navegar até eles. A vantagem dessa abordagem é que se evita a experiência ruim de inicialização, uma vez que as páginas são criadas sob demanda em resposta à navegação e não na inicialização do aplicativo.
+Esse XAML cria e exibe `CatsPage`, pois esse é o primeiro item do conteúdo declarado no objeto `Shell` na subclasse. `DogsPage` e `MonkeysPage` podem ser navegados por meio das guias inferiores, e essas páginas são criadas apenas quando o usuário navegar até eles. A vantagem dessa abordagem é que se evita a experiência ruim de inicialização, uma vez que as páginas são criadas sob demanda em resposta à navegação e não na inicialização do aplicativo.
 
 ## <a name="tab-appearance"></a>Aparência da guia
 

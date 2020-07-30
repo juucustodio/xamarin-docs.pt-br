@@ -10,16 +10,16 @@ ms.date: 09/30/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e38080fc9bc4ef0b74eb8c12c3a3f646c4888f53
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 874793975f027e1323dbf8a8acd30d19e980370b
+ms.sourcegitcommit: 562d4f2d51a43af21b7dc3ab892dd3a4264349a1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84198076"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87177639"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Introdução ao XAML
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _Em um Xamarin.Forms aplicativo, o XAML é usado principalmente para definir o conteúdo visual de uma página e funciona junto com um arquivo code-behind em C#._
 
@@ -148,7 +148,7 @@ Embora você normalmente não precise gastar muito tempo com arquivos de código
 
 Quando você compila e executa esse programa, o `Label` elemento é exibido no centro da página como sugere o XAML:
 
-[![Xamarin.FormsExibição padrão](get-started-with-xaml-images/xamlsamples.png)](get-started-with-xaml-images/xamlsamples-large.png#lightbox)
+[![Padrão::: não-Loc (Xamarin. Forms)::: Display](get-started-with-xaml-images/xamlsamples.png)](get-started-with-xaml-images/xamlsamples-large.png#lightbox)
 
 Para visuais mais interessantes, tudo o que você precisa é de um XAML mais interessante.
 
@@ -456,7 +456,7 @@ Fique à vontade. É sua página, e o XAML é apenas uma ferramenta para criar s
 
 Com essa introdução, você viu como um arquivo XAML e um arquivo de código contribuem para uma definição de classe e como os arquivos XAML e de código interagem. Mas o XAML também tem seus próprios recursos sintáticos exclusivos que permitem que ele seja usado de maneira muito flexível. Você pode começar a explorá-los na [parte 2. Sintaxe XAML essencial](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Parte 2. Sintaxe XAML essencial](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
