@@ -10,18 +10,21 @@ ms.date: 10/22/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fe099235857f6bd0531539e3aa84e41bf59b50ba
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 7e92385f3a82c2d12881be4ff3e54bc47533696d
+ms.sourcegitcommit: ea2abdc789d0e292c3e1700a2b53b92097e0e542
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139861"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517487"
 ---
-# <a name="xamarinforms-map-geocoding"></a>Xamarin.FormsMapear geocodificação
+# <a name="no-locxamarinforms-map-geocoding"></a>Xamarin.FormsMapear geocodificação
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 O [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) namespace fornece uma [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) classe, que converte entre endereços de cadeia de caracteres e coordenadas de latitude e longitude que são armazenadas em [`Position`](xref:Xamarin.Forms.Maps.Position) objetos. Para obter mais informações sobre a [`Position`](xref:Xamarin.Forms.Maps.Position) estrutura, consulte [posição e distância do mapa](position-distance.md).
+
+> [!NOTE]
+> Uma API de geocodificação alternativa é avalible no Xamarin.Essentials . A Xamarin.Essentials `Geocoding` API oferece dados de endereço estruturados ao geocodificar endereços, em oposição às cadeias de caracteres retornadas por essa API. Para obter mais informações, consulte [ Xamarin.Essentials : geocodificação](~/essentials/geocoding.md).
 
 ## <a name="geocode-an-address"></a>Geocódigo de um endereço
 
