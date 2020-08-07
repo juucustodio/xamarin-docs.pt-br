@@ -6,18 +6,18 @@ ms.assetId: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 06/19/2020
+ms.date: 07/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9afad335de60e605ef6551b0878455674a40750f
-ms.sourcegitcommit: 91b4d2f93687fadec5c3f80aadc8f7298d911624
+ms.openlocfilehash: b4c0ef44f528e3cbc56a27e98a1c38246736ff8c
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85795027"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918348"
 ---
-# <a name="xamarinforms-common-control-properties-methods-and-events"></a>Xamarin.FormsPropriedades, métodos e eventos de controle comum
+# <a name="no-locxamarinforms-common-control-properties-methods-and-events"></a>Xamarin.FormsPropriedades, métodos e eventos de controle comum
 
 A Xamarin.Forms `VisualElement` classe é a classe base para a maioria dos controles usados em um Xamarin.Forms aplicativo. A `VisualElement` classe define muitas [Propriedades](#properties), [métodos](#methods)e [eventos](#events) que são usados na derivação de classes.
 
@@ -32,6 +32,10 @@ A `AnchorX` propriedade é um `double` valor que define o ponto central no eixo 
 ### [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY)
 
 A `AnchorY` propriedade é um `double` valor que define o ponto central no eixo X para transformações, como escala e rotação. O valor padrão é 0,5.
+
+### `Background`
+
+A `Background` propriedade é um `Brush` valor que permite que os pincéis sejam usados como o plano de fundo em qualquer controle. O valor padrão é `Brush.Default`.
 
 ### [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor)
 

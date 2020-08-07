@@ -6,18 +6,18 @@ ms.prod: xamarin
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/17/2020
+ms.date: 08/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b451fe004ca21c8770658f31c9c38253e073c259
-ms.sourcegitcommit: 82eabb0eaa4a674897aa6d5e64efb91fd580c330
+ms.openlocfilehash: efd9cabc9504a9fa56f1f7a763013e6852be9382
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100177"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918102"
 ---
-# <a name="respond-to-system-theme-changes-in-xamarinforms-applications"></a>Responder a alterações de tema do sistema em Xamarin.Forms aplicativos
+# <a name="respond-to-system-theme-changes-in-no-locxamarinforms-applications"></a>Responder a alterações de tema do sistema em Xamarin.Forms aplicativos
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
 
@@ -26,9 +26,6 @@ Os dispositivos normalmente incluem temas leves e escuros, que se referem a um a
 O tema do sistema pode ser alterado por vários motivos, dependendo da configuração do dispositivo. Isso inclui o tema do sistema que está sendo explicitamente alterado pelo usuário, ele se altera devido à hora do dia e é alterado devido a fatores ambientais, como baixa luz.
 
 Xamarin.Formsos aplicativos podem responder às alterações de tema do sistema, consumindo recursos com a `AppThemeBinding` extensão de marcação e os `SetAppThemeColor` métodos de `SetOnAppTheme<T>` extensão e.
-
-> [!IMPORTANT]
-> Responder a uma alteração de tema do sistema é experimental no momento e só pode ser usado pela definição do `AppTheme_Experimental` sinalizador. Para obter mais informações, consulte [sinalizadores experimentais](~/xamarin-forms/internals/experimental-flags.md).
 
 Os requisitos a seguir devem ser atendidos para Xamarin.Forms que o responda a uma alteração de tema do sistema:
 

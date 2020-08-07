@@ -6,20 +6,20 @@ ms.assetid: 4E749FE8-852C-46DA-BB1E-652936106357
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/22/2020
+ms.date: 07/30/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 053da71fdd91af91f0a037e7573def91c36df503
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 6a0771ac0dbbbc89301aeca3812c3b49e14655a2
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935506"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918466"
 ---
-# <a name="xamarinforms-shapes"></a>Xamarin.FormsExistentes
+# <a name="no-locxamarinforms-shapes"></a>Xamarin.FormsExistentes
 
-![API de pré-lançamento](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
+![API de pré-lançamento](~/media/shared/preview.png)
 
 Um `Shape` é um tipo de [`View`](xref:Xamarin.Forms.View) que permite desenhar uma forma na tela. `Shape`os objetos podem ser usados nas classes de layout e na maioria dos controles, porque a `Shape` classe deriva da `View` classe.
 
@@ -31,13 +31,14 @@ Xamarin.FormsAs formas estão disponíveis no `Xamarin.Forms.Shapes` namespace n
 `Shape` define as propriedades a seguir:
 
 - `Aspect`, do tipo `Stretch` , descreve como a forma preenche seu espaço alocado. O valor padrão dessa propriedade é `Stretch.None`.
-- `Fill`, do tipo [`Color`](xref:Xamarin.Forms.Color) , indica a cor usada para pintar o interior da forma.
-- `Stroke`, do tipo [`Color`](xref:Xamarin.Forms.Color) , indica a cor usada para pintar o contorno da forma.
+- `Fill`, do tipo `Brush` , indica o pincel usado para pintar o interior da forma.
+- `Stroke`, do tipo `Brush` , indica o pincel usado para pintar o contorno da forma.
 - `StrokeDashArray`, do tipo `DoubleCollection` , que representa uma coleção de `double` valores que indicam o padrão de traços e lacunas que são usados para estruturar uma forma.
 - `StrokeDashOffset`, do tipo `double` , especifica a distância dentro do padrão de tracejado onde um traço começa. O valor padrão dessa propriedade é 0,0.
 - `StrokeLineCap`, do tipo `PenLineCap` , descreve a forma no início e no fim de uma linha ou segmento. O valor padrão dessa propriedade é `PenLineCap.Flat`.
 - `StrokeLineJoin`, do tipo `PenLineJoin` , especifica o tipo de junção que é usado nos vértices de uma forma. O valor padrão dessa propriedade é `PenLineJoin.Miter`.
-- `StrokeThickness`, do tipo `double` , indica a largura do contorno da forma. O valor padrão dessa propriedade é 1,0.
+- `StrokeMiterLimit`, do tipo `double` , especifica o limite da proporção do comprimento de Mitre para metade do `StrokeThickness` de uma forma. O valor padrão dessa propriedade é 10,0.
+- `StrokeThickness`, do tipo `double` , indica a largura do contorno da forma. O valor padrão dessa propriedade é 0,0.
 
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que eles podem ser destinos de associações de dados e com estilo.
 
@@ -45,7 +46,7 @@ Xamarin.Formsdefine um número de objetos que derivam da `Shape` classe. São el
 
 ## <a name="paint-shapes"></a>Formas de pintura
 
-[`Color`](xref:Xamarin.Forms.Color)os objetos são usados para pintar as formas `Stroke` e `Fill` :
+`Brush`os objetos são usados para pintar as formas `Stroke` e `Fill` :
 
 ```xaml
 <Ellipse Fill="DarkBlue"
@@ -61,9 +62,11 @@ Neste exemplo, o traço e o preenchimento de um `Ellipse` são especificados:
 ![Formas de pintura](images/ellipse.png "Formas de pintura")
 
 > [!IMPORTANT]
-> Se você não especificar um [`Color`](xref:Xamarin.Forms.Color) valor para `Stroke` , ou se definir `StrokeThickness` como 0, a borda ao redor da forma não será desenhada.
+> `Brush`os objetos usam um conversor de tipo que permite que [`Color`](xref:Xamarin.Forms.Color) valores sejam especificados para a `Stroke` propriedade.
 
-Para obter mais informações sobre [`Color`](xref:Xamarin.Forms.Color) valores válidos, consulte [cores Xamarin.Forms em ](~/xamarin-forms/user-interface/colors.md).
+Se você não especificar um `Brush` objeto para `Stroke` , ou se você definir `StrokeThickness` como 0, a borda ao redor da forma não será desenhada.
+
+Para obter mais informações sobre `Brush` objetos, consulte [ Xamarin.Forms pincéis](~/xamarin-forms/user-interface/brushes/index.md). Para obter mais informações sobre [`Color`](xref:Xamarin.Forms.Color) valores válidos, consulte [cores Xamarin.Forms em ](~/xamarin-forms/user-interface/colors.md).
 
 ## <a name="stretch-shapes"></a>Alongar formas
 
@@ -81,6 +84,7 @@ O XAML a seguir mostra como definir a `Aspect` Propriedade:
 ```xaml
 <Path Aspect="Uniform"
       Stroke="Yellow"
+      StrokeThickness="1"
       Fill="Red"
       BackgroundColor="LightGray"
       HorizontalOptions="Start"
@@ -158,6 +162,9 @@ Neste exemplo, a linha vermelha é arredondada no início e no final da linha:
 - `Bevel`, que representa vértices chanfrados.
 - `Round`, que representa vértices arredondados.
 
+> [!NOTE]
+> Quando a `StrokeLineJoin` propriedade é definida como `Miter` , a `StrokeMiterLimit` propriedade pode ser definida como um `double` para limitar o comprimento de Mitre das junções de linha na forma.
+
 O XAML a seguir mostra como definir a `StrokeLineJoin` Propriedade:
 
 ```xaml
@@ -174,4 +181,5 @@ Neste exemplo, a polilinha azul escura tem junções arredondadas em seus vérti
 ## <a name="related-links"></a>Links relacionados
 
 - [ShapeDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.FormsPincéis](~/xamarin-forms/user-interface/brushes/index.md)
 - [Cores emXamarin.Forms](~/xamarin-forms/user-interface/colors.md)

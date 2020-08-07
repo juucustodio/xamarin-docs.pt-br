@@ -10,16 +10,16 @@ ms.date: 02/18/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f1a015784dd87bc4c6da7daf99a6e463c1e65e5c
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 4a8ca74fc12b59100cc60b72d3c2287cffadfd18
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937157"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918109"
 ---
-# <a name="xamarinforms-mediaelement"></a>Xamarin.FormsMediaElement
+# <a name="no-locxamarinforms-mediaelement"></a>Xamarin.FormsMediaElement
 
-![API de pré-lançamento](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
+![API de pré-lançamento](~/media/shared/preview.png)
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos/)
 

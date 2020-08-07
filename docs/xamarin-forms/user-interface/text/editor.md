@@ -6,31 +6,24 @@ ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/26/2019
+ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 36f4946ffc6d5a42e1997f389501f921449d0259
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3a7dedad6fc33b75a687f94897b64d04a72a0b08
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937586"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918441"
 ---
-# <a name="xamarinforms-editor"></a>Xamarin.Forms Editor
+# <a name="no-locxamarinforms-editor"></a>Xamarin.Forms Editor
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
-_Entrada de texto de várias linhas_
+O [`Editor`](xref:Xamarin.Forms.Editor) controle é usado para aceitar a entrada de várias linhas.
 
-O [`Editor`](xref:Xamarin.Forms.Editor) controle é usado para aceitar a entrada de várias linhas. Este artigo cobre:
-
-- **[Personalização](#customization)** &ndash; do opções de teclado e cor.
-- **[Interatividade](#interactivity)** &ndash; eventos que podem ser ouvidos para fornecer interatividade.
-
-## <a name="customization"></a>Personalização
-
-### <a name="setting-and-reading-text"></a>Configurando e lendo texto
+## <a name="set-and-read-text"></a>Definir e ler texto
 
 O [`Editor`](xref:Xamarin.Forms.Editor) , como outras exibições de apresentação de texto, expõe a `Text` propriedade. Essa propriedade pode ser usada para definir e ler o texto apresentado pelo `Editor` . O exemplo a seguir demonstra como definir a `Text` propriedade em XAML:
 
@@ -50,7 +43,7 @@ Para ler o texto, acesse a `Text` propriedade em C#:
 var text = MyEditor.Text;
 ```
 
-### <a name="setting-placeholder-text"></a>Definindo texto de espaço reservado
+## <a name="set-placeholder-text"></a>Definir texto do espaço reservado
 
 O [`Editor`](xref:Xamarin.Forms.Editor) pode ser definido para mostrar o texto do espaço reservado quando não estiver armazenando a entrada do usuário. Isso é feito definindo a [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) propriedade como a `string` , e geralmente é usado para indicar o tipo de conteúdo apropriado para o `Editor` . Além disso, a cor do texto do espaço reservado pode ser controlada definindo a [`PlaceholderColor`](xref:Xamarin.Forms.InputView.PlaceholderColor) propriedade como a [`Color`](xref:Xamarin.Forms.Color) :
 
@@ -62,7 +55,7 @@ O [`Editor`](xref:Xamarin.Forms.Editor) pode ser definido para mostrar o texto d
 var editor = new Editor { Placeholder = "Enter text here", PlaceholderColor = Color.Olive };
 ```
 
-### <a name="preventing-text-entry"></a>Como impedir a entrada de texto
+## <a name="prevent-text-entry"></a>Impedir entrada de texto
 
 Os usuários podem ser impedidos de modificar o texto em um [`Editor`](xref:Xamarin.Forms.Editor) definindo a `IsReadOnly` propriedade, que tem um valor padrão de `false` , para `true` :
 
@@ -78,7 +71,33 @@ var editor = new Editor { Text = "This is a read-only Editor", IsReadOnly = true
 > [!NOTE]
 > A `IsReadonly` propriedade não altera a aparência visual de um [`Editor`](xref:Xamarin.Forms.Editor) , diferente da `IsEnabled` propriedade que também altera a aparência visual do `Editor` para cinza.
 
-### <a name="limiting-input-length"></a>Limitando comprimento de entrada
+## <a name="transform-text"></a>Texto de transformação
+
+Um [`Editor`](xref:Xamarin.Forms.Editor) pode transformar a capitalização de seu texto, armazenado na `Text` propriedade, definindo a `TextTransform` propriedade como um valor da `TextTransform` enumeração. Essa enumeração tem quatro valores:
+
+- `None`indica que o texto não será transformado.
+- `Default`indica que o comportamento padrão para a plataforma será usado. Este é o valor padrão da propriedade `TextTransform`.
+- `Lowercase`indica que o texto será transformado em minúsculas.
+- `Uppercase`indica que o texto será transformado em letras maiúsculas.
+
+O exemplo a seguir mostra a transformação de texto em maiúsculas:
+
+```xaml
+<Editor Text="This text will be displayed in uppercase."
+        TextTransform="Uppercase" />
+```
+
+Este é o código C# equivalente:
+
+```csharp
+Editor editor = new Editor
+{
+    Text = "This text will be displayed in uppercase.",
+    TextTransform = TextTransform.Uppercase
+};
+```
+
+## <a name="limit-input-length"></a>Limitar comprimento de entrada
 
 A [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) propriedade pode ser usada para limitar o comprimento de entrada permitido para o [`Editor`](xref:Xamarin.Forms.Editor) . Essa propriedade deve ser definida como um inteiro positivo:
 
@@ -92,7 +111,7 @@ var editor = new Editor { ... MaxLength = 10 };
 
 Um [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) valor de propriedade 0 indica que nenhuma entrada será permitida e um valor de `int.MaxValue` , que é o valor padrão de um [`Editor`](xref:Xamarin.Forms.Editor) , indica que não há um limite efetivo no número de caracteres que podem ser inseridos.
 
-### <a name="character-spacing"></a>Espaçamento de caracteres
+## <a name="character-spacing"></a>Espaçamento de caracteres
 
 O espaçamento de caracteres pode ser aplicado a um [`Editor`](xref:Xamarin.Forms.Editor) definindo a `Editor.CharacterSpacing` propriedade como um `double` valor:
 
@@ -112,7 +131,7 @@ O resultado é que os caracteres no texto exibidos pelas [`Editor`](xref:Xamarin
 > [!NOTE]
 > O `CharacterSpacing` valor da propriedade é aplicado ao texto exibido pelas `Text` Propriedades e `Placeholder` .
 
-### <a name="auto-sizing-an-editor"></a>Dimensionamento automático de um editor
+## <a name="auto-size-an-editor"></a>Dimensionar automaticamente um editor
 
 É [`Editor`](xref:Xamarin.Forms.Editor) possível fazer o dimensionamento automático para seu conteúdo definindo a [`Editor.AutoSize`](xref:Xamarin.Forms.Editor.AutoSize) propriedade como [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) , que é um valor da [`EditoAutoSizeOption`](xref:Xamarin.Forms.EditorAutoSizeOption) enumeração. Essa enumeração tem dois valores:
 
@@ -134,7 +153,7 @@ Quando o redimensionamento automático estiver habilitado, a altura do [`Editor`
 > [!NOTE]
 > Um [`Editor`](xref:Xamarin.Forms.Editor) não será dimensionado automaticamente se a [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) propriedade tiver sido definida.
 
-### <a name="customizing-the-keyboard"></a>Personalizando o teclado
+## <a name="customize-the-keyboard"></a>Personalizar o teclado
 
 O teclado apresentado quando os usuários interagem com um [`Editor`](xref:Xamarin.Forms.Editor) pode ser definido programaticamente por meio da [`Keyboard`](xref:Xamarin.Forms.InputView.Keyboard) propriedade, para uma das seguintes propriedades da [`Keyboard`](xref:Xamarin.Forms.Keyboard) classe:
 
@@ -193,7 +212,7 @@ var editor = new Editor();
 editor.Keyboard = Keyboard.Create(KeyboardFlags.Suggestions | KeyboardFlags.CapitalizeCharacter);
 ```
 
-### <a name="enabling-and-disabling-spell-checking"></a>Habilitando e desabilitando a verificação ortográfica
+## <a name="enable-and-disable-spell-checking"></a>Habilitar e desabilitar a verificação ortográfica
 
 A [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propriedade controla se a verificação ortográfica está habilitada. Por padrão, a propriedade é definida como `true` . Conforme o usuário digita o texto, erros de ortografia são indicados.
 
@@ -210,7 +229,7 @@ var editor = new Editor { ... IsSpellCheckEnabled = false };
 > [!NOTE]
 > Quando a [`IsSpellCheckEnabled`](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propriedade é definida como `false` e um teclado personalizado não está sendo usado, o verificador ortográfico nativo será desabilitado. No entanto, se um [`Keyboard`](xref:Xamarin.Forms.Keyboard) tiver sido definido que desabilita a verificação ortográfica, como [`Keyboard.Chat`](xref:Xamarin.Forms.Keyboard.Chat) , a `IsSpellCheckEnabled` propriedade será ignorada. Portanto, a propriedade não pode ser usada para habilitar a verificação ortográfica para um `Keyboard` que a desabilita explicitamente.
 
-### <a name="enabling-and-disabling-text-prediction"></a>Como habilitar e desabilitar a previsão de texto
+## <a name="enable-and-disable-text-prediction"></a>Habilitar e desabilitar a previsão de texto
 
 A `IsTextPredictionEnabled` propriedade controla se a previsão de texto e a correção automática de texto estão habilitadas. Por padrão, a propriedade é definida como `true` . À medida que o usuário insere texto, as previsões de palavras são apresentadas.
 
@@ -227,7 +246,7 @@ var editor = new Editor { ... IsTextPredictionEnabled = false };
 > [!NOTE]
 > Quando a `IsTextPredictionEnabled` propriedade é definida como `false` , e um teclado personalizado não está sendo usado, a previsão de texto e a correção automática de texto são desabilitadas. No entanto, se um [`Keyboard`](xref:Xamarin.Forms.Keyboard) tiver sido definido que desabilita a previsão de texto, a `IsTextPredictionEnabled` propriedade será ignorada. Portanto, a propriedade não pode ser usada para habilitar a previsão de texto para um `Keyboard` que a desabilita explicitamente.
 
-### <a name="colors"></a>Cores
+## <a name="colors"></a>Cores
 
 `Editor`pode ser definido para usar uma cor de plano de fundo personalizada por meio da `BackgroundColor` propriedade. É necessário ter cuidado especial para garantir que as cores sejam utilizáveis em cada plataforma. Como cada plataforma tem padrões diferentes para a cor do texto, talvez seja necessário definir uma cor de plano de fundo personalizada para cada plataforma. Consulte [trabalhando com ajustes de plataforma](~/xamarin-forms/platform/device.md) para obter mais informações sobre como otimizar a interface do usuário para cada plataforma.
 
@@ -275,7 +294,7 @@ Em XAML:
 
 Certifique-se de que as cores de plano de fundo e de texto escolhidas sejam utilizáveis em cada plataforma e não oculte nenhum texto de espaço reservado.
 
-## <a name="interactivity"></a>Interatividade
+## <a name="events-and-interactivity"></a>Eventos e interatividade
 
 `Editor`expõe dois eventos:
 
@@ -380,7 +399,7 @@ Title="Editor Demo">
 </ContentPage>
 ```
 
-## <a name="related-links"></a>Links Relacionados
+## <a name="related-links"></a>Links relacionados
 
 - [Texto (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [API de Editor](xref:Xamarin.Forms.Editor)

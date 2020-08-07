@@ -6,22 +6,22 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/09/2020
+ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8bf6517e3624ad80c2fd4d209e5a77472460be76
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1fcfc2c3fbb91a7ee326db7aeef08459e05d834d
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84570499"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917878"
 ---
-# <a name="xamarinforms-label"></a>Xamarin.FormsChamada
+# <a name="no-locxamarinforms-label"></a>Xamarin.FormsChamada
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
-_Exibir texto no Xamarin. Forms_
+_Exibir texto emXamarin.Forms_
 
 A [`Label`](xref:Xamarin.Forms.Label) exibição é usada para exibir texto, de linha única e de várias linhas. Os rótulos podem ter decorações de texto, texto colorido e usar fontes personalizadas (famílias, tamanhos e opções).
 
@@ -55,6 +55,32 @@ As capturas de tela a seguir mostram os `TextDecorations` membros de enumeraçã
 
 > [!NOTE]
 > As decorações de texto também podem ser aplicadas a [`Span`](xref:Xamarin.Forms.Span) instâncias. Para obter mais informações sobre a `Span` classe, consulte [texto formatado](#formatted-text).
+
+## <a name="transform-text"></a>Texto de transformação
+
+Um [`Label`](xref:Xamarin.Forms.Entry) pode transformar a capitalização de seu texto, armazenado na `Text` propriedade, definindo a `TextTransform` propriedade como um valor da `TextTransform` enumeração. Essa enumeração tem quatro valores:
+
+- `None`indica que o texto não será transformado.
+- `Default`indica que o comportamento padrão para a plataforma será usado. Este é o valor padrão da propriedade `TextTransform`.
+- `Lowercase`indica que o texto será transformado em minúsculas.
+- `Uppercase`indica que o texto será transformado em letras maiúsculas.
+
+O exemplo a seguir mostra a transformação de texto em maiúsculas:
+
+```xaml
+<Label Text="This text will be displayed in uppercase."
+       TextTransform="Uppercase" />
+```
+
+Este é o código C# equivalente:
+
+```csharp
+Label label = new Label
+{
+    Text = "This text will be displayed in uppercase.",
+    TextTransform = TextTransform.Uppercase
+};
+```
 
 ## <a name="character-spacing"></a>Espaçamento de caracteres
 

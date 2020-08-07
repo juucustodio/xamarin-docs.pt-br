@@ -10,16 +10,16 @@ ms.date: 06/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8e23e4151c4841dd4dce80ba0358471c64a26f39
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 274ff08d7fffc1cd3a817906e14ebddfac2c9337
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937599"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918257"
 ---
-# <a name="xamarinforms-shapes-path"></a>Xamarin.FormsFormas: caminho
+# <a name="no-locxamarinforms-shapes-path"></a>Xamarin.FormsFormas: caminho
 
-![API de pré-lançamento](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
+![API de pré-lançamento](~/media/shared/preview.png)
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -48,6 +48,7 @@ O exemplo de XAML a seguir mostra como desenhar um triângulo usando a sintaxe d
 ```xaml
 <Path Data="M 10,100 L 100,100 100,50Z"
       Stroke="Black"
+      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Start" />
 ```
@@ -71,6 +72,7 @@ O exemplo de XAML a seguir mostra como desenhar um triângulo usando um `PathGeo
 
 ```xaml
 <Path Stroke="Black"
+      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Start">
     <Path.Data>

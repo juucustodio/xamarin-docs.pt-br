@@ -6,20 +6,20 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/10/2020
+ms.date: 07/30/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1a1d47b2b37fa532b3e2a64ada5f367e612f557d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 821eafab6896d8771ba38332a43c0cbc319797a7
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946254"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917836"
 ---
-# <a name="xamarinforms-shell-flyout"></a>Xamarin.FormsSubmenu do Shell
+# <a name="no-locxamarinforms-shell-flyout"></a>Xamarin.FormsSubmenu do Shell
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 O submenu é o menu raiz de um aplicativo Shell e é acessível por meio de um ícone ou passando o dedo na lateral da tela. O submenu consiste em um cabeçalho opcional, itens de submenu e itens de menu opcionais:
 
@@ -43,7 +43,7 @@ Por padrão, os aplicativos Shell têm um ícone de hambúrguer que, quando pres
 O submenu por ser acessado pelo ícone de hambúrguer ou passando o dedo na lateral da tela. No entanto, esse comportamento pode ser alterado definindo a propriedade anexada `Shell.FlyoutBehavior` como um dos membros de enumeração `FlyoutBehavior`:
 
 - `Disabled` – indica que o submenu não pode ser aberto pelo usuário.
-- `Flyout` – indica que o submenu pode ser aberto e fechado pelo usuário. Este é o valor padrão da propriedade `FlyoutBehavior`.
+- `Flyout` – indica que o submenu pode ser aberto e fechado pelo usuário. Este é o valor padrão para a propriedade de `FlyoutBehavior` .
 - `Locked` – indica que o submenu não pode ser fechado pelo usuário, e o submenu não se sobrepõe ao conteúdo.
 
 O exemplo a seguir mostra como desabilitar o submenu:
@@ -234,6 +234,7 @@ A classe `FlyoutItem` inclui as seguintes propriedades que controlam o comportam
 - `IsChecked`, do tipo `boolean`, define se o item está realçado naquele momento no submenu.
 - `IsEnabled`, do tipo `boolean`, define se o item é selecionável no cromado.
 - `IsTabStop`, do tipo `bool`, indica se um `FlyoutItem` está incluído na navegação por tabulação. Seu valor padrão é `true`, e quando o valor é `false`, o `FlyoutItem` é ignorado pela infraestrutura da navegação por tabulação, independentemente de `TabIndex` estar definido.
+- `IsVisible`, do tipo `bool` , indica se o `FlyoutItem` está oculto no menu do submenu. Seu valor padrão é `true`.
 - `TabIndex`, do tipo `int`, indica a ordem na qual os objetos de `FlyoutItem` recebem o foco quando o usuário navega pelos itens pressionando a tecla Tab. O valor padrão da propriedade é 0.
 - `Title`, do tipo `string`, o título a ser exibido na interface do usuário.
 - `Route`, do tipo `string`, a cadeia de caracteres usada para resolver o item.
@@ -249,6 +250,46 @@ Além disso, a classe `FlyoutItem` expõe os seguintes métodos substituíveis:
 - `OnTabStopPropertyChanged`, chamado sempre que a propriedade `IsTabStop` muda.
 - `TabIndexDefaultValueCreator`, retorna um `int` e é chamado para definir o valor padrão da propriedade `TabIndex`.
 - `TabStopDefaultValueCreator`, retorna um `bool` e é chamado para definir o valor padrão da propriedade `TabStop`.
+
+## <a name="flyout-backdrop"></a>Pano de fundo do submenu
+
+O pano de fundo do submenu, que é a aparência da sobreposição do submenu, pode ser especificado definindo a `Shell.FlyoutBackdrop` Propriedade anexada como um `Brush` :
+
+```xaml
+<Shell ...
+       FlyoutBackdrop="Silver">
+    ...
+</Shell>
+```
+
+Neste exemplo, o pano de fundo do submenu é pintado com um prata `SolidColorBrush` .
+
+> [!IMPORTANT]
+> A `FlyoutBackdrop` Propriedade anexada pode ser definida em qualquer elemento Shell, mas só será aplicada quando for definida em `Shell` objetos, `FlyoutItem` ou `TabBar` .
+
+O exemplo a seguir mostra a configuração da fundo do submenu em um `FlyoutItem` para um `LinearGradientBrush` :
+
+```xaml
+<Shell ...>
+    <FlyoutItem ...>
+      <Shell.FlyoutBackdrop>
+          <LinearGradientBrush StartPoint="0,0"
+                               EndPoint="1,1">
+              <GradientStop Color="#8A2387"
+                            Offset="0.1" />
+              <GradientStop Color="#E94057"
+                            Offset="0.6" />
+              <GradientStop Color="#F27121"
+                            Offset="1.0" />
+          </LinearGradientBrush>
+      </Shell.FlyoutBackdrop>
+      ...
+    </FlyoutItem>
+    ...
+</Shell>
+```
+
+Para obter mais informações sobre pincéis, consulte [ Xamarin.Forms pincéis](~/xamarin-forms/user-interface/brushes/index.md).
 
 ## <a name="flyout-vertical-scroll"></a>Rolagem vertical do submenu
 
@@ -652,3 +693,4 @@ Além disso, as classes de estilo personalizado podem ser definidas e aplicadas 
 - [Xaminals (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [Xamarin.FormsClasses de estilo](~/xamarin-forms/user-interface/styles/xaml/style-class.md)
 - [Xamarin.FormsGerenciador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Xamarin.FormsPincéis](~/xamarin-forms/user-interface/brushes/index.md)

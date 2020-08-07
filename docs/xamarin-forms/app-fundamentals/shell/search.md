@@ -6,20 +6,20 @@ ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/18/2019
+ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cc5e0c4cb8b474a1b7e23b476b0c5125eb2ba298
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 00dfec5b48507c83f43d0622c11770ecec304ea6
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138080"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917550"
 ---
-# <a name="xamarinforms-shell-search"></a>Xamarin.FormsPesquisa de Shell
+# <a name="no-locxamarinforms-shell-search"></a>Xamarin.FormsPesquisa de Shell
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Xamarin.FormsO Shell inclui a funcionalidade de pesquisa integrada que é fornecida pela `SearchHandler` classe. A funcionalidade de pesquisa pode ser adicionada a uma página definindo a propriedade anexada `Shell.SearchHandler` como um objeto `SearchHandler` da subclasse. Isso faz com que uma caixa de pesquisa seja adicionada na parte superior da página:
 
@@ -224,6 +224,7 @@ A classe `SearchHandler` define as seguintes propriedades que afetam sua aparên
 - `HorizontalTextAlignment`, do tipo `TextAlignment`, é o alinhamento horizontal da caixa de pesquisa.
 - `PlaceholderColor`, do tipo `Color`, é a cor do texto da caixa de pesquisa do espaço reservado.
 - `TextColor`, do tipo `Color`, é a cor do texto da caixa de pesquisa.
+- `TextTransform`, do tipo `TextTransform` , determina a capitalização do texto da caixa de pesquisa.
 - `VerticalTextAlignment`, do tipo `TextAlignment` , é o alinhamento vertical do texto da caixa de pesquisa.
 
 ## <a name="searchhandler-keyboard"></a>Teclado do SearchHandler
@@ -320,6 +321,7 @@ A classe `SearchHandler` define as seguintes propriedades que controlam sua apar
 - `SelectedItem`, do tipo `object`, o item selecionado nos resultados da pesquisa. Essa propriedade é somente leitura e tem um valor padrão de `null`.
 - `ShowsResults`, do tipo `bool`, indica se os resultados da pesquisa devem ser esperados na área de sugestão na entrada de texto. O valor padrão é `false`.
 - `TextColor`, do tipo `Color`, é a cor do texto da caixa de pesquisa.
+- `TextTransform`, do tipo `TextTransform` , determina a capitalização do texto da caixa de pesquisa.
 
 Todas essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que as propriedades podem ser destinos de associações de dados.
 

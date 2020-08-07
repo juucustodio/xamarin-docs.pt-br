@@ -10,12 +10,12 @@ ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7c4ed503e0379c2c7f235bd91621a031bd660c85
-ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
+ms.openlocfilehash: 9ecdc3aca3264b52163d35e29659f434f521147f
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87426884"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918613"
 ---
 # <a name="no-locxamarinforms-shell-tabs"></a>Xamarin.FormsGuias do Shell
 
@@ -184,6 +184,7 @@ A classe `ShellContent` inclui as seguintes propriedades que controlam o comport
 - `Icon`, do tipo `ImageSource`, define o ícone a ser exibido em partes do cromado que não são o submenu.
 - `IsChecked`, do tipo `boolean`, define se o item está realçado naquele momento no submenu.
 - `IsEnabled`, do tipo `boolean`, define se o item é selecionável no cromado.
+- `IsVisible`, do tipo `bool` , indica se o `ShellContent` está oculto de todas as estruturas de interface do usuário. Seu valor padrão é `true`.
 - `MenuItems`, do tipo `MenuItemCollection`, são os itens de menu a serem exibidos no submenu quando esse `ShellContent` for a página apresentada.
 - `Title`, do tipo `string`, o título a ser exibido na interface do usuário.
 

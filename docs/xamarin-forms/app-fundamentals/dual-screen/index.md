@@ -10,16 +10,16 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 737cb819cfd762e81536fba03f3ae5b563416a4e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2b0290daedab4a6e825d2bab4bea9889b4966645
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930735"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918307"
 ---
-# <a name="xamarinforms-dual-screen"></a>Xamarin.Formstela dupla
+# <a name="no-locxamarinforms-dual-screen"></a>Xamarin.Formstela dupla
 
-![API de pré-lançamento](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
+![API de pré-lançamento](~/media/shared/preview.png)
 
 Dispositivos de tela dupla como o Microsoft Surface Duo facilitam novas possibilidades de experiência do usuário para seus aplicativos. Xamarin.Formsinclui `TwoPaneView` `DualScreenInfo` classes e para que você possa desenvolver aplicativos para dispositivos de tela dupla.
 
@@ -41,7 +41,7 @@ Siga estas etapas para adicionar recursos de tela dupla a um Xamarin.Forms aplic
 5. Atualize o `Activity` atributo na classe do projeto do Android `MainActivity` , para que ele inclua _todas_ essas `ConfigurationChanges` opções:
 
     ```@csharp
-    ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation 
+    ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation
         | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.UiMode
     ```
 

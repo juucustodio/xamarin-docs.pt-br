@@ -10,16 +10,16 @@ ms.date: 05/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 279df31eeda506d6780533bac8ae190f799424a3
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3e8c95e84dd525c274403290712260ba86abd677
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936026"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918566"
 ---
-# <a name="xamarinforms-c-markup"></a>Xamarin.FormsMarcação C#
+# <a name="no-locxamarinforms-c-markup"></a>Xamarin.FormsMarcação C#
 
-![API de pré-lançamento](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
+![API de pré-lançamento](~/media/shared/preview.png)
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
 
@@ -235,7 +235,7 @@ Como um reconhecedor de gesto é um `BindableObject` , você pode usar os `Bind`
 
 A marcação C# inclui uma série de métodos de extensão de layout que dão suporte ao posicionamento de exibições em layouts e conteúdo em exibições:
 
-| Tipo | Métodos de extensão |
+| Type | Métodos de extensão |
 |---|---|
 | `FlexLayout` | `AlignSelf`, `Basis`, `Grow`, `Menu`, `Order`, `Shrink` |
 | `Grid` | `Row`, `Column`, `RowSpan`, `ColumnSpan` |
@@ -253,7 +253,7 @@ Para tornar o conjunto correto de métodos de extensão esquerdo e direito dispo
 
 Para a marcação C# projetada para dar suporte à direção de fluxo da esquerda para a direita e da direita para a esquerda, é recomendável usar os métodos de extensão na tabela a seguir, em vez de um dos namespaces acima:
 
-| Tipo | Métodos de extensão |
+| Type | Métodos de extensão |
 |---|---|
 | `Label` | `TextStart`, `TextEnd` |
 | `LayoutOptions` | `Start`, `End` <br/> `StartExpand`, `EndExpand` |

@@ -1,5 +1,5 @@
 ---
-title: Adicionando um reconhecedor de gesto de panorâmica
+title: Adicionar um reconhecedor de gesto de Pan
 description: Este artigo explica como usar um gesto de panorâmica para percorrer uma imagem horizontal e verticalmente, para que todo o conteúdo da imagem pode ser exibido quando ela estiver sendo exibida em um visor menor do que as dimensões da imagem.
 ms.prod: xamarin
 ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713
@@ -10,16 +10,16 @@ ms.date: 01/21/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 53122991811c06360e8d015a753096cb35c1cca0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 886191725421a754e696409deb7a3cca0f6ea923
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137625"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917699"
 ---
-# <a name="adding-a-pan-gesture-recognizer"></a>Adicionando um reconhecedor de gesto de panorâmica
+# <a name="add-a-pan-gesture-recognizer"></a>Adicionar um reconhecedor de gesto de Pan
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pangesture)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pangesture)
 
 _O gesto de panorâmica é usado para detectar a movimentação de dedos em toda a tela e aplicar essa movimentação ao conteúdo, e é implementado com a `PanGestureRecognizer` classe. Um cenário comum para o gesto panorâmico é deslocar horizontalmente e verticalmente uma imagem, para que todo o conteúdo da imagem possa ser exibido quando ele estiver sendo exibido em um visor menor do que as dimensões da imagem. Isso é feito movendo a imagem dentro do visor e é demonstrado neste artigo._
 
@@ -149,7 +149,7 @@ Ao panorâmica do conteúdo em um elemento que não ocupa a tela inteira, a altu
 > [!NOTE]
 > Exibir imagens de alta resolução pode aumentar significativamente o volume de memória de um aplicativo. Portanto, elas só devem ser criadas quando necessário e devem ser liberadas assim que o aplicativo não precisar mais delas. Para saber mais, consulte [Otimizar recursos de imagem](~/xamarin-forms/deploy-test/performance.md#optimize-image-resources).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [PanGesture (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pangesture)
 - [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)

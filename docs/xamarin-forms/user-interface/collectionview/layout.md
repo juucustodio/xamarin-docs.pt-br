@@ -6,20 +6,20 @@ ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/22/2019
+ms.date: 07/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 425eb7abc14fb941dbfc28219907d98558cbfabb
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 73e7ace96c17aea2b397f2706e128ea498338b09
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137423"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918265"
 ---
-# <a name="xamarinforms-collectionview-layout"></a>Xamarin.FormsLayout CollectionView
+# <a name="no-locxamarinforms-collectionview-layout"></a>Xamarin.FormsLayout CollectionView
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView)define as seguintes propriedades que controlam o layout:
 
@@ -97,7 +97,7 @@ Por padrão, [`CollectionView`](xref:Xamarin.Forms.CollectionView) o exibirá se
 </CollectionView>
 ```
 
-No entanto, para fins de integridade, um [`CollectionView`](xref:Xamarin.Forms.CollectionView) pode ser definido para exibir seus itens em uma lista vertical definindo sua [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) propriedade como `VerticalList` :
+No entanto, para fins de integridade, o XAML a [`CollectionView`](xref:Xamarin.Forms.CollectionView) pode ser definido para exibir seus itens em uma lista vertical definindo sua [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) propriedade como `VerticalList` :
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
@@ -133,7 +133,7 @@ Isso resulta em uma única lista de colunas, que cresce verticalmente à medida 
 
 ## <a name="horizontal-list"></a>Lista horizontal
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)pode exibir seus itens em uma lista horizontal definindo sua [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) propriedade como `HorizontalList` :
+Em XAML, um [`CollectionView`](xref:Xamarin.Forms.CollectionView) pode exibir seus itens em uma lista horizontal definindo sua [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) propriedade como `HorizontalList` :
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
@@ -197,14 +197,11 @@ Isso resulta em uma única lista de linhas, que cresce horizontalmente à medida
 
 ## <a name="vertical-grid"></a>Grade vertical
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)pode exibir seus itens em uma grade vertical definindo sua [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) propriedade como um [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) objeto cuja [`Orientation`](xref:Xamarin.Forms.ItemsLayout.Orientation) propriedade está definida como `Vertical` :
+Em XAML, um [`CollectionView`](xref:Xamarin.Forms.CollectionView) pode exibir seus itens em uma grade vertical definindo sua [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) propriedade como `VerticalGrid` :
 
 ```xaml
-<CollectionView ItemsSource="{Binding Monkeys}">
-    <CollectionView.ItemsLayout>
-       <GridItemsLayout Orientation="Vertical"
-                        Span="2" />
-    </CollectionView.ItemsLayout>
+<CollectionView ItemsSource="{Binding Monkeys}"
+                ItemsLayout="VerticalGrid, 2">
     <CollectionView.ItemTemplate>
         <DataTemplate>
             <Grid Padding="10">
@@ -237,6 +234,18 @@ Isso resulta em uma única lista de linhas, que cresce horizontalmente à medida
 </CollectionView>
 ```
 
+Como alternativa, esse layout também pode ser feito definindo a [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) propriedade como um [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) objeto cuja [`Orientation`](xref:Xamarin.Forms.ItemsLayout.Orientation) propriedade está definida como `Vertical` :
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}">
+    <CollectionView.ItemsLayout>
+       <GridItemsLayout Orientation="Vertical"
+                        Span="2" />
+    </CollectionView.ItemsLayout>
+    ...
+</CollectionView>
+```
+
 Este é o código C# equivalente:
 
 ```csharp
@@ -253,14 +262,11 @@ Por padrão, um vertical [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout)
 
 ## <a name="horizontal-grid"></a>Grade horizontal
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)pode exibir seus itens em uma grade horizontal definindo sua [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) propriedade como um [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) objeto cuja [`Orientation`](xref:Xamarin.Forms.ItemsLayout.Orientation) propriedade está definida como `Horizontal` :
+Em XAML, um [`CollectionView`](xref:Xamarin.Forms.CollectionView) pode exibir seus itens em uma grade horizontal definindo sua [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) propriedade como `HorizontalGrid` :
 
 ```xaml
-<CollectionView ItemsSource="{Binding Monkeys}">
-    <CollectionView.ItemsLayout>
-       <GridItemsLayout Orientation="Horizontal"
-                        Span="4" />
-    </CollectionView.ItemsLayout>
+<CollectionView ItemsSource="{Binding Monkeys}"
+                ItemsLayout="HorizontalGrid, 4">
     <CollectionView.ItemTemplate>
         <DataTemplate>
             <Grid Padding="10">
@@ -290,6 +296,18 @@ Por padrão, um vertical [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout)
             </Grid>
         </DataTemplate>
     </CollectionView.ItemTemplate>
+</CollectionView>
+```
+
+Como alternativa, esse layout também pode ser feito definindo a [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) propriedade como um [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) objeto cuja [`Orientation`](xref:Xamarin.Forms.ItemsLayout.Orientation) propriedade está definida como `Horizontal` :
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}">
+    <CollectionView.ItemsLayout>
+       <GridItemsLayout Orientation="Horizontal"
+                        Span="4" />
+    </CollectionView.ItemsLayout>
+    ...
 </CollectionView>
 ```
 
@@ -532,7 +550,7 @@ Esse código resulta em uma grade vertical de duas colunas, que tem um espaçame
 
 Por padrão, cada item em um [`CollectionView`](xref:Xamarin.Forms.CollectionView) é individualmente medido e dimensionado, desde que os elementos da interface do usuário em [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) não especifiquem tamanhos fixos. Esse comportamento, que pode ser alterado, é especificado pelo [`CollectionView.ItemSizingStrategy`](xref:Xamarin.Forms.StructuredItemsView.ItemSizingStrategy) valor da propriedade. Esse valor de propriedade pode ser definido como um dos [`ItemSizingStrategy`](xref:Xamarin.Forms.ItemSizingStrategy) membros da enumeração:
 
-- `MeasureAllItems`– cada item é medido individualmente. Esse é o valor padrão.
+- `MeasureAllItems`– cada item é medido individualmente. Este é o valor padrão.
 - `MeasureFirstItem`– somente o primeiro item é medido, sendo que todos os itens subsequentes recebem o mesmo tamanho do primeiro item.
 
 > [!IMPORTANT]

@@ -6,20 +6,20 @@ ms.assetid: 62CAEB63-0800-44F4-9B8C-EE632138C2F5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/04/2019
+ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 595367d94bcc4ac384763e915a0a19db7517341d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 7ed24d38c75036245a024eecbef7f9a74380b591
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573385"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917890"
 ---
-# <a name="xamarinforms-button"></a>Xamarin.FormsButton
+# <a name="no-locxamarinforms-button"></a>Xamarin.FormsButton
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
 
 _O botão responde a um toque ou clique que direciona um aplicativo para executar uma tarefa específica._
 
@@ -426,7 +426,8 @@ O `Button` herda ou define várias propriedades que afetam sua aparência:
 - [`FontAttributes`](xref:Xamarin.Forms.Button.FontAttributes)indica se o texto está em itálico ou negrito
 - [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth)é a largura da borda
 - [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius)é o raio de canto do`Button`
-- `CharacterSpacing`é o espaçamento entre os caracteres do `Button` texto
+- [`CharacterSpacing`](xref:Xamarin.Forms.Button.CharacterSpacing)é o espaçamento entre os caracteres do `Button` texto.
+- `TextTransform`determina a capitalização do `Button` texto.
 
 > [!NOTE]
 > A `Button` classe também tem [`Margin`](xref:Xamarin.Forms.View.Margin) e [`Padding`](xref:Xamarin.Forms.Button.Padding) Propriedades que controlam o comportamento de layout do `Button` . Para saber mais, confira [Margens e preenchimento](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).

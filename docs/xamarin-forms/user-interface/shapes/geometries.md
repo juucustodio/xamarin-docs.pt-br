@@ -10,16 +10,16 @@ ms.date: 06/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: be0c12231ff6106e07c935a111195df779698172
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 420099cadd3a541736084403265b9302c9a32b37
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934271"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918323"
 ---
-# <a name="xamarinforms-shapes-geometries"></a>Xamarin.FormsFormas: geometrias
+# <a name="no-locxamarinforms-shapes-geometries"></a>Xamarin.FormsFormas: geometrias
 
-![API de pré-lançamento](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
+![API de pré-lançamento](~/media/shared/preview.png)
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -62,7 +62,8 @@ O exemplo a seguir mostra como criar e renderizar um `EllipseGeometry` em um `Pa
 
 ```xaml
 <Path Fill="Blue"
-      Stroke="Red">
+      Stroke="Red"
+      StrokeThickness="1">
   <Path.Data>
     <EllipseGeometry Center="50,50"
                      RadiusX="50"
@@ -89,7 +90,8 @@ Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.Bin
 O exemplo a seguir mostra como criar e renderizar um `LineGeometry` em um `Path` objeto:
 
 ```xaml
-<Path Stroke="Black">
+<Path Stroke="Black"
+      StrokeThickness="1">
   <Path.Data>
     <LineGeometry StartPoint="10,20"
                   EndPoint="100,130" />
@@ -108,13 +110,14 @@ Neste exemplo, um `LineGeometry` é desenhado de (10, 20) a (100.130):
 
 Uma geometria de retângulo representa a geometria de um retângulo ou quadrado e é definida com uma `Rect` estrutura que especifica sua posição relativa e sua altura e largura.
 
-A `RectangleGeometry` classe define a `Rect` propriedade, do tipo [`Rectangle`](xref:Xamarin.Forms.Rectangle) , que representa as dimensões do retângulo. Essa propriedade é apoiada por um [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto, o que significa que ele pode ser o destino de associações de dados e com estilo.
+A `RectangleGeometry` classe define a `Rect` propriedade, do tipo `Rect` , que representa as dimensões do retângulo. Essa propriedade é apoiada por um [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto, o que significa que ele pode ser o destino de associações de dados e com estilo.
 
 O exemplo a seguir mostra como criar e renderizar um `RectangleGeometry` em um `Path` objeto:
 
 ```xaml
 <Path Fill="Blue"
-      Stroke="Red">
+      Stroke="Red"
+      StrokeThickness="1">
   <Path.Data>
     <RectangleGeometry Rect="10,10,150,100" />
   </Path.Data>
@@ -156,7 +159,8 @@ Todas as classes acima derivam da `PathSegment` classe abstrata.
 Os segmentos em um `PathFigure` são combinados em uma única forma geométrica com o ponto de extremidade de cada segmento sendo o ponto inicial do próximo segmento. A `StartPoint` propriedade de um `PathFigure` especifica o ponto do qual o primeiro segmento é desenhado. Cada segmento subsequente começa no ponto de extremidade do segmento anterior. Por exemplo, uma linha vertical de `10,50` para `10,150` pode ser definida definindo a `StartPoint` propriedade como `10,50` e criando uma `LineSegment` com uma `Point` configuração de propriedade de `10,150` :
 
 ```xaml
-<Path Stroke="Black">
+<Path Stroke="Black"
+      StrokeThickness="1">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -202,7 +206,8 @@ A enumeração `SweepDirection` define os seguintes membros:
 O exemplo a seguir mostra como criar e renderizar um `ArcSegment` em um `Path` objeto:
 
 ```xaml
-<Path Stroke="Black">
+<Path Stroke="Black"
+      StrokeThickness="1">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -247,7 +252,8 @@ Os dois pontos de controle de uma curva de Bézier cúbica se comportam como os 
 O exemplo a seguir mostra como criar e renderizar um `BezierSegment` em um `Path` objeto:
 
 ```xaml
-<Path Stroke="Black">
+<Path Stroke="Black"
+      StrokeThickness="1">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -285,6 +291,7 @@ O exemplo a seguir mostra como criar e renderizar `LineSegment` objetos em um `P
 
 ```xaml
 <Path Stroke="Black"
+      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Start">
     <Path.Data>
@@ -323,7 +330,8 @@ A `PolyBezierSegment` classe define a `Points` propriedade, do tipo `PointCollec
 O exemplo a seguir mostra como criar e renderizar um `PolyBezierSegment` em um `Path` objeto:
 
 ```xaml
-<Path Stroke="Black">
+<Path Stroke="Black"
+      StrokeThickness="1">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -358,7 +366,8 @@ A `PolyLineSegment` classe define a `Points` propriedade, do tipo `PointCollecti
 O exemplo a seguir mostra como criar e renderizar um `PolyLineSegment` em um `Path` objeto:
 
 ```xaml
-<Path Stroke="Black">
+<Path Stroke="Black"
+      StrokeThickness="1">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -389,7 +398,8 @@ A `PolyQuadraticBezierSegment` classe define a `Points` propriedade, do tipo `Po
 O exemplo a seguir mostra como criar e renderizar um `PolyQuadraticBezierSegment` em um `Path` objeto:
 
 ```xaml
-<Path Stroke="Black">
+<Path Stroke="Black"
+      StrokeThickness="1">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -429,7 +439,8 @@ Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.Bin
 O exemplo a seguir mostra como criar e renderizar um `QuadraticBezierSegment` em um `Path` objeto:
 
 ```xaml
-<Path Stroke="Black">
+<Path Stroke="Black"
+      StrokeThickness="1">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -458,7 +469,8 @@ Neste exemplo, uma curva de Bezier quadrática é desenhada de (10, 10) para (30
 Geometrias mais complexas podem ser criadas usando uma combinação de `PathSegment` objetos. O exemplo a seguir cria uma forma usando um `BezierSegment` , um `LineSegment` e um `ArcSegment` :
 
 ```xaml
-<Path Stroke="Black">
+<Path Stroke="Black"
+      StrokeThickness="1">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>

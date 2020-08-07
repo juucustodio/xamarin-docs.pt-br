@@ -6,33 +6,35 @@ ms.assetid: D4815A4B-104B-4294-951B-BD8F2EC33C86
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/26/2019
+ms.date: 07/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5e3153e796f26ef150dccc79d8ea6f90127c6a26
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 30f5aefe5fcb327a7c3333bee8e8b553e2630f57
+ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938678"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87918007"
 ---
-# <a name="xamarinforms-picker"></a>Xamarin.FormsSeletor
+# <a name="no-locxamarinforms-picker"></a>Xamarin.FormsSeletor
 
 _A exibição do seletor é um controle para selecionar um item de texto de uma lista de dados._
 
 O Xamarin.Forms [`Picker`](xref:Xamarin.Forms.Picker) exibe uma lista curta de itens, da qual o usuário pode selecionar um item. `Picker` define as propriedades a seguir:
 
-- [`Title`](xref:Xamarin.Forms.Picker.Title)do tipo `string` , que usa como padrão `null` .
-- `TitleColor`do tipo [`Color`](xref:Xamarin.Forms.Color) , a cor usada para exibir o `Title` texto.
+- [`CharacterSpacing`](xref:Xamarin.Forms.Picker.CharacterSpacing), do tipo `double` , é o espaçamento entre os caracteres do item exibido pelo `Picker` .
+- [`FontAttributes`](xref:Xamarin.Forms.Picker.FontAttributes)do tipo [`FontAttributes`](xref:Xamarin.Forms.FontAttributes) , que usa como padrão [`FontAtributes.None`](xref:Xamarin.Forms.FontAttributes.None) .
+- [`FontFamily`](xref:Xamarin.Forms.Picker.FontFamily)do tipo `string` , que usa como padrão `null` .
+- [`FontSize`](xref:Xamarin.Forms.Picker.FontSize)do tipo `double` , que usa como padrão-1,0.
+- `HorizontalTextAlignment`, do tipo [`TextAlignment`](xref:Xamarin.Forms.TextAlignment) , é o alinhamento horizontal do texto exibido pelo `Picker` .
 - [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource)do tipo `IList` , a lista fonte de itens a serem exibidos, cujo padrão é `null` .
 - [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex)do tipo `int` , o índice do item selecionado, cujo padrão é-1.
 - [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem)do tipo `object` , o item selecionado, cujo padrão é `null` .
 - [`TextColor`](xref:Xamarin.Forms.Picker.TextColor)do tipo [`Color`](xref:Xamarin.Forms.Color) , a cor usada para exibir o texto, cujo padrão é [`Color.Default`](xref:Xamarin.Forms.Color.Default) .
-- [`FontAttributes`](xref:Xamarin.Forms.Picker.FontAttributes)do tipo [`FontAttributes`](xref:Xamarin.Forms.FontAttributes) , que usa como padrão [`FontAtributes.None`](xref:Xamarin.Forms.FontAttributes.None) .
-- [`FontFamily`](xref:Xamarin.Forms.Picker.FontFamily)do tipo `string` , que usa como padrão `null` .
-- [`FontSize`](xref:Xamarin.Forms.Picker.FontSize)do tipo `double` , que usa como padrão-1,0.
-- `CharacterSpacing`, do tipo `double` , é o espaçamento entre os caracteres do item exibido pelo `Picker` .
+- [`Title`](xref:Xamarin.Forms.Picker.Title)do tipo `string` , que usa como padrão `null` .
+- [`TitleColor`](xref:Xamarin.Forms.Picker.TitleColor)do tipo [`Color`](xref:Xamarin.Forms.Color) , a cor usada para exibir o `Title` texto.
+- `VerticalTextAlignment`, do tipo [`TextAlignment`](xref:Xamarin.Forms.TextAlignment) , é o alinhamento vertical do texto exibido pelo `Picker` .
 
 Todas as propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que elas podem ser estilizadas e as propriedades podem ser destinos de associações de dados. As [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) Propriedades e têm um modo de associação padrão de [`BindingMode.TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) , o que significa que elas podem ser destinos de associações de dados em um aplicativo que usa a arquitetura [MVVM (Model-View-ViewModel)](~/xamarin-forms/enterprise-application-patterns/mvvm.md) . Para obter informações sobre como definir propriedades de fonte, consulte [fontes](~/xamarin-forms/user-interface/text/fonts.md).
 
