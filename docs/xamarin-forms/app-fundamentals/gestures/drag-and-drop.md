@@ -10,18 +10,18 @@ ms.date: 08/04/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0f49521bb6818b73614107ea6ec383a3c5bd06ce
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: b21c1c85a29717bd9e5b9e9f164ce8f058764865
+ms.sourcegitcommit: 579ec4f2884fa391e5e214a3952cd6004c521eb8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918925"
+ms.locfileid: "87919639"
 ---
 # <a name="add-drag-and-drop-gesture-recognizers"></a>Adicionar reconhecedores de gestos de arrastar e soltar
 
 ![API de pré-lançamento](~/media/shared/preview.png)
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/WorkingWithGestures/DragAndDropGesture)
 
 Um gesto de arrastar e soltar permite que os itens e seus pacotes de dados associados sejam arrastados de um local na tela para outro local usando um gesto contínuo. A operação de arrastar e soltar pode ocorrer em um único aplicativo ou pode ser iniciada em um aplicativo e terminar em outra.
 
@@ -312,4 +312,4 @@ Neste exemplo, o `Square` objeto é recuperado do recipiente de propriedades do 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Gesto de arrastar e soltar (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture)
+- [Gesto de arrastar e soltar (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/WorkingWithGestures/DragAndDropGesture)

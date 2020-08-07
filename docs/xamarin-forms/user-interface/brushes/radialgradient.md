@@ -10,18 +10,18 @@ ms.date: 07/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: dd915384c630cc08a2bd79a52dd22ccb40835dfa
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 897ffd8b86eb161f0264a095b5a041828e631dae
+ms.sourcegitcommit: 579ec4f2884fa391e5e214a3952cd6004c521eb8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918906"
+ms.locfileid: "87919544"
 ---
 # <a name="no-locxamarinforms-brushes-radial-gradients"></a>Xamarin.FormsPincéis: gradientes radiais
 
 ![API de visualização](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
 
 A `RadialGradientBrush` classe deriva da `GradientBrush` classe e pinta uma área com um gradiente radial, que combina duas ou mais cores em um círculo. `GradientStop`os objetos são usados para especificar as cores no gradiente e suas posições. Para obter mais informações sobre `GradientStop` objetos, consulte [ Xamarin.Forms pincéis: gradientes](gradient.md).
 
@@ -102,5 +102,5 @@ Neste exemplo, o plano de fundo do [`Frame`](xref:Xamarin.Forms.Frame) é pintad
 
 ## <a name="related-links"></a>Links relacionados
 
-- [BrushesDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+- [BrushesDemos (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
 - [Xamarin.FormsPincéis: gradientes](gradient.md)
