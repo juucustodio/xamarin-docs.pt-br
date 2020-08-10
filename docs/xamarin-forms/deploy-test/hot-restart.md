@@ -10,12 +10,12 @@ ms.date: 03/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5367d7933e70c59298faacff85c1d5f533bc0776
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3240906cdf964bcf798137e640a82dbd1e2341d9
+ms.sourcegitcommit: a662910a6ba14d241e01047739eb1cd87aa7d884
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929275"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88029715"
 ---
 # <a name="xamarin-hot-restart-preview"></a>Xamarin Hot Restart (versão prévia)
 
@@ -73,8 +73,9 @@ Você também pode usar o `HOTRESTART` símbolo de pré-processador para impedir
 - Não há suporte para arquivos Storyboard e XIB, e o aplicativo poderá falhar se tentar carregá-los no runtime. Use o `HOTRESTART` símbolo de pré-processador para impedir que esse código seja executado.
 - Não há suporte para bibliotecas e estruturas do iOS estáticos e você poderá ver erros de tempo de execução ou falhas se seu aplicativo tentar carregá-las. Use o `HOTRESTART` símbolo de pré-processador para impedir que esse código seja executado. Há suporte para bibliotecas iOS dinâmicas.
 - Não é possível usar o Xamarin Hot Restart para criar pacotes de aplicativos para publicação. Você ainda precisará de um computador Mac para fazer uma compilação completa, assinatura e implantação de seu aplicativo para produção.
+- No momento, não há suporte para catálogos de ativos. Ao usar o Hot restart, seu aplicativo mostrará o ícone padrão e a tela de inicialização para aplicativos Xamarin. Quando emparelhado com um Mac ou desenvolvendo em um Mac, seus catálogos de ativos funcionarão.
 
-## <a name="troubleshoot"></a>Solucionar problemas
+## <a name="troubleshoot"></a>Solução de problemas
 
 - O assistente de instalação não detectará o iTunes se ele tiver sido instalado por meio da Microsoft Store. Você precisará desinstalar essa versão primeiro e, em seguida, baixar o [instalador da Apple](https://go.microsoft.com/fwlink/?linkid=2101014).
 - Há um problema conhecido no qual ter builds específicos do dispositivo habilitados impede que o aplicativo entre no modo de depuração. A solução alternativa é desabilitá-lo em **Propriedades > Build do iOS** e repetir a depuração. Isso será corrigido em uma versão futura.
