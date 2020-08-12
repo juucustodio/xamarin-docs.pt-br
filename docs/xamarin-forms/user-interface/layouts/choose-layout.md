@@ -10,22 +10,22 @@ ms.date: 08/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 16a48423d05ce1cede75c0020bf18f4f398f5adc
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9a097d6dad067f209d3aad27bde382f28910324a
+ms.sourcegitcommit: c3329ab25d377907d8804cdd5e26dc84a274f39c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138496"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88130923"
 ---
-# <a name="choose-a-xamarinforms-layout"></a>Escolher um Xamarin.Forms layout
+# <a name="choose-a-no-locxamarinforms-layout"></a>Escolher um Xamarin.Forms layout
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
 Xamarin.Formsas classes de layout permitem que você organize e agrupe controles de interface do usuário em seu aplicativo. Escolher uma classe de layout requer o conhecimento de como o layout posiciona seus elementos filho e como o layout dimensiona seus elementos filho. Além disso, pode ser necessário aninhar layouts para criar o layout desejado.
 
 A imagem a seguir mostra layouts típicos que podem ser obtidos com as Xamarin.Forms classes de layout principais:
 
-[![As classes de layout principal noXamarin.Forms](images/layouts.png "[! Parar. Classes de layout não LOC (Xamarin. Forms)]")](images/layouts-large.png#lightbox "[! Parar. Classes de layout não LOC (Xamarin. Forms)]")
+[![As classes de layout principais em::: no-Loc (Xamarin. Forms):::](images/layouts.png "::: no-Loc (Xamarin. Forms)::: classes de layout")](images/layouts-large.png#lightbox "::: no-Loc (Xamarin. Forms)::: classes de layout")
 
 ## <a name="stacklayout"></a>StackLayout
 
@@ -234,7 +234,7 @@ Neste exemplo, o layout funciona da seguinte maneira:
 > [!CAUTION]
 > Evite usar a [`AbsoluteLayout.AutoSize`](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) propriedade sempre que possível, pois isso fará com que o mecanismo de layout execute cálculos de layout adicionais.
 
-Para obter mais informações, consulte [ Xamarin.Forms AbsoluteLayout](absolute-layout.md).
+Para obter mais informações, consulte [ Xamarin.Forms AbsoluteLayout](absolutelayout.md).
 
 ## <a name="input-transparency"></a>Transparência de entrada
 
@@ -255,7 +255,7 @@ Além disso, o desempenho de renderização de página também pode ser melhorad
 - [Xamarin.FormsStackLayout](stacklayout.md)
 - [Xamarin.FormsGrade](grid.md)
 - [Xamarin.FormsFlexLayout](flex-layout.md)
-- [Xamarin.FormsAbsoluteLayout](absolute-layout.md)
+- [Xamarin.FormsAbsoluteLayout](absolutelayout.md)
 - [Xamarin.FormsRelativeLayout](relative-layout.md)
 - [Otimizar o desempenho do layout](~/xamarin-forms/deploy-test/performance.md#optimize-layout-performance)
 - [Compactação de layout](layout-compression.md)
