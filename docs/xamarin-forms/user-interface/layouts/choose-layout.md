@@ -10,12 +10,12 @@ ms.date: 08/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9a097d6dad067f209d3aad27bde382f28910324a
-ms.sourcegitcommit: c3329ab25d377907d8804cdd5e26dc84a274f39c
+ms.openlocfilehash: 38b44bbb8f01f090d286bb2203014455a32a2290
+ms.sourcegitcommit: 808ff109928a1eea16e17e23ea81f8c903a239e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88130923"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88181479"
 ---
 # <a name="choose-a-no-locxamarinforms-layout"></a>Escolher um Xamarin.Forms layout
 
@@ -194,7 +194,7 @@ Neste exemplo, o layout funciona da seguinte maneira:
 > [!WARNING]
 > Evite usar um `RelativeLayout` sempre que possível. Isso resultará em a CPU precisar realizar significativamente mais trabalho.
 
-Para obter mais informações, consulte [ Xamarin.Forms RelativeLayout](relative-layout.md).
+Para obter mais informações, consulte [ Xamarin.Forms RelativeLayout](relativelayout.md).
 
 ## <a name="absolutelayout"></a>AbsoluteLayout
 
@@ -256,6 +256,6 @@ Além disso, o desempenho de renderização de página também pode ser melhorad
 - [Xamarin.FormsGrade](grid.md)
 - [Xamarin.FormsFlexLayout](flex-layout.md)
 - [Xamarin.FormsAbsoluteLayout](absolutelayout.md)
-- [Xamarin.FormsRelativeLayout](relative-layout.md)
+- [Xamarin.FormsRelativeLayout](relativelayout.md)
 - [Otimizar o desempenho do layout](~/xamarin-forms/deploy-test/performance.md#optimize-layout-performance)
 - [Compactação de layout](layout-compression.md)

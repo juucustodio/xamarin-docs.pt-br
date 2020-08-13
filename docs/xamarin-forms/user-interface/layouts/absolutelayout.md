@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsAbsoluteLayout
+title: Xamarin.Forms AbsoluteLayout
 description: O Xamarin.Forms AbsoluteLayout é usado para posicionar e dimensionar elementos usando valores explícitos ou valores proporcionais ao tamanho do layout.
 ms.prod: xamarin
 ms.assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38
@@ -10,20 +10,20 @@ ms.date: 08/07/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 696429e04775640d46add77ec6a4bbf6e69f675b
-ms.sourcegitcommit: c3329ab25d377907d8804cdd5e26dc84a274f39c
+ms.openlocfilehash: a6efa4615f0061c83243f2d00d2d141a51607301
+ms.sourcegitcommit: 808ff109928a1eea16e17e23ea81f8c903a239e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88134099"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88181492"
 ---
-# <a name="no-locxamarinforms-absolutelayout"></a>Xamarin.FormsAbsoluteLayout
+# <a name="no-locxamarinforms-absolutelayout"></a>Xamarin.Forms AbsoluteLayout
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
 
 [![::: no-Loc (Xamarin. Forms)::: AbsoluteLayout](absolutelayout-images/layouts.png)](absolutelayout-images/layouts-large.png#lightbox)
 
-Um [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) é usado para posicionar e dimensionar filhos usando valores explícitos. A posição é especificada pelo canto superior esquerdo do filho em relação ao canto superior esquerdo do `AbsoluteLayout` , em unidades independentes do dispositivo. `AbsoluteLayout`também implementa um recurso de posicionamento e dimensionamento proporcional. Além disso, ao contrário de algumas outras classes de layout, `AbsoluteLayout` é possível posicionar filhos para que eles se sobreponham.
+Um [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) é usado para posicionar e dimensionar filhos usando valores explícitos. A posição é especificada pelo canto superior esquerdo do filho em relação ao canto superior esquerdo do `AbsoluteLayout` , em unidades independentes do dispositivo. `AbsoluteLayout` também implementa um recurso de posicionamento e dimensionamento proporcional. Além disso, ao contrário de algumas outras classes de layout, `AbsoluteLayout` é possível posicionar filhos para que eles se sobreponham.
 
 Um [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) deve ser considerado um layout de finalidade especial para ser usado somente quando você puder impor um tamanho em filhos ou quando o tamanho do elemento não afetar o posicionamento de outros filhos.
 
@@ -55,7 +55,7 @@ Para especificar que os tamanhos filho são horizontalmente ou verticalmente, ou
 
 ## <a name="absolute-positioning-and-sizing"></a>Posicionamento absoluto e dimensionamento
 
-Por padrão, [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) as posições e os tamanhos são filhos usando valores absolutos, especificados em unidades independentes de dispositivo, que definem explicitamente onde as exibições devem ser colocadas no layout. Isso é obtido adicionando filhos à `Children` coleção de um `AbsoluteLayout` e definindo a [`AbsoluteLayout.LayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) Propriedade anexada em cada filho para a posição absoluta e/ou valores de tamanho.
+Por padrão, [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) as posições e os tamanhos são filhos usando valores absolutos, especificados em unidades independentes de dispositivo, que definem explicitamente onde os filhos devem ser colocados no layout. Isso é obtido adicionando filhos à `Children` coleção de um `AbsoluteLayout` e definindo a [`AbsoluteLayout.LayoutBounds`](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty) Propriedade anexada em cada filho para a posição absoluta e/ou valores de tamanho.
 
 > [!WARNING]
 > Usar valores absolutos para posicionar e dimensionar filhos pode ser problemático, pois diferentes dispositivos têm diferentes tamanhos de tela e resoluções. Portanto, as coordenadas do centro da tela em um dispositivo podem ser deslocadas em outros dispositivos.
@@ -190,7 +190,7 @@ Neste exemplo, cada filho é posicionado usando valores proporcionais, mas dimen
 
 A captura de tela a seguir mostra o layout resultante:
 
-![Filhos colocados em um AbsoluteLayout usando valores de positino proporcionais](absolutelayout-images/proportional-position.png)
+![Filhos colocados em um AbsoluteLayout usando valores de posição proporcional](absolutelayout-images/proportional-position.png)
 
 O código C# equivalente é mostrado abaixo:
 
@@ -236,6 +236,6 @@ Neste exemplo, a posição e o tamanho de cada filho são definidos com o [`Abso
 ## <a name="related-links"></a>Links relacionados
 
 - [Demonstrações do AbsoluteLayout (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
-- [Xamarin.FormsPropriedades anexadas](~/xamarin-forms/xaml/attached-properties.md)
+- [Xamarin.Forms Propriedades anexadas](~/xamarin-forms/xaml/attached-properties.md)
 - [Escolher um Xamarin.Forms layout](choose-layout.md)
 - [Melhorar o Xamarin.Forms desempenho do aplicativo](~/xamarin-forms/deploy-test/performance.md)

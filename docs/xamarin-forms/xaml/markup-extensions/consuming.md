@@ -10,16 +10,16 @@ ms.date: 06/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e1429c3f39e37dc552d7f6ca8767058e5aec853b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b23aca29fa77b58183a1f09053bc2bb9ba66bb49
+ms.sourcegitcommit: 808ff109928a1eea16e17e23ea81f8c903a239e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84903097"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88181505"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de extensões de marcação do XAML
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
 As extensões de marcação XAML ajudam a melhorar o poder e a flexibilidade do XAML, permitindo que os atributos de elemento sejam definidos a partir de uma variedade de fontes. Várias extensões de marcação XAML fazem parte da especificação XAML 2009. Eles aparecem em arquivos XAML com o prefixo de `x` namespace personalizado e são comumente referidos com esse prefixo. Este artigo aborda as seguintes extensões de marcação:
 
@@ -42,7 +42,7 @@ Extensões de marcação XAML adicionais têm suporte historicamente por outras 
 - `TemplateBinding`-executa a vinculação de dados de um modelo de controle, conforme discutido no artigo [** Xamarin.Forms modelos de controle**](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 - `RelativeSource`– define a origem da associação em relação à posição do destino da associação, conforme discutido no artigo [associações relativas](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
-O [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) layout usa a extensão de marcação personalizada [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression) . Essa extensão de marcação é descrita no artigo [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
+O [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) layout usa a extensão de marcação personalizada [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression) . Essa extensão de marcação é descrita no artigo [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relativelayout.md).
 
 ## <a name="xstatic-markup-extension"></a>Extensão de marcação x:Static
 
