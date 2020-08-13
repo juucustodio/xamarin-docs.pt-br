@@ -6,12 +6,12 @@ ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: davidortinau
 ms.author: daortin
 ms.date: 06/19/2018
-ms.openlocfilehash: 39e7a6c86a2d4ab4231a29c0e1014de702af01ac
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 1545af984c0a409244c323048b448ec44e9be6a8
+ms.sourcegitcommit: f7fe46c0236a7130b63a33d9d1670d5111582dd2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573411"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88186181"
 ---
 # <a name="inspector-installation-and-requirements"></a>Instalação e requisitos do Inspetor
 
@@ -52,7 +52,7 @@ A inspeção do aplicativo ao vivo está disponível para clientes empresariais.
 |Plataforma de aplicativo|Suporte a IDE|Observações|
 |--- |--- |--- |
 |Mac|Somente com suporte no Visual Studio para Mac|
-|iOS|Com suporte no Visual Studio 2017 e Visual Studio para Mac| O comportamento do vinculador deve ser definido como **não vincular** (em opções do projeto de **compilação do IOS** ) |
+|iOS|Com suporte no Visual Studio 2017 e Visual Studio para Mac| O comportamento do vinculador deve ser definido como [**não vincular**](~/ios/deploy-test/linker.md) (em opções do projeto de **compilação do IOS** ) |
 |Android|Com suporte no Visual Studio 2017 e Visual Studio para Mac|É necessário direcionar o Android >= 4.0.3, com **fastdev** habilitado.<br />Deve usar os emuladores do Google, Visual Studio ou Xamarin Android. Os emuladores do Android 7 podem não permitir a inspeção no momento.|
 |WPF|Somente com suporte no Visual Studio 2017|
 

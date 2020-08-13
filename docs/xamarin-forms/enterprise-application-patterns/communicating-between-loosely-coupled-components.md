@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0a43ce2d27c8152137101d616302f6e56a57bd39
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: bf0315d2d077e06ff3ded4d66814afe050fdfad4
+ms.sourcegitcommit: f7fe46c0236a7130b63a33d9d1670d5111582dd2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931970"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88186194"
 ---
 # <a name="communicating-between-loosely-coupled-components"></a>Comunicação entre componentes flexíveis
 
@@ -58,7 +58,7 @@ Para obter mais informações sobre o [`MessagingCenter`](xref:Xamarin.Forms.Mes
 [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter)as mensagens são cadeias de caracteres usadas para identificar mensagens. O exemplo de código a seguir mostra as mensagens definidas no aplicativo móvel eShopOnContainers:
 
 ```csharp
-public class MessengerKeys  
+public class MessageKeys  
 {  
     // Add product to basket  
     public const string AddProduct = "AddProduct";  
@@ -78,7 +78,7 @@ Neste exemplo, as mensagens são definidas usando constantes. A vantagem dessa a
 Os editores notificam os assinantes de uma mensagem com uma das [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) sobrecargas. O exemplo de código a seguir demonstra a publicação da `AddProduct` mensagem:
 
 ```csharp
-MessagingCenter.Send(this, MessengerKeys.AddProduct, catalogItem);
+MessagingCenter.Send(this, MessageKeys.AddProduct, catalogItem);
 ```
 
 Neste exemplo, o [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) método especifica três argumentos:
@@ -118,7 +118,7 @@ Um assinante pode não precisar manipular todas as instâncias de uma mensagem p
 Os assinantes podem cancelar a assinatura de mensagens que não desejam mais receber. Isso é obtido com uma das [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) sobrecargas, conforme demonstrado no exemplo de código a seguir:
 
 ```csharp
-MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessengerKeys.AddProduct);
+MessagingCenter.Unsubscribe<CatalogViewModel, CatalogItem>(this, MessageKeys.AddProduct);
 ```
 
 Neste exemplo, a [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) sintaxe do método reflete os argumentos de tipo especificados durante a assinatura para receber a `AddProduct` mensagem.
