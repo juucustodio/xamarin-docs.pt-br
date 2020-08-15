@@ -1,6 +1,6 @@
 ---
-title: Localização de cadeia de caracteres e imagem emXamarin.Forms
-description: Xamarin.Formsos aplicativos podem ser localizados usando arquivos de recursos do .NET.
+title: Localização de cadeia de caracteres e imagem em Xamarin.Forms
+description: Xamarin.Forms os aplicativos podem ser localizados usando arquivos de recursos do .NET.
 zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 852B4ED3-2D2D-48A5-A759-A6591F6A1509
@@ -11,16 +11,16 @@ ms.date: 11/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: af15dc5a23404a11be6207bef7b4fc3e4bf9fad7
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d68227fbf4a4c9db8f4ba8858fdeda6637ce4732
+ms.sourcegitcommit: 14d67a2db82e67471584b1749e0d5b9ec0c0c09b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137592"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88228594"
 ---
-# <a name="xamarinforms-string-and-image-localization"></a>Xamarin.FormsLocalização de cadeia de caracteres e imagem
+# <a name="no-locxamarinforms-string-and-image-localization"></a>Xamarin.Forms Localização de cadeia de caracteres e imagem
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
 
 A localização é o processo de adaptação de um aplicativo para atender à linguagem específica ou aos requisitos culturais de um mercado-alvo. Para realizar a localização, o texto e as imagens em um aplicativo podem precisar ser traduzidos em vários idiomas. Um aplicativo localizado exibe automaticamente o texto traduzido com base nas configurações de cultura do dispositivo móvel:
 
@@ -59,7 +59,7 @@ Depois que o arquivo é adicionado, as linhas podem ser adicionadas para cada re
 
 A configuração suspensa do **modificador de acesso** determina como o Visual Studio gera a classe usada para acessar recursos. Definir o modificador de acesso como resultados **públicos** ou **internos** em uma classe gerada com o nível de acessibilidade especificado. Definir o modificador de acesso como **sem geração de código** não gera um arquivo de classe. O arquivo de recurso padrão deve ser configurado para gerar um arquivo de classe, o que resulta em um arquivo com a extensão **. designer.cs** que está sendo adicionada ao projeto.
 
-Depois que o arquivo de recurso padrão é criado, arquivos adicionais podem ser criados para cada cultura à qual o aplicativo dá suporte. Cada arquivo de recurso adicional deve incluir a cultura de tradução no nome de arquivo e deve ter o **modificador de acesso** definido como **sem geração de código**. 
+Depois que o arquivo de recurso padrão é criado, arquivos adicionais podem ser criados para cada cultura à qual o aplicativo dá suporte. Cada arquivo de recurso adicional deve incluir a cultura de tradução no nome de arquivo e deve ter o **modificador de acesso** definido como **sem geração de código**.
 
 Em tempo de execução, o aplicativo tenta resolver uma solicitação de recurso em ordem de especificidade. Por exemplo, se a cultura do dispositivo for **en-US** , o aplicativo procura por arquivos de recurso nesta ordem:
 
@@ -149,7 +149,37 @@ Depois que um arquivo de recurso padrão tiver sido criado e a cultura padrão e
 
 Para obter mais informações sobre arquivos de recursos, consulte [criar arquivos de recursos para aplicativos .net](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
 
-## <a name="localize-text-in-xamarinforms"></a>Localizar texto emXamarin.Forms
+## <a name="specify-supported-languages-on-ios"></a>Especificar idiomas com suporte no iOS
+
+No iOS, você deve declarar todos os idiomas com suporte no arquivo **info. plist** para seu projeto. No arquivo **info. plist** , use a exibição de **origem** para definir uma matriz para a `CFBundleLocalizations` chave e forneça valores que correspondam aos arquivos resx. Além disso, certifique-se de definir um idioma esperado por meio da `CFBundleDevelopmentRegion` chave:
+
+![Captura de tela do editor info. plist mostrando a seção localizações](text-images/info-plist.png)
+
+Como alternativa, abra o arquivo **info. plist** em um editor de XML e adicione o seguinte:
+
+```xml
+<key>CFBundleLocalizations</key>
+<array>
+    <string>de</string>
+    <string>es</string>
+    <string>fr</string>
+    <string>ja</string>
+    <string>pt</string> <!-- Brazil -->
+    <string>pt-PT</string> <!-- Portugal -->
+    <string>ru</string>
+    <string>zh-Hans</string>
+    <string>zh-Hant</string>
+</array>
+<key>CFBundleDevelopmentRegion</key>
+<string>en</string>
+```
+
+> [!NOTE]
+> A Apple trata os Português de forma ligeiramente diferente do que você pode esperar. Para obter mais informações, consulte [adicionando idiomas](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW2) em developer.Apple.com.
+
+Para obter mais informações, consulte [especificando os idiomas padrão e com suporte no info. plist](~/ios/app-fundamentals/localization/index.md#specifying-default-and-supported-languages-in-infoplist).
+
+## <a name="localize-text-in-no-locxamarinforms"></a>Localizar texto em Xamarin.Forms
 
 O texto é localizado em Xamarin.Forms usando a `AppResources` classe gerada. Essa classe é nomeada com base no nome do arquivo de recurso padrão. Como o arquivo de recurso de projeto de exemplo é denominado **AppResources.cs**, o Visual Studio gera uma classe correspondente chamada `AppResources` . As propriedades estáticas são geradas na `AppResources` classe para cada linha no arquivo de recurso. As propriedades estáticas a seguir são geradas na classe do aplicativo de exemplo `AppResources` :
 
@@ -178,19 +208,19 @@ public LocalizedCodePage()
         Text = AppResources.NotesLabel,
         // ...
     };
-    
+
     Entry notesEntry = new Entry
     {
         Placeholder = AppResources.NotesPlaceholder,
         //...
     };
-    
+
     Button addButton = new Button
     {
         Text = AppResources.AddButton,
         // ...
     };
-    
+
     Content = new StackLayout
     {
         Children = {

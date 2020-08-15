@@ -1,5 +1,5 @@
 ---
-title: Enviar e receber notificações por push com os hubs de notificação do Azure eXamarin.Forms
+title: Enviar e receber notificações por push com os hubs de notificação do Azure e Xamarin.Forms
 description: Este artigo explica como usar os hubs de notificação do Azure para enviar notificações por push de plataforma cruzada para Xamarin.Forms aplicativos.
 ms.prod: xamarin
 ms.assetid: 07D13195-3A0D-4C95-ACF0-143A9084973C
@@ -11,14 +11,14 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 - Firebase
-ms.openlocfilehash: 5fd657a3d55bd26b95e79e39540dcfe5b8bce08f
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 5a069595aa12852a4a861de9bac52eebd7247e48
+ms.sourcegitcommit: 14d67a2db82e67471584b1749e0d5b9ec0c0c09b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918591"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88228619"
 ---
-# <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-no-locxamarinforms"></a>Enviar e receber notificações por push com os hubs de notificação do Azure eXamarin.Forms
+# <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-no-locxamarinforms"></a>Enviar e receber notificações por push com os hubs de notificação do Azure e Xamarin.Forms
 
 [![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
 
@@ -77,7 +77,7 @@ Para receber mensagens com êxito, cada aplicativo nativo deve executar estas et
 
 Essas etapas são descritas em mais detalhes para cada plataforma nas seções [Configurar o aplicativo Android para notificações](#configure-the-android-application-for-notifications) e [Configurar o Ios para notificações](#configure-ios-for-notifications) .
 
-## <a name="no-locxamarinforms-application-functionality"></a>Xamarin.Formsfuncionalidade do aplicativo
+## <a name="no-locxamarinforms-application-functionality"></a>Xamarin.Forms funcionalidade do aplicativo
 
 O aplicativo de exemplo Xamarin.Forms exibe uma lista de mensagens de notificação por push. Isso é obtido com o `AddMessage` método, que adiciona a mensagem de notificação por push especificada à interface do usuário. Esse método também impede que mensagens duplicadas sejam adicionadas à interface do usuário e são executadas no thread principal para que possam ser chamadas de qualquer thread. O código a seguir mostra o `AddMessage` método:
 
@@ -251,7 +251,7 @@ void SendLocalNotification(string body)
     var requestCode = new Random().Next();
     var pendingIntent = PendingIntent.GetActivity(this, requestCode, intent, PendingIntentFlags.OneShot);
 
-    var notificationBuilder = new NotificationCompat.Builder(this)
+    var notificationBuilder = new NotificationCompat.Builder(this, AppConstants.NotificationChannelName)
         .SetContentTitle("XamarinNotify Message")
         .SetSmallIcon(Resource.Drawable.ic_launcher)
         .SetContentText(body)

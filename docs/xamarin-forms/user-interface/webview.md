@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsWebView
+title: Xamarin.Forms WebView
 description: Este artigo explica como usar a Xamarin.Forms classe WebView para apresentar conteúdo da Web local ou de rede e documentos aos usuários.
 ms.prod: xamarin
 ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
@@ -10,32 +10,32 @@ ms.date: 05/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9b07e044e55f99a7a183e55c566bf59dbd082655
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e0fbdc91c2661732e3afdbde44ce9891f89c5f62
+ms.sourcegitcommit: 14d67a2db82e67471584b1749e0d5b9ec0c0c09b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84198164"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88228632"
 ---
-# <a name="xamarinforms-webview"></a>Xamarin.FormsWebView
+# <a name="no-locxamarinforms-webview"></a>Xamarin.Forms WebView
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
-[`WebView`](xref:Xamarin.Forms.WebView)é uma exibição para exibir conteúdo Web e HTML em seu aplicativo:
+[`WebView`](xref:Xamarin.Forms.WebView) é uma exibição para exibir conteúdo Web e HTML em seu aplicativo:
 
 ![No navegador de aplicativos](webview-images/in-app-browser.png)
 
 ## <a name="content"></a>Conteúdo
 
-`WebView`o oferece suporte aos seguintes tipos de conteúdo:
+`WebView` o oferece suporte aos seguintes tipos de conteúdo:
 
 - O HTML & sites CSS &ndash; da WebView tem suporte completo para sites escritos usando HTML & CSS, incluindo suporte a JavaScript.
-- Documentos &ndash; como o WebView é implementado usando componentes nativos em cada plataforma, o WebView é capaz de mostrar documentos que são visíveis em cada plataforma. Isso significa que os arquivos PDF funcionam no iOS e no Android.
+- Documentos &ndash; como o WebView é implementado usando componentes nativos em cada plataforma, o WebView é capaz de mostrar documentos nos formatos com suporte na plataforma subjacente.
 - Cadeias &ndash; de caracteres HTML podem mostrar cadeias de caracteres HTML da memória.
 - Arquivos locais o &ndash; WebView pode apresentar qualquer um dos tipos de conteúdo acima inseridos no aplicativo.
 
 > [!NOTE]
-> `WebView`no Windows não oferece suporte a Silverlight, flash ou qualquer controle ActiveX, mesmo que eles tenham suporte do Internet Explorer nessa plataforma.
+> `WebView` no Windows não oferece suporte a Silverlight, flash ou qualquer controle ActiveX, mesmo que eles tenham suporte do Internet Explorer nessa plataforma.
 
 ### <a name="websites"></a>Sites
 
@@ -56,7 +56,7 @@ var browser = new WebView
 Desde a versão 9, o iOS só permitirá que seu aplicativo se comunique com servidores que implementam a segurança de práticas recomendadas por padrão. Os valores devem ser definidos no `Info.plist` para habilitar a comunicação com servidores inseguros.
 
 > [!NOTE]
-> Se seu aplicativo exigir uma conexão com um site da Web não seguro, você sempre deverá inserir o domínio como uma exceção usando `NSExceptionDomains` , em vez de desativar completamente o ATS usando `NSAllowsArbitraryLoads` . `NSAllowsArbitraryLoads`Só deve ser usado em situações de emergência extremas.
+> Se seu aplicativo exigir uma conexão com um site da Web não seguro, você sempre deverá inserir o domínio como uma exceção usando `NSExceptionDomains` , em vez de desativar completamente o ATS usando `NSAllowsArbitraryLoads` . `NSAllowsArbitraryLoads` Só deve ser usado em situações de emergência extremas.
 
 O exemplo a seguir demonstra como habilitar um domínio específico (neste caso, xamarin.com) para ignorar os requisitos de ATS:
 
@@ -156,7 +156,7 @@ Embora a primeira página tenha sido carregada, o `WebView` não tem conheciment
 
 Para resolver isso, você precisa dizer ao `WebView` local onde encontrar os arquivos no sistema de arquivos. Faça isso definindo a `BaseUrl` propriedade no `HtmlWebViewSource` usada pelo `WebView` .
 
-Como o sistema de arquivos em cada um dos sistemas operacionais é diferente, você precisa determinar essa URL em cada plataforma. Xamarin.Formsexpõe o `DependencyService` para resolver dependências em tempo de execução em cada plataforma.
+Como o sistema de arquivos em cada um dos sistemas operacionais é diferente, você precisa determinar essa URL em cada plataforma. Xamarin.Forms expõe o `DependencyService` para resolver dependências em tempo de execução em cada plataforma.
 
 Para usar o `DependencyService` , primeiro defina uma interface que possa ser implementada em cada plataforma:
 
@@ -269,8 +269,8 @@ O WebView dá suporte à navegação por meio de vários métodos e propriedades
 
 - **GoForward ()** &ndash; Se `CanGoForward` for true, a chamada `GoForward` navegará para a próxima página visitada.
 - **GoBack ()** &ndash; Se `CanGoBack` for true, chamar `GoBack` irá navegar para a última página visitada.
-- **CanGoBack** &ndash; `true`se houver páginas para as quais navegar de volta, `false` se o navegador estiver na URL inicial.
-- **CanGoForward** &ndash; `true`se o usuário navegou para trás e pode avançar para uma página que já foi visitada.
+- **CanGoBack** &ndash; `true` se houver páginas para as quais navegar de volta, `false` se o navegador estiver na URL inicial.
+- **CanGoForward** &ndash; `true` se o usuário navegou para trás e pode avançar para uma página que já foi visitada.
 
 Em páginas, `WebView` o não oferece suporte a gestos multitoque. É importante garantir que o conteúdo seja otimizado para dispositivos móveis e apareça sem a necessidade de zoom.
 
@@ -337,23 +337,23 @@ Pronto!
 
 O WebView gera os seguintes eventos para ajudá-lo a responder às alterações no estado:
 
-- [`Navigating`](xref:Xamarin.Forms.WebView.Navigating)– evento gerado quando o WebView começa a carregar uma nova página.
-- [`Navigated`](xref:Xamarin.Forms.WebView.Navigated)– evento gerado quando a página é carregada e a navegação é interrompida.
-- [`ReloadRequested`](xref:Xamarin.Forms.WebView.ReloadRequested)– evento gerado quando uma solicitação é feita para recarregar o conteúdo atual.
+- [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) – evento gerado quando o WebView começa a carregar uma nova página.
+- [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) – evento gerado quando a página é carregada e a navegação é interrompida.
+- [`ReloadRequested`](xref:Xamarin.Forms.WebView.ReloadRequested) – evento gerado quando uma solicitação é feita para recarregar o conteúdo atual.
 
 O [`WebNavigatingEventArgs`](xref:Xamarin.Forms.WebNavigatingEventArgs) objeto que acompanha o [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) evento tem quatro propriedades:
 
-- `Cancel`– indica se a navegação deve ou não ser cancelada.
-- `NavigationEvent`– o evento de navegação que foi gerado.
-- `Source`– o elemento que realizou a navegação.
-- `Url`– o destino de navegação.
+- `Cancel` – indica se a navegação deve ou não ser cancelada.
+- `NavigationEvent` – o evento de navegação que foi gerado.
+- `Source` – o elemento que realizou a navegação.
+- `Url` – o destino de navegação.
 
 O [`WebNavigatedEventArgs`](xref:Xamarin.Forms.WebNavigatedEventArgs) objeto que acompanha o [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) evento tem quatro propriedades:
 
-- `NavigationEvent`– o evento de navegação que foi gerado.
-- `Result`– Descreve o resultado da navegação, usando um [`WebNavigationResult`](xref:Xamarin.Forms.WebNavigationResult) membro de enumeração. Os valores válidos são `Cancel`, `Failure`, `Success` e `Timeout`.
-- `Source`– o elemento que realizou a navegação.
-- `Url`– o destino de navegação.
+- `NavigationEvent` – o evento de navegação que foi gerado.
+- `Result` – Descreve o resultado da navegação, usando um [`WebNavigationResult`](xref:Xamarin.Forms.WebNavigationResult) membro de enumeração. Os valores válidos são `Cancel`, `Failure`, `Success` e `Timeout`.
+- `Source` – o elemento que realizou a navegação.
+- `Url` – o destino de navegação.
 
 Se você antecipar o uso de páginas da Web que levam muito tempo para carregar, considere usar [`Navigating`](xref:Xamarin.Forms.WebView.Navigating) os [`Navigated`](xref:Xamarin.Forms.WebView.Navigated) eventos e para implementar um indicador de status. Por exemplo:
 
@@ -394,7 +394,7 @@ Carregamento concluído:
 
 ## <a name="reloading-content"></a>Recarregando conteúdo
 
-[`WebView`](xref:Xamarin.Forms.WebView)tem um `Reload` método que pode ser usado para recarregar o conteúdo atual:
+[`WebView`](xref:Xamarin.Forms.WebView) tem um `Reload` método que pode ser usado para recarregar o conteúdo atual:
 
 ```csharp
 var webView = new WebView();
@@ -418,7 +418,7 @@ Um aplicativo pode retornar ao uso da `UIWebView` classe Ios para implementar o 
 [assembly: ExportRenderer(typeof(Xamarin.Forms.WebView), typeof(Xamarin.Forms.Platform.iOS.WebViewRenderer))]
 ```
 
-`WebView`no Android, por padrão, é tão rápido quanto o navegador interno.
+`WebView` no Android, por padrão, é tão rápido quanto o navegador interno.
 
 O [UWP WebView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/web-view) usa o mecanismo de renderização do Microsoft Edge. Os dispositivos desktop e Tablet devem ver o mesmo desempenho que usar o navegador Edge em si.
 
@@ -427,7 +427,7 @@ O [UWP WebView](https://docs.microsoft.com/windows/uwp/design/controls-and-patte
 Para que o `WebView` funcione, você deve verificar se as permissões estão definidas para cada plataforma. Observe que, em algumas plataformas, o `WebView` funcionará no modo de depuração, mas não quando compilado para a versão. Isso ocorre porque algumas permissões, como as de acesso à Internet no Android, são definidas por padrão por Visual Studio para Mac no modo de depuração.
 
 - **UWP** &ndash; requer o recurso de Internet (cliente & Server) ao exibir o conteúdo da rede.
-- **Android** &ndash; requer `INTERNET` somente ao exibir o conteúdo da rede. O conteúdo local não requer permissões especiais.
+- **Android** &ndash; requer `INTERNET`  somente ao exibir o conteúdo da rede. O conteúdo local não requer permissões especiais.
 - **Ios** &ndash; Não requer permissões especiais.
 
 ## <a name="layout"></a>Layout
@@ -490,7 +490,7 @@ Grade *sem* WidthRequest & HeightRequest. A grade é um dos poucos layouts que n
 
 ## <a name="invoking-javascript"></a>Invocando JavaScript
 
-[`WebView`](xref:Xamarin.Forms.WebView)inclui a capacidade de invocar uma função JavaScript do C# e retornar qualquer resultado para o código C# de chamada. Isso é feito com o [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) método, que é mostrado no exemplo a seguir do exemplo do [WebView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview) :
+[`WebView`](xref:Xamarin.Forms.WebView) inclui a capacidade de invocar uma função JavaScript do C# e retornar qualquer resultado para o código C# de chamada. Isso é feito com o [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) método, que é mostrado no exemplo a seguir do exemplo do [WebView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview) :
 
 ```csharp
 var numberEntry = new Entry { Text = "5" };
@@ -547,7 +547,7 @@ webView.Cookies = cookieContainer;
 webView.Source = new UrlWebViewSource { Url = uri.ToString() };
 ```
 
-Neste exemplo, um único `Cookie` é adicionado ao `CookieContainer` objeto, que é então definido como o valor da `WebView.Cookies` propriedade. Quando o [`WebView`](xref:Xamarin.Forms.WebView) envia uma solicitação da Web para a URL especificada, o cookie é enviado com a solicitação.
+Neste exemplo, um único `Cookie` é adicionado ao `CookieContainer` objeto, que é então definido como o valor da `WebView.Cookies` propriedade. Quando o  [`WebView`](xref:Xamarin.Forms.WebView) envia uma solicitação da Web para a URL especificada, o cookie é enviado com a solicitação.
 
 ## <a name="uiwebview-deprecation-and-app-store-rejection-itms-90809"></a>Reprovação UIWebView e rejeição da loja de aplicativos (ITMS-90809)
 
@@ -557,7 +557,7 @@ Uma versão de visualização do vinculador está disponível para corrigir esse
 
 Os pré-requisitos para isso funcionam são:
 
-- ** Xamarin.Forms 4,5 ou superior**. Xamarin.Forms4,6, ou superior, será necessário se seu aplicativo usar o Visual de material.
+- ** Xamarin.Forms 4,5 ou superior**. Xamarin.Forms 4,6, ou superior, será necessário se seu aplicativo usar o Visual de material.
 - **Xamarin. Ios 13.10.0.17 ou superior**. Verifique sua versão do Xamarin. iOS [no Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). Esta versão do Xamarin. iOS está incluída no Visual Studio para Mac 8.4.1 e no Visual Studio 16.4.3.
 - **Remova as referências `UIWebView` a **. Seu código não deve ter nenhuma referência a `UIWebView` ou nenhuma classe que use `UIWebView` .
 
@@ -595,7 +595,7 @@ Você pode ver a janela com o novo sinalizador em vigor nesta captura de tela:
 
 Agora, quando você cria uma nova compilação (versão) e a envia para a loja de aplicativos, não deve haver nenhum aviso sobre a API preterida.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Trabalhando com o WebView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 - [WebView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview)
