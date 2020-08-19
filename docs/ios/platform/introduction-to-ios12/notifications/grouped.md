@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: 6352de1483aea49a628cbb30d104906fde767afa
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8c4ad31d91e6f9e4415309eee6c3da8a095dc097
+ms.sourcegitcommit: 80bd4d74812d2c086a164323b72a14662276d302
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031950"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608604"
 ---
 # <a name="grouped-notifications-in-xamarinios"></a>Notificações agrupadas no Xamarin. iOS
 
@@ -30,7 +30,7 @@ Trechos de código neste guia são provenientes deste aplicativo de exemplo.
 
 ## <a name="request-authorization-and-allow-foreground-notifications"></a>Solicitar autorização e permitir notificações em primeiro plano
 
-Antes que um aplicativo possa enviar notificações locais, ele deve solicitar permissão para fazer isso. No [`AppDelegate`](xref:UIKit.UIApplicationDelegate)do aplicativo de exemplo, o método [`FinishedLaunching`](xref:UIKit.UIApplicationDelegate.FinishedLaunching(UIKit.UIApplication,Foundation.NSDictionary)) solicita essa permissão:
+Antes que um aplicativo possa enviar notificações locais, ele deve solicitar permissão para fazer isso. No aplicativo de exemplo [`AppDelegate`](xref:UIKit.UIApplicationDelegate) , o [`FinishedLaunching`](xref:UIKit.UIApplicationDelegate.FinishedLaunching(UIKit.UIApplication,Foundation.NSDictionary)) método solicita essa permissão:
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -46,17 +46,17 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-O [`Delegate`](xref:UserNotifications.UNUserNotificationCenter.Delegate) (definido acima) para uma [`UNUserNotificationCenter`](xref:UserNotifications.UNUserNotificationCenter) decide se um aplicativo em primeiro plano deve ou não exibir uma notificação de entrada chamando o manipulador de conclusão passado para [`WillPresentNotification`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.WillPresentNotification(UserNotifications.IUNUserNotificationCenterDelegate,UserNotifications.UNUserNotificationCenter,UserNotifications.UNNotification,System.Action{UserNotifications.UNNotificationPresentationOptions})):
+O [`Delegate`](xref:UserNotifications.UNUserNotificationCenter.Delegate) (definido acima) para um [`UNUserNotificationCenter`](xref:UserNotifications.UNUserNotificationCenter) decide se um aplicativo em primeiro plano deve ou não exibir uma notificação de entrada chamando o manipulador de conclusão passado para [`WillPresentNotification`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.WillPresentNotification(UserNotifications.IUNUserNotificationCenterDelegate,UserNotifications.UNUserNotificationCenter,UserNotifications.UNNotification,System.Action{UserNotifications.UNNotificationPresentationOptions})) :
 
 ```csharp
-[Export("userNotificationCenter:willPresentotification:withCompletionHandler:")]
+[Export("userNotificationCenter:willPresentNotification:withCompletionHandler:")]
 public void WillPresentNotification(UNUserNotificationCenter center, UNNotification notification, System.Action<UNNotificationPresentationOptions> completionHandler)
 {
     completionHandler(UNNotificationPresentationOptions.Alert);
 }
 ```
 
-O parâmetro [`UNNotificationPresentationOptions.Alert`](xref:UserNotifications.UNNotificationPresentationOptions) indica que o aplicativo deve mostrar o alerta, mas não reproduzir um som ou atualizar um crachá.
+O [`UNNotificationPresentationOptions.Alert`](xref:UserNotifications.UNNotificationPresentationOptions) parâmetro indica que o aplicativo deve mostrar o alerta, mas não reproduzir um som ou atualizar um crachá.
 
 ## <a name="threaded-notifications"></a>Notificações encadeadas
 
@@ -122,11 +122,11 @@ async partial void ScheduleThreadedNotification(UIButton sender)
 Todas as notificações do mesmo aplicativo com o mesmo identificador de thread aparecerão no mesmo grupo de notificação.
 
 > [!NOTE]
-> Para definir um identificador de thread em uma notificação remota, adicione a chave de `thread-id` à carga JSON da notificação. Consulte [a criação de um documento de notificação remoto](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification) da Apple para obter mais detalhes.
+> Para definir um identificador de thread em uma notificação remota, adicione a `thread-id` chave à carga JSON da notificação. Consulte [a criação de um documento de notificação remoto](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/generating_a_remote_notification) da Apple para obter mais detalhes.
 
 ### <a name="summaryargument"></a>SummaryArgument
 
-`SummaryArgument` especifica como uma notificação afetará o texto de resumo que aparece no canto inferior esquerdo de um grupo de notificação ao qual a notificação pertence. o iOS agrega o texto de Resumo de notificações no mesmo grupo para criar uma descrição geral do resumo.
+`SummaryArgument` Especifica como uma notificação afetará o texto de resumo que aparece no canto inferior esquerdo de um grupo de notificação ao qual a notificação pertence. o iOS agrega o texto de Resumo de notificações no mesmo grupo para criar uma descrição geral do resumo.
 
 O aplicativo de exemplo usa o autor da mensagem como o argumento de resumo. Usando essa abordagem, o texto de Resumo de um grupo de seis notificações com Alice pode ser **mais de 5 notificações de Alice e eu**.
 
@@ -134,8 +134,8 @@ O aplicativo de exemplo usa o autor da mensagem como o argumento de resumo. Usan
 
 Cada toque do botão de **lembrete de compromissos** do aplicativo de exemplo envia uma das várias notificações de lembrete de compromissos. Como esses lembretes não são segmentados, eles aparecem no grupo de notificação no nível do aplicativo na tela de bloqueio e no centro de notificações.
 
-Para enviar uma notificação não threaded, o método de `ScheduleUnthreadedNotification` do aplicativo de exemplo usa um código semelhante como acima.
-No entanto, ele não define o `ThreadIdentifier` no objeto `UNMutableNotificationContent`.
+Para enviar uma notificação não threaded, o método do aplicativo de exemplo `ScheduleUnthreadedNotification` usa um código semelhante como acima.
+No entanto, ele não define o `ThreadIdentifier` no `UNMutableNotificationContent` objeto.
 
 ## <a name="related-links"></a>Links relacionados
 
