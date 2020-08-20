@@ -7,15 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2020
+ms.custom: contperfq1
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a6efa4615f0061c83243f2d00d2d141a51607301
-ms.sourcegitcommit: 808ff109928a1eea16e17e23ea81f8c903a239e8
+ms.openlocfilehash: 3fa88976c49d3ccb89b74a0ce40de0583fa20795
+ms.sourcegitcommit: 9bd6b1b20d126b3f837c4cf859b25895c242e54e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88181492"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88648155"
 ---
 # <a name="no-locxamarinforms-absolutelayout"></a>Xamarin.Forms AbsoluteLayout
 
