@@ -8,12 +8,12 @@ author: davidortinau
 ms.author: daortin
 ms.custom: video
 ms.date: 03/05/2020
-ms.openlocfilehash: 09d20ef2e4fece36ce67a7891892defb05a5f3df
-ms.sourcegitcommit: ca1eca5bcf6c82bc4ec05db12ee1be585006d59f
+ms.openlocfilehash: 32d9142fb74cba637982438a2aa984adb759d847
+ms.sourcegitcommit: bb18e6b3b5d592374b17932efa1e85c3b5fbad57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88514623"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88950710"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Provisionamento automático para o Xamarin.iOS
 
@@ -25,7 +25,7 @@ O provisionamento automático está disponível em Visual Studio para Mac, Visua
 
 > [!NOTE]
 > Você também deve ter uma conta de desenvolvedor da Apple paga para usar esse recurso. Mais informações sobre as contas de desenvolvedor da Apple estão disponíveis no guia de [provisionamento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md) .
-> Se você não tiver uma conta de desenvolvedor da Apple paga, consulte o guia [provisionamento gratuito para Xamarin. iOS] (~/Ios/Get-Started/Installation/Device-Provisioning/Free-Provisioning.MD).
+> Se você não tiver uma conta de desenvolvedor da Apple paga, confira o guia [provisionamento gratuito para o Xamarin. Ios](~/ios/get-started/installation/device-provisioning/free-provisioning.md) .
 
 > [!NOTE]
 > Antes de começar, certifique-se de primeiro aceitar todos os contratos de licença no [portal do desenvolvedor da Apple](https://developer.apple.com/account/) ou no [App Store Connect](https://appstoreconnect.apple.com/).

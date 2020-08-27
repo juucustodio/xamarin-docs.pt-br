@@ -11,12 +11,12 @@ ms.date: 11/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d68227fbf4a4c9db8f4ba8858fdeda6637ce4732
-ms.sourcegitcommit: 14d67a2db82e67471584b1749e0d5b9ec0c0c09b
+ms.openlocfilehash: 727bac49c5bff522125a2f21a9742e428b81c924
+ms.sourcegitcommit: bb18e6b3b5d592374b17932efa1e85c3b5fbad57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88228594"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88950736"
 ---
 # <a name="no-locxamarinforms-string-and-image-localization"></a>Xamarin.Forms Localização de cadeia de caracteres e imagem
 
@@ -69,7 +69,7 @@ Em tempo de execução, o aplicativo tenta resolver uma solicitação de recurso
 
 A captura de tela a seguir mostra um arquivo de tradução em espanhol chamado **AppResources.es.cs**:
 
-![Especificar recursos de texto padrão em um arquivo. resx](text-images/pc-spanish-strings.png)
+![Especificar os recursos de texto padrão do espanhol em um arquivo. resx](text-images/pc-spanish-strings.png)
 
 O arquivo de conversão usa os mesmos valores de **nome** especificados no arquivo padrão, mas contém cadeias de caracteres de idioma espanhol na coluna **valor** . Além disso, o **modificador de acesso** é definido como **sem geração de código**.
 
@@ -139,6 +139,12 @@ Para que os arquivos de recurso funcionem corretamente, o aplicativo deve ter um
 ```csharp
 using System.Resources;
 
+// The resources from the neutral language .resx file are stored directly
+// within the library assembly. For that reason, changing en-US to a different
+// language in this line will not by itself change the language shown in the
+// app. See the discussion of UltimateResourceFallbackLocation in the
+// documentation for additional information:
+// https://docs.microsoft.com/dotnet/api/system.resources.neutralresourceslanguageattribute
 [assembly: NeutralResourcesLanguage("en-US")]
 ```
 

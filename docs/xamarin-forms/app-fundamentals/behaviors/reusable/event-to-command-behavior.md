@@ -10,12 +10,12 @@ ms.date: 11/09/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0967845ac61ddf5f8e1cc76664a50877d041f011
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 7589e6e6f807c88c8ed17cf1e8f56645d2e98444
+ms.sourcegitcommit: bb18e6b3b5d592374b17932efa1e85c3b5fbad57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939666"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88950723"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>EventToCommandBehavior reutilizável
 
@@ -51,7 +51,7 @@ A `BehaviorBase<T>` classe fornece um Overridable [ `OnAttachedTo` ] (xref: Xama
 A `EventToCommandBehavior` classe define quatro [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instâncias, que executam um comando definido pelo usuário quando um evento é disparado. Essas propriedades são mostradas no seguinte exemplo de código:
 
 ```csharp
-public class EventToCommandBehavior : BehaviorBase<View>
+public class EventToCommandBehavior : BehaviorBase<VisualElement>
 {
   public static readonly BindableProperty EventNameProperty =
     BindableProperty.Create ("EventName", typeof(string), typeof(EventToCommandBehavior), null, propertyChanged: OnEventNameChanged);
@@ -104,7 +104,7 @@ O [ `OnAttachedTo` ] (xref: Xamarin.Forms . Comportamento `1.OnAttachedTo(Xamari
 A finalidade do comportamento é executar o comando definido pela propriedade `Command` em resposta ao acionamento do evento definido pela propriedade `EventName`. A principal funcionalidade de comportamento é mostrada no seguinte exemplo de código:
 
 ```csharp
-public class EventToCommandBehavior : BehaviorBase<View>
+public class EventToCommandBehavior : BehaviorBase<VisualElement>
 {
   ...
   void RegisterEvent (string name)
