@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsComportamento
+title: Xamarin.Forms Comportamento
 description: Comportamentos permitem adicionar funcionalidade a controles de interface do usuário sem precisar dividi-los em subclasses. Comportamentos são escritos em código e adicionados aos controles em XAML ou em código.
 ms.prod: xamarin
 ms.assetid: 42E32AD7-8E3B-48B3-B402-E75B758DA913
@@ -10,14 +10,14 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 83952982bd163725fb931c860cac3e267726315c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d917d7d6421cfae7fc877c81023a835573fa99b1
+ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135805"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88964617"
 ---
-# <a name="xamarinforms-behaviors"></a>Xamarin.FormsComportamento
+# <a name="no-locxamarinforms-behaviors"></a>Xamarin.Forms Comportamento
 
 _Os comportamentos permitem que você adicione funcionalidade aos controles da interface do usuário sem precisar subclasseá-los. Os comportamentos são escritos em código e adicionados a controles em XAML ou código._
 
@@ -29,10 +29,10 @@ Os comportamentos permitem que você implemente código que normalmente precisar
 
 Comportamentos anexados são classes `static` com uma ou mais propriedades anexadas. Este artigo demonstra como criar e consumir comportamentos anexados.
 
-## <a name="xamarinforms-behaviorscreatingmd"></a>[Xamarin.FormsComportamento](creating.md)
+## <a name="no-locxamarinforms-behaviors"></a>[Xamarin.Forms Comportamento](creating.md)
 
-Xamarin.Formsos comportamentos são criados pela derivação da [`Behavior`](xref:Xamarin.Forms.Behavior) [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) classe ou. Este artigo demonstra como criar e consumir Xamarin.Forms comportamentos.
+Xamarin.Forms os comportamentos são criados pela derivação da [`Behavior`](xref:Xamarin.Forms.Behavior) [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) classe ou. Este artigo demonstra como criar e consumir Xamarin.Forms comportamentos.
 
-## <a name="reusable-behaviors"></a>[Comportamentos reutilizáveis](reusable/index.md)
+## <a name="reusable-effectbehavior"></a>[EffectBehavior reutilizável](effect-behavior.md)
 
-Comportamentos são reutilizáveis em mais de um aplicativo. Estes artigos explicam como criar comportamentos úteis para executar a funcionalidade comumente usada.
+Os comportamentos são uma abordagem útil para adicionar um efeito a um controle, removendo o código de texto clichê de tratamento de efeito dos arquivos code-behind. Este artigo demonstra como criar e consumir um Xamarin.Forms comportamento para adicionar um efeito a um controle.

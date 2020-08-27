@@ -10,12 +10,12 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a705eef2ecd240b8944117a67a90ebeebc382bcb
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 55c987ab9f9a95eaeacf648af11c3518a1c27c2a
+ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933738"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88964643"
 ---
 # <a name="attached-behaviors"></a>Comportamentos anexados
 
@@ -32,7 +32,7 @@ Uma propriedade anexada pode definir um delegado `propertyChanged` que será exe
 1. O `propertyChanged` delegado converte a referência de controle, que é recebida como um [`BindableObject`](xref:Xamarin.Forms.BindableObject) , para o tipo de controle que o comportamento foi projetado para aprimorar.
 1. O delegado `propertyChanged` modifica as propriedades do controle, chama os métodos do controle ou registra manipuladores de eventos para eventos expostos pelo controle, a fim de implementar a funcionalidade do comportamento de núcleo.
 
-Um problema com comportamentos anexados é que eles são definidos em uma classe `static`, com propriedades `static` e métodos. Isso dificulta a criação de comportamentos anexados com estado. Além disso, Xamarin.Forms os comportamentos substituíram os comportamentos anexados como a abordagem preferida para a construção do comportamento. Para obter mais informações sobre Xamarin.Forms comportamentos, consulte [ Xamarin.Forms comportamentos](~/xamarin-forms/app-fundamentals/behaviors/creating.md) e [comportamentos reutilizáveis](~/xamarin-forms/app-fundamentals/behaviors/reusable/index.md).
+Um problema com comportamentos anexados é que eles são definidos em uma classe `static`, com propriedades `static` e métodos. Isso dificulta a criação de comportamentos anexados com estado. Além disso, Xamarin.Forms os comportamentos substituíram os comportamentos anexados como a abordagem preferida para a construção do comportamento. Para obter mais informações sobre Xamarin.Forms comportamentos, consulte [ Xamarin.Forms comportamentos](~/xamarin-forms/app-fundamentals/behaviors/creating.md).
 
 ## <a name="creating-an-attached-behavior"></a>Criando um comportamento anexado
 

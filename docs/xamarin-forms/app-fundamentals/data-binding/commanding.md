@@ -10,16 +10,16 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 253255f08cec6f08e03df94798c8572f7cf10f30
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ad36bd5efe09909753fed948a961a690feb0592a
+ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139718"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88964656"
 ---
-# <a name="the-xamarinforms-command-interface"></a>A Xamarin.Forms interface de comando
+# <a name="the-no-locxamarinforms-command-interface"></a>A Xamarin.Forms interface de comando
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Na arquitetura MVVM (Model-View-ViewModel), as associações de dados são definidas entre propriedades no ViewModel, que geralmente é uma classe derivada de `INotifyPropertyChanged`, e propriedades no View, que geralmente é o arquivo XAML. Às vezes, um aplicativo tem necessidades que vão além dessas associações de propriedade ao exigir que o usuário inicie os comandos que afetam algo no ViewModel. Esses comandos geralmente são sinalizados por cliques de botões ou toques de dedos e são tradicionalmente processados no arquivo code-behind em um manipulador para o evento `Clicked` do `Button` ou o evento `Tapped` de um `TapGestureRecognizer`.
 
@@ -27,18 +27,18 @@ A interface de comando oferece uma abordagem alternativa à implementação de c
 
 Para permitir uma associação de dados entre um `Button` e um ViewModel, o `Button` define duas propriedades:
 
-- [`Command`](xref:Xamarin.Forms.Button.Command)do tipo[`System.Windows.Input.ICommand`](xref:System.Windows.Input.ICommand)
-- [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter)do tipo`Object`
+- [`Command`](xref:Xamarin.Forms.Button.Command) do tipo [`System.Windows.Input.ICommand`](xref:System.Windows.Input.ICommand)
+- [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter) do tipo `Object`
 
 Para usar a interface de comando, defina uma associação de dados que direcione a propriedade `Command` do `Button`, em que a origem é uma propriedade no ViewModel do tipo `ICommand`. O ViewModel contém um código associado a essa propriedade `ICommand` executada quando se clica no botão. É possível definir `CommandParameter` como dados arbitrários para distinguir entre vários botões se eles forem todos associados à mesma propriedade `ICommand` no ViewModel.
 
 As propriedades `Command` e `CommandParameter` também são definidas pelas seguintes classes:
 
-- [`MenuItem`](xref:Xamarin.Forms.MenuItem)e, portanto,, [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) que deriva de`MenuItem`
-- [`TextCell`](xref:Xamarin.Forms.TextCell)e, portanto,, [`ImageCell`](xref:Xamarin.Forms.ImageCell) que deriva de`TextCell`
+- [`MenuItem`](xref:Xamarin.Forms.MenuItem) e, portanto,, [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) que deriva de `MenuItem`
+- [`TextCell`](xref:Xamarin.Forms.TextCell) e, portanto,, [`ImageCell`](xref:Xamarin.Forms.ImageCell) que deriva de `TextCell`
 - [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer)
 
-[`SearchBar`](xref:Xamarin.Forms.SearchBar)define uma [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) Propriedade do tipo `ICommand` e uma [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter) propriedade. A [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand) propriedade de [`ListView`](xref:Xamarin.Forms.ListView) é também do tipo `ICommand` .
+[`SearchBar`](xref:Xamarin.Forms.SearchBar) define uma [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) Propriedade do tipo `ICommand` e uma [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter) propriedade. A [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand) propriedade de [`ListView`](xref:Xamarin.Forms.ListView) é também do tipo `ICommand` .
 
 Todos esses comandos podem ser manipulados dentro de um ViewModel, de forma que ele não dependa do objeto específico da interface do usuário no View.
 
@@ -689,10 +689,6 @@ O método `canExecute` retornará `false` somente se o argumento for o ponto dec
 
 Todos os métodos `execute` chamam `RefreshCanExecutes`, que chama `ChangeCanExecute` para `DigitCommand` e `ClearCommand`. Isso garante que o ponto decimal e os botões backspace estão habilitados ou desabilitados com base na sequência atual de dígitos inseridos.
 
-## <a name="adding-commands-to-existing-views"></a>Como adicionar comandos a exibições existentes
-
-Se você quiser usar a interface de comando com exibições que não dão suporte a ela, é possível usar um Xamarin.Forms comportamento que converte um evento em um comando. Isso é descrito no artigo [**EventToCommandBehavior reutilizável**](~/xamarin-forms/app-fundamentals/behaviors/reusable/event-to-command-behavior.md).
-
 ## <a name="asynchronous-commanding-for-navigation-menus"></a>Comando assíncrono para menus de navegação
 
 Comandos são convenientes para implementar os menus de navegação, como o do programa [**Demonstrações de associação de dados**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) em si. Veja uma parte do **MainPage.xaml**:
@@ -767,7 +763,7 @@ Definir `NavigateCommand` e `BindingContext` (em qualquer ordem) antes da chamad
 
 Às vezes, as associações de dados podem ser complicadas, mas, como você viu nessa série de artigos, elas são poderosas e versáteis e ajudam bastante a organizar seu código separando a lógica subjacente da interface do usuário.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Capítulo de vinculação de dados do Xamarin.Forms livro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)
