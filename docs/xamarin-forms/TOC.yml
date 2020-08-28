@@ -171,13 +171,8 @@ items:
             href: app-fundamentals/behaviors/attached.md
           - name: Comportamentos do Xamarin.Forms
             href: app-fundamentals/behaviors/creating.md
-          - name: Comportamentos reutilizáveis
-            href: app-fundamentals/behaviors/reusable/index.md
-            items:
-              - name: EffectBehavior
-                href: app-fundamentals/behaviors/reusable/effect-behavior.md
-              - name: EventToCommandBehavior
-                href: app-fundamentals/behaviors/reusable/event-to-command-behavior.md
+          - name: EffectBehavior reutilizável
+            href: app-fundamentals/behaviors/effect-behavior.md
       - name: Renderizadores personalizados
         href: app-fundamentals/custom-renderer/index.md
         items:
