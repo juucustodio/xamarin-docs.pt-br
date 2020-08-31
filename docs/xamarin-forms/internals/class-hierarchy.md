@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsHierarquia de classes de controles
+title: Xamarin.Forms Hierarquia de classes de controles
 description: Os desenvolvedores devem estar familiarizados com a hierarquia dos tipos usados para criar a interface do usuário de um Xamarin.Forms aplicativo.
 ms.prod: xamarin
 ms.assetid: C89E6B98-464D-4BBE-BF11-13A5FCBBF420
@@ -17,13 +17,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 06/18/2020
 ms.locfileid: "84138627"
 ---
-# <a name="xamarinforms-controls-class-hierarchy"></a>Xamarin.FormsHierarquia de classes de controles
+# <a name="xamarinforms-controls-class-hierarchy"></a>Xamarin.Forms Hierarquia de classes de controles
 
-Xamarin.Formsé composto de centenas de tipos, em vários namespaces. Os desenvolvedores devem estar mais familiarizados com a hierarquia dos tipos usados para criar a interface do usuário de um Xamarin.Forms aplicativo, que reside no `Xamarin.Forms` namespace.
+Xamarin.Forms é composto de centenas de tipos, em vários namespaces. Os desenvolvedores devem estar mais familiarizados com a hierarquia dos tipos usados para criar a interface do usuário de um aplicativo Xamarin.Forms, que reside no namespace `Xamarin.Forms`.
 
-Esses tipos podem ser divididos em páginas, layouts, exibições e células. Uma Xamarin.Forms página geralmente ocupa a tela inteira e todos os tipos de página derivam da [`Page`](xref:Xamarin.Forms.Page) classe. As páginas geralmente contêm um layout e todos os tipos de layout derivam da [`Layout`](xref:Xamarin.Forms.Layout) classe. Um layout geralmente contém exibições e, possivelmente, outros layouts, e todos os tipos de exibição derivam, por fim, da [`View`](xref:Xamarin.Forms.View) classe. Finalmente, as células são controles especializados que são usados em dados de exibição [`TableView`](xref:Xamarin.Forms.TableView) nos [`ListView`](xref:Xamarin.Forms.ListView) controles e. Páginas, layouts, exibições e células são todas derivadas da [`Element`](xref:Xamarin.Forms.Element) classe.
+Esses tipos podem ser divididos em páginas, layouts, exibições e células. Uma página Xamarin.Forms geralmente ocupa a tela inteira e todos os tipos de página derivam da classe [`Page`](xref:Xamarin.Forms.Page). As páginas geralmente contêm um layout e todos os tipos de layout derivam da classe [`Layout`](xref:Xamarin.Forms.Layout). Um layout geralmente contém exibições e, possivelmente, outros layouts, e todos os tipos de exibição derivam, por fim, da classe [`View`](xref:Xamarin.Forms.View). Finalmente, as células são controles especializados que são usados em dados de exibição nos controles [`TableView`](xref:Xamarin.Forms.TableView) e [`ListView`](xref:Xamarin.Forms.ListView). Páginas, layouts, exibições e células são todas derivadas da classe [`Element`](xref:Xamarin.Forms.Element).
 
-O diagrama de classe a seguir mostra a hierarquia de tipos que normalmente são usados para criar uma interface do usuário no Xamarin.Forms :
+O diagrama de classe a seguir mostra a hierarquia de tipos que normalmente são usados para criar uma interface do usuário no Xamarin.Forms:
 
 [![Xamarin.FormsDiagrama de classes de controles](class-hierarchy-images/class-diagram.png "[! Parar. Diagrama de classe de controles NO-LOC (Xamarin. Forms)]")](class-hierarchy-images/class-diagram-large.png#lightbox "[! Parar. Diagrama de classe de controles NO-LOC (Xamarin. Forms)]")
 
@@ -32,4 +32,4 @@ O diagrama de classe a seguir mostra a hierarquia de tipos que normalmente são 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xamarin.FormsReferência de controles](~/xamarin-forms/user-interface/controls/index.md)
+- [Xamarin.Forms Referência de controles](~/xamarin-forms/user-interface/controls/index.md)
