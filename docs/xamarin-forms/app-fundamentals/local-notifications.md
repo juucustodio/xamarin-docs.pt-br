@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Formsnotificações locais
+title: Xamarin.Forms notificações locais
 description: Este artigo explica como enviar e receber notificações locais no Xamarin.Forms .
 ms.prod: xamarin
 ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
@@ -10,16 +10,16 @@ ms.date: 10/10/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 40e040f216ddda40931273f4e7f5614964862fe8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: da867dd017ed50ccbc09f969891bb91011379d3f
+ms.sourcegitcommit: f6a2f07d2e689e0cfd01b30008d50c83c63fa70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137586"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89052741"
 ---
-# <a name="local-notifications-in-xamarinforms"></a>Notificações locais emXamarin.Forms
+# <a name="local-notifications-in-no-locxamarinforms"></a>Notificações locais em Xamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/local-notifications)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/local-notifications)
 
 As notificações locais são alertas enviados por aplicativos instalados em um dispositivo móvel. As notificações locais geralmente são usadas para recursos como:
 
@@ -50,7 +50,7 @@ public interface INotificationManager
 
 Essa interface será implementada em cada projeto de plataforma. O `NotificationReceived` evento permite que o aplicativo manipule notificações de entrada. O `Initialize` método deve executar qualquer lógica de plataforma nativa necessária para preparar o sistema de notificação. O `ScheduleNotification` método deve enviar uma notificação. O `ReceiveNotification` método deve ser chamado pela plataforma subjacente quando uma mensagem é recebida.
 
-## <a name="consume-the-interface-in-xamarinforms"></a>Consuma a interface emXamarin.Forms
+## <a name="consume-the-interface-in-no-locxamarinforms"></a>Consuma a interface em Xamarin.Forms
 
 Depois que uma interface é criada, ela pode ser consumida no Xamarin.Forms projeto compartilhado, embora as implementações de plataforma ainda não tenham sido criadas. O aplicativo de exemplo contém um `ContentPage` chamado **MainPage. XAML** com o seguinte conteúdo:
 
@@ -113,6 +113,16 @@ public partial class MainPage : ContentPage
 ```
 
 O `MainPage` Construtor de classe usa o Xamarin.Forms `DependencyService` para recuperar uma instância específica da plataforma do `INotificationManager` . O `OnScheduleClicked` método usa a `INotificationManager` instância para agendar uma nova notificação. O `ShowNotification` método é chamado a partir do manipulador de eventos anexado ao `NotificationReceived` evento e irá inserir um novo `Label` na página quando o evento for invocado.
+
+O `NotificationReceived` manipulador de eventos converte seus argumentos de evento para `NotificationEventArgs` . Esse tipo é definido no projeto compartilhado Xamarin.Forms :
+
+```csharp
+public class NotificationEventArgs : EventArgs
+{
+    public string Title { get; set; }
+    public string Message { get; set; }
+}
+```
 
 Para obter mais informações sobre o Xamarin.Forms `DependencyService` , consulte [ Xamarin.Forms DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md).
 
@@ -403,4 +413,4 @@ No iOS, as notificações de entrada são automaticamente recebidas pelo aplicat
 - [Projeto de exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/local-notifications)
 - [Notificações no Xamarin. Android](~/android/app-fundamentals/notifications/index.md)
 - [Notificações no Xamarin. iOS](~/ios/platform/user-notifications/index.md)
-- [Xamarin.FormsDependência. serviço](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md)
+- [Xamarin.Forms Dependência. serviço](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md)

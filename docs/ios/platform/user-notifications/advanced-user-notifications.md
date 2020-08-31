@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018
-ms.openlocfilehash: edf224428103c318307f3a05dc79e1e8d286f512
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ce4614f7b21a42945a8541f2b18877e75a200f1a
+ms.sourcegitcommit: f6a2f07d2e689e0cfd01b30008d50c83c63fa70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935104"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89052767"
 ---
 # <a name="advanced-user-notifications-in-xamarinios"></a>Notificações de usuário avançadas no Xamarin. iOS
 
@@ -96,7 +96,7 @@ namespace MonkeyNotification
     public class NotificationService : UNNotificationServiceExtension
     {
         #region Constructors
-        public NotificationService ()
+        public NotificationService (IntPtr handle) : base(handle)
         {
         }
         #endregion
@@ -192,9 +192,9 @@ Para implementar uma interface do usuário de notificação personalizada em um 
 
 Quando a extensão de conteúdo de notificação for adicionada à solução, três arquivos serão criados no projeto da extensão:
 
-1. `NotificationViewController.cs`-Este é o controlador de exibição principal para a extensão de conteúdo de notificação.
-2. `MainInterface.storyboard`-Onde o desenvolvedor cria a interface do usuário visível para a extensão de conteúdo de notificação no designer do iOS.
-3. `Info.plist`-Controla a configuração da extensão de conteúdo de notificação.
+1. `NotificationViewController.cs` -Este é o controlador de exibição principal para a extensão de conteúdo de notificação.
+2. `MainInterface.storyboard` -Onde o desenvolvedor cria a interface do usuário visível para a extensão de conteúdo de notificação no designer do iOS.
+3. `Info.plist` -Controla a configuração da extensão de conteúdo de notificação.
 
 O `NotificationViewController.cs` arquivo padrão é semelhante ao seguinte:
 
@@ -254,7 +254,7 @@ O sistema precisa ser informado sobre como localizar a extensão de conteúdo de
 4. Adicione a `UNNotificationExtensionCategory` chave como tipo **cadeia de caracteres** com o valor da categoria à qual a extensão pertence (neste exemplo, ' evento-INVITE): 
 
     [![Adicionar a chave UNNotificationExtensionCategory](advanced-user-notifications-images/customui02.png)](advanced-user-notifications-images/customui02.png#lightbox)
-5. Salve as alterações.
+5. Salve suas alterações.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -263,7 +263,7 @@ O sistema precisa ser informado sobre como localizar a extensão de conteúdo de
 3. Adicione a `UNNotificationExtensionCategory` chave como tipo **cadeia de caracteres** com o valor da categoria à qual a extensão pertence (neste exemplo, ' evento-INVITE): 
 
     [![Adicionar a chave UNNotificationExtensionCategory](advanced-user-notifications-images/customui02w.png)](advanced-user-notifications-images/customui02w.png#lightbox)
-4. Salve as alterações.
+4. Salve suas alterações.
 
 -----
 

@@ -1,6 +1,6 @@
 ---
-title: Introdução aoXamarin.Essentials
-description: Xamarin.Essentialsfornece uma única API de plataforma cruzada que funciona com qualquer aplicativo iOS, Android ou UWP que pode ser acessado do código compartilhado, independentemente de como a interface do usuário é criada.
+title: Introdução ao Xamarin.Essentials
+description: Xamarin.Essentials fornece uma única API de plataforma cruzada que funciona com qualquer aplicativo iOS, Android ou UWP que pode ser acessado do código compartilhado, independentemente de como a interface do usuário é criada.
 ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
 author: jamesmontemagno
 ms.author: jamont
@@ -9,20 +9,20 @@ ms.date: 05/11/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0c0052b35475522ffb3634ebe22f69f66fe3b22b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 3599958a493dd4051064b5e7f54aa5901e6bf32c
+ms.sourcegitcommit: f6a2f07d2e689e0cfd01b30008d50c83c63fa70c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84129305"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89052754"
 ---
-# <a name="get-started-with-xamarinessentials"></a>Introdução aoXamarin.Essentials
+# <a name="get-started-with-no-locxamarinessentials"></a>Introdução ao Xamarin.Essentials
 
-Xamarin.Essentialsfornece uma única API de plataforma cruzada que funciona com qualquer aplicativo iOS, Android ou UWP que pode ser acessado do código compartilhado, independentemente de como a interface do usuário é criada. Confira o [guia de suporte a plataformas e recursos](platform-feature-support.md) para obter mais informações sobre os sistemas operacionais compatíveis.
+Xamarin.Essentials fornece uma única API de plataforma cruzada que funciona com qualquer aplicativo iOS, Android ou UWP que pode ser acessado do código compartilhado, independentemente de como a interface do usuário é criada. Confira o [guia de suporte a plataformas e recursos](platform-feature-support.md) para obter mais informações sobre os sistemas operacionais compatíveis.
 
 ## <a name="installation"></a>Instalação
 
-Xamarin.Essentialsestá disponível como um pacote NuGet e está incluído em todos os novos projetos no Visual Studio. Ele também pode ser adicionado a qualquer existente usando o Visual Studio com as etapas a seguir.
+Xamarin.Essentials está disponível como um pacote NuGet e está incluído em todos os novos projetos no Visual Studio. Ele também pode ser adicionado a qualquer projeto existente usando o Visual Studio com as etapas a seguir.
 
 1. Faça o download e instale o [Visual Studio](https://visualstudio.microsoft.com/) com as [Ferramentas do Visual Studio para Xamarin](~/get-started/installation/index.md).
 
@@ -50,11 +50,11 @@ Xamarin.Essentialsestá disponível como um pacote NuGet e está incluído em to
     using Xamarin.Essentials;
     ```
 
-5. Xamarin.Essentialsrequer a instalação específica da plataforma:
+5. Xamarin.Essentials requer a instalação específica da plataforma:
 
     # <a name="android"></a>[Android](#tab/android)
 
-    Xamarin.Essentialsdá suporte a uma versão mínima do Android 4,4, correspondente ao nível da API 19, mas a versão do Android de destino para compilação deve ser 9,0 ou 10,0, correspondendo ao nível da API 28 e nível 29. (No Visual Studio, essas duas versões são definidas na caixa de diálogo Propriedades do projeto para o projeto do Android, na guia manifesto do Android. No Visual Studio para Mac, eles são definidos na caixa de diálogo opções do projeto para o projeto do Android, na guia aplicativo do Android.)
+    Xamarin.Essentials dá suporte a uma versão mínima do Android 4,4, correspondente ao nível da API 19, mas a versão do Android de destino para compilação deve ser 9,0 ou 10,0, correspondendo ao nível da API 28 e nível 29. (No Visual Studio, essas duas versões são definidas na caixa de diálogo Propriedades do projeto para o projeto do Android, na guia manifesto do Android. No Visual Studio para Mac, eles são definidos na caixa de diálogo opções do projeto para o projeto do Android, na guia aplicativo do Android.)
 
     Ao compilar no Android 9,0, o Xamarin.Essentials instala a versão 28.0.0.3 das bibliotecas Xamarin. Android. support necessárias. Qualquer outra biblioteca Xamarin. Android. support que seu aplicativo requer também deve ser atualizada para a versão 28.0.0.3 usando o Gerenciador de pacotes NuGet. Todas as bibliotecas Xamarin. Android. support usadas pelo seu aplicativo devem ser as mesmas e devem ter pelo menos a versão 28.0.0.3. Consulte a [página de solução de problemas](troubleshooting.md) se você tiver problemas para adicionar o Xamarin.Essentials NuGet ou atualizar o NuGets em sua solução.
 
@@ -93,7 +93,7 @@ Xamarin.Essentialsestá disponível como um pacote NuGet e está incluído em to
 
 6. Siga os [ Xamarin.Essentials guias](index.md) que permitem copiar e colar trechos de código para cada recurso.
 
-## <a name="xamarinessentials---cross-platform-apis-for-mobile-apps-video"></a>Xamarin.Essentials-APIs de plataforma cruzada para aplicativos móveis (vídeo)
+## <a name="no-locxamarinessentials---cross-platform-apis-for-mobile-apps-video"></a>Xamarin.Essentials -APIs de plataforma cruzada para aplicativos móveis (vídeo)
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Snack-Pack-XamarinEssentials-Cross-Platform-APIs-for-Mobile-Apps/player]
 
