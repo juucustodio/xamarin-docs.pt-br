@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 09/11/2020
-ms.openlocfilehash: e047bb5acd341c665ad2ee9cfbb8f51cfa013646
-ms.sourcegitcommit: 0f92ef326ed2975ee735c8e98df42d5b23f4947a
+ms.openlocfilehash: d4c8e9ba717602aa30cb736957da5a61d2a91130
+ms.sourcegitcommit: e4a51ca35887dd3e45016cf10111cee68d343fbe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 09/11/2020
-ms.locfileid: "90026129"
+ms.locfileid: "90027601"
 ---
 # <a name="build-process"></a>Processo de build
 
@@ -231,7 +231,7 @@ As [Propriedades de Assinatura](#Signing_Properties) também são relevantes ao 
 
   Essa propriedade só será relevante se `$(AndroidPackageFormat)` for definido como `aab` .
 
-  Adicionado no Xamarin. Android 10,2.
+  Adicionado no Xamarin. Android 10,3.
 
   [bundle-config-format]: https://developer.android.com/studio/build/building-cmdline#bundleconfig
 
@@ -680,7 +680,7 @@ As seguintes propriedades de MSBuild são usadas com [projetos de associação](
 
 - **AndroidCodegenTarget** &ndash; uma propriedade de cadeia de caracteres que controla a ABI de destino de geração de código. Os valores possíveis incluem:
 
-  - **XamarinAndroid**: usa a API de associação de JNI presente desde o Mono para Android 1.0. Assemblies de associação criados com Xamarin.Android 5.0 ou posterior podem ser executados apenas no Xamarin.Android 5.0 ou posterior (adições de API/ABI), mas o *código-fonte* é compatível com o das versões anteriores do produto.
+  - **XamarinAndroid**: usa a API de associação JNI presente desde o mono para Android 1,0. Assemblies de associação criados com Xamarin.Android 5.0 ou posterior podem ser executados apenas no Xamarin.Android 5.0 ou posterior (adições de API/ABI), mas o *código-fonte* é compatível com o das versões anteriores do produto.
 
   - **XAJavaInterop1**: usar Java.Interop para invocações de JNI. Assemblies de associação usando `XAJavaInterop1` só podem compilar e executar com o Xamarin.Android 6.1 ou posterior. O Xamarin.Android 6.1 e os posteriores associam `Mono.Android.dll` com esse valor.
 
@@ -706,13 +706,13 @@ Propriedades do recurso controlam a geração do arquivo `Resource.designer.cs`,
 
   Adicionado no Xamarin.Android 9.1.
 
-- **AndroidExplicitCrunch** &ndash; Não tem mais suporte no Xamarin. Android 10,4.
-
-- **AndroidResgenExtraArgs** &ndash; Especifica opções de linha de comando adicionais para passar para o comando **AAPT** ao processar ativos e recursos do Android.
+- **AndroidExplicitCrunch** &ndash; Não tem mais suporte no Xamarin. Android 11,0.
 
 - **AndroidR8IgnoreWarnings** &ndash; Especifica automaticamente a `-ignorewarnings` regra do PROGuard para o `r8` . Isso permite `r8` continuar com a compilação Dex, mesmo que determinados avisos sejam encontrados. O padrão é `True` , mas pode ser definido como `False` para impor um comportamento mais estrito. Consulte o [manual do PROGuard](https://www.guardsquare.com/products/proguard/manual/usage) para obter detalhes.
 
-  Adicionado no Xamarin. Android 10,4.
+  Adicionado no Xamarin. Android 10,3.
+
+- **AndroidResgenExtraArgs** &ndash; Especifica opções de linha de comando adicionais para passar para o comando **AAPT** ao processar ativos e recursos do Android.
 
 - **AndroidResgenFile** &ndash; especifica o nome do arquivo de recurso para gerar. O modelo padrão define isso como `Resource.designer.cs`.
 
@@ -911,14 +911,6 @@ Observe que, como o Android é compatível com várias ABIs (interfaces binária
 
 Com a detecção de caminho, o nome do diretório pai da biblioteca nativa é usado para especificar a ABI usada como destino pela biblioteca. Portanto, se você adicionar `lib/armeabi-v7a/libfoo.so` ao build, em a ABI será "detectada" como `armeabi-v7a`.
 
-### <a name="androidresourceanalysisconfig"></a>AndroidResourceAnalysisConfig
-
-A ação de Build `AndroidResourceAnalysisConfig` marca um arquivo como um arquivo de configuração de nível de severidade para a ferramenta de diagnóstico de layout do Xamarin designer Android. Atualmente, isso é usado apenas no editor de layout e não em mensagens de compilação.
-
-Consulte a [documentação de análise de recursos do Android](https://aka.ms/androidresourceanalysis) para obter mais detalhes.
-
-Adicionado no Xamarin. Android 10,2.
-
 #### <a name="item-attribute-name"></a>Nome de atributo de item
 
 **Abi** &ndash; especifica a ABI da biblioteca nativa.
@@ -967,6 +959,14 @@ Usuários mais avançados talvez queiram usar diferentes recursos em configuraç
   </AndroidResource>
 </ItemGroup>
 ```
+
+### <a name="androidresourceanalysisconfig"></a>AndroidResourceAnalysisConfig
+
+A ação de Build `AndroidResourceAnalysisConfig` marca um arquivo como um arquivo de configuração de nível de severidade para a ferramenta de diagnóstico de layout do Xamarin designer Android. Atualmente, isso é usado apenas no editor de layout e não em mensagens de compilação.
+
+Consulte a [documentação de análise de recursos do Android](https://aka.ms/androidresourceanalysis) para obter mais detalhes.
+
+Adicionado no Xamarin. Android 10,2.
 
 ### <a name="content"></a>Conteúdo
 
