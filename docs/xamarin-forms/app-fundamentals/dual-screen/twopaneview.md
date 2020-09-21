@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Formslayout de tela dupla
+title: Xamarin.Forms layout de tela dupla
 description: Este guia explica como usar Xamarin.Forms o TwoPaneView para otimizar sua experiência de aplicativo para dispositivos de tela dupla, como Surface Duo e Surface neo.
 ms.prod: xamarin
 ms.assetid: 17ee8afa-5e7c-4a4f-a9b6-2aca03f30fe3
@@ -10,16 +10,14 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 734dea456af56f4103691e0368ae72202bce9556
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: d4582a8c27f1fe63a60f48830113f3a5514c56f9
+ms.sourcegitcommit: 69bd0fdc698c9b0c0d73217776d7084f32ae88ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918243"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90832249"
 ---
-# <a name="no-locxamarinforms-twopaneview-layout"></a>Xamarin.FormsLayout de TwoPaneView
-
-![API de pré-lançamento](~/media/shared/preview.png)
+# <a name="no-locxamarinforms-twopaneview-layout"></a>Xamarin.Forms Layout de TwoPaneView
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
@@ -58,8 +56,8 @@ Siga estas instruções para criar um layout de tela dupla em seu aplicativo:
 Somente um destes modos pode estar ativo:
 
 - `SinglePane` somente um painel está visível no momento.
-- `Wide` os dois painéis estão dispostos horizontalmente. Um painel está à esquerda e o outro, à direita. Quando estiver em duas telas, esse será o modo do dispositivo na orientação retrato.
-- `Tall` os dois painéis estão dispostos verticalmente. Um painel está na parte superior e o outro na parte inferior. Quando estiver em duas telas, esse será o modo do dispositivo na orientação paisagem.
+- `Wide` os dois painéis estão dispostos horizontalmente. Um painel fica à esquerda, e o outro, à direita. Quando estiver em duas telas, esse será o modo do dispositivo na orientação retrato.
+- `Tall` os dois painéis estão dispostos verticalmente. Um painel fica na parte superior, e o outro, na parte inferior. Quando estiver em duas telas, esse será o modo do dispositivo na orientação paisagem.
 
 ## <a name="control-twopaneview-when-its-only-on-one-screen"></a>Controlar o TwoPaneView quando ele estiver apenas em uma tela
 
@@ -77,8 +75,8 @@ As propriedades a seguir se aplicam quando `TwoPaneView` estiver ocupando uma ú
 
 As propriedades a seguir se aplicam quando `TwoPaneView` estiver ocupando uma ou duas telas:
 
-- `TallModeConfiguration`indica, quando no modo alto, a organização superior/inferior ou se você quiser apenas um único painel visível, conforme definido pelo TwoPaneViewPriority.
-- `WideModeConfiguration`indica, quando em modo largo, a organização esquerda/direita ou se você quiser apenas um único painel visível, conforme definido pelo TwoPaneViewPriority.
+- `TallModeConfiguration` indica, quando no modo alto, a organização superior/inferior ou se você quiser apenas um único painel visível, conforme definido pelo TwoPaneViewPriority.
+- `WideModeConfiguration` indica, quando em modo largo, a organização esquerda/direita ou se você quiser apenas um único painel visível, conforme definido pelo TwoPaneViewPriority.
 - `PanePriority` determina se o Pane1 ou o Pane2 deve estar no modo SinglePane.
 
 ## <a name="related-links"></a>Links relacionados
