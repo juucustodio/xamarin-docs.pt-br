@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.FormsFormas: transformações de caminho'
+title: 'Xamarin.Forms Formas: transformações de caminho'
 description: Uma Xamarin.Forms transformação define como transformar um objeto de caminho de um espaço de coordenadas para outro espaço de coordenadas.
 ms.prod: xamarin
 ms.assetid: 07DE3D66-1820-4642-BDDF-84146D40C99D
@@ -10,14 +10,14 @@ ms.date: 07/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fc0ff4a361175b52c0014427cee54ce5e14ab8f8
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 6bc61eadb40a66c278955936e15158f34709fd18
+ms.sourcegitcommit: aeefe667156ca8d3ee2ee21d9bec0fa629589e33
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918396"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90928647"
 ---
-# <a name="no-locxamarinforms-shapes-path-transforms"></a>Xamarin.FormsFormas: transformações de caminho
+# <a name="no-locxamarinforms-shapes-path-transforms"></a>Xamarin.Forms Formas: transformações de caminho
 
 ![API de pré-lançamento](~/media/shared/preview.png)
 
@@ -25,20 +25,20 @@ ms.locfileid: "87918396"
 
 Um `Transform` define como transformar um `Path` objeto de um espaço de coordenadas em outro espaço de coordenadas. Quando uma transformação é aplicada a um `Path` objeto, ela altera como o objeto é renderizado na interface do usuário.
 
-As transformações podem ser categorizadas em quatro classificações gerais: rotação, dimensionamento, distorção e tradução. Xamarin.Formsdefine uma classe para cada uma dessas classificações de transformação:
+As transformações podem ser categorizadas em quatro classificações gerais: rotação, dimensionamento, distorção e tradução. Xamarin.Forms define uma classe para cada uma dessas classificações de transformação:
 
 - `RotateTransform`, que gira um `Path` por um especificado `Angle` .
 - `ScaleTransform`, que dimensiona um `Path` objeto por especificado `ScaleX` e por `ScaleY` valores.
 - `SkewTransform`, que inclina um `Path` objeto por especificado `AngleX` e `AngleY` valores.
 - `TranslateTransform`, que move um `Path` objeto por `X` valores especificados e `Y` .
 
-Xamarin.Formstambém fornece as seguintes classes para criar transformações mais complexas:
+Xamarin.Forms também fornece as seguintes classes para criar transformações mais complexas:
 
 - `TransformGroup`, que representa uma transformação composta composta por vários objetos de transformação.
 - `CompositeTransform`, que aplica várias operações de transformação a um `Path` objeto.
 - `MatrixTransform`, que cria transformações personalizadas que não são fornecidas pelas outras classes de transformação.
 
-Todas essas classes derivam da `Transform` classe, que define uma `Value` Propriedade do tipo `Matrix` . Essa propriedade representa a transformação atual como um `Matrix` objeto. Para obter mais informações sobre a `Matrix` estrutura, consulte [transformar matriz](#transform-matrix).
+Todas essas classes derivam da `Transform` classe, que define uma `Value` Propriedade do tipo `Matrix` , que representa a transformação atual como um `Matrix` objeto. Essa propriedade é apoiada por um [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto, o que significa que ele pode ser o destino de associações de dados e com estilo. Para obter mais informações sobre a `Matrix` estrutura, consulte [transformar matriz](#transform-matrix).
 
 Para aplicar uma transformação a um `Path` , crie uma classe de transformação e defina-a como o valor da `Path.RenderTransform` propriedade.
 
@@ -195,7 +195,7 @@ Neste exemplo, o `Path` objeto é movido 50 unidades independentes do dispositiv
 
 ## <a name="multiple-transforms"></a>Várias transformações
 
-Xamarin.Formstem duas classes que dão suporte à aplicação de várias transformações em um `Path` objeto. São eles `TransformGroup` , e `CompositeTransform` . Um `TransformGroup` executa transformações em qualquer ordem desejada, enquanto um `CompositeTransform` executa transformações em uma ordem específica.
+Xamarin.Forms tem duas classes que dão suporte à aplicação de várias transformações em um `Path` objeto. São eles `TransformGroup` , e `CompositeTransform` . Um `TransformGroup` executa transformações em qualquer ordem desejada, enquanto um `CompositeTransform` executa transformações em uma ordem específica.
 
 ### <a name="transform-groups"></a>Transformar grupos
 
@@ -332,7 +332,7 @@ A tabela a seguir mostra a estrutura de uma Xamarin.Forms matriz:
         OffsetY
     :::column-end:::
     :::column:::
-        1.0
+        1,0
     :::column-end:::
 :::row-end:::
 
@@ -401,4 +401,4 @@ Além disso, o exemplo anterior pode ser simplificado ainda mais, especificando 
 ## <a name="related-links"></a>Links relacionados
 
 - [ShapeDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.FormsExistentes](index.md)
+- [Xamarin.Forms Existentes](index.md)
