@@ -56,7 +56,7 @@
           items:
             - name: Xamarin para desenvolvedores de Objective-C
               href: get-started/objective-c-developers/index.md
-            - name: 'Manual de introdução a C# para Desenvolvedores de Objective-C'
+            - name: Manual de introdução a C# para Desenvolvedores de Objective-C
               href: get-started/objective-c-developers/primer.md
     - name: Conceitos básicos de aplicativo
       items:
@@ -244,6 +244,12 @@
       items:
         - name: Visão geral
           href: platform/index.md
+        - name: iOS 14
+          items:
+            - name: Introdução ao iOS 14
+              href: platform/ios14/index.md
+            - name: Introdução
+              href: platform/ios14/get-started.md
         - name: iOS 13
           items:
             - name: Introdução ao iOS 13
