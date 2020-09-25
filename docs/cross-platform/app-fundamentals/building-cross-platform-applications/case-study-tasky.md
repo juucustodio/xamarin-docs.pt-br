@@ -6,12 +6,12 @@ ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 87ba471dad102059788695f3fe50633bc1a3de0c
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 96f5dd638de17569d105e95c44a539e652b35986
+ms.sourcegitcommit: d7c09c6cc2f479b8f14910ad2d20ec76800cd9c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930176"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91248120"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>Estudo de caso de aplicativo de plataforma cruzada: tarefa
 
@@ -115,7 +115,7 @@ Observação: você verá que seus projetos fazem referência a bibliotecas de e
 
 A camada de dados contém o código que faz o armazenamento físico de dados – seja para um banco de dado, arquivos simples ou outro mecanismo. A camada de dados tarefa consiste em duas partes: a biblioteca SQLite-NET e o código personalizado adicionado para conectá-lo.
 
-A tarefa depende do pacote de NuGet do SQLite-net (publicado por Frank Kreuger) para inserir o código SQLite-NET que fornece uma interface de banco de dados de ORM (mapeamento relacional de objeto). A `TaskItemDatabase` classe herda de `SQLiteConnection` e adiciona os métodos CRUD (criar, ler, atualizar, excluir) necessários para ler e gravar dados no SQLite. É uma implementação padronizada simples de métodos CRUD genéricos que podem ser reutilizados em outros projetos.
+A tarefa depende do pacote de NuGet do SQLite-net (publicado por Frank Krueger) para inserir o código SQLite-NET que fornece uma interface de banco de dados de ORM (mapeamento relacional de objeto). A `TaskItemDatabase` classe herda de `SQLiteConnection` e adiciona os métodos CRUD (criar, ler, atualizar, excluir) necessários para ler e gravar dados no SQLite. É uma implementação padronizada simples de métodos CRUD genéricos que podem ser reutilizados em outros projetos.
 
 O `TaskItemDatabase` é um singleton, garantindo que todo o acesso ocorra na mesma instância. Um bloqueio é usado para impedir o acesso simultâneo de vários threads.
 
@@ -233,7 +233,7 @@ Em tarefa, o modelo é a `TaskItem` classe e `TaskItemManager` implementa o padr
 
 #### <a name="faade"></a>Fachada
 
- `TaskItemManager`encapsula o `DAL.TaskItemRepository` para fornecer os métodos get, Save e Delete que serão referenciados pelas camadas do aplicativo e da interface do usuário.
+ `TaskItemManager` encapsula o `DAL.TaskItemRepository` para fornecer os métodos get, Save e Delete que serão referenciados pelas camadas do aplicativo e da interface do usuário.
 
 As regras de negócio e a lógica seriam colocadas aqui, se necessário, por exemplo, todas as regras de validação que devem ser satisfeitas antes que um objeto seja salvo.
 
@@ -280,7 +280,7 @@ A camada de aplicativo e a camada de interface do usuário são implementadas ne
 
 A camada de aplicativo contém classes específicas da plataforma necessárias para "associar" os objetos expostos pelo PCL à interface do usuário. O aplicativo específico para iOS tem duas classes para ajudar a exibir tarefas:
 
-- **Editingion** – essa classe é usada para associar listas de tarefas à interface do usuário. Como `MonoTouch.Dialog` o foi usado para a lista de tarefas, precisamos implementar esse auxiliar para habilitar a funcionalidade de passar para a exclusão no `UITableView` . Passar o dedo para exclusão é comum no iOS, mas não no Android ou Windows Phone, portanto, o projeto específico do iOS é o único que o implementa.
+- **Editingion** – essa classe é usada para associar listas de tarefas à interface do usuário. Como `MonoTouch.Dialog` o foi usado para a lista de tarefas, precisamos implementar esse auxiliar para habilitar a funcionalidade de passar para a exclusão no  `UITableView` . Passar o dedo para exclusão é comum no iOS, mas não no Android ou Windows Phone, portanto, o projeto específico do iOS é o único que o implementa.
 - **TaskDialog** – essa classe é usada para associar uma única tarefa à interface do usuário. Ele usa a `MonoTouch.Dialog` API de reflexão para "encapsular" o `TaskItem` objeto com uma classe que contém os atributos corretos para permitir que a tela de entrada seja formatada corretamente.
 
 A `TaskDialog` classe usa `MonoTouch.Dialog` atributos para criar uma tela com base nas propriedades de uma classe. A classe é parecida com esta:
@@ -318,7 +318,7 @@ Observe que os `OnTap` atributos exigem um nome de método – esses métodos de
 
 A camada da interface do usuário consiste nas seguintes classes:
 
-1. **AppDelegate** – contém chamadas para a API de aparência para estilizar as fontes e cores usadas no aplicativo. A tarefa é um aplicativo simples, portanto, não há outras tarefas de inicialização em execução no `FinishedLaunching` .
+1. **AppDelegate** – contém chamadas para a API de aparência para estilizar as fontes e cores usadas no aplicativo. A tarefa é um aplicativo simples, portanto, não há outras tarefas de inicialização em execução no  `FinishedLaunching` .
 2. **Telas** – subclasses de `UIViewController` que definem cada tela e seu comportamento. As telas reúnem a interface do usuário com classes de camada de aplicativo e a API comum ( `TaskItemManager` ). Neste exemplo, as telas são criadas no código, mas elas podem ter sido projetadas usando Interface Builder do Xcode ou o designer do storyboard.
 3. **Imagens** – os elementos visuais são uma parte importante de cada aplicativo. A tarefa tem imagens de tela inicial e ícone, que para o iOS deve ser fornecida em resolução regular e retina.
 
@@ -332,7 +332,7 @@ A tela inicial é uma `MonoTouch.Dialog` tela que exibe uma lista de tarefas do 
 
 Os dois métodos principais relacionados à exibição e interação com a lista de tarefas são:
 
-1. **Populable** – usa o método da camada de negócios `TaskManager.GetTasks` para recuperar uma coleção de `TaskItem` objetos a serem exibidos.
+1. **Populable** – usa o método da camada de negócios  `TaskManager.GetTasks` para recuperar uma coleção de  `TaskItem` objetos a serem exibidos.
 2. **Selecionado** – quando uma linha é tocada, o exibe a tarefa em uma nova tela.
 
  <a name="Task_Details_Screen"></a>
@@ -349,9 +349,9 @@ Esta captura de tela mostra uma exibição vazia que demonstra o `Entry` atribut
 
 A funcionalidade da tela de **detalhes da tarefa** (como salvar ou excluir uma tarefa) deve ser implementada na `HomeScreen` classe, pois é onde o `MonoTouch.Dialog.BindingContext` é criado. Os métodos a seguir `HomeScreen` dão suporte à tela de detalhes da tarefa:
 
-1. **ShowTaskDetails** – cria um `MonoTouch.Dialog.BindingContext` para renderizar uma tela. Ele cria a tela de entrada usando reflexão para recuperar os nomes e tipos de propriedade da `TaskDialog` classe. Informações adicionais, como o texto de marca d' água para as caixas de entrada, são implementadas com atributos nas propriedades.
-2. **SaveTask** – esse método é referenciado na `TaskDialog` classe por meio de um `OnTap` atributo. Ele é chamado quando **Save** é pressionado e usa um `MonoTouch.Dialog.BindingContext` para recuperar os dados inseridos pelo usuário antes de salvar as alterações usando `TaskItemManager` .
-3. **DeleteTask** – esse método é referenciado na `TaskDialog` classe por meio de um `OnTap` atributo. Ele usa `TaskItemManager` para excluir os dados usando a chave primária (Propriedade ID).
+1. **ShowTaskDetails** – cria um  `MonoTouch.Dialog.BindingContext` para renderizar uma tela. Ele cria a tela de entrada usando reflexão para recuperar os nomes e tipos de propriedade da  `TaskDialog` classe. Informações adicionais, como o texto de marca d' água para as caixas de entrada, são implementadas com atributos nas propriedades.
+2. **SaveTask** – esse método é referenciado na  `TaskDialog` classe por meio de um  `OnTap` atributo. Ele é chamado quando  **Save** é pressionado e usa um  `MonoTouch.Dialog.BindingContext` para recuperar os dados inseridos pelo usuário antes de salvar as alterações usando  `TaskItemManager` .
+3. **DeleteTask** – esse método é referenciado na  `TaskDialog` classe por meio de um  `OnTap` atributo. Ele usa  `TaskItemManager` para excluir os dados usando a chave primária (Propriedade ID).
 
  <a name="Android_App"></a>
 

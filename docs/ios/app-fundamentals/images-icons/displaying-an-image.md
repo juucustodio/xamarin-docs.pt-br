@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/24/2018
-ms.openlocfilehash: f9de09065d7c26c9ae98ef664be63599becb4da5
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: a7bc2b87e267e78d841217b7860e5d54c046b788
+ms.sourcegitcommit: d7c09c6cc2f479b8f14910ad2d20ec76800cd9c7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997443"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91248133"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Exibindo uma imagem no Xamarin. iOS
 
@@ -100,9 +100,9 @@ A partir do iOS 8, a classe **vector** especial foi adicionada aos **conjuntos d
 
 Por exemplo, se o desenvolvedor incluir um `MonkeyIcon.pdf` arquivo como o vetor de um catálogo de ativos com uma resolução de 150px x 150px, os seguintes ativos de bitmap seriam incluídos no pacote de aplicativo final quando ele foi compilado:
 
-- `MonkeyIcon@1x.png`-resolução de 150px x 150px.
-- `MonkeyIcon@2x.png`-resolução de 300px x 300px.
-- `MonkeyIcon@3x.png`-resolução de 450px x 450px.
+- `MonkeyIcon@1x.png` -resolução de 150px x 150px.
+- `MonkeyIcon@2x.png` -resolução de 300px x 300px.
+- `MonkeyIcon@3x.png` -resolução de 450px x 450px.
 
 O seguinte deve ser levado em consideração ao usar imagens de vetor de PDF em catálogos de ativos:
 
@@ -159,9 +159,9 @@ Como a `RenderMode` propriedade de um `UIImage` é somente leitura, use o `Image
 
 Há três configurações possivelmente para `UIImage.RenderMode` por meio da `UIImageRenderingMode` enumeração:
 
-- `AlwaysOriginal`– Força a imagem a ser renderizada como o arquivo de imagem de origem original sem nenhuma alteração.
-- `AlwaysTemplate`– Força a imagem a ser renderizada como uma imagem de modelo ao colorir os pixels com a `Tint` cor especificada.
-- `Automatic`-Renderiza a imagem como um modelo ou original com base no ambiente em que ela é usada. Por exemplo, se a imagem for usada em um `UIToolBar` , `UINavigationBar` `UITabBar` ou `UISegmentControl` ela será tratada como um modelo.
+- `AlwaysOriginal` – Força a imagem a ser renderizada como o arquivo de imagem de origem original sem nenhuma alteração.
+- `AlwaysTemplate` – Força a imagem a ser renderizada como uma imagem de modelo ao colorir os pixels com a `Tint` cor especificada.
+- `Automatic` -Renderiza a imagem como um modelo ou original com base no ambiente em que ela é usada. Por exemplo, se a imagem for usada em um `UIToolBar` , `UINavigationBar` `UITabBar` ou `UISegmentControl` ela será tratada como um modelo.
 
 ## <a name="adding-new-assets-collections"></a>Adicionando novas coleções de ativos
 
@@ -215,7 +215,7 @@ TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
 
 Para obter mais informações sobre ícones e imagens, consulte a documentação da Apple sobre [diretrizes personalizadas de criação de imagem e ícone](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html).
 
-## <a name="displaying-an-image-in-a-storyboards"></a>Exibindo uma imagem em um storyboards
+## <a name="displaying-an-image-in-a-storyboard"></a>Exibindo uma imagem em um storyboard
 
 Depois que uma imagem tiver sido adicionada a um projeto Xamarin. iOS usando catálogos de ativos, ela poderá ser facilmente exibida em um storyboard usando um `UIImageView` no designer do Ios. Por exemplo, se o seguinte ativo de imagem tiver sido adicionado:
 
