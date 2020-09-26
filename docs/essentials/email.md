@@ -5,20 +5,47 @@ ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.custom: video
 ms.author: jamont
-ms.date: 08/20/2019
+ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: eba2b6decc74c63e6b2790287842e6cc9b237bd2
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ddeba8e0d2d0f0894f7e43c5cf2501c942f7720a
+ms.sourcegitcommit: 3a15d9b29d65139b18dcf0871fe00cffb2a56357
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84802379"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353389"
 ---
-# <a name="xamarinessentials-email"></a>Xamarin.Essentials: Email
+# <a name="no-locxamarinessentials-email"></a>Xamarin.Essentials: Email
 
 A classe **Email** permite que um aplicativo abra o aplicativo de email padrão com uma informação especificada, incluindo assunto, corpo e destinatários (PARA, CC, CCO).
+
+Para acessar a funcionalidade de **email** , a configuração específica de plataforma a seguir é necessária.
+
+# <a name="android"></a>[Android](#tab/android)
+
+Se a versão do Android de destino do seu projeto estiver definida como **Android 11 (API R 30)** , você deverá atualizar seu manifesto do Android com consultas que são usadas com os novos [requisitos de visibilidade de pacote](https://developer.android.com/preview/privacy/package-visibility).
+
+Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o seguinte dentro do nó do **manifesto**:
+
+```xml
+<queries>
+  <intent>
+    <action android:name="android.intent.action.SENDTO" />
+    <data android:scheme="mailto" />
+  </intent>
+</queries>
+```
+
+# <a name="ios"></a>[iOS](#tab/ios)
+
+Não exige mais configurações.
+
+# <a name="uwp"></a>[UWP](#tab/uwp)
+
+Sem diferenças entre plataformas.
+
+-----
 
 ## <a name="get-started"></a>Introdução
 
@@ -68,7 +95,7 @@ public class EmailTest
 
 ## <a name="file-attachments"></a>Anexos de Arquivo
 
-Esse recurso permite que um aplicativo envie arquivos por email em clientes de email no dispositivo. Xamarin.Essentialso detectará automaticamente o tipo de arquivo (MIME) e solicitará que o arquivo seja adicionado como um anexo. Cada cliente de email é diferente e só pode dar suporte a extensões de arquivo específicas ou nenhum.
+Esse recurso permite que um aplicativo envie arquivos por email em clientes de email no dispositivo. Xamarin.Essentials o detectará automaticamente o tipo de arquivo (MIME) e solicitará que o arquivo seja adicionado como um anexo. Cada cliente de email é diferente e só pode dar suporte a extensões de arquivo específicas ou nenhum.
 
 Aqui está um exemplo de como gravar texto no disco e adicioná-lo como um anexo de email:
 

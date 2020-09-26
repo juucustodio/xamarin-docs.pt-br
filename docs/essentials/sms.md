@@ -5,24 +5,51 @@ ms.assetid: 81A757F2-6F2A-458F-B9BE-770ADEBFAB58
 author: jamesmontemagno
 ms.custom: video
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c3518befc9f26895514bf582a763c1323f336277
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d981a7ed2bffbbff12cf69ee4d0cda27ce319040
+ms.sourcegitcommit: 3a15d9b29d65139b18dcf0871fe00cffb2a56357
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84801836"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353376"
 ---
-# <a name="xamarinessentials-sms"></a>Xamarin.Essentials: SMS
+# <a name="no-locxamarinessentials-sms"></a>Xamarin.Essentials: SMS
 
 A classe **Sms** permite que um aplicativo abra o aplicativo de SMS padrão com uma determinada mensagem para enviar para um destinatário.
 
 ## <a name="get-started"></a>Introdução
 
 [!include[](~/essentials/includes/get-started.md)]
+
+Para acessar a funcionalidade do **SMS** , é necessária a configuração específica da plataforma a seguir.
+
+# <a name="android"></a>[Android](#tab/android)
+
+Se a versão do Android de destino do seu projeto estiver definida como **Android 11 (API R 30)** , você deverá atualizar seu manifesto do Android com consultas que são usadas com os novos [requisitos de visibilidade de pacote](https://developer.android.com/preview/privacy/package-visibility).
+
+Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o seguinte dentro do nó do **manifesto**:
+
+```xml
+<queries>
+  <intent>
+    <action android:name="android.intent.action.VIEW" />
+    <data android:scheme="smsto"/>
+  </intent>
+</queries>
+```
+
+# <a name="ios"></a>[iOS](#tab/ios)
+
+Não exige mais configurações.
+
+# <a name="uwp"></a>[UWP](#tab/uwp)
+
+Sem diferenças entre plataformas.
+
+-----
 
 ## <a name="using-sms"></a>Uso do SMS
 
