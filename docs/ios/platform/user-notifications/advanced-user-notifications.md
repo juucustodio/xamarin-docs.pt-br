@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018
-ms.openlocfilehash: ce4614f7b21a42945a8541f2b18877e75a200f1a
-ms.sourcegitcommit: f6a2f07d2e689e0cfd01b30008d50c83c63fa70c
+ms.openlocfilehash: c5a352ce2bdf4df5e19e49c52966c6230af1f4b2
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89052767"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435321"
 ---
 # <a name="advanced-user-notifications-in-xamarinios"></a>Notificações de usuário avançadas no Xamarin. iOS
 
@@ -254,7 +254,7 @@ O sistema precisa ser informado sobre como localizar a extensão de conteúdo de
 4. Adicione a `UNNotificationExtensionCategory` chave como tipo **cadeia de caracteres** com o valor da categoria à qual a extensão pertence (neste exemplo, ' evento-INVITE): 
 
     [![Adicionar a chave UNNotificationExtensionCategory](advanced-user-notifications-images/customui02.png)](advanced-user-notifications-images/customui02.png#lightbox)
-5. Salve suas alterações.
+5. Salve as alterações.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -263,7 +263,7 @@ O sistema precisa ser informado sobre como localizar a extensão de conteúdo de
 3. Adicione a `UNNotificationExtensionCategory` chave como tipo **cadeia de caracteres** com o valor da categoria à qual a extensão pertence (neste exemplo, ' evento-INVITE): 
 
     [![Adicionar a chave UNNotificationExtensionCategory](advanced-user-notifications-images/customui02w.png)](advanced-user-notifications-images/customui02w.png#lightbox)
-4. Salve suas alterações.
+4. Salve as alterações.
 
 -----
 
@@ -731,7 +731,7 @@ Este artigo adotou uma visão avançada do uso da nova estrutura de notificaçã
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Amostras do iOS 10](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)
 - [Referência da estrutura do usernotifications](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
 - [Guia de programação de notificação local e remota](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/Introduction.html)

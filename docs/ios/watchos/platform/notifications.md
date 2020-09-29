@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 0358b2b422e4cc69faa15187ee24d72c7d02ca38
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c8275811cb61aaa1a033ca414e9abd4d20ecc873
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937924"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435426"
 ---
 # <a name="watchos-notifications-in-xamarin"></a>Notificações do watchOS no Xamarin
 
@@ -123,7 +123,7 @@ Também é possível usar a linha de [comando](~/ios/watchos/troubleshooting.md#
 
 ### <a name="example-notification-payload"></a>Conteúdo de notificação de exemplo
 
-No exemplo de [catálogo do kit de inspeção](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) , há um arquivo JSON de carga de exemplo **NotificationPayload.jsem** (listado abaixo).
+No exemplo de [catálogo do kit de inspeção](/samples/xamarin/ios-samples/watchos-watchkitcatalog) , há um arquivo JSON de carga de exemplo **NotificationPayload.jsem** (listado abaixo).
 
 ```json
 {
@@ -146,5 +146,5 @@ No exemplo de [catálogo do kit de inspeção](https://docs.microsoft.com/sample
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [WatchKitCatalog (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchKitCatalog (exemplo)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Documentos de notificações do kit de inspeção da Apple](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html)

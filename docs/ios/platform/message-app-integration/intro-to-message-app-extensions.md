@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 2cc27b18bdb58ee633cae2d61e8cc6a8064df581
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 0a2ca9fea8135e0188829b8651e9ec15303b933d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937107"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436515"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Noções básicas da extensão do aplicativo de mensagens no Xamarin. iOS
 
@@ -99,7 +99,7 @@ Os pacotes adesivos podem fornecer adesivos em um dos três tamanhos disponívei
 
 Use o Inspetor de atributos do Xcode para definir o tamanho do pacote de adesivo inteiro e fornecer apenas ativos de imagem que correspondam ao tamanho solicitado, para obter os melhores resultados no navegador adesivo dentro do aplicativo mensagens.
 
-Para obter mais informações, consulte nosso aplicativo [Ice Builder](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder) e a referência de [mensagens](https://developer.apple.com/reference/messages)da Apple.
+Para obter mais informações, consulte nosso aplicativo [Ice Builder](/samples/xamarin/ios-samples/ios10-icecreambuilder) e a referência de [mensagens](https://developer.apple.com/reference/messages)da Apple.
 
 ## <a name="creating-a-custom-sticker-experience"></a>Criando uma experiência de adesivo personalizada
 
@@ -147,9 +147,9 @@ Por padrão, o `MessagesViewController.cs` arquivo será adicionado à solução
 
 A estrutura de mensagens fornece classes para apresentar os adesivos disponíveis para o usuário:
 
-- `MSStickerBrowserViewController`-Controla a exibição na qual os adesivos serão apresentados. Ele também está em conformidade com a `IMSStickerBrowserViewDataSource` interface para retornar a contagem de adesivos e o adesivo de um determinado índice de navegador.
-- `MSStickerBrowserView`-Esta é a exibição na qual os adesivos disponíveis serão exibidos.
-- `MSStickerSize`– Decide os tamanhos de célula individuais para a grade de adesivos apresentados no modo de exibição de navegador.
+- `MSStickerBrowserViewController` -Controla a exibição na qual os adesivos serão apresentados. Ele também está em conformidade com a `IMSStickerBrowserViewDataSource` interface para retornar a contagem de adesivos e o adesivo de um determinado índice de navegador.
+- `MSStickerBrowserView` -Esta é a exibição na qual os adesivos disponíveis serão exibidos.
+- `MSStickerSize` – Decide os tamanhos de célula individuais para a grade de adesivos apresentados no modo de exibição de navegador.
 
 ### <a name="creating-a-custom-sticker-browser"></a>Criando um navegador adesivo personalizado
 
@@ -711,6 +711,6 @@ Este artigo abordou inclui uma extensão de aplicativo de mensagem em uma soluç
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Construtor de sorvetes (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder)
+- [Construtor de sorvetes (exemplo)](/samples/xamarin/ios-samples/ios10-icecreambuilder)
 - [Referência de mensagens](https://developer.apple.com/reference/messages)
 - [Guia de programação de extensão de aplicativo](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214)

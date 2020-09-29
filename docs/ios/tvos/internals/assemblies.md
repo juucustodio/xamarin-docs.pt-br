@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: 2fde84441eeb9342d1a86e4dc565faf51d08c57b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 138b65d51c7069f04433f5b4aee6f8d2b743ccdb
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573554"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435017"
 ---
 # <a name="assemblies-supported-by-xamarin-for-tvos"></a>Assemblies com suporte do Xamarin para tvOS
 
@@ -26,22 +26,22 @@ Esta é uma lista dos assemblies com suporte do Xamarin para seus aplicativos Xa
 |Mono.Data.Sqlite.dll|1.2|Provedor de ADO.NET para SQLite; consulte [limitações](~/ios/data-cloud/system.data.md).|
 |Mono.Data.Tds.dll|1.2|Suporte a protocolo TDS; usado para suporte a [System. Data. SqlClient](xref:System.Data.SqlClient) em [System. Data](~/ios/data-cloud/system.data.md).|
 |Mono.Security.dll|1.0|APIs de criptografia.|
-|monotouch.dll|1.0|Esse assembly contém a [ligação C# com a API Cocoatouch](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8).|
-|mscorlib.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
+|monotouch.dll|1.0|Esse assembly contém a [ligação C# com a API Cocoatouch](/dotnet/api/?view=xamarinios-10.8).|
+|mscorlib.dll|1.0|[Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95))|
 |OpenTK.dll|1.0|As APIs do OpenGL/com orientação a objeto aberto, [estendidas para fornecer suporte a dispositivos iPhone](xref:OpenGLES).|
-|System.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), além de tipos dos seguintes namespaces: <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System. ComponentModel. Design</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>System .net. cache</li> <li>System.Net.Mail</li> <li>System .net. MIME</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>System. Timers</li></ul>|
-|System.Core.dll|1.0|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.Data.dll|1.2|[.Net 3,5](https://msdn.microsoft.com/library/ms229335.aspx), [com algumas funcionalidades removidas](~/ios/data-cloud/system.data.md).|
-|System. Data. Service. Client. dll|3.x|Cliente oData completo.|
+|System.dll|1.0|[Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95)), além de tipos dos seguintes namespaces: <ul><li>System.Collections.Specialized</li> <li>System.ComponentModel</li> <li>System. ComponentModel. Design</li> <li>System.Diagnostics</li> <li>System.IO.Compression</li> <li>System.Net</li> <li>System .net. cache</li> <li>System.Net.Mail</li> <li>System .net. MIME</li> <li>System.Net.NetworkInformation</li> <li>System.Net.Security</li> <li>System.Net.Sockets</li> <li>System.Security.Authentication</li> <li>System.Security.Cryptography</li> <li>System. Timers</li></ul>|
+|System.Core.dll|1.0|[Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95))|
+|System.Data.dll|1.2|[.Net 3,5](/previous-versions/ms229335(v=vs.100)), [com algumas funcionalidades removidas](~/ios/data-cloud/system.data.md).|
+|System.Data.Service.Client.dll|3.x|Cliente oData completo.|
 |System.Drawing|1.0|API de sistema. Drawing-somente API Clássica.<br />_Não há suporte para System. Drawing no API Unificada para o Xamarin. Mac .NET 4,5 ou para as estruturas móveis._|
-|System.Json.dll|1.1|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.Runtime.Serialization.dll|?|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.ServiceModel.dll|1.1|Pilha do [WCF](https://docs.microsoft.com/xamarin/cross-platform/data-cloud/web-services/) como presente no [Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|
-|System.ServiceModel.Web.dll|?|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), além de tipos dos seguintes namespaces: <ul><li>Sistema</li><li>System.ServiceModel.Channels</li><li>System.ServiceModel.Description</li><li>System.ServiceModel.Web</li></ul>|
-|System.Transactions.dll|1.2|[.Net 3,5](https://msdn.microsoft.com/library/ms229335.aspx); parte do suporte a [System. Data](https://docs.microsoft.com/xamarin/ios/data-cloud/system.data) .|
-|System.Web.Services|1.1|[Serviços Web básicos](https://docs.microsoft.com/xamarin/cross-platform/data-cloud/web-services/) do perfil .net 3,5, com os recursos do servidor removidos.|
-|System.Xml.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
-|System.Xml.Linq.dll|1.0|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|
+|System.Json.dll|1,1|[Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95))|
+|System.Runtime.Serialization.dll|?|[Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95))|
+|System.ServiceModel.dll|1,1|Pilha do [WCF](../../../cross-platform/data-cloud/web-services/index.md) como presente no [Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95))|
+|System.ServiceModel.Web.dll|?|[Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838194(v=vs.95)), além de tipos dos seguintes namespaces: <ul><li>Sistema</li><li>System.ServiceModel.Channels</li><li>System.ServiceModel.Description</li><li>System.ServiceModel.Web</li></ul>|
+|System.Transactions.dll|1.2|[.Net 3,5](/previous-versions/ms229335(v=vs.100)); parte do suporte a [System. Data](../../data-cloud/system.data.md) .|
+|System.Web.Services|1,1|[Serviços Web básicos](../../../cross-platform/data-cloud/web-services/index.md) do perfil .net 3,5, com os recursos do servidor removidos.|
+|System.Xml.dll|1.0|[.NET 3.5](/previous-versions/ms229335(v=vs.100))|
+|System.Xml.Linq.dll|1.0|[.NET 3.5](/previous-versions/ms229335(v=vs.100))|
 
 <a name="Summary"></a>
 
@@ -49,7 +49,7 @@ Esta é uma lista dos assemblies com suporte do Xamarin para seus aplicativos Xa
 
 Além das ligações Mac, o Xamarin. tvOS pode consumir bibliotecas de [classes portáteis .net](~/cross-platform/app-fundamentals/pcl.md).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guias de interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: b6080807bab17700a741462700182fa66267296e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 955fa049e88b74796d5949518f6149f1e2a9527c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939991"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435208"
 ---
 # <a name="handoff-in-xamarinios"></a>Entrega no Xamarin. iOS
 
@@ -82,7 +82,7 @@ Se essa chave estiver presente, `NSDocument` e `UIDocument` criar automaticament
 
 No OS X, o `NSUserActivity` gerenciado pelo `AppKit` e o associado aos respondentes se tornam automaticamente a atividade atual quando a janela do documento se torna a janela principal. No iOS, para `NSUserActivity` objetos gerenciados pelo `UIKit` , você deve chamar o `BecomeCurrent` método explicitamente ou ter a propriedade do documento `UserActivity` definida em um `UIViewController` quando o aplicativo chega ao primeiro plano.
 
-`AppKit`o irá restaurar automaticamente qualquer `UserActivity` Propriedade criada dessa maneira no os X. Isso ocorrerá se o `ContinueUserActivity` método retornar `false` ou se não for implementado. Nessa situação, o documento é aberto com o `OpenDocument` método do `NSDocumentController` e, em seguida, receberá uma `RestoreUserActivityState` chamada de método.
+`AppKit` o irá restaurar automaticamente qualquer `UserActivity` Propriedade criada dessa maneira no os X. Isso ocorrerá se o `ContinueUserActivity` método retornar `false` ou se não for implementado. Nessa situação, o documento é aberto com o `OpenDocument` método do `NSDocumentController` e, em seguida, receberá uma `RestoreUserActivityState` chamada de método.
 
 Consulte a seção [entrega de suporte em aplicativos baseados em documento](#supporting-handoff-in-document-based-apps) abaixo para obter mais informações.
 
@@ -152,7 +152,7 @@ O _identificador de tipo de atividade_ é uma cadeia de caracteres curta adicion
 
 O identificador de tipo de atividade é usado ao criar uma `NSUserActivity` instância para identificar o tipo de atividade. Quando uma atividade é continuada em outro dispositivo, o tipo de atividade (junto com a ID de equipe do aplicativo) determina qual aplicativo deve ser iniciado para continuar a atividade.
 
-Como exemplo, vamos criar um aplicativo de exemplo chamado **MonkeyBrowser** ([download aqui](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-monkeybrowser)). Esse aplicativo apresentará quatro guias, cada uma com uma URL diferente aberta em um modo de exibição de navegador da Web. O usuário poderá continuar qualquer guia em um dispositivo iOS diferente que executa o aplicativo.
+Como exemplo, vamos criar um aplicativo de exemplo chamado **MonkeyBrowser** ([download aqui](/samples/xamarin/ios-samples/ios8-monkeybrowser)). Esse aplicativo apresentará quatro guias, cada uma com uma URL diferente aberta em um modo de exibição de navegador da Web. O usuário poderá continuar qualquer guia em um dispositivo iOS diferente que executa o aplicativo.
 
 Para criar os identificadores de tipo de atividade necessários para dar suporte a esse comportamento, edite o arquivo **info. plist** e alterne para o modo de exibição de **origem** . Adicione uma `NSUserActivityTypes` chave e crie os seguintes identificadores:
 
@@ -235,9 +235,9 @@ Ele cria um novo `NSUserActivity` usando um dos tipos de atividade de usuário c
 
 ### <a name="populating-the-userinfo-dictionary"></a>Populando o dicionário UserInfo
 
-Como vimos acima, a `UserInfo` propriedade da `NSUserActivity` classe é um `NSDictionary` dos pares chave-valor usados para definir o estado de uma determinada atividade. Os valores armazenados em `UserInfo` devem ser um dos seguintes tipos:,,,,, `NSArray` `NSData` ,, `NSDate` `NSDictionary` `NSNull` `NSNumber` `NSSet` `NSString` ou `NSURL` . `NSURL`os valores de dados que apontam para documentos do iCloud serão automaticamente ajustados para que apontem para os mesmos documentos em um dispositivo receptor.
+Como vimos acima, a `UserInfo` propriedade da `NSUserActivity` classe é um `NSDictionary` dos pares chave-valor usados para definir o estado de uma determinada atividade. Os valores armazenados em `UserInfo` devem ser um dos seguintes tipos:,,,,, `NSArray` `NSData` ,, `NSDate` `NSDictionary` `NSNull` `NSNumber` `NSSet` `NSString` ou `NSURL` . `NSURL` os valores de dados que apontam para documentos do iCloud serão automaticamente ajustados para que apontem para os mesmos documentos em um dispositivo receptor.
 
-No exemplo acima, criamos um `NSMutableDictionary` objeto e o populamos com uma única chave fornecendo uma URL que o usuário estava exibindo atualmente na guia fornecida. O `AddUserInfoEntries` método da atividade do usuário foi usado para atualizar a atividade com os dados que serão usados para restaurar a atividade no dispositivo receptor:
+No exemplo acima, criamos um `NSMutableDictionary`  objeto e o populamos com uma única chave fornecendo uma URL que o usuário estava exibindo atualmente na guia fornecida. O `AddUserInfoEntries` método da atividade do usuário foi usado para atualizar a atividade com os dados que serão usados para restaurar a atividade no dispositivo receptor:
 
 ```csharp
 // Update the activity when the tab's URL changes
@@ -517,7 +517,7 @@ Para obter mais informações, consulte o suporte de atividade do usuário da Ap
 
 ## <a name="supporting-handoff-in-responders"></a>Dando suporte à entrega em respondentes
 
-Você pode associar respondentes (herdados de `UIResponder` no Ios ou `NSResponder` no os X) às atividades definindo suas `UserActivity` Propriedades. O sistema salva automaticamente a `UserActivity` Propriedade nos horários apropriados, chamando o método do Respondente `UpdateUserActivityState` para adicionar dados atuais ao objeto de atividade do usuário usando o `AddUserInfoEntriesFromDictionary` método.
+Você pode associar respondentes (herdados de `UIResponder` no Ios ou `NSResponder` no os X) às atividades definindo suas `UserActivity` Propriedades. O sistema salva automaticamente a `UserActivity` Propriedade nos horários apropriados, chamando o método do Respondente `UpdateUserActivityState` para adicionar dados atuais ao objeto de atividade do usuário usando o  `AddUserInfoEntriesFromDictionary` método.
 
 ## <a name="supporting-continuation-streams"></a>Fluxos de continuação de suporte
 
@@ -607,7 +607,7 @@ A implementação bem-sucedida da continuação direta de uma atividade do usuá
 
 ## <a name="example-handoff-app"></a>Aplicativo de entrega de exemplo
 
-Como exemplo de uso da entrega em um aplicativo Xamarin. iOS, incluímos o aplicativo de exemplo [**MonkeyBrowser**](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-monkeybrowser) com este guia. O aplicativo tem quatro guias que o usuário pode usar para navegar na Web, cada uma com um determinado tipo de atividade: clima, favorito, café e trabalho.
+Como exemplo de uso da entrega em um aplicativo Xamarin. iOS, incluímos o aplicativo de exemplo [**MonkeyBrowser**](/samples/xamarin/ios-samples/ios8-monkeybrowser) com este guia. O aplicativo tem quatro guias que o usuário pode usar para navegar na Web, cada uma com um determinado tipo de atividade: clima, favorito, café e trabalho.
 
 Em qualquer guia, quando o usuário insere uma nova URL e toca no botão **go** , um novo `NSUserActivity` é criado para essa guia que contém a URL que o usuário está procurando no momento:
 
@@ -621,7 +621,7 @@ Se o usuário arrastar para cima no ícone de entrega, o aplicativo será inicia
 
 [![A atividade do usuário continuou no novo dispositivo](handoff-images/handoff03.png)](handoff-images/handoff03.png#lightbox)
 
-Quando a atividade do usuário for enviada com êxito para outro dispositivo da Apple, o dispositivo de envio `NSUserActivity` receberá uma chamada para o `UserActivityWasContinued` método em seu `NSUserActivityDelegate` para que ele saiba que a atividade do usuário foi transferida com êxito para outro dispositivo.
+Quando a atividade do usuário for enviada com êxito para outro dispositivo da Apple, o dispositivo de envio `NSUserActivity` receberá uma chamada para o `UserActivityWasContinued`  método em seu `NSUserActivityDelegate` para que ele saiba que a atividade do usuário foi transferida com êxito para outro dispositivo.
 
 ## <a name="summary"></a>Resumo
 
@@ -629,8 +629,8 @@ Este artigo deu uma introdução à estrutura de entrega usada para continuar um
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Amostras do iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
-- [Exemplo de MonkeyBrowser](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-monkeybrowser)
+- [Amostras do iOS 9](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
+- [Exemplo de MonkeyBrowser](/samples/xamarin/ios-samples/ios8-monkeybrowser)
 - [iOS 9 para desenvolvedores](https://developer.apple.com/ios/pre-release/)
 - [O que há de novo no iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Guia do HomeKitDeveloper](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/HomeKitDeveloperGuide/Introduction/Introduction.html)

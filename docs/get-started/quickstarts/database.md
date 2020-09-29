@@ -12,12 +12,12 @@ ms.date: 04/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a28e391c6bacd460f095c94e30b2d9433a5191e4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8f19595fdabd663312e6346deaed65f85aed1280
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931788"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436966"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Armazenar dados em um banco de dados SQLite.NET local
 
@@ -35,7 +35,7 @@ Página de entrada de observação [ ![ da página de anotações](database-imag
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes de tentar este guia de início rápido. Como alternativa, baixe o [exemplo de início rápido anterior](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/) e use-o como o ponto de partida para este guia de início rápido.
+Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes de tentar este guia de início rápido. Como alternativa, baixe o [exemplo de início rápido anterior](/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/) e use-o como o ponto de partida para este guia de início rápido.
 
 ::: zone pivot="windows"
 
@@ -482,9 +482,9 @@ Neste guia de início rápido, você aprendeu a:
 Para definir o estilo do aplicativo com estilos XAML, vá para o próximo início rápido.
 
 > [!div class="nextstepaction"]
-> [Avançar](styling.md)
+> [Próximo](styling.md)
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Notas (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
-- [Xamarin.FormsAprofundamento do guia de início rápido](deepdive.md)
+- [Notas (exemplo)](/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
+- [Xamarin.Forms Aprofundamento do guia de início rápido](deepdive.md)

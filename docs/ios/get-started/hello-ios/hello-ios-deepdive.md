@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 60c62bf4d2887cec3d68d44e7d384daae35c066f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 4b9043d70bb7460abf62c964da8041f345cd1be6
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929037"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435612"
 ---
 # <a name="hello-ios--deep-dive"></a>Hello, iOS – Aprofundamento
 
@@ -26,7 +26,7 @@ Este guia ajudará você a desenvolver as habilidades e o conhecimento necessár
 
 ## <a name="introduction-to-visual-studio-for-mac"></a>Introdução ao Visual Studio para Mac
 
-O Visual Studio para Mac é um IDE gratuito de software livre que combina funcionalidades do Visual Studio e do XCode. Ele conta com um designer visual totalmente integrado, um editor de texto complementado com ferramentas de refatoração, um navegador de assembly, integração de código-fonte e muito mais. Este guia apresenta alguns recursos básicos do Visual Studio para Mac, mas, se você for novo no Visual Studio para Mac, confira a documentação [Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/).
+O Visual Studio para Mac é um IDE gratuito de software livre que combina funcionalidades do Visual Studio e do XCode. Ele conta com um designer visual totalmente integrado, um editor de texto complementado com ferramentas de refatoração, um navegador de assembly, integração de código-fonte e muito mais. Este guia apresenta alguns recursos básicos do Visual Studio para Mac, mas, se você for novo no Visual Studio para Mac, confira a documentação [Visual Studio para Mac](/visualstudio/mac/).
 
 Visual Studio para Mac segue a prática do Visual Studio de organizar o código em *soluções* e *projetos*. Uma solução é um contêiner que pode conter um ou mais projetos. Um projeto pode ser um aplicativo (por exemplo, iOS ou Android), uma biblioteca com suporte, um aplicativo de teste e muito mais. No aplicativo Phoneword, um novo projeto de iPhone foi adicionado usando o modelo de **Aplicativo de exibição única**. A solução inicial tinha esta aparência:
 
@@ -64,7 +64,7 @@ O Visual Studio organiza o código em soluções e projetos. Uma solução é um
 
 Nas instruções [Hello, Ios](~/ios/get-started/hello-ios/hello-ios-quickstart.md) , você criou uma solução chamada **Phoneword** e colocou um projeto do IOS- **Phoneword_iOS** -dentro dele. Os itens dentro do projeto incluem:
 
-- **Referências** -contém os assemblies necessários para compilar e executar o aplicativo. Expanda o diretório para ver referências a assemblies do .NET como [System](https://docs.microsoft.com/dotnet/api/system), System.Core e [System.Xml](https://docs.microsoft.com/dotnet/api/system.xml), bem como uma referência ao assembly Xamarin.iOS.
+- **Referências** -contém os assemblies necessários para compilar e executar o aplicativo. Expanda o diretório para ver referências a assemblies do .NET como [System](/dotnet/api/system), System.Core e [System.Xml](/dotnet/api/system.xml), bem como uma referência ao assembly Xamarin.iOS.
 - **Pacotes** – o diretório de pacotes contém pacotes do NuGet prontos.
 - **Recursos** – a pasta de recursos armazena outras mídias.
 - **Main.cs** – isso contém o ponto de entrada principal do aplicativo. Para iniciar o aplicativo, o nome da classe principal do aplicativo, a `AppDelegate`, é passado.
@@ -297,7 +297,7 @@ O controlador de exibição é responsável por carregar e descarregar hierarqui
 
 Estes são os métodos de ciclo de vida básicos e suas funções:
 
-- **ViewDidLoad** – chamado *uma vez* na primeira vez que o controlador de exibição carrega sua hierarquia de exibição de conteúdo na memória. Esse é um bom lugar para realizar a configuração inicial, porque é quando as subexibições se tornam disponíveis no código pela primeira vez.
+- **ViewDidLoad** – chamado  *uma vez* na primeira vez que o controlador de exibição carrega sua hierarquia de exibição de conteúdo na memória. Esse é um bom lugar para realizar a configuração inicial, porque é quando as subexibições se tornam disponíveis no código pela primeira vez.
 - **ViewWillAppear** – chamado sempre que o modo de exibição de um controlador de exibição está prestes a ser adicionado a uma hierarquia de exibição de conteúdo e aparece na tela.
 - **ViewWillDisappear** – chamado sempre que o modo de exibição de um controlador de exibição está prestes a ser removido de uma hierarquia de exibição de conteúdo e desaparece da tela. Esse evento de ciclo de vida é usado para limpeza e para salvar estados.
 - **ViewDidAppear** e **ViewDidDisappear** – chamados quando uma exibição é adicionada ou removida da hierarquia de exibição de conteúdo, respectivamente.
@@ -459,6 +459,6 @@ No [próximo tutorial na série Introdução](~/ios/get-started/hello-ios-multis
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Hello, iOS (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
+- [Hello, iOS (exemplo)](/samples/xamarin/ios-samples/hello-ios)
 - [Diretrizes da interface humana do iOS](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
 - [Portal de Provisionamento do iOS](https://developer.apple.com/account/#/overview)

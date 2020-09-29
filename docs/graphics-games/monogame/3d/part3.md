@@ -6,12 +6,12 @@ ms.assetid: A4130995-48FD-4E2E-9C2B-ADCEFF35BE3A
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 54a4c6e32059b6ff32b3a93abf5fd30c65f16b5f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 06309c2d746d1349a672d947e27503018b80ae40
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936624"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436957"
 ---
 # <a name="3d-coordinates-in-monogame"></a>Coordenadas 3D em monojogo
 
@@ -36,7 +36,7 @@ Quando terminar, teremos um projeto com um robô movendo em um círculo e uma c�
 
 ## <a name="creating-a-project"></a>Criando um projeto
 
-Este tutorial explica como mover objetos no espaço 3D. Vamos começar com o projeto para renderizar modelos e matrizes de vértices [que podem ser encontrados aqui](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelsandvertsmg/). Depois de baixado, descompacte e abra o projeto para verificar se ele é executado e devemos ver o seguinte:
+Este tutorial explica como mover objetos no espaço 3D. Vamos começar com o projeto para renderizar modelos e matrizes de vértices [que podem ser encontrados aqui](/samples/xamarin/mobile-samples/modelsandvertsmg/). Depois de baixado, descompacte e abra o projeto para verificar se ele é executado e devemos ver o seguinte:
 
 ![Depois de baixado, descompacte e abra o projeto para certificar-se de que ele é executado e esta exibição deve ser exibida](part3-images/image2.png)
 
@@ -374,7 +374,7 @@ Se executarmos o código com a multiplicação invertida, notaremos que, como a 
 
 A `Camera` entidade conterá toda a lógica necessária para executar a movimentação baseada em entrada e para fornecer propriedades para a atribuição de propriedades na `BasicEffect` classe.
 
-Primeiro, implementaremos uma câmera estática (sem movimento baseado em entrada) e a integraremos ao nosso projeto existente. Adicione uma nova classe à biblioteca de classes portátil **MonoGame3D** (o mesmo projeto com `Robot.cs` ) e nomeie-a como **câmera**. Substitua o conteúdo do arquivo pelo código a seguir:
+Primeiro, implementaremos uma câmera estática (sem movimento baseado em entrada) e a integraremos ao nosso projeto existente. Adicione uma nova classe à biblioteca de classes portátil **MonoGame3D** (o mesmo projeto com `Robot.cs` ) e nomeie-a como **câmera**. Substitua o conteúdo do arquivo por aquele mostrado com o seguinte código:
 
 ```csharp
 using System;
@@ -572,11 +572,11 @@ namespace MonoGame3D
 
 As modificações no `Game1` da versão anterior (que são identificadas com `// New camera code` ) são:
 
-- `Camera`campo em`Game1`
-- `Camera`instanciação em`Game1.Initialize`
-- `Camera.Update`chamada em`Game1.Update`
-- `Robot.Draw`Agora usa um `Camera` parâmetro
-- `Game1.Draw`Agora usa `Camera.ViewMatrix` e`Camera.ProjectionMatrix`
+- `Camera` campo em `Game1`
+- `Camera` instanciação em `Game1.Initialize`
+- `Camera.Update` chamada em `Game1.Update`
+- `Robot.Draw` Agora usa um `Camera` parâmetro
+- `Game1.Draw` Agora usa `Camera.ViewMatrix` e `Camera.ProjectionMatrix`
 
 ## <a name="moving-the-camera-with-input"></a>Movendo a câmera com entrada
 
@@ -728,4 +728,4 @@ Este tutorial explica como mover e girar `Models` no espaço 3D usando `Matrices
 ## <a name="related-links"></a>Links Relacionados
 
 - [Link da API monogame](http://www.monogame.net/documentation/?page=api)
-- [Projeto concluído (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/monogame3dcamera)
+- [Projeto concluído (exemplo)](/samples/xamarin/monodroid-samples/monogame3dcamera)

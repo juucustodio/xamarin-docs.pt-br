@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018
-ms.openlocfilehash: cfb694faff68e0762b93dd3bdf7c2e073108e77b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ed31e0262fecccf8974961d45d02388aeb8e85ea
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935132"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434422"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Implementando SiriKit no Xamarin. iOS
 
@@ -43,7 +43,7 @@ Conforme mostrado no guia de [conceitos do Understanding SiriKit](~/ios/platform
 
 [![Estendendo o aplicativo com o diagrama SiriKit](implementing-sirikit-images/elements01.png)](implementing-sirikit-images/elements01.png#lightbox)
 
-Elas incluem:
+Estão incluídos:
 
 1. **Extensão de tentativas** – verifica as respostas dos usuários, confirma que o aplicativo pode lidar com a solicitação e, na verdade, executa a tarefa para atender à solicitação do usuário.
 2. Extensão da interface **do usuário de tentativas**  -  *Opcional*, fornece uma interface do usuário personalizada para as respostas no ambiente Siri e pode trazer a interface do usuário de aplicativos e a identidade visual para o Siri para enriquecer a experiência dos usuários.
@@ -1062,7 +1062,7 @@ Este artigo abordou o SiriKit e mostrou como ele pode ser adicionado aos aplicat
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Exemplo de ElizaChat](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-elizachat)
+- [Exemplo de ElizaChat](/samples/xamarin/ios-samples/ios10-elizachat)
 - [Guia de programação do SiriKit](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)
 - [Referência de estrutura de tentativas](https://developer.apple.com/reference/intents)
 - [Referência da estrutura da interface do usuário de tentativas](https://developer.apple.com/reference/intentsui)

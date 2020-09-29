@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/29/2018
-ms.openlocfilehash: 7bc6a7ce1b8cd20aa782ddde42925e4e72374ec4
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 8cbed52524eac05cc4a737936fd6ee7d90279f8e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996940"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435452"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Emparelhar com o Mac para desenvolvimento no Xamarin.iOS
 
@@ -43,7 +43,7 @@ O Emparelhar com Mac permite o seguinte fluxo de trabalho de desenvolvimento:
 > Antes de seguir as instruções neste guia, conclua as seguintes etapas:
 >
 > - Em um computador Windows, [instale o Visual Studio 2019](~/get-started/installation/windows.md)
-> - Em um Mac, [instale o Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) e o [Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation)
+> - Em um Mac, [instale o Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) e o [Visual Studio para Mac](/visualstudio/mac/installation)
 >   - _Você deve abrir o Xcode manualmente após a instalação_ para que ele inclua componentes adicionais.
 >
 > Se preferir não instalar o Visual Studio para Mac, o Visual Studio 2019 poderá configurar automaticamente o host de build do Mac com Xamarin.iOS e Mono.
@@ -101,7 +101,7 @@ Agora que o acesso remoto está habilitado, conecte o Visual Studio 2019 ao Mac.
 
 5. O Emparelhar com Mac configura automaticamente o Mac.
 
-    [Desde a versão 15.6 do Visual Studio 2019](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), o Visual Studio 2019 instala ou atualiza o Mono e o Xamarin.iOS em um host de build conectado do Mac conforme necessário (observe que o Xcode ainda deve ser instalado manualmente). Para obter mais informações, veja [Provisionamento automático do Mac](#automatic-mac-provisioning).
+    [Desde a versão 15.6 do Visual Studio 2019](/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), o Visual Studio 2019 instala ou atualiza o Mono e o Xamarin.iOS em um host de build conectado do Mac conforme necessário (observe que o Xcode ainda deve ser instalado manualmente). Para obter mais informações, veja [Provisionamento automático do Mac](#automatic-mac-provisioning).
 
 6. Procure o ícone de status de conexão.
 
@@ -160,7 +160,7 @@ Se não vir um Mac específico listado na caixa de diálogo **Emparelhar com Mac
 
 ## <a name="automatic-mac-provisioning"></a>Provisionamento automático do Mac
 
-A partir do [Visual Studio 2019 versão 15,6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), o par para Mac provisiona automaticamente um Mac com o software necessário para criar aplicativos Xamarin. Ios: mono, Xamarin. Ios (a estrutura de software, não o Visual Studio para Mac IDE) e várias ferramentas relacionadas ao Xcode (mas não ao Xcode em si).
+A partir do [Visual Studio 2019 versão 15,6](/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), o par para Mac provisiona automaticamente um Mac com o software necessário para criar aplicativos Xamarin. Ios: mono, Xamarin. Ios (a estrutura de software, não o Visual Studio para Mac IDE) e várias ferramentas relacionadas ao Xcode (mas não ao Xcode em si).
 
 > [!IMPORTANT]
 >
@@ -185,7 +185,7 @@ O progresso é indicado por vários prompts, conforme mostrado pelas seguintes c
 O Emparelhar com Mac faz upgrade do Xamarin.iOS no Mac para corresponder à versão instalada no computador Windows.
 
 > [!IMPORTANT]
-> O Emparelhar com Mac não fará o downgrade do Xamarin.iOS no Mac de alfa/beta para estável. Se tiver o Visual Studio para Mac instalado, defina seu [canal de versão](https://docs.microsoft.com/visualstudio/mac/update) da seguinte maneira:
+> O Emparelhar com Mac não fará o downgrade do Xamarin.iOS no Mac de alfa/beta para estável. Se tiver o Visual Studio para Mac instalado, defina seu [canal de versão](/visualstudio/mac/update) da seguinte maneira:
 >
 > - Se for usar o Visual Studio 2019, selecione o canal de atualizações **Estável** no Visual Studio para Mac.
 > - Se for usar o Visual Studio 2019 Preview, selecione o canal de atualizações **Alfa** no Visual Studio para Mac.

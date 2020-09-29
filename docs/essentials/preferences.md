@@ -9,14 +9,14 @@ ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: acc0c48776c7a91e9e5a060928564bc6e0c1d775
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2dc00a10e70972429f123b0dfb7adb6a083a883d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84801810"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433679"
 ---
-# <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferências
+# <a name="no-locxamarinessentials-preferences"></a>Xamarin.Essentials: Preferências
 
 A classe **Preferences** ajuda a armazenar as preferências do aplicativo em um repositório de chave/valor.
 
@@ -72,7 +72,7 @@ Os tipos de dados a seguir têm suporte em **Preferences**:
 - **double**
 - **int**
 - **float**
-- **Longas**
+- **longo**
 - **cadeia de caracteres**
 - **DateTime**
 
@@ -81,7 +81,7 @@ Os tipos de dados a seguir têm suporte em **Preferences**:
 As preferências são armazenadas nativamente, o que permite que você integre suas configurações às configurações do sistema nativo. Siga os exemplos de plataforma e documetnation para integrar com a plataforma:
 
 * Apple: [implementando um pacote de configurações do IOS](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
-* [Exemplo de preferências do iOS aplicativo](https://docs.microsoft.com/samples/xamarin/ios-samples/appprefs/)
+* [Exemplo de preferências do iOS aplicativo](/samples/xamarin/ios-samples/appprefs/)
 * [Configurações de watchOS](https://developer.xamarin.com/guides/ios/watch/working-with/settings/)
 * Android: [introdução com telas de configurações](https://developer.android.com/guide/topics/ui/settings.html)
 
@@ -97,13 +97,13 @@ Todos os dados são armazenados em [Preferências Compartilhadas](https://develo
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-[NSUserDefaults](https://docs.microsoft.com/xamarin/ios/app-fundamentals/user-defaults) é usado para armazenar valores em dispositivos iOS. Se nenhum `sharedName` for especificado, o `StandardUserDefaults` será usado, caso contrário, o nome será usado para criar uma nova `NSUserDefaults` com o nome especificado usado para o `NSUserDefaultsType.SuiteName`.
+[NSUserDefaults](../ios/app-fundamentals/user-defaults.md) é usado para armazenar valores em dispositivos iOS. Se nenhum `sharedName` for especificado, o `StandardUserDefaults` será usado, caso contrário, o nome será usado para criar uma nova `NSUserDefaults` com o nome especificado usado para o `NSUserDefaultsType.SuiteName`.
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) é usado para armazenar os valores no dispositivo. Se nenhum `sharedName` for especificado, o `LocalSettings` será usado, caso contrário, o nome será usado para criar um novo contêiner dentro do `LocalSettings`.
+[ApplicationDataContainer](/uwp/api/windows.storage.applicationdatacontainer) é usado para armazenar os valores no dispositivo. Se nenhum `sharedName` for especificado, o `LocalSettings` será usado, caso contrário, o nome será usado para criar um novo contêiner dentro do `LocalSettings`.
 
-`LocalSettings`também tem a seguinte restrição de que o nome de cada configuração pode ter 255 caracteres de comprimento máximo. Cada configuração pode ter até 8K bytes de tamanho e cada configuração composta pode ter até 64K bytes de tamanho.
+`LocalSettings` também tem a seguinte restrição de que o nome de cada configuração pode ter 255 caracteres de comprimento máximo. Cada configuração pode ter até 8K bytes de tamanho e cada configuração composta pode ter até 64K bytes de tamanho.
 
 --------------
 

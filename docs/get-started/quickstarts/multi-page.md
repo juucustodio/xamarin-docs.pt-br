@@ -12,14 +12,14 @@ ms.date: 04/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8858a66d2caeea815bf06d5d2741bfc3623598f5
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 06cd68c56192664f6d11ec9f6adbe30f9ae5168c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933725"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433477"
 ---
-# <a name="perform-navigation-in-a-multi-page-xamarinforms-application"></a>Executar a navegação em um aplicativo de várias páginas Xamarin.Forms
+# <a name="perform-navigation-in-a-multi-page-no-locxamarinforms-application"></a>Executar a navegação em um aplicativo de várias páginas Xamarin.Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/)
 
@@ -36,7 +36,7 @@ Página de entrada de observação [ ![ da página de anotações](multi-page-im
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
-Você deve concluir com êxito o [início rápido anterior](single-page.md) antes de tentar este guia de início rápido. Como alternativa, baixe o [exemplo de início rápido anterior](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/) e use-o como o ponto de partida para este guia de início rápido.
+Você deve concluir com êxito o [início rápido anterior](single-page.md) antes de tentar este guia de início rápido. Como alternativa, baixe o [exemplo de início rápido anterior](/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/) e use-o como o ponto de partida para este guia de início rápido.
 
 ::: zone pivot="windows"
 
@@ -86,7 +86,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
 7. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto do **Notes** e selecione **Adicionar > novo item..**. Na caixa de diálogo **Adicionar novo item** , selecione **itens do Visual C# > Xamarin.Forms página > conteúdo**, nomeie o novo arquivo **NoteEntryPage**e clique no botão **Adicionar** :
 
-    ![Adicionar Xamarin.Forms Contentpage](multi-page-images/vs/add-note-entry-page.png)
+    ![Add::: no-Loc (Xamarin. Forms)::: ContentPage](multi-page-images/vs/add-note-entry-page.png)
 
     Isso adicionará uma nova página chamada **NoteEntryPage** à pasta raiz do projeto. Essa página será a segunda página do aplicativo.
 
@@ -369,7 +369,7 @@ Você deve concluir com êxito o [início rápido anterior](single-page.md) ante
 
 7. Na **painel de soluções**, selecione o projeto **notas** , clique com o botão direito do mouse e selecione **Adicionar > novo arquivo...**. Na caixa de diálogo **novo arquivo** , selecione **Forms > Forms Contentpage XAML**, nomeie o novo arquivo **NoteEntryPage**e clique no botão **novo** :
 
-    ![Adicionar Xamarin.Forms Contentpage](multi-page-images/vsmac/add-note-entry-page.png)
+    ![Add::: no-Loc (Xamarin. Forms)::: ContentPage](multi-page-images/vsmac/add-note-entry-page.png)
 
     Isso adicionará uma nova página chamada **NoteEntryPage** à pasta raiz do projeto. Essa página será a segunda página do aplicativo.
 
@@ -616,9 +616,9 @@ Neste guia de início rápido, você aprendeu a:
 Para modificar o aplicativo de forma que ele armazene seus dados em um banco de dados SQLite.NET local, vá para o próximo início rápido.
 
 > [!div class="nextstepaction"]
-> [Avançar](database.md)
+> [Próximo](database.md)
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Notas (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/)
-- [Xamarin.FormsAprofundamento do guia de início rápido](deepdive.md)
+- [Notas (exemplo)](/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/)
+- [Xamarin.Forms Aprofundamento do guia de início rápido](deepdive.md)

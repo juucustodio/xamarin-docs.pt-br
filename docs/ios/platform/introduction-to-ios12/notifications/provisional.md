@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/04/2018
-ms.openlocfilehash: 7d9fe2a651d8d75d8dd9d8c0dd1225350a58373d
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 745bfbc56dec12b7d46003a1d488e5638dc6c110
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73031882"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435181"
 ---
 # <a name="provisional-notifications-in-xamarinios"></a>Notificações provisórias no Xamarin. iOS
 
@@ -22,12 +22,12 @@ No centro de notificações, os usuários podem especificar que um aplicativo de
 
 ## <a name="sample-app-redgreennotifications"></a>Aplicativo de exemplo: RedGreenNotifications
 
-Dê uma olhada no aplicativo de exemplo [RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications) , que envia notificações provisionas.
+Dê uma olhada no aplicativo de exemplo [RedGreenNotifications](/samples/xamarin/ios-samples/ios12-redgreennotifications) , que envia notificações provisionas.
 
 ## <a name="sending-provisional-notifications"></a>Enviando notificações provisórias
 
-Para enviar notificações provisionas, forneça `UNAuthorizationOptions.Provisional` como uma opção para a [`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*)
-método de `UNUserNotificationCenter`:
+Para enviar notificações provisionas, forneça `UNAuthorizationOptions.Provisional` como uma opção para o [`RequestAuthorization`](xref:UserNotifications.UNUserNotificationCenter.RequestAuthorization*)
+método de `UNUserNotificationCenter` :
 
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -41,11 +41,11 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-Se o usuário promover notificações provisionas para entrega proeminente, os valores `UNAuthorizationOptions` passados para `RequestAuthorization` determinarão as novas configurações de entrega de notificação (no código acima, `UNAuthorizationOptions.Alert` e `UNAuthorizationOptions.Sound`).
+Se o usuário promover notificações provisionas para entrega proeminente, os `UNAuthorizationOptions` valores passados para `RequestAuthorization` determinarão as novas configurações de entrega de notificação (no código acima `UNAuthorizationOptions.Alert` e `UNAuthorizationOptions.Sound` ).
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Aplicativo de exemplo – RedGreenNotifications](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-redgreennotifications)
+- [Aplicativo de exemplo – RedGreenNotifications](/samples/xamarin/ios-samples/ios12-redgreennotifications)
 - [Estrutura de notificações do usuário no Xamarin. iOS](~/ios/platform/user-notifications/index.md)
 - [Usernotifications (Apple)](https://developer.apple.com/documentation/usernotifications?language=objc)
 - [O que há de novo nas notificações do usuário (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/710/)

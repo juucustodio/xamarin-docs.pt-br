@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 0c733789883c9752d63824d0bca7356a88d05659
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3d5bdfd78658803dcbb159101050aea48008b69e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929656"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435235"
 ---
 # <a name="healthkit-in-xamarinios"></a>HealthKit no Xamarin. iOS
 
@@ -139,15 +139,15 @@ O armazenamento de informações do kit de integridade é um repositório de arm
 
 Os dados do kit de integridade são limitados aos tipos especificados pela Apple. Esses tipos são estritamente definidos: alguns, como tipo de sangue, são limitados aos valores específicos de uma enumeração fornecida pela Apple, enquanto outros combinam uma magnitude com uma unidade de medida (como gramas, calorias e litros). Até mesmo dados que compartilham uma unidade de medida compatível são diferenciados por seu `HKObjectType` ; por exemplo, o sistema de tipos capturará uma tentativa incorreta de armazenar um `HKQuantityTypeIdentifier.NumberOfTimesFallen` valor em um campo que espera um `HKQuantityTypeIdentifier.FlightsClimbed` mesmo que ambos usem a `HKUnit.Count` unidade de medida.
 
-Os tipos armazenada no armazenamento de Datakit de integridade são todas subclasses de `HKObjectType` . `HKCharacteristicType`os objetos armazenam o sexo biológico, o tipo de sangue e a data de nascimento. Porém, mais comuns são `HKSampleType` objetos, que representam dados que são amostrados em um momento específico ou por um período de tempo. 
+Os tipos armazenada no armazenamento de Datakit de integridade são todas subclasses de `HKObjectType` . `HKCharacteristicType` os objetos armazenam o sexo biológico, o tipo de sangue e a data de nascimento. Porém, mais comuns são `HKSampleType` objetos, que representam dados que são amostrados em um momento específico ou por um período de tempo. 
 
 [![Gráfico de objetos HKSampleType](healthkit-images/image08.png)](healthkit-images/image08.png#lightbox)
 
-`HKSampleType`é abstract e tem quatro subclasses concretas. Atualmente, há apenas um tipo de `HKCategoryType` dados, que é a análise de suspensão. A grande maioria dos dados no kit de integridade são do tipo `HKQuantityType` e armazena seus dados em `HKQuantitySample` objetos, que são criados usando o padrão de design de fábrica familiar:
+`HKSampleType` é abstract e tem quatro subclasses concretas. Atualmente, há apenas um tipo de `HKCategoryType` dados, que é a análise de suspensão. A grande maioria dos dados no kit de integridade são do tipo `HKQuantityType` e armazena seus dados em `HKQuantitySample` objetos, que são criados usando o padrão de design de fábrica familiar:
 
 [![A grande maioria dos dados no kit de integridade são do tipo HKQuantityType e armazena seus dados em objetos HKQuantitySample](healthkit-images/image09.png)](healthkit-images/image09.png#lightbox)
 
-`HKQuantityType`os tipos variam de `HKQuantityTypeIdentifier.ActiveEnergyBurned` a `HKQuantityTypeIdentifier.StepCount` . 
+`HKQuantityType` os tipos variam de `HKQuantityTypeIdentifier.ActiveEnergyBurned` a `HKQuantityTypeIdentifier.StepCount` . 
 
 <a name="requesting-permission"></a>
 
@@ -331,19 +331,19 @@ A primeira seção é um código clichê para a criação de manipuladores e eve
 
 Em seguida, `HeartRateModel` expõe 3 eventos: 
 
-- `EnabledChanged`-Indica que o armazenamento de taxa de coração foi habilitado ou desabilitado (Observe que o armazenamento está inicialmente desabilitado). 
-- `ErrorMessageChanged`-Para este aplicativo de exemplo, temos um modelo de tratamento de erros muito simples: uma cadeia de caracteres com o último erro. 
-- `HeartRateStored`-Gerado quando uma taxa de coração é armazenada no banco de dados do kit de integridade.
+- `EnabledChanged` -Indica que o armazenamento de taxa de coração foi habilitado ou desabilitado (Observe que o armazenamento está inicialmente desabilitado). 
+- `ErrorMessageChanged` -Para este aplicativo de exemplo, temos um modelo de tratamento de erros muito simples: uma cadeia de caracteres com o último erro. 
+- `HeartRateStored` -Gerado quando uma taxa de coração é armazenada no banco de dados do kit de integridade.
 
 Observe que sempre que esses eventos são acionados, isso é feito por meio do `NSObject.InvokeOnMainThread()` , o que permite aos assinantes atualizar a interface do usuário. Como alternativa, os eventos podem ser documentados como sendo gerados em threads em segundo plano e a responsabilidade de garantir a compatibilidade pode ser deixada para seus manipuladores. As considerações de thread são importantes nos aplicativos do kit de integridade porque muitas das funções, como a solicitação de permissão, são assíncronas e executam seus retornos de chamada em threads não principais.
 
 O código específico do kit de integridade no `HeartRateModel` está nas duas funções `HeartRateInBeatsPerMinute()` e `StoreHeartRate()` . 
 
-`HeartRateInBeatsPerMinute()`converte seu argumento em um kit de integridade fortemente tipado `HKQuantity` . O tipo da quantidade é especificado pelo `HKQuantityTypeIdentifierKey.HeartRate` e as unidades da quantidade são `HKUnit.Count` divididas por `HKUnit.Minute` (em outras palavras, a unidade é de *batidas por minuto*). 
+`HeartRateInBeatsPerMinute()` converte seu argumento em um kit de integridade fortemente tipado `HKQuantity` . O tipo da quantidade é especificado pelo `HKQuantityTypeIdentifierKey.HeartRate` e as unidades da quantidade são `HKUnit.Count` divididas por `HKUnit.Minute` (em outras palavras, a unidade é de *batidas por minuto*). 
 
 A `StoreHeartRate()` função usa um `HKQuantity` (no aplicativo de exemplo, um criado por `HeartRateInBeatsPerMinute()` ). Para validar seus dados, ele usa o `HKQuantity.IsCompatible()` método, que retorna `true` se as unidades do objeto podem ser convertidas nas unidades do argumento. Se a quantidade foi criada com `HeartRateInBeatsPerMinute()` isso, obviamente retornará `true` , mas também retornará `true` se a quantidade tiver sido criada como, por exemplo, de *batidas por hora*. Mais comumente, `HKQuantity.IsCompatible()` pode ser usado para validar a massa, a distância e a energia que o usuário ou um dispositivo pode inserir ou exibir em um sistema de medida (como unidades Imperial), mas que podem ser armazenados em outro sistema (como unidades métricas). 
 
-Depois que a compatibilidade da quantidade tiver sido validada, o `HKQuantitySample.FromType()` método de fábrica será usado para criar um objeto fortemente tipado `heartRateSample` . `HKSample`os objetos têm uma data de início e de término; para leituras instantâneas, esses valores devem ser iguais, como no exemplo. O exemplo também não define nenhum dado de valor chave em seu `HKMetadata` argumento, mas é possível usar um código como o código a seguir para especificar o local do sensor:
+Depois que a compatibilidade da quantidade tiver sido validada, o `HKQuantitySample.FromType()` método de fábrica será usado para criar um objeto fortemente tipado `heartRateSample` . `HKSample` os objetos têm uma data de início e de término; para leituras instantâneas, esses valores devem ser iguais, como no exemplo. O exemplo também não define nenhum dado de valor chave em seu `HKMetadata` argumento, mas é possível usar um código como o código a seguir para especificar o local do sensor:
 
 ```csharp
 var hkm = new HKMetadata();
@@ -436,5 +436,5 @@ Por fim, vamos dar uma olhada em uma implementação simples do kit de integrida
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [HKWork (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-introtohealthkit)
+- [HKWork (exemplo)](/samples/xamarin/ios-samples/ios8-introtohealthkit)
 - [Introdução ao iOS 8](~/ios/platform/introduction-to-ios8.md)

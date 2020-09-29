@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: bfa2a74bf9cd30fb7b9888ecd7339a80fe472c9e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 75da06af3444cdb83f00c1089d43ca4d34f2177e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939081"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436814"
 ---
 # <a name="introduction-to-ios-9"></a>Introdução ao iOS 9
 
@@ -105,7 +105,7 @@ A estrutura [homekit](xref:HomeKit) , introduzida no Ios 8, fornece a capacidade
 
 No iOS 9, a Apple facilitou a instalação, expandiu os tipos de acessórios com suporte e forneceu mais interações de acessório (como controlar um acessório remotamente por meio do iCloud).
 
-Para obter mais informações, consulte nossa [introdução ao homekit](~/ios/platform/homekit.md), [aplicativo de exemplo do HomeKitIntro Ios](https://docs.microsoft.com/samples/xamarin/ios-samples/homekit-homekitintro) e a documentação do [homekit](https://developer.apple.com/homekit/) da Apple.
+Para obter mais informações, consulte nossa [introdução ao homekit](~/ios/platform/homekit.md), [aplicativo de exemplo do HomeKitIntro Ios](/samples/xamarin/ios-samples/homekit-homekitintro) e a documentação do [homekit](https://developer.apple.com/homekit/) da Apple.
 
 ## <a name="handoff-framework-changes"></a>Alterações da estrutura de entrega
 
@@ -185,14 +185,14 @@ Para obter uma lista completa de substituições de API específicas, consulte a
 
 ## <a name="ios-9-sample-apps"></a>Aplicativos de exemplo do iOS 9
 
-Temos alguns [exemplos específicos do IOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9) para começar:
+Temos alguns [exemplos específicos do IOS 9](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9) para começar:
 
 - [AstroLayout](https://github.com/xamarin/monotouch-samples/tree/master/ios9/AstroLayout)
 - [CollectionView](https://github.com/xamarin/monotouch-samples/tree/master/ios9/CollectionView)
-- [MetalPerformanceShadersHelloWorld](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-metalperformanceshadershelloworld)
-- [MusicMotion](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-musicmotion)
-- [Fotoprogresso](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-photoprogress)
-- [SegueCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-seguecatalog)
+- [MetalPerformanceShadersHelloWorld](/samples/xamarin/ios-samples/ios9-metalperformanceshadershelloworld)
+- [MusicMotion](/samples/xamarin/ios-samples/ios9-musicmotion)
+- [Fotoprogresso](/samples/xamarin/ios-samples/ios9-photoprogress)
+- [SegueCatalog](/samples/xamarin/ios-samples/ios9-seguecatalog)
 - [StackView](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StackView)
 - [StickyCorners](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StickyCorners)
 
@@ -203,7 +203,7 @@ Confira também as partes do iOS desses exemplos (versões do Companion Mac OS X
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Amostras do iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [Amostras do iOS 9](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [Introdução ao toque 3D](~/ios/platform/3d-touch.md)
 - [Segurança do transporte de aplicativo](~/ios/app-fundamentals/ats.md)
 - [Multitarefa para iPad](~/ios/platform/multitasking.md)

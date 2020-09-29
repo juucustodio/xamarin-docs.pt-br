@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 8a9a38c24af3e14cd6930cbb27717ba184dd0235
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 3020bb588f79ce4faf471488c116516402642b73
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996403"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437286"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Olá, iOS multitela – análise detalhada
 
@@ -72,7 +72,7 @@ O controlador de navegação é comum em aplicativos iOS e fornece navegação p
 
 O controlador de navegação atende a três funções principais:
 
-- **Fornece ganchos para navegação progressiva** – o controlador de navegação usa uma metáfora de navegação hierárquica em que as hierarquias de exibição de conteúdo são *enviadas por push* para uma *pilha de navegação* . Você pode pensar em uma pilha de navegação como uma pilha de cartas de baralho, em que apenas a carta superior está visível, conforme ilustra o diagrama a seguir:  
+- **Fornece ganchos para navegação progressiva** – o controlador de navegação usa uma metáfora de navegação hierárquica em que as hierarquias de exibição de conteúdo são  *enviadas por push* para uma  *pilha de navegação* . Você pode pensar em uma pilha de navegação como uma pilha de cartas de baralho, em que apenas a carta superior está visível, conforme ilustra o diagrama a seguir:  
 
     [![Este diagrama ilustra a navegação como uma pilha de cartões](hello-ios-multiscreen-deepdive-images/02.png)](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
 
@@ -80,7 +80,7 @@ O controlador de navegação atende a três funções principais:
 
     [![Este diagrama ilustra a retirada de um cartão para fora da pilha](hello-ios-multiscreen-deepdive-images/03.png)](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
-- **Fornece uma barra de título** – a parte superior do controlador de navegação é chamada de *barra de título* . Ele é responsável por exibir o título do controlador de exibição, conforme ilustrado pelo diagrama a seguir:  
+- **Fornece uma barra de título** – a parte superior do controlador de navegação é chamada de  *barra de título* . Ele é responsável por exibir o título do controlador de exibição, conforme ilustrado pelo diagrama a seguir:  
 
     [![A barra de título é responsável por exibir o título do controlador de exibição](hello-ios-multiscreen-deepdive-images/04.png)](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
@@ -189,8 +189,8 @@ CallHistoryButton.TouchUpInside += (object sender, EventArgs e) => {
 
 O aplicativo Phoneword introduziu vários conceitos não abordados neste guia. Esses conceitos incluem:
 
-- **Criação automática de controladores de exibição** – quando inserimos um nome de classe para o controlador de exibição no **painel de propriedades** , o designer do IOS verifica se essa classe existe e, em seguida, gera a classe de suporte do controlador de exibição para nós. Para saber mais sobre este e outros recursos de designer do iOS, consulte o guia de [Introdução ao iOS Designer](~/ios/user-interface/designer/introduction.md).
-- **Controlador de exibição de tabela** – o `CallHistoryController` é um controlador de exibição de tabela. Um Controlador de exibição de tabela contém uma Exibição de Tabela, o layout mais comum e a ferramenta de exibição de dados no iOS. Tabelas estão além do escopo deste guia. Para obter mais informações sobre os controladores de exibição de tabela, consulte o guia [trabalhando com tabelas e células](~/ios/user-interface/controls/tables/index.md) .
+- **Criação automática de controladores de exibição** – quando inserimos um nome de classe para o controlador de exibição no  **painel de propriedades** , o designer do IOS verifica se essa classe existe e, em seguida, gera a classe de suporte do controlador de exibição para nós. Para saber mais sobre este e outros recursos de designer do iOS, consulte o guia de [Introdução ao iOS Designer](~/ios/user-interface/designer/introduction.md).
+- **Controlador de exibição de tabela** – o  `CallHistoryController` é um controlador de exibição de tabela. Um Controlador de exibição de tabela contém uma Exibição de Tabela, o layout mais comum e a ferramenta de exibição de dados no iOS. Tabelas estão além do escopo deste guia. Para obter mais informações sobre os controladores de exibição de tabela, consulte o guia  [trabalhando com tabelas e células](~/ios/user-interface/controls/tables/index.md) .
 - **ID do storyboard** – a definição da ID do storyboard cria uma classe de controlador de exibição em Objective-C que contém o code-behind para o controlador de exibição no storyboard. Usamos a ID do Storyboard para localizar a classe Objective-C e instanciar o controlador de exibição no Storyboard. Para saber mais sobre IDs de Storyboard, consulte o guia [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md) (Introdução a Storyboards).
 
 ## <a name="summary"></a>Resumo
@@ -203,6 +203,6 @@ Em seguida, vamos aprender a compilar aplicativos de plataforma cruzada com Xama
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Hello, iOS (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
+- [Hello, iOS (exemplo)](/samples/xamarin/ios-samples/hello-ios)
 - [Diretrizes da interface humana do iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portal de Provisionamento do iOS](https://developer.apple.com/ios/manage/overview/index.action)

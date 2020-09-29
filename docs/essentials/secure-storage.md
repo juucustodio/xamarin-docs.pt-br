@@ -9,14 +9,14 @@ ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 061bc1cfe785ad080092ba21340f7d38bc499ed9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f4bb252448abe3c2987def143634d15b5cae194c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84801940"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433495"
 ---
-# <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Armazenamento seguro
+# <a name="no-locxamarinessentials-secure-storage"></a>Xamarin.Essentials: Armazenamento seguro
 
 A classe **SecureStorage** ajuda a armazenar com segurança os pares de chave/valor simples.
 
@@ -29,7 +29,7 @@ Para acessar a funcionalidade **SecureStorage**, a seguinte configuração espec
 # <a name="android"></a>[Android](#tab/android)
 
 > [!TIP]
-> O [Backup Automático para Aplicativos](https://developer.android.com/guide/topics/data/autobackup) é um recurso do Android 6.0 (nível da API 23) e posterior que faz o backup dos dados do aplicativo do usuário (preferências compartilhadas, arquivos no armazenamento interno do aplicativo e outros arquivos específicos). Os dados são restaurados quando um aplicativo é reinstalado ou instalado em um novo dispositivo. Isso pode afetar a `SecureStorage`, que utiliza as preferências de compartilhamento do backup e que não podem ser descriptografadas quando a restauração ocorrer. Xamarin.Essentialso manipula automaticamente esse caso removendo a chave para que possa ser redefinida, mas você pode executar uma etapa adicional desabilitando o backup automático.
+> O [Backup Automático para Aplicativos](https://developer.android.com/guide/topics/data/autobackup) é um recurso do Android 6.0 (nível da API 23) e posterior que faz o backup dos dados do aplicativo do usuário (preferências compartilhadas, arquivos no armazenamento interno do aplicativo e outros arquivos específicos). Os dados são restaurados quando um aplicativo é reinstalado ou instalado em um novo dispositivo. Isso pode afetar a `SecureStorage`, que utiliza as preferências de compartilhamento do backup e que não podem ser descriptografadas quando a restauração ocorrer. Xamarin.Essentials o manipula automaticamente esse caso removendo a chave para que possa ser redefinida, mas você pode executar uma etapa adicional desabilitando o backup automático.
 
 ### <a name="enable-or-disable-backup"></a>Habilitar ou desabilitar o backup
 Você pode optar por desabilitar o Backup Automático para todo o aplicativo definindo a configuração `android:allowBackup` como falsa no arquivo `AndroidManifest.xml`. Essa abordagem só é recomendada se você planeja restaurar dados de uma outra maneira.
@@ -154,7 +154,7 @@ Em alguns casos os dados do conjunto de chaves estão sincronizados com o iCloud
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-[DataProtectionProvider](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) é usado para criptografar valores em dispositivos UWP com segurança.
+[DataProtectionProvider](/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) é usado para criptografar valores em dispositivos UWP com segurança.
 
 Os valores criptografados são armazenados em `ApplicationData.Current.LocalSettings`, dentro de um contêiner com o nome **[ID-DE-SEU-APLICATIVO].xamarinessentials**.
 

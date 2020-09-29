@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: e89b24572d1581c83868b90a4da438f8fd7f91e4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f9ef6e833fe48bb2b124f02d741a39e4141e56e6
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936924"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436355"
 ---
 # <a name="push-notifications-in-ios"></a>Notificações por push no iOS
 
@@ -52,7 +52,7 @@ Cada um dos ambientes mencionados na seção anterior requer seu próprio certif
 
     [![Insira a descrição e um identificador de pacote para a ID do aplicativo](remote-notifications-in-ios-images/image7new.png)](remote-notifications-in-ios-images/image7new.png#lightbox)
 
-4. Certifique-se de selecionar **ID do aplicativo explícito** e que o identificador do pacote não termine com um `*` . Isso criará um identificador que é bom para vários aplicativos e os certificados de notificação por push devem ser para um único aplicativo.
+4. Certifique-se de selecionar **ID do aplicativo explícito** e que o identificador do pacote não termine com um  `*` . Isso criará um identificador que é bom para vários aplicativos e os certificados de notificação por push devem ser para um único aplicativo.
 
 5. Em serviços de aplicativos, selecione **notificações por push**:
 
@@ -74,23 +74,23 @@ Cada um dos ambientes mencionados na seção anterior requer seu próprio certif
 
     [![Selecione a nova ID do aplicativo recém-criada](remote-notifications-in-ios-images/image12new.png)](remote-notifications-in-ios-images/image12new.png#lightbox)
 
-10. Isso exibirá instruções que o guiarão pelo processo de criação de uma *solicitação de assinatura de certificado* usando o aplicativo de acesso do conjunto de **chaves** no seu Mac.
+10. Isso exibirá instruções que o guiarão pelo processo de criação de uma  *solicitação de assinatura de certificado* usando o aplicativo de acesso do conjunto de  **chaves** no seu Mac.
 
 11. Agora que o certificado foi criado, ele deve ser usado como parte do processo de compilação para assinar o aplicativo para que ele possa se registrar no APNs. Isso requer a criação e a instalação de um perfil de provisionamento que usa o certificado.
 
 12. Para criar um perfil de provisionamento de desenvolvimento, navegue até a seção **perfis de provisionamento** e siga as etapas para criá-lo, usando a ID do aplicativo que acabamos de criar.
 
-13. Depois de criar o perfil de provisionamento, abra o **organizador do Xcode** e atualize-o. Se o perfil de provisionamento criado não aparecer, talvez seja necessário baixar o perfil do portal de provisionamento do iOS e importá-lo manualmente. A captura de tela a seguir mostra um exemplo do organizador com o perfil de provisão adicionado:  
+13. Depois de criar o perfil de provisionamento, abra o  **organizador do Xcode** e atualize-o. Se o perfil de provisionamento criado não aparecer, talvez seja necessário baixar o perfil do portal de provisionamento do iOS e importá-lo manualmente. A captura de tela a seguir mostra um exemplo do organizador com o perfil de provisão adicionado:  
     [![Esta captura de tela mostra um exemplo do organizador com o perfil de provisionamento adicionado](remote-notifications-in-ios-images/image13new.png)](remote-notifications-in-ios-images/image13new.png#lightbox)
 
-14. Neste ponto, precisamos configurar o projeto Xamarin. iOS para usar esse perfil de provisionamento criado recentemente. Isso é feito na caixa de diálogo **Opções do projeto** , na guia assinatura do **pacote do IOS** , conforme mostrado na seguinte captura de tela:  
+14. Neste ponto, precisamos configurar o projeto Xamarin. iOS para usar esse perfil de provisionamento criado recentemente. Isso é feito na caixa de diálogo **Opções do projeto** , na guia assinatura do  **pacote do IOS** , conforme mostrado na seguinte captura de tela:  
     [![Configurar o projeto Xamarin. iOS para usar esse perfil de provisionamento recém-criado](remote-notifications-in-ios-images/image11.png)](remote-notifications-in-ios-images/image11.png#lightbox)
 
 Neste ponto, o aplicativo está configurado para trabalhar com notificações por push. No entanto, ainda há mais algumas etapas necessárias com o certificado. Esse certificado está em formato DER que não é compatível com PushSharp, que requer um certificado de troca de informações pessoais (PKCS12). Para converter o certificado para que ele possa ser usado pelo PushSharp, execute estas etapas finais:
 
-1. **Baixe o arquivo de certificado** -logon no portal de provisionamento do IOS, escolha a guia certificados, selecione o certificado associado ao perfil de provisionamento correto e escolha **baixar** .
+1. **Baixe o arquivo de certificado** -logon no portal de provisionamento do IOS, escolha a guia certificados, selecione o certificado associado ao perfil de provisionamento correto e escolha  **baixar** .
 1. **Abrir acesso** ao conjunto de chaves-este é um aplicativo da interface gráfica do sistema de gerenciamento de senhas no os X.
-1. **Importar o certificado** -se o certificado ainda não estiver instalado, **arquivo... Importar itens** do menu acesso do conjunto de chaves. Navegue até o certificado que foi exportado acima e selecione-o.
+1. **Importar o certificado** -se o certificado ainda não estiver instalado,  **arquivo... Importar itens** do menu acesso do conjunto de chaves. Navegue até o certificado que foi exportado acima e selecione-o.
 1. **Exportar o certificado** -expanda o certificado para que a chave privada associada esteja visível, clique com o botão direito do mouse na chave e escolha exportar. Será solicitado um nome de arquivo e uma senha para o arquivo exportado.
 
 Neste ponto, fizemos certificados. Criamos um certificado que será usado para assinar aplicativos iOS e converter esse certificado em um formato que possa ser usado com PushSharp em um aplicativo de servidor. Em seguida, vamos ver como os aplicativos iOS interagem com o APNS.
@@ -176,7 +176,7 @@ Esta seção apresenta os principais conceitos que envolvem notificações por p
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Notificações – demonstrando notificações locais e remotas (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/notifications)
+- [Notificações – demonstrando notificações locais e remotas (exemplo)](/samples/xamarin/ios-samples/notifications)
 - [Notificações locais e por push para desenvolvedores](https://developer.apple.com/notifications/)
-- [UIApplication](https://docs.microsoft.com/dotnet/api/uikit.uiapplication)
-- [UIRemoteNotificationType](https://docs.microsoft.com/dotnet/api/uikit.UIRemoteNotificationType)
+- [UIApplication](/dotnet/api/uikit.uiapplication)
+- [UIRemoteNotificationType](/dotnet/api/uikit.UIRemoteNotificationType)

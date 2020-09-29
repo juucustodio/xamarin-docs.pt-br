@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 7f1ae2ecfa7d6dbed56b8009593fc172615fd051
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c5120fead9084b50912fb4ea1e8cfa100f4b3bbe
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86928790"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436320"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Exibições de estrutura de tópicos no Xamarin. Mac
 
@@ -97,7 +97,7 @@ Selecione o modo de exibição de estrutura de tópicos na **hierarquia de inter
 - **Trunca a última linha visível** -se `true` , a célula será truncada nos dados não puder se ajustar dentro de seus limites.
 
 > [!IMPORTANT]
-> A menos que você esteja mantendo um aplicativo Xamarin. Mac herdado, `NSView` exibições de estrutura de tópicos baseadas devem ser usadas em `NSCell` exibições de tabela baseadas em. `NSCell`é considerado herdado e pode não ter suporte no futuro.
+> A menos que você esteja mantendo um aplicativo Xamarin. Mac herdado, `NSView` exibições de estrutura de tópicos baseadas devem ser usadas em `NSCell` exibições de tabela baseadas em. `NSCell` é considerado herdado e pode não ter suporte no futuro.
 
 Selecione uma coluna de tabela na **hierarquia de interface** e as seguintes propriedades estão disponíveis no **Inspetor de atributo**:
 
@@ -686,8 +686,8 @@ Este artigo deu uma visão detalhada de como trabalhar com exibições de estrut
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [MacOutlines (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macoutlines)
-- [MacImages (amostra)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
+- [MacOutlines (exemplo)](/samples/xamarin/mac-samples/macoutlines)
+- [MacImages (amostra)](/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Exibições de tabela](~/mac/user-interface/table-view.md)
 - [Listas de origem](~/mac/user-interface/source-list.md)

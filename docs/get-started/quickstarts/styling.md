@@ -12,14 +12,14 @@ ms.date: 02/07/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 05560ae7c3d255140c0782e5f442dd2356d86cad
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9794f429744611654ce883b48aa828b997ec881f
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937417"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435438"
 ---
-# <a name="style-a-cross-platform-xamarinforms-application"></a>Estilizar um aplicativo de plataforma cruzada Xamarin.Forms
+# <a name="style-a-cross-platform-no-locxamarinforms-application"></a>Estilizar um aplicativo de plataforma cruzada Xamarin.Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
 
@@ -34,7 +34,7 @@ Página de entrada de observação [ ![ da página de anotações](styling-image
 
 ### <a name="prerequisites"></a>Pré-requisitos
 
-Você deve concluir com êxito o [início rápido anterior](database.md) antes de tentar este guia de início rápido. Como alternativa, baixe o [exemplo de início rápido anterior](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/) e use-o como o ponto de partida para este guia de início rápido.
+Você deve concluir com êxito o [início rápido anterior](database.md) antes de tentar este guia de início rápido. Como alternativa, baixe o [exemplo de início rápido anterior](/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/) e use-o como o ponto de partida para este guia de início rápido.
 
 ::: zone pivot="windows"
 
@@ -322,9 +322,9 @@ Neste guia de início rápido, você aprendeu a:
 Para saber mais sobre os conceitos básicos do desenvolvimento de aplicativos usando Xamarin.Forms o, continue com o guia de início rápido aprofundado.
 
 > [!div class="nextstepaction"]
-> [Avançar](deepdive.md)
+> [Próximo](deepdive.md)
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Notas (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
-- [Xamarin.FormsAprofundamento do guia de início rápido](deepdive.md)
+- [Notas (exemplo)](/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
+- [Xamarin.Forms Aprofundamento do guia de início rápido](deepdive.md)

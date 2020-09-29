@@ -9,12 +9,12 @@ ms.date: 03/20/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5ccd5a610ad41c0160a6778a63a367376bd200b3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0c74c132a623388f1d0b3b467b73d948cf2a2022
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134011"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437252"
 ---
 # <a name="installing-xamarin-preview-on-windows"></a>Instalação da versão prévia do Xamarin no Windows
 
@@ -24,7 +24,7 @@ O Visual Studio 2019 e o Visual Studio 2017 não são compatíveis com canais al
 - **Prévia** – equivalente ao canal _Alpha_ e _Beta_ no Visual Studio para Mac
 
 > [!TIP]
-> Para testar os recursos de pré-lançamento, você deve [baixar o instalador do Visual Studio (versão prévia)](https://visualstudio.microsoft.com/vs/preview/), que oferecerá a opção de instalar as versões **Prévias** do Visual Studio juntamente com a versão estável (lançamento). Mais informações sobre o que há de novo no Visual Studio 2019 podem ser encontradas nas [notas sobre a versão](https://docs.microsoft.com/visualstudio/releases/2019/release-notes).
+> Para testar os recursos de pré-lançamento, você deve [baixar o instalador do Visual Studio (versão prévia)](https://visualstudio.microsoft.com/vs/preview/), que oferecerá a opção de instalar as versões **Prévias** do Visual Studio juntamente com a versão estável (lançamento). Mais informações sobre o que há de novo no Visual Studio 2019 podem ser encontradas nas [notas sobre a versão](/visualstudio/releases/2019/release-notes).
 
 A versão prévia do Visual Studio pode incluir versões prévias correspondentes da funcionalidade Xamarin, incluindo:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: b6681832ce83bbc2783ba874c5902c30013c8c94
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 53a3b43347e51cfbc99b2b798f0ad5c787f04847
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572421"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435559"
 ---
 # <a name="images-in-xamarinmac"></a>Imagens no Xamarin. Mac
 
@@ -43,7 +43,7 @@ Ao adicionar uma imagem para uso em um aplicativo Xamarin. Mac, há vários loca
 
 - **Árvore de projeto principal [preterido]** -as imagens podem ser adicionadas diretamente à árvore de projetos. Ao chamar imagens armazenadas na árvore de projeto principal do código, nenhum local de pasta é especificado. Por exemplo: `NSImage image = NSImage.ImageNamed("tags.png");`. 
 - **Pasta de recursos [preterido]** – a pasta de **recursos** especiais é para qualquer arquivo que se tornará parte do pacote do aplicativo, como ícone, tela de inicialização ou imagens gerais (ou qualquer outra imagem ou arquivo que o desenvolvedor deseja adicionar). Ao chamar imagens armazenadas na pasta de **recursos** do código, assim como as imagens armazenadas na árvore de projeto principal, nenhum local de pasta é especificado. Por exemplo: `NSImage.ImageNamed("tags.png")`.
-- **Pasta personalizada ou subpasta [preterido]** -o desenvolvedor pode adicionar uma pasta personalizada à árvore de origem de projetos e armazenar as imagens nela. O local onde o arquivo é adicionado pode ser aninhado em uma subpasta para ajudar a organizar o projeto. Por exemplo, se o desenvolvedor adicionou uma `Card` pasta ao projeto e uma subpasta do `Hearts` a essa pasta, armazene um conector de imagem **. png** na `Hearts` pasta, `NSImage.ImageNamed("Card/Hearts/Jack.png")` carregaria a imagem em tempo de execução.
+- **Pasta personalizada ou subpasta [preterido]** -o desenvolvedor pode adicionar uma pasta personalizada à árvore de origem de projetos e armazenar as imagens nela. O local onde o arquivo é adicionado pode ser aninhado em uma subpasta para ajudar a organizar o projeto. Por exemplo, se o desenvolvedor adicionou uma `Card` pasta ao projeto e uma subpasta do `Hearts` a essa pasta, armazene uma imagem **Jack.png** na `Hearts` pasta, `NSImage.ImageNamed("Card/Hearts/Jack.png")` carregaria a imagem em tempo de execução.
 - **Conjuntos de imagens do catálogo de ativos [preferencial]** -adicionado no os X El Capitan, os **conjuntos de imagens de catálogos de ativos** contêm todas as versões ou representações de uma imagem que são necessárias para dar suporte a vários dispositivos e fatores de escala para seu aplicativo. Em vez de depender do nome de arquivo de ativos de imagem ( **@1x** , **@2x** ).
 
 <a name="asset-catalogs"></a>
@@ -72,9 +72,9 @@ Uma classe de **vetor** especial, como adicionada a **conjuntos de imagens** que
 
 Por exemplo, se você incluir um `MonkeyIcon.pdf` arquivo como o vetor de um catálogo de ativos com uma resolução de 150px x 150px, os seguintes ativos de bitmap seriam incluídos no pacote de aplicativo final quando ele foi compilado:
 
-1. **MonkeyIcon@1x.png**-resolução de 150px x 150px.
-2. **MonkeyIcon@2x.png**-resolução de 300px x 300px.
-3. **MonkeyIcon@3x.png**-resolução de 450px x 450px.
+1. **MonkeyIcon@1x.png** -resolução de 150px x 150px.
+2. **MonkeyIcon@2x.png** -resolução de 300px x 300px.
+3. **MonkeyIcon@3x.png** -resolução de 450px x 450px.
 
 O seguinte deve ser levado em consideração ao usar imagens de vetor de PDF em catálogos de ativos:
 
@@ -137,14 +137,14 @@ Qualquer ativo gráfico que você adiciona a um aplicativo Xamarin. Mac (ícones
 
 Quando você cria as versões padrão e de alta resolução de uma imagem, siga esta Convenção de nomenclatura para o par de imagens ao incluí-los em seu projeto do Xamarin. Mac:
 
-- **Resolução padrão**   -  **ImageName. FileName-Extension** (exemplo: **Tags. png**)
+- **Resolução padrão**   -  **ImageName. FileName-Extension** (exemplo: **tags.png**)
 - **Alta resolução**   -  **ImageName@2x.filename-extension** (Exemplo: **tags@2x.png** )
 
 Quando adicionados a um projeto, eles seriam exibidos da seguinte maneira:
 
 ![Os arquivos de imagem no Painel de Soluções](image-images/add03.png "Os arquivos de imagem no Painel de Soluções")
 
-Quando uma imagem é atribuída a um elemento de interface do usuário no Interface Builder você simplesmente escolhe o arquivo no _ImageName_**.** _nome do arquivo-_ formato da extensão (exemplo: **Tags. png**). O mesmo para usar uma imagem no código C#, você escolherá o arquivo no _ImageName_**.** _nome do arquivo-_ formato da extensão.
+Quando uma imagem é atribuída a um elemento de interface do usuário no Interface Builder você simplesmente escolhe o arquivo no _ImageName_**.** _nome do arquivo-_ formato da extensão (exemplo: **tags.png**). O mesmo para usar uma imagem no código C#, você escolherá o arquivo no _ImageName_**.** _nome do arquivo-_ formato da extensão.
 
 Quando o aplicativo Xamarin. Mac é executado em um Mac, o _ImageName_**.** o _nome de arquivo-imagem de_ formato de extensão será usado em exibições de resolução padrão, a **ImageName@2x.filename-extension** imagem será automaticamente selecionada na tela de exibição da retina com Macs.
 
@@ -444,9 +444,9 @@ Para obter mais informações sobre como trabalhar com exibições de estrutura 
 
 Este artigo deu uma visão detalhada de como trabalhar com imagens e ícones em um aplicativo Xamarin. Mac. Vimos os diferentes tipos e usos de imagens, como usar imagens e ícones no Interface Builder do Xcode e como trabalhar com imagens e ícones em código C#.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [MacImages (amostra)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
+- [MacImages (amostra)](/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Exibições de tabela](~/mac/user-interface/table-view.md)
 - [Exibições de estrutura de tópicos](~/mac/user-interface/outline-view.md)

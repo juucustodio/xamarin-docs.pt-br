@@ -12,14 +12,14 @@ ms.date: 04/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cc09f93a8d86b96324435bf63cd3d19b51242ed2
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 96b3e6bd055c0bc89ae7bcbb66c8b3f48b21ad17
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931797"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436227"
 ---
-# <a name="create-a-single-page-xamarinforms-application"></a>Criar um aplicativo de página única Xamarin.Forms
+# <a name="create-a-single-page-no-locxamarinforms-application"></a>Criar um aplicativo de página única Xamarin.Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
 
@@ -502,9 +502,9 @@ Neste guia de início rápido, você aprendeu a:
 Para transformar esse aplicativo de página única em um aplicativo de várias páginas, vá para o próximo início rápido.
 
 > [!div class="nextstepaction"]
-> [Avançar](multi-page.md)
+> [Próximo](multi-page.md)
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Notas (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
-- [Xamarin.FormsAprofundamento do guia de início rápido](deepdive.md)
+- [Notas (exemplo)](/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
+- [Xamarin.Forms Aprofundamento do guia de início rápido](deepdive.md)

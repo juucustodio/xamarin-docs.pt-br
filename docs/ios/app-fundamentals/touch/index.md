@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/23/2017
-ms.openlocfilehash: edf5f1c82857930a2647f306195a4c82f4338db6
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: db3e66920beb355e0b05df2118cd2645c602f0d5
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78291861"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433922"
 ---
 # <a name="handling-touch-in-xamarinios-apps"></a>Lidando com o touch em aplicativos Xamarin. iOS
 
 Como outras plataformas móveis, o iOS tem várias maneiras de lidar com o Touch. Ele pode dar suporte a vários pontos de contato na tela – e gestos complexos. Este guia apresenta alguns dos conceitos, bem como as particularidades de implementação de toque e gestos no iOS.
 
-o iOS encapsula dados de toque na classe `UITouch`, que é disponibilizada para aplicativos por meio de uma série de métodos `UIResponder`. Os aplicativos podem substituir esses métodos em subclasses de `UIView` e `UIViewController`, ambos herdam de `UIResponder`.
+o iOS encapsula dados de toque na `UITouch` classe, que é disponibilizado para aplicativos por meio de uma série de `UIResponder` métodos. Os aplicativos podem substituir esses métodos em subclasses de `UIView` e `UIViewController` , ambos herdam de `UIResponder` .
 
 Além de capturar dados de toque, o iOS fornece meios para interpretar padrões de toques em gestos. Esses reconhecedores de gesto podem, por sua vez, ser usados para interpretar comandos específicos do aplicativo, como uma rotação de uma imagem ou uma rodada de uma página. o iOS fornece uma rica coleção de classes para lidar com gestos comuns com o código mínimo adicionado.
 
@@ -35,9 +35,9 @@ No entanto, há ocasiões em que você precisa usar o processamento de toque de 
 Este guia serve como introdução ao toque no iOS. Para obter mais informações sobre como usar os comentários de toque e Haptic 3D no iOS, que foram introduzidos no iOS 9 e 10, respectivamente, consulte os guias específicos abaixo:
 
 - [3D Touch](~/ios/platform/3d-touch.md)
-- [Fornecer comentários hápticos](~/ios/user-interface/ios-ui/haptic-feedback.md)
+- [Como fornecer comentários hápticos](~/ios/user-interface/ios-ui/haptic-feedback.md)
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Final do iOS Touch (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final)
-- [FingerPaint (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)
+- [Final do iOS Touch (exemplo)](/samples/xamarin/ios-samples/applicationfundamentals-touch-final)
+- [FingerPaint (exemplo)](/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)

@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 05/13/2020
-ms.openlocfilehash: 4006bb3ef82264b5a7a6d764719bee81a8ce78a1
-ms.sourcegitcommit: 5bc37b384706bfbf5bf8e5b1288a34ddd0f3303b
+ms.openlocfilehash: b9bbbc784fa9932d087e1f1c2a575eb7848d5a80
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83418010"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437112"
 ---
 # <a name="reuse-xamarinforms-pages-in-an-ios-extension"></a>Reutilizar páginas Xamarin. Forms em uma extensão do iOS
 
-as extensões do iOS permitem que você personalize o comportamento do sistema existente adicionando funcionalidade extra a [predefinidas por pontos de extensão do IOS e MacOS](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW2), como ações de contexto personalizadas, AutoPreenchimento de senha, filtros de chamadas de entrada, modificadores de conteúdo de notificação e muito mais. O Xamarin. iOS dá suporte a extensões e [este guia](https://docs.microsoft.com/xamarin/ios/platform/extensions) irá orientá-lo na criação de uma extensão do IOS usando as ferramentas do Xamarin.
+as extensões do iOS permitem que você personalize o comportamento do sistema existente adicionando funcionalidade extra a [predefinidas por pontos de extensão do IOS e MacOS](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW2), como ações de contexto personalizadas, AutoPreenchimento de senha, filtros de chamadas de entrada, modificadores de conteúdo de notificação e muito mais. O Xamarin. iOS dá suporte a extensões e [este guia](./extensions.md) irá orientá-lo na criação de uma extensão do IOS usando as ferramentas do Xamarin.
 
 As extensões são distribuídas como parte de um aplicativo de contêiner e ativadas de um ponto de extensão específico em um aplicativo host. O aplicativo de contêiner é geralmente um aplicativo iOS simples, que fornece a um usuário informações sobre a extensão, como ativá-la e usá-la. Há três abordagens principais para compartilhar código entre uma extensão e um aplicativo de contêiner:
 
@@ -37,7 +37,7 @@ As extensões são distribuídas como parte de um aplicativo de contêiner e ati
 A capacidade de usar o Xamarin. Forms em um projeto nativo é fornecida por meio de [formulários nativos](~/xamarin-forms/platform/native-forms.md). Ele permite que `ContentPage` páginas derivadas sejam adicionadas diretamente a projetos nativos do Xamarin. Ios. O `CreateViewController` método de extensão converte uma instância de uma página Xamarin. Forms em um nativo `UIViewController` , que pode ser usado ou modificado como um controlador regular. Como uma extensão do iOS é um tipo especial de um projeto nativo do iOS, você também pode usar **formulários nativos** aqui.
 
 > [!IMPORTANT]
-> Há muitas [limitações conhecidas](https://docs.microsoft.com/xamarin/ios/platform/extensions#limitations) para as extensões do Ios. Embora seja possível usar o Xamarin. Forms em uma extensão do iOS, você deve fazer isso com muito cuidado, monitorar o uso da memória e o tempo de inicialização. Caso contrário, a extensão poderia ser encerrada pelo iOS sem qualquer maneira de lidar com isso normalmente.
+> Há muitas [limitações conhecidas](./extensions.md#limitations) para as extensões do Ios. Embora seja possível usar o Xamarin. Forms em uma extensão do iOS, você deve fazer isso com muito cuidado, monitorar o uso da memória e o tempo de inicialização. Caso contrário, a extensão poderia ser encerrada pelo iOS sem qualquer maneira de lidar com isso normalmente.
 
 ## <a name="walkthrough"></a>Passo a passo
 
@@ -139,7 +139,7 @@ Neste tutorial, você vai criar um aplicativo Xamarin. Forms, uma extensão Xama
 
     - Clique com o botão direito do mouse na extensão do iOS, selecione **referências > adicionar projetos > de referência > FormsShareExtension** e pressione **OK**.
 
-    - Clique com o botão direito do mouse na extensão do iOS, selecione **pacotes > gerenciar pacotes NuGet... > Xamarin. Forms** e pressione **Adicionar pacote**.
+    - Clique com o botão direito do mouse na extensão do iOS, selecione **pacotes > gerenciar pacotes NuGet... > Xamarin. Forms**  e pressione **Adicionar pacote**.
 
 1. Expanda o projeto de extensão e modifique um ponto de entrada para inicializar Xamarin. Forms e criar páginas. Por requisitos do iOS, uma extensão deve definir o ponto de entrada no **info. plist** como `NSExtensionMainStoryboard` ou `NSExtensionPrincipalClass` . Quando o ponto de entrada é ativado, nesse caso é o `ActionViewController.ViewDidLoad` método, você pode criar uma instância de uma página Xamarin. Forms e mostrá-la a um usuário. Portanto, abra o ponto de entrada e substitua o `ViewDidLoad` método pela seguinte implementação:
 
@@ -190,7 +190,7 @@ Neste tutorial, você vai criar um aplicativo Xamarin. Forms, uma extensão Xama
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Extensões do iOS no Xamarin. iOS](~/iOS/platform/extensions.md)
+- [Extensões do iOS no Xamarin.iOS](~/iOS/platform/extensions.md)
 - [Xamarin. Forms em projetos nativos do Xamarin](~/xamarin-forms/platform/native-forms.md)
 - [Otimizar a eficiência e o desempenho de uma extensão de aplicativo iOS](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/ExtensionCreation.html#//apple_ref/doc/uid/TP40014214-CH5-SW7)
 - [Exemplo de código fonte](https://github.com/xamcat/xamarin-forms-ios-extension)

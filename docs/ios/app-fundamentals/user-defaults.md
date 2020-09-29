@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/07/2016
-ms.openlocfilehash: c65a06b8f2a04eda669b2d741135538fa8a583f2
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 587ce48f3d40bb4f16634409920b01d150d628ef
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571721"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436311"
 ---
 # <a name="working-with-user-defaults-in-xamarinios"></a>Trabalhando com padrões do usuário no Xamarin. iOS
 
@@ -77,16 +77,16 @@ Em que `group.com.xamarin.todaysharing` é o grupo de aplicativos criado em **ce
 
 Depois de ter acessado o banco de dados padrão do usuário desejado, você pode ler valores dos padrões usando pares de chave/valor e vários métodos de conveniência com base no tipo de dados que estão sendo lidos:
 
-- `ArrayForKey`-Retorna uma matriz de `NSObjects` para o valor de chave fornecido.
-- `BoolForKey`-Retorna um valor booliano para a chave especificada.
-- `DataForKey`-Retorna um `NSData` objeto para a chave fornecida.
-- `DictionaryForKey`-Retorna um `NSDictionary` para a chave fornecida.
-- `DoubleForKey`-Retorna um valor duplo para a chave especificada.
-- `FloatForKey`-Retorna um valor float para a chave fornecida.
-- `IntForKey`-Retorna um valor inteiro para a chave especificada.
-- `StringArrayForKey`-Retorna uma matriz de `String` objetos do valor de chave fornecido.
-- `StringForKey`-Retorna um valor de cadeia de caracteres para a chave fornecida.
-- `URLForKey`-Retorna um `NSUrl` valor para a chave especificada.
+- `ArrayForKey` -Retorna uma matriz de `NSObjects` para o valor de chave fornecido.
+- `BoolForKey` -Retorna um valor booliano para a chave especificada.
+- `DataForKey` -Retorna um `NSData` objeto para a chave fornecida.
+- `DictionaryForKey` -Retorna um `NSDictionary` para a chave fornecida.
+- `DoubleForKey` -Retorna um valor duplo para a chave especificada.
+- `FloatForKey` -Retorna um valor float para a chave fornecida.
+- `IntForKey` -Retorna um valor inteiro para a chave especificada.
+- `StringArrayForKey` -Retorna uma matriz de `String` objetos do valor de chave fornecido.
+- `StringForKey` -Retorna um valor de cadeia de caracteres para a chave fornecida.
+- `URLForKey` -Retorna um `NSUrl` valor para a chave especificada.
 
 Por exemplo, o código a seguir deve ler um valor booliano dos padrões do usuário:
 
@@ -106,11 +106,11 @@ var useHeader = plist.BoolForKey("UseHeader");
 
 Assim como na leitura de valores acima, depois de ter acessado o banco de dados padrão do usuário desejado, você pode gravar valores nos padrões usando pares de chave/valor e vários métodos de conveniência com base no tipo de dados que estão sendo gravados:
 
-- `SetBool`-Grava o valor booliano fornecido para a chave especificada.
-- `SetDouble`-Grava o valor duplo fornecido para a chave especificada.
-- `SetFloat`-Grava o valor float fornecido para a chave especificada.
-- `SetString`-Grava o valor de cadeia de caracteres fornecido para a chave especificada.
-- `SetURL`-Grava o valor de URL ( `NSUrl` ) fornecido para a chave especificada.
+- `SetBool` -Grava o valor booliano fornecido para a chave especificada.
+- `SetDouble` -Grava o valor duplo fornecido para a chave especificada.
+- `SetFloat` -Grava o valor float fornecido para a chave especificada.
+- `SetString` -Grava o valor de cadeia de caracteres fornecido para a chave especificada.
+- `SetURL` -Grava o valor de URL ( `NSUrl` ) fornecido para a chave especificada.
 
 Por exemplo, o código a seguir escreveria um valor booliano para os padrões do usuário:
 
@@ -134,8 +134,8 @@ plist.SetBool(useHeader, "UseHeader");
 
 Este artigo abordou a `NSUserDefaults` classe e como ela pode ser usada para fornecer um conjunto de opções que o usuário final pode usar para configurar seu aplicativo Xamarin. Ios. Além disso, ele abordou o uso de grupos de aplicativos para se comunicar entre uma extensão e seu aplicativo pai ou entre aplicativos em um grupo.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Exemplos do tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [Guia de programação de preferências e configurações](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/UserDefaults/Introduction/Introduction.html#//apple_ref/doc/uid/10000059i)
 - [NSUserDefaults](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSUserDefaults_Class/#//apple_ref/doc/constant_group/NSUserDefaults_Domains)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 6d87f99ae504346d55c4ddf86a093799ba9ddbd5
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 78a4f3ae90b1b20e9fe3cd4164726fee34f38eb7
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936715"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435504"
 ---
 # <a name="purchasing-non-consumable-products-in-xamarinios"></a>Comprando produtos não consumíveis no Xamarin. iOS
 
@@ -20,7 +20,7 @@ Os produtos não consumíveis são "de propriedade" pelo cliente. A expectativa 
 
 ## <a name="non-consumable-products-sample"></a>Exemplo de produtos não consumíveis
 
-O [código InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) contém um projeto chamado *NonConsumables*. O exemplo de código demonstra como implementar produtos não consumíveis usando filtros de fotos como um exemplo. Depois de adquirir um filtro, você poderá aplicá-lo à foto repetidamente. Você nunca precisa comprá-la novamente.   
+O [código InAppPurchaseSample](/samples/xamarin/ios-samples/storekit) contém um projeto chamado *NonConsumables*. O exemplo de código demonstra como implementar produtos não consumíveis usando filtros de fotos como um exemplo. Depois de adquirir um filtro, você poderá aplicá-lo à foto repetidamente. Você nunca precisa comprá-la novamente.   
 
 O processo de compra é mostrado nesta série de capturas de tela – o botão **comprar** se torna o botão ativação de recurso:   
 
@@ -47,5 +47,5 @@ Há situações em que um aplicativo não pode dizer se um produto não consumí
 O caminho de código nesse cenário é exatamente o mesmo que uma compra regular, as únicas diferenças são:
 
 - O usuário não será cobrado novamente para o produto.
-- O `SKPaymentTransaction` objeto passado para o aplicativo terá uma `OriginalTransaction` propriedade que se refere à transação que foi gerada quando o produto foi inicialmente adquirido. 
-- Os aplicativos que vendem produtos não consumíveis também devem implementar o recurso de **restauração** do StoreKit para ajudar os usuários a recuperar as compras existentes. 
+- O  `SKPaymentTransaction` objeto passado para o aplicativo terá uma  `OriginalTransaction` propriedade que se refere à transação que foi gerada quando o produto foi inicialmente adquirido. 
+- Os aplicativos que vendem produtos não consumíveis também devem implementar o recurso de  **restauração** do StoreKit para ajudar os usuários a recuperar as compras existentes.

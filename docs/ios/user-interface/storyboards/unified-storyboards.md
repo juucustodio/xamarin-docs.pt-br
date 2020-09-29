@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 4da0bd1c47c37430b278bed46f658b935a502e2d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: fdfdd385563ee425f0e8767aed13304ae9541b94
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937872"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435358"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Storyboards unificados no Xamarin. iOS
 
@@ -28,7 +28,7 @@ Antes do iOS 8, o desenvolvedor usava `UIInterfaceOrientation` e `UIInterfaceIdi
 
 Os dispositivos são definidos por classes de tamanho, em ambos os eixos vertical e horizontal, e há dois tipos de classes de tamanho no iOS 8:
 
-- **Regular** – isso é para um tamanho de tela grande (como um iPad) ou um gadget que dá a impressão de um tamanho grande (como um`UIScrollView`
+- **Regular** – isso é para um tamanho de tela grande (como um iPad) ou um gadget que dá a impressão de um tamanho grande (como um `UIScrollView`
 - **Compact** – é para dispositivos menores (como um iPhone). Esse tamanho leva em consideração a orientação do dispositivo.
 
 Se os dois conceitos forem usados juntos, o resultado será uma grade 2 x 2 que define os diferentes tamanhos possíveis que podem ser usados nas orientações diferentes, como visto no diagrama a seguir:
@@ -117,7 +117,7 @@ Veja a seguir uma coleção de características típica que o desenvolvedor pode
 |`HorizontalSizeClass`|Compacto|
 |`VerticalSizeClass`|Regular|
 |`UserInterfaceIdom`|Telefone|
-|`DisplayScale`|2.0|
+|`DisplayScale`|2,0|
 
 O conjunto acima representaria uma coleção de características totalmente qualificada, pois ela tem valores para todas as suas propriedades de característica.
 
@@ -228,17 +228,17 @@ O `TraitCollectionDidChange` é ótimo para trabalhar com a `UIView` classe, em 
 
 Agora vamos examinar mais de perto o que acontece quando um controlador de exibição de divisão recolhe de uma coluna de duas colunas para uma coluna. Como parte dessa alteração, há dois processos que precisam ocorrer:
 
-- Por padrão, o controlador de exibição de divisão usará o controlador de exibição primário como a exibição depois que o recolhimento ocorrer. O desenvolvedor pode substituir esse comportamento substituindo o `GetPrimaryViewControllerForCollapsingSplitViewController` método do `UISplitViewControllerDelegate` e fornecendo qualquer controlador de exibição que desejam exibir no estado recolhido.
-- O controlador de exibição secundário precisa ser mesclado no controlador de exibição primário. Geralmente, o desenvolvedor não precisa realizar nenhuma ação para esta etapa; o controlador de exibição de divisão inclui o tratamento automático desta fase com base no dispositivo de hardware. No entanto, pode haver alguns casos especiais em que o desenvolvedor vai querer interagir com essa alteração. Chamar o `CollapseSecondViewController` método de `UISplitViewControllerDelegate` permite que o controlador de exibição mestre seja exibido quando o recolhimento ocorre, em vez da exibição de detalhes.
+- Por padrão, o controlador de exibição de divisão usará o controlador de exibição primário como a exibição depois que o recolhimento ocorrer. O desenvolvedor pode substituir esse comportamento substituindo o  `GetPrimaryViewControllerForCollapsingSplitViewController` método do  `UISplitViewControllerDelegate` e fornecendo qualquer controlador de exibição que desejam exibir no estado recolhido.
+- O controlador de exibição secundário precisa ser mesclado no controlador de exibição primário. Geralmente, o desenvolvedor não precisa realizar nenhuma ação para esta etapa; o controlador de exibição de divisão inclui o tratamento automático desta fase com base no dispositivo de hardware. No entanto, pode haver alguns casos especiais em que o desenvolvedor vai querer interagir com essa alteração. Chamar o  `CollapseSecondViewController` método de  `UISplitViewControllerDelegate` permite que o controlador de exibição mestre seja exibido quando o recolhimento ocorre, em vez da exibição de detalhes.
 
 ### <a name="expanding-the-split-view-controller"></a>Expandindo o controlador de exibição de divisão
 
 Agora vamos examinar mais de perto o que acontece quando um controlador de exibição de divisão é expandido de um estado recolhido. Mais uma vez, há dois estágios que precisam ocorrer:
 
-- Primeiro, defina o novo controlador de exibição primário. Por padrão, o controlador de exibição de divisão usará automaticamente o controlador de exibição primário do modo de exibição recolhido. Novamente, o desenvolvedor pode substituir esse comportamento usando o `GetPrimaryViewControllerForExpandingSplitViewController` método do `UISplitViewControllerDelegate` .
-- Depois que o controlador de exibição primário tiver sido escolhido, o controlador de exibição secundário deverá ser recriado. Novamente, o controlador de exibição de divisão inclui o tratamento automático desta fase com base no dispositivo de hardware. O desenvolvedor pode substituir esse comportamento chamando o `SeparateSecondaryViewController` método do `UISplitViewControllerDelegate` .
+- Primeiro, defina o novo controlador de exibição primário. Por padrão, o controlador de exibição de divisão usará automaticamente o controlador de exibição primário do modo de exibição recolhido. Novamente, o desenvolvedor pode substituir esse comportamento usando o  `GetPrimaryViewControllerForExpandingSplitViewController` método do  `UISplitViewControllerDelegate` .
+- Depois que o controlador de exibição primário tiver sido escolhido, o controlador de exibição secundário deverá ser recriado. Novamente, o controlador de exibição de divisão inclui o tratamento automático desta fase com base no dispositivo de hardware. O desenvolvedor pode substituir esse comportamento chamando o  `SeparateSecondaryViewController` método do  `UISplitViewControllerDelegate` .
 
-Em um controlador de exibição de divisão, o controlador de exibição primário desempenha uma parte na expansão e no recolhimento das exibições implementando `CollapseSecondViewController` os `SeparateSecondaryViewController` métodos e do `UISplitViewControllerDelegate` . `UINavigationController`implementa esses métodos para enviar e pop automaticamente o controlador de exibição secundário.
+Em um controlador de exibição de divisão, o controlador de exibição primário desempenha uma parte na expansão e no recolhimento das exibições implementando `CollapseSecondViewController` os `SeparateSecondaryViewController` métodos e do `UISplitViewControllerDelegate` . `UINavigationController` implementa esses métodos para enviar e pop automaticamente o controlador de exibição secundário.
 
 ### <a name="showing-view-controllers"></a>Mostrando controladores de exibição
 
@@ -246,8 +246,8 @@ Outra alteração que a Apple fez no iOS 8 é a forma como o desenvolvedor mostr
 
 Isso apresentou um acoplamento muito rígido entre o controlador de navegação e o ambiente em que ele estava sendo executado. No iOS 8, a Apple o desacoplado fornecendo dois novos métodos:
 
-- `ShowViewController`– Adapta-se para exibir o novo controlador de exibição com base em seu ambiente. Por exemplo, em um `UINavigationController` ele simplesmente envia por push a nova exibição para a pilha. Em um controlador de exibição de divisão, o novo controlador de exibição será apresentado no lado esquerdo como o novo controlador de exibição primário. Se nenhum controlador de exibição de contêiner estiver presente, o novo modo de exibição será exibido como um controlador de exibição modal.
-- `ShowDetailViewController`– Funciona de maneira semelhante ao `ShowViewController` , mas é implementado em um controlador de exibição de divisão para substituir o modo de exibição de detalhes pelo novo controlador de exibição que está sendo passado. Se o controlador de exibição de divisão estiver recolhido (como pode ser visto em um aplicativo do iPhone), a chamada será redirecionada para o `ShowViewController` método e a nova exibição será mostrada como o controlador de exibição primário. Novamente, se nenhum controlador de exibição de contêiner estiver presente, o novo modo de exibição será exibido como um controlador de exibição modal.
+- `ShowViewController` – Adapta-se para exibir o novo controlador de exibição com base em seu ambiente. Por exemplo, em um  `UINavigationController` ele simplesmente envia por push a nova exibição para a pilha. Em um controlador de exibição de divisão, o novo controlador de exibição será apresentado no lado esquerdo como o novo controlador de exibição primário. Se nenhum controlador de exibição de contêiner estiver presente, o novo modo de exibição será exibido como um controlador de exibição modal.
+- `ShowDetailViewController` – Funciona de maneira semelhante ao  `ShowViewController` , mas é implementado em um controlador de exibição de divisão para substituir o modo de exibição de detalhes pelo novo controlador de exibição que está sendo passado. Se o controlador de exibição de divisão estiver recolhido (como pode ser visto em um aplicativo do iPhone), a chamada será redirecionada para o  `ShowViewController` método e a nova exibição será mostrada como o controlador de exibição primário. Novamente, se nenhum controlador de exibição de contêiner estiver presente, o novo modo de exibição será exibido como um controlador de exibição modal.
 
 Esses métodos funcionam iniciando no controlador de exibição de folha e orientam a hierarquia de exibição até encontrarem o controlador de exibição de contêiner correto para manipular a exibição da nova exibição.
 
@@ -261,8 +261,8 @@ Nesta seção, vamos dar uma olhada em como esses métodos são realmente implem
 
 Esse método percorre a cadeia de hierarquia até que o controlador de exibição de contêiner correto seja encontrado. Por exemplo:
 
-1. Se um `ShowViewController` método for chamado, o primeiro controlador de exibição na cadeia que implementa esse método é o controlador de navegação, portanto, ele é usado como o pai da nova exibição.
-1. Se um `ShowDetailViewController` método foi chamado em vez disso, o controlador de exibição de divisão é o primeiro controlador de exibição para implementá-lo, portanto, ele é usado como o pai.
+1. Se um  `ShowViewController` método for chamado, o primeiro controlador de exibição na cadeia que implementa esse método é o controlador de navegação, portanto, ele é usado como o pai da nova exibição.
+1. Se um  `ShowDetailViewController` método foi chamado em vez disso, o controlador de exibição de divisão é o primeiro controlador de exibição para implementá-lo, portanto, ele é usado como o pai.
 
 O `GetTargetForAction` método funciona localizando um controlador de exibição que implementa uma determinada ação e, em seguida, solicitando o controlador de exibição se desejar receber essa ação. Como esse método é público, os desenvolvedores podem criar seus próprios métodos personalizados que funcionam exatamente como os `ShowViewController` métodos internos e `ShowDetailViewController` .
 
@@ -454,7 +454,7 @@ public class SplitViewControllerDelegate : UISplitViewControllerDelegate
 }
 ```
 
-O `SeparateSecondaryViewController` método testa para ver se uma foto está sendo exibida e executa ações com base nesse estado. Se nenhuma foto estiver sendo mostrada, ela recolherá o controlador de exibição secundário para que o controlador de exibição mestre seja exibido.
+O `SeparateSecondaryViewController`  método testa para ver se uma foto está sendo exibida e executa ações com base nesse estado. Se nenhuma foto estiver sendo mostrada, ela recolherá o controlador de exibição secundário para que o controlador de exibição mestre seja exibido.
 
 O `CollapseSecondViewController` método é usado ao expandir o controlador de exibição de divisão para ver se há alguma foto na pilha, se ela for recolhida novamente para essa exibição.
 
@@ -749,7 +749,7 @@ Retorne para Visual Studio para Mac e interrompa a execução do aplicativo.
 
 Para manter a compatibilidade com versões anteriores do iOS 7, basta incluir os ativos de imagem usuais normalmente `Default.png` no aplicativo IOS 8. o iOS retornará ao comportamento anterior e usará esses arquivos como a tela de inicialização ao ser executado em um dispositivo iOS 7.
 
-Para ver uma implementação de uma tela de inicialização dinâmica no Xamarin, examine as [telas de inicialização dinâmica](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen) aplicativo de exemplo do IOS 8 anexado a este documento.
+Para ver uma implementação de uma tela de inicialização dinâmica no Xamarin, examine as [telas de inicialização dinâmica](/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen) aplicativo de exemplo do IOS 8 anexado a este documento.
 
 ## <a name="summary"></a>Resumo
 
@@ -759,8 +759,8 @@ Por fim, este artigo abordou os conceitos básicos da criação de storyboards u
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Fotos adaptáveis (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-adaptivephotos)
-- [Telas de inicialização dinâmica (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
+- [Fotos adaptáveis (exemplo)](/samples/xamarin/ios-samples/ios8-adaptivephotos)
+- [Telas de inicialização dinâmica (exemplo)](/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
 - [Introdução ao iOS 8](~/ios/platform/introduction-to-ios8.md)
 - [Layouts dinâmicos no iOS8-Evolve 2014 (vídeo)](https://youtu.be/f3mMGlS-lM4)
 - [UIPresentationController](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPresentationController_class/)

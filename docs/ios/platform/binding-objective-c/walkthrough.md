@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 342558908c5f42941c9e6e7ef5c7f75d8e0fa9d4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 82367d63d1cc7b52d69de52ee635e380cd68c382
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937976"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435663"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Walkthrough: associando uma biblioteca de Objective do iOS-C
 
@@ -51,7 +51,7 @@ Este artigo pressupõe que você tenha alguma familiaridade com o Xcode e com a 
 - O **Xcode e o SDK do IOS** – o Xcode da Apple e a mais recente API do IOS precisam ser instalados e configurados no computador do desenvolvedor.
 - **[Ferramentas de linha de comando do Xcode](#Installing_the_Xcode_Command_Line_Tools)** – as ferramentas de linha de comando do Xcode devem ser instaladas para a versão atualmente instalada do Xcode (veja abaixo os detalhes da instalação).
 - **Visual Studio para Mac ou Visual Studio** -a versão mais recente do Visual Studio para Mac ou do Visual Studio deve ser instalada e configurada no computador de desenvolvimento. Um Apple Mac é necessário para desenvolver um aplicativo Xamarin. iOS e, ao usar o Visual Studio, você deve estar conectado a [um host de Build do xamarin. Ios](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
-- **A última versão do objetivo de Objective** -uma cópia atual da ferramenta de nitidez objetiva baixada [daqui.](~/cross-platform/macios/binding/objective-sharpie/get-started.md) Se você já tiver a nitidez do objetivo instalada, poderá atualizá-la para a versão mais recente usando o`sharpie update`
+- **A última versão do objetivo de Objective** -uma cópia atual da ferramenta de nitidez objetiva baixada [daqui.](~/cross-platform/macios/binding/objective-sharpie/get-started.md) Se você já tiver a nitidez do objetivo instalada, poderá atualizá-la para a versão mais recente usando o `sharpie update`
 
 <a name="Installing_the_Xcode_Command_Line_Tools"></a>
 
@@ -491,7 +491,7 @@ Para que a definição seja parecida com:
 
 Em seguida, fazemos a mesma coisa com o conteúdo do `InfColorPicker.enums.cs` arquivo, copiando-os e colando-os no `StructsAndEnums.cs` arquivo deixando as `using` instruções intactas:
 
-[![O conteúdo do arquivo StructsAndEnums.cs](walkthrough-images/os09.png)](walkthrough-images/os09.png#lightbox)
+[![O conteúdo do arquivo StructsAndEnums.cs ](walkthrough-images/os09.png)](walkthrough-images/os09.png#lightbox)
 
 Você também pode achar que a nitidez do objetivo anotava a associação com `[Verify]` atributos. Esses atributos indicam que você deve verificar se a nitidez objetiva fez a coisa correta comparando a associação com a declaração C/Objective-C original (que será fornecida em um comentário acima da declaração associada). Depois de verificar as associações, você deve remover o atributo Verify. Para obter mais informações, consulte o guia de [verificação](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md) .
 
@@ -726,4 +726,4 @@ Este artigo descreveu o processo de criação e uso de um projeto de associaçã
 - [Detalhes da Associação](~/cross-platform/macios/binding/overview.md)
 - [Guia de referência de tipos de associação](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Xamarin para desenvolvedores de Objective-C](~/ios/get-started/objective-c-developers/index.md)
-- [Diretrizes de design de estrutura](https://msdn.microsoft.com/library/ms229042.aspx)
+- [Diretrizes de design de estrutura](/dotnet/standard/design-guidelines/)
