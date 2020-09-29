@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2018
-ms.openlocfilehash: eed18890c185ccd35d728176348c9fac481407e1
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d32d30419550c9b5f9a612589d12eba7c74eef26
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571396"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454319"
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin para desenvolvedores de Java
 
@@ -96,7 +96,7 @@ As seções a seguir explicam as diferenças de "introdução" básica entre C# 
 
 O Java normalmente empacota classes relacionadas em arquivos **.jar**. Em C# e .NET, no entanto, pedaços reutilizáveis de código pré-compilado são empacotados em *assemblies*, que normalmente são empacotados como arquivos *.dll*. Um assembly é uma unidade de implantação para código C#/.NET, sendo que cada assembly é tipicamente associado um projeto C#. Assemblies contêm código intermediário (IL) que é compilado por Just-In-Time no runtime.
 
-Para obter mais informações sobre assemblies, veja o tópico [Assemblies e o cache de assembly global](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/assemblies-gac/).
+Para obter mais informações sobre assemblies, veja o tópico [Assemblies e o cache de assembly global](/dotnet/csharp/programming-guide/concepts/assemblies-gac/).
 
 ### <a name="packages-vs-namespaces"></a>Pacotes vs. Namespaces
 
@@ -142,7 +142,7 @@ Essas instruções importam a funcionalidade dos namespaces `System`, `Android.A
 
 ### <a name="generics"></a>Genéricos
 
-Tanto Java quanto C# dão suporte a *genéricos*, que são espaços reservados que permitem que você conecte diferentes tipos em tempo de compilação. No entanto, genéricos funcionam de forma ligeiramente diferente em C#. No Java, a [eliminação de tipo](https://docs.oracle.com/javase/tutorial/java/generics/erasure.html) disponibiliza informações de tipo somente em tempo de compilação, mas não em tempo de execução. Por outro lado, o .NET Common Language Runtime (CLR) dá suporte explícito a tipos genéricos, o que significa que o C# tem acesso a informações de tipo em tempo de execução. No desenvolvimento do Xamarin.Android diário, a importância dessa distinção não é aparente na maior parte do tempo, mas se estiver usando [reflexão](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/reflection), você dependerá desse recurso para acessar as informações de tipo em tempo de execução.
+Tanto Java quanto C# dão suporte a *genéricos*, que são espaços reservados que permitem que você conecte diferentes tipos em tempo de compilação. No entanto, genéricos funcionam de forma ligeiramente diferente em C#. No Java, a [eliminação de tipo](https://docs.oracle.com/javase/tutorial/java/generics/erasure.html) disponibiliza informações de tipo somente em tempo de compilação, mas não em tempo de execução. Por outro lado, o .NET Common Language Runtime (CLR) dá suporte explícito a tipos genéricos, o que significa que o C# tem acesso a informações de tipo em tempo de execução. No desenvolvimento do Xamarin.Android diário, a importância dessa distinção não é aparente na maior parte do tempo, mas se estiver usando [reflexão](/dotnet/csharp/programming-guide/concepts/reflection), você dependerá desse recurso para acessar as informações de tipo em tempo de execução.
 
 No Xamarin.Android, você geralmente verá o método genérico `FindViewById` usado para obter uma referência a um controle de layout. Esse método aceita um parâmetro de tipo genérico que especifica o tipo de controle para pesquisar. Por exemplo:
 
@@ -152,7 +152,7 @@ TextView label = FindViewById<TextView> (Resource.Id.Label);
 
 Neste exemplo de código, `FindViewById` obtém uma referência para o controle `TextView`, que é definido no layout como **Label**, depois retorna-o como um tipo `TextView`.
 
-Para obter mais informações sobre os genéricos, veja o tópico [Genéricos](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/index) do MSDN.
+Para obter mais informações sobre os genéricos, veja o tópico [Genéricos](/dotnet/csharp/programming-guide/generics/index) do MSDN.
 Observe que há algumas limitações no suporte de Xamarin.Android para classes C# genéricas; Para obter mais informações, consulte [Limitações](~/android/internals/limitations.md).
 
 <a name="oopfeatures"></a>
@@ -211,7 +211,7 @@ Neste exemplo, `SensorsActivity` herda de `Activity` e implementa a funcionalida
 
 Quando você quiser impedir que uma classe seja mais subclasse em C#, precederá o nome da classe com `sealed` &ndash; em Java, precederá o nome da classe com `final` .
 
-Para mais informações sobre definições de classe do C#, veja os tópicos [Classe](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/classes) e [Herança](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/inheritance).
+Para mais informações sobre definições de classe do C#, veja os tópicos [Classe](/dotnet/csharp/programming-guide/classes-and-structs/classes) e [Herança](/dotnet/csharp/programming-guide/classes-and-structs/inheritance).
 
 ### <a name="properties"></a>Propriedades
 
@@ -233,7 +233,7 @@ O `rulerView` objeto também tem uma propriedade chamada `DrawingCacheEnabled` &
 
 O acesso às propriedades pode ser leitura/gravação, somente leitura ou somente gravação. Além disso, você pode usar modificadores de acesso diferentes para leitura e gravação. Por exemplo, você pode definir uma propriedade que tem acesso de leitura público, mas acesso de gravação privado.
 
-Para obter mais informações sobre propriedades do C#, veja o tópico [Propriedades](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/properties).
+Para obter mais informações sobre propriedades do C#, veja o tópico [Propriedades](/dotnet/csharp/programming-guide/classes-and-structs/properties).
 
 ### <a name="calling-base-class-methods"></a>Chamando métodos de classe base
 
@@ -276,7 +276,7 @@ Java e C# dão suporte aos modificadores de acesso `public`, `private` e `protec
 
 - **`protected internal`**&ndash;O membro de classe é acessível dentro do assembly de definição, a classe de definição e as classes derivadas (classes derivadas dentro e fora do assembly têm acesso).
 
-Para obter mais informações sobre os modificadores de acesso do C#, veja o tópico [Modificadores de acesso](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers).
+Para obter mais informações sobre os modificadores de acesso do C#, veja o tópico [Modificadores de acesso](/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers).
 
 ### <a name="virtual-and-override-methods"></a>Métodos virtual e override
 
@@ -291,7 +291,7 @@ No entanto, há algumas diferenças entre o Java e o C# no modo de declarar mét
 
 - Classes derivadas de C# devem usar a palavra-chave `override` para indicar explicitamente que um método de classe base virtual está sendo substituído.
 
-Para obter mais informações sobre o suporte do C# para polimorfismo, veja o tópico [Polimorfismo](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/polymorphism).
+Para obter mais informações sobre o suporte do C# para polimorfismo, veja o tópico [Polimorfismo](/dotnet/csharp/programming-guide/classes-and-structs/polymorphism).
 
 <a name="lambdas"></a>
 
@@ -321,7 +321,7 @@ button.Click += (sender, args) => {
 
 Neste exemplo, o código de expressão lambda (o código entre chaves) incrementa a contagem de cliques e atualiza o texto `button` para exibir a contagem de cliques. Essa expressão lambda é registrada com o objeto `button` como um manipulador de eventos a ser chamado sempre que o botão é tocado. (Manipuladores de eventos são explicados em mais detalhes abaixo.) Neste exemplo simples, os `sender` parâmetros e `args` não são usados pelo código de expressão lambda, mas são necessários na expressão lambda para atender aos requisitos de assinatura do método para o registro de eventos. Nos bastidores, o compilador de C# converte a expressão lambda em um método anônimo que é chamado sempre eventos de clique em botão ocorrem.
 
-Para obter mais informações sobre C# e expressões lambda, veja o tópico [Expressões lambda](https://docs.microsoft.com/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions).
+Para obter mais informações sobre C# e expressões lambda, veja o tópico [Expressões lambda](/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions).
 
 <a name="events"></a>
 
@@ -330,7 +330,7 @@ Para obter mais informações sobre C# e expressões lambda, veja o tópico [Exp
 Um *evento* é uma forma de um objeto notificar assinantes registrados quando algo interessante acontece para esse objeto. Ao contrário do Java, em que um assinante normalmente implementa uma interface `Listener` que contém um método de retorno de chamada, o C# é compatível, no nível de linguagem, com a manipulação de eventos por meio de *delegados*. Um *delegado* é como um ponteiro de função fortemente tipado e orientado a objeto &ndash; ele encapsula uma referência de objeto e um token de método. Se um objeto cliente deseja assinar um evento, ele cria um delegado e passa-o para o objeto que realiza a notificação.
 Quando o evento ocorre, o objeto que realiza a notificação invoca o método representado pelo objeto delegado, fornecendo uma notificação sobre o evento ao objeto cliente de assinatura. No C#, os manipuladores de eventos nada mais são do que métodos chamados por meio de delegados.
 
-Para obter mais informações sobre delegados, consulte o tópico [Delegados](https://docs.microsoft.com/dotnet/csharp/programming-guide/delegates/index).
+Para obter mais informações sobre delegados, consulte o tópico [Delegados](/dotnet/csharp/programming-guide/delegates/index).
 
 Em C#, os eventos são *multicast*; ou seja, mais de um ouvinte pode ser notificado quando um evento ocorre. Essa diferença é observada ao considerar as diferenças sintáticas entre o registro de evento do Java e do C#. Em Java, você chama `SetXXXListener` para se registrar para notificações de eventos; no C#, você usa o operador `+=` para se registrar para notificações de eventos adicionando o delegado à lista de ouvintes de eventos.
 Em Java, você chama `SetXXXListener` para cancelar o registro, enquanto no C# você usa o `-=` para remover seu delegado da lista de ouvintes.
@@ -403,7 +403,7 @@ Neste exemplo, quando o usuário clica no controle `downloadButton`, o manipulad
 Observe que a declaração de método de `downloadAsync` é precedida pela palavra-chave `async` para indicar que ele será executado de forma assíncrona e retornará uma tarefa. Observe também que a chamada para `DownloadDataTaskAsync` é precedida pela palavra-chave `await`. O aplicativo move a execução do manipulador de eventos (começando no ponto em que `await` aparece) para um thread em segundo plano até `DownloadDataTaskAsync` ser concluído e retornar.
 Enquanto isso, o thread de interface do usuário do aplicativo ainda pode responder à entrada do usuário e acionar manipuladores de eventos para os outros controles. Quando `DownloadDataTaskAsync` é concluído (o que pode levar vários segundos), a execução continua até a variável `bytes` ser definida como o resultado da chamada para `DownloadDataTaskAsync`, e o restante do código de manipulador de eventos exibe a imagem baixada no thread do chamador (interface do usuário).
 
-Para uma introdução a `async`/`await` em C#, veja o tópico [Programação assíncrona com async e await](https://docs.microsoft.com/dotnet/csharp/async).
+Para uma introdução a `async`/`await` em C#, veja o tópico [Programação assíncrona com async e await](/dotnet/csharp/async).
 Para obter mais informações sobre o suporte de Xamarin de recursos de programação assíncrona, consulte [visão geral de suporte assíncrono](~/cross-platform/platform/async.md).
 
 <a name="keywords"></a>
@@ -414,45 +414,45 @@ Muitas palavras-chave usadas em Java também são usadas em C#. Também há um n
 
 |Java|C#|Descrição|
 |---|---|---|
-|`boolean`|[bool](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/bool)|Usado para declarar os valores boolianos true e false.|
+|`boolean`|[bool](/dotnet/csharp/language-reference/keywords/bool)|Usado para declarar os valores boolianos true e false.|
 |`extends`|`:`|Precede a classe e as interfaces das quais herdar.|
 |`implements`|`:`|Precede a classe e as interfaces das quais herdar.|
-|`import`|[using](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using)|Importa tipos de um namespace, também é usado para criar um alias de namespace.|
-|`final`|[sealed](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/sealed)|Impede a derivação de classe; impede que métodos e propriedades sejam substituídos em classes derivadas.|
-|`instanceof`|[is](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/is)|Avalia se um objeto é compatível com um determinado tipo.|
-|`native`|[extern](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/extern)|Declara um método que é implementado externamente.|
-|`package`|[namespace](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/namespace)|Declara um escopo para um conjunto relacionado de objetos.|
-|`T...`|[parâmetros T](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/params)|Especifica um parâmetro do método que aceita um número variável de argumentos.|
-|`super`|[base](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/base)|Usado para acessar membros da classe pai de dentro de uma classe derivada.|
-|`synchronized`|[proprietário](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/lock-statement)|Encapsula uma seção crítica do código com a aquisição e a liberação de bloqueio.|
+|`import`|[usando](/dotnet/csharp/language-reference/keywords/using)|Importa tipos de um namespace, também é usado para criar um alias de namespace.|
+|`final`|[sealed](/dotnet/csharp/language-reference/keywords/sealed)|Impede a derivação de classe; impede que métodos e propriedades sejam substituídos em classes derivadas.|
+|`instanceof`|[for](/dotnet/csharp/language-reference/keywords/is)|Avalia se um objeto é compatível com um determinado tipo.|
+|`native`|[extern](/dotnet/csharp/language-reference/keywords/extern)|Declara um método que é implementado externamente.|
+|`package`|[namespace](/dotnet/csharp/language-reference/keywords/namespace)|Declara um escopo para um conjunto relacionado de objetos.|
+|`T...`|[parâmetros T](/dotnet/csharp/language-reference/keywords/params)|Especifica um parâmetro do método que aceita um número variável de argumentos.|
+|`super`|[base](/dotnet/csharp/language-reference/keywords/base)|Usado para acessar membros da classe pai de dentro de uma classe derivada.|
+|`synchronized`|[proprietário](/dotnet/csharp/language-reference/keywords/lock-statement)|Encapsula uma seção crítica do código com a aquisição e a liberação de bloqueio.|
 
-Além disso, há muitas palavras-chave que são exclusivas do C# e não têm nenhum equivalente no Java usado no Android. O código do Xamarin.Android geralmente usa as seguintes palavras-chave do C# (esta tabela é útil para referência ao ler o [exemplo de código](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android) do Xamarin.Android):
+Além disso, há muitas palavras-chave que são exclusivas do C# e não têm nenhum equivalente no Java usado no Android. O código do Xamarin.Android geralmente usa as seguintes palavras-chave do C# (esta tabela é útil para referência ao ler o [exemplo de código](/samples/browse/?products=xamarin&term=Xamarin.Android) do Xamarin.Android):
 
 |C#|Descrição|
 |---|---|
-|[como](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/as)|Executa conversões entre tipos de referência compatíveis ou tipos anuláveis.|
-|[async](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/async)|Especifica que uma expressão lambda ou método é assíncrono.|
-|[expressões](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await)|Suspende a execução de um método até que uma tarefa seja concluída.|
-|[byte](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/byte)|Tipo inteiro de 8 bits sem sinal.|
-|[delegate](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/delegate)|Usado para encapsular um método ou um método anônimo.|
-|[enumera](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/enum)|Declara uma enumeração, um conjunto de constantes nomeadas.|
-|[event](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/event)|Declara um evento em uma classe do publicador.|
-|[fixado](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/fixed-statement)|Impede que uma variável seja realocada.|
+|[como](/dotnet/csharp/language-reference/keywords/as)|Executa conversões entre tipos de referência compatíveis ou tipos anuláveis.|
+|[Async](/dotnet/csharp/language-reference/keywords/async)|Especifica que uma expressão lambda ou método é assíncrono.|
+|[await](/dotnet/csharp/language-reference/keywords/await)|Suspende a execução de um método até que uma tarefa seja concluída.|
+|[byte](/dotnet/csharp/language-reference/keywords/byte)|Tipo inteiro de 8 bits sem sinal.|
+|[delegate](/dotnet/csharp/language-reference/keywords/delegate)|Usado para encapsular um método ou um método anônimo.|
+|[enumera](/dotnet/csharp/language-reference/keywords/enum)|Declara uma enumeração, um conjunto de constantes nomeadas.|
+|[event](/dotnet/csharp/language-reference/keywords/event)|Declara um evento em uma classe do publicador.|
+|[fixado](/dotnet/csharp/language-reference/keywords/fixed-statement)|Impede que uma variável seja realocada.|
 |`get`|Define um método acessor que recupera o valor de uma propriedade.|
-|[no](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/in-generic-modifier)|Permite que um parâmetro aceite um tipo menos derivado em uma interface genérica.|
-|[object](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/object)|Um alias para o tipo Objeto no .NET Framework.|
-|[fora](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/out)|Modificador de parâmetro ou declaração de parâmetro de tipo genérico.|
-|[override](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/override)|Estende ou modifica a implementação de um membro herdado.|
-|[parcial](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/partial-method)|Declara uma definição a ser dividida em vários arquivos ou separa uma definição de método de sua implementação.|
-|[readonly](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/readonly)|Declara que um membro de classe pode ser atribuído somente no momento da declaração ou pelo construtor de classe.|
-|[ref](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/ref)|Faz com que um argumento seja passado por referência, em vez de por valor.|
-|[set](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/set)|Define um método acessor que define o valor de uma propriedade.|
-|[cadeia de caracteres](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/string)|Alias para o tipo Cadeia de caracteres no .NET Framework.|
-|[struct](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/struct)|Um tipo de valor que encapsula um grupo de variáveis relacionadas.|
-|[typeof](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/typeof)|Obtém o tipo de um objeto.|
-|[var](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/var)|Declara uma variável local de tipo implícito.|
-|[value](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/value)|Referencia o valor que o código do cliente deseja atribuir a uma propriedade.|
-|[virtual](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/virtual)|Permite que um método seja substituído em uma classe derivada.|
+|[Em](/dotnet/csharp/language-reference/keywords/in-generic-modifier)|Permite que um parâmetro aceite um tipo menos derivado em uma interface genérica.|
+|[object](/dotnet/csharp/language-reference/keywords/object)|Um alias para o tipo Objeto no .NET Framework.|
+|[fora](/dotnet/csharp/language-reference/keywords/out)|Modificador de parâmetro ou declaração de parâmetro de tipo genérico.|
+|[override](/dotnet/csharp/language-reference/keywords/override)|Estende ou modifica a implementação de um membro herdado.|
+|[parcial](/dotnet/csharp/language-reference/keywords/partial-method)|Declara uma definição a ser dividida em vários arquivos ou separa uma definição de método de sua implementação.|
+|[leitura](/dotnet/csharp/language-reference/keywords/readonly)|Declara que um membro de classe pode ser atribuído somente no momento da declaração ou pelo construtor de classe.|
+|[ref](/dotnet/csharp/language-reference/keywords/ref)|Faz com que um argumento seja passado por referência, em vez de por valor.|
+|[set](/dotnet/csharp/language-reference/keywords/set)|Define um método acessor que define o valor de uma propriedade.|
+|[cadeia de caracteres](/dotnet/csharp/language-reference/keywords/string)|Alias para o tipo Cadeia de caracteres no .NET Framework.|
+|[struct](/dotnet/csharp/language-reference/keywords/struct)|Um tipo de valor que encapsula um grupo de variáveis relacionadas.|
+|[typeof](/dotnet/csharp/language-reference/keywords/typeof)|Obtém o tipo de um objeto.|
+|[var](/dotnet/csharp/language-reference/keywords/var)|Declara uma variável local de tipo implícito.|
+|[value](/dotnet/csharp/language-reference/keywords/value)|Referencia o valor que o código do cliente deseja atribuir a uma propriedade.|
+|[virtual](/dotnet/csharp/language-reference/keywords/virtual)|Permite que um método seja substituído em uma classe derivada.|
 
 <a name="interop"></a>
 
@@ -468,7 +468,7 @@ Para obter mais informações sobre essas técnicas, consulte [Visão geral da i
 
 ## <a name="further-reading"></a>Leitura adicional
 
-O [Guia de programação em C#](https://docs.microsoft.com/dotnet/csharp/programming-guide/) do MSDN é uma ótima maneira de começar a aprender a linguagem de programação C#, e você pode usar a [Referência de C#](https://docs.microsoft.com/dotnet/csharp/language-reference/) para pesquisar recursos específicos da linguagem C#.
+O [Guia de programação em C#](/dotnet/csharp/programming-guide/) do MSDN é uma ótima maneira de começar a aprender a linguagem de programação C#, e você pode usar a [Referência de C#](/dotnet/csharp/language-reference/) para pesquisar recursos específicos da linguagem C#.
 
 Da mesma forma que o conhecimento de Java trata-se tanto de familiaridade com as bibliotecas de classes Java quanto de conhecer a linguagem Java propriamente dita, o conhecimento prático do C# requer alguma familiaridade com o .NET Framework. O pacote de aprendizado [Migrar para C# e o .NET Framework, para desenvolvedores de Java](https://www.microsoft.com/download/details.aspx?id=6073) da Microsoft é uma boa maneira de saber mais sobre o .NET Framework de uma perspectiva de Java (proporcionando também uma compreensão mais profunda do C#).
 
@@ -481,6 +481,6 @@ Este artigo fornece uma introdução para o ambiente de programação C# do Xama
 ## <a name="related-links"></a>Links relacionados
 
 - [Visão geral da integração Java](~/android/platform/java-integration/index.md)
-- [Guia de programação C#](https://docs.microsoft.com/dotnet/csharp/programming-guide/)
-- [Referência do C#](https://docs.microsoft.com/dotnet/csharp/language-reference/index)
+- [Guia de programação C#](/dotnet/csharp/programming-guide/)
+- [Referência do C#](/dotnet/csharp/language-reference/index)
 - [Migrar para C# e o .NET Framework para desenvolvedores Java](https://www.microsoft.com/download/details.aspx?id=6073)

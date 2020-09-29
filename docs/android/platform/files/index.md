@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/23/2018
-ms.openlocfilehash: 746433293c52d7071a3289962ea021f716fd0cfe
-ms.sourcegitcommit: f7fe46c0236a7130b63a33d9d1670d5111582dd2
+ms.openlocfilehash: 69c99d6aa132bb5326085f752b9220054e9f3e69
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88186168"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453916"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>Armazenamento de arquivos e acesso com Xamarin. Android
 
@@ -81,7 +81,7 @@ Para maximizar o compartilhamento de código, os aplicativos Xamarin. Android (o
 
 ### <a name="reading-or-writing-to-files-on-internal-storage"></a>Leitura ou gravação em arquivos no armazenamento interno
 
-Qualquer uma das [APIs do C# para gravar](https://docs.microsoft.com/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file) em um arquivo é suficiente; Tudo o que é necessário é obter o caminho para o arquivo que está no diretório alocado para o aplicativo. É altamente recomendável que as versões assíncronas das APIs do .NET sejam usadas para minimizar os problemas que podem ser associados ao acesso ao arquivo que bloqueia o thread principal.
+Qualquer uma das [APIs do C# para gravar](/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file) em um arquivo é suficiente; Tudo o que é necessário é obter o caminho para o arquivo que está no diretório alocado para o aplicativo. É altamente recomendável que as versões assíncronas das APIs do .NET sejam usadas para minimizar os problemas que podem ser associados ao acesso ao arquivo que bloqueia o thread principal.
 
 Esse trecho de código é um exemplo de gravação de um inteiro em um arquivo de texto UTF-8 para o diretório de armazenamento interno de um aplicativo:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 43637d8592631b2732e5922544f52d91947dd3bd
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b4740b91b3d59a3c50696af06eec4ff82bbf9b1e
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73024291"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91455190"
 ---
 # <a name="touch-and-gestures-in-xamarinandroid"></a>Toque e gestos no Xamarin. Android
 
@@ -22,7 +22,7 @@ _As telas de toque em muitos dos dispositivos atuais permitem que os usuários i
 
 o iOS e o Android são semelhantes de como lidam com o Touch. Ambos podem dar suporte a vários pontos de contato diversos na tela e em gestos complexos. Este guia apresenta algumas das semelhanças em conceitos, bem como as particularidades de implementação de toque e gestos em ambas as plataformas.
 
-O Android usa um objeto `MotionEvent` para encapsular dados de toque e métodos no objeto de exibição para ouvir os toques.
+O Android usa um `MotionEvent` objeto para encapsular dados de toque e métodos no objeto de exibição para ouvir os toques.
 
 Além de capturar dados de toque, o iOS e o Android fornecem meios para interpretar padrões de toques em gestos. Esses reconhecedores de gesto podem, por sua vez, ser usados para interpretar comandos específicos do aplicativo, como uma rotação de uma imagem ou uma rodada de uma página. O Android fornece alguns gestos com suporte, bem como recursos para facilitar a adição de gestos personalizados complexos.
 
@@ -40,8 +40,8 @@ Este guia segue um formato semelhante para cada sistema operacional: primeiro, a
 
 Neste guia, examinamos o toque no Android. Para ambos os sistemas operacionais, aprendemos como habilitar o toque e como responder aos eventos de toque. Em seguida, aprendemos sobre gestos e alguns dos reconhecedores de gestos que o Android e o iOS fornecem para lidar com alguns dos cenários mais comuns. Examinamos como criar gestos personalizados e implementá-los em aplicativos. Uma explicação demonstra os conceitos e as APIs para cada sistema operacional em ação, e você também viu como controlar os dedos individuais.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Android Touch Start (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-touch-start)
-- [Final do Android Touch (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-touch-final)
-- [FingerPaint (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint)
+- [Android Touch Start (exemplo)](/samples/xamarin/monodroid-samples/applicationfundamentals-touch-start)
+- [Final do Android Touch (exemplo)](/samples/xamarin/monodroid-samples/applicationfundamentals-touch-final)
+- [FingerPaint (exemplo)](/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint)

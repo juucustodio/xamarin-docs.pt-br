@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: jonpryor
 ms.author: jopryo
 ms.date: 09/23/2020
-ms.openlocfilehash: 2d84152551b6c9ddfb2263dcd65e2def5ba20e33
-ms.sourcegitcommit: 38496cfd4d30fd40a011011f303a31de639bd699
+ms.openlocfilehash: 90efe2533f971180124d044ec39ddcf1591b9d36
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247249"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91455034"
 ---
 # <a name="build-items"></a>Compilar itens
 
@@ -128,7 +128,7 @@ Usuários mais avançados talvez queiram usar diferentes recursos em configuraç
 
 A ação de Build `AndroidResourceAnalysisConfig` marca um arquivo como um arquivo de configuração de nível de severidade para a ferramenta de diagnóstico de layout do Xamarin designer Android. Atualmente, isso é usado apenas no editor de layout e não em mensagens de compilação.
 
-Consulte a [documentação de análise de recursos do Android](https://aka.ms/androidresourceanalysis) para obter mais detalhes.
+Consulte a [documentação de análise de recursos do Android](../../user-interface/android-designer/diagnostics.md) para obter mais detalhes.
 
 Adicionado no Xamarin. Android 10,2.
 

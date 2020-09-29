@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/03/2018
-ms.openlocfilehash: fbd9fff6e7b63e86f0bba38f22025c5ea288f7c2
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 96c9e750238bce35d5c8c12dd2ceba6be7ab8fcc
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73027997"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454813"
 ---
 # <a name="profiling-android-apps"></a>Criação de perfil de aplicativos Android
 
@@ -37,7 +37,7 @@ O Android Studio 3.0 e posterior inclui uma ferramenta Android Profiler. Você p
 
 ### <a name="launching-a-xamarin-android-app-in-android-profiler"></a>Iniciar um aplicativo Xamarin Android no Android Profiler
 
-As etapas a seguir explicam como iniciar um aplicativo Xamarin Android na ferramenta Android Profiler do Android Studio. Nas capturas de tela de exemplo abaixo, o aplicativo [XamagonXuzzle](https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/) do Xamarin Forms é criado e analisado usando o Android Profiler:
+As etapas a seguir explicam como iniciar um aplicativo Xamarin Android na ferramenta Android Profiler do Android Studio. Nas capturas de tela de exemplo abaixo, o aplicativo [XamagonXuzzle](/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/) do Xamarin Forms é criado e analisado usando o Android Profiler:
 
 1. Nas opções de build do projeto do Android, desabilite **Usar Runtime Compartilhado**. Isso garante que o APK (pacote de aplicativo Android) seja compilado sem dependência do tempo de desenvolvimento compartilhado do runtime Mono.
 
@@ -48,7 +48,7 @@ As etapas a seguir explicam como iniciar um aplicativo Xamarin Android na ferram
 
 3. Abra a pasta do projeto e navegue até **bin/Debug**. Nessa pasta, localize a versão **Signed.apk** do aplicativo e copie-a em um local de fácil acesso (como a área de trabalho). Na captura de tela abaixo, o APK **com.companyname.XamagonXuzzle-Signed.apk** é localizado e copiado na área de trabalho:
 
-    [![Localização do arquivo APK assinado com depuração](profiling-images/vswin/02-locating-the-debug-apk-sml.png)](profiling-images/vswin/02-locating-the-debug-apk.png#lightbox)
+    [![Local do arquivo APK assinado de depuração](profiling-images/vswin/02-locating-the-debug-apk-sml.png)](profiling-images/vswin/02-locating-the-debug-apk.png#lightbox)
 
 4. Inicie o Android Studio e selecione **Criar perfil ou depurar APK**:
 
@@ -64,21 +64,21 @@ As etapas a seguir explicam como iniciar um aplicativo Xamarin Android na ferram
 
 7. Depois que o APK é carregado, o Android Studio exibe a seguinte tela de projeto para o APK. Clique com o botão direito do mouse no nome do aplicativo no modo de exibição de árvore à esquerda e selecione **Abrir Configurações de Módulo**:
 
-    [![Localização do item do menu Configurações do Módulo Aberto](profiling-images/vswin/06-open-module-settings-sml.png)](profiling-images/vswin/06-open-module-settings.png#lightbox)
+    [![Local do item de menu de configurações do módulo aberto](profiling-images/vswin/06-open-module-settings-sml.png)](profiling-images/vswin/06-open-module-settings.png#lightbox)
 
 8. Navegue até **Configurações do Projeto > Módulos**, selecione o nó **-Assinado** do aplicativo e, em seguida, clique em **&lt;Sem SDK&gt;**:
 
-    [![Navegando para a configuração SDK](profiling-images/vswin/07-project-settings-modules-sml.png)](profiling-images/vswin/07-project-settings-modules.png#lightbox)
+    [![Navegando para a configuração do SDK](profiling-images/vswin/07-project-settings-modules-sml.png)](profiling-images/vswin/07-project-settings-modules.png#lightbox)
 
 9. No menu suspenso **Módulo SDK**, selecione o nível do SDK do Android usado para compilar o aplicativo (neste exemplo, o nível da API 26 foi usado para compilar o **XamagonXuzzle**):
 
-    [![Definindo o nível de SDK do projeto](profiling-images/vswin/08-project-sdk-level-sml.png)](profiling-images/vswin/08-project-sdk-level.png#lightbox)
+    [![Definindo o nível do SDK do projeto](profiling-images/vswin/08-project-sdk-level-sml.png)](profiling-images/vswin/08-project-sdk-level.png#lightbox)
 
     Clique em **Aplicar** e em **OK** para salvar essa configuração.
 
 10. Inicie o criador de perfil, usando ícone da barra de ferramentas:
 
-    [![Localização do ícone da barra de ferramentas do profiler](profiling-images/vswin/09-launch-profiler-sml.png)](profiling-images/vswin/09-launch-profiler.png#lightbox)
+    [![Local do ícone da barra de ferramentas do profiler](profiling-images/vswin/09-launch-profiler-sml.png)](profiling-images/vswin/09-launch-profiler.png#lightbox)
 
 11. Selecione o destino de implantação para executar/criar perfil do aplicativo e clique em **OK**. O destino de implantação pode ser um dispositivo físico ou um dispositivo virtual em execução em um emulador. Neste exemplo, um dispositivo Nexus 5X é usado:
 
@@ -86,7 +86,7 @@ As etapas a seguir explicam como iniciar um aplicativo Xamarin Android na ferram
 
 12. Após iniciar o criador de perfil, levará alguns segundos para que ele se conecte ao dispositivo de implantação e ao processo do aplicativo. Enquanto ele estiver instalando o APK, o Android Profiler relatará **Nenhum dispositivo conectado** e **Nenhum processo depurável**.
 
-    [![O profiler instala o APK](profiling-images/vswin/11-no-connected-devices-sml.png)](profiling-images/vswin/11-no-connected-devices.png#lightbox)
+    [![O criador de perfil instala o APK](profiling-images/vswin/11-no-connected-devices-sml.png)](profiling-images/vswin/11-no-connected-devices.png#lightbox)
 
 13. Após alguns segundos, o Android Profiler concluirá a instalação do APK e iniciará o APK, relatando o nome do dispositivo e o nome do processo de aplicativo dos quais está sendo criado perfil (neste exemplo, **LGE Nexus 5X** e **com.companyname.XamagonXuzzle**, respectivamente):
 
@@ -94,11 +94,11 @@ As etapas a seguir explicam como iniciar um aplicativo Xamarin Android na ferram
 
 14. Depois que o dispositivo e o processo depurável são identificados, o Android Profiler inicia a criação de perfil do aplicativo:
 
-    [![Profiler é exibido para o aplicativo em execução](profiling-images/vswin/13-profiler-running-sml.png)](profiling-images/vswin/13-profiler-running.png#lightbox)
+    [![O criador de perfil exibe o aplicativo em execução](profiling-images/vswin/13-profiler-running-sml.png)](profiling-images/vswin/13-profiler-running.png#lightbox)
 
 15. Se você tocar no botão **RANDOMIZE** no **XamagonXuzzle** (fazendo com que ele mude e embaralhe os blocos), você verá o uso da CPU aumentar durante o intervalo do embaralhamento do aplicativo:
 
-    [![Uso da CPU quando o botão RANDOMIZE é tocado](profiling-images/vswin/14-tap-randomize-sml.png)](profiling-images/vswin/14-tap-randomize.png#lightbox)
+    [![Uso da CPU quando o botão aleatório é tocado](profiling-images/vswin/14-tap-randomize-sml.png)](profiling-images/vswin/14-tap-randomize.png#lightbox)
 
 ### <a name="using-the-android-profiler"></a>Usando o Android Profiler
 

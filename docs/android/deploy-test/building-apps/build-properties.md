@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: jonpryor
 ms.author: jopryo
 ms.date: 09/21/2020
-ms.openlocfilehash: 25d1e7ba7cb3e74cb4bfed170662a3859823dfc5
-ms.sourcegitcommit: 38496cfd4d30fd40a011011f303a31de639bd699
+ms.openlocfilehash: aeb0cca9ead1a0f0a3f5b1dec88b2470289cd589
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247252"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454930"
 ---
 # <a name="build-properties"></a>Propriedades de build
 
 As propriedades do MSBuild controlam o comportamento dos [destinos](~/android/deploy-test/building-apps/build-targets.md).
-Eles são especificados dentro do arquivo de projeto, por exemplo **MyApp. csproj**, em um [PropertyGroup do MSBuild](https://docs.microsoft.com/visualstudio/msbuild/propertygroup-element-msbuild).
+Eles são especificados dentro do arquivo de projeto, por exemplo **MyApp. csproj**, em um [PropertyGroup do MSBuild](/visualstudio/msbuild/propertygroup-element-msbuild).
 
 ## <a name="adbtarget"></a>AdbTarget
 
@@ -353,7 +353,7 @@ Habilita a geração de [código de layout-behind](https://github.com/xamarin/xa
 
 ## <a name="androidhttpclienthandlertype"></a>AndroidHttpClientHandlerType
 
-Controla a `System.Net.Http.HttpMessageHandler` implementação padrão que será usada pelo `System.Net.Http.HttpClient` construtor padrão. O valor é um nome de tipo qualificado por assembly de uma `HttpMessageHandler` subclasse, adequado para uso com [`System.Type.GetType(string)`](https://docs.microsoft.com/dotnet/api/system.type.gettype#System_Type_GetType_System_String_) .
+Controla a `System.Net.Http.HttpMessageHandler` implementação padrão que será usada pelo `System.Net.Http.HttpClient` construtor padrão. O valor é um nome de tipo qualificado por assembly de uma `HttpMessageHandler` subclasse, adequado para uso com [`System.Type.GetType(string)`](/dotnet/api/system.type.gettype#System_Type_GetType_System_String_) .
 Os valores mais comuns para essa propriedade são:
 
 - `Xamarin.Android.Net.AndroidClientHandler`: Use as APIs Java do Android para executar solicitações de rede. Isso permite acessar as URLs TLS 1.2 quando a versão do Android subjacente dá suporte ao TLS 1.2. Somente versões Android 5.0 e posteriores fornecem suporte confiável ao TLS 1.2 por meio de Java.
@@ -791,7 +791,7 @@ permissão para que um depurador possa ser anexado ao processo. Um aplicativo é
 
 ## <a name="debugtype"></a>DebugType
 
-Especifica o [tipo de símbolos de depuração](https://docs.microsoft.com/visualstudio/msbuild/csc-task) a serem gerados como parte da compilação, o que também afeta se o aplicativo é depurável. Os valores possíveis incluem:
+Especifica o [tipo de símbolos de depuração](/visualstudio/msbuild/csc-task) a serem gerados como parte da compilação, o que também afeta se o aplicativo é depurável. Os valores possíveis incluem:
 
 - **Full**: todos os símbolos são gerados. Se o [`DebugSymbols`](#debugsymbols)
   A Propriedade MSBuild também é `True` , então, o pacote de aplicativos é depurável.
@@ -909,7 +909,7 @@ O valor padrão é `Resources`. Altere isso para `res` para a estrutura do proje
 Uma propriedade booliana que controla se os `.mSYM` artefatos são criados para uso posterior com `mono-symbolicate` , para extrair &ldquo; &rdquo; informações de nome de arquivo real e de número de linha dos rastreamentos de pilha de liberação.
 
 Isso é verdadeiro por padrão para &ldquo; aplicativos de versão &rdquo; que têm símbolos de depuração habilitados: [`$(EmbedAssembliesIntoApk)`](#embedassembliesintoapk) é verdadeiro, [`$(DebugSymbols)`](~/android/deploy-test/building-apps/build-properties.md#debugsymbols)
-é verdadeiro e [`$(Optimize)`](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties)
+é verdadeiro e [`$(Optimize)`](/visualstudio/msbuild/common-msbuild-project-properties)
 é verdadeiro.
 
 Adicionado no Xamarin.Android 7.1.

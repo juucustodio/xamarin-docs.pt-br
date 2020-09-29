@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 63365ebc12089ced7de621b3a510996fa66119ce
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: e49c6d92d4c6bcabf45047321e183fe36d19096b
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571955"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454709"
 ---
 # <a name="xamarinandroid-performance"></a>Desempenho do Xamarin.Android
 
@@ -200,15 +200,15 @@ O tempo de vida de um serviço pode ser limitado ao usar um `IntentService`, que
 
 Durante o ciclo de vida do aplicativo, o [`OnTrimMemory`](xref:Android.App.Activity.OnTrimMemory*) retorno de chamada fornece uma notificação quando a memória do dispositivo está baixa. Esse retorno de chamada deve ser implementado para detectar as seguintes notificações de nível de memória:
 
-- [`TrimMemoryRunningModerate`](xref:Android.Content.ComponentCallbacks2.TrimMemoryRunningModerate)– o aplicativo *pode* desejar liberar alguns recursos desnecessários.
-- [`TrimMemoryRunningLow`](xref:Android.Content.ComponentCallbacks2.TrimMemoryRunningLow)– o aplicativo *deve* liberar recursos desnecessários.
-- [`TrimMemoryRunningCritical`](xref:Android.Content.ComponentCallbacks2.TrimMemoryRunningCritical)– o aplicativo *deve* liberar o máximo possível de processos não críticos.
+- [`TrimMemoryRunningModerate`](xref:Android.Content.ComponentCallbacks2.TrimMemoryRunningModerate) – o aplicativo *pode* desejar liberar alguns recursos desnecessários.
+- [`TrimMemoryRunningLow`](xref:Android.Content.ComponentCallbacks2.TrimMemoryRunningLow) – o aplicativo *deve* liberar recursos desnecessários.
+- [`TrimMemoryRunningCritical`](xref:Android.Content.ComponentCallbacks2.TrimMemoryRunningCritical) – o aplicativo *deve* liberar o máximo possível de processos não críticos.
 
 Além disso, quando o processo do aplicativo é armazenado em cache, as seguintes notificações de nível de memória podem ser recebidas pelo [`OnTrimMemory`](xref:Android.App.Activity.OnTrimMemory*) retorno de chamada:
 
-- [`TrimMemoryBackground`](xref:Android.Content.ComponentCallbacks2.TrimMemoryBackground)– recursos de liberação que podem ser recriados de forma rápida e eficiente se o usuário retornar ao aplicativo.
-- [`TrimMemoryModerate`](xref:Android.Content.ComponentCallbacks2.TrimMemoryModerate)– a liberação de recursos pode ajudar o sistema a manter os outros processos em cache para melhorar o desempenho geral.
-- [`TrimMemoryComplete`](xref:Android.Content.ComponentCallbacks2.TrimMemoryComplete)– o processo do aplicativo será encerrado em breve se mais memória não for recuperada em breve.
+- [`TrimMemoryBackground`](xref:Android.Content.ComponentCallbacks2.TrimMemoryBackground) – recursos de liberação que podem ser recriados de forma rápida e eficiente se o usuário retornar ao aplicativo.
+- [`TrimMemoryModerate`](xref:Android.Content.ComponentCallbacks2.TrimMemoryModerate) – a liberação de recursos pode ajudar o sistema a manter os outros processos em cache para melhorar o desempenho geral.
+- [`TrimMemoryComplete`](xref:Android.Content.ComponentCallbacks2.TrimMemoryComplete) – o processo do aplicativo será encerrado em breve se mais memória não for recuperada em breve.
 
 As notificações devem ser respondidas liberando recursos com base no nível recebido.
 
@@ -232,7 +232,7 @@ Para obter mais informações, confira [Otimizar os recursos de imagem](~/cross-
 
 ## <a name="dispose-of-unused-image-resources"></a>Descartar os Recursos de Imagem não Utilizados
 
-Para salvar no uso de memória, é uma boa ideia descartar recursos de imagem grandes, que não são mais utilizados. No entanto, é importante garantir que as imagens sejam descartadas corretamente. Em vez de usar uma invocação `.Dispose()` explícita, é possível aproveitar as instruções [using](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/using-statement) para garantir o uso correto dos objetos `IDisposable`. 
+Para salvar no uso de memória, é uma boa ideia descartar recursos de imagem grandes, que não são mais utilizados. No entanto, é importante garantir que as imagens sejam descartadas corretamente. Em vez de usar uma invocação `.Dispose()` explícita, é possível aproveitar as instruções [using](/dotnet/csharp/language-reference/keywords/using-statement) para garantir o uso correto dos objetos `IDisposable`. 
 
 Por exemplo, a classe [Bitmap](xref:Android.Graphics.Bitmap) implementa `IDisposable`. O encapsulamento da instanciação de um objeto `BitMap` em um bloco `using` garante que ele será descartado corretamente na saída do bloco:
 
@@ -264,6 +264,6 @@ Ao usar a [`ProgressDialog`](xref:Android.App.ProgressDialog) classe (ou qualque
 
 Esse artigo descreve e discute técnicas para aumentar o desempenho dos aplicativos criados com o Xamarin.Android. Coletivamente, essas técnicas podem reduzir de forma considerável a quantidade de trabalho que está sendo executado por uma CPU e a quantidade de memória consumida por um aplicativo.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Desempenho de plataforma cruzada](~/cross-platform/deploy-test/memory-perf-best-practices.md)

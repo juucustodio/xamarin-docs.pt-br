@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 09/11/2020
-ms.openlocfilehash: 6a8e6b9e03cafe2ef40ae41114831b727010d12a
-ms.sourcegitcommit: 38496cfd4d30fd40a011011f303a31de639bd699
+ms.openlocfilehash: d89f686be99dc8ae8d1aada12dcbe94d857424d7
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91246901"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454956"
 ---
 # <a name="build-process"></a>Processo de build
 
@@ -141,7 +141,7 @@ Os pontos de extensão incluem:
 - [' $ (AfterGenerateAndroidManifest)](~/android/deploy-test/building-apps/build-properties.md#aftergenerateandroidmanifest)
 - [' $ (BeforeGenerateAndroidManifest)](~/android/deploy-test/building-apps/build-properties.md#beforegenerateandroidmanifest)
 
-Uma advertência sobre como estender o processo de compilação: se não for escrito corretamente, as extensões de compilação poderão afetar o desempenho da compilação, especialmente se forem executadas em cada compilação. É altamente recomendável que você leia a [documentação](https://docs.microsoft.com/visualstudio/msbuild/msbuild) do MSBuild antes de implementar essas extensões.
+Uma advertência sobre como estender o processo de compilação: se não for escrito corretamente, as extensões de compilação poderão afetar o desempenho da compilação, especialmente se forem executadas em cada compilação. É altamente recomendável que você leia a [documentação](/visualstudio/msbuild/msbuild) do MSBuild antes de implementar essas extensões.
 
 ## <a name="target-definitions"></a>Definições de destino
 
