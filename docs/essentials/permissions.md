@@ -9,12 +9,12 @@ ms.date: 09/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 570e549af3f0c020087e65eec0f5edfe3807719b
-ms.sourcegitcommit: 744f977b0595f489c592e29c8a3ba548fde02b6f
+ms.openlocfilehash: 12631abacc56edf88d375d4be89e71a9a4588d03
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91410682"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436368"
 ---
 # <a name="no-locxamarinessentials-permissions"></a>Xamarin.Essentials: Permissões
 
@@ -199,7 +199,7 @@ Em seguida, você pode chamar sua nova permissão no projeto do Android.
 await Permissions.RequestAsync<ReadWriteStoragePermission>();
 ```
 
-Se você quisesse chamar essa API de seu código compartilhado, poderia criar uma interface e usar um [serviço de dependência](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/dependency-service/) para registrar e obter a implementação.
+Se você quisesse chamar essa API de seu código compartilhado, poderia criar uma interface e usar um [serviço de dependência](../xamarin-forms/app-fundamentals/dependency-service/index.md) para registrar e obter a implementação.
 
 ```csharp
 public interface IReadWritePermission
@@ -244,19 +244,19 @@ if (status != PermissionStatus.Granted)
 
 As permissões devem ter os atributos correspondentes definidos no arquivo de manifesto do Android. O padrão de status de permissão é negado.
 
-Leia mais sobre as [permissões na documentação do Xamarin. Android](https://docs.microsoft.com/xamarin/android/app-fundamentals/permissions) .
+Leia mais sobre as [permissões na documentação do Xamarin. Android](../android/app-fundamentals/permissions.md) .
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
 As permissões devem ter uma cadeia de caracteres correspondente no `Info.plist` arquivo. Uma vez que uma permissão é solicitada e um pop-up não será mais exibido se você solicitar a permissão uma segunda vez. Você deve solicitar que o usuário ajuste manualmente a configuração na tela de configurações de aplicativos no iOS. O padrão de status de permissão é desconhecido.
 
-Leia mais sobre a documentação de [recursos de privacidade e segurança do IOS](https://docs.microsoft.com/xamarin/ios/app-fundamentals/security-privacy) .
+Leia mais sobre a documentação de [recursos de privacidade e segurança do IOS](../ios/app-fundamentals/security-privacy.md) .
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
 As permissões devem ter recursos de correspondência declarados no manifesto do pacote. O padrão de status de permissão é desconhecido na maioria das instâncias.
 
-Leia mais sobre a documentação da [declaração de capacidade do aplicativo](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) .
+Leia mais sobre a documentação da [declaração de capacidade do aplicativo](/windows/uwp/packaging/app-capability-declarations) .
 
 --------------
 

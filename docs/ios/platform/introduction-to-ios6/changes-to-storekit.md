@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 25de402742978ed9d2a4e16e87d786a014f596a0
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 85e6be722b0d2ddbd2c63955bd19b2907e062156
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933766"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433009"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>Alterações no StoreKit no iOS 6
 
@@ -55,10 +55,10 @@ Algumas opções dentro do `SKStoreProductViewController` ainda forçarão o usu
 
 A API para mostrar um produto em qualquer aplicativo é simples: requer apenas que você crie e exiba um `SKStoreProductViewController` . Siga estas etapas para criar e mostrar um produto:
 
-1. Crie um `StoreProductParameters` objeto para passar parâmetros para o controlador de exibição, incluindo o `productId` no construtor.
+1. Crie um  `StoreProductParameters` objeto para passar parâmetros para o controlador de exibição, incluindo o `productId` no construtor.
 1. Crie uma instância do `SKProductViewController` . Atribua-o a um campo de nível de classe.
-1. Atribua um manipulador ao evento do controlador de exibição `Finished` , que deve ignorar o controlador de exibição. Esse evento é chamado quando o usuário pressiona cancelar; ou, de outra forma, finaliza uma transação dentro do controlador de exibição.
-1. Chame o `LoadProduct` método passando o `StoreProductParameters` e um manipulador de conclusão. O manipulador de conclusão deve verificar se a solicitação do produto foi bem-sucedida e, em caso afirmativo, apresentar as `SKProductViewController` modalidades. O tratamento de erros apropriado deve ser adicionado caso o produto não possa ser recuperado.
+1. Atribua um manipulador ao evento do controlador de exibição  `Finished` , que deve ignorar o controlador de exibição. Esse evento é chamado quando o usuário pressiona cancelar; ou, de outra forma, finaliza uma transação dentro do controlador de exibição.
+1. Chame o  `LoadProduct` método passando o  `StoreProductParameters` e um manipulador de conclusão. O manipulador de conclusão deve verificar se a solicitação do produto foi bem-sucedida e, em caso afirmativo, apresentar as  `SKProductViewController` modalidades. O tratamento de erros apropriado deve ser adicionado caso o produto não possa ser recuperado.
 
 ### <a name="example"></a>Exemplo
 
@@ -107,7 +107,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (6,0)) {
 }
 ```
 
-### <a name="errors"></a>Erros
+### <a name="errors"></a>Errors
 
 O seguinte erro ocorrerá se a ID da Apple usada não for válida, o que pode ser confuso, pois implica um problema de rede ou de autenticação de algum tipo.
 
@@ -144,7 +144,7 @@ Estes são alguns exemplos:
 
 A Apple fornece aos parceiros aprovados um despejo de dados completo de todos os seus produtos, na forma de arquivos simples prontos para o banco de dado para download. Se você se qualifica para acesso ao feed de parceiros corporativos, a ID da Apple para qualquer produto pode ser encontrada nesse conjunto de código.
 
-Muitos usuários do feed de parceiros corporativos são membros do [programa afiliado](https://www.apple.com/itunes/affiliates) que permite que as comissões sejam obtidas em vendas de produtos. `SKStoreProductViewController`o não oferece suporte a IDs de afiliação (no momento da gravação).
+Muitos usuários do feed de parceiros corporativos são membros do [programa afiliado](https://www.apple.com/itunes/affiliates) que permite que as comissões sejam obtidas em vendas de produtos. `SKStoreProductViewController` o não oferece suporte a IDs de afiliação (no momento da gravação).
 
 ### <a name="direct-product-links"></a>Links diretos de produtos
 
@@ -192,7 +192,7 @@ Usar a App Store para fornecer compras no aplicativo *com conteúdo hospedado* r
 - **iTunes Connect** – você *deve* ter fornecido suas informações bancárias e fiscais para a Apple para que elas possam remeter os fundos coletados em seu nome. Em seguida, você pode configurar produtos para vender e configurar contas de usuário de área restrita para testar a compra.  _Você também deve configurar o conteúdo hospedado para os produtos não consumíveis que você deseja hospedar com a Apple_.
 - **portal de provisionamento do IOS** – criando um identificador de pacote e habilitando o acesso à App Store para seu aplicativo, como você faria para qualquer aplicativo que dê suporte à compra no aplicativo.
 - **Kit de loja** – adicionando código ao seu aplicativo para exibir produtos, comprar produtos e restaurar transações.  _No kit de armazenamento do iOS 6 também gerenciará o download do conteúdo do produto, em segundo plano, com atualizações de progresso._
-- **Código personalizado** – para controlar as compras feitas pelos clientes e fornecer os produtos ou serviços que eles compraram. Utilize novas classes do kit de armazenamento do iOS 6 como `SKDownload` para recuperar o conteúdo hospedado pela Apple.
+- **Código personalizado** – para controlar as compras feitas pelos clientes e fornecer os produtos ou serviços que eles compraram. Utilize novas classes do kit de armazenamento do iOS 6 como  `SKDownload` para recuperar o conteúdo hospedado pela Apple.
 
 As seções a seguir explicam como implementar conteúdo hospedado, desde a criação e o carregamento do pacote até o gerenciamento do processo de compra e de download, usando o código de exemplo deste artigo.
 
@@ -362,7 +362,7 @@ As seguintes classes foram adicionadas ou alteradas para dar suporte ao conteúd
 
 - **SKDownload** – nova classe que representa um download em andamento. A API permite mais de um por produto, no entanto, inicialmente, apenas um foi implementado.
 - **SKProduct** – novas propriedades adicionadas: `Downloadable` , `ContentVersion` , `ContentLengths` matriz.
-- **SKPaymentTransaction** – nova propriedade adicionada: `Downloads` , que contém uma coleção de `SKDownload` objetos se este produto tem conteúdo hospedado disponível para download.
+- **SKPaymentTransaction** – nova propriedade adicionada: `Downloads` , que contém uma coleção de  `SKDownload` objetos se este produto tem conteúdo hospedado disponível para download.
 - **SKPaymentQueue** – novo método adicionado: `StartDownloads` . Chame esse método com `SKDownload` objetos para buscar seu conteúdo hospedado. O download pode ocorrer em segundo plano.
 - **SKPaymentTransactionObserver** – novo método: `UpdateDownloads` . O kit de loja chama esse método com informações de progresso sobre as operações de download atuais.
 
@@ -371,7 +371,7 @@ Detalhes da nova `SKDownload` classe:
 - **Progresso** – um valor entre 0-1 que você pode usar para exibir um indicador de porcentagem concluída para o usuário. Não use Progress = = 1 para detectar se o download está concluído, verifique o estado = = concluído.
 - **Timecontinueing** – estimativa do tempo de download restante, em segundos. -1 significa que ainda está calculando a estimativa.
 - **Estado** – ativo, aguardando, concluído, falha, pausado, cancelado.
-- **ContentURL** – local do arquivo em que o conteúdo foi colocado no disco, no `Cache` diretório. Preenchido apenas depois que o download for concluído.
+- **ContentURL** – local do arquivo em que o conteúdo foi colocado no disco, no  `Cache` diretório. Preenchido apenas depois que o download for concluído.
 - **Erro** – Verifique essa propriedade se o estado falhar.
 
 As interações entre as classes no código de exemplo são mostradas neste diagrama (o código específico para compras de conteúdo hospedado é mostrado em verde):
@@ -521,7 +521,7 @@ Este artigo introduziu dois novos recursos do Store Kit no iOS6: comprando o iTu
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [StoreKit (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit)
+- [StoreKit (exemplo)](/samples/xamarin/ios-samples/storekit)
 - [Compras no aplicativo](~/ios/platform/in-app-purchasing/index.md)
 - [Referência da estrutura do StoreKit](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/StoreKit_Collection/_index.html)
 - [Referência de classe SKStoreProductViewController](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/SKITunesProductViewController_Ref/SKStoreProductViewController.html)

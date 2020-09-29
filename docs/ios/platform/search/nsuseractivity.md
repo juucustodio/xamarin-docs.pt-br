@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: bbd3d1663c3d796768095a12e5048b18f447fa7a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 29ccf115facf9a086db473301f7dfb548a80dc9f
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937014"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431108"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Pesquisar com NSUserActivity no Xamarin. iOS
 
-`NSUserActivity`foi introduzido no iOS 8 e é usado para fornecer os dados para entrega.
+`NSUserActivity` foi introduzido no iOS 8 e é usado para fornecer os dados para entrega.
 Ele permite que você crie atividades em partes específicas de seu aplicativo que podem ser passadas para outra instância do seu aplicativo em execução em um dispositivo iOS diferente. O dispositivo receptor pode continuar a atividade iniciada no dispositivo anterior, selecionando o direito onde o usuário parou. Para obter mais informações sobre como usar a entrega, consulte nossa [introdução à documentação de entrega](~/ios/platform/handoff.md) .
 
 Novo no iOS 9, `NSUserActivity` pode ser indexado (de forma pública e privada) e pesquisado na pesquisa de destaque e no Safari. Ao marcar um `NSUserActivity` como pesquisável e adicionar metadados indexáveis, a atividade pode ser listada nos resultados da pesquisa no dispositivo IOS.
@@ -27,14 +27,14 @@ Se o usuário selecionar um resultado de pesquisa que pertença a uma atividade 
 
 As seguintes propriedades do `NSUserActivity` são usadas para dar suporte à pesquisa de aplicativo:
 
-- `EligibleForHandoff`– Se `true` , essa atividade pode ser usada em uma operação de entrega.
-- `EligibleForSearch`– Se `true` , essa atividade será adicionada ao índice no dispositivo e apresentada nos resultados da pesquisa.
-- `EligibleForPublicIndexing`– Se `true` , essa atividade será adicionada ao índice baseado na nuvem da Apple e apresentada aos usuários (por meio de pesquisa) que ainda não instalaram seu aplicativo em seu dispositivo IOS. Consulte a seção [indexação de pesquisa pública](#public-search-indexing) abaixo para obter mais detalhes.
-- `Title`– Fornece um título para sua atividade e é exibido nos resultados da pesquisa. Os usuários também podem pesquisar o texto do título em si.
-- `Keywords`– É uma matriz de cadeias de caracteres usada para descrever sua atividade que será indexada e tornada pesquisável pelo usuário final.
-- `ContentAttributeSet`– É `CSSearchableItemAttributeSet` usado para descrever ainda mais sua atividade em detalhes e fornecer conteúdo avançado nos resultados da pesquisa.
-- `ExpirationDate`– Se você quiser que uma atividade seja mostrada apenas até uma determinada data, você pode fornecer essa data aqui.
-- `WebpageURL`– Se a atividade puder ser exibida na Web ou se seu aplicativo der suporte a links profundos do Safari, você poderá definir o link para visitar aqui.
+- `EligibleForHandoff` – Se `true` , essa atividade pode ser usada em uma operação de entrega.
+- `EligibleForSearch` – Se `true` , essa atividade será adicionada ao índice no dispositivo e apresentada nos resultados da pesquisa.
+- `EligibleForPublicIndexing` – Se `true` , essa atividade será adicionada ao índice baseado na nuvem da Apple e apresentada aos usuários (por meio de pesquisa) que ainda não instalaram seu aplicativo em seu dispositivo IOS. Consulte a seção [indexação de pesquisa pública](#public-search-indexing) abaixo para obter mais detalhes.
+- `Title` – Fornece um título para sua atividade e é exibido nos resultados da pesquisa. Os usuários também podem pesquisar o texto do título em si.
+- `Keywords` – É uma matriz de cadeias de caracteres usada para descrever sua atividade que será indexada e tornada pesquisável pelo usuário final.
+- `ContentAttributeSet` – É `CSSearchableItemAttributeSet` usado para descrever ainda mais sua atividade em detalhes e fornecer conteúdo avançado nos resultados da pesquisa.
+- `ExpirationDate` – Se você quiser que uma atividade seja mostrada apenas até uma determinada data, você pode fornecer essa data aqui.
+- `WebpageURL` – Se a atividade puder ser exibida na Web ou se seu aplicativo der suporte a links profundos do Safari, você poderá definir o link para visitar aqui.
 
 ## <a name="nsuseractivity-quickstart"></a>Início rápido do NSUserActivity
 
@@ -168,7 +168,7 @@ Ao adotar a pesquisa de aplicativo via `NSUserActivity` em seu aplicativo, você
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Amostras do iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [Amostras do iOS 9](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [iOS 9 para desenvolvedores](https://developer.apple.com/ios/pre-release/)
 - [iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Guia de programação de pesquisa de aplicativo](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)

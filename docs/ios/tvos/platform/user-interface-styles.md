@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: e779b874cda016a0cd6cc0444ff42a761ee7483e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 793a82b7bb88f3e0c0a233c8c18c2d90f741b137
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934674"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434766"
 ---
 # <a name="tvos-user-interface-styles-in-xamarin"></a>Estilos de interface do usuário tvOS no Xamarin
 
@@ -81,8 +81,8 @@ Se o desenvolvedor mudar a cor do texto manualmente (no storyboard ou no código
 
 Para dar suporte aos temas claros e escuros em um aplicativo tvOS 10, a Apple adicionou dois novos efeitos de desfoque. Esses novos efeitos ajustarão automaticamente o desfoque com base no tema da interface de usuário que o usuário selecionou da seguinte maneira:
 
-- `UIBlurEffectStyleRegular`-Usa um desfoque claro no tema claro e um desfoque escuro no tema escuro.
-- `UIBlurEffectStyleProminent`-Usa um desfoque extra-claro no tema claro e um desfoque extra escuro no tema escuro.
+- `UIBlurEffectStyleRegular` -Usa um desfoque claro no tema claro e um desfoque escuro no tema escuro.
+- `UIBlurEffectStyleProminent` -Usa um desfoque extra-claro no tema claro e um desfoque extra escuro no tema escuro.
 
 <a name="Working-with-Trait-Collections"></a>
 
@@ -209,5 +209,5 @@ Este artigo abordou os temas de interface do usuário leves e escuros que a Appl
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Exemplos do tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [O que há de novo no tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/09/2016
-ms.openlocfilehash: 6588747fb806c858f5bc7b024980ae0d0771c60e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: cace68a1b85a4404774ca88ec697d419920d05cb
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938782"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432897"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Usando o iCloud com Xamarin. iOS
 
@@ -45,13 +45,13 @@ Os aplicativos devem ser configurados para usar o iCloud no [portal de provision
 
 Para configurar corretamente um aplicativo para acessar o iCloud:
 
-- **Localize seu TeamID** – faça logon no [Developer.Apple.com](https://developer.apple.com) e visite o **centro de membros > sua conta > Resumo da conta de desenvolvedor** para obter sua ID de equipe (ou ID individual para desenvolvedores únicos). Será uma cadeia de 10 caracteres ( **A93A5CM278** , por exemplo)-esta parte do "identificador do contêiner".
+- **Localize seu TeamID** – faça logon no  [Developer.Apple.com](https://developer.apple.com) e visite o  **centro de membros > sua conta > Resumo da conta de desenvolvedor** para obter sua ID de equipe (ou ID individual para desenvolvedores únicos). Será uma cadeia de 10 caracteres ( **A93A5CM278** , por exemplo)-esta parte do "identificador do contêiner".
 
-- **Criar uma nova ID do aplicativo** – para criar uma ID de aplicativo, siga as etapas descritas na [seção provisionamento para tecnologias de armazenamento do guia de provisionamento de dispositivos](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)e certifique-se de verificar o **icloud** como um serviço permitido:
+- **Criar uma nova ID do aplicativo** – para criar uma ID de aplicativo, siga as etapas descritas na  [seção provisionamento para tecnologias de armazenamento do guia de provisionamento de dispositivos](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)e certifique-se de verificar o **icloud** como um serviço permitido:
 
  [![Verifique o iCloud como um serviço permitido](introduction-to-icloud-images/icloud-sml.png)](introduction-to-icloud-images/icloud.png#lightbox)
 
-- **Criar um novo perfil de provisionamento** -para criar um perfil de provisionamento, siga as etapas descritas no guia de provisionamento de [dispositivos](~/ios/get-started/installation/device-provisioning/index.md#provisioning-your-device) .
+- **Criar um novo perfil de provisionamento** -para criar um perfil de provisionamento, siga as etapas descritas no guia de provisionamento de  [dispositivos](~/ios/get-started/installation/device-provisioning/index.md#provisioning-your-device) .
 
 - **Adicione o identificador de contêiner a direitos. plist** -o formato do identificador de contêiner é `TeamID.BundleID` . Para obter mais informações, consulte o guia [trabalhando com direitos](~/ios/deploy-test/provisioning/entitlements.md) .
 
@@ -275,7 +275,7 @@ O modelo de dados, nesse caso, é muito simples, um único campo de texto. Seu m
 
 ### <a name="finding-and-opening-icloud-documents"></a>Localizando e abrindo documentos do iCloud
 
-O aplicativo de exemplo lida apenas com um único arquivo-test.txt-portanto, o código em **AppDelegate.cs** cria um `NSPredicate` e `NSMetadataQuery` para procurar especificamente o nome desse filename. O `NSMetadataQuery` é executado de forma assíncrona e envia uma notificação quando ela é concluída. `DidFinishGathering`é chamado pelo observador de notificação, interrompe a consulta e chama loaddocument, que usa o `UIDocument.Open` método com um manipulador de conclusão para tentar carregar o arquivo e exibi-lo em um `MonkeyDocumentViewController` .
+O aplicativo de exemplo lida apenas com um único arquivo-test.txt-portanto, o código em **AppDelegate.cs** cria um `NSPredicate` e `NSMetadataQuery` para procurar especificamente o nome desse filename. O `NSMetadataQuery` é executado de forma assíncrona e envia uma notificação quando ela é concluída. `DidFinishGathering` é chamado pelo observador de notificação, interrompe a consulta e chama loaddocument, que usa o `UIDocument.Open` método com um manipulador de conclusão para tentar carregar o arquivo e exibi-lo em um `MonkeyDocumentViewController` .
 
 ```csharp
 string monkeyDocFilename = "test.txt";
@@ -341,7 +341,7 @@ void LoadDocument (NSMetadataQuery metadataQuery)
 
 A exibição de um UIDocument não deve ser diferente de qualquer outra classe de modelo – as propriedades são exibidas nos controles da interface do usuário, possivelmente editadas pelo utilizador e gravadas novamente no modelo.
 
-No exemplo **iCloudUIDoc\MonkeyDocumentViewController.cs** , exibe o texto MonkeyDocument em um `UITextView` . `ViewDidLoad`Escuta a notificação enviada no `MonkeyDocument.LoadFromContents` método. `LoadFromContents`é chamado quando o iCloud tem novos dados para o arquivo, para que a notificação indique que o documento foi atualizado.
+No exemplo **iCloudUIDoc\MonkeyDocumentViewController.cs** , exibe o texto MonkeyDocument em um `UITextView` . `ViewDidLoad` Escuta a notificação enviada no `MonkeyDocument.LoadFromContents` método. `LoadFromContents` é chamado quando o iCloud tem novos dados para o arquivo, para que a notificação indique que o documento foi atualizado.
 
 ```csharp
 NSNotificationCenter.DefaultCenter.AddObserver (this,
@@ -427,7 +427,7 @@ Por fim, incluía uma breve discussão sobre como a adição do backup do iCloud
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Introdução ao iCloud (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/introductiontoicloud)
+- [Introdução ao iCloud (exemplo)](/samples/xamarin/ios-samples/introductiontoicloud)
 - [Código de exemplo do seminário do iCloud](https://github.com/xamarin/Seminars/tree/master/2012-03-22-iCloud)
 - [Slides do seminário do iCloud](https://www.slideshare.net/Xamarin/using-icloud-with-monotouch)
 - [NSUbiquitousKeyValueStore do iCloud](https://developer.apple.com/library/prerelease/ios/)

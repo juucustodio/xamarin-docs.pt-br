@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/02/2017
-ms.openlocfilehash: c8fd877c6addac7dd865d8464e24a455b2f1aa88
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 67638a261cd9a6e8c356924d47ea4adb4eae6a80
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573931"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430997"
 ---
 # <a name="macos-apis-for-xamarinmac-developers"></a>APIs do macOS para desenvolvedores do Xamarin. Mac
 
@@ -31,12 +31,12 @@ Por muito tempo desenvolvendo com o Xamarin. Mac, você pode imaginar, ler e esc
 A declaração pode ser lida da esquerda para a direita:
 
 - O `-` prefixo significa que ele é um método de instância (não estático). + significa que ele é um método de classe (estático)
-- `(BOOL)`é o tipo de retorno (bool em C#)
-- `canDragRowsWithIndexes`é a primeira parte do nome.
-- `(NSIndexSet *)rowIndexes`é o primeiro param e com seu tipo. O primeiro parâmetro está no formato:`(Type) pararmName`
-- `atPoint:(NSPoint)mouseDownPoint`é o segundo param e seu tipo. Cada parâmetro após o primeiro é o formato:`selectorPart:(Type) pararmName`
+- `(BOOL)` é o tipo de retorno (bool em C#)
+- `canDragRowsWithIndexes` é a primeira parte do nome.
+- `(NSIndexSet *)rowIndexes` é o primeiro param e com seu tipo. O primeiro parâmetro está no formato: `(Type) pararmName`
+- `atPoint:(NSPoint)mouseDownPoint` é o segundo param e seu tipo. Cada parâmetro após o primeiro é o formato: `selectorPart:(Type) pararmName`
 - O nome completo desse seletor de mensagem é: `canDragRowsWithIndexes:atPoint:` . Observe que `:` , no final, é importante.
-- A ligação real do Xamarin. Mac C# é:`bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
+- A ligação real do Xamarin. Mac C# é: `bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
 
 Essa invocação de seletor pode ser lida da mesma maneira:
 
@@ -45,7 +45,7 @@ Essa invocação de seletor pode ser lida da mesma maneira:
 ```
 
 - A instância `v` está tendo seu `canDragRowsWithIndexes:atPoint` seletor chamado com dois parâmetros `set` e `point` , passado.
-- No C#, a invocação do método tem esta aparência:`x.CanDragRows (set, point);`
+- No C#, a invocação do método tem esta aparência: `x.CanDragRows (set, point);`
 
 <a name="finding_selector"></a>
 
@@ -56,8 +56,8 @@ Agora que você encontrou o seletor Objective-C que precisa invocar, a próxima 
 1. Use a lista de preenchimento automático para verificar rapidamente se há algo com o mesmo nome. Como sabemos que é uma instância do `NSTableView` , você pode digitar:
 
     - `NSTableView x;`
-    - `x.`[Ctrl + Space se a lista não for exibida).
-    - `CanDrag`digita
+    - `x.` [Ctrl + Space se a lista não for exibida).
+    - `CanDrag` digita
     - Clique com o botão direito do mouse no método, vá para declaração para abrir o navegador de assembly no qual você pode comparar o `Export` atributo com o seletor em questão
 
 2. Pesquise toda a associação de classe. Como sabemos que é uma instância do `NSTableView` , você pode digitar:
@@ -66,7 +66,7 @@ Agora que você encontrou o seletor Objective-C que precisa invocar, a próxima 
     - Clique com o botão direito do mouse `NSTableView` , vá para a declaração para o navegador de assembly
     - Pesquisar o seletor em questão
 
-3. Você pode usar a [documentação online da API do Xamarin. Mac](https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0) .
+3. Você pode usar a [documentação online da API do Xamarin. Mac](/dotnet/api/?view=xamarinmac-3.0) .
 
 4. O Miguel fornece uma exibição de "lendária Stone" das APIs do Xamarin. Mac [aqui](https://tirania.org/tmp/rosetta.html) que você pode pesquisar por uma determinada API. Se sua API não for AppKit ou macOS específica, você poderá encontrá-la lá.
 

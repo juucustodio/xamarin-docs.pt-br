@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: 0af77464f849971050246a1676f89fe4702737e8
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 6fe6c254daf23f5f3d2fb267f6ba4986b94bcbd7
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997287"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431740"
 ---
 # <a name="contacts-and-contactsui-in-xamarinios"></a>Contatos e ContactsUI no Xamarin. iOS
 
@@ -44,11 +44,11 @@ A estrutura de contatos fornece acesso ao Xamarin. iOS às informações de cont
 
 ### <a name="contact-objects"></a>Objetos de contato
 
-A `CNContact` classe fornece acesso de thread seguro e somente leitura às propriedades de um contato, como nome, endereço ou números de telefone. `CNContact`funções como um `NSDictionary` e contêm várias coleções de propriedades somente leitura (como endereços ou números de telefone):
+A `CNContact` classe fornece acesso de thread seguro e somente leitura às propriedades de um contato, como nome, endereço ou números de telefone. `CNContact` funções como um `NSDictionary` e contêm várias coleções de propriedades somente leitura (como endereços ou números de telefone):
 
 [![Visão geral do objeto de contato](contacts-images/contactobjects.png)](contacts-images/contactobjects.png#lightbox)
 
-Para qualquer propriedade que possa ter vários valores (como endereço de email ou números de telefone), elas serão representadas como uma matriz de `NSLabeledValue` objetos. `NSLabeledValue`é uma tupla thread-safe que consiste em um conjunto somente leitura de rótulos e valores em que o rótulo define o valor para o usuário (por exemplo, email doméstico ou de trabalho). A estrutura de contatos fornece uma seleção de rótulos predefinidos (por meio das `CNLabelKey` `CNLabelPhoneNumberKey` classes e estáticas) que você pode usar em seu aplicativo ou tem a opção de definir rótulos personalizados para suas necessidades.
+Para qualquer propriedade que possa ter vários valores (como endereço de email ou números de telefone), elas serão representadas como uma matriz de `NSLabeledValue` objetos. `NSLabeledValue` é uma tupla thread-safe que consiste em um conjunto somente leitura de rótulos e valores em que o rótulo define o valor para o usuário (por exemplo, email doméstico ou de trabalho). A estrutura de contatos fornece uma seleção de rótulos predefinidos (por meio das `CNLabelKey` `CNLabelPhoneNumberKey` classes e estáticas) que você pode usar em seu aplicativo ou tem a opção de definir rótulos personalizados para suas necessidades.
 
 Para qualquer aplicativo Xamarin. iOS que precise ajustar os valores de um contato existente (ou criar novos), use a `NSMutableContact` versão da classe e suas subclasses (como `CNMutablePostalAddress` ).
 
@@ -359,7 +359,7 @@ Este artigo deu uma visão detalhada de como trabalhar com as estruturas de inte
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Exemplo de contatos](https://docs.microsoft.com/samples/xamarin/ios-samples/contacts/)
+- [Exemplo de contatos](/samples/xamarin/ios-samples/contacts/)
 - [O que há de novo no iOS 9](https://developer.apple.com/library/content/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Referência da estrutura de contatos](https://developer.apple.com/documentation/contacts?language=objc)
 - [Referência da estrutura do ContactsUI](https://developer.apple.com/documentation/contactsui?language=objc)

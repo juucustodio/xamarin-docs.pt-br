@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 093ac4a3242866413042de0b650433d4369ad35f
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 2a55991dacd6c35a2fe90cf90ad6f0e2208ff71f
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028251"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430459"
 ---
 # <a name="watchos-3-troubleshooting"></a>Solução de problemas do watchOS 3
 
@@ -66,35 +66,35 @@ Se um anexo de mídia for grande demais, ele será apresentado no iPhone do usu�
 
 ## <a name="nsurlconnection"></a>NSURLConnection
 
-Quaisquer conexões `NSURLConnection` usando protocolos TLS mais antigos falharão. Para todas as conexões SSL/TLS, a cifra simétrica RC4 agora está desabilitada por padrão. Além disso, a API de transporte seguro não dá mais suporte a SSLv3 e é recomendável que o aplicativo pare de usar a criptografia SHA-1 e 3DES assim que possível.
+Todas as `NSURLConnection` conexões que usam protocolos TLS mais antigos falharão. Para todas as conexões SSL/TLS, a cifra simétrica RC4 agora está desabilitada por padrão. Além disso, a API de transporte seguro não dá mais suporte a SSLv3 e é recomendável que o aplicativo pare de usar a criptografia SHA-1 e 3DES assim que possível.
 
 A partir de watchOS 3, a segurança de conexões SSL/TLS está sendo estritamente imposta pela Apple. Os serviços e aplicativos afetados devem atualizar os servidores Web para usar as versões mais recentes do protocolo TLS.
 
 ## <a name="nsurlsession"></a>NSURLSession
 
-A partir de watchOS 3, a propriedade `HTTPBodyStream` da classe `NSMutableURLRequest` deve ser definida como um fluxo não aberto, já que `NSURLConnection` e `NSURLSession` agora impõem estritamente esse requisito.
+A partir de watchOS 3, a `HTTPBodyStream` propriedade da `NSMutableURLRequest` classe deve ser definida como um fluxo não aberto, já que `NSURLConnection` e `NSURLSession` agora impõe estritamente esse requisito.
 
 ## <a name="privacy"></a>Privacidade
 
 Problemas Conhecidos:
 
-Ao trabalhar com URLs de `https://`, `NSURLSession` e `NSURLConnection` não oferecem mais suporte a pacotes de codificação RC4 durante o handshake TLS. Um dos códigos de erro a seguir pode ser gerado:
+Ao trabalhar com `https://` URLs `NSURLSession` , o e o `NSURLConnection` não oferecem mais suporte a pacotes de codificação RC4 durante o handshake TLS. Um dos códigos de erro a seguir pode ser gerado:
 
-- **-1200 ou-98** -para erros de `NSURLErrorSecurityConnectionFailed` e SecureTransport.
+- **-1200 ou-98** -para `NSURLErrorSecurityConnectionFailed` erros e SecureTransport.
 - **-1200 [3:-9824]** -falha no carregamento de http.
-- **-1200** - `NSURLConnection` concluído com erro.
+- **-1200**  -  `NSURLConnection` concluído com erro.
 
 A partir de watchOS 3, a segurança de conexões SSL/TLS está sendo estritamente imposta pela Apple. Os serviços e aplicativos afetados devem atualizar os servidores Web para usar as versões mais recentes do protocolo TLS. Consulte [NSURLConnection](#nsurlconnection) acima para obter mais informações.
 
-## <a name="snapshots"></a>instantâneos
+## <a name="snapshots"></a>Instantâneos
 
-Os aplicativos WatchKit que não adotaram a nova API de `HandelBackgroundTask` não receberão mais atualizações periódicas no watchOS 3. 
+Os aplicativos WatchKit que não adotaram a nova `HandelBackgroundTask` API não receberão mais atualizações periódicas no watchOS 3. 
 
 ## <a name="watchkit"></a>WatchKit
 
 Os bastidores SpriteKit e SceneKit serão pausados quando um aplicativo entrar no plano de fundo no encaixe watchOS.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Exemplos de watchOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)
+- [Exemplos de watchOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2bwatchOS)
 - [O que há de novo no watchOS 3](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInwatchOS/Articles/watchOS3.html#//apple_ref/doc/uid/TP40017085-SW1)

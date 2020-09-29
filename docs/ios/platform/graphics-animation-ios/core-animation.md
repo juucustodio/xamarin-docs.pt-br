@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: ddd46da0787f853e949d08c45dff5be17b9451fd
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d25d48421ad9b05925c1fa373ddba600ad3bac2e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932750"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431228"
 ---
 # <a name="core-animation-in-xamarinios"></a>Animação de núcleo no Xamarin. iOS
 
@@ -46,7 +46,7 @@ Esta seção aborda os recursos de animação do UIKit, incluindo:
 
 ### <a name="view-controller-transitions"></a>Transições de controlador de exibição
 
- `UIViewController`fornece suporte interno para fazer a transição entre os controladores de exibição por meio do `PresentViewController` método. Ao usar `PresentViewController` o, a transição para o segundo controlador pode, opcionalmente, ser animada.
+ `UIViewController` fornece suporte interno para fazer a transição entre os controladores de exibição por meio do `PresentViewController` método. Ao usar `PresentViewController` o, a transição para o segundo controlador pode, opcionalmente, ser animada.
 
 Por exemplo, considere um aplicativo com dois controladores, em que tocar um botão no primeiro controlador chama `PresentViewController` para exibir um segundo controlador. Para controlar qual animação de transição é usada para mostrar o segundo controlador, basta definir sua [`ModalTransitionStyle`](xref:UIKit.UIModalTransitionStyle) propriedade, conforme mostrado abaixo:
 
@@ -58,9 +58,9 @@ SecondViewController vc2 = new SecondViewController {
 
 Nesse caso, uma `PartialCurl` animação é usada, embora várias outras estejam disponíveis, incluindo:
 
-- `CoverVertical`– Desliza para cima na parte inferior da tela
-- `CrossDissolve`– A exibição antiga esmaece & a nova exibição esmaece
-- `FlipHorizontal`-Uma inversão horizontal da direita para a esquerda. No descarte, a transição inverte da esquerda para a direita.
+- `CoverVertical` – Desliza para cima na parte inferior da tela
+- `CrossDissolve` – A exibição antiga esmaece & a nova exibição esmaece
+- `FlipHorizontal` -Uma inversão horizontal da direita para a esquerda. No descarte, a transição inverte da esquerda para a direita.
 
 Para animar a transição, passe `true` como o segundo argumento para `PresentViewController` :
 
@@ -88,7 +88,7 @@ UIView.Transition (
   completion: () => { Console.WriteLine ("transition complete"); });
 ```
 
-`UIView.Transition`também usa um `duration` parâmetro que controla por quanto tempo a animação é executada, bem como [`options`](xref:UIKit.UIViewAnimationOptions) para especificar coisas como a animação a ser usada e a função de atenuação. Além disso, você pode especificar um manipulador de conclusão que será chamado quando a animação for concluída.
+`UIView.Transition` também usa um `duration` parâmetro que controla por quanto tempo a animação é executada, bem como [`options`](xref:UIKit.UIViewAnimationOptions) para especificar coisas como a animação a ser usada e a função de atenuação. Além disso, você pode especificar um manipulador de conclusão que será chamado quando a animação for concluída.
 
 A captura de tela abaixo mostra a transição animada entre as exibições de imagem quando `TransitionFlipFromTop` é usado:
 
@@ -133,7 +133,7 @@ Assim como com o `Transition` método, `Animate` permite que a duração seja de
 
 ## <a name="using-core-animation"></a>Usando a animação de núcleo
 
- `UIView`as animações permitem muita capacidade e devem ser usadas se possível devido à facilidade de implementação. Como mencionado anteriormente, as animações UIView usam a estrutura de animação principal. No entanto, algumas coisas não podem ser feitas com `UIView` animações, como animação de propriedades adicionais que não podem ser animadas com uma exibição ou interpolação ao longo de um caminho não linear. Nesses casos em que você precisa de controle mais preciso, a animação de núcleo também pode ser usada diretamente.
+ `UIView` as animações permitem muita capacidade e devem ser usadas se possível devido à facilidade de implementação. Como mencionado anteriormente, as animações UIView usam a estrutura de animação principal. No entanto, algumas coisas não podem ser feitas com `UIView` animações, como animação de propriedades adicionais que não podem ser animadas com uma exibição ou interpolação ao longo de um caminho não linear. Nesses casos em que você precisa de controle mais preciso, a animação de núcleo também pode ser usada diretamente.
 
 ### <a name="layers"></a>Camadas
 
@@ -143,7 +143,7 @@ Animações de camada podem ser implícitas ou explícitas. Animações implíci
 
 ### <a name="implicit-animations"></a>Animações implícitas
 
-Uma maneira de animar as propriedades de uma camada é por meio de uma animação implícita. `UIView`animações criam animações implícitas. No entanto, você também pode criar animações implícitas diretamente em uma camada.
+Uma maneira de animar as propriedades de uma camada é por meio de uma animação implícita. `UIView` animações criam animações implícitas. No entanto, você também pode criar animações implícitas diretamente em uma camada.
 
 Por exemplo, o código a seguir define uma camada `Contents` de uma imagem, define uma largura e uma cor de borda e adiciona a camada como uma subcamada da camada da exibição:
 
@@ -237,7 +237,7 @@ Neste artigo, examinamos os recursos de animação fornecidos por meio das estru
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Exemplo de animação de núcleo](https://docs.microsoft.com/samples/xamarin/ios-samples/graphicsandanimation)
+- [Exemplo de animação de núcleo](/samples/xamarin/ios-samples/graphicsandanimation)
 - [Gráficos principais](~/ios/platform/graphics-animation-ios/core-graphics.md)
 - [Instruções de gráficos e animação](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
 - [Animação principal](https://github.com/xamarin/recipes/tree/master/Recipes/ios/animation/coreanimation)

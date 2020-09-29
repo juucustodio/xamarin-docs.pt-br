@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: davidortinau
 ms.author: daortin
-ms.openlocfilehash: 8216e0e41eea98dcdcd34ccfac6a9573224f3093
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c57a6d02488272934ea77714b07c0328ac501d26
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936663"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431217"
 ---
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introdução à MonoTouch. caixa de diálogo para Xamarin. iOS
 
@@ -54,7 +54,7 @@ Por exemplo, toda vez que uma tabela é necessária, uma fonte de dados é neces
 
 MT. A D simplifica isso encapsulando todo o código em uma API genérica para a criação de tabelas. Em seguida, ele fornece uma abstração sobre essa API que permite uma sintaxe de vinculação de objeto declarativo que a torna ainda mais fácil. Assim, há duas APIs disponíveis em MT. 3D
 
-- **API de elementos de nível baixo** – a *API de elementos* é baseada na criação de uma árvore hierárquica de elementos que representam telas e seus componentes. A API dos elementos oferece aos desenvolvedores mais flexibilidade e controle na criação de UIs. Além disso, a API dos elementos tem suporte avançado para definição declarativa via JSON, que permite uma declaração incrivelmente rápida, bem como a geração de interface do usuário dinâmica de um servidor. 
+- **API de elementos de nível baixo** – a  *API de elementos* é baseada na criação de uma árvore hierárquica de elementos que representam telas e seus componentes. A API dos elementos oferece aos desenvolvedores mais flexibilidade e controle na criação de UIs. Além disso, a API dos elementos tem suporte avançado para definição declarativa via JSON, que permite uma declaração incrivelmente rápida, bem como a geração de interface do usuário dinâmica de um servidor. 
 - **API de reflexão de alto nível** – também conhecida como *Binding**API* de associação, na qual as classes são anotadas com dicas de interface do usuário e, em seguida, Mt. D cria automaticamente telas com base nos objetos e fornece uma associação entre o que é exibido (e, opcionalmente, editado) na tela e o backup do objeto subjacente.   O exemplo acima ilustrou o uso da API de reflexão. Essa API não fornece o controle refinado que a API dos elementos faz, mas reduz ainda mais a complexidade ao criar automaticamente a hierarquia de elementos com base nos atributos de classe. 
 
 MT. O D vem embalado de um grande conjunto de elementos de interface do usuário internos para a criação de tela, mas também reconhece a necessidade de elementos personalizados e layouts de tela avançados. Dessa forma, a extensibilidade é uma inclusas em destaque de primeira classe na API. Os desenvolvedores podem estender os elementos existentes ou criar novos e, em seguida, integrar-se perfeitamente.
@@ -64,8 +64,8 @@ Além disso, o MT. A D tem vários recursos comuns do iOS UX incorporados, como 
 Este artigo conseguirá uma visão abrangente do trabalho com o MT. D, incluindo:
 
 - **Mt. Componentes D** – isso se concentrará na compreensão das classes que compõem o Mt. D para permitir a rápida rapidez. 
-- **Referência de elementos** – uma lista abrangente dos elementos internos do Mt. 3D. 
-- **Uso avançado** – isso abrange recursos avançados, como pull-to-Refresh, pesquisa, carregamento de imagem em segundo plano, uso do LINQ para criar hierarquias de elemento e criar elementos personalizados, células e controladores para uso com o Mt. 3D. 
+- **Referência de elementos** – uma lista abrangente dos elementos internos de Mt. D. 
+- **Uso avançado** – isso abrange recursos avançados, como pull-to-Refresh, pesquisa, carregamento de imagem em segundo plano, uso do LINQ para criar hierarquias de elemento e criar elementos personalizados, células e controladores para uso com MT. D. 
 
 ## <a name="setting-up-mtd"></a>Configurando o MT. 3D
 
@@ -73,14 +73,14 @@ MT. A D é distribuída com o Xamarin. iOS. Para usá-lo, clique com o botão di
 
 ## <a name="understanding-the-pieces-of-mtd"></a>Entendendo as partes do MT. 3D
 
-Mesmo ao usar a API de reflexão, MT. D cria uma hierarquia de elementos nos bastidores, assim como se ela fosse criada por meio da API Elements diretamente. Além disso, o suporte a JSON mencionado na seção anterior também cria elementos. Por esse motivo, é importante ter uma compreensão básica dos componentes constituintes do MT. 3D.
+Mesmo ao usar a API de reflexão, MT. D cria uma hierarquia de elementos nos bastidores, assim como se ela fosse criada por meio da API Elements diretamente. Além disso, o suporte a JSON mencionado na seção anterior também cria elementos. Por esse motivo, é importante ter uma compreensão básica dos componentes constituintes de MT. D.
 
 MT. O D compila as telas usando as quatro partes a seguir:
 
 - **DialogViewController**
 - **RootElement**
 - **Seção**
-- **Elementos**
+- **Element**
 
 ### <a name="dialogviewcontroller"></a>DialogViewController
 
@@ -164,7 +164,7 @@ var section = new Section (header);
 #### <a name="handling-nsaction"></a>Manipulando NSAction
 
 MT. D mostra um `NSAction` como um delegado para lidar com retornos de chamada.
-Por exemplo, digamos que você deseja manipular um evento de toque para uma célula de tabela criada por MT. 3D. Ao criar um elemento com MT. D, basta fornecer uma função de retorno de chamada, conforme mostrado abaixo:
+Por exemplo, digamos que você deseja manipular um evento de toque para uma célula de tabela criada por MT. D. Ao criar um elemento com MT. D, basta fornecer uma função de retorno de chamada, conforme mostrado abaixo:
 
 ```csharp
 new Section () {
@@ -276,7 +276,7 @@ mtRoot = new RootElement ("Demos", new RadioGroup("MyGroup", 0));
 
  [![Um Radioelement requer que um Radiogroup seja especificado no RootElement](images/image14.png)](images/image14.png#lightbox)
 
- `RootElements`também são usados para coordenar elementos de rádio. Os `RadioElement` Membros podem abranger várias seções (por exemplo, para implementar algo semelhante ao seletor de Tom de toque e separar tons de toque personalizados de toques do sistema). A exibição de resumo mostrará o elemento Radio selecionado no momento. Para usar isso, crie o `RootElement` com o construtor do grupo, da seguinte maneira:
+ `RootElements` também são usados para coordenar elementos de rádio. Os `RadioElement` Membros podem abranger várias seções (por exemplo, para implementar algo semelhante ao seletor de Tom de toque e separar tons de toque personalizados de toques do sistema). A exibição de resumo mostrará o elemento Radio selecionado no momento. Para usar isso, crie o `RootElement` com o construtor do grupo, da seguinte maneira:
 
 ```csharp
 var root = new RootElement ("Meals", new RadioGroup ("myGroup", 0));
@@ -391,7 +391,7 @@ using (var reader = File.OpenRead ("json.sample"))
     return JsonElement.FromJson (JsonObject.Load (reader) as JsonObject, arg);
 ```
 
-Para obter mais informações sobre como usar JSON com MT. D, consulte o tutorial sobre o [elemento JSON](https://docs.microsoft.com/xamarin/ios/user-interface/monotouch.dialog/json-element-walkthrough) .
+Para obter mais informações sobre como usar JSON com MT. D, consulte o tutorial sobre o [elemento JSON](./json-element-walkthrough.md) .
 
 ## <a name="other-features"></a>Outros recursos
 
@@ -569,7 +569,7 @@ A forma como você notifica o usuário sobre um erro é específico do aplicativ
 
 ## <a name="summary"></a>Resumo
 
-Este artigo abordou muitas informações sobre o MonoTouch. Dialog. Ele abordou os conceitos básicos do como o MT. O D trabalha e abordou os vários componentes que compõem o MT. 3D. Ele também mostrou a ampla matriz de elementos e personalizações de tabela com suporte do MT. D e discutiu como o MT. A D pode ser estendida com elementos personalizados. Além disso, ele explicou o suporte a JSON em MT. D que permite criar elementos dinamicamente do JSON.
+Este artigo abordou muitas informações sobre o MonoTouch. Dialog. Ele abordou os conceitos básicos do como o MT. D trabalha e abordou os vários componentes que compõem MT. D. Ele também mostrou a ampla matriz de elementos e personalizações de tabela com suporte do MT. D e discutiu como o MT. A D pode ser estendida com elementos personalizados. Além disso, ele explicou o suporte a JSON em MT. D que permite criar elementos dinamicamente do JSON.
 
 ## <a name="related-links"></a>Links Relacionados
 

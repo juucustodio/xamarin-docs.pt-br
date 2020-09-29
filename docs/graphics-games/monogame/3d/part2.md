@@ -6,12 +6,12 @@ ms.assetid: 932AF5C2-884D-46E1-9455-4C359FD7C092
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: dfb03815f8642519cecf49ab7b626b9575821af1
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ccec89253c58d7d43cb09f33777c253a2f0da56d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937625"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431116"
 ---
 # <a name="drawing-3d-graphics-with-vertices-in-monogame"></a>Desenho de gráficos 3D com vértices em monojogo
 
@@ -42,7 +42,7 @@ O projeto concluído conterá uma base quadriculada que será desenhada usando u
 
 ## <a name="creating-a-project"></a>Criando um projeto
 
-Primeiro, baixaremos um projeto que servirá como nosso ponto de partida. Usaremos o projeto de modelo [que pode ser encontrado aqui](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelrenderingmg/).
+Primeiro, baixaremos um projeto que servirá como nosso ponto de partida. Usaremos o projeto de modelo [que pode ser encontrado aqui](/samples/xamarin/mobile-samples/modelrenderingmg/).
 
 Depois de baixado e descompactado, abra e execute o projeto. Esperamos ver seis modelos de robô sendo desenhados na tela:
 
@@ -219,7 +219,7 @@ O que é importante ter em mente é que o `foreach` loop permite que o mesmo có
 
 ### <a name="drawuserprimitives"></a>DrawUserPrimitives
 
-`DrawUserPrimitives`é onde os vértices são renderizados. O primeiro parâmetro informa ao método como organizamos nossos vértices. Nós os estruturamos para que cada triângulo seja definido por três vértices ordenados, portanto, usamos o `PrimitiveType.TriangleList` valor.
+`DrawUserPrimitives` é onde os vértices são renderizados. O primeiro parâmetro informa ao método como organizamos nossos vértices. Nós os estruturamos para que cada triângulo seja definido por três vértices ordenados, portanto, usamos o `PrimitiveType.TriangleList` valor.
 
 O segundo parâmetro é a matriz de vértices que definimos anteriormente.
 
@@ -468,4 +468,4 @@ Este tutorial mostrou como usar uma matriz de vértice para executar a renderiza
 ## <a name="related-links"></a>Links Relacionados
 
 - [Arquivo de xadrez (exemplo)](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true)
-- [Projeto concluído (exemplo)](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelsandvertsmg/)
+- [Projeto concluído (exemplo)](/samples/xamarin/mobile-samples/modelsandvertsmg/)

@@ -7,12 +7,12 @@ ms.assetid: 19506F08-2603-465E-A806-6BD01638DE90
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/03/2018
-ms.openlocfilehash: 4d0e57b98a479112b9fdf4f9c503418f3966cc73
-ms.sourcegitcommit: 9bfedf07940dad7270db86767eb2cc4007f2a59f
+ms.openlocfilehash: fd8926edce6b2310271e15418f2498162723ba49
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "64749922"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436448"
 ---
 # <a name="skiasharp-platform-independent-examples"></a>Exemplos independentes de plataforma SkiaSharp
 
@@ -22,7 +22,7 @@ O SkiaSharp fornece uma API gráfica 2D avançada e poderosa que pode ser usada 
 
 Atualmente, a biblioteca está disponível como um [pacote NuGet](https://www.nuget.org/packages/SkiaSharp)de plataforma cruzada. você pode adicioná-la ao seu projeto adicionando a referência do NuGet.
 
-Para desenhar, seu código criará um `SkCanvas` que descreve a superfície em que as operações de desenho ocorrerão.
+Para desenhar, seu código criará um `SkCanvas` que descreve a superfície onde as operações de desenho ocorrerão.
 
 ## <a name="obtaining-an-skcanvas"></a>Obtendo um SKCanvas
 
@@ -135,4 +135,4 @@ using (var paint = new SKPaint()) {
 
 ## <a name="more-information"></a>Mais informações
 
-Mais informações sobre como usar o SkiaSharp podem ser encontradas na [documentação da API](https://docs.microsoft.com/dotnet/api/skiasharp)
+Mais informações sobre como usar o SkiaSharp podem ser encontradas na [documentação da API](/dotnet/api/skiasharp)

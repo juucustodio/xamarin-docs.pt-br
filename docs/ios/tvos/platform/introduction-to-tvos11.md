@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 02/08/2018
-ms.openlocfilehash: 8069e28dabb804be862334dab5c75b888e23ef74
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b765a3ddb5a34c764d9e1b7cd4776e68cf404b08
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030576"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434782"
 ---
 # <a name="introduction-to-tvos-11"></a>Introdução ao tvOS 11
 
@@ -38,9 +38,9 @@ Acesse novos recursos do tvOS 11 em aplicativos Xamarin. tvOS:
 
 Para obter uma lista completa das alterações que a Apple introduziu no tvOS 11, consulte o documento [novidades no tvOS](https://developer.apple.com/library/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS_11_0.html) .
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Amostras do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Exemplos do tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [Introdução ao tvOS](~/ios/tvos/index.md)
 - [O que há de novo no tvOS 11 (guia do desenvolvedor da Apple)](https://developer.apple.com/library/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS_11_0.html)
 - [O que há de novo no tvOS 11 (WWDC 2017)](https://developer.apple.com/videos/play/wwdc2017/209/)

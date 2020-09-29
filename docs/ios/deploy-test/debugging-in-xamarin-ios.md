@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: a5135d9bb481afcaefc851e392196a87b8ef80dd
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 8d4b60a2e8e53b5b3f97a781b7f1888239541f1a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997196"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431865"
 ---
 # <a name="debugging-xamarinios-apps"></a>Depurando aplicativos Xamarin.iOS
 
@@ -126,7 +126,7 @@ Selecione **Condições…** para exibir o menu _Configurações do Ponto de Int
 
 Aqui, você pode inserir as condições sob as quais deseja que o ponto de interrupção ocorra
 
-Para saber mais sobre como usar as condições de ponto de interrupção em versões anteriores do Visual Studio, consulte a [documentação do Visual Studio](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints) sobre esse tópico.
+Para saber mais sobre como usar as condições de ponto de interrupção em versões anteriores do Visual Studio, consulte a [documentação do Visual Studio](/visualstudio/debugger/using-breakpoints) sobre esse tópico.
 
 -----
 
@@ -160,7 +160,7 @@ Eles são:
 - **Intervir (F10)** – isso também executará a próxima linha de código. Se a próxima linha é uma chamada de função, Intervir parará na primeira linha da função, permitindo que você continue a depuração da função linha a linha. Se a próxima linha não for uma função, ela se comportará como Passar.
 - **Sair (Shift + F11)** – isso retornará para a linha na qual a função atual foi chamada.
 
-Para obter uma documentação mais detalhada sobre Depuração, confira [Navegar pelo Código com o Depurador do Visual Studio](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger).
+Para obter uma documentação mais detalhada sobre Depuração, confira [Navegar pelo Código com o Depurador do Visual Studio](/visualstudio/debugger/navigating-through-code-with-the-debugger).
 
 -----
 

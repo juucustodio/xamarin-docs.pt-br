@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: c02b810cc61779f5c3b5ee5eb61169e8c3fceab4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 724d6ab8d39a5c0054302685c5f9f4ba0f3d9908
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931203"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431732"
 ---
 # <a name="ios-7-user-interface-overview"></a>Visão geral da interface do usuário do iOS 7
 
@@ -144,7 +144,7 @@ Ao preparar seu aplicativo para o iOS 7, você pode realinhar as subexibições 
 
 #### <a name="toplayoutguide-and-bottomlayoutguide"></a>TopLayoutGuide e BottomLayoutGuide
 
- `TopLayoutGuide`e `BottomLayoutGuide` serve como uma referência para onde as exibições devem começar ou terminar, para que o conteúdo não seja sobreposto por uma `UIKit` barra translúcida, como no exemplo a seguir:
+ `TopLayoutGuide` e `BottomLayoutGuide` serve como uma referência para onde as exibições devem começar ou terminar, para que o conteúdo não seja sobreposto por uma `UIKit` barra translúcida, como no exemplo a seguir:
 
  [![Conteúdo de exemplo não sobreposto por uma barra UIKit translúcida](ios7-ui-images/clipped.png)](ios7-ui-images/clipped.png#lightbox)
 
@@ -168,12 +168,12 @@ Podemos usar o valor calculado acima para definir o `ImageView` deslocamento de 
 
  [![Exemplo de substituição de ImageViews na parte superior da tela](ios7-ui-images/good2.png)](ios7-ui-images/good2.png#lightbox)
 
-Consulte o [ImageViewer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates/) para obter um exemplo funcional.
+Consulte o [ImageViewer](/samples/xamarin/ios-samples/ios7-ui-updates/) para obter um exemplo funcional.
 
 O valor de deslocamento é gerado dinamicamente depois que a exibição é adicionada à hierarquia, portanto, a tentativa de ler `TopLayoutGuide` e `BottomLayoutGuide` valores em `ViewDidLoad` retornará 0. Calcule o valor depois que o modo de exibição tiver sido carregado-por exemplo, no `ViewDidLayoutSubviews` .
 
 > [!IMPORTANT]
-> `TopLayoutGuide`e `BottomLayoutGuide` são preteridos no Ios 11 em favor do novo layout de área segura. A Apple afirmou que o uso da área segura é compatível com a versão do iOS anterior ao iOS 11. Para obter mais informações, consulte o guia [atualizando seu aplicativo para IOS 11](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen) .
+> `TopLayoutGuide` e `BottomLayoutGuide` são preteridos no Ios 11 em favor do novo layout de área segura. A Apple afirmou que o uso da área segura é compatível com a versão do iOS anterior ao iOS 11. Para obter mais informações, consulte o guia [atualizando seu aplicativo para IOS 11](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen) .
 
 #### <a name="edgesforextendedlayout"></a>EdgesForExtendedLayout
 
@@ -203,7 +203,7 @@ Em nosso aplicativo, veremos que a exibição é reposicionada novamente, de mod
 
 Observe que, embora os efeitos das `TopLayoutGuide/BottomLayoutGuide` `EdgesForExtendedLayout` APIs e sejam semelhantes, eles destinam-se a preencher metas diferentes. A alteração da `EdgesForExtendedLayout` configuração do padrão pode corrigir exibições recortadas em aplicativos criados para IOS 6, mas um bom design do IOS 7 deve respeitar a estética de tela inteira e fornecer uma experiência de exibição de tela inteira, contando com `TopLayoutGuide` e `BottomLayoutGuide` posicionar corretamente o conteúdo que pretende ser manipulado em um local confortável para o usuário.
 
-Consulte o [ImageViewer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates/) para obter um exemplo funcional.
+Consulte o [ImageViewer](/samples/xamarin/ios-samples/ios7-ui-updates/) para obter um exemplo funcional.
 
 ### <a name="status-and-navigation-bars"></a>Status e barras de navegação
 
@@ -256,7 +256,7 @@ A cor da tonalidade também pode ser aplicada a imagens quando o `RenderingMode`
 
 ### <a name="dynamic-type"></a>Tipo dinâmico
 
-No iOS 7, o usuário pode especificar o tamanho do texto nas configurações do sistema. Com o tipo dinâmico, a fonte é ajustada dinamicamente para parecer bom, independentemente do tamanho. `UIFont.PreferredFontForTextStyle`deve ser usado para obter uma fonte otimizada para o tamanho controlado pelo usuário.
+No iOS 7, o usuário pode especificar o tamanho do texto nas configurações do sistema. Com o tipo dinâmico, a fonte é ajustada dinamicamente para parecer bom, independentemente do tamanho. `UIFont.PreferredFontForTextStyle` deve ser usado para obter uma fonte otimizada para o tamanho controlado pelo usuário.
 
 ## <a name="summary"></a>Resumo
 
@@ -264,4 +264,4 @@ Este artigo aborda as alterações nos elementos da interface do usuário no iOS
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [ImageViewer (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates)
+- [ImageViewer (exemplo)](/samples/xamarin/ios-samples/ios7-ui-updates)

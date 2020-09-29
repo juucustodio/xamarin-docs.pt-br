@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/15/2018
-ms.openlocfilehash: 6245873385caa23e37d5499daa822fa0b699ac1e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 13eecdfe3ded3a0fd68594527f6c5bc8ca3a6c66
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032028"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434246"
 ---
 # <a name="core-ml-2-in-xamarinios"></a>Principal ML 2 no Xamarin. iOS
 
@@ -22,13 +22,13 @@ No iOS 12, o ML principal inclui uma API de processamento em lotes. Essa API tor
 
 ## <a name="sample-app-marshabitatcoremltimer"></a>Aplicativo de exemplo: MarsHabitatCoreMLTimer
 
-Para demonstrar previsões de lote com o ML principal, dê uma olhada no aplicativo de exemplo [MarsHabitatCoreMLTimer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer) . Este exemplo usa um modelo de ML básico treinado para prever o custo da criação de um habitat no Mars, com base em várias entradas: número de painéis solares, número de estufas e número de acres.
+Para demonstrar previsões de lote com o ML principal, dê uma olhada no aplicativo de exemplo [MarsHabitatCoreMLTimer](/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer) . Este exemplo usa um modelo de ML básico treinado para prever o custo da criação de um habitat no Mars, com base em várias entradas: número de painéis solares, número de estufas e número de acres.
 
 Os trechos de código neste documento vêm deste exemplo.
 
 ## <a name="generate-sample-data"></a>Gerar dados de exemplo
 
-Em `ViewController`, o método `ViewDidLoad` do aplicativo de exemplo chama `LoadMLModel`, que carrega o modelo de ML principal incluído:
+No `ViewController` , as chamadas de método do aplicativo de exemplo `ViewDidLoad` `LoadMLModel` , que carregam o modelo de ml principal incluído:
 
 ```csharp
 void LoadMLModel()
@@ -38,7 +38,7 @@ void LoadMLModel()
 }
 ```
 
-Em seguida, o aplicativo de exemplo cria 100.000 objetos de `MarsHabitatPricerInput` para usar como entrada para previsões de ML de núcleos sequenciais. Cada amostra gerada tem um valor aleatório definido para o número de painéis solares, o número de estufas e o número de acres:
+Em seguida, o aplicativo de exemplo cria 100.000 `MarsHabitatPricerInput` objetos a serem usados como entrada para previsões de ml de núcleos sequenciais. Cada amostra gerada tem um valor aleatório definido para o número de painéis solares, o número de estufas e o número de acres:
 
 ```csharp
 async void CreateInputs(int num)
@@ -59,7 +59,7 @@ async void CreateInputs(int num)
 }
 ```
 
-Tocar em qualquer um dos três botões do aplicativo executa duas sequências de previsões: uma usando um loop de `for` e outra usando o novo método de `GetPredictions` do lote introduzido no iOS 12:
+Tocar em qualquer um dos três botões do aplicativo executa duas sequências de previsões: uma usando um `for` loop e outra usando o novo método de lote `GetPredictions` introduzido no IOS 12:
 
 ```csharp
 async void RunTest(int num)
@@ -74,7 +74,7 @@ async void RunTest(int num)
 
 ## <a name="for-loop"></a>para loop
 
-A versão de loop de `for` do teste naively itera sobre o número especificado de entradas, chamando [`GetPrediction`](xref:CoreML.MLModel.GetPrediction*) para cada e descartando o resultado. O método vezes o tempo necessário para fazer as previsões:
+A `for` versão de loop do teste naively itera sobre o número especificado de entradas, chamando [`GetPrediction`](xref:CoreML.MLModel.GetPrediction*) para cada e descartando o resultado. O método vezes o tempo necessário para fazer as previsões:
 
 ```csharp
 async Task FetchNonBatchResults(int num)
@@ -94,8 +94,8 @@ async Task FetchNonBatchResults(int num)
 
 ## <a name="getpredictions-new-batch-api"></a>Getprevêtions (nova API do lote)
 
-A versão do lote do teste cria um objeto `MLArrayBatchProvider` da matriz de entrada (já que esse é um parâmetro de entrada necessário para o método `GetPredictions`), cria um [`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
-objeto que impede que os cálculos de previsão sejam restritos à CPU e usa a API `GetPredictions` para buscar as previsões, descartando novamente o resultado:
+A versão do lote do teste cria um `MLArrayBatchProvider` objeto a partir da matriz de entrada (já que esse é um parâmetro de entrada necessário para o `GetPredictions` método), cria um [`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
+objeto que impede que os cálculos de previsão sejam restritos à CPU e use a `GetPredictions` API para buscar as previsões, descartando novamente o resultado:
 
 ```csharp
 async Task FetchBatchResults(int num)
@@ -118,13 +118,13 @@ async Task FetchBatchResults(int num)
 
 ## <a name="results"></a>Resultados
 
-No simulador e no dispositivo, `GetPredictions` é concluída mais rapidamente do que as previsões de ML principais baseadas em loop.
+No simulador e no dispositivo, `GetPredictions` o é concluído mais rapidamente do que as previsões de ml principais baseadas em loop.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Aplicativo de exemplo – MarsHabitatCoreMLTimer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer)
+- [Aplicativo de exemplo – MarsHabitatCoreMLTimer](/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer)
 - [O que há de novo no ML principal, parte 1 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/708/)
 - [O que há de novo no ML principal, parte 2 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/709/)
-- [Introdução ao ML principal no Xamarin. iOS](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/coreml)
+- [Introdução ao ML principal no Xamarin. iOS](../introduction-to-ios11/coreml.md)
 - [ML principal (Apple)](https://developer.apple.com/documentation/coreml?language=objc)
 - [Trabalhando com modelos de ML principais](https://developer.apple.com/machine-learning/build-run-models/)

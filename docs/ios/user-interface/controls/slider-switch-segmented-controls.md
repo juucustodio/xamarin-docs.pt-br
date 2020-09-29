@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: cf0e617b225cc7535acffa0880a0bc089ae8da28
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 01a09294d55490a723eb59b0365ac2dc516110c9
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934050"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434667"
 ---
 # <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Controles deslizantes, comutadores e controle segmentados no Xamarin. iOS
 
@@ -58,11 +58,11 @@ O controle deslizante personalizado tem esta aparência:
 
 <a name="Switch"></a>
 
-## <a name="switch"></a>Opção
+## <a name="switch"></a>Comutador
 
 o iOS usa o `UISwitch` como uma entrada booliana que pode ser representada por um botão de opção em outras plataformas. O usuário pode manipular o controle movendo o *polegar* entre as posições **Ativar/desativar** .
 
- [![Switch](slider-switch-segmented-controls-images/image28a.png)](slider-switch-segmented-controls-images/image28a.png#lightbox)
+ [![Comutador](slider-switch-segmented-controls-images/image28a.png)](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 A aparência da opção pode ser personalizada na **painel de propriedades** do designer, o que permitirá controlar o estado padrão, **Ativar/desativar** as cores de tonalidade e uma **imagem on/off**. Isso é ilustrado na imagem abaixo:
 
@@ -94,5 +94,5 @@ Deve-se observar que o estilo de controle segmentado foi preterido em iOS7 e, po
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Controles (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [Controles (exemplo)](/samples/xamarin/ios-samples/controls)
 - [Controlador de alerta](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller)

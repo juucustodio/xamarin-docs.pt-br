@@ -9,14 +9,14 @@ ms.date: 11/04/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: eb35750372c5ccb878c7b38f9d25898b09fd7f1e
-ms.sourcegitcommit: e412858ce431b3280c88241e324fcab33066eb58
+ms.openlocfilehash: 967fa5f54ec9ccbb1f8bac2a87d77dca63caba3a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865891"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434330"
 ---
-# <a name="xamarinessentials-file-system-helpers"></a>Xamarin.Essentials: Auxiliares do sistema de arquivos
+# <a name="no-locxamarinessentials-file-system-helpers"></a>Xamarin.Essentials: Auxiliares do sistema de arquivos
 
 A classe **FileSystem** contém uma série de auxiliares para localizar o cache e os diretórios de dados do aplicativo e abrir arquivos dentro do pacote de aplicativos.
 
@@ -77,8 +77,8 @@ Adicione qualquer arquivo à pasta **Resources** no projeto do iOS e marque a A�
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-- **CacheDirectory** – Retorna o diretório [LocalCacheFolder](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localcachefolder#Windows_Storage_ApplicationData_LocalCacheFolder)...
-- **AppDataDirectory** – Retorna o diretório [LocalFolder](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localfolder#Windows_Storage_ApplicationData_LocalFolder) do qual foi feito backup na nuvem.
+- **CacheDirectory** – Retorna o diretório [LocalCacheFolder](/uwp/api/windows.storage.applicationdata.localcachefolder#Windows_Storage_ApplicationData_LocalCacheFolder)...
+- **AppDataDirectory** – Retorna o diretório [LocalFolder](/uwp/api/windows.storage.applicationdata.localfolder#Windows_Storage_ApplicationData_LocalFolder) do qual foi feito backup na nuvem.
 
 Adicionar qualquer arquivo à raiz do projeto UWP e marque a Ação de Compilação como **Conteúdo** para usá-lo com `OpenAppPackageFileAsync`.
 
