@@ -5,18 +5,18 @@ ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
 author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
-ms.date: 01/06/2020
+ms.date: 09/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d594e627fed21c3c2a73770313fcae29695370c5
-ms.sourcegitcommit: a658de488a6da916145ed4aa016825565110e767
+ms.openlocfilehash: 570e549af3f0c020087e65eec0f5edfe3807719b
+ms.sourcegitcommit: 744f977b0595f489c592e29c8a3ba548fde02b6f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86972552"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91410682"
 ---
-# <a name="xamarinessentials-permissions"></a>Xamarin.Essentials: Permissões
+# <a name="no-locxamarinessentials-permissions"></a>Xamarin.Essentials: Permissões
 
 A classe **Permissions** fornece a capacidade de verificar e solicitar permissões de tempo de execução.
 
@@ -68,9 +68,16 @@ Ao usar `CheckStatusAsync` `RequestAsync` o ou um `PermissionStatus` será retor
 * Concedido-o usuário concedeu permissão ou é concedido automaticamente
 * Restrito-em um estado restrito
 
+
+## <a name="explain-why-permission-is-needed"></a>Explicar por que a permissão é necessária
+
+![API de pré-lançamento](~/media/shared/preview.png)
+
+É uma prática recomendada explicar por que seu aplicativo precisa de uma permissão específica. No iOS, você deve especificar uma cadeia de caracteres que será exibida para o usuário. O Android não tem essa capacidade e também o status de permissão padrão como desabilitado. Isso limita a capacidade de saber se o usuário negou a permissão ou se é a primeira vez que solicita o usuário. O `ShouldShowRationale` método pode ser usado para determinar se uma interface do usuário educacional deve ser exibida. Se o método retornar, `true` isso ocorre porque o usuário negou ou desabilitou a permissão no passado. Outras plataformas sempre retornarão `false` ao chamar esse método.
+
 ## <a name="available-permissions"></a>Permissões disponíveis
 
-Xamarin.EssentialsTenta abstrair o máximo possível de permissões. No entanto, cada sistema operacional tem um conjunto diferente de permissões de tempo de execução. Além disso, há diferenças ao fornecer uma única API para algumas permissões. Aqui está um guia para as permissões disponíveis no momento:
+Xamarin.Essentials Tenta abstrair o máximo possível de permissões. No entanto, cada sistema operacional tem um conjunto diferente de permissões de tempo de execução. Além disso, há diferenças ao fornecer uma única API para algumas permissões. Aqui está um guia para as permissões disponíveis no momento:
 
 Guia de ícones:
 
@@ -235,19 +242,19 @@ if (status != PermissionStatus.Granted)
 
 # <a name="android"></a>[Android](#tab/android)
 
-As permissões devem ter os atributos correspondentes definidos no arquivo de manifesto do Android.
+As permissões devem ter os atributos correspondentes definidos no arquivo de manifesto do Android. O padrão de status de permissão é negado.
 
 Leia mais sobre as [permissões na documentação do Xamarin. Android](https://docs.microsoft.com/xamarin/android/app-fundamentals/permissions) .
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-As permissões devem ter uma cadeia de caracteres correspondente no `Info.plist` arquivo. Uma vez que uma permissão é solicitada e um pop-up não será mais exibido se você solicitar a permissão uma segunda vez. Você deve solicitar que o usuário ajuste manualmente a configuração na tela de configurações de aplicativos no iOS.
+As permissões devem ter uma cadeia de caracteres correspondente no `Info.plist` arquivo. Uma vez que uma permissão é solicitada e um pop-up não será mais exibido se você solicitar a permissão uma segunda vez. Você deve solicitar que o usuário ajuste manualmente a configuração na tela de configurações de aplicativos no iOS. O padrão de status de permissão é desconhecido.
 
 Leia mais sobre a documentação de [recursos de privacidade e segurança do IOS](https://docs.microsoft.com/xamarin/ios/app-fundamentals/security-privacy) .
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-As permissões devem ter recursos de correspondência declarados no manifesto do pacote.
+As permissões devem ter recursos de correspondência declarados no manifesto do pacote. O padrão de status de permissão é desconhecido na maioria das instâncias.
 
 Leia mais sobre a documentação da [declaração de capacidade do aplicativo](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) .
 
