@@ -836,6 +836,8 @@ items:
         href: ~/essentials/platform-feature-support.md?context=xamarin/xamarin-forms
       - name: Acelerômetro
         href: ~/essentials/accelerometer.md?context=xamarin/xamarin-forms
+      - name: Ações do aplicativo
+        href: ~/essentials/app-actions.md?context=xamarin/xamarin-forms
       - name: Informações do aplicativo
         href: ~/essentials/app-information.md?context=xamarin/xamarin-forms
       - name: Tema do aplicativo
@@ -852,6 +854,8 @@ items:
         href: ~/essentials/compass.md?context=xamarin/xamarin-forms
       - name: Conectividade
         href: ~/essentials/connectivity.md?context=xamarin/xamarin-forms
+      - name: Contatos
+        href: ~/essentials/contacts.md?context=xamarin/xamarin-forms
       - name: Detectar movimento
         href: ~/essentials/detect-shake.md?context=xamarin/xamarin-forms
       - name: Informações sobre DeviceDisplay
@@ -860,6 +864,8 @@ items:
         href: ~/essentials/device-information.md?context=xamarin/xamarin-forms
       - name: Email
         href: ~/essentials/email.md?context=xamarin/xamarin-forms
+      - name: Seletor de arquivos
+        href: ~/essentials/file-picker.md?context=xamarin/xamarin-forms
       - name: Auxiliares do sistema de arquivos
         href: ~/essentials/file-system-helpers.md?context=xamarin/xamarin-forms
       - name: Lanterna
@@ -870,6 +876,8 @@ items:
         href: ~/essentials/geolocation.md?context=xamarin/xamarin-forms
       - name: Giroscópio
         href: ~/essentials/gyroscope.md?context=xamarin/xamarin-forms
+      - name: Comentários táteis
+        href: ~/essentials/haptic-feedback.md?context=xamarin/xamarin-forms
       - name: Inicializador
         href: ~/essentials/launcher.md?context=xamarin/xamarin-forms
       - name: Magnetômetro
@@ -878,6 +886,8 @@ items:
         href: ~/essentials/main-thread.md?context=xamarin/xamarin-forms
       - name: Mapas
         href: ~/essentials/maps.md?context=xamarin/xamarin-forms
+      - name: Seletor de mídia
+        href: ~/essentials/media-picker.md?context=xamarin/xamarin-forms
       - name: Abrir navegador
         href: ~/essentials/open-browser.md?context=xamarin/xamarin-forms
       - name: Sensor de orientação
@@ -890,6 +900,8 @@ items:
         href: ~/essentials/platform-extensions.md?context=xamarin/xamarin-forms
       - name: Preferências
         href: ~/essentials/preferences.md?context=xamarin/xamarin-forms
+      - name: Captura de tela
+        href: ~/essentials/screenshot.md?context=xamarin/xamarin-forms
       - name: Armazenamento seguro
         href: ~/essentials/secure-storage.md?context=xamarin/xamarin-forms
       - name: Compartilhar
