@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 11/12/2018
-ms.openlocfilehash: a552b7c395634c264114a378ee3f5c67d164d9f3
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ef632b4bff3313de82c71cb5839ecdc24c9242ad
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937950"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431490"
 ---
 # <a name="file-system-access-in-xamarinios"></a>Acesso ao sistema de arquivos no Xamarin. iOS
 
@@ -245,7 +245,7 @@ o iOS 11 introduziu o aplicativo **arquivos** – um navegador de arquivos para 
 
 ![Definir LSSupportsOpeningDocumentsInPlace no info. plist](file-system-images/51-supports-opening.png)
 
-O diretório de **documentos** do aplicativo agora estará disponível para navegação no aplicativo **arquivos** . No aplicativo **arquivos** , navegue até **em meu iPhone** e cada aplicativo com arquivos compartilhados ficará visível. As capturas de tela abaixo mostram a aparência do [aplicativo de exemplo FileSystem](https://docs.microsoft.com/samples/xamarin/ios-samples/filesystemsamplecode) :
+O diretório de **documentos** do aplicativo agora estará disponível para navegação no aplicativo **arquivos** . No aplicativo **arquivos** , navegue até **em meu iPhone** e cada aplicativo com arquivos compartilhados ficará visível. As capturas de tela abaixo mostram a aparência do [aplicativo de exemplo FileSystem](/samples/xamarin/ios-samples/filesystemsamplecode) :
 
 ![aplicativo de arquivos do iOS 11](file-system-images/50-files-app-1-sml.png) ![Procurar meus arquivos do iPhone](file-system-images/50-files-app-2-sml.png) ![Arquivos de aplicativo de exemplo](file-system-images/50-files-app-3-sml.png)
 
@@ -356,6 +356,6 @@ Este artigo mostrou que as operações do sistema de arquivos com o Xamarin. iOS
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Código de exemplo FileSystem](https://docs.microsoft.com/samples/xamarin/ios-samples/filesystemsamplecode)
+- [Código de exemplo FileSystem](/samples/xamarin/ios-samples/filesystemsamplecode)
 - [Guia de programação do sistema de arquivos](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/FileSystemProgrammingGUide/Introduction/Introduction.html)
 - [Registrando os tipos de arquivo com suporte no seu aplicativo](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html#/apple_ref/doc/uid/TP40010411-SW1)

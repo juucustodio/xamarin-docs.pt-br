@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: d4fe04412eb4fb456bc49d71c1e5fe87df5f9e76
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 207aac33101615a0a103176cd2bf5dd061e0d264
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939628"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430419"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Notificações de usuário aprimoradas no Xamarin. iOS
 
@@ -558,7 +558,7 @@ Para implementar uma extensão de serviço em um aplicativo Xamarin. iOS, faça 
 -----
 
 > [!IMPORTANT]
-> O identificador de pacote para a extensão de serviço deve corresponder ao identificador de pacote do aplicativo principal com `.appnameserviceextension` acrescentado ao final. Por exemplo, se o aplicativo principal tiver um identificador de pacote de `com.xamarin.monkeynotify` , a extensão de serviço deverá ter um identificador de pacote de `com.xamarin.monkeynotify.monkeynotifyserviceextension` . Isso deve ser definido automaticamente quando a extensão é adicionada à solução. 
+> O identificador de pacote para a extensão de serviço deve corresponder ao identificador de pacote do aplicativo principal com `.appnameserviceextension` acrescentado ao final. Por exemplo, se o aplicativo principal tiver um identificador de pacote de  `com.xamarin.monkeynotify` , a extensão de serviço deverá ter um identificador de pacote de `com.xamarin.monkeynotify.monkeynotifyserviceextension` . Isso deve ser definido automaticamente quando a extensão é adicionada à solução. 
 
 Há uma classe principal na extensão do Notification Service que precisará ser modificada para fornecer a funcionalidade necessária. Por exemplo:
 
@@ -666,7 +666,7 @@ Este artigo abordou todas as maneiras como as notificações dos usuários foram
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Amostras do iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Amostras do iOS 10](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)
 - [Referência da estrutura do usernotifications](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
 - [Guia de programação de notificação local e remota](https://developer.apple.com/documentation/usernotifications)

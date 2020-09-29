@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 86c7c726465257d71b6b407686153650dddbcbca
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: e6879db1631bc6b58a36142344ff1fba997ee4fb
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574464"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432049"
 ---
 # <a name="providing-haptic-feedback-in-xamarinios"></a>Fornecendo comentários de Haptic no Xamarin. iOS
 
@@ -37,9 +37,9 @@ Vários elementos internos da interface do usuário já fornecem comentários ha
 
 O desenvolvedor pode usar uma das seguintes `UIFeedbackGenerator` subclasses para disparar programaticamente comentários de Haptic:
 
-- `UIImpactFeedbackGenerator`-Use este gerador de comentários para complementar uma ação ou tarefa, como apresentar um "Thud" quando um modo de exibição estiver em vigor ou se dois objetos na tela colidirem.
-- `UINotificationFeedbackGenerator`-Use este gerador de comentários para notificações como uma ação concluída, falha ou qualquer outro tipo de aviso.
-- `UISelectionFeedbackGenerator`-Use este gerador de comentários para uma seleção que é alterada ativamente, como escolher um item de uma lista.
+- `UIImpactFeedbackGenerator` -Use este gerador de comentários para complementar uma ação ou tarefa, como apresentar um "Thud" quando um modo de exibição estiver em vigor ou se dois objetos na tela colidirem.
+- `UINotificationFeedbackGenerator` -Use este gerador de comentários para notificações como uma ação concluída, falha ou qualquer outro tipo de aviso.
+- `UISelectionFeedbackGenerator` -Use este gerador de comentários para uma seleção que é alterada ativamente, como escolher um item de uma lista.
 
 <a name="UIImpactFeedbackGenerator"></a>
 
@@ -127,6 +127,6 @@ O `SelectionChanged` método então dispara comentários de Haptic.
 
 Este artigo abordou os novos tipos de comentários de Haptic disponíveis no iOS 10 e como implementá-los no Xamarin. iOS.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Amostras do iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Amostras do iOS 10](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)

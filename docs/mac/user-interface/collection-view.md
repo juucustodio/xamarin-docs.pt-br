@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 05/24/2017
-ms.openlocfilehash: f6e9a9338c0bce628cfd62d1106601ddc7a11490
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 0d95ecb1997ba70a2994d74bacdedd334f2b4c61
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84568627"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91429735"
 ---
 # <a name="collection-views-in-xamarinmac"></a>Exibições de coleção no Xamarin. Mac
 
@@ -769,7 +769,7 @@ var flowLayout = new NSCollectionViewFlowLayout()
 };
 ```
 
-A `ItemSize` propriedade define o tamanho de cada célula individual na coleção. A `SectionInset` propriedade define as indefinições da borda da coleção nas quais as células serão dispostas. `MinimumInteritemSpacing`define o espaçamento mínimo entre os itens e `MinimumLineSpacing` define o espaçamento mínimo entre as linhas na coleção.
+A `ItemSize` propriedade define o tamanho de cada célula individual na coleção. A `SectionInset` propriedade define as indefinições da borda da coleção nas quais as células serão dispostas. `MinimumInteritemSpacing` define o espaçamento mínimo entre os itens e `MinimumLineSpacing` define o espaçamento mínimo entre as linhas na coleção.
 
 O layout é atribuído à exibição de coleção e uma instância do `CollectionViewDelegate` é anexada para tratar a seleção de itens:
 
@@ -815,9 +815,9 @@ public override void ViewDidLoad()
 
 Este artigo fez uma visão detalhada de como trabalhar com exibições de coleção em um aplicativo Xamarin. Mac. Primeiro, ele analisou a exposição de uma classe C# para Objective-C usando KVC (codificação de valor chave) e KVO (key-value Observation). Em seguida, ele mostrou como usar uma classe compatível com KVO e vincular dados a exibições de coleção no Interface Builder do Xcode. Por fim, ele mostrou como interagir com exibições de coleção em código C#.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [MacCollectionNew (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccollectionnew)
+- [MacCollectionNew (exemplo)](/samples/xamarin/mac-samples/maccollectionnew)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Associação de dados e a codificação de chave-valor](~/mac/app-fundamentals/databinding.md)
 - [NSCollectionView](https://developer.apple.com/reference/appkit/nscollectionview)

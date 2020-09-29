@@ -9,14 +9,14 @@ ms.date: 08/20/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 82c54a72d0e0bc991644295f05136f89fd280d7f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0dc8981024105e24ef4dcd725284723060e7313c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84802265"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432319"
 ---
-# <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
+# <a name="no-locxamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
 
 A classe **MainThread** permite que os aplicativos executem o código no thread de execução principal e determinem se certo bloco de código está sendo executado no thread principal.
 
@@ -63,7 +63,7 @@ MainThread.BeginInvokeOnMainThread(MyMainThreadCode);
 ```
 
 > [!NOTE]
-> Xamarin.Formstem um método chamado[`Device.BeginInvokeOnMainThread(Action)`](https://docs.microsoft.com/dotnet/api/xamarin.forms.device.begininvokeonmainthread)
+> Xamarin.Forms tem um método chamado [`Device.BeginInvokeOnMainThread(Action)`](/dotnet/api/xamarin.forms.device.begininvokeonmainthread)
 > que faz o mesmo que `MainThread.BeginInvokeOnMainThread(Action)`.
 > Embora você possa usar qualquer um dos métodos em um Xamarin.Forms aplicativo, considere se o código de chamada tem alguma necessidade de uma dependência Xamarin.Forms . Caso contrário, é provável que `MainThread.BeginInvokeOnMainThread(Action)` seja uma opção melhor.
 

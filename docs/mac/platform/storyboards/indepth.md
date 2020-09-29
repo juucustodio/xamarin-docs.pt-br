@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 8586157dc9a803c3502ae2ffed9fed4fc285bfda
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: c90a51d8d849dc95ca9465dd55910bcd5b50e43e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574399"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430148"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Trabalhando com storyboards no Xamarin. Mac
 
@@ -61,14 +61,14 @@ Os controladores de exibição definem as relações entre uma determinada exibi
 
 Vários novos métodos foram adicionados à `NSViewController` classe para dar suporte a storyboards no MacOS. O mais importante é que os métodos a seguir usam para responder ao ciclo de vida da exibição que está sendo controlada pelo controlador de exibição fornecido:
 
-- `ViewDidLoad`-Esse método é chamado quando a exibição é carregada a partir do arquivo de storyboard.
-- `ViewWillAppear`-Esse método é chamado logo antes da exibição ser exibida na tela.
-- `ViewDidAppear`-Esse método é chamado diretamente depois que a exibição é exibida na tela.
-- `ViewWillDisappear`-Esse método é chamado logo antes da exibição ser removida da tela.
-- `ViewDidDisappear`-Esse método é chamado diretamente após a exibição ser removida da tela.
-- `UpdateViewConstraints`-Esse método é chamado quando as restrições que definem uma exibição de posição e tamanho de layout automático precisam ser atualizadas.
-- `ViewWillLayout`-Esse método é chamado logo antes de as subexibições dessa exibição serem colocadas na tela.
-- `ViewDidLayout`-Esse método é chamado diretamente depois que as subexibições de exibição são dispostas na tela.
+- `ViewDidLoad` -Esse método é chamado quando a exibição é carregada a partir do arquivo de storyboard.
+- `ViewWillAppear` -Esse método é chamado logo antes da exibição ser exibida na tela.
+- `ViewDidAppear` -Esse método é chamado diretamente depois que a exibição é exibida na tela.
+- `ViewWillDisappear` -Esse método é chamado logo antes da exibição ser removida da tela.
+- `ViewDidDisappear` -Esse método é chamado diretamente após a exibição ser removida da tela.
+- `UpdateViewConstraints` -Esse método é chamado quando as restrições que definem uma exibição de posição e tamanho de layout automático precisam ser atualizadas.
+- `ViewWillLayout` -Esse método é chamado logo antes de as subexibições dessa exibição serem colocadas na tela.
+- `ViewDidLayout` -Esse método é chamado diretamente depois que as subexibições de exibição são dispostas na tela.
 
 <a name="The-Responder-Chain"></a>
 
@@ -249,11 +249,11 @@ Em vez de substituir o `MouseDown` evento em seu controlador de exibição, voc�
 
 Os reconhecedores de gesto a seguir estão disponíveis no macOS:
 
-- `NSClickGestureRecognizer`-Registrar eventos de mouse para baixo e para cima.
-- `NSPanGestureRecognizer`-Registra os eventos de arrastar e soltar do botão do mouse.
-- `NSPressGestureRecognizer`-Registra o pressionamento de um botão do mouse para um determinado período de tempo.
-- `NSMagnificationGestureRecognizer`-Registra um evento de ampliação de hardware trackpad.
-- `NSRotationGestureRecognizer`-Registra um evento de rotação de hardware trackpad.
+- `NSClickGestureRecognizer` -Registrar eventos de mouse para baixo e para cima.
+- `NSPanGestureRecognizer` -Registra os eventos de arrastar e soltar do botão do mouse.
+- `NSPressGestureRecognizer` -Registra o pressionamento de um botão do mouse para um determinado período de tempo.
+- `NSMagnificationGestureRecognizer` -Registra um evento de ampliação de hardware trackpad.
+- `NSRotationGestureRecognizer` -Registra um evento de rotação de hardware trackpad.
 
 <a name="Using-Storyboard-References"></a>
 
@@ -350,11 +350,11 @@ Quando o aplicativo é executado e o usuário clica no elemento da interface do 
 
 ## <a name="complex-storyboard-example"></a>Exemplo de storyboard complexo
 
-Para obter um exemplo complexo de como trabalhar com storyboards em um aplicativo Xamarin. Mac, consulte o [aplicativo de exemplo SourceWriter](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter é um editor de código-fonte simples que dá suporte para a conclusão de código e realce de sintaxe simples.
+Para obter um exemplo complexo de como trabalhar com storyboards em um aplicativo Xamarin. Mac, consulte o [aplicativo de exemplo SourceWriter](/samples/xamarin/mac-samples/sourcewriter). SourceWriter é um editor de código-fonte simples que dá suporte para a conclusão de código e realce de sintaxe simples.
 
 O código do SourceWriter foi totalmente comentado e, quando disponível, foram fornecidos links de tecnologias-chave ou métodos para informações relevantes na Documentação de Guias do Xamarin.Mac.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Trabalhando com o Windows](~/mac/user-interface/window.md)

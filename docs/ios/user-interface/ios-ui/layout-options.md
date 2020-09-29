@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 6cfb567e6f74228a0b7e9ce017c57436df06cb56
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 719436835f5d104930adfe8cd7aa95de326784e9
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939094"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432084"
 ---
 # <a name="layout-options-in-xamarinios"></a>Opções de layout no Xamarin. iOS
 
 Há dois mecanismos diferentes para controlar o layout quando uma exibição é redimensionada ou girada:
 
 - **Dimensionamento** automático – o Inspetor de autodimensionamento no designer fornece uma maneira de definir as `AutoresizingMask` Propriedades. Isso permitirá que um controle seja ancorado às bordas de seu contêiner e/ou corrija seu tamanho. O dimensionamento automático funciona em todas as versões do iOS. Isso é descrito mais detalhadamente abaixo
-- **Layout automático** – um recurso, introduzido no Ios 6, que permite um controle refinado sobre as relações dos controles da interface do usuário. Ele permitirá o controle das posições de elementos em relação a outros elementos na superfície de design. Este tópico é abordado em mais detalhes no [layout automático com o guia de designer do Xamarin Ios](~/ios/user-interface/designer/designer-auto-layout.md) .
+- **Layout automático** – um recurso, introduzido no Ios 6, que permite um controle refinado sobre as relações dos controles da interface do usuário. Ele permitirá o controle das posições de elementos em relação a outros elementos na superfície de design. Este tópico é abordado em mais detalhes no  [layout automático com o guia de designer do Xamarin Ios](~/ios/user-interface/designer/designer-auto-layout.md) .
 
 ## <a name="autosizing"></a>Dimensionamento automático
 
@@ -64,4 +64,4 @@ Observe que a exibição de texto e o campo de texto são esticados para manter 
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Controles (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [Controles (exemplo)](/samples/xamarin/ios-samples/controls)

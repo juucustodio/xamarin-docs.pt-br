@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 48aeaf8e3036c9b4e1ed548208b7daa822a00913
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 819e4f89b1443b2e1154aedfb51007ca38fdca02
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933413"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91429916"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Populando uma tabela com dados no Xamarin. iOS
 
@@ -33,8 +33,8 @@ Uma `UITableViewSource` subclasse é atribuída a cada `UITableView` . A exibiç
 
 Há apenas dois métodos obrigatórios necessários para fazer uma tabela exibir dados:
 
-- **RowsInSection** – retorna uma [`nint`](~/cross-platform/macios/nativetypes.md) contagem do número total de linhas de dados que a tabela deve exibir.
-- **GetCell** – retorna um `UITableViewCell` populado com dados para o índice de linha correspondente passado para o método.
+- **RowsInSection** – retorna uma  [`nint`](~/cross-platform/macios/nativetypes.md) contagem do número total de linhas de dados que a tabela deve exibir.
+- **GetCell** – retorna um  `UITableViewCell` populado com dados para o índice de linha correspondente passado para o método.
 
 O arquivo de exemplo Basictable **TableSource.cs** tem a implementação mais simples possível do `UITableViewSource` . Você pode ver no trecho de código abaixo que ele aceita uma matriz de cadeias de caracteres para exibir na tabela e retorna um estilo de célula padrão contendo cada cadeia de caracteres:
 
@@ -292,4 +292,4 @@ Você pode personalizar ainda mais a aparência do cabeçalho e do rodapé com u
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [WorkingWithTables (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)
+- [WorkingWithTables (exemplo)](/samples/xamarin/ios-samples/workingwithtables)

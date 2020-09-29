@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 8c296e32fd0d1491c83ea3cb16e0921c0f0c5f12
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: dc3def5d5c709515574a72cf9f61d71d67690d87
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73017042"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91429707"
 ---
 # <a name="introduction-to-macos-mojave"></a>Introdução ao macOS Mojave
 
@@ -38,14 +38,14 @@ A estrutura de visão inclui um detector facial aprimorado que pode detectar ros
 
 ## <a name="network-framework"></a>Estrutura de rede
 
-A estrutura de rede, a pilha de rede subjacente às APIs de `URLSession` comumente usadas em aplicativos iOS, agora está disponível como uma estrutura autônoma, facilitando o trabalho com TCP, UDP, TLS, IPv4/IPv6 e muito mais.
+A estrutura de rede, a pilha de rede subjacente às `URLSession` APIs normalmente usadas em aplicativos Ios, agora está disponível como uma estrutura autônoma, facilitando o trabalho com TCP, UDP, TLS, IPv4/IPv6 e muito mais.
 
-## <a name="deprecations"></a>Substituições
+## <a name="deprecations"></a>Desativações
 
 Com o macOS Mojave, a Apple preteriu OpenGL ES e OpenCL, [incentivando os desenvolvedores](https://developer.apple.com/macos/whats-new/) a adotar sombreadores de desempenho de metal e de metal.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do Xamarin. Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+- [Exemplos de Xamarin.Mac](/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [macOS – desenvolvedor da Apple](https://developer.apple.com/macos/)
-- [Notas de versão do Xamarin. Mac 5,0](https://docs.microsoft.com/xamarin/mac/release-notes/5/5.0/)
+- [Notas de versão do Xamarin. Mac 5,0](/xamarin/mac/release-notes/5/5.0/)

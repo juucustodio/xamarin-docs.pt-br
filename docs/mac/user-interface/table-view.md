@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: d768be516b67ed23bdb851d87286a856a7269de4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d8c5cc10b4bce507f7a1d7896a41730745b08cbd
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935545"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431640"
 ---
 # <a name="table-views-in-xamarinmac"></a>Exibições de tabela no Xamarin. Mac
 
@@ -93,7 +93,7 @@ Selecione o modo de exibição de tabela na **hierarquia de interface** e as seg
 - **Trunca a última linha visível** -se `true` , a célula será truncada nos dados não puder se ajustar dentro de seus limites.
 
 > [!IMPORTANT]
-> A menos que você esteja mantendo um aplicativo Xamarin. Mac herdado, as `NSView` exibições de tabela baseadas devem ser usadas em `NSCell` exibições de tabela baseadas em. `NSCell`é considerado herdado e pode não ter suporte no futuro.
+> A menos que você esteja mantendo um aplicativo Xamarin. Mac herdado, as `NSView` exibições de tabela baseadas devem ser usadas em `NSCell` exibições de tabela baseadas em. `NSCell` é considerado herdado e pode não ter suporte no futuro.
 
 Selecione uma coluna de tabela na **hierarquia de interface** e as seguintes propriedades estão disponíveis no **Inspetor de atributo**:
 
@@ -420,10 +420,10 @@ Isso permitirá que o usuário selecione uma única linha no modo de exibição 
 
 O modo de exibição de tabela ( `NSTableView` ) contém os seguintes métodos para trabalhar com a seleção de linha:
 
-- `DeselectRow(nint)`-Anula a seleção da linha determinada na tabela.
-- `SelectRow(nint,bool)`-Seleciona a linha determinada. Passe `false` para o segundo parâmetro selecionar apenas uma linha por vez.
-- `SelectedRow`-Retorna a linha atual selecionada na tabela.
-- `IsRowSelected(nint)`-Retorna `true` se a linha fornecida está selecionada.
+- `DeselectRow(nint)` -Anula a seleção da linha determinada na tabela.
+- `SelectRow(nint,bool)` -Seleciona a linha determinada. Passe `false` para o segundo parâmetro selecionar apenas uma linha por vez.
+- `SelectedRow` -Retorna a linha atual selecionada na tabela.
+- `IsRowSelected(nint)` -Retorna `true` se a linha fornecida está selecionada.
 
 <a name="Multiple_Row_Selection"></a>
 
@@ -448,15 +448,15 @@ Isso permitirá que o usuário selecione uma única linha no modo de exibição 
 
 O modo de exibição de tabela ( `NSTableView` ) contém os seguintes métodos para trabalhar com a seleção de linha:
 
-- `DeselectAll(NSObject)`-Anula a seleção de todas as linhas na tabela. Use `this` para o primeiro parâmetro a ser enviado no objeto, fazendo a seleção. 
-- `DeselectRow(nint)`-Anula a seleção da linha determinada na tabela.
-- `SelectAll(NSobject)`– Seleciona todas as linhas na tabela. Use `this` para o primeiro parâmetro a ser enviado no objeto, fazendo a seleção.
-- `SelectRow(nint,bool)`-Seleciona a linha determinada. Pass `false` para o segundo parâmetro Limpe a seleção e selecione apenas uma única linha, passe `true` para estender a seleção e inclua essa linha.
-- `SelectRows(NSIndexSet,bool)`-Seleciona o conjunto de linhas fornecido. Pass `false` para o segundo parâmetro desmarque a seleção e selecione apenas uma dessas linhas, passe `true` para estender a seleção e inclua essas linhas.
-- `SelectedRow`-Retorna a linha atual selecionada na tabela.
-- `SelectedRows`-Retorna um `NSIndexSet` que contém os índices das linhas selecionadas.
-- `SelectedRowCount`-Retorna o número de linhas selecionadas.
-- `IsRowSelected(nint)`-Retorna `true` se a linha fornecida está selecionada.
+- `DeselectAll(NSObject)` -Anula a seleção de todas as linhas na tabela. Use `this` para o primeiro parâmetro a ser enviado no objeto, fazendo a seleção. 
+- `DeselectRow(nint)` -Anula a seleção da linha determinada na tabela.
+- `SelectAll(NSobject)` – Seleciona todas as linhas na tabela. Use `this` para o primeiro parâmetro a ser enviado no objeto, fazendo a seleção.
+- `SelectRow(nint,bool)` -Seleciona a linha determinada. Pass `false` para o segundo parâmetro Limpe a seleção e selecione apenas uma única linha, passe `true` para estender a seleção e inclua essa linha.
+- `SelectRows(NSIndexSet,bool)` -Seleciona o conjunto de linhas fornecido. Pass `false` para o segundo parâmetro desmarque a seleção e selecione apenas uma dessas linhas, passe `true` para estender a seleção e inclua essas linhas.
+- `SelectedRow` -Retorna a linha atual selecionada na tabela.
+- `SelectedRows` -Retorna um `NSIndexSet` que contém os índices das linhas selecionadas.
+- `SelectedRowCount` -Retorna o número de linhas selecionadas.
+- `IsRowSelected(nint)` -Retorna `true` se a linha fornecida está selecionada.
 
 <a name="Type_to_Select_Row"></a>
 
@@ -923,8 +923,8 @@ Este artigo deu uma visão detalhada de como trabalhar com exibições de tabela
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [MacTables (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/mactables)
-- [MacImages (amostra)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
+- [MacTables (exemplo)](/samples/xamarin/mac-samples/mactables)
+- [MacImages (amostra)](/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Exibições de estrutura de tópicos](~/mac/user-interface/outline-view.md)
 - [Listas de origem](~/mac/user-interface/source-list.md)

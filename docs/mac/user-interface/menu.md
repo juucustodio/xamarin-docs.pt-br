@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 2a7a09b1dec840090587377199533ef8c6ec63b5
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: c607e4668e4754edaec50a4c8b24776c7bb5844e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572660"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430788"
 ---
 # <a name="menus-in-xamarinmac"></a>Menus no Xamarin. Mac
 
@@ -120,7 +120,7 @@ Por padrão, toda vez que um evento de usuário ocorre, o `NSMenu` habilita auto
 - **Ações personalizadas e validateMenuItem:** -para qualquer item de menu associado a uma [ação personalizada de controlador de janela ou exibição](#Working-with-Custom-Window-Actions), você pode adicionar a `validateMenuItem:` ação e habilitar ou desabilitar manualmente os itens de menu.
 - **Habilitação do menu manual** -você define manualmente a `Enabled` propriedade de cada `NSMenuItem` para habilitar ou desabilitar cada item em um menu individualmente.
 
-Para escolher um sistema, defina a `AutoEnablesItems` propriedade de um `NSMenu` . `true`é automático (o comportamento padrão) e `false` é manual. 
+Para escolher um sistema, defina a `AutoEnablesItems` propriedade de um `NSMenu` . `true` é automático (o comportamento padrão) e `false` é manual. 
 
 > [!IMPORTANT]
 > Se você optar por usar o menu manual habilitando, nenhum dos itens de menu, mesmo aqueles controlados por classes AppKit como `NSTextView` , serão atualizados automaticamente. Você será responsável por habilitar e desabilitar todos os itens manualmente no código.
@@ -992,7 +992,7 @@ public override void DidFinishLaunching (NSNotification notification)
 }
 ```
 
-`NSStatusBar statusBar = NSStatusBar.SystemStatusBar;`nos dá acesso à barra de status de todo o sistema. `var item = statusBar.CreateStatusItem (NSStatusItemLength.Variable);`Cria um novo item da barra de status. A partir daí, criamos um menu e um número de itens de menu e anexamos o menu ao item da barra de status que acabamos de criar. 
+`NSStatusBar statusBar = NSStatusBar.SystemStatusBar;` nos dá acesso à barra de status de todo o sistema. `var item = statusBar.CreateStatusItem (NSStatusItemLength.Variable);` Cria um novo item da barra de status. A partir daí, criamos um menu e um número de itens de menu e anexamos o menu ao item da barra de status que acabamos de criar. 
 
 Se executarmos o aplicativo, o novo item da barra de status será exibido. Selecionar um item no menu irá alterar o texto na exibição de texto: 
 
@@ -1072,9 +1072,9 @@ Você pode criar e trabalhar com listas suspensas exatamente da mesma maneira qu
 
 Este artigo deu uma visão detalhada de como trabalhar com menus e itens de menu em um aplicativo Xamarin. Mac. Primeiro, examinamos a barra de menus do aplicativo e examinamos a criação de menus contextuais. em seguida, examinamos os menus de barra de status e os menus de encaixe personalizados. Por fim, abordamos os menus pop-up e as listas suspensas.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [MacMenus (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macmenus)
+- [MacMenus (exemplo)](/samples/xamarin/mac-samples/macmenus)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Diretrizes de interface humana – menus](https://developer.apple.com/macos/human-interface-guidelines/menus/menu-anatomy/)
 - [Introdução aos menus do aplicativo e listas pop-up](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/MenuList/MenuList.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 034169b4e77dace365b36733442afe295b62fb80
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: cae2b0ebfa81d140af1c233938ceddb9acd5ff07
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573962"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432920"
 ---
 # <a name="databases-in-xamarinmac"></a>Bancos de dados no Xamarin. Mac
 
@@ -1401,11 +1401,11 @@ namespace MacDatabase
 
 Neste exemplo, estamos criando um novo `NSComboBoxDataSource` que pode apresentar itens da caixa de combinação de qualquer fonte de dados do SQLite. Primeiro, definimos as seguintes propriedades:
 
-- `Conn`-Obtém ou define uma conexão com o banco de dados SQLite.
-- `TableName`-Obtém ou define o nome da tabela.
-- `IDField`-Obtém ou define o campo que fornece a ID exclusiva para a tabela especificada. O valor padrão é `ID`.
-- `DisplayField`-Obtém ou define o campo que é exibido na lista suspensa.
-- `RecordCount`-Obtém o número de registros na tabela especificada.
+- `Conn` -Obtém ou define uma conexão com o banco de dados SQLite.
+- `TableName` -Obtém ou define o nome da tabela.
+- `IDField` -Obtém ou define o campo que fornece a ID exclusiva para a tabela especificada. O valor padrão é `ID`.
+- `DisplayField` -Obtém ou define o campo que é exibido na lista suspensa.
+- `RecordCount` -Obtém o número de registros na tabela especificada.
 
 Quando criamos uma nova instância do objeto, passamos a conexão, o nome da tabela, opcionalmente o campo ID e o campo de exibição:
 
@@ -2222,9 +2222,9 @@ Primeiro, obtemos acesso ao nosso banco de dados SQLite.NET, criando e preenchen
 
 Este artigo deu uma visão detalhada de como trabalhar com associação de dados e codificação de valor de chave com bancos de dados SQLite em um aplicativo Xamarin. Mac. Primeiro, ele analisou a exposição de uma classe C# para Objective-C usando KVC (codificação de valor chave) e KVO (key-value Observation). Em seguida, ele mostrou como usar uma classe compatível com KVO e vincular dados a elementos da interface do usuário no Interface Builder do Xcode. O artigo também abordou o trabalho com dados do SQLite por meio do ORM SQLite.NET e exibindo esses dados em uma exibição de tabela.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [MacDatabase (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macdatabase)
+- [MacDatabase (exemplo)](/samples/xamarin/mac-samples/macdatabase)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Associação de dados e codificação de valor de chave](~/mac/app-fundamentals/databinding.md)
 - [Controles padrão](~/mac/user-interface/standard-controls.md)

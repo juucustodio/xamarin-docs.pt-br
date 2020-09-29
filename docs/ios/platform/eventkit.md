@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: a797fc654c7bdbbdb621c9d18dc7f1a82676778b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2e52fea7975094eb19d5247ea7747b40fda92630
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930228"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433166"
 ---
 # <a name="eventkit-in-xamarinios"></a>Kit no Xamarin. iOS
 
@@ -106,7 +106,7 @@ Além disso, como o manipulador de conclusão é chamado em um thread separado (
 
 ### <a name="ekentitytype"></a>EKEntityType
 
-`EKEntityType`é uma enumeração que descreve o tipo de `EventKit` item ou dados. Ele tem dois valores: `Event` e lembrete. Ele é usado em vários métodos, incluindo `EventStore.RequestAccess` para informar `EventKit` que tipo de dados obter acesso ou recuperar.
+`EKEntityType` é uma enumeração que descreve o tipo de `EventKit` item ou dados. Ele tem dois valores: `Event` e lembrete. Ele é usado em vários métodos, incluindo `EventStore.RequestAccess` para informar `EventKit` que tipo de dados obter acesso ou recuperar.
 
 ### <a name="ekcalendar"></a>EKCalendar
 
@@ -126,7 +126,7 @@ Além disso, como o manipulador de conclusão é chamado em um thread separado (
 
 ### <a name="ekspan"></a>EKSpan
 
-*EKSpan* é uma enumeração que descreve a extensão de eventos ao modificar eventos que podem ocorrer novamente e tem dois valores: *essa* e *FutureEvents*. `ThisEvent`significa que qualquer alteração ocorrerá apenas para o evento específico na série que está sendo referenciada, enquanto `FutureEvents` afetará esse evento e todas as recorrências futuras.
+*EKSpan* é uma enumeração que descreve a extensão de eventos ao modificar eventos que podem ocorrer novamente e tem dois valores: *essa* e *FutureEvents*. `ThisEvent` significa que qualquer alteração ocorrerá apenas para o evento específico na série que está sendo referenciada, enquanto `FutureEvents` afetará esse evento e todas as recorrências futuras.
 
 ## <a name="tasks"></a>Tarefas
 
@@ -274,7 +274,7 @@ Depois de salvo, a propriedade *EventIdentifier* será atualizada com um identif
 Console.WriteLine ("Event Saved, ID: " + newEvent.CalendarItemIdentifier);
 ```
 
- `EventIdentifier`é um GUID formatado de cadeia de caracteres.
+ `EventIdentifier` é um GUID formatado de cadeia de caracteres.
 
 ### <a name="create-a-reminder-programmatically"></a>Criar um lembrete programaticamente
 
@@ -378,6 +378,6 @@ Este documento forneceu uma visão geral das partes importantes da estrutura kit
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Calendários (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/calendars)
+- [Calendários (exemplo)](/samples/xamarin/ios-samples/calendars)
 - [Introdução ao iOS 6](~/ios/platform/introduction-to-ios6/index.md)
 - [Introdução aos calendários e lembretes](https://developer.apple.com/library/prerelease/ios/#documentation/DataManagement/Conceptual/EventKitProgGuide/Introduction/Introduction.html)

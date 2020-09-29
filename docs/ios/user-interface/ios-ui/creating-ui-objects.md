@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 729289c1764746f9777ef3d720e77865c9a71389
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 5b1bd4a07f9df13bff517db28715d985fc33e322
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937248"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430256"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Criando objetos da interface do usuário no Xamarin. iOS
 
-A Apple agrupa partes de funcionalidade relacionadas a "estruturas" que são equivalentes aos namespaces do Xamarin. iOS. `UIKit`é o namespace que contém todos os controles de interface do usuário para iOS.
+A Apple agrupa partes de funcionalidade relacionadas a "estruturas" que são equivalentes aos namespaces do Xamarin. iOS. `UIKit` é o namespace que contém todos os controles de interface do usuário para iOS.
 
 Sempre que seu código precisar fazer referência a um controle de interface do usuário, como um rótulo ou um botão, lembre-se de incluir a seguinte instrução Using:
 
@@ -171,4 +171,4 @@ Quando os objetos da interface do usuário são adicionados programaticamente a 
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Controles (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [Controles (exemplo)](/samples/xamarin/ios-samples/controls)

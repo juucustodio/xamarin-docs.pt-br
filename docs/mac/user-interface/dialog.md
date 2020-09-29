@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 631b1019313ddde6b53ffe63600be8f3fc58673a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f4d90960547fb43d6681667daadde1ce71fc105a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931463"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431763"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Caixas de diálogo no Xamarin. Mac
 
@@ -1099,11 +1099,11 @@ Este artigo adotou uma visão detalhada de como trabalhar com janelas modais, fo
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [MacWindows (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macwindows)
+- [MacWindows (exemplo)](/samples/xamarin/mac-samples/macwindows)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Menus](~/mac/user-interface/menu.md)
 - [Windows](~/mac/user-interface/window.md)
-- [Barras de ferramentas](~/mac/user-interface/toolbar.md)
+- [Barras de Ferramentas](~/mac/user-interface/toolbar.md)
 - [Diretrizes de interface humana do OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Introdução ao Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)
 - [Introdução às planilhas](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Sheets/Sheets.html#//apple_ref/doc/uid/10000002i)

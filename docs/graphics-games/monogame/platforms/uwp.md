@@ -6,12 +6,12 @@ ms.assetid: C6B99E44-00C1-4139-A1B7-FCFBE8749AB1
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 59bfad17e4c3a4720360f007ddf3e85835f972fd
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 5d970c596d403c7d55ccc23bb5e9ba7e5fbd623a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931073"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431964"
 ---
 # <a name="creating-a-monogame-uwp-project"></a>Criando um projeto UWP para monojogo
 
@@ -31,15 +31,15 @@ O desenvolvimento de aplicativos UWP de monojogo requer:
 - Definindo o dispositivo para o modo de desenvolvedor
 - [Monogame 3.7.1 para Visual Studio](http://community.monogame.net/t/monogame-3-7-1-release/11173) ou mais recente
 
-Para obter mais informações, consulte esta [página sobre como configurar o desenvolvimento de UWP do Windows 10](https://msdn.microsoft.com/windows/uwp/get-started/get-set-up).
+Para obter mais informações, consulte esta [página sobre como configurar o desenvolvimento de UWP do Windows 10](/windows/uwp/get-started/get-set-up).
 
-Os jogos do Xbox One podem ser desenvolvidos em um hardware do Xbox de varejo um. Um software adicional é necessário no PC de desenvolvimento e no Xbox. Para obter informações sobre como configurar um Xbox One para desenvolvimento de jogos, consulte esta página sobre como configurar [um Xbox One](https://msdn.microsoft.com/windows/uwp/xbox-apps/index).
+Os jogos do Xbox One podem ser desenvolvidos em um hardware do Xbox de varejo um. Um software adicional é necessário no PC de desenvolvimento e no Xbox. Para obter informações sobre como configurar um Xbox One para desenvolvimento de jogos, consulte esta página sobre como configurar [um Xbox One](/windows/uwp/xbox-apps/).
 
 ## <a name="creating-an-empty-template"></a>Criando um modelo vazio
 
 Depois que todos os recursos necessários tiverem sido instalados e o modo de desenvolvedor tiver sido habilitado no computador com Windows 10, podemos criar um novo projeto de monojogo usando o Visual Studio seguindo estas etapas:
 
-1. Selecione **arquivo**  >  **novo**  >  **projeto...**
+1. Selecione **Arquivo** > **Novo** > **Projeto...**
 1. Selecione a **Installed**  >  categoria**modelos**instalados do  >  **Visual C#**  >  **monogames** :
 
     ![Categoria de monojogo](uwp-images/image1.png)
