@@ -6,12 +6,12 @@ ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: dab6d1ff573f0f74b3b230732aa4669ba9fda0d5
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 38bee7e2c4c0b3cdf5107842e47feeeb1445d626
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934856"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457725"
 ---
 # <a name="localization"></a>Localização
 
@@ -108,7 +108,7 @@ Se os dados estiverem sendo inseridos pelo usuário do aplicativo, analise-os us
 double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
 ```
 
-Consulte os artigos [analisando cadeias de caracteres numéricas](https://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) e [data e hora de análise](https://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) do MSDN para obter informações adicionais.
+Consulte os artigos [analisando cadeias de caracteres numéricas](/dotnet/standard/base-types/parsing-numeric) e [data e hora de análise](/dotnet/standard/base-types/parsing-datetime) do MSDN para obter informações adicionais.
 
 <a name="rtl"></a>
 
@@ -128,7 +128,7 @@ O iOS e o Android dão suporte a layouts da direita para a esquerda e à renderi
 
 Diferentes idiomas definem a ordem de classificação de seus alfabetos de forma diferente, mesmo quando usam o mesmo conjunto de caracteres.
 
-Consulte os [detalhes da comparação de cadeias de caracteres](https://msdn.microsoft.com/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) nas [práticas recomendadas para usar cadeias no .NET Framework](https://msdn.microsoft.com/library/dd465121(v=vs.110).aspx) para obter um exemplo em que Language (CultureInfo) afeta a ordem de classificação.
+Consulte os [detalhes da comparação de cadeias de caracteres](/dotnet/standard/base-types/best-practices-strings#the_details_of_string_comparison) nas [práticas recomendadas para usar cadeias no .NET Framework](/dotnet/standard/base-types/best-practices-strings) para obter um exemplo em que Language (CultureInfo) afeta a ordem de classificação.
 
 É improvável que os recursos de banco de dados internos nas plataformas móveis ofereçam suporte à ordenação de classificação específica de idioma, para que você possa ser solicitado a implementar código adicional em sua lógica de negócios.
 
@@ -297,4 +297,4 @@ Continue lendo os detalhes técnicos da plataforma em que você está interessad
 
 - [Visão geral da localização da Apple](https://developer.apple.com/internationalization/)
 - [Lista de verificação de localização do Android](https://developer.android.com/distribute/tools/localization-checklist.html)
-- [Práticas recomendadas para o desenvolvimento de aplicativos preparados para o mundo (MSDN)](https://msdn.microsoft.com/library/w7x1y988%28v=vs.90%29.aspx)
+- [Práticas recomendadas para o desenvolvimento de aplicativos preparados para o mundo (MSDN)](/previous-versions/visualstudio/visual-studio-2008/w7x1y988(v=vs.90))

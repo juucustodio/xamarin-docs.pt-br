@@ -6,18 +6,18 @@ ms.assetid: 63C7F5D2-8933-4D4A-8348-E9CBDA45C472
 author: davidortinau
 ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: 2f632e3218d817aa0162a63ea81c61ca18c52b93
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 7eccc83a28d0bac7b9ff15a46022942c7238c714
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73006792"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457387"
 ---
 # <a name="net-embedding-best-practices-for-objective-c"></a>Práticas recomendadas de incorporação .NET para Objective-C
 
 Este é um rascunho e pode não estar em sincronia com os recursos atualmente compatíveis com a ferramenta. Esperamos que este documento se desenvolva separadamente e, eventualmente, corresponda à ferramenta final, ou seja, sugeriremos abordagens de longo prazo, não soluções alternativas imediatas.
 
-Uma grande parte deste documento também se aplica a outros idiomas com suporte. No entanto, todos os C# exemplos fornecidos são in e Objective-C.
+Uma grande parte deste documento também se aplica a outros idiomas com suporte. No entanto, todos os exemplos fornecidos estão em C# e Objective-C.
 
 ## <a name="exposing-a-subset-of-the-managed-code"></a>Expondo um subconjunto do código gerenciado
 
@@ -101,15 +101,15 @@ Mesmo bons nomes do .NET podem não ser ideais para uma API Objective-C.
 As convenções de nomenclatura em Objective-C são diferentes do .NET (em vez do camel case, mais detalhado).
 Leia as [diretrizes de codificação para Cocoa](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CodingGuidelines/Articles/NamingMethods.html#//apple_ref/doc/uid/20001282-BCIGIJJF).
 
-Do ponto de vista de um desenvolvedor Objective-C, um método com um prefixo `Get` implica que você não possui a instância, ou seja, a [regra Get](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-SW1).
+Do ponto de vista de um desenvolvedor Objective-C, um método com um `Get` prefixo implica que você não possui a instância, ou seja, a [regra Get](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-SW1).
 
-Esta regra de nomenclatura não tem nenhuma correspondência no mundo do .NET GC; um método .NET com um prefixo `Create` se comportará de forma idêntica no .NET. No entanto, para desenvolvedores de Objective-C, normalmente significa que você possui a instância retornada, ou seja, a [regra de criação](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-103029).
+Esta regra de nomenclatura não tem nenhuma correspondência no mundo do .NET GC; um método .NET com um `Create` prefixo se comportará de forma idêntica no .net. No entanto, para desenvolvedores de Objective-C, normalmente significa que você possui a instância retornada, ou seja, a [regra de criação](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html#//apple_ref/doc/uid/20001148-103029).
 
 ## <a name="exceptions"></a>Exceções
 
 É muito comum que o .NET use exceções extensivamente para relatar erros. No entanto, eles são lentos e não são muito idênticos em Objective-C. Sempre que possível, você deve ocultá-los do desenvolvedor Objective-C.
 
-Por exemplo, o padrão .NET `Try` será muito mais fácil de consumir do código Objective-C:
+Por exemplo, o `Try` padrão .net será muito mais fácil de consumir do código Objective-C:
 
 ```csharp
 public int Parse (string number)
@@ -131,14 +131,14 @@ public bool TryParse (string number, out int value)
 
 No .NET, um construtor deve ser bem sucedido e retornar uma instância válida (_espero_) ou gerar uma exceção.
 
-Por outro lado, o Objective-C permite que `init*` retorne `nil` quando uma instância não pode ser criada. Esse é um padrão comum, mas não geral, usado em muitas das estruturas da Apple. Em alguns outros casos, um `assert` pode acontecer (e eliminar o processo atual).
+Por outro lado, o Objective-C permite `init*` retornar `nil` quando uma instância não pode ser criada. Esse é um padrão comum, mas não geral, usado em muitas das estruturas da Apple. Em alguns outros casos, um `assert` pode acontecer (e eliminar o processo atual).
 
-O gerador segue o mesmo padrão de `return nil` para métodos de `init*` gerados. Se uma exceção gerenciada for lançada, ela será impressa (usando `NSLog`) e `nil` será retornada ao chamador.
+O gerador segue o mesmo `return nil` padrão para `init*` métodos gerados. Se uma exceção gerenciada for lançada, ela será impressa (usando `NSLog` ) e `nil` será retornada ao chamador.
 
 ## <a name="operators"></a>Operadores
 
-O Objective-C não permite que os operadores sejam sobrecarregados como C# o faz, portanto, eles são convertidos em seletores de classe.
+O Objective-C não permite que os operadores sejam sobrecarregados, pois o C# faz, portanto, eles são convertidos em seletores de classe.
 
-Os métodos nomeados ["amigáveis"](https://docs.microsoft.com/dotnet/standard/design-guidelines/operator-overloads) são gerados em preferência às sobrecargas de operador quando encontradas e podem produzir uma API mais fácil de consumir.
+Os métodos nomeados ["amigáveis"](/dotnet/standard/design-guidelines/operator-overloads) são gerados em preferência às sobrecargas de operador quando encontradas e podem produzir uma API mais fácil de consumir.
 
 As classes que substituem os operadores `==` e/ou `!=` devem substituir o método padrão Equals (Object) também.

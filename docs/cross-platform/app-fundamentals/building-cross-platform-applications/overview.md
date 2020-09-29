@@ -6,18 +6,18 @@ ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 6924379f49a80733714a488851533f506e83b245
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 72b41854160d0810bbc4a58972f638ef920a4068
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930826"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457478"
 ---
 # <a name="building-cross-platform-applications-overview"></a>Criando visão geral de aplicativos de plataforma cruzada
 
 Este guia apresenta a plataforma Xamarin e como arquitetar um aplicativo de plataforma cruzada para maximizar o uso de código e fornecer uma experiência nativa de alta qualidade em todas as principais plataformas móveis: iOS, Android e Windows Phone.
 
-A abordagem usada neste documento geralmente se aplica a aplicativos de produtividade e aplicativos de jogos, mas o foco está na produtividade e no utilitário (aplicativos sem jogo). Consulte o [documento introdução ao monogame](~/graphics-games/monogame/introduction/index.md) ou confira [Ferramentas do Visual Studio para Unity](https://docs.microsoft.com/visualstudio/cross-platform/visual-studio-tools-for-unity) para obter diretrizes de desenvolvimento de jogos entre plataformas.
+A abordagem usada neste documento geralmente se aplica a aplicativos de produtividade e aplicativos de jogos, mas o foco está na produtividade e no utilitário (aplicativos sem jogo). Consulte o [documento introdução ao monogame](~/graphics-games/monogame/introduction/index.md) ou confira [Ferramentas do Visual Studio para Unity](/visualstudio/cross-platform/visual-studio-tools-for-unity) para obter diretrizes de desenvolvimento de jogos entre plataformas.
 
 A frase "Write-Once, executar em qualquer lugar" é geralmente usada para enalteça as virtudes de uma única base de código que é executada sem modificações em várias plataformas. Embora ele tenha o benefício de reutilização de código, essa abordagem geralmente leva a aplicativos que têm um conjunto de recursos de denominador mais baixo-comum e uma interface de usuário de aparência genérica que não se encaixa perfeitamente em nenhuma das plataformas de destino.
 

@@ -6,12 +6,12 @@ ms.assetid: 870F0C18-A794-4C5D-881B-64CC78759E30
 author: davidortinau
 ms.author: daortin
 ms.date: 03/28/2018
-ms.openlocfilehash: bcda03d41cb3bafcfb3ee4b92046014cc5b0c119
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 813fb08835f30d0fc24f0c04e1f26b1f4e7f83e0
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029779"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456543"
 ---
 # <a name="getting-started-with-android"></a>Introdução ao Android
 
@@ -22,7 +22,7 @@ Além dos requisitos do guia de [introdução ao Java](~/tools/dotnet-embedding/
 
 Como uma visão geral, iremos:
 
-- Criar um C# projeto de biblioteca do Android
+- Criar um projeto de biblioteca do Android em C#
 - Instalar a inserção do .NET via NuGet
 - Executar a inserção do .NET no assembly da biblioteca do Android
 - Usar o arquivo AAR gerado em um projeto Java no Android Studio
@@ -53,7 +53,7 @@ A origem do layout deve ser semelhante a esta:
 </LinearLayout>
 ```
 
-Em sua atividade, certifique-se de que você está chamando `SetContentView` com o novo layout:
+Em sua atividade, verifique se você está chamando `SetContentView` com o novo layout:
 
 ```csharp
 [Activity(Label = "HelloActivity"),
@@ -70,9 +70,9 @@ public class HelloActivity : Activity
 ```
 
 > [!NOTE]
-> Não se esqueça do atributo `[Register]`. Para obter detalhes, consulte [limitações](#current-limitations-on-android).
+> Não se esqueça do `[Register]` atributo. Para obter detalhes, consulte [limitações](#current-limitations-on-android).
 
-Compile o projeto. O assembly resultante será salvo em `bin/Debug/hello-from-csharp.dll`.
+Compile o projeto. O assembly resultante será salvo no `bin/Debug/hello-from-csharp.dll` .
 
 ## <a name="installing-net-embedding-from-nuget"></a>Instalando a incorporação .NET do NuGet
 
@@ -97,9 +97,9 @@ if exist %E4K_OUTPUT% rmdir /S /Q %E4K_OUTPUT%
 ## <a name="use-the-generated-output-in-an-android-studio-project"></a>Usar a saída gerada em um projeto Android Studio
 
 1. Abra Android Studio e crie um novo projeto com uma **atividade vazia**.
-2. Clique com o botão direito do mouse no módulo do seu **aplicativo** e escolha **novo módulo >** .
+2. Clique com o botão direito do mouse no módulo do seu **aplicativo** e escolha **novo módulo >**.
 3. Selecione **importar. JAR/. Pacote AAR**.
-4. Use o navegador de diretório para localizar **~/Projects/Hello-from-Csharp/output/hello_from_csharp.aar** e clique em **concluir**.
+4. Use o navegador de diretório para localizar **~/projects/hello-from-csharp/output/hello_from_csharp. aar** e clique em **concluir**.
 
 ![Importar AAR para Android Studio](android-images/androidstudioimport.png)
 
@@ -111,7 +111,7 @@ Para usar o novo módulo do seu **aplicativo**, clique com o botão direito do m
 
 ![Dependências de Android Studio](android-images/androidstudiodependencies.png)
 
-Em sua atividade, adicione um novo método `onResume` e use o código a seguir para iniciar a C# atividade:
+Em sua atividade, adicione um novo `onResume` método e use o código a seguir para iniciar a atividade C#:
 
 ```java
 import hello_from_csharp.*;
@@ -155,11 +155,11 @@ com.xamarin.hellocsharp A/monodroid: No assemblies found in '(null)' or '<unavai
 
 Após iniciar seu aplicativo:
 
-![Olá do C# exemplo em execução no emulador](android-images/hello-from-csharp-android.png)
+![Exemplo de Olá do C# em execução no emulador](android-images/hello-from-csharp-android.png)
 
 Observe o que aconteceu aqui:
 
-- Temos uma C# classe, `HelloActivity`, que subclasses Java
+- Temos uma classe C#, `HelloActivity` , que subclasses Java
 - Temos arquivos de recurso do Android
 - Nós os usamos do Java em Android Studio
 
@@ -167,11 +167,11 @@ Para que este exemplo funcione, todos os itens a seguir são configurados no APK
 
 - O Xamarin. Android está configurado no início do aplicativo
 - Assemblies .NET incluídos em **ativos/assemblies**
-- Modificações de **AndroidManifest. xml** para C# suas atividades, etc.
+- **AndroidManifest.xml** modificações para suas atividades em C#, etc.
 - Recursos e ativos do Android de bibliotecas do .NET
-- [Wrappers](~/android/platform/java-integration/android-callable-wrappers.md) que podem ser chamados por Android para qualquer subclasse de `Java.Lang.Object`
+- [Wrappers](~/android/platform/java-integration/android-callable-wrappers.md) que podem ser chamados pelo Android para qualquer `Java.Lang.Object` subclasse
 
-Se você estiver procurando por um passo a passos adicional, confira o vídeo a seguir, que demonstra a inserção de [demonstração de FingerPaint](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) de Charles Petzold em um projeto Android Studio:
+Se você estiver procurando por um passo a passos adicional, confira o vídeo a seguir, que demonstra a inserção de [demonstração de FingerPaint](/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint) de Charles Petzold em um projeto Android Studio:
 
 [![Embeddinator-4000 para Android](https://img.youtube.com/vi/ZVcrXUpCNpI/0.jpg)](https://www.youtube.com/watch?v=ZVcrXUpCNpI)
 
@@ -207,7 +207,7 @@ android {
 
 ## <a name="current-limitations-on-android"></a>Limitações atuais no Android
 
-No momento, se você `Java.Lang.Object`a subclasse, o Xamarin. Android gerará o stub do Java (Android Callable Wrapper) em vez da inserção do .NET. Por isso, você deve seguir as mesmas regras para exportar C# para Java como Xamarin. Android. Por exemplo:
+No momento, se você `Java.Lang.Object` criar uma subclasse, o Xamarin. Android gerará o stub do Java (Android Callable Wrapper) em vez da incorporação do .net. Por isso, você deve seguir as mesmas regras para exportar C# para Java como Xamarin. Android. Por exemplo:
 
 ```csharp
 [Register("mono.embeddinator.android.ViewSubclass")]
@@ -239,7 +239,7 @@ Leia mais sobre [a integração do Java com o Xamarin. Android](~/android/platfo
 
 ## <a name="multiple-assemblies"></a>Vários assemblies
 
-A inserção de um único assembly é simples; no entanto, é muito mais provável que você tenha mais de C# um assembly. Muitas vezes, você terá dependências em pacotes NuGet, como as bibliotecas de suporte do Android ou Google Play Services que complicam ainda mais as coisas.
+A inserção de um único assembly é simples; no entanto, é muito mais provável que você tenha mais de um assembly C#. Muitas vezes, você terá dependências em pacotes NuGet, como as bibliotecas de suporte do Android ou Google Play Services que complicam ainda mais as coisas.
 
 Isso causa um dilema, já que a incorporação do .NET precisa incluir muitos tipos de arquivos no AAR final, como:
 

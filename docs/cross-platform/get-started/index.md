@@ -7,12 +7,12 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 04/10/2017
-ms.openlocfilehash: bc7a5217f3260eb36e45a683b5520347c22641b0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: da3148022f1280a18fd398e7c960c1a8440c0200
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73016379"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456802"
 ---
 # <a name="building-mobile-apps"></a>Criar aplicativos móveis
 
@@ -25,8 +25,8 @@ Antes de começar, confira o [requisitos de sistema](requirements.md) e as [inst
 
 Se você deseja criar um aplicativo usando tecnologias de interface do usuário nativas (como Android XML ou Xcode Storyboards), tente um desses guias específicos da plataforma:
 
-- [Android Quick Start](~/android/get-started/hello-android/hello-android-quickstart.md)
-- [Início rápido do iOS](~/ios/get-started/hello-ios/hello-ios-quickstart.md)
+- [Início Rápido Android](~/android/get-started/hello-android/hello-android-quickstart.md)
+- [Início Rápido do iOS](~/ios/get-started/hello-ios/hello-ios-quickstart.md)
 
 ## <a name="get-started-with-mobile-development"></a>Introdução ao desenvolvimento móvel
 
@@ -40,11 +40,11 @@ Este documento explica o *funcionamento do Xamarin* em um alto nível e inclui l
 
 Este artigo aborda o ciclo de vida de desenvolvimento de software em relação a aplicativos móveis e discute algumas das considerações necessárias ao criar projetos móveis. Para desenvolvedores que querem começar diretamente a compilar, este guia pode ser ignorado e lido posteriormente para obter um entendimento mais completo do desenvolvimento móvel.
 
-## <a name="building-cross-platform-applications"></a>[Construindo aplicativos multiplataforma](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
+## <a name="building-cross-platform-applications"></a>[Criando aplicativos de plataforma cruzada](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 
 Depois de escolher o Xamarin e levar em conta algumas considerações ao projetar e desenvolver aplicativos móveis, você poderá realizar um compartilhamento de código expressivo entre plataformas móveis, reduzir o tempo de lançamento no mercado, aproveitar talentos existentes, atender à demanda de acesso móvel dos clientes e reduzir a complexidade multiplataforma. Este documento descreve as principais diretrizes para aproveitar essas vantagens para aplicativos de produtividade e utilitários.
 
-### <a name="introducing-visual-studio-for-mac"></a>[Introdução do Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/)
+### <a name="introducing-visual-studio-for-mac"></a>[Introdução do Visual Studio para Mac](/visualstudio/mac/)
 
 Saiba mais sobre o Ambiente de Desenvolvimento Integrado (IDE) para macOS do Visual Studio para Mac.
 

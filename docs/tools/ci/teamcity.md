@@ -6,12 +6,12 @@ ms.assetid: AC2626CB-28A7-4808-B2A9-789D67899546
 author: davidortinau
 ms.author: daortin
 ms.date: 04/01/2020
-ms.openlocfilehash: 480ee0526fa707f46827fe764811dc33f5b5b243
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: a7118cc3ce9c0a5c4254bb5921800fe38acd85a0
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930020"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91458219"
 ---
 # <a name="using-team-city-with-xamarin"></a>Usando a cidade da equipe com o Xamarin
 
@@ -41,7 +41,7 @@ Há várias etapas envolvidas na configuração de TeamCity:
 
 ## <a name="requirements"></a>Requisitos
 
-A experiência com o [teste de App Center](https://docs.microsoft.com/appcenter/test-cloud/) é necessária.
+A experiência com o [teste de App Center](/appcenter/test-cloud/) é necessária.
 
 É necessário ter familiaridade com o TeamCity 8,1. A instalação do TeamCity está além do escopo deste documento. Supõe-se que o TeamCity está instalado no OS X Mavericks e está sendo executado em uma conta de usuário normal e não na conta raiz.
 

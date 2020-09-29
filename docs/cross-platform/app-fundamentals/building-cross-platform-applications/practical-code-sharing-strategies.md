@@ -6,12 +6,12 @@ ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: fd0e48c8f954ba926c5e1b5dc3a1c9bf6aab8c54
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: d10917471c37d91fa02db2585895f5694a5a4a60
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571188"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457439"
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>Parte 5 – Estratégias práticas de compartilhamento de código
 
@@ -90,7 +90,7 @@ O SQLite-NET atua como um ORM simples que permitirá que você salve e recupere 
 Recursos do SQLite-NET:
 
 - As tabelas são definidas adicionando atributos a classes de modelo.
-- Uma instância de banco de dados é representada por uma subclasse de `SQLiteConnection` , a classe principal na biblioteca SQLite-net.
+- Uma instância de banco de dados é representada por uma subclasse de  `SQLiteConnection` , a classe principal na biblioteca SQLite-net.
 - Os dados podem ser inseridos, consultados e excluídos usando objetos. Nenhuma instrução SQL é necessária (embora seja possível escrever instruções SQL, se necessário).
 - Consultas básicas do LINQ podem ser executadas nas coleções retornadas pelo SQLite-NET.
 
@@ -140,7 +140,7 @@ O Xamarin. iOS e o Xamarin. Android permitem o acesso ao sistema de arquivos usa
 
 Cada plataforma tem restrições de acesso diferentes que devem ser levadas em consideração:
 
-- os aplicativos iOS são executados em uma área restrita com acesso muito restrito ao sistema de arquivos. A Apple dita ainda mais como você deve usar o sistema de arquivos especificando determinados locais que são submetidos a backup (e outros que não são). Consulte o guia [trabalhando com o sistema de arquivos no Xamarin. Ios](~/ios/app-fundamentals/file-system.md) para obter mais detalhes.
+- os aplicativos iOS são executados em uma área restrita com acesso muito restrito ao sistema de arquivos. A Apple dita ainda mais como você deve usar o sistema de arquivos especificando determinados locais que são submetidos a backup (e outros que não são). Consulte o guia  [trabalhando com o sistema de arquivos no Xamarin. Ios](~/ios/app-fundamentals/file-system.md) para obter mais detalhes.
 - O Android também restringe o acesso a determinados diretórios relacionados ao aplicativo, mas também oferece suporte à mídia externa (por exemplo, Cartões SD) e acesso a dados compartilhados.
 - O Windows Phone 8 (Silverlight) não permite acesso direto a arquivos – os arquivos só podem ser manipulados usando `IsolatedStorage` .
 - Os projetos UWP Windows 8.1 WinRT e Windows 10 oferecem apenas operações de arquivo assíncronas por meio `Windows.Storage` de APIs, que são diferentes das outras plataformas.
@@ -184,7 +184,7 @@ O armazenamento isolado é uma API comum para salvar e carregar arquivos em toda
 
 É o mecanismo padrão de acesso a arquivos no Windows Phone (Silverlight) que foi implementado em Xamarin. iOS e Xamarin. Android para permitir que o código de acesso a arquivos comum seja gravado. A `System.IO.IsolatedStorage` classe pode ser referenciada em todas as três plataformas em um [projeto compartilhado](~/cross-platform/app-fundamentals/shared-projects.md).
 
-Consulte [visão geral do armazenamento isolado para obter Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) para obter mais informações.
+Consulte [visão geral do armazenamento isolado para obter Windows Phone](/previous-versions/windows/apps/ff402541(v=vs.105)) para obter mais informações.
 
 As APIs de armazenamento isolado não estão disponíveis em [bibliotecas de classes portáteis](~/cross-platform/app-fundamentals/pcl.md). Uma alternativa para o PCL é o [NuGet do PCLStorage](https://pclstorage.codeplex.com/)
 
@@ -232,13 +232,13 @@ webClient.Encoding = System.Text.Encoding.UTF8;
 webClient.DownloadStringAsync (new Uri ("http://some-server.com/file.xml"));
 ```
 
- `WebClient`também tem `DownloadFileCompleted` e `DownloadFileAsync` para recuperar dados binários.
+ `WebClient` também tem `DownloadFileCompleted` e `DownloadFileAsync` para recuperar dados binários.
 
 <a name="HttpWebRequest"></a>
 
 ### <a name="httpwebrequest"></a>HttpWebRequest
 
-`HttpWebRequest`oferece mais personalização do que `WebClient` e como resultado requer mais código a ser usado.
+`HttpWebRequest` oferece mais personalização do que `WebClient` e como resultado requer mais código a ser usado.
 
 O código para uma operação síncrona simples `HttpWebRequest` é:
 
@@ -345,10 +345,10 @@ static Context uiContext = TaskScheduler.FromCurrentSynchronizationContext();
 
 Para o código que não utiliza a biblioteca de tarefas paralelas, cada plataforma tem sua própria sintaxe para realizar o marshaling de operações de volta para o thread da interface do usuário:
 
-- **Ios** –`owner.BeginInvokeOnMainThread(new NSAction(action))`
-- **Android** –`owner.RunOnUiThread(action)`
-- **Xamarin. Forms** –`Device.BeginInvokeOnMainThread(action)`
-- **Windows** –`Deployment.Current.Dispatcher.BeginInvoke(action)`
+- **Ios** – `owner.BeginInvokeOnMainThread(new NSAction(action))`
+- **Android** – `owner.RunOnUiThread(action)`
+- **Xamarin. Forms** – `Device.BeginInvokeOnMainThread(action)`
+- **Windows** – `Deployment.Current.Dispatcher.BeginInvoke(action)`
 
 A sintaxe do iOS e do Android requer que uma classe ' Context ' esteja disponível, o que significa que o código precisa passar esse objeto para quaisquer métodos que exijam um retorno de chamada no thread da interface do usuário.
 
