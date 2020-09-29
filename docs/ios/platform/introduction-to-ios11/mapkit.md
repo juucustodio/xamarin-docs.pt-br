@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/30/2017
-ms.openlocfilehash: bddab35044c2b85b69146a03babd9884784baceb
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 8ccafec971a97a05dbf16488974d7a8e8e349708
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574581"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437336"
 ---
 # <a name="new-features-in-mapkit-on-ios-11"></a>Novos recursos no MapKit no iOS 11
 
@@ -29,7 +29,7 @@ o iOS 11 adiciona os seguintes novos recursos ao MapKit:
 
 ## <a name="automatically-grouping-markers-while-zooming"></a>Agrupamento de marcadores automaticamente ao aplicar zoom
 
-O exemplo de MapKit de exemplo ["Tandm"](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample) mostra como implementar o novo recurso de clustering de anotação do IOS 11.
+O exemplo de MapKit de exemplo ["Tandm"](/samples/xamarin/ios-samples/ios11-mapkitsample) mostra como implementar o novo recurso de clustering de anotação do IOS 11.
 
 ### <a name="1-create-an-mkpointannotation-subclass"></a>1. criar uma `MKPointAnnotation` subclasse
 
@@ -108,7 +108,7 @@ public class BikeView : MKMarkerAnnotationView
 
 Embora a exibição de anotação que representa um cluster de marcadores _possa_ ser uma imagem simples, os usuários esperam que o aplicativo forneça indicações visuais sobre o número de marcadores agrupados.
 
-O [código de exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample) usa CoreGraphics para renderizar o número de marcadores no cluster, bem como uma representação de gráfico de círculo da proporção de cada tipo de marcador.
+O [código de exemplo](/samples/xamarin/ios-samples/ios11-mapkitsample) usa CoreGraphics para renderizar o número de marcadores no cluster, bem como uma representação de gráfico de círculo da proporção de cada tipo de marcador.
 
 Você também deve definir:
 
@@ -200,7 +200,7 @@ Consulte a [seção mapas](~/ios/user-interface/controls/ios-maps/index.md) para
 
 ## <a name="compass-button"></a>Botão de bússola
 
-o iOS 11 adiciona a capacidade de retirar a bússola do mapa e renderizá-la em outro lugar na exibição. Consulte o [aplicativo de exemplo Tandm](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample) para obter um exemplo.
+o iOS 11 adiciona a capacidade de retirar a bússola do mapa e renderizá-la em outro lugar na exibição. Consulte o [aplicativo de exemplo Tandm](/samples/xamarin/ios-samples/ios11-mapkitsample) para obter um exemplo.
 
 Crie um botão que se parece com uma bússola (incluindo uma animação ao vivo quando a orientação do mapa é alterada) e a renderiza em outro controle.
 
@@ -253,8 +253,8 @@ button.TranslatesAutoresizingMaskIntoConstraints = false;
 View.AddSubview(button); // constraints omitted for simplicity
 ```
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Exemplo de MapKit ' Tandm '](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample)
+- [Exemplo de MapKit ' Tandm '](/samples/xamarin/ios-samples/ios11-mapkitsample)
 - [MKCompassButton](https://developer.apple.com/documentation/mapkit/mkcompassbutton)
 - [O que há de novo no MapKit (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/237/)

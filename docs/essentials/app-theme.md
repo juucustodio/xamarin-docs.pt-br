@@ -9,14 +9,14 @@ ms.date: 01/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: eca052c82ae3333feb0437b8a4e24bc6b97b836d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: c68f00b77f0b9f88d014334dc56e1e58ed057986
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84802502"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436878"
 ---
-# <a name="xamarinessentials-app-theme"></a>Xamarin.Essentials: Tema do aplicativo
+# <a name="no-locxamarinessentials-app-theme"></a>Xamarin.Essentials: Tema do aplicativo
 
 A API **RequestedTheme** faz parte da [`AppInfo`](app-information.md) classe e fornece informações sobre qual tema é solicitado para seu aplicativo em execução pelo sistema.
 
@@ -70,7 +70,7 @@ Não especificado sempre será retornado em versões do iOS com mais de 13,0
 
 Os aplicativos UWP respeitarão sua configuração no aplicativo UWP. XAML em **RequestedTheme**. Se estiver definido como um tema específico, Xamarin.Essentials o sempre retornará essa configuração. Para usar o tema dinâmico do sistema operacional, remova este nó do seu aplicativo e, em seguida, quando seu aplicativo for executado, ele retornará o tema definido pelo usuário nas configurações do Windows (**configurações > personalização > cores > escolha o modo de aplicativo padrão**).
 
-Você pode ler mais sobre a [documentação do tema solicitado por UWP](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.requestedtheme).
+Você pode ler mais sobre a [documentação do tema solicitado por UWP](/uwp/api/windows.ui.xaml.application.requestedtheme).
 
 --------------
 

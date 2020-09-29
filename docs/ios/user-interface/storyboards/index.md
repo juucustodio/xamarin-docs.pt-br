@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: b61d851e793d3fb0ae5e97718b151dd87f37da61
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b70a4693f356fdf83ca2f7fee9615855a5569712
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937040"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437027"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introdução aos storyboards no Xamarin. iOS
 
@@ -66,10 +66,10 @@ No mouse, um menu será exibido, permitindo-nos escolher a ação para nosso tra
 
 Há diferentes tipos de transições, cada uma dando controle sobre como um novo controlador de exibição é apresentado ao usuário e como ele interage com outros controladores de exibição no storyboard. Eles são explicados abaixo. Também é possível subclasse de um objeto transição para implementar uma transição personalizada:
 
-- **Mostrar/enviar por** Push – um push transição adiciona o controlador de exibição à pilha de navegação. Ele pressupõe que o controlador de exibição que originou o Push faz parte do mesmo controlador de navegação que o controlador de exibição que está sendo adicionado à pilha. Isso faz a mesma coisa que `pushViewController` e é geralmente usado quando há alguma relação entre os dados nas telas. O uso do transição de envio por push fornece a você o luxo de ter uma barra de navegação com um botão voltar e um título adicionado a cada exibição na pilha, permitindo a navegação detalhada na hierarquia de exibição.
-- **Modal** – um transição modal crie uma relação entre quaisquer dois controladores de exibição em seu projeto, com a opção de uma transição animada sendo mostrada. O controlador de exibição filho obscurecerá completamente o controlador de exibição pai quando colocado na exibição. Ao contrário de um transição de push, que adiciona um botão voltar para nós; ao usar um transição modal, `DismissViewController` é necessário usá-lo para retornar ao controlador de exibição anterior.
+- **Mostrar/enviar por** Push – um push transição adiciona o controlador de exibição à pilha de navegação. Ele pressupõe que o controlador de exibição que originou o Push faz parte do mesmo controlador de navegação que o controlador de exibição que está sendo adicionado à pilha. Isso faz a mesma coisa que  `pushViewController` e é geralmente usado quando há alguma relação entre os dados nas telas. O uso do transição de envio por push fornece a você o luxo de ter uma barra de navegação com um botão voltar e um título adicionado a cada exibição na pilha, permitindo a navegação detalhada na hierarquia de exibição.
+- **Modal** – um transição modal crie uma relação entre quaisquer dois controladores de exibição em seu projeto, com a opção de uma transição animada sendo mostrada. O controlador de exibição filho obscurecerá completamente o controlador de exibição pai quando colocado na exibição. Ao contrário de um transição de push, que adiciona um botão voltar para nós; ao usar um transição modal,  `DismissViewController` é necessário usá-lo para retornar ao controlador de exibição anterior.
 - **Personalizado** – qualquer transição personalizado pode ser criado como uma subclasse de `UIStoryboardSegue` .
-- **Desenrolar** – um transição de liberação pode ser usado para navegar de volta por um transição de Push ou modal – por exemplo, ignorando o controlador de exibição apresentado de modo restrito. Além disso, você pode desenrolar por não apenas um, mas uma série de continuações de push e modal e voltar várias etapas em sua hierarquia de navegação com uma única ação de desenrolamento. Para entender como usar um desenrolamento de transição no iOS, leia a receita [criando continuações de desenrolamento](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) .
+- **Desenrolar** – um transição de liberação pode ser usado para navegar de volta por um transição de Push ou modal – por exemplo, ignorando o controlador de exibição apresentado de modo restrito. Além disso, você pode desenrolar por não apenas um, mas uma série de continuações de push e modal e voltar várias etapas em sua hierarquia de navegação com uma única ação de desenrolamento. Para entender como usar um desenrolamento de transição no iOS, leia a receita  [criando continuações de desenrolamento](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) .
 - De **origem** – um transição de origem informativa indica a cena que contém o controlador de exibição inicial e, portanto, a exibição que o usuário verá primeiro. Ele é representado pelo transição mostrado abaixo:  
 
     [![Um transição de origem](images/sourcelesssegue.png)](images/sourcelesssegue.png#lightbox)
@@ -91,7 +91,7 @@ Qualquer aplicativo usando classes de tamanho também usará o novo [*continuaç
 
 ### <a name="transferring-data-with-segues"></a>Transferindo dados com continuações
 
-Os benefícios de um transição não terminam com transições. Eles também podem ser usados para gerenciar a transferência de dados entre controladores de exibição. Isso é obtido substituindo o `PrepareForSegue` método no controlador de exibição inicial e manipulando os dados por si mesmos. Quando o transição é disparado – por exemplo, com um pressionamento de botão – o aplicativo chamará esse método, fornecendo uma oportunidade de preparar o novo controlador de exibição *antes que* ocorra qualquer navegação. O código a seguir, do exemplo [Phoneword](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) , demonstra isso:
+Os benefícios de um transição não terminam com transições. Eles também podem ser usados para gerenciar a transferência de dados entre controladores de exibição. Isso é obtido substituindo o `PrepareForSegue` método no controlador de exibição inicial e manipulando os dados por si mesmos. Quando o transição é disparado – por exemplo, com um pressionamento de botão – o aplicativo chamará esse método, fornecendo uma oportunidade de preparar o novo controlador de exibição *antes que* ocorra qualquer navegação. O código a seguir, do exemplo [Phoneword](/samples/xamarin/ios-samples/hello-ios) , demonstra isso:
 
 ```csharp
 public override void PrepareForSegue (UIStoryboardSegue segue,
@@ -262,7 +262,7 @@ public partial class MainViewController : UIViewController
 }
 ```
 
-Para obter mais informações sobre como registrar classes e métodos, consulte a documentação do [registrador de tipos](https://docs.microsoft.com/xamarin/ios/internals/registrar) .
+Para obter mais informações sobre como registrar classes e métodos, consulte a documentação do [registrador de tipos](../../internals/registrar.md) .
 
 A última etapa dessa classe é conectar o botão e a transição para o controlador de exibição rosa. Criaremos uma instância do `PinkViewController` storyboard; em seguida, iremos programar um push transição com `PushViewController` , conforme ilustrado pelo código de exemplo abaixo:
 
@@ -356,7 +356,7 @@ Neste código, combinamos o segueIdentifier ao nosso `SegueToPink` transição, 
 
 Podemos aplicar essa abordagem a qualquer transição nesse controlador de exibição, verificando o argumento segueIdentifier para o método ShouldPerformSegue. Nesse caso, temos apenas um identificador transição – `SegueToPink` .
 
-Consulte a solução storyboards. Conditional no exemplo de [storyboards manual](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard) para obter um exemplo de trabalho.
+Consulte a solução storyboards. Conditional no exemplo de [storyboards manual](/samples/xamarin/ios-samples/manualstoryboard) para obter um exemplo de trabalho.
 
 <a name="Using-Storyboard-References"></a>
 
@@ -426,7 +426,7 @@ Para adicionar uma referência a uma cena específica um storyboard externo (e n
 
 6. Na guia **widget** do Gerenciador de **Propriedades**, selecione o nome do **storyboard** e a ID de **referência** (ID do storyboard) da cena que você criou acima:
 
-    [![A guia do widget](images/ref09.png)](images/ref09.png#lightbox)
+    [![A guia do widget ](images/ref09.png)](images/ref09.png#lightbox)
 
 7. Controle-clique em um widget de interface do usuário (como um botão) em uma cena existente e crie um novo transição para a **referência do storyboard** que você acabou de criar:
 
@@ -482,7 +482,7 @@ Este artigo apresenta o conceito de storyboards e como eles podem ser benéficos
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Storyboard manual (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard/)
+- [Storyboard manual (exemplo)](/samples/xamarin/ios-samples/manualstoryboard/)
 - [Introdução ao designer do iOS](~/ios/user-interface/designer/introduction.md)
 - [Convertendo em storyboards](https://developer.apple.com/library/ios/#releasenotes/Miscellaneous/RN-AdoptingStoryboards/)
 - [Referência de classe UIStoryboard](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIStoryboard_Class/Reference/Reference.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 1214360f98464e1451da58aaca13df6a3964aba9
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 56c4e9c5b0ca44500ca3930a63b300b6bd3fb33f
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933062"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436596"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Solução de problemas de conexão de um host de build do Xamarin.iOS
 
@@ -20,8 +20,8 @@ _Este guia fornece etapas de solução de problemas que podem ser encontrados us
 
 ## <a name="log-file-location"></a>Local do Arquivo de Log
 
-- **Mac** –`~/Library/Logs/Xamarin-[MAJOR.MINOR]`
-- **Windows** –`%LOCALAPPDATA%\Xamarin\Logs`
+- **Mac** – `~/Library/Logs/Xamarin-[MAJOR.MINOR]`
+- **Windows** – `%LOCALAPPDATA%\Xamarin\Logs`
 
 Os arquivos de log podem ser localizados, navegando até **Ajuda &gt; Xamarin &gt; Zip Logs** no Visual Studio.
 
@@ -268,7 +268,7 @@ Se os arquivos de log normais ainda não fornecerem informações suficientes pa
 
 1. Encerre o Visual Studio.
 
-2. Inicie um [**Prompt de Comando de Desenvolvedor**](https://msdn.microsoft.com/library/ms229859(v=vs.110).aspx).
+2. Inicie um [**Prompt de Comando de Desenvolvedor**](/dotnet/framework/tools/developer-command-prompt-for-vs).
 
 3. Execute o seguinte comando no prompt de comando para inicializar o Visual Studio com o log detalhado:
 
@@ -336,7 +336,7 @@ Causas relatadas:
 
 Bug relevante [#40781](https://bugzilla.xamarin.com/show_bug.cgi?id=40781).
 
-Esse problema pode ocorrer quando o Visual Studio não consegue atualizar o cache de componente MEF. Se esse for o caso, a instalação dessa extensão do Visual Studio poderá ajudar:[https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd)
+Esse problema pode ocorrer quando o Visual Studio não consegue atualizar o cache de componente MEF. Se esse for o caso, a instalação dessa extensão do Visual Studio poderá ajudar: [https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd)
 
 Isso limpará o cache de componente do MEF do Visual Studio para corrigir problemas com a corrupção de cache.
 

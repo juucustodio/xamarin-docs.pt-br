@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 2f9b4dfac4909a5c68b6c53fc913925ee95313a3
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 688febbb8b2aae3ae9dff45ea06ef3cf3809641a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997508"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436548"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Vinculação de dados e codificação de chave-valor no Xamarin. Mac
 
@@ -173,7 +173,7 @@ Agora, sempre que a `Name` propriedade da `Person` instância da `PersonModel` c
 
 Para obter mais informações, consulte [introdução à Apple no guia de programação de observação de valor-chave](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html#//apple_ref/doc/uid/10000177i).
 
-## <a name="data-binding"></a>Vinculação de dados
+## <a name="data-binding"></a>Associação de dados
 
 As seções a seguir mostrarão como você pode usar um código de chave-valor e um valor de chave que observa a classe compatível para associar dados aos elementos da interface do usuário no Interface Builder do Xcode, em vez de ler e gravar valores usando código C#. Dessa forma, você separa o _modelo de dados_ dos modos de exibição usados para exibi-los, tornando o aplicativo Xamarin. Mac mais flexível e mais fácil de manter. Você também diminui muito a quantidade de código a ser escrito.
 
@@ -371,10 +371,10 @@ public void SetPeople(NSMutableArray array) {
 
 Eles permitem que os controladores solicitem e modifiquem os dados que eles exibem. Como as expostas `NSArray` acima, elas têm uma Convenção de nomenclatura muito específica (que difere das convenções típicas de nomenclatura C#):
 
-- `addObject:`-Adiciona um objeto à matriz.
-- `insertObject:in{class_name}ArrayAtIndex:`-Em que `{class_name}` é o nome da sua classe. Esse método insere um objeto na matriz em um determinado índice.
-- `removeObjectFrom{class_name}ArrayAtIndex:`-Em que `{class_name}` é o nome da sua classe. Esse método remove o objeto na matriz em um determinado índice.
-- `set{class_name}Array:`-Em que `{class_name}` é o nome da sua classe. Esse método permite que você substitua o transporte existente por um novo.
+- `addObject:` -Adiciona um objeto à matriz.
+- `insertObject:in{class_name}ArrayAtIndex:` -Em que `{class_name}` é o nome da sua classe. Esse método insere um objeto na matriz em um determinado índice.
+- `removeObjectFrom{class_name}ArrayAtIndex:` -Em que `{class_name}` é o nome da sua classe. Esse método remove o objeto na matriz em um determinado índice.
+- `set{class_name}Array:` -Em que `{class_name}` é o nome da sua classe. Esse método permite que você substitua o transporte existente por um novo.
 
 Dentro desses métodos, Encapsulamos as alterações na matriz `WillChangeValue` e `DidChangeValue` as mensagens para conformidade com o KVO.
 
@@ -602,7 +602,7 @@ Agora precisamos associar o modo de exibição de tabela ao controlador da matri
 3. Selecione a **célula exibição de tabela** na coluna **funcionário** . No **Inspetor de associações** sob o **valor** Turndown, selecione **a exibição associar à** **célula da tabela**. Insira `objectValue.Name` para o **caminho de chave do modelo**:
 
     [![Definindo o caminho de chave do modelo](databinding-images/table09.png "Definindo o caminho de chave do modelo")](databinding-images/table09-large.png#lightbox)
-4. `objectValue`é o atual `PersonModel` na matriz que está sendo gerenciada pelo controlador da matriz.
+4. `objectValue` é o atual `PersonModel` na matriz que está sendo gerenciada pelo controlador da matriz.
 5. Selecione a **célula exibição de tabela** na coluna **ocupação** . No **Inspetor de associações** sob o **valor** Turndown, selecione **a exibição associar à** **célula da tabela**. Insira `objectValue.Occupation` para o **caminho de chave do modelo**:
 
     [![Definindo o caminho de chave do modelo](databinding-images/table10.png "Definindo o caminho de chave do modelo")](databinding-images/table10-large.png#lightbox)
@@ -724,7 +724,7 @@ Agora precisamos associar nossa exibição de estrutura de tópicos ao controlad
 3. Selecione a **célula exibição de tabela** na coluna **funcionário** . No **Inspetor de associações** sob o **valor** Turndown, selecione **a exibição associar à** **célula da tabela**. Insira `objectValue.Name` para o **caminho de chave do modelo**:
 
     [![Inserindo o caminho de chave do modelo](databinding-images/outline09.png "Inserindo o caminho de chave do modelo")](databinding-images/outline09-large.png#lightbox)
-4. `objectValue`é o atual `PersonModel` na matriz que está sendo gerenciada pelo controlador de árvore.
+4. `objectValue` é o atual `PersonModel` na matriz que está sendo gerenciada pelo controlador de árvore.
 5. Selecione a **célula exibição de tabela** na coluna **ocupação** . No **Inspetor de associações** sob o **valor** Turndown, selecione **a exibição associar à** **célula da tabela**. Insira `objectValue.Occupation` para o **caminho de chave do modelo**:
 
     [![Inserindo o caminho de chave do modelo](databinding-images/outline10.png "Inserindo o caminho de chave do modelo")](databinding-images/outline10-large.png#lightbox)
@@ -891,8 +891,8 @@ Este artigo deu uma visão detalhada de como trabalhar com vinculação de dados
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Storyboard MacDatabinding (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macdatabinding-storyboard)
-- [MacDatabinding XIBs (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macdatabinding-xibs)
+- [Storyboard MacDatabinding (exemplo)](/samples/xamarin/mac-samples/macdatabinding-storyboard)
+- [MacDatabinding XIBs (exemplo)](/samples/xamarin/mac-samples/macdatabinding-xibs)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Controles padrão](~/mac/user-interface/standard-controls.md)
 - [Exibições de tabela](~/mac/user-interface/table-view.md)

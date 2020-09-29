@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 49f2bdf63c286464073308cd1f17239692aa2395
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 002c57a1549201018cb2068f000a038f686eb2c0
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84567327"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436741"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Trabalhando com o aplicativo pai watchOS no Xamarin
 
@@ -30,8 +30,8 @@ O aplicativo pai às vezes também é chamado de aplicativo de contêiner.
 
 Esses dois exemplos demonstram como usar `WCSession` o para executar código e enviar mensagens entre um aplicativo de inspeção e o iPhone emparelhado:
 
-- [Assista à conectividade](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchconnectivity/)
-- [SimpleWatchConnectivity](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-simplewatchconnectivity/) 
+- [Assista à conectividade](/samples/xamarin/ios-samples/watchos-watchconnectivity/)
+- [SimpleWatchConnectivity](/samples/xamarin/ios-samples/watchos-simplewatchconnectivity/) 
 
 ## <a name="shared-storage"></a>Armazenamento compartilhado
 
@@ -74,7 +74,7 @@ Observação: se o caminho for `null` , verifique a [configuração do grupo de 
 
 Para obter mais informações, consulte a documentação de [recursos do grupo de aplicativos](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) .
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Referência do WKInterfaceController da Apple](https://developer.apple.com/library/prerelease/ios/documentation/WatchKit/Reference/WKInterfaceController_class/index.html#//apple_ref/occ/clm/WKInterfaceController/openParentApplication:reply:)
 - [Dados de compartilhamento da Apple com seu aplicativo recipiente](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)

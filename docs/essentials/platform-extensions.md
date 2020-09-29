@@ -1,6 +1,6 @@
 ---
-title: Xamarin.EssentialsExtensões de plataforma
-description: Xamarin.Essentialsfornece vários métodos de extensão de plataforma ao ter que trabalhar com tipos de plataforma como Rect, size e Point.
+title: Xamarin.Essentials Extensões de plataforma
+description: Xamarin.Essentials fornece vários métodos de extensão de plataforma ao ter que trabalhar com tipos de plataforma como Rect, size e Point.
 ms.assetid: AB4D198A-4FD7-479E-8627-01F887A6D056
 author: jamesmontemagno
 ms.author: jamont
@@ -8,16 +8,16 @@ ms.date: 03/13/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 56cb9619a4132f6568cee8fbf590965934024639
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4a13ed8e12e11595c6c1b7617e32a492205a9175
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84801888"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436571"
 ---
-# <a name="xamarinessentials-platform-extensions"></a>Xamarin.Essentials: Extensões de plataforma
+# <a name="no-locxamarinessentials-platform-extensions"></a>Xamarin.Essentials: Extensões de plataforma
 
-Xamarin.Essentialsfornece vários métodos de extensão de plataforma ao ter que trabalhar com tipos de plataforma como Rect, size e Point. Isso significa que você pode converter entre a versão `System` desses tipos para iOS, Android e tipos específicos de UWP.
+Xamarin.Essentials fornece vários métodos de extensão de plataforma ao ter que trabalhar com tipos de plataforma como Rect, size e Point. Isso significa que você pode converter entre a versão `System` desses tipos para iOS, Android e tipos específicos de UWP.
 
 ## <a name="get-started"></a>Introdução
 
@@ -89,7 +89,7 @@ Os Estados de atividade são os seguintes:
 * Iniciado
 * Parado
 
-Leia a documentação do [ciclo de vida da atividade](https://docs.microsoft.com/xamarin/android/app-fundamentals/activity-lifecycle/) para saber mais.
+Leia a documentação do [ciclo de vida da atividade](../android/app-fundamentals/activity-lifecycle/index.md) para saber mais.
 
 ## <a name="ios-extensions"></a>Extensões do iOS
 

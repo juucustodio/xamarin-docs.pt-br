@@ -12,14 +12,14 @@ ms.date: 05/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: da56bde956a0ff7730ef6737e2802c3723d6d716
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e6670faf921248c007c20307fddb6a34057c5202
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84133455"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436673"
 ---
-# <a name="build-your-first-xamarinforms-app"></a>Crie seu primeiro Xamarin.Forms aplicativo
+# <a name="build-your-first-no-locxamarinforms-app"></a>Crie seu primeiro Xamarin.Forms aplicativo
 
 _Assista a este vídeo e acompanhe para criar seu primeiro aplicativo móvel com o Xamarin.Forms ._
 
@@ -29,7 +29,7 @@ _Assista a este vídeo e acompanhe para criar seu primeiro aplicativo móvel com
 
 ## <a name="step-by-step-instructions-for-windows"></a>Instruções passo a passo para Windows
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Siga estas etapas em conjunto com o vídeo acima:
 
@@ -114,13 +114,13 @@ Este vídeo aborda o processo de criação e teste de um aplicativo iOS usando o
 
 ## <a name="step-by-step-instructions-for-windows"></a>Instruções passo a passo para Windows
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Siga estas etapas em conjunto com o vídeo acima:
 
 1. Escolha **arquivo > novo projeto de >...** ou pressione o botão **criar novo projeto...** e, em seguida, selecione **Visual C# > aplicativo móvel > de plataforma cruzada ( Xamarin.Forms )**:
 
-    [![Aplicativo móvel ( Xamarin.Forms )](images/win/01-sml.png)](images/win/01.png#lightbox)
+    [![Aplicativo móvel (::: no-Loc (Xamarin. Forms):::)](images/win/01-sml.png)](images/win/01.png#lightbox)
 
 2. Certifique-se de que **Android** e **iOS** estejam selecionados, com compartilhamento de código **.NET Standard**:
 
@@ -161,7 +161,7 @@ Siga estas etapas em conjunto com o vídeo acima:
 
 ## <a name="step-by-step-instructions-for-mac"></a>Instruções passo a passo para Mac
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Siga estas etapas em conjunto com o vídeo acima:
 
@@ -210,7 +210,7 @@ Siga estas etapas em conjunto com o vídeo acima:
 
 ::: zone-end
 
-Você pode baixar o código completo na [Galeria de amostras](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/) ou exibi-lo no [GitHub](https://github.com/xamarin/xamarin-forms-samples/tree/master/GetStarted/FirstApp).
+Você pode baixar o código completo na [Galeria de amostras](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/) ou exibi-lo no [GitHub](https://github.com/xamarin/xamarin-forms-samples/tree/master/GetStarted/FirstApp).
 
 ## <a name="next-steps"></a>Próximas etapas
 

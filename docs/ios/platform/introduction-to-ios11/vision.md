@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/31/2017
-ms.openlocfilehash: 89a21eec369691e5c6e1ec8ce2430d679b6b309d
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 9a31cd31f7cbfb4748991d45204ca867b5d62c8c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572137"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436625"
 ---
 # <a name="vision-framework-in-xamarinios"></a>Estrutura de visão no Xamarin. iOS
 
@@ -35,7 +35,7 @@ A detecção e a Detecção Facial de retângulo são discutidas em mais detalhe
 
 ## <a name="rectangle-detection"></a>Detecção de retângulo
 
-O [exemplo VisionRects](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles) mostra como processar uma imagem e desenhar os retângulos detectados nela.
+O [exemplo VisionRects](/samples/xamarin/ios-samples/ios11-visionrectangles) mostra como processar uma imagem e desenhar os retângulos detectados nela.
 
 ### <a name="1-initialize-the-vision-request"></a>1. inicializar a solicitação de visão
 
@@ -94,7 +94,7 @@ O `OverlayRectangles` método no exemplo **VisionRectangles** tem três funçõe
 - Desenhar um retângulo para indicar onde cada um foi detectado e
 - Adicionando um rótulo de texto para cada retângulo usando CoreGraphics.
 
-Exiba a [origem do exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles) para o método CoreGraphics exato.
+Exiba a [origem do exemplo](/samples/xamarin/ios-samples/ios11-visionrectangles) para o método CoreGraphics exato.
 
 ![Fotografia com três retângulos detectados](vision-images/found-rectangles-phone-sml.png)
 
@@ -106,7 +106,7 @@ A detecção de retângulo geralmente é apenas a primeira etapa em uma cadeia d
 
 ## <a name="face-detection"></a>Detecção Facial
 
-O [exemplo de VisionFaces](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces) funciona de maneira semelhante ao exemplo de **VisionRectangles** , usando uma classe de solicitação de visão diferente.
+O [exemplo de VisionFaces](/samples/xamarin/ios-samples/ios11-visionfaces) funciona de maneira semelhante ao exemplo de **VisionRectangles** , usando uma classe de solicitação de visão diferente.
 
 ### <a name="1-initialize-the-vision-request"></a>1. inicializar a solicitação de visão
 
@@ -167,7 +167,7 @@ O `OverlayRectangles` método no exemplo **VisionFaces** tem três funções:
 - Desenhando um retângulo para cada face detectada e
 - Adicionar um rótulo de texto para cada face usando CoreGraphics.
 
-Exiba a [origem do exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces) para o método CoreGraphics exato.
+Exiba a [origem do exemplo](/samples/xamarin/ios-samples/ios11-visionfaces) para o método CoreGraphics exato.
 
 ![Fotografia com duas faces detectadas](vision-images/found-faces-phone-sml.png)
 
@@ -175,8 +175,8 @@ Exiba a [origem do exemplo](https://docs.microsoft.com/samples/xamarin/ios-sampl
 
 O Vision Framework inclui recursos adicionais para detectar recursos faciais, como os olhos e a boca. Use o `VNDetectFaceLandmarksRequest` tipo, que retornará `VNFaceObservation` resultados como na etapa 3 acima, mas com dados adicionais `VNFaceLandmark` .
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Retângulos de visão (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles)
-- [Faces de visão (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces)
+- [Retângulos de visão (exemplo)](/samples/xamarin/ios-samples/ios11-visionrectangles)
+- [Faces de visão (exemplo)](/samples/xamarin/ios-samples/ios11-visionfaces)
 - [Avanços na imagem principal-filtros, metal, visão e muito mais (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/510/)
