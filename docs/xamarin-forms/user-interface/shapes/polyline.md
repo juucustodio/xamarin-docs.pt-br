@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.FormsFormas: polilinha'
+title: 'Xamarin.Forms Formas: polilinha'
 description: A Xamarin.Forms classe Polyline pode ser usada para desenhar uma série de linhas retas conectadas.
 ms.prod: xamarin
 ms.assetid: 15D02690-AC03-457E-8815-8E4C17E4D642
@@ -10,14 +10,14 @@ ms.date: 06/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5b7e6404dec40814b800aef696afd058cafb69e5
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 3926e063fcabf9c70103e3ee72a4723358f26b2a
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918353"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558863"
 ---
-# <a name="no-locxamarinforms-shapes-polyline"></a>Xamarin.FormsFormas: polilinha
+# <a name="no-locxamarinforms-shapes-polyline"></a>Xamarin.Forms Formas: polilinha
 
 ![API de pré-lançamento](~/media/shared/preview.png)
 
@@ -100,6 +100,6 @@ Neste exemplo, o comportamento de preenchimento da polilinha é determinado usan
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ShapeDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.FormsExistentes](index.md)
-- [Xamarin.FormsFormas: regras de preenchimento](fillrules.md)
+- [ShapeDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms Existentes](index.md)
+- [Xamarin.Forms Formas: regras de preenchimento](fillrules.md)

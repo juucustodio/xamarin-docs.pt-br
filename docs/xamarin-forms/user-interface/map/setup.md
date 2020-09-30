@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsInicialização e configuração do mapa
+title: Xamarin.Forms Inicialização e configuração do mapa
 description: O Xamarin.Forms . O pacote NuGet de mapas é necessário para usar a funcionalidade de mapas em um aplicativo. Além disso, o acesso ao local do usuário exige que as permissões de localização tenham sido concedidas ao aplicativo.
 ms.prod: xamarin
 ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
@@ -10,16 +10,16 @@ ms.date: 02/07/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 52e2ac5f8075c57f533fcba064223f355e07ba48
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 3da0223bf72e4de60cc50be2562a0fdbd279f52e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139835"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559734"
 ---
-# <a name="xamarinforms-map-initialization-and-configuration"></a>Xamarin.FormsInicialização e configuração do mapa
+# <a name="no-locxamarinforms-map-initialization-and-configuration"></a>Xamarin.Forms Inicialização e configuração do mapa
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 O [`Map`](xref:Xamarin.Forms.Maps.Map) controle usa o controle de mapa nativo em cada plataforma. Isso fornece uma experiência de mapas rápida e familiar para os usuários, mas significa que algumas etapas de configuração são necessárias para aderir a cada uma das plataformas requisitos de API.
 
@@ -60,11 +60,11 @@ A configuração adicional é necessária no Android e no Plataforma Universal d
 Exibir e interagir com um mapa no iOS não requer nenhuma configuração adicional. No entanto, para acessar os serviços de localização, você deve definir as seguintes chaves em **info. plist**:
 
 - iOS 11 e posterior
-  - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26)– para usar serviços de localização quando o aplicativo está em uso
-  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/bundleresources/information_property_list/nslocationalwaysandwheninuseusagedescription)– para usar serviços de localização em todos os momentos
+  - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – para usar serviços de localização quando o aplicativo está em uso
+  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/bundleresources/information_property_list/nslocationalwaysandwheninuseusagedescription) – para usar serviços de localização em todos os momentos
 - iOS 10 e anterior
-  - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26)– para usar serviços de localização quando o aplicativo está em uso
-  - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18)– para usar serviços de localização em todos os momentos    
+  - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – para usar serviços de localização quando o aplicativo está em uso
+  - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) – para usar serviços de localização em todos os momentos    
 
 Para dar suporte ao iOS 11 e anteriores, você pode incluir todas as três chaves: `NSLocationWhenInUseUsageDescription` , `NSLocationAlwaysAndWhenInUseUsageDescription` e `NSLocationAlwaysUsageDescription` .
 
@@ -115,7 +115,7 @@ Depois de obter uma chave de API, ela deve ser adicionada dentro do `<applicatio
 Isso incorpora a chave de API ao manifesto. Sem uma chave de API válida [`Map`](xref:Xamarin.Forms.Maps.Map) , o controle exibirá uma grade em branco.
 
 > [!NOTE]
-> `com.google.android.geo.API_KEY`é o nome de metadados recomendado para a chave de API. Para compatibilidade com versões anteriores, o `com.google.android.maps.v2.API_KEY` nome de metadados pode ser usado, mas permite apenas a autenticação para a API do Maps do Android v2.
+> `com.google.android.geo.API_KEY` é o nome de metadados recomendado para a chave de API. Para compatibilidade com versões anteriores, o `com.google.android.maps.v2.API_KEY` nome de metadados pode ser usado, mas permite apenas a autenticação para a API do Maps do Android v2.
 
 Para que seu APK acesse o Google Maps, você deve incluir impressões digitais e nomes de pacote do SHA-1 para cada repositório de chaves (depuração e versão) que você usa para assinar seu APK. Por exemplo, se você usar um computador para depuração e outro computador para gerar a versão APK, deverá incluir a impressão digital do certificado SHA-1 do repositório de chaves de depuração do primeiro computador e a impressão digital do certificado SHA-1 do repositório de chaves de lançamento do segundo computador. Lembre-se também de editar as credenciais de chave se o **nome do pacote** do aplicativo for alterado. Consulte [obtendo uma chave de API do Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
 
@@ -271,7 +271,7 @@ Esse código passa o assembly no qual a `Xamarin.Forms.Maps.UWP.MapRenderer` cla
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplo de mapas](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Exemplo de mapas](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Xamarin.Forms. Mapeia Pins](~/xamarin-forms/user-interface/map/pins.md).
 - [API de mapas](xref:Xamarin.Forms.Maps)
 - [Mapear renderizador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md)

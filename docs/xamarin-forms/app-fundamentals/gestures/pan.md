@@ -10,12 +10,12 @@ ms.date: 01/21/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 886191725421a754e696409deb7a3cca0f6ea923
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 8c9968ac7de45f3e6e239f82ba43b53abd05a647
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87917699"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558512"
 ---
 # <a name="add-a-pan-gesture-recognizer"></a>Adicionar um reconhecedor de gesto de Pan
 
@@ -151,6 +151,6 @@ Ao panorâmica do conteúdo em um elemento que não ocupa a tela inteira, a altu
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [PanGesture (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pangesture)
+- [PanGesture (amostra)](/samples/xamarin/xamarin-forms-samples/workingwithgestures-pangesture)
 - [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
 - [PanGestureRecognizer](xref:Xamarin.Forms.PanGestureRecognizer)

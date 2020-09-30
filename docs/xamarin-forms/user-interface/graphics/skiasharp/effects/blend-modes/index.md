@@ -10,16 +10,16 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b5b03779b9f0847621456b25582fb8ea04f8386d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: dd1ef993fc2184561f01dad99aa01858251f8f73
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131697"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560670"
 ---
 # <a name="skiasharp-blend-modes"></a>Modos de mesclagem SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Esses artigos se concentram na [`BlendMode`](xref:SkiaSharp.SKPaint.BlendMode) propriedade de [`SKPaint`](xref:SkiaSharp.SKPaint) . A `BlendMode` propriedade é do tipo [`SKBlendMode`](xref:SkiaSharp.SKBlendMode) , uma enumeração com 29 membros.
 
@@ -95,5 +95,5 @@ Use os modos de combinação não separáveis para alterar matiz, saturação ou
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

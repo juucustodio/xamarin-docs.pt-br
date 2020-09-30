@@ -10,12 +10,12 @@ ms.date: 10/10/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: da867dd017ed50ccbc09f969891bb91011379d3f
-ms.sourcegitcommit: f6a2f07d2e689e0cfd01b30008d50c83c63fa70c
+ms.openlocfilehash: 8c62d03e785e02160d9c0f83c3375383d890d62b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89052741"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558265"
 ---
 # <a name="local-notifications-in-no-locxamarinforms"></a>Notificações locais em Xamarin.Forms
 
@@ -410,7 +410,7 @@ No iOS, as notificações de entrada são automaticamente recebidas pelo aplicat
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Projeto de exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/local-notifications)
+- [Projeto de exemplo](/samples/xamarin/xamarin-forms-samples/local-notifications)
 - [Notificações no Xamarin. Android](~/android/app-fundamentals/notifications/index.md)
 - [Notificações no Xamarin. iOS](~/ios/platform/user-notifications/index.md)
 - [Xamarin.Forms Dependência. serviço](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md)

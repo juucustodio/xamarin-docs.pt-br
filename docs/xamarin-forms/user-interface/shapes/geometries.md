@@ -1,6 +1,6 @@
 ---
-title: 'Xamarin.FormsFormas: geometrias'
-description: Xamarin.Formsas classes Geometry permitem descrever a geometria de uma forma 2D.
+title: 'Xamarin.Forms Formas: geometrias'
+description: Xamarin.Forms as classes Geometry permitem descrever a geometria de uma forma 2D.
 ms.prod: xamarin
 ms.assetid: 07DE3D66-1820-4642-BDDF-84146D40C99D
 ms.technology: xamarin-forms
@@ -10,20 +10,20 @@ ms.date: 06/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 420099cadd3a541736084403265b9302c9a32b37
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: c6c6fb0ea9d3e2b728072fa36c3cdb2a86ade131
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918323"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559318"
 ---
-# <a name="no-locxamarinforms-shapes-geometries"></a>Xamarin.FormsFormas: geometrias
+# <a name="no-locxamarinforms-shapes-geometries"></a>Xamarin.Forms Formas: geometrias
 
 ![API de pré-lançamento](~/media/shared/preview.png)
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
-A `Geometry` classe e as classes que derivam dela permitem que você descreva a geometria de uma forma 2D. `Geometry`os objetos podem ser simples, como retângulos e círculos, ou compostos, criados a partir de dois ou mais objetos Geometry. Além disso, geometrias mais complexas podem ser criadas, incluindo arcos e curvas.
+A `Geometry` classe e as classes que derivam dela permitem que você descreva a geometria de uma forma 2D. `Geometry` os objetos podem ser simples, como retângulos e círculos, ou compostos, criados a partir de dois ou mais objetos Geometry. Além disso, geometrias mais complexas podem ser criadas, incluindo arcos e curvas.
 
 A `Geometry` classe é a classe pai para várias classes que definem diferentes categorias de geometrias:
 
@@ -630,6 +630,6 @@ A `GeometryHelper` classe fornece os seguintes métodos auxiliares:
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ShapeDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.FormsExistentes](index.md)
-- [Xamarin.FormsFormas: regras de preenchimento](fillrules.md)
+- [ShapeDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms Existentes](index.md)
+- [Xamarin.Forms Formas: regras de preenchimento](fillrules.md)

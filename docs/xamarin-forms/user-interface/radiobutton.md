@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsÍndices
+title: Xamarin.Forms Índices
 description: O Xamarin.Forms RadioButton é um tipo de botão que permite aos usuários selecionar uma opção de um conjunto. Cada opção é representada por um botão de opção e você só pode selecionar um botão de opção em um grupo.
 ms.prod: xamarin
 ms.assetid: E2AA40E0-69A5-41DF-BFC4-C151CA657451
@@ -10,16 +10,16 @@ ms.date: 03/13/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f7cbd11f98127cb73514112dae785102ff9c51c0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 964bac947f46e5279cbdcc6bdb61d74deba7f622
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127615"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559383"
 ---
-# <a name="xamarinforms-radiobutton"></a>Xamarin.FormsÍndices
+# <a name="no-locxamarinforms-radiobutton"></a>Xamarin.Forms Índices
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
 
 O Xamarin.Forms `RadioButton` é um tipo de botão que permite aos usuários selecionar uma opção de um conjunto. Cada opção é representada por um botão de opção e você só pode selecionar um botão de opção em um grupo. A `RadioButton` classe herda da [`Button`](xref:Xamarin.Forms.Button) classe.
 
@@ -28,7 +28,7 @@ As capturas de tela a seguir mostram `RadioButton` objetos em seus Estados limpo
 ![Captura de tela dos botões de opção nos Estados selecionado e limpo, no iOS e no Android](radiobutton-images/radiobutton-states.png "Botões de opção no iOS e no Android")
 
 > [!IMPORTANT]
-> `RadioButton`o é experimental e só pode ser usado com a definição do `RadioButton_Experimental` sinalizador. Para obter mais informações, consulte [sinalizadores experimentais](~/xamarin-forms/internals/experimental-flags.md).
+> `RadioButton` o é experimental e só pode ser usado com a definição do `RadioButton_Experimental` sinalizador. Para obter mais informações, consulte [sinalizadores experimentais](~/xamarin-forms/internals/experimental-flags.md).
 
 O `RadioButton` controle define as seguintes propriedades:
 
@@ -116,7 +116,7 @@ Neste exemplo, cada um `RadioButton` é mutuamente exclusivo porque compartilha 
 
 ## <a name="respond-to-a-radiobutton-state-change"></a>Responder a uma alteração de estado de RadioButton
 
-Um botão de opção tem dois estados: marcado ou desmarcado. Quando um botão de opção é selecionado, sua `IsChecked` propriedade é `true` . Quando um botão de opção é apagado, sua `IsChecked` propriedade é `false` . Um botão de opção pode ser desmarcado clicando em outro botão de opção no mesmo grupo, mas não pode ser desmarcado com um novo clique nele. No entanto, você pode desmarcar um botão de opção programaticamente definindo sua `IsChecked` propriedade como `false` .
+Um botão de opção tem dois estados: marcado ou desmarcado. Quando um botão de opção é selecionado, sua `IsChecked` propriedade é `true` . Quando um botão de opção está desmarcado, a propriedade `IsChecked` dele é `false`. Um botão de opção pode ser desmarcado clicando em outro botão de opção no mesmo grupo, mas não pode ser desmarcado com um novo clique nele. No entanto, você pode desmarcar um botão de opção programaticamente, configurando a propriedade `IsChecked` dele como `false`.
 
 Quando a `IsChecked` propriedade é alterada, seja por meio de manipulação de usuário ou programática, o `CheckedChanged` evento é acionado. Um manipulador de eventos para esse evento pode ser registrado para responder à alteração:
 
@@ -153,7 +153,7 @@ radioButton.CheckedChanged += (sender, e) =>
 
 ## <a name="radiobutton-visual-states"></a>Estados visuais de RadioButton
 
-`RadioButton`tem um `IsChecked` [`VisualState`](xref:Xamarin.Forms.VisualState) que pode ser usado para iniciar uma alteração visual quando um `RadioButton` é selecionado.
+`RadioButton` tem um `IsChecked` [`VisualState`](xref:Xamarin.Forms.VisualState) que pode ser usado para iniciar uma alteração visual quando um `RadioButton` é selecionado.
 
 O exemplo de XAML a seguir mostra como definir um estado visual para o `IsChecked` estado:
 
@@ -211,6 +211,6 @@ Para obter mais informações sobre os Estados visuais, consulte [ Xamarin.Forms
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações de RadioButton (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
-- [Xamarin.FormsButton](~/xamarin-forms/user-interface/button.md)
-- [Xamarin.FormsGerenciador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Demonstrações de RadioButton (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
+- [Xamarin.Forms Button](~/xamarin-forms/user-interface/button.md)
+- [Xamarin.Forms Gerenciador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)

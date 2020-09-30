@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsPosição e distância do mapa
+title: Xamarin.Forms Posição e distância do mapa
 description: O Xamarin.Forms . O namespace Maps contém uma struct de posição que é normalmente usada ao posicionar um mapa e seus Pins, e uma estrutura de distância que pode, opcionalmente, ser usada ao posicionar um mapa.
 ms.prod: xamarin
 ms.assetid: 2F4EA3D2-1351-40AD-A71D-CF7F1F18F1E8
@@ -10,16 +10,16 @@ ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2b1613789029d59e46a6d0431bfa9da1a53082e8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 896b7f878e1ec9c3ed3c8324330c288220963e62
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138392"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559708"
 ---
-# <a name="xamarinforms-map-position-and-distance"></a>Xamarin.FormsPosição e distância do mapa
+# <a name="no-locxamarinforms-map-position-and-distance"></a>Xamarin.Forms Posição e distância do mapa
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 O [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) namespace contém uma [`Position`](xref:Xamarin.Forms.Maps.Position) struct que é normalmente usada ao posicionar um mapa e seus PINs e uma [`Distance`](xref:Xamarin.Forms.Maps.Distance) struct que pode, opcionalmente, ser usada ao posicionar um mapa.
 
@@ -30,7 +30,7 @@ O [`Position`](xref:Xamarin.Forms.Maps.Position) struct encapsula uma posição 
 - [`Latitude`](xref:Xamarin.Forms.Maps.Position.Latitude), do tipo `double` , que representa a latitude da posição em graus decimais.
 - [`Longitude`](xref:Xamarin.Forms.Maps.Position.Longitude), do tipo `double` , que representa a longitude da posição em graus decimais.
 
-[`Position`](xref:Xamarin.Forms.Maps.Position)os objetos são criados com o `Position` Construtor, que requer argumentos de latitude e longitude especificados como `double` valores:
+[`Position`](xref:Xamarin.Forms.Maps.Position) os objetos são criados com o `Position` Construtor, que requer argumentos de latitude e longitude especificados como `double` valores:
 
 ```csharp
 Position position = new Position(36.9628066, -122.0194722);
@@ -49,7 +49,7 @@ A [`Distance`](xref:Xamarin.Forms.Maps.Distance) estrutura encapsula uma distân
 - [`Meters`](xref:Xamarin.Forms.Maps.Distance.Meters), do tipo `double` , que representa a distância em metros que é distribuída pelo `Distance` .
 - [`Miles`](xref:Xamarin.Forms.Maps.Distance.Miles), do tipo `double` , que representa a distância em milhas que é distribuída pelo `Distance` .
 
-[`Distance`](xref:Xamarin.Forms.Maps.Distance)os objetos podem ser criados com o `Distance` Construtor, que requer um argumento de medidores especificado como um `double` :
+[`Distance`](xref:Xamarin.Forms.Maps.Distance) os objetos podem ser criados com o `Distance` Construtor, que requer um argumento de medidores especificado como um `double` :
 
 ```csharp
 Distance distance = new Distance(1450.5);
@@ -66,4 +66,4 @@ Distance distance4 = Distance.BetweenPositions(position1, position2);
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplo de mapas](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Exemplo de mapas](/samples/xamarin/xamarin-forms-samples/workingwithmaps)

@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsStepper
+title: Xamarin.Forms Stepper
 description: O Xamarin.Forms stepper permite que um usuário selecione um valor numérico de um intervalo de valores. Ele consiste em dois botões rotulados com sinais de menos e mais. A manipulação dos dois botões altera o valor selecionado de forma incremental.
 ms.prod: xamarin
 ms.assetid: 62571B3E-D84B-4F52-9FC7-C105D6733B16
@@ -10,16 +10,16 @@ ms.date: 10/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4f071530fb17de44d8ede786ca1b42f5e11f4f7c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 390bca8cb74fd2da725724769956b164e0264173
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84130540"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558748"
 ---
-# <a name="xamarinforms-stepper"></a>Xamarin.FormsStepper
+# <a name="no-locxamarinforms-stepper"></a>Xamarin.Forms Stepper
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 
 _Use um stepper para selecionar um valor numérico de um intervalo de valores._
 
@@ -27,10 +27,10 @@ O Xamarin.Forms [`Stepper`](xref:Xamarin.Forms.Stepper) consiste em dois botões
 
 O [`Stepper`](xref:Xamarin.Forms.Stepper) define quatro propriedades do tipo `double` :
 
-- [`Increment`](xref:Xamarin.Forms.Stepper.Increment)é a quantidade pela qual alterar o valor selecionado, com um valor padrão de 1.
-- [`Minimum`](xref:Xamarin.Forms.Stepper.Minimum)é o mínimo do intervalo, com um valor padrão de 0.
-- [`Maximum`](xref:Xamarin.Forms.Stepper.Maximum)é o máximo do intervalo, com um valor padrão de 100.
-- [`Value`](xref:Xamarin.Forms.Stepper.Value)é o valor de stepper, que pode variar entre `Minimum` e `Maximum` e tem um valor padrão de 0.
+- [`Increment`](xref:Xamarin.Forms.Stepper.Increment) é a quantidade pela qual alterar o valor selecionado, com um valor padrão de 1.
+- [`Minimum`](xref:Xamarin.Forms.Stepper.Minimum) é o mínimo do intervalo, com um valor padrão de 0.
+- [`Maximum`](xref:Xamarin.Forms.Stepper.Maximum) é o máximo do intervalo, com um valor padrão de 100.
+- [`Value`](xref:Xamarin.Forms.Stepper.Value) é o valor de stepper, que pode variar entre `Minimum` e `Maximum` e tem um valor padrão de 0.
 
 Todas essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos. A [`Value`](xref:Xamarin.Forms.Stepper.Value) propriedade tem um modo de associação padrão de [`BindingMode.TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) , o que significa que ele é adequado como uma fonte de associação em um aplicativo que usa a arquitetura [MVVM (Model-View-ViewModel)](~/xamarin-forms/enterprise-application-patterns/mvvm.md) .
 
@@ -39,17 +39,17 @@ Todas essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.For
 
 O [`Stepper`](xref:Xamarin.Forms.Stepper) impõe a [`Value`](xref:Xamarin.Forms.Stepper.Value) propriedade para que ela fique entre [`Minimum`](xref:Xamarin.Forms.Stepper.Minimum) e [`Maximum`](xref:Xamarin.Forms.Stepper.Maximum) , inclusive. Se a `Minimum` propriedade for definida como um valor maior que a `Value` propriedade, o `Stepper` definirá a `Value` propriedade como `Minimum` . Da mesma forma, se `Maximum` for definido como um valor menor que `Value` , `Stepper` o definirá a `Value` propriedade como `Maximum` .
 
-[`Stepper`](xref:Xamarin.Forms.Stepper)define um [`ValueChanged`](xref:Xamarin.Forms.Stepper.ValueChanged) evento que é acionado quando as [`Value`](xref:Xamarin.Forms.Stepper.Value) alterações são feitas por meio da manipulação de usuário do `Stepper` ou quando o aplicativo define a `Value` propriedade diretamente. Um `ValueChanged` evento também é acionado quando a `Value` propriedade é conforçada, conforme descrito no parágrafo anterior.
+[`Stepper`](xref:Xamarin.Forms.Stepper) define um [`ValueChanged`](xref:Xamarin.Forms.Stepper.ValueChanged) evento que é acionado quando as [`Value`](xref:Xamarin.Forms.Stepper.Value) alterações são feitas por meio da manipulação de usuário do `Stepper` ou quando o aplicativo define a `Value` propriedade diretamente. Um `ValueChanged` evento também é acionado quando a `Value` propriedade é conforçada, conforme descrito no parágrafo anterior.
 
 O [`ValueChangedEventArgs`](xref:Xamarin.Forms.ValueChangedEventArgs) objeto que acompanha o [`ValueChanged`](xref:Xamarin.Forms.Stepper.ValueChanged) evento tem duas propriedades, ambas do tipo `double` : [`OldValue`](xref:Xamarin.Forms.ValueChangedEventArgs.OldValue) e [`NewValue`](xref:Xamarin.Forms.ValueChangedEventArgs.NewValue) . No momento em que o evento é acionado, o valor de `NewValue` é igual à [`Value`](xref:Xamarin.Forms.Stepper.Value) Propriedade do [`Stepper`](xref:Xamarin.Forms.Stepper) objeto.
 
 ## <a name="basic-stepper-code-and-markup"></a>Código e marcação do stepper básico
 
-O exemplo [**StepperDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) contém três páginas que são funcionalmente idênticas, mas são implementadas de maneiras diferentes. A primeira página usa apenas código C#, a segunda usa XAML com um manipulador de eventos no código e a terceira é capaz de evitar o manipulador de eventos usando a vinculação de dados no arquivo XAML.
+O exemplo [**StepperDemos**](/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) contém três páginas que são funcionalmente idênticas, mas são implementadas de maneiras diferentes. A primeira página usa apenas código C#, a segunda usa XAML com um manipulador de eventos no código e a terceira é capaz de evitar o manipulador de eventos usando a vinculação de dados no arquivo XAML.
 
 ### <a name="creating-a-stepper-in-code"></a>Criando um stepper no código
 
-A página de **código stepper básica** no exemplo de [**StepperDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) mostra como criar um [`Stepper`](xref:Xamarin.Forms.Stepper) e dois [`Label`](xref:Xamarin.Forms.Label) objetos no código:
+A página de **código stepper básica** no exemplo de [**StepperDemos**](/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) mostra como criar um [`Stepper`](xref:Xamarin.Forms.Stepper) e dois [`Label`](xref:Xamarin.Forms.Label) objetos no código:
 
 ```csharp
 public class BasicStepperCodePage : ContentPage
@@ -93,13 +93,13 @@ public class BasicStepperCodePage : ContentPage
 }
 ```
 
-O [`Stepper`](xref:Xamarin.Forms.Stepper) é inicializado para ter uma [`Maximum`](xref:Xamarin.Forms.Stepper.Maximum) propriedade de 360 e uma [`Increment`](xref:Xamarin.Forms.Stepper.Increment) propriedade de 30. Manipular as `Stepper` alterações do valor selecionado incrementalmente entre [`Minimum`](xref:Xamarin.Forms.Stepper.Minimum) `Maximum` o com base no valor da `Increment` propriedade. O [`ValueChanged`](xref:Xamarin.Forms.Stepper.ValueChanged) manipulador do `Stepper` usa a [`Value`](xref:Xamarin.Forms.Stepper.Value) Propriedade do `stepper` objeto para definir a [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) Propriedade do primeiro [`Label`](xref:Xamarin.Forms.Label) e usa o `string.Format` método com a `NewValue` propriedade dos argumentos do evento para definir a [`Text`](xref:Xamarin.Forms.Label.Text) Propriedade do segundo `Label` . Essas duas abordagens para obter o valor atual de `Stepper` são intercambiáveis.
+O [`Stepper`](xref:Xamarin.Forms.Stepper) é inicializado para ter uma [`Maximum`](xref:Xamarin.Forms.Stepper.Maximum) propriedade de 360 e uma [`Increment`](xref:Xamarin.Forms.Stepper.Increment) propriedade de 30. Manipular as `Stepper` alterações do valor selecionado incrementalmente entre [`Minimum`](xref:Xamarin.Forms.Stepper.Minimum) `Maximum` o com base no valor da `Increment` propriedade. O [`ValueChanged`](xref:Xamarin.Forms.Stepper.ValueChanged) manipulador do `Stepper` usa a [`Value`](xref:Xamarin.Forms.Stepper.Value) Propriedade do `stepper` objeto para definir a [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) Propriedade do primeiro [`Label`](xref:Xamarin.Forms.Label)  e usa o `string.Format` método com a `NewValue` propriedade dos argumentos do evento para definir a [`Text`](xref:Xamarin.Forms.Label.Text) Propriedade do segundo `Label` . Essas duas abordagens para obter o valor atual de `Stepper` são intercambiáveis.
 
 As capturas de tela a seguir mostram a página de **código básica do stepper** :
 
 [![Código stepper básico](stepper-images/basic-stepper-code.png "Código stepper básico")](stepper-images/basic-stepper-code-large.png#lightbox)
 
-O segundo [`Label`](xref:Xamarin.Forms.Label) exibe o texto "(não inicializado)" até que o [`Stepper`](xref:Xamarin.Forms.Stepper) seja manipulado, o que faz com que o primeiro [`ValueChanged`](xref:Xamarin.Forms.Stepper.ValueChanged) evento seja acionado.
+O segundo [`Label`](xref:Xamarin.Forms.Label)  exibe o texto "(não inicializado)" até que o [`Stepper`](xref:Xamarin.Forms.Stepper) seja manipulado, o que faz com que o primeiro [`ValueChanged`](xref:Xamarin.Forms.Stepper.ValueChanged) evento seja acionado.
 
 ### <a name="creating-a-stepper-in-xaml"></a>Criando um stepper em XAML
 
@@ -259,7 +259,7 @@ Se um [`ValueChanged`](xref:Xamarin.Forms.Stepper.ValueChanged) manipulador de e
 
 Quando [`Minimum`](xref:Xamarin.Forms.Stepper.Minimum) é definido como 180, [`Value`](xref:Xamarin.Forms.Stepper.Value) também é definido como 180 e o [`ValueChanged`](xref:Xamarin.Forms.Stepper.ValueChanged) evento é acionado. Isso pode ocorrer antes que o restante da página tenha sido construído e o manipulador possa tentar fazer referência a outros elementos na página que ainda não foram criados. Talvez você queira adicionar algum código ao `ValueChanged` manipulador que verifica os `null` valores de outros elementos na página. Ou, você pode definir o `ValueChanged` manipulador de eventos depois que os [`Stepper`](xref:Xamarin.Forms.Stepper) valores tiverem sido inicializados.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Exemplo de demonstrações do stepper](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
+- [Exemplo de demonstrações do stepper](/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 - [API stepper](xref:Xamarin.Forms.Stepper)

@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f6db5014050ad3f037869120d017e51803a7c48f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 60b331b01f7ba16bd2ea828d429ee64ae25766ea
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136533"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560267"
 ---
 # <a name="tabbedpage-icons-on-windows"></a>Ícones de TabbedPage no Windows
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Essa Plataforma Universal do Windows específica à plataforma permite que os ícones de página sejam exibidos em uma [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) barra de ferramentas e fornece a capacidade de especificar opcionalmente o tamanho do ícone. Ele é consumido em XAML, definindo a [`TabbedPage.HeaderIconsEnabled`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsEnabledProperty) Propriedade anexada como `true` e, opcionalmente, definindo a [`TabbedPage.HeaderIconsSize`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsSizeProperty) Propriedade anexada como um [`Size`](xref:Xamarin.Forms.Size) valor:
 
@@ -78,6 +78,6 @@ O resultado é que os ícones de página podem ser exibidos em uma [`TabbedPage`
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API WindowsSpecific](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

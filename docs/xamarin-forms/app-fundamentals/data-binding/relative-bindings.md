@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsAssociações relativas
+title: Xamarin.Forms Associações relativas
 description: Este artigo explica como criar associações relativas usando a extensão de marcação RelativeSource para definir a origem da associação em relação à posição do destino da associação.
 ms.prod: xamarin
 ms.assetid: CC64BB1D-8303-46B1-94B6-4EF2F20317A8
@@ -10,16 +10,16 @@ ms.date: 12/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8d4e2696e6027f07b7b8e638cd1e0f1d65a5503d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 24fa816519b05b46c38015fa602a4e70fbc07d16
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139705"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560384"
 ---
-# <a name="xamarinforms-relative-bindings"></a>Xamarin.FormsAssociações relativas
+# <a name="no-locxamarinforms-relative-bindings"></a>Xamarin.Forms Associações relativas
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 As associações relativas fornecem a capacidade de definir a origem da associação em relação à posição do destino da associação. Eles são criados com a `RelativeSource` extensão de marcação e definidos como a `Source` propriedade de uma expressão de associação.
 
@@ -34,10 +34,10 @@ A `RelativeSource` extensão de marcação é suportada pela `RelativeSourceExte
 
 A `Mode` propriedade deve ser definida como um dos `RelativeBindingSourceMode` membros da enumeração:
 
-- `TemplatedParent`indica o elemento no qual o modelo, no qual o elemento vinculado existe, é aplicado. Para obter mais informações, consulte [associar a um modelo pai](#bind-to-a-templated-parent).
-- `Self`indica o elemento no qual a associação está sendo definida, permitindo que você vincule uma propriedade desse elemento a outra propriedade no mesmo elemento. Para obter mais informações, consulte [associar a si mesmo](#bind-to-self).
-- `FindAncestor`indica o ancestral na árvore visual do elemento associado. Esse modo deve ser usado para associar a um controle ancestral representado pela `AncestorType` propriedade. Para obter mais informações, consulte [associar a um ancestral](#bind-to-an-ancestor).
-- `FindAncestorBindingContext`indica o `BindingContext` do ancestral na árvore visual do elemento associado. Esse modo deve ser usado para associar ao `BindingContext` de um ancestral representado pela `AncestorType` propriedade. Para obter mais informações, consulte [associar a um ancestral](#bind-to-an-ancestor).
+- `TemplatedParent` indica o elemento no qual o modelo, no qual o elemento vinculado existe, é aplicado. Para obter mais informações, consulte [associar a um modelo pai](#bind-to-a-templated-parent).
+- `Self` indica o elemento no qual a associação está sendo definida, permitindo que você vincule uma propriedade desse elemento a outra propriedade no mesmo elemento. Para obter mais informações, consulte [associar a si mesmo](#bind-to-self).
+- `FindAncestor` indica o ancestral na árvore visual do elemento associado. Esse modo deve ser usado para associar a um controle ancestral representado pela `AncestorType` propriedade. Para obter mais informações, consulte [associar a um ancestral](#bind-to-an-ancestor).
+- `FindAncestorBindingContext` indica o `BindingContext` do ancestral na árvore visual do elemento associado. Esse modo deve ser usado para associar ao `BindingContext` de um ancestral representado pela `AncestorType` propriedade. Para obter mais informações, consulte [associar a um ancestral](#bind-to-an-ancestor).
 
 A `Mode` propriedade é a propriedade content da `RelativeSourceExtension` classe. Portanto, para expressões de marcação XAML expressas com chaves, você pode eliminar a `Mode=` parte da expressão.
 
@@ -186,6 +186,6 @@ Para obter mais informações sobre modelos de controle, consulte [ Xamarin.Form
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [Demonstrações de associação de dados (amostra)](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Extensões de marcação do XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
-- [Xamarin.FormsModelos de controle](~/xamarin-forms/app-fundamentals/templates/control-template.md)
+- [Xamarin.Forms Modelos de controle](~/xamarin-forms/app-fundamentals/templates/control-template.md)

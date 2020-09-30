@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1bfd61e79a2b4697e884afb45e4b9080ee939b87
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6e25654fb856935c119d731df5db3eaa2d501930
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136520"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560241"
 ---
 # <a name="visualelement-access-keys-on-windows"></a>Chaves de acesso do visualelement no Windows
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Chaves de acesso são atalhos de teclado que melhoram a usabilidade e a acessibilidade de aplicativos no Plataforma Universal do Windows (UWP), fornecendo uma maneira intuitiva para os usuários navegarem e interagirem rapidamente com a interface do usuário visível do aplicativo por meio de um teclado em vez de por toque ou mouse. Elas são combinações da tecla Alt e uma ou mais chaves alfanuméricas, geralmente pressionadas em sequência. Os atalhos de teclado têm suporte automaticamente para chaves de acesso que usam um único caractere alfanumérico.
 
@@ -80,12 +80,12 @@ button4.On<Windows>()
 
 O `VisualElement.On<Windows>` método especifica que essa plataforma específica será executada somente no plataforma universal do Windows. O [ `VisualElement.SetAccessKey` ] (xref: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. Visualelement. SetAccessKey ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . O método visualelement}, System. String), no [`Xamarin.Forms.PlatformConfiguration.WindowsSpecific`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific) namespace, é usado para definir o valor da chave de acesso para o `VisualElement` . O [ `VisualElement.SetAccessKeyPlacement` ] (xref: Xamarin.Forms . PlatformConfiguration. WindowsSpecific. Visualelement. SetAccessKeyPlacement ( Xamarin.Forms . IPlatformElementConfiguration { Xamarin.Forms . PlatformConfiguration. Windows, Xamarin.Forms . Visualelement}, Xamarin.Forms . AccessKeyPlacement)), opcionalmente especifica a posição a ser usada para exibir a dica de tecla de acesso, com a [`AccessKeyPlacement`](xref:Xamarin.Forms.AccessKeyPlacement) enumeração que fornece os seguintes valores possíveis:
 
-- [`Auto`](xref:Xamarin.Forms.AccessKeyPlacement.Auto)– indica que o posicionamento da dica de tecla de acesso será determinado pelo sistema operacional.
-- [`Top`](xref:Xamarin.Forms.AccessKeyPlacement.Top)– indica que a dica de tecla de acesso aparecerá acima da borda superior do `VisualElement` .
-- [`Bottom`](xref:Xamarin.Forms.AccessKeyPlacement.Bottom)– indica que a dica de tecla de acesso aparecerá abaixo da borda inferior do `VisualElement` .
-- [`Right`](xref:Xamarin.Forms.AccessKeyPlacement.Right)– indica que a dica de tecla de acesso aparecerá à direita da borda direita do `VisualElement` .
-- [`Left`](xref:Xamarin.Forms.AccessKeyPlacement.Left)– indica que a dica de tecla de acesso será exibida à esquerda da borda esquerda do `VisualElement` .
-- [`Center`](xref:Xamarin.Forms.AccessKeyPlacement.Center)– indica que a dica de tecla de acesso aparecerá sobreposta no centro do `VisualElement` .
+- [`Auto`](xref:Xamarin.Forms.AccessKeyPlacement.Auto) – indica que o posicionamento da dica de tecla de acesso será determinado pelo sistema operacional.
+- [`Top`](xref:Xamarin.Forms.AccessKeyPlacement.Top) – indica que a dica de tecla de acesso aparecerá acima da borda superior do `VisualElement` .
+- [`Bottom`](xref:Xamarin.Forms.AccessKeyPlacement.Bottom) – indica que a dica de tecla de acesso aparecerá abaixo da borda inferior do `VisualElement` .
+- [`Right`](xref:Xamarin.Forms.AccessKeyPlacement.Right) – indica que a dica de tecla de acesso aparecerá à direita da borda direita do `VisualElement` .
+- [`Left`](xref:Xamarin.Forms.AccessKeyPlacement.Left) – indica que a dica de tecla de acesso será exibida à esquerda da borda esquerda do `VisualElement` .
+- [`Center`](xref:Xamarin.Forms.AccessKeyPlacement.Center) – indica que a dica de tecla de acesso aparecerá sobreposta no centro do `VisualElement` .
 
 > [!NOTE]
 > Normalmente, o [`Auto`](xref:Xamarin.Forms.AccessKeyPlacement.Auto) posicionamento da dica de tecla é suficiente, o que inclui suporte para interfaces de usuário adaptáveis.
@@ -107,6 +107,6 @@ Para obter mais informações sobre chaves de acesso, consulte [chaves de acesso
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API WindowsSpecific](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

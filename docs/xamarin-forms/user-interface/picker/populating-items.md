@@ -10,16 +10,16 @@ ms.date: 02/26/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8872c6748ba778a2622d82803d580c781bd282cd
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: d65352022057ce32bd969950c2165ad530c05bbb
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139627"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559617"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>Adicionar dados à coleção de itens do seletor
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
 
 _A exibição do seletor é um controle para selecionar um item de texto de uma lista de dados. Este artigo explica como preencher um seletor com dados adicionando-o à coleção de itens e como responder à seleção de itens pelo usuário._
 
@@ -86,5 +86,5 @@ Esse método obtém o [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex)
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstração do seletor (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
+- [Demonstração do seletor (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
 - [Seletor](xref:Xamarin.Forms.Picker)

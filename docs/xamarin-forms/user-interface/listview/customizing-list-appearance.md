@@ -10,12 +10,12 @@ ms.date: 12/13/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: be8dd5d29aebf29395885d650fbd28082013d0d1
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: dcf4e7ca0f081ff000aaa69d8be3a3cb3aa43e8e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929158"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560280"
 ---
 # <a name="listview-appearance"></a>Aparência de ListView
 
@@ -55,7 +55,7 @@ public class PageTypeGroup : List<PageModel>
     }
 ```
 
-No código acima, `All` é a lista que será dada ao nosso ListView como a origem da associação. `Title`e `ShortName` são as propriedades que serão usadas para títulos de grupo.
+No código acima, `All` é a lista que será dada ao nosso ListView como a origem da associação. `Title` e `ShortName` são as propriedades que serão usadas para títulos de grupo.
 
 Neste estágio, `All` é uma lista vazia. Adicione um construtor estático para que a lista seja populada na inicialização do programa:
 
@@ -210,9 +210,9 @@ Para criar um cabeçalho e um rodapé personalizados, defina as exibições de c
 
 A [`ListView`](xref:Xamarin.Forms.ListView) classe tem `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility` Propriedades, que Obtém ou define um [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) valor que representa quando a barra de rolagem horizontal ou vertical é visível. Ambas as propriedades podem ser definidas com os seguintes valores:
 
-- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility)indica o comportamento da barra de rolagem padrão para a plataforma e é o valor padrão para as `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` Propriedades e.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility)indica que as barras de rolagem estarão visíveis, mesmo quando o conteúdo couber na exibição.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility)indica que as barras de rolagem não estarão visíveis, mesmo se o conteúdo não couber na exibição.
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indica o comportamento da barra de rolagem padrão para a plataforma e é o valor padrão para as `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` Propriedades e.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica que as barras de rolagem estarão visíveis, mesmo quando o conteúdo couber na exibição.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica que as barras de rolagem não estarão visíveis, mesmo se o conteúdo não couber na exibição.
 
 ## <a name="row-separators"></a>Separadores de linha
 
@@ -276,7 +276,7 @@ XAML
 
 Todas as linhas em um ListView têm a mesma altura por padrão. ListView tem duas propriedades que podem ser usadas para alterar esse comportamento:
 
-- `HasUnevenRows`&ndash; `true`/`false` valor, as linhas têm alturas variáveis se definidas como `true` . O padrão é `false`.
+- `HasUnevenRows`&ndash; `true`/`false` valor, as linhas têm alturas variáveis se definidas como `true` . Assume o padrão de `false`.
 - `RowHeight`&ndash;define a altura de cada linha quando `HasUnevenRows` é `false` .
 
 Você pode definir a altura de todas as linhas definindo a `RowHeight` propriedade no `ListView` .
@@ -341,8 +341,8 @@ O `OnImageTapped` manipulador de eventos é executado em resposta a um [`Image`]
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Agrupamento (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
-- [Exibição do renderizador personalizado (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
-- [Redimensionamento dinâmico de linhas (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-dynamicunevenlistcells)
+- [Agrupamento (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-listview-grouping)
+- [Exibição do renderizador personalizado (exemplo)](/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
+- [Redimensionamento dinâmico de linhas (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-listview-dynamicunevenlistcells)
 - [notas de versão de 1,4](https://forums.xamarin.com/discussion/35451/xamarin-forms-1-4-0-released/)
 - [notas de versão de 1,3](https://forums.xamarin.com/discussion/29934/xamarin-forms-1-3-0-released/)

@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.FormsFormas: linha'
+title: 'Xamarin.Forms Formas: linha'
 description: A Xamarin.Forms classe line pode ser usada para desenhar linhas.
 ms.prod: xamarin
 ms.assetid: 384F1A72-6D3B-4FD3-BC40-E00A73A463EC
@@ -10,14 +10,14 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a5d130922a9bd8f30b33b99f7f3dc512f056269f
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 845e5842f91a1da415509631ec2472330d972dfb
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918628"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559149"
 ---
-# <a name="no-locxamarinforms-shapes-line"></a>Xamarin.FormsFormas: linha
+# <a name="no-locxamarinforms-shapes-line"></a>Xamarin.Forms Formas: linha
 
 ![API de pré-lançamento](~/media/shared/preview.png)
 
@@ -56,7 +56,7 @@ O exemplo de XAML a seguir mostra como desenhar uma linha:
 
 Neste exemplo, uma linha diagonal vermelha é desenhada de (40, 0) para (0120):
 
-![Descritos](line-images/line.png "Linha")
+![Linha](line-images/line.png "Linha")
 
 Como as `X1` `Y1` Propriedades,, e `X2` `Y2` têm valores padrão de 0, é possível desenhar algumas linhas com a sintaxe mínima:
 
@@ -89,5 +89,5 @@ Para obter mais informações sobre como desenhar uma linha tracejada, consulte 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ShapeDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.FormsExistentes](index.md)
+- [ShapeDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms Existentes](index.md)

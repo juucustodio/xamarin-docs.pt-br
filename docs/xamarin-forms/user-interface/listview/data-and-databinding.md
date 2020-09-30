@@ -10,12 +10,12 @@ ms.date: 03/23/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1e5f3b6cb84081f5e167d9afe7e7f2f2dffce247
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c77a219ab1b729aa279708d04610911fbbfe4e81
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938106"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560124"
 ---
 # <a name="listview-data-sources"></a>Fontes de dados ListView
 
@@ -67,7 +67,7 @@ listView.ItemsSource = new string[]
 
 Essa abordagem irá preencher o `ListView` com uma lista de cadeias de caracteres. Por padrão, `ListView` o chamará `ToString` e exibirá o resultado em um `TextCell` para cada linha. Para personalizar como os dados são exibidos, consulte [aparência da célula](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md).
 
-Como `ItemsSource` foi enviado a uma matriz, o conteúdo não será atualizado à medida que a lista subjacente ou a matriz for alterada. Se desejar que o ListView seja atualizado automaticamente à medida que itens forem adicionados, removidos e alterados na lista subjacente, você precisará usar um `ObservableCollection` . [`ObservableCollection`](xref:System.Collections.ObjectModel.ObservableCollection`1)o é definido em `System.Collections.ObjectModel` e é exatamente como `List` , exceto pelo fato de que ele pode notificar `ListView` as alterações:
+Como `ItemsSource` foi enviado a uma matriz, o conteúdo não será atualizado à medida que a lista subjacente ou a matriz for alterada. Se desejar que o ListView seja atualizado automaticamente à medida que itens forem adicionados, removidos e alterados na lista subjacente, você precisará usar um `ObservableCollection` . [`ObservableCollection`](xref:System.Collections.ObjectModel.ObservableCollection`1) o é definido em `System.Collections.ObjectModel` e é exatamente como `List` , exceto pelo fato de que ele pode notificar `ListView` as alterações:
 
 ```csharp
 ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
@@ -165,4 +165,4 @@ Supondo `listView` `ItemsSource` que seja uma lista de cadeias de caracteres, te
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Associação de duas vias (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)
+- [Associação de duas vias (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-listview-switchentrytwobinding)

@@ -10,16 +10,16 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c1939c30cbefdbf8d6546761a8c6ac7199bfff62
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0fd934a305e34bb7406a0379a0882873e3400fe8
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139679"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558356"
 ---
 # <a name="the-separable-blend-modes"></a>Os modos de mesclagem separáveis
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Como você viu no artigo [**SkiaSharp carregador-Duff Blend Modes**](porter-duff.md), os modos de combinação carregador-Duff geralmente executam operações de recorte. Os modos de mesclagem separáveis são diferentes. Os modos separáveis alteram os componentes individuais de cor de vermelho, verde e azul de uma imagem. Os modos de mesclagem separáveis podem misturar cores para demonstrar que a combinação de vermelho, verde e azul é realmente branca:
 
@@ -153,18 +153,18 @@ A tabela a seguir mostra todos os modos de combinação de separáveis com expli
 | Modo de mesclagem   | Nenhuma alteração | Operação |
 | ------------ | --------- | --------- |
 | `Plus`       | Preto     | Clareia adicionando cores: SC + DC |
-| `Modulate`   | Branco     | Escurece multiplicando as cores: SC · Origem | 
+| `Modulate`   | Branca     | Escurece multiplicando as cores: SC · Origem | 
 | `Screen`     | Preto     | Complementa o produto de Complementos: SC + DC &ndash; SC · Origem |
-| `Overlay`    | Cinza      | Inverso de`HardLight` |
-| `Darken`     | Branco     | Mínimo de cores: mín. (SC, DC) |
+| `Overlay`    | Cinza      | Inverso de `HardLight` |
+| `Darken`     | Branca     | Mínimo de cores: mín. (SC, DC) |
 | `Lighten`    | Preto     | Máximo de cores: máx. (SC, DC) |
 | `ColorDodge` | Preto     | Claree o destino com base na origem |
-| `ColorBurn`  | Branco     | Escurece o destino com base na origem | 
+| `ColorBurn`  | Branca     | Escurece o destino com base na origem | 
 | `HardLight`  | Cinza      | Semelhante ao efeito de refletor de destaque |
 | `SoftLight`  | Cinza      | Semelhante ao efeito de destaque suave | 
 | `Difference` | Preto     | Subtrai o mais escuro do mais claro: ABS (DC &ndash; SC) | 
 | `Exclusion`  | Preto     | Semelhante a `Difference` mas menor contraste |
-| `Multiply`   | Branco     | Escurece multiplicando as cores: SC · Origem |
+| `Multiply`   | Branca     | Escurece multiplicando as cores: SC · Origem |
 
 Algoritmos mais detalhados podem ser encontrados na especificação W3C de [**composição e mesclagem de nível 1**](https://www.w3.org/TR/compositing-1/) e na referência de skia [**SkBlendMode**](https://skia.org/user/api/SkBlendMode_Reference), embora a notação nessas duas fontes não seja a mesma. Tenha em mente que `Plus` normalmente é considerado um modo de mesclagem carregador-Duff e `Modulate` não faz parte da especificação W3C.
 
@@ -430,5 +430,5 @@ O `Darken` modo também funciona para esse mesmo efeito.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -10,12 +10,12 @@ ms.date: 02/26/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a15ca2e11dabb73054f5f0a1dc3f79342d8ce7f5
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 395536752fb0d581408d0b8f91ef623d926aeeb4
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938600"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559539"
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>Definir a propriedade ItemsSource de um seletor
 
@@ -23,7 +23,7 @@ ms.locfileid: "86938600"
 
 _A exibição do seletor é um controle para selecionar um item de texto de uma lista de dados. Este artigo explica como preencher um seletor com dados definindo a propriedade ItemsSource e como responder à seleção de itens pelo usuário._
 
-Xamarin.Formso 2.3.4 aprimorou a [`Picker`](xref:Xamarin.Forms.Picker) exibição adicionando a capacidade de preenchê-la com os dados definindo sua [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) propriedade e para recuperar o item selecionado da [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) propriedade. Além disso, a cor do texto do item selecionado pode ser alterada definindo a [`TextColor`](xref:Xamarin.Forms.Picker.TextColor) propriedade como a [`Color`](xref:Xamarin.Forms.Color) .
+Xamarin.Forms o 2.3.4 aprimorou a [`Picker`](xref:Xamarin.Forms.Picker) exibição adicionando a capacidade de preenchê-la com os dados definindo sua [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) propriedade e para recuperar o item selecionado da [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) propriedade. Além disso, a cor do texto do item selecionado pode ser alterada definindo a [`TextColor`](xref:Xamarin.Forms.Picker.TextColor) propriedade como a [`Color`](xref:Xamarin.Forms.Color) .
 
 ## <a name="populating-a-picker-with-data"></a>Populando um seletor com dados
 
@@ -185,7 +185,7 @@ Os [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) dados de propriedade
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstração do seletor (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
-- [Aplicativo de macaco (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
-- [Seletor vinculável (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)
+- [Demonstração do seletor (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
+- [Aplicativo de macaco (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-monkeyapppicker)
+- [Seletor vinculável (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)
 - [API do seletor](xref:Xamarin.Forms.Picker)

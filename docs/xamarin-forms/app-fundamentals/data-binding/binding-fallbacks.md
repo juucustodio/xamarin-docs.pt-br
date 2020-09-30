@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsFallbacks de associação
+title: Xamarin.Forms Fallbacks de associação
 description: Este artigo explica como tornar as associações mais robustas definindo valores de fallback que serão usados se a associação falhar.
 ms.prod: xamarin
 ms.assetid: 637ACD9D-3E5D-4014-86DE-A77D1FEF238A
@@ -10,16 +10,16 @@ ms.date: 08/16/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2c5ce10aa0a1137ad4e4832d5dc931c902b82810
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 24a9a351dbe6932b09add2ee7c3111256e013201
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946202"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560683"
 ---
-# <a name="xamarinforms-binding-fallbacks"></a>Xamarin.FormsFallbacks de associação
+# <a name="no-locxamarinforms-binding-fallbacks"></a>Xamarin.Forms Fallbacks de associação
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Às vezes, as associações de dados falham porque a origem da associação não pode ser resolvida ou porque a associação tem êxito, mas retorna um valor `null`. Embora esses cenários possam ser manipulados com conversores de valor ou outro código adicional, as associações de dados poderão se tornar mais robustas com a definição de valores de fallback a serem usados se o processo de associação falhar. Isso pode ser feito definindo as [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) Propriedades e [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) em uma expressão de associação. Como essas propriedades residem na [`BindingBase`](xref:Xamarin.Forms.BindingBase) classe, elas podem ser usadas com associações, associações múltiplas, associações compiladas e com a `Binding` extensão de marcação.
 
@@ -107,6 +107,6 @@ Quando a propriedade `TargetNullValue` não estiver definida em uma expressão d
 > [!IMPORTANT]
 > A formatação de cadeia de caracteres não é aplicada em uma expressão de associação quando a propriedade `TargetNullValue` está definida.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [Demonstrações de associação de dados (amostra)](/samples/xamarin/xamarin-forms-samples/databindingdemos)

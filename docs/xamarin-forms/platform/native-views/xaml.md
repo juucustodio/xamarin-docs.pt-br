@@ -10,12 +10,12 @@ ms.date: 03/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2c271c3537c6e96497763c67c5b8128148191f16
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 78bd93e2f6556480ae7d2903771d7d6303dda148
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937352"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558370"
 ---
 # <a name="native-views-in-xaml"></a>Exibições nativas em XAML
 
@@ -171,7 +171,7 @@ O [`UIFont.FromName`](xref:UIKit.UIFont.FromName*) método de fábrica é usado 
 
 O [`Typeface.Create`](xref:Android.Graphics.Typeface.Create*) método de fábrica é usado para definir a [`TextView.Typeface`](xref:Android.Widget.TextView.Typeface) propriedade como um novo [`Typeface`](xref:Android.Graphics.Typeface) no Android. O `Typeface` nome e o estilo da família são especificados pelos argumentos do método que são filhos do `x:Arguments` atributo.
 
-O [`FontFamily`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.fontfamily) Construtor é usado para definir a [`TextBlock.FontFamily`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.fontfamily) propriedade para uma nova `FontFamily` no plataforma universal do Windows (UWP). O `FontFamily` nome é especificado pelo argumento do método que é filho do `x:Arguments` atributo.
+O [`FontFamily`](/uwp/api/Windows.UI.Xaml.Media.FontFamily) Construtor é usado para definir a [`TextBlock.FontFamily`](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) propriedade para uma nova `FontFamily` no plataforma universal do Windows (UWP). O `FontFamily` nome é especificado pelo argumento do método que é filho do `x:Arguments` atributo.
 
 > [!NOTE]
 > Os argumentos devem corresponder aos tipos exigidos pelo construtor ou método de fábrica.
@@ -466,9 +466,9 @@ A `MySpinner` classe expõe `ItemsSource` e `SelectedObject` Propriedades e um `
 
 ## <a name="related-links"></a>Links relacionados
 
-- [NativeSwitch (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
-- [Forms2Native (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/forms2native)
-- [NativeViewInsideContentView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeviewinsidecontentview)
-- [SubclassedNativeControls (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-subclassednativecontrols)
+- [NativeSwitch (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
+- [Forms2Native (exemplo)](/samples/xamarin/xamarin-forms-samples/forms2native)
+- [NativeViewInsideContentView (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeviewinsidecontentview)
+- [SubclassedNativeControls (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-subclassednativecontrols)
 - [Formulários nativos](~/xamarin-forms/platform/native-forms.md)
 - [Passando argumentos em XAML](~/xamarin-forms/xaml/passing-arguments.md)

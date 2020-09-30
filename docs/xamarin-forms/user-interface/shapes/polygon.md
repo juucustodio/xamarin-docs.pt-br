@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.FormsFormas: polígono'
+title: 'Xamarin.Forms Formas: polígono'
 description: A Xamarin.Forms Classe Polygon pode ser usada para desenhar polígonos, que são uma série de linhas conectadas que formam formas fechadas.
 ms.prod: xamarin
 ms.assetid: D6539F60-A5AC-46EF-86EB-E9F508EB1FA8
@@ -10,14 +10,14 @@ ms.date: 06/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 52043bd507d35a1ebe2628c13c14429c604569c9
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 7464b3e4088986a87aa29c77ee8c6baa78266f84
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918492"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558967"
 ---
-# <a name="no-locxamarinforms-shapes-polygon"></a>Xamarin.FormsFormas: polígono
+# <a name="no-locxamarinforms-shapes-polygon"></a>Xamarin.Forms Formas: polígono
 
 ![API de pré-lançamento](~/media/shared/preview.png)
 
@@ -99,6 +99,6 @@ Neste exemplo, o comportamento de preenchimento de cada polígono é determinado
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ShapeDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.FormsExistentes](index.md)
-- [Xamarin.FormsFormas: regras de preenchimento](fillrules.md)
+- [ShapeDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms Existentes](index.md)
+- [Xamarin.Forms Formas: regras de preenchimento](fillrules.md)

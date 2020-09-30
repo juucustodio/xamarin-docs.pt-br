@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.FormsFormas: elipse'
+title: 'Xamarin.Forms Formas: elipse'
 description: A Xamarin.Forms classe Ellipse pode ser usada para desenhar reticências e círculos.
 ms.prod: xamarin
 ms.assetid: 5BF81E25-12E5-49F0-A40C-0CF4C5D63B9B
@@ -10,14 +10,14 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0796ba2a3b1ab28370fd8280e12df273223b9f4d
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: d0379f37a48a4cd11de06868a7616882a598e6a6
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87917738"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559240"
 ---
-# <a name="no-locxamarinforms-shapes-ellipse"></a>Xamarin.FormsFormas: elipse
+# <a name="no-locxamarinforms-shapes-ellipse"></a>Xamarin.Forms Formas: elipse
 
 ![API de pré-lançamento](~/media/shared/preview.png)
 
@@ -64,5 +64,5 @@ Para obter informações sobre como desenhar uma elipse tracejada, consulte [des
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ShapeDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.FormsExistentes](index.md)
+- [ShapeDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms Existentes](index.md)

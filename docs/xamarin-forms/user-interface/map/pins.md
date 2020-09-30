@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsPins do mapa
+title: Xamarin.Forms Pins do mapa
 description: Este artigo explica como criar Pins em um Xamarin.Forms mapa.
 ms.prod: xamarin
 ms.assetid: F8FC081B-A811-4FBB-B8F8-30D6FD36BD40
@@ -10,16 +10,16 @@ ms.date: 10/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5e22888291a430863b8e45ee21d359a5acec750f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 476ef1b8fd6c8e16c5fb3e5fdd1ac60eafd90b7c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138431"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91559838"
 ---
-# <a name="xamarinforms-map-pins"></a>Xamarin.FormsPins do mapa
+# <a name="no-locxamarinforms-map-pins"></a>Xamarin.Forms Pins do mapa
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 O Xamarin.Forms [`Map`](xref:Xamarin.Forms.Maps.Map) controle permite que os locais sejam marcados com [`Pin`](xref:Xamarin.Forms.Maps.Pin) objetos. Um `Pin` é um marcador de mapa que abre uma janela de informações quando tocado:
 
@@ -157,7 +157,7 @@ O `PinClickedEventArgs` objeto que acompanha ambos os eventos tem uma única `Hi
 
 ## <a name="pin-types"></a>Tipos de PIN
 
-[`Pin`](xref:Xamarin.Forms.Maps.Pin)os objetos incluem uma [`Type`](xref:Xamarin.Forms.Maps.Pin.Type) propriedade, do tipo [`PinType`](xref:Xamarin.Forms.Maps.PinType) , que representa o tipo de PIN. A enumeração `PinType` define os seguintes membros:
+[`Pin`](xref:Xamarin.Forms.Maps.Pin) os objetos incluem uma [`Type`](xref:Xamarin.Forms.Maps.Pin.Type) propriedade, do tipo [`PinType`](xref:Xamarin.Forms.Maps.PinType) , que representa o tipo de PIN. A enumeração `PinType` define os seguintes membros:
 
 - `Generic`, representa um PIN genérico.
 - `Place`, representa um PIN para um local.
@@ -271,7 +271,7 @@ Para obter mais informações sobre seletores de modelo de dados, consulte [Crea
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplo de mapas](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Exemplo de mapas](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Mapear renderizador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md)
 - [Passando argumentos em XAML](~/xamarin-forms/xaml/passing-arguments.md)
 - [Criando um Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

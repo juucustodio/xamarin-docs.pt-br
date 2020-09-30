@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsFormatação de cadeia de caracteres
+title: Xamarin.Forms Formatação de cadeia de caracteres
 description: Este artigo explica como usar associações de dados do Xamarin.Forms para formatar e exibir objetos como cadeias de caracteres. Isso é feito com a definição de StringFormat de Binding como uma cadeia de caracteres de formatação padrão do .NET com um espaço reservado.
 ms.prod: xamarin
 ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0
@@ -10,16 +10,16 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d08a89d5394a227e3cee76603e4e97d2cf9495e0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8e05420e41509c82c1912a4639159fb58b1a30dc
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135753"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91558577"
 ---
-# <a name="xamarinforms-string-formatting"></a>Xamarin.FormsFormatação de cadeia de caracteres
+# <a name="no-locxamarinforms-string-formatting"></a>Xamarin.Forms Formatação de cadeia de caracteres
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Às vezes, é conveniente usar associações de dados para exibir a representação de cadeia de caracteres de um objeto ou um valor. Por exemplo, talvez você deseje usar um `Label` para exibir o valor atual de um `Slider`. Nesta associação de dados, o `Slider` é a origem e o destino é a propriedade `Text` do `Label`.
 
@@ -187,7 +187,7 @@ Outra abordagem é mais geral: você pode escrever um *conversor de valor de ass
 
 No entanto, o próximo artigo explora o [**Caminho de associação**](binding-path.md) com mais detalhes e mostra como você pode usá-lo para referenciar subpropriedades e itens em coleções.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [Demonstrações de associação de dados (amostra)](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Capítulo de vinculação de dados do Xamarin.Forms livro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
