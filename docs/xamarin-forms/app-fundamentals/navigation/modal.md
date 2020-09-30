@@ -1,6 +1,6 @@
 ---
-title: Xamarin.FormsPáginas modais
-description: Xamarin.Formsfornece suporte para páginas modais. Uma página modal incentiva os usuários a concluir uma tarefa independente da qual não se pode sair via navegação até que essa tarefa seja concluída ou cancelada. Este artigo demonstra como navegar até as páginas modais.
+title: Xamarin.Forms Páginas modais
+description: Xamarin.Forms fornece suporte para páginas modais. Uma página modal incentiva os usuários a concluir uma tarefa independente da qual não se pode sair via navegação até que essa tarefa seja concluída ou cancelada. Este artigo demonstra como navegar até as páginas modais.
 ms.prod: xamarin
 ms.assetid: 486CB7FD-2B9A-4DE3-94BD-C8D904E5D3C6
 ms.technology: xamarin-forms
@@ -10,18 +10,18 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ea0d38946a773dc7571a08f999be5eb6500bfc9b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 7ba5224c23eaed6b7c37312f8a765556d0263d9c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934492"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563023"
 ---
-# <a name="xamarinforms-modal-pages"></a>Xamarin.FormsPáginas modais
+# <a name="no-locxamarinforms-modal-pages"></a>Xamarin.Forms Páginas modais
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)
 
-_Xamarin.Formsfornece suporte para páginas modais. Uma página modal incentiva os usuários a concluir uma tarefa independente que não pode ser navegada para longe até que a tarefa seja concluída ou cancelada. Este artigo demonstra como navegar até páginas modais._
+_Xamarin.Forms fornece suporte para páginas modais. Uma página modal incentiva os usuários a concluir uma tarefa independente que não pode ser navegada para longe até que a tarefa seja concluída ou cancelada. Este artigo demonstra como navegar até páginas modais._
 
 Este artigo discute os seguintes tópicos:
 
@@ -256,5 +256,5 @@ Este artigo demonstrou como navegar até as páginas modais. Uma página modal i
 ## <a name="related-links"></a>Links Relacionados
 
 - [Navegação de página](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
-- [Modal (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)
-- [PassingData (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata)
+- [Modal (amostra)](/samples/xamarin/xamarin-forms-samples/navigation-modal)
+- [PassingData (amostra)](/samples/xamarin/xamarin-forms-samples/navigation-passingdata)

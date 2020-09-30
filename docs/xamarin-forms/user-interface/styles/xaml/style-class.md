@@ -1,6 +1,6 @@
 ---
-title: Xamarin.FormsClasses de estilo
-description: Xamarin.Formsas classes de estilo permitem que vários estilos sejam aplicados a um controle, sem reclassificar para a herança de estilo.
+title: Xamarin.Forms Classes de estilo
+description: Xamarin.Forms as classes de estilo permitem que vários estilos sejam aplicados a um controle, sem reclassificar para a herança de estilo.
 ms.prod: xamarin
 ms.assetid: 4762401E-2B48-48F1-B6E4-61F7AF8AA46F
 ms.technology: xamarin-forms
@@ -10,18 +10,18 @@ ms.date: 01/30/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2afb06c2d97e6f15c2041b9c2e9cad092b13d90d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f100f98418b7e3cb82939bf67dda61b66cb5864e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138756"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557745"
 ---
-# <a name="xamarinforms-style-classes"></a>Xamarin.FormsClasses de estilo
+# <a name="no-locxamarinforms-style-classes"></a>Xamarin.Forms Classes de estilo
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
-_As classes de estilo Xamarin. Forms permitem que vários estilos sejam aplicados a um controle, sem reclassificar para a herança de estilo._
+_Xamarin.Forms as classes de estilo permitem que vários estilos sejam aplicados a um controle, sem reclassificar para a herança de estilo._
 
 ## <a name="create-style-classes"></a>Criar classes de estilo
 
@@ -228,4 +228,4 @@ Content = new StackLayout
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Estilos básicos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+- [Estilos básicos (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)

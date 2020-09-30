@@ -10,18 +10,18 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 735aae1b9d94865bd34450861bd6c57b08c420c2
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: af1747a19af6c715d1594122393e500d1f73c79b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134713"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562516"
 ---
 # <a name="skiasharp-transparency"></a>Transparência de SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Como você viu, a [`SKPaint`](xref:SkiaSharp.SKPaint) classe inclui uma [`Color`](xref:SkiaSharp.SKPaint.Color) Propriedade do tipo [`SKColor`](xref:SkiaSharp.SKColor) . `SKColor`inclui um canal alfa, de modo que qualquer coisa que você colorir com um `SKColor` valor pode ser parcialmente transparente. 
+Como você viu, a [`SKPaint`](xref:SkiaSharp.SKPaint) classe inclui uma [`Color`](xref:SkiaSharp.SKPaint.Color) Propriedade do tipo [`SKColor`](xref:SkiaSharp.SKColor) . `SKColor` inclui um canal alfa, de modo que qualquer coisa que você colorir com um `SKColor` valor pode ser parcialmente transparente. 
 
 Alguma transparência foi demonstrada na [**Animação básica no artigo SkiaSharp**](animation.md) . Este artigo vai um pouco mais fundo na transparência para combinar vários objetos em uma única cena, uma técnica, às vezes conhecida como _mesclagem_. Técnicas de mesclagem mais avançadas são discutidas nos artigos na seção [**sombreadores SkiaSharp**](../effects/shaders/index.md) .
 
@@ -39,7 +39,7 @@ Além disso, `SKColor` o define um [`WithAlpha`](xref:SkiaSharp.SKColor.WithAlph
 SKColor halfTransparentBlue = SKColors.Blue.WithAlpha(0x80);
 ```
 
-O uso de texto parcialmente transparente é demonstrado na página código **mais de código** no exemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . Essa página esmaece duas cadeias de caracteres de texto para dentro e para fora, incorporando transparência nos `SKColor` valores:
+O uso de texto parcialmente transparente é demonstrado na página código **mais de código** no exemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . Essa página esmaece duas cadeias de caracteres de texto para dentro e para fora, incorporando transparência nos `SKColor` valores:
 
 ```csharp
 public class CodeMoreCodePage : ContentPage
@@ -242,5 +242,5 @@ Nos últimos artigos, você viu como usar o SkiaSharp para desenhar texto, círc
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

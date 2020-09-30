@@ -10,14 +10,14 @@ ms.date: 03/08/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7cbeeb9a0eed37ec109b2e71c46e3f04cd08822d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: a0e84bd0bb6b2eb62ea5a25eefe6216ccdc08289
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936442"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562555"
 ---
-# <a name="creating-a-xamarinforms-datatemplateselector"></a>Criando um Xamarin.Forms DataTemplateSelector
+# <a name="creating-a-no-locxamarinforms-datatemplateselector"></a>Criando um Xamarin.Forms DataTemplateSelector
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
 
@@ -48,7 +48,7 @@ Uma instância da classe de seletor de modelo de dados pode ser atribuída a Xam
 
 ### <a name="limitations"></a>Limitações
 
-[`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector)as instâncias têm as seguintes limitações:
+[`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) as instâncias têm as seguintes limitações:
 
 - A subclasse `DataTemplateSelector` deve sempre retornar o mesmo modelo para os mesmos dados se consultada várias vezes.
 - A subclasse `DataTemplateSelector` não deve retornar outra subclasse `DataTemplateSelector`.
@@ -139,5 +139,5 @@ Este artigo demonstrou como criar e consumir um [`DataTemplateSelector`](xref:Xa
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Seletor de Modelo de Dados (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
+- [Seletor de Modelo de Dados (exemplo)](/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
 - [DataTemplateSelector](xref:Xamarin.Forms.DataTemplateSelector)

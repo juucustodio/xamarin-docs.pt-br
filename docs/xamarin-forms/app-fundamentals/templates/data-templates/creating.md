@@ -10,14 +10,14 @@ ms.date: 09/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9ed7e485adbc13862ff6fb6af9b02c43cc6a1f10
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f4ca18a34dc66a81fd30ce4ae2b60e31df8cffb5
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935636"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562607"
 ---
-# <a name="creating-a-xamarinforms-datatemplate"></a>Criando um Xamarin.Forms DataTemplate
+# <a name="creating-a-no-locxamarinforms-datatemplate"></a>Criando um Xamarin.Forms DataTemplate
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 
@@ -289,5 +289,5 @@ Este artigo explicou como criar modelos de dados, embutidos, de um tipo personal
 ## <a name="related-links"></a>Links Relacionados
 
 - [Aparência de célula](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)
-- [Modelos de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
+- [Modelos de dados (amostra)](/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 - [DataTemplate](xref:Xamarin.Forms.DataTemplate)

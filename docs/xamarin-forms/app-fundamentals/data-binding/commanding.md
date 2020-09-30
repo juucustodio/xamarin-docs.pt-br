@@ -10,12 +10,12 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ad36bd5efe09909753fed948a961a690feb0592a
-ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
+ms.openlocfilehash: 7edde81a926b142a5e792a203e96ee61b1fdfb7b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88964656"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562698"
 ---
 # <a name="the-no-locxamarinforms-command-interface"></a>A Xamarin.Forms interface de comando
 
@@ -89,7 +89,7 @@ Se estiver compartilhando ViewModels entre o Windows e Xamarin.Forms não for um
 
 ## <a name="basic-commanding"></a>Comando básico
 
-A página **Entrada de pessoa** no programa [**Demonstrações de associação de dados**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) demonstra alguns comandos simples implementados em um ViewModel.
+A página **Entrada de pessoa** no programa [**Demonstrações de associação de dados**](/samples/xamarin/xamarin-forms-samples/databindingdemos) demonstra alguns comandos simples implementados em um ViewModel.
 
 O `PersonViewModel` define três propriedades denominadas `Name`, `Age` e `Skills` que definem uma pessoa. Essa classe *não* contém nenhuma propriedade `ICommand`:
 
@@ -691,7 +691,7 @@ Todos os métodos `execute` chamam `RefreshCanExecutes`, que chama `ChangeCanExe
 
 ## <a name="asynchronous-commanding-for-navigation-menus"></a>Comando assíncrono para menus de navegação
 
-Comandos são convenientes para implementar os menus de navegação, como o do programa [**Demonstrações de associação de dados**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) em si. Veja uma parte do **MainPage.xaml**:
+Comandos são convenientes para implementar os menus de navegação, como o do programa [**Demonstrações de associação de dados**](/samples/xamarin/xamarin-forms-samples/databindingdemos) em si. Veja uma parte do **MainPage.xaml**:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -765,5 +765,5 @@ Definir `NavigateCommand` e `BindingContext` (em qualquer ordem) antes da chamad
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [Demonstrações de associação de dados (amostra)](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Capítulo de vinculação de dados do Xamarin.Forms livro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)

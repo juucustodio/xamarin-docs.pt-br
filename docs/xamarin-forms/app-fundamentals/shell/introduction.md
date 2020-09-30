@@ -1,6 +1,6 @@
 ---
-title: Xamarin.FormsIntrodução ao shell
-description: Xamarin.FormsO Shell fornece os recursos fundamentais que a maioria dos aplicativos exigem, incluindo uma experiência de usuário de navegação comum, um esquema de navegação baseado em URI e um manipulador de pesquisa integrado.
+title: Xamarin.Forms Introdução ao shell
+description: Xamarin.Forms O Shell fornece os recursos fundamentais que a maioria dos aplicativos exigem, incluindo uma experiência de usuário de navegação comum, um esquema de navegação baseado em URI e um manipulador de pesquisa integrado.
 ms.prod: xamarin
 ms.assetid: 4604DCB5-83DA-458A-8B02-6508A740BE0E
 ms.technology: xamarin-forms
@@ -10,18 +10,18 @@ ms.date: 09/20/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 29a99161ff2ef2d71b6c803db994522bfe80ed03
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 61e48328aea01347678540cde5141a29387e92f5
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138730"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563166"
 ---
-# <a name="xamarinforms-shell-introduction"></a>Xamarin.FormsIntrodução ao shell
+# <a name="no-locxamarinforms-shell-introduction"></a>Xamarin.Forms Introdução ao shell
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
-Xamarin.FormsO Shell reduz a complexidade do desenvolvimento de aplicativos móveis fornecendo os recursos fundamentais que a maioria dos aplicativos móveis exigem, incluindo:
+Xamarin.Forms O Shell reduz a complexidade do desenvolvimento de aplicativos móveis fornecendo os recursos fundamentais que a maioria dos aplicativos móveis exigem, incluindo:
 
 - Um único lugar para descrever a hierarquia visual do aplicativo.
 - Uma experiência de navegação comum para o usuário.
@@ -35,7 +35,7 @@ Além disso, o aplicativo Shell tem a vantagem de aumentar a velocidade de rende
 
 ## <a name="platform-support"></a>Suporte a plataforma
 
-Xamarin.FormsO Shell está totalmente disponível no iOS e no Android, mas apenas parcialmente disponível no Plataforma Universal do Windows (UWP). Além disso, o Shell é experimental no momento na UWP e só pode ser usado adicionando a linha de código a seguir à classe `App` em seu projeto UWP, antes de chamar `Forms.Init`:
+Xamarin.Forms O Shell está totalmente disponível no iOS e no Android, mas apenas parcialmente disponível no Plataforma Universal do Windows (UWP). Além disso, o Shell é experimental no momento na UWP e só pode ser usado adicionando a linha de código a seguir à classe `App` em seu projeto UWP, antes de chamar `Forms.Init`:
 
 ```csharp
 global::Xamarin.Forms.Forms.SetFlags("Shell_UWP_Experimental");
@@ -66,4 +66,4 @@ Dentro de cada guia, os [`ContentPage`](xref:Xamarin.Forms.ContentPage) objetos 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xaminals (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Xaminals (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

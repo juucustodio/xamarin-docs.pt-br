@@ -10,16 +10,16 @@ ms.date: 12/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 64529b81a375ee5a8cc8a96ec557c03401e60495
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: be1de99ba42e58e375792b0a4e03d1847e2e3c87
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84130566"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562880"
 ---
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Autenticar usuários com o Azure Active Directory B2C
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
 
 _O Azure Active Directory B2C fornece gerenciamento de identidade de nuvem para aplicativos Web e móveis voltados para o consumidor. Este artigo mostra como usar Azure Active Directory B2C para integrar o gerenciamento de identidades em um aplicativo móvel com a biblioteca de autenticação da Microsoft._
 
@@ -207,7 +207,7 @@ public partial class LoginPage : ContentPage
 }
 ```
 
-O `OnForgotPassword` método é semelhante ao processo de entrada, mas implementa uma política personalizada. `OnForgotPassword`usa uma sobrecarga diferente de `AcquireTokenAsync` , que permite que você forneça uma **autoridade**específica. O exemplo a seguir mostra como fornecer uma **autoridade** personalizada ao adquirir um token:
+O `OnForgotPassword` método é semelhante ao processo de entrada, mas implementa uma política personalizada. `OnForgotPassword` usa uma sobrecarga diferente de `AcquireTokenAsync` , que permite que você forneça uma **autoridade**específica. O exemplo a seguir mostra como fornecer uma **autoridade** personalizada ao adquirir um token:
 
 ```csharp
 public partial class LoginPage : ContentPage
@@ -342,9 +342,9 @@ Execute o aplicativo em um dispositivo físico ou virtual. Tocar no botão de **
 
 !["Tela de entrada do Azure ADB2C no Android e iOS"](azure-ad-b2c-images/login.png)
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [AzureADB2CAuth (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
+- [AzureADB2CAuth (exemplo)](/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
 - [Azure Active Directory B2C](/azure/active-directory-b2c/)
 - [Biblioteca de Autenticação da Microsoft](https://www.nuget.org/packages/Microsoft.Identity.Client)
 - [Documentação da biblioteca de autenticação da Microsoft](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki)

@@ -1,27 +1,15 @@
 ---
-title: Implementando uma exibição
-description: Este artigo explica como criar um renderizador personalizado para um Xamarin.Forms controle personalizado que é usado para exibir um fluxo de vídeo de visualização da câmera do dispositivo.
-ms.prod: xamarin
-ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2
-ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 05/10/2018
-no-loc:
-- Xamarin.Forms
-- Xamarin.Essentials
-ms.openlocfilehash: 8215454f80614c0c7cca79af5cf51e2dd96453ae
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
-ms.translationtype: MT
-ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929474"
+Título: implementando uma exibição Descrição: Este artigo explica como criar um renderizador personalizado para um Xamarin.Forms controle personalizado que é usado para exibir um fluxo de vídeo de visualização da câmera do dispositivo.
+MS. Prod: xamarin MS. AssetID: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2 MS. Technology: xamarin-Forms autor: davidbritch MS. Author: dabritch MS. Date: 05/10/2018 no-loc:
+- "Xamarin.Forms"
+- "Xamarin.Essentials"
+
 ---
 # <a name="implementing-a-view"></a>Implementando uma exibição
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-view)
 
-_Xamarin.Formscontroles de interface do usuário personalizados devem derivar da classe View, que é usada para posicionar layouts e controles na tela. Este artigo demonstra como criar um renderizador personalizado para um Xamarin.Forms controle personalizado que é usado para exibir um fluxo de vídeo de visualização da câmera do dispositivo._
+_Xamarin.Forms controles de interface do usuário personalizados devem derivar da classe View, que é usada para posicionar layouts e controles na tela. Este artigo demonstra como criar um renderizador personalizado para um Xamarin.Forms controle personalizado que é usado para exibir um fluxo de vídeo de visualização da câmera do dispositivo._
 
 Cada Xamarin.Forms exibição tem um renderizador que acompanha para cada plataforma que cria uma instância de um controle nativo. Quando um [`View`](xref:Xamarin.Forms.View) é renderizado por um Xamarin.Forms aplicativo no Ios, a `ViewRenderer` classe é instanciada, que por sua vez instancia um `UIView` controle nativo. Na plataforma Android, a classe `ViewRenderer` cria uma instância de um controle `View` nativo. Na UWP (Plataforma Universal do Windows), a classe `ViewRenderer` cria uma instância de um controle `FrameworkElement` nativo. Para obter mais informações sobre o renderizador e as classes de controle nativo que Xamarin.Forms controlam o mapa para o, consulte [classes base do processador e controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
@@ -327,8 +315,8 @@ Desde que a propriedade `Control` seja `null`, um novo `CaptureElement` será in
 
 ## <a name="summary"></a>Resumo
 
-Este artigo demonstrou como criar um renderizador personalizado para um Xamarin.Forms controle personalizado usado para exibir um fluxo de vídeo de visualização da câmera do dispositivo. Xamarin.Formsos controles personalizados da interface do usuário devem derivar da [`View`](xref:Xamarin.Forms.View) classe, que é usada para posicionar layouts e controles na tela.
+Este artigo demonstrou como criar um renderizador personalizado para um Xamarin.Forms controle personalizado usado para exibir um fluxo de vídeo de visualização da câmera do dispositivo. Xamarin.Forms os controles personalizados da interface do usuário devem derivar da [`View`](xref:Xamarin.Forms.View) classe, que é usada para posicionar layouts e controles na tela.
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [CustomRendererView (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-view)
+- [CustomRendererView (amostra)](/samples/xamarin/xamarin-forms-samples/customrenderers-view)

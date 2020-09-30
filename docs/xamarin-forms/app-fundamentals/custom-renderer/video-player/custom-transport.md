@@ -10,16 +10,16 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c72f68f327b6c0df6959d37ed4bf390e3bd7f31d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5d48c699ed89e91452efe84749a1dedac18a34f5
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134999"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562724"
 ---
 # <a name="custom-video-transport-controls"></a>Controles personalizados de transporte de vídeo
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 Os controles de transporte de um player de vídeo incluem os botões que executam as funções **Reproduzir**, **Pausar** e **Parar**. Em geral, esses botões são identificados com ícones conhecidos, em vez de um texto, e as funções **Reproduzir** e **Pausar** geralmente são combinadas em um botão.
 
@@ -525,7 +525,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="play-pause-and-stop-buttons"></a>Botões Reproduzir, Pausar e Parar
 
-É problemático usar caracteres Unicode para imagens simbólicas de **Reproduzir**, **Pausar** e **Parar**. A seção [Diversos – Técnico](https://unicode-table.com/en/blocks/miscellaneous-technical/) do padrão Unicode define três caracteres de símbolo aparentemente apropriados para essa finalidade. Estes são:
+É problemático usar caracteres Unicode para imagens simbólicas de **Reproduzir**, **Pausar** e **Parar**. A seção [Diversos – Técnico](https://unicode-table.com/en/blocks/miscellaneous-technical/) do padrão Unicode define três caracteres de símbolo aparentemente apropriados para essa finalidade. Eles são:
 
 - 0x23F5 (triângulo médio preto apontando para a direita) ou &#x23F5; para **Reproduzir**
 - 0x23F8 (barra vertical dupla) ou &#x23F8; para **Pausar**
@@ -660,6 +660,6 @@ Porém, no Android e no UWP, o botão **Reproduzir** é muito diferente quando o
 
 Em um aplicativo de produção, provavelmente, você desejará usar suas próprias imagens de bitmap para os botões para alcançar a uniformidade visual.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Demonstrações do player de vídeo (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [Demonstrações do player de vídeo (exemplo)](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

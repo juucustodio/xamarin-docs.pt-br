@@ -10,12 +10,12 @@ ms.date: 02/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 38c7f11ecf65a2a9ec9ef54b5beb270f51d24dda
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2b26e80267be9af6bf300b2ffc82e43fe717f59c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929942"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563114"
 ---
 # <a name="text-translation-using-the-translator-api"></a>Conversão de texto usando a API do Tradutor
 
@@ -153,5 +153,5 @@ Este artigo explicou como usar o API de Tradução de Texto da Microsoft para co
 
 - [Documentação da API do Conversor de Texto](/azure/cognitive-services/translator/)
 - [Consumir um serviço Web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [Serviços cognitivas todo (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+- [Serviços cognitivas todo (exemplo)](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 - [API de Tradução de Texto](/azure/cognitive-services/translator/reference/v3-0-reference)

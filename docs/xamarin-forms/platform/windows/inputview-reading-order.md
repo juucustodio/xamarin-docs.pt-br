@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f5f0bcdc2d2c8eb1b51ad8dcd1014c649af80c90
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0fd754b2d41de61238cb7b0b2f34c1035d8dc2bf
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137755"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557758"
 ---
 # <a name="inputview-reading-order-on-windows"></a>InputView ordem de leitura no Windows
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Essa Plataforma Universal do Windows específica da plataforma habilita a ordem de leitura (da esquerda para a direita ou da direita para a esquerda) de texto bidirecional [`Entry`](xref:Xamarin.Forms.Entry) nas [`Editor`](xref:Xamarin.Forms.Editor) instâncias do, e [`Label`](xref:Xamarin.Forms.Label) que serão detectadas dinamicamente. Ele é consumido em XAML definindo o [`InputView.DetectReadingOrderFromContent`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.InputView.DetectReadingOrderFromContentProperty) (para `Entry` e as `Editor` instâncias) ou [`Label.DetectReadingOrderFromContent`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Label.DetectReadingOrderFromContentProperty) a propriedade anexada como um `boolean` valor:
 
@@ -58,6 +58,6 @@ O resultado é que [`Entry`](xref:Xamarin.Forms.Entry) , [`Editor`](xref:Xamarin
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API WindowsSpecific](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

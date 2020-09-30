@@ -1,5 +1,5 @@
 ---
-title: Opções de layout emXamarin.Forms
+title: Opções de layout em Xamarin.Forms
 description: Cada Xamarin.Forms exibição tem as propriedades horizontaloptions e verticaloptions, do tipo layoutoptions. Este artigo explica o efeito que cada valor de Layoutoptions tem sobre o alinhamento e a expansão de uma exibição.
 ms.prod: xamarin
 ms.assetid: 7CAB5631-5153-4DEF-8AD7-C6011CE44307
@@ -10,14 +10,14 @@ ms.date: 02/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1a3b9db435de49c438f458d1c4d85d3f81bbf749
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: bf85bb3bf6f694aa5eefa8512b8391084228598e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930670"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563517"
 ---
-# <a name="layout-options-in-xamarinforms"></a>Opções de layout emXamarin.Forms
+# <a name="layout-options-in-no-locxamarinforms"></a>Opções de layout em Xamarin.Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
 
@@ -62,7 +62,7 @@ Um [`StackLayout`](xref:Xamarin.Forms.StackLayout) só respeita os `Start` `Cent
 A não [`StackLayout`](xref:Xamarin.Forms.StackLayout) respeita os `Start` campos, `Center` , `End` e `Fill` [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) em exibições filho que estão na mesma direção que a `StackLayout` orientação. Portanto, um orientado verticalmente `StackLayout` ignora os `Start` `Center` campos,, `End` ou `Fill` se eles são definidos nas [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) Propriedades de exibições filho. Da mesma forma, um orientado horizontalmente `StackLayout` ignora os `Start` `Center` campos,, `End` ou `Fill` se eles são definidos nas [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) Propriedades de exibições filho.
 
 > [!NOTE]
-> [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill)geralmente substitui as solicitações de tamanho especificadas usando as [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) Propriedades e.
+> [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill) geralmente substitui as solicitações de tamanho especificadas usando as  [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) Propriedades e.
 
 O exemplo de código XAML a seguir demonstra um verticalmente orientado [`StackLayout`](xref:Xamarin.Forms.StackLayout) onde cada filho [`Label`](xref:Xamarin.Forms.Label) define sua [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) propriedade como um dos quatro campos de alinhamento da [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) estrutura:
 
@@ -157,5 +157,5 @@ Este artigo explicou o efeito que cada [`LayoutOptions`](xref:Xamarin.Forms.Layo
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Layoutoptions (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
+- [Layoutoptions (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)
 - [LayoutOptions](xref:Xamarin.Forms.LayoutOptions)

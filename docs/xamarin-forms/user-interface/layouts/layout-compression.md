@@ -10,12 +10,12 @@ ms.date: 12/13/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5fa9c7592ecd2cb314ce12d7e303677447a5e104
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d5e1cb9709c224ed5059de24bb45eed882ef216b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931164"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563530"
 ---
 # <a name="layout-compression"></a>Compactação de Layout
 
@@ -25,7 +25,7 @@ _A compactação de layout remove os layouts especificados da árvore visual em 
 
 ## <a name="overview"></a>Visão geral
 
-Xamarin.Formsexecuta o layout usando duas séries de chamadas de método recursivos:
+Xamarin.Forms executa o layout usando duas séries de chamadas de método recursivos:
 
 - O layout começa na parte superior da árvore visual com uma página e prossegue por todas as ramificações da árvore visual para abranger todos os elementos visuais em uma página. Elementos que são pais para outros elementos são responsáveis por dimensionar e posicionar seus filhos em relação a si mesmos.
 - Invalidação é o processo pelo qual uma alteração em um elemento em uma página dispara um novo ciclo de layout. Os elementos são considerados inválidos quando não têm mais o tamanho ou a posição corretos. Cada elemento na árvore visual que tem filhos é alertado sempre que um de seus filhos muda de tamanho. Portanto, uma alteração no tamanho de um elemento na árvore visual pode causar alterações que propagam a árvore.
@@ -125,4 +125,4 @@ A compactação de layout remove os layouts especificados da árvore visual em u
 
 - [Criar um layout personalizado](~/xamarin-forms/user-interface/layouts/custom.md)
 - [Renderizadores Rápidos](~/xamarin-forms/internals/fast-renderers.md)
-- [LayoutCompression (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
+- [LayoutCompression (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)

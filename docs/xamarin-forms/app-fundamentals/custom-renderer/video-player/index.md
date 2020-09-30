@@ -10,20 +10,20 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 08bfb86f040bfbce834df5a5d98231afae92e78d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a4b092d90b3afa2197c1db576545d233eb6e208d
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84133753"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563504"
 ---
 # <a name="implementing-a-video-player"></a>Implementar um player de vídeo
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 Às vezes, é desejável reproduzir arquivos de vídeo em um Xamarin.Forms aplicativo. Esta série de artigos discute como escrever renderizadores personalizados para iOS, Android e o Plataforma Universal do Windows (UWP) para uma Xamarin.Forms classe denominada `VideoPlayer` .
 
-Na amostra [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos), todos os arquivos que implementam e dão suporte a `VideoPlayer` estão em pastas denominadas `FormsVideoLibrary` e identificadas com o namespace `FormsVideoLibrary` ou namespaces que começam com `FormsVideoLibrary`. Essa organização e nomenclatura devem facilitar a cópia dos arquivos do player de vídeo em sua própria Xamarin.Forms solução.
+Na amostra [**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos), todos os arquivos que implementam e dão suporte a `VideoPlayer` estão em pastas denominadas `FormsVideoLibrary` e identificadas com o namespace `FormsVideoLibrary` ou namespaces que começam com `FormsVideoLibrary`. Essa organização e nomenclatura devem facilitar a cópia dos arquivos do player de vídeo em sua própria Xamarin.Forms solução.
 
 `VideoPlayer` pode reproduzir arquivos de vídeo de três tipos de fontes:
 
@@ -69,6 +69,6 @@ Embora os players de vídeo em cada plataforma forneçam seus próprios controle
 
 Cada um dos players de vídeo da plataforma tem uma barra de posição que mostra o progresso do vídeo e permite que você avance ou retroceda para uma determinada posição. Este artigo demonstra como você pode substituir essa barra de posição com um controle personalizado.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Demonstrações do player de vídeo (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [Demonstrações do player de vídeo (exemplo)](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

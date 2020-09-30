@@ -10,12 +10,12 @@ ms.date: 02/09/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0c1ae9e05b6671d45d8df485a89cfc0dea86632d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3df3a606c54d7367079638d48330dfe1b214043b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937300"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563179"
 ---
 # <a name="pixels-and-device-independent-units"></a>Unidades independentes de dispositivo e pixels
 
@@ -31,7 +31,7 @@ Se você já está se programando em Xamarin.Forms algum tempo, pode ter uma ide
 
 Esses círculos *são* pequenos em comparação com Xamarin.Forms tamanhos. Por padrão, o SkiaSharp desenha em unidades de pixels enquanto Xamarin.Forms baseia as coordenadas e os tamanhos em uma unidade independente de dispositivo estabelecida pela plataforma subjacente. (Mais informações sobre o Xamarin.Forms sistema de coordenadas podem ser encontradas no [capítulo 5. Lidando com tamanhos](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter05.md) do livro *criando aplicativos móveis com Xamarin.Forms *o.
 
-A página no programa [**SkewSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) intitulado **tamanho da superfície** usa saída de texto SkiaSharp para mostrar o tamanho da superfície de exibição de três fontes diferentes:
+A página no programa [**SkewSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) intitulado **tamanho da superfície** usa saída de texto SkiaSharp para mostrar o tamanho da superfície de exibição de três fontes diferentes:
 
 - As Xamarin.Forms [`Width`](xref:Xamarin.Forms.VisualElement.Width) Propriedades normal e [`Height`](xref:Xamarin.Forms.VisualElement.Height) do `SKCanvasView` objeto.
 - A [`CanvasSize`](xref:SkiaSharp.Views.Forms.SKCanvasView.CanvasSize) Propriedade do `SKCanvasView` objeto.
@@ -52,7 +52,7 @@ public SurfaceSizePage()
 }
 ```
 
-`SKCanvas`inclui seis `DrawText` métodos diferentes, mas esse [`DrawText`](xref:SkiaSharp.SKCanvas.DrawText(System.String,System.Single,System.Single,SkiaSharp.SKPaint)) método é o mais simples:
+`SKCanvas` inclui seis `DrawText` métodos diferentes, mas esse [`DrawText`](xref:SkiaSharp.SKCanvas.DrawText(System.String,System.Single,System.Single,SkiaSharp.SKPaint)) método é o mais simples:
 
 ```csharp
 public void DrawText (String text, Single x, Single y, SKPaint paint)
@@ -168,5 +168,5 @@ canvas.DrawOval(rect, paint);
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

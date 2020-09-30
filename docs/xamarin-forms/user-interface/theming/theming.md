@@ -10,18 +10,18 @@ ms.date: 08/07/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3341ada6c5605917eeec79aac96e38cb99b40fc4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 7eef9cdf353c527be4e1de4721a5658a7763dabe
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138197"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557537"
 ---
-# <a name="theme-a-xamarinforms-application"></a>Aplicar tema a um Xamarin.Forms aplicativo
+# <a name="theme-a-no-locxamarinforms-application"></a>Aplicar tema a um Xamarin.Forms aplicativo
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 
-Xamarin.Formsos aplicativos podem responder a alterações de estilo dinamicamente em tempo de execução usando a `DynamicResource` extensão de marcação. Essa extensão de marcação é semelhante à `StaticResource` extensão de marcação, pois ambas usam uma chave de dicionário para buscar um valor de a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . No entanto, enquanto a `StaticResource` extensão de marcação executa uma única pesquisa de dicionário, a `DynamicResource` extensão de marcação mantém um link para a chave de dicionário. Portanto, se o valor associado à chave for substituído, a alteração será aplicada ao [`VisualElement`](xref:Xamarin.Forms.VisualElement) . Isso permite que os tempos de execução sejam implementados em Xamarin.Forms aplicativos.
+Xamarin.Forms os aplicativos podem responder a alterações de estilo dinamicamente em tempo de execução usando a `DynamicResource` extensão de marcação. Essa extensão de marcação é semelhante à `StaticResource` extensão de marcação, pois ambas usam uma chave de dicionário para buscar um valor de a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . No entanto, enquanto a `StaticResource` extensão de marcação executa uma única pesquisa de dicionário, a `DynamicResource` extensão de marcação mantém um link para a chave de dicionário. Portanto, se o valor associado à chave for substituído, a alteração será aplicada ao [`VisualElement`](xref:Xamarin.Forms.VisualElement) . Isso permite que os tempos de execução sejam implementados em Xamarin.Forms aplicativos.
 
 O processo para implementar o tempo de execução em um Xamarin.Forms aplicativo é o seguinte:
 
@@ -225,8 +225,8 @@ void OnPickerSelectionChanged(object sender, EventArgs e)
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Temas (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
+- [Temas (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 - [Responder às alterações do tema do sistema](system-theme-changes.md)
 - [Dicionários de recurso](~/xamarin-forms/xaml/resource-dictionaries.md)
-- [Estilos dinâmicos emXamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
+- [Estilos dinâmicos em Xamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
 - [Estilizando Xamarin.Forms aplicativos usando estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)

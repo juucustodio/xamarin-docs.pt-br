@@ -1,6 +1,6 @@
 ---
-title: Xamarin.FormsBancos de dados locais
-description: Xamarin.Formsdá suporte a aplicativos controlados por banco de dados usando o mecanismo de banco de dados SQLite, que possibilita carregar e salvar objetos no código compartilhado. Este artigo descreve como Xamarin.Forms os aplicativos podem ler e gravar dados em um banco de dados SQLite local usando o SQLite.net.
+title: Xamarin.Forms Bancos de dados locais
+description: Xamarin.Forms dá suporte a aplicativos controlados por banco de dados usando o mecanismo de banco de dados SQLite, que possibilita carregar e salvar objetos no código compartilhado. Este artigo descreve como Xamarin.Forms os aplicativos podem ler e gravar dados em um banco de dados SQLite local usando o SQLite.net.
 ms.prod: xamarin
 ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 12/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 021831da13a936fc5eb9d2e4cb63412484ceb465
-ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
+ms.openlocfilehash: 6c5390057baf48634056101d44540020648ea709
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87426858"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563101"
 ---
-# <a name="no-locxamarinforms-local-databases"></a>Xamarin.FormsBancos de dados locais
+# <a name="no-locxamarinforms-local-databases"></a>Xamarin.Forms Bancos de dados locais
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
@@ -173,7 +173,7 @@ public static class TaskExtensions
 
 O `SafeFireAndForget` método aguarda a execução assíncrona do objeto fornecido `Task` e permite que você anexe um `Action` que será chamado se uma exceção for gerada.
 
-Para obter mais informações, consulte [padrão assíncrono baseado em tarefa (toque)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
+Para obter mais informações, consulte [padrão assíncrono baseado em tarefa (toque)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
 
 ### <a name="data-manipulation-methods"></a>Métodos de manipulação de dados
 
@@ -219,7 +219,7 @@ public class TodoItemDatabase {
 }
 ```
 
-## <a name="access-data-in-no-locxamarinforms"></a>Acessar dados emXamarin.Forms
+## <a name="access-data-in-no-locxamarinforms"></a>Acessar dados em Xamarin.Forms
 
 A Xamarin.Forms `App` classe expõe uma instância da `TodoItemDatabase` classe:
 
@@ -289,10 +289,10 @@ Para obter mais informações, consulte [manipulação de Xamarin.Forms arquivos
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Aplicativo de exemplo todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+- [Aplicativo de exemplo todo](/samples/xamarin/xamarin-forms-samples/todo)
 - [Pacote NuGet do SQLite.NET](https://www.nuget.org/packages/sqlite-net-pcl/)
 - [Documentação do SQLite](https://www.sqlite.org/docs.html)
 - [Usando o SQLite com Android](~/android/data-cloud/data-access/using-sqlite-orm.md)
 - [Usando o SQLite com iOS](~/ios/data-cloud/data/using-sqlite-orm.md)
-- [Padrão assíncrono baseado em tarefa (toque)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
+- [Padrão assíncrono baseado em tarefa (toque)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
 - [&lt;Classe T &gt; lenta](xref:System.Lazy`1)

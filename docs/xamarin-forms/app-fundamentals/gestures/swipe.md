@@ -10,18 +10,18 @@ ms.date: 08/14/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: db0beb59ed882d76288968a239f0a0dd735d9990
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: cbd1bdd097bc205f82f98574df5c356b03769e29
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918472"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562646"
 ---
 # <a name="add-a-swipe-gesture-recognizer"></a>Adicionar um reconhecedor de gestos de passar
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
 
-_Um gesto de passar o dedo ocorre quando um dedo é movido pela tela em uma direção horizontal ou vertical e geralmente é usado para iniciar a navegação por meio de conteúdo. Os exemplos de código neste artigo são tirados do exemplo de [gesto de passar o dedo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture) ._
+_Um gesto de passar o dedo ocorre quando um dedo é movido pela tela em uma direção horizontal ou vertical e geralmente é usado para iniciar a navegação por meio de conteúdo. Os exemplos de código neste artigo são tirados do exemplo de [gesto de passar o dedo](/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture) ._
 
 Para fazer um [`View`](xref:Xamarin.Forms.View) gesto reconhecer um dedo, crie uma [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) instância, defina a [`Direction`](xref:Xamarin.Forms.SwipeGestureRecognizer.Direction) propriedade como um [`SwipeDirection`](xref:Xamarin.Forms.SwipeDirection) valor de enumeração ( `Left` , `Right` , `Up` ou `Down` ), opcionalmente, defina a [`Threshold`](xref:Xamarin.Forms.SwipeGestureRecognizer.Threshold) propriedade, manipule o [`Swiped`](xref:Xamarin.Forms.SwipeGestureRecognizer.Swiped) evento e adicione o novo reconhecedor de gesto à [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) coleção na exibição. O exemplo de código a seguir mostra um `SwipeGestureRecognizer` anexado a um [`BoxView`](xref:Xamarin.Forms.BoxView) :
 
@@ -142,7 +142,7 @@ O código XAML equivalente é:
 </BoxView>
 ```
 
-`SwipeCommand`é uma propriedade do tipo `ICommand` definido na instância do modelo de exibição que é definida como a página [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) . Quando um gesto de passar o dedo é reconhecido, o método `Execute` do objeto `SwipeCommand` é executado. O argumento para o `Execute` método é o valor da [`CommandParameter`](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter) propriedade. Para obter mais informações sobre comandos, confira [A Interface de Comando](~/xamarin-forms/app-fundamentals/data-binding/commanding.md).
+`SwipeCommand` é uma propriedade do tipo `ICommand` definido na instância do modelo de exibição que é definida como a página [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) . Quando um gesto de passar o dedo é reconhecido, o método `Execute` do objeto `SwipeCommand` é executado. O argumento para o `Execute` método é o valor da [`CommandParameter`](xref:Xamarin.Forms.SwipeGestureRecognizer.CommandParameter) propriedade. Para obter mais informações sobre comandos, confira [A Interface de Comando](~/xamarin-forms/app-fundamentals/data-binding/commanding.md).
 
 ## <a name="creating-a-swipe-container"></a>Criando um contêiner para o gesto de passar o dedo
 
@@ -210,6 +210,6 @@ Quando o [`BoxView`](xref:Xamarin.Forms.BoxView) recebe um gesto de passar o ded
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Gesto de passar o dedo (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
+- [Gesto de passar o dedo (amostra)](/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
 - [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
 - [SwipeGestureRecognizer](xref:Xamarin.Forms.SwipeGestureRecognizer)

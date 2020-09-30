@@ -10,12 +10,12 @@ ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0d6a18ec55b49da2b668ccc183646d5e4dde5849
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8e8c52c03534ca5d8b653eed4d8fc2c8f39edf61
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937222"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562633"
 ---
 # <a name="hierarchical-navigation"></a>Navegação hierárquica
 
@@ -307,7 +307,7 @@ Desde que as credenciais do usuário estejam corretas, a instância `MainPage` s
 
 Qualquer um Xamarin.Forms [`View`](xref:Xamarin.Forms.View) pode ser exibido na barra de navegação de um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) . Isso é feito definindo a [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) Propriedade anexada como um `View` . Essa propriedade anexada pode ser definida em qualquer [`Page`](xref:Xamarin.Forms.Page) , e quando o `Page` for enviado para um `NavigationPage` , o `NavigationPage` respeitará o valor da propriedade.
 
-O exemplo a seguir, extraído do [Exemplo de Modo de Exibição de Título](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-titleview), mostra como definir a propriedade anexada [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) do XAML:
+O exemplo a seguir, extraído do [Exemplo de Modo de Exibição de Título](/samples/xamarin/xamarin-forms-samples/navigation-titleview), mostra como definir a propriedade anexada [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) do XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -359,9 +359,9 @@ Há uma série de limitações a serem consideradas ao exibir um [`View`](xref:X
 ## <a name="related-links"></a>Links Relacionados
 
 - [Navegação de página](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
-- [Hierárquica (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
-- [PassingData (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata)
-- [LoginFlow (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-loginflow)
-- [TitleView (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-titleview)
+- [Hierárquica (amostra)](/samples/xamarin/xamarin-forms-samples/navigation-hierarchical)
+- [PassingData (amostra)](/samples/xamarin/xamarin-forms-samples/navigation-passingdata)
+- [LoginFlow (amostra)](/samples/xamarin/xamarin-forms-samples/navigation-loginflow)
+- [TitleView (amostra)](/samples/xamarin/xamarin-forms-samples/navigation-titleview)
 - [Como criar um fluxo de tela de entrada em Xamarin.Forms vídeo](https://www.youtube.com/watch?v=qKQ7pyyG1fo)
 - [NavigationPage](xref:Xamarin.Forms.NavigationPage)

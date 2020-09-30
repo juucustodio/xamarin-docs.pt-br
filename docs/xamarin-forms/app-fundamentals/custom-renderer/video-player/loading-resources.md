@@ -10,16 +10,16 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 472c6c2a7c5a084520aee6b8ae160d9329c3f593
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a1a0febfdb38e577363ba59e8d0a5ceda9464a26
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84133751"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563491"
 ---
 # <a name="loading-application-resource-videos"></a>Carregando vídeos de recursos do aplicativo
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 Os renderizadores personalizados para a exibição `VideoPlayer` podem reproduzir arquivos de vídeo que foram inseridos nos projetos da plataforma individual como recursos do aplicativo. No entanto, a versão atual do `VideoPlayer` não pode acessar os recursos inseridos em uma biblioteca do .NET Standard.
 
@@ -184,6 +184,6 @@ Esta é a página em execução:
 
 Agora você já viu como [carregar vídeos de um URI da Web](web-videos.md) e como reproduzir recursos inseridos. Além disso, você pode [carregar vídeos da biblioteca de vídeos do dispositivo](accessing-library.md).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Demonstrações do player de vídeo (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [Demonstrações do player de vídeo (exemplo)](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

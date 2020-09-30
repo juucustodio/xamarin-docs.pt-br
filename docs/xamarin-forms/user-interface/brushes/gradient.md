@@ -1,5 +1,5 @@
 ---
-title: 'Xamarin.FormsPincéis: gradientes'
+title: 'Xamarin.Forms Pincéis: gradientes'
 description: A Xamarin.Forms classe GradientBrush é uma classe abstrata que descreve um gradiente, composto por interrupções de gradiente.
 ms.prod: xamarin
 ms.assetid: 24763E56-74EC-4082-897B-E4EAACCADFEE
@@ -10,18 +10,18 @@ ms.date: 07/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 254a4433888be0e441ae37d41c24b1886040998b
-ms.sourcegitcommit: 579ec4f2884fa391e5e214a3952cd6004c521eb8
+ms.openlocfilehash: 08a423830ee3db55cb0ec7facfa5630c8832885b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87919613"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562932"
 ---
-# <a name="no-locxamarinforms-brushes-gradients"></a>Xamarin.FormsPincéis: gradientes
+# <a name="no-locxamarinforms-brushes-gradients"></a>Xamarin.Forms Pincéis: gradientes
 
 ![API de visualização](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 
 A `GradientBrush` classe deriva da `Brush` classe e é uma classe abstrata que descreve um gradiente, que é composto de interrupções de gradiente. Um pincel de gradiente pinta uma área com várias cores que se mesclam ao longo de um eixo. As classes que derivam de `GradientBrush` descrevem diferentes maneiras de interpretar interrupções de gradiente e Xamarin.Forms fornecem os seguintes pincéis de gradiente:
 
@@ -71,6 +71,6 @@ Neste diagrama, os círculos marcam a posição das interrupções de gradiente 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [BrushesDemos (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
-- [Xamarin.FormsPincéis: gradientes lineares](lineargradient.md)
-- [Xamarin.FormsPincéis: gradientes radiais](radialgradient.md)
+- [BrushesDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+- [Xamarin.Forms Pincéis: gradientes lineares](lineargradient.md)
+- [Xamarin.Forms Pincéis: gradientes radiais](radialgradient.md)

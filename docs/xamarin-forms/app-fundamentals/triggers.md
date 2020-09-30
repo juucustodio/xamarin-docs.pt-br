@@ -10,12 +10,12 @@ ms.date: 04/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fa907babc8dae0f466fd870f55b0e5be23114498
-ms.sourcegitcommit: 37ad3c1ef8faa5bfeeb305fde06e7b4654a643e1
+ms.openlocfilehash: 29fb1300e62d15130e999f6816e2afefcd3fba3b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87795988"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562594"
 ---
 # <a name="no-locxamarinforms-triggers"></a>Xamarin.Forms Gatilhos
 
@@ -574,7 +574,7 @@ O exemplo de XAML a seguir mostra um [`Style`](xref:Xamarin.Forms.Style) que inc
 </Style>
 ```
 
-Neste exemplo, os objetos de [`Style`](xref:Xamarin.Forms.Style) destinos explícitos [`ContentPage`](xref:Xamarin.Forms.ContentPage) . `ContentPage`os objetos que consomem o estilo definem sua cor de plano de fundo como prata no iOS, para azul pálido no Android e para azul marinho no UWP. As capturas de tela a seguir mostram as páginas resultantes no iOS e no Android:
+Neste exemplo, os objetos de [`Style`](xref:Xamarin.Forms.Style) destinos explícitos [`ContentPage`](xref:Xamarin.Forms.ContentPage) . `ContentPage` os objetos que consomem o estilo definem sua cor de plano de fundo como prata no iOS, para azul pálido no Android e para azul marinho no UWP. As capturas de tela a seguir mostram as páginas resultantes no iOS e no Android:
 
 [![Captura de tela de uma alteração de estado visual disparada, no iOS e no Android](triggers-images/devicestatetrigger.png "Exemplo de DeviceStateTrigger")](triggers-images/devicestatetrigger-large.png#lightbox "Exemplo de DeviceStateTrigger")
 
@@ -619,10 +619,10 @@ O exemplo de XAML a seguir mostra um [`Style`](xref:Xamarin.Forms.Style) que inc
 </Style>
 ```
 
-Neste exemplo, os objetos de [`Style`](xref:Xamarin.Forms.Style) destinos explícitos [`ContentPage`](xref:Xamarin.Forms.ContentPage) . `ContentPage`os objetos que consomem o estilo definem sua cor de plano de fundo como prata quando a orientação é retrato e definem a cor do plano de fundo como branco quando a orientação é paisagem.
+Neste exemplo, os objetos de [`Style`](xref:Xamarin.Forms.Style) destinos explícitos [`ContentPage`](xref:Xamarin.Forms.ContentPage) . `ContentPage` os objetos que consomem o estilo definem sua cor de plano de fundo como prata quando a orientação é retrato e definem a cor do plano de fundo como branco quando a orientação é paisagem.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplo de gatilhos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
-- [Xamarin.FormsGerenciador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)
-- [Xamarin.FormsAPI de gatilho](xref:Xamarin.Forms.TriggerAction`1)
+- [Exemplo de gatilhos](/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
+- [Xamarin.Forms Gerenciador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Xamarin.Forms API de gatilho](xref:Xamarin.Forms.TriggerAction`1)

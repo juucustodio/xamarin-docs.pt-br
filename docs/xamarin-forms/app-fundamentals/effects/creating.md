@@ -10,12 +10,12 @@ ms.date: 10/24/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bb4e0c81fb3f2e58be9c44d1ec7fddcf4d72a656
-ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
+ms.openlocfilehash: b109459f583afd491b613b4e32e4e4530eeb5ca4
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88964591"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562685"
 ---
 # <a name="creating-an-effect"></a>Criando um efeito
 
@@ -274,5 +274,5 @@ Este artigo demonstrou como criar um efeito que altera a cor do plano de fundo d
 - [Renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
 - [Efeito](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
-- [Efeito de cor da tela de fundo (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-backgroundcoloreffect)
-- [Efeito de foco (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-focuseffect)
+- [Efeito de cor da tela de fundo (amostra)](/samples/xamarin/xamarin-forms-samples/effects-backgroundcoloreffect)
+- [Efeito de foco (amostra)](/samples/xamarin/xamarin-forms-samples/effects-focuseffect)

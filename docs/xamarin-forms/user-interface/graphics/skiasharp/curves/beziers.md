@@ -10,16 +10,16 @@ ms.date: 05/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1ad548846500ccbacc2a3d117919bfb4df1a1d79
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9193cef76a5f474f3681b15a1315e5840b41d88a
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138678"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562971"
 ---
 # <a name="three-types-of-bzier-curves"></a>Três tipos de curvas de bézier
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explore como usar SkiaSharp para renderizar curvas Bézier cúbicas, quadráticas e cônicas_
 
@@ -498,7 +498,7 @@ Teoricamente, os pesos negativos são permitidos e fazem com que a curva dobre p
 
 Você pode usar a trigonometria para determinar a distância do ponto de controle do centro do círculo: é o raio do círculo dividido pelo cosseno da metade do ângulo α. Para desenhar um arco circular entre os pontos inicial e final, defina o peso para o mesmo cosseno da metade do ângulo. Observe que, se o ângulo for de 180 graus, as linhas tangentes nunca serão atendidas e o peso será zero. Mas para ângulos inferiores a 180 graus, a matemática funciona bem.
 
-A página de **arco circular de cone** demonstra isso. O arquivo [**ConicCircularArc. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml) instancia um `Slider` para selecionar o ângulo. O `PaintSurface` manipulador no arquivo code-behind [**ConicCircularArc.XAML.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml.cs) calcula o ponto de controle e o peso:
+A página de **arco circular de cone** demonstra isso. O arquivo [**ConicCircularArc. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml) instancia um `Slider` para selecionar o ângulo. O `PaintSurface` manipulador no arquivo code-behind  [**ConicCircularArc.XAML.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml.cs) calcula o ponto de controle e o peso:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -556,7 +556,7 @@ Mas defina o ângulo como 180 graus e a matemática falhará.
 
 Infelizmente, nesse caso, isso `ConicTo` não dá suporte a pesos negativos, porque na teoria (com base nas equações paramétricas), o círculo pode ser concluído com outra chamada para `ConicTo` com os mesmos pontos, mas um valor negativo do peso. Isso permitiria a criação de um círculo inteiro com apenas duas `ConicTo` curvas com base em qualquer ângulo entre (mas não incluindo) zero graus e 180 graus.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

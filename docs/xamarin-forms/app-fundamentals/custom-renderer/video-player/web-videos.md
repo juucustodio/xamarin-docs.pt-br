@@ -10,16 +10,16 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b4269b768d6dd9a0eadbbe557f701f8a43b74c99
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 113265ffd26fcb1daf1cc85867e55f3e8ebd091f
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84133673"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557940"
 ---
 # <a name="playing-a-web-video"></a>Reproduzindo um vídeo da Web
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 A classe `VideoPlayer` define uma propriedade `Source` usada para especificar a origem do arquivo de vídeo, bem como uma propriedade `AutoPlay`. `AutoPlay` tem uma configuração padrão igual a `true`, o que significa que o vídeo deve iniciar a reprodução automaticamente após a definição de `Source`:
 
@@ -452,7 +452,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="setting-a-url-source"></a>Definindo uma fonte de URL
 
-Com a implementação dessas propriedades nos três renderizadores, é possível reproduzir um vídeo de uma fonte de URL. A página **Reproduzir um vídeo da Web** no programa [**VideoPlayDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) é definida pelo seguinte arquivo XAML:
+Com a implementação dessas propriedades nos três renderizadores, é possível reproduzir um vídeo de uma fonte de URL. A página **Reproduzir um vídeo da Web** no programa [**VideoPlayDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) é definida pelo seguinte arquivo XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -522,6 +522,6 @@ Para referenciar um desses outros filmes, substitua a URL explícita no arquivo 
 
 Como alternativa, você pode definir a propriedade `Source` em um arquivo de vídeo em uma `ListView`, conforme descrito no próximo artigo, [Associando fontes de vídeo ao player](source-bindings.md).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Demonstrações do player de vídeo (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+- [Demonstrações do player de vídeo (exemplo)](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

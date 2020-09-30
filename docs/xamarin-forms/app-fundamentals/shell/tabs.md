@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsLayout do Shell
+title: Xamarin.Forms Layout do Shell
 description: Depois de um submenu, o próximo nível de navegação em um aplicativo Shell é a barra de guias inferior. Como alternativa, o padrão de navegação de um aplicativo pode começar com as guias inferiores e sem o uso de um submenu. Em ambos os casos, quando uma guia inferior contiver mais de uma página, as páginas poderão ser navegadas pelas guias superiores.
 ms.prod: xamarin
 ms.assetid: 318D81DB-E456-4E44-B083-36A27DBD9523
@@ -10,14 +10,14 @@ ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9ecdc3aca3264b52163d35e29659f434f521147f
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 59c7435273d7c01f93ef0bbfb0240e3917f8b716
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918613"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563010"
 ---
-# <a name="no-locxamarinforms-shell-tabs"></a>Xamarin.FormsGuias do Shell
+# <a name="no-locxamarinforms-shell-tabs"></a>Xamarin.Forms Guias do Shell
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
@@ -301,6 +301,6 @@ Além disso, as guias também podem ser estilizadas usando as folhas de estilo e
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xaminals (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
-- [Xamarin.FormsNavegação do Shell](navigation.md)
-- [Xamarin.FormsPropriedades específicas do Shell CSS](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)
+- [Xaminals (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Xamarin.Forms Navegação do Shell](navigation.md)
+- [Xamarin.Forms Propriedades específicas do Shell CSS](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

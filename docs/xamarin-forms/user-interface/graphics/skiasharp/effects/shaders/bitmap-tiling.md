@@ -10,18 +10,18 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6a28dd20eb8978334365ac217df1241e5288fd28
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8c6d139e47974247ce4af6bfa6c32331fcf7c824
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137417"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563127"
 ---
 # <a name="skiasharp-bitmap-tiling"></a>SkiaSharp bitmap em blocos
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
 
 Como você viu nos dois artigos anteriores, a [`SKShader`](xref:SkiaSharp.SKShader) classe pode criar gradientes lineares ou circulares. Este artigo se concentra no `SKShader` objeto que usa um bitmap para dividir uma área. O bitmap pode ser repetido horizontal e verticalmente, em sua orientação original ou invertido alternadamente horizontal e verticalmente. A inversão evita descontinuidades entre os blocos:
 
@@ -45,7 +45,7 @@ Este artigo contém vários exemplos de como usar essa transformação de matriz
 
 ## <a name="exploring-the-tile-modes"></a>Explorando os modos de bloco
 
-O primeiro programa na seção de **bitmap em blocos gráficos** da página **sombreadores e outros efeitos** do exemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) demonstra os efeitos dos dois `SKShaderTileMode` argumentos. O **bloco bitmap flip Modes** o arquivo XAML instancia uma `SKCanvasView` e duas `Picker` exibições que permitem selecionar um `SKShaderTilerMode` valor para divisão horizontal e vertical. Observe que uma matriz dos `SKShaderTileMode` Membros é definida na `Resources` seção:
+O primeiro programa na seção de **bitmap em blocos gráficos** da página **sombreadores e outros efeitos** do exemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) demonstra os efeitos dos dois `SKShaderTileMode` argumentos. O **bloco bitmap flip Modes** o arquivo XAML instancia uma `SKCanvasView` e duas `Picker` exibições que permitem selecionar um `SKShaderTilerMode` valor para divisão horizontal e vertical. Observe que uma matriz dos `SKShaderTileMode` Membros é definida na `Resources` seção:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -303,7 +303,7 @@ Observe que os `SKShaderTileMode` argumentos para `CreateBitmap` são ambos `Mir
 
 É necessário algum trabalho para obter um bitmap adequado para o bloco. Este não funciona muito bem porque o Brick mais escuro se destaca muito. Ele aparece regularmente dentro das imagens repetidas, revelando o fato de que essa parede de Brick foi construída a partir de um bitmap menor.
 
-A pasta de **mídia** do exemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) também inclui essa imagem de uma parede de pedra:
+A pasta de **mídia** do exemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) também inclui essa imagem de uma parede de pedra:
 
 ![Bloco de parede de pedra](bitmap-tiling-images/StoneWallTile.jpg "Bloco de parede de pedra")
 
@@ -369,7 +369,7 @@ Se a transformação for aplicada ao bloco individual, cada imagem repetida do b
 
 Na seção [**alinhamento de bloco**](#tile-alignment), você verá um exemplo uma transformação traduzir aplicada ao sombreador.
 
-O exemplo de [**relógio Cat**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock) autônomo (que não faz parte de **SkiaSharpFormsDemos**) simula um plano de fundo de granulação de madeira usando o bitmap com base em blocos de bits baseado neste bitmap quadrado de 240 pixels:
+O exemplo de [**relógio Cat**](/samples/xamarin/xamarin-forms-samples/catclock) autônomo (que não faz parte de **SkiaSharpFormsDemos**) simula um plano de fundo de granulação de madeira usando o bitmap com base em blocos de bits baseado neste bitmap quadrado de 240 pixels:
 
 ![Granulação de madeira](bitmap-tiling-images/WoodGrain.png "Granulação de madeira")
 
@@ -782,6 +782,6 @@ As `SKShaderTileMode.Mirror` Opções garantem que os braços do x em cada bitma
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
-- [CatClock (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [CatClock (exemplo)](/samples/xamarin/xamarin-forms-samples/catclock)

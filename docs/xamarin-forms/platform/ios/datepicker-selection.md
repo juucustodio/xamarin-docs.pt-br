@@ -10,16 +10,16 @@ ms.date: 01/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c65cac4c777150185524b291adc6e9d1e79958d3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f8b98d103021864aeb589787224f90bdaed17146
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138548"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563777"
 ---
 # <a name="datepicker-item-selection-on-ios"></a>Seleção de item DatePicker no iOS
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esses controles específicos da plataforma iOS quando a seleção de item ocorre em um [`DatePicker`](xref:Xamarin.Forms.DatePicker) , permitindo ao usuário especificar que a seleção de item ocorre durante a pesquisa de itens no controle ou apenas uma vez que o botão **Done** é pressionado. Ele é consumido em XAML definindo a `DatePicker.UpdateMode` Propriedade anexada como um valor da `UpdateMode` enumeração:
 
@@ -47,8 +47,8 @@ datePicker.On<iOS>().SetUpdateMode(UpdateMode.WhenFinished);
 
 O `DatePicker.On<iOS>` método especifica que essa plataforma específica será executada somente no Ios. O `DatePicker.SetUpdateMode` método, no [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, é usado para controlar quando ocorre a seleção de item, com a `UpdateMode` Enumeração fornecendo dois valores possíveis:
 
-- `Immediately`– a seleção de item ocorre quando o usuário procura itens no [`DatePicker`](xref:Xamarin.Forms.DatePicker) . Esse é o comportamento padrão no Xamarin.Forms .
-- `WhenFinished`– a seleção de itens ocorre apenas quando o usuário pressionou o botão **concluído** no [`DatePicker`](xref:Xamarin.Forms.DatePicker) .
+- `Immediately` – a seleção de item ocorre quando o usuário procura itens no [`DatePicker`](xref:Xamarin.Forms.DatePicker) . Esse é o comportamento padrão no Xamarin.Forms .
+- `WhenFinished` – a seleção de itens ocorre apenas quando o usuário pressionou o botão **concluído** no [`DatePicker`](xref:Xamarin.Forms.DatePicker) .
 
 Além disso, o `SetUpdateMode` método pode ser usado para alternar os valores de enumeração chamando o `UpdateMode` método, que retorna o atual `UpdateMode` :
 
@@ -70,6 +70,6 @@ O resultado é que um especificado `UpdateMode` é aplicado ao [`DatePicker`](xr
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

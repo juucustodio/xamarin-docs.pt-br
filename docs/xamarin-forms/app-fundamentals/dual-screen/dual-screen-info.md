@@ -10,12 +10,12 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8081eb604da0c9d2de07ee17abe05030efdc1005
-ms.sourcegitcommit: 69bd0fdc698c9b0c0d73217776d7084f32ae88ae
+ms.openlocfilehash: 4e6bbd40fb80c2884013647ced3c3660ab4af738
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90832288"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562672"
 ---
 # <a name="no-locxamarinforms-dualscreeninfo-helper-class"></a>Xamarin.Forms Classe auxiliar DualScreenInfo
 
@@ -223,4 +223,4 @@ A captura de tela a seguir mostra o layout resultante:
 
 ## <a name="related-links"></a>Links relacionados
 
-- [DualScreen (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
+- [DualScreen (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)

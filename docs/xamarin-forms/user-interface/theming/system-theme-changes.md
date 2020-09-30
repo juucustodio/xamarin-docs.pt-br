@@ -1,6 +1,6 @@
 ---
 title: Responder a alterações de tema do sistema em Xamarin.Forms aplicativos
-description: Xamarin.Formsos aplicativos podem responder às alterações de tema do sistema operacional usando o tipo OnAppTheme e a extensão de marcação DynamicResource.
+description: Xamarin.Forms os aplicativos podem responder às alterações de tema do sistema operacional usando o tipo OnAppTheme e a extensão de marcação DynamicResource.
 ms.assetid: D10506DD-BAA0-437F-A4AD-882D16E7B60D
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -10,12 +10,12 @@ ms.date: 08/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: efd9cabc9504a9fa56f1f7a763013e6852be9382
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 258061042fc8ab80b8bbdd9a0a9a965d87a1e064
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918102"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557563"
 ---
 # <a name="respond-to-system-theme-changes-in-no-locxamarinforms-applications"></a>Responder a alterações de tema do sistema em Xamarin.Forms aplicativos
 
@@ -25,11 +25,11 @@ Os dispositivos normalmente incluem temas leves e escuros, que se referem a um a
 
 O tema do sistema pode ser alterado por vários motivos, dependendo da configuração do dispositivo. Isso inclui o tema do sistema que está sendo explicitamente alterado pelo usuário, ele se altera devido à hora do dia e é alterado devido a fatores ambientais, como baixa luz.
 
-Xamarin.Formsos aplicativos podem responder às alterações de tema do sistema, consumindo recursos com a `AppThemeBinding` extensão de marcação e os `SetAppThemeColor` métodos de `SetOnAppTheme<T>` extensão e.
+Xamarin.Forms os aplicativos podem responder às alterações de tema do sistema, consumindo recursos com a `AppThemeBinding` extensão de marcação e os `SetAppThemeColor` métodos de `SetOnAppTheme<T>`  extensão e.
 
 Os requisitos a seguir devem ser atendidos para Xamarin.Forms que o responda a uma alteração de tema do sistema:
 
-- Xamarin.Forms4.6.0.967 ou superior.
+- Xamarin.Forms 4.6.0.967 ou superior.
 - iOS 13 ou superior.
 - Android 10 (API 29) ou superior.
 - O UWP Build 14393 ou superior.
@@ -96,7 +96,7 @@ Para obter mais informações sobre a `AppThemeBinding` extensão de marcação,
 
 ### <a name="extension-methods"></a>Métodos de extensão
 
-Xamarin.Formsinclui `SetAppThemeColor` e `SetOnAppTheme<T>` métodos de extensão que permitem que os [`VisualElement`](xref:Xamarin.Forms.VisualElement) objetos respondam às alterações do tema do sistema.
+Xamarin.Forms inclui `SetAppThemeColor` e `SetOnAppTheme<T>` métodos de extensão que permitem que os [`VisualElement`](xref:Xamarin.Forms.VisualElement) objetos respondam às alterações do tema do sistema.
 
 O `SetAppThemeColor` método permite [`Color`](xref:Xamarin.Forms.Color) que os objetos sejam especificados que serão definidos em uma propriedade de destino com base no tema atual do sistema:
 
@@ -145,7 +145,7 @@ Neste exemplo, o aplicativo está definido para usar o tema definido para o modo
 
 ## <a name="react-to-theme-changes"></a>Reagir às alterações do tema
 
-O tema do sistema em um dispositivo pode ser alterado por vários motivos, dependendo de como o dispositivo está configurado. Xamarin.Formsos aplicativos podem ser notificados quando o tema do sistema muda de acordo com a manipulação do `Application.RequestedThemeChanged` evento:
+O tema do sistema em um dispositivo pode ser alterado por vários motivos, dependendo de como o dispositivo está configurado. Xamarin.Forms os aplicativos podem ser notificados quando o tema do sistema muda de acordo com a manipulação do `Application.RequestedThemeChanged` evento:
 
 ```csharp
 Application.Current.RequestedThemeChanged += (s, a) =>
@@ -161,7 +161,7 @@ O `AppThemeChangedEventArgs` objeto, que acompanha o `RequestedThemeChanged` eve
 
 ## <a name="related-links"></a>Links relacionados
 
-- [SystemThemes (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
+- [SystemThemes (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
 - [Extensão de marcação AppThemeBinding](~/xamarin-forms/xaml/markup-extensions/consuming.md#appthemebinding-markup-extension)
 - [Dicionários de recurso](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Estilizando Xamarin.Forms aplicativos usando estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)

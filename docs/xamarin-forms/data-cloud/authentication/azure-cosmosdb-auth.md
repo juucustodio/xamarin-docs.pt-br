@@ -1,5 +1,5 @@
 ---
-title: Autenticar usuários com um banco de dados de documento Azure Cosmos DB eXamarin.Forms
+title: Autenticar usuários com um banco de dados de documento Azure Cosmos DB e Xamarin.Forms
 description: Este artigo explica como combinar o controle de acesso com Azure Cosmos DB coleções particionadas, para que um usuário possa acessar somente seus próprios documentos em um Xamarin.Forms aplicativo.
 ms.prod: xamarin
 ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
@@ -10,14 +10,14 @@ ms.date: 06/16/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 05547e960ba1ea141a830396f803dfc265283627
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2dacbc18fdbc7d9c7bd38d5ddfad2157e3a0a503
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936455"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563283"
 ---
-# <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Autenticar usuários com um banco de dados de documento Azure Cosmos DB eXamarin.Forms
+# <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-no-locxamarinforms"></a>Autenticar usuários com um banco de dados de documento Azure Cosmos DB e Xamarin.Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 
@@ -77,11 +77,11 @@ O processo para hospedar o agente de token de recurso no serviço Azure App é o
 
 1. No portal do Azure, crie um novo aplicativo Web do serviço de aplicativo. Para obter mais informações, consulte [criar um aplicativo Web em um ambiente do serviço de aplicativo](/azure/app-service-web/app-service-web-how-to-create-a-web-app-in-an-ase/).
 1. Na portal do Azure, abra a folha configurações do aplicativo para o aplicativo Web e adicione as seguintes configurações:
-    - `accountUrl`– o valor deve ser o Cosmos DB URL da conta da folha chaves da conta Cosmos DB.
-    - `accountKey`– o valor deve ser a Cosmos DB chave mestra (primária ou secundária) da folha chaves da conta de Cosmos DB.
-    - `databaseId`– o valor deve ser o nome do banco de dados Cosmos DB.
-    - `collectionId`– o valor deve ser o nome da coleção de Cosmos DB (nesse caso, `UserItems` ).
-    - `hostUrl`– o valor deve ser a URL do aplicativo Web na folha de visão geral da conta do serviço de aplicativo.
+    - `accountUrl` – o valor deve ser o Cosmos DB URL da conta da folha chaves da conta Cosmos DB.
+    - `accountKey` – o valor deve ser a Cosmos DB chave mestra (primária ou secundária) da folha chaves da conta de Cosmos DB.
+    - `databaseId` – o valor deve ser o nome do banco de dados Cosmos DB.
+    - `collectionId` – o valor deve ser o nome da coleção de Cosmos DB (nesse caso, `UserItems` ).
+    - `hostUrl` – o valor deve ser a URL do aplicativo Web na folha de visão geral da conta do serviço de aplicativo.
 
     A captura de tela a seguir demonstra essa configuração:
 
@@ -121,16 +121,16 @@ O processo para configurar a autenticação fácil do serviço de aplicativo é 
 
 O aplicativo Web do serviço de aplicativo também deve ser configurado para se comunicar com o aplicativo do Facebook para habilitar o fluxo de autenticação. Isso pode ser feito selecionando o provedor de identidade do Facebook e inserindo os valores de **ID** do aplicativo e **segredo do aplicativo** nas configurações do aplicativo do Facebook no centro de desenvolvimento do Facebook. Para obter mais informações, consulte [adicionar informações do Facebook ao seu aplicativo](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application).
 
-### <a name="xamarinforms-application-configuration"></a>Xamarin.FormsConfiguração do aplicativo
+### <a name="no-locxamarinforms-application-configuration"></a>Xamarin.Forms Configuração do aplicativo
 
 O processo de configuração do Xamarin.Forms aplicativo de exemplo é o seguinte:
 
 1. Abra a Xamarin.Forms solução.
 1. Abra `Constants.cs` e atualize os valores das seguintes constantes:
-    - `EndpointUri`– o valor deve ser o Cosmos DB URL da conta da folha chaves da conta Cosmos DB.
-    - `DatabaseName`– o valor deve ser o nome do banco de dados de documento.
-    - `CollectionName`– o valor deve ser o nome da coleção de banco de dados do documento (nesse caso, `UserItems` ).
-    - `ResourceTokenBrokerUrl`– o valor deve ser a URL do aplicativo Web do agente de token de recurso da folha visão geral da conta do serviço de aplicativo.
+    - `EndpointUri` – o valor deve ser o Cosmos DB URL da conta da folha chaves da conta Cosmos DB.
+    - `DatabaseName` – o valor deve ser o nome do banco de dados de documento.
+    - `CollectionName` – o valor deve ser o nome da coleção de banco de dados do documento (nesse caso, `UserItems` ).
+    - `ResourceTokenBrokerUrl` – o valor deve ser a URL do aplicativo Web do agente de token de recurso da folha visão geral da conta do serviço de aplicativo.
 
 ## <a name="initiating-login"></a>Iniciando logon
 
@@ -264,10 +264,10 @@ Este artigo explicou como combinar o controle de acesso com coleções particion
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Autenticação de Azure Cosmos DB todo (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
+- [Autenticação de Azure Cosmos DB todo (exemplo)](/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 - [Consumo de um banco de dados de documento do Azure Cosmos DB](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md)
 - [Protegendo o acesso aos dados do Azure Cosmos DB](/azure/cosmos-db/secure-access-to-data/)
 - [Controle de acesso na API do SQL](/rest/api/documentdb/access-control-on-documentdb-resources/).
 - [Como particionar e dimensionar no BD Cosmos do Azure](/azure/cosmos-db/partition-data/)
 - [Biblioteca de cliente Azure Cosmos DB](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core)
-- [API do Azure Cosmos DB](https://msdn.microsoft.com/library/azure/dn948556.aspx)
+- [API do Azure Cosmos DB](/dotnet/api/overview/azure/cosmosdb/client)

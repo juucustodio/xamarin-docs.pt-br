@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsIntrodução aos serviços Web
+title: Xamarin.Forms Introdução aos serviços Web
 description: Este guia fornece uma explicação do Xamarin.Forms exemplo de aplicativo que demonstra como se comunicar com diferentes serviços Web. Embora cada serviço Web Use um aplicativo de exemplo separado, eles são funcionalmente semelhantes e compartilham classes comuns.
 ms.prod: xamarin
 ms.assetid: A3FEB262-0D79-42E6-8F8B-A565618C490B
@@ -10,14 +10,14 @@ ms.date: 02/28/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cd9815c6448efae0bb0af982c8807c47263ae13e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ebff259519776718f41ab0fcc0a7abb0c692dac6
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938197"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563413"
 ---
-# <a name="xamarinforms-web-services-introduction"></a>Xamarin.FormsIntrodução aos serviços Web
+# <a name="no-locxamarinforms-web-services-introduction"></a>Xamarin.Forms Introdução aos serviços Web
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
@@ -96,6 +96,6 @@ Em vez de invocar as operações de serviço Web diretamente, os `TodoItemManage
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ASMX (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
-- [WCF (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
-- [REST (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
+- [ASMX (exemplo)](/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
+- [WCF (exemplo)](/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
+- [REST (exemplo)](/samples/xamarin/xamarin-forms-samples/webservices-todorest)

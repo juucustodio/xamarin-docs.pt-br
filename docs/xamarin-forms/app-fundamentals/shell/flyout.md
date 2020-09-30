@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsSubmenu do Shell
+title: Xamarin.Forms Submenu do Shell
 description: O submenu é o menu raiz de um aplicativo Shell e é acessível por meio de um ícone ou passando o dedo na lateral da tela. O submenu consiste em um cabeçalho opcional, itens de submenu e itens de menu opcionais.
 ms.prod: xamarin
 ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
@@ -10,14 +10,14 @@ ms.date: 07/30/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 821eafab6896d8771ba38332a43c0cbc319797a7
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: a0ec978c1947cde4bd6f7fd619ad8cd2f0dbdbce
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87917836"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563036"
 ---
-# <a name="no-locxamarinforms-shell-flyout"></a>Xamarin.FormsSubmenu do Shell
+# <a name="no-locxamarinforms-shell-flyout"></a>Xamarin.Forms Submenu do Shell
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
@@ -140,9 +140,9 @@ O submenu pode ter uma imagem de tela de fundo opcional, que aparece sob o cabe�
 
 A taxa de proporção da imagem de plano de fundo pode ser configurada definindo a `FlyoutBackgroundImageAspect` propriedade vinculável, do tipo [`Aspect`](xref:Xamarin.Forms.Aspect) , para um dos `Aspect` membros da enumeração:
 
-- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill)-Corta a imagem para que ela preencha a área de exibição enquanto preserva a taxa de proporção.
-- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit)-letterboxes a imagem, se necessário, para que a imagem caiba na área de exibição, com espaço em branco adicionado à parte superior/inferior ou aos lados, dependendo se a imagem for larga ou comprida.
-- [`Fill`](xref:Xamarin.Forms.Aspect.Fill)– Alonga a imagem para preencher completamente e exatamente a área de exibição. Isso pode resultar em distorção de imagem.
+- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) -Corta a imagem para que ela preencha a área de exibição enquanto preserva a taxa de proporção.
+- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -letterboxes a imagem, se necessário, para que a imagem caiba na área de exibição, com espaço em branco adicionado à parte superior/inferior ou aos lados, dependendo se a imagem for larga ou comprida.
+- [`Fill`](xref:Xamarin.Forms.Aspect.Fill) – Alonga a imagem para preencher completamente e exatamente a área de exibição. Isso pode resultar em distorção de imagem.
 
 A propriedade de `FlyoutBackgroundImageAspect` é definida por padrão como `AspectFit`.
 
@@ -295,9 +295,9 @@ Para obter mais informações sobre pincéis, consulte [ Xamarin.Forms pincéis]
 
 Por padrão, um submenu pode ser rolado verticalmente quando os itens do submenu não se ajustam ao submenu. Esse comportamento pode ser alterado definindo a `Shell.FlyoutVerticalScrollMode` propriedade vinculável como um dos `ScrollMode` membros da enumeração:
 
-- `Disabled`– indica que a rolagem vertical será desabilitada.
-- `Enabled`– indica que a rolagem vertical será habilitada.
-- `Auto`– indica que a rolagem vertical será habilitada se os itens do submenu não couberem no submenu. Este é o valor padrão da propriedade `Shell.FlyoutVerticalScrollMode`.
+- `Disabled` – indica que a rolagem vertical será desabilitada.
+- `Enabled` – indica que a rolagem vertical será habilitada.
+- `Auto` – indica que a rolagem vertical será habilitada se os itens do submenu não couberem no submenu. Este é o valor padrão da propriedade `Shell.FlyoutVerticalScrollMode`.
 
 O exemplo a seguir mostra como desabilitar a rolagem vertical:
 
@@ -543,7 +543,7 @@ Os itens de menu podem ser adicionados opcionalmente ao submenu e cada item de m
 > [!NOTE]
 > A `MenuItem` classe tem um [`Clicked`](xref:Xamarin.Forms.MenuItem.Clicked) evento e uma [`Command`](xref:Xamarin.Forms.MenuItem.Command) propriedade. Portanto, os objetos `MenuItem` permitem cenários que executam uma ação em resposta ao `MenuItem` que está sendo tocado. Esses cenários incluem realizar a navegação e abrir um navegador em uma página da Web específica.
 
-[`MenuItem`](xref:Xamarin.Forms.MenuItem)os objetos podem ser adicionados ao submenu, conforme mostrado no exemplo a seguir:
+[`MenuItem`](xref:Xamarin.Forms.MenuItem) os objetos podem ser adicionados ao submenu, conforme mostrado no exemplo a seguir:
 
 ```xaml
 <Shell ...>
@@ -690,7 +690,7 @@ Além disso, as classes de estilo personalizado podem ser definidas e aplicadas 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xaminals (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
-- [Xamarin.FormsClasses de estilo](~/xamarin-forms/user-interface/styles/xaml/style-class.md)
-- [Xamarin.FormsGerenciador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)
-- [Xamarin.FormsPincéis](~/xamarin-forms/user-interface/brushes/index.md)
+- [Xaminals (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Xamarin.Forms Classes de estilo](~/xamarin-forms/user-interface/styles/xaml/style-class.md)
+- [Xamarin.Forms Gerenciador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Xamarin.Forms Pincéis](~/xamarin-forms/user-interface/brushes/index.md)

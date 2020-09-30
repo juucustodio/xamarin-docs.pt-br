@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsGrade
+title: Xamarin.Forms Grade
 description: A Xamarin.Forms grade é um layout que organiza seus filhos em linhas e colunas de células.
 ms.prod: xamarin
 ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
@@ -10,18 +10,18 @@ ms.date: 06/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9d2e697a07e033fd7c3c8d3efffa1d67f6c097c3
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 59a4d5c0730719d6cc332728c6cab641d02239b4
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946332"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563556"
 ---
-# <a name="xamarinforms-grid"></a>Xamarin.FormsGrade
+# <a name="no-locxamarinforms-grid"></a>Xamarin.Forms Grade
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
 
-[![Xamarin.FormsGrade](grid-images/layouts.png "[! Parar. Grade não-LOC (Xamarin. Forms)]")](grid-images/layouts-large.png#lightbox "[! Parar. Grade não-LOC (Xamarin. Forms)]")
+[![::: no-Loc (Xamarin. Forms)::: Grid](grid-images/layouts.png "::: no-Loc (Xamarin. Forms)::: Grid")](grid-images/layouts-large.png#lightbox "::: no-Loc (Xamarin. Forms)::: Grid")
 
 O [`Grid`](xref:Xamarin.Forms.Grid) é um layout que organiza seus filhos em linhas e colunas, que podem ter tamanhos proporcionais ou absolutos. Por padrão, um `Grid` contém uma linha e uma coluna. Além disso, um `Grid` pode ser usado como um layout pai que contém outros layouts filho.
 
@@ -67,9 +67,9 @@ O comportamento de layout de um [`Grid`](xref:Xamarin.Forms.Grid) pode ser defin
 
 A [`RowDefinition`](xref:Xamarin.Forms.RowDefinition) classe define uma [`Height`](xref:Xamarin.Forms.RowDefinition.Height) propriedade, do tipo [`GridLength`](xref:Xamarin.Forms.GridLength) , e a [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) classe define uma [`Width`](xref:Xamarin.Forms.ColumnDefinition.Width) propriedade, do tipo [`GridLength`](xref:Xamarin.Forms.GridLength) . A [`GridLength`](xref:Xamarin.Forms.GridLength) struct especifica uma altura de linha ou uma largura de coluna em termos da [`GridUnitType`](xref:Xamarin.Forms.GridUnitType) enumeração, que tem três membros:
 
-- `Absolute`– a altura da linha ou a largura da coluna é um valor nas unidades independentes do dispositivo (um número em XAML).
-- `Auto`– a altura da linha ou a largura da coluna é autodimensionada com base no conteúdo da célula ( `Auto` em XAML).
-- `Star`– a altura da linha ou a largura da coluna de sobra é alocada proporcionalmente (um número seguido de `*` em XAML).
+- `Absolute` – a altura da linha ou a largura da coluna é um valor nas unidades independentes do dispositivo (um número em XAML).
+- `Auto` – a altura da linha ou a largura da coluna é autodimensionada com base no conteúdo da célula ( `Auto` em XAML).
+- `Star` – a altura da linha ou a largura da coluna de sobra é alocada proporcionalmente (um número seguido de `*` em XAML).
 
 Uma [`Grid`](xref:Xamarin.Forms.Grid) linha com uma `Height` propriedade de `Auto` restringe a altura das exibições nessa linha da mesma maneira que uma vertical [`StackLayout`](xref:Xamarin.Forms.StackLayout) . Da mesma forma, uma coluna com uma `Width` propriedade de funciona de maneira `Auto` muito semelhante a uma horizontal `StackLayout` .
 
@@ -752,7 +752,7 @@ public class ColorSlidersGridPageCS : ContentPage
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações em grade (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
-- [Opções de layout emXamarin.Forms](layout-options.md)
+- [Demonstrações em grade (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
+- [Opções de layout em Xamarin.Forms](layout-options.md)
 - [Escolher um Xamarin.Forms layout](choose-layout.md)
 - [Melhorar o Xamarin.Forms desempenho do aplicativo](~/xamarin-forms/deploy-test/performance.md)

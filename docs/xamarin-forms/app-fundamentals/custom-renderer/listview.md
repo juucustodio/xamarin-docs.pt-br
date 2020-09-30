@@ -10,12 +10,12 @@ ms.date: 11/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8892a49f2d7d93f8310293bc70d5e1acdfabe3f5
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 7fec48c86e68d2115a919e620e8b0f4e46740a03
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937079"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562490"
 ---
 # <a name="customizing-a-listview"></a>Personalizando uma ListView
 
@@ -563,4 +563,4 @@ Este artigo demonstrou como criar um renderizador personalizado que encapsula os
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [CustomRendererListView (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-listview)
+- [CustomRendererListView (amostra)](/samples/xamarin/xamarin-forms-samples/customrenderers-listview)

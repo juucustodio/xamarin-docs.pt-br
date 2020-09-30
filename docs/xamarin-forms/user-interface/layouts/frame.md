@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsQuadro
+title: Xamarin.Forms Quadro
 description: A Xamarin.Forms classe frame é um layout usado para encapsular uma exibição ou um layout com uma borda que pode ser configurada com cores, sombra e outras opções.
 ms.prod: xamarin
 ms.assetId: 4E074714-0928-41C8-A468-B60E23236A8C
@@ -10,16 +10,16 @@ ms.date: 08/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 42192111befbefda7e0f62b7691a8392c2828818
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8a14390afc04c1a0b2ccb5199350b69a9645a794
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137183"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563543"
 ---
-# <a name="xamarinforms-frame"></a>Xamarin.FormsQuadro
+# <a name="no-locxamarinforms-frame"></a>Xamarin.Forms Quadro
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
 
 A Xamarin.Forms [`Frame`](xref:Xamarin.Forms.Frame) classe é um layout usado para encapsular uma exibição com uma borda que pode ser configurada com cores, sombra e outras opções. Quadros geralmente são usados para criar bordas em torno de controles, mas podem ser usados para criar uma interface do usuário mais complexa. Para obter mais informações, consulte [uso avançado de quadro](#advanced-frame-usage).
 
@@ -29,9 +29,9 @@ A captura de tela a seguir mostra os `Frame` controles no Ios e no Android:
 
 A `Frame` classe define as seguintes propriedades:
 
-* [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor)é um `Color` valor que determina a cor da `Frame` borda.
-* [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius)é um `float` valor que determina o raio arredondado do canto.
-* [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow)é um `bool` valor que determina se o quadro tem uma sombra de projeção.
+* [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor) é um `Color` valor que determina a cor da `Frame` borda.
+* [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius) é um `float` valor que determina o raio arredondado do canto.
+* [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) é um `bool` valor que determina se o quadro tem uma sombra de projeção.
 
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que o `Frame` pode ser o destino de associações de dados.
 
@@ -57,7 +57,7 @@ Frame defaultFrame = new Frame
 };
 ```
 
-`Frame`os objetos podem ser personalizados com cantos arredondados, bordas coloridas e sombras projetadas definindo as propriedades no XAML. O exemplo a seguir mostra um `Frame` objeto personalizado:
+`Frame` os objetos podem ser personalizados com cantos arredondados, bordas coloridas e sombras projetadas definindo as propriedades no XAML. O exemplo a seguir mostra um `Frame` objeto personalizado:
 
 ```xaml
 <Frame BorderColor="Orange"
@@ -196,5 +196,5 @@ A imagem de **outdoors.jpg** deve ser adicionada a cada projeto de plataforma e 
 
 ## <a name="related-links"></a>Links relacionados
 
-* [Demonstrações de quadros](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
-* [Imagens emXamarin.Forms](~/xamarin-forms/user-interface/images.md)
+* [Demonstrações de quadros](/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+* [Imagens em Xamarin.Forms](~/xamarin-forms/user-interface/images.md)

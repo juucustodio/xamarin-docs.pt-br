@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsAssociações compiladas
+title: Xamarin.Forms Associações compiladas
 description: Este artigo explica como usar associações compiladas para melhorar o desempenho de vinculação de dados em Xamarin.Forms aplicativos.
 ms.prod: xamarin
 ms.assetid: ABE6B7F7-875E-4402-A1D2-845CE374402B
@@ -10,16 +10,16 @@ ms.date: 09/18/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 094691796fed9653f2a2e468ccb1c33d1a408a49
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1bc2ed53b12e6953033760b072d38353c65a6708
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84571552"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563452"
 ---
-# <a name="xamarinforms-compiled-bindings"></a>Xamarin.FormsAssociações compiladas
+# <a name="no-locxamarinforms-compiled-bindings"></a>Xamarin.Forms Associações compiladas
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 _As associações compiladas são resolvidas mais rapidamente do que as associações clássicas, portanto, melhorando o desempenho da vinculação de dados em Xamarin.Forms aplicativos._
 
@@ -178,4 +178,4 @@ Essas diferenças de desempenho podem aumentar em dispositivos móveis, dependen
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [Demonstrações de associação de dados (amostra)](/samples/xamarin/xamarin-forms-samples/databindingdemos)

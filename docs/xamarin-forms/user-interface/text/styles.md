@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsEstilos de texto
+title: Xamarin.Forms Estilos de texto
 description: Este artigo explica como estilizar o texto em Xamarin.Forms aplicativos. Os estilos podem ser definidos uma vez e usados por muitas exibições, mas um estilo só pode ser usado com exibições de um tipo.
 ms.prod: xamarin
 ms.assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF
@@ -10,25 +10,25 @@ ms.date: 05/22/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7d82348231c4b4905f2f70b80f73c45f2f0bf66b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e2c6898439da5869d79bc500643ca3cfc52c2e3f
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84571994"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557550"
 ---
-# <a name="xamarinforms-text-styles"></a>Xamarin.FormsEstilos de texto
+# <a name="no-locxamarinforms-text-styles"></a>Xamarin.Forms Estilos de texto
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
-_Estilo de texto no Xamarin. Forms_
+_Estilizando texto em Xamarin.Forms_
 
 Os estilos podem ser usados para ajustar a aparência de rótulos, entradas e editores. Os estilos podem ser definidos uma vez e usados por muitas exibições, mas um estilo só pode ser usado com exibições de um tipo.
 Os estilos podem ser atribuídos a `Key` e aplicados seletivamente usando uma propriedade de controle específica `Style` .
 
 ## <a name="built-in-styles"></a>Estilos internos
 
-Xamarin.Formsinclui vários estilos [internos](xref:Xamarin.Forms.Device.Styles) para cenários comuns:
+Xamarin.Forms inclui vários estilos [internos](xref:Xamarin.Forms.Device.Styles) para cenários comuns:
 
 - `BodyStyle`
 - `CaptionStyle`
@@ -142,9 +142,9 @@ Habilitado:
 
 Para garantir a acessibilidade, verifique se os estilos internos são usados como base para qualquer estilo relacionado a texto em seu aplicativo e se você está usando os estilos de forma consistente. Consulte os [estilos](~/xamarin-forms/user-interface/styles/index.md) para obter mais detalhes sobre como estender e trabalhar com estilos em geral.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Criando aplicativos móveis com o Xamarin.Forms , capítulo 12](https://developer.xamarin.com/r/xamarin-forms/book/chapter12.pdf)
 - [Estilos](~/xamarin-forms/user-interface/styles/index.md)
-- [Texto (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [Texto (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [Estilo](xref:Xamarin.Forms.Style)

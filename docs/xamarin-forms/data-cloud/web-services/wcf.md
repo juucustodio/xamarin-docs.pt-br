@@ -10,12 +10,12 @@ ms.date: 03/28/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cee301178880a62695f4208161965b01bb6f522e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 596fab91a1f64e0fb6c5483e354c2ef15fd24346
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938574"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557914"
 ---
 # <a name="consume-a-windows-communication-foundation-wcf-web-service"></a>Consumir um serviço Web Windows Communication Foundation (WCF)
 
@@ -71,7 +71,7 @@ Para cada chamada para *BeginOperationName*, o aplicativo também deve chamar *e
 
 A TPL (biblioteca paralela de tarefas) pode simplificar o processo de consumo de um par de métodos de início/término do APM encapsulando as operações assíncronas no mesmo `Task` objeto. Esse encapsulamento é fornecido por várias sobrecargas do `TaskFactory.FromAsync` método.
 
-Para obter mais informações sobre o APM, consulte [modelo de programação assíncrona](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) e [tpl e programação assíncrona de .NET Framework tradicional](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) no msdn.
+Para obter mais informações sobre o APM, consulte [modelo de programação assíncrona](/dotnet/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm) e [tpl e programação assíncrona de .NET Framework tradicional](/dotnet/standard/parallel-programming/tpl-and-traditional-async-programming) no msdn.
 
 ### <a name="create-the-todoserviceclient-object"></a>Criar o objeto TodoServiceClient
 
@@ -315,6 +315,6 @@ Por padrão, IIS Express responderá apenas às solicitações para `localhost` 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [TodoWCF (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
-- [Como criar um cliente do Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/how-to-create-a-wcf-client)
-- [Ferramenta de utilitário de metadados ServiceModel (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
+- [TodoWCF (exemplo)](/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
+- [Como criar um cliente do Windows Communication Foundation](/dotnet/framework/wcf/how-to-create-a-wcf-client)
+- [Ferramenta de utilitário de metadados ServiceModel (svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
