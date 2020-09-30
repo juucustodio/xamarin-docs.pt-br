@@ -10,18 +10,18 @@ ms.date: 03/12/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 23edbb007e912d13858686d1c5ec574c9e3349c7
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a8e8388a6a460b3a2958d3ab3b9a4c9c34ea1831
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127134"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556458"
 ---
-# <a name="create-a-xamarinforms-visual-renderer"></a>Criar um Xamarin.Forms renderizador Visual
+# <a name="create-a-no-locxamarinforms-visual-renderer"></a>Criar um Xamarin.Forms renderizador Visual
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 
-Xamarin.FormsO Visual permite que os renderizadores sejam criados e aplicados seletivamente a [`VisualElement`](xref:Xamarin.Forms.VisualElement) objetos, sem a necessidade de Xamarin.Forms exibições de subclasse. Um renderizador que especifica um `IVisual` tipo, como parte de seu `ExportRendererAttribute` , será usado para renderizar os modos de exibição, em vez do renderizador padrão. No momento da seleção do processador, a `Visual` propriedade da exibição é inspecionada e incluída no processo de seleção do processador.
+Xamarin.Forms O Visual permite que os renderizadores sejam criados e aplicados seletivamente a [`VisualElement`](xref:Xamarin.Forms.VisualElement) objetos, sem a necessidade de Xamarin.Forms exibições de subclasse. Um renderizador que especifica um `IVisual` tipo, como parte de seu `ExportRendererAttribute` , será usado para renderizar os modos de exibição, em vez do renderizador padrão. No momento da seleção do processador, a `Visual` propriedade da exibição é inspecionada e incluída no processo de seleção do processador.
 
 > [!IMPORTANT]
 > Atualmente [`Visual`](xref:Xamarin.Forms.VisualElement.Visual) , a propriedade não pode ser alterada depois que a exibição tiver sido renderizada, mas isso será alterado em uma versão futura.
@@ -175,6 +175,6 @@ O `IVisual` tipo pode então ser consumido por meio de seu nome registrado:
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Visual do material (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
-- [Xamarin.FormsVisual do material](material-visual.md)
+- [Visual do material (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
+- [Xamarin.Forms Visual do material](material-visual.md)
 - [Renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

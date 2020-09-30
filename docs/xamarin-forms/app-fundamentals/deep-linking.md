@@ -11,12 +11,12 @@ ms.date: 11/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d2bd0bf696e652e95e0feb88cca7cf685b14433b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 5c5d95c3d326961db9d56631a0d7190d64ede72a
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936494"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556055"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexação de aplicativo e vinculação profunda
 
@@ -28,7 +28,7 @@ _A indexação de aplicativos permite que os aplicativos que, de outra forma, se
 
 **Vinculação profunda com o Xamarin.Forms e o vídeo do Azure**
 
-Xamarin.Formsa indexação de aplicativos e a vinculação profunda fornecem uma API para publicar metadados para indexação de aplicativos à medida que os usuários navegam por aplicativos. O conteúdo indexado pode ser pesquisado no Spotlight Search, na Pesquisa Google ou em uma pesquisa na Web. Tocar em um resultado de pesquisa que contém um link profundo acionará um evento que poderá ser tratado por um aplicativo. Isso normalmente é usado para navegar até a página referenciada do link profundo.
+Xamarin.Forms a indexação de aplicativos e a vinculação profunda fornecem uma API para publicar metadados para indexação de aplicativos à medida que os usuários navegam por aplicativos. O conteúdo indexado pode ser pesquisado no Spotlight Search, na Pesquisa Google ou em uma pesquisa na Web. Tocar em um resultado de pesquisa que contém um link profundo acionará um evento que poderá ser tratado por um aplicativo. Isso normalmente é usado para navegar até a página referenciada do link profundo.
 
 Este aplicativo de exemplo demonstra um aplicativo de Lista de tarefas em que os dados são armazenados em um banco de dados local do SQLite, como mostrado nas seguintes capturas de tela:
 
@@ -39,7 +39,7 @@ Cada instância `TodoItem` criada pelo usuário é indexada. Então, a pesquisa 
 Para obter mais informações sobre como usar um banco de dados SQLite, consulte bancos de dados [ Xamarin.Forms locais](~/xamarin-forms/data-cloud/data/databases.md).
 
 > [!NOTE]
-> Xamarin.Formsa indexação de aplicativos e a funcionalidade de vinculação profunda só estão disponíveis nas plataformas iOS e Android e exigem, no mínimo, o iOS 9 e a API 23, respectivamente.
+> Xamarin.Forms a indexação de aplicativos e a funcionalidade de vinculação profunda só estão disponíveis nas plataformas iOS e Android e exigem, no mínimo, o iOS 9 e a API 23, respectivamente.
 
 ## <a name="setup"></a>Instalação
 
@@ -251,7 +251,7 @@ Este artigo explicou como usar a indexação de aplicativos e a vinculação pro
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Vinculação profunda (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
+- [Vinculação profunda (amostra)](/samples/xamarin/xamarin-forms-samples/deeplinking)
 - [APIs de pesquisa do iOS](~/ios/platform/search/index.md)
 - [Vinculação de aplicativo no Android 6.0](~/android/platform/app-linking.md)
 - [AppLinkEntry](xref:Xamarin.Forms.AppLinkEntry)

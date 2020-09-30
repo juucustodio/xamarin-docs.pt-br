@@ -1,5 +1,5 @@
 ---
-title: Layouts vinculáveis emXamarin.Forms
+title: Layouts vinculáveis em Xamarin.Forms
 description: Os layouts vinculáveis permitem que as classes de layout gerem seu conteúdo ligando-se a uma coleção de itens, com a opção de definir a aparência de cada item com um DataTemplate.
 ms.prod: xamarin
 ms.assetid: 824C3319-20A0-42D0-8632-CDECD98349C3
@@ -10,30 +10,30 @@ ms.date: 03/09/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9d0497c0c0593b54f69bac84307976c4050e9c95
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a5b1e43586810521e87360d8b6537d9bafdabad7
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138236"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555431"
 ---
-# <a name="bindable-layouts-in-xamarinforms"></a>Layouts vinculáveis emXamarin.Forms
+# <a name="bindable-layouts-in-no-locxamarinforms"></a>Layouts vinculáveis em Xamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 
 Os layouts vinculáveis habilitam qualquer classe de layout que derive da [`Layout<T>`](xref:Xamarin.Forms.Layout`1) classe para gerar seu conteúdo ligando a uma coleção de itens, com a opção de definir a aparência de cada item com um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) . Os layouts vinculáveis são fornecidos pela `BindableLayout` classe, que expõe as seguintes propriedades anexadas:
 
-- `ItemsSource`– Especifica a coleção de `IEnumerable` itens a serem exibidos pelo layout.
-- `ItemTemplate`– Especifica o [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) a ser aplicado a cada item na coleção de itens exibida pelo layout.
-- `ItemTemplateSelector`– Especifica o [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) que será usado para escolher um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) para um item em tempo de execução.
+- `ItemsSource` – Especifica a coleção de `IEnumerable` itens a serem exibidos pelo layout.
+- `ItemTemplate` – Especifica o [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) a ser aplicado a cada item na coleção de itens exibida pelo layout.
+- `ItemTemplateSelector` – Especifica o [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) que será usado para escolher um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) para um item em tempo de execução.
 
 > [!NOTE]
 > A `ItemTemplate` propriedade tem precedência quando ambas `ItemTemplate` as `ItemTemplateSelector` Propriedades e são definidas.
 
 Além disso, a `BindableLayout` classe expõe as seguintes propriedades vinculáveis:
 
-- `EmptyView`– Especifica a `string` exibição ou que será exibida quando a `ItemsSource` propriedade for `null` , ou quando a coleção especificada pela `ItemsSource` propriedade for `null` ou vazia. O valor padrão é `null`.
-- `EmptyViewTemplate`– Especifica o [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que será exibido quando a `ItemsSource` propriedade for `null` , ou quando a coleção especificada pela `ItemsSource` propriedade for `null` ou vazia. O valor padrão é `null`.
+- `EmptyView` – Especifica a `string` exibição ou que será exibida quando a `ItemsSource` propriedade for `null` , ou quando a coleção especificada pela `ItemsSource` propriedade for `null` ou vazia. O valor padrão é `null`.
+- `EmptyViewTemplate` – Especifica o [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que será exibido quando a `ItemsSource` propriedade for `null` , ou quando a coleção especificada pela `ItemsSource` propriedade for `null` ou vazia. O valor padrão é `null`.
 
 > [!NOTE]
 > A `EmptyViewTemplate` propriedade tem precedência quando ambas `EmptyView` as `EmptyViewTemplate` Propriedades e são definidas.
@@ -253,7 +253,7 @@ O `ToggleEmptyView` método define a `EmptyView` Propriedade do `stackLayout` ob
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstração de layout vinculável (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
+- [Demonstração de layout vinculável (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 - [Criar um layout personalizado](~/xamarin-forms/user-interface/layouts/custom.md)
-- [Xamarin.FormsModelos de dados](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Xamarin.Forms Modelos de dados](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Criando um Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

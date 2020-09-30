@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsExpansor
+title: Xamarin.Forms Expansor
 description: O Xamarin.Forms controle Expander fornece um contêiner expansível para hospedar qualquer conteúdo. O conteúdo é exibido ou oculto tocando no cabeçalho do expansor.
 ms.prod: xamarin
 ms.assetid: 381DCB55-522D-4414-B45B-E8DD70AA9985
@@ -10,16 +10,16 @@ ms.date: 04/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 33659dd52452c575c403d0a25b24f17daf9e3f17
-ms.sourcegitcommit: 8a18471b3d96f3f726b66f9bc50a829f1c122f29
+ms.openlocfilehash: 4be3744e0cce465aab8fc4af39495d2f7d8e9004
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84988216"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556601"
 ---
-# <a name="xamarinforms-expander"></a>Xamarin.FormsExpansor
+# <a name="no-locxamarinforms-expander"></a>Xamarin.Forms Expansor
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
 
 O Xamarin.Forms `Expander` controle fornece um contêiner expansível para hospedar qualquer conteúdo. O controle tem um cabeçalho e conteúdo, e o conteúdo é mostrado ou oculto tocando no `Expander` cabeçalho. Quando apenas o `Expander` cabeçalho é mostrado, o `Expander` é *recolhido*. Quando o `Expander` conteúdo estiver visível, o `Expander` será *expandido*.
 
@@ -28,7 +28,7 @@ As capturas de tela a seguir mostram um `Expander` em seus Estados recolhidos e 
 ![Captura de tela de um expansor em Estados recolhidos e expandidos, no iOS e no Android](expander-images/expander.png "Expansor no iOS e Android")
 
 > [!IMPORTANT]
-> `Expander`o é experimental e só pode ser usado com a definição do `Expander_Experimental` sinalizador. Para obter mais informações, consulte [sinalizadores experimentais](~/xamarin-forms/internals/experimental-flags.md).
+> `Expander` o é experimental e só pode ser usado com a definição do `Expander_Experimental` sinalizador. Para obter mais informações, consulte [sinalizadores experimentais](~/xamarin-forms/internals/experimental-flags.md).
 >
 > Além disso, o `Expander` controle é totalmente implementado no `Xamarin.Forms` namespace. Portanto, ele está disponível em todas as plataformas com suporte no Xamarin.Forms .
 
@@ -54,10 +54,10 @@ Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.Bin
 
 A enumeração `ExpanderState` define os seguintes membros:
 
-- `Expanding`indica que o `Expander` está sendo expandido.
-- `Expanded`indica que o `Expander` está expandido.
-- `Collapsing`indica que o `Expander` está sendo recolhido.
-- `Collapsed`indica que o `Expander` está recolhido.
+- `Expanding` indica que o `Expander` está sendo expandido.
+- `Expanded` indica que o `Expander` está expandido.
+- `Collapsing` indica que o `Expander` está sendo recolhido.
+- `Collapsed` indica que o `Expander` está recolhido.
 
 O `Expander` controle também define um `Tapped` evento que é acionado quando o `Expander` cabeçalho é tocado. Além disso, `Expander` o inclui um `ForceUpdateSize` método que pode ser chamado para redimensionar de forma programática o `Expander` em tempo de execução.
 
@@ -135,7 +135,7 @@ expander.Content = grid;
 
 ## <a name="create-expander-content-on-demand"></a>Criar conteúdo do expansor sob demanda
 
-`Expander`o conteúdo pode ser criado sob demanda, em resposta à `Expander` expansão. Isso pode ser feito definindo a `Expander.ContentTemplate` propriedade como um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que contém o conteúdo:
+`Expander` o conteúdo pode ser criado sob demanda, em resposta à `Expander` expansão. Isso pode ser feito definindo a `Expander.ContentTemplate` propriedade como um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que contém o conteúdo:
 
 ```xaml
 <Expander>
@@ -340,7 +340,7 @@ Um aplicativo pode inserir um estado em que a expansão de uma `Expander` não �
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações do expansor (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
-- [Xamarin.FormsFunções de atenuação](~/xamarin-forms/user-interface/animation/easing.md)
-- [Xamarin.FormsGatilhos](~/xamarin-forms/app-fundamentals/triggers.md)
-- [Xamarin.FormsLayouts vinculáveis](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)
+- [Demonstrações do expansor (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
+- [Xamarin.Forms Funções de atenuação](~/xamarin-forms/user-interface/animation/easing.md)
+- [Xamarin.Forms Gatilhos](~/xamarin-forms/app-fundamentals/triggers.md)
+- [Xamarin.Forms Layouts vinculáveis](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)

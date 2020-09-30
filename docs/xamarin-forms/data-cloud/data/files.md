@@ -1,5 +1,5 @@
 ---
-title: Manipulação de arquivos emXamarin.Forms
+title: Manipulação de arquivos em Xamarin.Forms
 description: A manipulação de arquivos com Xamarin.Forms o pode ser obtida com o uso de código em uma biblioteca de .net Standard ou por meio de recursos incorporados.
 ms.prod: xamarin
 ms.assetid: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8
@@ -10,22 +10,22 @@ ms.date: 06/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f62e5522b5b9a10a3806a70fe949561d77ce0d4e
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f8d81e037d63a7144263ce4b3520647e6829bd57
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84574347"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557251"
 ---
-# <a name="file-handling-in-xamarinforms"></a>Manipulação de arquivos emXamarin.Forms
+# <a name="file-handling-in-no-locxamarinforms"></a>Manipulação de arquivos em Xamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 
 _A manipulação de arquivos com Xamarin.Forms o pode ser obtida com o uso de código em uma biblioteca de .net Standard ou por meio de recursos incorporados._
 
 ## <a name="overview"></a>Visão geral
 
-Xamarin.Formso código é executado em várias plataformas – cada um deles tem seu próprio sistema de arquivos. Anteriormente, isso significava que ler e gravar arquivos era realizado mais facilmente usando as APIs de arquivo nativo em cada plataforma. Como alternativa, os recursos inseridos são uma solução mais simples para distribuir os arquivos de dados com um aplicativo. No entanto, com o .NET Standard 2.0, é possível compartilhar o código de acesso de arquivo nas bibliotecas .NET Standard.
+Xamarin.Forms o código é executado em várias plataformas – cada um deles tem seu próprio sistema de arquivos. Anteriormente, isso significava que ler e gravar arquivos era realizado mais facilmente usando as APIs de arquivo nativo em cada plataforma. Como alternativa, os recursos inseridos são uma solução mais simples para distribuir os arquivos de dados com um aplicativo. No entanto, com o .NET Standard 2.0, é possível compartilhar o código de acesso de arquivo nas bibliotecas .NET Standard.
 
 Para saber mais sobre o tratamento de arquivos de imagem, confira a página [Trabalhando com imagens](~/xamarin-forms/user-interface/images.md).
 
@@ -87,7 +87,7 @@ using (var reader = new System.IO.StreamReader (stream))
 }
 ```
 
-A variável `text` pode ser usada para exibir o texto ou, caso contrário, usá-lo no código. Esta captura de tela do [aplicativo de exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles) mostra o texto renderizado em um controle `Label`.
+A variável `text` pode ser usada para exibir o texto ou, caso contrário, usá-lo no código. Esta captura de tela do [aplicativo de exemplo](/samples/xamarin/xamarin-forms-samples/workingwithfiles) mostra o texto renderizado em um controle `Label`.
 
  [![Arquivo de texto inserido na biblioteca do .NET Standard](files-images/pcltext-sml.png "Arquivo de texto inserido na biblioteca .NET Standard exibida no aplicativo")](files-images/pcltext.png#lightbox "Arquivo de texto inserido na biblioteca .NET Standard exibida no aplicativo")
 
@@ -157,8 +157,8 @@ foreach (var res in assembly.GetManifestResourceNames()) {
 
 Este artigo mostrou algumas operações de arquivo simples para salvar e carregar texto no dispositivo e para carregar recursos inseridos. Com o .NET Standard 2.0, é possível compartilhar o código de acesso de arquivo nas bibliotecas .NET Standard.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [FilesSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
-- [Xamarin.FormsAmostras](https://github.com/xamarin/xamarin-forms-samples)
+- [FilesSample](/samples/xamarin/xamarin-forms-samples/workingwithfiles)
+- [Xamarin.Forms Amostras](https://github.com/xamarin/xamarin-forms-samples)
 - [Trabalhando com o sistema de arquivos no Xamarin.iOS](~/ios/app-fundamentals/file-system.md)

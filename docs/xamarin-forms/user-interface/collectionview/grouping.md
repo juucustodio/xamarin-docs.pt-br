@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsAgrupamento CollectionView
+title: Xamarin.Forms Agrupamento CollectionView
 description: CollectionView pode exibir dados agrupados corretamente definindo sua propriedade isgroupd como true.
 ms.prod: xamarin
 ms.assetid: 7E494245-FDBD-49D6-B7FA-CEF976EB59BB
@@ -10,20 +10,20 @@ ms.date: 09/17/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 51661d6573d78386f4ca8bfea0063b752295c2d8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 51bdcc6f9a95911c548269dbf7b3050cc5921183
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136455"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556614"
 ---
-# <a name="xamarinforms-collectionview-grouping"></a>Xamarin.FormsAgrupamento CollectionView
+# <a name="no-locxamarinforms-collectionview-grouping"></a>Xamarin.Forms Agrupamento CollectionView
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 Conjuntos de dados grandes geralmente podem se tornar difíceis quando apresentados em uma lista de rolagem contínua. Nesse cenário, organizar os dados em grupos pode melhorar a experiência do usuário, facilitando a navegação dos dados.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)dá suporte à exibição de dados agrupados e define as seguintes propriedades que controlam como ele será apresentado:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) dá suporte à exibição de dados agrupados e define as seguintes propriedades que controlam como ele será apresentado:
 
 - `IsGrouped`, do tipo `bool` , indica se os dados subjacentes devem ser exibidos em grupos. O valor padrão dessa propriedade é `false`.
 - `GroupHeaderTemplate`, do tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , o modelo a ser usado para o cabeçalho de cada grupo.
@@ -142,7 +142,7 @@ Esse código cria dois grupos na `Animals` coleção. O primeiro `AnimalGroup` �
 
 ## <a name="display-grouped-data"></a>Exibir dados agrupados
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)exibirá os dados agrupados, desde que os dados tenham sido agrupados corretamente, definindo a `IsGrouped` propriedade como `true` :
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) exibirá os dados agrupados, desde que os dados tenham sido agrupados corretamente, definindo a `IsGrouped` propriedade como `true` :
 
 ```xaml
 <CollectionView ItemsSource="{Binding Animals}"
@@ -241,7 +241,7 @@ Quando um [`CollectionView`](xref:Xamarin.Forms.CollectionView) exibe dados agru
 
 ## <a name="group-without-templates"></a>Grupo sem modelos
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)pode exibir dados agrupados corretamente sem definir a [`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) propriedade como um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) :
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) pode exibir dados agrupados corretamente sem definir a [`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate) propriedade como um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) :
 
 ```xaml
 <CollectionView ItemsSource="{Binding Animals}"
@@ -252,5 +252,5 @@ Nesse cenário, dados significativos podem ser exibidos substituindo o `ToString
 
 ## <a name="related-links"></a>Links relacionados
 
-- [CollectionView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
-- [Xamarin.FormsModelos de dados](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [CollectionView (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [Xamarin.Forms Modelos de dados](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)

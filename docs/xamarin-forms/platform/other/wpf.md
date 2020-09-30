@@ -1,6 +1,6 @@
 ---
 title: Configuração da plataforma WPF
-description: Xamarin.Formstem suporte de visualização para a plataforma WPF.
+description: Xamarin.Forms tem suporte de visualização para a plataforma WPF.
 ms.prod: xamarin
 ms.assetid: 650723F2-4279-4B7B-B0A1-D7F8FF26BF1E
 ms.technology: xamarin-forms
@@ -11,23 +11,23 @@ ms.date: 05/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 774ae964643b9b78f424d96b3dd382f244205dcf
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 17db86eb6e6c767498f1d8b550b923377b905364
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946319"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557433"
 ---
 # <a name="wpf-platform-setup"></a>Configuração da plataforma WPF
 
-![Visualização](~/media/shared/preview.png)
+![Versão Prévia](~/media/shared/preview.png)
 
-Xamarin.Formstem suporte de visualização para o Windows Presentation Foundation (WPF), em .NET Framework e no .NET Core 3. Este artigo demonstra como adicionar um projeto do WPF que se destina .NET Framework a uma Xamarin.Forms solução.
+Xamarin.Forms tem suporte de visualização para o Windows Presentation Foundation (WPF), em .NET Framework e no .NET Core 3. Este artigo demonstra como adicionar um projeto do WPF que se destina .NET Framework a uma Xamarin.Forms solução.
 
 > [!IMPORTANT]
-> Xamarin.Formso suporte para o WPF é fornecido pela Comunidade. Para obter mais informações, consulte [ Xamarin.Forms suporte a plataformas](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
+> Xamarin.Forms o suporte para o WPF é fornecido pela Comunidade. Para obter mais informações, consulte [ Xamarin.Forms suporte a plataformas](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
 
-Antes de começar, crie uma nova Xamarin.Forms solução no Visual Studio 2019 ou use uma solução existente Xamarin.Forms , por exemplo, [**BoxViewClock**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock). Você só pode adicionar aplicativos WPF a uma Xamarin.Forms solução no Windows.
+Antes de começar, crie uma nova Xamarin.Forms solução no Visual Studio 2019 ou use uma solução existente Xamarin.Forms , por exemplo, [**BoxViewClock**](/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock). Você só pode adicionar aplicativos WPF a uma Xamarin.Forms solução no Windows.
 
 ## <a name="add-a-wpf-application"></a>Adicionar um aplicativo WPF
 
@@ -42,7 +42,7 @@ Siga estas instruções para adicionar um aplicativo WPF que será executado no 
     Pressione o botão **Avançar** .
 
     > [!NOTE]
-    > Xamarin.Forms4,7 inclui suporte para aplicativos do WPF que são executados no .NET Core 3.
+    > Xamarin.Forms 4,7 inclui suporte para aplicativos do WPF que são executados no .NET Core 3.
 
 3. Na janela **configurar seu novo projeto** , digite um nome para o projeto com uma extensão do **WPF** , por exemplo, **BoxViewClock. WPF**. Clique no botão **procurar** , selecione a pasta **BoxViewClock** e pressione **Selecionar pasta** para colocar o projeto do WPF no mesmo diretório que os outros projetos na solução:
 
@@ -162,4 +162,4 @@ Esta é uma visualização, portanto, você deve esperar que nem tudo está pron
 
 > [!VIDEO https://youtube.com/embed/Fy9N6OSxK64]
 
-**Xamarin.Formsvídeo de suporte do WPF 3,0**
+**Xamarin.Forms vídeo de suporte do WPF 3,0**

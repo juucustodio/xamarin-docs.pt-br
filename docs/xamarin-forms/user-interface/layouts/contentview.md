@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsContentView
+title: Xamarin.Forms ContentView
 description: Este artigo explica como usar a classe ContentView para criar um controle personalizado, como o exemplo CardView.
 ms.prod: xamarin
 ms.assetid: 638402E7-CA44-456B-863B-791F6B6B561D
@@ -10,16 +10,16 @@ ms.date: 08/14/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 46d2abf895ffe31bd1dc1c22caf36440c54b331c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: eb94b2943cfe4659bb77764f810d45dc8b189005
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84130098"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555366"
 ---
-# <a name="xamarinforms-contentview"></a>Xamarin.FormsContentView
+# <a name="no-locxamarinforms-contentview"></a>Xamarin.Forms ContentView
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 
 A Xamarin.Forms [`ContentView`](xref:Xamarin.Forms.ContentView) classe é um tipo `Layout` que contém um único elemento filho e é normalmente usado para criar controles personalizados e reutilizáveis. A `ContentView` classe é herdada de [`TemplatedView`](xref:Xamarin.Forms.TemplatedView) . Este artigo e um exemplo associado explicam como criar um controle personalizado `CardView` com base na `ContentView` classe.
 
@@ -29,11 +29,11 @@ A captura de tela a seguir mostra um `CardView` controle que deriva da `ContentV
 
 A `ContentView` classe define uma única propriedade:
 
-* [`Content`](xref:Xamarin.Forms.ContentView.Content)é um `View` objeto. Essa propriedade é apoiada por um [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto para que possa ser o destino de associações de dados.
+* [`Content`](xref:Xamarin.Forms.ContentView.Content) é um `View` objeto. Essa propriedade é apoiada por um [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto para que possa ser o destino de associações de dados.
 
 O `ContentView` também herda uma propriedade da `TemplatedView` classe:
 
-* [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate)é um `ControlTemplate` que pode definir ou substituir a aparência do controle.
+* [`ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) é um `ControlTemplate` que pode definir ou substituir a aparência do controle.
 
 Para obter mais informações sobre a `ControlTemplate` propriedade, consulte [Personalizar a aparência com um ControlTemplate](#customize-appearance-with-a-controltemplate).
 
@@ -211,7 +211,7 @@ Para obter mais informações sobre modelos de controle, consulte [ Xamarin.Form
 
 ## <a name="related-links"></a>Links relacionados
 
-* [Aplicativo de exemplo ContentView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
-* [Xamarin.FormsAssociação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+* [Aplicativo de exemplo ContentView](/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
+* [Xamarin.Forms Associação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 * [Propriedades vinculáveis](~/xamarin-forms/xaml/bindable-properties.md).
-* [Xamarin.FormsModelos de controle](~/xamarin-forms/app-fundamentals/templates/control-template.md)
+* [Xamarin.Forms Modelos de controle](~/xamarin-forms/app-fundamentals/templates/control-template.md)

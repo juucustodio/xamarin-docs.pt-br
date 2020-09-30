@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsStackLayout
+title: Xamarin.Forms StackLayout
 description: Um StackLayout organiza exibições filhas em uma pilha unidimensional, horizontal ou verticalmente.
 ms.prod: xamarin
 ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
@@ -10,18 +10,18 @@ ms.date: 05/11/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f624674cc6d4ba1bdc34a42fb52fb63ff8a7135a
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 0c8e7c0e3edb581e13944ce48e2241f035791574
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137963"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556848"
 ---
-# <a name="xamarinforms-stacklayout"></a>Xamarin.FormsStackLayout
+# <a name="no-locxamarinforms-stacklayout"></a>Xamarin.Forms StackLayout
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
 
-[![Xamarin.FormsStackLayout](stacklayout-images/layouts.png "[! Parar. Não-LOC (Xamarin. Forms)] StackLayout")](stacklayout-images/layouts-large.png#lightbox "[! Parar. Não-LOC (Xamarin. Forms)] StackLayout")
+[![::: no-Loc (Xamarin. Forms)::: StackLayout](stacklayout-images/layouts.png "::: no-Loc (Xamarin. Forms)::: StackLayout")](stacklayout-images/layouts-large.png#lightbox "::: no-Loc (Xamarin. Forms)::: StackLayout")
 
 Um [`StackLayout`](xref:Xamarin.Forms.StackLayout) organiza exibições filhas em uma pilha unidimensional, tanto horizontal quanto verticalmente. Por padrão, um `StackLayout` é orientado verticalmente. Além disso, um `StackLayout` pode ser usado como um layout pai que contém outros layouts filho.
 
@@ -471,7 +471,7 @@ public class CombinedStackLayoutPageCS : ContentPage
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações do StackLayout (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
-- [Opções de layout emXamarin.Forms](layout-options.md)
+- [Demonstrações do StackLayout (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-stacklayoutdemos)
+- [Opções de layout em Xamarin.Forms](layout-options.md)
 - [Escolher um Xamarin.Forms layout](choose-layout.md)
 - [Melhorar o Xamarin.Forms desempenho do aplicativo](~/xamarin-forms/deploy-test/performance.md)

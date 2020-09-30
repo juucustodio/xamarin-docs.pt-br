@@ -11,12 +11,12 @@ ms.date: 07/09/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 94c451305f04294924b3f7115c4f2b3a7a6bad07
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 7272ef409c5662cf6e321a4284edc34982ec8186
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918668"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556718"
 ---
 # <a name="xaml-controls"></a>Controles XAML
 
@@ -33,10 +33,10 @@ Todas as exibições definidas em Xamarin.Forms podem ser referenciadas de arqui
 | <h3>BoxView</h3>Exibe um retângulo de uma cor específica.<p align="center">![Captura de tela de um BoxView](xaml-controls-images/BoxView.png "BoxView")</p>[API](xref:Xamarin.Forms.BoxView)  /  do [Guia](~/xamarin-forms/user-interface/boxview.md) | <p valign="center"><pre>&lt;BoxView Color="Accent"<br />         WidthRequest="150"<br />         HeightRequest="150"<br />         HorizontalOptions="Center"&gt;</pre></p> |
 | <h3>Elipse</h3>Exibe uma elipse ou um círculo.<p align="center">![Captura de tela de uma elipse](xaml-controls-images/Ellipse.png "Elipse")</p>[API](xref:Xamarin.Forms.Shapes.Ellipse)  /  do [Guia](~/xamarin-forms/user-interface/shapes/ellipse.md) | <p valign="center"><pre>&lt;Ellipse Fill="Red"<br />         WidthRequest="150"<br />         HeightRequest="50"<br />         HorizontalOptions="Center" /&gt;</pre></p> |
 | <h3>Expansor</h3>Fornece um contêiner expansível para hospedar qualquer conteúdo.<p align="center">![Captura de tela de um expansor](xaml-controls-images/Expander.png "Expansor")</p>[Guia](~/xamarin-forms/user-interface/expander.md) | <pre>&lt;Expander&gt;<br />    &lt;Expander.Header&gt;<br />        &lt;Label Text="Baboon" /&gt;<br />    &lt;/Expander.Header&gt;<br />    &lt;Image Source="Baboon.png"<br />           Aspect="AspectFill" /&gt;<br />&lt;/Expander&gt;</pre></p> |
-| <h3>Imagem</h3>Exibe um bitmap.<p align="center">![Captura de tela de uma imagem](xaml-controls-images/Image.png "Image")</p>[API](xref:Xamarin.Forms.Image)  /  do [Guia](~/xamarin-forms/user-interface/images.md) | <pre>&lt;Image Source="https://aka.ms/campus.jpg"<br />       Aspect="AspectFit"<br />       HorizontalOptions="Center" /&gt;</pre></p> |
-| <h3>Rótulo</h3>Exibe uma ou mais linhas de texto.<p align="center">![Captura de tela de um rótulo](xaml-controls-images/Label.png "Rotular")</p>[API](xref:Xamarin.Forms.Label)  /  do [Guia](~/xamarin-forms/user-interface/text/label.md) | <p valign="center"><pre>&lt;Label Text="Hello, Xamarin.Forms!"<br />       FontSize="Large"<br />       FontAttributes="Italic"<br />       HorizontalTextAlignment="Center" /&gt;</pre></p> |
+| <h3>Image</h3>Exibe um bitmap.<p align="center">![Captura de tela de uma imagem](xaml-controls-images/Image.png "Image")</p>[API](xref:Xamarin.Forms.Image)  /  do [Guia](~/xamarin-forms/user-interface/images.md) | <pre>&lt;Image Source="https://aka.ms/campus.jpg"<br />       Aspect="AspectFit"<br />       HorizontalOptions="Center" /&gt;</pre></p> |
+| <h3>Rotular</h3>Exibe uma ou mais linhas de texto.<p align="center">![Captura de tela de um rótulo](xaml-controls-images/Label.png "Rotular")</p>[API](xref:Xamarin.Forms.Label)  /  do [Guia](~/xamarin-forms/user-interface/text/label.md) | <p valign="center"><pre>&lt;Label Text="Hello, Xamarin.Forms!"<br />       FontSize="Large"<br />       FontAttributes="Italic"<br />       HorizontalTextAlignment="Center" /&gt;</pre></p> |
 | <h3>Linha</h3>Exibir uma linha.<p align="center">![Captura de tela de uma linha](xaml-controls-images/Line.png "Linha")</p>[API](xref:Xamarin.Forms.Shapes.Line)  /  do [Guia](~/xamarin-forms/user-interface/shapes/line.md) | <p valign="center"><pre>&lt;Line X1="40"<br />      Y1="0"<br />      X2="0"<br />      Y2="120"<br />      Stroke="Red"<br />      HorizontalOptions="Center" /&gt;</pre></p> |
-| <h3>Mapeamento</h3>Exibe um mapa.<p align="center">![Captura de tela de um mapa](xaml-controls-images/Map.png "Mapeamento")</p>[API](xref:Xamarin.Forms.Maps.Map)  /  do [Guia](~/xamarin-forms/user-interface/map/index.md) | <p valign="center"><pre>&lt;maps:Map ItemsSource="{Binding Locations}" /&gt;</pre></p> |
+| <h3>Mapa</h3>Exibe um mapa.<p align="center">![Captura de tela de um mapa](xaml-controls-images/Map.png "Mapa")</p>[API](xref:Xamarin.Forms.Maps.Map)  /  do [Guia](~/xamarin-forms/user-interface/map/index.md) | <p valign="center"><pre>&lt;maps:Map ItemsSource="{Binding Locations}" /&gt;</pre></p> |
 | <h3>MediaElement</h3>Reproduzir vídeo ou áudio.<p align="center">![Captura de tela de um MediaElement](xaml-controls-images/MediaElement.png "MediaELement")</p>[API](xref:Xamarin.Forms.MediaElement)  /  do [Guia](~/xamarin-forms/user-interface/mediaelement.md) | <p valign="center"><pre>&lt;MediaElement Source="https://sec.ch9.ms/ch9/XamarinShow_mid.mp4"<br />              AutoPlay="True"<br />              ShowsPlaybackControls="True" /&gt;</pre></p> |
 | <h3>Caminho</h3>Exibir curvas e formas complexas.<p align="center">![Captura de tela de um caminho](xaml-controls-images/Path.png "Caminho")</p>[API](xref:Xamarin.Forms.Shapes.Path)  /  do [Guia](~/xamarin-forms/user-interface/shapes/path.md) | <p valign="center"><pre>&lt;Path Stroke="Black"<br />      Aspect="Uniform"<br />      HorizontalOptions="Center"<br />      HeightRequest="100"<br />      WidthRequest="100"<br />      Data="M13.9,16.2<br />            L32,16.2 32,31.9 13.9,30.1Z<br />            M0,16.2<br />            L11.9,16.2 11.9,29.9 0,28.6Z<br />            M11.9,2<br />            L11.9,14.2 0,14.2 0,3.3Z<br />            M32,0<br />            L32,14.2 13.9,14.2 13.9,1.8Z" /&gt;</pre></p> |
 | <h3>Polygon</h3>Exibir um polígono.<p align="center">![Captura de tela de um polígono](xaml-controls-images/Polygon.png "Polygon")</p>[API](xref:Xamarin.Forms.Shapes.Polygon)  /  do [Guia](~/xamarin-forms/user-interface/shapes/polygon.md) | <p valign="center"><pre>&lt;Polygon Points="0 48, 0 144, 96 150, 100 0, 192 0, 192 96,<br/>                 50 96, 48 192, 150 200 144 48"<br />         Fill="Blue"<br />         Stroke="Red"<br />         StrokeThickness="3"<br />         HorizontalOptions="Center" /&gt;</pre></p> |
@@ -74,7 +74,7 @@ Todas as exibições definidas em Xamarin.Forms podem ser referenciadas de arqui
 | Visualizar | Exemplo |
 | --- | --- |
 | <h3>Entrada</h3>Permite que uma única linha de texto seja inserida e editada.<p align="center">![Captura de tela de uma entrada](xaml-controls-images/Entry.png "Entrada")</p>[API](xref:Xamarin.Forms.Entry)  /  do [Guia](~/xamarin-forms/user-interface/text/entry.md) | <p valign="center"><pre>&lt;Entry Keyboard="Email"<br />       Placeholder="Enter email address"<br />       VerticalOptions="CenterAndExpand" /&gt;</pre></p> |
-| <h3>Editor</h3>Permite que várias linhas de texto sejam inseridas e editadas.<p align="center">![Captura de tela de um editor](xaml-controls-images/Editor.png "Rótulo")</p>[API](xref:Xamarin.Forms.Editor)  /  do [Guia](~/xamarin-forms/user-interface/text/editor.md) | <p valign="center"><pre>&lt;Editor VerticalOptions="FillAndExpand" /&gt;</pre></p> |
+| <h3>Editor</h3>Permite que várias linhas de texto sejam inseridas e editadas.<p align="center">![Captura de tela de um editor](xaml-controls-images/Editor.png "Rotular")</p>[API](xref:Xamarin.Forms.Editor)  /  do [Guia](~/xamarin-forms/user-interface/text/editor.md) | <p valign="center"><pre>&lt;Editor VerticalOptions="FillAndExpand" /&gt;</pre></p> |
 |     |     |
 
 ## <a name="views-to-indicate-activity"></a>Exibições para indicar atividade
@@ -99,6 +99,6 @@ Todas as exibições definidas em Xamarin.Forms podem ser referenciadas de arqui
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xamarin.FormsExemplo de FormsGallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
-- [Xamarin.FormsAmostras](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
-- [Xamarin.FormsDocumentação da API](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
+- [Xamarin.Forms Exemplo de FormsGallery](/samples/xamarin/xamarin-forms-samples/formsgallery)
+- [Xamarin.Forms Amostras](/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Xamarin.Forms Documentação da API](/dotnet/api/xamarin.forms?view=xamarin-forms)

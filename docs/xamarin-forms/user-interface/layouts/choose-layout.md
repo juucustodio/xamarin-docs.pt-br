@@ -1,6 +1,6 @@
 ---
 title: Escolher um Xamarin.Forms layout
-description: Xamarin.Formsas classes de layout permitem que você organize e agrupe controles de interface do usuário em seu aplicativo.
+description: Xamarin.Forms as classes de layout permitem que você organize e agrupe controles de interface do usuário em seu aplicativo.
 ms.prod: xamarin
 ms.assetid: 05A39752-A174-447E-A30D-3CC9EF98CB96
 ms.technology: xamarin-forms
@@ -10,18 +10,18 @@ ms.date: 08/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 38b44bbb8f01f090d286bb2203014455a32a2290
-ms.sourcegitcommit: 808ff109928a1eea16e17e23ea81f8c903a239e8
+ms.openlocfilehash: 6f5702695698881a30cfbf3e63110856a97a2c24
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88181479"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555341"
 ---
 # <a name="choose-a-no-locxamarinforms-layout"></a>Escolher um Xamarin.Forms layout
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
-Xamarin.Formsas classes de layout permitem que você organize e agrupe controles de interface do usuário em seu aplicativo. Escolher uma classe de layout requer o conhecimento de como o layout posiciona seus elementos filho e como o layout dimensiona seus elementos filho. Além disso, pode ser necessário aninhar layouts para criar o layout desejado.
+Xamarin.Forms as classes de layout permitem que você organize e agrupe controles de interface do usuário em seu aplicativo. Escolher uma classe de layout requer o conhecimento de como o layout posiciona seus elementos filho e como o layout dimensiona seus elementos filho. Além disso, pode ser necessário aninhar layouts para criar o layout desejado.
 
 A imagem a seguir mostra layouts típicos que podem ser obtidos com as Xamarin.Forms classes de layout principais:
 
@@ -29,7 +29,7 @@ A imagem a seguir mostra layouts típicos que podem ser obtidos com as Xamarin.F
 
 ## <a name="stacklayout"></a>StackLayout
 
-Um [`StackLayout`](xref:Xamarin.Forms.StackLayout) organiza elementos em uma pilha unidimensional, tanto horizontal quanto verticalmente. A [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) propriedade especifica a direção dos elementos e a orientação padrão é [`Vertical`](xref:Xamarin.Forms.StackOrientation) . `StackLayout`normalmente é usado para organizar uma subseção da interface do usuário em uma página.
+Um [`StackLayout`](xref:Xamarin.Forms.StackLayout) organiza elementos em uma pilha unidimensional, tanto horizontal quanto verticalmente. A [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) propriedade especifica a direção dos elementos e a orientação padrão é [`Vertical`](xref:Xamarin.Forms.StackOrientation) . `StackLayout` normalmente é usado para organizar uma subseção da interface do usuário em uma página.
 
 O XAML a seguir mostra como criar um vertical [`StackLayout`](xref:Xamarin.Forms.StackLayout) contendo três [`Label`](xref:Xamarin.Forms.Label) objetos:
 
@@ -250,12 +250,12 @@ Além disso, o desempenho de renderização de página também pode ser melhorad
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Layout (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
-- [Xamarin.FormsLayouts (vídeo)](https://youtu.be/4HlLjTZQzjM)
-- [Xamarin.FormsStackLayout](stacklayout.md)
-- [Xamarin.FormsGrade](grid.md)
-- [Xamarin.FormsFlexLayout](flex-layout.md)
-- [Xamarin.FormsAbsoluteLayout](absolutelayout.md)
-- [Xamarin.FormsRelativeLayout](relativelayout.md)
+- [Layout (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [Xamarin.Forms Layouts (vídeo)](https://youtu.be/4HlLjTZQzjM)
+- [Xamarin.Forms StackLayout](stacklayout.md)
+- [Xamarin.Forms Grade](grid.md)
+- [Xamarin.Forms FlexLayout](flex-layout.md)
+- [Xamarin.Forms AbsoluteLayout](absolutelayout.md)
+- [Xamarin.Forms RelativeLayout](relativelayout.md)
 - [Otimizar o desempenho do layout](~/xamarin-forms/deploy-test/performance.md#optimize-layout-performance)
 - [Compactação de layout](layout-compression.md)

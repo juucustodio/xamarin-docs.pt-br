@@ -1,5 +1,5 @@
 ---
-title: Animações simples emXamarin.Forms
+title: Animações simples em Xamarin.Forms
 description: A classe ViewExtensions fornece métodos de extensão que podem ser usados para construir animações simples. Este artigo demonstra como criar e cancelar animações usando a classe ViewExtensions.
 ms.prod: xamarin
 ms.assetid: 4A6FAE5A-848F-4CE0-BFA1-22A6309B5225
@@ -10,14 +10,14 @@ ms.date: 11/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b13ec7ab079dcf7069b5f4b0dccbb52faf25f927
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2336a4fbd92a7e9158d332de1ea2e2b018d144ce
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933790"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556653"
 ---
-# <a name="simple-animations-in-xamarinforms"></a>Animações simples emXamarin.Forms
+# <a name="simple-animations-in-no-locxamarinforms"></a>Animações simples em Xamarin.Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
 
@@ -26,9 +26,9 @@ _A classe ViewExtensions fornece métodos de extensão que podem ser usados para
 A [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) classe fornece os seguintes métodos de extensão que podem ser usados para criar animações simples:
 
 - [ `TranslateTo` ] (xref: Xamarin.Forms . ViewExtensions. transtardiato ( Xamarin.Forms . Visualelement, System. Double, System. Double, System. UInt32, Xamarin.Forms . Facilitando)) anima as [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) Propriedades e de um [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
-- [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo*)Anima a [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) propriedade de um [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
-- `ScaleXTo`Anima a [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) propriedade de um [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
-- `ScaleYTo`Anima a [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) propriedade de um [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
+- [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo*) Anima a [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) propriedade de um [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
+- `ScaleXTo` Anima a [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) propriedade de um [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
+- `ScaleYTo` Anima a [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) propriedade de um [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
 - [ `RelScaleTo` ] (xref: Xamarin.Forms . ViewExtensions. RelScaleTo ( Xamarin.Forms . Visualelement, System. Double, System. UInt32, Xamarin.Forms . Facilitando a tentativa)) aplica um aumento ou diminuição incremental animado à [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) propriedade de um [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
 - [ `RotateTo` ] (xref: Xamarin.Forms . ViewExtensions. RotateTo ( Xamarin.Forms . Visualelement, System. Double, System. UInt32, Xamarin.Forms . Facilitando)) anima a [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) propriedade de um [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
 - [ `RelRotateTo` ] (xref: Xamarin.Forms . ViewExtensions. RelRotateTo ( Xamarin.Forms . Visualelement, System. Double, System. UInt32, Xamarin.Forms . Facilitando a tentativa)) aplica um aumento ou diminuição incremental animado à [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) propriedade de um [`VisualElement`](xref:Xamarin.Forms.VisualElement) .
@@ -237,5 +237,5 @@ Este artigo demonstrou a criação e o cancelamento de animações usando a [`Vi
 ## <a name="related-links"></a>Links Relacionados
 
 - [Visão geral do suporte assíncrono](~/cross-platform/platform/async.md)
-- [Animação básica (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
+- [Animação básica (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-animation-basic)
 - [ViewExtensions](xref:Xamarin.Forms.ViewExtensions)

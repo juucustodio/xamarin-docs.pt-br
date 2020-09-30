@@ -9,12 +9,12 @@ ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2dc00a10e70972429f123b0dfb7adb6a083a883d
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 60a5fbaa8386d0ecdc5d205b3262e05406cec4a6
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91433679"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556237"
 ---
 # <a name="no-locxamarinessentials-preferences"></a>Xamarin.Essentials: Preferências
 
@@ -62,7 +62,7 @@ Para remover todas as preferências:
 Preferences.Clear();
 ```
 
-Além desses métodos, cada uma pode receber um `sharedName` opcional que pode ser usado para criar contêineres adicionais para preferência. Leia a seguir as particularidades de implementação da plataforma.
+Os métodos acima também assumem um opcional `sharedName` que pode ser usado para criar contêineres adicionais para preferências. Leia a seguir as particularidades de implementação da plataforma.
 
 ## <a name="supported-data-types"></a>Tipos de dados com suporte
 
@@ -78,7 +78,7 @@ Os tipos de dados a seguir têm suporte em **Preferences**:
 
 ## <a name="integrate-with-system-settings"></a>Integrar com as configurações do sistema
 
-As preferências são armazenadas nativamente, o que permite que você integre suas configurações às configurações do sistema nativo. Siga os exemplos de plataforma e documetnation para integrar com a plataforma:
+As preferências são armazenadas nativamente, o que permite que você integre suas configurações às configurações do sistema nativo. Siga a documentação e os exemplos da plataforma para integrar-se à plataforma:
 
 * Apple: [implementando um pacote de configurações do IOS](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
 * [Exemplo de preferências do iOS aplicativo](/samples/xamarin/ios-samples/appprefs/)
@@ -93,7 +93,7 @@ Os valores de `DateTime` são armazenados em um formato binário de 64 bits (int
 
 # <a name="android"></a>[Android](#tab/android)
 
-Todos os dados são armazenados em [Preferências Compartilhadas](https://developer.android.com/training/data-storage/shared-preferences.html). Se não houver um `sharedName` especificado, as preferências compartilhadas padrão serão usadas, caso contrário, o nome será usado para obter preferências compartilhadas **privadas** com o nome especificado.
+Todos os dados são armazenados em [Preferências Compartilhadas](https://developer.android.com/training/data-storage/shared-preferences.html). Se não `sharedName` for especificado, as preferências compartilhadas padrão serão usadas, caso contrário, o nome será usado para obter preferências **particulares** compartilhadas com o nome especificado.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
@@ -101,7 +101,7 @@ Todos os dados são armazenados em [Preferências Compartilhadas](https://develo
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-[ApplicationDataContainer](/uwp/api/windows.storage.applicationdatacontainer) é usado para armazenar os valores no dispositivo. Se nenhum `sharedName` for especificado, o `LocalSettings` será usado, caso contrário, o nome será usado para criar um novo contêiner dentro do `LocalSettings`.
+[ApplicationDataContainer](/uwp/api/windows.storage.applicationdatacontainer) é usado para armazenar os valores no dispositivo. Se não `sharedName` for especificado, o será `LocalSettings` usado, caso contrário, o nome será usado para criar um novo contêiner dentro de `LocalSettings` .
 
 `LocalSettings` também tem a seguinte restrição de que o nome de cada configuração pode ter 255 caracteres de comprimento máximo. Cada configuração pode ter até 8K bytes de tamanho e cada configuração composta pode ter até 64K bytes de tamanho.
 
@@ -109,11 +109,11 @@ Todos os dados são armazenados em [Preferências Compartilhadas](https://develo
 
 ## <a name="persistence"></a>Persistência
 
-A desinstalação do aplicativo causará a remoção de todas as _Preferências_. Há uma exceção a isso para aplicativos destinados ao Android 6.0 (API nível 23) ou posterior que usam [__Backup Automático__](https://developer.android.com/guide/topics/data/autobackup). Esse recurso está ativado por padrão e preserva os dados do aplicativo, incluindo __Preferências Compartilhadas__, que é o que a API de **Preferências** utiliza. É possível desabilitar isso seguindo a [documentação](https://developer.android.com/guide/topics/data/autobackup) do Google.
+A desinstalação do aplicativo fará com que todas as _preferências_ sejam removidas, com a exceção sendo aplicativos direcionados e executados no Android 6,0 (API nível 23) ou posterior que usam o [__backup automático__](https://developer.android.com/guide/topics/data/autobackup). Esse recurso está ativado por padrão e preserva os dados do aplicativo, incluindo __Preferências Compartilhadas__, que é o que a API de **Preferências** utiliza. É possível desabilitar isso seguindo a [documentação](https://developer.android.com/guide/topics/data/autobackup) do Google.
 
 ## <a name="limitations"></a>Limitações
 
-Ao armazenar uma cadeia de caracteres, essa API destina-se a armazenar pequenas quantidades de texto.  O desempenho pode ser abaixo da média se você tentar usá-lo para armazenar grandes quantidades de texto.
+Ao armazenar uma cadeia de caracteres, essa API destina-se a armazenar pequenas quantidades de texto. O desempenho pode ser abaixo da média se você tentar usá-lo para armazenar grandes quantidades de texto.
 
 ## <a name="api"></a>API
 

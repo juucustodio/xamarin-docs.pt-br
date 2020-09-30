@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsMarcação C#
+title: Xamarin.Forms Marcação C#
 description: A marcação C# é um conjunto opcional de métodos e classes auxiliares fluentes para simplificar o processo de criação de interfaces de usuário declarativas Xamarin.Forms em C#.
 ms.prod: xamarin
 ms.assetid: D41B9DCD-5C34-4C2F-B177-FC082AB2E9E0
@@ -10,14 +10,14 @@ ms.date: 05/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3e8c95e84dd525c274403290712260ba86abd677
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: a07931bfa53a5e4d77c2755b08745b8dd962b695
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918566"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91557147"
 ---
-# <a name="no-locxamarinforms-c-markup"></a>Xamarin.FormsMarcação C#
+# <a name="no-locxamarinforms-c-markup"></a>Xamarin.Forms Marcação C#
 
 ![API de pré-lançamento](~/media/shared/preview.png)
 
@@ -235,7 +235,7 @@ Como um reconhecedor de gesto é um `BindableObject` , você pode usar os `Bind`
 
 A marcação C# inclui uma série de métodos de extensão de layout que dão suporte ao posicionamento de exibições em layouts e conteúdo em exibições:
 
-| Type | Métodos de extensão |
+| Tipo | Métodos de extensão |
 |---|---|
 | `FlexLayout` | `AlignSelf`, `Basis`, `Grow`, `Menu`, `Order`, `Shrink` |
 | `Grid` | `Row`, `Column`, `RowSpan`, `ColumnSpan` |
@@ -253,7 +253,7 @@ Para tornar o conjunto correto de métodos de extensão esquerdo e direito dispo
 
 Para a marcação C# projetada para dar suporte à direção de fluxo da esquerda para a direita e da direita para a esquerda, é recomendável usar os métodos de extensão na tabela a seguir, em vez de um dos namespaces acima:
 
-| Type | Métodos de extensão |
+| Tipo | Métodos de extensão |
 |---|---|
 | `Label` | `TextStart`, `TextEnd` |
 | `LayoutOptions` | `Start`, `End` <br/> `StartExpand`, `EndExpand` |
@@ -283,7 +283,7 @@ Ao seguir a Convenção consistentemente, você poderá ler rapidamente a marca�
 As enumerações podem ser usadas para definir [`Grid`](xref:Xamarin.Forms.Grid) linhas e colunas, em vez de usar números. Isso oferece a vantagem de que a renumeração não é necessária ao adicionar ou remover linhas ou colunas.
 
 > [!IMPORTANT]
-> Definir [`Grid`](xref:Xamarin.Forms.Grid) linhas e colunas usando enumerações requer a seguinte `using` diretiva:`using static Xamarin.Forms.Markup.GridRowsColumns;`
+> Definir [`Grid`](xref:Xamarin.Forms.Grid) linhas e colunas usando enumerações requer a seguinte `using` diretiva: `using static Xamarin.Forms.Markup.GridRowsColumns;`
 
 O código a seguir mostra um exemplo de como definir e consumir [`Grid`](xref:Xamarin.Forms.Grid) linhas e colunas usando enumerações:
 
@@ -553,7 +553,7 @@ Aplicar consistentemente essa Convenção permite que você examine rapidamente 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [CSharpForMarkupDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
+- [CSharpForMarkupDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
 - [Recursos da plataforma Android](~/xamarin-forms/platform/android/index.md)
 - [recursos da plataforma iOS](~/xamarin-forms/platform/ios/index.md)
 - [Recursos da plataforma Windows](~/xamarin-forms/platform/windows/index.md)

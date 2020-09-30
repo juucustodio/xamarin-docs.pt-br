@@ -10,16 +10,16 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 418d29010a8cce81d2bb8c365608c54b61739622
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ec84ac906ac146f37ba5b161a898582ce483bc95
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135636"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556666"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>Os gradientes circulares do SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 A [`SKShader`](xref:SkiaSharp.SKShader) classe define métodos estáticos para criar quatro tipos diferentes de gradientes. O artigo [**gradiente linear SkiaSharp**](linear-gradient.md) discute o [`CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient*) método. Este artigo aborda os outros três tipos de gradientes, todos baseados em círculos.
 
@@ -57,7 +57,7 @@ Os dois primeiros argumentos especificam o centro de um círculo e um raio. O gr
 
 Se você usar `CreateRadialGradient` o para preencher um círculo, poderá definir o centro do gradiente para o centro do círculo e o raio do gradiente para o raio do círculo. Nesse caso, o `SKShaderTileMode` argumento não tem nenhum efeito sobre a renderização do gradiente. Mas se a área preenchida pelo gradiente for maior do que o círculo definido pelo gradiente, o `SKShaderTileMode` argumento terá um efeito profundo sobre o que acontece fora do círculo.
 
-O efeito de `SKShaderMode` é demonstrado na página **gradiente radial** no exemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . O arquivo XAML para esta página cria uma instância de um `Picker` que permite que você selecione um dos três membros da `SKShaderTileMode` enumeração:
+O efeito de `SKShaderMode` é demonstrado na página **gradiente radial** no exemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . O arquivo XAML para esta página cria uma instância de um `Picker` que permite que você selecione um dos três membros da `SKShaderTileMode` enumeração:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -334,7 +334,7 @@ public class RadialSpecularHighlightPage : ContentPage
 }
 ```
 
-A `CreateRadialGradient` chamada cria um gradiente que começa nesse `offCenter` ponto com branco e termina com vermelho a uma distância da metade do raio. Veja como ela se parece:
+A `CreateRadialGradient` chamada cria um gradiente que começa nesse `offCenter` ponto com branco e termina com vermelho a uma distância da metade do raio. Esta é a aparência dele:
 
 [![Realce de especula radial](circular-gradients-images/RadialSpecularHighlight.png "Realce de especula radial")](circular-gradients-images/RadialSpecularHighlight-Large.png#lightbox)
 
@@ -622,5 +622,5 @@ Os dois círculos têm centros de `offCenter` e `center` . O círculo centraliza
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

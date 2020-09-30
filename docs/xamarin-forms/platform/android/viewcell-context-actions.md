@@ -10,16 +10,16 @@ ms.date: 09/24/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 053697921f1adacc102e9e9bee9dd17f8d44526b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6cbdea3656daa4df894a79edc70453c78e3844bc
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128551"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556744"
 ---
 # <a name="viewcell-context-actions-on-android"></a>Ações de contexto ViewCell no Android
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Por padrão Xamarin.Forms , de 4,3, quando a [`ViewCell`](xref:Xamarin.Forms.ViewCell) em um aplicativo Android define ações de contexto para cada item em um [`ListView`](xref:Xamarin.Forms.ListView) , o menu ações de contexto é atualizado quando o item selecionado é `ListView` alterado. No entanto, nas versões anteriores do Xamarin.Forms menu de ações de contexto não foi atualizada, e esse comportamento é conhecido como o `ViewCell` modo herdado. Esse modo herdado pode resultar em comportamento incorreto se um `ListView` usar um [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) para definir seu `ItemTemplate` de [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) objetos que definem ações de contexto diferentes.
 
@@ -72,7 +72,7 @@ Nesse modo, os itens de menu de ação de contexto corretos são exibidos para a
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API AndroidSpecific](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [API AndroidSpecific. AppCompat](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

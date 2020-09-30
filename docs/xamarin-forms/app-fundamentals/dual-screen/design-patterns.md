@@ -10,12 +10,12 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 74f06f88cd974d774d3b2527505bb45b3db03191
-ms.sourcegitcommit: 69bd0fdc698c9b0c0d73217776d7084f32ae88ae
+ms.openlocfilehash: 9b553a2fc3dea0d2793cb337142eacf0419ad994
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90832301"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556068"
 ---
 # <a name="no-locxamarinforms-dual-screen-design-patterns"></a>Xamarin.Forms padrões de design de tela dupla
 
@@ -162,7 +162,7 @@ O padrão de exibição dupla pode ser semelhante à exibição de "duas página
 
 O padrão complementar demonstra como é possível usar a segunda tela para fornecer um segundo nível de conteúdo relacionado à exibição principal, como no caso de um aplicativo de desenho, um jogo ou uma edição de mídia:
 
-![Exemplo do painel complementar](design-patterns-images/companion-pane-sample.png)
+![Exemplo de painel complementar](design-patterns-images/companion-pane-sample.png)
 
 ```xaml
 <ContentPage xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"
@@ -271,5 +271,5 @@ O padrão complementar demonstra como é possível usar a segunda tela para forn
 
 ## <a name="related-links"></a>Links relacionados
 
-- [DualScreen (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
+- [DualScreen (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 - [Criar aplicativos para dispositivos de tela dupla](index.md)

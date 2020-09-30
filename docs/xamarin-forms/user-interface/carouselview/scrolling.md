@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsCarouselView rolagem
+title: Xamarin.Forms CarouselView rolagem
 description: Quando um usuário passa o dedo para iniciar uma rolagem, a posição final da rolagem pode ser controlada para que os itens sejam totalmente exibidos. Além disso, o CarouselView define dois métodos roleto, que rolam programaticamente os itens para a exibição.
 ms.prod: xamarin
 ms.assetid: 92D7B618-07FA-4343-9D0F-212525E92C39
@@ -10,20 +10,20 @@ ms.date: 01/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5c15760919c2511ee24485ab7539463ec252d999
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 5e48b962130acf98aa99c83773318d077dde2666
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918131"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556640"
 ---
-# <a name="no-locxamarinforms-carouselview-scrolling"></a>Xamarin.FormsCarouselView rolagem
+# <a name="no-locxamarinforms-carouselview-scrolling"></a>Xamarin.Forms CarouselView rolagem
 
 ![API de pré-lançamento](~/media/shared/preview.png)
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)define as seguintes propriedades relacionadas à rolagem:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) define as seguintes propriedades relacionadas à rolagem:
 
 - `HorizontalScrollBarVisibility`, do tipo `ScrollBarVisibility` , que especifica quando a barra de rolagem horizontal é visível.
 - `IsDragging`, do tipo `bool` , que indica se o `CarouselView` está rolando. Esta é uma propriedade somente leitura, cujo valor padrão é `false` .
@@ -33,15 +33,15 @@ ms.locfileid: "87918131"
 
 Todas essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que elas podem ser destinos de associações de dados.
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)também define dois [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) métodos, que rolam itens para o modo de exibição. Uma das sobrecargas rola o item no índice especificado para a exibição, enquanto o outro rola o item especificado para a exibição. Ambas as sobrecargas têm argumentos adicionais que podem ser especificados para indicar a posição exata do item após a conclusão da rolagem e se a rolagem deve ser animada.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) também define dois [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) métodos, que rolam itens para o modo de exibição. Uma das sobrecargas rola o item no índice especificado para a exibição, enquanto o outro rola o item especificado para a exibição. Ambas as sobrecargas têm argumentos adicionais que podem ser especificados para indicar a posição exata do item após a conclusão da rolagem e se a rolagem deve ser animada.
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)define um [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) evento que é acionado quando um dos [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) métodos é invocado. O [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) objeto que acompanha o `ScrollToRequested` evento tem muitas propriedades, incluindo `IsAnimated` ,, `Index` `Item` e `ScrollToPosition` . Essas propriedades são definidas a partir dos argumentos especificados nas `ScrollTo` chamadas de método.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) define um [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) evento que é acionado quando um dos [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) métodos é invocado. O [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) objeto que acompanha o `ScrollToRequested` evento tem muitas propriedades, incluindo `IsAnimated` ,, `Index` `Item` e `ScrollToPosition` . Essas propriedades são definidas a partir dos argumentos especificados nas `ScrollTo` chamadas de método.
 
 Além disso, [`CarouselView`](xref:Xamarin.Forms.CarouselView) o define um `Scrolled` evento que é acionado para indicar que a rolagem ocorreu. O `ItemsViewScrolledEventArgs` objeto que acompanha o `Scrolled` evento tem muitas propriedades. Para obter mais informações, consulte [detectar rolagem](#detect-scrolling).
 
 Quando um usuário passa o dedo para iniciar uma rolagem, a posição final da rolagem pode ser controlada para que os itens sejam totalmente exibidos. Esse recurso é conhecido como encaixe, pois os itens se ajustam à posição quando a rolagem é interrompida. Para obter mais informações, consulte [snap Points](#snap-points).
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)também pode carregar dados de forma incremental à medida que o usuário rola. Para obter mais informações, consulte [carregar dados incrementalmente](populate-data.md#load-data-incrementally).
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) também pode carregar dados de forma incremental à medida que o usuário rola. Para obter mais informações, consulte [carregar dados incrementalmente](populate-data.md#load-data-incrementally).
 
 ## <a name="detect-scrolling"></a>Detectar rolagem
 
@@ -167,11 +167,11 @@ Este código de exemplo resulta no item que está sendo rolado para o final da e
 
 ## <a name="control-scroll-position-when-new-items-are-added"></a>Controlar a posição de rolagem quando novos itens forem adicionados
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)define uma `ItemsUpdatingScrollMode` propriedade, que é apoiada por uma propriedade vinculável. Essa propriedade Obtém ou define um `ItemsUpdatingScrollMode` valor de enumeração que representa o comportamento de rolagem do `CarouselView` quando novos itens são adicionados a ele. A enumeração `ItemsUpdatingScrollMode` define os seguintes membros:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) define uma `ItemsUpdatingScrollMode` propriedade, que é apoiada por uma propriedade vinculável. Essa propriedade Obtém ou define um `ItemsUpdatingScrollMode` valor de enumeração que representa o comportamento de rolagem do `CarouselView` quando novos itens são adicionados a ele. A enumeração `ItemsUpdatingScrollMode` define os seguintes membros:
 
-- `KeepItemsInView`ajusta o deslocamento de rolagem para manter o primeiro item visível exibido quando novos itens são adicionados.
-- `KeepScrollOffset`mantém o deslocamento de rolagem relativo ao início da lista quando novos itens são adicionados.
-- `KeepLastItemInView`ajusta o deslocamento de rolagem para manter o último item visível quando novos itens são adicionados.
+- `KeepItemsInView` ajusta o deslocamento de rolagem para manter o primeiro item visível exibido quando novos itens são adicionados.
+- `KeepScrollOffset` mantém o deslocamento de rolagem relativo ao início da lista quando novos itens são adicionados.
+- `KeepLastItemInView` ajusta o deslocamento de rolagem para manter o último item visível quando novos itens são adicionados.
 
 O valor padrão da `ItemsUpdatingScrollMode` propriedade é `KeepItemsInView` . Portanto, quando novos itens forem adicionados a um [`CarouselView`](xref:Xamarin.Forms.CarouselView) primeiro item visível na lista, permanecerão exibidos. Para garantir que itens recém-adicionados sempre fiquem visíveis na parte inferior da lista, a `ItemsUpdatingScrollMode` propriedade deve ser definida como `KeepLastItemInView` :
 
@@ -192,11 +192,11 @@ CarouselView carouselView = new CarouselView
 
 ## <a name="scroll-bar-visibility"></a>Visibilidade da barra de rolagem
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)define `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility` Propriedades, que são apoiadas por propriedades vinculáveis. Essas propriedades obtêm ou definem um [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) valor de enumeração que representa quando a barra de rolagem horizontal ou vertical é visível. A enumeração `ScrollBarVisibility` define os seguintes membros:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) define `HorizontalScrollBarVisibility` e `VerticalScrollBarVisibility` Propriedades, que são apoiadas por propriedades vinculáveis. Essas propriedades obtêm ou definem um [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) valor de enumeração que representa quando a barra de rolagem horizontal ou vertical é visível. A enumeração `ScrollBarVisibility` define os seguintes membros:
 
-- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility)indica o comportamento da barra de rolagem padrão para a plataforma e é o valor padrão para as `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` Propriedades e.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility)indica que as barras de rolagem estarão visíveis, mesmo quando o conteúdo couber na exibição.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility)indica que as barras de rolagem não estarão visíveis, mesmo se o conteúdo não couber na exibição.
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indica o comportamento da barra de rolagem padrão para a plataforma e é o valor padrão para as `HorizontalScrollBarVisibility` `VerticalScrollBarVisibility` Propriedades e.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica que as barras de rolagem estarão visíveis, mesmo quando o conteúdo couber na exibição.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica que as barras de rolagem não estarão visíveis, mesmo se o conteúdo não couber na exibição.
 
 ## <a name="snap-points"></a>Pontos de ajuste
 
@@ -214,9 +214,9 @@ Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.Bin
 
 A [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType) enumeração define os seguintes membros:
 
-- `None`indica que a rolagem não se ajusta aos itens.
-- `Mandatory`indica que o conteúdo sempre se ajusta ao ponto de ajuste mais próximo para onde a rolagem seria interrompida naturalmente, ao longo da direção de inércia.
-- `MandatorySingle`indica o mesmo comportamento que `Mandatory` , mas apenas rola um item de cada vez.
+- `None` indica que a rolagem não se ajusta aos itens.
+- `Mandatory` indica que o conteúdo sempre se ajusta ao ponto de ajuste mais próximo para onde a rolagem seria interrompida naturalmente, ao longo da direção de inércia.
+- `MandatorySingle` indica o mesmo comportamento que `Mandatory` , mas apenas rola um item de cada vez.
 
 Por padrão, em um [`CarouselView`](xref:Xamarin.Forms.CarouselView) , a [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) propriedade é definida como `SnapPointsType.MandatorySingle` , o que garante que a rolagem role apenas um item de cada vez.
 
@@ -337,4 +337,4 @@ Quando um usuário passa o dedo para iniciar uma rolagem em uma rolagem horizont
 
 ## <a name="related-links"></a>Links relacionados
 
-- [CarouselView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+- [CarouselView (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)

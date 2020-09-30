@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsMessagingCenter
+title: Xamarin.Forms MessagingCenter
 description: A Xamarin.Forms classe MessagingCenter implementa o padrão de publicação-assinatura, permitindo a comunicação baseada em mensagem entre componentes que são inconvenientes de vincular por referências de objeto e tipo.
 ms.prod: xamarin
 ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
@@ -10,14 +10,14 @@ ms.date: 10/08/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c817936c77764b95842226b9a9a31c26667d6d0f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d24ff6831bb8b52d840ff2db7c13c3eb674b7bd8
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937443"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555782"
 ---
-# <a name="xamarinforms-messagingcenter"></a>Xamarin.FormsMessagingCenter
+# <a name="no-locxamarinforms-messagingcenter"></a>Xamarin.Forms MessagingCenter
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
 
@@ -38,7 +38,7 @@ Os editores enviam mensagens usando o [`MessagingCenter.Send`](xref:Xamarin.Form
 
 ## <a name="publish-a-message"></a>Publicar uma mensagem
 
-[`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter)as mensagens são cadeias de caracteres. Os editores notificam os assinantes de uma mensagem com uma das [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) sobrecargas. O exemplo de código a seguir publica uma mensagem `Hi`:
+[`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) as mensagens são cadeias de caracteres. Os editores notificam os assinantes de uma mensagem com uma das [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) sobrecargas. O exemplo de código a seguir publica uma mensagem `Hi`:
 
 ```csharp
 MessagingCenter.Send<MainPage>(this, "Hi");
@@ -109,4 +109,4 @@ Neste exemplo, o [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*
 
 ## <a name="related-links"></a>Links relacionados
 
-- [MessagingCenterSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
+- [MessagingCenterSample](/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)

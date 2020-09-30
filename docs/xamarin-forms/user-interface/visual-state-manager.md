@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsGerenciador de estado visual
+title: Xamarin.Forms Gerenciador de estado visual
 description: Use o Gerenciador de estado visual para fazer alterações em elementos XAML com base em estados visuais definidos a partir do código.
 ms.prod: xamarin
 ms.assetid: 17296F14-640D-484B-A24C-A4E9B7013E4F
@@ -11,16 +11,16 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3dda730446ec2b4268f42ee5af853400b33565d9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 7e59cddbe9192f29ca1636c567131aad60157066
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946220"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556575"
 ---
-# <a name="xamarinforms-visual-state-manager"></a>Xamarin.FormsGerenciador de estado visual
+# <a name="no-locxamarinforms-visual-state-manager"></a>Xamarin.Forms Gerenciador de estado visual
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
 
 _Use o Gerenciador de estado visual para fazer alterações em elementos XAML com base em estados visuais definidos a partir do código._
 
@@ -42,7 +42,7 @@ Esse grupo de estado visual tem suporte para todas as classes que derivam de [`V
 Você também pode definir seus próprios grupos de estado visual e Estados visuais, como este artigo demonstrará.
 
 > [!NOTE]
-> Xamarin.Formsos desenvolvedores familiarizados com [gatilhos](~/xamarin-forms/app-fundamentals/triggers.md) estão cientes de que os gatilhos também podem fazer alterações em visuais na interface do usuário com base nas alterações nas propriedades de uma exibição ou no acionamento de eventos. No entanto, o uso de gatilhos para lidar com várias combinações dessas alterações pode se tornar bastante confuso. Historicamente, o Visual State Manager foi introduzido em ambientes baseados em XAML do Windows para aliviar a confusão resultante de combinações de Estados visuais. Com o VSM, os Estados visuais dentro de um grupo de estado visual são sempre mutuamente exclusivos. A qualquer momento, apenas um estado em cada grupo é o estado atual.
+> Xamarin.Forms os desenvolvedores familiarizados com [gatilhos](~/xamarin-forms/app-fundamentals/triggers.md) estão cientes de que os gatilhos também podem fazer alterações em visuais na interface do usuário com base nas alterações nas propriedades de uma exibição ou no acionamento de eventos. No entanto, o uso de gatilhos para lidar com várias combinações dessas alterações pode se tornar bastante confuso. Historicamente, o Visual State Manager foi introduzido em ambientes baseados em XAML do Windows para aliviar a confusão resultante de combinações de Estados visuais. Com o VSM, os Estados visuais dentro de um grupo de estado visual são sempre mutuamente exclusivos. A qualquer momento, apenas um estado em cada grupo é o estado atual.
 
 ## <a name="common-states"></a>Estados comuns
 
@@ -78,7 +78,7 @@ Em seguida, insira `VisualStateManager.VisualStateGroups` as marcas entre essas 
 </Entry>
 ```
 
-[`VisualStateGroups`](xref:Xamarin.Forms.VisualStateManager.VisualStateGroupsProperty)é uma propriedade vinculável associada definida pela [`VisualStateManager`](xref:Xamarin.Forms.VisualStateManager) classe. (Para obter mais informações sobre as propriedades vinculáveis anexadas, consulte o artigo [Propriedades anexadas](~/xamarin-forms/xaml/attached-properties.md).) É assim que a `VisualStateGroups` propriedade é anexada ao `Entry` objeto.
+[`VisualStateGroups`](xref:Xamarin.Forms.VisualStateManager.VisualStateGroupsProperty) é uma propriedade vinculável associada definida pela [`VisualStateManager`](xref:Xamarin.Forms.VisualStateManager) classe. (Para obter mais informações sobre as propriedades vinculáveis anexadas, consulte o artigo [Propriedades anexadas](~/xamarin-forms/xaml/attached-properties.md).) É assim que a `VisualStateGroups` propriedade é anexada ao `Entry` objeto.
 
 A `VisualStateGroups` propriedade é do tipo [`VisualStateGroupList`](xref:Xamarin.Forms.VisualStateGroupList) , que é uma coleção de [`VisualStateGroup`](xref:Xamarin.Forms.VisualStateGroup) objetos. Dentro das `VisualStateManager.VisualStateGroups` marcas, insira um par de `VisualStateGroup` marcas para cada grupo de Estados visuais que você deseja incluir:
 
@@ -100,7 +100,7 @@ Observe que a `VisualStateGroup` marca tem um `x:Name` atributo que indica o nom
 
 Você pode usar o `x:Name` ou `Name` o, mas não ambos, no mesmo elemento.
 
-A `VisualStateGroup` classe define uma propriedade chamada [`States`](xref:Xamarin.Forms.VisualStateGroup.States) , que é uma coleção de [`VisualState`](xref:Xamarin.Forms.VisualState) objetos. `States`é a _Propriedade Content_ de `VisualStateGroups` , portanto, você pode incluir as `VisualState` marcas diretamente entre as `VisualStateGroup` marcas. (As propriedades de conteúdo são discutidas no artigo [sintaxe XAML essencial](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md#content-properties).)
+A `VisualStateGroup` classe define uma propriedade chamada [`States`](xref:Xamarin.Forms.VisualStateGroup.States) , que é uma coleção de [`VisualState`](xref:Xamarin.Forms.VisualState) objetos. `States` é a _Propriedade Content_ de `VisualStateGroups` , portanto, você pode incluir as `VisualState` marcas diretamente entre as `VisualStateGroup` marcas. (As propriedades de conteúdo são discutidas no artigo [sintaxe XAML essencial](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md#content-properties).)
 
 A próxima etapa é incluir um par de marcas para cada estado visual nesse grupo. Elas também podem ser identificadas usando `x:Name` ou `Name` :
 
@@ -124,7 +124,7 @@ A próxima etapa é incluir um par de marcas para cada estado visual nesse grupo
 </Entry>
 ```
 
-`VisualState`define uma propriedade chamada [`Setters`](xref:Xamarin.Forms.VisualState.Setters) , que é uma coleção de [`Setter`](xref:Xamarin.Forms.Setter) objetos. Esses são os mesmos `Setter` objetos que você usa em um [`Style`](xref:Xamarin.Forms.Style) objeto.
+`VisualState` define uma propriedade chamada [`Setters`](xref:Xamarin.Forms.VisualState.Setters) , que é uma coleção de [`Setter`](xref:Xamarin.Forms.Setter) objetos. Esses são os mesmos `Setter` objetos que você usa em um [`Style`](xref:Xamarin.Forms.Style) objeto.
 
 `Setters`_não_ é a propriedade de conteúdo de `VisualState` , portanto, é necessário incluir marcas de elemento de propriedade para a `Setters` Propriedade:
 
@@ -184,7 +184,7 @@ Agora você pode inserir um ou mais `Setter` objetos entre cada par de `Setters`
 
 Cada `Setter` marca indica o valor de uma propriedade específica quando esse estado é atual. Qualquer propriedade referenciada por um `Setter` objeto deve ser apoiada por uma propriedade vinculável.
 
-A marcação semelhante a esta é a base da página **VSM na exibição** no programa de exemplo **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** . A página inclui três `Entry` exibições, mas apenas a segunda tem a marcação VSM anexada a ela:
+A marcação semelhante a esta é a base da página **VSM na exibição** no programa de exemplo **[VsmDemos](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** . A página inclui três `Entry` exibições, mas apenas a segunda tem a marcação VSM anexada a ela:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -404,7 +404,7 @@ Agora, todas as `Entry` exibições nesta página respondem da mesma maneira aos
 
 [![VSM em estilo](vsm-images/VsmInStyle.png "VSM em estilo")](vsm-images/VsmInStyle-Large.png#lightbox)
 
-## <a name="visual-states-in-xamarinforms"></a>Estados visuais noXamarin.Forms
+## <a name="visual-states-in-no-locxamarinforms"></a>Estados visuais no Xamarin.Forms
 
 A tabela a seguir lista os Estados visuais que são definidos em Xamarin.Forms :
 
@@ -439,7 +439,7 @@ Neste exemplo, um `Label` nome terá `label` sua `TextColor` propriedade definid
 > [!NOTE]
 > Qualquer propriedade referenciada por um `Setter` objeto deve ser apoiada por uma propriedade vinculável.
 
-A página **VSM with setter TargetName** no exemplo **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** mostra como definir o estado em vários elementos, a partir de um único grupo de estado visual. O arquivo XAML consiste em uma `StackLayout` contendo um `Label` elemento, um `Entry` e um `Button` :
+A página **VSM with setter TargetName** no exemplo **[VsmDemos](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** mostra como definir o estado em vários elementos, a partir de um único grupo de estado visual. O arquivo XAML consiste em uma `StackLayout` contendo um `Label` elemento, um `Entry` e um `Button` :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -499,7 +499,7 @@ Curiosamente, o nome do grupo de estado visual "CommonStates" não é explicitam
 
 Se você quiser implementar seus próprios Estados visuais, precisará chamar a `VisualStateManager.GoToState` partir do código. Geralmente, você fará essa chamada a partir do arquivo code-behind da sua classe Page.
 
-A página **validação do VSM** no exemplo de **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** mostra como usar o Gerenciador de estado visual em conexão com a validação de entrada. O arquivo XAML consiste em um `StackLayout` contendo dois `Label` elementos, um `Entry` e um `Button` :
+A página **validação do VSM** no exemplo de **[VsmDemos](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** mostra como usar o Gerenciador de estado visual em conexão com a validação de entrada. O arquivo XAML consiste em um `StackLayout` contendo dois `Label` elementos, um `Entry` e um `Button` :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -625,7 +625,7 @@ No modo paisagem, a matriz de botões pode ser movida para um lado e exibida em 
 
 De cima para baixo, o programa está em execução no Plataforma Universal do Windows, no Android e no iOS.
 
-A página de **layout adaptável do VSM** no exemplo de [VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos) define um grupo chamado "OrientationStates" com dois estados visuais chamados "retrato" e "paisagem". (Uma abordagem mais complexa pode ser baseada em várias larguras de página ou janela diferentes.)
+A página de **layout adaptável do VSM** no exemplo de [VsmDemos](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos) define um grupo chamado "OrientationStates" com dois estados visuais chamados "retrato" e "paisagem". (Uma abordagem mais complexa pode ser baseada em várias larguras de página ou janela diferentes.)
 
 A marcação VSM ocorre em quatro locais no arquivo XAML. O `StackLayout` nome `mainStack` contém o menu e o conteúdo, que é um `Image` elemento. Isso `StackLayout` deve ter uma orientação vertical no modo retrato e uma orientação horizontal no modo paisagem:
 
@@ -775,9 +775,9 @@ Pode parecer que o arquivo code-behind pode tratar as alterações de orientaç�
 
 > [!VIDEO https://youtube.com/embed/qhUHbVP5mIQ]
 
-**Xamarin.Formsvídeo do Gerenciador de estado visual 3,0**
+**Xamarin.Forms vídeo do Gerenciador de estado visual 3,0**
 
 ## <a name="related-links"></a>Links relacionados
 
-- [VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
+- [VsmDemos](/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
 - [Gatilhos de estado](~/xamarin-forms/app-fundamentals/triggers.md#state-triggers)

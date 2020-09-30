@@ -10,12 +10,12 @@ ms.date: 03/23/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5cb43bfe572b98a6530dfeb8d923ac71b5b633a7
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 5ea4fa88925925ba7c81f47c30875c3419603ab8
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932035"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555457"
 ---
 # <a name="the-scale-transform"></a>A transformação de escala
 
@@ -105,7 +105,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Você pode estar imaginando: como os fatores de dimensionamento afetam o valor retornado do `MeasureText` método de `SKPaint` ? A resposta é: não. `Scale`é um método de `SKCanvas` . Ele não afeta nada que você faça com um `SKPaint` objeto até que você use esse objeto para renderizar algo na tela.
+Você pode estar imaginando: como os fatores de dimensionamento afetam o valor retornado do `MeasureText` método de `SKPaint` ? A resposta é: não. `Scale` é um método de `SKCanvas` . Ele não afeta nada que você faça com um `SKPaint` objeto até que você use esse objeto para renderizar algo na tela.
 
 Como você pode ver, tudo desenhado após a `Scale` chamada aumenta proporcionalmente:
 
@@ -348,5 +348,5 @@ O código também exibe a estrela 10 mais vezes, cada vez que diminui o fator de
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

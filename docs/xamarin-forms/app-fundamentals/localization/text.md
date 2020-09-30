@@ -11,12 +11,12 @@ ms.date: 11/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 727bac49c5bff522125a2f21a9742e428b81c924
-ms.sourcegitcommit: bb18e6b3b5d592374b17932efa1e85c3b5fbad57
+ms.openlocfilehash: fac41e57d13815dcd202521d16ae4730e1d99cfa
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88950736"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555860"
 ---
 # <a name="no-locxamarinforms-string-and-image-localization"></a>Xamarin.Forms Localização de cadeia de caracteres e imagem
 
@@ -26,7 +26,7 @@ A localização é o processo de adaptação de um aplicativo para atender à li
 
 ![Capturas de tela do aplicativo de localização no iOS e no Android](text-images/localizationdemo-screenshots.png)
 
-O .NET Framework inclui um mecanismo interno para localizar aplicativos usando arquivos de [recurso resx](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Um arquivo de recurso armazena texto e outro conteúdo como pares de nome/valor que permitem que o aplicativo recupere conteúdo para uma chave fornecida. Os arquivos de recurso permitem que o conteúdo localizado seja separado do código do aplicativo.
+O .NET Framework inclui um mecanismo interno para localizar aplicativos usando arquivos de [recurso resx](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Um arquivo de recurso armazena texto e outro conteúdo como pares de nome/valor que permitem que o aplicativo recupere conteúdo para uma chave fornecida. Os arquivos de recurso permitem que o conteúdo localizado seja separado do código do aplicativo.
 
 O uso de arquivos de recursos para localizar Xamarin.Forms aplicativos exige que você execute as seguintes etapas:
 
@@ -153,7 +153,7 @@ using System.Resources;
 
 Depois que um arquivo de recurso padrão tiver sido criado e a cultura padrão especificada no arquivo **AssemblyInfo.cs** , o aplicativo poderá recuperar cadeias de caracteres localizadas em tempo de execução.
 
-Para obter mais informações sobre arquivos de recursos, consulte [criar arquivos de recursos para aplicativos .net](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
+Para obter mais informações sobre arquivos de recursos, consulte [criar arquivos de recursos para aplicativos .net](/dotnet/framework/resources/creating-resource-files-for-desktop-apps).
 
 ## <a name="specify-supported-languages-on-ios"></a>Especificar idiomas com suporte no iOS
 
@@ -306,7 +306,7 @@ Image flag = new Image
 
 ## <a name="localize-the-application-name"></a>Localizar o nome do aplicativo
 
-O nome do aplicativo é especificado por plataforma e não usa arquivos de recurso resx. Para localizar o nome do aplicativo no Android, consulte [localizar o nome do aplicativo no Android](~/android/app-fundamentals/localization.md#stringsxml-file-format). Para localizar o nome do aplicativo no iOS, consulte [localizar o nome do aplicativo no Ios](~/ios/app-fundamentals/localization/index.md#app-name). Para localizar o nome do aplicativo no UWP, consulte [Localizar cadeias de caracteres no manifesto do pacote UWP](https://docs.microsoft.com/windows/uwp/app-resources/localize-strings-ui-manifest).
+O nome do aplicativo é especificado por plataforma e não usa arquivos de recurso resx. Para localizar o nome do aplicativo no Android, consulte [localizar o nome do aplicativo no Android](~/android/app-fundamentals/localization.md#stringsxml-file-format). Para localizar o nome do aplicativo no iOS, consulte [localizar o nome do aplicativo no Ios](~/ios/app-fundamentals/localization/index.md#app-name). Para localizar o nome do aplicativo no UWP, consulte [Localizar cadeias de caracteres no manifesto do pacote UWP](/windows/uwp/app-resources/localize-strings-ui-manifest).
 
 ## <a name="test-localization"></a>Localização de teste
 
@@ -318,11 +318,11 @@ No Android, as configurações de idioma são detectadas e armazenadas em cache 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Projeto de exemplo de localização](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
-- [Criar arquivos de recurso para aplicativos .NET](https://docs.microsoft.com/dotnet/framework/resources/creating-resource-files-for-desktop-apps)
+- [Projeto de exemplo de localização](/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
+- [Criar arquivos de recurso para aplicativos .NET](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)
 - [Localização multiplataforma](~/cross-platform/app-fundamentals/localization.md)
-- [Usando a classe CultureInfo (MSDN)](https://docs.microsoft.com/dotnet/api/system.globalization.cultureinfo)
+- [Usando a classe CultureInfo (MSDN)](/dotnet/api/system.globalization.cultureinfo)
 - [Localização no Android](~/android/app-fundamentals/localization.md)
 - [Localização no iOS](~/ios/app-fundamentals/localization/index.md)
 - [Localização na UWP](/windows/uwp/design/globalizing/globalizing-portal/)
-- [Localizando e usando recursos para uma cultura específica (MSDN)](https://msdn.microsoft.com/library/s9ckwb4b%28v=vs.90%29.aspx)
+- [Localizando e usando recursos para uma cultura específica (MSDN)](/previous-versions/visualstudio/visual-studio-2008/s9ckwb4b(v=vs.90))

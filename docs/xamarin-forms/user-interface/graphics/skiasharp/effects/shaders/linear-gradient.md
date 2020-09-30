@@ -10,16 +10,16 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 43aa429046c1b0f72a1cbe6a5b921da9b8907a49
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2cc0806af28360cf4bf2bb7e382e8d0a423abab9
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84132217"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555522"
 ---
 # <a name="the-skiasharp-linear-gradient"></a>O gradiente linear SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 A [`SKPaint`](xref:SkiaSharp.SKPaint) classe define uma [`Color`](xref:SkiaSharp.SKPaint.Color) propriedade que é usada para traçar linhas ou áreas de preenchimento com uma cor sólida. Você pode, como alternativa, traçar linhas ou preencher áreas com _gradientes_, que são misturas graduais de cores:
 
@@ -40,7 +40,7 @@ Geralmente, um gradiente linear se estende de um canto de um retângulo para out
 - horizontalmente no canto superior direito
 - diagonalmente para o canto inferior direito
 
-O gradiente linear diagonal é demonstrado na primeira página na seção **sombreadores SkiaSharp e outros efeitos** do exemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . A página **gradiente do canto para o canto** cria um `SKCanvasView` em seu construtor. O `PaintSurface` manipulador cria um `SKPaint` objeto em uma `using` instrução e define um retângulo quadrado de 300 pixels centralizado na tela:
+O gradiente linear diagonal é demonstrado na primeira página na seção **sombreadores SkiaSharp e outros efeitos** do exemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . A página **gradiente do canto para o canto** cria um `SKCanvasView` em seu construtor. O `PaintSurface` manipulador cria um `SKPaint` objeto em uma `using` instrução e define um retângulo quadrado de 300 pixels centralizado na tela:
 
 ```csharp
 public class CornerToCornerGradientPage : ContentPage
@@ -514,7 +514,7 @@ public class GradientAnimationPage : ContentPage
 }
 ```
 
-Uma abordagem um pouco diferente requer menos código. Essa abordagem utiliza o [`SKShader.CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient(SkiaSharp.SKPoint,SkiaSharp.SKPoint,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) método Overload com uma transformação de matriz como o último argumento. Essa abordagem é a versão no exemplo de [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
+Uma abordagem um pouco diferente requer menos código. Essa abordagem utiliza o [`SKShader.CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient(SkiaSharp.SKPoint,SkiaSharp.SKPoint,SkiaSharp.SKColor[],System.Single[],SkiaSharp.SKShaderTileMode,SkiaSharp.SKMatrix)) método Overload com uma transformação de matriz como o último argumento. Essa abordagem é a versão no exemplo de [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
 
 ```csharp
 public class GradientAnimationPage : ContentPage
@@ -626,7 +626,7 @@ Os dois pontos de gradiente no `CreateLinearGradient` método se baseiam em dois
 
 Essa é uma imagem interessante, mas não é bem a intenção. O problema é que ao criar um gradiente linear, as linhas da cor constante são perpendiculares à linha de gradiente. A linha gradiente se baseia nos pontos em que a figura toca nos lados superior e esquerdo, e essa linha geralmente não é perpendicular às bordas da figura que se estendem para o canto inferior direito. Essa abordagem funcionaria apenas se a tela fosse quadrada.
 
-Para criar um gradiente de arco-íris adequado, a linha de gradiente deve ser perpendicular à borda do arco-íris. Esse é um cálculo mais envolvido. É necessário definir um vetor que seja paralelo ao lado longo da figura. O vetor é girado 90 graus para que seja perpendicular a esse lado. Em seguida, ele é ampliado para ser a largura da figura multiplicando por `rainbowWidth` . Os dois pontos de gradação são calculados com base em um ponto no lado da figura e nesse ponto mais o vetor. Aqui está o código que aparece na página de **gradiente arco-íris** no exemplo de [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
+Para criar um gradiente de arco-íris adequado, a linha de gradiente deve ser perpendicular à borda do arco-íris. Esse é um cálculo mais envolvido. É necessário definir um vetor que seja paralelo ao lado longo da figura. O vetor é girado 90 graus para que seja perpendicular a esse lado. Em seguida, ele é ampliado para ser a largura da figura multiplicando por `rainbowWidth` . Os dois pontos de gradação são calculados com base em um ponto no lado da figura e nesse ponto mais o vetor. Aqui está o código que aparece na página de **gradiente arco-íris** no exemplo de [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
 
 ```csharp
 public class RainbowGradientPage : ContentPage
@@ -919,5 +919,5 @@ A `CreateLinearGradient` chamada define um gradiente a partir da parte superior 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

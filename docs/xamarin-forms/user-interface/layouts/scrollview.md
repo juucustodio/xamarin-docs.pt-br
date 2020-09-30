@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsScrollView
+title: Xamarin.Forms ScrollView
 description: O Xamarin.Forms ScrollView é um layout que é capaz de rolar seu conteúdo.
 ms.prod: xamarin
 ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
@@ -10,25 +10,25 @@ ms.date: 05/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f527acabe3b051cbfd6450ba6f5328449b1a728c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: af8513d86b7cf02ec7adcee75241d8ce99e2dfab
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84199137"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556822"
 ---
-# <a name="xamarinforms-scrollview"></a>Xamarin.FormsScrollView
+# <a name="no-locxamarinforms-scrollview"></a>Xamarin.Forms ScrollView
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-scrollviewdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-scrollviewdemos)
 
-[![Xamarin.FormsScrollView](scrollview-images/layouts.png "[! Parar. Não-LOC (Xamarin. Forms)] ScrollView")](scrollview-images/layouts-large.png#lightbox "[! Parar. Não-LOC (Xamarin. Forms)] ScrollView")
+[![::: no-Loc (Xamarin. Forms)::: ScrollView](scrollview-images/layouts.png "::: no-Loc (Xamarin. Forms)::: ScrollView")](scrollview-images/layouts-large.png#lightbox "::: no-Loc (Xamarin. Forms)::: ScrollView")
 
-[`ScrollView`](xref:Xamarin.Forms.ScrollView)é um layout que é capaz de rolar seu conteúdo. A `ScrollView` classe deriva da [`Layout`](xref:Xamarin.Forms.Layout) classe e, por padrão, rola seu conteúdo verticalmente. Um `ScrollView` só pode ter um único filho, embora isso possa ser outros layouts.
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) é um layout que é capaz de rolar seu conteúdo. A `ScrollView` classe deriva da [`Layout`](xref:Xamarin.Forms.Layout) classe e, por padrão, rola seu conteúdo verticalmente. Um `ScrollView` só pode ter um único filho, embora isso possa ser outros layouts.
 
 > [!WARNING]
-> [`ScrollView`](xref:Xamarin.Forms.ScrollView)os objetos não devem ser aninhados. Além disso, `ScrollView` os objetos não devem ser aninhados com outros controles que fornecem rolagem, como [`CollectionView`](xref:Xamarin.Forms.CollectionView) , [`ListView`](xref:Xamarin.Forms.ListView) e [`WebView`](xref:Xamarin.Forms.WebView) .
+> [`ScrollView`](xref:Xamarin.Forms.ScrollView) os objetos não devem ser aninhados. Além disso, `ScrollView` os objetos não devem ser aninhados com outros controles que fornecem rolagem, como [`CollectionView`](xref:Xamarin.Forms.CollectionView) , [`ListView`](xref:Xamarin.Forms.ListView) e [`WebView`](xref:Xamarin.Forms.WebView) .
 
-[`ScrollView`](xref:Xamarin.Forms.ScrollView)define as seguintes propriedades:
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) define as seguintes propriedades:
 
 - [`Content`](xref:Xamarin.Forms.ScrollView.Content), do tipo [`View`](xref:Xamarin.Forms.View) , representa o conteúdo a ser exibido no [`ScrollView`](xref:Xamarin.Forms.ScrollView) .
 - [`ContentSize`](xref:Xamarin.Forms.ScrollView), do tipo [`Size`](xref:Xamarin.Forms.Size) , representa o tamanho do conteúdo. Trata-se de uma propriedade somente leitura.
@@ -205,19 +205,19 @@ public class BlackCatPageCS : ContentPage
 
 ## <a name="orientation"></a>Orientação
 
-[`ScrollView`](xref:Xamarin.Forms.ScrollView)tem uma [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) propriedade, que representa a direção da rolagem do `ScrollView` . Essa propriedade é do tipo [`ScrollOrientation`](xref:Xamarin.Forms.ScrollOrientation) , que define os seguintes membros:
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) tem uma [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) propriedade, que representa a direção da rolagem do `ScrollView` . Essa propriedade é do tipo [`ScrollOrientation`](xref:Xamarin.Forms.ScrollOrientation) , que define os seguintes membros:
 
-- `Vertical`indica que o `ScrollView` será rolado verticalmente. Esse membro é o valor padrão da [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) propriedade.
-- `Horizontal`indica que o `ScrollView` irá rolar horizontalmente.
-- `Both`indica que o `ScrollView` irá rolar horizontal e verticalmente.
-- `Neither`indica que o `ScrollView` não rolará.
+- `Vertical` indica que o `ScrollView` será rolado verticalmente. Esse membro é o valor padrão da [`Orientation`](xref:Xamarin.Forms.ScrollView.Orientation) propriedade.
+- `Horizontal` indica que o `ScrollView` irá rolar horizontalmente.
+- `Both` indica que o `ScrollView` irá rolar horizontal e verticalmente.
+- `Neither` indica que o `ScrollView` não rolará.
 
 > [!TIP]
 > A rolagem pode ser desabilitada definindo a [`Orientation`](xref:Xamarin.Forms.ScrollView.OrientationProperty) propriedade como `Neither` .
 
 ## <a name="detect-scrolling"></a>Detectar rolagem
 
-[`ScrollView`](xref:Xamarin.Forms.ScrollView)define um [`Scrolled`](xref:Xamarin.Forms.ScrollView.Scrolled) evento que é acionado para indicar que a rolagem ocorreu. O [`ScrolledEventArgs`](xref:Xamarin.Forms.ScrolledEventArgs) objeto que acompanha o `Scrolled` evento tem `ScrollX` e `ScrollY` Propriedades, ambos os tipos `double` .
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) define um [`Scrolled`](xref:Xamarin.Forms.ScrollView.Scrolled) evento que é acionado para indicar que a rolagem ocorreu. O [`ScrolledEventArgs`](xref:Xamarin.Forms.ScrolledEventArgs) objeto que acompanha o `Scrolled` evento tem `ScrollX` e `ScrollY` Propriedades, ambos os tipos `double` .
 
 > [!IMPORTANT]
 > As `ScrolledEventArgs.ScrollX` `ScrolledEventArgs.ScrollY` Propriedades e podem ter valores negativos, devido ao efeito de repercussão que ocorre ao rolar de volta para o início de um [`ScrollView`](xref:Xamarin.Forms.ScrollView) .
@@ -253,7 +253,7 @@ Neste exemplo, o `OnScrollViewScrolled` manipulador de eventos gera os valores d
 
 ## <a name="scroll-programmatically"></a>Rolar programaticamente
 
-[`ScrollView`](xref:Xamarin.Forms.ScrollView)define dois [`ScrollToAsync`](xref:Xamarin.Forms.ScrollView.ScrollToAsync*) métodos, que rolam de forma assíncrona o `ScrollView` . Uma das sobrecargas rola para uma posição especificada no `ScrollView` , enquanto a outra rola um elemento especificado para o modo de exibição. Ambas as sobrecargas têm um argumento adicional que pode ser usado para indicar se a rolagem deve ser animada.
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) define dois [`ScrollToAsync`](xref:Xamarin.Forms.ScrollView.ScrollToAsync*) métodos, que rolam de forma assíncrona o `ScrollView` . Uma das sobrecargas rola para uma posição especificada no `ScrollView` , enquanto a outra rola um elemento especificado para o modo de exibição. Ambas as sobrecargas têm um argumento adicional que pode ser usado para indicar se a rolagem deve ser animada.
 
 > [!IMPORTANT]
 > Os [`ScrollToAsync`](xref:Xamarin.Forms.ScrollView.ScrollToAsync*) métodos não resultarão na rolagem quando a [`ScrollView.Orientation`](xref:Xamarin.Forms.ScrollView.OrientationProperty) propriedade for definida como `Neither` .
@@ -280,21 +280,21 @@ O terceiro argumento para [`ScrollToAsync`](xref:Xamarin.Forms.ScrollView.Scroll
 
 Ao rolar um elemento para a exibição, a posição exata do elemento após a rolagem concluída pode ser definida com o segundo argumento, `position` , do [`ScrollToAsync`](xref:Xamarin.Forms.ScrollView.ScrollToAsync*) método. Esse argumento aceita um [`ScrollToPosition`](xref:Xamarin.Forms.ScrollToPosition) membro de enumeração:
 
-- `MakeVisible`indica que o elemento deve ser rolado até que esteja visível no `ScrollView` .
-- `Start`indica que o elemento deve ser rolado para o início do `ScrollView` .
-- `Center`indica que o elemento deve ser rolado para o centro do `ScrollView` .
-- `End`indica que o elemento deve ser rolado para o final do `ScrollView` .
+- `MakeVisible` indica que o elemento deve ser rolado até que esteja visível no `ScrollView` .
+- `Start` indica que o elemento deve ser rolado para o início do `ScrollView` .
+- `Center` indica que o elemento deve ser rolado para o centro do `ScrollView` .
+- `End` indica que o elemento deve ser rolado para o final do `ScrollView` .
 
 ## <a name="scroll-bar-visibility"></a>Visibilidade da barra de rolagem
 
-[`ScrollView`](xref:Xamarin.Forms.ScrollView)define [`HorizontalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView) e [`VerticalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView) Propriedades, que são apoiadas por propriedades vinculáveis. Essas propriedades obtêm ou definem um [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollView.HorizontalScrollBarVisibility) valor de enumeração que representa se a barra de rolagem horizontal ou vertical está visível. A enumeração `ScrollBarVisibility` define os seguintes membros:
+[`ScrollView`](xref:Xamarin.Forms.ScrollView) define [`HorizontalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView) e [`VerticalScrollBarVisibility`](xref:Xamarin.Forms.ScrollView) Propriedades, que são apoiadas por propriedades vinculáveis. Essas propriedades obtêm ou definem um [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollView.HorizontalScrollBarVisibility) valor de enumeração que representa se a barra de rolagem horizontal ou vertical está visível. A enumeração `ScrollBarVisibility` define os seguintes membros:
 
-- `Default`indica o comportamento da barra de rolagem padrão para a plataforma e é o valor padrão `HorizontalScrollBarVisibility` das `VerticalScrollBarVisibility` Propriedades e.
-- `Always`indica que as barras de rolagem estarão visíveis, mesmo quando o conteúdo couber na exibição.
-- `Never`indica que as barras de rolagem não estarão visíveis, mesmo se o conteúdo não couber na exibição.
+- `Default` indica o comportamento da barra de rolagem padrão para a plataforma e é o valor padrão `HorizontalScrollBarVisibility` das `VerticalScrollBarVisibility` Propriedades e.
+- `Always` indica que as barras de rolagem estarão visíveis, mesmo quando o conteúdo couber na exibição.
+- `Never` indica que as barras de rolagem não estarão visíveis, mesmo se o conteúdo não couber na exibição.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações do ScrollView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-scrollviewdemos)
-- [Xamarin.FormsStackLayout](stacklayout.md)
-- [Layouts vinculáveis emXamarin.Forms](bindable-layouts.md)
+- [Demonstrações do ScrollView (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-scrollviewdemos)
+- [Xamarin.Forms StackLayout](stacklayout.md)
+- [Layouts vinculáveis em Xamarin.Forms](bindable-layouts.md)

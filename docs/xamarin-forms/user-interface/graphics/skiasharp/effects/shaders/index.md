@@ -10,16 +10,16 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8f4ef3a583a7f9078f62c899d3b2abfc0848cc79
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 7e2f9d27fb111feb31272df03c3676c7f4d36769
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135428"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556627"
 ---
 # <a name="skiasharp-shaders"></a>Sombreadores SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Você pode definir a [`Shader`](xref:SkiaSharp.SKPaint.Shader) propriedade de `SKPaint` como um objeto do tipo [`SKShader`](xref:SkiaSharp.SKShader) para criar vários tipos de gradientes, um padrão de bitmap lado a lado ou um ruído de Perl.
 
@@ -41,5 +41,5 @@ Gere sombreadores de ruído de Perlm e combine com outros sombreadores.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsModo de ligação
+title: Xamarin.Forms Modo de ligação
 description: Este artigo explica como controlar o fluxo de informações entre a origem e o destino usando um modo de associação, que é especificado com um membro da enumeração BindingMode. Cada propriedade associável tem um modo de associação padrão, que indica o modo em vigor quando essa propriedade é um destino da associação de dados.
 ms.prod: xamarin
 ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
@@ -10,20 +10,20 @@ ms.date: 05/01/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c14215071a1d9d3ec804c307fa6edbbe4ddcf8e9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8a7c62ec6d7329227abd8f52644212341098185f
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139770"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556432"
 ---
-# <a name="xamarinforms-binding-mode"></a>Xamarin.FormsModo de ligação
+# <a name="no-locxamarinforms-binding-mode"></a>Xamarin.Forms Modo de ligação
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 No [artigo anterior](basic-bindings.md), as páginas **Associação de código alternativa** e **Associação de XAML alternativa** apresentavam um `Label` com sua propriedade `Scale` associada à propriedade `Value` de um `Slider`. Como o valor inicial de `Slider` é 0, isso fez com que a propriedade `Scale` do `Label` fosse definida como 0 em vez de 1 e o `Label` desapareceu.
 
-Na amostra [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos), a página **Associação inversa** é semelhante aos programas do artigo anterior, exceto que a associação de dados é definida no `Slider` em vez de no `Label`:
+Na amostra [**DataBindingDemos**](/samples/xamarin/xamarin-forms-samples/databindingdemos), a página **Associação inversa** é semelhante aos programas do artigo anterior, exceto que a associação de dados é definida no `Slider` em vez de no `Label`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -684,7 +684,7 @@ A outra captura de tela mostra as configurações alteradas. Ao experimentar com
 
 No próximo artigo, você verá como especificar a [**Formatação da cadeia de caracteres**](string-formatting.md) de associações de dados que são definidas na propriedade `Text` de `Label`.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [Demonstrações de associação de dados (amostra)](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Capítulo de vinculação de dados do Xamarin.Forms livro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e82572d88e380997fb2435179dba824c1b3f0c2f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: aa427035dc33b617bed14e0c6aa0b0db27efca7f
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936182"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556562"
 ---
 # <a name="the-path-fill-types"></a>Os tipos de preenchimento do caminho
 
@@ -23,7 +23,7 @@ ms.locfileid: "86936182"
 
 _Descobrir os diferentes efeitos possíveis com os tipos de preenchimento de caminho SkiaSharp_
 
-Dois contornos em um caminho podem se sobrepor e as linhas que compõem uma única delimitação podem se sobrepor. Qualquer área fechada pode potencialmente ser preenchida, mas talvez você não queira preencher todas as áreas incluídas. Este é um exemplo:
+Dois contornos em um caminho podem se sobrepor e as linhas que compõem uma única delimitação podem se sobrepor. Qualquer área fechada pode potencialmente ser preenchida, mas talvez você não queira preencher todas as áreas incluídas. Aqui está um exemplo:
 
 ![Filles em estrela de cinco pontas](fill-types-images/filltypeexample.png)
 
@@ -230,5 +230,5 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
