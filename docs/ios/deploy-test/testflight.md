@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 1f86227573fc5e9dc39d4781125c49a067e8967d
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 35adaf4a5cf9ce103cb36320692ad8307b9d1354
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997482"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91564115"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Usando TestFlight para distribuir aplicativos Xamarin.iOS
 
@@ -52,9 +52,9 @@ O fluxo de trabalho a seguir descreve as etapas necessárias para começar a usa
 3. Gerencie Testes Beta:
     - Adicione Metadados.
     - Adicione Usuários Internos:
-      - Máximo de 25 Usuários.
+      - Máximo de 100 usuários, cada usuário pode testar até 30 dispositivos.
     - Adicione Usuários Externos:
-      - Máximo de 1.000 Usuários.
+      - Máximo de 10000 usuários.
       - Requer uma análise de teste beta, que exige a conformidade com as diretrizes da Apple.
 4. Receba Comentários de usuários, aja com base neles e retorne para a etapa 2.
 
@@ -187,7 +187,7 @@ Testadores Internos são membros de sua equipe de desenvolvimento atribuídos a 
 - **Legal** – o Agente de Equipe é o único usuário administrativo que terá a função Legal atribuída. Isso permite que ele assine contratos legais.
 - **Técnico** – um usuário técnico pode alterar a maioria das propriedades em relação a um aplicativo. Por exemplo, editar informações do aplicativo, carregar um binário e enviar um aplicativo para análise.
 
-Cada build pode ser compartilhado com um máximo de 25 membros.
+Cada compilação pode ser compartilhada com um máximo de 100 membros, que pode cada teste em até 30 dispositivos.
 
 Para adicionar testadores, navegue até **Usuários e Funções** na tela principal do iTunes Connect:
 
@@ -221,7 +221,7 @@ Para enviar seu aplicativo para análise, clique no texto **Enviar para Análise
 
 Para seu aplicativo ser aprovado na análise, você deve inserir todos os metadados necessários na página Informações do Beta do TestFlight.
 
-Agora você pode começar a preparar convites e adicionar até 2.000 testadores externos por meio da guia Testadores Externos, inserindo seu email, Nome e Sobrenome, conforme ilustra a captura de tela abaixo. O email que você inserir não precisa ser sua ID da Apple; ele é apenas o email que receberá o convite.
+Agora você pode começar a preparar convites e a adicionar até 10000 testadores externos por meio da guia testadores externos, inserindo seu email, nome e sobrenome, conforme ilustrado na captura de tela abaixo. O email que você inserir não precisa ser sua ID da Apple; ele é apenas o email que receberá o convite.
 
 [![Convidar testadores](testflight-images/add-external.png)](testflight-images/add-external.png#lightbox)
 
