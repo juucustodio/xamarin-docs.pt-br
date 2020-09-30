@@ -10,12 +10,12 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 01/27/2020
-  ms.openlocfilehash: 394812b5150f7bbea46dff476bd2f896083b9a74
-  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+  ms.openlocfilehash: 593d8d20433222e1b18fd65b86a7586aa5560933
+  ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 04/09/2020
-  ms.locfileid: "77374078"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91454280"
 landingContent:
 - title: Introdução
   linkLists:
@@ -23,7 +23,7 @@ landingContent:
     links:
     - text: Introdução ao Xamarin.Android
       url: ~/android/get-started/index.md
-    - text: Configuração e instalação
+    - text: Instalação e configuração
       url: ~/android/get-started/installation/index.md
     - text: Criar seu primeiro aplicativo
       url: ~/android/get-started/hello-android/index.md
@@ -53,7 +53,7 @@ landingContent:
       url: ~/android/app-fundamentals/permissions.md
     - text: Toque e gestos
       url: ~/android/app-fundamentals/touch/index.md
-    - text: Veja mais >
+    - text: Ver mais >
       url: ~/android/app-fundamentals/index.md
 - title: Interface do usuário
   linkLists:
@@ -89,33 +89,33 @@ landingContent:
       url: ~/android/platform/fragments/index.md
     - text: Integração com o Java
       url: ~/android/platform/java-integration/index.md
-    - text: Agendador de Trabalhos
+    - text: Agendador de trabalho
       url: ~/android/platform/android-job-scheduler.md
     - text: Mapas e localização
       url: ~/android/platform/maps-and-location/index.md
-    - text: Veja mais >
+    - text: Ver mais >
       url: ~/android/platform/index.md
 - title: Xamarin.Essentials
   linkLists:
   - linkListType: concept
     links:
-    - text: Sobre o
+    - text: Sobre
       url: ~/essentials/index.md?context=xamarin/android
     - text: Introdução
       url: ~/essentials/get-started.md?context=xamarin/android
     - text: Suporte aos recursos e à plataforma
       url: ~/essentials/platform-feature-support.md?context=xamarin/android
-    - text: solução de problemas
+    - text: Solução de problemas
       url: ~/essentials/troubleshooting.md?context=xamarin/android
     - text: Notas de versão
-      url: https://docs.microsoft.com/xamarin/essentials/release-notes/
+      url: /xamarin/essentials/release-notes/
 - title: Serviços de nuvem e de dados
   linkLists:
   - linkListType: concept
     links:
     - text: Azure Active Directory
       url: ~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/android
-    - text: Aplicativos Móveis do Azure
+    - text: Aplicativos móveis do Azure
       url: ~/cross-platform/data-cloud/mobile-apps.md
     - text: Acesso de dados
       url: ~/android/data-cloud/data-access/index.md
@@ -139,13 +139,13 @@ landingContent:
       url: ~/android/deploy-test/performance.md
     - text: Criação de perfil
       url: ~/android/deploy-test/profiling.md
-    - text: Preparação para o lançamento
+    - text: Preparar para o lançamento
       url: ~/android/deploy-test/release-prep/index.md
     - text: Assinar o APK
       url: ~/android/deploy-test/signing/index.md
     - text: Publicar um aplicativo
       url: ~/android/deploy-test/publishing/index.md
-    - text: Veja mais >
+    - text: Ver mais >
       url: ~/android/deploy-test/index.md
 - title: Conceitos avançados e recursos internos
   linkLists:

@@ -9,12 +9,12 @@ metadata:
   author: conceptdev
   ms.author: crdun
   ms.date: 09/26/2019
-  ms.openlocfilehash: 161b1570f668ed13f235b72fca064b1349e25d8b
-  ms.sourcegitcommit: 0c45e3f810947e3d43223aa01bf3e43a0defca65
+  ms.openlocfilehash: c478d4f7f93d7ddeeb307aa87f324127f98ec6f4
+  ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 09/21/2020
-  ms.locfileid: "90843532"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91453227"
 highlightedContent:
   items:
   - title: Instalação e configuração
@@ -28,7 +28,7 @@ highlightedContent:
     url: ~/whats-new/index.yml
   - title: Aprimore suas habilidades de desenvolvimento móvel
     itemType: learn
-    url: https://docs.microsoft.com/learn/browse/?roles=developer&products=xamarin
+    url: /learn/browse/?products=xamarin&roles=developer
 productDirectory:
   items:
   - title: Xamarin.Forms multiplataforma
@@ -86,7 +86,7 @@ conceptualContent:
       url: ~/get-started/quickstarts/styling.md
       itemType: get-started
     footerLink:
-      url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms%20get%20started
+      url: /samples/browse/?products=xamarin&term=Xamarin.Forms%2bget%2bstarted
       text: Encontrar um exemplo
   - title: Seguir um tutorial
     links:
@@ -181,7 +181,7 @@ additionalContent:
       - text: Conceitos avançados e recursos internos
         url: ~/xamarin-forms/internals/index.md
       - text: Exemplos
-        url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms
+        url: /samples/browse/?products=xamarin&term=Xamarin.Forms
     - title: Android
       links:
       - text: Conceitos básicos do aplicativo
@@ -197,7 +197,7 @@ additionalContent:
       - text: Conceitos avançados e recursos internos
         url: ~/android/internals/index.md
       - text: Exemplos
-        url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android
+        url: /samples/browse/?products=xamarin&term=Xamarin.Android
     - title: iOS
       links:
       - text: Conceitos básicos do aplicativo
@@ -213,7 +213,7 @@ additionalContent:
       - text: Conceitos avançados e recursos internos
         url: ~/ios/internals/index.md
       - text: Exemplos
-        url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS
+        url: /samples/browse/?products=xamarin&term=Xamarin.iOS
     - title: Mac
       links:
       - text: Conceitos básicos do aplicativo
@@ -227,5 +227,5 @@ additionalContent:
       - text: Conceitos avançados e recursos internos
         url: ~/mac/internals/index.md
       - text: Exemplos
-        url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac
+        url: /samples/browse/?products=xamarin&term=Xamarin.Mac
   footer: '[Blogs](https://devblogs.microsoft.com/xamarin/) - [Twitter](https://twitter.com/xamarinhq) - [Stack Overflow](https://stackoverflow.com/questions/tagged/xamarin) - [Comunidade de Desenvolvedores](https://developercommunity.visualstudio.com/spaces/8/index.html)'
