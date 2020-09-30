@@ -10,12 +10,12 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 01/24/2020
-  ms.openlocfilehash: f800b61bfdf9d1e79eed6e943c2b49e4724ef641
-  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+  ms.openlocfilehash: c54bbc3d1157ad46abbfe798dbf3227efaed4f78
+  ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 04/09/2020
-  ms.locfileid: "77374104"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91432225"
 landingContent:
 - title: Introdução
   linkLists:
@@ -23,7 +23,7 @@ landingContent:
     links:
     - text: Introdução ao Xamarin.iOS
       url: ~/ios/get-started/index.md
-    - text: Configuração e instalação
+    - text: Instalação e configuração
       url: ~/ios/get-started/installation/index.md
     - text: Criar seu primeiro aplicativo
       url: ~/ios/get-started/hello-ios/index.md
@@ -53,7 +53,7 @@ landingContent:
       url: ~/ios/app-fundamentals/security-privacy.md
     - text: Toque
       url: ~/ios/app-fundamentals/touch/index.md
-    - text: Veja mais >
+    - text: Ver mais >
       url: ~/ios/app-fundamentals/index.md
 - title: Interface do usuário
   linkLists:
@@ -85,7 +85,7 @@ landingContent:
       url: ~/ios/platform/passkit.md
     - text: PhotoKit
       url: ~/ios/platform/photokit.md
-    - text: Search
+    - text: Pesquisar
       url: ~/ios/platform/search/index.md
     - text: SiriKit
       url: ~/ios/platform/sirikit/index.md
@@ -93,31 +93,31 @@ landingContent:
       url: ~/ios/platform/3d-touch.md
     - text: Touch ID e Face ID
       url: ~/ios/platform/touch-id-face-id.md
-    - text: Veja mais >
+    - text: Ver mais >
       url: ~/ios/platform/index.md
 - title: Xamarin.Essentials
   linkLists:
   - linkListType: concept
     links:
-    - text: Sobre o
+    - text: Sobre
       url: ~/essentials/index.md?context=xamarin/ios
     - text: Introdução
       url: ~/essentials/get-started.md?context=xamarin/ios
     - text: Suporte aos recursos e à plataforma
       url: ~/essentials/platform-feature-support.md?context=xamarin/ios
-    - text: solução de problemas
+    - text: Solução de problemas
       url: ~/essentials/troubleshooting.md?context=xamarin/ios
     - text: Notas de versão
-      url: https://docs.microsoft.com/xamarin/essentials/release-notes/
+      url: /xamarin/essentials/release-notes/
 - title: Serviços de nuvem e de dados
   linkLists:
   - linkListType: concept
     links:
     - text: Azure Active Directory
       url: ~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/ios
-    - text: Aplicativos Móveis do Azure
+    - text: Aplicativos móveis do Azure
       url: ~/cross-platform/data-cloud/mobile-apps.md
-    - text: Acesso aos Dados
+    - text: Acesso a dados
       url: ~/ios/data-cloud/data/index.md
     - text: System.Data
       url: ~/ios/data-cloud/system.data.md
@@ -149,7 +149,7 @@ landingContent:
       url: ~/ios/deploy-test/touch.unit.md
     - text: Implantação sem fio
       url: ~/ios/deploy-test/wireless-deployment.md
-    - text: Veja mais >
+    - text: Ver mais >
       url: ~/ios/deploy-test/index.md
 - title: Conceitos avançados e recursos internos
   linkLists:
@@ -191,7 +191,7 @@ landingContent:
       url: ~/essentials/index.md?context=xamarin/watchos
     - text: Implantação e teste
       url: ~/ios/watchos/deploy-test/index.md
-    - text: solução de problemas
+    - text: Solução de problemas
       url: ~/ios/watchos/troubleshooting.md
 - title: tvOS
   linkLists:
@@ -211,5 +211,5 @@ landingContent:
       url: ~/ios/tvos/deploy-test/index.md
     - text: Recursos internos
       url: ~/ios/tvos/internals/index.md
-    - text: solução de problemas
+    - text: Solução de problemas
       url: ~/ios/tvos/troubleshooting.md

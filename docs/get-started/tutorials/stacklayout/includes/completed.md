@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cb03ad89c4fa7a8bed876a7210add68be06cf4a3
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+ms.openlocfilehash: bfbe612f400681e1790b2c0b067b910fb8c3dd76
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83343387"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451459"
 ---
 Parabéns por concluir este tutorial, no qual você aprendeu a:
 
@@ -23,7 +23,7 @@ Para saber mais sobre os conceitos básicos da criação de aplicativos móveis 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [StackLayoutTutorial (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-stacklayouttutorial/)
+- [StackLayoutTutorial (amostra)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-stacklayouttutorial/)
 - [Xamarin.Forms StackLayout (guia)](~/xamarin-forms/user-interface/layouts/stacklayout.md)
 - [Margem e preenchimento (guia)](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)
 - [Opções de layout no Xamarin.Forms (guia)](~/xamarin-forms/user-interface/layouts/layout-options.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 95067df17424d5b9367578e675d747317a827de9
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 6316d1013a608a4e03c1cad73adaba96e1e37dc7
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71059528"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451628"
 ---
 Parabéns por concluir este tutorial, no qual você aprendeu a:
 
@@ -23,6 +23,6 @@ Para saber mais sobre os conceitos básicos da criação de aplicativos móveis 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ButtonTutorial (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-buttontutorial/)
+- [ButtonTutorial (amostra)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-buttontutorial/)
 - [Botão do Xamarin.Forms (guia)](~/xamarin-forms/user-interface/button.md)
 - [API do Botão](xref:Xamarin.Forms.Button)
