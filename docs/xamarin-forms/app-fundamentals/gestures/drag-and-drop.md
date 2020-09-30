@@ -10,12 +10,12 @@ ms.date: 08/04/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2d929043a6b4cd5dd8b06318df0d7a347708fe6c
-ms.sourcegitcommit: c3329ab25d377907d8804cdd5e26dc84a274f39c
+ms.openlocfilehash: d3eb7edbb24c7e28ee375e1de85f6a7597ec63ac
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88130910"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561009"
 ---
 # <a name="add-drag-and-drop-gesture-recognizers"></a>Adicionar reconhecedores de gestos de arrastar e soltar
 
@@ -35,10 +35,10 @@ A *fonte de arrastar*, que é o elemento no qual o gesto de arrastar é iniciado
 O processo para habilitar o recurso de arrastar e soltar em um aplicativo é o seguinte:
 
 1. Habilite a opção arrastar em um elemento adicionando um `DragGestureRecognizer` objeto à sua `GestureRecognizers` coleção e definindo a `DragGestureRecognizer.CanDrag` propriedade como `true` . Para obter mais informações, consulte [habilitar arrastar](#enable-drag).
-1. adicional Crie um pacote de dados. Xamarin.Formspopula automaticamente o pacote de dados para controles de imagem e texto, mas para outro conteúdo, você precisará construir seu próprio pacote de dados. Para obter mais informações, consulte [criar um pacote de dados](#build-a-data-package).
+1. adicional Crie um pacote de dados. Xamarin.Forms popula automaticamente o pacote de dados para controles de imagem e texto, mas para outro conteúdo, você precisará construir seu próprio pacote de dados. Para obter mais informações, consulte [criar um pacote de dados](#build-a-data-package).
 1. Habilite Drop em um elemento adicionando um `DropGestureRecognizer` objeto sua `GestureRecognizers` coleção e definindo a `DropGestureRecognizer.AllowDrop` propriedade como `true` . Para obter mais informações, consulte [habilitar drop](#enable-drop).
 1. adicional Manipule o `DropGestureRecognizer.DragOver` evento para indicar o tipo de operação permitido pelo destino de soltura. Para obter mais informações, consulte [manipular o evento DragOver](#handle-the-dragover-event).
-1. adicional Processe o pacote de dados para receber o conteúdo Descartado. Xamarin.Formso recuperará automaticamente dados de imagem e texto do pacote de dados, mas para outro conteúdo, você precisará processar o pacote de dados. Para obter mais informações, consulte [processar o pacote de dados](#process-the-data-package).
+1. adicional Processe o pacote de dados para receber o conteúdo Descartado. Xamarin.Forms o recuperará automaticamente dados de imagem e texto do pacote de dados, mas para outro conteúdo, você precisará processar o pacote de dados. Para obter mais informações, consulte [processar o pacote de dados](#process-the-data-package).
 
 > [!NOTE]
 > Não há suporte para arrastar itens para e de um [`CollectionView`](xref:Xamarin.Forms.CollectionView) no momento.
@@ -82,7 +82,7 @@ Neste exemplo, um gesto de arrastar pode ser iniciado no [`Image`](xref:Xamarin.
 
 ## <a name="build-a-data-package"></a>Criar um pacote de dados
 
-Xamarin.Formso criará automaticamente um pacote de dados para você, quando um arrastar for iniciado, para os seguintes controles:
+Xamarin.Forms o criará automaticamente um pacote de dados para você, quando um arrastar for iniciado, para os seguintes controles:
 
 - Controles de texto. Os valores de texto podem ser arrastados dos objetos,,,,,, [`CheckBox`](xref:Xamarin.Forms.CheckBox) [`DatePicker`](xref:Xamarin.Forms.DatePicker) [`Editor`](xref:Xamarin.Forms.Editor) [`Entry`](xref:Xamarin.Forms.Entry) [`Label`](xref:Xamarin.Forms.Label) [`RadioButton`](xref:Xamarin.Forms.RadioButton) [`Switch`](xref:Xamarin.Forms.Switch) e [`TimePicker`](xref:Xamarin.Forms.TimePicker) .
 - Controles de imagem. As imagens podem ser arrastadas de [`Button`](xref:Xamarin.Forms.Button) [`Image`](xref:Xamarin.Forms.Image) controles, e [`ImageButton`](xref:Xamarin.Forms.ImageButton) .
@@ -188,7 +188,7 @@ A `DropGestureRecognizer` classe também define `DragOver` e `Drop` eventos. Qua
 
 A `DragEventArgs` classe que acompanha o `DragOver` evento define as seguintes propriedades:
 
-- `Data`, do tipo `DataPackage` , que contém os dados associados à fonte de arrastar. Essa propriedade é somente leitura.
+- `Data`, do tipo `DataPackage` , que contém os dados associados à fonte de arrastar. Esta propriedade é somente para leitura.
 - `AcceptedOperation`, do tipo `DataPackageOperation` , que especifica quais operações são permitidas pelo destino de soltura.
 
 Para obter informações sobre a `DataPackageOperation` enumeração, consulte [manipular o evento DragOver](#handle-the-dragover-event).
@@ -259,14 +259,14 @@ A tabela a seguir mostra as propriedades que são definidas e qualquer conversã
 
 | Control | Propriedade | Conversão |
 | --- | --- | --- |
-| `CheckBox` | `IsChecked` | `string`é convertido em um `bool` . |
-| `DatePicker` | `Date` | `string`é convertido em um `DateTime` . |
+| `CheckBox` | `IsChecked` | `string` é convertido em um `bool` . |
+| `DatePicker` | `Date` | `string` é convertido em um `DateTime` . |
 | `Editor` | `Text` ||
 | `Entry` | `Text` ||
 | `Label` | `Text` ||
-| `RadioButton` | `IsChecked` | `string`é convertido em um `bool` . |
-| `Switch` | `IsToggled` | `string`é convertido em um `bool` . |
-| `TimePicker` | `Time` | `string`é convertido em um `TimeSpan` . |
+| `RadioButton` | `IsChecked` | `string` é convertido em um `bool` . |
+| `Switch` | `IsToggled` | `string` é convertido em um `bool` . |
+| `TimePicker` | `Time` | `string` é convertido em um `TimeSpan` . |
 
 Para conteúdo que não seja texto e imagens, você mesmo precisará processar o pacote de dados.
 
@@ -312,4 +312,4 @@ Neste exemplo, o `Square` objeto é recuperado do recipiente de propriedades do 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Gesto de arrastar e soltar (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)
+- [Gesto de arrastar e soltar (exemplo)](/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)

@@ -1,6 +1,6 @@
 ---
-title: Xamarin.Formsdicionários de recursos
-description: Xamarin.FormsOs recursos XAML são objetos que podem ser compartilhados e reutilizados em um Xamarin.Forms aplicativo.
+title: Xamarin.Forms dicionários de recursos
+description: Xamarin.Forms Os recursos XAML são objetos que podem ser compartilhados e reutilizados em um Xamarin.Forms aplicativo.
 ms.prod: xamarin
 ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
 ms.technology: xamarin-forms
@@ -11,16 +11,16 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.custom: video
-ms.openlocfilehash: a1c7cfd4a0f3549b11ac51dc13b40da552f6b758
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cdf34d78751345857e89c6bfa6862b58207ad01e
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139406"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562126"
 ---
-# <a name="xamarinforms-resource-dictionaries"></a>Xamarin.Formsdicionários de recursos
+# <a name="no-locxamarinforms-resource-dictionaries"></a>Xamarin.Forms dicionários de recursos
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 
 Um [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) é um repositório de recursos que são usados por um Xamarin.Forms aplicativo. Os recursos típicos que são armazenados em um `ResourceDictionary` incluem [estilos](~/xamarin-forms/user-interface/styles/index.md), [modelos de controle](~/xamarin-forms/app-fundamentals/templates/control-template.md), [modelos de dados](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md), cores e conversores.
 
@@ -236,9 +236,9 @@ Quando [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) os recursos
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Dicionários de recursos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
+- [Dicionários de recursos (exemplo)](/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 - [Extensões de marcação do XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
-- [Xamarin.FormsEstilos](~/xamarin-forms/user-interface/styles/index.md)
+- [Xamarin.Forms Estilos](~/xamarin-forms/user-interface/styles/index.md)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 
 ## <a name="related-video"></a>Vídeo relacionado

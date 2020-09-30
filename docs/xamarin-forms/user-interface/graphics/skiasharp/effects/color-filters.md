@@ -10,16 +10,16 @@ ms.date: 08/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b9c89d4d426884d678e77687ffa226cced97be58
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 809477fe466ee7a8f0985308896c14341f2dd460
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136377"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561931"
 ---
 # <a name="skiasharp-color-filters"></a>SkiaSharp filtros de cores
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Filtros de cores podem traduzir cores em um bitmap (ou outra imagem) para outras cores para efeitos como a Posterização:
 
@@ -123,7 +123,7 @@ O [`SKColorFilter.CreateColorMatrix`](xref:SkiaSharp.SKColorFilter.CreateColorMa
 public static SKColorFilter CreateColorMatrix (float[] matrix);
 ```
 
-em que `matrix` é uma matriz dos 20 `float` valores. Ao criar a matriz em C#, é fácil formatar os números para que eles se assemelhem à matriz 4 × 5. Isso é demonstrado na página **matriz de escala cinza** no exemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
+em que `matrix` é uma matriz dos 20 `float` valores. Ao criar a matriz em C#, é fácil formatar os números para que eles se assemelhem à matriz 4 × 5. Isso é demonstrado na página **matriz de escala cinza** no exemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
 
 ```csharp
 public class GrayScaleMatrixPage : ContentPage
@@ -166,7 +166,7 @@ public class GrayScaleMatrixPage : ContentPage
 }
 ```
 
-O `DrawBitmap` método usado neste código é do arquivo **BitmapExtension.cs** incluído no exemplo de [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . 
+O `DrawBitmap` método usado neste código é do arquivo **BitmapExtension.cs** incluído no exemplo de [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . 
 
 Este é o resultado em execução em iOS, Android e Plataforma Universal do Windows:
 
@@ -176,7 +176,7 @@ Observe o valor na quarta linha e na quarta coluna. Esse é o fator crucial que 
 
 Ao experimentar as matrizes de cores, você pode tratar a transformação da perspectiva da origem ou da perspectiva do destino. Como o pixel vermelho da origem contribui para os pixels vermelho, verde e azul do destino? Isso é determinado pelos valores na primeira _coluna_ da matriz. Como alternativa, como o pixel vermelho de destino deve ser afetado pelos pixels vermelho, verde e azul da fonte? Isso é determinado pela primeira _linha_ da matriz.
 
-Para algumas ideias sobre como usar transformações de cores, consulte as páginas [**Recolorindo imagens**](https://docs.microsoft.com/dotnet/framework/winforms/advanced/recoloring-images) . A discussão se preocupa Windows Forms e a matriz é um formato diferente, mas os conceitos são os mesmos.
+Para algumas ideias sobre como usar transformações de cores, consulte as páginas [**Recolorindo imagens**](/dotnet/framework/winforms/advanced/recoloring-images) . A discussão se preocupa Windows Forms e a matriz é um formato diferente, mas os conceitos são os mesmos.
 
 A **matriz pastel** calcula o pixel vermelho de destino atenuando o pixel vermelho de origem e enfatizando ligeiramente os pixels vermelho e verde. Esse processo ocorre de forma semelhante para os pixels verde e azul:
 
@@ -302,5 +302,5 @@ Você pode usar várias tabelas de cores para diferentes canais de cores para v�
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

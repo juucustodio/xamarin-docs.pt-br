@@ -10,16 +10,16 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a1e6290c0f85b54c3fd8958bc43667714bdece20
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 12e3e95b0f87d0e93d157bebe057874430866c2b
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131047"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560774"
 ---
 # <a name="porter-duff-blend-modes"></a>Modos de mesclagem carregador-Duff
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Os modos de mesclagem carregador-Duff são nomeados após Thomas carregador e Tom Duff, que desenvolveu uma Algebra de composição enquanto trabalha para Lucasfilm. Suas [_imagens digitais de composição_](https://graphics.pixar.com/library/Compositing/paper.pdf) de papel foram publicadas na edição de julho de 1984 de _gráficos de computador_, páginas 253 a 259. Esses modos de mesclagem são essenciais para composição, que está montando várias imagens em uma cena composta:
 
@@ -71,13 +71,13 @@ Skia adiciona um modo 14 chamado `Modulate` que é muito semelhante a `Plus` , e
 
 Aqui estão os 14 modos carregador Duff, conforme definido em SkiaSharp. A tabela mostra como elas colorem cada uma das três áreas que não estão em branco no diagrama acima:
 
-| Mode       | Destino | Interseção | Fonte |
+| Modo       | Destination | Interseção | Fonte |
 | ---------- |:-----------:|:------------:|:------:|
 | `Clear`    |             |              |        |
 | `Src`      |             | Fonte       | X      |
-| `Dst`      | X           | Destino  |        |
+| `Dst`      | X           | Destination  |        |
 | `SrcOver`  | X           | Fonte       | X      |
-| `DstOver`  | X           | Destino  | X      |
+| `DstOver`  | X           | Destination  | X      |
 | `SrcIn`    |             | Fonte       |        |
 | `DstIn`    |             | Destino  |        |
 | `SrcOut`   |             |              | X      |
@@ -286,7 +286,7 @@ A página de **composição do Brick-Wall** mostra um exemplo de uma tarefa de c
 
 ![Macaco sentado](porter-duff-images/SeatedMonkey.jpg "Macaco sentado")
 
-Na preparação para a composição, um _fosco_ correspondente foi criado, que é outro bitmap que é preto onde você deseja que a imagem seja exibida e transparente caso contrário. Esse arquivo é denominado **SeatedMonkeyMatte.png** e está entre os recursos na pasta de **mídia** no exemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
+Na preparação para a composição, um _fosco_ correspondente foi criado, que é outro bitmap que é preto onde você deseja que a imagem seja exibida e transparente caso contrário. Esse arquivo é denominado **SeatedMonkeyMatte.png** e está entre os recursos na pasta de **mídia** no exemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) :
 
 ![Macaco encaixado fosco](porter-duff-images/SeatedMonkeyMatte.png "Macaco encaixado fosco")
 
@@ -512,7 +512,7 @@ As cores RGB são previamente multiplicadas pelo valor alfa. Por exemplo, se **S
 
 O resultado é mostrado entre colchetes com o canal alfa e a cor RGB, separados por uma vírgula: **[alfa, cor]**. Para a cor, o cálculo é executado separadamente para os componentes vermelho, verde e azul:
 
-| Mode       | Operação |
+| Modo       | Operação |
 | ---------- | --------- |
 | `Clear`    | [0, 0]    |
 | `Src`      | [SA, SC]  |
@@ -905,5 +905,5 @@ As capturas de tela a seguir mostram os três tipos de transições diferentes, 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsRoundEffect reutilizável
+title: Xamarin.Forms RoundEffect reutilizável
 description: RoundEffect é um efeito reutilizável que pode ser aplicado a qualquer controle derivado de Visualelement para renderizar o controle como um círculo.
 ms.prod: xamarin
 ms.assetid: B5DE7507-B565-4EE5-9897-27E5733FD173
@@ -10,16 +10,16 @@ ms.date: 10/25/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fc3776934a4c109b2527132b11c6c6a93b7d9f9e
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 47b459945aec4ef8f1c3fa9729efd82461aec0e0
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138847"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561957"
 ---
-# <a name="xamarinforms-reusable-roundeffect"></a>Xamarin.FormsRoundEffect reutilizável
+# <a name="no-locxamarinforms-reusable-roundeffect"></a>Xamarin.Forms RoundEffect reutilizável
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
 
 O RoundEffect simplifica a renderização de qualquer controle derivado de Visualelement como um círculo. Esse efeito pode ser usado para criar imagens circulares, botões e outros controles:
 
@@ -224,6 +224,6 @@ A `RoundEffect` classe pode ser aplicada a qualquer controle derivado de `Visual
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Aplicativo de exemplo RoundEffect](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
+- [Aplicativo de exemplo RoundEffect](/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
 - [Introdução aos efeitos](~/xamarin-forms/app-fundamentals/effects/introduction.md)
 - [Criando um efeito](~/xamarin-forms/app-fundamentals/effects/creating.md)

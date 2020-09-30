@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ed20da1005447334a99ea40c177c8f88d59d71ce
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 31a76e160186caec74665b7615323eb8e60b698a
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938460"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562321"
 ---
 # <a name="the-translate-transform"></a>A transformação de conversão
 
@@ -41,7 +41,7 @@ Esses argumentos podem ser negativos. Um segundo [`Translate`](xref:SkiaSharp.SK
 public void Translate (SKPoint point)
 ```
 
-A página de **tradução acumulada** do programa de exemplo [**SkiaSharpForms**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) demonstra que várias chamadas do `Translate` método são cumulativas. A [`AccumulatedTranslatePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) classe exibe 20 versões do mesmo retângulo, cada um dos deslocamentos do retângulo anterior apenas o suficiente para que eles se Alonguem ao longo da diagonal. Este é o `PaintSurface` manipulador de eventos:
+A página de **tradução acumulada** do programa de exemplo [**SkiaSharpForms**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) demonstra que várias chamadas do `Translate` método são cumulativas. A [`AccumulatedTranslatePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) classe exibe 20 versões do mesmo retângulo, cada um dos deslocamentos do retângulo anterior apenas o suficiente para que eles se Alonguem ao longo da diagonal. Este é o `PaintSurface` manipulador de eventos:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -308,5 +308,5 @@ Observe que a estrela mantém a mesma orientação que ela gira em todo o centro
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

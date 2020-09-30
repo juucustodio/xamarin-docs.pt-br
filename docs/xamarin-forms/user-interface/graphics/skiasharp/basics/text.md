@@ -10,12 +10,12 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a98c7210f2e71f6f26d53da3555f3f9b5e016952
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 032a01a1e4e0f2b3e3d394aec6a30bd215fd84f8
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935974"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562412"
 ---
 # <a name="integrating-text-and-graphics"></a>Integração de texto e elementos gráficos
 
@@ -65,10 +65,10 @@ A segunda [`MeasureText`](xref:SkiaSharp.SKPaint.MeasureText(System.String,SkiaS
 
 As `Left` `Top` Propriedades e da `SKRect` estrutura indicam as coordenadas do canto superior esquerdo do texto renderizado se o texto for exibido por uma `DrawText` chamada com as posições X e Y de 0. Por exemplo, quando esse programa estiver em execução em um simulador do iPhone 7, `TextSize` o valor 90,6254 será atribuído como resultado do cálculo após a primeira chamada para `MeasureText` . O `SKRect` valor obtido da segunda chamada para `MeasureText` tem os seguintes valores de propriedade:
 
-- `Left`= 6
+- `Left` = 6
 - `Top` = &ndash;68
-- `Width`= 664,8214
-- `Height`= 88;
+- `Width` = 664,8214
+- `Height` = 88;
 
 Tenha em mente que as coordenadas X e Y que você passa para o `DrawText` método especificam o lado esquerdo do texto na linha de base. O `Top` valor indica que o texto estende 68 pixels acima da linha de base e (subtraindo 68 de 88) 20 pixels abaixo da linha de base. O `Left` valor de 6 indica que o texto começa com seis pixels à direita do valor X na `DrawText` chamada. Isso permite um espaçamento entre caracteres normal. Se você quiser exibir o texto de forma confortavel no canto superior esquerdo da tela, passe os negativos desses `Left` `Top` valores e como as coordenadas X e Y de `DrawText` , neste exemplo, &ndash; 6 e 68.
 
@@ -179,5 +179,5 @@ Outro objeto gráfico comum é o bitmap. Esse é um tópico grande abordado em d
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

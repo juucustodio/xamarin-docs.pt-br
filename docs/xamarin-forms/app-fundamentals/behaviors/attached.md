@@ -10,12 +10,12 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 55c987ab9f9a95eaeacf648af11c3518a1c27c2a
-ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
+ms.openlocfilehash: 6c8c43a877a102d9e16070da00813b00e7ef1c38
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88964643"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561359"
 ---
 # <a name="attached-behaviors"></a>Comportamentos anexados
 
@@ -134,4 +134,4 @@ Este artigo demonstrou como criar e consumir comportamentos anexados. Comportame
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Comportamentos anexados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-attachednumericvalidationbehavior)
+- [Comportamentos anexados (amostra)](/samples/xamarin/xamarin-forms-samples/behaviors-attachednumericvalidationbehavior)

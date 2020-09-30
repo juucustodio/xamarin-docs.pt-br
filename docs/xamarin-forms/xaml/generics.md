@@ -1,6 +1,6 @@
 ---
 title: Genéricos em Xamarin.Forms XAML
-description: Xamarin.FormsO XAML fornece suporte para o consumo de tipos CLR genéricos especificando as restrições genéricas como argumentos de tipo.
+description: Xamarin.Forms O XAML fornece suporte para o consumo de tipos CLR genéricos especificando as restrições genéricas como argumentos de tipo.
 ms.prod: xamarin
 ms.assetid: 97B73048-4F90-41AD-AB48-8EB804C4998B
 ms.technology: xamarin-forms
@@ -10,18 +10,18 @@ ms.date: 04/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5a033e5feeefc41b97be29491a70632e767aa1b4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e6856e0ef513905a6300dcaf661ea33f4a89852c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84565194"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563907"
 ---
-# <a name="generics-in-xamarinforms-xaml"></a>Genéricos em Xamarin.Forms XAML
+# <a name="generics-in-no-locxamarinforms-xaml"></a>Genéricos em Xamarin.Forms XAML
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
 
-Xamarin.FormsO XAML fornece suporte para o consumo de tipos CLR genéricos especificando as restrições genéricas como argumentos de tipo. Esse suporte é fornecido pela `x:TypeArguments` diretiva, que passa os argumentos de tipo restrito de um genérico para o construtor do tipo genérico.
+Xamarin.Forms O XAML fornece suporte para o consumo de tipos CLR genéricos especificando as restrições genéricas como argumentos de tipo. Esse suporte é fornecido pela `x:TypeArguments` diretiva, que passa os argumentos de tipo restrito de um genérico para o construtor do tipo genérico.
 
 > [!IMPORTANT]
 > Xamarin.FormsNão há suporte para definir classes genéricas em XAML, com a `x:TypeArguments` diretiva.
@@ -212,7 +212,7 @@ Neste exemplo, `GenericsDemo.Models` é definido como o `models` namespace XAML 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Genéricos em XAML (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
+- [Genéricos em XAML (exemplo)](/samples/xamarin/xamarin-forms-samples/xaml-generics/)
 - [Primitivos de linguagem XAML 2009](/dotnet/desktop-wpf/xaml-services/types-for-primitives#xaml-2009-language-primitives)
 - [extensão de marcação x:Type](~/xamarin-forms/xaml/markup-extensions/consuming.md#xtype-markup-extension)
 - [Passando argumentos de Construtor](~/xamarin-forms/xaml/passing-arguments.md#passing-constructor-arguments)

@@ -10,18 +10,18 @@ ms.date: 05/09/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 47770b4f57da530677dead051fc657ab24e776f5
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: db0591f89447a2ae083f5ac73f6e002b4d0ee6f8
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933803"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561346"
 ---
-# <a name="keyboard-accessibility-in-xamarinforms"></a>Acessibilidade de teclado noXamarin.Forms
+# <a name="keyboard-accessibility-in-no-locxamarinforms"></a>Acessibilidade de teclado no Xamarin.Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
-Os usuários que utilizam leitores de tela ou que tenham problemas de mobilidade podem ter dificuldade para usar aplicativos que não fornecem acesso apropriado por teclado. Xamarin.Formsos aplicativos podem ter uma ordem de tabulação esperada especificada para melhorar sua usabilidade e acessibilidade. Especificar uma ordem de tabulação para os controles habilita a navegação por teclado, prepara as páginas do aplicativo para receber as entradas em uma ordem específica e possibilita aos leitores de tela a leitura de elementos focalizáveis para o usuário.
+Os usuários que utilizam leitores de tela ou que tenham problemas de mobilidade podem ter dificuldade para usar aplicativos que não fornecem acesso apropriado por teclado. Xamarin.Forms os aplicativos podem ter uma ordem de tabulação esperada especificada para melhorar sua usabilidade e acessibilidade. Especificar uma ordem de tabulação para os controles habilita a navegação por teclado, prepara as páginas do aplicativo para receber as entradas em uma ordem específica e possibilita aos leitores de tela a leitura de elementos focalizáveis para o usuário.
 
 Por padrão, a ordem de tabulação dos controles é a mesma ordem em que eles são listados no XAML ou são adicionados de maneira programática a uma coleção filho. Essa é a ordem em que os controles serão navegados usando um teclado e lidos pelos leitores de tela, e geralmente essa ordem padrão é a melhor. No entanto, a ordem padrão nem sempre é o mesmo que a ordem esperada, conforme mostrado no exemplo de código XAML a seguir:
 
@@ -69,9 +69,9 @@ A `VisualElement.TabIndex` propriedade é usada para indicar a ordem na qual [`V
 
 As seguintes regras se aplicam ao usar a ordem de tabulação padrão ou ao definir a propriedade `TabIndex`:
 
-- [`VisualElement`](xref:Xamarin.Forms.VisualElement)as instâncias com `TabIndex` igual a 0 são adicionadas à ordem de tabulação com base em sua ordem de declaração em coleções XAML ou filho.
-- [`VisualElement`](xref:Xamarin.Forms.VisualElement)as instâncias com um `TabIndex` maior que 0 são adicionadas à ordem de tabulação com base em seu `TabIndex` valor.
-- [`VisualElement`](xref:Xamarin.Forms.VisualElement)as instâncias com `TabIndex` menos de 0 são adicionadas à ordem de tabulação e aparecem antes de qualquer valor zero.
+- [`VisualElement`](xref:Xamarin.Forms.VisualElement) as instâncias com `TabIndex` igual a 0 são adicionadas à ordem de tabulação com base em sua ordem de declaração em coleções XAML ou filho.
+- [`VisualElement`](xref:Xamarin.Forms.VisualElement) as instâncias com um `TabIndex` maior que 0 são adicionadas à ordem de tabulação com base em seu `TabIndex` valor.
+- [`VisualElement`](xref:Xamarin.Forms.VisualElement) as instâncias com `TabIndex` menos de 0 são adicionadas à ordem de tabulação e aparecem antes de qualquer valor zero.
 - Conflitos em um `TabIndex` são resolvidos pela ordem de declaração.
 
 Após definir uma ordem de tabulação, pressionar a tecla Tab passará o foco pelos controles na ordem crescente de `TabIndex`, voltando para o início quando o controle final é atingido.
@@ -149,4 +149,4 @@ As propriedades `TabIndex` e `IsTabStop` têm suporte nos seguintes controles, q
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Acessibilidade (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
+- [Acessibilidade (amostra)](/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)

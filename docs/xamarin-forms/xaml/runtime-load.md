@@ -1,5 +1,5 @@
 ---
-title: Carregando XAML em tempo de execução noXamarin.Forms
+title: Carregando XAML em tempo de execução no Xamarin.Forms
 description: O XAML pode ser carregado e analisado em tempo de execução com os métodos de extensão LoadFromXaml.
 ms.prod: xamarin
 ms.assetid: 25F73FBF-2DD3-468E-A2D8-0897414F0F4A
@@ -10,20 +10,20 @@ ms.date: 12/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d750aa84a48ad4c8015a619d819134cefc63c3d9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 071a7de630d7d7b7582e3c9fa8906919e92d1fb5
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139341"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561996"
 ---
-# <a name="loading-xaml-at-runtime-in-xamarinforms"></a>Carregando XAML em tempo de execução noXamarin.Forms
+# <a name="loading-xaml-at-runtime-in-no-locxamarinforms"></a>Carregando XAML em tempo de execução no Xamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)
 
 O [`Xamarin.Forms.Xaml`](xref:Xamarin.Forms.Xaml) namespace inclui dois [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) métodos de extensão que podem ser usados para carregar e analisar XAML em tempo de execução.
 
-## <a name="background"></a>Segundo plano
+## <a name="background"></a>Tela de fundo
 
 Quando uma Xamarin.Forms classe XAML é construída, o [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) método é chamado indiretamente. Isso ocorre porque o arquivo code-behind para uma classe XAML chama o `InitializeComponent` método de seu construtor:
 
@@ -104,4 +104,4 @@ Neste exemplo, o XAML para um é inconsistente [`ContentPage`](xref:Xamarin.Form
 
 ## <a name="related-links"></a>Links relacionados
 
-- [LoadRuntimeXAML (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)
+- [LoadRuntimeXAML (exemplo)](/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)

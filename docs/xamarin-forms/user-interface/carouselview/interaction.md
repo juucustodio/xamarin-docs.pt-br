@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsInteração CarouselView
+title: Xamarin.Forms Interação CarouselView
 description: O item atualmente exibido em um CarouselView pode ser acessado por meio das propriedades CurrentItem e Position.
 ms.prod: xamarin
 ms.assetid: 854D97E5-D119-4BE2-AE7C-BD428792C992
@@ -10,18 +10,18 @@ ms.date: 02/11/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 57c501c0f789ce448d8381cbbccb46666cf06305
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 43f2e32a240b74fde50659033096c8a7246ea60c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137404"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91564050"
 ---
-# <a name="xamarinforms-carouselview-interaction"></a>Xamarin.FormsInteração CarouselView
+# <a name="no-locxamarinforms-carouselview-interaction"></a>Xamarin.Forms Interação CarouselView
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)define as seguintes propriedades que controlam a interação do usuário:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) define as seguintes propriedades que controlam a interação do usuário:
 
 - `CurrentItem`, do tipo `object` , o item atual que está sendo exibido. Essa propriedade tem um modo de associação padrão de `TwoWay` e tem um `null` valor quando não há dados a serem exibidos.
 - `CurrentItemChangedCommand`, do tipo `ICommand` , que é executado quando o item atual é alterado.
@@ -35,15 +35,15 @@ ms.locfileid: "84137404"
 
 Todas essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que as propriedades podem ser destinos de associações de dados.
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)define um `CurrentItemChanged` evento que é disparado quando a `CurrentItem` propriedade é alterada, seja devido à rolagem do usuário ou quando um aplicativo define a propriedade. O `CurrentItemChangedEventArgs` objeto que acompanha o `CurrentItemChanged` evento tem duas propriedades, ambas do tipo `object` :
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) define um `CurrentItemChanged` evento que é disparado quando a `CurrentItem` propriedade é alterada, seja devido à rolagem do usuário ou quando um aplicativo define a propriedade. O `CurrentItemChangedEventArgs` objeto que acompanha o `CurrentItemChanged` evento tem duas propriedades, ambas do tipo `object` :
 
-- `PreviousItem`– o item anterior, após a alteração da propriedade.
-- `CurrentItem`– o item atual, após a alteração da propriedade.
+- `PreviousItem` – o item anterior, após a alteração da propriedade.
+- `CurrentItem` – o item atual, após a alteração da propriedade.
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)também define um `PositionChanged` evento que é disparado quando a `Position` propriedade é alterada, seja devido à rolagem do usuário ou quando um aplicativo define a propriedade. O `PositionChangedEventArgs` objeto que acompanha o `PositionChanged` evento tem duas propriedades, ambas do tipo `int` :
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) também define um `PositionChanged` evento que é disparado quando a `Position` propriedade é alterada, seja devido à rolagem do usuário ou quando um aplicativo define a propriedade. O `PositionChangedEventArgs` objeto que acompanha o `PositionChanged` evento tem duas propriedades, ambas do tipo `int` :
 
-- `PreviousPosition`– a posição anterior, após a alteração da propriedade.
-- `CurrentPosition`– a posição atual, após a alteração da propriedade.
+- `PreviousPosition` – a posição anterior, após a alteração da propriedade.
+- `CurrentPosition` – a posição atual, após a alteração da propriedade.
 
 ## <a name="respond-to-the-current-item-changing"></a>Responder à alteração do item atual
 
@@ -281,12 +281,12 @@ Neste exemplo, a `Position` propriedade é definida como o quarto item da `Monke
 
 ## <a name="define-visual-states"></a>Definir estados visuais
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)define quatro estados visuais:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) define quatro estados visuais:
 
-- `CurrentItem`representa o estado visual do item exibido no momento.
-- `PreviousItem`representa o estado visual do item exibido anteriormente.
-- `NextItem`representa o estado visual do próximo item.
-- `DefaultItem`representa o estado visual do restante dos itens.
+- `CurrentItem` representa o estado visual do item exibido no momento.
+- `PreviousItem` representa o estado visual do item exibido anteriormente.
+- `NextItem` representa o estado visual do próximo item.
+- `DefaultItem` representa o estado visual do restante dos itens.
 
 Esses Estados visuais podem ser usados para iniciar alterações visuais nos itens exibidos pelo [`CarouselView`](xref:Xamarin.Forms.CarouselView) .
 
@@ -362,5 +362,5 @@ Por padrão, o [`CarouselView`](xref:Xamarin.Forms.CarouselView) permite aos usu
 
 ## <a name="related-links"></a>Links relacionados
 
-- [CarouselView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
-- [Xamarin.FormsGerenciador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [CarouselView (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+- [Xamarin.Forms Gerenciador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)

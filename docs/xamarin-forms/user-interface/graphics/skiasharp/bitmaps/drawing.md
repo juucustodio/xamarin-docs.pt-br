@@ -10,16 +10,16 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c045e297beca675c0582efc2f75b1d6b2bcedcf8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 91051b1ffc859d4e3deb62d41709db0c587b2789
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573283"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91560826"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Criando e desenhando bitmaps SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Você viu como um aplicativo pode carregar bitmaps da Web, de recursos do aplicativo e da biblioteca de fotos do usuário. Também é possível criar novos bitmaps dentro de seu aplicativo. A abordagem mais simples envolve um dos construtores de [`SKBitmap`](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)) :
 
@@ -59,7 +59,7 @@ using (SKCanvas canvas = new SKCanvas(bitmap))
 
 O bitmap pode ser exibido. Posteriormente, o programa pode criar um novo `SKCanvas` objeto com base no mesmo bitmap e desenhá-lo mais uma vez.
 
-A página de **bitmap de saudação** no aplicativo **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** grava o texto "Olá, bitmap!" em um bitmap e, em seguida, exibe esse bitmap várias vezes.
+A página de **bitmap de saudação** no aplicativo **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** grava o texto "Olá, bitmap!" em um bitmap e, em seguida, exibe esse bitmap várias vezes.
 
 O construtor do `HelloBitmapPage` começa criando um `SKPaint` objeto para exibir o texto. Ele determina as dimensões de uma cadeia de texto e cria um bitmap com essas dimensões. Em seguida, ele cria um `SKCanvas` objeto com base no bitmap, chamadas `Clear` e, em seguida, chama `DrawText` . É sempre uma boa ideia chamar `Clear` um novo bitmap, pois um bitmap recém-criado pode conter dados aleatórios.
 
@@ -126,7 +126,7 @@ A exibição da página de **bitmap de saudação** demonstra que o bitmap criad
 
 A documentação dos `Clear` métodos de `SKCanvas` Descrição deles com a instrução: "substitui todos os pixels no clipe atual da tela". O uso da palavra "substitui" revela uma característica importante desses métodos: todos os métodos de desenho de `SKCanvas` adicionar algo à superfície de exibição existente. Os `Clear` métodos _substituem_ o que já existe.
 
-`Clear`existe em duas versões diferentes:
+`Clear` existe em duas versões diferentes:
 
 - O [`Clear`](xref:SkiaSharp.SKCanvas.Clear(SkiaSharp.SKColor)) método com um `SKColor` parâmetro substitui os pixels da superfície de exibição por pixels dessa cor.
 
@@ -176,8 +176,8 @@ Hoje em dia, os programadores quase sempre usam bitmaps de cor completa e não s
 
 Esta série de artigos se restringirá aos `SKBitmap` formatos de cores usados por padrão quando nenhum `SKColorType` membro for especificado. Esse formato padrão é baseado na plataforma subjacente. Para as plataformas com suporte Xamarin.Forms no, o tipo de cor padrão é:
 
-- `Rgba8888`para iOS e Android
-- `Bgra8888`para o UWP
+- `Rgba8888` para iOS e Android
+- `Bgra8888` para o UWP
 
 A única diferença é a ordem dos 4 bytes na memória, e isso só se torna um problema quando você acessa diretamente os bits de pixel. Isso não se tornará importante até chegar ao artigo [**acessando os pixels de bitmap SkiaSharp**](pixel-bits.md).
 
@@ -267,7 +267,7 @@ Os métodos do `SKCanvas` que você pode usar para desenhar em um bitmap incluem
 
 A maneira mais versátil de modificar um bitmap é acessar os bits de pixel reais, um assunto abordado no artigo **[acessando os pixels de bitmap SkiaSharp](pixel-bits.md)**. Mas há muitas outras técnicas para modificar os bitmaps que não exigem o acesso aos bits de pixel.
 
-O bitmap a seguir incluído no aplicativo **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** tem 360 pixels de largura e 480 pixels de altura:
+O bitmap a seguir incluído no aplicativo **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** tem 360 pixels de largura e 480 pixels de altura:
 
 ![Escalares de montanha](drawing-images/MountainClimbers.jpg "Escalares de montanha")
 
@@ -497,7 +497,7 @@ O bitmap girado é muito grande o suficiente para incluir o bitmap original inte
 
 Outra operação normalmente executada em bitmaps é chamada de _inversão_. Conceitualmente, o bitmap é girado em três dimensões em um eixo vertical ou em um eixo horizontal por meio do centro do bitmap. A inversão vertical cria uma imagem espelho.
 
-A página de **palheta do bitmap** no aplicativo **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** demonstra esses processos. O arquivo XAML contém um `SKCanvasView` e dois botões para inverter vertical e horizontalmente:
+A página de **palheta do bitmap** no aplicativo **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** demonstra esses processos. O arquivo XAML contém um `SKCanvasView` e dois botões para inverter vertical e horizontalmente:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -599,5 +599,5 @@ Outra tarefa comum que pode ser tratada usando técnicas semelhantes é cortar u
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

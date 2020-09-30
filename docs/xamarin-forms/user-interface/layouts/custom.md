@@ -1,5 +1,5 @@
 ---
-title: Criar um layout personalizado emXamarin.Forms
+title: Criar um layout personalizado em Xamarin.Forms
 description: Este artigo explica como escrever uma classe de layout personalizada e demonstra uma classe WrapLayout sensível à orientação que organiza seus filhos horizontalmente na página e, em seguida, encapsula a exibição de filhos subsequentes em linhas adicionais.
 ms.prod: xamarin
 ms.assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31
@@ -10,18 +10,18 @@ ms.date: 03/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b3063a644a48a8796b03b1a6acedbbcbfc7acbf7
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 63a939e7093bcbe52f1aed376253c7aa78b078bf
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934258"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563842"
 ---
-# <a name="create-a-custom-layout-in-xamarinforms"></a>Criar um layout personalizado emXamarin.Forms
+# <a name="create-a-custom-layout-in-no-locxamarinforms"></a>Criar um layout personalizado em Xamarin.Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
-_Xamarin.Formsdefine cinco classes de layout – StackLayout, AbsoluteLayout, RelativeLayout, Grid e FlexLayout, e cada uma organiza seus filhos de forma diferente. No entanto, às vezes é necessário organizar o conteúdo da página usando um layout não fornecido pelo Xamarin.Forms . Este artigo explica como escrever uma classe de layout personalizada e demonstra uma classe WrapLayout sensível à orientação que organiza seus filhos horizontalmente na página e, em seguida, encapsula a exibição de filhos subsequentes em linhas adicionais._
+_Xamarin.Forms define cinco classes de layout – StackLayout, AbsoluteLayout, RelativeLayout, Grid e FlexLayout, e cada uma organiza seus filhos de forma diferente. No entanto, às vezes é necessário organizar o conteúdo da página usando um layout não fornecido pelo Xamarin.Forms . Este artigo explica como escrever uma classe de layout personalizada e demonstra uma classe WrapLayout sensível à orientação que organiza seus filhos horizontalmente na página e, em seguida, encapsula a exibição de filhos subsequentes em linhas adicionais._
 
 No Xamarin.Forms , todas as classes de layout derivam da [`Layout<T>`](xref:Xamarin.Forms.Layout`1) classe e restringem o tipo genérico para [`View`](xref:Xamarin.Forms.View) e seus tipos derivados. Por sua vez, a `Layout<T>` classe deriva da [`Layout`](xref:Xamarin.Forms.Layout) classe, que fornece o mecanismo de posicionamento e dimensionamento de elementos filho.
 
@@ -40,7 +40,7 @@ A [`VisualElement`](xref:Xamarin.Forms.VisualElement) classe define um [ `Measur
 
 Esse ciclo garante que todos os elementos visuais na página recebam chamadas para `Measure` os `Layout` métodos e. O processo é mostrado no diagrama a seguir:
 
-![Xamarin.FormsCiclo de layout](custom-images/layout-cycle.png)
+![::: no-Loc (Xamarin. Forms)::: ciclo de layout](custom-images/layout-cycle.png)
 
 > [!NOTE]
 > Observe que os ciclos de layout também podem ocorrer em um subconjunto da árvore visual se algo mudar para afetar o layout. Isso inclui itens sendo adicionados ou removidos de uma coleção, como em um [`StackLayout`](xref:Xamarin.Forms.StackLayout) , uma alteração na [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) propriedade de um elemento ou uma alteração no tamanho de um elemento.
@@ -108,10 +108,10 @@ public class WrapLayout : Layout<View>
 
 A `LayoutData` estrutura armazena dados sobre uma coleção de filhos em várias propriedades:
 
-- `VisibleChildCount`– o número de filhos que são visíveis no layout.
-- `CellSize`– o tamanho máximo de todos os filhos, ajustados para o tamanho do layout.
-- `Rows`– o número de linhas.
-- `Columns`– o número de colunas.
+- `VisibleChildCount` – o número de filhos que são visíveis no layout.
+- `CellSize` – o tamanho máximo de todos os filhos, ajustados para o tamanho do layout.
+- `Rows` – o número de linhas.
+- `Columns` – o número de colunas.
 
 O `layoutDataCache` campo é usado para armazenar vários `LayoutData` valores. Quando o aplicativo for iniciado, dois `LayoutData` objetos serão armazenados em cache no `layoutDataCache` dicionário para a orientação atual – um para os argumentos de restrição para a `OnMeasure` substituição e um para os `width` `height` argumentos e para a `LayoutChildren` substituição. Ao girar o dispositivo para a orientação paisagem, a `OnMeasure` substituição e a `LayoutChildren` substituição serão invocadas novamente, o que fará com que outros dois `LayoutData` objetos sejam armazenados em cache no dicionário. No entanto, ao retornar o dispositivo para a orientação retrato, nenhum cálculo adicional é necessário porque o `layoutDataCache` já tem os dados necessários.
 
@@ -412,7 +412,7 @@ O número de colunas em cada linha depende do tamanho da foto, da largura da tel
 
 ## <a name="related-links"></a>Links relacionados
 
-- [WrapLayout (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
+- [WrapLayout (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [Layouts personalizados](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
 - [Criando layouts personalizados no Xamarin.Forms (vídeo)](https://www.youtube.com/watch?v=sxjOqNZFhKU)
 - [Layout\<T>](xref:Xamarin.Forms.Layout`1)

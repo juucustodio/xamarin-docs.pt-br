@@ -10,16 +10,16 @@ ms.date: 03/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3fcea963b253ea34601a36434007f18d925975eb
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9923a7f0605a7ca5d9d81269c3d855e92fbccaf4
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131333"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91564076"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensões de marcação do XAML
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _As extensões de marcação XAML constituem um recurso importante em XAML que permite que as propriedades sejam definidas para objetos ou valores que são referenciados indiretamente de outras fontes. As extensões de marcação XAML são particularmente importantes para compartilhar objetos e referenciar constantes usadas em um aplicativo, mas elas encontram seu maior utilitário em associações de dados._
 
@@ -146,7 +146,7 @@ Agora é necessário definir as `HorizontalOptions` `VerticalOptions` Propriedad
 
 A `StaticResource` extensão de marcação sempre é delimitada por chaves e inclui a chave de dicionário.
 
-O nome o `StaticResource` distingue de `DynamicResource` , que Xamarin.Forms também dá suporte a. `DynamicResource`é para chaves de dicionário associadas a valores que podem ser alterados durante o tempo de execução, enquanto `StaticResource` acessa elementos do dicionário apenas uma vez quando os elementos na página são construídos.
+O nome o `StaticResource` distingue de `DynamicResource` , que Xamarin.Forms também dá suporte a. `DynamicResource` é para chaves de dicionário associadas a valores que podem ser alterados durante o tempo de execução, enquanto `StaticResource` acessa elementos do dicionário apenas uma vez quando os elementos na página são construídos.
 
 Para a `BorderWidth` propriedade, é necessário armazenar um duplo no dicionário. O XAML, convenientemente, define marcas para tipos de dados comuns como `x:Double` e `x:Int32` :
 
@@ -323,7 +323,7 @@ Um dos tipos mais comuns de objetos armazenados em dicionários de recursos é o
 
 ## <a name="the-xstatic-markup-extension"></a>A extensão de marcação x:Static
 
-Apesar das semelhanças de seus nomes `x:Static` e `StaticResource` são muito diferentes. `StaticResource`Retorna um objeto de um dicionário de recursos enquanto `x:Static` acessa um dos seguintes:
+Apesar das semelhanças de seus nomes `x:Static` e `StaticResource` são muito diferentes. `StaticResource` Retorna um objeto de um dicionário de recursos enquanto `x:Static` acessa um dos seguintes:
 
 - um campo estático público
 - uma propriedade estática pública
@@ -444,9 +444,9 @@ O tamanho do resultado `BoxView` relativo à tela depende da plataforma:
 
 Várias extensões de marcação são intrínsecas ao XAML e têm suporte em Xamarin.Forms arquivos XAML. Alguns deles não são usados com muita frequência, mas são essenciais quando você precisa deles:
 
-- Se uma propriedade não tiver `null` valor por padrão, mas você quiser defini-la como `null` , defina-a como a `{x:Null}` extensão de marcação.
-- Se uma propriedade for do tipo `Type` , você poderá atribuí-la a um `Type` objeto usando a extensão de marcação `{x:Type someClass}` .
-- Você pode definir matrizes em XAML usando a `x:Array` extensão de marcação. Essa extensão de marcação tem um atributo necessário chamado `Type` que indica o tipo dos elementos na matriz.
+- Se uma propriedade não tiver `null` valor por padrão, mas você quiser defini-la como  `null` , defina-a como a `{x:Null}` extensão de marcação.
+- Se uma propriedade for do tipo `Type` , você poderá atribuí-la a um  `Type` objeto usando a extensão de marcação `{x:Type someClass}` .
+- Você pode definir matrizes em XAML usando a `x:Array` extensão de marcação. Essa extensão de marcação tem um atributo necessário chamado  `Type` que indica o tipo dos elementos na matriz.
 - A `Binding` extensão de marcação é discutida na [parte 4. Noções básicas de ligação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 - A `RelativeSource` extensão de marcação é discutida em [associações relativas](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
@@ -561,9 +561,9 @@ Este é o programa em execução:
 
 As extensões de marcação XAML mostradas aqui fornecem suporte importante para arquivos XAML. Mas talvez a extensão de marcação XAML mais valiosa seja `Binding` , que é abordada na próxima parte desta série, [parte 4. Noções básicas de ligação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+- [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Parte 1. Introdução com XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Parte 2. Sintaxe XAML essencial](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Parte 4. Noções básicas de ligação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

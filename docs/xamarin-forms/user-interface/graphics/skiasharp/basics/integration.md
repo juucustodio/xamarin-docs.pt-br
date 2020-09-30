@@ -1,5 +1,5 @@
 ---
-title: Integração com oXamarin.Forms
+title: Integração com o Xamarin.Forms
 description: Este artigo explica como criar gráficos SkiaSharp que respondem ao toque e aos Xamarin.Forms elementos e demonstra isso com o código de exemplo.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
@@ -10,14 +10,14 @@ ms.date: 02/09/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 60f53fb00786b183f36f7cfefa6af9062bb682db
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: cca93508e022420e0d5d11de079420b367188052
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938158"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562243"
 ---
-# <a name="integrating-with-xamarinforms"></a>Integração com oXamarin.Forms
+# <a name="integrating-with-no-locxamarinforms"></a>Integração com o Xamarin.Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
@@ -28,7 +28,7 @@ Os gráficos do SkiaSharp podem se integrar com o restante de Xamarin.Forms vár
 ![Selecionando uma cor com controles deslizantes](integration-images/integrationexample.png)
 
 Outra abordagem para criar gráficos interativos do SkiaSharp no Xamarin.Forms é por toque.
-A segunda página do programa [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) tem o direito de **tocar em Alternar Preenchimento**. Ele desenha um círculo simples de duas maneiras &mdash; sem um preenchimento e com um preenchimento &mdash; alternado por um toque. A [`TapToggleFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) classe mostra como você pode alterar os elementos gráficos do SkiaSharp em resposta à entrada do usuário.
+A segunda página do programa [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) tem o direito de **tocar em Alternar Preenchimento**. Ele desenha um círculo simples de duas maneiras &mdash; sem um preenchimento e com um preenchimento &mdash; alternado por um toque. A [`TapToggleFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) classe mostra como você pode alterar os elementos gráficos do SkiaSharp em resposta à entrada do usuário.
 
 Para essa página, a `SKCanvasView` classe é instanciada no arquivo [TapToggleFill. XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml) , que também define um Xamarin.Forms [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) na exibição:
 
@@ -244,5 +244,5 @@ Mas a melhor maneira de ter uma ideia para os dois modelos é experimentá-los p
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

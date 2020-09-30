@@ -10,12 +10,12 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7ecc094abf816f11dcb16d9eba7d715c8c4e4ab1
-ms.sourcegitcommit: a003b036f6fb83818e2ecc9c72a641e3aeb373bd
+ms.openlocfilehash: 3a085226da3c63f4f151bc657976bba384c02170
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88964810"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561138"
 ---
 # <a name="reusable-effectbehavior"></a>EffectBehavior reutilizável
 
@@ -35,7 +35,7 @@ As seguintes propriedades de comportamento precisam ser definidas para que o com
 Para obter mais informações sobre efeitos, confira [Efeitos](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 > [!NOTE]
-> O `EffectBehavior` é uma classe personalizada que pode ser localizada no [exemplo de comportamento de efeito](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)e não faz parte do Xamarin.Forms .
+> O `EffectBehavior` é uma classe personalizada que pode ser localizada no [exemplo de comportamento de efeito](/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)e não faz parte do Xamarin.Forms .
 
 ## <a name="creating-the-behavior"></a>Criação do comportamento
 
@@ -171,6 +171,6 @@ Este artigo demonstrou o uso de um comportamento para adicionar um efeito a um c
 ## <a name="related-links"></a>Links Relacionados
 
 - [Efeitos](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [Comportamento de efeito (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
+- [Comportamento de efeito (exemplo)](/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
 - [Comportamento](xref:Xamarin.Forms.Behavior)
 - [Comportamento &lt; T&gt;](xref:Xamarin.Forms.Behavior`1)

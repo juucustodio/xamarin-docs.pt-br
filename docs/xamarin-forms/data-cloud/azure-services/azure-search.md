@@ -1,5 +1,5 @@
 ---
-title: Pesquisar dados com Azure Search eXamarin.Forms
+title: Pesquisar dados com Azure Search e Xamarin.Forms
 description: Este artigo demonstra como usar a biblioteca de pesquisa Microsoft Azure para integrar o Azure Search em um Xamarin.Forms aplicativo.
 ms.prod: xamarin
 ms.assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B
@@ -10,14 +10,14 @@ ms.date: 12/05/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 29e73f4051eda9117663992af9e710483e4b772b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 14d26c1360c1c1b7997598ef1263e3dd62e3c013
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934089"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561775"
 ---
-# <a name="search-data-with-azure-search-and-xamarinforms"></a>Pesquisar dados com Azure Search eXamarin.Forms
+# <a name="search-data-with-azure-search-and-no-locxamarinforms"></a>Pesquisar dados com Azure Search e Xamarin.Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 
@@ -96,12 +96,12 @@ static void CreateSearchIndex()
 
 A `Index.Name` propriedade deve ser definida como o nome do índice e a `Index.Fields` propriedade deve ser definida como uma matriz de `Field` objetos. Cada `Field` instância especifica um nome, um tipo e qualquer propriedade, que especifica como o campo é usado. Essas propriedades incluem:
 
-- `IsKey`– indica se o campo é a chave do índice. Somente um campo no índice, do tipo `DataType.String` , deve ser designado como o campo de chave.
-- `IsFacetable`– indica se é possível executar a navegação facetada nesse campo. O valor padrão é `false`.
-- `IsFilterable`– indica se o campo pode ser usado em consultas de filtro. O valor padrão é `false`.
-- `IsRetrievable`– indica se o campo pode ser recuperado nos resultados da pesquisa. O valor padrão é `true`.
-- `IsSearchable`– indica se o campo está incluído em pesquisas de texto completo. O valor padrão é `false`.
-- `IsSortable`– indica se o campo pode ser usado em `OrderBy` expressões. O valor padrão é `false`.
+- `IsKey` – indica se o campo é a chave do índice. Somente um campo no índice, do tipo `DataType.String` , deve ser designado como o campo de chave.
+- `IsFacetable` – indica se é possível executar a navegação facetada nesse campo. O valor padrão é `false`.
+- `IsFilterable` – indica se o campo pode ser usado em consultas de filtro. O valor padrão é `false`.
+- `IsRetrievable` – indica se o campo pode ser recuperado nos resultados da pesquisa. O valor padrão é `true`.
+- `IsSearchable` – indica se o campo está incluído em pesquisas de texto completo. O valor padrão é `false`.
+- `IsSortable` – indica se o campo pode ser usado em `OrderBy` expressões. O valor padrão é `false`.
 
 > [!NOTE]
 > A alteração de um índice após sua implantação envolve a recriação e o recarregamento dos dados.
@@ -262,11 +262,11 @@ async Task AzureSuggestions(string text)
 
 O `SuggestAsync` método usa um argumento de texto de pesquisa, o nome do Sugestor a ser usado (que é definido no índice) e um `SuggestParameters` objeto opcional que pode ser usado para refinar ainda mais a consulta. A `SuggestParameters` instância define as seguintes propriedades:
 
-- `UseFuzzyMatching`– Quando definido como `true` , Azure Search encontrará sugestões mesmo se houver um caractere substituído ou ausente no texto de pesquisa.
-- `HighlightPreTag`– a marca que é precedida para ocorrências de sugestões.
-- `HighlightPostTag`– a marca que é acrescentada às ocorrências de sugestão.
-- `MinimumCoverage`– representa a porcentagem do índice que deve ser coberta por uma consulta de sugestão para que a consulta seja relatada como êxito. O padrão é 80.
-- `Top`– o número de sugestões a serem recuperadas. Ele deve ser um inteiro entre 1 e 100, com um valor padrão de 5.
+- `UseFuzzyMatching` – Quando definido como `true` , Azure Search encontrará sugestões mesmo se houver um caractere substituído ou ausente no texto de pesquisa.
+- `HighlightPreTag` – a marca que é precedida para ocorrências de sugestões.
+- `HighlightPostTag` – a marca que é acrescentada às ocorrências de sugestão.
+- `MinimumCoverage` – representa a porcentagem do índice que deve ser coberta por uma consulta de sugestão para que a consulta seja relatada como êxito. O padrão é 80.
+- `Top` – o número de sugestões a serem recuperadas. Ele deve ser um inteiro entre 1 e 100, com um valor padrão de 5.
 
 O efeito geral é que os 10 principais resultados do índice serão retornados com realce de clique e os resultados incluirão documentos que incluem termos de pesquisa escritos de forma semelhante.
 
@@ -282,6 +282,6 @@ Este artigo demonstrou como usar a biblioteca de pesquisa Microsoft Azure para i
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Azure Search (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
+- [Azure Search (exemplo)](/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 - [Documentação do Azure Search](/azure/search/)
 - [Microsoft Azure biblioteca de pesquisa](https://www.nuget.org/packages/Microsoft.Azure.Search/)

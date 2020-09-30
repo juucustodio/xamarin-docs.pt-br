@@ -10,12 +10,12 @@ ms.date: 05/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e0fbdc91c2661732e3afdbde44ce9891f89c5f62
-ms.sourcegitcommit: 14d67a2db82e67471584b1749e0d5b9ec0c0c09b
+ms.openlocfilehash: d535956e03ac02e2cf0c5d7528ee8e363a2a1e55
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88228632"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561645"
 ---
 # <a name="no-locxamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -329,7 +329,7 @@ public partial class InAppBrowserXaml : ContentPage
 }
 ```
 
-Pronto!
+É isso!
 
 ![Botões de navegação do WebView](webview-images/in-app-browser.png)
 
@@ -420,7 +420,7 @@ Um aplicativo pode retornar ao uso da `UIWebView` classe Ios para implementar o 
 
 `WebView` no Android, por padrão, é tão rápido quanto o navegador interno.
 
-O [UWP WebView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/web-view) usa o mecanismo de renderização do Microsoft Edge. Os dispositivos desktop e Tablet devem ver o mesmo desempenho que usar o navegador Edge em si.
+O [UWP WebView](/windows/uwp/design/controls-and-patterns/web-view) usa o mecanismo de renderização do Microsoft Edge. Os dispositivos desktop e Tablet devem ver o mesmo desempenho que usar o navegador Edge em si.
 
 ## <a name="permissions"></a>Permissões
 
@@ -490,7 +490,7 @@ Grade *sem* WidthRequest & HeightRequest. A grade é um dos poucos layouts que n
 
 ## <a name="invoking-javascript"></a>Invocando JavaScript
 
-[`WebView`](xref:Xamarin.Forms.WebView) inclui a capacidade de invocar uma função JavaScript do C# e retornar qualquer resultado para o código C# de chamada. Isso é feito com o [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) método, que é mostrado no exemplo a seguir do exemplo do [WebView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview) :
+[`WebView`](xref:Xamarin.Forms.WebView) inclui a capacidade de invocar uma função JavaScript do C# e retornar qualquer resultado para o código C# de chamada. Isso é feito com o [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) método, que é mostrado no exemplo a seguir do exemplo do [WebView](/samples/xamarin/xamarin-forms-samples/userinterface-webview) :
 
 ```csharp
 var numberEntry = new Entry { Text = "5" };
@@ -597,6 +597,6 @@ Agora, quando você cria uma nova compilação (versão) e a envia para a loja d
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Trabalhando com o WebView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
-- [WebView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview)
+- [Trabalhando com o WebView (exemplo)](/samples/xamarin/xamarin-forms-samples/workingwithwebview)
+- [WebView (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-webview)
 - [Reprovação de UIWebView](~/ios/user-interface/controls/webview.md#uiwebview-deprecation)

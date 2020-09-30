@@ -1,5 +1,5 @@
 ---
-title: Hot recarregamento de XAML paraXamarin.Forms
+title: Hot recarregamento de XAML para Xamarin.Forms
 description: Recarregue imediatamente as alterações no arquivo XAML em seu aplicativo em execução para que você não precise compilar o Xamarin.Forms projeto após cada alteração de XAML.
 ms.prod: xamarin
 ms.assetid: E220F054-32EE-424C-A7E5-6156BE271519
@@ -10,14 +10,14 @@ ms.date: 03/14/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0655739c95ba58b8d93aae6d3987d54bd0582c7b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ca79a8a4059a303b6f4bfa152d645311a6056ffd
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127446"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91563881"
 ---
-# <a name="xaml-hot-reload-for-xamarinforms"></a>Hot recarregamento de XAML paraXamarin.Forms
+# <a name="xaml-hot-reload-for-no-locxamarinforms"></a>Hot recarregamento de XAML para Xamarin.Forms
 
 Os Hot recarregamento de XAML são conectados ao fluxo de trabalho existente para aumentar a produtividade e poupar tempo. Sem o Hot recarregamento de XAML, você precisa compilar e implantar seu aplicativo toda vez que desejar ver uma alteração XAML. Com a recarga a quente, quando você salva o arquivo XAML, as alterações são refletidas em seu aplicativo em execução. Além disso, o estado de navegação e os dados serão mantidos, permitindo que você itere rapidamente na interface do usuário sem perder seu lugar no aplicativo. Portanto, com o Hot recarregamento de XAML, você gastará menos tempo recriando e implantando seus aplicativos para validar as alterações na interface do usuário.
 
@@ -26,7 +26,7 @@ Os Hot recarregamento de XAML são conectados ao fluxo de trabalho existente par
 >
 > O Hot recarregamento de Xamarin.Forms XAML _para não_ funciona atualmente para Xamarin.Forms projetos UWP.
 
-## <a name="system-requirements"></a>Requisitos de sistema
+## <a name="system-requirements"></a>Requisitos do sistema
 
 | IDE/estrutura | Versão necessária |
 |------|------------------|
@@ -34,7 +34,7 @@ Os Hot recarregamento de XAML são conectados ao fluxo de trabalho existente par
 Visual Studio 2019 para Mac | 8,4 ou superior
 Xamarin.Forms | 4,1 ou superior
 
-## <a name="enable-xaml-hot-reload-for-xamarinforms"></a>Habilitar o Hot recarregamento de XAML paraXamarin.Forms
+## <a name="enable-xaml-hot-reload-for-no-locxamarinforms"></a>Habilitar o Hot recarregamento de XAML para Xamarin.Forms
 
 Se você estiver iniciando com base em um modelo, o Hot recarregamento de XAML será ativado por padrão e o projeto será configurado para funcionar sem nenhuma configuração adicional. Depure seu aplicativo em um emulador do Android ou iOS, simulador ou dispositivo físico, altere o XAML e salve o arquivo para disparar um Hot recarregamento de XAML.
 
@@ -57,8 +57,8 @@ Se você fizer uma alteração que o Hot recarregamento de XAML não possa recar
 ## <a name="reload-on-multiple-platforms-at-once"></a>Recarregar em várias plataformas de uma vez
 
 O Hot recarregamento de XAML dá suporte à depuração simultânea no Visual Studio e Visual Studio para Mac. Você pode implantar um Android e um destino iOS ao mesmo tempo para ver suas alterações refletidas em ambas as plataformas de uma só vez. Para depurar em várias plataformas, consulte:
-* **Windows** [Como definir vários projetos de inicialização](https://docs.microsoft.com/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2019)
-* **Mac** [definir vários projetos de inicialização](https://docs.microsoft.com/visualstudio/mac/set-startup-projects?view=vsmac-2019)
+* **Windows** [Como definir vários projetos de inicialização](/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2019)
+* **Mac** [definir vários projetos de inicialização](/visualstudio/mac/set-startup-projects?view=vsmac-2019)
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 

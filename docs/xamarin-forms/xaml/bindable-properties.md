@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsPropriedades vinculáveis
+title: Xamarin.Forms Propriedades vinculáveis
 description: Este artigo fornece uma introdução às propriedades vinculáveis e demonstra como criá-las e consumi-las.
 ms.prod: xamarin
 ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
@@ -10,14 +10,14 @@ ms.date: 01/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7d83728edc161a89b381330884e86f09b7788e3d
-ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
+ms.openlocfilehash: df2cf99ef0ea1fcbb1b52dda7abb6c8cfdd2d2e7
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226775"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91561528"
 ---
-# <a name="xamarinforms-bindable-properties"></a>Xamarin.FormsPropriedades vinculáveis
+# <a name="no-locxamarinforms-bindable-properties"></a>Xamarin.Forms Propriedades vinculáveis
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 
@@ -221,8 +221,8 @@ O `defaultValueCreator` parâmetro é definido como um `Func` que invoca o [ `De
 ## <a name="related-links"></a>Links relacionados
 
 - [Namespaces XAML](~/xamarin-forms/xaml/namespaces.md)
-- [Comportamento do evento para o comando (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
-- [Retorno de chamada de validação (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-validationcallback)
-- [Retorno de chamada de valor forçado (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-coercevaluecallback)
+- [Comportamento do evento para o comando (exemplo)](/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
+- [Retorno de chamada de validação (exemplo)](/samples/xamarin/xamarin-forms-samples/xaml-validationcallback)
+- [Retorno de chamada de valor forçado (exemplo)](/samples/xamarin/xamarin-forms-samples/xaml-coercevaluecallback)
 - [API vinculproperty](xref:Xamarin.Forms.BindableProperty)
 - [API vinculobject](xref:Xamarin.Forms.BindableObject)
