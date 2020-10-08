@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/02/2017
-ms.openlocfilehash: 67638a261cd9a6e8c356924d47ea4adb4eae6a80
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: efac76338af710e716decf47635652bf8de74910
+ms.sourcegitcommit: 6d347e1d7641ac1d2b389fb1dc7a6882a08f7c00
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91430997"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91851503"
 ---
 # <a name="macos-apis-for-xamarinmac-developers"></a>APIs do macOS para desenvolvedores do Xamarin. Mac
 
@@ -33,8 +33,8 @@ A declaração pode ser lida da esquerda para a direita:
 - O `-` prefixo significa que ele é um método de instância (não estático). + significa que ele é um método de classe (estático)
 - `(BOOL)` é o tipo de retorno (bool em C#)
 - `canDragRowsWithIndexes` é a primeira parte do nome.
-- `(NSIndexSet *)rowIndexes` é o primeiro param e com seu tipo. O primeiro parâmetro está no formato: `(Type) pararmName`
-- `atPoint:(NSPoint)mouseDownPoint` é o segundo param e seu tipo. Cada parâmetro após o primeiro é o formato: `selectorPart:(Type) pararmName`
+- `(NSIndexSet *)rowIndexes` é o primeiro param e com seu tipo. O primeiro parâmetro está no formato: `(Type) paramName`
+- `atPoint:(NSPoint)mouseDownPoint` é o segundo param e seu tipo. Cada parâmetro após o primeiro é o formato: `selectorPart:(Type) paramName`
 - O nome completo desse seletor de mensagem é: `canDragRowsWithIndexes:atPoint:` . Observe que `:` , no final, é importante.
 - A ligação real do Xamarin. Mac C# é: `bool CanDragRows (NSIndexSet rowIndexes, PointF mouseDownPoint)`
 
@@ -45,7 +45,7 @@ Essa invocação de seletor pode ser lida da mesma maneira:
 ```
 
 - A instância `v` está tendo seu `canDragRowsWithIndexes:atPoint` seletor chamado com dois parâmetros `set` e `point` , passado.
-- No C#, a invocação do método tem esta aparência: `x.CanDragRows (set, point);`
+- No C#, a invocação do método tem esta aparência: `v.CanDragRows (set, point);`
 
 <a name="finding_selector"></a>
 
