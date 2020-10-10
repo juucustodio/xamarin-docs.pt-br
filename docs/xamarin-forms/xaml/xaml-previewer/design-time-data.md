@@ -10,16 +10,19 @@ ms.date: 03/27/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 182256fd572a370a7b322898b1e24ade12e971fd
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4221cd313ca8fbc3f3f9f886e3bd3f774c7472f7
+ms.sourcegitcommit: 27f33b0a83b9dc871ad9fb207a1c9960ef197d9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127333"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91897941"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Usar dados de tempo de design com o previsor XAML
 
 _Alguns layouts são difíceis de Visualizar sem dados. Use essas dicas para tirar o máximo proveito da visualização de páginas pesadas de dados no visualizador XAML._
+
+> [!NOTE]
+> Se você estiver usando Windows Presentation Foundation (WPF) ou UWP, consulte [usar dados de tempo de design com o designer XAML para aplicativos de área de trabalho](/visualstudio/xaml-tools/xaml-designtime-data)
 
 ## <a name="design-time-data-basics"></a>Noções básicas de dados de tempo de design
 
