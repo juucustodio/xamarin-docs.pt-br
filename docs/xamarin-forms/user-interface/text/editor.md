@@ -10,12 +10,12 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 42f89f09bd84127fd19bc3ab64794bdac7f145d7
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 257962516b8a183e63c49b22bc2be108364d9425
+ms.sourcegitcommit: e7d6f8bb074c08d87f7507ad5f1377cfacefa32a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561619"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92041880"
 ---
 # <a name="no-locxamarinforms-editor"></a>Xamarin.Forms Editor
 
@@ -133,7 +133,7 @@ O resultado é que os caracteres no texto exibidos pelas [`Editor`](xref:Xamarin
 
 ## <a name="auto-size-an-editor"></a>Dimensionar automaticamente um editor
 
-É [`Editor`](xref:Xamarin.Forms.Editor) possível fazer o dimensionamento automático para seu conteúdo definindo a [`Editor.AutoSize`](xref:Xamarin.Forms.Editor.AutoSize) propriedade como [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) , que é um valor da [`EditoAutoSizeOption`](xref:Xamarin.Forms.EditorAutoSizeOption) enumeração. Essa enumeração tem dois valores:
+É [`Editor`](xref:Xamarin.Forms.Editor) possível fazer o dimensionamento automático para seu conteúdo definindo a [`Editor.AutoSize`](xref:Xamarin.Forms.Editor.AutoSize) propriedade como [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) , que é um valor da [`EditorAutoSizeOption`](xref:Xamarin.Forms.EditorAutoSizeOption) enumeração. Essa enumeração tem dois valores:
 
 - [`Disabled`](xref:Xamarin.Forms.EditorAutoSizeOption.Disabled) indica que o redimensionamento automático está desabilitado e é o valor padrão.
 - [`TextChanges`](xref:Xamarin.Forms.EditorAutoSizeOption.TextChanges) indica que o redimensionamento automático está habilitado.
