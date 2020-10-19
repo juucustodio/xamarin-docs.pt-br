@@ -9,12 +9,12 @@ ms.date: 09/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 12631abacc56edf88d375d4be89e71a9a4588d03
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 01902942c750a3cd278d648fa82499af4c5d3ab6
+ms.sourcegitcommit: dac04cec56290fb19034f3e135708f6966a8f035
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436368"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92169963"
 ---
 # <a name="no-locxamarinessentials-permissions"></a>Xamarin.Essentials: Permissões
 
@@ -44,7 +44,7 @@ var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>()
 
 Um `PermissionException` será gerado se a permissão necessária não for declarada.
 
-É melhor verificar o status da permissão antes de solicitá-la. Cada sistema operacional retornará um estado padrão diferente se o usuário nunca tiver sido solicitado. iOS retorna `Unknown` , enquanto outros retornam `Denied` .
+É melhor verificar o status da permissão antes de solicitá-la. Cada sistema operacional retornará um estado padrão diferente se o usuário nunca tiver sido solicitado. iOS retorna `Unknown` , enquanto outros retornam `Denied` . Se o status for `Granted` , não será necessário fazer outras chamadas. No iOS se o status for `Denied` solicitado que o usuário altere a permissão nas configurações e no Android, você poderá chamar `ShouldShowRationale` para detectar se o usuário já negou a permissão no passado.
 
 ## <a name="requesting-permissions"></a>Solicitando permissões
 
@@ -56,7 +56,7 @@ var status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
 
 Um `PermissionException` será gerado se a permissão necessária não for declarada.
 
-Observe que, em algumas plataformas, uma solicitação de permissão só pode ser ativada uma única vez. Solicitações adicionais devem ser manipuladas pelo desenvolvedor para verificar se uma permissão está no `Denied` estado e solicitar que o usuário a ative manualmente.
+Observe que, em algumas plataformas, uma solicitação de permissão só pode ser ativada uma única vez. Solicitações adicionais devem ser manipuladas pelo desenvolvedor para verificar se uma permissão está no `Denied` estado e solicitar que o usuário a ative manualmente. 
 
 ## <a name="permission-status"></a>Status da permissão
 
@@ -91,7 +91,7 @@ Guia de ícones:
 | Câmera | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP sem suporte](~/media/shared/no.png "UWP sem suporte") | ![watchOS não tem suporte](~/media/shared/no.png "watchOS não tem suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen com suporte](~/media/shared/yes.png "Tizen com suporte") |
 | ContactsRead | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![watchOS não tem suporte](~/media/shared/no.png "watchOS não tem suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen não tem suporte](~/media/shared/no.png "Tizen não tem suporte") |
 | ContactsWrite | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![watchOS não tem suporte](~/media/shared/no.png "watchOS não tem suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen não tem suporte](~/media/shared/no.png "Tizen não tem suporte") |
-| Lanterna | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS sem suporte](~/media/shared/no.png "iOS sem suporte") | ![UWP sem suporte](~/media/shared/no.png "UWP sem suporte") | ![watchOS não tem suporte](~/media/shared/no.png "watchOS não tem suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen com suporte](~/media/shared/yes.png "Tizen com suporte") |
+| Flashlight | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS sem suporte](~/media/shared/no.png "iOS sem suporte") | ![UWP sem suporte](~/media/shared/no.png "UWP sem suporte") | ![watchOS não tem suporte](~/media/shared/no.png "watchOS não tem suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen com suporte](~/media/shared/yes.png "Tizen com suporte") |
 | LocationWhenInUse | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![watchOS com suporte](~/media/shared/yes.png "watchOS com suporte") | ![tvOS com suporte](~/media/shared/yes.png "tvOS com suporte")  | ![Tizen com suporte](~/media/shared/yes.png "Tizen com suporte") |
 | LocationAlways | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![watchOS com suporte](~/media/shared/yes.png "watchOS com suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen com suporte](~/media/shared/yes.png "Tizen com suporte") |
 | Mídia | ![Android sem suporte](~/media/shared/no.png "Android sem suporte") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP sem suporte](~/media/shared/no.png "UWP sem suporte") | ![watchOS não tem suporte](~/media/shared/no.png "watchOS não tem suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen não tem suporte](~/media/shared/no.png "Tizen não tem suporte") |
@@ -114,12 +114,24 @@ Aqui está um padrão de uso geral para lidar com permissões.
 public async Task<PermissionStatus> CheckAndRequestLocationPermission()
 {
     var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
-    if (status != PermissionStatus.Granted)
+    
+    if (status == PermissionStatus.Granted)
+        return status;
+        
+    
+    if (status == PermissionStatus.Denied && DeviceInfo.Platform == DevicePlatform.iOS)
     {
-        status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
+        // Prompt the user to turn on in settings
+        // On iOS once a permission has been denied it may not be requested again from the application
+        return status;
     }
+    
+    if (Permissions.ShouldShowRationale<Permissions.LocationWhenInUse>())
+    {
+        // Prompt the user with additional information as to why the permission is needed
+    }   
 
-    // Additionally could prompt the user to turn on in settings
+    status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
 
     return status;
 }

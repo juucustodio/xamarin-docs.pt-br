@@ -9,14 +9,14 @@ ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ef4c9961e7e1fac20084247f4c85e87b79bcc427
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 93ad745790a746924f7037e490985c53c332c089
+ms.sourcegitcommit: dac04cec56290fb19034f3e135708f6966a8f035
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84801891"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92169911"
 ---
-# <a name="xamarinessentials-share"></a>Xamarin.Essentials: Compartilhar
+# <a name="no-locxamarinessentials-share"></a>Xamarin.Essentials: Compartilhar
 
 A classe **Share** permite que um aplicativo compartilhe dados, como links de texto e da Web com outros aplicativos no dispositivo.
 
@@ -64,7 +64,7 @@ Interface do usuário para compartilhar com aplicativo externo exibida quando um
 
 ## <a name="files"></a>Arquivos
 
-Esse recurso permite que um aplicativo compartilhe arquivos com outros aplicativos no dispositivo. Xamarin.Essentialso detectará automaticamente o tipo de arquivo (MIME) e solicitará um compartilhamento. Cada plataforma poderá ser compatível somente com extensões de arquivo específicas.
+Esse recurso permite que um aplicativo compartilhe arquivos com outros aplicativos no dispositivo. Xamarin.Essentials o detectará automaticamente o tipo de arquivo (MIME) e solicitará um compartilhamento. Cada plataforma poderá ser compatível somente com extensões de arquivo específicas.
 
 Veja um exemplo de como gravar texto no disco e compartilhá-lo com outros aplicativos:
 
@@ -82,7 +82,7 @@ await Share.RequestAsync(new ShareFileRequest
 
 ## <a name="presentation-location"></a>Local da apresentação
 
-Ao solicitar um compartilhamento no iPadOS, você tem a capacidade de apresentá-lo em um controle pop-up. Você pode especificar o local usando a `PresentationSourceBounds` Propriedade:
+Ao solicitar um compartilhamento no iPadOS, você tem a capacidade de apresentá-lo em um controle pop-up. Isso especifica onde o pop-up aparecerá e apontará uma seta diretamente para. Esse local geralmente é o controle que iniciou a ação. Você pode especificar o local usando a `PresentationSourceBounds` Propriedade:
 
 ```csharp
 await Share.RequestAsync(new ShareFileRequest
@@ -93,6 +93,72 @@ await Share.RequestAsync(new ShareFileRequest
                             ? new System.Drawing.Rectangle(0, 20, 0, 0)
                             : System.Drawing.Rectangle.Empty
 });
+```
+
+Se você estiver usando Xamarin.Forms , poderá passar um `View` e calcular os limites:
+
+
+```
+public static class ViewHelpers
+{
+    public static Rectangle GetAbsoluteBounds(this Xamarin.Forms.View element)
+    {
+        Element looper = element;
+
+        var absoluteX = element.X + element.Margin.Top;
+        var absoluteY = element.Y + element.Margin.Left;
+
+        // Add logic to handle titles, headers, or other non-view bars
+
+        while (looper.Parent != null)
+        {
+            looper = looper.Parent;
+            if (looper is Xamarin.Forms.View v)
+            {
+                absoluteX += v.X + v.Margin.Top;
+                absoluteY += v.Y + v.Margin.Left;
+            }
+        }
+
+        return new Rectangle(absoluteX, absoluteY, element.Width, element.Height);
+    }
+
+    public static System.Drawing.Rectangle ToSystemRectangle(this Rectangle rect) =>
+        new System.Drawing.Rectangle((int)rect.X, (int)rect.Y, (int)rect.Width, (int)rect.Height);
+}
+```
+
+Isso pode ser usado ao chamar `RequstAsync` :
+
+```csharp
+public Command<Xamarin.Forms.View> ShareCommand { get; } = new Command<Xamarin.Forms.View>(Share);
+async void Share(Xamarin.Forms.View element)
+{
+    try
+    {
+        Analytics.TrackEvent("ShareWithFriends");
+        var bounds = element.GetAbsoluteBounds();
+
+        await Share.RequestAsync(new ShareTextRequest
+        {
+            PresentationSourceBounds = bounds.ToSystemRectangle(),
+            Title = "Title",
+            Text = "Text"
+        });
+    }
+    catch (Exception)
+    {
+        // Handle exception that share failed
+    }
+}
+```
+
+Você pode passar o elemento de chamada quando o `Command` for disparado:
+
+```xml
+<Button Text="Share"
+        Command="{Binding ShareWithFriendsCommand}"
+        CommandParameter="{Binding Source={RelativeSource Self}}"/>
 ```
 
 ## <a name="platform-differences"></a>Diferenças entre plataformas
