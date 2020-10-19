@@ -8,12 +8,12 @@ ms.date: 03/26/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6f67ca1ff260c342de8686f24dffe396c591c171
-ms.sourcegitcommit: dac04cec56290fb19034f3e135708f6966a8f035
+ms.openlocfilehash: 8f36dd37d670da5245fbc649a8235d4fb9c327c6
+ms.sourcegitcommit: 31bdc3809b1b71865cdc596f0a67fa45a71d0838
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/19/2020
-ms.locfileid: "92169950"
+ms.locfileid: "92171089"
 ---
 # <a name="no-locxamarinessentials-web-authenticator"></a>Xamarin.Essentials: Autenticador da Web
 
@@ -95,7 +95,7 @@ No iOS, você precisará adicionar o padrão de URI de retorno de chamada do apl
 > [!NOTE]
 > Você deve considerar o uso de [links de aplicativo universal](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content) para registrar o URI de retorno de chamada do aplicativo como uma prática recomendada.
 
-Você também precisará substituir o `AppDelegate` método do `OpenUrl` para chamar no Essentials:
+Você também precisará substituir seus `AppDelegate` `OpenUrl` `ContinueUserActivity` métodos e para chamar no Essentials:
 
 ```csharp
 public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
@@ -104,6 +104,13 @@ public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
         return true;
 
     return base.OpenUrl(app, url, options);
+}
+
+public override bool ContinueUserActivity(UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
+{
+    if (Xamarin.Essentials.Platform.ContinueUserActivity(application, userActivity, completionHandler))
+        return true;
+    return base.ContinueUserActivity(application, userActivity, completionHandler);
 }
 ```
 
