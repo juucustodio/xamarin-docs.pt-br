@@ -8,12 +8,12 @@ ms.date: 03/26/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8f36dd37d670da5245fbc649a8235d4fb9c327c6
-ms.sourcegitcommit: 31bdc3809b1b71865cdc596f0a67fa45a71d0838
+ms.openlocfilehash: f373b8c249d4dba11db3b8445648afe2c61d273f
+ms.sourcegitcommit: eda6acc7471acc2f95df498e747376006e3d3f2a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92171089"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92214817"
 ---
 # <a name="no-locxamarinessentials-web-authenticator"></a>Xamarin.Essentials: Autenticador da Web
 
@@ -213,7 +213,7 @@ var accessToken = r?.AccessToken;
 
 É possível usar a `WebAuthenticator` API com qualquer serviço de back-end da Web.  Para usá-lo com um aplicativo ASP.NET Core, primeiro você precisa configurar o aplicativo Web com as seguintes etapas:
 
-1. Configure os [provedores de autenticação social externos](/aspnet/core/security/authentication/social/?tabs=visual-studio&view=aspnetcore-3.1) desejados em um aplicativo Web ASP.NET Core.
+1. Configure os [provedores de autenticação social externos](/aspnet/core/security/authentication/social/?tabs=visual-studio) desejados em um aplicativo Web ASP.NET Core.
 2. Defina o esquema de autenticação padrão como `CookieAuthenticationDefaults.AuthenticationScheme` em sua `.AddAuthentication()` chamada.
 3. Use `.AddCookie()` em sua chamada do Startup.cs `.AddAuthentication()` .
 4. Todos os provedores devem ser configurados com `.SaveTokens = true;` .
@@ -255,6 +255,9 @@ A finalidade desse controlador é inferir o esquema (provedor) que o aplicativo 
 Às vezes, talvez você queira retornar dados como o provedor de `access_token` volta para o aplicativo, o que pode ser feito por meio dos parâmetros de consulta do URI de retorno de chamada. Ou talvez você queira, em vez disso, criar sua própria identidade no servidor e retornar seu próprio token para o aplicativo. O que e como você faz essa parte é de sua escolha!
 
 Confira o [exemplo de controlador completo](https://github.com/xamarin/Essentials/blob/develop/Samples/Sample.Server.WebAuthenticator/Controllers/MobileAuthController.cs) no repositório do Essentials.
+
+> [!NOTE]
+> O exemplo acima demonstra como retornar o token de acesso do provedor de autenticação de terceiros (IE: OAuth). Para obter um token que você pode usar para autorizar solicitações da Web ao próprio back-end da Web, você deve criar seu próprio token em seu aplicativo Web e, em vez disso, retornar isso.  A [visão geral da autenticação ASP.NET Core](/aspnet/core/security/authentication) tem mais informações sobre cenários de autenticação avançada no ASP.NET Core.
 
 -----
 ## <a name="api"></a>API
