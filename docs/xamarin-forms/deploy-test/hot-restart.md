@@ -10,12 +10,12 @@ ms.date: 03/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3240906cdf964bcf798137e640a82dbd1e2341d9
-ms.sourcegitcommit: a662910a6ba14d241e01047739eb1cd87aa7d884
+ms.openlocfilehash: b441e5fd5ef045bf90244b4b69f868fe858e002d
+ms.sourcegitcommit: ba052b0990499d8191bcb25291c6ccd8d1ff26fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88029715"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92493306"
 ---
 # <a name="xamarin-hot-restart-preview"></a>Xamarin Hot Restart (versão prévia)
 
@@ -77,7 +77,6 @@ Você também pode usar o `HOTRESTART` símbolo de pré-processador para impedir
 
 ## <a name="troubleshoot"></a>Solução de problemas
 
-- O assistente de instalação não detectará o iTunes se ele tiver sido instalado por meio da Microsoft Store. Você precisará desinstalar essa versão primeiro e, em seguida, baixar o [instalador da Apple](https://go.microsoft.com/fwlink/?linkid=2101014).
 - Há um problema conhecido no qual ter builds específicos do dispositivo habilitados impede que o aplicativo entre no modo de depuração. A solução alternativa é desabilitá-lo em **Propriedades > Build do iOS** e repetir a depuração. Isso será corrigido em uma versão futura.
 - Se o aplicativo já estiver presente no dispositivo, tentar implantar com o Hot Restart poderá falhar com um erro de `AMDeviceStartHouseArrestService`. A solução alternativa é desinstalar o aplicativo no dispositivo e implantá-lo novamente.
 - A inserção de uma ID da Apple que não faz parte do programa de desenvolvedor da Apple pode resultar no seguinte erro: `Authentication Error. Xcode 7.3 or later is required to continue developing with your Apple ID` . Você deve ter uma conta de desenvolvedor da Apple válida para usar o Xamarin Hot Restart em dispositivos iOS. 
