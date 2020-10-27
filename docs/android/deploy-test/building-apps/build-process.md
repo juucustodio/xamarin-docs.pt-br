@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 09/11/2020
-ms.openlocfilehash: d89f686be99dc8ae8d1aada12dcbe94d857424d7
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 4a89cfbb2406b6a5cda125044d43736dfa02d791
+ms.sourcegitcommit: 01ccefd54c0ced724784dbe1aec9ecfc9b00e633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91454956"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92630225"
 ---
 # <a name="build-process"></a>Processo de build
 
@@ -22,9 +22,9 @@ O processo de compilação do Xamarin. Android é responsável por colar tudo em
 
 Em termos gerais, há dois tipos de pacotes de aplicativos do Android (arquivos `.apk`) que o sistema de build do Xamarin.Android pode gerar:
 
-- Builds de **versão**, que são totalmente independentes e não requerem pacotes adicionais para executar. Esses são os pacotes que seriam fornecidos para uma loja de aplicativos.
+- Builds de **versão** , que são totalmente independentes e não requerem pacotes adicionais para executar. Esses são os pacotes que seriam fornecidos para uma loja de aplicativos.
 
-- Builds de **depuração**, que não o são.
+- Builds de **depuração** , que não o são.
 
 Não coincidentemente, eles correspondem ao `Configuration` do MSBuild que produz o pacote.
 
@@ -77,7 +77,7 @@ As seguintes propriedades do MSBuild são usadas para controlar a geração do `
 
 ## <a name="signing-properties"></a>Propriedades de assinatura
 
-As propriedades de assinatura controlam como o pacote do aplicativo é assinado, para que ele possa ser instalado em um dispositivo Android. Para permitir uma iteração de build mais rápida, as tarefas do Xamarin.Android não assinam pacotes durante o processo de build, porque assinar é algo muito lento. Em vez disso, eles são assinados (se necessário) antes da instalação ou durante a exportação, pelo IDE ou pelo destino de build *Install*. Invocar o destino *SignAndroidPackage* produzirá um pacote com o sufixo `-Signed.apk` no diretório de saída.
+As propriedades de assinatura controlam como o pacote do aplicativo é assinado, para que ele possa ser instalado em um dispositivo Android. Para permitir uma iteração de build mais rápida, as tarefas do Xamarin.Android não assinam pacotes durante o processo de build, porque assinar é algo muito lento. Em vez disso, eles são assinados (se necessário) antes da instalação ou durante a exportação, pelo IDE ou pelo destino de build *Install* . Invocar o destino *SignAndroidPackage* produzirá um pacote com o sufixo `-Signed.apk` no diretório de saída.
 
 Por padrão, o destino da assinatura gera uma nova chave de assinatura de depuração, se necessário. Se você quiser usar uma chave específica, por exemplo, em um servidor de compilação, as seguintes propriedades do MSBuild serão usadas:
 
@@ -145,7 +145,7 @@ Uma advertência sobre como estender o processo de compilação: se não for esc
 
 ## <a name="target-definitions"></a>Definições de destino
 
-As partes do processo de build específicas do Xamarin.Android são definidas em `$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets`, mas destinos normais específicos a uma linguagem, tais como *Microsoft.CSharp.targets*, também são necessários para compilar o assembly.
+As partes do processo de build específicas do Xamarin.Android são definidas em `$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets`, mas destinos normais específicos a uma linguagem, tais como *Microsoft.CSharp.targets* , também são necessários para compilar o assembly.
 
 As seguintes propriedades de build devem ser definidas antes de importar quaisquer destinos de linguagem de programação:
 
@@ -157,7 +157,7 @@ As seguintes propriedades de build devem ser definidas antes de importar quaisqu
 </PropertyGroup>
 ```
 
-Todos esses destinos e propriedades podem ser incluídos para C# importando *Xamarin.Android.CSharp.targets*:
+Todos esses destinos e propriedades podem ser incluídos para C# importando *Xamarin.Android.CSharp.targets* :
 
 ```xml
 <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

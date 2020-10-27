@@ -9,12 +9,12 @@ ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f4bb252448abe3c2987def143634d15b5cae194c
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 4a5190ef3e9f61fdb6d08f9cd68202e55a4faead
+ms.sourcegitcommit: 58247fe066ad271ee43c8967ac3301fdab6ca2d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91433495"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92629580"
 ---
 # <a name="no-locxamarinessentials-secure-storage"></a>Xamarin.Essentials: Armazenamento seguro
 
@@ -24,7 +24,7 @@ A classe **SecureStorage** ajuda a armazenar com segurança os pares de chave/va
 
 [!include[](~/essentials/includes/get-started.md)]
 
-Para acessar a funcionalidade **SecureStorage**, a seguinte configuração específica da plataforma é necessária:
+Para acessar a funcionalidade **SecureStorage** , a seguinte configuração específica da plataforma é necessária:
 
 # <a name="android"></a>[Android](#tab/android)
 
@@ -46,7 +46,7 @@ Você pode optar por desabilitar o Backup Automático para todo o aplicativo def
 ### <a name="selective-backup"></a>Backup seletivo
 O backup automático pode ser configurado para desabilitar o backup de um conteúdo específico. Você pode criar uma regra personalizada definida para excluir itens do `SecureStore` de passarem por backup.
 
-1. Defina o atributo `android:fullBackupContent` em seu **AndroidManifest.xml**:
+1. Defina o atributo `android:fullBackupContent` em seu **AndroidManifest.xml** :
 
     ```xml
     <application ...
@@ -54,7 +54,7 @@ O backup automático pode ser configurado para desabilitar o backup de um conte�
     </application>
     ```
 
-2. Crie um novo arquivo XML chamado **auto_backup_rules.xml** no diretório **Resources/xml** com a ação de compilação de **AndroidResource**. Em seguida, defina o seguinte conteúdo que inclui todas as preferências compartilhadas, exceto para `SecureStorage`:
+2. Crie um novo arquivo XML chamado **auto_backup_rules.xml** no diretório **Resources/xml** com a ação de compilação de **AndroidResource** . Em seguida, defina o seguinte conteúdo que inclui todas as preferências compartilhadas, exceto para `SecureStorage`:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -66,11 +66,11 @@ O backup automático pode ser configurado para desabilitar o backup de um conte�
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-Ao desenvolver no **simulador do iOS**, habilite o direito **Keychain** e inclua um grupo de acesso keychain para o identificador do pacote do aplicativo.
+Ao desenvolver no **simulador do iOS** , habilite o direito **Keychain** e inclua um grupo de acesso keychain para o identificador do pacote do aplicativo.
 
 Abra **Entitlements.plist** no projeto do iOS, localize o direito **Keychain** e habilite-o. Isso adicionará automaticamente o identificador do aplicativo como um grupo.
 
-Nas propriedades do projeto, em **Assinatura de pacote do iOS**, configure os **Direitos Personalizados** para **Entitlements.plist**.
+Nas propriedades do projeto, em **Assinatura de pacote do iOS** , configure os **Direitos Personalizados** para **Entitlements.plist** .
 
 > [!TIP]
 > Ao implantar em um dispositivo iOS, esse direito não é necessário e deverá ser removido.
@@ -130,11 +130,14 @@ Para remover todas as chaves, chame:
 SecureStorage.RemoveAll();
 ```
 
+> [!TIP]
+> É possível que uma exceção seja lançada ao chamar `GetAsync` ou `SetAsync` . Isso pode ser causado por um dispositivo que não dá suporte a armazenamento seguro, chaves de criptografia alteradas ou corrupção de dados. É melhor lidar com isso removendo e adicionando a configuração de volta, se possível.
+
 ## <a name="platform-implementation-specifics"></a>Particularidades de implementação da plataforma
 
 # <a name="android"></a>[Android](#tab/android)
 
-O [Repositório de chaves do Android](https://developer.android.com/training/articles/keystore.html) é usado para armazenar a chave de criptografia usada para criptografar o valor antes que ele seja salvo em [Preferências Compartilhadas](https://developer.android.com/training/data-storage/shared-preferences.html) com um nome de arquivo **[ID-DO-SEU-PACOTE-DE-APLICATIVO].xamarinessentials**.  A chave (não uma chave de criptografia, a _chave_ para o _valor_) usada no arquivo de preferências compartilhadas é um _Hash MD5_ da chave passada para as APIs do `SecureStorage`.
+O [Repositório de chaves do Android](https://developer.android.com/training/articles/keystore.html) é usado para armazenar a chave de criptografia usada para criptografar o valor antes que ele seja salvo em [Preferências Compartilhadas](https://developer.android.com/training/data-storage/shared-preferences.html) com um nome de arquivo **[ID-DO-SEU-PACOTE-DE-APLICATIVO].xamarinessentials** .  A chave (não uma chave de criptografia, a _chave_ para o _valor_ ) usada no arquivo de preferências compartilhadas é um _Hash MD5_ da chave passada para as APIs do `SecureStorage`.
 
 **Nível da API 23 e superior**
 
@@ -142,13 +145,13 @@ Em níveis da API mais recentes, uma chave **AES** é obtida do Repositório de 
 
 **Nível da API 22 e inferior**
 
-Em níveis de API mais antigos, o Repositório de chaves do Android só é compatível com o armazenamento de chaves **RSA**, que é usado com uma cifra **RSA/ECB/PKCS1Padding** para criptografar uma chave **AES** (aleatoriamente gerada no runtime) e armazenado no arquivo de preferências compartilhadas sob a chave _SecureStorageKey_, caso ainda não tenha sido gerado.
+Em níveis de API mais antigos, o Repositório de chaves do Android só é compatível com o armazenamento de chaves **RSA** , que é usado com uma cifra **RSA/ECB/PKCS1Padding** para criptografar uma chave **AES** (aleatoriamente gerada no runtime) e armazenado no arquivo de preferências compartilhadas sob a chave _SecureStorageKey_ , caso ainda não tenha sido gerado.
 
 **SecureStorage** usa a API [Preferências](preferences.md) e segue a mesma persistência de dados descrita na documentação de [Preferências](preferences.md#persistence). Se um dispositivo fizer o upgrade do nível da API 22 ou inferior para o nível da API 23 e superior, esse tipo de criptografia continuará a ser usado, a menos que o aplicativo seja desinstalado ou **RemoveAll** seja chamado.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-[KeyChain](xref:Security.SecKeyChain) é usado para armazenar valores em dispositivos iOS com segurança.  O `SecRecord` usado para armazenar o valor tem um valor `Service` definido como **[ID-DO-SEU-PACOTE-DO-APLICATIVO].xamarinessentials**.
+[KeyChain](xref:Security.SecKeyChain) é usado para armazenar valores em dispositivos iOS com segurança.  O `SecRecord` usado para armazenar o valor tem um valor `Service` definido como **[ID-DO-SEU-PACOTE-DO-APLICATIVO].xamarinessentials** .
 
 Em alguns casos os dados do conjunto de chaves estão sincronizados com o iCloud e a desinstalação do aplicativo poderá não remover os valores seguros do iCloud e outros dispositivos do usuário.
 
@@ -156,7 +159,7 @@ Em alguns casos os dados do conjunto de chaves estão sincronizados com o iCloud
 
 [DataProtectionProvider](/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider) é usado para criptografar valores em dispositivos UWP com segurança.
 
-Os valores criptografados são armazenados em `ApplicationData.Current.LocalSettings`, dentro de um contêiner com o nome **[ID-DE-SEU-APLICATIVO].xamarinessentials**.
+Os valores criptografados são armazenados em `ApplicationData.Current.LocalSettings`, dentro de um contêiner com o nome **[ID-DE-SEU-APLICATIVO].xamarinessentials** .
 
 **SecureStorage** usa a API [Preferências](preferences.md) e segue a mesma persistência de dados descrita na documentação de [Preferências](preferences.md#persistence). Ele também usa o `LocalSettings` que tem uma restrição de que o nome de cada configuração pode ter 255 caracteres de comprimento máximo. Cada configuração pode ter até 8K bytes de tamanho e cada configuração composta pode ter até 64K bytes de tamanho.
 

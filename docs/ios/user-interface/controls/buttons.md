@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/11/2018
-ms.openlocfilehash: 0619488199c202e1877e4cfa60d622ef247e2b3f
-ms.sourcegitcommit: 24883be72e485e5311dd0eb91f9a22f78eeec11a
+ms.openlocfilehash: d763d4433ef0979343de059c5113314f553142fa
+ms.sourcegitcommit: 01ccefd54c0ced724784dbe1aec9ecfc9b00e633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "78292929"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92630212"
 ---
 # <a name="buttons-in-xamarinios"></a>Botões no Xamarin. iOS
 
-No iOS, a classe `UIButton` representa um controle de botão.
+No iOS, a `UIButton` classe representa um controle de botão.
 
-As propriedades de um botão podem ser modificadas programaticamente ou com a **painel de propriedades** do designer do IOS:
+As propriedades de um botão podem ser modificadas programaticamente ou com a **janela Propriedades ou o painel** do designer do IOS:
 
 ![O Painel de Propriedades do designer do iOS](buttons-images/properties.png "O Painel de Propriedades do designer do iOS")
 
@@ -32,14 +32,14 @@ Um `UIButton` pode ser criado com apenas algumas linhas de código.
   UIButton myButton = new UIButton(UIButtonType.System);
   ```
 
-  O tipo do botão é especificado por um `UIButtonType`:
+  O tipo do botão é especificado por uma `UIButtonType` Propriedade:
 
-  - `UIButtonType.System`-um botão de finalidade geral
-  - `UIButtonType.DetailDisclosure`-indica a disponibilidade de informações detalhadas, geralmente sobre um item específico em uma tabela
-  - `UIButtonType.InfoDark`-indica a disponibilidade das informações de configuração; cor escura
-  - `UIButtonType.InfoLight`-indica a disponibilidade das informações de configuração; cor clara
-  - `UIButtonType..AddContact`-indica que um contato pode ser adicionado
-  - `UIButtonType.Custom`-botão personalizável
+  - `UIButtonType.System` -Um botão de finalidade geral
+  - `UIButtonType.DetailDisclosure` -Indica a disponibilidade de informações detalhadas, geralmente sobre um item específico em uma tabela
+  - `UIButtonType.InfoDark` -Indica a disponibilidade das informações de configuração; cor escura
+  - `UIButtonType.InfoLight` -Indica a disponibilidade das informações de configuração; cor clara
+  - `UIButtonType..AddContact` -Indica que um contato pode ser adicionado
+  - `UIButtonType.Custom` -Botão personalizável
 
   Para obter mais informações sobre os diferentes tipos de botão, dê uma olhada em:
   
@@ -53,12 +53,22 @@ Um `UIButton` pode ser criado com apenas algumas linhas de código.
   myButton.Frame = new CGRect(25, 25, 300, 150);
   ```
 
-- Defina o texto do botão. Use o método `SetTitle`, que exige o texto e um valor de `UIControlState`:
+- Defina o texto do botão. Use o `SetTitle` método, que exige o texto e um `UIControlState` valor para o estado do botão:
 
   ```csharp
   myButton.SetTitle("Hello, World!", UIControlState.Normal);
   ```
-
+  
+  Os tipos de estado do botão estão listados abaixo:
+  
+  - `UIControlState.Normal`
+  - `UIControlState.Highlighted`
+  - `UIControlState.Disabled`
+  - `UIControlState.Selected`
+  - `UIControlState.Focused`
+  - `UIControlState.Application`
+  - `UIControlState.Reserved`
+  
   Para obter mais informações sobre como estilizar um botão e definir seu texto, consulte:
 
   - O [estilo de uma](#styling-a-button) seção de botão deste documento
@@ -66,7 +76,7 @@ Um `UIButton` pode ser criado com apenas algumas linhas de código.
 
 ## <a name="handling-a-button-tap"></a>Lidando com um toque de botão
 
-Para responder a um toque de botão, forneça um manipulador para o evento de `TouchUpInside` do botão:
+Para responder a um toque de botão, forneça um manipulador para o evento do botão `TouchUpInside` :
 
 ```csharp
 myButton.TouchUpInside += (sender, e) => {
@@ -75,7 +85,7 @@ myButton.TouchUpInside += (sender, e) => {
 ```
 
 > [!NOTE]
-> `TouchUpInside` não é o único evento de botão disponível. `UIButton` é uma classe filha de `UIControl`, que define [muitos eventos diferentes](xref:UIKit.UIControlEvent).
+> `TouchUpInside` Não é o único evento de botão disponível. `UIButton` é uma classe filho de `UIControl` , que define [muitos eventos diferentes](xref:UIKit.UIControlEvent).
 
 ### <a name="using-the-ios-designer-to-specify-button-event-handlers"></a>Usando o designer do iOS para especificar manipuladores de eventos de botão
 
@@ -87,20 +97,20 @@ Para o evento apropriado, digite o nome de um novo manipulador de eventos ou sel
 
 ## <a name="styling-a-button"></a>Estilizando um botão
 
-os controles de `UIButton` podem existir em vários Estados diferentes, cada um especificado por um valor de `UIControlState` – `Normal`, `Disabled`, `Focused`, `Highlighted`, etc. Cada Estado pode receber um estilo exclusivo, especificado programaticamente ou com o designer do iOS.
+`UIButton` os controles podem existir em vários Estados diferentes, cada um especificado por um `UIControlState` valor – `Normal` , `Disabled` , `Focused` , `Highlighted` etc. Cada Estado pode receber um estilo exclusivo, especificado programaticamente ou com o designer do iOS.
 
 > [!NOTE]
-> Para obter uma lista completa de todos os valores de `UIControlState`, dê uma olhada na [`UIKit.UIControlState enumeration`](xref:UIKit.UIControlState)
+> Para obter uma lista completa de todos os `UIControlState` valores, dê uma olhada no [`UIKit.UIControlState enumeration`](xref:UIKit.UIControlState)
 > online.
 
-Por exemplo, para definir a cor do título e a cor da sombra para `UIControlState.Normal`:
+Por exemplo, para definir a cor do título e a cor da sombra para `UIControlState.Normal` :
 
 ```csharp
 myButton.SetTitleColor(UIColor.White, UIControlState.Normal);
 myButton.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
 ```
 
-O código a seguir define o título do botão para uma cadeia de caracteres (estilizada) atribuída para `UIControlState.Normal` e `UIControlState.Highlighted`:
+O código a seguir define o título do botão para uma cadeia de caracteres (estilizada) atribuída para `UIControlState.Normal` e `UIControlState.Highlighted` :
 
 ```csharp
 var normalAttributedTitle = new NSAttributedString(buttonTitle, foregroundColor: UIColor.Blue, strikethroughStyle: NSUnderlineStyle.Single);
@@ -120,10 +130,10 @@ myButton.SetImage (UIImage.FromBundle ("Buttons/MagicWand_Highlight.png"), UICon
 myButton.SetImage (UIImage.FromBundle ("Buttons/MagicWand_On.png"), UIControlState.Selected);
 ```
 
-Dependendo se o usuário estiver tocando no botão ou não, ele será renderizado como uma das imagens a seguir (`UIControlState.Normal`, `UIControlState.Highlighted` e `UIControlState.Selected` Estados, respectivamente):
+Dependendo se o usuário estiver tocando no botão ou não, ele será renderizado como uma das seguintes imagens ( `UIControlState.Normal` `UIControlState.Highlighted` e `UIControlState.Selected` Estados, respectivamente):
 
-![UIControlState. Normal](buttons-images/image22.png "UIControlState. normal")
-![UIControlState. realçado](buttons-images/image23.png "UIControlState. realçado")
-![UIControlState. Selected](buttons-images/image24.png "UIControlState. Selected")
+![UIControlState. normal](buttons-images/image22.png "UIControlState. normal") 
+ ![UIControlState. realçado](buttons-images/image23.png "UIControlState. realçado") 
+ ![UIControlState. Selected](buttons-images/image24.png "UIControlState. Selected")
 
 Para obter mais informações sobre como trabalhar com botões personalizados, consulte a receita [usar uma imagem para um botão](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/buttons/use_an_image_for_a_button) .

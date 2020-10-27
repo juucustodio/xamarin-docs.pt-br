@@ -9,12 +9,12 @@ ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 60a5fbaa8386d0ecdc5d205b3262e05406cec4a6
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 07bfcabc7ffef20bee43531bfab3e78155beb9a9
+ms.sourcegitcommit: 58247fe066ad271ee43c8967ac3301fdab6ca2d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556237"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92629568"
 ---
 # <a name="no-locxamarinessentials-preferences"></a>Xamarin.Essentials: Preferências
 
@@ -62,11 +62,12 @@ Para remover todas as preferências:
 Preferences.Clear();
 ```
 
-Os métodos acima também assumem um opcional `sharedName` que pode ser usado para criar contêineres adicionais para preferências. Leia a seguir as particularidades de implementação da plataforma.
+> [!TIP]
+> Os métodos acima assumem um `string` parâmetro opcional chamado `sharedName` . Esse parâmetro é usado para criar contêineres adicionais para preferências que são úteis em alguns casos de uso. Um caso de uso é quando seu aplicativo precisa compartilhar preferências entre extensões ou um aplicativo de inspeção. Leia as especificações de implementação da plataforma abaixo.
 
 ## <a name="supported-data-types"></a>Tipos de dados com suporte
 
-Os tipos de dados a seguir têm suporte em **Preferences**:
+Os tipos de dados a seguir têm suporte em **Preferences** :
 
 - **bool**
 - **double**
@@ -109,7 +110,7 @@ Todos os dados são armazenados em [Preferências Compartilhadas](https://develo
 
 ## <a name="persistence"></a>Persistência
 
-A desinstalação do aplicativo fará com que todas as _preferências_ sejam removidas, com a exceção sendo aplicativos direcionados e executados no Android 6,0 (API nível 23) ou posterior que usam o [__backup automático__](https://developer.android.com/guide/topics/data/autobackup). Esse recurso está ativado por padrão e preserva os dados do aplicativo, incluindo __Preferências Compartilhadas__, que é o que a API de **Preferências** utiliza. É possível desabilitar isso seguindo a [documentação](https://developer.android.com/guide/topics/data/autobackup) do Google.
+A desinstalação do aplicativo fará com que todas as _preferências_ sejam removidas, com a exceção sendo aplicativos direcionados e executados no Android 6,0 (API nível 23) ou posterior que usam o [__backup automático__](https://developer.android.com/guide/topics/data/autobackup). Esse recurso está ativado por padrão e preserva os dados do aplicativo, incluindo __Preferências Compartilhadas__ , que é o que a API de **Preferências** utiliza. É possível desabilitar isso seguindo a [documentação](https://developer.android.com/guide/topics/data/autobackup) do Google.
 
 ## <a name="limitations"></a>Limitações
 

@@ -9,12 +9,12 @@ ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 059405d4e3219162022b3f8c0208ee5cc4ac2d38
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 577628237d1e7433c2ad06466a2e804808874108
+ms.sourcegitcommit: d8627a500a9b8a07615aef9822c9b1dba2bf6650
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91434537"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92629630"
 ---
 # <a name="no-locxamarinessentials-email"></a>Xamarin.Essentials: Email
 
@@ -26,7 +26,7 @@ Para acessar a funcionalidade de **email** , a configuração específica de pla
 
 Se a versão do Android de destino do seu projeto estiver definida como **Android 11 (API R 30)** , você deverá atualizar seu manifesto do Android com consultas que são usadas com os novos [requisitos de visibilidade de pacote](https://developer.android.com/preview/privacy/package-visibility).
 
-Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o seguinte dentro do nó do **manifesto**:
+Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o seguinte dentro do nó do **manifesto** :
 
 ```xml
 <queries>
@@ -39,7 +39,14 @@ Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o se
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-Não exige mais configurações.
+No iOS 9 e superior, a Apple impõe o esquema que um aplicativo pode consultar. Para consultar se o email é um destino válido, o `mailto` esquema deve ser especificado no LSApplicationQueriesSchemes em seu arquivo info. plist.
+
+```xml
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>mailto</string>
+</array>
+```
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 

@@ -10,12 +10,12 @@ ms.date: 06/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: da3c6c2f55f1cdbed1b3c4e1bb16c4f78e32cf23
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 9e8c0eeb70393cd3a5c6db7b99146b69b79ec14d
+ms.sourcegitcommit: 01ccefd54c0ced724784dbe1aec9ecfc9b00e633
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556042"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92630238"
 ---
 # <a name="no-locxamarinforms-dependencyservice-registration-and-resolution"></a>Xamarin.Forms Registro e resolução do DependencyService
 
@@ -36,7 +36,7 @@ O registro pode ser executado com o [`DependencyAttribute`](xref:Xamarin.Forms.D
 
 O [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) pode ser usado para registrar uma implementação de plataforma com o [`DependencyService`](xref:Xamarin.Forms.DependencyService) . O atributo indica que o tipo especificado fornece uma implementação concreta da interface.
 
-O exemplo a seguir mostra como usar o [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) para registrar a implementação do IOS da `IDeviceOrientationService` interface:
+O exemplo a seguir usa o [`DependencyAttribute`](xref:Xamarin.Forms.DependencyAttribute) para registrar a implementação do IOS da `IDeviceOrientationService` interface:
 
 ```csharp
 using Xamarin.Forms;
@@ -65,7 +65,7 @@ Da mesma forma, as implementações da `IDeviceOrientationService` interface em 
 
 Os [`DependencyService.Register`](xref:Xamarin.Forms.DependencyService.Register*) métodos e o `RegisterSingleton` método podem ser usados para registrar uma implementação de plataforma com o [`DependencyService`](xref:Xamarin.Forms.DependencyService) .
 
-O exemplo a seguir mostra o uso do [`Register`](xref:Xamarin.Forms.DependencyService.Register*) método para registrar a implementação do IOS da `IDeviceOrientationService` interface:
+O exemplo a seguir usa o [`Register`](xref:Xamarin.Forms.DependencyService.Register*) método para registrar a implementação do IOS da `IDeviceOrientationService` interface:
 
 ```csharp
 [Register("AppDelegate")]
