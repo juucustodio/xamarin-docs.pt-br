@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: jonpryor
 ms.author: jopryo
 ms.date: 09/23/2020
-ms.openlocfilehash: 90efe2533f971180124d044ec39ddcf1591b9d36
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 8a23e973687ac9f775042685122d558788fc7be7
+ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91455034"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92897436"
 ---
 # <a name="build-items"></a>Compilar itens
 
@@ -107,7 +107,7 @@ Usuários mais avançados talvez queiram usar diferentes recursos em configuraç
   <AndroidResource Include="Resources-Debug\values\strings.xml"/>
 </ItemGroup>
 <PropertyGroup>
-  <MonoAndroidResourcePrefix>Resources;Resources-Debug<MonoAndroidResourcePrefix>
+  <MonoAndroidResourcePrefix>Resources;Resources-Debug</MonoAndroidResourcePrefix>
 </PropertyGroup>
 ```
 

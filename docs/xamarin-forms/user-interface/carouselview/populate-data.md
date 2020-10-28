@@ -6,16 +6,16 @@ ms.assetid: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/29/2020
+ms.date: 10/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b0654aef28ac356fdffc5a846f9ca654db240367
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 82098c47a313eac48b457575620287af74aacd15
+ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562854"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92897540"
 ---
 # <a name="no-locxamarinforms-carouselview-data"></a>Xamarin.Forms Dados do CarouselView
 
@@ -37,53 +37,10 @@ Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.Bin
 
 ## <a name="populate-a-carouselview-with-data"></a>Popular um CarouselView com dados
 
-Um [`CarouselView`](xref:Xamarin.Forms.CarouselView) é populado com dados definindo sua [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) propriedade para qualquer coleção que implementa `IEnumerable` . Os itens podem ser adicionados em XAML inicializando a `ItemsSource` propriedade de uma matriz de cadeias de caracteres:
-
-```xaml
-<CarouselView>
-    <CarouselView.ItemsSource>
-        <x:Array Type="{x:Type x:String}">
-            <x:String>Baboon</x:String>
-            <x:String>Capuchin Monkey</x:String>
-            <x:String>Blue Monkey</x:String>
-            <x:String>Squirrel Monkey</x:String>
-            <x:String>Golden Lion Tamarin</x:String>
-            <x:String>Howler Monkey</x:String>
-            <x:String>Japanese Macaque</x:String>
-        </x:Array>
-    </CarouselView.ItemsSource>
-</CarouselView>
-```
-
-> [!NOTE]
-> Observe que o elemento `x:Array` requer um atributo `Type` que indica o tipo dos itens na matriz.
-
-Este é o código C# equivalente:
-
-```csharp
-CarouselView carouselView = new CarouselView();
-carouselView.ItemsSource = new string[]
-{
-    "Baboon",
-    "Capuchin Monkey",
-    "Blue Monkey",
-    "Squirrel Monkey",
-    "Golden Lion Tamarin",
-    "Howler Monkey",
-    "Japanese Macaque"
-};
-```
+Um [`CarouselView`](xref:Xamarin.Forms.CarouselView) é populado com dados definindo sua [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) propriedade para qualquer coleção que implementa `IEnumerable` . Por padrão, o [`CarouselView`](xref:Xamarin.Forms.CarouselView) exibe os itens horizontalmente.
 
 > [!IMPORTANT]
 > Se o [`CarouselView`](xref:Xamarin.Forms.CarouselView) for necessário para atualizar à medida que os itens forem adicionados, removidos ou alterados na coleção subjacente, a coleção subjacente deverá ser uma `IEnumerable` coleção que enviará notificações de alteração de propriedade, como `ObservableCollection` .
-
-Por padrão, o [`CarouselView`](xref:Xamarin.Forms.CarouselView) exibe os itens horizontalmente. As capturas de tela a seguir mostram uma `CarouselView` exibição de itens de cadeia de caracteres diferentes no Ios e no Android:
-
-[![Captura de tela de CarouselView contendo itens de texto, no iOS e no Android](populate-data-images/text.png "Itens de texto em um CarouselView")](populate-data-images/text-large.png#lightbox "Itens de texto em um CarouselView")
-
-Para obter informações sobre como alterar a [`CarouselView`](xref:Xamarin.Forms.CarouselView) orientação, consulte [ Xamarin.Forms layout CarouselView](layout.md). Para obter informações sobre como definir a aparência de cada item no `CarouselView` , consulte [definir a aparência do item](#define-item-appearance).
-
-### <a name="data-binding"></a>Associação de dados
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) pode ser preenchido com dados usando a vinculação de dados para associar sua [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) Propriedade a uma `IEnumerable` coleção. Em XAML, isso é obtido com a `Binding` extensão de marcação:
 
@@ -103,7 +60,7 @@ Neste exemplo, os [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) dado
 > [!NOTE]
 > Associações compiladas podem ser habilitadas para melhorar o desempenho de vinculação de dados em Xamarin.Forms aplicativos. Para saber mais, confira [Associações compiladas](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
 
-Para obter mais informações sobre a vinculação de dados, consulte [ Xamarin.Forms vinculação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+Para obter informações sobre como alterar a [`CarouselView`](xref:Xamarin.Forms.CarouselView) orientação, consulte [ Xamarin.Forms layout CarouselView](layout.md). Para obter informações sobre como definir a aparência de cada item no `CarouselView` , consulte [definir a aparência do item](#define-item-appearance). Para obter mais informações sobre a vinculação de dados, consulte [ Xamarin.Forms vinculação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
 ## <a name="define-item-appearance"></a>Definir a aparência do item
 

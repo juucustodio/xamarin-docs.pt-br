@@ -6,16 +6,16 @@ ms.assetid: 4CB2F270-908A-4A89-B852-70BC04066E8C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/04/2020
+ms.date: 10/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d3eb7edbb24c7e28ee375e1de85f6a7597ec63ac
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: af56e84598f73693a8cb0e93573b789a716c194a
+ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561009"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92897462"
 ---
 # <a name="add-drag-and-drop-gesture-recognizers"></a>Adicionar reconhecedores de gestos de arrastar e soltar
 
@@ -30,7 +30,7 @@ Um gesto de arrastar e soltar permite que os itens e seus pacotes de dados assoc
 >
 > Há suporte para o reconhecimento de gestos de arrastar e soltar no iOS, no Android e no Plataforma Universal do Windows (UWP). No entanto, no iOS, é necessária uma plataforma mínima do iOS 11.
 
-A *fonte de arrastar*, que é o elemento no qual o gesto de arrastar é iniciado, pode fornecer dados a serem transferidos preenchendo um objeto de pacote de dados. Quando a fonte de arrastar é liberada, drop ocorre. O *destino de soltura*, que é o elemento sob a interface "arrastar" e, em seguida, processa o pacote de dados.
+A *fonte de arrastar* , que é o elemento no qual o gesto de arrastar é iniciado, pode fornecer dados a serem transferidos preenchendo um objeto de pacote de dados. Quando a fonte de arrastar é liberada, drop ocorre. O *destino de soltura* , que é o elemento sob a interface "arrastar" e, em seguida, processa o pacote de dados.
 
 O processo para habilitar o recurso de arrastar e soltar em um aplicativo é o seguinte:
 
@@ -50,7 +50,7 @@ No Xamarin.Forms , o reconhecimento de gestos de arrastar é fornecido pela `Dra
 - `CanDrag`, do tipo `bool` , que indica se o elemento ao qual o reconhecedor de gestos está anexado pode ser uma fonte de arrastar. O valor padrão dessa propriedade é `false`.
 - `DragStartingCommand`, do tipo `ICommand` , que é executado quando um gesto de arrastar é reconhecido pela primeira vez.
 - `DragStartingCommandParameter`, do tipo `object`, que é o parâmetro passado para `DragStartingCommand`.
-- `DropCompletedCommmand`, do tipo `ICommand` , que é executado quando a fonte de arrastar é descartada.
+- `DropCompletedCommand`, do tipo `ICommand` , que é executado quando a fonte de arrastar é descartada.
 - `DropCompletedCommandParameter`, do tipo `object`, que é o parâmetro passado para `DropCompletedCommand`.
 
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que eles podem ser destinos de associações de dados e com estilo.
@@ -79,6 +79,8 @@ Neste exemplo, um gesto de arrastar pode ser iniciado no [`Image`](xref:Xamarin.
 
 > [!TIP]
 > No iOS, Android e UWP, um gesto de arrastar é iniciado com um pressionamento longo seguido de um arrastar.
+
+Para obter um exemplo de como usar `DragGestureRecognizer` comandos, consulte o [exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/).
 
 ## <a name="build-a-data-package"></a>Criar um pacote de dados
 
@@ -211,6 +213,8 @@ O exemplo de XAML a seguir mostra um `DropGestureRecognizer` anexado a um [`Imag
 ```
 
 Neste exemplo, quando uma fonte de arrastar é descartada no [`Image`](xref:Xamarin.Forms.Image) destino de soltar, a fonte de arrastar será copiada para o destino de soltura, desde que a fonte de arrastar seja um [`ImageSource`](xref:Xamarin.Forms.ImageSource) . Isso ocorre porque o Xamarin.Forms copia automaticamente imagens arrastadas e texto para destinos de destino compatíveis.
+
+Para obter um exemplo de como usar `DropGestureRecognizer` comandos, consulte o [exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/).
 
 ## <a name="handle-the-dragover-event"></a>Manipular o evento DragOver
 

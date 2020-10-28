@@ -6,13 +6,13 @@ ms.assetid: E73AE622-664C-4A90-B5B2-BD47D0E7A1A7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/18/2020
-ms.openlocfilehash: 0c10e73d8d6c2dcafacbb069eaf905a227030b87
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.date: 10/26/2020
+ms.openlocfilehash: 6a3154d159c491c6460e118395286aa33cfa7e7e
+ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557524"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92897449"
 ---
 # <a name="xamarinforms-multi-bindings"></a>Várias associações do Xamarin. Forms
 
@@ -155,6 +155,33 @@ Neste exemplo, o `MultiBinding` objeto usa a `AllTrueMultiConverter` instância 
 
 Por padrão, a [`CheckBox.IsChecked`](xref:Xamarin.Forms.CheckBox.IsChecked) propriedade usa uma [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) associação. Portanto, o `ConvertBack` método da `AllTrueMultiConverter` instância é executado quando o [`CheckBox`](xref:Xamarin.Forms.CheckBox) é desmarcado pelo usuário, que define os valores de associação de origem como o valor da `CheckBox.IsChecked` propriedade.
 
+O código C# equivalente é mostrado abaixo:
+
+```csharp
+public class MultiBindingConverterCodePage : ContentPage
+{
+    public MultiBindingConverterCodePage()
+    {
+        BindingContext = new GroupViewModel();
+
+        CheckBox checkBox = new CheckBox();
+        checkBox.SetBinding(CheckBox.IsCheckedProperty, new MultiBinding
+        {
+            Bindings = new Collection<BindingBase>
+            {
+                new Binding("Employee1.IsOver16"),
+                new Binding("Employee1.HasPassedTest"),
+                new Binding("Employee1.IsSuspended", converter: new InverterConverter())
+            },
+            Converter = new AllTrueMultiConverter()
+        });
+
+        Title = "MultiBinding converter demo";
+        Content = checkBox;
+    }
+}
+```
+
 ## <a name="format-strings"></a>Formatar cadeias de caracteres
 
 Um `MultiBinding` pode formatar qualquer resultado de várias ligações que é exibido como uma cadeia de caracteres, com a `StringFormat` propriedade. Essa propriedade pode ser definida como uma cadeia de caracteres de formatação .NET padrão, com espaços reservados, que especifica como formatar o resultado de várias associações:
@@ -172,6 +199,22 @@ Um `MultiBinding` pode formatar qualquer resultado de várias ligações que é 
 ```
 
 Neste exemplo, a `StringFormat` Propriedade combina os três valores associados em uma única cadeia de caracteres que é exibida pelo [`Label`](xref:Xamarin.Forms.Label) .
+
+O código C# equivalente é mostrado abaixo:
+
+```csharp
+Label label = new Label();
+label.SetBinding(Label.TextProperty, new MultiBinding
+{
+    Bindings = new Collection<BindingBase>
+    {
+        new Binding("Employee1.Forename"),
+        new Binding("Employee1.MiddleName"),
+        new Binding("Employee1.Surname")
+    },
+    StringFormat = "{0} {1} {2}"
+});
+```
 
 > [!IMPORTANT]
 > O número de parâmetros em um formato de cadeia de caracteres composta não pode exceder o número de `Binding` objetos filho no `MultiBinding` .

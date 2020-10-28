@@ -10,12 +10,12 @@ ms.date: 12/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6c5390057baf48634056101d44540020648ea709
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: afa5ccf8f4d4485ae7a9a45bcbc745bddee20f5c
+ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563101"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92897475"
 ---
 # <a name="no-locxamarinforms-local-databases"></a>Xamarin.Forms Bancos de dados locais
 
@@ -40,13 +40,12 @@ Use o Gerenciador de pacotes NuGet para pesquisar o **SQLite-net-PCL** e adicion
 Há diversos pacotes NuGet com nomes semelhantes. O pacote correto tem estes atributos:
 
 - **ID:** sqlite-net-pcl
-- **Autor(es):** SQLite-net
-- **Proprietário:** praeclarum
-- **URL do Projeto:** https://github.com/praeclarum/sqlite-net
+- **Autores:** SQLite-net
+- **Proprietários:** praeclarum
 - **Link do NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]
-> Apesar do nome do pacote, use o pacote NuGet **sqlite-net-pcl**, mesmo em projetos do .NET Standard.
+> Apesar do nome do pacote, use o pacote NuGet **sqlite-net-pcl** , mesmo em projetos do .NET Standard.
 
 ## <a name="configure-app-constants"></a>Configurar constantes do aplicativo
 
@@ -256,13 +255,13 @@ O SQLite fornece uma API robusta com mais recursos do que o que é abordado nest
 
 Para obter mais informações, consulte a [documentação do SQLite](https://www.sqlite.org/docs.html) em SQLite.org.
 
-### <a name="write-ahead-logging"></a>Log write-ahead
+### <a name="write-ahead-logging"></a>Log de Write-Ahead
 
 Por padrão, o SQLite usa um diário de reversão tradicional. Uma cópia do conteúdo do banco de dados inalterado é gravada em um arquivo de reversão separado e, em seguida, as alterações são gravadas diretamente no arquivo de banco de dados. A confirmação ocorre quando o diário de reversão é excluído.
 
-O registro write-ahead (WAL) grava as alterações em um arquivo WAL separado primeiro. No modo WAL, uma confirmação é um registro especial, acrescentado ao arquivo WAL, que permite que várias transações ocorram em um único arquivo WAL. Um arquivo WAL é mesclado de volta para o arquivo de banco de dados em uma operação especial chamada _ponto de verificação_.
+O log de Write-Ahead (WAL) grava as alterações em um arquivo WAL separado primeiro. No modo WAL, uma confirmação é um registro especial, acrescentado ao arquivo WAL, que permite que várias transações ocorram em um único arquivo WAL. Um arquivo WAL é mesclado de volta para o arquivo de banco de dados em uma operação especial chamada _ponto de verificação_ .
 
-O WAL pode ser mais rápido para bancos de dados locais, pois leitores e gravadores não bloqueiam um ao outro, permitindo que as operações de leitura e gravação sejam simultâneas. No entanto, o modo WAL não permite alterações no _tamanho da página_, adiciona associações de arquivo adicionais ao banco de dados e adiciona a operação de _ponto de verificação_ extra.
+O WAL pode ser mais rápido para bancos de dados locais, pois leitores e gravadores não bloqueiam um ao outro, permitindo que as operações de leitura e gravação sejam simultâneas. No entanto, o modo WAL não permite alterações no _tamanho da página_ , adiciona associações de arquivo adicionais ao banco de dados e adiciona a operação de _ponto de verificação_ extra.
 
 Para habilitar WAL em SQLite.NET, chame o `EnableWriteAheadLoggingAsync` método na `SQLiteAsyncConnection` instância:
 
@@ -270,7 +269,7 @@ Para habilitar WAL em SQLite.NET, chame o `EnableWriteAheadLoggingAsync` método
 await Database.EnableWriteAheadLoggingAsync();
 ```
 
-Para obter mais informações, consulte [log write-ahead do SQLite](https://www.sqlite.org/wal.html) em SQLite.org.
+Para obter mais informações, consulte [SQLite Write-Ahead Logging](https://www.sqlite.org/wal.html) em SQLite.org.
 
 ### <a name="copying-a-database"></a>Copiando um banco de dados
 
