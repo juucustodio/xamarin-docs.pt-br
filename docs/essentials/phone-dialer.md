@@ -9,20 +9,45 @@ ms.date: 07/02/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d642005e9aed663570c251e955c6a3af4704ed5c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9bd281a61fd53ef3f6d0d3d2307f78a218f33cf4
+ms.sourcegitcommit: db423d51356cf5a2dfa1b3925204797b1baf3cd9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84802207"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92734774"
 ---
-# <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: Discagem telefônica
+# <a name="no-locxamarinessentials-phone-dialer"></a>Xamarin.Essentials: Discagem telefônica
 
 A classe **PhoneDialer** permite que um aplicativo abra um número de telefone pelo discador.
 
 ## <a name="get-started"></a>Introdução
 
 [!include[](~/essentials/includes/get-started.md)]
+
+# <a name="android"></a>[Android](#tab/android)
+
+Se a versão do Android de destino do seu projeto estiver definida como **Android 11 (API R 30)** , você deverá atualizar seu manifesto do Android com consultas que são usadas com os novos [requisitos de visibilidade de pacote](https://developer.android.com/preview/privacy/package-visibility).
+
+Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o seguinte dentro do nó do **manifesto** :
+
+```xml
+<queries>
+  <intent>
+    <action android:name="android.intent.action.DIAL" />
+    <data android:scheme="tel"/>
+  </intent>
+</queries>
+```
+
+# <a name="ios"></a>[iOS](#tab/ios)
+
+Não exige mais configurações.
+
+# <a name="uwp"></a>[UWP](#tab/uwp)
+
+Sem diferenças entre plataformas.
+
+-----
 
 ## <a name="using-phone-dialer"></a>Como usar a Discagem telefônica
 
