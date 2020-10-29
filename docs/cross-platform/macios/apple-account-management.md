@@ -6,12 +6,12 @@ ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 author: davidortinau
 ms.author: daortin
 ms.date: 03/05/2020
-ms.openlocfilehash: 17607e09a141fd29cd81cde93d812b20e62a9af8
-ms.sourcegitcommit: 60d2243809d8e980fca90b9f771e72f8c0e64d71
+ms.openlocfilehash: f7a94f4aa7ec9be02f2365afbb995e9a7d5f3700
+ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78946242"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92928588"
 ---
 # <a name="apple-account-management"></a>Gerenciamento de contas da Apple
 
@@ -36,11 +36,11 @@ O gerenciamento de conta da Apple está disponível em Visual Studio para Mac, V
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-1. Acesse o **Visual Studio > preferências > conta de desenvolvedor da Apple** e clique no botão **+** para abrir a caixa de diálogo entrar:
+1. Acesse o **Visual Studio > preferências > conta de desenvolvedor da Apple** e clique no **+** botão para abrir a caixa de diálogo de entrada:
 
     ![AScreenshot da página de contas de desenvolvedor da Apple em preferências de Visual Studio para Mac.](apple-account-management-images/add-account-vsm.png)
 
-2. Insira sua ID da Apple e senha e clique em **entrar**. Isso salvará suas credenciais no conjunto de chaves seguro neste computador.
+2. Insira sua ID da Apple e senha e clique em **entrar** . Isso salvará suas credenciais no conjunto de chaves seguro neste computador.
 
 3. Selecione **sempre permitir** na caixa de diálogo de alerta para permitir que o Visual Studio use suas credenciais:
 
@@ -55,11 +55,11 @@ O gerenciamento de conta da Apple está disponível em Visual Studio para Mac, V
 > [!NOTE]
 > Se você estiver usando o Visual Studio 2017 ou o Visual Studio 2019 (versão 16,4 e mais antigo), você precisará ser [emparelhado a um host de Build do Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) antes de continuar.
 
-1. Vá para **ferramentas > opções > Xamarin > contas da Apple** e clique em **Adicionar**:
+1. Vá para **ferramentas > opções > Xamarin > contas da Apple** e clique em **Adicionar** :
 
     ![Captura de tela da página de contas da Apple nas opções do Visual Studio.](apple-account-management-images/add-account-vsw.png)
 
-2. Insira sua ID da Apple e senha e clique em **logon**.
+2. Insira sua ID da Apple e senha e clique em **logon** .
 
 3. Depois que sua conta tiver sido adicionada com êxito, você verá sua ID da Apple e todas as equipes das quais sua ID da Apple faz parte:
 
@@ -71,7 +71,7 @@ O gerenciamento de conta da Apple está disponível em Visual Studio para Mac, V
 
 Selecione uma equipe e clique em **Exibir detalhes...** para abrir uma caixa de diálogo que exibe uma lista de identidades de assinatura e perfis de provisionamento instalados em seu computador.
 
-A caixa de diálogo detalhes da equipe exibe uma lista de identidades de assinatura, organizadas por tipo. A coluna **status** aconselha você se o certificado for: 
+A caixa de diálogo detalhes da equipe exibe uma lista de identidades de assinatura, organizadas por tipo. A coluna **status** aconselha você se o certificado for:
 
 - **Válido** – a identidade de assinatura (o certificado e a chave privada) está instalada em seu computador e não expirou.
 
@@ -91,18 +91,20 @@ Se uma opção na lista suspensa estiver esmaecida e desmarcada, isso significa 
 
 ## <a name="download-provisioning-profiles"></a>Baixar perfis de provisionamento
 
-A caixa de diálogo detalhes da equipe também exibe uma lista de todos os perfis de provisionamento conectados à sua conta de desenvolvedor. Você pode baixar todos os perfis de provisionamento para o computador local clicando em **baixar todos os perfis**.
+A caixa de diálogo detalhes da equipe também exibe uma lista de todos os perfis de provisionamento conectados à sua conta de desenvolvedor. Você pode baixar todos os perfis de provisionamento para o computador local clicando em **baixar todos os perfis** .
 
 
-## <a name="troubleshoot"></a>Solução de problemas
+## <a name="troubleshoot"></a>Solucionar problemas
 
 - Pode levar várias horas para que uma nova conta de desenvolvedor da Apple seja aprovada. Você não poderá habilitar o provisionamento automático até que a conta tenha sido aprovada.
 
-- Se a adição de contas de desenvolvedor da Apple falhar com a mensagem `Authentication Error: Xcode 7.3 or later is required to continue developing with your Apple ID.`, verifique se a ID da Apple que você está usando tem uma associação paga ativa ao programa de desenvolvedor da Apple. Para usar uma conta de desenvolvedor da Apple paga, confira o guia de [provisionamento gratuito para aplicativos Xamarin. Ios](~/ios/get-started/installation/device-provisioning/free-provisioning.md) .
+- Se a adição de contas de desenvolvedor da Apple falhar com a mensagem `Authentication Error: Xcode 7.3 or later is required to continue developing with your Apple ID.` , verifique se a ID da Apple que você está usando tem uma associação paga ativa ao programa de desenvolvedor da Apple. Para usar uma conta de desenvolvedor da Apple paga, confira o guia de [provisionamento gratuito para aplicativos Xamarin. Ios](~/ios/get-started/installation/device-provisioning/free-provisioning.md) .
 
-- Se a tentativa de criar um novo certificado de autenticação falhar com o erro `You have reached the limit for certificates of this type`, o número máximo de certificados permitidos terá sido gerado. Para corrigir isso, navegue até o [centro de desenvolvedores da Apple](https://developer.apple.com/account/ios/certificate/distribution) e revogue um dos certificados de produção.
+- Se a tentativa de criar um novo certificado de assinatura falhar com o erro `You have reached the limit for certificates of this type` , o número máximo de certificados permitidos foi gerado. Para corrigir isso, navegue até o [centro de desenvolvedores da Apple](https://developer.apple.com/account/ios/certificate/distribution) e revogue um dos certificados de produção.
 
-- Se você estiver tendo problemas ao fazer logon em sua conta no Visual Studio para Mac, uma possível correção é abrir o aplicativo de conjunto de chaves e, em **categoria** , selecionar **senhas**. Procure `deliver.` e exclua todas as entradas encontradas.
+- Se você estiver tendo problemas ao fazer logon em sua conta no Visual Studio para Mac, uma possível correção é abrir o aplicativo de conjunto de chaves e, em **categoria** , selecionar **senhas** . Pesquise `deliver.` e exclua todas as entradas encontradas.
+
+- Se seu certificado de assinatura for revogado, ele poderá ser removido do seguinte caminho no Windows: `C:\Users\<user>\AppData\Local\Xamarin\iOS\Provisioning\Certificates` .
 
 ## <a name="known-issues"></a>Problemas conhecidos
 

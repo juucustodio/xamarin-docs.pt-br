@@ -6,12 +6,12 @@ ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
 author: davidortinau
 ms.author: daortin
 ms.date: 10/11/2017
-ms.openlocfilehash: 35f2db71f582c7e6e30448cf32ba4d95033652bf
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 5bee8df72290cab3ed6d5c23fef6c2ae2f1a2559
+ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84570980"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92928510"
 ---
 # <a name="getting-started-with-objective-sharpie"></a>Introdução com nitidez objetiva
 
@@ -22,13 +22,13 @@ ms.locfileid: "84570980"
 
 ## <a name="installing-objective-sharpie"></a>Instalando a nitidez do objetivo
 
-A nitidez objetiva é atualmente uma ferramenta de linha de comando autônoma para o Mac OS X 10,10 e mais recente e _não é um produto Xamarin com suporte completo_. Ele só deve ser usado por desenvolvedores avançados para auxiliar na criação de um projeto de associação a uma biblioteca de Objective-C de terceiros.
+A nitidez objetiva é atualmente uma ferramenta de linha de comando autônoma para o Mac OS X 10,10 e mais recente e _não é um produto Xamarin com suporte completo_ . Ele só deve ser usado por desenvolvedores avançados para auxiliar na criação de um projeto de associação a uma biblioteca de Objective-C de terceiros.
 
 A nitidez do objetivo pode ser baixada como um instalador de pacote do OS X padrão.
 Execute o instalador e siga todos os prompts na tela do assistente de instalação:
 
 - **Versão atual: 3,4**
-  - [Baixar a versão mais recente](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie.pkg)
+  - [Baixar a versão mais recente](https://aka.ms/objective-sharpie)
   - [Comunicado do fórum](https://forums.xamarin.com/discussion/104800/objective-sharpie-3-4)
 
 > [!TIP]
