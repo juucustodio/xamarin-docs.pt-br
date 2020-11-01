@@ -10,10 +10,10 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 255c870407f1657196abd826b46c7e9b114285c9
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "91433324"
 ---
 # <a name="installing-xamarin-in-visual-studio-2019"></a>Como instalar o Xamarin no Visual Studio 2019
@@ -26,7 +26,7 @@ Para começar, verifique os [requisitos do sistema](~/cross-platform/get-started
 
 [!include[](~/cross-platform/includes/install-xamarin-windows-2019.md)]
 
-Para conferir se instalou o Xamarin no Visual Studio 2019, clique no menu **Ajuda**. Se o Xamarin estiver instalado, você verá o item de menu **Xamarin**, conforme mostrado nesta captura de tela:
+Para conferir se instalou o Xamarin no Visual Studio 2019, clique no menu **Ajuda** . Se o Xamarin estiver instalado, você verá o item de menu **Xamarin** , conforme mostrado nesta captura de tela:
 
 ![Item de menu do Xamarin no menu Ajuda](windows-images/12-xamarin-menu-item.png "Item de menu do Xamarin no menu Ajuda")
 
