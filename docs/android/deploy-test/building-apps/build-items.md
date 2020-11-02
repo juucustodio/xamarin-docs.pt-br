@@ -8,10 +8,10 @@ author: jonpryor
 ms.author: jopryo
 ms.date: 09/23/2020
 ms.openlocfilehash: 8a23e973687ac9f775042685122d558788fc7be7
-ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
+ms.sourcegitcommit: 145bd7550d19088c84949ecf5b1cc39002183234
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2020
+ms.lasthandoff: 11/02/2020
 ms.locfileid: "92897436"
 ---
 # <a name="build-items"></a>Compilar itens
