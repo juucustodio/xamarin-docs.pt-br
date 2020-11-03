@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
-ms.openlocfilehash: ebb9baf7bb1a6da96615eac65d5384cb7a05a9d6
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: d7f66d9bda014337ae6108ab42158faa856632bb
+ms.sourcegitcommit: 4f0223cf13e14d35c52fa72a026b1c7696bf8929
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91457595"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93278332"
 ---
 # <a name="binding-objective-c-libraries"></a>Associando bibliotecas de Objective-C
 
@@ -37,14 +37,14 @@ Você pode usar o projeto de [exemplo de associação do IOS](https://github.com
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
 A maneira mais fácil de criar uma associação é criar um projeto de associação do Xamarin. iOS.
-Você pode fazer isso em Visual Studio para Mac selecionando o tipo de projeto, biblioteca do **iOS > > biblioteca de associações**:
+Você pode fazer isso em Visual Studio para Mac selecionando o tipo de projeto, biblioteca do **iOS > > biblioteca de associações** :
 
 [![Faça isso em Visual Studio para Mac selecionando o tipo de projeto, biblioteca de associações de biblioteca do iOS](objective-c-libraries-images/00-sml.png)](objective-c-libraries-images/00.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
 A maneira mais fácil de criar uma associação é criar um projeto de associação do Xamarin. iOS.
-Você pode fazer isso no Visual Studio no Windows selecionando o tipo de projeto, **Visual C# > ios > biblioteca de associações (Ios)**:
+Você pode fazer isso no Visual Studio no Windows selecionando o tipo de projeto, **Visual C# > ios > biblioteca de associações (Ios)** :
 
 [![Biblioteca de associações do iOS iOS](objective-c-libraries-images/00vs-sml.png)](objective-c-libraries-images/00vs.png#lightbox)
 
@@ -445,7 +445,7 @@ class MyDelegate : NSObject, IUITableViewDelegate {
 }
 ```
 
-A implementação para os métodos de interface é exportada automaticamente com o nome apropriado, portanto, é equivalente a esta:
+A implementação para os métodos de interface necessários é exportada com o nome apropriado, portanto, é equivalente a esta:
 
 ```csharp
 class MyDelegate : NSObject, IUITableViewDelegate {
@@ -456,7 +456,29 @@ class MyDelegate : NSObject, IUITableViewDelegate {
 }
 ```
 
-Não importa se a interface é implementada implicitamente ou explicitamente.
+Isso funcionará para todos os membros de protocolo necessários, mas há um caso especial com os seletores opcionais que devem estar cientes.
+Os membros de protocolo opcionais são tratados de forma idêntica ao usar a classe base:
+
+```
+public class UrlSessionDelegate : NSUrlSessionDownloadDelegate {
+    public override void DidWriteData (NSUrlSession session, NSUrlSessionDownloadTask downloadTask, long bytesWritten, long totalBytesWritten, long totalBytesExpectedToWrite)
+```
+
+Mas ao usar a interface de protocolo, é necessário adicionar o [Export]. O IDE irá adicioná-lo por meio de preenchimento automático quando você adicioná-lo começando com override. 
+
+```
+public class UrlSessionDelegate : NSObject, INSUrlSessionDownloadDelegate {
+    [Export ("URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:")]
+    public void DidWriteData (NSUrlSession session, NSUrlSessionDownloadTask downloadTask, long bytesWritten, long totalBytesWritten, long totalBytesExpectedToWrite)
+```
+
+Há uma pequena diferença de comportamento entre os dois em tempo de execução.
+
+- Os usuários da classe base (NSUrlSessionDownloadDelegate, em exemplo) fornecem todos os seletores obrigatórios e opcionais, retornando valores padrão razoáveis.
+- Os usuários da interface (INSUrlSessionDownloadDelegate no exemplo) só respondem aos seletores exatos fornecidos.
+
+Algumas classes raras podem se comportar de maneira diferente aqui. Em quase todos os casos, no entanto, é seguro usar qualquer um deles.
+
 
 <a name="Binding_Class_Extensions"></a>
 

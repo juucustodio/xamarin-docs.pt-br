@@ -6,12 +6,12 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: davidortinau
 ms.author: daortin
 ms.date: 03/06/2018
-ms.openlocfilehash: 8549e993bf46ffd3b24ad8ec495791eb25b25023
-ms.sourcegitcommit: bd49f28105218f04e978e58143bba8cdec9fd4a9
+ms.openlocfilehash: 764c6303956199982da779d87b0a29977575e767
+ms.sourcegitcommit: 4f0223cf13e14d35c52fa72a026b1c7696bf8929
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925978"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93278345"
 ---
 # <a name="binding-types-reference-guide"></a>Guia de referência de tipos de associação
 
@@ -356,7 +356,7 @@ Normalmente, os modelos são usados pela implementação de protocolo.
 Eles diferem que o tempo de execução registrará somente com Objective-C os métodos que realmente foram substituídos.
 Caso contrário, o método não será registrado.
 
-Em geral, isso significa que, quando você subclasse de uma classe que foi sinalizada com o `ModelAttribute` , não deve chamar o método base.   Chamar esse método gerará a seguinte exceção: Foundation. You_Should_Not_Call_base_In_This_Method. Você deve implementar todo o comportamento em sua subclasse para qualquer método que substituir.
+Em geral, isso significa que, quando você subclasse de uma classe que foi sinalizada com o `ModelAttribute` , não deve chamar o método base.   Chamar esse método gerará a seguinte exceção: Foundation.You_Should_Not_Call_base_In_This_Method. Você deve implementar todo o comportamento em sua subclasse para qualquer método que substituir.
 
 <a name="AbstractAttribute"></a>
 
@@ -441,7 +441,7 @@ public interface NSAnimationDelegate {
 
 No caso acima, se o usuário da `NSAnimation` classe optasse por usar qualquer um dos eventos/Propriedades do C# e não tiver definido `NSAnimation.ComputeAnimationCurve` como um método ou lambda, o valor de retorno será o valor passado no parâmetro Progress.
 
-Consulte também: [`[NoDefaultValue]`](#NoDefaultValueAttribute) ,[`[DefaultValue]`](#DefaultValueAttribute)
+Consulte também: [`[NoDefaultValue]`](#NoDefaultValueAttribute) , [`[DefaultValue]`](#DefaultValueAttribute)
 
 ### <a name="ignoredindelegateattribute"></a>IgnoredInDelegateAttribute
 
@@ -577,7 +577,7 @@ interface CameraDelegate {
 }
 ```
 
-Consulte também: [`[DefaultValue]`](#DefaultValueAttribute) ,[`[DefaultValueFromArgument]`](#DefaultValueFromArgumentAttribute)  
+Consulte também: [`[DefaultValue]`](#DefaultValueAttribute) , [`[DefaultValueFromArgument]`](#DefaultValueFromArgumentAttribute)  
 
 <a name="ProtocolAttribute"></a>
 
@@ -671,7 +671,7 @@ class MyDelegate : NSObject, IUITableViewDelegate {
 }
 ```
 
-A implementação para os métodos de interface é exportada automaticamente com o nome apropriado, portanto, é equivalente a esta:
+A implementação para os métodos de interface necessários é exportada com o nome apropriado, portanto, é equivalente a esta:
 
 ```csharp
 class MyDelegate : NSObject, IUITableViewDelegate {
@@ -682,7 +682,29 @@ class MyDelegate : NSObject, IUITableViewDelegate {
 }
 ```
 
-Não importa se a interface é implementada implicitamente ou explicitamente.
+Isso funcionará para todos os membros de protocolo necessários, mas há um caso especial com os seletores opcionais que devem estar cientes.
+
+Os membros de protocolo opcionais são tratados de forma idêntica ao usar a classe base:
+
+```
+public class UrlSessionDelegate : NSUrlSessionDownloadDelegate {
+    public override void DidWriteData (NSUrlSession session, NSUrlSessionDownloadTask downloadTask, long bytesWritten, long totalBytesWritten, long totalBytesExpectedToWrite)
+```
+
+Mas ao usar a interface de protocolo, é necessário adicionar o [Export]. O IDE irá adicioná-lo por meio de preenchimento automático quando você adicioná-lo começando com override. 
+
+```
+public class UrlSessionDelegate : NSObject, INSUrlSessionDownloadDelegate {
+    [Export ("URLSession:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:")]
+    public void DidWriteData (NSUrlSession session, NSUrlSessionDownloadTask downloadTask, long bytesWritten, long totalBytesWritten, long totalBytesExpectedToWrite)
+```
+
+Há uma pequena diferença de comportamento entre os dois no tempo de execução:
+
+- Os usuários da classe base (NSUrlSessionDownloadDelegate, em exemplo) fornecem todos os seletores obrigatórios e opcionais, retornando valores padrão razoáveis.
+- Os usuários da interface (INSUrlSessionDownloadDelegate no exemplo) só respondem aos seletores exatos fornecidos.
+
+Algumas classes raras podem se comportar de maneira diferente aqui. Em quase todos os casos, no entanto, é seguro usar qualquer um deles.
 
 ### <a name="protocol-inlining"></a>Inalinhamento de protocolo
 
@@ -864,7 +886,7 @@ Os seguintes tipos de dados C# têm suporte para serem encapsulados de/para `NSN
 
 #### <a name="nsstring"></a>NSString
 
-[`[BindAs]`](#BindAsAttribute)funciona em conjuntion com [enums apoiados por uma constante NSString](#enum-attributes) para que você possa criar uma API .net melhor, por exemplo:
+[`[BindAs]`](#BindAsAttribute) funciona em conjuntion com [enums apoiados por uma constante NSString](#enum-attributes) para que você possa criar uma API .net melhor, por exemplo:
 
 ```csharp
 [BindAs (typeof (CAScroll))]
@@ -883,7 +905,7 @@ Trataremos a `enum`  <->  `NSString` conversão somente se o tipo de enumeraçã
 
 #### <a name="arrays"></a>Matrizes
 
-[`[BindAs]`](#BindAsAttribute)também dá suporte a matrizes de qualquer um dos tipos com suporte, você pode ter a seguinte definição de API como um exemplo:
+[`[BindAs]`](#BindAsAttribute) também dá suporte a matrizes de qualquer um dos tipos com suporte, você pode ter a seguinte definição de API como um exemplo:
 
 ```csharp
 [return: BindAs (typeof (CAScroll []))]
@@ -1499,7 +1521,7 @@ interface FooExplorer {
 }
 ```
 
-`[Wrap]`também pode ser usado diretamente em getters e setters de propriedade.
+`[Wrap]` também pode ser usado diretamente em getters e setters de propriedade.
 Isso permite ter controle total sobre eles e ajustar o código conforme necessário.
 Por exemplo, considere a seguinte definição de API que usa enums inteligentes:
 
@@ -1899,7 +1921,7 @@ A `SmartLink` propriedade deve ser definida como true para permitir que o Xamari
 
 A `WeakFrameworks` propriedade funciona da mesma maneira que a `Frameworks` propriedade, exceto que, em tempo de vinculação, o `-weak_framework` especificador é passado para gcc para cada uma das estruturas listadas.
 
-`WeakFrameworks`possibilita que bibliotecas e aplicativos vinculem de forma fraca as estruturas da plataforma para que possam, opcionalmente, usá-las se estiverem disponíveis, mas não precisarem de uma dependência complexa, o que é útil se a sua biblioteca se destinar a adicionar recursos extras em versões mais recentes do iOS. Para obter mais informações sobre vinculação fraca, consulte a documentação da Apple sobre [vinculação fraca](https://developer.apple.com/library/mac/#documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WeakLinking.html).
+`WeakFrameworks` possibilita que bibliotecas e aplicativos vinculem de forma fraca as estruturas da plataforma para que possam, opcionalmente, usá-las se estiverem disponíveis, mas não precisarem de uma dependência complexa, o que é útil se a sua biblioteca se destinar a adicionar recursos extras em versões mais recentes do iOS. Para obter mais informações sobre vinculação fraca, consulte a documentação da Apple sobre [vinculação fraca](https://developer.apple.com/library/mac/#documentation/MacOSX/Conceptual/BPFrameworks/Concepts/WeakLinking.html).
 
 Bons candidatos à vinculação fraca seriam `Frameworks` como contas,, `CoreBluetooth` , `CoreImage` `GLKit` `NewsstandKit` e já que `Twitter` estão disponíveis apenas no iOS 5.
 
@@ -2060,20 +2082,20 @@ interface MyColoringKeys {
 
 Os seguintes tipos de dados têm suporte na `StrongDictionary` definição:
 
-|Tipo de interface C#|`NSDictionary`Tipo de armazenamento|
+|Tipo de interface C#|`NSDictionary` Tipo de armazenamento|
 |---|---|
-|`bool`|`Boolean`armazenado em um`NSNumber`|
-|Valores de enumeração|inteiro armazenado em um`NSNumber`|
-|`int`|inteiro de 32 bits armazenado em um`NSNumber`|
-|`uint`|inteiro de 32 bits sem sinal armazenado em um`NSNumber`|
-|`nint`|`NSInteger`armazenado em um`NSNumber`|
-|`nuint`|`NSUInteger`armazenado em um`NSNumber`|
-|`long`|inteiro de 64 bits armazenado em um`NSNumber`|
-|`float`|inteiro de 32 bits armazenado como um`NSNumber`|
-|`double`|inteiro de 64 bits armazenado como um`NSNumber`|
-|`NSObject`e subclasses|`NSObject`|
+|`bool`|`Boolean` armazenado em um `NSNumber`|
+|Valores de enumeração|inteiro armazenado em um `NSNumber`|
+|`int`|inteiro de 32 bits armazenado em um `NSNumber`|
+|`uint`|inteiro de 32 bits sem sinal armazenado em um `NSNumber`|
+|`nint`|`NSInteger` armazenado em um `NSNumber`|
+|`nuint`|`NSUInteger` armazenado em um `NSNumber`|
+|`long`|inteiro de 64 bits armazenado em um `NSNumber`|
+|`float`|inteiro de 32 bits armazenado como um `NSNumber`|
+|`double`|inteiro de 64 bits armazenado como um `NSNumber`|
+|`NSObject` e subclasses|`NSObject`|
 |`NSDictionary`|`NSDictionary`|
 |`string`|`NSString`|
 |`NSString`|`NSString`|
-|C# `Array` de`NSObject`|`NSArray`|
-|C# `Array` de enumerações|`NSArray`contendo `NSNumber` valores|
+|C# `Array` de `NSObject`|`NSArray`|
+|C# `Array` de enumerações|`NSArray` contendo `NSNumber` valores|
