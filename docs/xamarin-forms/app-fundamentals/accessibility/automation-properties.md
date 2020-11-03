@@ -10,12 +10,12 @@ ms.date: 12/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cadefcf4eb3fbc1c8e5c1e2545ef5f4a98eb64e7
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f05ca6eaaaedea69e8b6eb951d31fb7701a2f0de
+ms.sourcegitcommit: 836d54779190b1bef1b43bc0c2016c9b3034bfda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561309"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281177"
 ---
 # <a name="automation-properties-in-no-locxamarinforms"></a>Propriedades de automação em Xamarin.Forms
 
@@ -131,6 +131,9 @@ AutomationProperties.SetIsInAccessibleTree(entry, true);
 AutomationProperties.SetLabeledBy(entry, nameLabel);
 ```
 
+> [!IMPORTANT]
+> O `AutomationProperties.LabeledByProperty` ainda não tem suporte no Ios.
+
 > [!NOTE]
 > Observe que o [ `SetValue` ] (xref: Xamarin.Forms . Acopláble. SetValue ( Xamarin.Forms . O método vinculproperty, System. Object)) também pode ser usado para definir a `AutomationProperties.IsInAccessibleTree` Propriedade anexada – `entry.SetValue(AutomationProperties.LabeledByProperty, nameLabel);`
 
@@ -173,5 +176,5 @@ No Android, os valores de propriedade `AutomationProperties.Name` e/ou `Automati
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Propriedades anexadas](~/xamarin-forms/xaml/attached-properties.md)
+- [Propriedades Anexadas](~/xamarin-forms/xaml/attached-properties.md)
 - [Acessibilidade (amostra)](/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)

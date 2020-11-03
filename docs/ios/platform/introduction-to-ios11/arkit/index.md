@@ -7,21 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/30/2017
-ms.openlocfilehash: 6803ecf2303ff2c91265f3ac8352a7aa15e74d40
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 6e96a57d2425d99839b723520ac24bafa57cc1a3
+ms.sourcegitcommit: 836d54779190b1bef1b43bc0c2016c9b3034bfda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436209"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281255"
 ---
 # <a name="introduction-to-arkit-in-xamarinios"></a>Introdução ao ARKit no Xamarin. iOS
 
 _Realidade aumentada para o iOS 11_
 
-O ARKit permite uma ampla variedade de aplicativos e jogos de realidade aumentada. Esta seção contém os seguintes tópicos:
-
-- [Introdução com ARKit](#gettingstarted)
-- [Usando ARKit com UrhoSharp](urhosharp.md)
+O ARKit permite uma ampla variedade de aplicativos e jogos de realidade aumentada
 
 <a name="gettingstarted"></a>
 
@@ -107,12 +104,11 @@ SceneView.Session.Pause();
 
 O código acima resulta em um aplicativo ARKit simples. Exemplos mais complexos esperam que o controlador de exibição hospede a sessão de realidade aumentada para implementar `IARSCNViewDelegate` e métodos adicionais sejam implementados.
 
-O ARKit fornece muitos recursos mais sofisticados, como o controle de superfície e a interação do usuário. Consulte a [demonstração de UrhoSharp](urhosharp.md) para obter um exemplo de combinação de rastreamento de ARKit com UrhoSharp.
+O ARKit fornece muitos recursos mais sofisticados, como o controle de superfície e a interação do usuário.
 
 ## <a name="related-links"></a>Links Relacionados
 
 - [Realidade aumentada (Apple)](https://developer.apple.com/arkit/)
-- [Usando ARKit com UrhoSharp](urhosharp.md)
 - [Exemplo simples de ARKit (Jet)](/samples/xamarin/ios-samples/ios11-arkitsample)
 - [ARKit colocando objetos (exemplo)](/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
 - [Introdução à realidade ARKitda para iOS (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/602/)
