@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsPropriedades, métodos e eventos de controle comum
+title: Xamarin.Forms Propriedades, métodos e eventos de controle comum
 description: Este artigo descreve Propriedades, métodos e eventos comuns definidos na classe Visualelement, que são comumente usados na derivação de classes.
 ms.prod: xamarin
 ms.assetId: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D
@@ -10,14 +10,14 @@ ms.date: 07/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b4c0ef44f528e3cbc56a27e98a1c38246736ff8c
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: c709331b743d6d6ac1f72fe87dae342b4478a920
+ms.sourcegitcommit: 9a83e49eb4d2afb8b3a99ac2347f4b9f8a19e76b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918348"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93330956"
 ---
-# <a name="no-locxamarinforms-common-control-properties-methods-and-events"></a>Xamarin.FormsPropriedades, métodos e eventos de controle comum
+# <a name="no-locxamarinforms-common-control-properties-methods-and-events"></a>Xamarin.Forms Propriedades, métodos e eventos de controle comum
 
 A Xamarin.Forms `VisualElement` classe é a classe base para a maioria dos controles usados em um Xamarin.Forms aplicativo. A `VisualElement` classe define muitas [Propriedades](#properties), [métodos](#methods)e [eventos](#events) que são usados na derivação de classes.
 
@@ -31,7 +31,7 @@ A `AnchorX` propriedade é um `double` valor que define o ponto central no eixo 
 
 ### [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY)
 
-A `AnchorY` propriedade é um `double` valor que define o ponto central no eixo X para transformações, como escala e rotação. O valor padrão é 0,5.
+A `AnchorY` propriedade é um `double` valor que define o ponto central no eixo Y para transformações, como escala e rotação. O valor padrão é 0,5.
 
 ### `Background`
 
@@ -55,7 +55,7 @@ A `Clip` propriedade é um `Geometry` objeto que define o contorno do conteúdo 
 
 ### [`Effects`](xref:Xamarin.Forms.Element.Effects)
 
-A `Effects` propriedade é um `List` dos `Effect` objetos, herdados do `Element` (xref: Xamarin.Forms . Elemento). Os efeitos permitem que os controles nativos sejam personalizados e normalmente são usados para alterações de estilo pequeno. Para obter mais informações sobre a `Effect` classe, consulte [ Xamarin.Forms Effects](~/xamarin-forms/app-fundamentals/effects/index.md).
+A `Effects` propriedade é um `List` dos `Effect` objetos herdados da [`Element`](xref:Xamarin.Forms.Element) classe. Os efeitos permitem que os controles nativos sejam personalizados e normalmente são usados para alterações de estilo pequeno. Para obter mais informações sobre a `Effect` classe, consulte [ Xamarin.Forms Effects](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 ### [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection)
 
@@ -239,7 +239,7 @@ O `Unfocused` evento é gerado sempre que a `VisualElement` instância perde o f
 
 ## <a name="units-of-measurement"></a>Unidades de medida
 
-As plataformas Android, iOS e UWP têm unidades de medida diferentes que podem variar entre os dispositivos. Xamarin.Formsusa uma unidade de medida independente de plataforma que normaliza as unidades entre dispositivos e plataformas. Há 160 unidades por polegada ou 64 unidades por centímetro, em Xamarin.Forms .
+As plataformas Android, iOS e UWP têm unidades de medida diferentes que podem variar entre os dispositivos. Xamarin.Forms usa uma unidade de medida independente de plataforma que normaliza as unidades entre dispositivos e plataformas. Há 160 unidades por polegada ou 64 unidades por centímetro, em Xamarin.Forms .
 
 ## <a name="request-properties"></a>Propriedades de solicitação
 
@@ -272,7 +272,7 @@ O comportamento é indefinido quando o valor mínimo é maior que o valor absolu
 
 ### <a name="minimum-properties-within-a-grid"></a>Propriedades mínimas em uma grade
 
-`Grid`os layouts têm seu próprio sistema para o dimensionamento relativo de linhas e colunas. Usar `MinimumWidthRequest` ou `MinimumHeightRequest` dentro de um `Grid` layout não terá efeito. Para obter mais informações, consulte [ Xamarin.Forms grade](~/xamarin-forms/user-interface/layouts/grid.md).
+`Grid` os layouts têm seu próprio sistema para o dimensionamento relativo de linhas e colunas. Usar `MinimumWidthRequest` ou `MinimumHeightRequest` dentro de um `Grid` layout não terá efeito. Para obter mais informações, consulte [ Xamarin.Forms grade](~/xamarin-forms/user-interface/layouts/grid.md).
 
 ## <a name="related-links"></a>Links relacionados
 
