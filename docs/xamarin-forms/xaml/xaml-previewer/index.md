@@ -1,5 +1,5 @@
 ---
-title: Visualizar XAML paraXamarin.Forms
+title: Visualizar XAML para Xamarin.Forms
 description: Este artigo explica como usar o visualizador XAML para ver seus Xamarin.Forms layouts renderizados conforme você digita. O XAML Visualizer está disponível no Visual Studio 2019 e no Visual Studio 2019 para Mac.
 zone_pivot_groups: platform
 ms.prod: xamarin
@@ -11,16 +11,19 @@ ms.date: 03/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6916d5fde688c5b1162f12db0d36bc3ca27156d8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: dff01728c986b23e59af702edb3bfd8c74ad744a
+ms.sourcegitcommit: d2aa3a8bf9a60b6708db55b10b0c6893c06d3256
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137313"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93331442"
 ---
-# <a name="xaml-previewer-for-xamarinforms"></a>Visualizar XAML paraXamarin.Forms
+# <a name="xaml-previewer-for-no-locxamarinforms"></a>Visualizar XAML para Xamarin.Forms
 
 _Consulte os Xamarin.Forms layouts renderizados conforme você digita_
+
+> [!WARNING]
+> A maneira recomendada para visualizar seu XAML agora é com o **[Hot recarregamento de XAML](~/xamarin-forms/xaml/hot-reload.md)**.
 
 ## <a name="overview"></a>Visão geral
 
@@ -32,9 +35,9 @@ A visualização XAML mostra como a sua Xamarin.Forms página XAML será exibida
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-Você pode abrir o visualizador XAML clicando nas setas no painel exibição de divisão. Se você quiser alterar o comportamento padrão de exibição de divisão, use as **ferramentas > opções > caixa Xamarin.Forms ** de diálogo prévia de XAML do Xamarin >. Nesta caixa de diálogo, você pode selecionar a exibição de documento padrão e a orientação de divisão.
+Você pode abrir o visualizador XAML clicando nas setas no painel exibição de divisão. Se você quiser alterar o comportamento padrão de exibição de divisão, use as **ferramentas > opções > caixa Xamarin.Forms** de diálogo prévia de XAML do Xamarin >. Nesta caixa de diálogo, você pode selecionar a exibição de documento padrão e a orientação de divisão.
 
-[![Xamarin.FormsOpções de visualização no Visual Studio](xaml-previewer-images/xamlp-options-vs-sm.png "[! Parar. Opções de visualização não-LOC (Xamarin. Forms)] no Visual Studio")](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
+[![::: no-Loc (Xamarin. Forms)::: opções de visualização no Visual Studio](xaml-previewer-images/xamlp-options-vs-sm.png "::: no-Loc (Xamarin. Forms)::: opções de visualização no Visual Studio")](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
 
 Quando você abrir um arquivo XAML, o editor será aberto de tamanho completo ou ao lado do previsor, com base nas configurações selecionadas na caixa de diálogo **ferramentas > > o Xamarin > Xamarin.Forms XAML de visualização** . No entanto, a divisão pode ser alterada para cada arquivo na janela do editor.
 
@@ -42,15 +45,15 @@ Quando você abrir um arquivo XAML, o editor será aberto de tamanho completo ou
 
 Escolha se você deseja ver seu código, o visualizador XAML ou ambos selecionando esses botões no painel exibição de divisão. O botão do meio troca o que o lado do visualizador e seu código estão:
 
-[![Xamarin.FormsControles de visualização para alternar entre o design, a origem e a exibição dividida no Visual Studio](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "[! Parar. Controles de visualização não-LOC (Xamarin. Forms)] para alternar entre o modo de exibição de design, origem e divisão no Visual Studio")](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
+[![::: no-Loc (Xamarin. Forms)::: controles de visualização para alternar entre o modo de exibição de design, origem e divisão no Visual Studio](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "::: no-Loc (Xamarin. Forms)::: controles de visualização para alternar entre o modo de exibição de design, origem e divisão no Visual Studio")](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
 
 Você pode alterar se a tela é dividida vertical ou horizontalmente ou recolher um painel completamente:
 
-[![Xamarin.FormsControles de orientação do painel de visualização no Visual Studio](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "[! Parar. Não-LOC (Xamarin. Forms)] painel de visualização controles de orientação no Visual Studio")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
+[![::: no-Loc (Xamarin. Forms)::: painel de visualização de controles de orientação no Visual Studio](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "::: no-Loc (Xamarin. Forms)::: painel de visualização de controles de orientação no Visual Studio")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
 
 #### <a name="enable-or-disable-the-xaml-previewer"></a>Habilitar ou desabilitar o previsor XAML
 
-Você pode desativar a visualização de XAML na caixa de diálogo **ferramentas > > Xamarin > Xamarin.Forms XAML de visualização** , selecionando **editor XML padrão** como seu **editor XAML padrão**. Isso também desativa a estrutura de tópicos do documento, o painel de propriedades e a caixa de ferramentas XAML. Para ativar o Visualizar XAML e essas ferramentas novamente, altere o **editor XAML padrão** para o ** Xamarin.Forms previsor**.
+Você pode desativar a visualização de XAML na caixa de diálogo **ferramentas > > Xamarin > Xamarin.Forms XAML de visualização** , selecionando **editor XML padrão** como seu **editor XAML padrão**. Isso também desativa a estrutura de tópicos do documento, o painel de propriedades e a caixa de ferramentas XAML. Para ativar o Visualizar XAML e essas ferramentas novamente, altere o **editor XAML padrão** para o **Xamarin.Forms previsor**.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -59,14 +62,14 @@ Você pode desativar a visualização de XAML na caixa de diálogo **ferramentas
 
 O botão **Visualizar** é exibido no editor quando você abre uma página XAML. Mostre ou oculte o visualizador pressionando os botões **Visualizar** ou **dividir** na parte inferior esquerda de qualquer janela de documento XAML:
 
-[![Xamarin.FormsPré-visor habilitado com o botão Visualizar ou dividir](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
+[![::: no-Loc (Xamarin. Forms)::: pré-visor habilitado com o botão Visualizar ou dividir](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
 
 > [!NOTE]
 > Em versões mais antigas do Visual Studio para Mac, o botão **Visualizar** estava localizado no canto superior direito da janela.
 
 #### <a name="enable-or-disable-the-xaml-previewer"></a>Habilitar ou desabilitar o previsor XAML
 
-Você pode desativar o Visualizar XAML no **Visual Studio > preferências > editor de texto >** caixa de diálogo XAML selecionando o **editor XML padrão** como seu **editor XAML padrão**. Isso também desativa a estrutura de tópicos do documento, o painel de propriedades e a caixa de ferramentas XAML. Para ativar o Visualizar XAML e essas ferramentas novamente, altere o **editor XAML padrão** para o ** Xamarin.Forms previsor**.
+Você pode desativar o Visualizar XAML no **Visual Studio > preferências > editor de texto >** caixa de diálogo XAML selecionando o **editor XML padrão** como seu **editor XAML padrão**. Isso também desativa a estrutura de tópicos do documento, o painel de propriedades e a caixa de ferramentas XAML. Para ativar o Visualizar XAML e essas ferramentas novamente, altere o **editor XAML padrão** para o **Xamarin.Forms previsor**.
 
 ::: zone-end
 
@@ -75,7 +78,7 @@ Você pode desativar o Visualizar XAML no **Visual Studio > preferências > edit
 As opções na parte superior do painel de visualização são:
 
 * **Android** – mostrar a versão do Android da tela
-* **Ios** – mostrar a versão do IOS da tela (*Observação: se você estiver usando o Visual Studio no Windows, deverá ser [emparelhado com um Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) para usar esse modo*)
+* **Ios** – mostrar a versão do IOS da tela ( *Observação: se você estiver usando o Visual Studio no Windows, deverá ser [emparelhado com um Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) para usar esse modo* )
 * **Dispositivo** -lista suspensa de dispositivos Android ou Ios, incluindo resolução e tamanho da tela
 * **Retrato (ícone)** – usa a orientação retrato para a visualização
 * **Paisagem (ícone)** – usa a orientação paisagem para a versão prévia
