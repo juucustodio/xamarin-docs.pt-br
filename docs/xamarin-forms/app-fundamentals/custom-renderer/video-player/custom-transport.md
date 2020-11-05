@@ -10,18 +10,18 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5d48c699ed89e91452efe84749a1dedac18a34f5
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 947e630457a652b18abb6979b1f99fa9b1e8c389
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562724"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374986"
 ---
 # <a name="custom-video-transport-controls"></a>Controles personalizados de transporte de vídeo
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
-Os controles de transporte de um player de vídeo incluem os botões que executam as funções **Reproduzir**, **Pausar** e **Parar**. Em geral, esses botões são identificados com ícones conhecidos, em vez de um texto, e as funções **Reproduzir** e **Pausar** geralmente são combinadas em um botão.
+Os controles de transporte de um player de vídeo incluem os botões que executam as funções **Reproduzir** , **Pausar** e **Parar**. Em geral, esses botões são identificados com ícones conhecidos, em vez de um texto, e as funções **Reproduzir** e **Pausar** geralmente são combinadas em um botão.
 
 Por padrão, o `VideoPlayer` exibe controles de transporte compatíveis com cada plataforma. Quando você define a propriedade `AreTransportControlsEnabled` como `false`, esses controles são suprimidos. Em seguida, você pode controlar o `VideoPlayer` de forma programática ou fornecer seus próprios controles de transporte.
 
@@ -215,7 +215,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="the-video-player-status"></a>O status do player de vídeo
 
-A implementação das funções **Reproduzir**, **Pausar** e **Parar** não é suficiente para dar suporte aos controles de transporte. Muitas vezes, os comandos **Reproduzir** e **Pausar** são implementados com o mesmo botão que muda de aparência para indicar se o vídeo ainda está execução ou em pausa. Além disso, o botão nem deverá ser habilitado se o vídeo ainda não tiver sido carregado.
+A implementação das funções **Reproduzir** , **Pausar** e **Parar** não é suficiente para dar suporte aos controles de transporte. Muitas vezes, os comandos **Reproduzir** e **Pausar** são implementados com o mesmo botão que muda de aparência para indicar se o vídeo ainda está execução ou em pausa. Além disso, o botão nem deverá ser habilitado se o vídeo ainda não tiver sido carregado.
 
 Esses requisitos implicam que o player de vídeo precisa disponibilizar um status atual que indica se ele está reproduzindo um vídeo ou em pausa ou se ele ainda não está pronto para reproduzir um vídeo. (Cada plataforma também dá suporte a propriedades que indicam se o vídeo pode ser colocado em pausa ou pode ser movido para uma nova posição, mas essas propriedades são aplicáveis para transmissão de vídeo, em vez de arquivos de vídeo. Portanto, não há suporte para elas no `VideoPlayer` descrito aqui.)
 
@@ -525,7 +525,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="play-pause-and-stop-buttons"></a>Botões Reproduzir, Pausar e Parar
 
-É problemático usar caracteres Unicode para imagens simbólicas de **Reproduzir**, **Pausar** e **Parar**. A seção [Diversos – Técnico](https://unicode-table.com/en/blocks/miscellaneous-technical/) do padrão Unicode define três caracteres de símbolo aparentemente apropriados para essa finalidade. Eles são:
+É problemático usar caracteres Unicode para imagens simbólicas de **Reproduzir** , **Pausar** e **Parar**. A seção [Diversos – Técnico](https://unicode-table.com/en/blocks/miscellaneous-technical/) do padrão Unicode define três caracteres de símbolo aparentemente apropriados para essa finalidade. Eles são:
 
 - 0x23F5 (triângulo médio preto apontando para a direita) ou &#x23F5; para **Reproduzir**
 - 0x23F8 (barra vertical dupla) ou &#x23F8; para **Pausar**
@@ -541,9 +541,9 @@ Há suporte para isso em cada plataforma, exceto que ele é um triângulo preto 
 
 - 0x25B6 seguido por 0xFE0F (variante 16) ou &#x25B6;&#xFE0F; para **Reproduzir**
 
-Isso é o que é usado na marcação mostrada abaixo. No iOS, ele fornece o símbolo **Reproduzir** a mesma aparência 3D dos botões **Pausar** e **Parar**, mas a variante não funciona no Android e no UWP.
+Isso é o que é usado na marcação mostrada abaixo. No iOS, ele fornece o símbolo **Reproduzir** a mesma aparência 3D dos botões **Pausar** e **Parar** , mas a variante não funciona no Android e no UWP.
 
-A página **Transporte personalizado** define a propriedade **AreTransportControlsEnabled** como **falso** e inclui um `ActivityIndicator` exibido quando o vídeo está sendo carregado e dois botões. Os objetos `DataTrigger` são usados para habilitar e desabilitar o `ActivityIndicator` e os botões, bem como para alternar o primeiro botão entre **Reproduzir** e **Pausar**:
+A página **Transporte personalizado** define a propriedade **AreTransportControlsEnabled** como **falso** e inclui um `ActivityIndicator` exibido quando o vídeo está sendo carregado e dois botões. Os objetos `DataTrigger` são usados para habilitar e desabilitar o `ActivityIndicator` e os botões, bem como para alternar o primeiro botão entre **Reproduzir** e **Pausar** :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -650,7 +650,7 @@ namespace VideoPlayerDemos
 }
 ```
 
-Como `AutoPlay` é definido como `false` no arquivo **CustomTransport.xaml**, você precisará pressionar o botão **Reproduzir** quando ele ficar habilitado para iniciar o vídeo. Os botões são definidos para que os caracteres Unicode abordados acima sejam acompanhados por seus equivalentes de texto. Os botões têm uma aparência consistente em cada plataforma durante a reprodução do vídeo:
+Como `AutoPlay` é definido como `false` no arquivo **CustomTransport.xaml** , você precisará pressionar o botão **Reproduzir** quando ele ficar habilitado para iniciar o vídeo. Os botões são definidos para que os caracteres Unicode abordados acima sejam acompanhados por seus equivalentes de texto. Os botões têm uma aparência consistente em cada plataforma durante a reprodução do vídeo:
 
 [![Execução de transporte personalizada](custom-transport-images/customtransportplaying-small.png "Execução de transporte personalizada")](custom-transport-images/customtransportplaying-large.png#lightbox "Execução de transporte personalizada")
 

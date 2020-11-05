@@ -10,16 +10,16 @@ ms.date: 10/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 476ef1b8fd6c8e16c5fb3e5fdd1ac60eafd90b7c
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 033b4edd6eea8a4904364c906a6f9b30da6267ef
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559838"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375428"
 ---
 # <a name="no-locxamarinforms-map-pins"></a>Xamarin.Forms Pins do mapa
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 O Xamarin.Forms [`Map`](xref:Xamarin.Forms.Maps.Map) controle permite que os locais sejam marcados com [`Pin`](xref:Xamarin.Forms.Maps.Pin) objetos. Um `Pin` é um marcador de mapa que abre uma janela de informações quando tocado:
 

@@ -10,16 +10,16 @@ ms.date: 12/14/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3bbad7f96403cb1f386b80b2923b0cdd222f9596
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: d9cece5bc0b9799a4c2ac951cde8196a66465bd4
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555873"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375272"
 ---
 # <a name="invoking-events-from-effects"></a>Invocando eventos por meio de efeitos
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
 
 _Um efeito pode definir e invocar um evento, sinalizando alterações na exibição nativa subjacente. Este artigo mostra como implementar o acompanhamento de dedos com vários toques de nível baixo e como gerar eventos que sinalizam atividade de toque._
 
@@ -31,9 +31,9 @@ Um efeito é ideal para o acompanhamento de dedos multitoque porque ele pode ser
 
 O iOS, o Android e a Plataforma Universal do Windows incluem uma API de nível baixo que permite que os aplicativos detectem a atividade de toque. Essas plataformas todas distinguem entre três tipos básicos de eventos de toque:
 
-- *Pressionado*, quando um dedo toca a tela
-- *Movido*, quando um dedo que toca a tela se move
-- *Liberado*, quando o dedo é liberado da tela
+- *Pressionado* , quando um dedo toca a tela
+- *Movido* , quando um dedo que toca a tela se move
+- *Liberado* , quando o dedo é liberado da tela
 
 Em um ambiente multitoque, vários dedos podem tocar a tela ao mesmo tempo. As várias plataformas incluem um número de ID (identificação) que os aplicativos podem usar para distinguir entre vários dedos.
 
@@ -460,7 +460,7 @@ Você pode mover vários elementos `BoxView` simultaneamente usando dedos difere
 
 ### <a name="subclassing-the-view"></a>Criando subclasses da exibição
 
-Geralmente, é mais fácil para um Xamarin.Forms elemento lidar com seus próprios eventos de toque. A página **Arrastando a BoxView arrastável** funciona da mesma maneira que a página **Arrastando BoxView**, mas os elementos que o usuário arrasta são instâncias de uma classe [`DraggableBoxView`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/DraggableBoxView.cs) que deriva de `BoxView`:
+Geralmente, é mais fácil para um Xamarin.Forms elemento lidar com seus próprios eventos de toque. A página **Arrastando a BoxView arrastável** funciona da mesma maneira que a página **Arrastando BoxView** , mas os elementos que o usuário arrasta são instâncias de uma classe [`DraggableBoxView`](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffect/TouchTrackingEffect/TouchTrackingEffect/DraggableBoxView.cs) que deriva de `BoxView`:
 
 ```csharp
 class DraggableBoxView : BoxView

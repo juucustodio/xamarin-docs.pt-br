@@ -10,16 +10,16 @@ ms.date: 08/14/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cbd1bdd097bc205f82f98574df5c356b03769e29
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 85492866c5d613b9688d215f5979192c32bb7263
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562646"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375194"
 ---
 # <a name="add-a-swipe-gesture-recognizer"></a>Adicionar um reconhecedor de gestos de passar
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture)
 
 _Um gesto de passar o dedo ocorre quando um dedo é movido pela tela em uma direção horizontal ou vertical e geralmente é usado para iniciar a navegação por meio de conteúdo. Os exemplos de código neste artigo são tirados do exemplo de [gesto de passar o dedo](/samples/xamarin/xamarin-forms-samples/workingwithgestures-swipegesture) ._
 

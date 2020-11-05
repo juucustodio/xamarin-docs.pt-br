@@ -10,16 +10,16 @@ ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 58ab2f785c26019c90b91c928daed864c3c6098b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 5f70420690a9d81e5697c2e0bfefdf107aed9c86
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559565"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375415"
 ---
 # <a name="display-pop-ups"></a>Exibir pop-ups
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
 
 Exibir um alerta, pedir a um usuário para fazer uma escolha ou exibir um prompt é uma tarefa comum da interface do usuário. Xamarin.Forms tem três métodos na [`Page`](xref:Xamarin.Forms.Page) classe para interagir com o usuário por meio de um pop-up: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) , [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) e `DisplayPromptAsync` . Eles são renderizados com os controles nativos apropriados em cada plataforma.
 

@@ -10,35 +10,38 @@ ms.date: 11/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8aea3ad36f6c35e9faf2771fc6b54c378c304afb
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3facf6e1e5796d8e17488f3c018cba23e5f99b7f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933595"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375350"
 ---
 # <a name="dependency-injection"></a>Injeção de dependência
+
+> [!NOTE]
+> Este livro eletrônico foi publicado na Primavera de 2017 e não foi atualizado desde então. Há muito no livro que permanece valioso, mas parte do material está desatualizada.
 
 Normalmente, um construtor de classe é invocado ao instanciar um objeto e quaisquer valores que o objeto precisa são passados como argumentos para o construtor. Este é um exemplo de injeção de dependência e, especificamente, é conhecido como *injeção de Construtor*. As dependências que o objeto precisa são injetadas no construtor.
 
 Ao especificar dependências como tipos de interface, a injeção de dependência permite o desacoplamento dos tipos concretos do código que depende desses tipos. Ele geralmente usa um contêiner que contém uma lista de registros e mapeamentos entre interfaces e tipos abstratos e os tipos concretos que implementam ou estendem esses tipos.
 
-Também há outros tipos de injeção de dependência, como *injeção de setter de propriedade*e *injeção de chamada de método*, mas elas são vistas com menos frequência. Portanto, este capítulo se concentrará exclusivamente na execução de injeção de construtor com um contêiner de injeção de dependência.
+Também há outros tipos de injeção de dependência, como *injeção de setter de propriedade* e *injeção de chamada de método* , mas elas são vistas com menos frequência. Portanto, este capítulo se concentrará exclusivamente na execução de injeção de construtor com um contêiner de injeção de dependência.
 
 ## <a name="introduction-to-dependency-injection"></a>Introdução à injeção de dependência
 
 A injeção de dependência é uma versão especializada do padrão de inversão de controle (IoC), onde a preocupação que está sendo invertida é o processo de obtenção da dependência necessária. Com a injeção de dependência, outra classe é responsável por injetar dependências em um objeto no tempo de execução. O exemplo de código a seguir mostra como a `ProfileViewModel` classe é estruturada ao usar a injeção de dependência:
 
 ```csharp
-public class ProfileViewModel : ViewModelBase  
+public class ProfileViewModel : ViewModelBase  
 {  
-    private IOrderService _orderService;  
+    private IOrderService _orderService;  
 
-    public ProfileViewModel(IOrderService orderService)  
-    {  
-        _orderService = orderService;  
-    }  
-    ...  
+    public ProfileViewModel(IOrderService orderService)  
+    {  
+        _orderService = orderService;  
+    }  
+    ...  
 }
 ```
 

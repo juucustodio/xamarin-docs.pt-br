@@ -10,16 +10,16 @@ ms.date: 08/07/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7eef9cdf353c527be4e1de4721a5658a7763dabe
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 123a0868ce098f8c54e6805a1b2b9a6efb04c238
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557537"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375389"
 ---
 # <a name="theme-a-no-locxamarinforms-application"></a>Aplicar tema a um Xamarin.Forms aplicativo
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 
 Xamarin.Forms os aplicativos podem responder a alterações de estilo dinamicamente em tempo de execução usando a `DynamicResource` extensão de marcação. Essa extensão de marcação é semelhante à `StaticResource` extensão de marcação, pois ambas usam uma chave de dicionário para buscar um valor de a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . No entanto, enquanto a `StaticResource` extensão de marcação executa uma única pesquisa de dicionário, a `DynamicResource` extensão de marcação mantém um link para a chave de dicionário. Portanto, se o valor associado à chave for substituído, a alteração será aplicada ao [`VisualElement`](xref:Xamarin.Forms.VisualElement) . Isso permite que os tempos de execução sejam implementados em Xamarin.Forms aplicativos.
 
@@ -86,7 +86,7 @@ Cada [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) contém [`Col
 
 ## <a name="set-a-default-theme"></a>Definir um tema padrão
 
-Um aplicativo requer um tema padrão, para que os controles tenham valores para os recursos que consomem. Um tema padrão pode ser definido mesclando o tema [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) no nível de aplicativo `ResourceDictionary` que é definido em **app. XAML**:
+Um aplicativo requer um tema padrão, para que os controles tenham valores para os recursos que consomem. Um tema padrão pode ser definido mesclando o tema [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) no nível de aplicativo `ResourceDictionary` que é definido em **app. XAML** :
 
 ```xaml
 <Application xmlns="http://xamarin.com/schemas/2014/forms"

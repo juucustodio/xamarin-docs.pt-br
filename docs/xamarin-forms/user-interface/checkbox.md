@@ -8,7 +8,7 @@ MS. Prod: xamarin MS. AssetID: B8B9268B-BCB8-42B9-B08C-C0F22C137238 MS. Technolo
 
 # <a name="no-locxamarinforms-checkbox"></a>Xamarin.Forms Verificação
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
 
 O Xamarin.Forms `CheckBox` é um tipo de botão que pode ser marcado ou vazio. Quando uma caixa de seleção é marcada, ela é considerada como ativada. Quando uma caixa de seleção está vazia, ela é considerada como off.
 

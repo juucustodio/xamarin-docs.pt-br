@@ -10,18 +10,18 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 48d8d61633d09212e445d37f6bd282677ef6b1b1
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 7b5f477d4ec708071095ec666e34ef6d88ac0f0b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558837"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375038"
 ---
 # <a name="no-locxamarinforms-shapes-rectangle"></a>Xamarin.Forms Formas: retângulo
 
 ![API de pré-lançamento](~/media/shared/preview.png)
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 A `Rectangle` classe deriva da `Shape` classe e pode ser usada para desenhar retângulos e quadrados. Para obter informações sobre as propriedades que a `Rectangle` classe herda da `Shape` classe, consulte [ Xamarin.Forms formas](index.md).
 

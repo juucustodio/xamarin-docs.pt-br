@@ -10,18 +10,18 @@ ms.date: 06/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3926e063fcabf9c70103e3ee72a4723358f26b2a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 2c80a82c50c34d45184e8f6359e8940b697e9823
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558863"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375051"
 ---
 # <a name="no-locxamarinforms-shapes-polyline"></a>Xamarin.Forms Formas: polilinha
 
 ![API de pré-lançamento](~/media/shared/preview.png)
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 A `Polyline` classe deriva da `Shape` classe e pode ser usada para desenhar uma série de linhas retas conectadas. Uma polilinha é semelhante a um polígono, exceto que o último ponto em uma polilinha não está conectado ao primeiro ponto. Para obter informações sobre as propriedades que a `Polyline` classe herda da `Shape` classe, consulte [ Xamarin.Forms formas](index.md).
 
@@ -53,7 +53,7 @@ O exemplo de XAML a seguir mostra como desenhar uma polilinha:
 
 Neste exemplo, uma polilinha vermelha é desenhada:
 
-![Linha poligonal](polyline-images/stroke.png "Linha poligonal")
+![Múltipla](polyline-images/stroke.png "Linha poligonal")
 
 O exemplo de XAML a seguir mostra como desenhar uma polilinha tracejada:
 

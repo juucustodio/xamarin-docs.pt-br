@@ -10,24 +10,27 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: edc3dfd97457fe93a04edd82574f6ed419f5fdc1
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e2858d0606cf9c5c97a3457b5b29f620e7da2bad
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136793"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375129"
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>Resumo do capítulo 11. A infraestrutura vinculável
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)
 
-Cada programador de C# está familiarizado com *as propriedades*do c#. As propriedades contêm um acessador *set* e/ou um acessador *Get* . Geralmente, eles são chamados de *Propriedades CLR* para o Common Language Runtime.
+> [!NOTE]
+> Este livro foi publicado na Primavera de 2016 e não foi atualizado desde então. Há muito no livro que permanece valioso, mas alguns materiais estão desatualizados e alguns tópicos não estão mais totalmente corretos ou completos.
 
-Xamarin.Formsdefine uma definição de propriedade avançada chamada uma *propriedade vinculável* encapsulada pela [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) classe e com suporte da [`BindableObject`](xref:Xamarin.Forms.BindableObject) classe. Essas classes são relacionadas, mas bem distintas: a `BindableProperty` é usada para definir a própria propriedade; `BindableObject` é como se `object` fosse uma classe base para classes que definem propriedades vinculáveis.
+Cada programador de C# está familiarizado com *as propriedades* do c#. As propriedades contêm um acessador *set* e/ou um acessador *Get* . Geralmente, eles são chamados de *Propriedades CLR* para o Common Language Runtime.
 
-## <a name="the-xamarinforms-class-hierarchy"></a>A Xamarin.Forms hierarquia de classe
+Xamarin.Forms define uma definição de propriedade avançada chamada uma *propriedade vinculável* encapsulada pela [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) classe e com suporte da [`BindableObject`](xref:Xamarin.Forms.BindableObject) classe. Essas classes são relacionadas, mas bem distintas: a `BindableProperty` é usada para definir a própria propriedade; `BindableObject` é como se `object` fosse uma classe base para classes que definem propriedades vinculáveis.
 
-O exemplo [**ClassHierarchy**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/ClassHierarchy) usa reflexão para exibir uma hierarquia de classe de Xamarin.Forms e demonstrar a função crucial desempenhada por `BindableObject` nessa hierarquia. `BindableObject`deriva de `Object` e é a classe pai [`Element`](xref:Xamarin.Forms.Element) da qual [`VisualElement`](xref:Xamarin.Forms.VisualElement) deriva. Essa é a classe pai para [`Page`](xref:Xamarin.Forms.Page) e [`View`](xref:Xamarin.Forms.View) , que é a classe pai para [`Layout`](xref:Xamarin.Forms.Layout) :
+## <a name="the-no-locxamarinforms-class-hierarchy"></a>A Xamarin.Forms hierarquia de classe
+
+O exemplo [**ClassHierarchy**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/ClassHierarchy) usa reflexão para exibir uma hierarquia de classe de Xamarin.Forms e demonstrar a função crucial desempenhada por `BindableObject` nessa hierarquia. `BindableObject` deriva de `Object` e é a classe pai [`Element`](xref:Xamarin.Forms.Element) da qual [`VisualElement`](xref:Xamarin.Forms.VisualElement) deriva. Essa é a classe pai para [`Page`](xref:Xamarin.Forms.Page) e [`View`](xref:Xamarin.Forms.View) , que é a classe pai para [`Layout`](xref:Xamarin.Forms.Layout) :
 
 [![Captura de tela tripla de compartilhamento de hierarquia de classe](images/ch11fg01-small.png "Compartilhamento de hierarquia de classes")](images/ch11fg01-large.png#lightbox "Compartilhamento de hierarquia de classes")
 
@@ -39,7 +42,7 @@ Um aplicativo pode definir ou obter a `Text` propriedade de `Label` normalmente,
 
 Na verdade, a `Text` propriedade CLR é totalmente implementada usando os `SetValue` `GetValue` métodos e definidos por `BindableObject` em conjunto com a `Label.TextProperty` propriedade estática.
 
-`BindableObject`e `BindableProperty` fornecem suporte para:
+`BindableObject` e `BindableProperty` fornecem suporte para:
 
 - Atribuindo valores padrão de propriedades
 - Armazenando seus valores atuais
@@ -63,7 +66,7 @@ Da mesma forma, o [ `SetBinding` ] (xref: Xamarin.Forms . Acopláble. SetBinding
 
 Você pode definir suas próprias propriedades vinculáveis usando o static [ `BindableProperty.Create` ] (xref: Xamarin.Forms . Vinculproperty. Create (System. String, System. Type, System. Type, System. Object, Xamarin.Forms . BindingMode, Xamarin.Forms . Vinculproperty. ValidateValueDelegate, Xamarin.Forms . Vinculproperty. BindingPropertyChangedDelegate, Xamarin.Forms . Vinculproperty. BindingPropertyChangingDelegate, Xamarin.Forms . Vinculproperty. CoerceValueDelegate, Xamarin.Forms . Vinculproperty. CreateDefaultValueDelegate)) para criar um campo de somente leitura estático do tipo `BindableProperty` .
 
-Isso é demonstrado na [`AltLabel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AltLabel.cs) classe na biblioteca [**Xamarin. FormsBook. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) . A classe deriva de `Label` e permite que você especifique um tamanho de fonte em pontos. Ele é demonstrado no exemplo de [**PointSizedText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/PointSizedText) .
+Isso é demonstrado na [`AltLabel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AltLabel.cs) classe na biblioteca [**Xamarin.Forms book. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) . A classe deriva de `Label` e permite que você especifique um tamanho de fonte em pontos. Ele é demonstrado no exemplo de [**PointSizedText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/PointSizedText) .
 
 São necessários quatro argumentos do `BindableProperty.Create` método:
 
@@ -92,10 +95,10 @@ Uma propriedade vinculável pode ser somente leitura. A criação de uma proprie
 
 Em seguida, defina o acessador de propriedade CLR `set` como `private` para chamar um [ `SetValue` ] (xref: Xamarin.Forms . Acopláble. SetValue ( Xamarin.Forms . BindablePropertyKey, System. Object)) sobrecarga com o `BindablePropertyKey` objeto. Isso impede que a propriedade seja definida fora da classe.
 
-Isso é demonstrado na [`CountedLabel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/CountedLabel.cs) classe usada no exemplo [**BaskervillesCount**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/BaskervillesCount) .
+Isso é demonstrado na [`CountedLabel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/CountedLabel.cs) classe usada no exemplo  [**BaskervillesCount**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/BaskervillesCount) .
 
 ## <a name="related-links"></a>Links relacionados
 
 - [Capítulo 11 texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch11-Apr2016.pdf)
 - [Capítulo 11 exemplos](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11)
-- [Propriedades associáveis](~/xamarin-forms/xaml/bindable-properties.md)
+- [Propriedades vinculáveis](~/xamarin-forms/xaml/bindable-properties.md)

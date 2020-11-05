@@ -10,16 +10,16 @@ ms.date: 02/17/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b462535815e1c8ca6262d82d2527d7667b645db8
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6f812e252f714539c41b57552038ca74e4d5137c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563920"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374908"
 ---
 # <a name="explicit-styles-in-no-locxamarinforms"></a>Estilos explícitos em Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
 _Um estilo explícito é aquele aplicado seletivamente aos controles definindo suas propriedades de estilo._
 

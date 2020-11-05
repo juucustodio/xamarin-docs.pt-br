@@ -10,16 +10,16 @@ ms.date: 01/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 372c268c13c50719953ac63bcc43cc8d9bff4bdd
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: a8c8a378775a9e52731e4b2df37b983fc15c1867
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563712"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375311"
 ---
 # <a name="timepicker-item-selection-on-ios"></a>Seleção de item do timeseparar no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esses controles específicos da plataforma iOS quando a seleção de item ocorre em um [`TimePicker`](xref:Xamarin.Forms.TimePicker) , permitindo ao usuário especificar que a seleção de item ocorre durante a pesquisa de itens no controle ou apenas uma vez que o botão **Done** é pressionado. Ele é consumido em XAML definindo a `TimePicker.UpdateMode` Propriedade anexada como um valor da `UpdateMode` enumeração:
 
@@ -65,7 +65,7 @@ switch (timePicker.On<iOS>().UpdateMode())
 
 O resultado é que um especificado `UpdateMode` é aplicado ao [`TimePicker`](xref:Xamarin.Forms.TimePicker) , que controla quando a seleção de item ocorre:
 
-[![Captura de tela dos modos de atualização do timeseparar](timepicker-selection-images/timepicker-updatemode.png "Específico da plataforma UpdateMode")](timepicker-selection-images/timepicker-updatemode-large.png#lightbox "Específico da plataforma UpdateMode")
+[![Captura de tela dos modos de atualização do timeseparar](timepicker-selection-images/timepicker-updatemode.png "Platform-Specific UpdateMode do TimeSeparator")](timepicker-selection-images/timepicker-updatemode-large.png#lightbox "Platform-Specific UpdateMode do TimeSeparator")
 
 ## <a name="related-links"></a>Links relacionados
 

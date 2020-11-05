@@ -10,16 +10,16 @@ ms.date: 05/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9193cef76a5f474f3681b15a1315e5840b41d88a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: aee429b3dcc898ae0663817d52ed5b03d919e239
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562971"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375363"
 ---
 # <a name="three-types-of-bzier-curves"></a>Três tipos de curvas de bézier
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explore como usar SkiaSharp para renderizar curvas Bézier cúbicas, quadráticas e cônicas_
 
@@ -31,7 +31,7 @@ As curvas Bézier são conhecidas por serem adequadas para o design interativo: 
 
 Os contornos de caracteres das fontes baseadas em computador geralmente são definidos com curvas Bézier.
 
-O artigo da Wikipédia na [**curva de Bézier**](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) contém algumas informações úteis do plano de fundo. O termo *curva Bézier* na verdade se refere a uma família de curvas semelhantes. O SkiaSharp dá suporte a três tipos de curvas Bézier, chamadas *cúbica*, *quadrática*e *cone*. O cone também é conhecido como o *quadrática racional*.
+O artigo da Wikipédia na [**curva de Bézier**](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) contém algumas informações úteis do plano de fundo. O termo *curva Bézier* na verdade se refere a uma família de curvas semelhantes. O SkiaSharp dá suporte a três tipos de curvas Bézier, chamadas *cúbica* , *quadrática* e *cone*. O cone também é conhecido como o *quadrática racional*.
 
 ## <a name="the-cubic-bzier-curve"></a>A curva Bézier cúbica
 
@@ -122,7 +122,7 @@ O expoente mais alto de 3 confirma que esses são polinomiais cúbicos. É fáci
 
 Às vezes, é conveniente usar uma curva de Bézier para renderizar um arco circular. Uma curva Bézier cúbica pode aproximar um arco circular muito bem para um quarto de círculo, de modo que quatro curvas Bézier conectadas podem definir um círculo inteiro. Essa aproximação é discutida em dois artigos publicados há mais de 25 anos:
 
-> Tor Dokken, et al, "boa aproximação de círculos por curvatura, curvas de Bézier contínuas", *design de geométrico auxiliado por computador 7* (1990), 33-41.
+> Tor Dokken, et al, "boa aproximação de círculos por Curvature-Continuous curvas Bézier," *design geométrico auxiliado por computador 7* (1990), 33-41.
 
 > Michael Goldapp, "aproximação de arcos circulares por polinomiais cúbicos", *design de geométrico auxiliado por computador 8* (1991), 227-238.
 
@@ -420,7 +420,7 @@ No entanto, a forma de uma curva Bézier quadrática não é elíptica, motivo p
 
 A curva Bézier de cone &mdash; também conhecida como a curva Bézier de quadrática racional &mdash; é uma adição relativamente recente à família de curvas Bézier. Como a curva Bézier quadrática, a curva Bézier de quadrática racional envolve um ponto de partida, um ponto de extremidade e um ponto de controle. Mas a curva Bézier de quadrática racional também requer um valor de *peso* . Ele é chamado de quadrática *racional* porque as fórmulas paramétricas envolvem proporções.
 
-As equações paramétricas para X e Y são taxas que compartilham o mesmo denominador. Aqui está a equação para o denominador para *t* que varia de 0 a 1 e um valor de peso de *w*:
+As equações paramétricas para X e Y são taxas que compartilham o mesmo denominador. Aqui está a equação para o denominador para *t* que varia de 0 a 1 e um valor de peso de *w* :
 
 d (t) = (1 – t) ² + 2WT (1 – t) + t ²
 

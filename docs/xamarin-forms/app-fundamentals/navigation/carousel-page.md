@@ -10,16 +10,16 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0110fa7c348c4facaf60cd261c8a584904aa0b8e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: e8dd18caf7ab6730c8529660d83511cf8c65edcf
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563062"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375155"
 ---
 # <a name="no-locxamarinforms-carousel-page"></a>Xamarin.Forms Página do carrossel
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpage)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/navigation-carouselpage)
 
 _O Xamarin.Forms CarouselPage é uma página que os usuários podem passar do lado a lado para navegar pelas páginas de conteúdo, como uma galeria. Este artigo demonstra como usar um CarouselPage para navegar por uma coleção de páginas._
 

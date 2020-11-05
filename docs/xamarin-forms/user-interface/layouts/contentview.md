@@ -10,16 +10,16 @@ ms.date: 08/14/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: eb94b2943cfe4659bb77764f810d45dc8b189005
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: a11178b9034561e9f1fdf1bbf17cf28cfe9d967b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555366"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375069"
 ---
 # <a name="no-locxamarinforms-contentview"></a>Xamarin.Forms ContentView
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 
 A Xamarin.Forms [`ContentView`](xref:Xamarin.Forms.ContentView) classe é um tipo `Layout` que contém um único elemento filho e é normalmente usado para criar controles personalizados e reutilizáveis. A `ContentView` classe é herdada de [`TemplatedView`](xref:Xamarin.Forms.TemplatedView) . Este artigo e um exemplo associado explicam como criar um controle personalizado `CardView` com base na `ContentView` classe.
 
@@ -119,7 +119,7 @@ A interface do usuário do controle personalizado usa um `ContentView` como o el
 </ContentView>
 ```
 
-O `ContentView` elemento define a `x:Name` propriedade como **this**, que pode ser usada para acessar o objeto associado à `CardView` instância. Os elementos no conjunto de layouts vinculam suas propriedades a valores definidos no objeto associado.
+O `ContentView` elemento define a `x:Name` propriedade como **this** , que pode ser usada para acessar o objeto associado à `CardView` instância. Os elementos no conjunto de layouts vinculam suas propriedades a valores definidos no objeto associado.
 
 Para obter mais informações sobre a vinculação de dados, consulte [ Xamarin.Forms vinculação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 

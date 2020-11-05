@@ -10,18 +10,18 @@ ms.date: 06/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 845e5842f91a1da415509631ec2472330d972dfb
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 78425617d95758d3663cb9f2c5ac9bebb463bd68
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559149"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374752"
 ---
 # <a name="no-locxamarinforms-shapes-line"></a>Xamarin.Forms Formas: linha
 
 ![API de pré-lançamento](~/media/shared/preview.png)
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 A `Line` classe deriva da `Shape` classe e pode ser usada para desenhar linhas. Para obter informações sobre as propriedades que a `Line` classe herda da `Shape` classe, consulte [ Xamarin.Forms formas](index.md).
 

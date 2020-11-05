@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 75f6f9b3e7a493121b8f4dacb87749d4a9616dee
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 2b5fbae64d1cef6fb39fbe505b77fbc931803349
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557095"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375259"
 ---
 # <a name="polylines-and-parametric-equations"></a>Polilinhas e equações paramétricas
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Use SkiaSharp para renderizar qualquer linha que você possa definir com equações paramétricas_
 

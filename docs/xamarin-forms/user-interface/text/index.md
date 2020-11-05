@@ -10,16 +10,16 @@ ms.date: 10/26/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5e1ad1d4fa9d5ce006373382e85398edac59a82a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 37973db6288f092d756a29de61731a296eac3924
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557589"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375402"
 ---
 # <a name="text-in-no-locxamarinforms"></a>Texto em Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Usando Xamarin.Forms para inserir ou exibir texto._
 

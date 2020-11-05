@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e6fac17f28703ec7254958e19bff7132bee6b78a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: e39c16b900b89f0f3ba4c55fffc4e360070a0540
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555717"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374804"
 ---
 # <a name="masterdetailpage-navigation-bar-on-windows"></a>Barra de navegação do MasterDetailPage no Windows
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esse Plataforma Universal do Windows específico à plataforma é usado para recolher a barra de navegação em um [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) , e é consumido em XAML definindo as [`MasterDetailPage.CollapseStyle`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.MasterDetailPage.CollapseStyleProperty) [`MasterDetailPage.CollapsedPaneWidth`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.MasterDetailPage.CollapsedPaneWidthProperty) Propriedades anexadas e:
 
@@ -47,7 +47,7 @@ O `MasterDetailPage.On<Windows>` método especifica que essa plataforma específ
 
 O resultado é que um especificado [`CollapseStyle`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle) é aplicado à [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) instância, com a largura também sendo especificada:
 
-[![Barra de navegação recolhida específica da plataforma](masterdetailpage-navigation-bar-images/collapsed-navigation-bar.png)](masterdetailpage-navigation-bar-images/collapsed-navigation-bar-large.png#lightbox "Barra de navegação recolhida específica da plataforma")
+[![Barra de navegação recolhida específica da plataforma](masterdetailpage-navigation-bar-images/collapsed-navigation-bar.png)](masterdetailpage-navigation-bar-images/collapsed-navigation-bar-large.png#lightbox "Barra de navegação recolhida Platform-Specific")
 
 ## <a name="related-links"></a>Links relacionados
 

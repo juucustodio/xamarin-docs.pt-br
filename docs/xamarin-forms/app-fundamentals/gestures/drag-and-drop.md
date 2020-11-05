@@ -10,18 +10,18 @@ ms.date: 10/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: af56e84598f73693a8cb0e93573b789a716c194a
-ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
+ms.openlocfilehash: 30e77d4978e9a191c1ba19e80109f9854cc46f8f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92897462"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375233"
 ---
 # <a name="add-drag-and-drop-gesture-recognizers"></a>Adicionar reconhecedores de gestos de arrastar e soltar
 
 ![API de pré-lançamento](~/media/shared/preview.png)
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)
 
 Um gesto de arrastar e soltar permite que os itens e seus pacotes de dados associados sejam arrastados de um local na tela para outro local usando um gesto contínuo. A operação de arrastar e soltar pode ocorrer em um único aplicativo ou pode ser iniciada em um aplicativo e terminar em outra.
 
@@ -80,7 +80,7 @@ Neste exemplo, um gesto de arrastar pode ser iniciado no [`Image`](xref:Xamarin.
 > [!TIP]
 > No iOS, Android e UWP, um gesto de arrastar é iniciado com um pressionamento longo seguido de um arrastar.
 
-Para obter um exemplo de como usar `DragGestureRecognizer` comandos, consulte o [exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/).
+Para obter um exemplo de como usar `DragGestureRecognizer` comandos, consulte o [exemplo](/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/).
 
 ## <a name="build-a-data-package"></a>Criar um pacote de dados
 
@@ -214,7 +214,7 @@ O exemplo de XAML a seguir mostra um `DropGestureRecognizer` anexado a um [`Imag
 
 Neste exemplo, quando uma fonte de arrastar é descartada no [`Image`](xref:Xamarin.Forms.Image) destino de soltar, a fonte de arrastar será copiada para o destino de soltura, desde que a fonte de arrastar seja um [`ImageSource`](xref:Xamarin.Forms.ImageSource) . Isso ocorre porque o Xamarin.Forms copia automaticamente imagens arrastadas e texto para destinos de destino compatíveis.
 
-Para obter um exemplo de como usar `DropGestureRecognizer` comandos, consulte o [exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/).
+Para obter um exemplo de como usar `DropGestureRecognizer` comandos, consulte o [exemplo](/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/).
 
 ## <a name="handle-the-dragover-event"></a>Manipular o evento DragOver
 

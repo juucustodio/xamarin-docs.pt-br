@@ -10,18 +10,18 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d417f5e0b2b0bea5a3e129c87e94b289dc7201ed
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 812adbbb4a9572d38dd57a3edd5c1a561909f1b0
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562477"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374955"
 ---
 # <a name="binding-video-sources-to-the-player"></a>Associando fontes de vídeo ao player
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
-Quando a propriedade `Source` da exibição `VideoPlayer` for definida como um novo arquivo de vídeo, o vídeo existente interromperá a execução e o novo vídeo será iniciado. Isso é demonstrado pela página **Selecionar vídeo da Web** do exemplo [**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos). A página inclui um `ListView` com os títulos dos três vídeos referenciados no arquivo **App.xaml**:
+Quando a propriedade `Source` da exibição `VideoPlayer` for definida como um novo arquivo de vídeo, o vídeo existente interromperá a execução e o novo vídeo será iniciado. Isso é demonstrado pela página **Selecionar vídeo da Web** do exemplo [**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos). A página inclui um `ListView` com os títulos dos três vídeos referenciados no arquivo **App.xaml** :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -99,7 +99,7 @@ namespace VideoPlayerDemos
 }
 ```
 
-O `ListView` no arquivo **BindToVideoPlayer.xaml** contém uma matriz desses objetos `VideoInfo`, cada uma inicializada com um título do vídeo e o objeto `UriVideoSource` do dicionário de recursos em **App.xaml**:
+O `ListView` no arquivo **BindToVideoPlayer.xaml** contém uma matriz desses objetos `VideoInfo`, cada uma inicializada com um título do vídeo e o objeto `UriVideoSource` do dicionário de recursos em **App.xaml** :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -140,7 +140,7 @@ O `ListView` no arquivo **BindToVideoPlayer.xaml** contém uma matriz desses obj
 
 A propriedade `Source` do `VideoPlayer` está associada ao `ListView`. O `Path` da associação é especificado como `SelectedItem.VideoSource`, que é um demarcador composto que consiste em duas propriedades: `SelectedItem` é uma propriedade de `ListView`. O item selecionado é do tipo `VideoInfo`, que tem uma propriedade `VideoSource`.
 
-Assim como acontece com a primeira página **Selecionar vídeo da Web**, nenhum item é inicialmente selecionado no `ListView`; portanto, é necessário selecionar um dos vídeos antes de começar a reproduzi-lo.
+Assim como acontece com a primeira página **Selecionar vídeo da Web** , nenhum item é inicialmente selecionado no `ListView`; portanto, é necessário selecionar um dos vídeos antes de começar a reproduzi-lo.
 
 ## <a name="related-links"></a>Links Relacionados
 

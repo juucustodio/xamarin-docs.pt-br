@@ -10,18 +10,18 @@ ms.date: 06/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c6c6fb0ea9d3e2b728072fa36c3cdb2a86ade131
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6fe7ce75af14e25fa3dc213f0fb5ed99a2e70a87
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559318"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374817"
 ---
 # <a name="no-locxamarinforms-shapes-geometries"></a>Xamarin.Forms Formas: geometrias
 
 ![API de pré-lançamento](~/media/shared/preview.png)
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 A `Geometry` classe e as classes que derivam dela permitem que você descreva a geometria de uma forma 2D. `Geometry` os objetos podem ser simples, como retângulos e círculos, ou compostos, criados a partir de dois ou mais objetos Geometry. Além disso, geometrias mais complexas podem ser criadas, incluindo arcos e curvas.
 

@@ -10,16 +10,16 @@ ms.date: 09/25/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d665a80d6f1e0319fc9dc8696db379cf781ee833
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 4a922a841452e5e934cc7dcb88a9f84373ae3ded
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560111"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375488"
 ---
 # <a name="listview-interactivity"></a>Interatividade do ListView
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
 
 A Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) classe dá suporte à interação do usuário com os dados que ele apresenta.
 
@@ -181,7 +181,7 @@ listView.RefreshControlColor = Color.Red;
 
 As capturas de tela a seguir mostram o pull-to-Refresh à medida que o usuário está puxando:
 
-![Pull de ListView para atualização em andamento](interactivity-images/refresh-start.png)
+![Pull de ListView para atualizar In-Progress](interactivity-images/refresh-start.png)
 
 As capturas de tela a seguir mostram o pull-to-Refresh depois que o usuário lançou o pull, com o controle giratório exibido enquanto o [`ListView`](xref:Xamarin.Forms.ListView) está atualizando:
 

@@ -12,16 +12,16 @@ ms.date: 04/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 96b3e6bd055c0bc89ae7bcbb66c8b3f48b21ad17
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: b550aed2dd2038a48fa4eafcf1ed1d874a08eb03
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436227"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375519"
 ---
 # <a name="create-a-single-page-no-locxamarinforms-application"></a>Criar um aplicativo de página única Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
 
 Neste guia de início rápido, você aprenderá a:
 
@@ -53,24 +53,24 @@ Para obter mais informações sobre esses pré-requisitos, confira [Como instala
 
     ![Modelos de Projeto Multiplataforma](single-page-images/vs/new-project-2019.png)
 
-3. Na janela **Configurar seu novo projeto**, defina o **Nome do projeto** como **Notes**, escolha uma localização adequada para o projeto e clique no botão **Criar**:
+3. Na janela **Configurar seu novo projeto** , defina o **Nome do projeto** como **Notes** , escolha uma localização adequada para o projeto e clique no botão **Criar** :
 
     ![Configurar seu projeto](single-page-images/vs/configure-project.png)
 
     > [!IMPORTANT]
     > Os snippets C# e XAML neste início rápido requerem que a solução seja nomeada como **Notas**. O uso de um nome diferente resultará em erros de build ao copiar o código deste início rápido para a solução.
 
-4. Na caixa de diálogo **Novo Aplicativo Multiplataforma**, clique em **Aplicativo em Branco** e clique no botão **OK**:
+4. Na caixa de diálogo **Novo Aplicativo Multiplataforma** , clique em **Aplicativo em Branco** e clique no botão **OK** :
 
     ![Novo Aplicativo Multiplataforma](single-page-images/vs/new-app-2019.png)
 
     Para obter mais informações sobre a biblioteca de .NET Standard que é criada, consulte a [anatomia de um Xamarin.Forms aplicativo](deepdive.md#anatomy-of-a-xamarinforms-application) no guia de [ Xamarin.Forms início rápido](deepdive.md)aprofundado.
 
-5. No **Gerenciador de Soluções**, no projeto **Notas**, clique duas vezes em **MainPage.xaml** para abri-lo:
+5. No **Gerenciador de Soluções** , no projeto **Notas** , clique duas vezes em **MainPage.xaml** para abri-lo:
 
     ![Abra MainPage.xaml](single-page-images/vs/open-mainpage-xaml-2019.png)
 
-6. Em **MainPage. XAML**, remova todo o código do modelo e substitua-o pelo seguinte código:
+6. Em **MainPage. XAML** , remova todo o código do modelo e substitua-o pelo seguinte código:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -103,11 +103,11 @@ Para obter mais informações sobre esses pré-requisitos, confira [Como instala
 
     Salve as alterações em **MainPage.xaml** ao pressionar **CTRL+S** e feche o arquivo.
 
-7. No **Gerenciador de Soluções**, no projeto **Notas**, expanda **MainPage.xaml** e clique duas vezes em **MainPage.xaml.cs** para abri-lo:
+7. No **Gerenciador de Soluções** , no projeto **Notas** , expanda **MainPage.xaml** e clique duas vezes em **MainPage.xaml.cs** para abri-lo:
 
     ![Abra MainPage.xaml.cs](single-page-images/vs/open-mainpage-codebehind-2019.png)
 
-8. No **MainPage.XAML.cs**, remova todo o código do modelo e substitua-o pelo código a seguir:
+8. No **MainPage.XAML.cs** , remova todo o código do modelo e substitua-o pelo código a seguir:
 
     ```csharp
     using System;
@@ -203,24 +203,24 @@ Para obter mais informações sobre esses pré-requisitos, confira [Como instala
 
     ![Novo Projeto](single-page-images/vs/new-solution.png)
 
-2. Na caixa de diálogo **novo projeto** , clique em **plataforma cruzada**, selecione o modelo **aplicativo móvel ( Xamarin.Forms )** , defina o nome como **notas**, escolha um local adequado para o projeto e clique no botão **OK** :
+2. Na caixa de diálogo **novo projeto** , clique em **plataforma cruzada** , selecione o modelo **aplicativo móvel ( Xamarin.Forms )** , defina o nome como **notas** , escolha um local adequado para o projeto e clique no botão **OK** :
 
     ![Modelos de Projeto Multiplataforma](single-page-images/vs/new-project.png)
 
     > [!IMPORTANT]
     > Os snippets C# e XAML neste início rápido requerem que a solução seja nomeada como **Notas**. O uso de um nome diferente resultará em erros de build ao copiar o código deste início rápido para a solução.
 
-3. Na caixa de diálogo **Novo Aplicativo de Plataforma Cruzada**, clique em **Aplicativo em Branco**, selecione **.NET Standard** como a estratégia de compartilhamento de código e clique no botão **OK**:
+3. Na caixa de diálogo **Novo Aplicativo de Plataforma Cruzada** , clique em **Aplicativo em Branco** , selecione **.NET Standard** como a estratégia de compartilhamento de código e clique no botão **OK** :
 
     ![Novo Aplicativo Multiplataforma](single-page-images/vs/new-app.png)
 
     Para obter mais informações sobre a biblioteca de .NET Standard que é criada, consulte a [anatomia de um Xamarin.Forms aplicativo](deepdive.md#anatomy-of-a-xamarinforms-application) no guia de [ Xamarin.Forms início rápido](deepdive.md)aprofundado.
 
-4. No **Gerenciador de Soluções**, no projeto **Notas**, clique duas vezes em **MainPage.xaml** para abri-lo:
+4. No **Gerenciador de Soluções** , no projeto **Notas** , clique duas vezes em **MainPage.xaml** para abri-lo:
 
     ![Abra MainPage.xaml](single-page-images/vs/open-mainpage-xaml.png)
 
-5. Em **MainPage. XAML**, remova todo o código do modelo e substitua-o pelo seguinte código:
+5. Em **MainPage. XAML** , remova todo o código do modelo e substitua-o pelo seguinte código:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -253,11 +253,11 @@ Para obter mais informações sobre esses pré-requisitos, confira [Como instala
 
     Salve as alterações em **MainPage.xaml** ao pressionar **CTRL+S** e feche o arquivo.
 
-6. No **Gerenciador de Soluções**, no projeto **Notas**, expanda **MainPage.xaml** e clique duas vezes em **MainPage.xaml.cs** para abri-lo:
+6. No **Gerenciador de Soluções** , no projeto **Notas** , expanda **MainPage.xaml** e clique duas vezes em **MainPage.xaml.cs** para abri-lo:
 
     ![Abra MainPage.xaml.cs](single-page-images/vs/open-mainpage-codebehind.png)
 
-7. No **MainPage.XAML.cs**, remova todo o código do modelo e substitua-o pelo código a seguir:
+7. No **MainPage.XAML.cs** , remova todo o código do modelo e substitua-o pelo código a seguir:
 
     ```csharp
     using System;
@@ -353,15 +353,15 @@ Para obter mais informações sobre esses pré-requisitos, confira [Como instala
 
     ![Nova solução](single-page-images/vsmac/new-project.png)
 
-2. Na caixa de diálogo **Escolher um modelo para seu novo projeto**, clique em **Multiplataforma > Aplicativo**, selecione o modelo do **Aplicativo de Formulários em Branco** e clique no botão **Avançar**:
+2. Na caixa de diálogo **Escolher um modelo para seu novo projeto** , clique em **Multiplataforma > Aplicativo** , selecione o modelo do **Aplicativo de Formulários em Branco** e clique no botão **Avançar** :
 
     ![Escolher um modelo](single-page-images/vsmac/choose-template.png)
 
-3. Na caixa de diálogo **Configurar seu aplicativo de formulários em branco**, nomeie o novo aplicativo como **Notas**, selecione o botão de opção **Usar .NET Standard** e clique no botão **Avançar**:    
+3. Na caixa de diálogo **Configurar seu aplicativo de formulários em branco** , nomeie o novo aplicativo como **Notas** , selecione o botão de opção **Usar .NET Standard** e clique no botão **Avançar** :    
 
     ![Configurar o Aplicativo Forms](single-page-images/vsmac/configure-app.png)
 
-4. Na caixa de diálogo **Configurar seu novo aplicativo de formulários em branco**, deixe os nomes do Projeto e da Solução definidos como **Notas**, escolha um local adequado para o projeto e clique no botão **Criar** para criá-lo:
+4. Na caixa de diálogo **Configurar seu novo aplicativo de formulários em branco** , deixe os nomes do Projeto e da Solução definidos como **Notas** , escolha um local adequado para o projeto e clique no botão **Criar** para criá-lo:
 
     ![Configurar o Projeto Forms](single-page-images/vsmac/configure-project.png)
 
@@ -370,11 +370,11 @@ Para obter mais informações sobre esses pré-requisitos, confira [Como instala
 
     Para obter mais informações sobre a biblioteca de .NET Standard que é criada, consulte a [anatomia de um Xamarin.Forms aplicativo](deepdive.md#anatomy-of-a-xamarinforms-application) no guia de [ Xamarin.Forms início rápido](deepdive.md)aprofundado.
 
-5. No **Painel de Soluções**, no projeto **Notas**, clique duas vezes em **MainPage.xaml** para abri-lo:
+5. No **Painel de Soluções** , no projeto **Notas** , clique duas vezes em **MainPage.xaml** para abri-lo:
 
     ![MainPage.xaml](single-page-images/vsmac/mainpage-xaml.png)
 
-6. Em **MainPage. XAML**, remova todo o código do modelo e substitua-o pelo seguinte código:
+6. Em **MainPage. XAML** , remova todo o código do modelo e substitua-o pelo seguinte código:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -405,13 +405,13 @@ Para obter mais informações sobre esses pré-requisitos, confira [Como instala
 
     Esse código define declarativamente a interface do usuário para a página, que consiste em um [`Label`](xref:Xamarin.Forms.Label) para exibir texto, uma [`Editor`](xref:Xamarin.Forms.Editor) entrada de texto e duas [`Button`](xref:Xamarin.Forms.Button) instâncias que direcionam o aplicativo para salvar ou excluir um arquivo. As duas `Button` instâncias são dispostas horizontalmente em um [`Grid`](xref:Xamarin.Forms.Grid) , com o `Label` , `Editor` e `Grid` que estão sendo dispostos verticalmente em um [`StackLayout`](xref:Xamarin.Forms.StackLayout) . Para obter mais informações sobre como criar a interface do usuário, consulte [interface do usuário](deepdive.md#user-interface) no guia de [ Xamarin.Forms início rápido](deepdive.md)aprofundamento.
 
-    Salve as alterações em **MainPage.xaml** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
+    Salve as alterações em **MainPage.xaml** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S** ) e feche o arquivo.
 
-7. No **Painel de Soluções**, no projeto **Notas**, expanda **MainPage.xaml** e clique duas vezes em **MainPage.xaml.cs** para abri-lo:
+7. No **Painel de Soluções** , no projeto **Notas** , expanda **MainPage.xaml** e clique duas vezes em **MainPage.xaml.cs** para abri-lo:
 
     ![MainPage.xaml.cs](single-page-images/vsmac/mainpage-xaml-cs.png)
 
-8. No **MainPage.XAML.cs**, remova todo o código do modelo e substitua-o pelo código a seguir:
+8. No **MainPage.XAML.cs** , remova todo o código do modelo e substitua-o pelo código a seguir:
 
     ```csharp
     using System;
@@ -453,17 +453,17 @@ Para obter mais informações sobre esses pré-requisitos, confira [Como instala
 
     Esse código define um campo `_fileName`, que referencia um arquivo chamado `notes.txt` que armazenará os dados de notas na pasta de dados local do aplicativo. Quando o construtor da página é executado, o arquivo é lido, se existir, e exibido no [`Editor`](xref:Xamarin.Forms.Editor) . Quando o **salvamento** [`Button`](xref:Xamarin.Forms.Button) é pressionado `OnSaveButtonClicked` , o manipulador de eventos é executado, o que salva o conteúdo do no `Editor` arquivo. Quando o **Excluir** `Button` for pressionado, o manipulador de eventos `OnDeleteButtonClicked` será executado, excluindo o arquivo, caso ele exista, e removendo todo o texto do `Editor`. Para obter mais informações sobre a interação do usuário, consulte [respondendo à interação do usuário](deepdive.md#responding-to-user-interaction) no guia de [ Xamarin.Forms início rápido](deepdive.md)aprofundamento.
 
-    Salve as alterações em **MainPage.xaml.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
+    Salve as alterações em **MainPage.xaml.cs** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S** ) e feche o arquivo.
 
 ### <a name="building-the-quickstart"></a>Criando o Início Rápido
 
-1. No Visual Studio para Mac, selecione o item de menu **Compilar > Compilar Tudo** (ou pressione **&#8984; + B**). Os projetos serão criados e uma mensagem de êxito será exibida na barra de ferramentas do Visual Studio para Mac.
+1. No Visual Studio para Mac, selecione o item de menu **Compilar > Compilar Tudo** (ou pressione **&#8984; + B** ). Os projetos serão criados e uma mensagem de êxito será exibida na barra de ferramentas do Visual Studio para Mac.
 
       ![Build bem-sucedido](single-page-images/vsmac/build-successful.png)
 
     Se houver erros, repita as etapas anteriores e corrija-os até que os projetos sejam compilados com êxito.
 
-2. No **Painel de Soluções**, selecione o projeto **Notes.iOS**, clique com o botão direito do mouse e selecione **Definir como projeto de inicialização**:
+2. No **Painel de Soluções** , selecione o projeto **Notes.iOS** , clique com o botão direito do mouse e selecione **Definir como projeto de inicialização** :
 
       ![Definir o iOS como Projeto Inicial](single-page-images/vsmac/set-startup-project-ios.png)
 
@@ -477,7 +477,7 @@ Para obter mais informações sobre esses pré-requisitos, confira [Como instala
 
     Para obter mais informações sobre como o aplicativo é iniciado em cada plataforma, consulte [iniciando o aplicativo em cada plataforma](deepdive.md#launching-the-application-on-each-platform) no guia de [ Xamarin.Forms início rápido](deepdive.md)aprofundamento.
 
-4. No **Painel de Soluções**, selecione o projeto **Notes.Droid**, clique com o botão direito do mouse e selecione **Definir como projeto de inicialização**:
+4. No **Painel de Soluções** , selecione o projeto **Notes.Droid** , clique com o botão direito do mouse e selecione **Definir como projeto de inicialização** :
 
       ![Definir Android como projeto de inicialização](single-page-images/vsmac/set-startup-project-android.png)
 

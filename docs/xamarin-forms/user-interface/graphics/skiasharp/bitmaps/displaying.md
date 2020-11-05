@@ -10,16 +10,16 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1427b6f8461c74ded933fe562a7d17221790383a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c266cdee5a0949edc6ade7fff81816d0405af27f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562308"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374882"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>Exibindo bitmaps SkiaSharp
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 O assunto dos bitmaps SkiaSharp foi introduzido no artigo **[noções básicas de bitmap em SkiaSharp](../basics/bitmaps.md)**. Esse artigo mostrou três maneiras de carregar bitmaps e três maneiras de exibir bitmaps. Este artigo revisa as técnicas para carregar bitmaps e vai mais fundo o uso dos `DrawBitmap` métodos do `SKCanvas` .
 
@@ -27,7 +27,7 @@ O assunto dos bitmaps SkiaSharp foi introduzido no artigo **[noções básicas d
 
 Os `DrawBitmapLattice` `DrawBitmapNinePatch` métodos e são discutidos no artigo **[exibição segmentada de bitmaps SkiaSharp](segmented.md)**.
 
-Os exemplos nesta página são do aplicativo **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** . Na home page desse aplicativo, escolha **bitmaps SkiaSharp**e, em seguida, vá para a seção **exibindo bitmaps** .
+Os exemplos nesta página são do aplicativo **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** . Na home page desse aplicativo, escolha **bitmaps SkiaSharp** e, em seguida, vá para a seção **exibindo bitmaps** .
 
 ## <a name="loading-a-bitmap"></a>Carregando um bitmap
 
@@ -622,7 +622,7 @@ Aqui estão algumas combinações de opções:
 
 [![Modos de dimensionamento](displaying-images/ScalingModes.png "Modos de dimensionamento")](displaying-images/ScalingModes-Large.png#lightbox)
 
-A página de **subconjunto de retângulo** tem praticamente o mesmo arquivo XAML que os **modos de dimensionamento**, mas o arquivo code-behind define um subconjunto retangular do bitmap fornecido pelo `SOURCE` campo: 
+A página de **subconjunto de retângulo** tem praticamente o mesmo arquivo XAML que os **modos de dimensionamento** , mas o arquivo code-behind define um subconjunto retangular do bitmap fornecido pelo `SOURCE` campo: 
 
 ```csharp
 public partial class ScalingModesPage : ContentPage

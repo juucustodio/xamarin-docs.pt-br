@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
-ms.openlocfilehash: d8c458ad30d7e281427dad0e29092c55fede7347
-ms.sourcegitcommit: fc689c1a6b641c124378dedc1bd157d96fc759a7
+ms.openlocfilehash: 5cbe3f36d1aeb12be671b14a4f76c79764e814e6
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71319535"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374999"
 ---
 # <a name="sign-in-with-apple-in-xamarinios"></a>Entre com a Apple no Xamarin. iOS
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios13-addingthesigninwithappleflowtoyourapp/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/ios-samples/ios13-addingthesigninwithappleflowtoyourapp/)
 
 Entrar com a Apple é um novo serviço que fornece proteção de identidade para usuários de serviços de autenticação de terceiros. A partir do iOS 13, a Apple exige que qualquer aplicativo novo usando serviços de autenticação de terceiros também deve fornecer entrada com a Apple. Os aplicativos existentes que estão sendo atualizados não precisam adicionar entrar com a Apple até abril de 2020.
 
@@ -28,7 +28,7 @@ Antes de criar e executar um aplicativo usando entrar com a Apple, você precisa
 
 1. Crie um novo identificador de **IDs de aplicativo** .
 2. Defina uma descrição no campo **Descrição** .
-3. Escolha uma ID de pacote **explícita** e `com.xamarin.AddingTheSignInWithAppleFlowToYourApp` defina no campo.
+3. Escolha uma ID de pacote **explícita** e defina `com.xamarin.AddingTheSignInWithAppleFlowToYourApp` no campo.
 4. Habilite a **entrada com** o recurso Apple e registre a nova identidade.
 5. Crie um novo perfil de provisionamento com a nova identidade.
 6. Baixe e instale-o em seu dispositivo.
@@ -36,7 +36,7 @@ Antes de criar e executar um aplicativo usando entrar com a Apple, você precisa
 
 ## <a name="check-sign-in-status"></a>Verificar status de entrada
 
-Quando o aplicativo for iniciado, ou quando você precisar verificar o status de autenticação de um usuário, crie uma `ASAuthorizationAppleIdProvider` instância de e verifique o estado atual:
+Quando o aplicativo for iniciado, ou quando você precisar verificar o status de autenticação de um usuário, crie uma instância de `ASAuthorizationAppleIdProvider` e verifique o estado atual:
 
 ```csharp
 var appleIdProvider = new ASAuthorizationAppleIdProvider ();
@@ -65,11 +65,11 @@ appleIdProvider.GetCredentialState (KeychainItem.CurrentUserIdentifier, (credent
 });
 ```
 
-Nesse `FinishedLaunching` código, chamado durante `AppDelegate.cs`no, o aplicativo tratará quando um estado for `NotFound` e apresentará o `LoginViewController` para o usuário. Se o estado tiver retornado `Authorized` ou `Revoked`, uma ação diferente poderá ser apresentada ao usuário.
+Nesse código, chamado durante `FinishedLaunching` no `AppDelegate.cs` , o aplicativo tratará quando um estado for `NotFound` e apresentará o `LoginViewController` para o usuário. Se o estado tiver retornado `Authorized` ou `Revoked` , uma ação diferente poderá ser apresentada ao usuário.
 
 ## <a name="a-loginviewcontroller-for-sign-in-with-apple"></a>Um LoginViewController para entrar com a Apple
 
-O `UIViewController` que implementa a lógica de logon e oferece entrada com a Apple precisa `IASAuthorizationControllerDelegate` implementar `IASAuthorizationControllerPresentationContextProviding` e como no `LoginViewController` exemplo abaixo.
+O `UIViewController` que implementa a lógica de logon e oferece entrada com a Apple precisa implementar `IASAuthorizationControllerDelegate` e `IASAuthorizationControllerPresentationContextProviding` como no `LoginViewController` exemplo abaixo.
 
 ```csharp
 public partial class LoginViewController : UIViewController, IASAuthorizationControllerDelegate, IASAuthorizationControllerPresentationContextProviding {
@@ -131,13 +131,13 @@ public partial class LoginViewController : UIViewController, IASAuthorizationCon
 
 ![Animação do aplicativo de exemplo usando entrar com a Apple](sign-in-images/sign-in-flow.png)
 
-Este código de exemplo verifica o status de logon `PerformExistingAccountSetupFlows` atual no e conecta-se ao modo de exibição atual como um delegado. Se uma credencial existente do conjunto de chaves do iCloud ou uma credencial de ID da Apple for encontrada, o usuário será solicitado a usá-la.
+Este código de exemplo verifica o status de logon atual no `PerformExistingAccountSetupFlows` e conecta-se ao modo de exibição atual como um delegado. Se uma credencial existente do conjunto de chaves do iCloud ou uma credencial de ID da Apple for encontrada, o usuário será solicitado a usá-la.
 
-A Apple `ASAuthorizationAppleIdButton`fornece um botão especificamente para essa finalidade. Quando tocado, o botão irá disparar o fluxo de trabalho manipulado `HandleAuthorizationAppleIDButtonPress`no método.
+A Apple fornece `ASAuthorizationAppleIdButton` um botão especificamente para essa finalidade. Quando tocado, o botão irá disparar o fluxo de trabalho manipulado no método `HandleAuthorizationAppleIDButtonPress` .
 
 ## <a name="handling-authorization"></a>Manipulando a autorização
 
-`IASAuthorizationController` Em implementar qualquer lógica personalizada para armazenar a conta do usuário. O exemplo a seguir armazena a conta do usuário no conjunto de chaves, o próprio serviço de armazenamento da Apple.
+Em `IASAuthorizationController` implementar qualquer lógica personalizada para armazenar a conta do usuário. O exemplo a seguir armazena a conta do usuário no conjunto de chaves, o próprio serviço de armazenamento da Apple.
 
 ```csharp
 #region IASAuthorizationController Delegate
@@ -211,7 +211,7 @@ public UIWindow GetPresentationAnchor (ASAuthorizationController controller) => 
 
 * [Entre com as diretrizes da Apple](https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/overview/)
 * [Entre com a autorização da Apple.][2]
-* [WWDC 2019 sessão 706: Apresentando a entrada com a Apple.][3]
+* [WWDC 2019 sessão 706: introdução à entrada com a Apple.][3]
 * [Entrar com a Apple para Xamarin. Forms][4]
 
 [1]: https://developer.apple.com/documentation/authenticationservices/adding_the_sign_in_with_apple_flow_to_your_app

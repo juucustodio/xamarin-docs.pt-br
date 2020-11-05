@@ -10,20 +10,23 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5aa62927efe0a9803efbddaef97ac6557edccd6c
-ms.sourcegitcommit: c3329ab25d377907d8804cdd5e26dc84a274f39c
+ms.openlocfilehash: 09011647428e2af1bdfcdb2f9def8da64ef84144
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88130897"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374831"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>Resumo do capítulo 14. Layout absoluto
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
 
-Como `StackLayout` , [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) deriva de `Layout<View>` e herda uma `Children` propriedade. `AbsoluteLayout`implementa um sistema de layout que exige que o programador especifique as posições de seus filhos e, opcionalmente, seu tamanho. A posição é especificada pelo canto superior esquerdo do filho em relação ao canto superior esquerdo do `AbsoluteLayout` em unidades independentes de dispositivo. `AbsoluteLayout`também implementa um recurso de posicionamento e dimensionamento proporcional.
+> [!NOTE]
+> Este livro foi publicado na Primavera de 2016 e não foi atualizado desde então. Há muito no livro que permanece valioso, mas alguns materiais estão desatualizados e alguns tópicos não estão mais totalmente corretos ou completos.
 
-`AbsoluteLayout`deve ser considerado um sistema de layout de finalidade especial para ser usado somente quando o programador puder impor um tamanho nos filhos (por exemplo, `BoxView` elementos) ou quando o tamanho do elemento não afetar o posicionamento de outros filhos. As `HorizontalOptions` `VerticalOptions` Propriedades e não têm efeito sobre os filhos de um `AbsoluteLayout` .
+Como `StackLayout` , [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) deriva de `Layout<View>` e herda uma `Children` propriedade. `AbsoluteLayout` implementa um sistema de layout que exige que o programador especifique as posições de seus filhos e, opcionalmente, seu tamanho. A posição é especificada pelo canto superior esquerdo do filho em relação ao canto superior esquerdo do `AbsoluteLayout` em unidades independentes de dispositivo. `AbsoluteLayout` também implementa um recurso de posicionamento e dimensionamento proporcional.
+
+`AbsoluteLayout` deve ser considerado um sistema de layout de finalidade especial para ser usado somente quando o programador puder impor um tamanho nos filhos (por exemplo, `BoxView` elementos) ou quando o tamanho do elemento não afetar o posicionamento de outros filhos. As `HorizontalOptions` `VerticalOptions` Propriedades e não têm efeito sobre os filhos de um `AbsoluteLayout` .
 
 Este capítulo também apresenta o recurso importante das *propriedades vinculáveis anexadas* que permitem que as propriedades definidas em uma classe (nesse caso `AbsoluteLayout` ) sejam anexadas a outra classe (um filho do `AbsoluteLayout` ).
 
@@ -39,7 +42,7 @@ O exemplo [**ChessboardFixed**](https://github.com/xamarin/xamarin-forms-book-sa
 
 ## <a name="attached-bindable-properties"></a>Propriedades vinculáveis anexadas
 
-Também é possível definir a posição e, opcionalmente, o tamanho de um filho de um `AbsoluteLayout` após ele ter sido adicionado à `Children` coleção usando o método estático [ `AbsoluteLayout.SetLayoutBounds` ] (xref: Xamarin.Forms . AbsoluteLayout. SetLayoutBounds ( Xamarin.Forms . Vinculobject, Xamarin.Forms . Rectangle)). O primeiro argumento é o filho; o segundo é um `Rectangle` objeto. Você pode especificar que os tamanhos filho são horizontal e/ou verticalmente, definindo valores de largura e altura para a [`AbsoluteLayout.AutoSize`](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) constante.
+Também é possível definir a posição e, opcionalmente, o tamanho de um filho de um `AbsoluteLayout` após ele ter sido adicionado à `Children` coleção usando o método estático [ `AbsoluteLayout.SetLayoutBounds` ] (xref: Xamarin.Forms . AbsoluteLayout. SetLayoutBounds ( Xamarin.Forms . Vinculobject, Xamarin.Forms . Rectangle)). O primeiro argumento é o filho; o segundo é um `Rectangle` objeto. Você pode especificar que os tamanhos filho são horizontal e/ou verticalmente, definindo valores de largura e altura para a  [`AbsoluteLayout.AutoSize`](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) constante.
 
 O exemplo [**ChessboardDynamic**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/ChessboardDynamic) coloca o `AbsoluteLayout` em um `ContentView` com um `SizeChanged` manipulador para chamar `AbsoluteLayout.SetLayoutBounds` em todos os filhos para torná-los o mais amplo possível.  
 
@@ -47,18 +50,18 @@ A propriedade vinculável anexada que `AbsoluteLayout` define é o campo somente
 
 ## <a name="proportional-sizing-and-positioning"></a>Dimensionamento e posicionamento proporcional
 
-`AbsoluteLayout`implementa um recurso de dimensionamento e posicionamento proporcional. A classe define uma segunda propriedade vinculável anexada, [`LayoutFlagsProperty`](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty) , com os métodos estáticos relacionados [ `AbsoluteLayout.SetLayoutFlags` ] (xref: Xamarin.Forms . AbsoluteLayout. SetLayoutFlags ( Xamarin.Forms . Vinculobject, Xamarin.Forms . AbsoluteLayoutFlags)) e [ `AbsoluteLayout.GetLayoutFlags` ] (xref: Xamarin.Forms . AbsoluteLayout. GetLayoutFlags ( Xamarin.Forms . Bindobject)).
+`AbsoluteLayout` implementa um recurso de dimensionamento e posicionamento proporcional. A classe define uma segunda propriedade vinculável anexada, [`LayoutFlagsProperty`](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty) , com os métodos estáticos relacionados [ `AbsoluteLayout.SetLayoutFlags` ] (xref: Xamarin.Forms . AbsoluteLayout. SetLayoutFlags ( Xamarin.Forms . Vinculobject, Xamarin.Forms . AbsoluteLayoutFlags)) e [ `AbsoluteLayout.GetLayoutFlags` ] (xref: Xamarin.Forms . AbsoluteLayout. GetLayoutFlags ( Xamarin.Forms . Bindobject)).
 
 O argumento para `AbsoluteLayout.SetLayoutFlags` e o valor de retorno de `AbsoluteLayout.GetLayoutFlags` é um valor do tipo [`AbsoluteLayoutFlags`](xref:Xamarin.Forms.AbsoluteLayoutFlags) , uma enumeração com os seguintes membros:
 
-- [`None`](xref:Xamarin.Forms.AbsoluteLayoutFlags.None)(igual a 0)
-- [`XProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.XProportional)uma
-- [`YProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.YProportional)2
-- [`PositionProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.PositionProportional)Beta
-- [`WidthProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.WidthProportional)quatro
-- [`HeightProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.HeightProportional)8
-- [`SizeProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.SizeProportional)12
-- [`All`](xref:Xamarin.Forms.AbsoluteLayoutFlags.All)(\xFFFFFFFF)
+- [`None`](xref:Xamarin.Forms.AbsoluteLayoutFlags.None) (igual a 0)
+- [`XProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.XProportional) uma
+- [`YProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.YProportional) 2
+- [`PositionProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.PositionProportional) Beta
+- [`WidthProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.WidthProportional) quatro
+- [`HeightProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.HeightProportional) 8
+- [`SizeProportional`](xref:Xamarin.Forms.AbsoluteLayoutFlags.SizeProportional) 12
+- [`All`](xref:Xamarin.Forms.AbsoluteLayoutFlags.All) (\xFFFFFFFF)
 
 Você pode combiná-los com o operador OR de bit de C#.
 
@@ -90,7 +93,7 @@ Um atributo em XAML que consiste em um nome de classe, um ponto e um nome de pro
 
 ## <a name="overlays"></a>Sobreposições
 
-Você pode usar `AbsoluteLayout` para construir uma *sobreposição*, que aborda a página com outros controles, talvez para proteger o usuário de interagir com os controles normais na página.
+Você pode usar `AbsoluteLayout` para construir uma *sobreposição* , que aborda a página com outros controles, talvez para proteger o usuário de interagir com os controles normais na página.
 
 O exemplo [**SimpleOverlay**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/SimpleOverlay) demonstra essa técnica e também demonstra o [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) , que exibe a extensão para a qual um programa concluiu uma tarefa.
 
@@ -107,4 +110,4 @@ O programa [**BouncingText**](https://github.com/xamarin/xamarin-forms-book-samp
 - [Capítulo 14 texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch14-Apr2016.pdf)
 - [Exemplos do capítulo 14](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14)
 - [AbsoluteLayout](~/xamarin-forms/user-interface/layouts/absolutelayout.md)
-- [Propriedades anexadas](~/xamarin-forms/xaml/attached-properties.md)
+- [Propriedades Anexadas](~/xamarin-forms/xaml/attached-properties.md)

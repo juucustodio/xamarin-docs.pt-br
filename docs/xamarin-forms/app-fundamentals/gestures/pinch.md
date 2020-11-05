@@ -10,16 +10,16 @@ ms.date: 01/21/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bb471787a4b3304be3df008fc3ecea66ff8263b3
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 4f7f0a1d8951166327b84f0003f5670f117d65f9
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560982"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375200"
 ---
 # <a name="add-a-pinch-gesture-recognizer"></a>Adicionar um reconhecedor de gestos de pinçagem
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-pinchgesture)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/workingwithgestures-pinchgesture)
 
 _O gesto de pinçagem é usado para executar zoom interativo e é implementado com a classe PinchGestureRecognizer. Um cenário comum para o gesto de pinçar é executar o zoom interativo de uma imagem no local de pinçagem. Isso é feito dimensionando o conteúdo do visor e é demonstrado neste artigo._
 
