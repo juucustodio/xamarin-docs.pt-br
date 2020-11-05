@@ -10,16 +10,16 @@ ms.date: 10/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e1474167d3bb56f0e5eb7ee0a8d321a5d4367ef2
-ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
+ms.openlocfilehash: 74df5809576745903f978862ddc8a1e98aa1c973
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92897553"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374258"
 ---
 # <a name="no-locxamarinforms-reusable-roundeffect"></a>Xamarin.Forms RoundEffect reutilizável
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
 
 > [!IMPORTANT]
 > Não é mais necessário usar um `RoundEffect` para renderizar um controle como um círculo. A abordagem mais recente recomendada é recortar o controle usando um `EllipseGeometry` . Para obter mais informações, consulte [cortar com uma geometria](~/xamarin-forms/user-interface/shapes/geometries.md#clip-with-a-geometry).

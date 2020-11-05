@@ -10,16 +10,16 @@ ms.date: 01/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f8b98d103021864aeb589787224f90bdaed17146
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 8668ef01e7fac02243934f145eb2e3f4ff4a6a8a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563777"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373205"
 ---
 # <a name="datepicker-item-selection-on-ios"></a>Seleção de item DatePicker no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esses controles específicos da plataforma iOS quando a seleção de item ocorre em um [`DatePicker`](xref:Xamarin.Forms.DatePicker) , permitindo ao usuário especificar que a seleção de item ocorre durante a pesquisa de itens no controle ou apenas uma vez que o botão **Done** é pressionado. Ele é consumido em XAML definindo a `DatePicker.UpdateMode` Propriedade anexada como um valor da `UpdateMode` enumeração:
 
@@ -66,7 +66,7 @@ switch (datePicker.On<iOS>().UpdateMode())
 
 O resultado é que um especificado `UpdateMode` é aplicado ao [`DatePicker`](xref:Xamarin.Forms.DatePicker) , que controla quando a seleção de item ocorre:
 
-[![Captura de tela dos modos de atualização do DatePicker](datepicker-selection-images/datepicker-updatemode.png "DatePicker UpdateMode específico da plataforma")](datepicker-selection-images/datepicker-updatemode-large.png#lightbox "DatePicker UpdateMode específico da plataforma")
+[![Captura de tela dos modos de atualização do DatePicker](datepicker-selection-images/datepicker-updatemode.png "DatePicker UpdateMode Platform-Specific")](datepicker-selection-images/datepicker-updatemode-large.png#lightbox "DatePicker UpdateMode Platform-Specific")
 
 ## <a name="related-links"></a>Links relacionados
 

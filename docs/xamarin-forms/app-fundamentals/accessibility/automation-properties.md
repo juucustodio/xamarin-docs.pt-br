@@ -10,16 +10,16 @@ ms.date: 12/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f05ca6eaaaedea69e8b6eb951d31fb7701a2f0de
-ms.sourcegitcommit: 836d54779190b1bef1b43bc0c2016c9b3034bfda
+ms.openlocfilehash: 98cf9f67188f67c4575823024106e100f6f22608
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281177"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374505"
 ---
 # <a name="automation-properties-in-no-locxamarinforms"></a>Propriedades de automação em Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
 _Xamarin.Forms permite que os valores de acessibilidade sejam definidos nos elementos da interface do usuário usando propriedades anexadas da classe AutomationProperties, que, por sua vez, define valores de acessibilidade nativos. Este artigo explica como usar a classe AutomationProperties para que um leitor de tela possa falar sobre os elementos na página._
 

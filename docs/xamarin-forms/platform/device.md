@@ -10,16 +10,16 @@ ms.date: 07/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8eff115e894f77aeacff0f6c072bfd338fa19844
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c28f10441e624a316762c5e677f613335a3f0f94
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560501"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373257"
 ---
 # <a name="no-locxamarinforms-device-class"></a>Xamarin.Forms Classe de dispositivo
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/workingwithdevice)
 
 A [`Device`](xref:Xamarin.Forms.Device) classe contém várias propriedades e métodos para ajudar os desenvolvedores a personalizar o layout e a funcionalidade de acordo com a plataforma.
 
@@ -253,7 +253,7 @@ Os aplicativos às vezes usam threads em segundo plano para executar operações
 
 A `Device` classe inclui os seguintes `static` métodos que podem ser usados para interagir com elementos de interface do usuário de threads de planos de fundo:
 
-| Método | Argumentos | Retornos | Finalidade |
+| Método | Arguments | Retornos | Finalidade |
 |---|---|---|---|
 | `BeginInvokeOnMainThread` | `Action` | `void` | Invoca um `Action` no thread principal e não aguarda que ele seja concluído. |
 | `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Invoca um `Func<T>` no thread principal e aguarda sua conclusão. |

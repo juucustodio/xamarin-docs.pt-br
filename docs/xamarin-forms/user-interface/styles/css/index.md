@@ -11,16 +11,16 @@ ms.date: 07/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 39a6dbcbd5e825c6630bfb60b61bf00a308fdc0e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 656a9dbec5f0520b4167c482b227ea863eb4c412
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562776"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373530"
 ---
 # <a name="styling-no-locxamarinforms-apps-using-cascading-style-sheets-css"></a>Estilizando Xamarin.Forms aplicativos usando folhas de estilos em cascata (CSS)
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 
 _Xamarin.Forms dá suporte a elementos visuais de estilo usando folhas de estilos em cascata (CSS)._
 
@@ -363,7 +363,7 @@ No momento, não há suporte para os seguintes seletores:
 
 ## <a name="property-reference"></a>Referência de propriedade
 
-As propriedades de CSS a seguir têm suporte no Xamarin.Forms (na coluna **valores** , os tipos são em _itálico_, enquanto os literais de cadeia de caracteres são `gray` ):
+As propriedades de CSS a seguir têm suporte no Xamarin.Forms (na coluna **valores** , os tipos são em _itálico_ , enquanto os literais de cadeia de caracteres são `gray` ):
 
 |Propriedade|Aplica-se a|Valores|Exemplo|
 |---|---|---|---|
@@ -395,11 +395,11 @@ As propriedades de CSS a seguir têm suporte no Xamarin.Forms (na coluna **valor
 |`margin-top`|`View`|_espessura_ \|`initial` |`margin-top: 2;`|
 |`margin-right`|`View`|_espessura_ \|`initial` |`margin-right: 1;`|
 |`margin-bottom`|`View`|_espessura_ \|`initial` |`margin-bottom: 6;`|
-|`max-lines`|`Label`|_int_ \| `initial`|`max-lines: 2;`|
+|`max-lines`|`Label`|_INT_ \| `initial`|`max-lines: 2;`|
 |`min-height`|`VisualElement`|_duplo_ \|`initial` |`min-height: 50;`|
 |`min-width`|`VisualElement`|_duplo_ \|`initial` |`min-width: 112;`|
 |`opacity`|`VisualElement`|_duplo_ \|`initial` |`opacity: .3;`|
-|`order`|`VisualElement`|_int_ \| `initial`|`order: -1;`|
+|`order`|`VisualElement`|_INT_ \| `initial`|`order: -1;`|
 |`padding`|`Button`, `ImageButton`, `Layout`, `Page`|_espessura_ \|`initial` |`padding: 6 12 12;`|
 |`padding-left`|`Button`, `ImageButton`, `Layout`, `Page`|_duplo_ \|`initial`|`padding-left: 3;`|
 |`padding-top`|`Button`, `ImageButton`, `Layout`, `Page`| _duplo_ \|`initial` |`padding-top: 4;`|
@@ -411,7 +411,7 @@ As propriedades de CSS a seguir têm suporte no Xamarin.Forms (na coluna **valor
 |`text-decoration`|`Label`, `Span`|`none` \| `underline` \| `strikethrough` \| `line-through` \| `initial`|`text-decoration: underline, line-through;`|
 |`text-transform`|`Button`,`Editor`, `Entry`, `Label`, `SearchBar`, `SearchHandler`|`none` \| `default` \| `uppercase` \| `lowercase` \| `initial` |`text-transform: uppercase;`|
 |`transform`|`VisualElement`| `none`, `rotate`, `rotateX`, `rotateY`, `scale`, `scaleX`, `scaleY`, `translate`, `translateX`, `translateY`, `initial` |`transform: rotate(180), scaleX(2.5);`|
-|`transform-origin`|`VisualElement`| _duplo_, _duplo_ \|`initial` |`transform-origin: 7.5, 12.5;`|
+|`transform-origin`|`VisualElement`| _duplo_ , _duplo_ \|`initial` |`transform-origin: 7.5, 12.5;`|
 |`vertical-align`|`Label`|`left` \| `top` \| `right` \| `bottom` \| `start` \| `center` \| `middle` \| `end` \| `initial`|`vertical-align: bottom;`|
 |`visibility`|`VisualElement`|`true` \| `visible` \| `false` \| `hidden` \| `collapse` \| `initial`|`visibility: hidden;`|
 |`width`|`VisualElement`|_duplo_ \|`initial`|`min-width: 320;`|
@@ -431,14 +431,14 @@ Além disso, não há nenhum `inherit` valor e, portanto, não há suporte para 
 
 ### <a name="no-locxamarinforms-specific-properties"></a>Xamarin.Forms Propriedades específicas
 
-As Xamarin.Forms Propriedades específicas de CSS a seguir também têm suporte (na coluna **valores** , os tipos são em _itálico_, enquanto os literais de cadeia de caracteres são `gray` ):
+As Xamarin.Forms Propriedades específicas de CSS a seguir também têm suporte (na coluna **valores** , os tipos são em _itálico_ , enquanto os literais de cadeia de caracteres são `gray` ):
 
 |Propriedade|Aplica-se a|Valores|Exemplo|
 |---|---|---|---|
 |`-xf-bar-background-color`|`NavigationPage`, `TabbedPage`|_cor_ \| do `initial` |`-xf-bar-background-color: teal;`|
 |`-xf-bar-text-color`|`NavigationPage`, `TabbedPage`|_cor_ \| do `initial` |`-xf-bar-text-color: gray`|
 |`-xf-horizontal-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-horizontal-scroll-bar-visibility: never;`|
-|`-xf-max-length`|`Entry`, `Editor`, `SearchBar`|_int_ \| `initial` |`-xf-max-length: 20;`|
+|`-xf-max-length`|`Entry`, `Editor`, `SearchBar`|_INT_ \| `initial` |`-xf-max-length: 20;`|
 |`-xf-max-track-color`|`Slider`|_cor_ \| do `initial` |`-xf-max-track-color: red;`|
 |`-xf-min-track-color`|`Slider`|_cor_ \| do `initial` |`-xf-min-track-color: yellow;`|
 |`-xf-orientation`|`ScrollView`, `StackLayout`| `horizontal` \| `vertical` \| `both` \| `initial`. `both` Só tem suporte em um `ScrollView` . |`-xf-orientation: horizontal;`|
@@ -452,7 +452,7 @@ As Xamarin.Forms Propriedades específicas de CSS a seguir também têm suporte 
 
 ### <a name="no-locxamarinforms-shell-specific-properties"></a>Xamarin.Forms Propriedades específicas do Shell
 
-As Xamarin.Forms Propriedades CSS específicas do Shell a seguir também têm suporte (na coluna **valores** , os tipos são em _itálico_, enquanto os literais de cadeia de caracteres são `gray` ):
+As Xamarin.Forms Propriedades CSS específicas do Shell a seguir também têm suporte (na coluna **valores** , os tipos são em _itálico_ , enquanto os literais de cadeia de caracteres são `gray` ):
 
 |Propriedade|Aplica-se a|Valores|Exemplo|
 |---|---|---|---|

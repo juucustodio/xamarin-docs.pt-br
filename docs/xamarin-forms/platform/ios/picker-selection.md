@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8e8c5696235e0258ab4e300a821c1ef804e6bd50
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 5b7315fce6a51c570c4486c54fdfc81932a4b8f8
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556679"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372674"
 ---
 # <a name="picker-item-selection-on-ios"></a>Seleção de item do seletor no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esses controles específicos da plataforma iOS quando a seleção de item ocorre em um [`Picker`](xref:Xamarin.Forms.Picker) , permitindo ao usuário especificar que a seleção de item ocorre durante a pesquisa de itens no controle ou apenas uma vez que o botão **Done** é pressionado. Ele é consumido em XAML definindo a `Picker.UpdateMode` Propriedade anexada como um valor da `UpdateMode` enumeração:
 
@@ -66,7 +66,7 @@ switch (picker.On<iOS>().UpdateMode())
 
 O resultado é que um especificado `UpdateMode` é aplicado ao [`Picker`](xref:Xamarin.Forms.Picker) , que controla quando a seleção de item ocorre:
 
-[![Atualização do seletor específico da plataforma](picker-selection-images/picker-updatemode.png)](picker-selection-images/picker-updatemode-large.png#lightbox "Atualização do seletor específico da plataforma")
+[![Atualização do seletor específico da plataforma](picker-selection-images/picker-updatemode.png)](picker-selection-images/picker-updatemode-large.png#lightbox "UpdateMode do seletor Platform-Specific")
 
 ## <a name="related-links"></a>Links relacionados
 

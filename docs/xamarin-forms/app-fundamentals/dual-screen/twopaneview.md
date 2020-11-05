@@ -10,16 +10,16 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3c77e81dccea9bc6953d719d52056c772c16d823
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c1f5da6ed6a2c7f130e98a3f05ef2c11afe6995e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562659"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373803"
 ---
 # <a name="no-locxamarinforms-twopaneview-layout"></a>Xamarin.Forms Layout de TwoPaneView
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
 A classe `TwoPaneView` representa um contêiner com duas exibições que dimensionam e posicionam o conteúdo no espaço disponível, lado a lado ou de cima para baixo. `TwoPaneView` herda de `Grid`, portanto, a maneira mais fácil de entender essas propriedades é imaginar que elas estão sendo aplicadas a uma grade.
 

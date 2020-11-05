@@ -10,16 +10,16 @@ ms.date: 01/13/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c89c6b50335405b56349e502f95b9d2975a04f73
-ms.sourcegitcommit: 145bd7550d19088c84949ecf5b1cc39002183234
+ms.openlocfilehash: ad65c46f216af9a24eb02ab55411f0a89ac61100
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93185504"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374609"
 ---
 # <a name="no-locxamarinforms-control-templates"></a>Xamarin.Forms modelos de controle
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplatedemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/templates-controltemplatedemos)
 
 Xamarin.Forms os modelos de controle permitem que você defina a estrutura visual de [`ContentView`](xref:Xamarin.Forms.ContentView) controles personalizados derivados e [`ContentPage`](xref:Xamarin.Forms.ContentPage) páginas derivadas. Os modelos de controle separam a IU (interface do usuário) para uma página ou controle personalizado da lógica que implementa o controle ou a página. Também é possível inserir conteúdo adicional no controle modelo personalizado ou na página modelo, em um local predefinido.
 
@@ -122,7 +122,7 @@ O exemplo de XAML a seguir mostra um [`ControlTemplate`](xref:Xamarin.Forms.Cont
 </ContentPage>
 ```
 
-Quando um [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) é declarado como um recurso, ele deve ter uma chave especificada com o `x:Key` atributo para que ele possa ser identificado no dicionário de recursos. Neste exemplo, o elemento raiz do `CardViewControlTemplate` é um objeto [`Frame`](xref:Xamarin.Forms.Frame). O objeto `Frame` usa a extensão de marcação `RelativeSource` para definir o próprio `BindingContext` para a instância de objeto de runtime à qual o modelo será aplicado, que é conhecida como o *pai modelo* . O `Frame` objeto usa uma combinação de [`Grid`](xref:Xamarin.Forms.Grid) objetos,, `Frame` [`Image`](xref:Xamarin.Forms.Image) , [`Label`](xref:Xamarin.Forms.Label) e [`BoxView`](xref:Xamarin.Forms.BoxView) para definir a estrutura visual de um `CardView` objeto. As expressões de associação desses objetos são resolvidas em relação às propriedades `CardView`, devido à herança do `BindingContext` do elemento raiz `Frame`. Para obter mais informações sobre a `RelativeSource` extensão de marcação, consulte [ Xamarin.Forms associações relativas](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
+Quando um [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) é declarado como um recurso, ele deve ter uma chave especificada com o `x:Key` atributo para que ele possa ser identificado no dicionário de recursos. Neste exemplo, o elemento raiz do `CardViewControlTemplate` é um objeto [`Frame`](xref:Xamarin.Forms.Frame). O objeto `Frame` usa a extensão de marcação `RelativeSource` para definir o próprio `BindingContext` para a instância de objeto de runtime à qual o modelo será aplicado, que é conhecida como o *pai modelo*. O `Frame` objeto usa uma combinação de [`Grid`](xref:Xamarin.Forms.Grid) objetos,, `Frame` [`Image`](xref:Xamarin.Forms.Image) , [`Label`](xref:Xamarin.Forms.Label) e [`BoxView`](xref:Xamarin.Forms.BoxView) para definir a estrutura visual de um `CardView` objeto. As expressões de associação desses objetos são resolvidas em relação às propriedades `CardView`, devido à herança do `BindingContext` do elemento raiz `Frame`. Para obter mais informações sobre a `RelativeSource` extensão de marcação, consulte [ Xamarin.Forms associações relativas](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
 ## <a name="consume-a-controltemplate"></a>Consumir um ControlTemplate
 
@@ -177,7 +177,7 @@ A `TemplateBinding` extensão de marcação associa uma propriedade de um elemen
 A extensão de marcação `TemplateBinding` define as seguintes propriedades:
 
 - `Path`, do tipo `string`, o caminho para a propriedade.
-- `Mode`, do tipo `BindingMode`, a direção em que as alterações se propagam entre a *origem* e o *destino* .
+- `Mode`, do tipo `BindingMode`, a direção em que as alterações se propagam entre a *origem* e o *destino*.
 - `Converter`, do tipo `IValueConverter`, o conversor de valor de associação.
 - `ConverterParameter`, do tipo `object`, o parâmetro do conversor de valor de associação.
 - `StringFormat`, do tipo `string`, o formato da cadeia de caracteres para a associação.

@@ -10,16 +10,16 @@ ms.date: 05/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f749bda3f0fb10edf8c662ef08c22164087dee47
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: d64f1919bebc1988753a7b6d37c8d31fcb6d84e3
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563738"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373244"
 ---
 # <a name="no-locxamarinforms-layouts"></a>Xamarin.Forms Layouts
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/formsgallery)
 
 _Xamarin.Forms Os layouts são usados para compor controles de interface do usuário em estruturas visuais._
 
@@ -33,7 +33,7 @@ As classes que derivam de `Layout` podem ser divididas em duas categorias:
 
 Essas classes derivam de [`Layout`](xref:Xamarin.Forms.Layout) , que define [`Padding`](xref:Xamarin.Forms.Layout.Padding) e [`IsClippedToBounds`](xref:Xamarin.Forms.Layout.IsClippedToBounds) Propriedades:
 
-| Tipo | Descrição | Aparência |
+| Type | Descrição | Aparência |
 | --- | --- | --- |
 | `ContentView` | [`ContentView`](xref:Xamarin.Forms.ContentView) contém um único filho que é definido com a [`Content`](xref:Xamarin.Forms.ContentView.Content) propriedade. A `Content` propriedade pode ser definida para qualquer `View` derivativo, incluindo outros `Layout` derivativos. `ContentView` é usado principalmente como um elemento estrutural e serve como uma classe base para [`Frame`](xref:Xamarin.Forms.Frame) .<br /><br />[Documentação](xref:Xamarin.Forms.ContentView)  /  da API [Guia](~/xamarin-forms/user-interface/layouts/contentview.md)  /  [Exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/) de | [![Exemplo de ContentView](layouts-images/ContentView.png "Exemplo de ContentView")](layouts-images/ContentView-Large.png#lightbox "Exemplo de ContentView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentViewDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentViewDemoPage.xaml) |
 | `Frame` | A [`Frame`](xref:Xamarin.Forms.Frame) classe deriva de [`ContentView`](xref:Xamarin.Forms.ContentView) e exibe uma borda, ou quadro, em torno de seu filho. A `Frame` classe tem um [`Padding`](xref:Xamarin.Forms.Layout.Padding) valor padrão de 20 e também define [`BorderColor`](xref:Xamarin.Forms.Frame.BorderColor) [`CornerRadius`](xref:Xamarin.Forms.Frame.CornerRadius) as propriedades, e [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) .<br /><br />[Documentação](xref:Xamarin.Forms.Frame)  /  da API [Guia](~/xamarin-forms/user-interface/layouts/frame.md)  /  [Exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-frame/) de | [![Exemplo de quadro](layouts-images/Frame.png "Exemplo de quadro")](layouts-images/Frame-Large.png#lightbox "Exemplo de quadro")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FrameDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FrameDemoPage.xaml) |
@@ -46,7 +46,7 @@ Essas classes derivam de [`Layout`](xref:Xamarin.Forms.Layout) , que define [`Pa
 
 Essas classes derivam de [`Layout<View>`](xref:Xamarin.Forms.Layout`1) :
 
-| Tipo | Descrição | Aparência |
+| Type | Descrição | Aparência |
 | --- | --- | --- |
 | `StackLayout` | [`StackLayout`](xref:Xamarin.Forms.StackLayout) posiciona os elementos filho em uma pilha horizontal ou verticalmente com base na [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) propriedade. A [`Spacing`](xref:Xamarin.Forms.StackLayout.Spacing) Propriedade governa o espaçamento entre os filhos e tem um valor padrão de 6.<br /><br />[Documentação](xref:Xamarin.Forms.StackLayout)  /  da API [Guia](~/xamarin-forms/user-interface/layouts/stacklayout.md)  /  [Exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-layout) de| [![Exemplo de StackLayout](layouts-images/StackLayout.png "Exemplo de StackLayout")](layouts-images/StackLayout-Large.png#lightbox "Exemplo de StackLayout")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StackLayoutDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StackLayoutDemoPage.xaml) |
 | `Grid` | [`Grid`](xref:Xamarin.Forms.Grid) posiciona seus elementos filho em uma grade de linhas e colunas. A posição de um filho é indicada usando as [Propriedades anexadas](~/xamarin-forms/xaml/attached-properties.md) [`Row`](xref:Xamarin.Forms.Grid.RowProperty) , [`Column`](xref:Xamarin.Forms.Grid.ColumnProperty) , [`RowSpan`](xref:Xamarin.Forms.Grid.RowSpanProperty) e [`ColumnSpan`](xref:Xamarin.Forms.Grid.ColumnSpanProperty) .<br /><br />[Documentação](xref:Xamarin.Forms.Grid)  /  da API [Guia](~/xamarin-forms/user-interface/layouts/grid.md)  /  [Exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-layout) de | [![Exemplo de grade](layouts-images/Grid.png "Exemplo de grade")](layouts-images/Grid-Large.png#lightbox "Exemplo de grade")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/GridDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/GridDemoPage.xaml) |

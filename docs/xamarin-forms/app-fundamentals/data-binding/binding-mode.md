@@ -10,16 +10,16 @@ ms.date: 05/01/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8a7c62ec6d7329227abd8f52644212341098185f
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 1ab0603555c55d969e1bee8ae709df3cac23de73
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556432"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373634"
 ---
 # <a name="no-locxamarinforms-binding-mode"></a>Xamarin.Forms Modo de ligação
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 No [artigo anterior](basic-bindings.md), as páginas **Associação de código alternativa** e **Associação de XAML alternativa** apresentavam um `Label` com sua propriedade `Scale` associada à propriedade `Value` de um `Slider`. Como o valor inicial de `Slider` é 0, isso fez com que a propriedade `Scale` do `Label` fosse definida como 0 em vez de 1 e o `Label` desapareceu.
 
@@ -208,7 +208,7 @@ public class HslColorViewModel : INotifyPropertyChanged
 }
 ```
 
-Quando a propriedade `Color` é alterada, o método `GetNearestColorName` estático na classe `NamedColor` (também incluído na solução **DataBindingDemos**) obtém a cor nomeada mais próxima e define a propriedade `Name`. Essa propriedade `Name` tem um acessador `set` particular e, portanto, não pode ser definida fora da classe.
+Quando a propriedade `Color` é alterada, o método `GetNearestColorName` estático na classe `NamedColor` (também incluído na solução **DataBindingDemos** ) obtém a cor nomeada mais próxima e define a propriedade `Name`. Essa propriedade `Name` tem um acessador `set` particular e, portanto, não pode ser definida fora da classe.
 
 Quando um ViewModel é definido como uma origem da associação, a infraestrutura de associação anexa um manipulador ao evento `PropertyChanged`. Dessa forma, a associação pode ser notificada de alterações nas propriedades e pode então definir as propriedades de destino com base nos valores alterados.
 
@@ -268,7 +268,7 @@ Quando o programa é executado pela primeira vez, a `BoxView`, o `Label` e três
 
 À medida que você manipula os controles deslizantes, os `BoxView` e `Label` são atualizados de acordo, conforme ilustrado pela captura de tela do Android.
 
-A criação de uma instância do ViewModel no dicionário de recursos é uma abordagem comum. Também é possível criar uma instância do ViewModel dentro de marcas de elemento de propriedade para a propriedade `BindingContext`. No arquivo XAML **Seletor de cor simples**, tente remover o `HslColorViewModel` do dicionário de recursos e defini-lo como a propriedade `BindingContext` da `Grid` desta forma:
+A criação de uma instância do ViewModel no dicionário de recursos é uma abordagem comum. Também é possível criar uma instância do ViewModel dentro de marcas de elemento de propriedade para a propriedade `BindingContext`. No arquivo XAML **Seletor de cor simples** , tente remover o `HslColorViewModel` do dicionário de recursos e defini-lo como a propriedade `BindingContext` da `Grid` desta forma:
 
 ```xaml
 <Grid>
@@ -301,7 +301,7 @@ No entanto, a definição da propriedade `Mode` como `TwoWay` nem sempre funcion
 
 Pode ser esperado que o `Slider` seja inicializado com o valor inicial da propriedade `Scale`, que é 1, mas isso não acontece. Quando uma associação `TwoWay` é inicializada, o destino é definido na origem primeiro, o que significa que a propriedade `Scale` é definida com o valor padrão de `Slider` igual a 0. Quando a associação `TwoWay` é definida no `Slider`, o `Slider` inicialmente é definido da origem.
 
-Defina o modo de associação como `OneWayToSource` na amostra **Associação de XAML alternativa**:
+Defina o modo de associação como `OneWayToSource` na amostra **Associação de XAML alternativa** :
 
 ```xaml
 <Label Text="TEXT"

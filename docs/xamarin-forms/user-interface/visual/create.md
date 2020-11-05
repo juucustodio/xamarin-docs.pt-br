@@ -10,16 +10,16 @@ ms.date: 03/12/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a8e8388a6a460b3a2958d3ab3b9a4c9c34ea1831
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 3cf29c550a6ef3e4f12bdc3a1525d33b53198220
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556458"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374381"
 ---
 # <a name="create-a-no-locxamarinforms-visual-renderer"></a>Criar um Xamarin.Forms renderizador Visual
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 
 Xamarin.Forms O Visual permite que os renderizadores sejam criados e aplicados seletivamente a [`VisualElement`](xref:Xamarin.Forms.VisualElement) objetos, sem a necessidade de Xamarin.Forms exibições de subclasse. Um renderizador que especifica um `IVisual` tipo, como parte de seu `ExportRendererAttribute` , será usado para renderizar os modos de exibição, em vez do renderizador padrão. No momento da seleção do processador, a `Visual` propriedade da exibição é inspecionada e incluída no processo de seleção do processador.
 

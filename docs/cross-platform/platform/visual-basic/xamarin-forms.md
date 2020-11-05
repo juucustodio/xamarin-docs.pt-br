@@ -6,18 +6,18 @@ ms.assetid: da4b4ba9-9205-47dc-8bae-23272ede2c50
 author: davidortinau
 ms.author: daortin
 ms.date: 04/24/2019
-ms.openlocfilehash: 5b042116f6d1fe2832298d09e3d47cba745973ad
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 8cb26c3d8cec03cfaa12f7acb974c9944119bdfc
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91456867"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374102"
 ---
 # <a name="xamarinforms-using-visual-basicnet"></a>Xamarin. Forms usando o Visual Basic.NET
 
 O Xamarin não oferece suporte a Visual Basic diretamente – siga as instruções nesta página para criar uma solução de Xamarin. Forms em C# e, em seguida, substitua o projeto .NET Standard C# por Visual Basic.
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
 
 [![Crie uma solução Xamarin. Forms e substitua o projeto .NET Standard por Visual Basic](xamarin-forms-images/hero-sml.png)](xamarin-forms-images/hero.png#lightbox)
 
@@ -36,7 +36,7 @@ Siga estas etapas para criar um projeto do Xamarin. Forms simples que usa Visual
 
 3. Na próxima tela, digite um nome para o projeto e pressione **criar**.
 
-4. Escolha o modelo **em branco** e pressione **OK**:
+4. Escolha o modelo **em branco** e pressione **OK** :
 
     [![Modelo Xamarin. Forms em branco](xamarin-forms-images/04-sml.png)](xamarin-forms-images/04.png#lightbox)
 
@@ -50,15 +50,15 @@ Siga estas etapas para criar um projeto do Xamarin. Forms simples que usa Visual
 
 7. Na próxima tela, digite um nome para o projeto e pressione **criar**.
 
-8. Clique com o botão direito do mouse no projeto Visual Basic e escolha **Propriedades**e, em seguida, altere o **namespace padrão** para corresponder aos projetos C# existentes:
+8. Clique com o botão direito do mouse no projeto Visual Basic e escolha **Propriedades** e, em seguida, altere o **namespace padrão** para corresponder aos projetos C# existentes:
 
     [![Verifique se o namespace raiz do Visual Basic corresponde ao aplicativo Xamarin. Forms](xamarin-forms-images/07a-sml.png)](xamarin-forms-images/07a.png#lightbox)
 
-9. Clique com o botão direito do mouse no novo projeto Visual Basic e escolha **gerenciar pacotes NuGet**e, em seguida, instale o **Xamarin. Forms** e feche a janela do Gerenciador de pacotes.
+9. Clique com o botão direito do mouse no novo projeto Visual Basic e escolha **gerenciar pacotes NuGet** e, em seguida, instale o **Xamarin. Forms** e feche a janela do Gerenciador de pacotes.
 
     [![Formulários e fechar a janela do Gerenciador de pacotes](xamarin-forms-images/07b-sml.png)](xamarin-forms-images/07b.png#lightbox)
 
-10. Renomeie o arquivo **Class1. vb** padrão para **app. vb**:
+10. Renomeie o arquivo **Class1. vb** padrão para **app. vb** :
 
     [![Renomear o arquivo Class1 padrão e a classe para o aplicativo](xamarin-forms-images/08.png)](xamarin-forms-images/08.png#lightbox)
 

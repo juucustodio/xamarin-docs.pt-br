@@ -10,16 +10,16 @@ ms.date: 01/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: df2cf99ef0ea1fcbb1b52dda7abb6c8cfdd2d2e7
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f50dde4bb96f43c6487cb40889746514f23d9d44
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561528"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374076"
 ---
 # <a name="no-locxamarinforms-bindable-properties"></a>Xamarin.Forms Propriedades vinculáveis
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/behaviors-eventtocommandbehavior)
 
 As propriedades vinculáveis estendem a funcionalidade da propriedade CLR ao fazer o backup de uma propriedade com um [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) tipo, em vez de fazer backup de uma propriedade com um campo. A finalidade das propriedades vinculáveis é fornecer um sistema de propriedades que ofereça suporte a vinculação de dados, estilos, modelos e valores definidos por meio de relações pai-filho. Além disso, as propriedades vinculáveis podem fornecer valores padrão, validação de valores de propriedade e retornos de chamada que monitoram alterações de propriedade.
 

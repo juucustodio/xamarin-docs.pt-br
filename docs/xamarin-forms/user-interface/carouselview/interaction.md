@@ -10,16 +10,16 @@ ms.date: 02/11/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 43f2e32a240b74fde50659033096c8a7246ea60c
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c6b6a5a538d69d396f8b30381fd1d0b73d3f0e9f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91564050"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373816"
 ---
 # <a name="no-locxamarinforms-carouselview-interaction"></a>Xamarin.Forms Interação CarouselView
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) define as seguintes propriedades que controlam a interação do usuário:
 

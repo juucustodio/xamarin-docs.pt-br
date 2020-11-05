@@ -10,16 +10,16 @@ ms.date: 04/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ee027399aec51bb7ae4fac15e9c706c65d3af235
-ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
+ms.openlocfilehash: fb9d5243e5be4d99d741349564854c9c54e7a1bb
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92928627"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373283"
 ---
 # <a name="no-locxamarinforms-shell-navigation"></a>Xamarin.Forms Navegação do Shell
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Xamarin.Forms O Shell inclui uma experiência de navegação baseada em URI que usa rotas para navegar para qualquer página no aplicativo, sem precisar seguir uma hierarquia de navegação de conjunto. Além disso, eles também oferecem a capacidade de navegar para trás, sem precisar visitar todas as páginas na pilha de navegação.
 
@@ -42,8 +42,8 @@ A navegação é executada pela invocação do método `GoToAsync`, da classe `S
 A navegação é executada em um aplicativo Shell, especificando um URI para onde navegar. Os URIs de navegação podem ter três componentes:
 
 - Uma *rota* , que define o caminho para o conteúdo que existe como parte da hierarquia visual do Shell.
-- Uma *página* . As páginas que não existam na hierarquia visual do Shell podem ser enviadas por push para a pilha de navegação de qualquer lugar em um aplicativo Shell. Por exemplo, uma página de detalhes do item não será definida na hierarquia visual do Shell, mas poderá ser enviada para a pilha de navegação conforme necessário.
-- Um ou mais *parâmetros de consulta* . Parâmetros de consulta são aqueles que podem ser passados para a página de destino durante a navegação.
+- Uma *página*. As páginas que não existam na hierarquia visual do Shell podem ser enviadas por push para a pilha de navegação de qualquer lugar em um aplicativo Shell. Por exemplo, uma página de detalhes do item não será definida na hierarquia visual do Shell, mas poderá ser enviada para a pilha de navegação conforme necessário.
+- Um ou mais *parâmetros de consulta*. Parâmetros de consulta são aqueles que podem ser passados para a página de destino durante a navegação.
 
 Quando um URI de navegação incluir todos os três componentes, a estrutura será: //route/page?queryParameters
 
@@ -108,7 +108,7 @@ Routing.RegisterRoute("dogdetails", typeof(DogDetailPage));
 Routing.RegisterRoute("elephantdetails", typeof(ElephantDetailPage));
 ```
 
-Este exemplo registra páginas de detalhes do item, que não estão definidas na subclasse do Shell, como rotas. Essas páginas, então, podem ser navegadas usando a navegação baseada em URI de qualquer lugar dentro do aplicativo. As rotas para essas páginas são conhecidas como *rotas globais* .
+Este exemplo registra páginas de detalhes do item, que não estão definidas na subclasse do Shell, como rotas. Essas páginas, então, podem ser navegadas usando a navegação baseada em URI de qualquer lugar dentro do aplicativo. As rotas para essas páginas são conhecidas como *rotas globais*.
 
 > [!NOTE]
 > As páginas cujas rotas tenham sido registradas com o método `Routing.RegisterRoute` podem ter o registro cancelado com o método `Routing.UnRegisterRoute`, se necessário.
@@ -244,7 +244,7 @@ A classe `Tab` define uma propriedade `Stack`, do tipo `IReadOnlyList<Page>`, qu
 
 A classe `Shell` define um evento `Navigating`, que é acionado quando a navegação está prestes a ser realizada, devido à navegação programática ou à interação do usuário. O objeto `ShellNavigatingEventArgs` que acompanha o evento `Navigating` fornece as seguintes propriedades:
 
-| Propriedade | Tipo | Description |
+| Propriedade | Type | Descrição |
 |---|---|---|
 | `Current` | `ShellNavigationState` | O URI da página atual. |
 | `Source` | `ShellNavigationSource` | O tipo de navegação que ocorreu. |
@@ -256,7 +256,7 @@ Além disso, a classe `ShellNavigatingEventArgs` fornece um método `Cancel` que
 
 A classe `Shell` também define um evento`Navigated`, que é acionado quando a navegação é concluída. O objeto `ShellNavigatedEventArgs` que acompanha o evento `Navigating` fornece as seguintes propriedades:
 
-| Propriedade | Tipo | Description |
+| Propriedade | Type | Descrição |
 |---|---|---|
 | `Current` | `ShellNavigationState` | O URI da página atual. |
 | `Previous`| `ShellNavigationState` | O URI da página anterior. |

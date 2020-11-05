@@ -10,16 +10,16 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 113265ffd26fcb1daf1cc85867e55f3e8ebd091f
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 29d3dbc29424089b9e5c492395ccbadfa0a69ae7
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557940"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373400"
 ---
 # <a name="playing-a-web-video"></a>Reproduzindo um vídeo da Web
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 A classe `VideoPlayer` define uma propriedade `Source` usada para especificar a origem do arquivo de vídeo, bem como uma propriedade `AutoPlay`. `AutoPlay` tem uma configuração padrão igual a `true`, o que significa que o vídeo deve iniciar a reprodução automaticamente após a definição de `Source`:
 
@@ -466,7 +466,7 @@ Com a implementação dessas propriedades nos três renderizadores, é possível
 </ContentPage>
 ```
 
-A classe `VideoSourceConverter` converte a cadeia de caracteres em uma `UriVideoSource`. Quando você navega para a página **Reproduzir um vídeo da Web**, o vídeo começa a ser carregado e inicia a execução quando uma quantidade suficiente de dados é baixada e armazenada em buffer. O vídeo tem cerca de 10 minutos:
+A classe `VideoSourceConverter` converte a cadeia de caracteres em uma `UriVideoSource`. Quando você navega para a página **Reproduzir um vídeo da Web** , o vídeo começa a ser carregado e inicia a execução quando uma quantidade suficiente de dados é baixada e armazenada em buffer. O vídeo tem cerca de 10 minutos:
 
 [![Reproduzir vídeo da Web](web-videos-images/playwebvideo-small.png "Reproduzir vídeo da Web")](web-videos-images/playwebvideo-large.png#lightbox "Reproduzir vídeo da Web")
 

@@ -10,16 +10,16 @@ ms.date: 03/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 63a939e7093bcbe52f1aed376253c7aa78b078bf
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 2a7aa9ec588879eb4f59e42cf9848d6e3c560625
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563842"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373790"
 ---
 # <a name="create-a-custom-layout-in-no-locxamarinforms"></a>Criar um layout personalizado em Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
 _Xamarin.Forms define cinco classes de layout – StackLayout, AbsoluteLayout, RelativeLayout, Grid e FlexLayout, e cada uma organiza seus filhos de forma diferente. No entanto, às vezes é necessário organizar o conteúdo da página usando um layout não fornecido pelo Xamarin.Forms . Este artigo explica como escrever uma classe de layout personalizada e demonstra uma classe WrapLayout sensível à orientação que organiza seus filhos horizontalmente na página e, em seguida, encapsula a exibição de filhos subsequentes em linhas adicionais._
 
@@ -50,7 +50,7 @@ Cada Xamarin.Forms classe que tem uma `Content` ou uma `Children` propriedade te
 Além disso, todas as classes que derivam de [`Layout`](xref:Xamarin.Forms.Layout) ou [`Layout<View>`](xref:Xamarin.Forms.Layout`1) devem substituir o [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) método, que é onde uma classe de layout determina o tamanho que precisa ser fazendo chamadas para o [ `Measure` ] (xref: Xamarin.Forms . Visualelement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) métodos de seus filhos.
 
 > [!NOTE]
-> Os elementos determinam seu tamanho com base nas *restrições*, o que indica a quantidade de espaço disponível para um elemento dentro do pai do elemento. Restrições passadas para [ `Measure` ] (xref: Xamarin.Forms . Visualelement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) e os [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) métodos podem variar de 0 a `Double.PositiveInfinity` . Um elemento é *restrito*, ou *totalmente restrito*, quando recebe uma chamada para seu [ `Measure` ] (xref: Xamarin.Forms . Visualelement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) método com argumentos não infinitos-o elemento é restrito a um tamanho específico. Um elemento é *irrestrito*, ou *parcialmente restrito*, quando recebe uma chamada para seu `Measure` método com pelo menos um argumento igual a `Double.PositiveInfinity` – a restrição infinita pode ser considerada como indicando o dimensionamento automático.
+> Os elementos determinam seu tamanho com base nas *restrições* , o que indica a quantidade de espaço disponível para um elemento dentro do pai do elemento. Restrições passadas para [ `Measure` ] (xref: Xamarin.Forms . Visualelement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) e os [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) métodos podem variar de 0 a `Double.PositiveInfinity` . Um elemento é *restrito* , ou *totalmente restrito* , quando recebe uma chamada para seu [ `Measure` ] (xref: Xamarin.Forms . Visualelement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) método com argumentos não infinitos-o elemento é restrito a um tamanho específico. Um elemento é *irrestrito* , ou *parcialmente restrito* , quando recebe uma chamada para seu `Measure` método com pelo menos um argumento igual a `Double.PositiveInfinity` – a restrição infinita pode ser considerada como indicando o dimensionamento automático.
 
 ## <a name="invalidation"></a>Invalidação
 
@@ -73,15 +73,15 @@ O [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) pode ser subs
 O processo para criar um layout personalizado é o seguinte:
 
 1. Crie uma classe que derive da classe `Layout<View>`. Para obter mais informações, consulte [criar um WrapLayout](#create-a-wraplayout).
-1. [*opcional*] Adicione Propriedades, apoiadas por propriedades vinculáveis, para quaisquer parâmetros que devem ser definidos na classe layout. Para obter mais informações, consulte [Adicionar propriedades apoiadas por propriedades vinculáveis](#add-properties-backed-by-bindable-properties).
+1. [ *opcional* ] Adicione Propriedades, apoiadas por propriedades vinculáveis, para quaisquer parâmetros que devem ser definidos na classe layout. Para obter mais informações, consulte [Adicionar propriedades apoiadas por propriedades vinculáveis](#add-properties-backed-by-bindable-properties).
 1. Substitua o [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) método para invocar [ `Measure` ] (xref: Xamarin.Forms . Visualelement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) em todos os filhos do layout e retorna um tamanho solicitado para o layout. Para obter mais informações, consulte [substituir o método onmeasure](#override-the-onmeasure-method).
 1. Substitua o [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) método para invocar [ `Layout` ] (xref: Xamarin.Forms . Visualelement. layout ( Xamarin.Forms . Rectangle)) do método em todos os filhos do layout. Falha ao invocar [ `Layout` ] (xref: Xamarin.Forms . Visualelement. layout ( Xamarin.Forms . Rectangle)) o método em cada filho em um layout resultará no filho nunca recebendo um tamanho ou posição correto e, portanto, o filho não ficará visível na página. Para obter mais informações, consulte [substituir o método LayoutChildren](#override-the-layoutchildren-method).
 
     > [!NOTE]
     > Ao enumerar filhos nas [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) substituições e, ignore qualquer filho cuja [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) Propriedade esteja definida como `false` . Isso garantirá que o layout personalizado não deixará espaço para filhos invisíveis.
 
-1. [*opcional*] Substitua o [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) método a ser notificado quando os filhos forem adicionados ou removidos do layout. Para obter mais informações, consulte [substituir o método InvalidateLayout](#override-the-invalidatelayout-method).
-1. [*opcional*] Substitua o [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) método a ser notificado quando um dos filhos do layout mudar de tamanho. Para obter mais informações, consulte [substituir o método OnChildMeasureInvalidated](#override-the-onchildmeasureinvalidated-method).
+1. [ *opcional* ] Substitua o [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) método a ser notificado quando os filhos forem adicionados ou removidos do layout. Para obter mais informações, consulte [substituir o método InvalidateLayout](#override-the-invalidatelayout-method).
+1. [ *opcional* ] Substitua o [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) método a ser notificado quando um dos filhos do layout mudar de tamanho. Para obter mais informações, consulte [substituir o método OnChildMeasureInvalidated](#override-the-onchildmeasureinvalidated-method).
 
 > [!NOTE]
 > Observe que a [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) substituição não será invocada se o tamanho do layout for regido por seu pai, em vez de seus filhos. No entanto, a substituição será invocada se uma ou ambas as restrições forem infinitas ou se a classe de layout tiver [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) valores de propriedade ou não padrão [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) . Por esse motivo, a [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) substituição não pode depender de tamanhos filho obtidos durante a [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) chamada do método. Em vez disso, `LayoutChildren` deve invocar [ `Measure` ] (xref: Xamarin.Forms . Visualelement. Measure (System. Double, System. Double, Xamarin.Forms . MeasureFlags)) para o método nos filhos do layout, antes de invocar [ `Layout` ] (xref: Xamarin.Forms . Visualelement. layout ( Xamarin.Forms . Rectangle)). Como alternativa, o tamanho dos filhos obtidos na `OnMeasure` substituição pode ser armazenado em cache para evitar `Measure` invocações posteriores na `LayoutChildren` substituição, mas a classe de layout precisará saber quando os tamanhos precisam ser obtidos novamente. Para obter mais informações, consulte [Calculate and cache layout data](#calculate-and-cache-layout-data).
@@ -92,7 +92,7 @@ A classe de layout pode ser consumida adicionando-a a um [`Page`](xref:Xamarin.F
 
 O aplicativo de exemplo demonstra uma classe sensível à orientação `WrapLayout` que organiza seus filhos horizontalmente na página e, em seguida, encapsula a exibição de filhos subsequentes em linhas adicionais.
 
-A `WrapLayout` classe aloca a mesma quantidade de espaço para cada filho, conhecida como o tamanho da *célula*, com base no tamanho máximo dos filhos. Filhos menores que o tamanho da célula podem ser posicionados dentro da célula com base em seus [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) valores de propriedade e.
+A `WrapLayout` classe aloca a mesma quantidade de espaço para cada filho, conhecida como o tamanho da *célula* , com base no tamanho máximo dos filhos. Filhos menores que o tamanho da célula podem ser posicionados dentro da célula com base em seus [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) valores de propriedade e.
 
 A `WrapLayout` definição de classe é mostrada no exemplo de código a seguir:
 

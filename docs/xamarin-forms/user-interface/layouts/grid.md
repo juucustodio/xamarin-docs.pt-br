@@ -10,16 +10,16 @@ ms.date: 06/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 59a4d5c0730719d6cc332728c6cab641d02239b4
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 226c20acef7fc65cd0a4daf082c86e3c9c17bf54
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563556"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373761"
 ---
 # <a name="no-locxamarinforms-grid"></a>Xamarin.Forms Grade
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-griddemos)
 
 [![::: no-Loc (Xamarin. Forms)::: Grid](grid-images/layouts.png "::: no-Loc (Xamarin. Forms)::: Grid")](grid-images/layouts-large.png#lightbox "::: no-Loc (Xamarin. Forms)::: Grid")
 
@@ -270,7 +270,7 @@ public class BasicGridPageCS : ContentPage
 
 No código, para especificar a altura de um [`RowDefinition`](xref:Xamarin.Forms.RowDefinition) objeto e a largura de um [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) objeto, você usa valores da [`GridLength`](xref:Xamarin.Forms.GridLength) estrutura, geralmente em combinação com a [`GridUnitType`](xref:Xamarin.Forms.GridUnitType) enumeração.
 
-O código de exemplo acima também mostra várias abordagens diferentes para adicionar filhos ao [`Grid`](xref:Xamarin.Forms.Grid) e especificar as células nas quais eles residem. Ao usar a `Add` sobrecarga que especifica os argumentos *esquerdo*, *direito*, *superior*e *inferior* , enquanto os argumentos *esquerdo* e *superior* sempre se referem a células dentro do `Grid` , os argumentos *direito* e *inferior* parecem se referir a células que estão fora do `Grid` . Isso ocorre porque o argumento *à direita* sempre deve ser maior que o argumento *esquerdo* , e o argumento *inferior* deve ser sempre maior que o argumento *superior* . O exemplo a seguir, que pressupõe um 2x2 `Grid` , mostra o código equivalente usando as duas `Add` sobrecargas:
+O código de exemplo acima também mostra várias abordagens diferentes para adicionar filhos ao [`Grid`](xref:Xamarin.Forms.Grid) e especificar as células nas quais eles residem. Ao usar a `Add` sobrecarga que especifica os argumentos *esquerdo* , *direito* , *superior* e *inferior* , enquanto os argumentos *esquerdo* e *superior* sempre se referem a células dentro do `Grid` , os argumentos *direito* e *inferior* parecem se referir a células que estão fora do `Grid` . Isso ocorre porque o argumento *à direita* sempre deve ser maior que o argumento *esquerdo* , e o argumento *inferior* deve ser sempre maior que o argumento *superior* . O exemplo a seguir, que pressupõe um 2x2 `Grid` , mostra o código equivalente usando as duas `Add` sobrecargas:
 
 ```csharp
 // left, top

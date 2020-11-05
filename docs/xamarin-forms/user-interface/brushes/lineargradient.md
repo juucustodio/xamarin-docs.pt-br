@@ -10,18 +10,18 @@ ms.date: 07/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: be4b868a2f38063f3a46d57ecb190b377eb89dce
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 01dba502f6a561aac122e9fa44d7b257c76c5b4b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563582"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374323"
 ---
 # <a name="no-locxamarinforms-brushes-linear-gradients"></a>Xamarin.Forms Pincéis: gradientes lineares
 
 ![API de visualização](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 
 A `LinearGradientBrush` classe deriva da `GradientBrush` classe e pinta uma área com um gradiente linear, que mistura duas ou mais cores ao longo de uma linha conhecida como o eixo gradiente. `GradientStop` os objetos são usados para especificar as cores no gradiente e suas posições. Para obter mais informações sobre `GradientStop` objetos, consulte [ Xamarin.Forms pincéis: gradientes](gradient.md).
 

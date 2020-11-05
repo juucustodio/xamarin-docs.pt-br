@@ -10,16 +10,16 @@ ms.date: 06/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f8d81e037d63a7144263ce4b3520647e6829bd57
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 11f33c07d2a98e326717f284f0b5d6308a65a693
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557251"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374713"
 ---
 # <a name="file-handling-in-no-locxamarinforms"></a>Manipulação de arquivos em Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 
 _A manipulação de arquivos com Xamarin.Forms o pode ser obtida com o uso de código em uma biblioteca de .net Standard ou por meio de recursos incorporados._
 
@@ -63,7 +63,7 @@ Essas operações são demonstradas no aplicativo de exemplo, que inclui uma pá
 
 ## <a name="loading-files-embedded-as-resources"></a>Carregamento de arquivos inseridos como recursos
 
-Para inserir um arquivo em um assembly do **.NET Standard**, crie ou adicione um arquivo e certifique-se de que seja **Ação de build: EmbeddedResource**.
+Para inserir um arquivo em um assembly do **.NET Standard** , crie ou adicione um arquivo e certifique-se de que seja **Ação de build: EmbeddedResource**.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -75,7 +75,7 @@ Para inserir um arquivo em um assembly do **.NET Standard**, crie ou adicione um
 
 -----
 
-`GetManifestResourceStream` é usado para acessar o arquivo inserido usando sua **ID de recurso**. Por padrão, a ID do recurso é o nome de arquivo prefixado com o namespace padrão para o projeto no qual ele está incorporado – nesse caso, o assembly é **WorkingWithFiles** e o nome do arquivo é **LibTextResource.txt**, portanto, a ID do recurso é `WorkingWithFiles.LibTextResource.txt` .
+`GetManifestResourceStream` é usado para acessar o arquivo inserido usando sua **ID de recurso**. Por padrão, a ID do recurso é o nome de arquivo prefixado com o namespace padrão para o projeto no qual ele está incorporado – nesse caso, o assembly é **WorkingWithFiles** e o nome do arquivo é **LibTextResource.txt** , portanto, a ID do recurso é `WorkingWithFiles.LibTextResource.txt` .
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
@@ -135,7 +135,7 @@ Stream stream = assembly.GetManifestResourceStream
 
 ### <a name="organizing-resources"></a>Organização de recursos
 
-Os exemplos acima supõem que o arquivo é inserido na raiz do projeto da biblioteca .NET Standard, em cujo caso a ID de recurso é do formato **Namespace.Filename.Extension**, como `WorkingWithFiles.LibTextResource.txt` e `WorkingWithFiles.iOS.SharedTextResource.txt`.
+Os exemplos acima supõem que o arquivo é inserido na raiz do projeto da biblioteca .NET Standard, em cujo caso a ID de recurso é do formato **Namespace.Filename.Extension** , como `WorkingWithFiles.LibTextResource.txt` e `WorkingWithFiles.iOS.SharedTextResource.txt`.
 
 É possível organizar os recursos inseridos em pastas. Quando um recurso inserido é colocado em uma pasta, o nome da pasta se torna parte da ID de recurso (separado por pontos) para que o formato de ID de recurso se torne **Namespace.Folder.Filename.Extension**. Colocar os arquivos usados no aplicativo de exemplo em uma pasta **MyFolder** tornaria as IDs de recurso correspondentes `WorkingWithFiles.MyFolder.LibTextResource.txt` e `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
 

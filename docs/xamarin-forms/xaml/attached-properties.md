@@ -1,5 +1,5 @@
 ---
-title: Propriedades anexadas
+title: Propriedades Anexadas
 description: Este artigo fornece uma introdução às propriedades anexadas e demonstra como criá-las e consumi-las.
 ms.prod: xamarin
 ms.assetid: 6E9DCDC3-A0E4-46A6-BAA9-4FEB6DF8A5A8
@@ -10,16 +10,16 @@ ms.date: 06/02/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 61edbb347b4d3466d1ca756208adb5d173d63b34
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: b3db63018bc8d927b9e9041c762b1989cfb17679
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561541"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374089"
 ---
-# <a name="attached-properties"></a>Propriedades anexadas
+# <a name="attached-properties"></a>Propriedades Anexadas
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
 
 
 As propriedades anexadas permitem que um objeto atribua um valor para uma propriedade que sua própria classe não define. Por exemplo, elementos filho podem usar propriedades anexadas para informar o elemento pai de como eles devem ser apresentados na interface do usuário. O [`Grid`](xref:Xamarin.Forms.Grid) controle permite que a linha e a coluna de um filho sejam especificadas definindo as `Grid.Row` `Grid.Column` Propriedades anexadas e. `Grid.Row` e `Grid.Column` são propriedades anexadas porque são definidas em elementos que são filhos de a `Grid` , e não por `Grid` si só.
@@ -143,7 +143,7 @@ Ao criar uma propriedade anexada, há vários parâmetros opcionais que podem se
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Propriedades associáveis](~/xamarin-forms/xaml/bindable-properties.md)
+- [Propriedades vinculáveis](~/xamarin-forms/xaml/bindable-properties.md)
 - [Namespaces XAML](~/xamarin-forms/xaml/namespaces.md)
 - [Efeito de sombra (amostra)](/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
 - [API vinculproperty](xref:Xamarin.Forms.BindableProperty)

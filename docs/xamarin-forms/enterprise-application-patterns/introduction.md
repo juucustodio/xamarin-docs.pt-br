@@ -10,14 +10,17 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 665971607d8c67f77ad5172778cddcd97bf79841
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: e085006f3f7479d35e4991503e52ce19ced7f75b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932620"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374531"
 ---
 # <a name="introduction-to-enterprise-app-development"></a>Introdução ao desenvolvimento de aplicativos empresariais
+
+> [!NOTE]
+> Este livro eletrônico foi publicado na Primavera de 2017 e não foi atualizado desde então. Há muito no livro que permanece valioso, mas parte do material está desatualizada.
 
 Independentemente da plataforma, os desenvolvedores de aplicativos empresariais enfrentam vários desafios:
 
@@ -67,7 +70,7 @@ A Figura 1-1 fornece uma visão geral de alto nível da arquitetura do aplicativ
 
 ![arquitetura de alto nível do eShopOnContainers](introduction-images/architecture.png)
 
-**Figura 1-1**: arquitetura de alto nível do eShopOnContainers
+**Figura 1-1** : arquitetura de alto nível do eShopOnContainers
 
 O aplicativo de exemplo é fornecido com três aplicativos cliente:
 
@@ -94,7 +97,7 @@ Este guia se concentra na criação de aplicativos empresariais de plataforma cr
 
 [![O aplicativo móvel eShopOnContainers](introduction-images/screenshots.png)](introduction-images/screenshots-large.png#lightbox "O aplicativo móvel eShopOnContainers")
 
-**Figura 1-2**: o aplicativo móvel eShopOnContainers
+**Figura 1-2** : o aplicativo móvel eShopOnContainers
 
 O aplicativo móvel consome os serviços de back-end fornecidos pelo aplicativo de referência eShopOnContainers. No entanto, ele pode ser configurado para consumir dados de serviços fictícios para aqueles que desejam evitar a implantação dos serviços de back-end.
 

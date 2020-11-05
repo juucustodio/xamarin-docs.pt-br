@@ -10,16 +10,16 @@ ms.date: 04/06/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 53df681e79c4c233a8908764d31c8ee416c8a621
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: d5b0cc2bb4617a0f093971dfca69e8352779c088
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561164"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373647"
 ---
 # <a name="create-no-locxamarinforms-behaviors"></a>Criar Xamarin.Forms comportamentos
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior)
 
 _Xamarin.Forms os comportamentos são criados pela derivação da classe de comportamento ou comportamento &lt; T &gt; . Este artigo demonstra como criar e consumir Xamarin.Forms comportamentos._
 

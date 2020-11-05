@@ -10,16 +10,16 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ec84ac906ac146f37ba5b161a898582ce483bc95
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: db2baea124f013d3b35451e62bd67c32dcebc470
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556666"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373595"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>Os gradientes circulares do SkiaSharp
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 A [`SKShader`](xref:SkiaSharp.SKShader) classe define métodos estáticos para criar quatro tipos diferentes de gradientes. O artigo [**gradiente linear SkiaSharp**](linear-gradient.md) discute o [`CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient*) método. Este artigo aborda os outros três tipos de gradientes, todos baseados em círculos.
 
@@ -215,7 +215,7 @@ Se você preencher toda a tela com esse gradiente, verá que ela é vermelha no 
 
 ## <a name="radial-gradients-for-masking"></a>Gradientes radiais para mascaramento
 
-Como gradientes lineares, gradientes radiais podem incorporar cores transparentes ou parcialmente transparentes. Esse recurso é útil para um processo chamado _mascaramento_, que oculta parte de uma imagem para acentuar outra parte da imagem.
+Como gradientes lineares, gradientes radiais podem incorporar cores transparentes ou parcialmente transparentes. Esse recurso é útil para um processo chamado _mascaramento_ , que oculta parte de uma imagem para acentuar outra parte da imagem.
 
 A página **máscara de gradiente radial** mostra um exemplo. O programa carrega um dos bitmaps de recurso. Os `CENTER` `RADIUS` campos e foram determinados de um exame do bitmap e fazem referência a uma área que deve ser realçada. O `PaintSurface` manipulador começa calculando um retângulo para exibir o bitmap e, em seguida, o exibe nesse retângulo:
 
@@ -285,7 +285,7 @@ Depois de desenhar o bitmap, alguns códigos simples são convertidos `CENTER` e
 
 [![Máscara de gradiente radial](circular-gradients-images/RadialGradientMask.png "Máscara de gradiente radial")](circular-gradients-images/RadialGradientMask-Large.png#lightbox)
 
-Essa abordagem não é a melhor maneira de mascarar um bitmap. O problema é que a máscara tem, na maioria, uma cor de branco, que foi escolhida para corresponder ao plano de fundo da tela. Se o plano de fundo for outra cor &mdash; ou talvez um gradiente &mdash; , ele não corresponderá. Uma abordagem melhor para mascaramento é mostrada no artigo [SkiaSharp carregador-Duff Blend Modes](../blend-modes/porter-duff.md).
+Essa abordagem não é a melhor maneira de mascarar um bitmap. O problema é que a máscara tem, na maioria, uma cor de branco, que foi escolhida para corresponder ao plano de fundo da tela. Se o plano de fundo for outra cor &mdash; ou talvez um gradiente &mdash; , ele não corresponderá. Uma abordagem melhor para mascaramento é mostrada no artigo [SkiaSharp Porter-Duff os modos de mesclagem](../blend-modes/porter-duff.md).
 
 ## <a name="radial-gradients-for-specular-highlights"></a>Gradientes radiais para realces especulares
 

@@ -1,6 +1,6 @@
 ---
-title: Serviço do Azure Signalr comXamarin.Forms
-description: Introdução ao serviço de Signaler do Azure e Azure Functions comXamarin.Forms
+title: Serviço do Azure Signalr com Xamarin.Forms
+description: Introdução ao serviço de Signaler do Azure e Azure Functions com Xamarin.Forms
 ms.prod: xamarin
 ms.assetid: 1B9A69EF-C200-41BF-B098-D978D7F9CD8F
 author: profexorgeek
@@ -9,16 +9,16 @@ ms.date: 06/07/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4ef1f9aadd93c971adb66ede442796c2b72c2c9a
-ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
+ms.openlocfilehash: 12e1576ab2e5f7a90f4e1355d03e8f9c5c487e6c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226827"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374414"
 ---
-# <a name="azure-signalr-service-with-xamarinforms"></a>Serviço do Azure Signalr comXamarin.Forms
+# <a name="azure-signalr-service-with-no-locxamarinforms"></a>Serviço do Azure Signalr com Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresignalr/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/webservices-azuresignalr/)
 
 ASP.NET Core Signalr é um modelo de aplicativo que simplifica o processo de adicionar comunicação em tempo real aos aplicativos. O serviço de Signaler do Azure permite o desenvolvimento e a implantação rápidos de aplicativos Signaler escalonáveis. Azure Functions são métodos de código sem servidor de curta duração que podem ser combinados para formar aplicativos escalonáveis e orientados a eventos.
 
@@ -48,7 +48,7 @@ A captura de tela a seguir mostra a criação de um novo serviço de Signaler do
 
 ![Captura de tela da criação do serviço de Signaler do Azure no portal do Azure](azure-signalr-images/azure-signalr-create.png "Criando um serviço de Signaler do Azure")
 
-Depois de criada, a seção **chaves** de um serviço de signaler do Azure contém uma **cadeia de conexão**, que é usada para conectar o aplicativo Azure Functions ao Hub do signalr. A captura de tela a seguir mostra onde encontrar a cadeia de conexão no serviço de Signaler do Azure:
+Depois de criada, a seção **chaves** de um serviço de signaler do Azure contém uma **cadeia de conexão** , que é usada para conectar o aplicativo Azure Functions ao Hub do signalr. A captura de tela a seguir mostra onde encontrar a cadeia de conexão no serviço de Signaler do Azure:
 
 ![Captura de tela da cadeia de conexão do Signalr do Azure no portal do Azure](azure-signalr-images/azure-signalr-connection-string.png "Cadeia de conexão do Azure Signalr")
 
@@ -64,7 +64,7 @@ O Azure Functions pode ser implantado em uma instância de aplicativo Azure Func
 
 ### <a name="build-azure-functions-in-visual-studio-2019"></a>Criar Azure Functions no Visual Studio 2019
 
-O aplicativo de exemplo contém uma biblioteca de classes chamada **ChatServer**, que inclui dois Azure Functions sem servidor em arquivos chamados **Negotiate.cs** e **Talk.cs**.
+O aplicativo de exemplo contém uma biblioteca de classes chamada **ChatServer** , que inclui dois Azure Functions sem servidor em arquivos chamados **Negotiate.cs** e **Talk.cs**.
 
 A `Negotiate` função responde a solicitações da Web com um `SignalRConnectionInfo` objeto que contém uma `AccessToken` propriedade e uma `Url` propriedade. O aplicativo móvel usa esses valores para se registrar no Hub do Signalr. O código a seguir mostra a `Negotiate` função:
 
@@ -142,7 +142,7 @@ Depois de inserir a cadeia de conexão, você pode clicar em **publicar** para i
 
 ![Funções publicadas no aplicativo Azure Functions](azure-signalr-images/azure-functions-deployed.png "Funções publicadas no aplicativo Azure Functions")
 
-## <a name="integrate-azure-signalr-service-with-xamarinforms"></a>Integrar o serviço do Azure Signalr comXamarin.Forms
+## <a name="integrate-azure-signalr-service-with-no-locxamarinforms"></a>Integrar o serviço do Azure Signalr com Xamarin.Forms
 
 A integração entre o serviço do Signalr do Azure e o Xamarin.Forms aplicativo é uma classe de serviço de sinalização que é instanciada na `MainPage` classe com manipuladores de eventos atribuídos a três eventos. Para obter mais informações sobre esses manipuladores de eventos, consulte [usar a classe de serviço Xamarin.Forms signalr no ](#use-the-signalr-service-class-in-xamarinforms).
 
@@ -252,7 +252,7 @@ public void AddNewMessage(JObject message)
 }
 ```
 
-### <a name="use-the-signalr-service-class-in-xamarinforms"></a>Usar a classe de serviço Signalr emXamarin.Forms
+### <a name="use-the-signalr-service-class-in-no-locxamarinforms"></a>Usar a classe de serviço Signalr em Xamarin.Forms
 
 A utilização da classe de serviço Signalr no Xamarin.Forms é realizada pela Associação dos `SignalRService` eventos de classe na `MainPage` classe code-behind.
 

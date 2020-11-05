@@ -10,18 +10,18 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8c6d139e47974247ce4af6bfa6c32331fcf7c824
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 92bcdd2c86387f229b9acf066456985c4a7ad514
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563127"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373660"
 ---
 # <a name="skiasharp-bitmap-tiling"></a>SkiaSharp bitmap em blocos
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/catclock)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/catclock)
 
 Como você viu nos dois artigos anteriores, a [`SKShader`](xref:SkiaSharp.SKShader) classe pode criar gradientes lineares ou circulares. Este artigo se concentra no `SKShader` objeto que usa um bitmap para dividir uma área. O bitmap pode ser repetido horizontal e verticalmente, em sua orientação original ou invertido alternadamente horizontal e verticalmente. A inversão evita descontinuidades entre os blocos:
 
@@ -369,7 +369,7 @@ Se a transformação for aplicada ao bloco individual, cada imagem repetida do b
 
 Na seção [**alinhamento de bloco**](#tile-alignment), você verá um exemplo uma transformação traduzir aplicada ao sombreador.
 
-O exemplo de [**relógio Cat**](/samples/xamarin/xamarin-forms-samples/catclock) autônomo (que não faz parte de **SkiaSharpFormsDemos**) simula um plano de fundo de granulação de madeira usando o bitmap com base em blocos de bits baseado neste bitmap quadrado de 240 pixels:
+O exemplo de [**relógio Cat**](/samples/xamarin/xamarin-forms-samples/catclock) autônomo (que não faz parte de **SkiaSharpFormsDemos** ) simula um plano de fundo de granulação de madeira usando o bitmap com base em blocos de bits baseado neste bitmap quadrado de 240 pixels:
 
 ![Granulação de madeira](bitmap-tiling-images/WoodGrain.png "Granulação de madeira")
 
@@ -655,7 +655,7 @@ public class ChainLinkFencePage : ContentPage
 
 Observe que o sombreador é girado 45 graus para que ele seja orientado como um limite de link de cadeia real:
 
-[![Limite de link de cadeia](bitmap-tiling-images/ChainLinkFence.png "Limite de link de cadeia")](bitmap-tiling-images/ChainLinkFence-Large.png#lightbox)
+[![Limite de link de cadeia](bitmap-tiling-images/ChainLinkFence.png "Chain-Link limite")](bitmap-tiling-images/ChainLinkFence-Large.png#lightbox)
 
 ## <a name="animating-bitmap-tiles"></a>Animação de blocos de bitmap
 

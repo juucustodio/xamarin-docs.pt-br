@@ -10,16 +10,16 @@ ms.date: 12/13/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d5e1cb9709c224ed5059de24bb45eed882ef216b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c710328426590322f60f482708931c160b2100ca
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563530"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372646"
 ---
 # <a name="layout-compression"></a>Compactação de Layout
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
 
 _A compactação de layout remove os layouts especificados da árvore visual em uma tentativa de melhorar o desempenho de renderização de página. Este artigo explica como habilitar a compactação de layout e os benefícios que ele pode trazer._
 

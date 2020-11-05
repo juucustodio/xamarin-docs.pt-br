@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3a7fafcd154dc30df5d33f5728cf8fd8ae592de3
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 4d59807c7bafe8d882777dcebc48292f77639539
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562438"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373868"
 ---
 # <a name="tabbedpage-page-transition-animations-on-android"></a>Animações de transição de página TabbedPage no Android
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Essa plataforma do Android específica é usada para desabilitar animações de transição ao navegar pelas páginas, seja de forma programática ou ao usar a barra de guias, em um [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) . Ele é consumido em XAML definindo a `TabbedPage.IsSmoothScrollEnabled` propriedade vinculável como `false` :
 

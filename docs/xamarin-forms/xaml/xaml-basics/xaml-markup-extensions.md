@@ -10,16 +10,16 @@ ms.date: 03/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9923a7f0605a7ca5d9d81269c3d855e92fbccaf4
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: b934885369882dea2c3a5de1954b428fcfcbac59
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91564076"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374596"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensões de marcação do XAML
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _As extensões de marcação XAML constituem um recurso importante em XAML que permite que as propriedades sejam definidas para objetos ou valores que são referenciados indiretamente de outras fontes. As extensões de marcação XAML são particularmente importantes para compartilhar objetos e referenciar constantes usadas em um aplicativo, mas elas encontram seu maior utilitário em associações de dados._
 
@@ -398,7 +398,7 @@ Você precisará de declarações de namespace XML adicionais para acessar outra
 xmlns:local="clr-namespace:XamlSamples"
 ```
 
-Você também pode definir declarações de namespace XML para namespaces do .NET em qualquer assembly ao qual a biblioteca .NET Standard faz referência. Por exemplo, aqui está um `sys` prefixo para o namespace padrão do .NET `System` , que está no assembly **netstandard** . Como esse é outro assembly, você também deve especificar o nome do assembly, neste caso **netstandard**:
+Você também pode definir declarações de namespace XML para namespaces do .NET em qualquer assembly ao qual a biblioteca .NET Standard faz referência. Por exemplo, aqui está um `sys` prefixo para o namespace padrão do .NET `System` , que está no assembly **netstandard** . Como esse é outro assembly, você também deve especificar o nome do assembly, neste caso **netstandard** :
 
 ```csharp
 xmlns:sys="clr-namespace:System;assembly=netstandard"

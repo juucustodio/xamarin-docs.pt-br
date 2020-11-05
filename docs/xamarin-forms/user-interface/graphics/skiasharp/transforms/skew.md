@@ -10,16 +10,16 @@ ms.date: 03/20/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ed1bcbed86874362e291fb23ce86dea8992d3408
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 088f96e4b8ab7f19dac90834e10c5a49875d0570
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563725"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373556"
 ---
 # <a name="the-skew-transform"></a>A transformação de distorção
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Veja como a transformação de distorção pode criar objetos gráficos inclinados no SkiaSharp_
 

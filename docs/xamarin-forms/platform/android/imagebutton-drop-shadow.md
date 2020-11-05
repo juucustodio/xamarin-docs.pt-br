@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c355816ec1b89801814b217cad8a23be2f453226
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 0f33d3e10b549e6e3e45d35a259ece71bf68724c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563790"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373322"
 ---
 # <a name="imagebutton-drop-shadows-on-android"></a>Sombras suspensas de ImageButton no Android
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esse recurso específico da plataforma Android é usado para habilitar uma sombra em um `ImageButton` . Ele é consumido em XAML definindo- `ImageButton.IsShadowEnabled` se a propriedade vinculável como `true` , juntamente com várias propriedades adicionais vinculáveis opcionais que controlam a sombra projetada:
 

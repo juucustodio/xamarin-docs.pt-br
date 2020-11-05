@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 308b0aa56afdbdbd0ac1e918eefd72b1edb4f338
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 79ceca6f028ec5d0399251e178d82d1b2fff81ef
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563816"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373335"
 ---
 # <a name="entry-input-method-editor-options-on-android"></a>Opções do editor de método de entrada de entrada no Android
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Essa plataforma Android define as opções do IME (editor de método de entrada) para o teclado soft de um [`Entry`](xref:Xamarin.Forms.Entry) . Isso inclui a configuração do botão de ação do usuário no canto inferior do teclado soft e as interações com o `Entry` . Ele é consumido em XAML definindo a [`Entry.ImeOptions`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.ImeOptionsProperty) Propriedade anexada como um valor da [`ImeFlags`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) enumeração:
 

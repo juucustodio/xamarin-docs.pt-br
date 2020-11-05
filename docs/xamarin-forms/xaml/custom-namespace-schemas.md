@@ -10,16 +10,16 @@ ms.date: 12/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5c7e0d90358ec230436276070ea2792539c446e5
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f950db0694b21239b742867d519e893d9a62384c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561476"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374058"
 ---
 # <a name="xaml-custom-namespace-schemas-in-no-locxamarinforms"></a>Esquemas de namespace personalizado XAML em Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
 
 Os tipos em uma biblioteca podem ser referenciados em XAML declarando um namespace XAML para a biblioteca, com a declaração de namespace especificando o nome do namespace CLR (Common Language Runtime) e um nome de assembly:
 

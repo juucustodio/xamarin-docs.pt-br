@@ -10,22 +10,22 @@ ms.date: 08/08/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 60c58ee17f68a12e3e51170f143adc9dc204e275
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 90d97e690c4d1fcdb22f17bbc856f9f9b2d0900c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562763"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374648"
 ---
 # <a name="controls-reference"></a>Referência de Controles
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
 A interface do usuário de um Xamarin.Forms aplicativo é construída de objetos que são mapeados para os controles nativos de cada plataforma de destino. Isso permite que aplicativos específicos da plataforma para iOS, Android e o Plataforma Universal do Windows usem o Xamarin.Forms código contido em uma [biblioteca de .net Standard](~/cross-platform/app-fundamentals/net-standard.md).
 
 Os quatro grupos principais de controle usados para criar a interface do usuário de um Xamarin.Forms aplicativo são os seguintes:
 
-- [**Pages (Páginas)**](pages.md)
+- [**Páginas**](pages.md)
 - [**Layouts**](layouts.md)
 - [**Exibições**](views.md)
 - [**Células**](cells.md)

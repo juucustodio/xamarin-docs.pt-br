@@ -10,20 +10,20 @@ ms.date: 12/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 071a7de630d7d7b7582e3c9fa8906919e92d1fb5
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c027ef35462e6d2d43acf4ea5241a38abe15d41f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561996"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374271"
 ---
 # <a name="loading-xaml-at-runtime-in-no-locxamarinforms"></a>Carregando XAML em tempo de execução no Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)
 
 O [`Xamarin.Forms.Xaml`](xref:Xamarin.Forms.Xaml) namespace inclui dois [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) métodos de extensão que podem ser usados para carregar e analisar XAML em tempo de execução.
 
-## <a name="background"></a>Tela de fundo
+## <a name="background"></a>Segundo plano
 
 Quando uma Xamarin.Forms classe XAML é construída, o [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) método é chamado indiretamente. Isso ocorre porque o arquivo code-behind para uma classe XAML chama o `InitializeComponent` método de seu construtor:
 
@@ -37,7 +37,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-Quando o Visual Studio cria um projeto que contém um arquivo XAML, ele analisa o arquivo XAML para gerar um arquivo de código C# (por exemplo, **MainPage.XAML.g.cs**) que contém a definição do `InitializeComponent` método:
+Quando o Visual Studio cria um projeto que contém um arquivo XAML, ele analisa o arquivo XAML para gerar um arquivo de código C# (por exemplo, **MainPage.XAML.g.cs** ) que contém a definição do `InitializeComponent` método:
 
 ```csharp
 private void InitializeComponent()

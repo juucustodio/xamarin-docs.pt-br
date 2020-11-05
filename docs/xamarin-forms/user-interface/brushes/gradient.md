@@ -10,18 +10,18 @@ ms.date: 07/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 08a423830ee3db55cb0ec7facfa5630c8832885b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 025832a6f51f94812e49cfb5245700b62d98ced3
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562932"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374336"
 ---
 # <a name="no-locxamarinforms-brushes-gradients"></a>Xamarin.Forms Pincéis: gradientes
 
 ![API de visualização](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 
 A `GradientBrush` classe deriva da `Brush` classe e é uma classe abstrata que descreve um gradiente, que é composto de interrupções de gradiente. Um pincel de gradiente pinta uma área com várias cores que se mesclam ao longo de um eixo. As classes que derivam de `GradientBrush` descrevem diferentes maneiras de interpretar interrupções de gradiente e Xamarin.Forms fornecem os seguintes pincéis de gradiente:
 

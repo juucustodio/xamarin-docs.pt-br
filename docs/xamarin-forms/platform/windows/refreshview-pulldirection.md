@@ -10,16 +10,16 @@ ms.date: 09/20/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b5c1310e300373fe75cbcd1464220acf989516ba
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 2aebd86b4b15dec1a79cb60057e0c04f2e196ac5
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555678"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372893"
 ---
 # <a name="refreshview-pull-direction-on-windows"></a>Direção de pull de RefreshView no Windows
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Essa Plataforma Universal do Windows específica à plataforma permite que a direção de pull de um seja `RefreshView` alterada para corresponder à orientação do controle rolável que está exibindo dados. Ele é consumido em XAML definindo a `RefreshView.RefreshPullDirection` propriedade vinculável como um valor da `RefreshPullDirection` enumeração:
 

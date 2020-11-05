@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6387da5ffa240c2509a2942a1e721def8f8d39b9
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f80660c5875db77c85c39f570e9ae58c6c821eb6
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555626"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374622"
 ---
 # <a name="path-basics-in-skiasharp"></a>Noções básicas de caminho em SkiaSharp
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explorar o objeto SkiaSharp SKPath para combinar linhas e curvas conectadas_
 
@@ -33,7 +33,7 @@ Uma delimitação geralmente começa com uma chamada para o seguinte método de 
 
 - [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo*) para iniciar uma nova delimitação
 
-O argumento para esse método é um ponto único, que pode ser expresso como um `SKPoint` valor ou como coordenadas X e Y separadas. A `MoveTo` chamada estabelece um ponto no início da delimitação e um *ponto atual*inicial. Você pode chamar os seguintes métodos para continuar a delimitação com uma linha ou curva do ponto atual para um ponto especificado no método, que, em seguida, se torna o novo ponto atual:
+O argumento para esse método é um ponto único, que pode ser expresso como um `SKPoint` valor ou como coordenadas X e Y separadas. A `MoveTo` chamada estabelece um ponto no início da delimitação e um *ponto atual* inicial. Você pode chamar os seguintes métodos para continuar a delimitação com uma linha ou curva do ponto atual para um ponto especificado no método, que, em seguida, se torna o novo ponto atual:
 
 - [`LineTo`](xref:SkiaSharp.SKPath.LineTo*) para adicionar uma linha reta ao caminho
 - [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo*) para adicionar um arco, que é uma linha na circunferência de um círculo ou elipse

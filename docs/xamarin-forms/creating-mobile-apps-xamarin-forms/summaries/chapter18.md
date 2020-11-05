@@ -10,16 +10,19 @@ ms.date: 11/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b2309d6ec6712be32f6e972fab130a542fbec857
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 15342144a080f3056c1aaa3441f6d1ec850f4dc2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557420"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374050"
 ---
 # <a name="summary-of-chapter-18-mvvm"></a>Resumo do capítulo 18. MVVM
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18)
+
+> [!NOTE]
+> Este livro foi publicado na Primavera de 2016 e não foi atualizado desde então. Há muito no livro que permanece valioso, mas alguns materiais estão desatualizados e alguns tópicos não estão mais totalmente corretos ou completos.
 
 Uma das melhores maneiras de arquitetar um aplicativo é separar a interface do usuário do código subjacente, que às vezes é chamado de *lógica de negócios*. Existem várias técnicas, mas a que é personalizada para ambientes baseados em XAML é conhecida como Model-View-ViewModel ou MVVM.
 
@@ -45,7 +48,7 @@ A `INotifyPropertyChanged` interface declara um único evento chamado [`Property
 
 ### <a name="a-viewmodel-clock"></a>Um relógio ViewModel
 
-O [`DateTimeViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DateTimeViewModel.cs) na biblioteca [** Xamarin.Forms book. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit) define uma propriedade do tipo `DateTime` que muda com base em um temporizador. A classe implementa `INotifyPropertyChanged` e dispara o `PropertyChanged` evento sempre que a `DateTime` propriedade é alterada.
+O [`DateTimeViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DateTimeViewModel.cs) na biblioteca [**Xamarin.Forms book. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit) define uma propriedade do tipo `DateTime` que muda com base em um temporizador. A classe implementa `INotifyPropertyChanged` e dispara o `PropertyChanged` evento sempre que a `DateTime` propriedade é alterada.
 
 O exemplo [**MvvmClock**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/MvvmClock) instancia esse ViewModel e usa associações de dados para o ViewModel para exibir informações atualizadas de data e hora.
 
@@ -55,13 +58,13 @@ As propriedades em um ViewModel podem ser mais interativas, conforme demonstrado
 
 ### <a name="a-color-viewmodel"></a>Um ViewModel de cores
 
-O [`ColorViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ColorViewModel.cs) na biblioteca [** Xamarin.Forms book. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit) integra os modelos de cores RGB e HSL. Ele é demonstrado no exemplo de [**HslSliders**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/HslSliders) :
+O [`ColorViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ColorViewModel.cs) na biblioteca [**Xamarin.Forms book. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit) integra os modelos de cores RGB e HSL. Ele é demonstrado no exemplo de [**HslSliders**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/HslSliders) :
 
 [![Captura de tela tripla de TK](images/ch18fg08-small.png "Modelo de cor HSL")](images/ch18fg08-large.png#lightbox "Modelo de cor HSL")
 
 ### <a name="streamlining-the-viewmodel"></a>Simplificando o ViewModel
 
-O código em ViewModels pode ser simplificado pela definição de um `OnPropertyChanged` método usando o [`CallerMemberName`](xref:System.Runtime.CompilerServices.CallerMemberNameAttribute) atributo, que obtém o nome da propriedade de chamada automaticamente. A [`ViewModelBase`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ViewModelBase.cs) classe na biblioteca [** Xamarin.Forms book. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit) faz isso e fornece uma classe base para ViewModels.
+O código em ViewModels pode ser simplificado pela definição de um `OnPropertyChanged` método usando o [`CallerMemberName`](xref:System.Runtime.CompilerServices.CallerMemberNameAttribute) atributo, que obtém o nome da propriedade de chamada automaticamente. A [`ViewModelBase`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ViewModelBase.cs) classe na biblioteca [**Xamarin.Forms book. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit) faz isso e fornece uma classe base para ViewModels.
 
 ## <a name="the-command-interface"></a>A interface de comando
 
@@ -90,7 +93,7 @@ Os `Button` elementos podem ser facilmente substituídos por `TapGestureRecogniz
 
 ### <a name="a-calculator-almost"></a>Uma calculadora, quase
 
-O exemplo [**AddingMachine**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/AddingMachine) usa os `Execute` `CanExecute` métodos e de `ICommand` . Ele usa uma [`AdderViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) classe na biblioteca [** Xamarin.Forms book. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) . O ViewModel contém seis propriedades do tipo `ICommand` . Eles são inicializados a partir do [ `Command` Construtor](xref:Xamarin.Forms.Command.%23ctor(System.Action)) e do [ `Command` Construtor](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) de `Command` e do [ `Command<T>` Construtor](/dotnet/api/xamarin.forms.command.-ctor?view=xamarin-forms#Xamarin_Forms_Command__ctor_System_Action_System_Object__System_Func_System_Object_System_Boolean__) de `Command<T>` . As chaves numéricas da máquina de adição são todas vinculadas à propriedade que é inicializada com `Command<T>` , e um `string` argumento para `Execute` e `CanExecute` identifica a chave específica.
+O exemplo [**AddingMachine**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter18/AddingMachine) usa os `Execute` `CanExecute` métodos e de `ICommand` . Ele usa uma [`AdderViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) classe na biblioteca [**Xamarin.Forms book. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AdderViewModel.cs) . O ViewModel contém seis propriedades do tipo `ICommand` . Eles são inicializados a partir do [ `Command` Construtor](xref:Xamarin.Forms.Command.%23ctor(System.Action)) e do [ `Command` Construtor](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) de `Command` e do [ `Command<T>` Construtor](/dotnet/api/xamarin.forms.command.-ctor?view=xamarin-forms#Xamarin_Forms_Command__ctor_System_Action_System_Object__System_Func_System_Object_System_Boolean__) de `Command<T>` . As chaves numéricas da máquina de adição são todas vinculadas à propriedade que é inicializada com `Command<T>` , e um `string` argumento para `Execute` e `CanExecute` identifica a chave específica.
 
 ## <a name="viewmodels-and-the-application-lifecycle"></a>ViewModels e o ciclo de vida do aplicativo
 

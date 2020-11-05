@@ -10,16 +10,16 @@ ms.date: 05/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d535956e03ac02e2cf0c5d7528ee8e363a2a1e55
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 9b22b46cb5452e558328c383ed97e66a60cfc166
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561645"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374128"
 ---
 # <a name="no-locxamarinforms-webview"></a>Xamarin.Forms WebView
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
 [`WebView`](xref:Xamarin.Forms.WebView) é uma exibição para exibir conteúdo Web e HTML em seu aplicativo:
 
@@ -175,7 +175,7 @@ As implementações da interface para cada plataforma devem ser fornecidas.
 
 #### <a name="ios"></a>iOS
 
-No iOS, o conteúdo da Web deve estar localizado no diretório raiz do projeto ou na pasta de **recursos** com a ação de compilação *BundleResource*, conforme demonstrado abaixo:
+No iOS, o conteúdo da Web deve estar localizado no diretório raiz do projeto ou na pasta de **recursos** com a ação de compilação *BundleResource* , conforme demonstrado abaixo:
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -557,9 +557,9 @@ Uma versão de visualização do vinculador está disponível para corrigir esse
 
 Os pré-requisitos para isso funcionam são:
 
-- ** Xamarin.Forms 4,5 ou superior**. Xamarin.Forms 4,6, ou superior, será necessário se seu aplicativo usar o Visual de material.
+- **Xamarin.Forms 4,5 ou superior**. Xamarin.Forms 4,6, ou superior, será necessário se seu aplicativo usar o Visual de material.
 - **Xamarin. Ios 13.10.0.17 ou superior**. Verifique sua versão do Xamarin. iOS [no Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). Esta versão do Xamarin. iOS está incluída no Visual Studio para Mac 8.4.1 e no Visual Studio 16.4.3.
-- **Remova as referências `UIWebView` a **. Seu código não deve ter nenhuma referência a `UIWebView` ou nenhuma classe que use `UIWebView` .
+- **Remova as referências `UIWebView` a**. Seu código não deve ter nenhuma referência a `UIWebView` ou nenhuma classe que use `UIWebView` .
 
 Para obter mais informações sobre como detectar e remover `UIWebView` referências, consulte [UIWebView preterition](~/ios/user-interface/controls/webview.md#uiwebview-deprecation).
 
@@ -584,7 +584,7 @@ Siga estas etapas para que o vinculador remova as `UIWebView` referências:
 
 1. **Abrir opções** &ndash; de projeto do IOS Clique com o botão direito do mouse no seu projeto iOS e escolha **Opções**.
 1. **Navegue até a seção** &ndash; Build do IOS Selecione a seção **Build do IOS** .
-1. **Atualize os argumentos _mTouch_ adicionais** &ndash; nos **argumentos adicionais do _mTouch_ ** adicione esse sinalizador `--optimize=experimental-xforms-product-type` (além de qualquer valor que possa já estar lá). Observação: esse sinalizador funciona junto com o **comportamento do vinculador** definido como **somente SDK** ou **vincular tudo**. Se, por algum motivo, você vir erros ao definir o comportamento do vinculador como todos, isso provavelmente é um problema no código do aplicativo ou em uma biblioteca de terceiros que não é segura para o vinculador. Para obter mais informações sobre o vinculador, consulte [vinculando aplicativos Xamarin. Ios](~/ios/deploy-test/linker.md).
+1. **Atualize os argumentos _mTouch_ adicionais** &ndash; nos **argumentos adicionais do _mTouch_** adicione esse sinalizador `--optimize=experimental-xforms-product-type` (além de qualquer valor que possa já estar lá). Observação: esse sinalizador funciona junto com o **comportamento do vinculador** definido como **somente SDK** ou **vincular tudo**. Se, por algum motivo, você vir erros ao definir o comportamento do vinculador como todos, isso provavelmente é um problema no código do aplicativo ou em uma biblioteca de terceiros que não é segura para o vinculador. Para obter mais informações sobre o vinculador, consulte [vinculando aplicativos Xamarin. Ios](~/ios/deploy-test/linker.md).
 1. **Atualizar todas as configurações** &ndash; de compilação Use as listas de **configuração** e **plataforma** na parte superior da janela para atualizar todas as configurações de compilação. A configuração mais importante a ser atualizada é a configuração de **lançamento/iPhone** , pois ela normalmente é usada para criar compilações para envio da loja de aplicativos.
 
 Você pode ver a janela com o novo sinalizador em vigor nesta captura de tela:

@@ -11,16 +11,16 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 - Firebase
-ms.openlocfilehash: 6135d8caec196ded385bc0f962f007c41d20e2cb
-ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
+ms.openlocfilehash: 498e3b0bd2cb88df3e04dc19c66dbe671a8378dd
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92897488"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374440"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-no-locxamarinforms"></a>Enviar e receber notificações por push com os hubs de notificação do Azure e Xamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
+[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](/samples/xamarin/xamarin-forms-samples/webservices-azurenotificationhub/)
 
 As notificações por push entregam informações de um sistema de back-end para um aplicativo móvel. A Apple, o Google e outras plataformas têm seu próprio serviço de notificação por push (PNS). Os hubs de notificação do Azure permitem centralizar notificações entre plataformas para que seu aplicativo de back-end possa se comunicar com um único Hub, que cuida da distribuição das notificações para cada PNS específica da plataforma.
 
@@ -122,7 +122,7 @@ public static class AppConstants
 Personalize os seguintes valores no `AppConstants` para conectar o aplicativo de exemplo ao Hub de notificação do Azure:
 
 * `NotificationHubName`: Use o nome do hub de notificação do Azure que você criou em seu portal do Azure.
-* `ListenConnectionString`: Esse valor é encontrado no Hub de notificação do Azure em **políticas de acesso** .
+* `ListenConnectionString`: Esse valor é encontrado no Hub de notificação do Azure em **políticas de acesso**.
 
 A captura de tela a seguir mostra onde esses valores estão localizados na portal do Azure:
 

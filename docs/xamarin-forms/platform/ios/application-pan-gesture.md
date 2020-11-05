@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5bea8b58d8b80ced97856fc7c981afdd5c2102a7
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f1baf5d71cc25a1f84ff683e9d0072f34715c0da
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562399"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373231"
 ---
 # <a name="simultaneous-pan-gesture-recognition-on-ios"></a>Reconhecimento de gesto de Pan simultânea no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Quando um [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer) é anexado a uma exibição dentro de uma exibição de rolagem, todos os gestos de panorâmica são capturados pelo `PanGestureRecognizer` e não são passados para a exibição de rolagem. Portanto, a exibição de rolagem não rolará mais.
 

@@ -10,16 +10,16 @@ ms.date: 05/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 32de64c0fa6b0ec0a0b03c8075710e1cbc92dd49
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 5f48300b6c974bbbb0106f1afaa6c863f8159c58
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557407"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374631"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Três formas de desenhar um arco
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Saiba como usar o SkiaSharp para definir arcos de três maneiras diferentes_
 
@@ -219,7 +219,7 @@ Para ver sua aparência sem a "explosão", basta comentar a `Translate` chamada:
 
 ## <a name="the-tangent-arc"></a>O arco tangente
 
-O segundo tipo de arco com suporte `SKPath` no é o *arco tangente*, portanto, chamado porque o arco é a circunferência de um círculo que é tangente a duas linhas conectadas.
+O segundo tipo de arco com suporte `SKPath` no é o *arco tangente* , portanto, chamado porque o arco é a circunferência de um círculo que é tangente a duas linhas conectadas.
 
 Um arco tangente é adicionado a um caminho com uma chamada para o  [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,System.Single)) método com dois `SKPoint` parâmetros, ou a [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(System.Single,System.Single,System.Single,System.Single,System.Single)) sobrecarga com `Single` parâmetros separados para os pontos:
 
@@ -235,7 +235,7 @@ O `ArcTo` método envolve três pontos:
 
 - O ponto atual da delimitação ou o ponto (0, 0) se `MoveTo` não tiver sido chamado
 - O primeiro argumento de ponto para o `ArcTo` método, chamado de *ponto de canto*
-- O segundo argumento de ponto para `ArcTo` , chamado de *ponto de destino*:
+- O segundo argumento de ponto para `ArcTo` , chamado de *ponto de destino* :
 
 ![Três pontos que começam um arco tangente](arcs-images/tangentarcthreepoints.png)
 

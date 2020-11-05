@@ -10,16 +10,16 @@ ms.date: 09/14/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c6d568e948f02952fa71ed21af48160a53bfc419
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: ee69ca1e95f7dcffa60387579e89c3a2d3e985da
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556536"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374284"
 ---
 # <a name="touch-manipulations"></a>Manipulações de toque
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Usar transformações de matriz para implementar arrastar, apertar e girar toque_
 
@@ -268,7 +268,7 @@ A manipulação da `Pressed` ação é quase igual ao programa anterior, exceto 
 
 Em seguida, o programa calcula dois vetores da nova posição do dedo em relação ao ponto dinâmico e a posição do dedo antigo em relação ao ponto dinâmico. As proporções desses vetores são fatores de dimensionamento. Como a divisão por zero é uma possibilidade, elas devem ser verificadas quanto a valores infinitos ou valores NaN (não um número). Se tudo estiver bem, uma transformação de dimensionamento será concatenada com o `SKMatrix` valor salvo como um campo.
 
-Ao experimentar essa página, você observará que pode arrastar o bitmap com um ou dois dedos ou dimensioná-lo com dois dedos. O dimensionamento é _anisotropic_, o que significa que o dimensionamento pode ser diferente nas direções horizontal e vertical. Isso distorce a taxa de proporção, mas também permite que você vire o bitmap para criar uma imagem espelho. Você também pode descobrir que pode reduzir o bitmap para uma dimensão zero e ele desaparece. No código de produção, você desejará se proteger contra isso.
+Ao experimentar essa página, você observará que pode arrastar o bitmap com um ou dois dedos ou dimensioná-lo com dois dedos. O dimensionamento é _anisotropic_ , o que significa que o dimensionamento pode ser diferente nas direções horizontal e vertical. Isso distorce a taxa de proporção, mas também permite que você vire o bitmap para criar uma imagem espelho. Você também pode descobrir que pode reduzir o bitmap para uma dimensão zero e ele desaparece. No código de produção, você desejará se proteger contra isso.
 
 ## <a name="two-finger-rotation"></a>Rotação de dois dedos
 
@@ -1060,7 +1060,7 @@ O código percorre a coleção e exibe a pilha de bitmaps desde o início da col
 
 [![Captura de tela tripla da página de exibição de dispersão de bitmap](touch-images/bitmapscatterview-small.png)](touch-images/bitmapscatterview-large.png#lightbox "Captura de tela tripla da página de exibição de dispersão de bitmap")
 
-## <a name="single-finger-scaling"></a>Dimensionamento de dedo único
+## <a name="single-finger-scaling"></a>Dimensionamento de Single-Finger
 
 Uma operação de dimensionamento geralmente requer um gesto de pinçagem usando dois dedos. No entanto, é possível implementar o dimensionamento com um único dedo fazendo com que o dedo mova os cantos de um bitmap.
 

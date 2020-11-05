@@ -10,16 +10,16 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fba8dcb344f79c21815a58cff0d8132967381cca
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6534d25e46ecdd5fcdcd9c525aa49b8e2ded5f49
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556731"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374206"
 ---
 # <a name="no-locxamarinforms-button"></a>Xamarin.Forms Button
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
 
 _O botão responde a um toque ou clique que direciona um aplicativo para executar uma tarefa específica._
 
@@ -59,7 +59,7 @@ O `Button` tende a ocupar todo o espaço permitido para ele. Por exemplo, se voc
 
 Por padrão, o `Button` é retangular, mas você pode dar a ele cantos arredondados usando a [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius) propriedade, conforme descrito abaixo na aparência do [**botão**](#button-appearance)de seção.
 
-A [`Text`](xref:Xamarin.Forms.Button.Text) propriedade especifica o texto que aparece no `Button` . O [`Clicked`](xref:Xamarin.Forms.Button.Clicked) evento é definido como um manipulador de eventos chamado `OnButtonClicked` . Esse manipulador está localizado no arquivo code-behind, **BasicButtonClickPage.XAML.cs**:
+A [`Text`](xref:Xamarin.Forms.Button.Text) propriedade especifica o texto que aparece no `Button` . O [`Clicked`](xref:Xamarin.Forms.Button.Clicked) evento é definido como um manipulador de eventos chamado `OnButtonClicked` . Esse manipulador está localizado no arquivo code-behind, **BasicButtonClickPage.XAML.cs** :
 
 ```csharp
 public partial class BasicButtonClickPage : ContentPage
@@ -133,7 +133,7 @@ Tudo é feito no construtor da classe. Como o `Clicked` manipulador é apenas um
 button.Clicked += async (sender, args) => await label.RelRotateTo(360, 1000);
 ```
 
-É claro que você também pode definir o manipulador de eventos como um método separado (assim como o `OnButtonClick` método no **clique do botão básico**) e anexar esse método ao evento:
+É claro que você também pode definir o manipulador de eventos como um método separado (assim como o `OnButtonClick` método no **clique do botão básico** ) e anexar esse método ao evento:
 
 ```csharp
 button.Clicked += OnButtonClicked;

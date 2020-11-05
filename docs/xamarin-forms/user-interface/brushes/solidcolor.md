@@ -10,18 +10,18 @@ ms.date: 07/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3c3caf064ca550086f8e7924786ac8bcaf1badfc
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 3260f934eb3cfe147b218b65e981928a4683555e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556276"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372698"
 ---
 # <a name="no-locxamarinforms-brushes-solid-colors"></a>Xamarin.Forms Pincéis: cores sólidas
 
 ![API de visualização](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 
 A `SolidColorBrush` classe deriva da `Brush` classe e é usada para pintar uma área com uma cor sólida. Há uma variedade de abordagens para especificar a cor de um `SolidColorBrush` . Por exemplo, você pode especificar sua cor com um [`Color`](xref:Xamarin.Forms.Color) valor ou usando um dos objetos predefinidos `SolidColorBrush` fornecidos pela `Brush` classe.
 

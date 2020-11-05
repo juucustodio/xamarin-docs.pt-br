@@ -10,16 +10,16 @@ ms.date: 12/04/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: be1de99ba42e58e375792b0a4e03d1847e2e3c87
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c24c8eb2ea4801037621cdc82f49073c89115817
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562880"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374362"
 ---
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Autenticar usuários com o Azure Active Directory B2C
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
 
 _O Azure Active Directory B2C fornece gerenciamento de identidade de nuvem para aplicativos Web e móveis voltados para o consumidor. Este artigo mostra como usar Azure Active Directory B2C para integrar o gerenciamento de identidades em um aplicativo móvel com a biblioteca de autenticação da Microsoft._
 
@@ -110,7 +110,7 @@ public static class Constants
 
 O pacote NuGet da MSAL (biblioteca de autenticação da Microsoft) deve ser adicionado ao projeto compartilhado, .NET Standard e aos projetos da plataforma em uma Xamarin.Forms solução. MSAL inclui uma `PublicClientApplicationBuilder` classe que constrói um objeto que adere à `IPublicClientApplication` interface. O MSAL utiliza `With` cláusulas para fornecer parâmetros adicionais ao construtor e aos métodos de autenticação.
 
-No projeto de exemplo, o code-behind para **app. XAML** define propriedades estáticas nomeadas `AuthenticationClient` e e `UIParent` cria uma instância do `AuthenticationClient` objeto no construtor. A `WithIosKeychainSecurityGroup` cláusula fornece um nome de grupo de segurança para aplicativos Ios. A `WithB2CAuthority` cláusula fornece a **autoridade**padrão ou a política que será usada para autenticar usuários. A `WithRedirectUri` cláusula informa a instância dos hubs de notificação do Azure que o URI de redirecionamento usará se vários URIs forem especificados. O exemplo a seguir demonstra como criar uma instância de `PublicClientApplication` :
+No projeto de exemplo, o code-behind para **app. XAML** define propriedades estáticas nomeadas `AuthenticationClient` e e `UIParent` cria uma instância do `AuthenticationClient` objeto no construtor. A `WithIosKeychainSecurityGroup` cláusula fornece um nome de grupo de segurança para aplicativos Ios. A `WithB2CAuthority` cláusula fornece a **autoridade** padrão ou a política que será usada para autenticar usuários. A `WithRedirectUri` cláusula informa a instância dos hubs de notificação do Azure que o URI de redirecionamento usará se vários URIs forem especificados. O exemplo a seguir demonstra como criar uma instância de `PublicClientApplication` :
 
 ```csharp
 public partial class App : Application
@@ -169,7 +169,7 @@ public partial class LoginPage : ContentPage
 }
 ```
 
-O `OnLoginButtonClicked` manipulador de eventos (acionado quando o botão de logon é clicado) chama `AcquireTokenAsync` . A biblioteca MSAL abre automaticamente o navegador do dispositivo móvel e navega até a página de logon. A URL de entrada, chamada de **autoridade**, é uma combinação do nome do locatário e das políticas definidas no arquivo **Constants.cs** . Se o usuário escolher a opção esqueceu a senha, ele será retornado ao aplicativo com uma exceção, que iniciará a experiência de senha esquecida. O exemplo a seguir mostra o processo de autenticação:
+O `OnLoginButtonClicked` manipulador de eventos (acionado quando o botão de logon é clicado) chama `AcquireTokenAsync` . A biblioteca MSAL abre automaticamente o navegador do dispositivo móvel e navega até a página de logon. A URL de entrada, chamada de **autoridade** , é uma combinação do nome do locatário e das políticas definidas no arquivo **Constants.cs** . Se o usuário escolher a opção esqueceu a senha, ele será retornado ao aplicativo com uma exceção, que iniciará a experiência de senha esquecida. O exemplo a seguir mostra o processo de autenticação:
 
 ```csharp
 public partial class LoginPage : ContentPage
@@ -207,7 +207,7 @@ public partial class LoginPage : ContentPage
 }
 ```
 
-O `OnForgotPassword` método é semelhante ao processo de entrada, mas implementa uma política personalizada. `OnForgotPassword` usa uma sobrecarga diferente de `AcquireTokenAsync` , que permite que você forneça uma **autoridade**específica. O exemplo a seguir mostra como fornecer uma **autoridade** personalizada ao adquirir um token:
+O `OnForgotPassword` método é semelhante ao processo de entrada, mas implementa uma política personalizada. `OnForgotPassword` usa uma sobrecarga diferente de `AcquireTokenAsync` , que permite que você forneça uma **autoridade** específica. O exemplo a seguir mostra como fornecer uma **autoridade** personalizada ao adquirir um token:
 
 ```csharp
 public partial class LoginPage : ContentPage
@@ -260,7 +260,7 @@ No iOS, o esquema de URL personalizado que foi registrado com Azure Active Direc
 
 !["Registrando um esquema de URL personalizado no iOS"](azure-ad-b2c-images/customurl-ios.png)
 
-O MSAL também exige direitos de conjunto de chaves no iOS, registrados no **Entitilements. plist**, conforme mostrado na seguinte captura de tela:
+O MSAL também exige direitos de conjunto de chaves no iOS, registrados no **Entitilements. plist** , conforme mostrado na seguinte captura de tela:
 
 !["Configurando direitos de aplicativo no iOS"](azure-ad-b2c-images/entitlements-ios.png)
 
