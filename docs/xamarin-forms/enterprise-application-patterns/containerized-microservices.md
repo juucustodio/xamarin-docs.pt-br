@@ -10,14 +10,17 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3f85c6528a1bf599c38a39b4e88400bc8b0c4f05
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 310a4e94a91eeb0d8d1c1f6ccb6fa30f0ff1f563
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931983"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366562"
 ---
 # <a name="containerized-microservices"></a>Microsserviços em contêineres
+
+> [!NOTE]
+> Este livro eletrônico foi publicado na Primavera de 2017 e não foi atualizado desde então. Há muito no livro que permanece valioso, mas parte do material está desatualizada.
 
 O desenvolvimento de aplicativos cliente-servidor resultou em um foco na criação de aplicativos em camadas que usam tecnologias específicas em cada camada. Esses aplicativos costumam ser chamados de aplicativos *monolíticos* e empacotados em hardware previamente dimensionado para picos de carga. As principais desvantagens dessa abordagem de desenvolvimento são o acoplamento rígido entre os componentes de cada camada, que os componentes individuais não podem ser dimensionados com facilidade e o custo do teste. Uma atualização simples pode ter efeitos imprevistos no restante da camada e, portanto, uma alteração em um componente de aplicativo requer que sua camada inteira seja testada novamente e reimplantada.
 
@@ -25,7 +28,7 @@ Especialmente em relação à idade da nuvem, é que os componentes individuais 
 
 ![Abordagem de dimensionamento de aplicativos monolítico](containerized-microservices-images/monolithicapp.png)
 
-**Figura 8-1**: abordagem de dimensionamento de aplicativos monolítico
+**Figura 8-1** : abordagem de dimensionamento de aplicativos monolítico
 
 ## <a name="microservices"></a>Microsserviços
 
@@ -35,7 +38,7 @@ Os microserviços podem escalar horizontalmente de forma independente, em compar
 
 ![Abordagem de dimensionamento de aplicativos de microserviços](containerized-microservices-images/microservicesapp.png)
 
-**Figura 8-2**: abordagem de dimensionamento do aplicativo de microserviços
+**Figura 8-2** : abordagem de dimensionamento do aplicativo de microserviços
 
 A expansão do microserviço pode ser quase instantânea, permitindo que um aplicativo se adapte às cargas em constante mudança. Por exemplo, um único microserviço na funcionalidade voltada para a Web de um aplicativo pode ser o único microserviço no aplicativo que precisa ser expandido para lidar com o tráfego de entrada adicional.
 
@@ -69,7 +72,7 @@ Há muitas semelhanças entre contêineres e máquinas virtuais, como ilustrado 
 
 ![Abordagem de dimensionamento de aplicativos de microserviços](containerized-microservices-images/containersvsvirtualmachines.png)
 
-**Figura 8-3**: comparação de máquinas virtuais e contêineres
+**Figura 8-3** : comparação de máquinas virtuais e contêineres
 
 Um contêiner executa um sistema operacional, tem um sistema de arquivos e pode ser acessado em uma rede como se fosse uma máquina virtual ou física. No entanto, a tecnologia e os conceitos usados por contêineres são muito diferentes das máquinas virtuais. As máquinas virtuais incluem os aplicativos, as dependências necessárias e um sistema operacional convidado completo. Os contêineres incluem o aplicativo e suas dependências, mas compartilham o sistema operacional com outros contêineres, executando como processos isolados no sistema operacional do host (além de contêineres do Hyper-V que são executados dentro de uma máquina virtual especial por contêiner). Portanto, os contêineres compartilham recursos e normalmente exigem menos recursos do que as máquinas virtuais.
 
@@ -89,7 +92,7 @@ O aplicativo de referência eShopOnContainers usa o Docker para hospedar quatro 
 
 ![eShopOnContainers fazer referência a microserviços de back-end do aplicativo](containerized-microservices-images/microservicesarchitecture.png)
 
-**Figura 8-4**: eShopOnContainers de aplicativos de referência de back-end do aplicativo
+**Figura 8-4** : eShopOnContainers de aplicativos de referência de back-end do aplicativo
 
 A arquitetura dos serviços de back-end no aplicativo de referência é decomposta em vários subsistemas autônomos na forma de colaboração de microserviços e contêineres. Cada microserviço fornece uma única área de funcionalidade: um serviço de identidade, um serviço de catálogo, um serviço de pedidos e um serviço de cesta.
 
@@ -103,7 +106,7 @@ O aplicativo móvel eShopOnContainers comunica-se com os microserviços de back-
 
 ![Abordagem de dimensionamento de aplicativos de microserviços](containerized-microservices-images/directclienttomicroservicecommunication.png)
 
-**Figura 8-5**: comunicação direta de cliente para microserviço
+**Figura 8-5** : comunicação direta de cliente para microserviço
 
 Com a comunicação direta entre cliente e microserviço, o aplicativo móvel faz solicitações para cada microserviço diretamente por meio de seu ponto de extremidade público, com uma porta TCP diferente por microserviço. Em produção, o ponto de extremidade normalmente se mapearia para o balanceador de carga do microserviço, que distribui solicitações entre as instâncias disponíveis.
 
@@ -134,7 +137,7 @@ O barramento de evento eShopOnContainers, implementado usando o RabbitMQ, fornec
 
 ![Comunicação um-para-muitos](containerized-microservices-images/eventdrivencommunication.png)
 
-**Figura 8-9**: comunicação um-para-muitos
+**Figura 8-9** : comunicação um-para-muitos
 
 Essa abordagem de comunicação de um para muitos usa eventos para implementar transações de negócios que abrangem vários serviços, garantindo a consistência eventual entre os serviços. Uma transação de eventualidade consiste em uma série de etapas distribuídas. Portanto, quando o microserviço do perfil de usuário recebe o comando UpdateUser, ele atualiza os detalhes do usuário em seu banco de dados e publica o evento userupdate no barramento de evento. O microserviço da cesta e o microserviço de pedidos se inscreveram para receber esse evento e, em resposta, atualize suas informações de comprador em seus respectivos bancos de dados.
 

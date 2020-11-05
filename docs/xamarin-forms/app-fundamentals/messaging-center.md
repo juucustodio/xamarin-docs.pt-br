@@ -10,16 +10,16 @@ ms.date: 10/08/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d24ff6831bb8b52d840ff2db7c13c3eb674b7bd8
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 5ccff2fd24537be0bbf2d809b20a00bc35667c95
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555782"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366848"
 ---
 # <a name="no-locxamarinforms-messagingcenter"></a>Xamarin.Forms MessagingCenter
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
 
 O padrão de publicação-assinatura é um padrão de troca de mensagens em que os publicadores enviam mensagens sem ter conhecimento de nenhum receptor, conhecido como assinante. Da mesma forma, os assinantes escutam mensagens específicas, sem ter conhecimento de nenhum publicador.
 
@@ -94,7 +94,7 @@ Neste exemplo, o [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) m�
 Os assinantes podem cancelar a assinatura de mensagens que não desejam mais receber. Isso é obtido com uma das [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) sobrecargas:
 
 ```csharp
-MessagingCenter.Unsubscribe<MainPage>(this, "Hi");
+MessagingCenter.Unsubscribe<MainPage>(this, "Hi");
 ```
 
 Neste exemplo, o [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) método cancela a assinatura do `this` objeto da `Hi` mensagem enviada pelo `MainPage` tipo.
@@ -102,7 +102,7 @@ Neste exemplo, o [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*
 As mensagens que contêm dados de carga devem ter a assinatura cancelada usando a [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) sobrecarga que especifica dois argumentos genéricos:
 
 ```csharp
-MessagingCenter.Unsubscribe<MainPage, string>(this, "Hi");
+MessagingCenter.Unsubscribe<MainPage, string>(this, "Hi");
 ```
 
 Neste exemplo, o [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) método cancela a assinatura do `this` objeto da `Hi` mensagem enviada pelo `MainPage` tipo, cujos dados de carga são um `string` .

@@ -10,16 +10,16 @@ ms.date: 04/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 01e439812c3935e890acf0b9b83579b5813d8e21
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 5c49ee7022166983f55bca4a39dd726412b070c8
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563946"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366198"
 ---
 # <a name="device-orientation"></a>Orientação do dispositivo
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
 
 É importante considerar como seu aplicativo será usado e como a orientação paisagem pode ser incorporada para melhorar a experiência do usuário. Layouts individuais podem ser criados para acomodar várias orientações e usar melhor o espaço disponível. No nível do aplicativo, a rotação pode ser desabilitada ou habilitada.
 
@@ -43,7 +43,7 @@ No Visual Studio para Mac, abra o projeto do iOS e abra o **info. plist**. Na gu
 
 ![Informações de implantação do iPhone no Visual Studio para Mac](device-orientation-images/orientation-vsmac.png)
 
-Se você preferir editar os valores usando uma interface de editor de chave-valor, selecione a guia **fonte**> na parte inferior da tela:
+Se você preferir editar os valores usando uma interface de editor de chave-valor, selecione a guia **fonte** > na parte inferior da tela:
 
 ![Orientações de dispositivo com suporte no Visual Studio para Mac](device-orientation-images/orientation-source-vsmac.png)
 
@@ -76,9 +76,9 @@ O Xamarin. Android dá suporte a várias opções para especificar a orientaçã
 - **ReversePortrait** &ndash; faz com que o aplicativo use orientação retrato, voltado para a direção oposta, para que pareça "de cabeça para baixo".
 - **FullSensor** &ndash; faz com que o aplicativo confie nos dados do sensor para selecionar a orientação correta (fora dos possíveis 4).
 - **FullUser** &ndash; faz com que o aplicativo use as preferências de orientação do usuário. Se a rotação automática estiver habilitada, todas as quatro orientações poderão ser usadas.
-- **Userlandscape** &ndash; _ \[ Sem suporte \] _ faz com que o aplicativo use a orientação paisagem, a menos que o usuário tenha a rotação automática habilitada; nesse caso, ele usará o sensor para determinar a orientação. Esta opção interromperá a compilação.
-- **Userretrato** &ndash; _ \[ Sem suporte \] _ faz com que o aplicativo use a orientação retrato, a menos que o usuário tenha a rotação automática habilitada; nesse caso, ele usará o sensor para determinar a orientação. Esta opção interromperá a compilação.
-- **Bloqueado** &ndash; Sem _ \[ suporte \] _ faz com que o aplicativo use a orientação da tela, o que estiver na inicialização, não respondendo às alterações na orientação física do dispositivo. Esta opção interromperá a compilação.
+- **Userlandscape** &ndash; _\[ Sem suporte \]_ faz com que o aplicativo use a orientação paisagem, a menos que o usuário tenha a rotação automática habilitada; nesse caso, ele usará o sensor para determinar a orientação. Esta opção interromperá a compilação.
+- **Userretrato** &ndash; _\[ Sem suporte \]_ faz com que o aplicativo use a orientação retrato, a menos que o usuário tenha a rotação automática habilitada; nesse caso, ele usará o sensor para determinar a orientação. Esta opção interromperá a compilação.
+- **Bloqueado** &ndash; Sem _\[ suporte \]_ faz com que o aplicativo use a orientação da tela, o que estiver na inicialização, não respondendo às alterações na orientação física do dispositivo. Esta opção interromperá a compilação.
 
 Observe que as APIs nativas do Android fornecem muito controle sobre como a orientação é gerenciada, incluindo opções que se contradizem explicitamente às preferências expressas do usuário.
 
@@ -360,7 +360,7 @@ Observe o seguinte:
 - Devido à maneira como a página foi disposta, não há necessidade de código de procedimento para introduzir a capacidade de resposta.
 - O `ScrollView` está sendo usado para permitir que o rótulo fique visível mesmo quando a altura da tela for menor que a soma das alturas fixas dos botões e da imagem.
 
-### <a name="grid"></a>Grade
+### <a name="grid"></a>Grid
 
 Considere o seguinte aplicativo, exibido em retrato:
 

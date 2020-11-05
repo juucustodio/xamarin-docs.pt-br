@@ -10,20 +10,20 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 75d19e41243076da127d58defdabeca908d900cd
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 7e27db7cd05c1997d3ac889b36aca5e3716d2d08
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556081"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367589"
 ---
 # <a name="lines-and-stroke-caps"></a>Limites de linha e de traço
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Saiba como usar o SkiaSharp para desenhar linhas com limites de traço diferentes_
 
-No SkiaSharp, a renderização de uma única linha é muito diferente da renderização de uma série de linhas retas conectadas. No entanto, mesmo ao desenhar linhas únicas, muitas vezes é necessário dar uma largura de traço específica a linhas. Como essas linhas se tornam mais largas, a aparência das extremidades das linhas também se torna importante. A aparência do final da linha é chamada de ponta do *traço*:
+No SkiaSharp, a renderização de uma única linha é muito diferente da renderização de uma série de linhas retas conectadas. No entanto, mesmo ao desenhar linhas únicas, muitas vezes é necessário dar uma largura de traço específica a linhas. Como essas linhas se tornam mais largas, a aparência das extremidades das linhas também se torna importante. A aparência do final da linha é chamada de ponta do *traço* :
 
 ![As três opções de Caps Stroke](lines-images/strokecapsexample.png)
 

@@ -10,16 +10,16 @@ ms.date: 08/16/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 24a9a351dbe6932b09add2ee7c3111256e013201
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: d288d43bcee5719c1ab3667812e5bac4891bb188
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560683"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366302"
 ---
 # <a name="no-locxamarinforms-binding-fallbacks"></a>Xamarin.Forms Fallbacks de associação
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Às vezes, as associações de dados falham porque a origem da associação não pode ser resolvida ou porque a associação tem êxito, mas retorna um valor `null`. Embora esses cenários possam ser manipulados com conversores de valor ou outro código adicional, as associações de dados poderão se tornar mais robustas com a definição de valores de fallback a serem usados se o processo de associação falhar. Isso pode ser feito definindo as [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) Propriedades e [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) em uma expressão de associação. Como essas propriedades residem na [`BindingBase`](xref:Xamarin.Forms.BindingBase) classe, elas podem ser usadas com associações, associações múltiplas, associações compiladas e com a `Binding` extensão de marcação.
 
@@ -53,7 +53,7 @@ Este é o programa em execução:
 
 ![Associação de FallbackValue](binding-fallbacks-images/bindingunavailable-detail-cropped.png "Associação de FallbackValue")
 
-Quando a `FallbackValue` propriedade não está definida em uma expressão de associação e o caminho de associação ou parte do caminho não é resolvido, [`BindableProperty.DefaultValue`](xref:Xamarin.Forms.BindableProperty.DefaultValue) é definido no destino. No entanto, quando a propriedade `FallbackValue` está definida e o caminho de associação ou parte do caminho não está resolvido, o valor da propriedade de valor `FallbackValue` é definido no destino. Portanto, na página **MonkeyDetail**, o [`Label`](xref:Xamarin.Forms.Label) exibe "Tamanho da população desconhecido", porque o objeto associado não tem uma propriedade `Population`.
+Quando a `FallbackValue` propriedade não está definida em uma expressão de associação e o caminho de associação ou parte do caminho não é resolvido, [`BindableProperty.DefaultValue`](xref:Xamarin.Forms.BindableProperty.DefaultValue) é definido no destino. No entanto, quando a propriedade `FallbackValue` está definida e o caminho de associação ou parte do caminho não está resolvido, o valor da propriedade de valor `FallbackValue` é definido no destino. Portanto, na página **MonkeyDetail** , o [`Label`](xref:Xamarin.Forms.Label) exibe "Tamanho da população desconhecido", porque o objeto associado não tem uma propriedade `Population`.
 
 > [!IMPORTANT]
 > Um conversor de valor definido não é executado em uma expressão de associação quando a [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) propriedade é definida.

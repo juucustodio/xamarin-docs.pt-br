@@ -10,16 +10,16 @@ ms.date: 03/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 78bd93e2f6556480ae7d2903771d7d6303dda148
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: cd7c29f835b34b4c5ffb9a5af589815a09546a87
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558370"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93365899"
 ---
 # <a name="native-views-in-xaml"></a>Exibições nativas em XAML
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
 
 _Exibições nativas do iOS, Android e Plataforma Universal do Windows podem ser referenciadas diretamente de Xamarin.Forms arquivos XAML. As propriedades e os manipuladores de eventos podem ser definidos em exibições nativas e podem interagir com Xamarin.Forms exibições. Este artigo demonstra como consumir exibições nativas de Xamarin.Forms arquivos XAML._
 
@@ -109,7 +109,7 @@ A página também contém um comutador nativo para cada plataforma. Cada comutad
 ![Comutador nativo desabilitado para o comutador nativo ](xaml-images/native-switch-disabled.png)
  ![ habilitado](xaml-images/native-switch-enabled.png)
 
-Associações bidirecionais são automaticamente suportadas desde que a propriedade nativa implementa `INotifyPropertyChanged` ou dá suporte à observação de valor-chave (KVO) no Ios, ou é uma `DependencyProperty` em UWP. No entanto, muitas exibições nativas não dão suporte à notificação de alteração de propriedade. Para essas exibições, você pode especificar um [`UpdateSourceEventName`](xref:Xamarin.Forms.Binding.UpdateSourceEventName) valor de propriedade como parte da expressão de associação. Essa propriedade deve ser definida como o nome de um evento no modo de exibição nativo que sinaliza quando a propriedade de destino foi alterada. Em seguida, quando o valor do comutador nativo é alterado, a `Binding` classe é notificada de que o usuário alterou o valor de opção e o `NativeSwitchPageViewModel.IsSwitchOn` valor da propriedade é atualizado.
+As associações bidirecionais são automaticamente suportadas desde que a propriedade nativa implemente `INotifyPropertyChanged` ou dê suporte à Key-Value de observação (KVO) no Ios ou seja uma `DependencyProperty` no UWP. No entanto, muitas exibições nativas não dão suporte à notificação de alteração de propriedade. Para essas exibições, você pode especificar um [`UpdateSourceEventName`](xref:Xamarin.Forms.Binding.UpdateSourceEventName) valor de propriedade como parte da expressão de associação. Essa propriedade deve ser definida como o nome de um evento no modo de exibição nativo que sinaliza quando a propriedade de destino foi alterada. Em seguida, quando o valor do comutador nativo é alterado, a `Binding` classe é notificada de que o usuário alterou o valor de opção e o `NativeSwitchPageViewModel.IsSwitchOn` valor da propriedade é atualizado.
 
 ## <a name="pass-arguments-to-native-views"></a>Passar argumentos para exibições nativas
 

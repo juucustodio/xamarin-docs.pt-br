@@ -10,16 +10,16 @@ ms.date: 03/13/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 964bac947f46e5279cbdcc6bdb61d74deba7f622
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 20ccf71771493afe56d4d899186c7e6330ee96dd
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559383"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366575"
 ---
 # <a name="no-locxamarinforms-radiobutton"></a>Xamarin.Forms Índices
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
 
 O Xamarin.Forms `RadioButton` é um tipo de botão que permite aos usuários selecionar uma opção de um conjunto. Cada opção é representada por um botão de opção e você só pode selecionar um botão de opção em um grupo. A `RadioButton` classe herda da [`Button`](xref:Xamarin.Forms.Button) classe.
 

@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6e25654fb856935c119d731df5db3eaa2d501930
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 7df914ae5b6de38b5179f5b1139b9c41e9559198
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560241"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367446"
 ---
 # <a name="visualelement-access-keys-on-windows"></a>Chaves de acesso do visualelement no Windows
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Chaves de acesso são atalhos de teclado que melhoram a usabilidade e a acessibilidade de aplicativos no Plataforma Universal do Windows (UWP), fornecendo uma maneira intuitiva para os usuários navegarem e interagirem rapidamente com a interface do usuário visível do aplicativo por meio de um teclado em vez de por toque ou mouse. Elas são combinações da tecla Alt e uma ou mais chaves alfanuméricas, geralmente pressionadas em sequência. Os atalhos de teclado têm suporte automaticamente para chaves de acesso que usam um único caractere alfanumérico.
 

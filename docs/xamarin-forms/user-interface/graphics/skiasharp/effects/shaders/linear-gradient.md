@@ -10,22 +10,22 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2cc0806af28360cf4bf2bb7e382e8d0a423abab9
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 9d2ac2eec5422068243ac43e78092e25c10652f5
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555522"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366770"
 ---
 # <a name="the-skiasharp-linear-gradient"></a>O gradiente linear SkiaSharp
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-A [`SKPaint`](xref:SkiaSharp.SKPaint) classe define uma [`Color`](xref:SkiaSharp.SKPaint.Color) propriedade que é usada para traçar linhas ou áreas de preenchimento com uma cor sólida. Você pode, como alternativa, traçar linhas ou preencher áreas com _gradientes_, que são misturas graduais de cores:
+A [`SKPaint`](xref:SkiaSharp.SKPaint) classe define uma [`Color`](xref:SkiaSharp.SKPaint.Color) propriedade que é usada para traçar linhas ou áreas de preenchimento com uma cor sólida. Você pode, como alternativa, traçar linhas ou preencher áreas com _gradientes_ , que são misturas graduais de cores:
 
 ![Exemplo de gradiente linear](linear-gradient-images/LinearGradientSample.png "Exemplo de gradiente linear")
 
-O tipo de gradiente mais básico é um gradiente _linear_ . O Blend of Colors ocorre em uma linha (chamada de _linha de gradiente_) de um ponto para outro. As linhas perpendiculares à linha de gradiente têm a mesma cor. Você cria um gradiente linear usando um dos dois métodos estáticos [`SKShader.CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient*) . A diferença entre as duas sobrecargas é que uma delas inclui uma transformação de matriz e a outra não. 
+O tipo de gradiente mais básico é um gradiente _linear_ . O Blend of Colors ocorre em uma linha (chamada de _linha de gradiente_ ) de um ponto para outro. As linhas perpendiculares à linha de gradiente têm a mesma cor. Você cria um gradiente linear usando um dos dois métodos estáticos [`SKShader.CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient*) . A diferença entre as duas sobrecargas é que uma delas inclui uma transformação de matriz e a outra não. 
 
 Esses métodos retornam um objeto do tipo [`SKShader`](xref:SkiaSharp.SKShader) que você definiu para a [`Shader`](xref:SkiaSharp.SKPaint.Shader) propriedade de `SKPaint` . Se a `Shader` propriedade for não nula, ela substituirá a `Color` propriedade. Qualquer linha que seja cortada ou qualquer área preenchida usando esse `SKPaint` objeto é baseada no gradiente, e não na cor sólida.
 

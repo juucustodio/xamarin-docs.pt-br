@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5064a53b140c26acdc5149f5495cc002e657a9b0
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 56a652f6f8ff2c4e9780d72117241d79f71210b5
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563998"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367381"
 ---
 # <a name="dots-and-dashes-in-skiasharp"></a>Pontos e traços em SkiaSharp
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Dominar as complexidades do desenho de linhas pontilhadas e tracejadas em SkiaSharp_
 
@@ -27,7 +27,7 @@ O SkiaSharp permite desenhar linhas que não são sólidas, mas em vez disso, s�
 
 ![Linha pontilhada](dots-images/dottedlinesample.png)
 
-Você faz isso com um *efeito de caminho*, que é uma instância da [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) classe que você define para a [`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect) propriedade de `SKPaint` . Você pode criar um efeito de caminho (ou combinar efeitos de caminho) usando um dos métodos de criação estáticos definidos pelo `SKPathEffect` . ( `SKPathEffect` é um dos seis efeitos com suporte do SkiaSharp; os outros são descritos na seção [**SkiaSharp Effect**](../effects/index.md).)
+Você faz isso com um *efeito de caminho* , que é uma instância da [`SKPathEffect`](xref:SkiaSharp.SKPathEffect) classe que você define para a [`PathEffect`](xref:SkiaSharp.SKPaint.PathEffect) propriedade de `SKPaint` . Você pode criar um efeito de caminho (ou combinar efeitos de caminho) usando um dos métodos de criação estáticos definidos pelo `SKPathEffect` . ( `SKPathEffect` é um dos seis efeitos com suporte do SkiaSharp; os outros são descritos na seção [**SkiaSharp Effect**](../effects/index.md).)
 
 Para desenhar linhas pontilhadas ou tracejadas, use o [`SKPathEffect.CreateDash`](xref:SkiaSharp.SKPathEffect.CreateDash(System.Single[],System.Single)) método estático. Há dois argumentos: o primeiro é uma matriz de `float` valores que indicam os comprimentos dos pontos e traços e o comprimento dos espaços entre eles. Essa matriz deve ter um número par de elementos, e deve haver pelo menos dois elementos. (Pode haver zero elementos na matriz, mas isso resulta em uma linha sólida.) Se houver dois elementos, o primeiro é o comprimento de um ponto ou traço e o segundo é o comprimento da lacuna antes do próximo ponto ou traço. Se houver mais de dois elementos, eles estarão nesta ordem: comprimento do traço, comprimento do intervalo, comprimento do traço, comprimento do intervalo e assim por diante.
 

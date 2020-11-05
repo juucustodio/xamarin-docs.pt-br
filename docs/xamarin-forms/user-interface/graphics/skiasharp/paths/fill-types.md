@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: aa427035dc33b617bed14e0c6aa0b0db27efca7f
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 63833e80b15bb27ab656825b4b1f6b1e3eb31670
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556562"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367810"
 ---
 # <a name="the-path-fill-types"></a>Os tipos de preenchimento do caminho
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Descobrir os diferentes efeitos possíveis com os tipos de preenchimento de caminho SkiaSharp_
 
@@ -173,7 +173,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Normalmente, o tipo de preenchimento de caminho deve afetar apenas os preenchimentos e não traços, mas os dois `Inverse` modos afetam os preenchimentos e os traços. Para preenchimentos, os dois `Inverse` tipos preenchem áreas de forma oposta para que a área fora da estrela seja preenchida. Para traços, os dois `Inverse` tipos colorem tudo, exceto o traço. Usar esses tipos de preenchimento inverso pode produzir alguns efeitos estranhos, como demonstra a captura de tela do iOS:
 
-[![Captura de tela tripla da página de estrela de cinco pontas](fill-types-images/fivepointedstar-small.png)](fill-types-images/fivepointedstar-large.png#lightbox "Captura de tela tripla da página de estrela de cinco pontas")
+[![Captura de tela tripla da página Five-Pointed Star](fill-types-images/fivepointedstar-small.png)](fill-types-images/fivepointedstar-large.png#lightbox "Captura de tela tripla da página Five-Pointed Star")
 
 A captura de tela do Android mostra os efeitos típicos de retrocesso e ímpar, mas a ordem do traço e do preenchimento também afeta os resultados.
 

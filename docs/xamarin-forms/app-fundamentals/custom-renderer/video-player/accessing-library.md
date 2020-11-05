@@ -10,16 +10,16 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ff9f44ad790f3acda1e855f3308942bb702e66ee
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 595eda84026a9b609f7bd0dadb72fdc9ac762a34
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563894"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367230"
 ---
 # <a name="accessing-the-devices-video-library"></a>Acessando a biblioteca de vídeos do dispositivo
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 A maioria dos computadores desktop e dispositivos móveis modernos tem a capacidade de gravar vídeos usando a câmera do dispositivo. Em seguida, os vídeos criados por um usuário são armazenados como arquivos no dispositivo. Esses arquivos podem ser recuperados da biblioteca de imagens e reproduzidos pela classe `VideoPlayer`, assim como qualquer outro vídeo.
 
@@ -149,7 +149,7 @@ namespace VideoPlayerDemos.Droid
 }
 ```
 
-O método `OnCreate` em `MainActivity` armazena sua própria instância na propriedade estática `Current`. Isso permite a implementação de `IVideoPicker` para obter a instância `MainActivity` a fim de iniciar o seletor **Selecionar Vídeo**:
+O método `OnCreate` em `MainActivity` armazena sua própria instância na propriedade estática `Current`. Isso permite a implementação de `IVideoPicker` para obter a instância `MainActivity` a fim de iniciar o seletor **Selecionar Vídeo** :
 
 ```csharp
 using System;
@@ -232,7 +232,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="invoking-the-dependency-service"></a>Invocando o serviço de dependência
 
-A página **Reproduzir vídeo da biblioteca** do programa [**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) demonstra como usar o serviço de dependência do seletor de vídeo. O arquivo XAML contém uma instância `VideoPlayer` e um `Button` rotulado **Mostrar biblioteca de vídeos**:
+A página **Reproduzir vídeo da biblioteca** do programa [**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) demonstra como usar o serviço de dependência do seletor de vídeo. O arquivo XAML contém uma instância `VideoPlayer` e um `Button` rotulado **Mostrar biblioteca de vídeos** :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

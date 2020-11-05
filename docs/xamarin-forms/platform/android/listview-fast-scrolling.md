@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 80b8dc663457316eef831c1e60894cc6b95e281e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 38a59c2e468873d0beb632b601ee59d8c94bf716
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91564037"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367108"
 ---
 # <a name="listview-fast-scrolling-on-android"></a>Rolagem rápida de ListView no Android
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Essa plataforma do Android específica é usada para habilitar a rolagem rápida por meio de dados em um [`ListView`](xref:Xamarin.Forms.ListView) . Ele é consumido em XAML definindo a `ListView.IsFastScrollEnabled` Propriedade anexada como um `boolean` valor:
 
@@ -59,7 +59,7 @@ listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScro
 
 O resultado é que a rolagem rápida por meio de dados em um [`ListView`](xref:Xamarin.Forms.ListView) pode ser habilitada, o que altera o tamanho do polegar de rolagem:
 
-[![ListView FastScroll específico da plataforma](listview-fast-scrolling-images/fastscroll.png)](listview-fast-scrolling-images/fastscroll-large.png#lightbox "ListView FastScroll específico da plataforma")
+[![ListView FastScroll específico da plataforma](listview-fast-scrolling-images/fastscroll.png)](listview-fast-scrolling-images/fastscroll-large.png#lightbox "Platform-Specific ListView FastScroll")
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -10,16 +10,16 @@ ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 896b7f878e1ec9c3ed3c8324330c288220963e62
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: ccdcfc28e1d439b390459be242b959f53d0bd915
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559708"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367706"
 ---
 # <a name="no-locxamarinforms-map-position-and-distance"></a>Xamarin.Forms Posição e distância do mapa
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 O [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) namespace contém uma [`Position`](xref:Xamarin.Forms.Maps.Position) struct que é normalmente usada ao posicionar um mapa e seus PINs e uma [`Distance`](xref:Xamarin.Forms.Maps.Distance) struct que pode, opcionalmente, ser usada ao posicionar um mapa.
 

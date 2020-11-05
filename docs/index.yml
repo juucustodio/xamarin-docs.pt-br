@@ -9,12 +9,12 @@ metadata:
   author: conceptdev
   ms.author: crdun
   ms.date: 09/26/2019
-  ms.openlocfilehash: c478d4f7f93d7ddeeb307aa87f324127f98ec6f4
-  ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+  ms.openlocfilehash: 4ca300805c51c6394ed39fb96a7e178a62e72856
+  ms.sourcegitcommit: 836d54779190b1bef1b43bc0c2016c9b3034bfda
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 09/29/2020
-  ms.locfileid: "91453227"
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "93281188"
 highlightedContent:
   items:
   - title: Instalação e configuração
@@ -128,8 +128,8 @@ additionalContent:
       summary: Entenda como os aplicativos iniciam e vão para o segundo plano.
       url: ~/xamarin-forms/app-fundamentals/app-lifecycle.md
     - title: Mostrar uma lista de dados
-      summary: Use o ListView para rolar pelos dados e selecioná-los.
-      url: ~/xamarin-forms/user-interface/listview/index.md
+      summary: Usar CollectionView para rolar e selecionar dados.
+      url: ~/xamarin-forms/user-interface/collectionview/index.md
     - title: Usar XAML e vinculação de dados
       summary: Use o padrão MVVM para mostrar dados em sua interface do usuário.
       url: ~/xamarin-forms/xaml/xaml-basics/index.md
@@ -148,20 +148,6 @@ additionalContent:
     - title: Renderizar gráficos de SkiaSharp
       summary: Renderize gráficos de vetor 2D multiplataforma.
       url: ~/xamarin-forms/user-interface/graphics/skiasharp/index.md
-  - title: Ferramentas para desenvolvedores móveis
-    items:
-    - title: Simulador de iOS para Windows
-      summary: Interagir com o Simulador de iOS usando o Visual Studio no Windows.
-      url: ~/tools/ios-simulator/index.md
-    - title: Criador de perfil
-      summary: Identificar e corrigir problemas de desempenho.
-      url: ~/tools/profiler/index.md
-    - title: .NET Embedding
-      summary: Permite que seu código .NET existente seja consumido a partir de outras linguagens de programação.
-      url: ~/tools/dotnet-embedding/index.md
-    - title: MonoGame
-      summary: Compile jogos de desktop, móveis e de console com C#.
-      url: ~/graphics-games/monogame/introduction/index.md
   - title: Visão geral das plataformas do Xamarin
     items:
     - title: Xamarin.Forms multiplataforma

@@ -1,6 +1,6 @@
 ---
-title: Modos de mesclagem carregador-Duff
-description: Use os modos de mesclagem carregador-Duff para compor cenas com base em imagens de origem e de destino.
+title: Modos de mesclagem Porter-Duff
+description: Use os modos de mesclagem Porter-Duff para compor cenas com base em imagens de origem e de destino.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 57F172F8-BA03-43EC-A215-ED6B78696BB5
@@ -10,74 +10,74 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 12e3e95b0f87d0e93d157bebe057874430866c2b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 104039bdb211eb823c4306071804e9680793840a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560774"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93365834"
 ---
-# <a name="porter-duff-blend-modes"></a>Modos de mesclagem carregador-Duff
+# <a name="porter-duff-blend-modes"></a>Modos de mesclagem Porter-Duff
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Os modos de mesclagem carregador-Duff são nomeados após Thomas carregador e Tom Duff, que desenvolveu uma Algebra de composição enquanto trabalha para Lucasfilm. Suas [_imagens digitais de composição_](https://graphics.pixar.com/library/Compositing/paper.pdf) de papel foram publicadas na edição de julho de 1984 de _gráficos de computador_, páginas 253 a 259. Esses modos de mesclagem são essenciais para composição, que está montando várias imagens em uma cena composta:
+Os modos de mesclagem Porter-Duff são nomeados após Thomas carregador e Tom Duff, que desenvolveu uma Algebra de composição enquanto trabalha para Lucasfilm. Suas [_imagens digitais de composição_](https://graphics.pixar.com/library/Compositing/paper.pdf) de papel foram publicadas na edição de julho de 1984 de _gráficos de computador_ , páginas 253 a 259. Esses modos de mesclagem são essenciais para composição, que está montando várias imagens em uma cena composta:
 
-![Exemplo de carregador-Duff](porter-duff-images/PorterDuffSample.png "Exemplo de carregador-Duff")
+![Exemplo de carregador-Duff](porter-duff-images/PorterDuffSample.png "Exemplo de Porter-Duff")
 
-## <a name="porter-duff-concepts"></a>Conceitos de carregador-Duff
+## <a name="porter-duff-concepts"></a>Conceitos de Porter-Duff
 
 Suponha que um retângulo marrom ocupe os dois terços esquerdo e superior da sua superfície de exibição:
 
-![Destino carregador-Duff](porter-duff-images/PorterDuffDst.png "Destino carregador-Duff")
+![Destino carregador-Duff](porter-duff-images/PorterDuffDst.png "Destino de Porter-Duff")
 
 Essa área é chamada de _destino_ ou, às vezes, do _plano de fundo_ ou do _pano_.
 
 Você deseja desenhar o retângulo a seguir, que tem o mesmo tamanho do destino. O retângulo é transparente, exceto por uma área bluish que ocupe a direita e a parte inferior dois terços:
 
-![Origem do carregador-Duff](porter-duff-images/PorterDuffSrc.png "Origem do carregador-Duff")
+![Origem do carregador-Duff](porter-duff-images/PorterDuffSrc.png "Origem do Porter-Duff")
 
 Isso é chamado de _origem_ ou, às vezes, do _primeiro plano_.
 
 Quando você exibe a origem no destino, aqui está o que você espera:
 
-![Carregador-Duff de origem](porter-duff-images/PorterDuffSrcOver.png "Carregador-Duff de origem")
+![Carregador-Duff de origem](porter-duff-images/PorterDuffSrcOver.png "Fonte de Porter-Duff sobre")
 
 Os pixels transparentes da fonte permitem que o plano de fundo mostre, enquanto os pixels de origem bluish obscurecem o plano de fundo. Esse é o caso normal e é referenciado em SkiaSharp como `SKBlendMode.SrcOver` . Esse valor é a configuração padrão da `BlendMode` propriedade quando um `SKPaint` objeto é instanciado pela primeira vez.
 
 No entanto, é possível especificar um modo de mesclagem diferente para um efeito diferente. Se você especificar `SKBlendMode.DstOver` , na área em que a origem e o destino se cruzam, o destino aparecerá em vez da fonte:
 
-![Carregador-Duff de destino](porter-duff-images/PorterDuffDstOver.png "Carregador-Duff de destino")
+![Carregador-Duff de destino](porter-duff-images/PorterDuffDstOver.png "Destino de Porter-Duff")
 
 O `SKBlendMode.DstIn` modo de mesclagem exibe apenas a área em que o destino e a origem fazem interseção usando a cor de destino:
 
-![Carregador-Duff de destino](porter-duff-images/PorterDuffDstIn.png "Carregador-Duff de destino")
+![Carregador-Duff de destino](porter-duff-images/PorterDuffDstIn.png "Porter-Duff destino em")
 
 O modo de mesclagem de `SKBlendMode.Xor` (exclusivo ou) não faz nada para aparecer onde as duas áreas se sobrepõem:
 
-![Carregador-Duff exclusivo ou](porter-duff-images/PorterDuffXor.png "Carregador-Duff exclusivo ou")
+![Carregador-Duff exclusivo ou](porter-duff-images/PorterDuffXor.png "Porter-Duff exclusivo ou")
 
 O destino colorido e os retângulos de origem dividem efetivamente a superfície de exibição em quatro áreas exclusivas que podem ser coloridas de várias maneiras correspondentes à presença dos retângulos de destino e de origem:
 
-![Carregador-Duff](porter-duff-images/PorterDuff.png "Carregador-Duff")
+![Carregador-Duff](porter-duff-images/PorterDuff.png "Porter-Duff")
 
 Os retângulos superior direito e inferior esquerdo estão sempre em branco porque o destino e a origem são transparentes nessas áreas. A cor de destino ocupa a área superior esquerda, para que a área possa ser colorida com a cor de destino ou não. Da mesma forma, a cor de origem ocupa a área inferior direita, para que a área possa ser colorida com a cor de origem ou não. A interseção do destino e da origem no meio pode ser colorida com a cor de destino, a cor de origem ou não.
 
-O número total de combinações é 2 (para os períodos superior esquerdo) 2 (para a parte inferior direita) vezes 3 (para o centro) ou 12. Estes são os 12 modos básicos de composição carregador-Duff.
+O número total de combinações é 2 (para os períodos superior esquerdo) 2 (para a parte inferior direita) vezes 3 (para o centro) ou 12. Estes são os 12 modos básicos de composição de Porter-Duff.
 
 No final da _composição de imagens digitais_ (página 256), carregador e Duff adicionam um modo 13 chamado _Plus_ (correspondente ao membro SkiaSharp `SKBlendMode.Plus` e o modo _mais claro_ do W3C (que não deve ser confundido com o modo de _clareamento_ do W3C). Esse `Plus` modo adiciona as cores de origem e destino, um processo que será descrito mais detalhadamente em breve.
 
-Skia adiciona um modo 14 chamado `Modulate` que é muito semelhante a `Plus` , exceto que as cores de origem e destino são multiplicadas. Ele pode ser tratado como um modo de mesclagem carregador-Duff adicional.
+Skia adiciona um modo 14 chamado `Modulate` que é muito semelhante a `Plus` , exceto que as cores de origem e destino são multiplicadas. Ele pode ser tratado como um modo de mesclagem Porter-Duff adicional.
 
-Aqui estão os 14 modos carregador Duff, conforme definido em SkiaSharp. A tabela mostra como elas colorem cada uma das três áreas que não estão em branco no diagrama acima:
+Aqui estão os 14 Porter-Duff modos, conforme definido em SkiaSharp. A tabela mostra como elas colorem cada uma das três áreas que não estão em branco no diagrama acima:
 
-| Modo       | Destination | Interseção | Fonte |
+| Mode       | Destino | Interseção | Fonte |
 | ---------- |:-----------:|:------------:|:------:|
 | `Clear`    |             |              |        |
 | `Src`      |             | Fonte       | X      |
-| `Dst`      | X           | Destination  |        |
+| `Dst`      | X           | Destino  |        |
 | `SrcOver`  | X           | Fonte       | X      |
-| `DstOver`  | X           | Destination  | X      |
+| `DstOver`  | X           | Destino  | X      |
 | `SrcIn`    |             | Fonte       |        |
 | `DstIn`    |             | Destino  |        |
 | `SrcOut`   |             |              | X      |
@@ -85,7 +85,7 @@ Aqui estão os 14 modos carregador Duff, conforme definido em SkiaSharp. A tabel
 | `SrcATop`  | X           | Fonte       |        |
 | `DstATop`  |             | Destino  | X      |
 | `Xor`      | X           |              | X      |
-| `Plus`     | X           | SUM          | X      |
+| `Plus`     | X           | Soma          | X      |
 | `Modulate` |             | Produto      |        | 
 
 Esses modos de mesclagem são simétricos. A origem e o destino podem ser trocados e todos os modos ainda estão disponíveis.
@@ -262,9 +262,9 @@ public class PorterDuffGridPage : ContentPage
 
 Eis o resultado:
 
-[![Grade carregador-Duff](porter-duff-images/PorterDuffGrid.png "Grade carregador-Duff")](porter-duff-images/PorterDuffGrid-Large.png#lightbox)
+[![Grade carregador-Duff](porter-duff-images/PorterDuffGrid.png "Grade de Porter-Duff")](porter-duff-images/PorterDuffGrid-Large.png#lightbox)
 
-Você desejará convencer-se de que a transparência é crucial para o funcionamento adequado dos modos de mistura carregador-Duff. A `PorterDuffCanvasView` classe contém um total de três chamadas para o `Canvas.Clear` método. Todos eles usam o método sem parâmetros, que define todos os pixels como transparentes:
+Você desejará convencer-se de que a transparência é crucial para o funcionamento adequado dos modos de mesclagem Porter-Duff. A `PorterDuffCanvasView` classe contém um total de três chamadas para o `Canvas.Clear` método. Todos eles usam o método sem parâmetros, que define todos os pixels como transparentes:
 
 ```csharp
 canvas.Clear();
@@ -280,7 +280,7 @@ Após essa alteração, alguns dos modos de mesclagem parecerão funcionar, mas 
 
 Pode haver uma tentação de substituir os bitmaps na página de **grade carregador-Duff** por chamadas mais simples `DrawRect` . Isso funcionará para o retângulo de destino, mas não para o retângulo de origem. O retângulo de origem deve abranger mais do que apenas a área bluish. O retângulo de origem deve incluir uma área transparente que corresponda à área colorida do destino. Somente então esses modos de mesclagem funcionarão.
 
-## <a name="using-mattes-with-porter-duff"></a>Usando Matts com carregador-Duff
+## <a name="using-mattes-with-porter-duff"></a>Usando Matts com Porter-Duff
 
 A página de **composição do Brick-Wall** mostra um exemplo de uma tarefa de composição clássica: uma imagem precisa ser montada de várias partes, incluindo um bitmap com um plano de fundo que precisa ser eliminado. Aqui está o bitmap **SeatedMonkey.jpg** com o plano de fundo problemático:
 
@@ -366,9 +366,9 @@ public partial class BrickWallCompositingPage : ContentPage
 
 Quando o programa é executado pela primeira vez, nada é visível, exceto `Button` :
 
-[![Etapa 0 da composição de mural de tijolo](porter-duff-images/BrickWallCompositing0.png "Etapa 0 da composição de mural de tijolo")](porter-duff-images/BrickWallCompositing0-Large.png#lightbox)
+[![Etapa 0 da composição de mural de tijolo](porter-duff-images/BrickWallCompositing0.png "Brick-Wall a composição da etapa 0")](porter-duff-images/BrickWallCompositing0-Large.png#lightbox)
 
-Pressionar as `Button` causas a serem `step` incrementadas para 1 e o `PaintSurface` manipulador agora exibe **SeatedMonkey.jpg**:
+Pressionar as `Button` causas a serem `step` incrementadas para 1 e o `PaintSurface` manipulador agora exibe **SeatedMonkey.jpg** :
 
 ```csharp
 public partial class BrickWallCompositingPage : ContentPage
@@ -392,7 +392,7 @@ public partial class BrickWallCompositingPage : ContentPage
 
 Não há nenhum `SKPaint` objeto e, portanto, não há nenhum modo de mesclagem. O bitmap aparece na parte inferior da tela:
 
-[![Etapa 1 da composição de parede de Brick](porter-duff-images/BrickWallCompositing1.png "Etapa 1 da composição de parede de Brick")](porter-duff-images/BrickWallCompositing1-Large.png#lightbox)
+[![Etapa 1 da composição de parede de Brick](porter-duff-images/BrickWallCompositing1.png "Etapa 1 da composição de Brick-Wall")](porter-duff-images/BrickWallCompositing1-Large.png#lightbox)
 
 Pressione a `Button` novamente e `step` incrementa para 2. Esta é a etapa crucial de exibir o arquivo de **SeatedMonkeyMatte.png** :
 
@@ -419,7 +419,7 @@ public partial class BrickWallCompositingPage : ContentPage
 
 O modo de mesclagem é `SKBlendMode.DstIn` , o que significa que o destino será preservado em áreas correspondentes às áreas não transparentes da origem. O restante do retângulo de destino correspondente ao bitmap original se torna transparente:
 
-[![Etapa 2 da composição de parede de Brick](porter-duff-images/BrickWallCompositing2.png "Etapa 2 da composição de parede de Brick")](porter-duff-images/BrickWallCompositing2-Large.png#lightbox)
+[![Etapa 2 da composição de parede de Brick](porter-duff-images/BrickWallCompositing2.png "Etapa 2 da composição de Brick-Wall")](porter-duff-images/BrickWallCompositing2-Large.png#lightbox)
 
 O plano de fundo foi removido. 
 
@@ -456,7 +456,7 @@ public partial class BrickWallCompositingPage : ContentPage
 
 Como esse calçada deve ficar atrás do macaco, o modo de mesclagem é `DstOver` . O destino aparece apenas onde o plano de fundo é transparente:
 
-[![Etapa 3 da composição de parede de Brick](porter-duff-images/BrickWallCompositing3.png "Etapa 3 da composição de parede de Brick")](porter-duff-images/BrickWallCompositing3-Large.png#lightbox)
+[![Etapa 3 da composição de parede de Brick](porter-duff-images/BrickWallCompositing3.png "Etapa 3 da composição de Brick-Wall")](porter-duff-images/BrickWallCompositing3-Large.png#lightbox)
 
 A etapa final é adicionar uma parede de tijolos. O programa usa o bloco de bitmap de parede de tijolo disponível como a propriedade estática `BrickWallTile` na `AlgorithmicBrickWallPage` classe. Uma transformação de tradução é adicionada à `SKShader.CreateBitmap` chamada para deslocar os blocos para que a linha inferior seja um bloco completo:
 
@@ -489,15 +489,15 @@ public partial class BrickWallCompositingPage : ContentPage
 
 Para sua conveniência, a `DrawRect` chamada exibe esse sombreador sobre toda a tela, mas o `DstOver` modo limita a saída somente à área da tela que ainda é transparente:
 
-[![Etapa 4 da composição de parede de Brick](porter-duff-images/BrickWallCompositing4.png "Etapa 4 da composição de parede de Brick")](porter-duff-images/BrickWallCompositing4-Large.png#lightbox)
+[![Etapa 4 da composição de parede de Brick](porter-duff-images/BrickWallCompositing4.png "Etapa 4 da composição de Brick-Wall")](porter-duff-images/BrickWallCompositing4-Large.png#lightbox)
 
 Obviamente, há outras maneiras de compor essa cena. Ele pode ser criado a partir do plano de fundo e progredindo para o primeiro plano. Mas usar os modos de mesclagem proporciona mais flexibilidade. Em particular, o uso do Matte permite que o plano de fundo de um bitmap seja excluído da cena composta.
 
-Como você aprendeu no artigo [recorte com caminhos e regiões](../../curves/clipping.md), a `SKCanvas` classe define três tipos de recorte, correspondentes aos [`ClipRect`](xref:SkiaSharp.SKCanvas.ClipRect*) [`ClipPath`](xref:SkiaSharp.SKCanvas.ClipPath*) métodos, e [`ClipRegion`](xref:SkiaSharp.SKCanvas.ClipRegion*) . Os modos de mesclagem carregador-Duff adicionam outro tipo de recorte, que permite restringir uma imagem a qualquer coisa que você possa desenhar, incluindo bitmaps. O matte usado na **composição de mural de tijolo** basicamente define uma área de recorte.
+Como você aprendeu no artigo [recorte com caminhos e regiões](../../curves/clipping.md), a `SKCanvas` classe define três tipos de recorte, correspondentes aos [`ClipRect`](xref:SkiaSharp.SKCanvas.ClipRect*) [`ClipPath`](xref:SkiaSharp.SKCanvas.ClipPath*) métodos, e [`ClipRegion`](xref:SkiaSharp.SKCanvas.ClipRegion*) . Os modos de mesclagem Porter-Duff adicionam outro tipo de recorte, que permite restringir uma imagem a qualquer coisa que você possa desenhar, incluindo bitmaps. O matte usado na **composição de mural de tijolo** basicamente define uma área de recorte.
 
 ## <a name="gradient-transparency-and-transitions"></a>Transparência e transições de gradiente
 
-Os exemplos dos modos de mesclagem carregador-Duff mostrados anteriormente neste artigo têm todas as imagens envolvidas que consistiram em pixels opacos e pixels transparentes, mas não em pixels parcialmente transparentes. As funções de modo de combinação também são definidas para esses pixels. A tabela a seguir é uma definição mais formal dos modos de mesclagem carregador-Duff que usa a notação encontrada na referência do skia [**SkBlendMode**](https://skia.org/user/api/SkBlendMode_Reference). (Como **referência de SkBlendMode** é uma referência de skia, a sintaxe do C++ é usada.)
+Os exemplos dos modos de mesclagem Porter-Duff mostrados anteriormente neste artigo têm todas as imagens envolvidas que consistiram em pixels opacos e pixels transparentes, mas não em pixels parcialmente transparentes. As funções de modo de combinação também são definidas para esses pixels. A tabela a seguir é uma definição mais formal dos modos de mesclagem Porter-Duff que usa a notação encontrada na [**referência de SkBlendMode**](https://skia.org/user/api/SkBlendMode_Reference)skia. (Como **referência de SkBlendMode** é uma referência de skia, a sintaxe do C++ é usada.)
 
 Conceitualmente, os componentes vermelho, verde, azul e alfa de cada pixel são convertidos de bytes em números de ponto flutuante no intervalo de 0 a 1. Para o canal alfa, 0 é totalmente transparente e 1 é totalmente opaco
 
@@ -512,7 +512,7 @@ As cores RGB são previamente multiplicadas pelo valor alfa. Por exemplo, se **S
 
 O resultado é mostrado entre colchetes com o canal alfa e a cor RGB, separados por uma vírgula: **[alfa, cor]**. Para a cor, o cálculo é executado separadamente para os componentes vermelho, verde e azul:
 
-| Modo       | Operação |
+| Mode       | Operação |
 | ---------- | --------- |
 | `Clear`    | [0, 0]    |
 | `Src`      | [SA, SC]  |
@@ -529,13 +529,13 @@ O resultado é mostrado entre colchetes com o canal alfa e a cor RGB, separados 
 | `Plus`     | [SA + da, SC + DC] |
 | `Modulate` | Administrador Da, SC · Origem | 
 
-Essas operações são mais fáceis de analisar quando o **da** e **SA** são 0 ou 1. Por exemplo, para o `SrcOver` modo padrão, se **SA** for 0, **SC** também será 0 e o resultado será **[da, DC]**, o alfa de destino e a cor. Se o **SA** for 1, o resultado será **[SA, SC]**, a fonte alfa e a cor, ou **[1, SC]**.
+Essas operações são mais fáceis de analisar quando o **da** e **SA** são 0 ou 1. Por exemplo, para o `SrcOver` modo padrão, se **SA** for 0, **SC** também será 0 e o resultado será **[da, DC]** , o alfa de destino e a cor. Se o **SA** for 1, o resultado será **[SA, SC]** , a fonte alfa e a cor, ou **[1, SC]**.
 
 Os `Plus` `Modulate` modos e são um pouco diferentes dos outros, pois as novas cores podem resultar da combinação da origem e do destino. O `Plus` modo pode ser interpretado com componentes de byte ou componentes de ponto flutuante. Na página da **grade carregador-Duff** mostrada anteriormente, a cor de destino é **(0xC0, 0x80, 0x00)** e a cor de origem é **(0x00, 0x80, 0xC0)**. Cada par de componentes é adicionado, mas a soma é clamped em 0xFF. O resultado é a cor **(0xC0, 0xFF, 0xC0)**. Essa é a cor mostrada na interseção.
 
 Para o `Modulate` modo, os valores RGB devem ser convertidos em ponto flutuante. A cor de destino é **(0,75, 0,5, 0)** e a origem é **(0, 0,5, 0,75)**. Os componentes RGB são cada um multiplicado em conjunto e o resultado é **(0, 0,25, 0)**. Essa é a cor mostrada na interseção na página de **grade carregador-Duff** para esse modo.
 
-A página **transparência carregador-Duff** permite que você examine como os modos de mesclagem carregador-Duff operam em objetos gráficos que são parcialmente transparentes. O arquivo XAML inclui um `Picker` com os modos carregador-Duff:
+A página **transparência carregador-Duff** permite que você examine como os modos de mesclagem Porter-Duff funcionam em objetos gráficos que são parcialmente transparentes. O arquivo XAML inclui um `Picker` com os modos de Porter-Duff:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -652,13 +652,13 @@ public partial class PorterDuffTransparencyPage : ContentPage
 }
 ```
 
-Este programa demonstra que os modos de combinação carregador-Duff podem ser usados com objetos gráficos diferentes de bitmaps. No entanto, a origem deve incluir uma área transparente. Esse é o caso aqui porque o gradiente preenche o retângulo, mas parte do gradiente é transparente.
+Este programa demonstra que os modos de mesclagem Porter-Duff podem ser usados com objetos gráficos diferentes de bitmaps. No entanto, a origem deve incluir uma área transparente. Esse é o caso aqui porque o gradiente preenche o retângulo, mas parte do gradiente é transparente.
 
 Aqui estão três exemplos:
 
-[![Transparência de carregador-Duff](porter-duff-images/PorterDuffTransparency.png "Transparência de carregador-Duff")](porter-duff-images/PorterDuffTransparency-Large.png#lightbox)
+[![Transparência de carregador-Duff](porter-duff-images/PorterDuffTransparency.png "Transparência de Porter-Duff")](porter-duff-images/PorterDuffTransparency-Large.png#lightbox)
 
-A configuração do destino e da fonte é muito semelhante aos diagramas mostrados na página 255 do papel original de [_imagens digitais de composição_](https://graphics.pixar.com/library/Compositing/paper.pdf) carregador-Duff, mas essa página demonstra que os modos de mesclagem têm um bom desempenho para áreas de transparência parcial.
+A configuração do destino e da fonte é muito semelhante aos diagramas mostrados na página 255 do papel original Porter-Duff [_composição de imagens digitais_](https://graphics.pixar.com/library/Compositing/paper.pdf) , mas essa página demonstra que os modos de mesclagem têm um bom desempenho para áreas de transparência parcial.
 
 Você pode usar gradientes transparentes para alguns efeitos diferentes. Uma possibilidade é o mascaramento, que é semelhante à técnica mostrada na seção [**gradientes radiais para mascaramento**](../shaders/circular-gradients.md#radial-gradients-for-masking) da **página gradientes circulares do SkiaSharp**. Grande parte da página **máscara de composição** é semelhante ao programa anterior. Ele carrega um recurso de bitmap e determina um retângulo no qual exibi-lo. Um gradiente radial é criado com base em um centro e um raio predeterminados:
 
@@ -740,7 +740,7 @@ Todas as áreas transparentes da tela são cor rosa:
 
 [![Máscara de composição](porter-duff-images/CompositingMask.png "Máscara de composição")](porter-duff-images/CompositingMask-Large.png#lightbox)
 
-Você também pode usar os modos carregador-Duff e gradientes parcialmente transparentes para transições de uma imagem para outra. A página **transições de gradiente** inclui um `Slider` para indicar um nível de progresso na transição de 0 para 1 e um `Picker` para escolher o tipo de transição desejado:
+Você também pode usar os modos de Porter-Duff e gradientes parcialmente transparentes para transições de uma imagem para outra. A página **transições de gradiente** inclui um `Slider` para indicar um nível de progresso na transição de 0 para 1 e um `Picker` para escolher o tipo de transição desejado:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

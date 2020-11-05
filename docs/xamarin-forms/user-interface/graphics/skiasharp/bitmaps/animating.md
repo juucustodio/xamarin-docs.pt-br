@@ -10,16 +10,16 @@ ms.date: 07/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d9a96de5520a03b2ef51426be2c589c736ca2396
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: eeaf62c684100ff9fd5bb9ffd15162bdb4c6afd6
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562386"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366510"
 ---
 # <a name="animating-skiasharp-bitmaps"></a>Animação de bitmaps SkiaSharp
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Os aplicativos que animam os gráficos SkiaSharp geralmente chamam `InvalidateSurface` em `SKCanvasView` uma taxa fixa, geralmente a cada 16 milissegundos. A invalidação da superfície dispara uma chamada para o `PaintSurface` manipulador para redesenhar a exibição. Como os visuais são redesenhados 60 vezes por segundo, eles parecem ser animados sem problemas.
 
@@ -37,13 +37,13 @@ O segundo exemplo mostra como usar SkiaSharp para renderizar um arquivo GIF anim
 
 ## <a name="bitmap-animation"></a>Animação de bitmap
 
-O conjunto de Mandelbrot é um fascinante visualmente, mas computionally comprimento. (Para obter uma discussão sobre o conjunto de Mandelbrot e a matemática usada aqui, consulte o [capítulo 20 da _criação Xamarin.Forms de aplicativos móveis com a_ ](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) partir da página 666. A descrição a seguir pressupõe que o conhecimento em segundo plano.)
+O conjunto de Mandelbrot é um fascinante visualmente, mas computionally comprimento. (Para obter uma discussão sobre o conjunto de Mandelbrot e a matemática usada aqui, consulte o [capítulo 20 da _criação Xamarin.Forms de aplicativos móveis com a_](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf) partir da página 666. A descrição a seguir pressupõe que o conhecimento em segundo plano.)
 
 O exemplo de [**animação Mandelbrot**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-mandelanima) usa animação de bitmap para simular um zoom contínuo de um ponto fixo no conjunto de Mandelbrot. O zoom no é seguido pelo zoom e, em seguida, o ciclo se repete para sempre ou até que você encerre o programa.
 
-O programa prepara para essa animação criando até 50 bitmaps que ele armazena no armazenamento local do aplicativo. Cada bitmap abrange metade da largura e da altura do plano complexo como o bitmap anterior. (No programa, esses bitmaps são considerados para representar níveis de _zoom_integral.) Os bitmaps são então exibidos em sequência. O dimensionamento de cada bitmap é animado para fornecer uma progressão suave de um bitmap para outro.
+O programa prepara para essa animação criando até 50 bitmaps que ele armazena no armazenamento local do aplicativo. Cada bitmap abrange metade da largura e da altura do plano complexo como o bitmap anterior. (No programa, esses bitmaps são considerados para representar níveis de _zoom_ integral.) Os bitmaps são então exibidos em sequência. O dimensionamento de cada bitmap é animado para fornecer uma progressão suave de um bitmap para outro.
 
-Como o programa final descrito no capítulo 20 da _criação de aplicativos móveis Xamarin.Forms com _o, o cálculo do conjunto de Mandelbrot na **animação Mandelbrot** é um método assíncrono com oito parâmetros. Os parâmetros incluem um ponto central complexo e uma largura e altura do plano complexo em torno desse ponto central. Os próximos três parâmetros são a largura do pixel e a altura do bitmap a ser criado e um número máximo de iterações para o cálculo recursivo. O `progress` parâmetro é usado para exibir o progresso desse cálculo. O `cancelToken` parâmetro não é usado neste programa:
+Como o programa final descrito no capítulo 20 da _criação de aplicativos móveis Xamarin.Forms com_ o, o cálculo do conjunto de Mandelbrot na **animação Mandelbrot** é um método assíncrono com oito parâmetros. Os parâmetros incluem um ponto central complexo e uma largura e altura do plano complexo em torno desse ponto central. Os próximos três parâmetros são a largura do pixel e a altura do bitmap a ser criado e um número máximo de iterações para o cálculo recursivo. O `progress` parâmetro é usado para exibir o progresso desse cálculo. O `cancelToken` parâmetro não é usado neste programa:
 
 ```csharp
 static class Mandelbrot
@@ -182,7 +182,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-Em algum momento, você provavelmente desejará alterar o `COUNT` valor para 50 para ver o intervalo completo da animação. Os valores acima de 50 não são úteis. Em um nível de zoom de 48 ou mais, a resolução de números de ponto flutuante de precisão dupla se torna insuficiente para o cálculo do conjunto de Mandelbrot. Esse problema é discutido na página 684 da _criação de aplicativos móveis Xamarin.Forms com _o.
+Em algum momento, você provavelmente desejará alterar o `COUNT` valor para 50 para ver o intervalo completo da animação. Os valores acima de 50 não são úteis. Em um nível de zoom de 48 ou mais, a resolução de números de ponto flutuante de precisão dupla se torna insuficiente para o cálculo do conjunto de Mandelbrot. Esse problema é discutido na página 684 da _criação de aplicativos móveis Xamarin.Forms com_ o.
 
 O `center` valor é muito importante. Esse é o foco do zoom da animação. Os três valores no arquivo são aqueles usados nas três capturas de tela finais no capítulo 20 da _criação de aplicativos móveis Xamarin.Forms com_ a página 684, mas você pode experimentar o programa nesse capítulo para criar um de seus próprios valores.
 

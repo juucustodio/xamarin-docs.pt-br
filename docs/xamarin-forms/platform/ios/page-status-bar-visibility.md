@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 65bdeef161ce4bfed18ca07966a0ab3189c65ba2
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f653f2a617022ddd80e910fcea7c43450cb911d0
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556705"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366718"
 ---
 # <a name="page-status-bar-visibility-on-ios"></a>Visibilidade da barra de status da página no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Essa plataforma específica do iOS é usada para definir a visibilidade da barra de status em um [`Page`](xref:Xamarin.Forms.Page) e inclui a capacidade de controlar como a barra de status entra ou sai do `Page` . Ele é consumido em XAML definindo- `Page.PrefersStatusBarHidden` se a propriedade anexada como um valor da `StatusBarHiddenMode` enumeração e, opcionalmente, a `Page.PreferredStatusBarUpdateAnimation` Propriedade anexada a um valor da `UIStatusBarAnimation` enumeração:
 
@@ -47,7 +47,7 @@ O `Page.On<iOS>` método especifica que essa plataforma específica será execut
 
 O resultado é que a visibilidade da barra de status em um [`Page`](xref:Xamarin.Forms.Page) pode ser definida:
 
-![Visibilidade da barra de status-específica da plataforma](page-status-bar-visibility-images/hide-status-bar.png)
+![Platform-Specific de visibilidade da barra de status](page-status-bar-visibility-images/hide-status-bar.png)
 
 > [!NOTE]
 > Em um [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) , o `StatusBarHiddenMode` valor de enumeração especificado também atualizará a barra de status em todas as páginas filho. Em todos os outros [`Page`](xref:Xamarin.Forms.Page) tipos derivados, o `StatusBarHiddenMode` valor de enumeração especificado atualizará apenas a barra de status na página atual.

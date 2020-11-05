@@ -10,16 +10,16 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a4b092d90b3afa2197c1db576545d233eb6e208d
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 34c3e2bb09c6e285f38b3c17bab2e10debe1d890
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563504"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367251"
 ---
 # <a name="implementing-a-video-player"></a>Implementar um player de vídeo
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 Às vezes, é desejável reproduzir arquivos de vídeo em um Xamarin.Forms aplicativo. Esta série de artigos discute como escrever renderizadores personalizados para iOS, Android e o Plataforma Universal do Windows (UWP) para uma Xamarin.Forms classe denominada `VideoPlayer` .
 
@@ -31,7 +31,7 @@ Na amostra [**VideoPlayerDemos**](/samples/xamarin/xamarin-forms-samples/customr
 - Um recurso inserido no aplicativo da plataforma
 - A biblioteca de vídeos do dispositivo
 
-Players de vídeo exigem *controles de transporte*, que são botões para reproduzir e pausar o vídeo e uma barra de posicionamento que mostra o andamento no vídeo e permite que o usuário passe rapidamente para um tempo diferente. `VideoPlayer` pode usar controles de transporte e a barra de posicionamento fornecidos pela plataforma (como mostrado abaixo), ou você pode fornecer controles de transporte e uma barra de posicionamento personalizados. Aqui está o programa em execução no iOS, no Android e na Plataforma Universal do Windows:
+Players de vídeo exigem *controles de transporte* , que são botões para reproduzir e pausar o vídeo e uma barra de posicionamento que mostra o andamento no vídeo e permite que o usuário passe rapidamente para um tempo diferente. `VideoPlayer` pode usar controles de transporte e a barra de posicionamento fornecidos pela plataforma (como mostrado abaixo), ou você pode fornecer controles de transporte e uma barra de posicionamento personalizados. Aqui está o programa em execução no iOS, no Android e na Plataforma Universal do Windows:
 
 [![Reproduzir vídeo da Web](web-videos-images/playwebvideo-small.png "Reproduzir vídeo da Web")](web-videos-images/playwebvideo-large.png#lightbox "Reproduzir vídeo da Web")
 
@@ -63,7 +63,7 @@ Quando um vídeo é criado usando a câmera do dispositivo, o arquivo de vídeo 
 
 ## <a name="custom-video-transport-controls"></a>[Controles de transporte de vídeo personalizados](custom-transport.md)
 
-Embora os players de vídeo em cada plataforma forneçam seus próprios controles de transporte na forma de botões para **Reproduzir** e **Pausar**, você pode suprimir a exibição desses botões e fornecer os seus próprios. Este artigo mostra como fazer isso.
+Embora os players de vídeo em cada plataforma forneçam seus próprios controles de transporte na forma de botões para **Reproduzir** e **Pausar** , você pode suprimir a exibição desses botões e fornecer os seus próprios. Este artigo mostra como fazer isso.
 
 ## <a name="custom-video-positioning"></a>[Posicionamento de vídeo personalizado](custom-positioning.md)
 

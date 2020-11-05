@@ -11,16 +11,16 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3d2620014c9554712c746b98de3b9a0eeaa20864
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 1c660c04e89c56f10435964425b2b20dbf5c8eb3
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562750"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93365860"
 ---
 # <a name="no-locxamarinforms-xaml-basics"></a>Xamarin.Forms Noções básicas do XAML
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 A linguagem XAML é uma linguagem baseada em XML criada pela Microsoft como uma alternativa ao código de programação para instanciar e inicializar objetos e organizar esses objetos em hierarquias pai-filho. O XAML foi adaptado para várias tecnologias no .NET Framework, mas encontrou seu maior utilitário na definição do layout das interfaces do usuário dentro do Windows Presentation Foundation (WPF), do Silverlight, do Windows Runtime e do UWP (Plataforma Universal do Windows).
 
@@ -54,7 +54,7 @@ Esses recursos *não* são extensões XML. O XAML é totalmente legal XML. Mas e
 
 ## <a name="requirements"></a>Requisitos
 
-Este artigo pressupõe familiaridade com o Xamarin.Forms . Este artigo também pressupõe alguma familiaridade com XML, incluindo a compreensão do uso de declarações de namespace XML e o *elemento*, a *marca*e o *atributo*dos termos.
+Este artigo pressupõe familiaridade com o Xamarin.Forms . Este artigo também pressupõe alguma familiaridade com XML, incluindo a compreensão do uso de declarações de namespace XML e o *elemento* , a *marca* e o *atributo* dos termos.
 
 Quando estiver familiarizado com o Xamarin.Forms e o XML, comece a ler a [parte 1. Introdução com XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md).
 

@@ -10,16 +10,16 @@ ms.date: 02/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 00b6617f754eb251eae0a7be9715deb840c33102
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 15529520668f4d6353fe99c13ddb2e6cc2801500
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562737"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367225"
 ---
 # <a name="custom-video-positioning"></a>Posicionamento de vídeo personalizado
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
 Os controles de transporte implementados por cada plataforma incluem uma barra de posição. Essa barra é semelhante a um controle deslizante ou a uma barra de rolagem e mostra a localização atual do vídeo dentro de sua duração total. Além disso, o usuário pode manipular a barra de posição para mover para frente ou para trás para uma nova posição no vídeo.
 
@@ -421,7 +421,7 @@ A documentação do UWP [`MediaElement`](/uwp/api/Windows.UI.Xaml.Controls.Media
 
 É uma boa recomendação, mas as três classes `VideoPlayerRenderer` já estão usando indiretamente um temporizador para atualizar a propriedade `Position`. A propriedade `Position` é alterada em um manipulador para o evento `UpdateStatus`, que é disparado apenas 10 vezes por segundo.
 
-Portanto, a propriedade `Position` do `VideoPlayer` pode ser associada à propriedade `Position` do `PositionSlider` sem problemas de desempenho, conforme demonstrado na página **Barra de Posição Personalizada**:
+Portanto, a propriedade `Position` do `VideoPlayer` pode ser associada à propriedade `Position` do `PositionSlider` sem problemas de desempenho, conforme demonstrado na página **Barra de Posição Personalizada** :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

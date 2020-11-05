@@ -11,18 +11,18 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.custom: video
-ms.openlocfilehash: 9bedde64f0eda233c289cb31296854b5cbca54a1
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 107916edee01171b8ff5d4871de3b1243c385dd5
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561112"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366419"
 ---
 # <a name="no-locxamarinforms-basic-bindings"></a>Xamarin.Forms Associações básicas
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
-Uma Xamarin.Forms ligação de dados vincula um par de propriedades entre dois objetos, pelo menos um dos quais geralmente é um objeto de interface do usuário. Esses dois objetos são chamados de *destino* e *origem*:
+Uma Xamarin.Forms ligação de dados vincula um par de propriedades entre dois objetos, pelo menos um dos quais geralmente é um objeto de interface do usuário. Esses dois objetos são chamados de *destino* e *origem* :
 
 - O *destino* é o objeto (e a propriedade) no qual a associação de dados é definida.
 - A *origem* é o objeto (e propriedade) referenciado pela associação de dados.
@@ -102,7 +102,7 @@ Ao manipular `Slider`, o `Label` gira de acordo:
 
 [![Vinculação de código básica](basic-bindings-images/basiccodebinding-small.png "Vinculação de código básica")](basic-bindings-images/basiccodebinding-large.png#lightbox "Vinculação de código básica")
 
-A página **Associação de XAML básica** é idêntica à **Associação de código básica**, exceto que ela define a associação de dados inteira em XAML:
+A página **Associação de XAML básica** é idêntica à **Associação de código básica** , exceto que ela define a associação de dados inteira em XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -156,7 +156,7 @@ A marcação mostrada na página **Associação de XAML básica** pode ser simpl
 
 A propriedade `BindingContext` é um componente importante de associações de dados, mas nem sempre é necessária. O objeto de origem pode ser especificado na chamada `SetBinding` ou na extensão de marcação `Binding`.
 
-Isso é demonstrado no exemplo **Associação de código alternativa**. O arquivo XAML é semelhante ao exemplo **Associação de código básica**, exceto que o `Slider` é definido para controlar a propriedade `Scale` do `Label`. Por esse motivo, o `Slider` é definido para um intervalo de &ndash;2 a 2:
+Isso é demonstrado no exemplo **Associação de código alternativa**. O arquivo XAML é semelhante ao exemplo **Associação de código básica** , exceto que o `Slider` é definido para controlar a propriedade `Scale` do `Label`. Por esse motivo, o `Slider` é definido para um intervalo de &ndash;2 a 2:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

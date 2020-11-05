@@ -10,16 +10,16 @@ ms.date: 08/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 809477fe466ee7a8f0985308896c14341f2dd460
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f7a31f54cb90fa3633217e8eb59d92c1e4d063c7
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561931"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93365907"
 ---
 # <a name="skiasharp-color-filters"></a>SkiaSharp filtros de cores
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Filtros de cores podem traduzir cores em um bitmap (ou outra imagem) para outras cores para efeitos como a Posterização:
 
@@ -170,7 +170,7 @@ O `DrawBitmap` método usado neste código é do arquivo **BitmapExtension.cs** 
 
 Este é o resultado em execução em iOS, Android e Plataforma Universal do Windows:
 
-[![Matriz cinza-escala](color-filters-images/GrayScaleMatrix.png "Matriz cinza-escala")](color-filters-images/GrayScaleMatrix-Large.png#lightbox)
+[![Matriz cinza-escala](color-filters-images/GrayScaleMatrix.png "Matriz de Gray-Scale")](color-filters-images/GrayScaleMatrix-Large.png#lightbox)
 
 Observe o valor na quarta linha e na quarta coluna. Esse é o fator crucial que é multiplicado pelo valor da cor original para o valor ' a ' da cor transformada. Se essa célula for zero, nada será exibido e o problema poderá ser difícil de localizar.
 
