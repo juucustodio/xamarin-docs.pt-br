@@ -12,16 +12,16 @@ ms.date: 04/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0992f7db22d79e58db0306bc09329f2852ef9489
-ms.sourcegitcommit: 145bd7550d19088c84949ecf5b1cc39002183234
+ms.openlocfilehash: 54a6dca3b16ed4ac9fb7ab2065f1d8462a3f3da4
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "92897514"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368109"
 ---
 # <a name="store-data-in-a-local-sqlitenet-database"></a>Armazenar dados em um banco de dados SQLite.NET local
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
 
 Neste guia de início rápido, você aprenderá a:
 
@@ -86,9 +86,9 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
     > [!WARNING]
     > Tentar compilar o aplicativo neste ponto resultará em erros que serão corrigidos em etapas posteriores.
 
-5. No **Gerenciador de Soluções** , adicione uma nova pasta chamada **Data** ao projeto **Notes** .
+5. No **Gerenciador de Soluções** , adicione uma nova pasta chamada **Data** ao projeto **Notes**.
 
-6. No **Gerenciador de Soluções** , no projeto **Notes** , adicione uma nova classe chamada **NoteDatabase** à pasta **Data** .
+6. No **Gerenciador de Soluções** , no projeto **Notes** , adicione uma nova classe chamada **NoteDatabase** à pasta **Data**.
 
 7. Em **NoteDatabase.cs** , substitua o código existente pelo código a seguir:
 
@@ -249,7 +249,7 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
 
 11. Compile e execute o projeto em cada plataforma. Para obter mais informações, confira [Como criar o guia de início rápido](single-page.md#building-the-quickstart).
 
-    Na **NotesPage** , pressione o botão **+** para navegar até a **NoteEntryPage** e inserir uma observação. Depois de salvar a observação, o aplicativo navegará de volta para a **NotesPage** .
+    Na **NotesPage** , pressione o botão **+** para navegar até a **NoteEntryPage** e inserir uma observação. Depois de salvar a observação, o aplicativo navegará de volta para a **NotesPage**.
 
     Insira diversas observações de comprimento variável para observar o comportamento do aplicativo.
 
@@ -303,9 +303,9 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
     > [!WARNING]
     > Tentar compilar o aplicativo neste ponto resultará em erros que serão corrigidos em etapas posteriores.
 
-5. No **Painel de Soluções** , adicione uma nova pasta chamada **Data** ao projeto **Notes** .
+5. No **Painel de Soluções** , adicione uma nova pasta chamada **Data** ao projeto **Notes**.
 
-6. No **Painel de Soluções** , no projeto **Notes** , adicione uma nova classe chamada **NoteDatabase** à pasta **Data** .
+6. No **Painel de Soluções** , no projeto **Notes** , adicione uma nova classe chamada **NoteDatabase** à pasta **Data**.
 
 7. Em **NoteDatabase.cs** , substitua o código existente pelo código a seguir:
 
@@ -466,7 +466,7 @@ Você deve concluir com êxito o [início rápido anterior](multi-page.md) antes
 
 11. Compile e execute o projeto em cada plataforma. Para obter mais informações, confira [Como criar o guia de início rápido](single-page.md#building-the-quickstart).
 
-    Na **NotesPage** , pressione o botão **+** para navegar até a **NoteEntryPage** e inserir uma observação. Depois de salvar a observação, o aplicativo navegará de volta para a **NotesPage** .
+    Na **NotesPage** , pressione o botão **+** para navegar até a **NoteEntryPage** e inserir uma observação. Depois de salvar a observação, o aplicativo navegará de volta para a **NotesPage**.
 
     Insira diversas observações de comprimento variável para observar o comportamento do aplicativo.
 

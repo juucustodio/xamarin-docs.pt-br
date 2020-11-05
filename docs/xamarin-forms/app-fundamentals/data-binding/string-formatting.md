@@ -10,16 +10,16 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8e05420e41509c82c1912a4639159fb58b1a30dc
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f2ec170a1e622586c4f025452ee334774fbaf5aa
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558577"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369760"
 ---
 # <a name="no-locxamarinforms-string-formatting"></a>Xamarin.Forms Formatação de cadeia de caracteres
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Às vezes, é conveniente usar associações de dados para exibir a representação de cadeia de caracteres de um objeto ou um valor. Por exemplo, talvez você deseje usar um `Label` para exibir o valor atual de um `Slider`. Nesta associação de dados, o `Slider` é a origem e o destino é a propriedade `Text` do `Label`.
 
@@ -132,7 +132,7 @@ Este é o programa em execução:
 
 Quando estiver usando `Label` e `StringFormat` para exibir o valor de uma exibição que também é o destino de um ViewModel, você poderá definir a associação na exibição como o `Label` ou no ViewModel como a `Label`. Em geral, a segunda abordagem é melhor porque verifica se as associações entre o View e o ViewModel estão funcionando.
 
-Essa abordagem é apresentada na amostra **Melhor Seletor de Cor**, que usa o mesmo ViewModel do programa **Seletor de Cor Simples** mostrado no artigo [**Modo de associação**](binding-mode.md):
+Essa abordagem é apresentada na amostra **Melhor Seletor de Cor** , que usa o mesmo ViewModel do programa **Seletor de Cor Simples** mostrado no artigo [**Modo de associação**](binding-mode.md):
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

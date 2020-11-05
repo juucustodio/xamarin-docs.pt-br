@@ -10,16 +10,16 @@ ms.date: 05/24/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f2e6735be2593133f755f87b365b8352bf09ebb4
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 12af5d9be025fb2113d70a93a364619aff75598d
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563075"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370059"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>Dados do caminho SVG em SkiaSharp
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Definir caminhos usando cadeias de caracteres de texto no formato gráfico de vetor escalonável_
 
@@ -109,7 +109,7 @@ Defina o *sinalizador de arco grande* para 1 para o arco grande ou para 0 para o
 
 Defina o *sinalizador de varredura* como 1 para o sentido horário e 0 para o sentido anti-horário.
 
-O arco é desenhado para o ponto (*x*, *y*), que se torna a nova posição atual.
+O arco é desenhado para o ponto ( *x* , *y* ), que se torna a nova posição atual.
 
 ## <a name="cubicto"></a>**Cúbicoto**
 
@@ -117,7 +117,7 @@ O arco é desenhado para o ponto (*x*, *y*), que se torna a nova posição atual
 C x1 y1 x2 y2 x3 y3 ...
 ```
 
-Esse comando adiciona uma curva Bézier cúbica da posição atual para (*X3*, *y3*), que se torna a nova posição atual. Os pontos (*X1*, *Y1*) e (*X2*, *Y2*) são pontos de controle.
+Esse comando adiciona uma curva Bézier cúbica da posição atual para ( *X3* , *y3* ), que se torna a nova posição atual. Os pontos ( *X1* , *Y1* ) e ( *X2* , *Y2* ) são pontos de controle.
 
 Várias curvas Bézier podem ser especificadas por um único `C` comando. O número de pontos deve ser um múltiplo de 3.
 
@@ -135,7 +135,7 @@ Esse comando deve seguir um comando de Bézier regular (embora isso não seja es
 Q x1 y1 x2 y2 ...
 ```
 
-Para curvas Bézier quadráticas, o número de pontos deve ser um múltiplo de 2. O ponto de controle é (*X1*, *Y1*) e o ponto de extremidade (e a nova posição atual) é (*X2*, *Y2*)
+Para curvas Bézier quadráticas, o número de pontos deve ser um múltiplo de 2. O ponto de controle é ( *X1* , *Y1* ) e o ponto de extremidade (e a nova posição atual) é ( *X2* , *Y2* )
 
 Há também um comando de curva quadrática suave:
 

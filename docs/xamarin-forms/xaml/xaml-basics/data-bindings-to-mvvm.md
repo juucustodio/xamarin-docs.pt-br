@@ -11,16 +11,16 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8cb59738519af933e509ebf63a923e573667941e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: a62fee4ca3cdb4de7f23856f123389df23692f62
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562906"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368911"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Parte 5. De associações de dados a MVVM
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _O padrão de arquitetura MVVM (Model-View-ViewModel) foi inventado com XAML em mente. O padrão impõe uma separação entre três camadas de software — a interface do usuário XAML, chamada de exibição; os dados subjacentes, chamados de modelo; e um intermediário entre a exibição e o modelo, chamado ViewModel. A exibição e o ViewModel geralmente são conectados por meio de associações de dados definidas no arquivo XAML. O BindingContext para a exibição geralmente é uma instância do ViewModel._
 
@@ -298,7 +298,7 @@ O arquivo XAML a seguir contém um `BoxView` cuja `Color` propriedade está asso
 
 A associação em cada `Label` é o padrão `OneWay` . Ele só precisa exibir o valor. Mas a associação em cada um `Slider` é `TwoWay` . Isso permite que o seja `Slider` inicializado a partir do ViewModel. Observe que a `Color` propriedade é definida como `Aqua` quando o ViewModel é instanciado. Mas uma alteração no `Slider` também precisa definir um novo valor para a propriedade no ViewModel, que então calcula uma nova cor.
 
-[![MVVM usando associações de dados bidirecionais](data-bindings-to-mvvm-images/hslcolorscroll.png)](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "MVVM usando associações de dados bidirecionais")
+[![MVVM usando associações de dados de Two-Way](data-bindings-to-mvvm-images/hslcolorscroll.png)](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "MVVM usando associações de dados de Two-Way")
 
 ## <a name="commanding-with-viewmodels"></a>Comando com ViewModels
 
@@ -566,7 +566,7 @@ A `Command` propriedade da primeira `Button` que aparece nessa marcação está 
 Os comandos também podem invocar métodos assíncronos. Isso é feito usando as `async` `await` palavras-chave e ao especificar o `Execute` método:
 
 ```csharp
-DownloadCommand = new Command (async () => await DownloadAsync ());
+DownloadCommand = new Command (async () => await DownloadAsync ());
 ```
 
 Isso indica que o `DownloadAsync` método é a `Task` e deve ser aguardado:

@@ -12,16 +12,16 @@ ms.date: 02/07/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9794f429744611654ce883b48aa828b997ec881f
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 099c95af190fc9b43c8e8497eebdeec44aed36cd
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91435438"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368434"
 ---
 # <a name="style-a-cross-platform-no-locxamarinforms-application"></a>Estilizar um aplicativo de plataforma cruzada Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
 
 Neste guia de início rápido, você aprenderá a:
 
@@ -42,7 +42,7 @@ Você deve concluir com êxito o [início rápido anterior](database.md) antes d
 
 1. Inicie o Visual Studio e abra a solução Notes.
 
-2. No **Gerenciador de Soluções**, no projeto **Notes**, clique duas vezes em **App.xaml** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
+2. No **Gerenciador de Soluções** , no projeto **Notes** , clique duas vezes em **App.xaml** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -80,7 +80,7 @@ Você deve concluir com êxito o [início rápido anterior](database.md) antes d
 
     Salve as alterações em **App.xaml** pressionando **CTRL + S** e feche o arquivo.
 
-3. No **Gerenciador de Soluções**, no projeto **Notes**, clique duas vezes em **NotesPage.xaml** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
+3. No **Gerenciador de Soluções** , no projeto **Notes** , clique duas vezes em **NotesPage.xaml** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -120,7 +120,7 @@ Você deve concluir com êxito o [início rápido anterior](database.md) antes d
 
     Salve as alterações em **NotesPage.xaml** ao pressionar **CTRL+S** e feche o arquivo.
 
-4. No **Gerenciador de Soluções**, no projeto **Notes**, clique duas vezes em **NoteEntryPage.xaml** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
+4. No **Gerenciador de Soluções** , no projeto **Notes** , clique duas vezes em **NoteEntryPage.xaml** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -171,7 +171,7 @@ Você deve concluir com êxito o [início rápido anterior](database.md) antes d
 
 5. Compile e execute o projeto em cada plataforma. Para obter mais informações, confira [Como criar o guia de início rápido](single-page.md#building-the-quickstart).
 
-    Na **NotesPage**, pressione o botão **+** para navegar até a **NoteEntryPage** e inserir uma observação. Em cada página, observe como o estilo foi alterado no início rápido anterior.
+    Na **NotesPage** , pressione o botão **+** para navegar até a **NoteEntryPage** e inserir uma observação. Em cada página, observe como o estilo foi alterado no início rápido anterior.
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -180,7 +180,7 @@ Você deve concluir com êxito o [início rápido anterior](database.md) antes d
 
 1. Inicie o Visual Studio para Mac e abra o projeto Notes.
 
-2. No **Painel de Soluções**, no projeto **Notes**, clique duas vezes em **App.xaml** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
+2. No **Painel de Soluções** , no projeto **Notes** , clique duas vezes em **App.xaml** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
 
     ```xaml
     <?xml version="1.0" encoding="utf-8"?>
@@ -216,9 +216,9 @@ Você deve concluir com êxito o [início rápido anterior](database.md) antes d
 
     Esse código define um [`Thickness`](xref:Xamarin.Forms.Thickness) valor, uma série de [`Color`](xref:Xamarin.Forms.Color) valores e estilos implícitos para [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) e [`ContentPage`](xref:Xamarin.Forms.ContentPage) . Observe que esses estilos, que estão no nível do aplicativo [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) , podem ser consumidos em todo o aplicativo. Para obter mais informações sobre o estilo XAML, consulte [estilos](deepdive.md#styling) no guia de [ Xamarin.Forms início rápido](deepdive.md)aprofundamento.
 
-    Salve as alterações em **App.xaml** escolhendo **Arquivo > Salvar** (ou pressionando **& #8984; + S**) e feche o arquivo.
+    Salve as alterações em **App.xaml** escolhendo **Arquivo > Salvar** (ou pressionando **& #8984; + S** ) e feche o arquivo.
 
-3. No **Painel de Soluções**, no projeto **Notes**, clique duas vezes em **NotesPage.xaml** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
+3. No **Painel de Soluções** , no projeto **Notes** , clique duas vezes em **NotesPage.xaml** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -256,9 +256,9 @@ Você deve concluir com êxito o [início rápido anterior](database.md) antes d
 
     Esse código adiciona um estilo implícito para o no [`ListView`](xref:Xamarin.Forms.ListView) nível de página [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) e define a `ListView.Margin` propriedade como um valor definido no nível do aplicativo `ResourceDictionary` . Observe que o estilo implícito `ListView` foi adicionado ao nível de página `ResourceDictionary`, pois ele só é consumido pelo `NotesPage`. Para obter mais informações sobre o estilo XAML, consulte [estilos](deepdive.md#styling) no guia de [ Xamarin.Forms início rápido](deepdive.md)aprofundamento.
 
-    Salve as alterações em **NotesPage.xaml** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
+    Salve as alterações em **NotesPage.xaml** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S** ) e feche o arquivo.
 
-4. No **Painel de Soluções**, no projeto **Notes**, clique duas vezes em **NoteEntryPage.xaml** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
+4. No **Painel de Soluções** , no projeto **Notes** , clique duas vezes em **NoteEntryPage.xaml** para abri-lo. Em seguida, substitua o código existente pelo código a seguir:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -305,11 +305,11 @@ Você deve concluir com êxito o [início rápido anterior](database.md) antes d
 
     Esse código adiciona estilos implícitos para [`Editor`](xref:Xamarin.Forms.Editor) as [`Button`](xref:Xamarin.Forms.Button) exibições e para o nível de página [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) e define a `StackLayout.Margin` propriedade com um valor definido no nível do aplicativo `ResourceDictionary` . Observe que os estilos implícitos `Editor` e `Button` foram adicionados ao `ResourceDictionary` no nível de página, pois eles só são consumidos pelo `NoteEntryPage`. Para obter mais informações sobre o estilo XAML, consulte [estilos](deepdive.md#styling) no guia de [ Xamarin.Forms início rápido](deepdive.md)aprofundamento.
 
-    Salve as alterações em **NoteEntryPage.xaml** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S**) e feche o arquivo.
+    Salve as alterações em **NoteEntryPage.xaml** ao escolher **Arquivo > Salvar** (ou ao pressionar **& #8984; + S** ) e feche o arquivo.
 
 5. Compile e execute o projeto em cada plataforma. Para obter mais informações, confira [Como criar o guia de início rápido](single-page.md#building-the-quickstart).
 
-    Na **NotesPage**, pressione o botão **+** para navegar até a **NoteEntryPage** e inserir uma observação. Em cada página, observe como o estilo foi alterado no início rápido anterior.
+    Na **NotesPage** , pressione o botão **+** para navegar até a **NoteEntryPage** e inserir uma observação. Em cada página, observe como o estilo foi alterado no início rápido anterior.
 
 ::: zone-end
 

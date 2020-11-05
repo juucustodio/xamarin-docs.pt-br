@@ -10,16 +10,16 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2dd2abed23704f6a67ac34bc828c48e7200cf99a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 23191be26f8b47393e5cd86f27704fc35c5d5a5c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558708"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368902"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Conceitos básicos da associação de dados
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _As ligações de dados permitem que as propriedades de dois objetos sejam vinculadas para que uma alteração em um cause uma alteração no outro. Essa é uma ferramenta muito valiosa e, embora as ligações de dados possam ser definidas inteiramente no código, o XAML fornece atalhos e conveniência. Consequentemente, uma das extensões de marcação mais importantes no Xamarin.Forms é a associação._
 
@@ -215,7 +215,7 @@ Nada ilustra o poder do XAML e das ligações de dados melhor do que um modelo `
 
 `ListView` define uma `ItemsSource` Propriedade do tipo `IEnumerable` e exibe os itens nessa coleção. Esses itens podem ser objetos de qualquer tipo. Por padrão, `ListView` o usa o `ToString` método de cada item para exibir esse item. Às vezes, isso é exatamente o que você deseja, mas em muitos casos, `ToString` retorna apenas o nome de classe totalmente qualificado do objeto.
 
-No entanto, os itens na `ListView` coleção podem ser exibidos da maneira que você desejar por meio do uso de um *modelo*, que envolve uma classe derivada de `Cell` . O modelo é clonado para cada item no `ListView` , e as vinculações de dados que foram definidas no modelo são transferidas para os clones individuais.
+No entanto, os itens na `ListView` coleção podem ser exibidos da maneira que você desejar por meio do uso de um *modelo* , que envolve uma classe derivada de `Cell` . O modelo é clonado para cada item no `ListView` , e as vinculações de dados que foram definidas no modelo são transferidas para os clones individuais.
 
 Com muita frequência, você desejará criar uma célula Personalizada para esses itens usando a `ViewCell` classe. Esse processo é um pouco confuso no código, mas em XAML ele se torna muito simples.
 
@@ -342,7 +342,7 @@ Observe o uso de `OnPlatform` para definir o tamanho de uma `BoxView` e a altura
 
 O arquivo XAML de **demonstração do ListView** anterior exibe as `R` Propriedades individual, `G` e `B` da Xamarin.Forms `Color` estrutura. Essas propriedades são do tipo `double` e do intervalo de 0 a 1. Se você quiser exibir os valores hexadecimais, não poderá simplesmente usar `StringFormat` com uma especificação de formatação "X2". Isso funciona apenas para números inteiros e, além disso, os `double` valores precisam ser multiplicados por 255.
 
-Esse pequeno problema foi resolvido com um *conversor de valor*, também chamado de *conversor de associação*. Essa é uma classe que implementa a `IValueConverter` interface, o que significa que ela tem dois métodos chamados `Convert` e `ConvertBack` . O `Convert` método é chamado quando um valor é transferido da origem para o destino; `ConvertBack` o método é chamado para transferências do destino para a origem `OneWayToSource` ou `TwoWay` associações:
+Esse pequeno problema foi resolvido com um *conversor de valor* , também chamado de *conversor de associação*. Essa é uma classe que implementa a `IValueConverter` interface, o que significa que ela tem dois métodos chamados `Convert` e `ConvertBack` . O `Convert` método é chamado quando um valor é transferido da origem para o destino; `ConvertBack` o método é chamado para transferências do destino para a origem `OneWayToSource` ou `TwoWay` associações:
 
 ```csharp
 using System;

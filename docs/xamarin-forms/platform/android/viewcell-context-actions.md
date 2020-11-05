@@ -10,16 +10,16 @@ ms.date: 09/24/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6cbdea3656daa4df894a79edc70453c78e3844bc
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: e829c7f3763d25574b9ca70c1118ee9521633b48
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556744"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368460"
 ---
 # <a name="viewcell-context-actions-on-android"></a>Ações de contexto ViewCell no Android
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Por padrão Xamarin.Forms , de 4,3, quando a [`ViewCell`](xref:Xamarin.Forms.ViewCell) em um aplicativo Android define ações de contexto para cada item em um [`ListView`](xref:Xamarin.Forms.ListView) , o menu ações de contexto é atualizado quando o item selecionado é `ListView` alterado. No entanto, nas versões anteriores do Xamarin.Forms menu de ações de contexto não foi atualizada, e esse comportamento é conhecido como o `ViewCell` modo herdado. Esse modo herdado pode resultar em comportamento incorreto se um `ListView` usar um [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) para definir seu `ItemTemplate` de [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) objetos que definem ações de contexto diferentes.
 

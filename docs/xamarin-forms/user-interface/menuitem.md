@@ -10,16 +10,16 @@ ms.date: 08/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 749e569e36896441c5b7cebbc4425d9c0e860e0b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: a7adb890ed103b595aa777d33254ab2fcb776901
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559630"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368135"
 ---
 # <a name="no-locxamarinforms-menuitem"></a>Xamarin.Forms MenuItem
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-menuitemdemos/)
 
 A Xamarin.Forms [`MenuItem`](xref:Xamarin.Forms.MenuItem) classe define itens de menu para menus como menus de `ListView` contexto de item e menus de submenu de aplicativo Shell.
 

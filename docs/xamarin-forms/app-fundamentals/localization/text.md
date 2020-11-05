@@ -11,16 +11,16 @@ ms.date: 11/01/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fac41e57d13815dcd202521d16ae4730e1d99cfa
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: cb811972d622ffdcf6042e030528a88fb18abaf7
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91555860"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369799"
 ---
 # <a name="no-locxamarinforms-string-and-image-localization"></a>Xamarin.Forms Localização de cadeia de caracteres e imagem
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
 
 A localização é o processo de adaptação de um aplicativo para atender à linguagem específica ou aos requisitos culturais de um mercado-alvo. Para realizar a localização, o texto e as imagens em um aplicativo podem precisar ser traduzidos em vários idiomas. Um aplicativo localizado exibe automaticamente o texto traduzido com base nas configurações de cultura do dispositivo móvel:
 
@@ -67,7 +67,7 @@ Em tempo de execução, o aplicativo tenta resolver uma solicitação de recurso
 1. AppResources. en. resx
 1. AppResources. resx (padrão)
 
-A captura de tela a seguir mostra um arquivo de tradução em espanhol chamado **AppResources.es.cs**:
+A captura de tela a seguir mostra um arquivo de tradução em espanhol chamado **AppResources.es.cs** :
 
 ![Especificar os recursos de texto padrão do espanhol em um arquivo. resx](text-images/pc-spanish-strings.png)
 
@@ -112,7 +112,7 @@ Em tempo de execução, o aplicativo tenta resolver uma solicitação de recurso
 1. AppResources. en. resx
 1. AppResources. resx (padrão)
 
-Os arquivos de tradução de idioma devem ter os mesmos valores de **nome** especificados como o arquivo padrão. O XML a seguir mostra o arquivo de tradução em espanhol chamado **AppResources. es. resx**:
+Os arquivos de tradução de idioma devem ter os mesmos valores de **nome** especificados como o arquivo padrão. O XML a seguir mostra o arquivo de tradução em espanhol chamado **AppResources. es. resx** :
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -187,7 +187,7 @@ Para obter mais informações, consulte [especificando os idiomas padrão e com 
 
 ## <a name="localize-text-in-no-locxamarinforms"></a>Localizar texto em Xamarin.Forms
 
-O texto é localizado em Xamarin.Forms usando a `AppResources` classe gerada. Essa classe é nomeada com base no nome do arquivo de recurso padrão. Como o arquivo de recurso de projeto de exemplo é denominado **AppResources.cs**, o Visual Studio gera uma classe correspondente chamada `AppResources` . As propriedades estáticas são geradas na `AppResources` classe para cada linha no arquivo de recurso. As propriedades estáticas a seguir são geradas na classe do aplicativo de exemplo `AppResources` :
+O texto é localizado em Xamarin.Forms usando a `AppResources` classe gerada. Essa classe é nomeada com base no nome do arquivo de recurso padrão. Como o arquivo de recurso de projeto de exemplo é denominado **AppResources.cs** , o Visual Studio gera uma classe correspondente chamada `AppResources` . As propriedades estáticas são geradas na `AppResources` classe para cada linha no arquivo de recurso. As propriedades estáticas a seguir são geradas na classe do aplicativo de exemplo `AppResources` :
 
 - AddButton
 - NotesLabel

@@ -10,16 +10,16 @@ ms.date: 04/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4be3744e0cce465aab8fc4af39495d2f7d8e9004
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 0d6cf880be995949553602f9925535e55a8dbb49
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556601"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369500"
 ---
 # <a name="no-locxamarinforms-expander"></a>Xamarin.Forms Expansor
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
 
 O Xamarin.Forms `Expander` controle fornece um contêiner expansível para hospedar qualquer conteúdo. O controle tem um cabeçalho e conteúdo, e o conteúdo é mostrado ou oculto tocando no `Expander` cabeçalho. Quando apenas o `Expander` cabeçalho é mostrado, o `Expander` é *recolhido*. Quando o `Expander` conteúdo estiver visível, o `Expander` será *expandido*.
 

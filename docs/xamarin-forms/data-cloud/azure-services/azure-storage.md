@@ -10,16 +10,16 @@ ms.date: 12/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cba4c670e9e092eef92f7b37eefc750782c94367
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: bd726a5e5d6064ecb9aa1c862697e08a9c4733f4
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563829"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370111"
 ---
 # <a name="store-and-access-data-in-azure-storage-from-no-locxamarinforms"></a>Armazene e acesse dados no armazenamento do Azure de Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 
 _O armazenamento do Azure é uma solução de armazenamento em nuvem escalonável que pode ser usada para armazenar dados não estruturados e estruturados. Este artigo demonstra como usar Xamarin.Forms o para armazenar texto e dados binários no armazenamento do Azure e como acessar os dados._
 
@@ -61,11 +61,11 @@ Um blob é um arquivo de qualquer tipo e tamanho. O armazenamento do Azure dá s
 
 Um blob é carregado no armazenamento do Azure e baixado do armazenamento do Azure, como um fluxo de bytes. Portanto, os arquivos devem ser convertidos em um fluxo de bytes antes do carregamento e convertidos de volta para sua representação original após o download.
 
-Cada objeto armazenado no armazenamento do Azure tem um endereço de URL exclusivo. O nome da conta de armazenamento forma o subdomínio desse endereço, e a combinação de subdomínio e nome de domínio forma um *ponto de extremidade* para a conta de armazenamento. Por exemplo, se sua conta de armazenamento for chamada *mystorageaccount*, o ponto de extremidade de blob padrão para a conta de armazenamento será `https://mystorageaccount.blob.core.windows.net` .
+Cada objeto armazenado no armazenamento do Azure tem um endereço de URL exclusivo. O nome da conta de armazenamento forma o subdomínio desse endereço, e a combinação de subdomínio e nome de domínio forma um *ponto de extremidade* para a conta de armazenamento. Por exemplo, se sua conta de armazenamento for chamada *mystorageaccount* , o ponto de extremidade de blob padrão para a conta de armazenamento será `https://mystorageaccount.blob.core.windows.net` .
 
 A URL para acessar um objeto em uma conta de armazenamento é compilada acrescentando o local do objeto na conta de armazenamento ao ponto de extremidade. Por exemplo, um endereço de blob terá o formato `https://mystorageaccount.blob.core.windows.net/mycontainer/myblob` .
 
-## <a name="setup"></a>Instalação
+## <a name="setup"></a>Configuração
 
 O processo de integração de uma conta de armazenamento do Azure em um Xamarin.Forms aplicativo é o seguinte:
 

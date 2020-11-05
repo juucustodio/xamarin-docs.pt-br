@@ -10,16 +10,16 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7ba5224c23eaed6b7c37312f8a765556d0263d9c
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 932f6d347afcc4957294036e2c76ef81635d958c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563023"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368694"
 ---
 # <a name="no-locxamarinforms-modal-pages"></a>Xamarin.Forms Páginas modais
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/navigation-modal)
 
 _Xamarin.Forms fornece suporte para páginas modais. Uma página modal incentiva os usuários a concluir uma tarefa independente que não pode ser navegada para longe até que a tarefa seja concluída ou cancelada. Este artigo demonstra como navegar até páginas modais._
 

@@ -10,22 +10,22 @@ ms.date: 05/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a07931bfa53a5e4d77c2755b08745b8dd962b695
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: e874543b356ffe5dd821c6c2f20e487d79919449
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91557147"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367914"
 ---
 # <a name="no-locxamarinforms-c-markup"></a>Xamarin.Forms Marcação C#
 
 ![API de pré-lançamento](~/media/shared/preview.png)
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-csharpmarkupdemos/)
 
 A marcação C# é um conjunto opcional de métodos e classes auxiliares fluentes para simplificar o processo de criação de interfaces de usuário declarativas Xamarin.Forms em C#. A API fluente fornecida pela marcação C# está disponível no `Xamarin.Forms.Markup` namespace.
 
-Assim como acontece com o XAML, a marcação C# permite uma separação clara entre marcação de interface do usuário e lógica da interface do usuário. Isso pode ser obtido separando a marcação da interface do usuário e a lógica da interface do usuário em arquivos de classe parcial distintos. Por exemplo, para uma página de logon, a marcação de interface do usuário estaria em um arquivo chamado *LoginPage.cs*, enquanto a lógica da interface do usuário estaria em um arquivo chamado *LoginPage.Logic.cs*.
+Assim como acontece com o XAML, a marcação C# permite uma separação clara entre marcação de interface do usuário e lógica da interface do usuário. Isso pode ser obtido separando a marcação da interface do usuário e a lógica da interface do usuário em arquivos de classe parcial distintos. Por exemplo, para uma página de logon, a marcação de interface do usuário estaria em um arquivo chamado *LoginPage.cs* , enquanto a lógica da interface do usuário estaria em um arquivo chamado *LoginPage.Logic.cs*.
 
 A marcação C# está disponível em Xamarin.Forms 4,6. No entanto, ele está experimental e só pode ser usado adicionando a seguinte linha de código ao arquivo *app.cs* :
 
@@ -235,7 +235,7 @@ Como um reconhecedor de gesto é um `BindableObject` , você pode usar os `Bind`
 
 A marcação C# inclui uma série de métodos de extensão de layout que dão suporte ao posicionamento de exibições em layouts e conteúdo em exibições:
 
-| Tipo | Métodos de extensão |
+| Type | Métodos de extensão |
 |---|---|
 | `FlexLayout` | `AlignSelf`, `Basis`, `Grow`, `Menu`, `Order`, `Shrink` |
 | `Grid` | `Row`, `Column`, `RowSpan`, `ColumnSpan` |
@@ -253,7 +253,7 @@ Para tornar o conjunto correto de métodos de extensão esquerdo e direito dispo
 
 Para a marcação C# projetada para dar suporte à direção de fluxo da esquerda para a direita e da direita para a esquerda, é recomendável usar os métodos de extensão na tabela a seguir, em vez de um dos namespaces acima:
 
-| Tipo | Métodos de extensão |
+| Type | Métodos de extensão |
 |---|---|
 | `Label` | `TextStart`, `TextEnd` |
 | `LayoutOptions` | `Start`, `End` <br/> `StartExpand`, `EndExpand` |
@@ -529,10 +529,10 @@ Para obter mais informações sobre especificações de plataforma, consulte [re
 
 Uma ordem recomendada e o agrupamento de propriedades e métodos auxiliares é:
 
-- **Finalidade**: qualquer propriedade ou método auxiliar cujo valor identifica a finalidade do controle (por exemplo `Text` , `Placeholder` ,,. `Assign` ).
-- **Outro**: todas as propriedades ou métodos auxiliares que não são layout ou associação, na mesma linha ou em várias linhas.
-- **Layout**: o layout é ordenado de maneira invertida: linhas e colunas, opções de layout, margem, tamanho, preenchimento e alinhamento de conteúdo.
-- **Ligação**: a associação de dados é executada no final da cadeia de métodos, com uma propriedade associada por linha. Se a propriedade ligável *padrão* estiver associada, ela deverá estar no final da cadeia de métodos.
+- **Finalidade** : qualquer propriedade ou método auxiliar cujo valor identifica a finalidade do controle (por exemplo `Text` , `Placeholder` ,,. `Assign` ).
+- **Outro** : todas as propriedades ou métodos auxiliares que não são layout ou associação, na mesma linha ou em várias linhas.
+- **Layout** : o layout é ordenado de maneira invertida: linhas e colunas, opções de layout, margem, tamanho, preenchimento e alinhamento de conteúdo.
+- **Ligação** : a associação de dados é executada no final da cadeia de métodos, com uma propriedade associada por linha. Se a propriedade ligável *padrão* estiver associada, ela deverá estar no final da cadeia de métodos.
 
 O código a seguir mostra um exemplo de como seguir esta Convenção:
 

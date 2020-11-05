@@ -10,16 +10,16 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 98eb35697aee9022a837a7b0b531edb0c53b2239
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: da88337778f31378d257894c3428ad89889673d3
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562139"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368941"
 ---
 # <a name="xaml-markup-extensions"></a>Extensões de marcação do XAML
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
 As extensões de marcação XAML ajudam a ampliar o poder e a flexibilidade do XAML, permitindo que os atributos de elemento sejam definidos de fontes diferentes de cadeias de caracteres de texto literal.
 

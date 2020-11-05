@@ -12,12 +12,12 @@ ms.date: 05/23/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e6670faf921248c007c20307fddb6a34057c5202
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: d2bb00eeadb3862d25032da45860f1cc12e3aad2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436673"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369877"
 ---
 # <a name="build-your-first-no-locxamarinforms-app"></a>Crie seu primeiro Xamarin.Forms aplicativo
 
@@ -29,11 +29,11 @@ _Assista a este vídeo e acompanhe para criar seu primeiro aplicativo móvel com
 
 ## <a name="step-by-step-instructions-for-windows"></a>Instruções passo a passo para Windows
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Siga estas etapas em conjunto com o vídeo acima:
 
-1. Escolha **Arquivo > Novo > Projeto…** ou pressione o botão **Criar projeto…**:
+1. Escolha **Arquivo > Novo > Projeto…** ou pressione o botão **Criar projeto…** :
 
     [![Criar um novo projeto](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
 
@@ -55,7 +55,7 @@ Siga estas etapas em conjunto com o vídeo acima:
 
     ![Criar lista suspensa do Android Emulator](images/win-2019/debug-dropdown.png)
 
-7. Na tela de criação do emulador, use as configurações padrão e clique no botão **Criar**:
+7. Na tela de criação do emulador, use as configurações padrão e clique no botão **Criar** :
 
     [![Tela de criação do emulador do Android](images/win-2019/create-emulator-sml.png)](images/win-2019/create-emulator.png#lightbox)
 
@@ -63,7 +63,7 @@ Siga estas etapas em conjunto com o vídeo acima:
 
     ![Android Emulator no Gerenciador de Dispositivos](images/win-2019/start-emulator.png)
 
-9. O Visual Studio 2019 agora deve mostrar o nome do novo emulador no botão **Depurar**:
+9. O Visual Studio 2019 agora deve mostrar o nome do novo emulador no botão **Depurar** :
 
     ![Nome do Android Emulator no botão Depurar](images/win-2019/debug-emulator-name.png)
 
@@ -75,13 +75,13 @@ Siga estas etapas em conjunto com o vídeo acima:
 
 O aplicativo pode ser personalizado para adicionar funcionalidade interativa. Execute as etapas a seguir para adicionar a interação do usuário ao aplicativo:
 
-1. Edite **MainPage.xaml**, adicionando este XAML antes do final de `</StackLayout>`:
+1. Edite **MainPage.xaml** , adicionando este XAML antes do final de `</StackLayout>`:
 
     ```xaml
     <Button Text="Click Me" Clicked="Button_Clicked" />
     ```
 
-2. Edite **MainPage.xaml.cs**, adicionando este código ao final da classe:
+2. Edite **MainPage.xaml.cs** , adicionando este código ao final da classe:
 
     ```csharp
     int count = 0;
@@ -114,29 +114,29 @@ Este vídeo aborda o processo de criação e teste de um aplicativo iOS usando o
 
 ## <a name="step-by-step-instructions-for-windows"></a>Instruções passo a passo para Windows
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Siga estas etapas em conjunto com o vídeo acima:
 
-1. Escolha **arquivo > novo projeto de >...** ou pressione o botão **criar novo projeto...** e, em seguida, selecione **Visual C# > aplicativo móvel > de plataforma cruzada ( Xamarin.Forms )**:
+1. Escolha **arquivo > novo projeto de >...** ou pressione o botão **criar novo projeto...** e, em seguida, selecione **Visual C# > aplicativo móvel > de plataforma cruzada ( Xamarin.Forms )** :
 
     [![Aplicativo móvel (::: no-Loc (Xamarin. Forms):::)](images/win/01-sml.png)](images/win/01.png#lightbox)
 
-2. Certifique-se de que **Android** e **iOS** estejam selecionados, com compartilhamento de código **.NET Standard**:
+2. Certifique-se de que **Android** e **iOS** estejam selecionados, com compartilhamento de código **.NET Standard** :
 
     [![Android e iOS, com .NET Standard](images/win/02-sml.png)](images/win/02.png#lightbox)
 
 3. Aguarde até que os pacotes do NuGet sejam restaurados (a mensagem "Restauração concluída" será exibida na barra de status).
 
-4. Inicie o Android Emulator pressionando o botão de depuração (ou o item de menu **Depurar > Iniciar Depuração**).
+4. Inicie o Android Emulator pressionando o botão de depuração (ou o item de menu **Depurar > Iniciar Depuração** ).
 
-5. Edite **MainPage.xaml**, adicionando este XAML antes do final de `</StackLayout>`:
+5. Edite **MainPage.xaml** , adicionando este XAML antes do final de `</StackLayout>`:
 
     ```xaml
     <Button Text="Click Me" Clicked="Button_Clicked" />
     ```
 
-6. Edite **MainPage.xaml.cs**, adicionando este código ao final da classe:
+6. Edite **MainPage.xaml.cs** , adicionando este código ao final da classe:
 
     ```csharp
     int count = 0;
@@ -161,15 +161,15 @@ Siga estas etapas em conjunto com o vídeo acima:
 
 ## <a name="step-by-step-instructions-for-mac"></a>Instruções passo a passo para Mac
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Siga estas etapas em conjunto com o vídeo acima:
 
-1. Escolha **Arquivo > Nova Solução...** ou pressione o botão **Novo Projeto...** e, em seguida, selecione **Multiplataforma > Aplicativo > Aplicativo de Formulários em Branco**:
+1. Escolha **Arquivo > Nova Solução...** ou pressione o botão **Novo Projeto...** e, em seguida, selecione **Multiplataforma > Aplicativo > Aplicativo de Formulários em Branco** :
 
     [![Aplicativo de formulários em branco](images/01-sml.png)](images/01.png#lightbox)
 
-2. Certifique-se de que **Android** e **iOS** estejam selecionados, com compartilhamento de código **.NET Standard**:
+2. Certifique-se de que **Android** e **iOS** estejam selecionados, com compartilhamento de código **.NET Standard** :
 
     [![Android e iOS, com .NET Standard](images/02-sml.png)](images/02.png#lightbox)
 
@@ -177,15 +177,15 @@ Siga estas etapas em conjunto com o vídeo acima:
 
     ![Aplicativo Android](images/03-sml.png)
 
-4. Inicie o Android Emulator pressionando o botão de depuração (ou **Executar > Iniciar Depuração**).
+4. Inicie o Android Emulator pressionando o botão de depuração (ou **Executar > Iniciar Depuração** ).
 
-5. Edite **MainPage.xaml**, adicionando este XAML antes do final de `</StackLayout>`:
+5. Edite **MainPage.xaml** , adicionando este XAML antes do final de `</StackLayout>`:
 
     ```xaml
     <Button Text="Click Me" Clicked="Handle_Clicked" />
     ```
 
-6. Edite **MainPage.xaml.cs**, adicionando este código ao final da classe:
+6. Edite **MainPage.xaml.cs** , adicionando este código ao final da classe:
 
     ```csharp
     int count = 0;
@@ -200,7 +200,7 @@ Siga estas etapas em conjunto com o vídeo acima:
 
     ![Aplicativo Android](images/07-sml.png)
 
-8. Clique com o botão direito do mouse para definir o iOS para o **Projeto de inicialização**:
+8. Clique com o botão direito do mouse para definir o iOS para o **Projeto de inicialização** :
 
     [![Definir o projeto de inicialização para iOS](images/08-sml.png)](images/08.png#lightbox)
 

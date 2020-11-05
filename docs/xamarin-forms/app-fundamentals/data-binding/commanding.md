@@ -10,16 +10,16 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7edde81a926b142a5e792a203e96ee61b1fdfb7b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: cd37166c461abe6b92a280dd52098d85c2393fbd
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562698"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369825"
 ---
 # <a name="the-no-locxamarinforms-command-interface"></a>A Xamarin.Forms interface de comando
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Na arquitetura MVVM (Model-View-ViewModel), as associações de dados são definidas entre propriedades no ViewModel, que geralmente é uma classe derivada de `INotifyPropertyChanged`, e propriedades no View, que geralmente é o arquivo XAML. Às vezes, um aplicativo tem necessidades que vão além dessas associações de propriedade ao exigir que o usuário inicie os comandos que afetam algo no ViewModel. Esses comandos geralmente são sinalizados por cliques de botões ou toques de dedos e são tradicionalmente processados no arquivo code-behind em um manipulador para o evento `Clicked` do `Button` ou o evento `Tapped` de um `TapGestureRecognizer`.
 
@@ -288,7 +288,7 @@ A tela do iOS à esquerda mostra o layout antes que uma idade válida seja inser
 
 O programa não tem nenhum recurso para editar entradas existentes nem salva as entradas quando você sai da página.
 
-Toda a lógica dos botões **Novo**, **Enviar**, e **Cancelar** é tratado em `PersonCollectionViewModel` por meio das definições das propriedades `NewCommand`, `SubmitCommand` e `CancelCommand`. O construtor do `PersonCollectionViewModel` define essas três propriedades para objetos do tipo `Command`.  
+Toda a lógica dos botões **Novo** , **Enviar** , e **Cancelar** é tratado em `PersonCollectionViewModel` por meio das definições das propriedades `NewCommand`, `SubmitCommand` e `CancelCommand`. O construtor do `PersonCollectionViewModel` define essas três propriedades para objetos do tipo `Command`.  
 
 Um [construtor](xref:Xamarin.Forms.Command.%23ctor(System.Action,System.Func{System.Boolean})) da classe `Command` permite que você passe argumentos do tipo `Action` e `Func<bool>` correspondentes aos métodos `Execute` e `CanExecute`. É mais fácil definir essas ações e funções como funções lambda direto no construtor `Command`. Veja a definição do objeto `Command` para a propriedade `NewCommand`:
 
@@ -334,7 +334,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 }
 ```
 
-Quando o usuário clica no botão **Novo**, a função `execute` passada para o construtor `Command` é executada. Isso cria um novo objeto `PersonViewModel`, define um manipulador no evento `PropertyChanged` desse objeto, define `IsEditing` como `true` e chama o método `RefreshCanExecutes` definido após o construtor.
+Quando o usuário clica no botão **Novo** , a função `execute` passada para o construtor `Command` é executada. Isso cria um novo objeto `PersonViewModel`, define um manipulador no evento `PropertyChanged` desse objeto, define `IsEditing` como `true` e chama o método `RefreshCanExecutes` definido após o construtor.
 
 Além de implementar a interface `ICommand`, a classe `Command` também define um método chamado `ChangeCanExecute`. O ViewModel deve chamar `ChangeCanExecute` para uma propriedade `ICommand` sempre que acontecer qualquer coisa que possa alterar o valor retornado do método `CanExecute`. Uma chamada ao `ChangeCanExecute` faz a classe `Command` acionar o método `CanExecuteChanged`. O `Button` anexou um manipulador para o evento, responde chamando `CanExecute` novamente e permitindo que se baseie no valor retornado desse método.
 
@@ -691,7 +691,7 @@ Todos os métodos `execute` chamam `RefreshCanExecutes`, que chama `ChangeCanExe
 
 ## <a name="asynchronous-commanding-for-navigation-menus"></a>Comando assíncrono para menus de navegação
 
-Comandos são convenientes para implementar os menus de navegação, como o do programa [**Demonstrações de associação de dados**](/samples/xamarin/xamarin-forms-samples/databindingdemos) em si. Veja uma parte do **MainPage.xaml**:
+Comandos são convenientes para implementar os menus de navegação, como o do programa [**Demonstrações de associação de dados**](/samples/xamarin/xamarin-forms-samples/databindingdemos) em si. Veja uma parte do **MainPage.xaml** :
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -730,7 +730,7 @@ Comandos são convenientes para implementar os menus de navegação, como o do p
 
 Ao usar comandos com XAML, as propriedades `CommandParameter` geralmente são definidas como cadeias de caracteres. No entanto, nesse caso, uma extensão de marcação XAML é usada para que o `CommandParameter` seja do tipo `System.Type`.
 
-Cada propriedade `Command` está associada a uma propriedade chamada `NavigateCommand`. Se a propriedade estiver definida no arquivo code-behind, **MainPage.xaml.cs**:
+Cada propriedade `Command` está associada a uma propriedade chamada `NavigateCommand`. Se a propriedade estiver definida no arquivo code-behind, **MainPage.xaml.cs** :
 
 ```csharp
 public partial class MainPage : ContentPage

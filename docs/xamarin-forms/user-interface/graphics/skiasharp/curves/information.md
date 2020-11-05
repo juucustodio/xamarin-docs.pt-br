@@ -10,16 +10,16 @@ ms.date: 09/12/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cf9ebb819d5b424963170d563575c4900bbed28b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 64a81b04961ebb0d03f661e99839b7ed78d710f2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556354"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368668"
 ---
 # <a name="path-information-and-enumeration"></a>Enumeração e informações de caminho
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Obter informações sobre caminhos e enumerar o conteúdo_
 
@@ -141,7 +141,7 @@ Os membros da [`SKPathMeasureMatrixFlags`](xref:SkiaSharp.SKPathMeasureMatrixFla
 
 A página de **meio-pipe Unicycle** anima uma figura de aderência em um unicycle que parece passar para a frente e para trás ao longo de uma curva Bézier cúbica:
 
-[![Captura de tela tripla da página de meio-pipe Unicycle](information-images/unicyclehalfpipe-small.png)](information-images/unicyclehalfpipe-large.png#lightbox "Captura de tela tripla da página de meio-pipe Unicycle")
+[![Captura de tela tripla da página de Half-Pipe de unicycle](information-images/unicyclehalfpipe-small.png)](information-images/unicyclehalfpipe-large.png#lightbox "Captura de tela tripla da página de Half-Pipe de unicycle")
 
 O `SKPaint` objeto usado para traçar o meio-pipe e o Unicycle é definido como um campo na `UnicycleHalfPipePage` classe. Também definido é o `SKPath` objeto para o Unicycle:
 

@@ -10,16 +10,16 @@ ms.date: 06/16/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2dacbc18fdbc7d9c7bd38d5ddfad2157e3a0a503
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: caa4f78d70f583c22fb4a00fd85b91ec7357013a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563283"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369721"
 ---
 # <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-no-locxamarinforms"></a>Autenticar usuários com um banco de dados de documento Azure Cosmos DB e Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 
 _Azure Cosmos DB bancos de dados de documentos dão suporte a coleções particionadas, que podem abranger vários servidores e partições, ao mesmo tempo que dão suporte a armazenamento e taxa de transferência ilimitadas. Este artigo explica como combinar o controle de acesso com coleções particionadas, para que um usuário possa acessar somente seus próprios documentos em um Xamarin.Forms aplicativo._
 
@@ -51,7 +51,7 @@ O agente de token de recurso é um serviço de API da Web de camada intermediár
 
 Para obter mais informações sobre o particionamento de Cosmos DB, consulte [como particionar e dimensionar em Azure Cosmos DB](/azure/cosmos-db/partition-data/). Para obter mais informações sobre Cosmos DB controle de acesso, consulte [protegendo o acesso a Cosmos DB dados](/azure/cosmos-db/secure-access-to-data/) e [controle de acesso na API do SQL](/rest/api/documentdb/access-control-on-documentdb-resources/).
 
-## <a name="setup"></a>Instalação
+## <a name="setup"></a>Configuração
 
 O processo de integração do agente de token de recurso em um Xamarin.Forms aplicativo é o seguinte:
 

@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 99a008e1b2a159c26f434644ab829851d76be59b
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: b97ce2015ba632d100b946a5b287f0eae737123c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563088"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368681"
 ---
 # <a name="searchbar-spell-check-on-windows"></a>SearchBar Verificação Ortográfica no Windows
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Essa Plataforma Universal do Windows específica à plataforma permite que um [`SearchBar`](xref:Xamarin.Forms.SearchBar) interaja com o mecanismo de verificação ortográfica. Ele é consumido em XAML definindo a [`SearchBar.IsSpellCheckEnabled`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.SearchBar.IsSpellCheckEnabledProperty) Propriedade anexada como um `boolean` valor:
 

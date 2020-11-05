@@ -10,18 +10,18 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 43c8cd0dd7b50e3a5bfbd15d9858bd4502fedacc
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 87153223c79365053bfc05b2a8a97c9aa1d4c4a4
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558772"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369045"
 ---
 # <a name="creating-xaml-markup-extensions"></a>Criação de extensões de marcação do XAML
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
-No nível de programação, uma extensão de marcação XAML é uma classe que implementa [`IMarkupExtension`](xref:Xamarin.Forms.Xaml.IMarkupExtension) a [`IMarkupExtension<T>`](xref:Xamarin.Forms.Xaml.IMarkupExtension`1) interface ou. Você pode explorar o código-fonte das extensões de marcação padrão descritas abaixo no [diretório **MarkupExtensions** ](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) do Xamarin.Forms repositório github.
+No nível de programação, uma extensão de marcação XAML é uma classe que implementa [`IMarkupExtension`](xref:Xamarin.Forms.Xaml.IMarkupExtension) a [`IMarkupExtension<T>`](xref:Xamarin.Forms.Xaml.IMarkupExtension`1) interface ou. Você pode explorar o código-fonte das extensões de marcação padrão descritas abaixo no [diretório **MarkupExtensions**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) do Xamarin.Forms repositório github.
 
 Também é possível definir suas próprias extensões de marcação XAML personalizadas derivando de `IMarkupExtension` ou `IMarkupExtension<T>` . Use o formulário genérico se a extensão de marcação obtiver um valor de um tipo específico. Esse é o caso com várias extensões de Xamarin.Forms marcação:
 
@@ -188,7 +188,7 @@ Este é o programa em execução:
 
 ## <a name="service-providers"></a>Provedores de serviço
 
-Usando o `IServiceProvider` argumento para `ProvideValue` , as extensões de marcação XAML podem obter acesso a informações úteis sobre o arquivo XAML no qual estão sendo usadas. Mas para usar o `IServiceProvider` argumento com êxito, você precisa saber quais tipos de serviços estão disponíveis em contextos específicos. A melhor maneira de entender esse recurso é estudar o código-fonte das extensões de marcação XAML existentes na [pasta **MarkupExtensions** ](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) no Xamarin.Forms repositório no github. Lembre-se de que alguns tipos de serviços são internos ao Xamarin.Forms .
+Usando o `IServiceProvider` argumento para `ProvideValue` , as extensões de marcação XAML podem obter acesso a informações úteis sobre o arquivo XAML no qual estão sendo usadas. Mas para usar o `IServiceProvider` argumento com êxito, você precisa saber quais tipos de serviços estão disponíveis em contextos específicos. A melhor maneira de entender esse recurso é estudar o código-fonte das extensões de marcação XAML existentes na [pasta **MarkupExtensions**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) no Xamarin.Forms repositório no github. Lembre-se de que alguns tipos de serviços são internos ao Xamarin.Forms .
 
 Em algumas extensões de marcação XAML, esse serviço pode ser útil:
 

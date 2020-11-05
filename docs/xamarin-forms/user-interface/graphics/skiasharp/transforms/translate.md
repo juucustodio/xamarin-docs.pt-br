@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 31a76e160186caec74665b7615323eb8e60b698a
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: fdb59cf8b40c62bc4375a12368ed871898497adf
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562321"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368585"
 ---
 # <a name="the-translate-transform"></a>A transformação de conversão
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Saiba como usar a transformação converter para deslocar gráficos SkiaSharp_
 
@@ -145,7 +145,7 @@ Você também pode usar a [`SKAutoCanvasRestore`](xref:SkiaSharp.SKAutoCanvasRes
 
 No entanto, você não precisa se preocupar com as transformações que são transportadas de uma chamada do `PaintSurface` manipulador para a próxima. Cada nova chamada para `PaintSurface` entrega um `SKCanvas` objeto atualizado com transformações padrão.
 
-Outro uso comum da `Translate` transformação é para a renderização de um objeto visual que foi criado originalmente usando coordenadas que são convenientes para desenhar. Por exemplo, você pode querer especificar coordenadas para um relógio analógico com um centro no ponto (0,0). Em seguida, você pode usar transformações para exibir o relógio onde você deseja. Essa técnica é demonstrada na página [**matriz Hendecagram**]. A [`HendecagramArrayPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramArrayPage.cs) classe começa criando um `SKPath` objeto para uma estrela de 11 pontas. O `HendecagramPath` objeto é definido como público, estático e somente leitura para que possa ser acessado de outros programas de demonstração. Ele é criado em um construtor estático:
+Outro uso comum da `Translate` transformação é para a renderização de um objeto visual que foi criado originalmente usando coordenadas que são convenientes para desenhar. Por exemplo, você pode querer especificar coordenadas para um relógio analógico com um centro no ponto (0,0). Em seguida, você pode usar transformações para exibir o relógio onde você deseja. Essa técnica é demonstrada na página [ **matriz Hendecagram** ]. A [`HendecagramArrayPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/HendecagramArrayPage.cs) classe começa criando um `SKPath` objeto para uma estrela de 11 pontas. O `HendecagramPath` objeto é definido como público, estático e somente leitura para que possa ser acessado de outros programas de demonstração. Ele é criado em um construtor estático:
 
 ```csharp
 public class HendecagramArrayPage : ContentPage

@@ -11,16 +11,16 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.custom: video
-ms.openlocfilehash: cdf34d78751345857e89c6bfa6862b58207ad01e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 90068096eced1fd1ddd2eb59b845eb4d5e41286f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562126"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368876"
 ---
 # <a name="no-locxamarinforms-resource-dictionaries"></a>Xamarin.Forms dicionários de recursos
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 
 Um [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) é um repositório de recursos que são usados por um Xamarin.Forms aplicativo. Os recursos típicos que são armazenados em um `ResourceDictionary` incluem [estilos](~/xamarin-forms/user-interface/styles/index.md), [modelos de controle](~/xamarin-forms/app-fundamentals/templates/control-template.md), [modelos de dados](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md), cores e conversores.
 
@@ -137,7 +137,7 @@ Uma classe derivada de [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDiction
 
 Para criar esse arquivo, adicione um novo **modo de exibição de conteúdo** ou item de página de **conteúdo** ao projeto (mas não a uma **exibição de conteúdo** ou a uma página de **conteúdo** com apenas um arquivo C#). Exclua o arquivo code-behind e, no arquivo XAML, altere o nome da classe base de [`ContentView`](xref:Xamarin.Forms.ContentView) ou [`ContentPage`](xref:Xamarin.Forms.ContentPage) para [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . Além disso, remova o `x:Class` atributo da marca raiz do arquivo.
 
-O exemplo de XAML a seguir mostra um [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) chamado **myresourcedictionary. XAML**:
+O exemplo de XAML a seguir mostra um [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) chamado **myresourcedictionary. XAML** :
 
 ```xaml
 <ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
@@ -194,7 +194,7 @@ Essa sintaxe não instancia a `MyResourceDictionary` classe. Em vez disso, ele f
 
 ### <a name="merge-resource-dictionaries-from-other-assemblies"></a>Mesclar dicionários de recurso de outros assemblies
 
-Um [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) também pode ser mesclado em outro `ResourceDictionary` adicionando-o à [`MergedDictionaries`](xref:Xamarin.Forms.ResourceDictionary.MergedDictionaries) Propriedade do `ResourceDictionary` . Essa técnica permite que os dicionários de recursos sejam mesclados, independentemente do assembly no qual residem. A mesclagem de dicionários de recursos de assemblies externos exige que o [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) tenha uma ação de compilação definida como **EmbeddedResource**, tenha um arquivo code-behind e defina o `x:Class` atributo na marca raiz do arquivo.
+Um [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) também pode ser mesclado em outro `ResourceDictionary` adicionando-o à [`MergedDictionaries`](xref:Xamarin.Forms.ResourceDictionary.MergedDictionaries) Propriedade do `ResourceDictionary` . Essa técnica permite que os dicionários de recursos sejam mesclados, independentemente do assembly no qual residem. A mesclagem de dicionários de recursos de assemblies externos exige que o [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) tenha uma ação de compilação definida como **EmbeddedResource** , tenha um arquivo code-behind e defina o `x:Class` atributo na marca raiz do arquivo.
 
 > [!WARNING]
 > A [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) classe também define uma [`MergedWith`](xref:Xamarin.Forms.ResourceDictionary.MergedWith) propriedade. No entanto, essa propriedade foi preterida e não deve mais ser usada.

@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3baadfcb06a595c5809dbabd484a8f886ab84aec
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: e041c766d0a4beefb8b4c74b9024c7554c818511
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562360"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368629"
 ---
 # <a name="soft-keyboard-input-mode-on-android"></a>Modo de entrada de teclado virtual no Android
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Essa plataforma do Android específica é usada para definir o modo de operação para uma área de entrada de teclado virtual e é consumida em XAML definindo a [`Application.WindowSoftInputModeAdjust`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Application.WindowSoftInputModeAdjustProperty) Propriedade anexada como um valor da [`WindowSoftInputModeAdjust`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust) enumeração:
 
@@ -45,7 +45,7 @@ O `Application.On<Android>` método especifica que essa plataforma específica s
 
 O resultado é que o modo operacional da área de entrada do teclado virtual pode ser definido quando um controle de entrada tem foco:
 
-[![Modo de operação de teclado virtual específico da plataforma](soft-keyboard-input-mode-images/pan-resize.png)](soft-keyboard-input-mode-images/pan-resize-large.png#lightbox "Modo de operação de teclado virtual específico da plataforma")
+[![Modo de operação de teclado virtual específico da plataforma](soft-keyboard-input-mode-images/pan-resize.png)](soft-keyboard-input-mode-images/pan-resize-large.png#lightbox "Modo de operação do teclado virtual Platform-Specific")
 
 ## <a name="related-links"></a>Links relacionados
 

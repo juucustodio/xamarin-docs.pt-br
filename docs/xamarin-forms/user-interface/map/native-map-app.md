@@ -10,16 +10,16 @@ ms.date: 10/30/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ede34258650c378a45ee694f90de1e8b249acf71
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: cbd61d956b17df556cb4bb452f60b0e41b31b707
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559877"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368239"
 ---
 # <a name="launch-the-native-map-app-from-no-locxamarinforms"></a>Inicie o aplicativo de mapa nativo de Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 O aplicativo de mapa nativo em cada plataforma pode ser iniciado de um Xamarin.Forms aplicativo pela Xamarin.Essentials `Launcher` classe. Essa classe permite que um aplicativo abra outro aplicativo por meio de seu esquema de URI personalizado. A funcionalidade do iniciador pode ser chamada com o `OpenAsync` método, passando `string` um `Uri` argumento ou que represente o esquema de URL personalizado a ser aberto. Para obter mais informações sobre o Xamarin.Essentials , consulte [Xamarin.Essentials](~/essentials/index.md?context=xamarin/xamarin-forms) .
 

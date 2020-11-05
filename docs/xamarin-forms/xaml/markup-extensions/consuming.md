@@ -10,16 +10,16 @@ ms.date: 06/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ee834bf7bae945536facb576ae26b9d13f5b7bcd
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6409bd5052f7943eee00e4405bf3e7da6623278e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91558937"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369266"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de extensões de marcação do XAML
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
 As extensões de marcação XAML ajudam a melhorar o poder e a flexibilidade do XAML, permitindo que os atributos de elemento sejam definidos a partir de uma variedade de fontes. Várias extensões de marcação XAML fazem parte da especificação XAML 2009. Eles aparecem em arquivos XAML com o prefixo de `x` namespace personalizado e são comumente referidos com esse prefixo. Este artigo aborda as seguintes extensões de marcação:
 
@@ -39,7 +39,7 @@ Extensões de marcação XAML adicionais têm suporte historicamente por outras 
 - `StaticResource` -objetos de referência de um dicionário de recursos, conforme descrito no artigo  [**dicionários de recursos**](~/xamarin-forms/xaml/resource-dictionaries.md).
 - `DynamicResource` -responder a alterações em objetos em um dicionário de recursos, conforme descrito no artigo [**estilos dinâmicos**](~/xamarin-forms/user-interface/styles/dynamic.md).
 - `Binding` -Estabeleça um vínculo entre as propriedades de dois objetos, conforme descrito no artigo [**vinculação de dados**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- `TemplateBinding`-executa a vinculação de dados de um modelo de controle, conforme discutido no artigo [** Xamarin.Forms modelos de controle**](~/xamarin-forms/app-fundamentals/templates/control-template.md).
+- `TemplateBinding`-executa a vinculação de dados de um modelo de controle, conforme discutido no artigo [**Xamarin.Forms modelos de controle**](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 - `RelativeSource` – define a origem da associação em relação à posição do destino da associação, conforme discutido no artigo [associações relativas](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
 O [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) layout usa a extensão de marcação personalizada [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression) . Essa extensão de marcação é descrita no artigo [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relativelayout.md).
@@ -239,7 +239,7 @@ A `x:Type` extensão de marcação também é útil ao construir um menu em que 
 </ContentPage>
 ```
 
-Aqui está a página principal de abertura em **extensões de marcação**:
+Aqui está a página principal de abertura em **extensões de marcação** :
 
 [![Página Principal](consuming-images/mainpage-small.png "Página Principal")](consuming-images/mainpage-large.png#lightbox "Página Principal")
 
