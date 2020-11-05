@@ -11,20 +11,20 @@ ms.date: 05/07/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 88f89e3d17c693c48176a45605b036f56599ee6d
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: c7705304a6eda662095c1e2a57633bf74c90c6de
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563621"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370137"
 ---
 # <a name="the-no-locxamarinforms-flexlayout"></a>O Xamarin.Forms FlexLayout
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)
 
 _Use FlexLayout para empilhar ou encapsular uma coleção de exibições filho._
 
-O Xamarin.Forms [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) é novo na Xamarin.Forms versão 3,0. Ele se baseia no módulo de [layout de caixa flexível](https://www.w3.org/TR/css-flexbox-1/)CSS, normalmente conhecido como _layout flexível_ ou _caixa flexível_, portanto chamado porque inclui muitas opções flexíveis para organizar os filhos no layout.
+O Xamarin.Forms [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) é novo na Xamarin.Forms versão 3,0. Ele se baseia no módulo de [layout de caixa flexível](https://www.w3.org/TR/css-flexbox-1/)CSS, normalmente conhecido como _layout flexível_ ou _caixa flexível_ , portanto chamado porque inclui muitas opções flexíveis para organizar os filhos no layout.
 
 `FlexLayout` é semelhante ao Xamarin.Forms [`StackLayout`](~/xamarin-forms/user-interface/layouts/stacklayout.md) em que ele pode organizar seus filhos horizontal e verticalmente em uma pilha. No entanto, o `FlexLayout` também é capaz de encapsular seus filhos se houver muitos para caber em uma única linha ou coluna, além de ter muitas opções de orientação, alinhamento e adaptação a vários tamanhos de tela.
 
@@ -71,7 +71,7 @@ Três propriedades de `FlexLayout` são mostradas no arquivo **SimpleStackPage. 
 
 - A [`Direction`](xref:Xamarin.Forms.FlexLayout.Direction) propriedade é definida como um valor da [`FlexDirection`](xref:Xamarin.Forms.FlexDirection) enumeração. O padrão é `Row`. Definir a propriedade como `Column` faz com que os filhos do `FlexLayout` sejam organizados em uma única coluna de itens.
 
-    Quando os itens em um `FlexLayout` são organizados em uma coluna, o `FlexLayout` é considerado um eixo vertical _principal_ e um _eixo cruzado_horizontal.
+    Quando os itens em um `FlexLayout` são organizados em uma coluna, o `FlexLayout` é considerado um eixo vertical _principal_ e um _eixo cruzado_ horizontal.
 
 - A [`AlignItems`](xref:Xamarin.Forms.FlexLayout.AlignItems) propriedade é do tipo [`FlexAlignItems`](xref:Xamarin.Forms.FlexAlignItems) e especifica como os itens são alinhados no eixo cruzado. A `Center` opção faz com que cada item seja centralizado horizontalmente.
 

@@ -10,16 +10,16 @@ ms.date: 02/07/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3da0223bf72e4de60cc50be2562a0fdbd279f52e
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: b84336f836c3fa421537daf7e43de01e7be20b01
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91559734"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371281"
 ---
 # <a name="no-locxamarinforms-map-initialization-and-configuration"></a>Xamarin.Forms Inicialização e configuração do mapa
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 O [`Map`](xref:Xamarin.Forms.Maps.Map) controle usa o controle de mapa nativo em cada plataforma. Isso fornece uma experiência de mapas rápida e familiar para os usuários, mas significa que algumas etapas de configuração são necessárias para aderir a cada uma das plataformas requisitos de API.
 
@@ -57,7 +57,7 @@ A configuração adicional é necessária no Android e no Plataforma Universal d
 
 ### <a name="ios"></a>iOS
 
-Exibir e interagir com um mapa no iOS não requer nenhuma configuração adicional. No entanto, para acessar os serviços de localização, você deve definir as seguintes chaves em **info. plist**:
+Exibir e interagir com um mapa no iOS não requer nenhuma configuração adicional. No entanto, para acessar os serviços de localização, você deve definir as seguintes chaves em **info. plist** :
 
 - iOS 11 e posterior
   - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – para usar serviços de localização quando o aplicativo está em uso
@@ -121,7 +121,7 @@ Para que seu APK acesse o Google Maps, você deve incluir impressões digitais e
 
 #### <a name="specify-the-google-play-services-version-number"></a>Especificar o número de versão dos serviços de Google Play
 
-Adicione a seguinte declaração dentro do `<application>` elemento de **AndroidManifest.xml**:
+Adicione a seguinte declaração dentro do `<application>` elemento de **AndroidManifest.xml** :
 
 ```xml
 <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
@@ -131,7 +131,7 @@ Isso incorpora a versão do Google Play Services com a qual o aplicativo foi com
 
 #### <a name="specify-the-requirement-for-the-apache-http-legacy-library"></a>Especifique o requisito para a biblioteca herdada do Apache HTTP
 
-Se seu Xamarin.Forms aplicativo for destinado à API 28 ou superior, você deverá adicionar a seguinte declaração dentro do `<application>` elemento de **AndroidManifest.xml**:
+Se seu Xamarin.Forms aplicativo for destinado à API 28 ou superior, você deverá adicionar a seguinte declaração dentro do `<application>` elemento de **AndroidManifest.xml** :
 
 ```xml
 <uses-library android:name="org.apache.http.legacy" android:required="false" />    
@@ -245,8 +245,8 @@ No UWP, seu aplicativo deve ser autenticado antes de poder exibir um mapa e cons
 
 Além disso, se seu aplicativo precisar acessar o local do usuário, você deverá habilitar a capacidade de localização no manifesto do pacote. Isso pode ser feito da seguinte maneira:
 
-1. No **Gerenciador de Soluções**, clique duas vezes sobre **package.appxmanifest** e selecione a guia **Funcionalidades**.
-1. Na lista **Recursos**, marque a caixa de **Local**. Isso adiciona a `location` funcionalidade do dispositivo ao arquivo de manifesto do pacote.
+1. No **Gerenciador de Soluções** , clique duas vezes sobre **package.appxmanifest** e selecione a guia **Funcionalidades**.
+1. Na lista **Recursos** , marque a caixa de **Local**. Isso adiciona a `location` funcionalidade do dispositivo ao arquivo de manifesto do pacote.
 
     ```xml
     <Capabilities>
@@ -257,7 +257,7 @@ Além disso, se seu aplicativo precisar acessar o local do usuário, você dever
 
 #### <a name="release-builds"></a>Builds de versão
 
-As compilações da versão UWP usam compilação nativa do .NET para compilar o aplicativo diretamente no código nativo. No entanto, uma consequência disso é que o renderizador do [`Map`](xref:Xamarin.Forms.Maps.Map) controle em UWP pode ser vinculado fora do executável. Isso pode ser corrigido usando uma sobrecarga específica de UWP do `Forms.Init` método no **app.XAML.cs**:
+As compilações da versão UWP usam compilação nativa do .NET para compilar o aplicativo diretamente no código nativo. No entanto, uma consequência disso é que o renderizador do [`Map`](xref:Xamarin.Forms.Maps.Map) controle em UWP pode ser vinculado fora do executável. Isso pode ser corrigido usando uma sobrecarga específica de UWP do `Forms.Init` método no **app.XAML.cs** :
 
 ```csharp
 var assembliesToInclude = new [] { typeof(Xamarin.Forms.Maps.UWP.MapRenderer).GetTypeInfo().Assembly };

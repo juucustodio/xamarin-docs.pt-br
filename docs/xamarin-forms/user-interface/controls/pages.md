@@ -10,16 +10,16 @@ ms.date: 01/12/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9164275b75c021a79b6ea5ea64194997ad804ece
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 2a3540773aec977c6d17592ff6a0ea1e16acc2b9
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563205"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372165"
 ---
 # <a name="no-locxamarinforms-pages"></a>Xamarin.Forms Pages
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
 _Xamarin.Forms As páginas representam telas de aplicativos móveis de plataforma cruzada._
 
@@ -27,11 +27,11 @@ Todos os tipos de página descritos abaixo derivam da Xamarin.Forms [`Page`](xre
 
 [![::: no-Loc (Xamarin. Forms)::: tipos de página](pages-images/pages-sml.png)](pages-images/pages.png#lightbox "::: no-Loc (Xamarin. Forms)::: tipos de página")
 
-## <a name="pages"></a>Pages (Páginas)
+## <a name="pages"></a>Páginas
 
 Xamarin.Forms o oferece suporte aos seguintes tipos de página:
 
-| Tipo | Descrição | Aparência |
+| Type | Descrição | Aparência |
 | --- | --- | --- |
 | `ContentPage` | [`ContentPage`](xref:Xamarin.Forms.ContentPage) é o tipo mais simples e mais comum de página. Defina a [`Content`](xref:Xamarin.Forms.ContentPage.Content) propriedade como um único [`View`](views.md) objeto, que é geralmente um [`Layout`](layouts.md) [`StackLayout`](xref:Xamarin.Forms.StackLayout) , como, [`Grid`](xref:Xamarin.Forms.Grid) ou [`ScrollView`](xref:Xamarin.Forms.ScrollView) .<br /><br />[Documentação da API](xref:Xamarin.Forms.ContentPage) | [![Exemplo de ContentPage](pages-images/ContentPage.png "Exemplo de ContentPage")](pages-images/ContentPage-Large.png#lightbox "Exemplo de ContentPage")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentPageDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentPageDemoPage.xaml) |
 | `MasterDetailPage` | Um [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) gerencia dois painéis de informações. Defina a [`Master`](xref:Xamarin.Forms.MasterDetailPage.Master) propriedade como uma página geralmente mostrando uma lista ou um menu. Defina a [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) propriedade como uma página mostrando um item selecionado da página mestra. A [`IsPresented`](xref:Xamarin.Forms.MasterDetailPage.IsPresented) propriedade determina se a página mestra ou de detalhes está visível.<br /><br />[Documentação](xref:Xamarin.Forms.MasterDetailPage)  /  da API [Guia](~/xamarin-forms/app-fundamentals/navigation/master-detail-page.md)  /  [Exemplo](/samples/xamarin/xamarin-forms-samples/navigation-masterdetailpage) de | [![Exemplo de MasterDetailPage](pages-images/MasterDetailPage.png "Exemplo de MasterDetailPage")](pages-images/MasterDetailPage-Large.png#lightbox "Exemplo de MasterDetailPage")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MasterDetailPageDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MasterDetailPageDemoPage.xaml) com [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MasterDetailPageDemoPage.xaml.cs) |

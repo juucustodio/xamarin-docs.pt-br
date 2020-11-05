@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2020
-ms.openlocfilehash: 6a3154d159c491c6460e118395286aa33cfa7e7e
-ms.sourcegitcommit: 1550019cd1e858d4d13a4ae6dfb4a5947702f24b
+ms.openlocfilehash: 79d27cf9d6ba01235962b43ee7f05c904c265c2f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92897449"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370839"
 ---
 # <a name="xamarinforms-multi-bindings"></a>Várias associações do Xamarin. Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 As várias associações fornecem a capacidade de anexar uma coleção de [`Binding`](xref:Xamarin.Forms.Binding) objetos a uma única propriedade de destino de associação. Eles são criados com a `MultiBinding` classe, que avalia todos os seus `Binding` objetos e retorna um único valor por meio de uma `IMultiValueConverter` instância fornecida pelo seu aplicativo. Além disso, `MultiBinding` o reavalia todos os seus `Binding` objetos quando qualquer um dos dados ligados é alterado.
 

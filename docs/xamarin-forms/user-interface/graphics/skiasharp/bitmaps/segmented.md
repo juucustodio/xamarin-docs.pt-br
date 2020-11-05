@@ -10,16 +10,16 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9a39433a0bad518055542adb190f4f441675ddfb
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: fe63f3fdab5d508ab0202fbfe93bdc223f97d28a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556367"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370163"
 ---
 # <a name="segmented-display-of-skiasharp-bitmaps"></a>Exibição segmentada de bitmaps SkiaSharp
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 O `SKCanvas` objeto SkiaSharp define um método chamado `DrawBitmapNinePatch` e dois métodos chamados `DrawBitmapLattice` que são muito semelhantes. Ambos os métodos renderizam um bitmap para o tamanho de um retângulo de destino, mas em vez de alongar o bitmap uniformemente, eles exibem partes do bitmap em suas dimensões de pixel e ampliam outras partes do bitmap para que ele se ajuste ao retângulo:
 
@@ -110,7 +110,7 @@ public class NinePatchDisplayPage : ContentPage
 
 O `centerRect` retângulo abrange a matriz central de 16 círculos. Os círculos nos cantos são exibidos em suas dimensões de pixel e todo o resto é alongado de acordo:
 
-[![Nove-exibição de patch](segmented-images/NinePatchDisplay.png "Nove-exibição de patch")](segmented-images/NinePatchDisplay-Large.png#lightbox)
+[![Nove-exibição de patch](segmented-images/NinePatchDisplay.png "Nine-Patch exibir")](segmented-images/NinePatchDisplay-Large.png#lightbox)
 
 A página UWP tem de ser de 500 pixels de largura e, portanto, exibe as linhas superior e inferior como uma série de círculos do mesmo tamanho. Caso contrário, todos os círculos que não estão nos cantos são esticados para formar elipses.
 
@@ -182,7 +182,7 @@ As `XDivs` Propriedades e `YDivs` são definidas como matrizes de apenas dois in
 
 A exibição é idêntica ao programa anterior:
 
-[![Malha nove-patch](segmented-images/LatticeNinePatch.png "Malha nove-patch")](segmented-images/LatticeNinePatch-Large.png#lightbox)
+[![Malha nove-patch](segmented-images/LatticeNinePatch.png "Nine-Patch malha")](segmented-images/LatticeNinePatch-Large.png#lightbox)
 
 A página de **exibição malha** divide o bitmap em 16 retângulos:
 

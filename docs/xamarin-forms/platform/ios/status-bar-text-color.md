@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 09b5f145b273d234322eb560207c65aab3313558
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 9459ce5e8b8f167f94d1f88e79d9acb32e4788bf
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91560787"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370605"
 ---
 # <a name="navigationpage-bar-text-color-mode-on-ios"></a>Modo de cor de texto da barra de NavigationPage no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Essa plataforma determina se a cor do texto da barra de status em uma [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) é ajustada para corresponder à luminosidade da barra de navegação. Ele é consumido em XAML definindo a [`NavigationPage.StatusBarTextColorMode`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.StatusBarTextColorModeProperty) Propriedade anexada como um valor da [`StatusBarTextColorMode`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.StatusBarTextColorMode) enumeração:
 
@@ -75,7 +75,7 @@ Além disso, o [ `GetStatusBarTextColorMode` ] (xref: Xamarin.Forms . PlatformCo
 
 O resultado é que a cor do texto da barra de status em um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) pode ser ajustada para corresponder à luminosidade da barra de navegação. Neste exemplo, a cor do texto da barra de status muda conforme o usuário alterna entre as [`Master`](xref:Xamarin.Forms.MasterDetailPage.Master) [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) páginas e de a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) :
 
-![Modo de cor de texto de barra de status específica da plataforma](status-bar-text-color-images/status-bar-text-color-mode.png)
+![Modo de cor de texto da barra de status Platform-Specific](status-bar-text-color-images/status-bar-text-color-mode.png)
 
 ## <a name="related-links"></a>Links relacionados
 

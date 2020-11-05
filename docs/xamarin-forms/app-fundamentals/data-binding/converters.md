@@ -10,20 +10,20 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2a5912d18787543b05b3937f2b8b5c6a36b04873
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 7a2d7251f3896994ab75aba07c2fb03af6558c4e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91556809"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370917"
 ---
 # <a name="no-locxamarinforms-binding-value-converters"></a>Xamarin.Forms Conversores de valor de associação
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Normalmente, associações de dados transferem dados de uma propriedade de origem para uma propriedade de destino e, em alguns casos, da propriedade de destino para a propriedade de origem. Essa transferência é simples quando as propriedades de origem e de destino são do mesmo tipo ou quando um tipo pode ser convertido para outro por meio de uma conversão implícita. Quando não é esse o caso, é necessário realizar uma conversão de tipo.
 
-No artigo [**Formatação de Cadeia de Caracteres**](string-formatting.md), você viu como é possível usar a propriedade `StringFormat` de uma associação de dados para converter qualquer tipo em uma cadeia de caracteres. Para outros tipos de conversões, você precisa escrever um código especializado em uma classe que implementa a [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) interface. (O Plataforma Universal do Windows contém uma classe semelhante chamada [`IValueConverter`](/uwp/api/Windows.UI.Xaml.Data.IValueConverter/) no `Windows.UI.Xaml.Data` namespace, mas isso `IValueConverter` está no `Xamarin.Forms` namespace.) As classes que implementam `IValueConverter` são chamadas de *conversores de valor*, mas também são conhecidas como *conversores de associação* ou *conversores de valor de associação*.
+No artigo [**Formatação de Cadeia de Caracteres**](string-formatting.md), você viu como é possível usar a propriedade `StringFormat` de uma associação de dados para converter qualquer tipo em uma cadeia de caracteres. Para outros tipos de conversões, você precisa escrever um código especializado em uma classe que implementa a [`IValueConverter`](xref:Xamarin.Forms.IValueConverter) interface. (O Plataforma Universal do Windows contém uma classe semelhante chamada [`IValueConverter`](/uwp/api/Windows.UI.Xaml.Data.IValueConverter/) no `Windows.UI.Xaml.Data` namespace, mas isso `IValueConverter` está no `Xamarin.Forms` namespace.) As classes que implementam `IValueConverter` são chamadas de *conversores de valor* , mas também são conhecidas como *conversores de associação* ou *conversores de valor de associação*.
 
 ## <a name="the-ivalueconverter-interface"></a>A interface IValueConverter
 

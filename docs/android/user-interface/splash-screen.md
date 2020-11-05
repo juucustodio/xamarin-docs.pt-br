@@ -7,22 +7,22 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/02/2019
-ms.openlocfilehash: 2b0b68be5cd36d908c7e152137b14b41a7a0b947
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: bd24fbf6ce99e87c6a7f4ccd8cceef6cbe826f0f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91458167"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370527"
 ---
 # <a name="splash-screen"></a>Splash Screen
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/monodroid-samples/splashscreen)
 
 _Um aplicativo Android leva algum tempo para ser iniciado, especialmente quando o aplicativo é iniciado pela primeira vez em um dispositivo. Uma tela inicial pode exibir o progresso de inicialização para o usuário ou para indicar a identidade visual._
 
 ## <a name="overview"></a>Visão geral
 
-Um aplicativo Android leva algum tempo para ser inicializado, especialmente durante a primeira vez em que o aplicativo é executado em um dispositivo (às vezes, isso é chamado de _inicialização a frio_). A tela inicial pode exibir o progresso de inicialização para o usuário ou pode exibir informações de identidade visual para identificar e promover o aplicativo.
+Um aplicativo Android leva algum tempo para ser inicializado, especialmente durante a primeira vez em que o aplicativo é executado em um dispositivo (às vezes, isso é chamado de _inicialização a frio_ ). A tela inicial pode exibir o progresso de inicialização para o usuário ou pode exibir informações de identidade visual para identificar e promover o aplicativo.
 
 Este guia aborda uma técnica para implementar uma tela inicial em um aplicativo Android. Ele aborda as seguintes etapas:
 
@@ -50,7 +50,7 @@ A tela inicial é implementada como uma atividade que exibe o empate com marca, 
 
 A tela inicial exibirá um XML que poderá ser desenhado no plano de fundo da atividade da tela inicial. É necessário usar uma imagem de bitmap (como um PNG ou JPG) para a imagem a ser exibida.
 
-O aplicativo de exemplo define um **splash_screen.xml**de desenho chamado. Esse empate usa uma [lista de camadas](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) para centralizar a imagem da tela inicial no aplicativo, conforme mostrado no XML a seguir:
+O aplicativo de exemplo define um **splash_screen.xml** de desenho chamado. Esse empate usa uma [lista de camadas](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) para centralizar a imagem da tela inicial no aplicativo, conforme mostrado no XML a seguir:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -81,7 +81,7 @@ Para obter mais informações sobre `Drawable` objetos, consulte a [documentaç�
 
 ### <a name="implementing-a-theme"></a>Implementando um tema
 
-Para criar um tema personalizado para a atividade da tela inicial, edite (ou adicione) os **valores/styles.xml** do arquivo e crie um novo `style` elemento para a tela inicial. Um arquivo de **valores/style.xml** de exemplo é mostrado abaixo com um `style` chamado **mythemes. Splash**:
+Para criar um tema personalizado para a atividade da tela inicial, edite (ou adicione) os **valores/styles.xml** do arquivo e crie um novo `style` elemento para a tela inicial. Um arquivo de **valores/style.xml** de exemplo é mostrado abaixo com um `style` chamado **mythemes. Splash** :
 
 ```xml
 <resources>
@@ -167,7 +167,7 @@ Para adicionar uma tela inicial para o modo paisagem, use as seguintes etapas:
 
 1. Na pasta **recursos/empates** , adicione a versão de paisagem da imagem de tela inicial que você deseja usar. Neste exemplo, **splash_logo_land.png** é a versão de paisagem do logotipo que foi usada nos exemplos acima (ela usa letra branca em vez de azul).
 
-2. Na pasta **recursos/empates** , crie uma versão de paisagem do `layer-list` draw que foi definido anteriormente (por exemplo, **splash_screen_land.xml**). Nesse arquivo, defina o caminho do bitmap para a versão de paisagem da imagem da tela inicial. No exemplo a seguir, **splash_screen_land.xml** usa **splash_logo_land.png**:
+2. Na pasta **recursos/empates** , crie uma versão de paisagem do `layer-list` draw que foi definido anteriormente (por exemplo, **splash_screen_land.xml** ). Nesse arquivo, defina o caminho do bitmap para a versão de paisagem da imagem da tela inicial. No exemplo a seguir, **splash_screen_land.xml** usa **splash_logo_land.png** :
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>

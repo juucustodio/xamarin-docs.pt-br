@@ -10,16 +10,16 @@ ms.date: 07/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2e0c4d247f3ecf9c1b8e077c4a96712e9ed138ca
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 1d50c03fcea043c4b29db4a82ee3dc1712c288df
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562945"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372074"
 ---
 # <a name="saving-skiasharp-bitmaps-to-files"></a>Salvando bitmaps SkiaSharp em arquivos
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Depois que um aplicativo SkiaSharp criou ou modificou um bitmap, o aplicativo pode querer salvar o bitmap na biblioteca de fotos do usuário:
 
@@ -34,7 +34,7 @@ Esta tarefa abrange duas etapas:
 
 A maioria dos formatos de arquivo de bitmap populares de hoje usa compactação para reduzir o espaço de armazenamento. As duas categorias amplas de técnicas de compactação são chamadas de _perda_ e _sem perdas_. Esses termos indicam se o algoritmo de compactação resulta ou não na perda de dados.
 
-O formato de perda mais popular foi desenvolvido pelo grupo de especialistas geográficos conjuntos e é chamado de JPEG. O algoritmo de compactação JPEG analisa a imagem usando uma ferramenta matemática chamada de _transformação de cosseno discreta_e tenta remover dados que não são cruciais para preservar a fidelidade visual da imagem. O grau de compactação pode ser controlado com uma configuração geralmente conhecida como _qualidade_. As configurações de qualidade superior resultam em arquivos maiores.
+O formato de perda mais popular foi desenvolvido pelo grupo de especialistas geográficos conjuntos e é chamado de JPEG. O algoritmo de compactação JPEG analisa a imagem usando uma ferramenta matemática chamada de _transformação de cosseno discreta_ e tenta remover dados que não são cruciais para preservar a fidelidade visual da imagem. O grau de compactação pode ser controlado com uma configuração geralmente conhecida como _qualidade_. As configurações de qualidade superior resultam em arquivos maiores.
 
 Por outro lado, um algoritmo de compactação sem perdas analisa a imagem para repetição e padrões de pixels que podem ser codificados de uma maneira que reduza os dados, mas não resulta na perda de qualquer informação. Os dados de bitmap originais podem ser restaurados inteiramente do arquivo compactado. O formato de arquivo compactado sem perdas primário em uso hoje é o PNG (Portable Network Graphics).
 
@@ -476,7 +476,7 @@ O artigo [**pintura do dedo no SkiaSharp**](../paths/finger-paint.md) demonstrou
 
 O **dedo de pintura com salvar** página no exemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) também retém todo o desenho em uma coleção de `SKPath` objetos, mas também renderiza o desenho em um bitmap, que pode ser salvo em sua biblioteca de fotos.
 
-Grande parte desse programa é semelhante ao programa original de **pintura a dedo** . Um aprimoramento é que o arquivo XAML agora instancia os botões rotulados como **Clear** e **Save**:
+Grande parte desse programa é semelhante ao programa original de **pintura a dedo** . Um aprimoramento é que o arquivo XAML agora instancia os botões rotulados como **Clear** e **Save** :
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -705,7 +705,7 @@ Uma técnica muito semelhante é usada no exemplo de [**SpinPaint**](/samples/xa
 
 [![Pincel de rotação](saving-images/SpinPaint.png "Pincel de rotação")](saving-images/SpinPaint-Large.png#lightbox)
 
-O botão **salvar** da `SpinPaint` classe é semelhante à **pintura digital** , pois salva a imagem em um nome de pasta fixa (**SpainPaint**) e um nome de arquivo construído a partir da data e hora.
+O botão **salvar** da `SpinPaint` classe é semelhante à **pintura digital** , pois salva a imagem em um nome de pasta fixa ( **SpainPaint** ) e um nome de arquivo construído a partir da data e hora.
 
 ## <a name="related-links"></a>Links relacionados
 

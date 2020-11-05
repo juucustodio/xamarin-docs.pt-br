@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 11/12/2018
-ms.openlocfilehash: ef632b4bff3313de82c71cb5839ecdc24c9242ad
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: ffb49329b38705d097520b24d53285d5dbf15167
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91431490"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371801"
 ---
 # <a name="file-system-access-in-xamarinios"></a>Acesso ao sistema de arquivos no Xamarin. iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/filesystemsamplecode)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/ios-samples/filesystemsamplecode)
 
 Você pode usar o Xamarin. iOS e as `System.IO` classes na *BCL (base Class Library) do .net* para acessar o sistema de arquivos do Ios. A classe `File` permite criar, excluir e ler arquivos e a classe `Directory` permite criar, excluir ou enumerar o conteúdo de diretórios. Você também pode usar `Stream` subclasses, o que pode fornecer um grau maior de controle sobre as operações de arquivo (como a compactação ou a pesquisa de posição dentro de um arquivo).
 
@@ -155,7 +155,7 @@ Para marcar um arquivo para inclusão, clique com o botão direito do mouse nos 
 
 É importante entender que o sistema de arquivos iOS diferencia *maiúsculas de minúsculas*. Diferenciar maiúsculas de minúsculas significa que os nomes de arquivo e diretório devem corresponder exatamente – **README.txt** e **readme.txt** seriam considerados nomes de arquivos diferentes.
 
-Isso pode ser confuso para os desenvolvedores do .NET que estão mais familiarizados com o sistema de arquivos do Windows, que não diferencia *maiúsculas de minúsculas* – **arquivos**, **arquivos**e **arquivos** se refereriam ao mesmo diretório.
+Isso pode ser confuso para os desenvolvedores do .NET que estão mais familiarizados com o sistema de arquivos do Windows, que não diferencia *maiúsculas de minúsculas* – **arquivos** , **arquivos** e **arquivos** se refereriam ao mesmo diretório.
 
 > [!WARNING]
 > O simulador do iOS não diferencia maiúsculas de minúsculas.
@@ -200,7 +200,7 @@ Esses diretórios, como determinar seu caminho e suas finalidades são listadas 
 
 |Diretório|Descrição|
 |---|---|
-|[ApplicationName]. app/|**No Ios 7 e versões anteriores**, esse é o `ApplicationBundle` diretório onde o executável do aplicativo está armazenado. A estrutura de diretório que você cria em seu aplicativo existe nesse diretório (por exemplo, imagens e outros tipos de arquivo que você marcou como recursos em seu projeto de Visual Studio para Mac).<br /><br />Se você precisar acessar os arquivos de conteúdo dentro de seu pacote de aplicativo, o caminho para esse diretório estará disponível por meio da `NSBundle.MainBundle.BundlePath` propriedade.|
+|[ApplicationName]. app/|**No Ios 7 e versões anteriores** , esse é o `ApplicationBundle` diretório onde o executável do aplicativo está armazenado. A estrutura de diretório que você cria em seu aplicativo existe nesse diretório (por exemplo, imagens e outros tipos de arquivo que você marcou como recursos em seu projeto de Visual Studio para Mac).<br /><br />Se você precisar acessar os arquivos de conteúdo dentro de seu pacote de aplicativo, o caminho para esse diretório estará disponível por meio da `NSBundle.MainBundle.BundlePath` propriedade.|
 |Documento|Use esse diretório para armazenar documentos de usuário e arquivos de dados de aplicativo.<br /><br />O conteúdo desse diretório pode ser disponibilizado para o usuário por meio do compartilhamento de arquivos do iTunes (embora isso esteja desabilitado por padrão). Adicione uma `UIFileSharingEnabled` chave booliana ao arquivo info. plist para permitir que os usuários acessem esses arquivos.<br /><br />Mesmo que um aplicativo não habilite imediatamente o compartilhamento de arquivos, você deve evitar colocar os arquivos que devem ser ocultados dos usuários nesse diretório (como arquivos de banco de dados, a menos que você pretenda compartilhá-los). Desde que os arquivos confidenciais permaneçam ocultos, esses arquivos não serão expostos (e potencialmente movidos, modificados ou excluídos pelo iTunes) se o compartilhamento de arquivos estiver habilitado em uma versão futura.<br /><br /> Você pode usar o `Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments)` método para obter o caminho para o diretório de documentos para seu aplicativo.<br /><br />O conteúdo desse diretório é submetido a backup pelo iTunes.|
 |Biblioteca|O diretório de biblioteca é um bom local para armazenar arquivos que não são criados diretamente pelo usuário, como bancos de dados ou outros arquivos gerados pelo aplicativo. O conteúdo desse diretório nunca é exposto ao usuário por meio do iTunes.<br /><br />Você pode criar seus próprios subdiretórios na biblioteca; no entanto, já existem alguns diretórios criados pelo sistema aqui que você deve estar atento, incluindo preferências e caches.<br /><br />O conteúdo desse diretório (exceto para o subdiretório caches) é submetido a backup pelo iTunes. Os diretórios personalizados criados na biblioteca serão submetidos a backup.|
 |Biblioteca/Preferências/|Os arquivos de preferência específicos do aplicativo são armazenados nesse diretório. Não crie esses arquivos diretamente. Em vez disso, use a `NSUserDefaults` classe.<br /><br />O conteúdo desse diretório é submetido a backup pelo iTunes.|
@@ -263,7 +263,7 @@ Os usuários só podem acessar os itens de nível superior neste diretório por 
 
 Os usuários que modificarem o conteúdo de suas pastas de documentos poderão causar problemas se não forem cuidadosos. Seu aplicativo deve levar isso em consideração e ser resiliente a atualizações destrutivas da pasta documentos.
 
-O código de exemplo deste artigo cria um arquivo e uma pasta na pasta documentos (em **SampleCode.cs**) e habilita o compartilhamento de arquivos no arquivo **info. plist** . Esta captura de tela mostra como eles aparecem no iTunes:
+O código de exemplo deste artigo cria um arquivo e uma pasta na pasta documentos (em **SampleCode.cs** ) e habilita o compartilhamento de arquivos no arquivo **info. plist** . Esta captura de tela mostra como eles aparecem no iTunes:
 
 [![Esta captura de tela mostra como os arquivos aparecem no iTunes](file-system-images/15-itunes-file-sharing-example-sml.png)](file-system-images/15-itunes-file-sharing-example.png#lightbox)
 

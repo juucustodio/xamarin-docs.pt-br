@@ -10,16 +10,19 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6ea63fc483025fc6f9b0c7f379b6dfdc6ca30de8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f1c5af73c7c7fd160f715d7dbfab26c72cb06a31
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84198093"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371541"
 ---
 # <a name="preface-to-enterprise-app-development"></a>Preceder para o desenvolvimento de aplicativos empresariais
 
-Este livro eletrônico fornece orientação sobre a criação de aplicativos empresariais de plataforma cruzada usando o Xamarin.Forms . Xamarin.Formso é um kit de ferramentas de interface do usuário de plataforma cruzada que permite aos desenvolvedores criar facilmente layouts de interface nativa de usuários que podem ser compartilhados entre plataformas, incluindo iOS, Android e o Plataforma Universal do Windows (UWP). Ele fornece uma solução abrangente para os aplicativos Business to Employee (B2E), Business to Business (B2B) e Business to Consumer (B2C), fornecendo a capacidade de compartilhar código em todas as plataformas de destino e ajudando a reduzir o TCO (custo total de propriedade).
+> [!NOTE]
+> Este livro eletrônico foi publicado na Primavera de 2017 e não foi atualizado desde então. Há muito no livro que permanece valioso, mas parte do material está desatualizada.
+
+Este livro eletrônico fornece orientação sobre a criação de aplicativos empresariais de plataforma cruzada usando o Xamarin.Forms . Xamarin.Forms o é um kit de ferramentas de interface do usuário de plataforma cruzada que permite aos desenvolvedores criar facilmente layouts de interface nativa de usuários que podem ser compartilhados entre plataformas, incluindo iOS, Android e o Plataforma Universal do Windows (UWP). Ele fornece uma solução abrangente para os aplicativos Business to Employee (B2E), Business to Business (B2B) e Business to Consumer (B2C), fornecendo a capacidade de compartilhar código em todas as plataformas de destino e ajudando a reduzir o TCO (custo total de propriedade).
 
 O guia fornece diretrizes arquitetônicas para o desenvolvimento de aplicativos empresariais adaptáveis, que podem ser mantidos e que podem ser testados Xamarin.Forms . São fornecidas diretrizes sobre como implementar o MVVM, injeção de dependência, navegação, validação e gerenciamento de configuração, mantendo o acoplamento flexível. Além disso, também há orientações sobre como executar a autenticação e a autorização com o IdentityServer, acessar dados de microservices em contêineres e testes de unidade.
 
@@ -43,7 +46,7 @@ Este guia se concentra na criação de aplicativos empresariais de plataforma cr
 
 Sinta-se à vontade para encaminhar este guia aos membros da equipe para ajudar a garantir uma compreensão comum do desenvolvimento de aplicativos empresariais entre plataformas usando o Xamarin.Forms . Ter todos trabalhando em um conjunto comum de terminologias e princípios básicos ajudará a garantir uma aplicação consistente de padrões e práticas de arquitetura.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Download do eBook (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (exemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

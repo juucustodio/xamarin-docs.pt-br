@@ -10,16 +10,16 @@ ms.date: 06/16/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 604d2aa8368c85b852530f999601fffca8e104e6
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 79c32595053cc80ffae91b5434e18690ca2dce4a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562919"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370709"
 ---
 # <a name="clipping-with-paths-and-regions"></a>Recorte com caminhos de regiões
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Usar caminhos para recortar elementos gráficos para áreas específicas e para criar regiões_
 
@@ -511,7 +511,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Na verdade, ele não parece um trevo folhas de quatro folhas, mas é uma imagem que, de outra forma, poderia ser difícil de renderizar sem recorte:
 
-[![Captura de tela tripla da página de trevo folhas de quatro folhas](clipping-images//fourleafclover-small.png)](clipping-images/fourleafclover-large.png#lightbox)
+[![Captura de tela tripla da página do Four-Leaf trevo folhas](clipping-images//fourleafclover-small.png)](clipping-images/fourleafclover-large.png#lightbox)
 
 ## <a name="related-links"></a>Links Relacionados
 

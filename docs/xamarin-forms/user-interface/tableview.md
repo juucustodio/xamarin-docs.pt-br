@@ -10,16 +10,16 @@ ms.date: 09/25/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2a54b5e2523f4d1993cf0c86ba141135b1e9d74c
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: afb2c7c5c82a7ce530846c266d231b893bbbf39d
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91561737"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371217"
 ---
 # <a name="no-locxamarinforms-tableview"></a>Xamarin.Forms TableView
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-tableview)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-tableview)
 
 [`TableView`](xref:Xamarin.Forms.TableView) é uma exibição para exibir listas roláveis de dados ou opções em que há linhas que não compartilham o mesmo modelo. Ao contrário de [ListView](~/xamarin-forms/user-interface/listview/index.md), não `TableView` tem o conceito de um `ItemsSource` , portanto, os itens devem ser adicionados manualmente como filhos.
 

@@ -10,20 +10,23 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6b86bfe1e343cd50f4a133726d16364b3efb8bee
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 26b9aa33267c56a82edfd38a1d7eefa6a5cd82a2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84198267"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370358"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Resumo do capítulo 4. Rolagem da pilha
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
 
-Este capítulo é dedicado principalmente à introdução do conceito de *layout*, que é o termo geral para as classes e técnicas que o Xamarin.Forms usa para organizar a exibição visual de várias exibições na página.
+> [!NOTE]
+> Este livro foi publicado na Primavera de 2016 e não foi atualizado desde então. Há muito no livro que permanece valioso, mas alguns materiais estão desatualizados e alguns tópicos não estão mais totalmente corretos ou completos.
 
-O layout envolve várias classes que derivam de [`Layout`](xref:Xamarin.Forms.Layout) e [`Layout<T>`](xref:Xamarin.Forms.Layout`1) . Este capítulo se concentra em [`StackLayout`](xref:Xamarin.Forms.StackLayout) .
+Este capítulo é dedicado principalmente à introdução do conceito de *layout* , que é o termo geral para as classes e técnicas que o Xamarin.Forms usa para organizar a exibição visual de várias exibições na página.
+
+O layout envolve várias classes que derivam de [`Layout`](xref:Xamarin.Forms.Layout) e  [`Layout<T>`](xref:Xamarin.Forms.Layout`1) . Este capítulo se concentra em [`StackLayout`](xref:Xamarin.Forms.StackLayout) .
 
 > [!NOTE]
 > O [`FlexLayout`](~/xamarin-forms/user-interface/layouts/flex-layout.md) introduzido no Xamarin.Forms 3,0 pode ser usado de maneiras semelhantes a `StackLayout` , mas com mais flexibilidade.
@@ -32,7 +35,7 @@ Também foram apresentadas neste capítulo as [`ScrollView`](xref:Xamarin.Forms.
 
 ## <a name="stacks-of-views"></a>Pilhas de modos de exibição
 
-[`StackLayout`](xref:Xamarin.Forms.StackLayout)deriva de `Layout<View>` e herda uma [`Children`](xref:Xamarin.Forms.Layout`1) Propriedade do tipo `IList<View>` . Você adiciona vários itens de exibição a essa coleção e `StackLayout` os exibe em uma pilha horizontal ou vertical.
+[`StackLayout`](xref:Xamarin.Forms.StackLayout) deriva de `Layout<View>` e herda uma [`Children`](xref:Xamarin.Forms.Layout`1) Propriedade do tipo `IList<View>` . Você adiciona vários itens de exibição a essa coleção e `StackLayout` os exibe em uma pilha horizontal ou vertical.
 
 Defina a [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) propriedade de `StackLayout` como um membro da [`StackOrientation`](xref:Xamarin.Forms.StackOrientation) enumeração, [`Vertical`](xref:Xamarin.Forms.StackOrientation.Vertical) ou [`Horizontal`](xref:Xamarin.Forms.StackOrientation.Horizontal) . O padrão é `Vertical`.
 
@@ -56,8 +59,8 @@ Quando uma `StackLayout` pilha de seus filhos, cada filho ocupa um slot específ
 
 A `LayoutOptions` estrutura define duas propriedades:
 
-- [`Alignment`](xref:Xamarin.Forms.LayoutOptions.Alignment)do tipo de enumeração [`LayoutAlignment`](xref:Xamarin.Forms.LayoutAlignment) com quatro membros, [`Start`](xref:Xamarin.Forms.LayoutAlignment.Start) , [`Center`](xref:Xamarin.Forms.LayoutAlignment.Center) , [`End`](xref:Xamarin.Forms.LayoutAlignment.End) e[`Fill`](xref:Xamarin.Forms.LayoutAlignment.Fill)
-- [`Expands`](xref:Xamarin.Forms.LayoutOptions.Expands)do tipo`bool`
+- [`Alignment`](xref:Xamarin.Forms.LayoutOptions.Alignment) do tipo de enumeração [`LayoutAlignment`](xref:Xamarin.Forms.LayoutAlignment) com quatro membros, [`Start`](xref:Xamarin.Forms.LayoutAlignment.Start) , [`Center`](xref:Xamarin.Forms.LayoutAlignment.Center) , [`End`](xref:Xamarin.Forms.LayoutAlignment.End) e [`Fill`](xref:Xamarin.Forms.LayoutAlignment.Fill)
+- [`Expands`](xref:Xamarin.Forms.LayoutOptions.Expands) do tipo `bool`
 
 Para sua conveniência, a `LayoutOptions` estrutura também define oito campos estáticos somente leitura do tipo `LayoutOptions` que abrangem todas as combinações das duas propriedades de instância:
 
@@ -86,7 +89,7 @@ Isso é demonstrado no exemplo de [**VerticalOptionsDemo**](https://github.com/x
 
 Essas duas exibições retangulares são geralmente usadas para fins de apresentação.
 
-A [`Frame`](xref:Xamarin.Forms.Frame) exibição mostra um quadro retangular ao contrário de outra exibição, que pode ser um layout como `StackLayout` . `Frame`herda uma [`Content`](xref:Xamarin.Forms.ContentView.Content) Propriedade do [`ContentView`](xref:Xamarin.Forms.ContentView) que você define para a exibição a ser exibida dentro do `Frame` . O `Frame` é transparente por padrão. Defina as três propriedades a seguir para personalizar a aparência do quadro:
+A [`Frame`](xref:Xamarin.Forms.Frame) exibição mostra um quadro retangular ao contrário de outra exibição, que pode ser um layout como `StackLayout` . `Frame` herda uma [`Content`](xref:Xamarin.Forms.ContentView.Content) Propriedade do [`ContentView`](xref:Xamarin.Forms.ContentView) que você define para a exibição a ser exibida dentro do `Frame` . O `Frame` é transparente por padrão. Defina as três propriedades a seguir para personalizar a aparência do quadro:
 
 - A [`OutlineColor`](xref:Xamarin.Forms.Frame.OutlineColor) propriedade para torná-la visível. É comum definir `OutlineColor` como `Color.Accent` quando você não souber o esquema de cores subjacente.
 - A [`HasShadow`](xref:Xamarin.Forms.Frame.HasShadow) propriedade pode ser definida como `true` para exibir uma sombra preta em dispositivos IOS.

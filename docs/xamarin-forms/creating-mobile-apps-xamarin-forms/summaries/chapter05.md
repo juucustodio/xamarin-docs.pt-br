@@ -10,19 +10,19 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 37403cfe9f37972c20fb074db5e30cc54b60fea9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8cd68fdc3d7e94b6ae12ce6296dc4d698bc0ebd2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136871"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370254"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>Resumo do capítulo 5. Lidar com tamanhos
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05)
 
 > [!NOTE]
-> As observações nesta página indicam áreas em que Xamarin.Forms houve uma divergência do material apresentado no livro.
+> Este livro foi publicado na Primavera de 2016 e não foi atualizado desde então. Há muito no livro que permanece valioso, mas alguns materiais estão desatualizados e alguns tópicos não estão mais totalmente corretos ou completos.
 
 Vários tamanhos no Xamarin.Forms foram encontrados até agora:
 
@@ -36,18 +36,18 @@ Esses tamanhos não são pixels. Em vez disso, elas são unidades independentes 
 
 ## <a name="pixels-points-dps-dips-and-dius"></a>Pixels, pontos, DPS, DIPs e DIUs
 
-No início dos históricos do Apple Mac e do Microsoft Windows, os programadores trabalharam em unidades de pixels. No entanto, o advento das telas de resolução superior exigia uma abordagem mais virtualizada e abstrata para as coordenadas da tela. No mundo do Mac, os programadores trabalharam em unidades de *pontos*, tradicionalmente 1/72 polegadas, enquanto os desenvolvedores do Windows usavam DIUs ( *unidades independentes de dispositivo* ) com base em 1/96 polegadas.
+No início dos históricos do Apple Mac e do Microsoft Windows, os programadores trabalharam em unidades de pixels. No entanto, o advento das telas de resolução superior exigia uma abordagem mais virtualizada e abstrata para as coordenadas da tela. No mundo do Mac, os programadores trabalharam em unidades de *pontos* , tradicionalmente 1/72 polegadas, enquanto os desenvolvedores do Windows usavam DIUs ( *unidades independentes de dispositivo* ) com base em 1/96 polegadas.
 
 Os dispositivos móveis, no entanto, geralmente são mantidos muito mais próximos da face e têm uma resolução mais alta do que as telas da área de trabalho, o que implica que uma densidade de pixel maior pode ser tolerada.
 
-Os programadores visando dispositivos Apple iPhone e iPad continuam a funcionar em unidades de *pontos*, mas há 160 desses pontos em polegadas. Dependendo do dispositivo, pode haver 1, 2 ou 3 pixels até o ponto.
+Os programadores visando dispositivos Apple iPhone e iPad continuam a funcionar em unidades de *pontos* , mas há 160 desses pontos em polegadas. Dependendo do dispositivo, pode haver 1, 2 ou 3 pixels até o ponto.
 
 O Android é semelhante. Os programadores trabalham em unidades de pontos *independentes de densidade* (DPS) e a relação entre o DPS e os pixels é baseada no dps de 160 a polegada.
 
 Windows phones e dispositivos móveis também estabeleceram fatores de dimensionamento que implicam algo perto de 160 unidades independentes de dispositivo para a polegada.
 
 > [!NOTE]
-> Xamarin.FormsNão dá mais suporte a qualquer telefone baseado no Windows ou dispositivo móvel.
+> Xamarin.Forms Não dá mais suporte a qualquer telefone baseado no Windows ou dispositivo móvel.
 
 Em resumo, um Xamarin.Forms programador que visa telefones e tablets pode assumir que todas as unidades de medida se baseiam no seguinte critério:
 
@@ -79,7 +79,7 @@ O exemplo [**EstimatedFontSize**](https://github.com/xamarin/xamarin-forms-book-
 
 ## <a name="a-fit-to-size-clock"></a>Um relógio ajustado para o tamanho
 
-O exemplo [**FitToSizeClock**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/FitToSizeClock) demonstra como usar o [`Device.StartTimer`](xref:Xamarin.Forms.Device.StartTimer(System.TimeSpan,System.Func{System.Boolean})) para iniciar um temporizador que notifica periodicamente o aplicativo quando é hora de atualizar o relógio. O tamanho da fonte é definido como um sexto da largura da página para tornar a exibição o mais grande possível.
+O exemplo [**FitToSizeClock**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/FitToSizeClock) demonstra como usar o  [`Device.StartTimer`](xref:Xamarin.Forms.Device.StartTimer(System.TimeSpan,System.Func{System.Boolean})) para iniciar um temporizador que notifica periodicamente o aplicativo quando é hora de atualizar o relógio. O tamanho da fonte é definido como um sexto da largura da página para tornar a exibição o mais grande possível.
 
 ## <a name="accessibility-issues"></a>Problemas de acessibilidade
 

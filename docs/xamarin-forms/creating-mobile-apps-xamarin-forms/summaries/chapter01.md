@@ -10,19 +10,19 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 48b2fb429d206f6582886c94d4d99839d790dc8d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1af4b990d388436c04a2feb0abe3d4e3a8bc6756
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136919"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370449"
 ---
-# <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Resumo do capítulo 1. Como o Xamarin.Forms se encaixa?
+# <a name="summary-of-chapter-1-how-does-no-locxamarinforms-fit-in"></a>Resumo do capítulo 1. Como o Xamarin.Forms se encaixa?
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter01)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter01)
 
 > [!NOTE]
-> As observações nesta página indicam áreas em que Xamarin.Forms houve uma divergência do material apresentado no livro.
+> Este livro foi publicado na Primavera de 2016 e não foi atualizado desde então. Há muito no livro que permanece valioso, mas alguns materiais estão desatualizados e alguns tópicos não estão mais totalmente corretos ou completos.
 
 Um dos trabalhos mais desagradáveis na programação é portar uma base de código de uma plataforma para outra, especialmente se essa plataforma envolver uma linguagem de programação diferente. Há uma tentação ao portar o código para refatorá-lo também, mas se ambas as plataformas precisarem ser mantidas em paralelo, as diferenças entre as duas bases de código tornarão a manutenção futura mais difícil.
 
@@ -43,7 +43,7 @@ Os desenvolvedores podem usar a plataforma Xamarin para escrever aplicativos em 
 > [!NOTE]
 > As bibliotecas de classes portáteis foram substituídas por bibliotecas de .NET Standard. Todo o código de exemplo do livro foi convertido para usar bibliotecas do .NET Standard.
 
-## <a name="introducing-xamarinforms"></a>ApresentandoXamarin.Forms
+## <a name="introducing-no-locxamarinforms"></a>Apresentando Xamarin.Forms
 
 Ao direcionar várias plataformas móveis, Xamarin.Forms permite ainda mais o compartilhamento de código. Um único programa escrito para Xamarin.Forms pode direcionar estas plataformas:
 
@@ -52,13 +52,13 @@ Ao direcionar várias plataformas móveis, Xamarin.Forms permite ainda mais o co
 - o Plataforma Universal do Windows para o Windows 10 de destino
 
 > [!NOTE]
-> Xamarin.FormsNão dá mais suporte a Windows 8.1, Windows Phone 8,1 ou Windows 10 Mobile, mas Xamarin.Forms os aplicativos são executados na área de trabalho do Windows 10. Também há suporte de visualização para as plataformas [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK #](~/xamarin-forms/platform/other/gtk.md)e [tizen](~/xamarin-forms/platform/other/tizen.md) .
+> Xamarin.Forms Não dá mais suporte a Windows 8.1, Windows Phone 8,1 ou Windows 10 Mobile, mas Xamarin.Forms os aplicativos são executados na área de trabalho do Windows 10. Também há suporte de visualização para as plataformas [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK #](~/xamarin-forms/platform/other/gtk.md)e [tizen](~/xamarin-forms/platform/other/tizen.md) .
 
 A maior parte de um Xamarin.Forms programa existe em uma biblioteca ou em um SAP. Cada uma das plataformas consiste em um stub de aplicativo pequeno que chama esse código compartilhado.
 
 As Xamarin.Forms APIs são mapeadas para controles nativos em cada plataforma, de forma que cada plataforma mantenha sua aparência característica:
 
-[![Captura de tela tripla de compartilhamento de visuais de plataforma](images/ch01fg03-small.png "[! Parar. Controles não-LOC (Xamarin. Forms)] em cada plataforma")](images/ch01fg03-large.png#lightbox "[! Parar. Controles não-LOC (Xamarin. Forms)] em cada plataforma")
+[![Captura de tela tripla de compartilhamento de visuais de plataforma](images/ch01fg03-small.png "::: no-Loc (Xamarin. Forms)::: Controls em cada plataforma")](images/ch01fg03-large.png#lightbox "::: no-Loc (Xamarin. Forms)::: Controls em cada plataforma")
 
 As capturas de tela da esquerda para a direita mostram um iPhone e um telefone Android:
 
@@ -66,7 +66,7 @@ Em cada tela, a página contém um Xamarin.Forms [`Label`](xref:Xamarin.Forms.La
 
 Também anexado à página é uma Xamarin.Forms barra de ferramentas que consiste em vários [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) objetos. Eles são visíveis como ícones na parte superior das telas do iOS e do Android e na parte inferior da tela do Windows 10 Mobile.
 
-Xamarin.Formstambém dá suporte a XAML, o Extensible Application Markup Language desenvolvido na Microsoft para várias plataformas de aplicativos. Todos os visuais do programa mostrado acima são definidos em XAML, conforme demonstrado no exemplo de [**PlatformVisuals**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter01/PlatformVisuals) .
+Xamarin.Forms também dá suporte a XAML, o Extensible Application Markup Language desenvolvido na Microsoft para várias plataformas de aplicativos. Todos os visuais do programa mostrado acima são definidos em XAML, conforme demonstrado no exemplo de [**PlatformVisuals**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter01/PlatformVisuals) .
 
 Um Xamarin.Forms programa pode determinar em qual plataforma ele está sendo executado e executar código diferente adequadamente. De forma mais eficiente, os desenvolvedores podem escrever código personalizado para as várias plataformas e executar esse código de um Xamarin.Forms programa de maneira independente da plataforma. Os desenvolvedores também podem criar controles adicionais escrevendo renderizadores para cada plataforma.
 
