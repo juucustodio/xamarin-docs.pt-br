@@ -948,8 +948,6 @@ items:
             href: data-cloud/azure-services/azure-search.md
           - name: Verificação de
             href: data-cloud/azure-services/azure-functions.md
-          - name: Serviço Azure SignalR
-            href: data-cloud/azure-services/azure-signalr.md
       - name: Serviços Cognitivos do Azure
         items:
           - name: Visão geral dos serviços cognitivos

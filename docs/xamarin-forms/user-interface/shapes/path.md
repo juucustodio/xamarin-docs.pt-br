@@ -10,12 +10,12 @@ ms.date: 06/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 62bfb13f3aa4c09da76eca6723a34e6e8a72853d
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 1ba44903f20d0431c27f2d49429b2feb9c9a51e0
+ms.sourcegitcommit: f920ac0724f09e5c9b4f36be1995a5a17a6d9f95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373725"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94591054"
 ---
 # <a name="no-locxamarinforms-shapes-path"></a>Xamarin.Forms Formas: caminho
 
@@ -56,9 +56,6 @@ O exemplo de XAML a seguir mostra como desenhar um triângulo usando a sintaxe d
 A `Data` cadeia de caracteres começa com o comando move, indicado por `M` , que estabelece um ponto de partida absoluto para o caminho. `L` é o comando line, que cria uma linha reta a partir do ponto inicial até o ponto de extremidade especificado. `Z` é o comando Close, que cria uma linha que conecta o ponto atual ao ponto de partida. O resultado é um triângulo:
 
 ![Triângulo do caminho](path-images/triangle.png "Triângulo do caminho")
-
-> [!NOTE]
-> A sintaxe de marcação de caminho só está disponível em XAML.
 
 Para obter mais informações sobre a sintaxe de marcação de caminho, consulte [ Xamarin.Forms sintaxe de marcação de caminho](path-markup-syntax.md).
 

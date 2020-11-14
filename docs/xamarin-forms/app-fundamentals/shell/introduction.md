@@ -10,12 +10,12 @@ ms.date: 09/20/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a7347bb1e2ef07161c5d03b76680b8770c5a49ec
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 215bf467c6f00e45d3e00e10438b01d238050504
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373309"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590318"
 ---
 # <a name="no-locxamarinforms-shell-introduction"></a>Xamarin.Forms Introdução ao shell
 
@@ -41,7 +41,7 @@ Xamarin.Forms O Shell está totalmente disponível no iOS e no Android, mas apen
 global::Xamarin.Forms.Forms.SetFlags("Shell_UWP_Experimental");
 ```
 
-Para obter informações sobre como adicionar um projeto UWP a uma Xamarin.Forms solução, consulte [Configurar projetos do Windows](~/xamarin-forms/platform/windows/installation/index.md).
+Para obter mais informações sobre o status do Shell no UWP, consulte [ Xamarin.Forms shell Project Board](https://github.com/xamarin/Xamarin.Forms/projects/54) em github.com.
 
 ## <a name="shell-navigation-experience"></a>Experiência de navegação do Shell
 

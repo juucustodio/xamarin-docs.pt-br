@@ -10,12 +10,12 @@ ms.date: 04/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fb9d5243e5be4d99d741349564854c9c54e7a1bb
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: f29bacf3546b2148a3d97c3c1ccaa44e02872be8
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373283"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590305"
 ---
 # <a name="no-locxamarinforms-shell-navigation"></a>Xamarin.Forms Navegação do Shell
 
@@ -149,20 +149,24 @@ Este exemplo navega até a página para a rota `monkeys`, com a rota sendo defin
 
 ### <a name="relative-routes"></a>Rotas relativas
 
-A navegação também pode ser realizada por meio da especificação de um URI relativo válido como um argumento para o método `GoToAsync`. O sistema de roteamento tentará fazer a correspondência do URI a um objeto `ShellContent`. Portanto, se todas as rotas em um aplicativo forem exclusivas, a navegação poderá ser realizada simplesmente pela especificação do nome da rota exclusiva como um URI relativo:
+A navegação também pode ser realizada por meio da especificação de um URI relativo válido como um argumento para o método `GoToAsync`. O sistema de roteamento tentará fazer a correspondência do URI a um objeto `ShellContent`. Portanto, se todas as rotas em um aplicativo forem exclusivas, a navegação poderá ser executada apenas especificando o nome exclusivo da rota como um URI relativo.
+
+Os seguintes formatos de rota relativos têm suporte:
+
+| Formatar | Descrição |
+| --- | --- |
+| *route* | A hierarquia de rotas será pesquisada para a rota especificada, para cima da posição atual. A página correspondente será enviada por push para a pilha de navegação. |
+| /*rota* | A hierarquia de rotas será pesquisada a partir da rota especificada, para baixo da posição atual. A página correspondente será enviada por push para a pilha de navegação. |
+| //*rota* | A hierarquia de rotas será pesquisada para a rota especificada, para cima da posição atual. A página correspondente substituirá a pilha de navegação. |
+| ///*rota* | A hierarquia de rotas será pesquisada para a rota especificada, abaixo da posição atual. A página correspondente substituirá a pilha de navegação. |
+
+O exemplo a seguir navega até a página da `monkeydetails` rota:
 
 ```csharp
 await Shell.Current.GoToAsync("monkeydetails");
 ```
 
-Este exemplo navega até a página para a rota `monkeydetails`.
-
-Além disso, há suporte para os seguintes formatos de rota relativa:
-
-| Formatar | Descrição |
-| --- | --- |
-| //*rota* | A hierarquia de rotas será pesquisada à procura da rota especificada, acima da rota exibida atualmente. |
-| ///*rota* | A hierarquia de rotas será pesquisada à procura da rota especificada, abaixo da rota exibida atualmente. |
+Neste exemplo, a `monkeyDetails` rota é pesquisada para cima na hierarquia até que a página correspondente seja encontrada. Quando a página é encontrada, ela é enviada por push para a pilha de navegação.
 
 #### <a name="contextual-navigation"></a>Navegação contextual
 
@@ -185,13 +189,13 @@ A navegação para trás pode ser executada especificando ".." como o argumento 
 await Shell.Current.GoToAsync("..");
 ```
 
-A navegação para trás com ".." também pode ser combinada com uma rota, da seguinte maneira:
+A navegação para trás com ".." também pode ser combinada com uma rota:
 
 ```csharp
 await Shell.Current.GoToAsync("../route");
 ```
 
-Neste exemplo, o efeito geral é navegar para trás e, em seguida, navegar até a rota especificada.
+Neste exemplo, navegação para trás é executada e, em seguida, navegação para a rota especificada.
 
 > [!IMPORTANT]
 > Navegar para trás e para uma rota especificada só será possível se a navegação para trás colocar você no local atual na hierarquia de rotas para navegar até a rota especificada.
@@ -202,10 +206,20 @@ Da mesma forma, é possível navegar para trás várias vezes e, em seguida, nav
 await Shell.Current.GoToAsync("../../route");
 ```
 
-Neste exemplo, o efeito geral é navegar duas vezes para trás e, em seguida, navegar até a rota especificada.
+Neste exemplo, navegação para trás é executada duas vezes e, em seguida, navegação para a rota especificada.
+
+Além disso, os dados podem ser passados por meio de propriedades de consulta ao navegar para trás:
+
+```csharp
+await Shell.Current.GoToAsync($"..?parameterToPassBack={parameterValueToPassBack}");
+```
+
+Neste exemplo, a navegação para trás é executada e o valor do parâmetro de consulta é passado para o parâmetro de consulta na página anterior.
 
 > [!NOTE]
-> Os dados também podem ser passados ao navegar com "..". Para obter mais informações, consulte [transmitir dados](#pass-data).
+> Os parâmetros de consulta podem ser anexados a qualquer solicitação de navegação retroativa.
+
+Para obter mais informações sobre como passar dados ao navegar, consulte [passar dados](#pass-data).
 
 ### <a name="invalid-routes"></a>Rotas inválidas
 
@@ -240,11 +254,27 @@ A classe `Tab` define uma propriedade `Stack`, do tipo `IReadOnlyList<Page>`, qu
 - `OnPushAsync` retorna `Task` e é chamado quando `INavigation.PushAsync` é chamado.
 - `OnRemovePage`, chamado quando `INavigation.RemovePage` é chamado.
 
+Por exemplo, o exemplo de código a seguir mostra como substituir o `OnRemovePage` método:
+
+```csharp
+public class MyTab : Tab
+{
+    protected override void OnRemovePage(Page page)
+    {
+        base.OnRemovePage(page);
+
+        // Custom logic
+    }
+}
+```
+
+`MyTab` os objetos podem ser consumidos em sua hierarquia visual do Shell em vez de `Tab` objetos.
+
 ## <a name="navigation-events"></a>Eventos de navegação
 
 A classe `Shell` define um evento `Navigating`, que é acionado quando a navegação está prestes a ser realizada, devido à navegação programática ou à interação do usuário. O objeto `ShellNavigatingEventArgs` que acompanha o evento `Navigating` fornece as seguintes propriedades:
 
-| Propriedade | Type | Descrição |
+| Propriedade | Tipo | Description |
 |---|---|---|
 | `Current` | `ShellNavigationState` | O URI da página atual. |
 | `Source` | `ShellNavigationSource` | O tipo de navegação que ocorreu. |
@@ -256,7 +286,7 @@ Além disso, a classe `ShellNavigatingEventArgs` fornece um método `Cancel` que
 
 A classe `Shell` também define um evento`Navigated`, que é acionado quando a navegação é concluída. O objeto `ShellNavigatedEventArgs` que acompanha o evento `Navigating` fornece as seguintes propriedades:
 
-| Propriedade | Type | Descrição |
+| Propriedade | Tipo | Description |
 |---|---|---|
 | `Current` | `ShellNavigationState` | O URI da página atual. |
 | `Previous`| `ShellNavigationState` | O URI da página anterior. |

@@ -6,16 +6,16 @@ ms.assetid: A2C1BD59-1A16-4E26-A825-0338E2AF9E65
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/19/2020
+ms.date: 11/13/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c774b795fce50b32f01b50c29cb71dd5fd02585c
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 4f60a48d2d8b43ea08ccc36401103d8987e48b1c
+ms.sourcegitcommit: f920ac0724f09e5c9b4f36be1995a5a17a6d9f95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373517"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94591041"
 ---
 # <a name="no-locxamarinforms-shapes-path-markup-syntax"></a>Xamarin.Forms Formas: sintaxe de marcação de caminho
 
@@ -43,7 +43,13 @@ No exemplo acima, a sintaxe de marcação de caminho Especifica um ponto de part
 Na sintaxe de marcação de caminho, os espaços não são necessários antes ou depois dos comandos. Além disso, dois números não precisam ser separados por uma vírgula ou espaço em branco, mas isso só pode ser obtido quando a cadeia de caracteres não é ambígua.
 
 > [!TIP]
-> A linguagem de marcação de caminho usa uma sintaxe compatível com definições de caminho de imagem SVG (gráficos vetoriais escalonáveis) e, portanto, pode ser útil para portar gráficos do formato SVG.
+> A sintaxe de marcação de caminho é compatível com definições de caminho de imagem SVG (gráficos vetoriais escalonáveis) e, portanto, pode ser útil para portar gráficos do formato SVG.
+
+Embora a sintaxe de marcação de caminho seja destinada ao consumo em XAML, ela pode ser convertida em um `Geometry` objeto no código invocando o `ConvertFromInvariantString` método na `PathGeometryConverter` classe:
+
+```csharp
+Geometry pathData = (Geometry)new PathGeometryConverter().ConvertFromInvariantString("M13.908992,16.207977 L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983Z");
+```
 
 ## <a name="move-command"></a>Comando de movimentação
 

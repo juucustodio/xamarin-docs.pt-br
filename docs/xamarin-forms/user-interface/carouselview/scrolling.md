@@ -10,12 +10,12 @@ ms.date: 01/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 945b6656895b4c148ac4b138af0c4922f9e3bc8f
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 58d0da21c81586a2cee2268c5d2df668eab0515a
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93365679"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590292"
 ---
 # <a name="no-locxamarinforms-carouselview-scrolling"></a>Xamarin.Forms CarouselView rolagem
 
@@ -169,11 +169,11 @@ Este código de exemplo resulta no item que está sendo rolado para o final da e
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) define uma `ItemsUpdatingScrollMode` propriedade, que é apoiada por uma propriedade vinculável. Essa propriedade Obtém ou define um `ItemsUpdatingScrollMode` valor de enumeração que representa o comportamento de rolagem do `CarouselView` quando novos itens são adicionados a ele. A enumeração `ItemsUpdatingScrollMode` define os seguintes membros:
 
-- `KeepItemsInView` ajusta o deslocamento de rolagem para manter o primeiro item visível exibido quando novos itens são adicionados.
-- `KeepScrollOffset` mantém o deslocamento de rolagem relativo ao início da lista quando novos itens são adicionados.
-- `KeepLastItemInView` ajusta o deslocamento de rolagem para manter o último item visível quando novos itens são adicionados.
+- `KeepItemsInView` mantém o primeiro item na lista exibido quando novos itens são adicionados.
+- `KeepScrollOffset` garante que a posição de rolagem atual seja mantida quando novos itens forem adicionados.
+- `KeepLastItemInView` ajusta o deslocamento de rolagem para manter o último item da lista exibido quando novos itens são adicionados.
 
-O valor padrão da `ItemsUpdatingScrollMode` propriedade é `KeepItemsInView` . Portanto, quando novos itens forem adicionados a um [`CarouselView`](xref:Xamarin.Forms.CarouselView) primeiro item visível na lista, permanecerão exibidos. Para garantir que itens recém-adicionados sempre fiquem visíveis na parte inferior da lista, a `ItemsUpdatingScrollMode` propriedade deve ser definida como `KeepLastItemInView` :
+O valor padrão da `ItemsUpdatingScrollMode` propriedade é `KeepItemsInView` . Portanto, quando novos itens forem adicionados a um [`CarouselView`](xref:Xamarin.Forms.CarouselView) primeiro item da lista, permanecerão exibidos. Para garantir que o último item da lista seja exibido quando novos itens forem adicionados, defina a `ItemsUpdatingScrollMode` propriedade como `KeepLastItemInView` :
 
 ```xaml
 <CarouselView ItemsUpdatingScrollMode="KeepLastItemInView">

@@ -10,12 +10,12 @@ ms.date: 09/17/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1872f86c0e7be6ab07b4e962d17be7d8030c1d96
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 557c82ac9318faaef5628a15989af2982a7f5ba4
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373153"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590409"
 ---
 # <a name="no-locxamarinforms-collectionview-scrolling"></a>Xamarin.Forms Rolagem de CollectionView
 
@@ -132,7 +132,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.MakeVisible);
 
 Este código de exemplo resulta na rolagem mínima necessária para rolar o item para a exibição:
 
-[![Captura de tela de uma lista vertical CollectionView com um item rolado na exibição, no iOS e no Android](scrolling-images/scrolltoposition-makevisible.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-makevisible-large.png#lightbox "Lista vertical CollectionView com item rolado")
+[![Captura de tela de uma lista vertical CollectionView com ScrollToPosition. MakeVisible, no iOS e no Android](scrolling-images/scrolltoposition-makevisible.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-makevisible-large.png#lightbox "Lista vertical CollectionView com item rolado")
 
 > [!NOTE]
 > O [`ScrollToPosition.MakeVisible`](xref:Xamarin.Forms.ScrollToPosition) membro será usado por padrão, se o `position` argumento não for especificado ao chamar o `ScrollTo` método.
@@ -147,7 +147,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Start);
 
 Este código de exemplo resulta no item que está sendo rolado para o início da exibição:
 
-[![Captura de tela de uma lista vertical CollectionView com um item rolado na exibição, no iOS e no Android](scrolling-images/scrolltoposition-start.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-start-large.png#lightbox "Lista vertical CollectionView com item rolado")
+[![Captura de tela de uma lista vertical CollectionView com ScrollToPosition. Start, no iOS e no Android](scrolling-images/scrolltoposition-start.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-start-large.png#lightbox "Lista vertical CollectionView com item rolado")
 
 ### <a name="center"></a>Centro
 
@@ -159,7 +159,7 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.Center);
 
 Este código de exemplo resulta no item que está sendo rolado para o centro da exibição:
 
-[![Captura de tela de uma lista vertical CollectionView com um item rolado na exibição, no iOS e no Android](scrolling-images/scrolltoposition-center.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-center-large.png#lightbox "Lista vertical CollectionView com item rolado")
+[![Captura de tela de uma lista vertical CollectionView com ScrollToPosition. Center, no iOS e no Android](scrolling-images/scrolltoposition-center.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-center-large.png#lightbox "Lista vertical CollectionView com item rolado")
 
 ### <a name="end"></a>End
 
@@ -171,17 +171,17 @@ collectionView.ScrollTo(monkey, position: ScrollToPosition.End);
 
 Este código de exemplo resulta no item que está sendo rolado para o final da exibição:
 
-[![Captura de tela de uma lista vertical CollectionView com um item rolado na exibição, no iOS e no Android](scrolling-images/scrolltoposition-end.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-end-large.png#lightbox "Lista vertical CollectionView com item rolado")
+[![Captura de tela de uma lista vertical CollectionView com ScrollToPosition. end, no iOS e no Android](scrolling-images/scrolltoposition-end.png "Lista vertical CollectionView com item rolado")](scrolling-images/scrolltoposition-end-large.png#lightbox "Lista vertical CollectionView com item rolado")
 
 ## <a name="control-scroll-position-when-new-items-are-added"></a>Controlar a posição de rolagem quando novos itens forem adicionados
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) define uma `ItemsUpdatingScrollMode` propriedade, que é apoiada por uma propriedade vinculável. Essa propriedade Obtém ou define um `ItemsUpdatingScrollMode` valor de enumeração que representa o comportamento de rolagem do `CollectionView` quando novos itens são adicionados a ele. A enumeração `ItemsUpdatingScrollMode` define os seguintes membros:
 
-- `KeepItemsInView` ajusta o deslocamento de rolagem para manter o primeiro item visível exibido quando novos itens são adicionados.
-- `KeepScrollOffset` mantém o deslocamento de rolagem relativo ao início da lista quando novos itens são adicionados.
-- `KeepLastItemInView` ajusta o deslocamento de rolagem para manter o último item visível quando novos itens são adicionados.
+- `KeepItemsInView` mantém o primeiro item na lista exibido quando novos itens são adicionados.
+- `KeepScrollOffset` garante que a posição de rolagem atual seja mantida quando novos itens forem adicionados.
+- `KeepLastItemInView` ajusta o deslocamento de rolagem para manter o último item da lista exibido quando novos itens são adicionados.
 
-O valor padrão da `ItemsUpdatingScrollMode` propriedade é `KeepItemsInView` . Portanto, quando novos itens forem adicionados a um [`CollectionView`](xref:Xamarin.Forms.CollectionView) primeiro item visível na lista, permanecerão exibidos. Para garantir que itens recém-adicionados sempre fiquem visíveis na parte inferior da lista, a `ItemsUpdatingScrollMode` propriedade deve ser definida como `KeepLastItemInView` :
+O valor padrão da `ItemsUpdatingScrollMode` propriedade é `KeepItemsInView` . Portanto, quando novos itens forem adicionados a um [`CollectionView`](xref:Xamarin.Forms.CollectionView) primeiro item da lista, permanecerão exibidos. Para garantir que o último item da lista seja exibido quando novos itens forem adicionados, defina a `ItemsUpdatingScrollMode` propriedade como `KeepLastItemInView` :
 
 ```xaml
 <CollectionView ItemsUpdatingScrollMode="KeepLastItemInView">

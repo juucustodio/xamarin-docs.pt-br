@@ -11,12 +11,12 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 - Firebase
-ms.openlocfilehash: 498e3b0bd2cb88df3e04dc19c66dbe671a8378dd
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: b560eedb1968db791c57620686c4ddb854153b1c
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93374440"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590396"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-no-locxamarinforms"></a>Enviar e receber notificações por push com os hubs de notificação do Azure e Xamarin.Forms
 
@@ -142,8 +142,10 @@ Conclua as etapas a seguir para configurar o aplicativo Android para receber e p
 1. [Substituir](#override-firebasemessagingservice-to-handle-messages) `FirebaseMessagingService` para lidar com mensagens.
 1. [Adicionar](#add-incoming-notifications-to-the-xamarinforms-ui) notificações de entrada à Xamarin.Forms interface do usuário.
 
-> [!NOTE]
-> A `GoogleServicesJson` ação de compilação faz parte do `Xamarin.GooglePlayServices.Base` pacote NuGet. O Visual Studio 2019 define as ações de compilação disponíveis durante a inicialização. Se você não vir `GoogleServicesJson` como uma ação de compilação, reinicie o Visual Studio 2019 depois de instalar os pacotes NuGet.
+A `GoogleServicesJson` ação de compilação faz parte do `Xamarin.GooglePlayServices.Base` pacote NuGet. O Visual Studio 2019 define as ações de compilação disponíveis durante a inicialização. Se você não vir `GoogleServicesJson` como uma ação de compilação, reinicie o Visual Studio 2019 depois de instalar os pacotes NuGet.
+
+> [!IMPORTANT]
+> A entrega de notificações por push enquanto o aplicativo está em suspensão agora requer o uso de AndroidX. Para obter informações sobre como migrar para o AndroidX, consulte [migração do AndroidX no Xamarin.Forms ](~/xamarin-forms/platform/android/androidx-migration.md).
 
 ### <a name="configure-android-manifest"></a>Configurar o manifesto do Android
 
