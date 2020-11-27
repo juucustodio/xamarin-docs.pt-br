@@ -11,18 +11,19 @@ ms.date: 03/16/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: dff01728c986b23e59af702edb3bfd8c74ad744a
-ms.sourcegitcommit: d2aa3a8bf9a60b6708db55b10b0c6893c06d3256
+ms.openlocfilehash: 5af5846c77c5cd63e14494c25e5dc04ebcea4b7d
+ms.sourcegitcommit: f90e908a72cf616ee303c2751729b62f11654379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93331442"
+ms.lasthandoff: 11/27/2020
+ms.locfileid: "96299953"
 ---
 # <a name="xaml-previewer-for-no-locxamarinforms"></a>Visualizar XAML para Xamarin.Forms
 
 _Consulte os Xamarin.Forms layouts renderizados conforme você digita_
 
 > [!WARNING]
+> O previsor XAML começará a ser dividido no Visual Studio 2019 versão 16,8 e Visual Studio para Mac versão 8,8.
 > A maneira recomendada para visualizar seu XAML agora é com o **[Hot recarregamento de XAML](~/xamarin-forms/xaml/hot-reload.md)**.
 
 ## <a name="overview"></a>Visão geral
@@ -78,7 +79,7 @@ Você pode desativar o Visualizar XAML no **Visual Studio > preferências > edit
 As opções na parte superior do painel de visualização são:
 
 * **Android** – mostrar a versão do Android da tela
-* **Ios** – mostrar a versão do IOS da tela ( *Observação: se você estiver usando o Visual Studio no Windows, deverá ser [emparelhado com um Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) para usar esse modo* )
+* **Ios** – mostrar a versão do IOS da tela (*Observação: se você estiver usando o Visual Studio no Windows, deverá ser [emparelhado com um Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) para usar esse modo*)
 * **Dispositivo** -lista suspensa de dispositivos Android ou Ios, incluindo resolução e tamanho da tela
 * **Retrato (ícone)** – usa a orientação retrato para a visualização
 * **Paisagem (ícone)** – usa a orientação paisagem para a versão prévia

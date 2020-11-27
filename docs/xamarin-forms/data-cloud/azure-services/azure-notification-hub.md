@@ -12,11 +12,11 @@ no-loc:
 - Xamarin.Essentials
 - Firebase
 ms.openlocfilehash: b560eedb1968db791c57620686c4ddb854153b1c
-ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
+ms.sourcegitcommit: f90e908a72cf616ee303c2751729b62f11654379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94590396"
+ms.lasthandoff: 11/27/2020
+ms.locfileid: "96299966"
 ---
 # <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-no-locxamarinforms"></a>Enviar e receber notificações por push com os hubs de notificação do Azure e Xamarin.Forms
 
