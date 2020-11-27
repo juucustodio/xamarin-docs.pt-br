@@ -8,12 +8,12 @@ ms.date: 09/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e997ae3137110e18df9eed90ef07bfa2703e8088
-ms.sourcegitcommit: 58247fe066ad271ee43c8967ac3301fdab6ca2d1
+ms.openlocfilehash: f98f0cdea812a91bbe6caf1e248e468d9a960ac6
+ms.sourcegitcommit: 8fa0cb9ccbc107d697aa5b9113a4e5d1e75d6eb9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92629594"
+ms.lasthandoff: 11/27/2020
+ms.locfileid: "96303040"
 ---
 # <a name="no-locxamarinessentials-file-picker"></a>Xamarin.Essentials: Seletor de arquivos
 
@@ -45,7 +45,7 @@ Abra o arquivo **AndroidManifest.xml** na pasta **Propriedades** e adicione o se
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 ```
 
-Ou clique com o botão direito do mouse no projeto do Android e abra as propriedades do projeto. Em **manifesto do Android** , localize as **permissões necessárias:** área e verifique essa permissão. Isso atualizará automaticamente o arquivo **AndroidManifest.xml** .
+Ou clique com o botão direito do mouse no projeto do Android e abra as propriedades do projeto. Em **manifesto do Android** , localize as **permissões necessárias:** área e verifique essa permissão. Isso atualizará automaticamente o arquivo **AndroidManifest.xml**.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
@@ -110,6 +110,21 @@ var options = new PickOptions
 ## <a name="pick-multiple-files"></a>Escolher vários arquivos
 
 Se você quiser que o usuário escolha vários arquivos, você pode chamar o `FilePicker.PickMultipleAsync()` método. Ele também usa `PickOptions` como um parâmetro para especificar informações adicionais. Os resultados são os mesmos `PickAsync` que, mas em vez de um único, `FileResult` `IEnumerable<FileResult>` é retornado que pode ser iterado.
+
+
+## <a name="platform-differences"></a>Diferenças entre plataformas
+
+# <a name="android"></a>[Android](#tab/android)
+
+- O URI do arquivo resultante pode não ser persistido entre as reinicializações.
+
+# <a name="ios"></a>[iOS](#tab/ios)
+
+Sem diferenças entre plataformas.
+
+# <a name="uwp"></a>[UWP](#tab/uwp)
+
+Sem diferenças entre plataformas.
 
 ## <a name="api"></a>API
 

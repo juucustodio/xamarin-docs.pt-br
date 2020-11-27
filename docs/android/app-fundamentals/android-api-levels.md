@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/21/2018
-ms.openlocfilehash: 188cc5b2ffba4540766edf0403d3a55228a21d6d
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: bb41a6e4ea477ed0a7932df441678e53a304aa35
+ms.sourcegitcommit: 8fa0cb9ccbc107d697aa5b9113a4e5d1e75d6eb9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84568810"
+ms.lasthandoff: 11/27/2020
+ms.locfileid: "96303095"
 ---
 # <a name="understanding-android-api-levels"></a>Noções básicas sobre níveis da API do Android
 
@@ -31,8 +31,8 @@ O Xamarin. Android expõe três configurações de projeto de nível de API do A
 Antes de configurar um nível de API para seu projeto, você deve instalar os componentes da plataforma SDK para esse nível de API. Para obter mais informações sobre como baixar e instalar SDK do Android componentes, consulte [SDK do Android setup](~/android/get-started/installation/android-sdk.md).
 
 > [!NOTE]
-> A partir de agosto de 2018, o console de Google Play exigirá que os novos aplicativos tenham o nível de API de destino 26 (Android 8,0) ou superior.
-Os aplicativos existentes serão solicitados a direcionar o nível de API 26 ou superior a partir de novembro de 2018. Para obter mais informações, consulte [melhorando a segurança e o desempenho do aplicativo no Google Play por anos](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html).
+> A partir de agosto de 2020, o console do Google Play requer que os novos aplicativos tenham o nível da API de destino 29 (Android 10,0) ou superior.
+Os aplicativos existentes são necessários para direcionar o nível da API 29 ou superior a partir de novembro de 2020. Para obter mais informações, consulte [requisitos de nível de API de destino para o console de reprodução](https://support.google.com/googleplay/android-developer/answer/9859152#targetsdk) em "criar e configurar seu aplicativo" na documentação do console de reprodução.
 
 <!-- markdownlint-disable MD001 -->
 
@@ -104,7 +104,7 @@ Essas configurações são usadas para garantir que a funcionalidade necessária
 
 ## <a name="project-api-level-settings"></a>Configurações de nível de API do projeto
 
-As seções a seguir explicam como usar o Gerenciador do SDK para preparar seu ambiente de desenvolvimento para os níveis de API que você deseja direcionar, seguidos por explicações detalhadas de como configurar a *estrutura de destino*, a *versão mínima do Android*e as configurações de destino do *Android* no Xamarin. Android.
+As seções a seguir explicam como usar o Gerenciador do SDK para preparar seu ambiente de desenvolvimento para os níveis de API que você deseja direcionar, seguidos por explicações detalhadas de como configurar a *estrutura de destino*, a *versão mínima do Android* e as configurações de destino do *Android* no Xamarin. Android.
 
 ### <a name="android-sdk-platforms"></a>Plataformas SDK do Android
 
@@ -261,9 +261,9 @@ Essas práticas recomendadas são recomendadas para ajudar a evitar a situação
 
 ## <a name="summary"></a>Resumo
 
-Este guia explicou como os níveis de API do Android são usados para gerenciar a compatibilidade de aplicativos em diferentes versões do Android. Ele forneceu etapas detalhadas para configurar a estrutura de *destino*do Xamarin. Android, a *versão mínima do Android*e as configurações do projeto de *versão do Android de destino* . Ele forneceu instruções para usar o Gerenciador de SDK do Android para instalar pacotes do SDK, incluindo exemplos de como escrever código para lidar com diferentes níveis de API em tempo de execução e explicou como gerenciar níveis de API ao criar ou consumir bibliotecas Android. Ele também forneceu uma lista abrangente que relaciona os níveis de API aos números de versão do Android (como Android 4,4), nomes de versão do Android (como KitKat) e códigos de versão de Build do Xamarin. Android.
+Este guia explicou como os níveis de API do Android são usados para gerenciar a compatibilidade de aplicativos em diferentes versões do Android. Ele forneceu etapas detalhadas para configurar a estrutura de *destino* do Xamarin. Android, a *versão mínima do Android* e as configurações do projeto de *versão do Android de destino* . Ele forneceu instruções para usar o Gerenciador de SDK do Android para instalar pacotes do SDK, incluindo exemplos de como escrever código para lidar com diferentes níveis de API em tempo de execução e explicou como gerenciar níveis de API ao criar ou consumir bibliotecas Android. Ele também forneceu uma lista abrangente que relaciona os níveis de API aos números de versão do Android (como Android 4,4), nomes de versão do Android (como KitKat) e códigos de versão de Build do Xamarin. Android.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Configuração do SDK do Android](~/android/get-started/installation/android-sdk.md)
 - [Alterações de ferramentas da CLI do SDK](~/android/troubleshooting/sdk-cli-tooling-changes.md)

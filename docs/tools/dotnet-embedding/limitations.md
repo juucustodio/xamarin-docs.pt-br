@@ -6,12 +6,12 @@ ms.assetid: EBBBB886-1CEF-4DF4-AFDD-CA96049F878E
 author: davidortinau
 ms.author: daortin
 ms.date: 11/14/2017
-ms.openlocfilehash: a8b63638861e8d44deb4ea72959d7461190f7713
-ms.sourcegitcommit: 6266ef043ae0289f174e901f204f2a280a53c071
+ms.openlocfilehash: 2fbd42efcdb3de10a7f094db2197a75d88d27b66
+ms.sourcegitcommit: 8fa0cb9ccbc107d697aa5b9113a4e5d1e75d6eb9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75545800"
+ms.lasthandoff: 11/27/2020
+ms.locfileid: "96303029"
 ---
 # <a name="net-embedding-limitations"></a>Limitações de incorporação do .NET
 
@@ -41,9 +41,9 @@ Dependendo de suas necessidades, pode ser possível fazer parte da solução alt
 
 ### <a name="nullability"></a>Nulidade
 
-Não há nenhum metadado no .NET que nos informe se uma referência nula é aceitável ou não para uma API. A maioria das APIs irá gerar `ArgumentNullException` se não puderem lidar com um argumento `null`. Isso é problemático, pois o tratamento de exceções Objective-C é algo melhor evitado.
+Não há nenhum metadado no .NET que nos informe se uma referência nula é aceitável ou não para uma API. A maioria das APIs gerará `ArgumentNullException` se elas não conseguirem lidar com um `null` argumento. Isso é problemático, pois o tratamento de exceções Objective-C é algo melhor evitado.
 
-Como não podemos gerar anotações de nulidade precisas nos arquivos de cabeçalho e deseja minimizar as exceções gerenciadas, por padrão, os argumentos não nulos (`NS_ASSUME_NONNULL_BEGIN`) e adicionariam algum específico, quando a precisão é possível, anotações de nulidade.
+Como não podemos gerar anotações de nulidade precisas nos arquivos de cabeçalho e deseja minimizar as exceções gerenciadas, por padrão, os argumentos não nulos ( `NS_ASSUME_NONNULL_BEGIN` ) e adicionariam algum específico, quando a precisão é possível, anotações de nulidade.
 
 ### <a name="bitcode-ios"></a>BitCode (iOS)
 
