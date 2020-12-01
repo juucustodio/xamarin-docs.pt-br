@@ -7,16 +7,20 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/31/2018
-ms.openlocfilehash: 7c6b5a4dd2f6f5d4992d84d5d8690a6dda3d20e3
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 07f3e313a743c9d95f8baf2be7a31f16c6ca4f7e
+ms.sourcegitcommit: d1f0e0a9100548cfe0960ed2225b979cc1d7c28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91432754"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96439474"
 ---
 # <a name="ios-designer-basics"></a>Noções básicas do iOS designer
 
 _Este guia apresenta o Xamarin Designer para iOS. Ele demonstra como usar o designer do iOS para formatar visualmente os controles, como acessar esses controles no código e como editar propriedades._
+
+> [!WARNING]
+> O designer do iOS começará a ser dividido no Visual Studio 2019 versão 16,8 e no Visual Studio 2019 para Mac versão 8,8.
+> A maneira recomendada para criar interfaces de usuário do iOS é diretamente em um Mac que executa o Xcode. Para obter mais informações, consulte [projetando interfaces do usuário com o Xcode](../storyboards/index.md). 
 
 O Xamarin Designer para iOS é um designer de interface visual semelhante ao Interface Builder do Xcode e ao Designer Android. Alguns dos seus muitos recursos incluem a integração direta com o Visual Studio para Windows e Mac, edição do tipo "arrastar e soltar", uma interface para configurar manipuladores de eventos e a capacidade de renderizar controles personalizados.
 
@@ -68,13 +72,13 @@ Alguns controles, como rótulos que contêm texto estático, podem ser adicionad
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-Para acessar e manipular o botão no código, ele deve ter um identificador exclusivo. Forneça um identificador exclusivo selecionando o botão, abrindo o **painel de propriedades**e definindo seu campo de **nome** como um valor como "SubmitButton":
+Para acessar e manipular o botão no código, ele deve ter um identificador exclusivo. Forneça um identificador exclusivo selecionando o botão, abrindo o **painel de propriedades** e definindo seu campo de **nome** como um valor como "SubmitButton":
 
 [![Definindo o nome de um botão na Painel de Propriedades](introduction-images/4-settingbuttonname-vsmac.png "Definindo o nome de um botão na Painel de Propriedades")](introduction-images/4-settingbuttonname-vsmac-large.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Para acessar e manipular o botão no código, ele deve ter um identificador exclusivo. Forneça um identificador exclusivo selecionando o botão, abrindo a **janela Propriedades**e definindo seu campo de **nome** como um valor como "SubmitButton":
+Para acessar e manipular o botão no código, ele deve ter um identificador exclusivo. Forneça um identificador exclusivo selecionando o botão, abrindo a **janela Propriedades** e definindo seu campo de **nome** como um valor como "SubmitButton":
 
 [![Definindo o nome de um botão na janela Propriedades](introduction-images/4-settingbuttonname-vs.png "Definindo o nome de um botão na janela Propriedades")](introduction-images/4-settingbuttonname-vs-large.png#lightbox)
 
@@ -300,8 +304,8 @@ Observe que a seleção de um dispositivo e orientação altera apenas a forma c
 
 Quando as [classes de tamanho](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) estiverem [habilitadas](~/ios/user-interface/storyboards/unified-storyboards.md#enabling-size-classes), o botão **Editar características** será exibido na barra de ferramentas inferior expandida.  Clicar no botão **Editar características** exibe opções para criar uma variação de interface com base na classe de tamanho representada pelo dispositivo e orientação selecionados. Considere os seguintes exemplos:
 
-- Se a opção **iPhone se**  /  **retrato**estiver selecionada, o popover fornecerá opções para criar uma variação de interface para a classe tamanho compacto de altura normal. 
-- Se o **iPad Pro 9,7 "**  /  **paisagem**  /  de**tela inteira** for selecionado, o popover fornecerá opções para criar uma variação de interface para a classe largura regular, tamanho normal de altura.
+- Se a opção **iPhone se**  /  **retrato** estiver selecionada, o popover fornecerá opções para criar uma variação de interface para a classe tamanho compacto de altura normal. 
+- Se o **iPad Pro 9,7 "**  /  **paisagem**  /  de **tela inteira** for selecionado, o popover fornecerá opções para criar uma variação de interface para a classe largura regular, tamanho normal de altura.
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
