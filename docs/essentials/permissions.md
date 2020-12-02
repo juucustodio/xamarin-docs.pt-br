@@ -9,12 +9,12 @@ ms.date: 09/22/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 01902942c750a3cd278d648fa82499af4c5d3ab6
-ms.sourcegitcommit: dac04cec56290fb19034f3e135708f6966a8f035
+ms.openlocfilehash: 25677d79b29902ed0cdd0b2ed08da021d7ef9e6f
+ms.sourcegitcommit: d2daaa6ca5fe630f80d5a8151985d9f96a2fc93b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92169963"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96513012"
 ---
 # <a name="no-locxamarinessentials-permissions"></a>Xamarin.Essentials: Permissões
 
@@ -108,7 +108,8 @@ Guia de ícones:
 Se uma permissão for marcada como ![sem suporte](~/media/shared/no.png "sem suporte") , ela sempre retornará `Granted` quando for marcada ou solicitada.
 
 ## <a name="general-usage"></a>Uso geral
-Aqui está um padrão de uso geral para lidar com permissões.
+
+O código a seguir apresenta o padrão de uso geral para determinar se uma permissão foi concedida e solicitá-la se não tiver. Esse código usa recursos que estão disponíveis com a Xamarin.Essentials versão 1.6.0 ou posterior.
 
 ```csharp
 public async Task<PermissionStatus> CheckAndRequestLocationPermission()
@@ -116,8 +117,7 @@ public async Task<PermissionStatus> CheckAndRequestLocationPermission()
     var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
     
     if (status == PermissionStatus.Granted)
-        return status;
-        
+        return status;        
     
     if (status == PermissionStatus.Denied && DeviceInfo.Platform == DevicePlatform.iOS)
     {
