@@ -140,9 +140,11 @@
       items:
         - name: Visão geral
           href: user-interface/index.md
-        - name: Storyboards
+        - name: Como criar usando o Xcode
           href: user-interface/storyboards/index.md
           items:
+            - name: Storyboards
+              href: user-interface/storyboards/indepth-storyboard.md
             - name: Storyboards unificadas
               href: user-interface/storyboards/unified-storyboards.md
         - name: Designer do iOS
