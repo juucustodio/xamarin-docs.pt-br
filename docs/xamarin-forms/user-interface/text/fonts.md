@@ -11,12 +11,12 @@ ms.custom: contperfq2
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c6fdbaf8d218044de9a4fe30ffe7e3df05619bdb
-ms.sourcegitcommit: f920ac0724f09e5c9b4f36be1995a5a17a6d9f95
+ms.openlocfilehash: 271c6c5e510a892919b5d87c4dbc38ad8e9d657d
+ms.sourcegitcommit: 342cfbd2502ad92cadada4fa9aec669b99d7830a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94591067"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96604567"
 ---
 # <a name="fonts-in-no-locxamarinforms"></a>Fontes em Xamarin.Forms
 
@@ -24,7 +24,7 @@ ms.locfileid: "94591067"
 
 Por padrão, Xamarin.Forms o usa uma fonte de sistema definida por cada plataforma. No entanto, os controles que exibem texto definem as propriedades que você pode usar para alterar essa fonte:
 
-- `FontAttributes`, do tipo `FontAttributes` , que é uma enumeração com três membros: `None` , `Build` e `Italic` . O valor padrão dessa propriedade é `None`.
+- `FontAttributes`, do tipo `FontAttributes` , que é uma enumeração com três membros: `None` , `Bold` e `Italic` . O valor padrão dessa propriedade é `None`.
 - `FontSize`, de tipo `double`.
 - `FontFamily`, de tipo `string`.
 
@@ -107,8 +107,8 @@ Há várias técnicas que podem ser usadas para tentar derivar as fontes que est
 
 Fontes personalizadas podem ser adicionadas ao seu Xamarin.Forms projeto compartilhado e consumidas por projetos de plataforma sem qualquer trabalho adicional. O processo para realizar isso é o seguinte:
 
-1. Adicione a fonte ao seu Xamarin.Forms projeto compartilhado como um recurso inserido ( **ação de compilação: EmbeddedResource** ).
-1. Registre o arquivo de fonte com o assembly, em um arquivo como **AssemblyInfo.cs** , usando o `ExportFont` atributo. Um alias opcional também pode ser especificado.
+1. Adicione a fonte ao seu Xamarin.Forms projeto compartilhado como um recurso inserido (**ação de compilação: EmbeddedResource**).
+1. Registre o arquivo de fonte com o assembly, em um arquivo como **AssemblyInfo.cs**, usando o `ExportFont` atributo. Um alias opcional também pode ser especificado.
 
 O exemplo a seguir mostra a fonte de Lobster-Regular que está sendo registrada com o assembly, juntamente com um alias:
 

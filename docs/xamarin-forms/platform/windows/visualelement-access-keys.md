@@ -10,12 +10,12 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7df914ae5b6de38b5179f5b1139b9c41e9559198
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 3cd4a9078a22c1f002cbc414490455c716ba884a
+ms.sourcegitcommit: 342cfbd2502ad92cadada4fa9aec669b99d7830a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93367446"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96604580"
 ---
 # <a name="visualelement-access-keys-on-windows"></a>Chaves de acesso do visualelement no Windows
 
@@ -103,7 +103,10 @@ O resultado é que as dicas de tecla de acesso podem ser exibidas ao lado de qua
 
 Quando um usuário ativa uma tecla de acesso, pressionando a tecla Alt seguida da tecla de acesso, a ação padrão para o `VisualElement` será executada. Por exemplo, quando um usuário ativa a tecla de acesso em um [`Switch`](xref:Xamarin.Forms.Switch) , o `Switch` é alternado. Quando um usuário ativa a tecla de acesso em um [`Entry`](xref:Xamarin.Forms.Entry) , o `Entry` foco ganha. Quando um usuário ativa a chave de acesso em um [`Button`](xref:Xamarin.Forms.Button) , o manipulador de eventos para o [`Clicked`](xref:Xamarin.Forms.Button.Clicked) evento é executado.
 
-Para obter mais informações sobre chaves de acesso, consulte [chaves de acesso](/windows/uwp/design/input/access-keys#key-tip-positioning).
+> [!WARNING]
+> Por padrão, as chaves de acesso podem ser ativadas quando uma caixa de diálogo modal é exibida, por exemplo, pelos `DisplayAlert` `DisplayPromptAsync` métodos e. No entanto, a lógica personalizada pode ser escrita para desabilitar as chaves de acesso nesse cenário. Isso pode ser obtido com a manipulação do `Dispatcher.AcceleratorKeyActivated` evento na `MainPage` classe do seu projeto UWP e no manipulador de eventos, definindo a `Handled` propriedade dos argumentos do evento como `true` quando uma caixa de diálogo modal é exibida.
+
+Para obter mais informações sobre chaves de acesso, consulte [chaves de acesso](/windows/uwp/design/input/access-keys).
 
 ## <a name="related-links"></a>Links relacionados
 

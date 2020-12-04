@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: a001cabae5e137cda4b31e15d3e75401575b96a7
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 2fc6c7fcd1c255e1cfd87e2e7cf91c92f17d8465
+ms.sourcegitcommit: 342cfbd2502ad92cadada4fa9aec669b99d7830a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91435029"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96604437"
 ---
 # <a name="introduction-to-tvos-in-xamarin"></a>Introdução ao tvOS no Xamarin
 
@@ -35,7 +35,7 @@ Os documentos a seguir irão ajudá-lo a começar a criar aplicativos tvOS com o
 
 - [Introdução ao tvOS 11](~/ios/tvos/platform/introduction-to-tvos11.md) – este artigo descreve os novos recursos disponíveis no tvOS 11 para desenvolvedores do Xamarin. tvOS.
 - [Introdução ao tvOS 10](~/ios/tvos/platform/introduction-to-tvos10/index.md) – este artigo apresenta todas as APIs e recursos novos e modificados disponíveis no tvOS 10 para desenvolvedores do Xamarin. tvOS.
-- [Introdução ao tvOS 9](~/ios/tvos/platform/tvos9.md) – este artigo apresenta todas as APIs e recursos novos e modificados disponíveis no tvOS 9 para desenvolvedores do Xamarin. tvOS. 
+- [Introdução ao tvOS 9](~/ios/tvos/platform/tvos9.md) – este artigo apresenta todas as APIs e recursos novos e modificados disponíveis no tvOS 9 para desenvolvedores do Xamarin. tvOS.
 - [Olá, tvOS guia de início rápido](~/ios/tvos/get-started/hello-tvos.md) – este guia orienta a criação do seu primeiro aplicativo Xamarin. tvOS e, no processo, apresenta o ferramentas de desenvolvimento, incluindo Visual Studio para Mac, Xcode e Interface Builder. Ele também apresenta saídas e ações, que expõem controles de interface do usuário ao código e, finalmente, ilustram como compilar, executar e testar um aplicativo Xamarin. tvOS.
 - [Trabalhando com ícones e imagens](~/ios/tvos/app-fundamentals/icons-images.md) – este artigo aborda a criação e o trabalho com ícones e imagens dentro de um aplicativo Xamarin. tvOS.
 - [Trabalhando com navegação e foco](~/ios/tvos/app-fundamentals/navigation-focus.md) – este artigo aborda o conceito de foco e como ele é usado para apresentar e tratar a navegação dentro de um aplicativo Xamarin. tvOS.
@@ -71,6 +71,10 @@ Além disso, a Apple fornece os seguintes aplicativos de exemplo que podem ser t
 Se você encontrar problemas ao compilar o tvOS com o Xamarin, verifique as [notas de versão](/xamarin/ios/release-notes/), os [fóruns do xamarin. Ios](https://forums.xamarin.com/categories/ios), o verificador de [bugzilla do xamarin](https://bugzilla.xamarin.com/query.cgi?product=iOS)e o [GitHub](https://github.com/xamarin/xamarin-macios/issues) para problemas existentes.
 
 Relatar novos problemas e sugestões [sobre o GitHub](https://github.com/xamarin/xamarin-macios/issues).
+
+## <a name="xamarintvos-on-qa"></a>Xamarin. tvOS no Q&A 
+
+Faça perguntas sobre como criar e implantar aplicativos tvOS com o Xamarin no [Q&A](/answers/topics/dotnet-tvos.html).
 
 ## <a name="related-links"></a>Links Relacionados
 

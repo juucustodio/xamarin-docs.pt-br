@@ -10,12 +10,12 @@ ms.date: 03/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5f70420690a9d81e5697c2e0bfefdf107aed9c86
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: f1caf08cf0fc2fdba6c9a9156280f9d3dafe0322
+ms.sourcegitcommit: 342cfbd2502ad92cadada4fa9aec669b99d7830a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93375415"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96604554"
 ---
 # <a name="display-pop-ups"></a>Exibir pop-ups
 
@@ -46,6 +46,9 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 ```
 
 [![DisplayAlert](pop-ups-images/alert2-sml.png "Caixa de diálogo de alerta com dois botões")](pop-ups-images/alert2.png#lightbox "Caixa de diálogo de alerta com dois botões")
+
+> [!WARNING]
+> Por padrão, as chaves de acesso UWP podem ser ativadas quando um alerta é exibido. Para obter mais informações, consulte [as chaves de acesso do visualelement no Windows](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
 
 ## <a name="guide-users-through-tasks"></a>Orientar os usuários por meio de tarefas
 
@@ -109,6 +112,9 @@ string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", initialV
 Esse código exibe uma resposta predefinida de 10, limita o número de caracteres que podem ser inseridos em 2 e exibe o teclado numérico para a entrada do usuário:
 
 [![Captura de tela de um prompt modal, no iOS e no Android](pop-ups-images/keyboard-prompt.png "Prompt modal")](pop-ups-images/keyboard-prompt-large.png#lightbox "Prompt modal")
+
+> [!WARNING]
+> Por padrão, as chaves de acesso UWP podem ser ativadas quando um prompt é exibido. Para obter mais informações, consulte [as chaves de acesso do visualelement no Windows](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
 
 ## <a name="related-links"></a>Links relacionados
 

@@ -1,21 +1,21 @@
 ---
 title: Xamarin.Forms notificações locais
-description: Este artigo explica como enviar e receber notificações locais no Xamarin.Forms .
+description: Este artigo explica como enviar, agendar e receber notificações locais no Xamarin.Forms .
 ms.prod: xamarin
 ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 10/10/2019
+ms.date: 12/03/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 306dbe15d269f0c8554f73b92623e4f67e06b959
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 5009e74bac79ad6a560bd4ab1cb039a74d8b49be
+ms.sourcegitcommit: 342cfbd2502ad92cadada4fa9aec669b99d7830a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93375168"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96604502"
 ---
 # <a name="local-notifications-in-no-locxamarinforms"></a>Notificações locais em Xamarin.Forms
 
@@ -27,7 +27,7 @@ As notificações locais são alertas enviados por aplicativos instalados em um 
 - Lembretes
 - Gatilhos baseados em local
 
-Cada plataforma manipula a criação, a exibição e o consumo de notificações locais de forma diferente. Este artigo explica como criar uma abstração de plataforma cruzada para enviar e receber notificações locais com o Xamarin.Forms .
+Cada plataforma manipula a criação, a exibição e o consumo de notificações locais de forma diferente. Este artigo explica como criar uma abstração de plataforma cruzada para enviar, agendar e receber notificações locais com o Xamarin.Forms .
 
 [![Aplicativo de notificações locais no iOS e Android](local-notifications-images/local-notifications-msg-cropped.png)](local-notifications-images/local-notifications-msg.png#lightbox)
 
@@ -39,16 +39,13 @@ O Xamarin.Forms aplicativo deve criar e consumir notificações sem preocupaçã
 public interface INotificationManager
 {
     event EventHandler NotificationReceived;
-
     void Initialize();
-
-    int ScheduleNotification(string title, string message);
-
+    void SendNotification(string title, string message, DateTime? notifyTime = null);
     void ReceiveNotification(string title, string message);
 }
 ```
 
-Essa interface será implementada em cada projeto de plataforma. O `NotificationReceived` evento permite que o aplicativo manipule notificações de entrada. O `Initialize` método deve executar qualquer lógica de plataforma nativa necessária para preparar o sistema de notificação. O `ScheduleNotification` método deve enviar uma notificação. O `ReceiveNotification` método deve ser chamado pela plataforma subjacente quando uma mensagem é recebida.
+Essa interface será implementada em cada projeto de plataforma. O `NotificationReceived` evento permite que o aplicativo manipule notificações de entrada. O `Initialize` método deve executar qualquer lógica de plataforma nativa necessária para preparar o sistema de notificação. O `SendNotification` método deve enviar uma notificação, em um opcional `DateTime` . O `ReceiveNotification` método deve ser chamado pela plataforma subjacente quando uma mensagem é recebida.
 
 ## <a name="consume-the-interface-in-no-locxamarinforms"></a>Consuma a interface em Xamarin.Forms
 
@@ -57,18 +54,26 @@ Depois que uma interface é criada, ela pode ser consumida no Xamarin.Forms proj
 ```xaml
 <StackLayout Margin="0,35,0,0"
              x:Name="stackLayout">
-    <Label Text="Click the button to create a local notification."
+    <Label Text="Click the button below to create a local notification."
            TextColor="Red"
            HorizontalOptions="Center"
            VerticalOptions="Start" />
     <Button Text="Create Notification"
             HorizontalOptions="Center"
             VerticalOptions="Start"
-            Clicked="OnScheduleClick"/>
+            Clicked="OnSendClick" />
+    <Label Text="Click the button below to schedule a local notification for in 10 seconds time."
+           TextColor="Red"
+           HorizontalOptions="Center"
+           VerticalOptions="Start" />
+    <Button Text="Create Notification"
+            HorizontalOptions="Center"
+            VerticalOptions="Start"
+            Clicked="OnScheduleClick" />
 </StackLayout>
 ```
 
-O layout contém um `Label` elemento com instruções para o usuário e um `Button` que deve agendar uma notificação quando tocado.
+O layout contém `Label` elementos que explicam instruções e `Button` elementos que enviam ou agendam uma notificação quando tocadas.
 
 A `MainPage` classe code-behind lida com o envio e recebimento de notificações:
 
@@ -90,12 +95,20 @@ public partial class MainPage : ContentPage
         };
     }
 
+    void OnSendClick(object sender, EventArgs e)
+    {
+        notificationNumber++;
+        string title = $"Local Notification #{notificationNumber}";
+        string message = $"You have now received {notificationNumber} notifications!";
+        notificationManager.SendNotification(title, message);
+    }
+
     void OnScheduleClick(object sender, EventArgs e)
     {
         notificationNumber++;
         string title = $"Local Notification #{notificationNumber}";
         string message = $"You have now received {notificationNumber} notifications!";
-        notificationManager.ScheduleNotification(title, message);
+        notificationManager.SendNotification(title, message, DateTime.Now.AddSeconds(10));
     }
 
     void ShowNotification(string title, string message)
@@ -112,7 +125,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-O `MainPage` Construtor de classe usa o Xamarin.Forms `DependencyService` para recuperar uma instância específica da plataforma do `INotificationManager` . O `OnScheduleClicked` método usa a `INotificationManager` instância para agendar uma nova notificação. O `ShowNotification` método é chamado a partir do manipulador de eventos anexado ao `NotificationReceived` evento e irá inserir um novo `Label` na página quando o evento for invocado.
+O `MainPage` Construtor de classe usa o Xamarin.Forms `DependencyService` para recuperar uma instância específica da plataforma do `INotificationManager` . Os `OnSendClick` `OnScheduleClicked` métodos e usam a `INotificationManager` instância para enviar e agendar novas notificações. O `ShowNotification` método é chamado a partir do manipulador de eventos anexado ao `NotificationReceived` evento e irá inserir um novo `Label` na página quando o evento for invocado.
 
 O `NotificationReceived` manipulador de eventos converte seus argumentos de evento para `NotificationEventArgs` . Esse tipo é definido no projeto compartilhado Xamarin.Forms :
 
@@ -135,6 +148,11 @@ Para que o Xamarin.Forms aplicativo envie e receba notificações no Android, o 
 A `AndroidNotificationManager` classe implementa a `INotificationManager` interface:
 
 ```csharp
+using System;
+using Android.App;
+using Android.Content;
+using Android.Graphics;
+using Android.OS;
 using Android.Support.V4.App;
 using Xamarin.Forms;
 using AndroidApp = Android.App.Application;
@@ -147,49 +165,48 @@ namespace LocalNotifications.Droid
         const string channelId = "default";
         const string channelName = "Default";
         const string channelDescription = "The default channel for notifications.";
-        const int pendingIntentId = 0;
 
         public const string TitleKey = "title";
         public const string MessageKey = "message";
 
         bool channelInitialized = false;
-        int messageId = -1;
+        int messageId = 0;
+        int pendingIntentId = 0;
+
         NotificationManager manager;
 
         public event EventHandler NotificationReceived;
 
+        public static AndroidNotificationManager Instance { get; private set; }
+
         public void Initialize()
         {
             CreateNotificationChannel();
+            Instance = this;
         }
 
-        public int ScheduleNotification(string title, string message)
+        public void SendNotification(string title, string message, DateTime? notifyTime = null)
         {
             if (!channelInitialized)
             {
                 CreateNotificationChannel();
             }
 
-            messageId++;
+            if (notifyTime != null)
+            {
+                Intent intent = new Intent(AndroidApp.Context, typeof(AlarmHandler));
+                intent.PutExtra(TitleKey, title);
+                intent.PutExtra(MessageKey, message);
 
-            Intent intent = new Intent(AndroidApp.Context, typeof(MainActivity));
-            intent.PutExtra(TitleKey, title);
-            intent.PutExtra(MessageKey, message);
-
-            PendingIntent pendingIntent = PendingIntent.GetActivity(AndroidApp.Context, pendingIntentId, intent, PendingIntentFlags.OneShot);
-
-            NotificationCompat.Builder builder = new NotificationCompat.Builder(AndroidApp.Context, channelId)
-                .SetContentIntent(pendingIntent)
-                .SetContentTitle(title)
-                .SetContentText(message)
-                .SetLargeIcon(BitmapFactory.DecodeResource(AndroidApp.Context.Resources, Resource.Drawable.xamagonBlue))
-                .SetSmallIcon(Resource.Drawable.xamagonBlue)
-                .SetDefaults((int)NotificationDefaults.Sound | (int)NotificationDefaults.Vibrate);
-
-            var notification = builder.Build();
-            manager.Notify(messageId, notification);
-
-            return messageId;
+                PendingIntent pendingIntent = PendingIntent.GetBroadcast(AndroidApp.Context, pendingIntentId++, intent, PendingIntentFlags.CancelCurrent);
+                long triggerTime = GetNotifyTime(notifyTime.Value);
+                AlarmManager alarmManager = AndroidApp.Context.GetSystemService(Context.AlarmService) as AlarmManager;
+                alarmManager.Set(AlarmType.RtcWakeup, triggerTime, pendingIntent);
+            }
+            else
+            {
+                Show(title, message);
+            }
         }
 
         public void ReceiveNotification(string title, string message)
@@ -200,6 +217,26 @@ namespace LocalNotifications.Droid
                 Message = message,
             };
             NotificationReceived?.Invoke(null, args);
+        }
+
+        public void Show(string title, string message)
+        {
+            Intent intent = new Intent(AndroidApp.Context, typeof(MainActivity));
+            intent.PutExtra(TitleKey, title);
+            intent.PutExtra(MessageKey, message);
+
+            PendingIntent pendingIntent = PendingIntent.GetActivity(AndroidApp.Context, pendingIntentId++, intent, PendingIntentFlags.UpdateCurrent);
+
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(AndroidApp.Context, channelId)
+                .SetContentIntent(pendingIntent)
+                .SetContentTitle(title)
+                .SetContentText(message)
+                .SetLargeIcon(BitmapFactory.DecodeResource(AndroidApp.Context.Resources, Resource.Drawable.xamagonBlue))
+                .SetSmallIcon(Resource.Drawable.xamagonBlue)
+                .SetDefaults((int)NotificationDefaults.Sound | (int)NotificationDefaults.Vibrate);
+
+            Notification notification = builder.Build();
+            manager.Notify(messageId++, notification);
         }
 
         void CreateNotificationChannel()
@@ -218,16 +255,45 @@ namespace LocalNotifications.Droid
 
             channelInitialized = true;
         }
+
+        long GetNotifyTime(DateTime notifyTime)
+        {
+            DateTime utcTime = TimeZoneInfo.ConvertTimeToUtc(notifyTime);
+            double epochDiff = (new DateTime(1970, 1, 1) - DateTime.MinValue).TotalSeconds;
+            long utcAlarmTime = utcTime.AddSeconds(-epochDiff).Ticks / 10000;
+            return utcAlarmTime; // milliseconds
+        }
     }
 }
 ```
 
 O `assembly` atributo acima do namespace registra a `INotificationManager` implementação da interface com o `DependencyService` .
 
-O Android permite que os aplicativos definam vários canais para notificações. O `Initialize` método cria um canal básico que o aplicativo de exemplo usa para enviar notificações. O `ScheduleNotification` método define a lógica específica da plataforma necessária para criar e enviar uma notificação. Por fim, o `ReceiveNotification` método é chamado pelo sistema operacional Android quando uma mensagem é recebida e invoca o manipulador de eventos.
+O Android permite que os aplicativos definam vários canais para notificações. O `Initialize` método cria um canal básico que o aplicativo de exemplo usa para enviar notificações. O `SendNotification` método define a lógica específica da plataforma necessária para criar e enviar uma notificação. O `ReceiveNotification` método é chamado pelo sistema operacional Android quando uma mensagem é recebida e invoca o manipulador de eventos.
 
-> [!NOTE]
-> A `Application` classe é definida nos `Xamarin.Forms` `Android.App` namespaces e, portanto, o `AndroidApp` alias é definido nas `using` instruções para diferenciar os dois.
+O `SendNotification` método cria uma notificação local imediatamente ou em um exato `DateTime` . Uma notificação pode ser agendada para um `DateTime` uso exato da `AlarmManager` classe, e a notificação será recebida por um objeto derivado da `BroadcastReceiver` classe:
+
+```csharp
+[BroadcastReceiver(Enabled = true, Label = "Local Notifications Broadcast Receiver")]
+public class AlarmHandler : BroadcastReceiver
+{
+    public override void OnReceive(Context context, Intent intent)
+    {
+        if (intent?.Extras != null)
+        {
+            string title = intent.GetStringExtra(AndroidNotificationManager.TitleKey);
+            string message = intent.GetStringExtra(AndroidNotificationManager.MessageKey);
+
+            AndroidNotificationManager.Instance.Show(title, message);
+        }
+    }
+}
+```
+
+> [!IMPORTANT]
+> Por padrão, as notificações agendadas usando a `AlarmManager` classe não irão sobreviver à reinicialização do dispositivo. No entanto, você pode criar seu aplicativo para reagendar automaticamente as notificações se o dispositivo for reiniciado. Para obter mais informações, consulte [Iniciar um alarme quando o dispositivo for reiniciado](https://developer.android.com/training/scheduling/alarms#boot) em [agendar alarmes repetitivos](https://developer.android.com/training/scheduling/alarms) em developer.Android.com. Para obter informações sobre o processamento em segundo plano no Android, consulte [guia para processamento em segundo plano](https://developer.android.com/guide/background) em developer.Android.com.
+
+Para obter mais informações sobre receptores de transmissão, consulte [receptores de transmissão no Xamarin. Android](~/android/app-fundamentals/broadcast-receivers.md).
 
 ### <a name="handle-incoming-notifications-on-android"></a>Manipular notificações de entrada no Android
 
@@ -266,8 +332,8 @@ void CreateNotificationFromIntent(Intent intent)
 {
     if (intent?.Extras != null)
     {
-        string title = intent.Extras.GetString(AndroidNotificationManager.TitleKey);
-        string message = intent.Extras.GetString(AndroidNotificationManager.MessageKey);
+        string title = intent.GetStringExtra(AndroidNotificationManager.TitleKey);
+        string message = intent.GetStringExtra(AndroidNotificationManager.MessageKey);
         DependencyService.Get<INotificationManager>().ReceiveNotification(title, message);
     }
 }
@@ -289,15 +355,18 @@ Para que o Xamarin.Forms aplicativo envie e receba notificações no Ios, o apli
 A `iOSNotificationManager` classe implementa a `INotificationManager` interface:
 
 ```csharp
+using System;
+using Foundation;
+using UserNotifications;
+using Xamarin.Forms;
+
 [assembly: Dependency(typeof(LocalNotifications.iOS.iOSNotificationManager))]
 namespace LocalNotifications.iOS
 {
     public class iOSNotificationManager : INotificationManager
     {
-        int messageId = -1;
-
+        int messageId = 0;
         bool hasNotificationsPermission;
-
         public event EventHandler NotificationReceived;
 
         public void Initialize()
@@ -309,12 +378,12 @@ namespace LocalNotifications.iOS
             });
         }
 
-        public int ScheduleNotification(string title, string message)
+        public void SendNotification(string title, string message, DateTime? notifyTime = null)
         {
             // EARLY OUT: app doesn't have permissions
-            if(!hasNotificationsPermission)
+            if (!hasNotificationsPermission)
             {
-                return -1;
+                return;
             }
 
             messageId++;
@@ -325,11 +394,19 @@ namespace LocalNotifications.iOS
                 Subtitle = "",
                 Body = message,
                 Badge = 1
-            };
+            };            
 
-            // Local notifications can be time or location based
-            // Create a time-based trigger, interval is in seconds and must be greater than 0
-            var trigger = UNTimeIntervalNotificationTrigger.CreateTrigger(0.25, false);
+            UNNotificationTrigger trigger;
+            if (notifyTime != null)
+            {
+                // Create a calendar-based trigger.
+                trigger = UNCalendarNotificationTrigger.CreateTrigger(GetNSDateComponents(notifyTime.Value), false);
+            }
+            else
+            {
+                // Create a time-based trigger, interval is in seconds and must be greater than 0.
+                trigger = UNTimeIntervalNotificationTrigger.CreateTrigger(0.25, false);
+            }                      
 
             var request = UNNotificationRequest.FromIdentifier(messageId.ToString(), content, trigger);
             UNUserNotificationCenter.Current.AddNotificationRequest(request, (err) =>
@@ -339,8 +416,6 @@ namespace LocalNotifications.iOS
                     throw new Exception($"Failed to schedule notification: {err}");
                 }
             });
-
-            return messageId;
         }
 
         public void ReceiveNotification(string title, string message)
@@ -352,13 +427,29 @@ namespace LocalNotifications.iOS
             };
             NotificationReceived?.Invoke(null, args);
         }
+
+        NSDateComponents GetNSDateComponents(DateTime dateTime)
+        {
+            return new NSDateComponents
+            {
+                Month = dateTime.Month,
+                Day = dateTime.Day,
+                Year = dateTime.Year,
+                Hour = dateTime.Hour,
+                Minute = dateTime.Minute,
+                Second = dateTime.Second
+            };
+        }
     }
 }
 ```
 
 O `assembly` atributo acima do namespace registra a `INotificationManager` implementação da interface com o `DependencyService` .
 
-No iOS, você deve solicitar permissão para usar notificações antes de tentar agendar uma notificação. O `Initialize` método solicita autorização para usar notificações locais. O `ScheduleNotification` método define a lógica necessária para criar e enviar uma notificação. Por fim, o `ReceiveNotification` método será chamado pelo Ios quando uma mensagem for recebida e invocará o manipulador de eventos.
+No iOS, você deve solicitar permissão para usar notificações antes de tentar agendar uma notificação. O `Initialize` método solicita autorização para usar notificações locais. O `SendNotification` método define a lógica necessária para criar e enviar uma notificação. O `ReceiveNotification` método será chamado pelo Ios quando uma mensagem for recebida e invocará o manipulador de eventos.
+
+> [!NOTE]
+> O `SendNotification` método cria uma notificação local imediatamente, usando um `UNTimeIntervalNotificationTrigger` objeto ou, em um exato, `DateTime` usando um `UNCalendarNotificationTrigger` objeto.
 
 ### <a name="handle-incoming-notifications-on-ios"></a>Manipular notificações de entrada no iOS
 
@@ -398,13 +489,13 @@ o iOS oferece muitas opções avançadas para notificações. Para obter mais in
 
 ## <a name="test-the-application"></a>Testar o aplicativo
 
-Depois que os projetos de plataforma contiverem uma implementação registrada da `INotificationManager` interface, o aplicativo poderá ser testado em ambas as plataformas. Execute o aplicativo e clique no botão **agendar notificação** para criar uma notificação.
+Depois que os projetos de plataforma contiverem uma implementação registrada da `INotificationManager` interface, o aplicativo poderá ser testado em ambas as plataformas. Execute o aplicativo e clique em um dos botões **criar notificação** para criar uma notificação.
 
-No Android, a notificação aparecerá na área de notificação. Quando a notificação é tocada, o aplicativo recebe a notificação e exibe uma mensagem abaixo do botão **agendar notificação** :
+No Android, as notificações serão exibidas na área de notificação. Quando a notificação é tocada, o aplicativo recebe a notificação e exibe uma mensagem:
 
 ![Notificações locais no Android](local-notifications-images/local-notifications-android.png)
 
-No iOS, as notificações de entrada são automaticamente recebidas pelo aplicativo sem a necessidade de entrada do usuário. O aplicativo recebe a notificação e exibe uma mensagem abaixo do botão **agendar notificação** :
+No iOS, as notificações de entrada são automaticamente recebidas pelo aplicativo sem a necessidade de entrada do usuário. O aplicativo recebe a notificação e exibe uma mensagem:
 
 ![Notificações locais no iOS](local-notifications-images/local-notifications-ios.png)
 
@@ -412,5 +503,6 @@ No iOS, as notificações de entrada são automaticamente recebidas pelo aplicat
 
 - [Projeto de exemplo](/samples/xamarin/xamarin-forms-samples/local-notifications)
 - [Notificações no Xamarin. Android](~/android/app-fundamentals/notifications/index.md)
+- [Receptores de difusão no Xamarin. Android](~/android/app-fundamentals/broadcast-receivers.md)
 - [Notificações no Xamarin. iOS](~/ios/platform/user-notifications/index.md)
-- [Xamarin.Forms Dependência. serviço](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md)
+- [Xamarin.Forms DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md)
