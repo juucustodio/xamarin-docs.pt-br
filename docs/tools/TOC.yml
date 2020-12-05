@@ -9,7 +9,7 @@
           href: ios-simulator/deploy.md
         - name: Notas de Versão
           href: /xamarin/tools/ios-simulator/release-notes/?context=xamarin/tools
-    - name: Inspector
+    - name: Inspetor
       href: inspector/index.md
       items:
         - name: Instalação e requisitos
@@ -33,7 +33,7 @@
       items:
         - name: Solução de problemas
           href: profiler/troubleshooting.md
-        - name: Notas de Versão
+        - name: Notas de versão
           href: /xamarin/tools/profiler/release-notes/
     - name: Pastas de trabalho
       href: workbooks/index.md
@@ -96,7 +96,7 @@
         - name: Objective-C
           href: dotnet-embedding/objective-c/index.md
           items:
-            - name: Práticas recomendadas
+            - name: Práticas Recomendadas
               href: dotnet-embedding/objective-c/best-practices.md
             - name: Plataformas
               href: dotnet-embedding/objective-c/platforms.md
