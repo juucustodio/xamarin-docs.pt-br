@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/05/2017
-ms.openlocfilehash: 07b39f87b6eeb0fc24486be83573a721abc07966
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: a54a0012f7b5ed3d147242e3ee02b2ed6fe890bf
+ms.sourcegitcommit: 0a41c4aa6db72cd2d0cecbe0dc893024cecac71d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572397"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96749872"
 ---
 # <a name="exception-marshaling-in-xamarinios"></a>Marshaling de exceção no Xamarin. iOS
 
@@ -39,8 +39,8 @@ A ação padrão é não fazer nada. Para o exemplo acima, isso significa deixar
 Considere o seguinte exemplo de código:
 
 ``` csharp
-var dict = new NSMutableDictionary ();
-dict.LowLevelSetObject (IntPtr.Zero, IntPtr.Zero); 
+var dict = new NSMutableDictionary ();
+dict.LowlevelSetObject (IntPtr.Zero, IntPtr.Zero); 
 ```
 
 Isso gerará um NSInvalidArgumentException Objective-C no código nativo:
@@ -98,10 +98,10 @@ Outro problema ocorre aqui, porque o tempo de execução do mono não sabe como 
 Quando o retorno de chamada de exceção Objective-C não capturado do Xamarin. iOS é chamado, a pilha é parecida com esta:
 
 ```
- 0 libxamarin-debug.dylib   exception_handler(exc=name: "NSInvalidArgumentException" - reason: "*** setObjectForKey: key cannot be nil")
+ 0 libxamarin-debug.dylib   exception_handler(exc=name: "NSInvalidArgumentException" - reason: "**_ setObjectForKey: key cannot be nil")
  1 CoreFoundation           __handleUncaughtException + 809
  2 libobjc.A.dylib          _objc_terminate() + 100
- 3 libc++abi.dylib          std::__terminate(void (*)()) + 14
+ 3 libc++abi.dylib          std::__terminate(void (_)()) + 14
  4 libc++abi.dylib          __cxa_throw + 122
  5 libobjc.A.dylib          objc_exception_throw + 337
  6 CoreFoundation           -[__NSDictionaryM setObject:forKey:] + 1015
@@ -217,7 +217,7 @@ Isso também é bastante comum ao depurar aplicativos Xamarin. Mac em uma versã
 
 Para resumir, ter o tempo de execução Objective-C ou os quadros de liberação de tempo de execução mono que não estão programados para lidar pode levar a comportamentos indefinidos, como falhas, vazamentos de memória e outros tipos de comportamentos imprevisíveis (inadequados).
 
-## <a name="solution"></a>Solução
+## <a name="solution"></a>Solução
 
 No Xamarin. iOS 10 e no Xamarin. Mac 2,10, adicionamos suporte para capturar exceções gerenciadas e objetivas-C em qualquer limite nativo gerenciado e para converter essa exceção para outro tipo.
 
@@ -303,7 +303,7 @@ Runtime.MarshalObjectiveCException += (object sender, MarshalObjectiveCException
 
 <a name="build_time_flags"></a>
 
-## <a name="build-time-flags"></a>Sinalizadores de tempo de compilação
+## <a name="build-time-flags"></a>Sinalizadores de Build-Time
 
 É possível passar as seguintes opções para **mTouch** (para aplicativos Xamarin. Ios) e **MMP** (para aplicativos xamarin. Mac), que determinará se a interceptação de exceção está habilitada e definirá a ação padrão que deve ocorrer:
 
@@ -331,6 +331,6 @@ Interceptamos apenas P/Invokes para a `objc_msgSend` família de funções ao te
 
 [2]: https://developer.apple.com/reference/foundation/1409609-nssetuncaughtexceptionhandler?language=objc
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Marshaling de exceção (exemplo)](https://github.com/xamarin/mac-ios-samples/tree/master/ExceptionMarshaling)
