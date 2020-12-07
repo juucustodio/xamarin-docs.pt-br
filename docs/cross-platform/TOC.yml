@@ -1,4 +1,4 @@
-- name: Multiplataforma
+- name: Plataforma cruzada
   href: index.yml
   expanded: true
   items:
@@ -57,21 +57,21 @@
           href: app-fundamentals/nuget-manual.md
         - name: Usar bibliotecas C/C++ em aplicativos multiplataforma
           href: cpp/index.md
-    - name: Suporte a linguagens
+    - name: Suporte ao idioma
       href: platform/index.md
       items:
-        - name: 'C#'
+        - name: C#
           items:
             - name: Visão geral do suporte assíncrono
               href: platform/async.md
-            - name: 'Recursos de linguagem C# 6'
+            - name: Recursos de linguagem C# 6
               href: platform/csharp-six.md
-        - name: 'F#'
+        - name: F#
           href: platform/fsharp/index.md
           items:
             - name: Introdução
               href: platform/fsharp/overview.md
-            - name: 'Amostras do F#'
+            - name: Amostras do F#
               href: platform/fsharp/samples.md
         - name: Visual Basic
           href: platform/visual-basic/index.md
@@ -172,5 +172,7 @@
               href: troubleshooting/questions/vs-config-manager.md
         - name: Atualizar referências de componentes para NuGet
           href: troubleshooting/component-nuget.md
+    - name: Desenvolvimento multiplataforma no Q&A
+      href: /answers/topics/dotnet-crossplatform-general.html
     - name: Exemplos
       href: samples/index.md

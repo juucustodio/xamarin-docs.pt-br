@@ -10,12 +10,12 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 01/27/2020
-  ms.openlocfilehash: 593d8d20433222e1b18fd65b86a7586aa5560933
-  ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+  ms.openlocfilehash: 4cd192b0580067a24b497febda2e843a7c997b62
+  ms.sourcegitcommit: 342cfbd2502ad92cadada4fa9aec669b99d7830a
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 09/29/2020
-  ms.locfileid: "91454280"
+  ms.lasthandoff: 12/04/2020
+  ms.locfileid: "96604242"
 landingContent:
 - title: Introdução
   linkLists:
@@ -31,6 +31,10 @@ landingContent:
       url: ~/android/get-started/hello-android-multiscreen/index.md
     - text: Xamarin para desenvolvedores de Java
       url: ~/android/get-started/java-developers.md
+  - linkListType: get-started
+    links:
+    - text: Xamarin.Android no Q&A
+      url: /answers/topics/dotnet-android.html
 - title: Conceitos básicos de aplicativo
   linkLists:
   - linkListType: concept
@@ -53,7 +57,7 @@ landingContent:
       url: ~/android/app-fundamentals/permissions.md
     - text: Toque e gestos
       url: ~/android/app-fundamentals/touch/index.md
-    - text: Ver mais >
+    - text: Veja mais >
       url: ~/android/app-fundamentals/index.md
 - title: Interface do usuário
   linkLists:
@@ -63,7 +67,7 @@ landingContent:
       url: ~/android/user-interface/android-designer/index.md
     - text: Tema de material
       url: ~/android/user-interface/material-theme.md
-    - text: Perfil de Usuário
+    - text: Perfil de usuário
       url: ~/android/user-interface/user-profile.md
     - text: Tela inicial
       url: ~/android/user-interface/splash-screen.md
@@ -93,7 +97,7 @@ landingContent:
       url: ~/android/platform/android-job-scheduler.md
     - text: Mapas e localização
       url: ~/android/platform/maps-and-location/index.md
-    - text: Ver mais >
+    - text: Veja mais >
       url: ~/android/platform/index.md
 - title: Xamarin.Essentials
   linkLists:
@@ -145,7 +149,7 @@ landingContent:
       url: ~/android/deploy-test/signing/index.md
     - text: Publicar um aplicativo
       url: ~/android/deploy-test/publishing/index.md
-    - text: Ver mais >
+    - text: Veja mais >
       url: ~/android/deploy-test/index.md
 - title: Conceitos avançados e recursos internos
   linkLists:

@@ -44,7 +44,7 @@
       items:
         - name: Windows
           href: user-interface/window.md
-        - name: Diálogos
+        - name: Caixas de diálogo
           href: user-interface/dialog.md
         - name: Alertas
           href: user-interface/alert.md
@@ -221,6 +221,8 @@
           href: troubleshooting/troubleshooting.md
         - name: Mensagens de erro (mmp)
           href: troubleshooting/mmp-errors.md
+    - name: Xamarin.Mac.no Q&A
+      href: /answers/topics/dotnet-macos.html
     - name: Notas sobre a versão
       href: /xamarin/mac/release-notes/
     - name: Exemplos

@@ -145,6 +145,8 @@ items:
             href: xaml/field-modifiers.md
           - name: Carregar XAML em runtime
             href: xaml/runtime-load.md
+      - name: XAML do Xamarin.Forms no Q&A
+        href: /answers/topics/dotnet-xamarinforms-xaml.html
   - name: Conceitos básicos de aplicativo
     items:
       - name: Visão geral
@@ -922,6 +924,8 @@ items:
         href: /xamarin/essentials/release-notes/
       - name: Solução de problemas
         href: ~/essentials/troubleshooting.md?context=xamarin/xamarin-forms
+      - name: Xamarin.Essentials no Q&A
+        href: /answers/topics/dotnet-xamarinessentials.html
   - name: Dados e Serviços de Nuvem do Azure
     items:
       - name: Visão geral
@@ -1030,6 +1034,8 @@ items:
             href: troubleshooting/questions/android-linkassemblies-error.md
           - name: 'Por que meu projeto Android Xamarin.Forms.Maps falha com COMPILETODALVIK: UNEXPECTED TOP-LEVEL ERROR?'
             href: troubleshooting/questions/maps-compiletodalvik-error.md
+  - name: Xamarin.Forms no Q&A
+    href: /answers/topics/dotnet-xamarinforms.html
   - name: Notas de Versão
     href: /xamarin/xamarin-forms/release-notes/
   - name: Exemplos
