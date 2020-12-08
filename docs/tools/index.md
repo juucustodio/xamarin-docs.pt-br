@@ -4,12 +4,12 @@ description: Ferramentas para melhorar a experiência de desenvolvimento do Xama
 author: davidortinau
 ms.author: daortin
 ms.date: 12/27/2019
-ms.openlocfilehash: 9b034346500d85ce3e496fae57657bc8c1fab46a
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: b90b7c83d7182866afb1e976cfb065f711a3a1fd
+ms.sourcegitcommit: bc2850d6f55f2e68c6ffeb9d562b21c1a242bab9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93366978"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96850953"
 ---
 # <a name="xamarin-tools"></a>Ferramentas do Xamarin
 
@@ -37,24 +37,4 @@ Entender e depurar sua interface de usuário.
 
 Identificar e corrigir problemas de desempenho.
     :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
-[![Xamarin Workbooks](/media/illustrations/dynamics-resource-library.svg)](~/tools/workbooks/index.md)
-
-### <a name="xamarin-workbooks"></a>[Xamarin Workbooks](~/tools/workbooks/index.md)
-
-Aprenda C# e a plataforma Xamarin interativamente.
-    :::column-end:::
-    :::column:::
-[![Inserção .NET](~/media/index/xamarin-cross-platform-dotnet-embedding.svg)](~/tools/dotnet-embedding/index.md)
-
-### <a name="net-embedding"></a>[Inserção .NET](~/tools/dotnet-embedding/index.md)
-
-Permite que seu código .NET existente seja consumido a partir de outras linguagens de programação.
-    :::column-end:::
-
-    :::column:::
-    :::column-end:::
-    
 :::row-end:::
