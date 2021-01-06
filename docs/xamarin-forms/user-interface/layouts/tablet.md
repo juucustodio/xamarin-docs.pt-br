@@ -10,16 +10,16 @@ ms.date: 02/01/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8c53b1e58ad97f7d0e17972a2b232c16e05ecc1a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 5eb6a13888d96cac6fe193457ccc20659869ab68
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934882"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940376"
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Layout para aplicativos Tablet e desktop
 
-Xamarin.Formsdá suporte a todos os tipos de dispositivo disponíveis nas plataformas com suporte, portanto, além dos telefones, os aplicativos também podem ser executados em:
+Xamarin.Forms dá suporte a todos os tipos de dispositivo disponíveis nas plataformas com suporte, portanto, além dos telefones, os aplicativos também podem ser executados em:
 
 - iPads
 - Tablets Android,
@@ -49,7 +49,7 @@ A funcionalidade de tela de divisão significa que você deve projetar seu aplic
 
 ### <a name="android-tablets"></a>Tablets Android
 
-O ecossistema do Android tem uma infinidade de tamanhos de tela com suporte, de pequenos telefones até tablets grandes. Xamarin.Formso pode dar suporte a todos os tamanhos de tela, mas como nas outras plataformas, você talvez queira ajustar a interface do usuário para dispositivos maiores.
+O ecossistema do Android tem uma infinidade de tamanhos de tela com suporte, de pequenos telefones até tablets grandes. Xamarin.Forms o pode dar suporte a todos os tamanhos de tela, mas como nas outras plataformas, você talvez queira ajustar a interface do usuário para dispositivos maiores.
 
 Ao oferecer suporte a várias resoluções de tela diferentes, você pode fornecer seus recursos de imagem nativa em tamanhos diferentes para otimizar a experiência do usuário.
 Examine a documentação de [recursos do Android](~/android/app-fundamentals/resources-in-android/index.md) (e, em particular, [criando recursos para diferentes tamanhos de tela](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md)) para obter mais informações sobre como estruturar as pastas e nomes de arquivos em seu projeto de aplicativo Android para incluir recursos de imagem otimizados em seu aplicativo.
@@ -81,11 +81,11 @@ if (Device.Idiom == TargetIdiom.Phone)
 
 Essa abordagem pode ser expandida para fazer alterações significativas em layouts de página individuais ou até mesmo para renderizar páginas totalmente diferentes em telas maiores.
 
-### <a name="leverage-masterdetailpage"></a>Aproveitar o MasterDetailPage
+### <a name="leverage-flyoutpage"></a>Aproveitar o FlyoutPage
 
-O [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) é ideal para telas maiores, especialmente no iPad em que ele usa o [`UISplitViewController`](xref:UIKit.UISplitViewController) para fornecer uma experiência de Ios nativa.
+O [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage) é ideal para telas maiores, especialmente no iPad em que ele usa o [`UISplitViewController`](xref:UIKit.UISplitViewController) para fornecer uma experiência de Ios nativa.
 
-Leia [esta postagem no blog do Xamarin](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/) para ver como você pode adaptar sua interface do usuário para que os telefones usem um layout e telas maiores possam usar outro (com o `MasterDetailPage` ).
+Leia [esta postagem no blog do Xamarin](https://devblogs.microsoft.com/xamarin/bringing-xamarin-forms-apps-to-tablets/) para ver como você pode adaptar sua interface do usuário para que os telefones usem um layout e telas maiores possam usar outro (com o `FlyoutPage` ).
 
 ## <a name="related-links"></a>Links Relacionados
 

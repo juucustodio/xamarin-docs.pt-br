@@ -6,16 +6,16 @@ ms.assetid: E6F124C7-A161-4C1F-AF40-52F0935E54DE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/14/2016
+ms.date: 09/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 50b64b394314ae2f63ab1f756f1cc73ba29e59e7
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 6ec4c16249aadce668b9fe33dad661e1f7e7ee9e
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93372841"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939011"
 ---
 # <a name="easing-functions-in-no-locxamarinforms"></a>Facilitando funções no Xamarin.Forms
 
@@ -54,6 +54,9 @@ await image.TranslateTo(0, -200, 2000, Easing.BounceOut);
 ```
 
 Ao especificar uma função de atenuação para uma animação, a velocidade de animação se torna não linear e produz o efeito fornecido pela função de atenuação. Omitir uma função de atenuação ao criar uma animação faz com que a animação use a [`Linear`](xref:Xamarin.Forms.Easing.Linear) função de atenuação padrão, que produz uma velocidade linear.
+
+> [!NOTE]
+> Xamarin.Forms 5,0 inclui um conversor de tipo que converte uma representação de cadeia de caracteres de uma função de atenuação para o [`Easing`](xref:Xamarin.Forms.Easing) membro de enumeração apropriado. Esse conversor de tipo é invocado automaticamente em qualquer Propriedade do tipo `Easing` que esteja definida em XAML.
 
 Para obter mais informações sobre como usar os métodos de extensão de animação na [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) classe, consulte [animações simples](~/xamarin-forms/user-interface/animation/simple.md). As funções de atenuação também podem ser consumidas pela [`Animation`](xref:Xamarin.Forms.Animation) classe. Para obter mais informações, consulte [animações personalizadas](~/xamarin-forms/user-interface/animation/custom.md).
 

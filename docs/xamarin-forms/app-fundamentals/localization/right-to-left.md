@@ -11,12 +11,12 @@ ms.date: 11/05/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 676e0f062d3ed83cf433188e646f1e96f84a77cc
-ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
+ms.openlocfilehash: 5d06b0467a5029fec6d0c92a683114b9e0d04685
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94590245"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940181"
 ---
 # <a name="right-to-left-localization"></a>Localização da direita para a esquerda
 
@@ -128,7 +128,6 @@ Xamarin.Forms a localização da direita para a esquerda atualmente tem uma sér
 - [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) o local do botão, a localização do item da barra de ferramentas e a animação da transição são controlados pela localidade do dispositivo, em vez da [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
 - [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) a direção do dedo não inverte.
 - [`Image`](xref:Xamarin.Forms.Image) o conteúdo Visual não é invertido.
-- [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) e a [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])) orientação é controlada pela localidade do dispositivo, em vez da [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
 - [`WebView`](xref:Xamarin.Forms.WebView) o conteúdo não respeita a [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
 - Uma propriedade `TextDirection` precisa ser adicionada, para controlar o alinhamento do texto.
 
@@ -146,7 +145,7 @@ Xamarin.Forms a localização da direita para a esquerda atualmente tem uma sér
 ### <a name="uwp"></a>UWP
 
 - [`Editor`](xref:Xamarin.Forms.Editor) o alinhamento de texto é controlado pela localidade do dispositivo, em vez da [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
-- [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) a propriedade não é herdada por [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) filhos.
+- [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) a propriedade não é herdada por [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage) filhos.
 - [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) o alinhamento de texto é controlado pela localidade do dispositivo, em vez da [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
 
 ## <a name="force-right-to-left-layout"></a>Forçar layout da direita para a esquerda

@@ -10,12 +10,12 @@ ms.date: 12/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 98cf9f67188f67c4575823024106e100f6f22608
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 53f6a44ef28e00613ed0ee4e05a4e86a26bc7a6a
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93374505"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940571"
 ---
 # <a name="automation-properties-in-no-locxamarinforms"></a>Propriedades de automação em Xamarin.Forms
 
@@ -145,11 +145,11 @@ As seções a seguir descrevem as complexidades da configuração dos valores de
 
 No Android, para definir o texto que os leitores de tela lerám para a seta voltar na barra de ação em um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) , defina as `AutomationProperties.Name` `AutomationProperties.HelpText` Propriedades e em um [`Page`](xref:Xamarin.Forms.Page) . No entanto, observe que isso não terá um efeito em botões voltar de sistema operacional.
 
-### <a name="masterdetailpage"></a>MasterDetailPage
+### <a name="flyoutpage"></a>FlyoutPage
 
-No iOS e no Plataforma Universal do Windows (UWP), para definir o texto que os leitores de tela lerá para o botão de alternância em um [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) , defina as `AutomationProperties.Name` `AutomationProperties.HelpText` Propriedades e no `MasterDetailPage` ou na `IconImageSource` propriedade da `Master` página.
+No iOS e no Plataforma Universal do Windows (UWP), para definir o texto que os leitores de tela lerá para o botão de alternância em um [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage) , defina as `AutomationProperties.Name` `AutomationProperties.HelpText` Propriedades e no `FlyoutPage` ou na `IconImageSource` propriedade da `Flyout` página.
 
-No Android, para definir o texto que os leitores de tela lerám para o botão de alternância em um [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) , adicione recursos de cadeia de caracteres ao projeto do Android:
+No Android, para definir o texto que os leitores de tela lerám para o botão de alternância em um [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage) , adicione recursos de cadeia de caracteres ao projeto do Android:
 
 ```xml
 <resources>
@@ -159,11 +159,11 @@ No Android, para definir o texto que os leitores de tela lerám para o botão de
 </resources>
 ```
 
-Em seguida, defina a propriedade `AutomationId` da propriedade `IconImageSource` da página `Master` na cadeia de caracteres apropriada:
+Em seguida, defina a propriedade `AutomationId` da propriedade `IconImageSource` da página `Flyout` na cadeia de caracteres apropriada:
 
 ```csharp
-var master = new ContentPage { ... };
-master.IconImageSource.AutomationId = "btnMDPAutomationID";
+var flyout = new ContentPage { ... };
+flyout.IconImageSource.AutomationId = "btnMDPAutomationID";
 ```
 
 ### <a name="toolbaritem"></a>ToolbarItem

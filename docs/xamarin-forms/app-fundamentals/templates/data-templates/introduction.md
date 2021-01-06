@@ -10,12 +10,12 @@ ms.date: 09/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 374444307ef0b6cc6354d2f660834762bb566434
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 4df1afb80cc8b261d9bc6d022fe814fd411c0c3c
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93367953"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940077"
 ---
 # <a name="introduction-to-no-locxamarinforms-data-templates"></a>Introdução aos Xamarin.Forms modelos de dados
 
@@ -117,17 +117,6 @@ A substituição `Person.ToString` poderia retornar uma cadeia de caracteres for
 ## <a name="creating-a-datatemplate"></a>Criando um DataTemplate
 
 Um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) é usado para especificar a aparência dos dados e normalmente usa a vinculação de dados para exibir dados. Seu cenário de uso comum é ao exibir dados de uma coleção de objetos em um [`ListView`](xref:Xamarin.Forms.ListView) . Por exemplo, quando um `ListView` está associado a uma coleção de objetos `Person`, a propriedade `ListView.ItemTemplate` é definida como um `DataTemplate` que define a aparência de cada objeto `Person` no `ListView`. O `DataTemplate` conterá elementos que associam aos valores de propriedade de cada objeto `Person`. Para obter mais informações sobre vinculação de dados, veja [Noções básicas de vinculação de dados](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
-
-Um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) pode ser usado como um valor para as seguintes propriedades:
-
-- [`ListView.HeaderTemplate`](xref:Xamarin.Forms.ListView.HeaderTemplate)
-- [`ListView.FooterTemplate`](xref:Xamarin.Forms.ListView.FooterTemplate)
-- [`ListView.GroupHeaderTemplate`](xref:Xamarin.Forms.ListView.GroupHeaderTemplate)
-- [`ItemsView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1), que é herdado pelo [`ListView`](xref:Xamarin.Forms.ListView) .
-- [`MultiPage.ItemTemplate`](xref:Xamarin.Forms.MultiPage`1), que é herdado por [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) , [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) e [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) .
-
-> [!NOTE]
-> Observe que, embora o [`TableView`](xref:Xamarin.Forms.TableView) faça uso de [`Cell`](xref:Xamarin.Forms.Cell) objetos, ele não usa um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) . Isso acontece porque as associações de dados sempre são definidas diretamente em objetos `Cell`.
 
 Um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que é colocado como um filho direto das propriedades listadas acima é conhecido como um *modelo embutido*. Como alternativa, é possível definir um `DataTemplate` como um recurso de nível de controle, nível de página ou nível de aplicativo. Escolhendo onde definir um [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) impacto onde ele pode ser usado:
 

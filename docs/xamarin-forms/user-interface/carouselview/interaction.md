@@ -6,16 +6,16 @@ ms.assetid: 854D97E5-D119-4BE2-AE7C-BD428792C992
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/11/2020
+ms.date: 09/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c6b6a5a538d69d396f8b30381fd1d0b73d3f0e9f
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: d8187c82033a872752a314b03950793cad4ac0d1
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373816"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939154"
 ---
 # <a name="no-locxamarinforms-carouselview-interaction"></a>Xamarin.Forms Interação CarouselView
 
@@ -28,6 +28,7 @@ ms.locfileid: "93373816"
 - `CurrentItemChangedCommandParameter`, do tipo `object`, que é o parâmetro passado para `CurrentItemChangedCommand`.
 - `IsBounceEnabled`, do tipo `bool` , que especifica se o `CarouselView` irá devolver um limite de conteúdo. O valor padrão é `true`.
 - `IsSwipeEnabled`, do tipo `bool` , que determina se um gesto de dedo vai alterar o item exibido. O valor padrão é `true`.
+- `Loop`, do tipo `bool` , que determina se o `CarouselView` fornece acesso em loop à sua coleção de itens. O valor padrão é `true`.
 - `Position`, do tipo `int` , o índice do item atual na coleção subjacente. Essa propriedade tem um modo de associação padrão de `TwoWay` e tem um valor de 0 quando não há dados a serem exibidos.
 - `PositionChangedCommand`, do tipo `ICommand` , que é executado quando a posição é alterada.
 - `PositionChangedCommandParameter`, do tipo `object`, que é o parâmetro passado para `PositionChangedCommand`.
@@ -355,6 +356,10 @@ A `CurrentItem` propriedade pode ser desmarcada definindo-a, ou o objeto ao qual
 ## <a name="disable-bounce"></a>Desabilitar o retorno
 
 Por padrão, o [`CarouselView`](xref:Xamarin.Forms.CarouselView) resalta os itens em limites de conteúdo. Isso pode ser desabilitado definindo a `IsBounceEnabled` propriedade como `false` .
+
+## <a name="disable-loop"></a>Desabilitar loop
+
+Por padrão, [`CarouselView`](xref:Xamarin.Forms.CarouselView) o fornece acesso em loop à sua coleção de itens. Portanto, o dedo para trás do primeiro item na coleção exibirá o último item da coleção. Da mesma forma, o encaminhamento do último item da coleção retornará ao primeiro item da coleção. Esse comportamento pode ser desabilitado definindo a `Loop` propriedade como `false` .
 
 ## <a name="disable-swipe-interaction"></a>Desabilitar a interação do passe o dedo
 

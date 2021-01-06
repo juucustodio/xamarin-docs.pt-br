@@ -1,6 +1,6 @@
 ---
-title: Xamarin.FormsRenderizadores personalizados do Shell
-description: Xamarin.FormsOs aplicativos shell são altamente personalizáveis por meio das propriedades e métodos que as várias classes Shell expõem. No entanto, também será possível criar um renderizador personalizado do Shell quando personalizações específicas de plataforma mais sofisticadas forem necessárias.
+title: Xamarin.Forms Renderizadores personalizados do Shell
+description: Xamarin.Forms Os aplicativos shell são altamente personalizáveis por meio das propriedades e métodos que as várias classes Shell expõem. No entanto, também será possível criar um renderizador personalizado do Shell quando personalizações específicas de plataforma mais sofisticadas forem necessárias.
 ms.prod: xamarin
 ms.assetid: 3B1A6AE8-1D1E-4C34-B9AB-48F4444FEF32
 ms.technology: xamarin-forms
@@ -10,14 +10,14 @@ ms.date: 07/29/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 76f9b4e243af908e5d00ba8b812dfd143104fe65
-ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
+ms.openlocfilehash: 2a35966bfdf203a77fc3943e224d77fb087dcc45
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87426845"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940480"
 ---
-# <a name="no-locxamarinforms-shell-custom-renderers"></a>Xamarin.FormsRenderizadores personalizados do Shell
+# <a name="no-locxamarinforms-shell-custom-renderers"></a>Xamarin.Forms Renderizadores personalizados do Shell
 
 Uma das vantagens dos Xamarin.Forms aplicativos Shell é que sua aparência e comportamento é altamente personalizável por meio das propriedades e dos métodos que as várias classes Shell expõem. No entanto, também será possível criar um renderizador personalizado do Shell quando personalizações específicas de plataforma mais sofisticadas forem necessárias. Assim como acontece com outros renderizadores personalizados, um renderizador personalizado do Shell pode ser adicionado a apenas um projeto de plataforma para personalizar a aparência e o comportamento, permitindo o comportamento padrão na outra plataforma; ou um renderizador personalizado do Shell diferente pode ser adicionado a cada projeto de plataforma para personalizar a aparência e o comportamento no iOS e no Android.
 
@@ -109,7 +109,7 @@ namespace Xaminals.Droid
 A classe `MyShellRenderer` substitui o método `CreateToolbarAppearanceTracker` e retorna uma instância da classe `MyShellToolbarAppearanceTracker`. A classe `MyShellToolbarAppearanceTracker`, que deriva da classe `ShellToolbarAppearanceTracker`, é mostrada no exemplo a seguir:
 
 ```csharp
-using Android.Support.V7.Widget;
+using AndroidX.AppCompat.Widget;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
@@ -137,4 +137,4 @@ A classe `MyShellToolbarAppearanceTracker` substitui o método `SetAppearance` e
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xamarin.FormsRenderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
+- [Xamarin.Forms Renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

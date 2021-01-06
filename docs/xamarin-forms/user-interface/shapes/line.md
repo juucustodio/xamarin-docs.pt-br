@@ -6,20 +6,18 @@ ms.assetid: 384F1A72-6D3B-4FD3-BC40-E00A73A463EC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/20/2020
+ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 78425617d95758d3663cb9f2c5ac9bebb463bd68
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 5d5ecd7804c6cd8321827cd8aef98245124beca0
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93374752"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939102"
 ---
 # <a name="no-locxamarinforms-shapes-line"></a>Xamarin.Forms Formas: linha
-
-![API de pré-lançamento](~/media/shared/preview.png)
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -50,8 +48,7 @@ O exemplo de XAML a seguir mostra como desenhar uma linha:
       Y1="0"
       X2="0"
       Y2="120"
-      Stroke="Red"
-      StrokeThickness="1" />
+      Stroke="Red" />
 ```
 
 Neste exemplo, uma linha diagonal vermelha é desenhada de (40, 0) para (0120):
@@ -62,7 +59,6 @@ Como as `X1` `Y1` Propriedades,, e `X2` `Y2` têm valores padrão de 0, é poss�
 
 ```xaml
 <Line Stroke="Red"
-      StrokeThickness="1"
       X2="200" />
 ```
 
@@ -76,7 +72,6 @@ O exemplo de XAML a seguir mostra como desenhar uma linha tracejada:
       X2="0"
       Y2="120"
       Stroke="DarkBlue"
-      StrokeThickness="1"
       StrokeDashArray="1,1"
       StrokeDashOffset="6" />
 ```

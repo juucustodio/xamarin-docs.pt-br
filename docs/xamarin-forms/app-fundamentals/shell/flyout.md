@@ -10,18 +10,18 @@ ms.date: 07/30/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 90f06c0379cc40a946970ad4248dc8527ee34f3a
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 4faa0923e074460ef254db319dfcfd01cc832dce
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93372776"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940110"
 ---
 # <a name="no-locxamarinforms-shell-flyout"></a>Xamarin.Forms Submenu do Shell
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
-O submenu é o menu raiz de um aplicativo Shell e é acessível por meio de um ícone ou passando o dedo na lateral da tela. O submenu consiste em um cabeçalho opcional, itens de submenu e itens de menu opcionais:
+O submenu é o menu raiz de um aplicativo Shell e é acessível por meio de um ícone ou passando o dedo na lateral da tela. O submenu consiste em um cabeçalho opcional, itens de submenu, itens de menu opcionais e um rodapé opcional:
 
 ![Captura de tela de um submenu anotado do Shell](flyout-images/flyout-annotated.png "Submenu anotado")
 
@@ -133,6 +133,59 @@ O exemplo a seguir mostra como recolher o cabeçalho do submenu à medida que o 
     ...
 </Shell>
 ```
+
+## <a name="flyout-footer"></a>Rodapé do submenu
+
+O rodapé do submenu é o conteúdo que, opcionalmente, aparece na parte inferior do submenu, com sua aparência sendo definida por um `object` que pode ser definida por meio do `Shell.FlyoutFooter` valor da propriedade:
+
+```xaml
+<Shell.FlyoutFooter>
+    <controls:FlyoutFooter />
+</Shell.FlyoutFooter>
+```
+
+O tipo `FlyoutFooter` é mostrado no exemplo a seguir:
+
+```xaml
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             x:Class="Xaminals.Controls.FlyoutFooter">
+    <StackLayout>
+        <Label Text="Xaminals"
+               TextColor="GhostWhite"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy}'}"
+               TextColor="GhostWhite"
+               HorizontalOptions="Center" />
+    </StackLayout>
+</ContentView>
+```
+
+Isso resulta no seguinte rodapé submenu:
+
+![Captura de tela do rodapé do submenu](flyout-images/flyout-footer.png "Rodapé do submenu")
+
+Como alternativa, a aparência do rodapé do submenu pode ser definida definindo a `Shell.FlyoutFooterTemplate` propriedade como a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) :
+
+```xaml
+<Shell.FlyoutFooterTemplate>
+    <DataTemplate>
+        <StackLayout>
+            <Label Text="Xaminals"
+                   TextColor="GhostWhite"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+            <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy}'}"
+                   TextColor="GhostWhite"
+                   HorizontalOptions="Center" />
+        </StackLayout>
+    </DataTemplate>
+</Shell.FlyoutFooterTemplate>
+```
+
+O rodapé do submenu é fixado na parte inferior do submenu e pode ser qualquer altura. Além disso, o rodapé nunca obscurece nenhum item de menu.
 
 ## <a name="flyout-background-image"></a>Imagem da tela de fundo do submenu
 

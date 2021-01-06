@@ -10,12 +10,12 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e8dd18caf7ab6730c8529660d83511cf8c65edcf
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 289f2637b10e1ad163b0c3693176625f3bd82e6f
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93375155"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940090"
 ---
 # <a name="no-locxamarinforms-carousel-page"></a>Xamarin.Forms Página do carrossel
 
@@ -43,7 +43,7 @@ Passar o dedo da direita para a esquerda novamente leva para a terceira página,
 > [!NOTE]
 > O [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) não oferece suporte à virtualização de interface do usuário. Portanto, o desempenho poderá ser afetado se a `CarouselPage` contiver muitos elementos filho.
 
-Se um [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) for inserido na [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) página de a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) , a [`MasterDetailPage.IsGestureEnabled`](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty) Propriedade deverá ser definida como `false` para evitar conflitos de gesto entre o `CarouselPage` e o `MasterDetailPage` .
+Se um [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) for inserido na [`Detail`](xref:Xamarin.Forms.FlyoutPage.Detail) página de a [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage) , a [`FlyoutPage.IsGestureEnabled`](xref:Xamarin.Forms.FlyoutPage.IsGestureEnabledProperty) Propriedade deverá ser definida como `false` para evitar conflitos de gesto entre o `CarouselPage` e o `FlyoutPage` .
 
 Para obter mais informações sobre o [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) , consulte o [capítulo 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) do livro de Charles Petzold Xamarin.Forms .
 

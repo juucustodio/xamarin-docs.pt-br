@@ -6,16 +6,16 @@ ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/02/2020
+ms.date: 10/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f29bacf3546b2148a3d97c3c1ccaa44e02872be8
-ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
+ms.openlocfilehash: 5fb215ea92035965b48fff85ef4ccc70edc65fdf
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94590305"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939167"
 ---
 # <a name="no-locxamarinforms-shell-navigation"></a>Xamarin.Forms Navegação do Shell
 
@@ -27,6 +27,7 @@ Xamarin.Forms O Shell inclui uma experiência de navegação baseada em URI que 
 
 - `BackButtonBehavior`, do tipo `BackButtonBehavior`, uma propriedade anexada que define o comportamento do botão Voltar.
 - `CurrentItem`, do tipo `FlyoutItem`, o `FlyoutItem` selecionado no momento.
+- `CurrentPage`, do tipo `Page` , a página apresentada no momento.
 - `CurrentState`, do tipo `ShellNavigationState`, o estado de navegação atual do `Shell`.
 - `Current`, do tipo `Shell`, um alias convertido em tipo para `Application.Current.MainPage`.
 
@@ -41,7 +42,7 @@ A navegação é executada pela invocação do método `GoToAsync`, da classe `S
 
 A navegação é executada em um aplicativo Shell, especificando um URI para onde navegar. Os URIs de navegação podem ter três componentes:
 
-- Uma *rota* , que define o caminho para o conteúdo que existe como parte da hierarquia visual do Shell.
+- Uma *rota*, que define o caminho para o conteúdo que existe como parte da hierarquia visual do Shell.
 - Uma *página*. As páginas que não existam na hierarquia visual do Shell podem ser enviadas por push para a pilha de navegação de qualquer lugar em um aplicativo Shell. Por exemplo, uma página de detalhes do item não será definida na hierarquia visual do Shell, mas poderá ser enviada para a pilha de navegação conforme necessário.
 - Um ou mais *parâmetros de consulta*. Parâmetros de consulta são aqueles que podem ser passados para a página de destino durante a navegação.
 
@@ -227,8 +228,8 @@ Os seguintes formatos de rota são inválidos:
 
 | Formatar | Explicação |
 | --- | --- |
-| *rota* ou / *rota* | As rotas na hierarquia visual não podem ser enviadas por push para a pilha de navegação. |
-| //*página* ou /// *página* | No momento, as rotas globais não podem ser a única página na pilha de navegação. Portanto, não há suporte para roteamento absoluto para rotas globais. |
+| *rota* ou /*rota* | As rotas na hierarquia visual não podem ser enviadas por push para a pilha de navegação. |
+| //*página* ou ///*página* | No momento, as rotas globais não podem ser a única página na pilha de navegação. Portanto, não há suporte para roteamento absoluto para rotas globais. |
 
 O uso de qualquer um desses formatos de rota resulta na geração de uma `Exception`.
 
@@ -274,7 +275,7 @@ public class MyTab : Tab
 
 A classe `Shell` define um evento `Navigating`, que é acionado quando a navegação está prestes a ser realizada, devido à navegação programática ou à interação do usuário. O objeto `ShellNavigatingEventArgs` que acompanha o evento `Navigating` fornece as seguintes propriedades:
 
-| Propriedade | Tipo | Description |
+| Propriedade | Tipo | Descrição |
 |---|---|---|
 | `Current` | `ShellNavigationState` | O URI da página atual. |
 | `Source` | `ShellNavigationSource` | O tipo de navegação que ocorreu. |
@@ -282,11 +283,11 @@ A classe `Shell` define um evento `Navigating`, que é acionado quando a navega�
 | `CanCancel`  | `bool` | Um valor que indica se é possível cancelar a navegação. |
 | `Cancelled`  | `bool` | Um valor que indica se a navegação foi cancelada. |
 
-Além disso, a classe `ShellNavigatingEventArgs` fornece um método `Cancel` que pode ser usado para cancelar a navegação.
+Além disso, a `ShellNavigatingEventArgs` classe fornece um `Cancel` método que pode ser usado para cancelar a navegação e um `GetDeferral` método que retorna um `ShellNavigatingDeferral` token que pode ser usado para concluir a navegação. Para obter mais informações sobre o adiamento de navegação, consulte [adiamento de navegação](#navigation-deferral).
 
 A classe `Shell` também define um evento`Navigated`, que é acionado quando a navegação é concluída. O objeto `ShellNavigatedEventArgs` que acompanha o evento `Navigating` fornece as seguintes propriedades:
 
-| Propriedade | Tipo | Description |
+| Propriedade | Tipo | Descrição |
 |---|---|---|
 | `Current` | `ShellNavigationState` | O URI da página atual. |
 | `Previous`| `ShellNavigationState` | O URI da página anterior. |
@@ -316,6 +317,35 @@ void OnNavigating(object sender, ShellNavigatingEventArgs e)
     }
 }
 ```
+
+## <a name="navigation-deferral"></a>Adiamento de navegação
+
+A navegação do shell pode ser interceptada e concluída ou cancelada com base na escolha do usuário. Isso pode ser obtido substituindo o `OnNavigating` método em sua `Shell` subclasse e chamando o `GetDeferral` método no `ShellNavigatingEventArgs` objeto. Esse método retorna um `ShellNavigatingDeferral` token que tem um `Complete` método, que pode ser usado para concluir a solicitação de navegação:
+
+```csharp
+public MyShell : Shell
+{
+    // ...
+    protected override async void OnNavigating(ShellNavigatingEventArgs args)
+    {
+        base.OnNavigating(args);
+
+        ShellNavigatingDeferral token = args.GetDeferral();
+        var result = await DisplayActionSheet("Navigate?", "Cancel", "Yes", "No");
+
+        if (result != "Yes")
+        {
+            args.Cancel();
+        }
+        token.Complete();
+    }    
+}
+```
+
+Neste exemplo, é exibida uma folha de ação que convida o usuário a concluir a solicitação de navegação ou cancelá-la. A navegação é cancelada invocando o `Cancel` método no `ShellNavigatingEventArgs` objeto. A navegação é concluída invocando o `Complete` método no `ShellNavigatingDeferral` token que foi recuperado pelo `GetDeferral` método no `ShellNavigatingEventArgs` objeto.
+
+> [!IMPORTANT]
+> O `GoToAsync` método emitirá um `InvalidOperationException` se um usuário tentar navegar enquanto houver um adiamento de navegação pendente.
 
 ## <a name="pass-data"></a>Passar dados
 

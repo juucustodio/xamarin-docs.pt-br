@@ -10,12 +10,12 @@ ms.date: 11/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 05b7821a08140dda411842c5f978be2027fcc033
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: f37006e15ad4cc2c6c8d03f3c88c1c8f57fe4fd5
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373962"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940064"
 ---
 # <a name="summary-of-chapter-25-page-varieties"></a>Resumo do capítulo 25. Variedades de página
 
@@ -40,7 +40,7 @@ Há duas maneiras fundamentais de alternar entre essas duas páginas:
 - *dividir* onde o mestre e os detalhes estão lado a lado
 - *popover* onde a página de detalhes cobre ou aborda parcialmente a página mestra
 
-Há várias variações da abordagem *popover* ( *Slide* , *sobreposição* e *troca* ), mas elas geralmente são dependentes da plataforma. Você pode definir a [`MasterDetailBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) propriedade de `MasterDetailPage` como um membro da [`MasterBehavior`](xref:Xamarin.Forms.MasterBehavior) enumeração:
+Há várias variações da abordagem *popover* (*Slide*, *sobreposição* e *troca*), mas elas geralmente são dependentes da plataforma. Você pode definir a [`MasterDetailBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) propriedade de `MasterDetailPage` como um membro da [`MasterBehavior`](xref:Xamarin.Forms.MasterBehavior) enumeração:
 
 - [`Default`](xref:Xamarin.Forms.MasterBehavior.Default)
 - [`Split`](xref:Xamarin.Forms.MasterBehavior.Split)
@@ -122,5 +122,5 @@ No entanto, isso é problemático no iOS. Apenas alguns dos itens podem ser exib
 
 - [Capítulo 25 texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch25-Apr2016.pdf)
 - [Exemplos do capítulo 25](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter25)
-- [Página mestre-detalhes](~/xamarin-forms/app-fundamentals/navigation/master-detail-page.md)
+- [Página mestre-detalhes](~/xamarin-forms/app-fundamentals/navigation/flyoutpage.md)
 - [Página com guias](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)

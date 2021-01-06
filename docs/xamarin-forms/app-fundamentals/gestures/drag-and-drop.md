@@ -10,27 +10,23 @@ ms.date: 10/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 30e77d4978e9a191c1ba19e80109f9854cc46f8f
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 4bd8715d7eb4fa593d62021721f9403672652754
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93375233"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940454"
 ---
 # <a name="add-drag-and-drop-gesture-recognizers"></a>Adicionar reconhecedores de gestos de arrastar e soltar
-
-![API de pré-lançamento](~/media/shared/preview.png)
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/workingwithgestures-draganddropgesture/)
 
 Um gesto de arrastar e soltar permite que os itens e seus pacotes de dados associados sejam arrastados de um local na tela para outro local usando um gesto contínuo. A operação de arrastar e soltar pode ocorrer em um único aplicativo ou pode ser iniciada em um aplicativo e terminar em outra.
 
 > [!IMPORTANT]
-> O Xamarin.Forms reconhecedor de gestos de arrastar e soltar é experimental e só pode ser usado definindo o `DragAndDrop_Experimental` sinalizador. Para obter mais informações, consulte [sinalizadores experimentais](~/xamarin-forms/internals/experimental-flags.md).
->
 > Há suporte para o reconhecimento de gestos de arrastar e soltar no iOS, no Android e no Plataforma Universal do Windows (UWP). No entanto, no iOS, é necessária uma plataforma mínima do iOS 11.
 
-A *fonte de arrastar* , que é o elemento no qual o gesto de arrastar é iniciado, pode fornecer dados a serem transferidos preenchendo um objeto de pacote de dados. Quando a fonte de arrastar é liberada, drop ocorre. O *destino de soltura* , que é o elemento sob a interface "arrastar" e, em seguida, processa o pacote de dados.
+A *fonte de arrastar*, que é o elemento no qual o gesto de arrastar é iniciado, pode fornecer dados a serem transferidos preenchendo um objeto de pacote de dados. Quando a fonte de arrastar é liberada, drop ocorre. O *destino de soltura*, que é o elemento sob a interface "arrastar" e, em seguida, processa o pacote de dados.
 
 O processo para habilitar o recurso de arrastar e soltar em um aplicativo é o seguinte:
 

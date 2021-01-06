@@ -10,16 +10,14 @@ ms.date: 11/13/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4f60a48d2d8b43ea08ccc36401103d8987e48b1c
-ms.sourcegitcommit: f920ac0724f09e5c9b4f36be1995a5a17a6d9f95
+ms.openlocfilehash: 542d06970cb414b7590cd13757b4e4902af3dd7f
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94591041"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939076"
 ---
 # <a name="no-locxamarinforms-shapes-path-markup-syntax"></a>Xamarin.Forms Formas: sintaxe de marcação de caminho
-
-![API de pré-lançamento](~/media/shared/preview.png)
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -27,7 +25,6 @@ Xamarin.Forms a sintaxe de marcação de caminho permite especificar de forma co
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Data="M13.908992,16.207977 L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983Z" />
 ```
 
@@ -145,7 +142,7 @@ Para obter informações sobre como criar uma curva de Bézier quadrática como 
 
 ### <a name="smooth-cubic-bezier-curve-command"></a>Comando de curva de Bézier cubica suave
 
-O comando de curva de Bézier cubica suave cria uma curva de Bézier cúbica entre o ponto atual e o ponto de extremidade especificado usando o ponto de controle especificado. A sintaxe para esse comando é: `S` *controlPoint2* *ponto de extremidade* ControlPoint2 ou ponto de `s` *controlPoint2* *extremidade* ControlPoint2.  
+O comando de curva de Bézier cubica suave cria uma curva de Bézier cúbica entre o ponto atual e o ponto de extremidade especificado usando o ponto de controle especificado. A sintaxe para esse comando é: `S`  *ponto de extremidade* ControlPoint2 ou ponto de `s`  *extremidade* ControlPoint2.  
 
 Nesta sintaxe:
 

@@ -6,20 +6,18 @@ ms.assetid: 07DE3D66-1820-4642-BDDF-84146D40C99D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/24/2020
+ms.date: 09/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6fe7ce75af14e25fa3dc213f0fb5ed99a2e70a87
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: f3a89e0c5c49ec790cf35443030d50d3ddef9ed4
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93374817"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939804"
 ---
 # <a name="no-locxamarinforms-shapes-geometries"></a>Xamarin.Forms Formas: geometrias
-
-![API de pré-lançamento](~/media/shared/preview.png)
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -32,6 +30,9 @@ A `Geometry` classe é a classe pai para várias classes que definem diferentes 
 - `LineGeometry`, que representa a geometria de uma linha.
 - `PathGeometry`, que representa a geometria de uma forma complexa que pode ser composta de arcos, curvas, elipses, linhas e retângulos.
 - `RectangleGeometry`, que representa a geometria de um retângulo ou quadrado.
+
+> [!NOTE]
+> Também há uma `RoundedRectangleGeometry` classe derivada da `GeometryGroup` classe. Para obter mais informações, consulte [RoundRectangleGeometry](#roundrectanglegeometry).
 
 As `Geometry` `Shape` classes e parecem semelhantes, pois ambas descrevem formas 2D, mas têm uma diferença importante. A `Geometry` classe deriva da [`BindableObject`](xref:Xamarin.Forms.BindableObject) classe, enquanto a `Shape` classe deriva da [`View`](xref:Xamarin.Forms.View) classe. Portanto, os `Shape` objetos podem ser renderizados e participar do sistema de layout, enquanto os `Geometry` objetos não podem. Embora os objetos `Shape` sejam mais prontamente utilizáveis do que `Geometry` objetos, os `Geometry` objetos são mais versáteis. Embora um `Shape` objeto seja usado para renderizar gráficos 2D, um `Geometry` objeto pode ser usado para definir a região geométrica para gráficos 2D e definir uma região para recorte.
 
@@ -62,8 +63,7 @@ O exemplo a seguir mostra como criar e renderizar um `EllipseGeometry` em um `Pa
 
 ```xaml
 <Path Fill="Blue"
-      Stroke="Red"
-      StrokeThickness="1">
+      Stroke="Red">
   <Path.Data>
     <EllipseGeometry Center="50,50"
                      RadiusX="50"
@@ -90,8 +90,7 @@ Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.Bin
 O exemplo a seguir mostra como criar e renderizar um `LineGeometry` em um `Path` objeto:
 
 ```xaml
-<Path Stroke="Black"
-      StrokeThickness="1">
+<Path Stroke="Black">
   <Path.Data>
     <LineGeometry StartPoint="10,20"
                   EndPoint="100,130" />
@@ -116,8 +115,7 @@ O exemplo a seguir mostra como criar e renderizar um `RectangleGeometry` em um `
 
 ```xaml
 <Path Fill="Blue"
-      Stroke="Red"
-      StrokeThickness="1">
+      Stroke="Red">
   <Path.Data>
     <RectangleGeometry Rect="10,10,150,100" />
   </Path.Data>
@@ -159,8 +157,7 @@ Todas as classes acima derivam da `PathSegment` classe abstrata.
 Os segmentos em um `PathFigure` são combinados em uma única forma geométrica com o ponto de extremidade de cada segmento sendo o ponto inicial do próximo segmento. A `StartPoint` propriedade de um `PathFigure` especifica o ponto do qual o primeiro segmento é desenhado. Cada segmento subsequente começa no ponto de extremidade do segmento anterior. Por exemplo, uma linha vertical de `10,50` para `10,150` pode ser definida definindo a `StartPoint` propriedade como `10,50` e criando uma `LineSegment` com uma `Point` configuração de propriedade de `10,150` :
 
 ```xaml
-<Path Stroke="Black"
-      StrokeThickness="1">
+<Path Stroke="Black">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -206,13 +203,12 @@ A enumeração `SweepDirection` define os seguintes membros:
 O exemplo a seguir mostra como criar e renderizar um `ArcSegment` em um `Path` objeto:
 
 ```xaml
-<Path Stroke="Black"
-      StrokeThickness="1">
+<Path Stroke="Black">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
                 <PathFigureCollection>
-                    <PathFigure StartPoint="10,100">
+                    <PathFigure StartPoint="10,10">
                         <PathFigure.Segments>
                             <PathSegmentCollection>
                                 <ArcSegment Size="100,50"
@@ -230,7 +226,7 @@ O exemplo a seguir mostra como criar e renderizar um `ArcSegment` em um `Path` o
 </Path>
 ```
 
-Neste exemplo, um arco elíptico é desenhado de (10.100) a (200.100).
+Neste exemplo, um arco elíptico é desenhado de (10, 10) para (200.100).
 
 ### <a name="create-a-beziersegment"></a>Criar um BezierSegment
 
@@ -252,8 +248,7 @@ Os dois pontos de controle de uma curva de Bézier cúbica se comportam como os 
 O exemplo a seguir mostra como criar e renderizar um `BezierSegment` em um `Path` objeto:
 
 ```xaml
-<Path Stroke="Black"
-      StrokeThickness="1">
+<Path Stroke="Black">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -290,8 +285,7 @@ A `LineSegment` classe define a `Point` propriedade, do tipo [`Point`](xref:Xama
 O exemplo a seguir mostra como criar e renderizar `LineSegment` objetos em um `Path` objeto:
 
 ```xaml
-<Path Stroke="Black"
-      StrokeThickness="1"
+<Path Stroke="Black"      
       Aspect="Uniform"
       HorizontalOptions="Start">
     <Path.Data>
@@ -330,8 +324,7 @@ A `PolyBezierSegment` classe define a `Points` propriedade, do tipo `PointCollec
 O exemplo a seguir mostra como criar e renderizar um `PolyBezierSegment` em um `Path` objeto:
 
 ```xaml
-<Path Stroke="Black"
-      StrokeThickness="1">
+<Path Stroke="Black">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -366,8 +359,7 @@ A `PolyLineSegment` classe define a `Points` propriedade, do tipo `PointCollecti
 O exemplo a seguir mostra como criar e renderizar um `PolyLineSegment` em um `Path` objeto:
 
 ```xaml
-<Path Stroke="Black"
-      StrokeThickness="1">
+<Path Stroke="Black">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -398,8 +390,7 @@ A `PolyQuadraticBezierSegment` classe define a `Points` propriedade, do tipo `Po
 O exemplo a seguir mostra como criar e renderizar um `PolyQuadraticBezierSegment` em um `Path` objeto:
 
 ```xaml
-<Path Stroke="Black"
-      StrokeThickness="1">
+<Path Stroke="Black">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -439,8 +430,7 @@ Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.Bin
 O exemplo a seguir mostra como criar e renderizar um `QuadraticBezierSegment` em um `Path` objeto:
 
 ```xaml
-<Path Stroke="Black"
-      StrokeThickness="1">
+<Path Stroke="Black">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -469,8 +459,7 @@ Neste exemplo, uma curva de Bezier quadrática é desenhada de (10, 10) para (30
 Geometrias mais complexas podem ser criadas usando uma combinação de `PathSegment` objetos. O exemplo a seguir cria uma forma usando um `BezierSegment` , um `LineSegment` e um `ArcSegment` :
 
 ```xaml
-<Path Stroke="Black"
-      StrokeThickness="1">
+<Path Stroke="Black">
     <Path.Data>
         <PathGeometry>
             <PathGeometry.Figures>
@@ -595,6 +584,34 @@ Para desenhar uma geometria composta, defina os `Geometry` objetos necessários 
 Neste exemplo, quatro `EllipseGeometry` objetos com coordenadas x-RADIUS e y-RADIUS idênticas, mas com diferentes coordenadas do centro, são combinados. Isso cria quatro círculos sobrepostos, cujos interiores são preenchidos em laranja devido à `EvenOdd` regra de preenchimento padrão:
 
 ![GeometryGroup](geometry-images/geometrygroup.png "GeometryGroup")
+
+### <a name="roundrectanglegeometry"></a>RoundRectangleGeometry
+
+Uma geometria de retângulo arredondado representa a geometria de um retângulo ou quadrado, com cantos arredondados e é definida por um raio de canto e uma [`Rect`](xref:Xamarin.Forms.Rect) estrutura que especifica sua posição relativa e sua altura e largura.
+
+A `RoundRectangleGeometry` classe, que deriva da `GeometryGroup` classe, define as seguintes propriedades:
+
+- `CornerRadius`, do tipo [`CornerRadius`](xref:Xamarin.Forms.CornerRadius) , que é o raio de canto da geometria.
+- `Rect`, do tipo [`Rect`](xref:Xamarin.Forms.Rect) , que representa as dimensões do retângulo.
+
+Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que eles podem ser destinos de associações de dados e com estilo.
+
+> [!NOTE]
+> A regra de preenchimento usada pelo `RoundRectangleGeometry` é `FillRule.Nonzero` . Para obter mais informações sobre regras de preenchimento, consulte [ Xamarin.Forms formas: regras de preenchimento](fillrules.md).
+
+O exemplo a seguir mostra como criar e renderizar um `RoundRectangleGeometry` em um `Path` objeto:
+
+```xaml
+<Path Fill="Blue"
+      Stroke="Red">
+    <Path.Data>
+        <RoundRectangleGeometry CornerRadius="5"
+                                Rect="10,10,150,100" />
+    </Path.Data>
+</Path>
+```
+
+A posição e as dimensões do retângulo são definidas por uma [`Rect`](xref:Xamarin.Forms.Rect) estrutura. Neste exemplo, a posição é (10, 10), a largura é 150 e a altura é de 100 unidades independentes de dispositivo. Além disso, os cantos do retângulo são arredondados com um raio de 5 unidades independentes de dispositivo.
 
 ## <a name="clip-with-a-geometry"></a>Cortar com uma geometria
 

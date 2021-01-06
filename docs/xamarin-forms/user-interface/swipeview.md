@@ -6,20 +6,18 @@ ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/26/2020
+ms.date: 10/05/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c9ebee7914d8d2ccfb284910f31d87999b22701f
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: de3d7df922a0b6bdc6644e2684c6f01176abbe42
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93369643"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940493"
 ---
 # <a name="no-locxamarinforms-swipeview"></a>Xamarin.Forms SwipeView
-
-![API de pré-lançamento](~/media/shared/preview.png)
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-swipeviewdemos/)
 
@@ -27,18 +25,13 @@ O `SwipeView` é um controle de contêiner que envolve um item de conteúdo e fo
 
 [![Captura de tela do SwipeView passando itens em um CollectionView, no iOS e no Android](swipeview-images/swipeview-collectionview.png "SwipeView passar itens")](swipeview-images/swipeview-collectionview-large.png#lightbox "SwipeView passar itens")
 
-`SwipeView` está disponível em Xamarin.Forms 4,4. No entanto, ele é experimental e só pode ser usado adicionando a linha de código a seguir à sua `AppDelegate` classe no Ios, à sua `MainActivity` classe no Android ou à sua `App` classe no UWP, antes de chamar `Forms.Init` :
-
-```csharp
-Forms.SetFlags("SwipeView_Experimental");
-```
-
 `SwipeView` define as propriedades a seguir:
 
 - `LeftItems`, do tipo `SwipeItems` , que representa os itens de passar o dedo que podem ser invocados quando o controle é transformado do lado esquerdo.
 - `RightItems`, do tipo `SwipeItems` , que representa os itens do dedo que podem ser invocados quando o controle é transdedodo do lado direito.
 - `TopItems`, do tipo `SwipeItems` , que representa os itens do dedo que podem ser invocados quando o controle é transdedodo de cima para baixo.
 - `BottomItems`, do tipo `SwipeItems` , que representa os itens de passar o dedo que podem ser invocados quando o controle é transformado da parte inferior para cima.
+- `Threshold`, do tipo `double` , que representa o número de unidades independentes de dispositivo que disparam um gesto de passar o dedo para revelar totalmente os itens do dedo.
 
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que eles podem ser destinos de associações de dados e com estilo.
 
@@ -186,7 +179,7 @@ A aparência de cada `SwipeItem` um é definida por uma combinação das `Text` 
 
 [![Captura de tela de itens de deslize do SwipeView, no iOS e no Android](swipeview-images/swipeview-swipeitems.png "SwipeView passar itens")](swipeview-images/swipeview-swipeitems-large.png#lightbox "SwipeView passar itens")
 
-Quando um `SwipeItem` é tocado, seu `Invoked` evento é acionado e manipulado por seu manipulador de eventos registrado. Como alternativa, a `Command` propriedade pode ser definida como uma `ICommand` implementação que será executada quando o `SwipeItem` for invocado.
+Quando um `SwipeItem` é tocado, seu `Invoked` evento é acionado e manipulado por seu manipulador de eventos registrado. Além disso, o `MenuItem.Clicked` evento é acionado. Como alternativa, a `Command` propriedade pode ser definida como uma `ICommand` implementação que será executada quando o `SwipeItem` for invocado.
 
 > [!NOTE]
 > Quando a aparência de um `SwipeItem` é definida somente usando as `Text` `IconImageSource` Propriedades ou, o conteúdo é sempre centralizado.
@@ -234,6 +227,30 @@ Os `SwipeStarted` `SwipeChanging` eventos, e `SwipeEnded` relatam a direção do
 - `Left` indica que ocorreu um dedo à esquerda.
 - `Up` indica que ocorreu um toque para cima.
 - `Down` indica que um dedo para baixo ocorreu.
+
+## <a name="swipe-threshold"></a>Limite do dedo
+
+`SwipeView` inclui uma `Threshold` propriedade, do tipo `double` , que representa o número de unidades independentes do dispositivo que disparam um gesto de passar o dedo para revelar totalmente os itens do dedo.
+
+O exemplo a seguir mostra um `SwipeView` que define a `Threshold` Propriedade:
+
+```xaml
+<SwipeView Threshold="200">
+    <SwipeView.LeftItems>
+        <SwipeItems>
+            <SwipeItem Text="Favorite"
+                       IconImageSource="favorite.png"
+                       BackgroundColor="LightGreen" />
+        </SwipeItems>
+    </SwipeView.LeftItems>
+    <!-- Content -->
+</SwipeView>
+```
+
+Neste exemplo, o `SwipeView` deve ser transdedodo para unidades independentes de dispositivo 200 antes que o `SwipeItem` seja totalmente revelado.
+
+> [!NOTE]
+> Atualmente, a `Threshold` propriedade só é implementada no Ios e no Android.
 
 ## <a name="swipe-mode"></a>Modo de toque
 

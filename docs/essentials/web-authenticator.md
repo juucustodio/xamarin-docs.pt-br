@@ -8,12 +8,12 @@ ms.date: 03/26/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 04090a2e9d97f1a5f4dae8fa850a39c3465ba05b
-ms.sourcegitcommit: 0c31f1398ec1de1a2b18ec7f25f30630df968db1
+ms.openlocfilehash: f05868bbf8da9597c4290ba687f767f3995ba437
+ms.sourcegitcommit: 07ee6a95f77f9a12fadb857e549cdcdb1928c7d3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96544663"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97904978"
 ---
 # <a name="no-locxamarinessentials-web-authenticator"></a>Xamarin.Essentials: Autenticador da Web
 
@@ -46,9 +46,6 @@ Para acessar a funcionalidade **Webauthenticator** , é necessária a configura�
 
 O Android requer uma configuração de filtro de intenção para manipular o URI de retorno de chamada. Isso é facilmente conseguido por meio da subclasse da `WebAuthenticatorCallbackActivity` classe:
 
-> [!NOTE]
-> Você deve considerar a implementação de [links de aplicativo do Android](https://developer.android.com/training/app-links/) para lidar com o URI de retorno de chamada e garantir que seu aplicativo seja o único que pode se registrar para lidar com o URI de retorno de chamada.
-
 ```csharp
 const string CALLBACK_SCHEME = "myapp";
 
@@ -58,17 +55,6 @@ const string CALLBACK_SCHEME = "myapp";
     DataScheme = CALLBACK_SCHEME)]
 public class WebAuthenticationCallbackActivity : Xamarin.Essentials.WebAuthenticatorCallbackActivity
 {
-}
-```
-
-Você também precisará chamar novamente o Essentials da `OnResume` substituição em seu `MainActivity` :
-
-```csharp
-protected override void OnResume()
-{
-    base.OnResume();
-
-    Xamarin.Essentials.Platform.OnResume();
 }
 ```
 
@@ -91,9 +77,6 @@ No iOS, você precisará adicionar o padrão de URI de retorno de chamada do apl
     </dict>
 </array>
 ```
-
-> [!NOTE]
-> Você deve considerar o uso de [links de aplicativo universal](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content) para registrar o URI de retorno de chamada do aplicativo como uma prática recomendada.
 
 Você também precisará substituir seus `AppDelegate` `OpenUrl` `ContinueUserActivity` métodos e para chamar no Essentials:
 

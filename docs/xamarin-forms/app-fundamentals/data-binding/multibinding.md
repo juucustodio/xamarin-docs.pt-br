@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2020
-ms.openlocfilehash: 79d27cf9d6ba01235962b43ee7f05c904c265c2f
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: ad9171aa6138b12d66ba8289c4e68766ce733e97
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93370839"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939103"
 ---
 # <a name="xamarinforms-multi-bindings"></a>Várias associações do Xamarin. Forms
 
@@ -271,29 +271,30 @@ Neste exemplo, o `MultiBinding` objeto usa sua `AnyTrueMultiConverter` instânci
 
 ```xaml
 <ContentPage ...
-             xmlns:local="clr-namespace:DataBindingDemos">
+             xmlns:local="clr-namespace:DataBindingDemos"
+             xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit">
     <ContentPage.Resources>
         <local:AllTrueMultiConverter x:Key="AllTrueConverter" />
 
         <ControlTemplate x:Key="CardViewExpanderControlTemplate">
-            <Expander BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
-                      IsExpanded="{Binding IsExpanded, Source={RelativeSource TemplatedParent}}"
-                      BackgroundColor="{Binding CardColor}">
-                <Expander.IsVisible>
+            <xct:Expander BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
+                          IsExpanded="{Binding IsExpanded, Source={RelativeSource TemplatedParent}}"
+                          BackgroundColor="{Binding CardColor}">
+                <xct:Expander.IsVisible>
                     <MultiBinding Converter="{StaticResource AllTrueConverter}">
                         <Binding Path="IsExpanded" />
                         <Binding Path="IsEnabled" />
                     </MultiBinding>
-                </Expander.IsVisible>
-                <Expander.Header>
+                </xct:Expander.IsVisible>
+                <xct:Expander.Header>
                     <Grid>
                         <!-- XAML that defines Expander header goes here -->
                     </Grid>
-                </Expander.Header>
+                </xct:Expander.Header>
                 <Grid>
                     <!-- XAML that defines Expander content goes here -->
                 </Grid>
-            </Expander>
+            </xct:Expander>
         </ControlTemplate>
     </ContentPage.Resources>
 
@@ -309,6 +310,9 @@ Neste exemplo, o `MultiBinding` objeto usa sua `AnyTrueMultiConverter` instânci
     </StackLayout>
 </ContentPage>
 ```
+
+> [!NOTE]
+> O `Expander` controle agora faz parte do Xamarin Community Toolkit.
 
 Neste exemplo, o `TemplatedParent` modo de associação relativo é usado para associar de dentro de um modelo de controle à instância do objeto de tempo de execução à qual o modelo é aplicado. O `Expander` , que é o elemento raiz do [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) , tem seu `BindingContext` definido como a instância do objeto de tempo de execução à qual o modelo é aplicado. Portanto, o `Expander` e seus filhos resolvem suas expressões de associação e [`Binding`](xref:Xamarin.Forms.Binding) objetos, em relação às propriedades do `CardViewExpander` objeto. O `MultiBinding` usa a `AllTrueMultiConverter` instância para definir a `Expander.IsVisible` propriedade como `true` desde que os dois [`Binding`](xref:Xamarin.Forms.Binding) objetos sejam avaliados como `true` . Caso contrário, a `Expander.IsVisible` propriedade será definida como `false` .
 

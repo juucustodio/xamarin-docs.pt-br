@@ -6,16 +6,16 @@ ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/10/2020
+ms.date: 12/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4af29f2df797aea4bbd0655fc0564e289f2c2a3b
-ms.sourcegitcommit: 1d19ee87e317a72de05f3f0fa73dfcaeb767cbd1
+ms.openlocfilehash: 09cffb4e5c7d8f6b78d5ab1de6ec9839c3969e87
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96755013"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940103"
 ---
 # <a name="display-pop-ups"></a>Exibir pop-ups
 
@@ -47,6 +47,8 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 
 [![Caixa de diálogo de alerta com dois botões](pop-ups-images/alert2-sml.png)](pop-ups-images/alert2.png#lightbox)
 
+O [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) método também tem sobrecargas que aceitam um [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) argumento que especifica a direção na qual os elementos da interface do usuário fluem no alerta. Para obter mais informações sobre a direção do fluxo, consulte [localização da direita para a esquerda](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
+
 > [!WARNING]
 > Por padrão, no UWP, quando um alerta é exibido, qualquer chave de acesso definida na página por trás do alerta ainda pode ser ativada. Para obter mais informações, consulte [as chaves de acesso do visualelement no Windows](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
 
@@ -77,6 +79,8 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 ```
 
 [![DisplayActionSheet](pop-ups-images/action2-sml.png "Caixa de diálogo da folha de ações com o botão destruir")](pop-ups-images/action2.png#lightbox "Caixa de diálogo da folha de ações com o botão destruir")
+
+O [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) método também tem uma sobrecarga que aceita um [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) argumento que especifica a direção na qual os elementos da interface do usuário fluem dentro da folha de ações. Para obter mais informações sobre a direção do fluxo, consulte [localização da direita para a esquerda](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
 
 ## <a name="display-a-prompt"></a>exibir um prompt
 
@@ -119,3 +123,4 @@ Esse código exibe uma resposta predefinida de 10, limita o número de caractere
 ## <a name="related-links"></a>Links relacionados
 
 - [PopupsSample](/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
+- [Localização da direita para a esquerda](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
