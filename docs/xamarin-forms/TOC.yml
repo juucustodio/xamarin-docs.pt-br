@@ -308,8 +308,8 @@ items:
             href: app-fundamentals/navigation/tabbed-page.md
           - name: CarouselPage
             href: app-fundamentals/navigation/carousel-page.md
-          - name: MasterDetailPage
-            href: app-fundamentals/navigation/master-detail-page.md
+          - name: FlyoutPage
+            href: app-fundamentals/navigation/flyoutpage.md
           - name: Páginas modais
             href: app-fundamentals/navigation/modal.md
       - name: Shell
@@ -354,8 +354,6 @@ items:
     items:
       - name: Visão geral
         href: user-interface/index.yml
-      - name: Marcação do C#
-        href: user-interface/csharp-markup.md
       - name: Referência de controles
         items:
           - name: Visão geral
@@ -376,8 +374,6 @@ items:
         items:
           - name: BoxView
             href: user-interface/boxview.md
-          - name: Expansor
-            href: user-interface/expander.md
           - name: Image
             href: user-interface/images.md
           - name: Rotular
@@ -400,8 +396,6 @@ items:
                 href: user-interface/map/geocoder.md
               - name: Iniciar o aplicativo de mapas nativos
                 href: user-interface/map/native-map-app.md
-          - name: MediaElement
-            href: user-interface/mediaelement.md
           - name: Formas
             items:
               - name: Visão geral
@@ -561,13 +555,6 @@ items:
                     href: user-interface/brushes/radialgradient.md
           - name: Cores
             href: user-interface/colors.md
-          - name: DataPages
-            href: user-interface/datapages/index.md
-            items:
-              - name: Introdução
-                href: user-interface/datapages/get-started.md
-              - name: Referência de Controles
-                href: user-interface/datapages/controls.md
           - name: Exibir pop-ups
             href: user-interface/pop-ups.md
           - name: Fontes
@@ -668,8 +655,6 @@ items:
             href: platform/android/index.md
           - name: Migração AndroidX
             href: platform/android/androidx-migration.md
-          - name: AppCompat e Design de material
-            href: platform/android/appcompat-material-design.md
           - name: Botão de sombras e preenchimento
             href: platform/android/button-padding-shadow.md
           - name: Opções do IME de entrada
@@ -716,6 +701,8 @@ items:
             href: platform/ios/entry-cursor-color.md
           - name: Tamanho da fonte de entrada
             href: platform/ios/entry-font-size.md
+          - name: Sombra da FlyoutPage
+            href: platform/ios/flyoutpage-shadow.md
           - name: Formatação
             href: platform/ios/formatting.md
           - name: Estilo de apresentação da página modal
@@ -730,8 +717,6 @@ items:
             href: platform/ios/listview-separator-style.md
           - name: Atualizações de controle do thread principal
             href: platform/ios/main-thread-updates-ui.md
-          - name: Sombra do MasterDetailPage
-            href: platform/ios/masterdetailpage-shadow.md
           - name: Separador da barra de NavigationPage
             href: platform/ios/navigation-bar-separator.md
           - name: Modo de cor do texto da barra de NavigationPage
@@ -774,12 +759,12 @@ items:
             href: platform/windows/index.md
           - name: Diretório de imagem padrão
             href: platform/windows/default-image-directory.md
+          - name: Barra de navegação da FlyoutPage
+            href: platform/windows/flyoutpage-navigation-bar.md
           - name: Sentido de leitura de InputView
             href: platform/windows/inputview-reading-order.md
           - name: SelectionMode de ListView
             href: platform/windows/listview-selectionmode.md
-          - name: Barra de navegação de MasterDetailPage
-            href: platform/windows/masterdetailpage-navigation-bar.md
           - name: Posicionamento da barra de ferramentas da página
             href: platform/windows/page-toolbar-placement.md
           - name: Instalação da plataforma
@@ -794,6 +779,8 @@ items:
             href: platform/windows/visualelement-access-keys.md
           - name: Modo de cor herdado de VisualElement
             href: platform/windows/legacy-color-mode.md
+          - name: Modo de execução de WebView
+            href: platform/windows/webview-executionmode.md
           - name: Alertas do JavaScript de WebView
             href: platform/windows/webview-javascript-alert.md
       - name: Criar elementos específicos à plataforma
@@ -1026,6 +1013,8 @@ items:
       - name: Perguntas frequentes
         href: troubleshooting/questions/index.md
         items:
+          - name: Como posso migrar meu aplicativo para o Xamarin.Forms 5.0?
+            href: troubleshooting/questions/forms5-migration.md
           - name: Posso atualizar o modelo padrão Xamarin.Forms para um pacote NuGet mais recente?
             href: troubleshooting/questions/update-forms-template.md
           - name: Por que o designer XAML do Visual Studio não funciona para arquivos XAML do Xamarin.Forms?
