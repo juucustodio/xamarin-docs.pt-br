@@ -47,11 +47,11 @@ Na caixa de diálogo **novo aplicativo de plataforma cruzada** , clique em **em 
 
 ![Caixa de diálogo novo aplicativo](get-started-with-xaml-images/win/new-cross-platform-app.png)
 
-Quatro projetos são criados na solução: o **XamlSamples** .net standard library, **XamlSamples. Android** , **XamlSamples. Ios** e a solução plataforma universal do Windows, **XamlSamples. UWP**.
+Quatro projetos são criados na solução: o **XamlSamples** .net standard library, **XamlSamples. Android**, **XamlSamples. Ios** e a solução plataforma universal do Windows, **XamlSamples. UWP**.
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-Em Visual Studio para Mac, selecione **arquivo > nova solução** no menu. Na caixa de diálogo **novo projeto** , selecione **multiplataforma > aplicativo** à esquerda e **aplicativo de formulários em branco** ( *não* **aplicativo de formulários** ) na lista modelo:
+Em Visual Studio para Mac, selecione **arquivo > nova solução** no menu. Na caixa de diálogo **novo projeto** , selecione **multiplataforma > aplicativo** à esquerda e **aplicativo de formulários em branco** (*não* **aplicativo de formulários**) na lista modelo:
 
 ![Caixa de diálogo novo projeto 1](get-started-with-xaml-images/mac/newprojectdialog1.png)
 
@@ -81,15 +81,15 @@ A menos que você precise escrever código específico da plataforma, o projeto 
 
 Na biblioteca de .NET Standard **XamlSamples** , há um par de arquivos com os seguintes nomes:
 
-- **App. XAML** , o arquivo XAML; e
-- **App.XAML.cs** , um arquivo *code-behind em* C# associado ao arquivo XAML.
+- **App. XAML**, o arquivo XAML; e
+- **App.XAML.cs**, um arquivo *code-behind em* C# associado ao arquivo XAML.
 
 Você precisará clicar na seta ao lado de **app. XAML** para ver o arquivo code-behind.
 
 Tanto o **app. XAML** quanto o **app.XAML.cs** contribuem para uma classe chamada `App` derivada de `Application` . A maioria das outras classes com arquivos XAML contribuem para uma classe derivada de `ContentPage` ; esses arquivos usam XAML para definir o conteúdo visual de uma página inteira. Isso é verdadeiro nos outros dois arquivos no projeto **XamlSamples** :
 
-- **MainPage. XAML** , o arquivo XAML; e
-- **MainPage.XAML.cs** , o arquivo code-behind do C#.
+- **MainPage. XAML**, o arquivo XAML; e
+- **MainPage.XAML.cs**, o arquivo code-behind do C#.
 
 O arquivo **MainPage. XAML** tem esta aparência (embora a formatação possa ser um pouco diferente):
 
@@ -156,13 +156,13 @@ Para visuais mais interessantes, tudo o que você precisa é de um XAML mais int
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Para adicionar outras classes baseadas em XAML `ContentPage` ao seu projeto, selecione o projeto de biblioteca **XamlSamples** .net Standard, clique com o botão direito do mouse e selecione **Adicionar > novo item...**. Na caixa de diálogo **Adicionar novo item** , selecione **itens do Visual C# > Xamarin.Forms > página conteúdo** (não a **página de conteúdo (C#)** , que cria uma página somente código ou exibição de **conteúdo** , que não é uma página). Dê um nome à página, por exemplo, **HelloXamlPage** :
+Para adicionar outras classes baseadas em XAML `ContentPage` ao seu projeto, selecione o projeto de biblioteca **XamlSamples** .net Standard, clique com o botão direito do mouse e selecione **Adicionar > novo item...**. Na caixa de diálogo **Adicionar novo item** , selecione **itens do Visual C# > Xamarin.Forms > página conteúdo** (não a **página de conteúdo (C#)**, que cria uma página somente código ou exibição de **conteúdo**, que não é uma página). Dê um nome à página, por exemplo, **HelloXamlPage**:
 
 ![Caixa de diálogo Adicionar novo item](get-started-with-xaml-images/win/add-new-item-dialog-2019.png)
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-Para adicionar outras classes baseadas em XAML `ContentPage` ao seu projeto, selecione o projeto de biblioteca **XamlSamples** .net Standard e invoque o arquivo > item de menu **novo arquivo** . À esquerda da caixa de diálogo **novo arquivo** , selecione **formulários** à esquerda e forma de **XAML de Contentpage** (não **forma Contentpage** , que cria uma página somente código ou exibição de **conteúdo** , que não é uma página). Dê um nome à página, por exemplo, **HelloXamlPage** :
+Para adicionar outras classes baseadas em XAML `ContentPage` ao seu projeto, selecione o projeto de biblioteca **XamlSamples** .net Standard e invoque o arquivo > item de menu **novo arquivo** . À esquerda da caixa de diálogo **novo arquivo** , selecione **formulários** à esquerda e forma de **XAML de Contentpage** (não **forma Contentpage**, que cria uma página somente código ou exibição de **conteúdo**, que não é uma página). Dê um nome à página, por exemplo, **HelloXamlPage**:
 
 ![Caixa de diálogo novo arquivo](get-started-with-xaml-images/mac/newfiledialog.png)
 
@@ -299,7 +299,7 @@ A aparência é a seguinte:
 
 ## <a name="xaml-and-code-interactions"></a>XAML e interações de código
 
-O exemplo **HelloXamlPage** contém apenas um único `Label` na página, mas isso é muito incomum. A maioria dos `ContentPage` derivativos define a `Content` propriedade como um layout de algum tipo, como um `StackLayout` . A `Children` propriedade de `StackLayout` é definida como sendo do tipo, `IList<View>` mas é, na verdade, um objeto do tipo `ElementCollection<View>` , e essa coleção pode ser preenchida com várias exibições ou outros layouts. Em XAML, essas relações pai-filho são estabelecidas com a hierarquia XML normal. Aqui está um arquivo XAML para uma nova página chamada **XamlPlusCodePage** :
+O exemplo **HelloXamlPage** contém apenas um único `Label` na página, mas isso é muito incomum. A maioria dos `ContentPage` derivativos define a `Content` propriedade como um layout de algum tipo, como um `StackLayout` . A `Children` propriedade de `StackLayout` é definida como sendo do tipo, `IList<View>` mas é, na verdade, um objeto do tipo `ElementCollection<View>` , e essa coleção pode ser preenchida com várias exibições ou outros layouts. Em XAML, essas relações pai-filho são estabelecidas com a hierarquia XML normal. Aqui está um arquivo XAML para uma nova página chamada **XamlPlusCodePage**:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
