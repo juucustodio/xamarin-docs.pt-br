@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 8d5f5ff1cfe7876862371a9732f0ab8186bbeeba
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 8d5f0b06a804e9b9af7bb15111c70e4505c79fd0
+ms.sourcegitcommit: 40a56bbc1e038a9181101580ad18a4584edb5ab0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91457610"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025507"
 ---
 # <a name="toolbar-compatibility"></a>Compatibilidade da barra de ferramentas
 
@@ -45,7 +45,7 @@ Em seguida, adicione o pacote de [biblioteca de suporte do Android v7 AppCompat]
 
 [![Captura de tela do pacote do v7 AppCompat selecionado em gerenciar pacotes NuGet](toolbar-compatibility-images/01-appcompat-nuget-sml.png)](toolbar-compatibility-images/01-appcompat-nuget.png#lightbox)
 
-Quando esse NuGet é instalado, vários outros pacotes do NuGet também são instalados, caso ainda não estejam presentes (como **Xamarin. Android. support. animada. Vector. estilododesenho**, **xamarin. Android. support. v4**e **Xamarin. Android. support. Vector. estilododesenho**). Para obter mais informações sobre a instalação de pacotes do NuGet, consulte [Walkthrough: incluindo um NuGet em seu projeto](/visualstudio/mac/nuget-walkthrough). 
+Quando esse NuGet é instalado, vários outros pacotes do NuGet também são instalados, caso ainda não estejam presentes (como **Xamarin. Android. support. animada. Vector. estilododesenho**, **xamarin. Android. support. v4** e **Xamarin. Android. support. Vector. estilododesenho**). Para obter mais informações sobre a instalação de pacotes do NuGet, consulte [Walkthrough: incluindo um NuGet em seu projeto](/visualstudio/mac/nuget-walkthrough). 
 
 ## <a name="use-an-appcompat-theme-and-toolbar"></a>Usar um tema e uma barra de ferramentas do AppCompat
 
@@ -166,7 +166,7 @@ Como essa opção de namespace fornece suporte para o `showAsAction` atributo em
 
 ## <a name="subclass-appcompatactivity"></a>AppCompatActivity de subclasse
 
-A etapa final da conversão é modificar `MainActivity` de forma que ela seja uma subclasse de `AppCompactActivity` . Edite **MainActivity.cs** e adicione as seguintes `using` instruções: 
+A etapa final da conversão é modificar `MainActivity` de forma que ela seja uma subclasse de `AppCompatActivity` . Edite **MainActivity.cs** e adicione as seguintes `using` instruções: 
 
 ```csharp
 using Android.Support.V7.App;
