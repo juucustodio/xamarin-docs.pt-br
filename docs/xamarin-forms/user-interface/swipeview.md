@@ -6,16 +6,16 @@ ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/05/2020
+ms.date: 01/11/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: de3d7df922a0b6bdc6644e2684c6f01176abbe42
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: d0ebae93405cb115a0f1e87453ab9b438202ef30
+ms.sourcegitcommit: 1decf2c65dc4c36513f7dd459a5df01e170a036f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97940493"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98115243"
 ---
 # <a name="no-locxamarinforms-swipeview"></a>Xamarin.Forms SwipeView
 
@@ -37,12 +37,11 @@ Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.Bin
 
 Além disso, o `SwipeView` herda a [`Content`](xref:Xamarin.Forms.ContentView.Content) propriedade da [`ContentView`](xref:Xamarin.Forms.ContentView) classe. A `Content` propriedade é a propriedade content da `SwipeView` classe e, portanto, não precisa ser definida explicitamente.
 
-A `SwipeView` classe também define quatro eventos:
+A `SwipeView` classe também define três eventos:
 
 - `SwipeStarted` é acionado quando um dedo é iniciado. O `SwipeStartedEventArgs` objeto que acompanha esse evento tem uma `SwipeDirection` propriedade, do tipo `SwipeDirection` .
 - `SwipeChanging` é acionado à medida que o dedo se move. O `SwipeChangingEventArgs` objeto que acompanha esse evento tem uma `SwipeDirection` propriedade, do tipo `SwipeDirection` e uma `Offset` Propriedade do tipo `double` .
-- `SwipeEnded` é acionado quando um dedo termina. O `SwipeEndedEventArgs` objeto que acompanha esse evento tem uma `SwipeDirection` propriedade, do tipo `SwipeDirection` .
-- `CloseRequested` é acionado quando os itens do dedo são fechados.
+- `SwipeEnded` é acionado quando um dedo termina. O `SwipeEndedEventArgs` objeto que acompanha esse evento tem uma `SwipeDirection` propriedade, do tipo `SwipeDirection` e uma `IsOpen` Propriedade do tipo `bool` .
 
 Além disso, `SwipeView` `Open` o inclui `Close` os métodos e, que programaticamente abrem e fecham os itens do dedo, respectivamente.
 
@@ -346,7 +345,7 @@ Neste exemplo, o `SwipeItemView` inclui um [`StackLayout`](xref:Xamarin.Forms.St
 
 ## <a name="open-and-close-a-swipeview-programmatically"></a>Abrir e fechar um SwipeView programaticamente
 
-`SwipeView` inclui `Open` `Close` os métodos e, que programaticamente abrem e fecham os itens do dedo, respectivamente.
+`SwipeView` inclui `Open` `Close` os métodos e, que programaticamente abrem e fecham os itens do dedo, respectivamente. Por padrão, esses métodos animarão o `SwipeView` quando for aberto ou fechado.
 
 O `Open` método requer um `OpenSwipeItem` argumento para especificar a direção da qual o `SwipeView` será aberto. A `OpenSwipeItem` enumeração tem quatro membros:
 
@@ -354,6 +353,8 @@ O `Open` método requer um `OpenSwipeItem` argumento para especificar a direçã
 - `TopItems`, que indica que o `SwipeView` será aberto na parte superior, para revelar os itens do dedo na `TopItems` coleção.
 - `RightItems`, que indica que o `SwipeView` será aberto da direita, para revelar os itens do dedo na `RightItems` coleção.
 - `BottomItems`, que indica que o `SwipeView` será aberto na parte inferior, para revelar os itens do dedo na `BottomItems` coleção.
+
+Além disso, o `Open` método também aceita um `bool` argumento opcional que define se o `SwipeView` será animado quando for aberto.
 
 Dado um `SwipeView` nomeado `swipeView` , o exemplo a seguir mostra como abrir um `SwipeView` para revelar os itens do dedo na `LeftItems` coleção:
 
@@ -368,7 +369,7 @@ swipeView.Close();
 ```
 
 > [!NOTE]
-> Quando o `Close` método é invocado, o `CloseRequested` evento é acionado.
+> O `Close` método também aceita um `bool` argumento opcional que define se o `SwipeView` será animado quando for fechado.
 
 ## <a name="disable-a-swipeview"></a>Desabilitar um SwipeView
 

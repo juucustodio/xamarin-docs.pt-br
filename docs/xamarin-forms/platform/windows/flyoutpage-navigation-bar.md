@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e31a13daf5ff4b3e2c9fc185ddb3325f99406160
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: e2f6a4c3eaf2668eff7e2123378175f7844a3413
+ms.sourcegitcommit: 1decf2c65dc4c36513f7dd459a5df01e170a036f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97940667"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98115139"
 ---
 # <a name="flyoutpage-navigation-bar-on-windows"></a>Barra de navegação do FlyoutPage no Windows
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esse Plataforma Universal do Windows específico à plataforma é usado para recolher a barra de navegação em um [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage) , e é consumido em XAML definindo as [`FlyoutPage.CollapseStyle`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.FlyoutPage.CollapseStyleProperty) [`FlyoutPage.CollapsedPaneWidth`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.FlyoutPage.CollapsedPaneWidthProperty) Propriedades anexadas e:
 
@@ -51,6 +51,6 @@ O resultado é que um especificado [`CollapseStyle`](xref:Xamarin.Forms.Platform
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API WindowsSpecific](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

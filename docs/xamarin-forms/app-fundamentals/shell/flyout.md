@@ -6,16 +6,16 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/30/2020
+ms.date: 01/12/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4faa0923e074460ef254db319dfcfd01cc832dce
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: bad3a19de5a8feae2ca2fd02c1a454ac379e9f42
+ms.sourcegitcommit: 1decf2c65dc4c36513f7dd459a5df01e170a036f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97940110"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98115152"
 ---
 # <a name="no-locxamarinforms-shell-flyout"></a>Xamarin.Forms Submenu do Shell
 
@@ -63,6 +63,20 @@ Além disso, o submenu pode ser aberto de forma programática e fechado com a de
 ```csharp
 Shell.Current.FlyoutIsPresented = false;
 ```
+
+## <a name="flyout-width-and-height"></a>Largura e altura do submenu
+
+A largura e a altura do submenu podem ser personalizadas definindo as `Shell.FlyoutWidth` `Shell.FlyoutHeight` Propriedades anexadas e como `double` valores:
+
+```xaml
+<Shell ...
+       FlyoutWidth="400"
+       FlyoutHeight="200">
+    ...
+</Shell>
+```
+
+Isso permite cenários como expandir o submenu em toda a tela ou reduzir a altura do submenu para que ele não oculte a barra de guias.
 
 ## <a name="flyout-header"></a>Cabeçalho do submenu
 
@@ -540,7 +554,23 @@ Além disso, os [`Grid`](xref:Xamarin.Forms.Grid) [`Image`](xref:Xamarin.Forms.I
 > [!NOTE]
 > O mesmo modelo também pode ser usado para `MenuItem` objetos.
 
-## <a name="flyoutitem-tab-order"></a>Ordem de tabulação do FlyoutItem
+## <a name="set-flyoutitem-visibility"></a>Definir visibilidade de FlyoutItem
+
+Itens de submenu são visíveis no submenu por padrão. No entanto, um item de submenu pode ser ocultado no submenu definindo a `Shell.FlyoutItemIsVisible` Propriedade anexada, que usa como padrão `true` para `false` :
+
+```xaml
+<Shell ...>
+    <FlyoutItem ...
+                Shell.FlyoutItemIsVisible="False">
+        ...
+    </FlyoutItem>
+</Shell>
+```
+
+> [!NOTE]
+> A `Shell.FlyoutItemIsVisible` Propriedade anexada pode ser definida `FlyoutItem` nos `MenuItem` objetos,, `Tab` e `ShellContent` .
+
+## <a name="set-flyoutitem-tab-order"></a>Definir ordem de tabulação FlyoutItem
 
 Por padrão, a ordem de tabulação dos objetos `FlyoutItem` é a mesma ordem em que eles são listados no XAML ou em que são adicionados de maneira programática a uma coleção filha. Essa é a ordem em que ocorrerá a navegação dos objetos `FlyoutItem` por meio do teclado e, geralmente, essa ordem padrão é a melhor ordem.
 
@@ -588,6 +618,54 @@ Neste exemplo, a `CurrentItem` propriedade é definida na classe de subclasse `S
 ```csharp
 Shell.Current.CurrentItem = aboutItem;
 ```
+
+## <a name="replace-flyout-content"></a>Substituir conteúdo do submenu
+
+Itens de submenu, que representam o conteúdo do submenu, podem, opcionalmente, ser substituídos por seu próprio conteúdo, definindo a `Shell.FlyoutContent` propriedade vinculável como um `object` :
+
+```xaml
+<Shell.FlyoutContent>
+    <CollectionView BindingContext="{x:Reference shell}"
+                    IsGrouped="True"
+                    ItemsSource="{Binding FlyoutItems}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Label Text="{Binding Title}"
+                       TextColor="White"
+                       FontSize="Large" />
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</Shell.FlyoutContent>
+```
+
+Neste exemplo, o conteúdo do submenu é substituído por um [`CollectionView`](xref:Xamarin.Forms.CollectionView) que exibe o título de cada item na `FlyoutItems` coleção.
+
+> [!NOTE]
+> A `FlyoutItems` propriedade, na `Shell` classe, é uma coleção somente leitura de itens de submenu.
+
+Como alternativa, o conteúdo do submenu pode ser definido definindo a `Shell.FlyoutContentTemplate` propriedade como a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) :
+
+```xaml
+<Shell.FlyoutContentTemplate>
+    <DataTemplate>
+        <CollectionView BindingContext="{x:Reference shell}"
+                        IsGrouped="True"
+                        ItemsSource="{Binding FlyoutItems}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Title}"
+                           TextColor="White"
+                           FontSize="Large" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </DataTemplate>
+</Shell.FlyoutContentTemplate>
+```
+
+> [!IMPORTANT]
+> Um cabeçalho de submenu pode, opcionalmente, ser exibido acima do conteúdo do submenu e um rodapé de submenu pode, opcionalmente, ser exibido abaixo do conteúdo do submenu. Se o conteúdo do submenu for rolável, o Shell tentará honrar o comportamento de rolagem do seu cabeçalho de submenu.
 
 ## <a name="menu-items"></a>Itens de menu
 

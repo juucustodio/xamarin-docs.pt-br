@@ -10,16 +10,16 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ad3b5d76816710d45cd1d8e738771e39555401fa
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: ea0be2136b354ef7a613904799481079bcae52ad
+ms.sourcegitcommit: 1decf2c65dc4c36513f7dd459a5df01e170a036f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97940656"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98115230"
 ---
 # <a name="no-locxamarinforms-flyoutpage"></a>Xamarin.Forms FlyoutPage
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-flyoutpage)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/navigation-flyoutpage)
 
 Uma página de submenu normalmente exibe uma lista de itens, conforme mostrado nas seguintes capturas de tela:
 
@@ -294,5 +294,5 @@ public class MainPageCS : FlyoutPage
 ## <a name="related-links"></a>Links relacionados
 
 - [Variedades de páginas](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
-- [FlyoutPage (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-flyoutpage)
+- [FlyoutPage (exemplo)](/samples/xamarin/xamarin-forms-samples/navigation-flyoutpage)
 - [API FlyoutPage](xref:Xamarin.Forms.FlyoutPage)
