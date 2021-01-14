@@ -6,16 +6,16 @@ ms.assetid: E220F054-32EE-424C-A7E5-6156BE271519
 ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
-ms.date: 03/14/2020
+ms.date: 01/14/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ca79a8a4059a303b6f4bfa152d645311a6056ffd
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 62c7be9bd737b4d1860dca9f75cdde6acfadaa96
+ms.sourcegitcommit: 99e340360e8615fbc2971f48d6856f8701594825
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91563881"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204093"
 ---
 # <a name="xaml-hot-reload-for-no-locxamarinforms"></a>Hot recarregamento de XAML para Xamarin.Forms
 
@@ -40,9 +40,10 @@ Se você estiver iniciando com base em um modelo, o Hot recarregamento de XAML s
 
 Se você estiver trabalhando a partir de uma Xamarin.Forms solução existente, nenhuma instalação adicional será necessária para usar o Hot recarregamento de XAML, mas talvez seja necessário verificar sua configuração para garantir a melhor experiência. Primeiro, habilite-o nas configurações do IDE:
 
-* No Windows, marque a caixa de seleção **habilitar o WebLoad do xamarin** em **ferramentas**  >  **Opções**  >  **xamarin**  >  **Hot recarregar**.
-* No Mac, marque a caixa de seleção **habilitar o Xamarin Hot reload** nas ferramentas de preferências do **Visual Studio**  >  **Preferences**  >  **para**  >  **recarregamento dinâmico**do xamarin.
-  * Em versões anteriores do Visual Studio para Mac, o menu é em **Visual Studio**  >  **preferências**  >  **projetos**  >  **Xamarin Hot reload**.
+* No Windows, marque a caixa de seleção **habilitar o recarregamento do XAML** (e as plataformas necessárias) em **ferramentas**  >  **Opções**  >  **depuração**  >  **quente de recarregamento**.
+  * Em versões anteriores do Visual Studio 2019, a caixa de seleção está em **ferramentas**  >  **Opções**  >    >  **WebLoad** do Xamarin.
+* No Mac, marque a caixa de seleção **habilitar o Xamarin Hot reload** nas ferramentas de preferências do **Visual Studio**  >    >  **para**  >  **recarregamento dinâmico** do xamarin.
+  * Em versões anteriores do Visual Studio para Mac, a caixa de seleção é em **Visual Studio**  >  **preferências**  >  **projetos**  >  **Xamarin Hot reload**.
 
 Em seguida, em suas configurações de Build do Android e iOS, verifique se o vinculador está definido como "não vincular" ou "link nenhum". Para usar o recarregamento de XAML com um dispositivo IOS físico, você também precisa marcar **habilitar o intérprete mono** (Visual Studio 16,4 e superior) ou adicionar **--interpretador** para seus **args mTouch adicionais** (Visual Studio 16,3 e inferior).
 
@@ -57,7 +58,7 @@ Se você fizer uma alteração que o Hot recarregamento de XAML não possa recar
 ## <a name="reload-on-multiple-platforms-at-once"></a>Recarregar em várias plataformas de uma vez
 
 O Hot recarregamento de XAML dá suporte à depuração simultânea no Visual Studio e Visual Studio para Mac. Você pode implantar um Android e um destino iOS ao mesmo tempo para ver suas alterações refletidas em ambas as plataformas de uma só vez. Para depurar em várias plataformas, consulte:
-* **Windows** [Como definir vários projetos de inicialização](/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2019)
+*  [Como definir vários projetos de inicialização](/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2019)
 * **Mac** [definir vários projetos de inicialização](/visualstudio/mac/set-startup-projects?view=vsmac-2019)
 
 ## <a name="known-limitations"></a>Limitações conhecidas
@@ -84,4 +85,4 @@ O Hot recarregamento de XAML dá suporte à depuração simultânea no Visual St
 * Se nada acontecer ao salvar o arquivo XAML, verifique se o Hot recarregamento de XAML está habilitado no IDE.
 * Se você estiver Depurando em um iPhone físico e seu aplicativo ficar sem resposta, verifique se o intérprete está habilitado. Para ativá-lo, marque **habilitar o intérprete mono** (Visual Studio 16.4/8.4 e superior) ou adicionar **--intérprete** para o campo **argumentos mTouch adicionais** (Visual Studio 16.3/8.3 e anterior) em suas configurações de Build do Ios.
 
-Para relatar um bug, use **a ajuda**  >  **enviar comentários**para  >  **relatar um problema** no Windows e **ajudar**  >  **a relatar um problema** no Mac.
+Para relatar um bug, use **a ajuda**  >  **enviar comentários** para  >  **relatar um problema** no Windows e **ajudar**  >  **a relatar um problema** no Mac.
