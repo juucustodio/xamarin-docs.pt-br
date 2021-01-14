@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/09/2018
-ms.openlocfilehash: 418a0196849099da03983085aca9ceed2077207b
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 480ec0d4a815d62422e31a4110af52ca1628d1f7
+ms.sourcegitcommit: d4d293174a8324ce82b8f961ae6eadce294cafd7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030917"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98194894"
 ---
 # <a name="where-can-i-find-the-dsym-file-to-symbolicate-ios-crash-logs"></a>Onde posso encontrar o arquivo .dSYM para simbolizar os logs de falha do iOS?
 
@@ -20,7 +20,7 @@ Ao criar um aplicativo iOS com Visual Studio para Mac ou o Visual Studio 2017, o
 
 - Se você habilitou compilações específicas do dispositivo, o. dSYM pode ser encontrado no seguinte diretório:
 
-    **&lt;diretório do projeto&gt;/bin/&lt;plataforma&gt;/&lt;Configuration&gt;/Device-Builds/&lt;dispositivo&gt;-&lt;os-Version&gt;/**
+    **&lt;diretório do &gt; projeto &lt; /bin/ &gt; / &lt; &gt; de configuração de plataforma/Device-Builds/so do &lt; dispositivo &gt; - &lt; -versão&gt;/**
 
     Por exemplo:
   
@@ -28,7 +28,7 @@ Ao criar um aplicativo iOS com Visual Studio para Mac ou o Visual Studio 2017, o
 
 - Se você não tiver habilitado compilações específicas do dispositivo, o. dSYM poderá ser encontrado no seguinte diretório:
 
-    **&lt;diretório do projeto&gt;/bin/&lt;plataforma&gt;/&lt;Configuration&gt;/**
+    **&lt;configuração da &gt; plataforma/bin/do diretório do projeto &lt; &gt; / &lt;&gt;/**
 
     Por exemplo:
 
@@ -37,7 +37,7 @@ Ao criar um aplicativo iOS com Visual Studio para Mac ou o Visual Studio 2017, o
 > [!NOTE]
 > Como parte do processo de compilação, o Visual Studio 2017 copia o arquivo. dSYM do host de Build do Mac para o Windows. Se você não vir um arquivo. dSYM no Windows, certifique-se de ter configurado as configurações de Build do aplicativo para [criar um arquivo. ipa](~/ios/deploy-test/app-distribution/ipa-support.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Arquivos de falha do Symbolicating iOS (Xamarin. iOS)](https://www.jmillerdev.net/symbolicating-ios-crash-files-xamarin-ios/)
+- [Arquivos de falha do Symbolicating iOS (Xamarin. iOS)](https://www.jmillerdev.com/symbolicating-ios-crash-files-xamarin-ios/)
 - [Desmistificando os logs de falhas do aplicativo iOS](https://www.raywenderlich.com/23704/demystifying-ios-application-crash-logs)
