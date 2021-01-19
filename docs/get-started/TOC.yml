@@ -60,7 +60,7 @@
         - name: Layout de grade
           href: tutorials/grid/index.yml
         - name: Listas
-          href: tutorials/listview/index.yml
+          href: tutorials/collectionview/index.yml
         - name: Pop-ups
           href: tutorials/pop-ups/index.yml
         - name: Ciclo de vida do aplicativo
