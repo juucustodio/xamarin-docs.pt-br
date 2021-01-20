@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: da0e3775f400c965ee59a762884e638e3379c8df
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: ab5b02e34afa4ff0c839f3f16cc9391e267c2f8a
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91454852"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98608748"
 ---
 # <a name="xamarinandroid-environment"></a>Ambiente do Xamarin.Android
 
@@ -79,7 +79,7 @@ Contém uma lista de variáveis de ambiente separadas por `|`.
 
 ### `debug.mono.gc`
 
-O valor da propriedade do sistema `debug.mono.debug` é um inteiro.
+O valor da propriedade do sistema `debug.mono.gc` é um inteiro.
 Se `1`, as informações de GC devem ser registradas.
 
 Isso é equivalente a fazer com que propriedade do sistema `debug.mono.log` contenha `gc`.
@@ -165,4 +165,4 @@ MONO_LOG_LEVEL=
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Segurança da camada de transporte](~/cross-platform/app-fundamentals/transport-layer-security.md)
+- [Protocolo TLS](~/cross-platform/app-fundamentals/transport-layer-security.md)

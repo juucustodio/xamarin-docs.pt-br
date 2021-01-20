@@ -10,12 +10,12 @@ ms.date: 01/29/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f447a89ca4b4f21554a75ec52c5771ee9f9d35fd
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: 6bb9156c3f097b517474b70cdacc683d96423417
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91562984"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609112"
 ---
 # <a name="adding-ios-specific-formatting"></a>Adicionando formatação específica do iOS
 
@@ -42,7 +42,7 @@ nav.BarTextColor = Color.White;
 
 O resultado é mostrado no trecho de tela abaixo. Observe que os itens da barra de status são pretos (isso não pode ser definido no Xamarin.Forms porque ele é um recurso específico da plataforma).
 
-![iOS com temas](theme-images/status-default-sml.png)
+![Captura de tela mostrar iOS com itens de barra de status em texto preto.](theme-images/status-default-sml.png)
 
 O ideal é que a barra de status também seja branca – algo que possamos fazer diretamente no projeto do iOS. Adicione as seguintes entradas ao **info. plist** para forçar a barra de status a ficar branca:
 
@@ -59,7 +59,7 @@ ou edite o arquivo **info. plist** correspondente diretamente para incluir:
 
 Agora, quando o aplicativo é executado, a barra de navegação fica verde e seu texto é branco (devido à Xamarin.Forms formatação) *e* o texto da barra de status também é branco graças à configuração específica do IOS:
 
-![iOS com temas](theme-images/status-white-sml.png)
+![Captura de tela mostrar iOS com itens de barra de status em texto branco.](theme-images/status-white-sml.png)
 
 ## <a name="uiappearance-api"></a>API UIAppearance
 

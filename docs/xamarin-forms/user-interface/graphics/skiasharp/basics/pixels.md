@@ -10,12 +10,12 @@ ms.date: 02/09/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5f12dbd4ef0cfea9d276fd8c939afab585541ece
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 04f0a056b83c3ebb298e284fefc93d83dfc57b52
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93373884"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98608995"
 ---
 # <a name="pixels-and-device-independent-units"></a>Unidades independentes de dispositivo e pixels
 
@@ -104,7 +104,7 @@ O método começa a primeira linha de texto com uma coordenada X de 20 (para uma
 
 Este é o programa em execução:
 
-[![Captura de tela tripla da página tamanho da superfície](pixels-images/surfacesize-small.png)](pixels-images/surfacesize-large.png#lightbox "Captura de tela tripla da página tamanho da superfície")
+[![Capturas de tela mostram o aplicativo de tamanho de superfície em execução em dois dispositivos móveis.](pixels-images/surfacesize-small.png)](pixels-images/surfacesize-large.png#lightbox "Captura de tela tripla da página tamanho da superfície")
 
 Como você pode ver, a `CanvasSize` propriedade de `SKCanvasView` e a `Size` Propriedade do `SKImageInfo` valor são consistentes ao relatar as dimensões de pixel. As `Height` `Width` Propriedades e de `SKCanvasView` são propriedades e Xamarin.Forms relatam o tamanho da exibição nas unidades independentes do dispositivo definidas pela plataforma.
 
@@ -147,7 +147,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Aqui está executando:
 
-[![Captura de tela tripla da página tamanho da superfície](pixels-images/ellipsefill-small.png)](pixels-images/ellipsefill-large.png#lightbox "Captura de tela tripla da página tamanho da superfície")
+[![Capturas de tela mostram o aplicativo preenchimento de elipse em execução em dois dispositivos móveis.](pixels-images/ellipsefill-small.png)](pixels-images/ellipsefill-large.png#lightbox "Captura de tela tripla da página tamanho da superfície")
 
 O outro [`DrawOval`](xref:SkiaSharp.SKCanvas.DrawOval(SkiaSharp.SKRect,SkiaSharp.SKPaint)) método tem um [`SKRect`](xref:SkiaSharp.SKRect) argumento, que é um retângulo definido em termos das coordenadas X e Y de seu canto superior esquerdo e canto inferior direito. A oval preenche esse retângulo, o que sugere que pode ser possível usá-lo na página de **preenchimento da elipse** como esta:
 

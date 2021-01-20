@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 06/22/2018
-ms.openlocfilehash: 0b0bfc650ffa271a7616d7c6e6a436fafa2664c8
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9521c059e853b71050dda43c9f49ce688f43ffe2
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932594"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98608943"
 ---
 # <a name="set-up-device-for-development"></a>Configurar o dispositivo para desenvolvimento
 
@@ -31,7 +31,7 @@ Um dispositivo deve ser habilitado para depuração a fim de testar um aplicativ
 Para Android 9,0 e superior, a depuração é habilitada seguindo estas etapas:
 
 1. Acesse a tela **Configurações**.
-2. Selecione **sobre o telefone** .
+2. Selecione  **sobre o telefone** .
 3. Toque em **número de Build** 7 vezes até **que você agora seja um desenvolvedor!** está visível.
 
 ### <a name="android-80-and-android-81"></a>Android 8,0 e Android 8,1
@@ -67,7 +67,7 @@ Navegue até **configurações > opções do desenvolvedor** e habilite a **depu
 
 Uma vez que a guia **Opções do desenvolvedor** estiver disponível em **Configurações > Sistema**, abra-a para revelar as configurações do desenvolvedor:
 
-[![Tela de opções do desenvolvedor no Android 9,0](set-up-device-for-development-images/usb-debugging-sml.png)](set-up-device-for-development-images/usb-debugging.png#lightbox)
+[![Tela de opções do desenvolvedor no Android](set-up-device-for-development-images/usb-debugging-sml.png)](set-up-device-for-development-images/usb-debugging.png#lightbox)
 
 Esse é o local para habilitar as opções do desenvolvedor, como a depuração USB e o modo permanecer ativo.
 
@@ -176,7 +176,7 @@ Para instalar os drivers no Windows 7:
 5. Clique com o botão direito do mouse no nome do dispositivo e selecione **Atualizar Software de Driver**.
     Isso inicializará o Assistente para Atualização de Hardware.
 
-6. Selecione **procurar software de driver no meu computador** e clique em **Avançar** .
+6. Selecione **procurar software de driver no meu computador** e clique em  **Avançar** .
 
 7. Clique em **procurar** e localize a pasta driver USB (o driver USB do Google está localizado em **[SDK do Android caminho de instalação] \extras\google\ USB_Driver**).
 

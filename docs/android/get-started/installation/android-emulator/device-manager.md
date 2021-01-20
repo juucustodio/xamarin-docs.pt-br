@@ -9,12 +9,12 @@ author: davidortinau
 ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: fd1361f00bf10089f7a9dead5a5adaa1e7c29727
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 13b66f3484f274c04282ef1964107fcb53c62e38
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571578"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609788"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Gerenciando dispositivos virtuais com o Android Device Manager
 
@@ -125,7 +125,7 @@ Para configurar um novo dispositivo na tela **Novo Dispositivo**, siga estas eta
 
    [![Adicionar menu suspenso de propriedades](device-manager-images/win/16-add-property-menu-sml.png)](device-manager-images/win/16-add-property-menu.png#lightbox)
 
-    Você também pode definir uma propriedade personalizada selecionando **Personalizado... ** na parte superior da lista de propriedades.
+    Você também pode definir uma propriedade personalizada selecionando **Personalizado...** na parte superior da lista de propriedades.
 
 8. Clique no botão **Criar** (canto inferior direito) para criar o novo dispositivo:
 
@@ -228,7 +228,7 @@ Inicie o Android Device Manager, clicando em **Ferramentas > Gerenciador de Disp
 
 Se a caixa de diálogo de erro a seguir for exibida na inicialização, confira a seção [Solução de Problemas](#troubleshooting) para obter instruções de soluções alternativas:
 
-![Caixa de diálogo de erro de instância do SDK do Android](device-manager-images/mac/04-sdk-instance-error.png)
+![Captura de tela mostra a caixa de diálogo SDK do Android erro de instância para informações de solução de problemas.](device-manager-images/mac/04-sdk-instance-error.png)
 
 ## <a name="main-screen"></a>Tela principal
 
@@ -299,7 +299,7 @@ Para configurar um novo dispositivo na tela **Novo Dispositivo**, siga estas eta
 
 8. Clique no botão **Criar** (canto inferior direito) para criar o novo dispositivo:
 
-   ![Botão Criar](device-manager-images/mac/18-create-button-m76.png)
+   ![Criar botão](device-manager-images/mac/18-create-button-m76.png)
 
 9. O Android Device Manager adiciona o novo dispositivo à lista de dispositivos virtuais instalados, mostrando um indicador de progresso **Criando** durante a criação do dispositivo:
 
@@ -401,7 +401,7 @@ Depois de fazer essa alteração em **user.config**, você poderá iniciar o And
 
 Se a versão 26.1.1 ou posterior das Android SDK Tools não estiverem instaladas, este erro será exibido na inicialização:
 
-![Caixa de diálogo de erro de instância do SDK do Android](device-manager-images/win/32-sdk-instance-error.png)
+![Captura de tela mostra a caixa de diálogo SDK do Android erro de instância.](device-manager-images/win/32-sdk-instance-error.png)
 
 Se essa caixa de diálogo de erro for exibida, clique em **Abrir Gerenciador de SDK** para abrir o Gerenciador do SDK do Android. No Gerenciador do SDK do Android, clique na guia **Ferramentas** e instale os seguintes pacotes:
 
@@ -485,7 +485,7 @@ Se encontrar um problema com o Android Device Manager que não possa ser resolvi
 
 Este guia apresentou o Android Device Manager disponível nas Ferramentas do Visual Studio para Xamarin e no Visual Studio para Mac. Os recursos essenciais foram explicados, como iniciar e parar o Android Emulator, selecionar um AVD (Dispositivo Virtual Android) para execução, criar novos dispositivos virtuais e como editar um dispositivo virtual. Foi explicado como editar propriedades de hardware de perfil para personalização adicional e fornecidas dicas de solução de problemas comuns.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Alterações nas Ferramentas do SDK do Android](~/android/troubleshooting/sdk-cli-tooling-changes.md)
 - [Depurando no Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md)

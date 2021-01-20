@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 05/13/2020
-ms.openlocfilehash: b9bbbc784fa9932d087e1f1c2a575eb7848d5a80
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: ed7b7bae452db0067b330126315d5b029a08ccab
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437112"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98608930"
 ---
 # <a name="reuse-xamarinforms-pages-in-an-ios-extension"></a>Reutilizar páginas Xamarin. Forms em uma extensão do iOS
 
@@ -133,7 +133,7 @@ Neste tutorial, você vai criar um aplicativo Xamarin. Forms, uma extensão Xama
 
 1. No painel de solução, clique com o botão direito do mouse na solução, selecione **adicionar > novo projeto > extensão de > do iOS > extensão de ação**, nomeie-o como **myaction** e pressione **criar**:
 
-    ![Criar extensão](extensions-xf-images/2.walkthrough-createextension.png)
+    ![Captura de tela mostra a escolha um modelo com a extensão de ação selecionada.](extensions-xf-images/2.walkthrough-createextension.png)
 
 1. Para usar o Xamarin. Forms na extensão do iOS e o código compartilhado, você precisa adicionar as referências necessárias:
 
@@ -167,11 +167,11 @@ Neste tutorial, você vai criar um aplicativo Xamarin. Forms, uma extensão Xama
     
     Compilar e executar o aplicativo:
 
-    ![Criar extensão](extensions-xf-images/3.walkthrough-runapp.png)
+    ![Captura de tela mostra uma mensagem de saudação de formulários do Xamarin Dot em um dispositivo móvel.](extensions-xf-images/3.walkthrough-runapp.png)
 
     Para ativar a extensão, navegue até o navegador Safari, digite qualquer endereço da Web, por exemplo, [Microsoft.com](https://microsoft.com), pressione navegar e, em seguida, pressione o ícone **compartilhar** na parte inferior da página para ver as extensões de ação disponíveis. Na lista de extensões disponíveis, selecione a extensão **myaction** tocando nela:
 
-    ![Criar extensão](extensions-xf-images/4.walkthrough-run1.png) ![Criar extensão](extensions-xf-images/5.walkthrough-run2.png) ![Criar extensão](extensions-xf-images/6.walkthrough-run3.png)
+    ![Captura de tela mostra uma página do Microsoft Teams saiba mais com o ícone de compartilhamento realçado em um dispositivo móvel.](extensions-xf-images/4.walkthrough-run1.png) ![Captura de tela mostra uma home page oficial com myaction realçado em um dispositivo móvel.](extensions-xf-images/5.walkthrough-run2.png) ![Captura de tela mostra um bem-vindo à página X F criada a partir de uma mensagem de extensão de e s em um dispositivo móvel.](extensions-xf-images/6.walkthrough-run3.png)
 
     A extensão é ativada e a página Xamarin. Forms é exibida para o usuário. Todas as associações e comandos funcionam como no aplicativo de contêiner.
 

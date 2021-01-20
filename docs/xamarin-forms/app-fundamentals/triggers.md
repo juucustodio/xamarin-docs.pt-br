@@ -10,12 +10,12 @@ ms.date: 04/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1f2484fe7c6dee1f1b4df1318263624f3f50f604
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 6f54ec3afd3d53d4a7bee40159bccff2d23f44f6
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93367173"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609035"
 ---
 # <a name="no-locxamarinforms-triggers"></a>Xamarin.Forms Gatilhos
 
@@ -521,8 +521,8 @@ O exemplo de XAML a seguir mostra um [`Style`](xref:Xamarin.Forms.Style) que inc
 
 Neste exemplo, os objetos de [`Style`](xref:Xamarin.Forms.Style) destinos implícitos [`Grid`](xref:Xamarin.Forms.Grid) . Quando a [`IsChecked`](xref:Xamarin.Forms.CheckBox.IsChecked) Propriedade do [`CheckBox`](xref:Xamarin.Forms.CheckBox) é `false` , a cor do plano de fundo do `Grid` é definida como branco. Quando a `CheckBox.IsChecked` propriedade se torna `true` , uma [`VisualState`](xref:Xamarin.Forms.VisualState) alteração é disparada e a cor do plano de fundo `Grid` fica preta:
 
-[![Captura de tela de uma alteração de estado visual disparada, no Ios e no Android](triggers-images/comparestatetrigger-unchecked.png "Exemplo de CompareStateTrigger")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "Exemplo de CompareStateTrigger") 
- [ ![Captura de tela de uma alteração de estado visual disparada, no Ios e no Android](triggers-images/comparestatetrigger-checked.png "Exemplo de CompareStateTrigger")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "Exemplo de CompareStateTrigger")
+[![Captura de tela de uma alteração de estado visual acionada, no Ios e no Android, com o gatilho desmarcado.](triggers-images/comparestatetrigger-unchecked.png "Exemplo de CompareStateTrigger")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "Exemplo de CompareStateTrigger") 
+ [ ![Captura de tela de uma alteração de estado visual disparada, no Ios e no Android, com o gatilho verificado.](triggers-images/comparestatetrigger-checked.png "Exemplo de CompareStateTrigger")](triggers-images/comparestatetrigger-checked-large.png#lightbox "Exemplo de CompareStateTrigger")
 
 ### <a name="device-state-trigger"></a>Gatilho de estado do dispositivo
 

@@ -10,12 +10,12 @@ ms.date: 04/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5c49ee7022166983f55bca4a39dd726412b070c8
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 955cb8371e6363f617738dcf2fe4a6eb27dcb032
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93366198"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98608852"
 ---
 # <a name="device-orientation"></a>Orientação do dispositivo
 
@@ -43,7 +43,7 @@ No Visual Studio para Mac, abra o projeto do iOS e abra o **info. plist**. Na gu
 
 ![Informações de implantação do iPhone no Visual Studio para Mac](device-orientation-images/orientation-vsmac.png)
 
-Se você preferir editar os valores usando uma interface de editor de chave-valor, selecione a guia **fonte** > na parte inferior da tela:
+Se você preferir editar os valores usando uma interface de editor de chave-valor, selecione a guia **fonte**> na parte inferior da tela:
 
 ![Orientações de dispositivo com suporte no Visual Studio para Mac](device-orientation-images/orientation-source-vsmac.png)
 
@@ -147,11 +147,11 @@ As regras acima também se aplicam ao implementar interfaces para vários tamanh
 
 Considere o seguinte aplicativo, exibido em retrato:
 
-![Aplicativo de foto em retrato](device-orientation-images/photo-stack-portrait.png)
+![A captura de tela mostra o StackLayout do aplicativo de fotos em retrato.](device-orientation-images/photo-stack-portrait.png)
 
 e paisagem:
 
-![Aplicativo de fotos em paisagem](device-orientation-images/photo-stack-landscape.png)
+![A captura de tela mostra o StackLayout do aplicativo de fotos em paisagem.](device-orientation-images/photo-stack-landscape.png)
 
 Isso é feito com o seguinte XAML:
 
@@ -221,11 +221,11 @@ Observe o seguinte:
 
 Considere o seguinte aplicativo, exibido em retrato:
 
-![Aplicativo de foto em retrato](device-orientation-images/photo-abs-portrait.png)
+![A captura de tela mostra o AbsoluteLayout do aplicativo de fotos em retrato.](device-orientation-images/photo-abs-portrait.png)
 
 e paisagem:
 
-![Aplicativo de fotos em paisagem](device-orientation-images/photo-abs-landscape.png)
+![A captura de tela mostra o AbsoluteLayout do aplicativo de fotos em paisagem.](device-orientation-images/photo-abs-landscape.png)
 
 Isso é feito com o seguinte XAML:
 
@@ -273,11 +273,11 @@ Observe o seguinte:
 
 Considere o seguinte aplicativo, exibido em retrato:
 
-![Aplicativo de foto em retrato](device-orientation-images/photo-rel-portrait.png)
+![A captura de tela mostra o RelativeLayout do aplicativo de fotos em retrato.](device-orientation-images/photo-rel-portrait.png)
 
 e paisagem:
 
-![Aplicativo de fotos em paisagem](device-orientation-images/photo-rel-landscape.png)
+![A captura de tela mostra o RelativeLayout do aplicativo de fotos em paisagem.](device-orientation-images/photo-rel-landscape.png)
 
 Isso é feito com o seguinte XAML:
 
@@ -364,11 +364,11 @@ Observe o seguinte:
 
 Considere o seguinte aplicativo, exibido em retrato:
 
-![Aplicativo de foto em retrato](device-orientation-images/photo-grid-portrait.png)
+![A captura de tela mostra a grade do aplicativo de fotos em retrato.](device-orientation-images/photo-grid-portrait.png)
 
 e paisagem:
 
-![Aplicativo de fotos em paisagem](device-orientation-images/photo-grid-landscape.png)
+![Captura de tela mostra a grade do aplicativo de fotos em paisagem.](device-orientation-images/photo-grid-landscape.png)
 
 Isso é feito com o seguinte XAML:
 

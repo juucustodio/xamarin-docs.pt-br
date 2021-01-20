@@ -10,12 +10,12 @@ ms.date: 05/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 05de8c554864108b90433c335074c61fc3def8cf
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: 3fe1b7d56e71cac0b7a5a7b4e2bc68710241f13f
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97939947"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609151"
 ---
 # <a name="no-locxamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -386,11 +386,11 @@ void webviewNavigated(object sender, WebNavigatedEventArgs e)
 
 Isso resulta na seguinte saída (carregando):
 
-![Exemplo de evento de navegação do WebView](webview-images/loading-start.png)
+![Captura de tela mostra o evento de navegação do WebView durante o carregamento.](webview-images/loading-start.png)
 
 Carregamento concluído:
 
-![Exemplo de evento de navegação do WebView](webview-images/loading-end.png)
+![Captura de tela mostra o evento de navegação do WebView após o carregamento.](webview-images/loading-end.png)
 
 ## <a name="reloading-content"></a>Recarregando conteúdo
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4ee2326079ba9ddea6b0f4c5c4356412a3d5b492
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 7c0896c3674304275b284a482335cb397379a2a9
+ms.sourcegitcommit: b75c369adb8e02a429b6c0fed8ba4a855099bf01
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91451423"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98557151"
 ---
 Parabéns por concluir este tutorial, no qual você aprendeu a:
 
@@ -16,10 +16,10 @@ Parabéns por concluir este tutorial, no qual você aprendeu a:
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Para saber mais sobre os conceitos básicos da criação de aplicativos móveis com o Xamarin.Forms, prossiga para o tutorial de ListView.
+Para saber mais sobre os conceitos básicos da criação de aplicativos móveis com o Xamarin.Forms, prossiga para o tutorial da CollectionView.
 
 > [!div class="nextstepaction"]
-> [Tutorial de ListView](~/get-started/tutorials/listview/index.yml)
+> [Tutorial de ListView](~/get-started/tutorials/collectionview/index.yml)
 
 ## <a name="related-links"></a>Links relacionados
 

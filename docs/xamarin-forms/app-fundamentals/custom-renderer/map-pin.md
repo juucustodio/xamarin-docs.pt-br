@@ -10,12 +10,12 @@ ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f4e0387b6b64c5a3bf801a31c6e333b6f514df1d
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 81a273091d14f8da908d1d52751f262b3a00027c
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93367359"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609060"
 ---
 # <a name="customizing-a-map-pin"></a>Personalizando um marcador de mapa
 
@@ -174,9 +174,9 @@ As seções a seguir abordam a implementação de cada classe de renderizador pe
 
 As seguintes capturas de tela mostram o mapa, antes e após a personalização:
 
-![Controle de Mapeamento antes e após a personalização](map-pin-images/map-layout-ios.png)
+![As capturas de tela mostram um dispositivo móvel com um PIN comum e um PIN anotado.](map-pin-images/map-layout-ios.png)
 
-No iOS, o marcador é chamado de *anotação* e pode ser uma imagem personalizada ou um marcador definido pelo sistema de várias cores. As anotações podem opcionalmente mostrar um *texto explicativo* , que é exibido em resposta à seleção da anotação pelo usuário. O texto explicativo exibe o `Label` e as propriedades `Address` da instância `Pin`, com as exibições acessório direita e esquerda opcionais. Na captura de tela acima, a exibição acessório esquerda é a imagem de um macaco, com a exibição acessório direita sendo o botão *Informações*.
+No iOS, o marcador é chamado de *anotação* e pode ser uma imagem personalizada ou um marcador definido pelo sistema de várias cores. As anotações podem opcionalmente mostrar um *texto explicativo*, que é exibido em resposta à seleção da anotação pelo usuário. O texto explicativo exibe o `Label` e as propriedades `Address` da instância `Pin`, com as exibições acessório direita e esquerda opcionais. Na captura de tela acima, a exibição acessório esquerda é a imagem de um macaco, com a exibição acessório direita sendo o botão *Informações*.
 
 O exemplo de código a seguir mostra o renderizador personalizado para a plataforma iOS:
 
@@ -347,9 +347,9 @@ Para obter mais informações sobre como personalizar uma instância `MKMapView`
 
 As seguintes capturas de tela mostram o mapa, antes e após a personalização:
 
-![Controle de Mapeamento antes e após a personalização](map-pin-images/map-layout-android.png)
+![As capturas de tela mostram um dispositivo móvel com um marcador comum e um marcador personalizado.](map-pin-images/map-layout-android.png)
 
-No Android, o marcador é chamado de *marcador* e pode ser uma imagem personalizada ou um marcador definido pelo sistema de várias cores. Os marcadores podem mostrar uma *janela de informações* , que é exibida na resposta ao toque do usuário no marcador. A janela de informações exibe as propriedades `Label` e `Address` da instância `Pin` e pode ser personalizada para incluir outros tipos de conteúdo. No entanto, apenas uma janela de informações pode ser mostrada por vez.
+No Android, o marcador é chamado de *marcador* e pode ser uma imagem personalizada ou um marcador definido pelo sistema de várias cores. Os marcadores podem mostrar uma *janela de informações*, que é exibida na resposta ao toque do usuário no marcador. A janela de informações exibe as propriedades `Label` e `Address` da instância `Pin` e pode ser personalizada para incluir outros tipos de conteúdo. No entanto, apenas uma janela de informações pode ser mostrada por vez.
 
 O exemplo de código a seguir mostra o renderizador personalizado para a plataforma Android:
 
@@ -510,7 +510,7 @@ Para obter mais informações sobre como personalizar uma instância `MapView`, 
 
 As seguintes capturas de tela mostram o mapa, antes e após a personalização:
 
-![Controle de Mapeamento antes e após a personalização](map-pin-images/map-layout-uwp.png)
+![As capturas de tela mostram um dispositivo móvel com um ícone de mapa comum e um ícone de mapa personalizado.](map-pin-images/map-layout-uwp.png)
 
 No UWP, o marcador é chamado de *ícone de mapa* e pode ser uma imagem personalizada ou a imagem padrão definida pelo sistema. Um ícone de mapa pode mostrar um `UserControl`, que é exibido em resposta ao toque do usuário no ícone de mapa. O `UserControl` pode exibir qualquer conteúdo, incluindo as propriedades `Label` e `Address` da instância `Pin`.
 

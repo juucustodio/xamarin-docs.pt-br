@@ -10,12 +10,12 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bfac785e6bfa3dce698d5657d0be1079e675ecc6
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 7420c5883856379db98001fce2fd36bf576cc2fb
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93366328"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609073"
 ---
 # <a name="no-locxamarinforms-shell-search"></a>Xamarin.Forms Pesquisa de Shell
 
@@ -102,11 +102,11 @@ O método `MonkeySearchHandler.OnQueryChanged` retorna um `List` de objetos `Ani
 
 A propriedade `ShowsResults` é definida como `true`, de modo que as sugestões de pesquisa são exibidas enquanto o usuário insere uma consulta de pesquisa:
 
-[![Captura de tela dos resultados da pesquisa em um shell SearchHandler, no iOS e no Android](search-images/search-results.png "Resultados da pesquisa do Shell SearchHandler")](search-images/search-results-large.png#lightbox "Resultados da pesquisa do Shell SearchHandler")
+[![Captura de tela dos resultados da pesquisa em um shell SearchHandler, no iOS e no Android, com resultados para a cadeia de caracteres parcial M.](search-images/search-results.png "Resultados da pesquisa do Shell SearchHandler")](search-images/search-results-large.png#lightbox "Resultados da pesquisa do Shell SearchHandler")
 
 À medida que a consulta de pesquisa muda, a área de sugestões da pesquisa é atualizada:
 
-[![Captura de tela dos resultados da pesquisa em um shell SearchHandler, no iOS e no Android](search-images/search-results-change.png "Resultados da pesquisa do Shell SearchHandler")](search-images/search-results-change-large.png#lightbox "Resultados da pesquisa do Shell SearchHandler")
+[![Captura de tela dos resultados da pesquisa em um shell SearchHandler, no iOS e no Android, com resultados para a cadeia de caracteres parcial M o n.](search-images/search-results-change.png "Resultados da pesquisa do Shell SearchHandler")](search-images/search-results-change-large.png#lightbox "Resultados da pesquisa do Shell SearchHandler")
 
 Quando um resultado de pesquisa é selecionado, ocorre a navegação até `MonkeyDetailPage`, e os dados sobre o macaco selecionado são exibidos:
 
