@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 07/02/2018
-ms.openlocfilehash: 44003e55ee88db727c26def56b3363dbf6c982e9
-ms.sourcegitcommit: 124d845f8d2768353e8b7fe1ab1d959a589367f7
+ms.openlocfilehash: 07c20be730d73b080d99b2fecb88b26115c37bc2
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91872271"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609021"
 ---
 # <a name="signing-the-android-application-package"></a>Assinatura do Pacote de Aplicativos Android
 
@@ -28,7 +28,7 @@ Em [arquivo para publicação](~/android/deploy-test/release-prep/index.md#archi
 
 Em [Arquivar para Publicação](~/android/deploy-test/release-prep/index.md#archive), a caixa de diálogo **Assinar e Distribuir...** nos apresentou duas opções de distribuição. Selecione **Ad-Hoc** e clique em **Próximo**:
 
-[![Caixa de diálogo assinar e distribuir](images/xs/01-select-ad-hoc-sml.png)](images/xs/01-select-ad-hoc.png#lightbox)
+[![Caixa de diálogo assinar e distribuir, selecione canal de distribuição do Android.](images/xs/01-select-ad-hoc-sml.png)](images/xs/01-select-ad-hoc.png#lightbox)
 
 -----
 
@@ -125,7 +125,7 @@ A seguinte captura de tela mostra um exemplo de aplicativo pronto para publicar,
 Conforme visto aqui, um novo certificado foi adicionado ao repositório de chaves. Para publicar um aplicativo no Google Play, clique em **Cancelar** e vá até [Publicar no Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md).
 Como alternativa, clique em **Próximo** para publicar o aplicativo *ad hoc* (para distribuição independente) conforme mostrado neste exemplo:
 
-[![Caixa de diálogo assinar e distribuir](images/xs/04-select-identity-sml.png)](images/xs/04-select-identity.png#lightbox)
+[![Caixa de diálogo assinar e distribuir, identidade de assinatura do Android.](images/xs/04-select-identity-sml.png)](images/xs/04-select-identity.png#lightbox)
 
 A caixa de diálogo **Publicar como Ad Hoc** fornece um resumo do aplicativo assinado antes de ser publicado. Se essas informações estiverem corretas, clique em **Publicar**.
 

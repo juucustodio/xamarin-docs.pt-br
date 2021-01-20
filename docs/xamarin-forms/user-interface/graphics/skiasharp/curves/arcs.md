@@ -10,12 +10,12 @@ ms.date: 05/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5f48300b6c974bbbb0106f1afaa6c863f8159c58
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 6aa52ff13dccbf6c7b65f7006195997971a7cac2
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93374631"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609775"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Três formas de desenhar um arco
 
@@ -219,7 +219,7 @@ Para ver sua aparência sem a "explosão", basta comentar a `Translate` chamada:
 
 ## <a name="the-tangent-arc"></a>O arco tangente
 
-O segundo tipo de arco com suporte `SKPath` no é o *arco tangente* , portanto, chamado porque o arco é a circunferência de um círculo que é tangente a duas linhas conectadas.
+O segundo tipo de arco com suporte `SKPath` no é o *arco tangente*, portanto, chamado porque o arco é a circunferência de um círculo que é tangente a duas linhas conectadas.
 
 Um arco tangente é adicionado a um caminho com uma chamada para o  [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,System.Single)) método com dois `SKPoint` parâmetros, ou a [`ArcTo`](xref:SkiaSharp.SKPath.ArcTo(System.Single,System.Single,System.Single,System.Single,System.Single)) sobrecarga com `Single` parâmetros separados para os pontos:
 
@@ -235,7 +235,7 @@ O `ArcTo` método envolve três pontos:
 
 - O ponto atual da delimitação ou o ponto (0, 0) se `MoveTo` não tiver sido chamado
 - O primeiro argumento de ponto para o `ArcTo` método, chamado de *ponto de canto*
-- O segundo argumento de ponto para `ArcTo` , chamado de *ponto de destino* :
+- O segundo argumento de ponto para `ArcTo` , chamado de *ponto de destino*:
 
 ![Três pontos que começam um arco tangente](arcs-images/tangentarcthreepoints.png)
 
@@ -257,7 +257,7 @@ Se as duas linhas forem atendidas em qualquer ângulo, esse círculo poderá ser
 
 A curva que é adicionada à delimitação não toca em nenhum dos pontos especificados no `ArcTo` método. Ele consiste em uma linha reta do ponto atual até o primeiro ponto tangente e um arco que termina no segundo ponto tangente, mostrado aqui em vermelho:
 
-![O arco tangente realçado entre as duas linhas](arcs-images/tangentarchighlight.png)
+![Diagrama mostra o diagrama anterior anotado com uma linha vermelha que mostra o arco tangente realçado entre as duas linhas.](arcs-images/tangentarchighlight.png)
 
 Aqui está a linha reta final e o arco que é adicionado à delimitação:
 

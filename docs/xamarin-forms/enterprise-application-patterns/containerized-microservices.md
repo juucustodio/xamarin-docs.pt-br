@@ -10,12 +10,12 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 310a4e94a91eeb0d8d1c1f6ccb6fa30f0ff1f563
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 30c2f39a299b59022df8d651762df0dd7023e264
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93366562"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98608956"
 ---
 # <a name="containerized-microservices"></a>Microsserviços em contêineres
 
@@ -28,7 +28,7 @@ Especialmente em relação à idade da nuvem, é que os componentes individuais 
 
 ![Abordagem de dimensionamento de aplicativos monolítico](containerized-microservices-images/monolithicapp.png)
 
-**Figura 8-1** : abordagem de dimensionamento de aplicativos monolítico
+**Figura 8-1**: abordagem de dimensionamento de aplicativos monolítico
 
 ## <a name="microservices"></a>Microsserviços
 
@@ -36,9 +36,9 @@ Os microserviços oferecem uma abordagem diferente para desenvolvimento e implan
 
 Os microserviços podem escalar horizontalmente de forma independente, em comparação com aplicativos monolíticos gigantes que são dimensionados juntos. Isso significa que uma área funcional específica, que exige mais capacidade de processamento ou largura de banda de rede para dar suporte à demanda, pode ser dimensionada em vez de reduzir desnecessariamente outras áreas do aplicativo. A Figura 8-2 ilustra essa abordagem, em que os microserviços são implantados e dimensionados de forma independente, criando instâncias de serviços entre máquinas.
 
-![Abordagem de dimensionamento de aplicativos de microserviços](containerized-microservices-images/microservicesapp.png)
+![O diagrama mostra dois aplicativos com blocos que representam diferentes áreas funcionais e seis retângulos que hospedam várias áreas funcionais de ambos os aplicativos.](containerized-microservices-images/microservicesapp.png)
 
-**Figura 8-2** : abordagem de dimensionamento do aplicativo de microserviços
+**Figura 8-2**: abordagem de dimensionamento do aplicativo de microserviços
 
 A expansão do microserviço pode ser quase instantânea, permitindo que um aplicativo se adapte às cargas em constante mudança. Por exemplo, um único microserviço na funcionalidade voltada para a Web de um aplicativo pode ser o único microserviço no aplicativo que precisa ser expandido para lidar com o tráfego de entrada adicional.
 
@@ -70,9 +70,9 @@ Um contêiner é um ambiente operacional isolado, controlado por recursos e port
 
 Há muitas semelhanças entre contêineres e máquinas virtuais, como ilustrado na Figura 8-3.
 
-![Abordagem de dimensionamento de aplicativos de microserviços](containerized-microservices-images/containersvsvirtualmachines.png)
+![O diagrama mostra uma comparação entre máquinas virtuais e contêineres, em que as máquinas virtuais têm três aplicativos cada um com silo em um convidado, com um hipervisor e um host o S, e os contêineres têm três aplicativos hospedados em um mecanismo de contêiner em um único sistema operacional.](containerized-microservices-images/containersvsvirtualmachines.png)
 
-**Figura 8-3** : comparação de máquinas virtuais e contêineres
+**Figura 8-3**: comparação de máquinas virtuais e contêineres
 
 Um contêiner executa um sistema operacional, tem um sistema de arquivos e pode ser acessado em uma rede como se fosse uma máquina virtual ou física. No entanto, a tecnologia e os conceitos usados por contêineres são muito diferentes das máquinas virtuais. As máquinas virtuais incluem os aplicativos, as dependências necessárias e um sistema operacional convidado completo. Os contêineres incluem o aplicativo e suas dependências, mas compartilham o sistema operacional com outros contêineres, executando como processos isolados no sistema operacional do host (além de contêineres do Hyper-V que são executados dentro de uma máquina virtual especial por contêiner). Portanto, os contêineres compartilham recursos e normalmente exigem menos recursos do que as máquinas virtuais.
 
@@ -92,7 +92,7 @@ O aplicativo de referência eShopOnContainers usa o Docker para hospedar quatro 
 
 ![eShopOnContainers fazer referência a microserviços de back-end do aplicativo](containerized-microservices-images/microservicesarchitecture.png)
 
-**Figura 8-4** : eShopOnContainers de aplicativos de referência de back-end do aplicativo
+**Figura 8-4**: eShopOnContainers de aplicativos de referência de back-end do aplicativo
 
 A arquitetura dos serviços de back-end no aplicativo de referência é decomposta em vários subsistemas autônomos na forma de colaboração de microserviços e contêineres. Cada microserviço fornece uma única área de funcionalidade: um serviço de identidade, um serviço de catálogo, um serviço de pedidos e um serviço de cesta.
 
@@ -104,9 +104,9 @@ Para obter mais informações sobre o aplicativo de referência, consulte [micro
 
 O aplicativo móvel eShopOnContainers comunica-se com os microserviços de back-end em contêineres usando a comunicação *direta de cliente para microserviço* , que é mostrada na Figura 8-5.
 
-![Abordagem de dimensionamento de aplicativos de microserviços](containerized-microservices-images/directclienttomicroservicecommunication.png)
+![O diagrama mostra um aplicativo hospedado em um dispositivo móvel conectado a três microserviços de back-end, cada um com seu próprio contêiner da Web A P.](containerized-microservices-images/directclienttomicroservicecommunication.png)
 
-**Figura 8-5** : comunicação direta de cliente para microserviço
+**Figura 8-5**: comunicação direta de cliente para microserviço
 
 Com a comunicação direta entre cliente e microserviço, o aplicativo móvel faz solicitações para cada microserviço diretamente por meio de seu ponto de extremidade público, com uma porta TCP diferente por microserviço. Em produção, o ponto de extremidade normalmente se mapearia para o balanceador de carga do microserviço, que distribui solicitações entre as instâncias disponíveis.
 
@@ -137,7 +137,7 @@ O barramento de evento eShopOnContainers, implementado usando o RabbitMQ, fornec
 
 ![Comunicação um-para-muitos](containerized-microservices-images/eventdrivencommunication.png)
 
-**Figura 8-9** : comunicação um-para-muitos
+**Figura 8-9**: comunicação um-para-muitos
 
 Essa abordagem de comunicação de um para muitos usa eventos para implementar transações de negócios que abrangem vários serviços, garantindo a consistência eventual entre os serviços. Uma transação de eventualidade consiste em uma série de etapas distribuídas. Portanto, quando o microserviço do perfil de usuário recebe o comando UpdateUser, ele atualiza os detalhes do usuário em seu banco de dados e publica o evento userupdate no barramento de evento. O microserviço da cesta e o microserviço de pedidos se inscreveram para receber esse evento e, em resposta, atualize suas informações de comprador em seus respectivos bancos de dados.
 

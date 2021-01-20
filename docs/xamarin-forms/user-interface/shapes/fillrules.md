@@ -10,12 +10,12 @@ ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e78acc88c9f159fdeb797663f1c90283ed0d803b
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: 3daf08c688be41652ae2573b0bf58e2ace2072c6
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97939778"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609138"
 ---
 # <a name="no-locxamarinforms-shapes-fill-rules"></a>Xamarin.Forms Formas: regras de preenchimento
 
@@ -101,11 +101,11 @@ O exemplo XAML a seguir cria e renderiza uma forma composta, com a `FillRule` de
 
 Neste exemplo, uma forma composta composta por uma série de anéis concêntricos é exibida:
 
-![Forma composta com regra de preenchimento diferente de zero](fillrule-images/nonzero.png "Forma composta com regra de preenchimento diferente de zero")
+![O diagrama mostra quatro círculos concêntricos, todos preenchidos.](fillrule-images/nonzero.png "Forma composta com regra de preenchimento diferente de zero")
 
 Na forma composta, observe que todos os anéis estão preenchidos. Isso ocorre porque todos os segmentos estão sendo executados na mesma direção e, portanto, um raio desenhado de qualquer ponto irá cruzar um ou mais segmentos e a soma dos cruzamentos não será igual a zero:
 
-![Forma composta por anotação com regra de preenchimento diferente de zero](fillrule-images/nonzero-annotated.png "Forma composta por anotação com regra de preenchimento diferente de zero")
+![Diagrama mostra os círculos do diagrama anterior com setas direcionais e um Ray anotado com + 1 para cada círculo que ele cruzar.](fillrule-images/nonzero-annotated.png "Forma composta por anotação com regra de preenchimento diferente de zero")
 
 Na imagem acima, as setas vermelhas representam a direção em que os segmentos são desenhados e a seta preta representa um raio arbitrário em execução a partir de um ponto no anel mais interno. Iniciando com um valor de zero, para cada segmento que o raio cruza, um valor de um é adicionado, já que o segmento cruza o raio da esquerda para a direita.
 
@@ -172,11 +172,11 @@ Uma forma mais complexa com segmentos executados em direções diferentes é nec
 
 Neste exemplo, uma série de segmentos de arco são desenhados, que não são fechados:
 
-![Forma composta com regra de preenchimento diferente de zero](fillrule-images/nonzero-gaps.png "Forma composta com regra de preenchimento diferente de zero")
+![O diagrama mostra quatro círculos concêntricos, com a maior parte e terceiro de preenchimento externo.](fillrule-images/nonzero-gaps.png "Forma composta com regra de preenchimento diferente de zero")
 
 Na imagem acima, o terceiro arco do centro não é preenchido. Isso ocorre porque a soma dos valores de um determinado raio atravessando os segmentos em seu caminho é zero:
 
-![Forma composta por anotação com regra de preenchimento diferente de zero](fillrule-images/nonzero-gaps-annotated.png "Forma composta por anotação com regra de preenchimento diferente de zero")
+![Diagrama mostra os círculos do diagrama anterior com setas direcionais e dois raios anotados com + 1 ou – 1 para cada círculo que cruzam.](fillrule-images/nonzero-gaps-annotated.png "Forma composta por anotação com regra de preenchimento diferente de zero")
 
 Na imagem acima, o círculo vermelho representa um ponto, as linhas pretas representam raios arbitrários que se movem do ponto na região não preenchida e as setas vermelhas representam a direção em que os segmentos são desenhados. Como pode ser visto, a soma dos valores dos raios que cruzam os segmentos é zero:
 
