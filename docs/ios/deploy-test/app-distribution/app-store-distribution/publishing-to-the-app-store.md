@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: 1f556e7b63cabcb2a0909927df4970d367338694
-ms.sourcegitcommit: 2d41e287ccf937efa24813151e371298b2b4a582
+ms.openlocfilehash: af5678c5ed6fe5376588f39d9f878d03c7de9f9f
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91102278"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628989"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Publicar aplicativos Xamarin.iOS na App Store
 
@@ -82,7 +82,7 @@ Para criar e instalar um perfil de provisionamento da App Store, siga estas etap
 
 1. Faça logon no [portal do desenvolvedor da Apple](https://developer.apple.com/account/).
 2. Vá para a seção **certificados, IDs & perfis** e, em seguida, para a seção de **perfis** .
-3. Clique no **+** botão, selecione **desenvolvimento de aplicativo do IOS** e **loja de aplicativos**e clique em **continuar**.
+3. Clique no **+** botão, selecione **desenvolvimento de aplicativo do IOS** e **loja de aplicativos** e clique em **continuar**.
 4. Selecione a **ID do aplicativo** do seu aplicativo na lista e clique em **Continue** (Continuar).
 5. Selecione um certificado de autenticação e clique em **Continue** (Continuar).
 6. Selecione os dispositivos a serem incluídos neste perfil e clique em **continuar**.
@@ -93,7 +93,7 @@ Para obter instruções detalhadas, confira [Criar um perfil de distribuição](
 
 ## <a name="update-the-release-build-configuration"></a>Atualizar a configuração de build da Versão
 
-Os novos projetos do Xamarin. iOS definem automaticamente **Release** _as configurações_de **depuração** e versão de compilação. Para configurar corretamente a compilação **Versão**, siga estas etapas:
+Os novos projetos do Xamarin. iOS definem automaticamente  _as configurações_ de **depuração** e versão de compilação. Para configurar corretamente a compilação **Versão**, siga estas etapas:
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -154,7 +154,7 @@ Os novos projetos do Xamarin. iOS definem automaticamente **Release** _as config
 
     Veja também o guia de [mecânica de Build do IOS](~/ios/deploy-test/ios-build-mechanics.md) , que descreve ainda mais as configurações de compilação.
 
-11. Navegue até a guia **assinatura do pacote do IOS** . Verifique se a **configuração** está definida como **versão**, a **plataforma** está definida como **iPhone**e se o **provisionamento manual** está selecionado.
+11. Navegue até a guia **assinatura do pacote do IOS** . Verifique se a **configuração** está definida como **versão**, a **plataforma** está definida como **iPhone** e se o **provisionamento manual** está selecionado.
 12. Defina **Identidade de assinatura** como **Distribuição (automática)**.
 13. Selecione o **Perfil de provisionamento** da App Store [criado acima](#create-and-install-an-app-store-provisioning-profile).
 
@@ -187,13 +187,13 @@ Os novos projetos do Xamarin. iOS definem automaticamente **Release** _as config
 
     Veja também o guia de [mecânica de Build do IOS](~/ios/deploy-test/ios-build-mechanics.md) , que descreve ainda mais as configurações de compilação.
 
-11. Navegue até a guia **assinatura do pacote do IOS** . Verifique se a **configuração** está definida como **versão**, a **plataforma** está definida como **iPhone**e se o **provisionamento manual** está selecionado.
+11. Navegue até a guia **assinatura do pacote do IOS** . Verifique se a **configuração** está definida como **versão**, a **plataforma** está definida como **iPhone** e se o **provisionamento manual** está selecionado.
 12. Defina **Identidade de assinatura** como **Distribuição (automática)**.
 13. Selecione o **Perfil de provisionamento** da App Store [criado acima](#create-and-install-an-app-store-provisioning-profile).
 
     As opções de assinatura de pacote do projeto serão parecidas com isto:
 
-    ![configurações de assinatura de pacote do iOS](publishing-to-the-app-store-images/bundleSigning-w157.png "configurações de assinatura de pacote do iOS")
+    ![Captura de tela mostra as configurações de assinatura do pacote i S.](publishing-to-the-app-store-images/bundleSigning-w157.png "configurações de assinatura de pacote do iOS")
 
 14. Navegue até a guia **Opções de IPA do iOS**.
 15. Verifique se a **Configuração** está definida como **Versão** e se a **Plataforma** está definida como **iPhone**.
@@ -204,7 +204,7 @@ Os novos projetos do Xamarin. iOS definem automaticamente **Release** _as config
 
 17. Para especificar um nome de arquivo .ipa diferente do nome do projeto do Xamarin.iOS, insira-o no campo **Nome do pacote**.
 
-    ![configurações de assinatura de pacote do iOS](publishing-to-the-app-store-images/ipaOptions-w157.png "configurações de assinatura de pacote do iOS")
+    ![Captura de tela mostra as opções i S P.](publishing-to-the-app-store-images/ipaOptions-w157.png "configurações de assinatura de pacote do iOS")
 
 18. Salve a configuração de build e feche-a.
 

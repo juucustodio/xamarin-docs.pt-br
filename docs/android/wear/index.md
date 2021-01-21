@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2018
-ms.openlocfilehash: 67698ae7fe3ef9a7586d83e26ed276ba473396e5
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 9f9e886d6e72faee6ba579fc4c9ab92dfbfb0cf4
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91457504"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628924"
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -22,7 +22,7 @@ O desgaste do Android é uma versão do Android projetada para dispositivos port
 
 Apresenta o desgaste do Android, descreve como instalar e configurar seu computador para desenvolvimento de desgaste e fornece etapas para ajudá-lo a criar e executar seu primeiro aplicativo de desgaste do Android em um emulador ou dispositivo de desgaste.
 
-## <a name="user-interface"></a>[Interface do Usuário](~/android/wear/user-interface/index.md)
+## <a name="user-interface"></a>[Interface do usuário](~/android/wear/user-interface/index.md)
 
 Explica os controles específicos de desgaste do Android e fornece links para exemplos que demonstram como usar esses controles.
 
@@ -61,9 +61,9 @@ Confira estes links de vídeo que discutem o Xamarin. Android com suporte de des
 
 |Descrição|Captura de tela|
 |--- |--- |
-|[Android L e muito mais](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; O Android L Developer Preview introduziu uma infinidade de novas APIs para que os desenvolvedores tirem proveito do, incluindo design de material, notificações e novas animações, para citar alguns.|![Captura de tela de vídeo da apresentação](images/video-android-l.png)|
-|[O C# está em meus ouvidos e nos meus olhos: o Google Glass e o desgaste](https://www.youtube.com/watch?v=80H8tXByZQc) &ndash; do Android A computação portátil pode parecer algo do futuro (ou de um episódio de gadget de Inspetor), mas muitas pessoas já estão adotando o futuro hoje! Os desenvolvedores de C# sabem disso e já têm as ferramentas e habilidades para aproveitar o poder dos dispositivos portátil (de evoluir 2014).|![Captura de tela de vídeo da apresentação](images/video-eyes-ears.png)|
-|[O que há de novo no Xamarin. Android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, Android desgaste, TV Android, Android, design de material e arte; o que isso significa para você como desenvolvedor do Xamarin? de evoluir 2014.|![Captura de tela de vídeo da apresentação](Images/video-whats-new.png)|
+|[Android L e muito mais](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; O Android L Developer Preview introduziu uma infinidade de novas APIs para que os desenvolvedores tirem proveito do, incluindo design de material, notificações e novas animações, para citar alguns.|![Captura de tela de vídeo do Android L e muito mais apresentação.](images/video-android-l.png)|
+|[O C# está em meus ouvidos e nos meus olhos: o Google Glass e o desgaste](https://www.youtube.com/watch?v=80H8tXByZQc) &ndash; do Android A computação portátil pode parecer algo do futuro (ou de um episódio de gadget de Inspetor), mas muitas pessoas já estão adotando o futuro hoje! Os desenvolvedores de C# sabem disso e já têm as ferramentas e habilidades para aproveitar o poder dos dispositivos portátil (de evoluir 2014).|![A captura de tela de vídeo do C# está em meus ouvidos e na apresentação dos meus olhos.](images/video-eyes-ears.png)|
+|[O que há de novo no Xamarin. Android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; Android L, Android desgaste, TV Android, Android, design de material e arte; o que isso significa para você como desenvolvedor do Xamarin? de evoluir 2014.|![Captura de tela de vídeo sobre o que há de novo na apresentação do Xamarin dot Android.](Images/video-whats-new.png)|
 
 <!--
 

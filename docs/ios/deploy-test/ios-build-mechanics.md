@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 52a6c3c996e2d5df204b6d0df40368bc835e990f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 90e14fdd81168563e105e62d9aefd81fdc5f0168
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936767"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628794"
 ---
 # <a name="ios-build-mechanics"></a>Mecânica de Compilação do iOS
 
@@ -67,7 +67,7 @@ Total time: 1554 ms
 
 As ferramentas do Xamarin, tecnicamente, funcionam em qualquer Mac que possa executar o OS X 10.10 Yosemite ou posterior. No entanto, as experiências de desenvolvedor e tempos de compilação podem ser prejudicados pelo desempenho do Mac.
 
-No estado desconectado, o Visual Studio no Windows executa apenas a fase de compilação em C# e não tenta executar vinculação ou compilação AOT, empacotar o aplicativo em um pacote _. app_   ou assinar o pacote de aplicativo. (A fase de compilação em C# raramente é um afunilamento de desempenho.) Tentativa de identificar onde o Build está diminuindo a velocidade, criando diretamente no host de Build do Mac em Visual Studio para Mac.
+No estado desconectado, o Visual Studio no Windows só realizará a fase de compilação do C# e não tentará executar a vinculação ou compilação AOT, empacotar o aplicativo em um pacote _.app_ ou conectar-se ao pacote de aplicativos. (A fase de compilação em C# raramente é um afunilamento de desempenho.) Tentativa de identificar onde o Build está diminuindo a velocidade, criando diretamente no host de Build do Mac em Visual Studio para Mac.
 
 Além disso, um dos locais mais comuns para a lentidão é a conexão de rede entre o computador Windows e o host de compilação do Mac. Isso pode ocorrer devido a um obstáculo físico na rede, usar uma conexão sem fio ou ter que viajar por um computador saturado (como um serviço Mac na nuvem).
 
@@ -97,7 +97,7 @@ Levando em consideração as informações acima, a lista abaixo fornece algumas
 
 A captura de tela abaixo ilustra como definir essas opções para o simulador nas opções do iOS:
 
-[![Definindo as opções](ios-build-mechanics-images/image3.png)](ios-build-mechanics-images/image3.png#lightbox)
+[![Captura de tela mostra opções de projeto, incluindo comportamento do vinculador, argumentos mTouch adicionais e otimizar imagens P N G.](ios-build-mechanics-images/image3.png)](ios-build-mechanics-images/image3.png#lightbox)
 
 ## <a name="device-tricks"></a>Truques de dispositivos
 
@@ -125,7 +125,7 @@ Minimizar o tamanho do aplicativo também pode reduzir o tempo de compilação. 
   - Compilar uma única arquitetura (por exemplo, ARM64) é mais rápido do que um binário FAT (por exemplo, ARMv7 + ARM64)
   - Evite otimizar arquivos PNG ao depurar
   - Considere Vincular todos os assemblies. Otimizar cada assembly 
-  - Desabilite a criação de símbolos de depuração usando `--dsym=false`. No entanto, saiba que desabilitar essa opção significa que os relatórios de falhas só poderão ser simbolizados na máquina que compilou o aplicativo e somente se o aplicativo não tiver sido eliminado.
+  - Desabilite a criação de símbolos de depuração usando `--dsym=false`. No entanto, saiba que desabilitar essa opção significa que os relatórios de falhas só poderão ser simbolizados na máquina que compilou o aplicativo e somente se o aplicativo não tiver sido eliminado.
 
 O que evitar:
 
@@ -148,7 +148,7 @@ Dicas adicionais
 
 A captura de tela abaixo ilustra como definir essas opções para o simulador nas opções do iOS:
 
-[![Definindo as opções](ios-build-mechanics-images/image4.png)](ios-build-mechanics-images/image4.png#lightbox)
+[![Captura de tela mostra opções de projeto, incluindo comportamento do vinculador, arquiteturas com suporte e outras configurações.](ios-build-mechanics-images/image4.png)](ios-build-mechanics-images/image4.png#lightbox)
 
 ## <a name="using-the-linker"></a>Usar o Vinculador
 

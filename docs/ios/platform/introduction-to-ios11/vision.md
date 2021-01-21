@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/31/2017
-ms.openlocfilehash: 9a31cd31f7cbfb4748991d45204ca867b5d62c8c
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: c33317835ff07826e8b9276c4f5cdc13c04c2680
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436625"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628807"
 ---
 # <a name="vision-framework-in-xamarinios"></a>Estrutura de visão no Xamarin. iOS
 
@@ -27,7 +27,7 @@ O Vision Framework adiciona uma série de novos recursos de processamento de ima
 - Detecção de horizonte
 - Rastreamento de & de detecção de objeto
 
-![Fotografia com três retângulos detectados](vision-images/found-rectangles-tiny.png) ![Fotografia com duas faces detectadas](vision-images/xamarin-home-faces-tiny.png)
+![Fotografia com três retângulos detectados.](vision-images/found-rectangles-tiny.png) ![Fotografia com duas faces detectadas.](vision-images/xamarin-home-faces-tiny.png)
 
 A detecção e a Detecção Facial de retângulo são discutidas em mais detalhes abaixo.
 
@@ -96,7 +96,7 @@ O `OverlayRectangles` método no exemplo **VisionRectangles** tem três funçõe
 
 Exiba a [origem do exemplo](/samples/xamarin/ios-samples/ios11-visionrectangles) para o método CoreGraphics exato.
 
-![Fotografia com três retângulos detectados](vision-images/found-rectangles-phone-sml.png)
+![Fotografia com três retângulos detectados em um dispositivo móvel.](vision-images/found-rectangles-phone-sml.png)
 
 ### <a name="5-further-processing"></a>5. processamento adicional
 
@@ -169,7 +169,7 @@ O `OverlayRectangles` método no exemplo **VisionFaces** tem três funções:
 
 Exiba a [origem do exemplo](/samples/xamarin/ios-samples/ios11-visionfaces) para o método CoreGraphics exato.
 
-![Fotografia com duas faces detectadas](vision-images/found-faces-phone-sml.png)
+![Fotografia com duas faces detectadas em um dispositivo móvel.](vision-images/found-faces-phone-sml.png)
 
 ### <a name="5-further-processing"></a>5. processamento adicional
 

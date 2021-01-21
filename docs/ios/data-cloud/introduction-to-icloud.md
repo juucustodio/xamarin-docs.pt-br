@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/09/2016
-ms.openlocfilehash: cace68a1b85a4404774ca88ec697d419920d05cb
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: cf10633d06c338f5067f768b9097c9b1836d6f59
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91432897"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628820"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Usando o iCloud com Xamarin. iOS
 
@@ -28,7 +28,7 @@ Há quatro tipos de armazenamento disponíveis:
 
 - **Arquivos e diretórios individuais** -para gerenciar vários arquivos diferentes diretamente no sistema de arquivos.
 
-Este documento aborda os dois primeiros tipos – pares chave-valor e subclasses UIDocument-e como usar esses recursos no Xamarin. iOS.
+Este documento aborda os dois primeiros tipos – pares de Key-Value e subclasses UIDocument – e como usar esses recursos no Xamarin. iOS.
 
 > [!IMPORTANT]
 > A Apple [fornece ferramentas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ajudar os desenvolvedores a lidar adequadamente com o GDPR (Regulamento Geral sobre a Proteção de Dados) da União Europeia.
@@ -63,7 +63,7 @@ Selecione e ative a opção **documentos & dados** .
 - **Você deve usar um dispositivo para testar o iCloud** -ele não funcionará no simulador.
 Na verdade, você realmente precisa de dois ou mais dispositivos conectados com a mesma ID da Apple para ver o iCloud em ação.
 
-## <a name="key-value-storage"></a>Armazenamento de chave-valor
+## <a name="key-value-storage"></a>Armazenamento Key-Value
 
 O armazenamento de chave-valor é destinado a pequenas quantidades de dados que um usuário deseja manter entre dispositivos, como a última página que eles exibiram em um livro ou revista. O armazenamento de chave-valor não deve ser usado para fazer backup de dados.
 
@@ -404,9 +404,9 @@ Os usuários podem gerenciar documentos do iCloud no diretório **documentos** d
 
 Os usuários também receberão avisos diferentes quando tentarem remover um aplicativo habilitado para iCloud de seu dispositivo, para informá-los sobre o status dos documentos do iCloud relacionados a esse aplicativo.
 
- [![Caixa de diálogo de exemplo quando o usuário tenta remover um aplicativo habilitado para iCloud de seu dispositivo](introduction-to-icloud-images/icloud-delete1.png)](introduction-to-icloud-images/icloud-delete1.png#lightbox)
+ [![Captura de tela mostra um aviso para atualizações de documento pendentes.](introduction-to-icloud-images/icloud-delete1.png)](introduction-to-icloud-images/icloud-delete1.png#lightbox)
 
- [![Caixa de diálogo de exemplo quando o usuário tenta remover um aplicativo habilitado para iCloud de seu dispositivo](introduction-to-icloud-images/icloud-delete2.png)](introduction-to-icloud-images/icloud-delete2.png#lightbox)
+ [![Captura de tela mostra um aviso para excluir i Cloud.](introduction-to-icloud-images/icloud-delete2.png)](introduction-to-icloud-images/icloud-delete2.png#lightbox)
 
 ## <a name="icloud-backup"></a>Backup do iCloud
 

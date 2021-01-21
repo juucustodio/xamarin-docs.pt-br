@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: f5796ee17e947494d1e22f750bc43ff823d56d55
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 98855bb51552edcd567e3b99740f0be04034e388
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937274"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628963"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>Teste de unidade de aplicativos Xamarin.iOS
 
@@ -112,7 +112,7 @@ O executor de teste permite que você veja quais testes são registrados e selec
 
 Você pode executar acessórios de teste individuais selecionando o acessório texto nas exibições aninhadas ou você pode executar todos os seus testes com "Executar tudo". Se você executar o teste padrão, ele deverá incluir um teste aprovado, um não aprovado e um ignorado. Esta é a aparência do relatório e você pode fazer uma busca detalhada diretamente nos testes não aprovados e descobrir mais informações sobre a falha:
 
-[ ![ Um](touch.unit-images/05-sml.png)](touch.unit-images/05.png#lightbox) exemplo de relatório [ ![ um exemplo](touch.unit-images/06-sml.png)](touch.unit-images/06.png#lightbox) [ ![ de relatório de](touch.unit-images/07-sml.png)](touch.unit-images/07.png#lightbox) exemplo
+[![Captura de tela mostra um exemplo de relatório, Test Runner Screen.](touch.unit-images/05-sml.png)](touch.unit-images/05.png#lightbox) [![A captura de tela mostra um exemplo de relatório de amostra, testes.](touch.unit-images/06-sml.png)](touch.unit-images/06.png#lightbox) [![Captura de tela mostra um exemplo de relatório, Test screen com status do teste.](touch.unit-images/07-sml.png)](touch.unit-images/07.png#lightbox)
 
 Você também pode examinar a janela Saída do Aplicativo no seu IDE para ver quais testes estão sendo executados e seus status atuais.
 

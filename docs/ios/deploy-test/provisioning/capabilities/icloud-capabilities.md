@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 1932bc8bf5362a284ed62aa241170264826baa9e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 22f047871d203aa8604dd3331c4397c7607e332e
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84567548"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628872"
 ---
 # <a name="icloud-capabilities-in-xamarinios"></a>Recursos iCloud no Xamarin.iOS
 
@@ -47,11 +47,11 @@ As etapas abaixo orientam nessas etapas:
 
 3. Insira uma **Descrição** e um **Identificador** exclusivo para o contêiner do iCloud: 
     
-    ![Tela de registro de contêiner do iCloud](icloud-capabilities-images/image24.png)
+    ![A captura de tela mostra o registro de um contêiner de i Cloud.](icloud-capabilities-images/image24.png)
 
 4. Pressione **Continuar**, verifique se as informações estão corretas e pressione **Registrar** para criar o contêiner do iCloud:  
     
-    ![Tela de registro de contêiner do iCloud](icloud-capabilities-images/image25.png)
+    ![A captura de tela mostra confirmar o contêiner de i Cloud.](icloud-capabilities-images/image25.png)
 
 Para criar uma nova ID do aplicativo e adicionar um contêiner, faça o seguinte:
 
@@ -107,6 +107,6 @@ A lista a seguir descreve as etapas adicionais que precisam ser executadas:
 
 * Use o namespace do framework em seu aplicativo.
 * Adicione os direitos necessários para seu aplicativo. As informações sobre os direitos necessários e como adicioná-los estão detalhadas no guia [Trabalhando com direitos](~/ios/deploy-test/provisioning/entitlements.md).
-* Na **Assinatura de Pacote do iOS** do Aplicativo, verifique se a opção **Direitos Personalizados** está definida como **Entitlements.plist**.Essa _não_é   a configuração padrão para compilações de depuração e do IOS Simulator.
+* Na **Assinatura de Pacote do iOS** do aplicativo, certifique-se de que **Direitos Personalizados** está definido como **Entitlements.plist**. Esta _não_ é a configuração padrão para builds de depuração e do simulador do iOS.
 
 Se você encontrar problemas com serviços de aplicativos, consulte a seção [Solução de problemas](~/ios/deploy-test/provisioning/capabilities/index.md) do guia principal.

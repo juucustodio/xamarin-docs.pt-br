@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 82367d63d1cc7b52d69de52ee635e380cd68c382
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: ad237ae509170e8d43d583e87ddc5f7de6147ae1
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91435663"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98629015"
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Walkthrough: associando uma biblioteca de Objective do iOS-C
 
@@ -124,7 +124,7 @@ A primeira etapa é adicionar o código-fonte InfoColorPicker à biblioteca est�
 1. Inicie o Xcode.
 2. No menu **arquivo** , selecione **novo**  >  **projeto...**:
 
-    [![Criar um projeto](walkthrough-images/image04.png)](walkthrough-images/image04.png#lightbox)
+    [![Captura de tela mostra o projeto selecionado no menu novo do menu arquivo.](walkthrough-images/image04.png)](walkthrough-images/image04.png#lightbox)
 3. Selecione **estrutura & biblioteca**, o modelo de **biblioteca estática Cocoa Touch** e clique no botão **Avançar** :
 
     [![Selecione o modelo de biblioteca estática do Cocoa Touch](walkthrough-images/image05.png)](walkthrough-images/image05.png#lightbox)
@@ -277,7 +277,7 @@ A solução será criada e dois arquivos padrão serão incluídos:
 
 1. No menu **arquivo** , selecione **novo**  >  **projeto...**:
 
-    ![Criar um projeto](walkthrough-images/bind01vs.png "Criar um projeto")
+    ![Captura de tela mostra o projeto selecionado no menu novo do menu arquivo no Visual Studio.](walkthrough-images/bind01vs.png "Criar um projeto")
 
 1. Na caixa de diálogo novo projeto, selecione **Visual C# > iPhone & iPad > biblioteca de associações do IOS (Xamarin)**:
 
@@ -331,7 +331,7 @@ Siga estas etapas para adicionar a biblioteca:
 
 -----
 
-Quando o arquivo **. a** é adicionado ao projeto, o Xamarin. Ios definirá automaticamente a **ação de compilação** do arquivo como **ObjcBindingNativeLibrary**e criará um arquivo especial chamado `libInfColorPickerSDK.linkwith.cs` .
+Quando o arquivo **. a** é adicionado ao projeto, o Xamarin. Ios definirá automaticamente a **ação de compilação** do arquivo como **ObjcBindingNativeLibrary** e criará um arquivo especial chamado `libInfColorPickerSDK.linkwith.cs` .
 
 Esse arquivo contém o `LinkWith` atributo que informa ao Xamarin. Ios como lidar com a biblioteca estática que acabamos de adicionar. O conteúdo desse arquivo é mostrado no seguinte trecho de código:
 
@@ -426,7 +426,7 @@ Insira o seguinte comando no aplicativo de terminal:
 sharpie bind --output=InfColorPicker --namespace=InfColorPicker --sdk=[iphone-os] -scope [full-path-to-project]/InfColorPicker/InfColorPicker [full-path-to-project]/InfColorPicker/InfColorPicker/*.h
 ```
 
-Em que `[full-path-to-project]` é o caminho completo para o diretório em que o arquivo de projeto **InfColorPicker** Xcode está localizado em nosso computador e [iPhone-os] é o SDK do IOS que instalamos, conforme observado pelo `sharpie xcode -sdks` comando. Observe que, neste exemplo, passamos ** \* . h** como um parâmetro, que inclui *todos* os arquivos de cabeçalho nesse diretório – normalmente, você não deve fazer isso, mas, em vez disso, ler atentamente os arquivos de cabeçalho para localizar o arquivo **. h** de nível superior que faz referência a todos os outros arquivos relevantes e apenas passá-lo para a nitidez objetiva. 
+Em que `[full-path-to-project]` é o caminho completo para o diretório em que o arquivo de projeto **InfColorPicker** Xcode está localizado em nosso computador e [iPhone-os] é o SDK do IOS que instalamos, conforme observado pelo `sharpie xcode -sdks` comando. Observe que, neste exemplo, passamos **\* . h** como um parâmetro, que inclui *todos* os arquivos de cabeçalho nesse diretório – normalmente, você não deve fazer isso, mas, em vez disso, ler atentamente os arquivos de cabeçalho para localizar o arquivo **. h** de nível superior que faz referência a todos os outros arquivos relevantes e apenas passá-lo para a nitidez objetiva. 
 
 > [!TIP] 
 > Para o `-scope` argumento, passe a pasta que tem os cabeçalhos que você deseja associar. Sem o `-scope` argumento, a nitidez do objetivo tentará gerar associações para todos os cabeçalhos do SDK do IOS que são importados, por exemplo `#import <UIKit.h>` , resultando em um arquivo de definições enorme que provavelmente gerará erros ao compilar o projeto de associação. Com o `-scope` conjunto de argumentos, a nitidez do objetivo não gerará associações para nenhum cabeçalho fora da pasta com escopo. 
@@ -529,7 +529,7 @@ Siga estas etapas para criar um aplicativo de exemplo do iPhone para usar a bibl
 
     ![Adicionando um botão à exibição](walkthrough-images/use03.png)
 
-1. **Adicione o InfColorPickerView. xib** -a biblioteca InfColorPicker objec-C inclui um arquivo **. xib** . O Xamarin. iOS não incluirá this **. xib** no projeto de associação, o que causará erros em tempo de execução em nosso aplicativo de exemplo. A solução alternativa para isso é adicionar o arquivo **. xib** ao nosso projeto Xamarin. Ios. Selecione o projeto Xamarin. iOS, clique com o botão direito do mouse e selecione **adicionar > adicionar arquivos**e adicione o arquivo **. xib** , conforme mostrado na seguinte captura de tela:
+1. **Adicione o InfColorPickerView. xib** -a biblioteca InfColorPicker objec-C inclui um arquivo **. xib** . O Xamarin. iOS não incluirá this **. xib** no projeto de associação, o que causará erros em tempo de execução em nosso aplicativo de exemplo. A solução alternativa para isso é adicionar o arquivo **. xib** ao nosso projeto Xamarin. Ios. Selecione o projeto Xamarin. iOS, clique com o botão direito do mouse e selecione **adicionar > adicionar arquivos** e adicione o arquivo **. xib** , conforme mostrado na seguinte captura de tela:
 
     ![Adicionar o InfColorPickerView. xib](walkthrough-images/use04.png)
 

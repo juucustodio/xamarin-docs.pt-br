@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/13/2017
-ms.openlocfilehash: 476c19f22755775f7b2b8b1d4205747b4bc6b313
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 797122d82f13a178986d7d19203a8f6eeddaf483
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91432530"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628885"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Segurança de transporte de aplicativo no Xamarin. iOS
 
@@ -38,7 +38,7 @@ O ATS irá impor os seguintes requisitos para todas as conexões com a Internet:
 
 - Todas as codificações de conexão devem estar usando o sigilo de encaminhamento. Consulte a lista de codificações aceitas abaixo.
 - O protocolo TLS deve ser a versão 1,2 ou superior.
-- Pelo menos uma impressão digital SHA256 com uma chave RSA de 2048 bits ou maior, ou uma chave de 256 bits ou mais de alta curva elíptica (ECC) deve ser usada para todos os certificados.
+- Pelo menos uma impressão digital SHA256 com uma chave RSA de 2048 bits ou maior, ou uma chave de 256 bits ou mais Elliptic-Curve (ECC) deve ser usada para todos os certificados.
 
 Novamente, como o ATS está habilitado por padrão no iOS 9, qualquer tentativa de estabelecer uma conexão que não atenda a esses requisitos resultará em uma exceção sendo gerada.
 
@@ -184,7 +184,7 @@ Cada chave tem o seguinte tipo e significado:
 
 <a name="optout"></a>
 
-### <a name="opting-out-of-ats"></a>Recusando-fora do ATS
+### <a name="opting-out-of-ats"></a>Opting-Out de ATS
 
 Embora a Apple sugira usar o `HTTPS` protocolo e a comunicação segura com as informações baseadas na Internet, pode haver ocasiões em que isso nem sempre é possível. Por exemplo, se você estiver se comunicando com um serviço Web de terceiros ou usando anúncios entregues pela Internet em seu aplicativo.
 
@@ -212,7 +212,7 @@ Se seu aplicativo Xamarin. iOS precisar fazer uma solicitação para um domínio
 
 Dentro de Visual Studio para Mac, clique duas vezes no `Info.plist` arquivo na **Gerenciador de soluções**, alterne para a exibição de **origem** e adicione as chaves acima:
 
-[![A exibição da fonte do arquivo info. plist](ats-images/ats01.png)](ats-images/ats01.png#lightbox)
+[![A exibição de origem do arquivo info. plist depois de adicionar as chaves especificadas.](ats-images/ats01.png)](ats-images/ats01.png#lightbox)
 
 Se seu aplicativo precisar carregar e exibir conteúdo da Web de sites não seguros, adicione o seguinte ao arquivo **info. plist** do seu aplicativo para permitir que as páginas da Web sejam carregadas corretamente enquanto a proteção de ATS (segurança de transporte da Apple) ainda estiver habilitada para o restante do aplicativo:
 
@@ -236,7 +236,7 @@ Opcionalmente, você pode fazer as seguintes alterações no arquivo **info. pli
 
 Dentro de Visual Studio para Mac, clique duas vezes no `Info.plist` arquivo na **Gerenciador de soluções**, alterne para a exibição de **origem** e adicione as chaves acima:
 
-[![A exibição da fonte do arquivo info. plist](ats-images/ats02.png)](ats-images/ats02.png#lightbox)
+[![A exibição de origem do arquivo info. plist depois de especificar NSAllowsArbitraryLoadsInWebContent e NSAllowsArbitraryLoads.](ats-images/ats02.png)](ats-images/ats02.png#lightbox)
 
 > [!IMPORTANT]
 > Se seu aplicativo exigir uma conexão com um site da Web não seguro, você **sempre** deverá inserir o domínio como uma exceção usando `NSExceptionDomains` , em vez de desativar completamente o ATS usando `NSAllowsArbitraryLoads` . `NSAllowsArbitraryLoads` Só deve ser usado em situações de emergência extremas.

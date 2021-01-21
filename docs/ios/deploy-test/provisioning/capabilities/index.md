@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/06/2018
-ms.openlocfilehash: bff3b2a7c1e273c7a03ae341dd663ebc722791eb
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 79e700f17f365895cd2cdaa015f4a8fe9e95bb79
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571734"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628846"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Trabalhando com recursos no Xamarin.iOS
 
@@ -82,7 +82,7 @@ Os recursos são adicionados ao **Entitlements.plist** no Visual Studio para Mac
 
 2. Abra o arquivo **. plist de direitos** e selecione a funcionalidade que você deseja adicionar:
 
-    ![Adicionar funcionalidades ao arquivo entitlements.plist](images/image17.png)
+    ![Captura de tela mostra o conteúdo do arquivo. plist de direitos.](images/image17.png)
 
     Selecionar uma funcionalidade faz duas coisas:
     - Adiciona esse recurso à ID do aplicativo
@@ -90,7 +90,7 @@ Os recursos são adicionados ao **Entitlements.plist** no Visual Studio para Mac
 
     O Visual Studio para Mac informará quando essas tarefas tiverem sido realizadas exibindo a seguinte mensagem de êxito:
 
-    ![Adicionar funcionalidades ao arquivo entitlements.plist](images/image18.png)
+    ![Captura de tela mostra a notificação quando o provisionamento automático é concluído.](images/image18.png)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 

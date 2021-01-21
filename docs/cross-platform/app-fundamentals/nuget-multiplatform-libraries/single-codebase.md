@@ -6,12 +6,12 @@ ms.assetid: E7B55354-9BBE-4122-BCE3-3506B79090DD
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 3226820dddbd6ecb83b87b29ef1991d19104b2a6
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ca874149874c420801c839fcde7afac11f46c5e1
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936975"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628911"
 ---
 # <a name="creating-a-new-multiplatform-library-for-nuget"></a>Criando uma nova biblioteca multiplataforma para NuGet
 
@@ -30,11 +30,11 @@ Se você precisar mais tarde da funcionalidade específica da plataforma, os [pr
 
 2. Escolha **biblioteca multiplataforma** na seção **biblioteca de > de várias plataformas** :
 
-   [![Configurar a biblioteca de várias plataformas para uma única base de código](single-codebase-images/mulitplatform-library-sml.png)](single-codebase-images/mulitplatform-library.png#lightbox)
+   [![Captura de tela mostra escolher um modelo com a biblioteca multiplataforma selecionada.](single-codebase-images/mulitplatform-library-sml.png)](single-codebase-images/mulitplatform-library.png#lightbox)
 
-3. Insira um **nome** e uma **Descrição**e escolha **único para todas as plataformas**:
+3. Insira um **nome** e uma **Descrição** e escolha **único para todas as plataformas**:
 
-   [![Configurar a biblioteca de várias plataformas para uma única base de código](single-codebase-images/single-configure-sml.png)](single-codebase-images/single-configure.png#lightbox)
+   [![Captura de tela mostra valores inseridos para nome, descrição e implementação.](single-codebase-images/single-configure-sml.png)](single-codebase-images/single-configure.png#lightbox)
 
 4. Conclua o assistente. Um único projeto de biblioteca é criado na solução.
 
@@ -60,7 +60,7 @@ Esta captura de tela mostra o conteúdo de um NuGet baseado em PCL – apenas um
 
 <a name="add-platforms"></a>
 
-## <a name="adding-platform-specific-code"></a>Adicionando código específico da plataforma
+## <a name="adding-platform-specific-code"></a>Adicionando Platform-Specific código
 
 Projetos baseados em PCL e projetos baseados em .NET Standard não podem conter referências específicas à plataforma (como a funcionalidade iOS ou Android).
 
@@ -73,7 +73,7 @@ Um ou mais projetos de plataforma podem ser adicionados à solução, e a biblio
 [![Adicionar opções de plataforma, como iOS, Android e projeto compartilhado](single-codebase-images/add-later-platforms-sml.png)](single-codebase-images/add-later-platforms-sml.png#lightbox)
 
 Depois de converter para um projeto compartilhado, visite a seção **Opções do projeto > pacote NuGet > assemblies de referência** 
- [section](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) e verifique se todos os perfis necessários estão selecionados (para que o NuGet continue a ser compatível com os projetos em que ele foi usado anteriormente).
+ [](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md) e verifique se todos os perfis necessários estão selecionados (para que o NuGet continue a ser compatível com os projetos em que ele foi usado anteriormente).
 
 ## <a name="related-links"></a>Links Relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/23/2018
-ms.openlocfilehash: 79dcab73c379cecb5108a88cc8bbb2eab33af05c
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: 81dc3d23ea606a525fcc1bbffafa7d3bfdf6b332
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91457101"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628859"
 ---
 # <a name="creating-a-watch-face"></a>Como criar um mostrador de relógio
 
@@ -23,11 +23,11 @@ _Este guia explica como implementar um serviço de face de inspeção personaliz
 Neste tutorial, um serviço de face de inspeção básico é criado para ilustrar os conceitos básicos da criação de uma face de relógio do Android desgaste 1,0 personalizada.
 O serviço de face de inspeção inicial exibe uma inspeção digital simples que exibe a hora atual em horas e minutos:
 
-[![Rosto de inspeção digital](creating-a-watchface-images/01-initial-face.png "Captura de tela de exemplo do rosto de inspeção digital inicial")](creating-a-watchface-images/01-initial-face.png#lightbox)
+[![Captura de tela mostra o rosto de inspeção digital inicial.](creating-a-watchface-images/01-initial-face.png "Captura de tela de exemplo do rosto de inspeção digital inicial")](creating-a-watchface-images/01-initial-face.png#lightbox)
 
 Depois que esse tipo de inspeção digital é desenvolvido e testado, mais código é adicionado para atualizá-lo para uma face de inspeção analógica mais sofisticada com três mãos:
 
-[![Face de inspeção analógica](creating-a-watchface-images/02-example-watchface.png "Captura de tela de exemplo da face de inspeção analógica final")](creating-a-watchface-images/02-example-watchface.png#lightbox)
+[![Captura de tela mostra a face de inspeção analógica final.](creating-a-watchface-images/02-example-watchface.png "Captura de tela de exemplo da face de inspeção analógica final")](creating-a-watchface-images/02-example-watchface.png#lightbox)
 
 Observe que os serviços de face são agrupados e instalados como parte de um aplicativo de desgaste 1,0. Nos exemplos a seguir, `MainActivity` não contém nada mais do que o código do modelo de aplicativo de desgaste 1,0 para que o serviço Watch face possa ser empacotado e implantado no Smart Watch como parte do aplicativo. Na verdade, esse aplicativo servirá puramente como um veículo para obter o serviço de face de inspeção carregado no dispositivo (ou emulador) de desgaste 1,0 para depuração e teste.
 
@@ -340,7 +340,7 @@ Crie e implante o aplicativo no dispositivo de desgaste. Você deve ver a tela d
 
 Isso altera a face do relógio do dispositivo de desgaste para usar o serviço de face de inspeção personalizado implementado até o momento:
 
-[![Rosto de inspeção digital](creating-a-watchface-images/12-digital-watchface.png "Inspeção digital personalizada em execução no dispositivo de desgaste")](creating-a-watchface-images/12-digital-watchface.png#lightbox)
+[![Captura de tela mostra uma inspeção digital personalizada em execução no dispositivo de desgaste.](creating-a-watchface-images/12-digital-watchface.png "Inspeção digital personalizada em execução no dispositivo de desgaste")](creating-a-watchface-images/12-digital-watchface.png#lightbox)
 
 Trata-se de uma superfície de inspeção relativamente crua porque a implementação do aplicativo é tão mínima (por exemplo, não inclui um plano de fundo de relógio de inspeção e não chama `Paint` métodos de suavização de estilo para melhorar a aparência).
 No entanto, ele implementa a funcionalidade básica que é necessária para criar uma face de inspeção personalizada.
@@ -361,11 +361,11 @@ No restante deste passo a passos, o `MyWatchFaceService` é atualizado para exib
 
 5. Atualiza automaticamente a hora em que ocorre uma alteração de fuso horário.
 
-Antes de implementar as alterações de código abaixo, baixe [drawable.zip](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/Resources/drawable.zip?raw=true), descompacte-o e mova os arquivos. png descompactados para **recursos/desenháveis** (substitua o **preview.png**anterior). Adicione os novos arquivos. png ao `WatchFace` projeto.
+Antes de implementar as alterações de código abaixo, baixe [drawable.zip](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/Resources/drawable.zip?raw=true), descompacte-o e mova os arquivos. png descompactados para **recursos/desenháveis** (substitua o **preview.png** anterior). Adicione os novos arquivos. png ao `WatchFace` projeto.
 
 ### <a name="update-engine-features"></a>Recursos do mecanismo de atualização
 
-A próxima etapa é atualizar **MyWatchFaceService.cs** para uma implementação que desenha uma face de inspeção analógica e dá suporte a novos recursos. Substitua o conteúdo de **MyWatchFaceService.cs** pela versão analógica do código de rosto de inspeção em [MyWatchFaceService.cs](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/WatchFace/MyWatchFaceService.cs) (você pode recortar e colar essa fonte no **MyWatchFaceService.cs**existente).
+A próxima etapa é atualizar **MyWatchFaceService.cs** para uma implementação que desenha uma face de inspeção analógica e dá suporte a novos recursos. Substitua o conteúdo de **MyWatchFaceService.cs** pela versão analógica do código de rosto de inspeção em [MyWatchFaceService.cs](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/WatchFace/MyWatchFaceService.cs) (você pode recortar e colar essa fonte no **MyWatchFaceService.cs** existente).
 
 Esta versão do **MyWatchFaceService.cs** adiciona mais código aos métodos existentes e inclui métodos adicionais substituídos para adicionar mais funcionalidade. As seções a seguir fornecem um tour guiado do código-fonte.
 
@@ -463,7 +463,7 @@ Application.Context.UnregisterReceiver (timeZoneReceiver);
 
 Crie e implante o aplicativo no dispositivo de desgaste novamente. Selecione a face de inspeção do seletor de face de inspeção como antes. A visualização no seletor de inspeção é mostrada à esquerda e a nova face de inspeção é mostrada à direita:
 
-[![Face de inspeção analógica](creating-a-watchface-images/13-analog-watchface.png "Aparência analógica aprimorada no seletor e no dispositivo")](creating-a-watchface-images/13-analog-watchface.png#lightbox)
+[![Captura de tela mostra uma face analógica aprimorada no seletor e no dispositivo.](creating-a-watchface-images/13-analog-watchface.png "Aparência analógica aprimorada no seletor e no dispositivo")](creating-a-watchface-images/13-analog-watchface.png#lightbox)
 
 Nesta captura de tela, a segunda mão é movida uma vez por segundo. Quando você executa esse código em um dispositivo de desgaste, a segunda mão desaparece quando o relógio entra no modo ambiente.
 
