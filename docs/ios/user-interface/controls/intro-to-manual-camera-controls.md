@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 04c33b59e2a1bab7fb401ffdc49d120bcfd679d0
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 53ffd71704201c87d5e30dea0f8da46189d6e75b
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436823"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697521"
 ---
 # <a name="manual-camera-controls-in-xamarinios"></a>Controles de câmera manuais no Xamarin. iOS
 
@@ -332,7 +332,7 @@ Para implementar os recursos acima, a `AVCaptureDevice` classe foi modificada pa
 
 Para assumir o controle manual da posição da lente, o dispositivo de captura deve estar no modo de foco bloqueado. Exemplo:
 
- `CaptureDevice.FocusMode = AVCaptureFocusMode.Locked;`
+ `CaptureDevice.FocusMode = AVCaptureFocusMode.Locked;`
 
 O `SetFocusModeLocked` método do dispositivo de captura é usado para ajustar a posição da lente da câmera. Uma rotina de retorno de chamada opcional pode ser fornecida para receber notificações quando a alteração entrar em vigor. Exemplo:
 
@@ -348,7 +348,7 @@ Como visto no código acima, o dispositivo de captura deve ser bloqueado para co
 
 Com o código de configuração geral da captura AV em vigor, um `UIViewController` pode ser adicionado ao storyboard do aplicativo e configurado da seguinte maneira:
 
-[![Um UIViewController pode ser adicionado ao storyboard dos aplicativos e configurado como mostrado aqui](intro-to-manual-camera-controls-images/image5.png)](intro-to-manual-camera-controls-images/image5.png#lightbox)
+[![Um UIViewController pode ser adicionado ao storyboard dos aplicativos e configurado como mostrado aqui para o exemplo de foco manual.](intro-to-manual-camera-controls-images/image5.png)](intro-to-manual-camera-controls-images/image5.png#lightbox)
 
 A exibição contém os seguintes elementos principais:
 
@@ -539,7 +539,7 @@ O `ExposurePointOfInterest` pode ser usado para tocar para expor a cena selecion
 Além dos recursos já fornecidos pelo iOS 7 e posterior, os recursos a seguir agora estão disponíveis para controlar a exposição no iOS 8:
 
 - Exposição personalizada totalmente manual.
-- Get, set e key-value observam o IOS e a velocidade do obturador (duração).
+- Get, set e Key-Value observam a velocidade do IOS e do obturador (duração).
 
 Para implementar os recursos acima, um novo `AVCaptureExposureModeCustom` modo foi adicionado. Quando a câmera no é o modo personalizado, o código a seguir pode ser usado para ajustar a duração da exposição e o ISO:
 
@@ -572,7 +572,7 @@ Como visto no código acima, o dispositivo de captura deve ser bloqueado para co
 
 Com o código de configuração geral da captura AV em vigor, um `UIViewController` pode ser adicionado ao storyboard do aplicativo e configurado da seguinte maneira:
 
-[![Um UIViewController pode ser adicionado ao storyboard dos aplicativos e configurado como mostrado aqui](intro-to-manual-camera-controls-images/image12.png)](intro-to-manual-camera-controls-images/image12.png#lightbox)
+[![Um UIViewController pode ser adicionado ao storyboard dos aplicativos e configurado como mostrado aqui para o exemplo de exposição manual.](intro-to-manual-camera-controls-images/image12.png)](intro-to-manual-camera-controls-images/image12.png#lightbox)
 
 A exibição contém os seguintes elementos principais:
 
@@ -827,7 +827,7 @@ E o aplicativo pode monitorar a `AdjustingWhiteBalance` propriedade para ver qua
 Além dos recursos já fornecidos pelo iOS 7 e posterior, os seguintes recursos agora estão disponíveis para controlar o equilíbrio de branco no iOS 8:
 
 - Controle totalmente manual dos ganhos de RGB do dispositivo.
-- Get, set e key-value observam os ganhos de RGB do dispositivo.
+- Get, set e Key-Value observam os ganhos de RGB do dispositivo.
 - Suporte para balanço de branco usando cartão cinza.
 - Rotinas de conversão de e para espaços de cores independentes de dispositivo.
 
@@ -872,7 +872,7 @@ O dispositivo de captura deve ser bloqueado para configuração antes que uma al
 
 Com o código de configuração geral da captura AV em vigor, um `UIViewController` pode ser adicionado ao storyboard do aplicativo e configurado da seguinte maneira:
 
-[![Um UIViewController pode ser adicionado ao storyboard dos aplicativos e configurado como mostrado aqui](intro-to-manual-camera-controls-images/image18.png)](intro-to-manual-camera-controls-images/image18.png#lightbox)
+[![Um UIViewController pode ser adicionado ao storyboard dos aplicativos e configurado como mostrado aqui para o exemplo de balanço de branco manual.](intro-to-manual-camera-controls-images/image18.png)](intro-to-manual-camera-controls-images/image18.png#lightbox)
 
 A exibição contém os seguintes elementos principais:
 
@@ -1152,7 +1152,7 @@ Com essas informações em mente, vamos dar uma olhada em um exemplo de uso da c
 
 Com o código de configuração geral da captura AV em vigor, um `UIViewController` pode ser adicionado ao storyboard do aplicativo e configurado da seguinte maneira:
 
-[![Um UIViewController pode ser adicionado ao storyboard dos aplicativos e configurado como mostrado aqui](intro-to-manual-camera-controls-images/image23.png)](intro-to-manual-camera-controls-images/image23.png#lightbox)
+[![Um UIViewController pode ser adicionado ao storyboard dos aplicativos e configurado conforme mostrado aqui exemplo de captura de colchete.](intro-to-manual-camera-controls-images/image23.png)](intro-to-manual-camera-controls-images/image23.png#lightbox)
 
 A exibição contém os seguintes elementos principais:
 

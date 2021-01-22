@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: ae54f4f4cfb9b2c604be9c55d2a47303fb22485e
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: e5a872fc18ca918b45181646ff4b279e1441f39b
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91435572"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697534"
 ---
 # <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Trabalhando com campos de pesquisa e texto tvOS no Xamarin
 
@@ -72,7 +72,7 @@ Para obter mais informações sobre como trabalhar com o teclado virtual, consul
 
 <a name="Search"></a>
 
-## <a name="search"></a>Pesquisar
+## <a name="search"></a>Search
 
 Um campo de pesquisa apresenta uma tela especializada que fornece um campo de texto e um teclado na tela que permite ao usuário filtrar uma coleção de itens que são exibidos abaixo do teclado:
 
@@ -107,10 +107,10 @@ Faça o seguinte:
 1. Selecione os **campos de texto** e dê a cada um um **nome** exclusivo na guia **widget** da **painel de propriedades**:
 
     [![A guia do widget do Painel de Propriedades](text-fields-and-search-images/text03.png)](text-fields-and-search-images/text03.png#lightbox)
-1. Na seção **campo de texto** , você pode definir elementos como a dica de **espaço reservado** e o **valor**padrão:
+1. Na seção **campo de texto** , você pode definir elementos como a dica de **espaço reservado** e o **valor** padrão:
 
     [![A seção de campo de texto](text-fields-and-search-images/text04.png)](text-fields-and-search-images/text04.png#lightbox)
-1. Role para baixo para definir propriedades, como **verificação ortográfica**, **maiúsculas e minúsculas** , **tipo de teclado**padrão:
+1. Role para baixo para definir propriedades, como **verificação ortográfica**, **maiúsculas e minúsculas** , **tipo de teclado** padrão:
 
     [![Verificação ortográfica, capitalização e tipo de teclado padrão](text-fields-and-search-images/text05.png)](text-fields-and-search-images/text05.png#lightbox)
 1. Salve as alterações em seu Storyboard.
@@ -123,11 +123,11 @@ Faça o seguinte:
     [![Um campo de texto](text-fields-and-search-images/text02-vs.png)](text-fields-and-search-images/text02-vs.png#lightbox)
 1. Selecione os **campos de texto** e dê a cada um um **nome** exclusivo na guia **widget** do **Gerenciador de propriedades**:
 
-    [![A guia do widget](text-fields-and-search-images/text03-vs.png)](text-fields-and-search-images/text03-vs.png#lightbox)
-1. Na seção **campo de texto** , você pode definir elementos como a dica de **espaço reservado** e o **valor**padrão:
+    [![A guia do widget onde você pode inserir um nome para cada campo de texto.](text-fields-and-search-images/text03-vs.png)](text-fields-and-search-images/text03-vs.png#lightbox)
+1. Na seção **campo de texto** , você pode definir elementos como a dica de **espaço reservado** e o **valor** padrão:
 
     [![A seção de campo de texto](text-fields-and-search-images/text04-vs.png)](text-fields-and-search-images/text04-vs.png#lightbox)
-1. Role para baixo para definir propriedades, como **verificação ortográfica**, **maiúsculas e minúsculas** , **tipo de teclado**padrão:
+1. Role para baixo para definir propriedades, como **verificação ortográfica**, **maiúsculas e minúsculas** , **tipo de teclado** padrão:
 
     [![Verificação ortográfica, capitalização e tipo de teclado padrão](text-fields-and-search-images/text05-vs.png)](text-fields-and-search-images/text05-vs.png#lightbox)
 1. Salve as alterações em seu Storyboard.
@@ -158,11 +158,11 @@ Faça o seguinte:
     [![Um controlador de exibição de coleção](text-fields-and-search-images/search02.png)](text-fields-and-search-images/search02.png#lightbox)
 1. Na guia **widget** do **painel de propriedades**, use `SearchResultsViewController` para a **classe** e `SearchResults` para a ID do **storyboard**:
 
-    [![A guia do widget](text-fields-and-search-images/search03.png)](text-fields-and-search-images/search03.png#lightbox)
+    [![A guia do widget em Visual Studio para Mac onde você pode especificar a classe e o storyboard I D.](text-fields-and-search-images/search03.png)](text-fields-and-search-images/search03.png#lightbox)
 1. Selecione o **protótipo de célula** na superfície de design.
 1. Na guia **widget** do Gerenciador de **Propriedades**, use `SearchResultCell` para a **classe** e `ImageCell` para o **identificador**:
 
-    [![A guia do widget](text-fields-and-search-images/search04.png)](text-fields-and-search-images/search04.png#lightbox)
+    [![A guia do widget no Visual Studio para Mac em que você pode especificar a classe e o identificador.](text-fields-and-search-images/search04.png)](text-fields-and-search-images/search04.png#lightbox)
 1. Layout o design do **protótipo de célula** e expor cada elemento com um **nome** exclusivo na guia **widget** do Gerenciador de **Propriedades**:
 
     [![Layout do design do protótipo de célula](text-fields-and-search-images/search05.png)](text-fields-and-search-images/search05.png#lightbox)
@@ -176,11 +176,11 @@ Faça o seguinte:
     [![Um controlador de exibição de coleção](text-fields-and-search-images/seach02-vs.png)](text-fields-and-search-images/seach02-vs.png#lightbox)
 1. Na guia **widget** do Gerenciador de **Propriedades**, use `SearchResultsViewController` para a **classe** e `SearchResults` para a ID do **storyboard**:
 
-    [![A guia do widget](text-fields-and-search-images/search03-vs.png)](text-fields-and-search-images/search03-vs.png#lightbox)
+    [![A guia do widget onde você pode especificar a classe e o storyboard I D.](text-fields-and-search-images/search03-vs.png)](text-fields-and-search-images/search03-vs.png#lightbox)
 1. Selecione o **protótipo de célula** na superfície de design.
 1. Na guia **widget** do Gerenciador de **Propriedades**, use `SearchResultCell` para a **classe** e `ImageCell` para o **identificador**:
 
-    [![A guia do widget](text-fields-and-search-images/search04-vs.png)](text-fields-and-search-images/search04-vs.png#lightbox)
+    [![A guia do widget onde você pode especificar a classe e o identificador.](text-fields-and-search-images/search04-vs.png)](text-fields-and-search-images/search04-vs.png#lightbox)
 1. Layout o design do **protótipo de célula** e expor cada elemento com um **nome** exclusivo na guia **widget** do Gerenciador de **Propriedades**:
 
     [![Layout do design do protótipo de célula](text-fields-and-search-images/search05-vs.png)](text-fields-and-search-images/search05-vs.png#lightbox)

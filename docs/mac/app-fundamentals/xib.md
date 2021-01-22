@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: d70d794ea95c628a2f2f59e94c3c4fe2f458f718
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: ec1005f3956498f1525c65b5d505f2f899aee2e2
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91435754"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697664"
 ---
 # <a name="xib-files-in-xamarinmac"></a>arquivos. xib no Xamarin. Mac
 
@@ -53,7 +53,7 @@ A seção de **navegação do projeto** permite que você navegue entre todos os
 
 #### <a name="interface-hierarchy"></a>Hierarquia de interface
 
-A seção **hierarquia de interface** permite que você acesse facilmente várias propriedades de chave da interface do usuário, como seus **espaços reservados** e **janela**principal. Você também pode usar esta seção para acessar os elementos individuais (exibições) que compõem a interface do usuário e ajustar a forma como eles são aninhados arrastando-os para dentro da hierarquia.
+A seção **hierarquia de interface** permite que você acesse facilmente várias propriedades de chave da interface do usuário, como seus **espaços reservados** e **janela** principal. Você também pode usar esta seção para acessar os elementos individuais (exibições) que compõem a interface do usuário e ajustar a forma como eles são aninhados arrastando-os para dentro da hierarquia.
 
 #### <a name="interface-editor"></a>Editor de interface
 
@@ -96,14 +96,14 @@ Para alternar para o usando uma interface do usuário baseada em. xib, faça o s
 
 1. Abra Visual Studio para Mac e inicie um novo projeto Xamarin. Mac.
 2. Na **painel de soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar**  >  **novo arquivo...**
-3. Selecione **Mac**  >  **controlador do Windows**Mac:
+3. Selecione   >  **controlador do Windows** Mac:
 
     ![Adicionando um novo controlador de janela](xib-images/setup00.png "Adicionando um novo controlador de janela")
 4. Insira `MainWindow` para o nome e clique no botão **novo** :
 
     ![Adicionando uma nova janela principal](xib-images/setup01.png "Adicionando uma nova janela principal")
 5. Clique com o botão direito do mouse no projeto novamente e selecione **Adicionar**  >  **novo arquivo...**
-6. Selecione **Mac**o  >  **menu principal**do Mac:
+6. Selecione o  >  **menu principal** do Mac:
 
     ![Adicionando um novo menu principal](xib-images/setup02.png "Adicionando um novo menu principal")
 7. Deixe o nome como `MainMenu` e clique no botão **novo** .
@@ -451,7 +451,7 @@ A `var preferences = new PreferencesWindowController ();` linha cria uma nova in
 
 Se você executar o código e selecionar as **preferências...** no **menu do aplicativo**, a janela será exibida:
 
-![Executando o aplicativo de exemplo](xib-images/new04.png "Executando o aplicativo de exemplo")
+![Captura de tela mostra a janela Preferências exibida no menu do aplicativo.](xib-images/new04.png "Executando o aplicativo de exemplo")
 
 Para obter mais informações sobre como trabalhar com o Windows em um aplicativo Xamarin. Mac, consulte a documentação do [Windows](~/mac/user-interface/window.md) .
 
@@ -559,7 +559,7 @@ DisplaySubview(new SubviewTableController(), SubviewType.TableView);
 
 Isso cria uma nova instância do controlador de exibição para a nova exibição a ser exibida, define seu tipo (conforme especificado pela enumeração adicionada ao projeto) e usa o `DisplaySubview` método adicionado à classe da janela para realmente exibir a exibição. Por exemplo:
 
-[![Executando o aplicativo de exemplo](xib-images/view04.png "Executando o aplicativo de exemplo")](xib-images/view04-large.png#lightbox)
+[![Captura de tela mostra a exibição de tabela selecionada na janela trabalhando com imagens.](xib-images/view04.png "Executando o aplicativo de exemplo")](xib-images/view04-large.png#lightbox)
 
 Para obter mais informações sobre como trabalhar com o Windows em um aplicativo Xamarin. Mac, consulte nossa documentação sobre [janelas](~/mac/user-interface/window.md) e [caixas de diálogo](~/mac/user-interface/dialog.md) .
 

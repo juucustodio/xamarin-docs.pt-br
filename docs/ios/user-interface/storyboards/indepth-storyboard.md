@@ -6,12 +6,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: e6bbc9d7d404136984e3d1ec93186dc85691c751
-ms.sourcegitcommit: d1f0e0a9100548cfe0960ed2225b979cc1d7c28f
+ms.openlocfilehash: b9e0f5d01d7843c25af3af3cddefbe0740f018a3
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439724"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697508"
 ---
 # <a name="storyboards-in-xamarinios"></a>Storyboards no Xamarin. iOS
 
@@ -205,11 +205,11 @@ A captura de tela a seguir mostra dois controladores de exibição na superfíci
 
 6. Este aplicativo navegará para outra exibição, portanto, adicione mais uma exibição ao storyboard, assim como antes. Chame- `PinkViewController` o e defina esses valores da mesma maneira que com o `MainViewController` .
 
-    [![Adicionando um controlador de exibição adicional](images/add-additional-view-controller.png)](images/add-additional-view-controller.png#lightbox)
+    [![Captura de tela mostra o storyboard com três exibições.](images/add-additional-view-controller.png)](images/add-additional-view-controller.png#lightbox)
 
 7. Como o controlador de exibição terá um plano de fundo rosa, defina essa propriedade no painel atributos usando a lista suspensa ao lado de `Background` .
 
-    [![Adicionando um controlador de exibição adicional](images/set-pink-background.png)](images/set-pink-background.png#lightbox)
+    [![A captura de tela mostra o storyboard da etapa anterior com a imagem mais à direita alterada para um plano de fundo rosa.](images/set-pink-background.png)](images/set-pink-background.png#lightbox)
 
 8. Como queremos que o `MainViewController` navegue para o `PinkViewController` , o primeiro precisará de um botão para interagir. Use a biblioteca para adicionar um botão ao `MainViewController` .
 

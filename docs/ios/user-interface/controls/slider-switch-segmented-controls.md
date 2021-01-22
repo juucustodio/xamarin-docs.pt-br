@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 01a09294d55490a723eb59b0365ac2dc516110c9
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 65fd825b6858efa02fcada196b4229cc69313b3e
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91434667"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697482"
 ---
 # <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Controles deslizantes, comutadores e controle segmentados no Xamarin. iOS
 
@@ -58,7 +58,7 @@ O controle deslizante personalizado tem esta aparência:
 
 <a name="Switch"></a>
 
-## <a name="switch"></a>Comutador
+## <a name="switch"></a>Opção
 
 o iOS usa o `UISwitch` como uma entrada booliana que pode ser representada por um botão de opção em outras plataformas. O usuário pode manipular o controle movendo o *polegar* entre as posições **Ativar/desativar** .
 
@@ -78,17 +78,17 @@ switch1.On = true;
 
 ## <a name="segmented-controls"></a>Controles segmentados
 
-Um controle segmentado é uma maneira organizada de permitir que os usuários interajam com um pequeno número de opções. Ele é disposto horizontalmente e cada segmento funciona como um botão separado. Ao usar o designer, o controle segmentado pode ser encontrado em **caixa de ferramentas > controles**e deve ser semelhante à imagem a seguir:
+Um controle segmentado é uma maneira organizada de permitir que os usuários interajam com um pequeno número de opções. Ele é disposto horizontalmente e cada segmento funciona como um botão separado. Ao usar o designer, o controle segmentado pode ser encontrado em **caixa de ferramentas > controles** e deve ser semelhante à imagem a seguir:
 
- [![Controle segmentado](slider-switch-segmented-controls-images/segmentedcontrol.png)](slider-switch-segmented-controls-images/segmentedcontrol.png#lightbox)
+ [![Ícone de controle segmentado.](slider-switch-segmented-controls-images/segmentedcontrol.png)](slider-switch-segmented-controls-images/segmentedcontrol.png#lightbox)
 
 Um recurso exclusivo do designer permite que cada segmento seja selecionado individualmente na superfície de design, conforme ilustrado abaixo:
 
- [![Controle segmentado](slider-switch-segmented-controls-images/segmentedcontrolselection.png)](slider-switch-segmented-controls-images/segmentedcontrolselection.png#lightbox)
+ [![Segmentos de controle segmentados selecionados individualmente.](slider-switch-segmented-controls-images/segmentedcontrolselection.png)](slider-switch-segmented-controls-images/segmentedcontrolselection.png#lightbox)
 
 Isso permite que o Painel de Propriedades seja usado para controlar com mais precisão as propriedades de cada segmento. Você pode ver as propriedades editáveis na captura de tela abaixo:
 
- [![Controle segmentado](slider-switch-segmented-controls-images/segmentedcontrolproperties.png)](slider-switch-segmented-controls-images/segmentedcontrolproperties.png#lightbox)
+ [![Propriedades de controle segmentado.](slider-switch-segmented-controls-images/segmentedcontrolproperties.png)](slider-switch-segmented-controls-images/segmentedcontrolproperties.png#lightbox)
 
 Deve-se observar que o estilo de controle segmentado foi preterido em iOS7 e, portanto, ajustar as opções para isso em um aplicativo iOS7 não terá nenhum efeito.
 

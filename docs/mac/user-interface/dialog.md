@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: f4d90960547fb43d6681667daadde1ce71fc105a
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 484a40aa744cae382fccca3698df0cb9344863fa
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91431763"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697547"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Caixas de diálogo no Xamarin. Mac
 
@@ -118,7 +118,7 @@ Para adicionar uma nova janela, faça o seguinte:
     [![Selecionando um controlador de exibição da biblioteca](dialog-images/new01.png)](dialog-images/new01.png#lightbox)
 3. No **Inspetor de identidade**, digite `CustomDialogController` para o **nome da classe**: 
 
-    [![Definindo o nome da classe](dialog-images/new02.png)](dialog-images/new02.png#lightbox)
+    [![Definindo o nome da classe como CustomDialogController.](dialog-images/new02.png)](dialog-images/new02.png#lightbox)
 4. Volte para Visual Studio para Mac, permita que ele seja sincronizado com o Xcode e crie o `CustomDialogController.h` arquivo.
 5. Retorne ao Xcode e projete sua interface: 
 
@@ -272,8 +272,8 @@ Para criar uma planilha personalizada no Xamarin. Mac, vamos fazer o seguinte:
     [![Selecionando o tipo de transição de planilha](dialog-images/sheet02.png)](dialog-images/sheet02.png#lightbox)
 5. No **Inspetor de identidade**, nomeie a **classe** do controlador de exibição `SheetViewController` : 
 
-    [![Definindo o nome da classe](dialog-images/sheet03.png)](dialog-images/sheet03.png#lightbox)
-6. Defina as **ações**e **saídas** necessárias: 
+    [![Definindo o nome da classe como SheetViewController.](dialog-images/sheet03.png)](dialog-images/sheet03.png#lightbox)
+6. Defina as **ações** e **saídas** necessárias: 
 
     [![Definindo as ações e saídas necessárias](dialog-images/sheet04.png)](dialog-images/sheet04.png#lightbox)
 7. Salve as alterações e retorne ao Visual Studio para Mac para sincronização.
@@ -496,20 +496,20 @@ Para adicionar uma nova janela, faça o seguinte:
 7. Layout o design da sua barra de ferramentas:
 
     [![Layout da barra de ferramentas](dialog-images/pref06.png)](dialog-images/pref06.png#lightbox)
-8. Controle-clique e arraste de cada **botão da barra de ferramentas** para os modos de exibição que você criou acima. Selecione um tipo de transição **personalizado** :
+8. Control-Click e arraste de cada **botão da barra de ferramentas** para os modos de exibição que você criou acima. Selecione um tipo de transição **personalizado** :
 
-    [![Configurando o tipo transição](dialog-images/pref07.png)](dialog-images/pref07.png#lightbox)
+    [![Definindo um tipo de transição personalizado.](dialog-images/pref07.png)](dialog-images/pref07.png#lightbox)
 9. Selecione o novo transição e defina a **classe** como `ReplaceViewSegue` :
 
     [![Definindo a classe transição](dialog-images/pref08.png)](dialog-images/pref08.png#lightbox)
 10. No **Designer de BarraDeMenu** na design Surface, no menu do aplicativo, selecione **preferências...**, clique no botão de controle e arraste para a janela preferências para criar um transição de **exibição** :
 
-    [![Configurando o tipo transição](dialog-images/pref09.png)](dialog-images/pref09.png#lightbox)
+    [![Configurando o tipo transição arrastando as preferências para a janela preferências.](dialog-images/pref09.png)](dialog-images/pref09.png#lightbox)
 11. Salve as alterações e retorne ao Visual Studio para Mac para sincronização.
 
 Se executarmos o código e selecionarmos as **preferências...** no **menu do aplicativo**, a janela será exibida:
 
-[![Uma janela de preferências de exemplo](dialog-images/pref10.png)](dialog-images/pref10.png#lightbox)
+[![Uma janela de preferências de exemplo exibindo o perfil de palavra.](dialog-images/pref10.png)](dialog-images/pref10.png#lightbox)
 
 Para obter mais informações sobre como trabalhar com janelas e barras de ferramentas, consulte nossa documentação sobre [janelas](~/mac/user-interface/window.md) e [barras de ferramentas](~/mac/user-interface/toolbar.md) .
 
@@ -519,7 +519,7 @@ Para obter mais informações sobre como trabalhar com janelas e barras de ferra
 
 Em um aplicativo macOS típico, quando o usuário faz alterações em qualquer uma das preferências do usuário do aplicativo, essas alterações são salvas automaticamente. A maneira mais fácil de lidar com isso em um aplicativo Xamarin. Mac é criar uma única classe para gerenciar todas as preferências do usuário e compartilhá-las em todo o sistema.
 
-Primeiro, adicione uma nova `AppPreferences` classe ao projeto e herde de `NSObject` . As preferências serão projetadas para usar a [vinculação de dados e a codificação de chave-valor](~/mac/app-fundamentals/databinding.md) , o que tornará o processo de criação e manutenção dos formulários de preferência muito mais simples. Como as preferências consistirão em uma pequena quantidade de tipos de dado simples, use o interno `NSUserDefaults` para armazenar e recuperar valores.
+Primeiro, adicione uma nova `AppPreferences` classe ao projeto e herde de `NSObject` . As preferências serão projetadas para usar a [vinculação de dados e a codificação de Key-Value](~/mac/app-fundamentals/databinding.md) , o que tornará o processo de criação e manutenção dos formulários de preferência muito mais simples. Como as preferências consistirão em uma pequena quantidade de tipos de dado simples, use o interno `NSUserDefaults` para armazenar e recuperar valores.
 
 Edite o `AppPreferences.cs` arquivo e faça com que ele se pareça com o seguinte:
 
@@ -902,7 +902,7 @@ namespace SourceWriter
 
 Com todas essas alterações em vigor, se o usuário editar as preferências do aplicativo e fechar a janela de preferência, as alterações serão aplicadas a todas as janelas abertas:
 
-[![Uma janela de preferências de exemplo](dialog-images/prefs14.png)](dialog-images/prefs14.png#lightbox)
+[![Uma janela de preferências de exemplo, exibida com várias outras janelas abertas.](dialog-images/prefs14.png)](dialog-images/prefs14.png#lightbox)
 
 <a name="The_Open_Dialog"></a>
 

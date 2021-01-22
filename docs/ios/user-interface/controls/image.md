@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/13/2018
-ms.openlocfilehash: 900a4bf3407b4a3d37f6102ff4b10292edf4bd25
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 2350c068b0a719e8d633c0f96712aec40e7865aa
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91434042"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697469"
 ---
 # <a name="displaying-images-with-xamarinios"></a>Exibindo imagens com Xamarin. iOS
 
@@ -59,7 +59,7 @@ O diretório de **recursos** deve ser tão nomeado, e todos os arquivos devem te
 
 No designer do iOS, use uma **exibição de imagem** para exibir uma imagem ou uma série animada de imagens. O ícone de **exibição de imagem** da caixa de ferramentas é mostrado abaixo:
 
- [![ImageView na caixa de ferramentas](image-images/image35a.png)](image-images/image35.png#lightbox)
+ [![Ícone de ImageView na caixa de ferramentas.](image-images/image35a.png)](image-images/image35.png#lightbox)
 
 Arraste o **modo de exibição de imagem** da **caixa de ferramentas** para o controlador de exibição. Em seguida, em **modo de exibição de imagem > imagem** , a lista suspensa fornecerá uma lista de todos os arquivos de imagem disponíveis em seu projeto. Selecione qualquer um deles para adicioná-lo à sua exibição de imagem.
 
