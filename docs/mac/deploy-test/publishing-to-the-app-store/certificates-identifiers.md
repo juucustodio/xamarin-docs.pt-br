@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 12/17/2019
-ms.openlocfilehash: 2b2bfe9925a99c2ba7f1366ea28d5c72e2e1da88
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: ae62a695670f50c5385b9279c6d6de79b6d59fb7
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "76725535"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697560"
 ---
 # <a name="certificates-and-identifiers-in-xamarinmac"></a>Certificados e identificadores no Xamarin.Mac
 
@@ -23,17 +23,17 @@ _Esse guia lhe orienta durante a criação dos Certificados e Identificadores qu
 Visite o [Apple Developer Member Center (Central de Associados do Desenvolvedor da Apple)](https://developer.apple.com) para configurar o Mac para desenvolvimento. Clique no link **Conta** e entre. O menu principal é mostrado abaixo:
 
 > [!div class="mx-imgBorder"]
-> [![O Centro de Membros desenvolvedores da Apple](certificates-identifiers-images/devcenter01.png)](certificates-identifiers-images/devcenter01-large.png#lightbox)
+> [![O centro de membros do desenvolvedor da Apple](certificates-identifiers-images/devcenter01.png)](certificates-identifiers-images/devcenter01-large.png#lightbox)
 
 Clique no botão **Certificados, Identificadores e Perfis** (ou no botão de adição próximo ao cabeçalho **Certificados**):
 
 > [!div class="mx-imgBorder"]
-> [![Selecionando Certificados, IDs & Perfis](certificates-identifiers-images/devcenter02.png)](certificates-identifiers-images/devcenter02-large.png#lightbox)
+> [![Selecionando certificados, IDs & perfis](certificates-identifiers-images/devcenter02.png)](certificates-identifiers-images/devcenter02-large.png#lightbox)
 
 Selecione um tipo de certificado e clique em **Continuar**:
 
 > [!div class="mx-imgBorder"]
-> [![Selecionando o link Certificados](certificates-identifiers-images/devcenter03.png)](certificates-identifiers-images/devcenter03-large.png#lightbox)
+> [![Selecionando o link de certificados](certificates-identifiers-images/devcenter03.png)](certificates-identifiers-images/devcenter03-large.png#lightbox)
 
 Daqui, é possível baixar os **Certificados Intermediários** (Autoridade de Certificação de Relações de Desenvolvedores em todo o mundo e Autoridade de Certificação de ID de Desenvolvedor), se necessário (o último item na parte inferior da página). No entanto, eles devem ser instalados automaticamente para o desenvolvedor pelo Xcode.
 
@@ -51,12 +51,12 @@ Você precisa registrar uma ID do Aplicativo para cada aplicativo. Siga as etapa
 1. Pressione o botão "+" (sinal de adição) ou **Registrar uma ID do Aplicativo**:
 
     > [!div class="mx-imgBorder"]
-    > [![Começando com IDs de aplicativos](certificates-identifiers-images/appid01.png)](certificates-identifiers-images/appid01-large.png#lightbox)
+    > [![A captura de tela mostra Introdução com app I DS em certificados, identificadores e perfis.](certificates-identifiers-images/appid01.png)](certificates-identifiers-images/appid01-large.png#lightbox)
 
 1. Escolher **IDs do Aplicativo**
 
     > [!div class="mx-imgBorder"]
-    > [![Começando com IDs de aplicativos](certificates-identifiers-images/appid02.png)](certificates-identifiers-images/appid02-large.png#lightbox)
+    > [![A captura de tela mostra a opção registrar um novo identificador.](certificates-identifiers-images/appid02.png)](certificates-identifiers-images/appid02-large.png#lightbox)
 
 1. Insira uma **Descrição** e selecione quaisquer **Serviços de Aplicativos** que o aplicativo exigir: A plataforma deve ser **macOS**. Escolha uma **Descrição** (usada somente neste portal). Insira a **ID do Pacote**, que deve corresponder ao seu **Info.plist**. Selecione as funcionalidades exigidas pelo seu aplicativo
 
@@ -68,7 +68,7 @@ Você precisa registrar uma ID do Aplicativo para cada aplicativo. Siga as etapa
 1. Se todas as informações estiverem corretas, clique em **Registrar** para concluir a instalação:
 
     > [!div class="mx-imgBorder"]
-    > [![Revisar os dados inseridos](certificates-identifiers-images/appid04.png)](certificates-identifiers-images/appid04-large.png#lightbox)
+    > [![Examinar os dados inseridos](certificates-identifiers-images/appid04.png)](certificates-identifiers-images/appid04-large.png#lightbox)
 
 1. Verifique as informações e clique no botão **Submit (Enviar)**:
 
@@ -78,7 +78,7 @@ Você precisa registrar uma ID do Aplicativo para cada aplicativo. Siga as etapa
 Alguns **App Services (Serviços de Aplicativos)** poderão exigir outras configurações (por exemplo, iCloud). Se esse for o caso, selecione a nova ID do aplicativo recém-criada e clique no botão **Edit (Editar)**:
 
 > [!div class="mx-imgBorder"]
-> [![Edição do novo ID do aplicativo](certificates-identifiers-images/appid06.png)](certificates-identifiers-images/appid06-large.png#lightbox)
+> [![Editando a nova ID do aplicativo](certificates-identifiers-images/appid06.png)](certificates-identifiers-images/appid06-large.png#lightbox)
 
 Para configurar os serviços do iCloud, por exemplo, clique no botão **Editar**:
 
@@ -97,12 +97,12 @@ Para criar um perfil de provisionamento para teste, o desenvolvedor precisa ter 
 1. Insira um **Name (Nome)** e o **UUID** do computador para adicionar e clique no botão **Continue (Continuar)**. Examine as informações e clique no botão **Register (Registrar)**:
 
     > [!div class="mx-imgBorder"]
-    > [![Inserindo as novas informações do computador](certificates-identifiers-images/device02.png)](certificates-identifiers-images/device02-large.png#lightbox)
+    > [![Captura de tela mostra a página registrar um novo dispositivo, na qual você pode inserir o nome e U U D.](certificates-identifiers-images/device02.png)](certificates-identifiers-images/device02-large.png#lightbox)
 
 1. Examine e confirme os dados inseridos:
 
     > [!div class="mx-imgBorder"]
-    > [![Inserindo as novas informações do computador](certificates-identifiers-images/device03.png)](certificates-identifiers-images/device03-large.png#lightbox)
+    > [![Captura de tela mostra a página registrar um novo dispositivo, na qual você pode confirmar o nome e U U D.](certificates-identifiers-images/device03.png)](certificates-identifiers-images/device03-large.png#lightbox)
 
 ## <a name="create-certificates"></a>Criar certificados
 
@@ -135,14 +135,14 @@ Faça o seguinte para criar um novo Certificado de Desenvolvimento:
 1. Carregue uma _solicitação de assinatura de certificado_. O arquivo de solicitação de certificado (extensão `.certSigningRequest`) será salvo localmente no Mac. Clique em **Escolher arquivo** para selecionar a solicitação de certificado e, em seguida, pressione **Continuar**.
 
     > [!div class="mx-imgBorder"]
-    > [![Faça upload de um arquivo de solicitação de certificado](certificates-identifiers-images/certif03.png)](certificates-identifiers-images/certif03-large.png#lightbox)
+    > [![Carregar um arquivo de solicitação de certificado](certificates-identifiers-images/certif03.png)](certificates-identifiers-images/certif03-large.png#lightbox)
 
     Siga o link [Saiba mais >](https://help.apple.com/developer-account/#/devbfa00fef7) para obter instruções sobre como usar o **Acesso ao Conjunto de Chaves** para criar um arquivo de solicitação de certificado.
 
 1. Pressione **Baixar** para obter o arquivo de certificado e clique duas vezes para instalá-lo:
 
     > [!div class="mx-imgBorder"]
-    > [![Baixe o arquivo de certificado](certificates-identifiers-images/certif04.png)](certificates-identifiers-images/certif04-large.png#lightbox)
+    > [![Baixar o arquivo de certificado](certificates-identifiers-images/certif04.png)](certificates-identifiers-images/certif04-large.png#lightbox)
 
 Conforme mencionado anteriormente, o certificado do Desenvolvedor nem sempre é necessário, a menos que o desenvolvedor esteja implementando recursos macOS, como o iCloud e as notificações por push. Ele também é necessário para criar um **Development Provisioning Profile (Perfil de Provisionamento de Desenvolvimento)**, que será necessário para testar os aplicativos da Mac App Store.
 
@@ -166,14 +166,14 @@ Primeiro, crie o certificado do instalador:
 1. A próxima página explica como usar o **Acesso ao Conjunto de Chaves** para gerar um arquivo de solicitação de certificado. Siga as instruções:
 
     > [!div class="mx-imgBorder"]
-    > [![Faça upload de uma solicitação de certificado](certificates-identifiers-images/certif06.png)](certificates-identifiers-images/certif06-large.png#lightbox)
+    > [![Carregar uma solicitação de certificado](certificates-identifiers-images/certif06.png)](certificates-identifiers-images/certif06-large.png#lightbox)
 
     Siga o link [Saiba mais >](https://help.apple.com/developer-account/#/devbfa00fef7) para obter instruções sobre como usar o **Acesso ao Conjunto de Chaves** para criar um arquivo de solicitação de certificado. Lembre-se de escolher um nome de certificado que reflita o _tipo_ do certificado (de Aplicativo ou de Instalador).
 
 1. Clique em **Download (Baixar)** para obter seu certificado e clique duas vezes para instalá-lo no **Keychain (Conjunto de Chaves)**:
 
     > [!div class="mx-imgBorder"]
-    > [![Baixe o certificado da App Store](certificates-identifiers-images/certif07.png)](certificates-identifiers-images/certif07-large.png#lightbox)
+    > [![Baixar o certificado da App Store](certificates-identifiers-images/certif07.png)](certificates-identifiers-images/certif07-large.png#lightbox)
 
 **Siga as mesmas etapas para o certificado de Distribuição de Aplicativo Mac.**
 
@@ -196,6 +196,6 @@ Depois que você tiver criado, baixado e instalado os certificados, eles estarã
 ## <a name="related-links"></a>Links relacionados
 
 - [Instalação](/visualstudio/mac/installation/)
-- [Olá, amostra mac](~/mac/get-started/hello-mac.md)
+- [Olá, exemplo de Mac](~/mac/get-started/hello-mac.md)
 - [Distribua aplicativos na Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
 - [ID de Desenvolvedor e GateKeeper](https://developer.apple.com/developer-id/)

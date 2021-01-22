@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: c90a51d8d849dc95ca9465dd55910bcd5b50e43e
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 53f8dda128facc29a0bfbb67b2dfbd263504b3b4
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91430148"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697677"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Trabalhando com storyboards no Xamarin. Mac
 
@@ -41,7 +41,7 @@ controller.ShowWindow(this);
 
 O `FromName` carrega o arquivo de storyboard com o nome fornecido que foi incluído no pacote do aplicativo. O `InstantiateControllerWithIdentifier` cria uma instância do controlador de exibição com a identidade fornecida. Você define a identidade no Interface Builder do Xcode ao criar a interface do usuário:
 
-[![Definindo a ID do storyboard](indepth-images/sb02.png)](indepth-images/sb02.png#lightbox)
+[![Definindo a ID do storyboard em Interface Builder.](indepth-images/sb02.png)](indepth-images/sb02.png#lightbox)
 
 Opcionalmente, você pode usar o `InstantiateInitialController` método para carregar o controlador de exibição ao qual foi atribuído o controlador inicial no interface Builder:
 
@@ -74,7 +74,7 @@ Vários novos métodos foram adicionados à `NSViewController` classe para dar s
 
 ### <a name="the-responder-chain"></a>A cadeia de respondentes
 
-Além disso, `NSViewControllers` agora fazem parte da cadeia de _respondentes_da janela:
+Além disso, `NSViewControllers` agora fazem parte da cadeia de _respondentes_ da janela:
 
 [![A cadeia de respondentes](indepth-images/vc01.png)](indepth-images/vc01.png#lightbox)
 
@@ -303,14 +303,14 @@ Para adicionar uma referência a uma cena específica um storyboard externo (e n
     [![Criando o layout no Xcode](indepth-images/ref07.png)](indepth-images/ref07.png#lightbox)
 3. No **Inspetor de identidade**, insira uma **ID de storyboard** para o controlador de janela da nova cena: 
 
-    [![Definindo a ID do storyboard](indepth-images/ref08.png)](indepth-images/ref08.png#lightbox)
+    [![Definindo o storyboard I D como AltScene em Identity.](indepth-images/ref08.png)](indepth-images/ref08.png#lightbox)
 4. Abra o storyboard ao qual você vai adicionar a referência em Interface Builder.
 5. Arraste uma **referência de storyboard** da **biblioteca de objetos** para a design Surface: 
 
     [![Selecionando uma referência de storyboard na biblioteca](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
 6. No **Inspetor de identidade**, selecione o nome do **storyboard** e a **ID de referência** (ID do storyboard) da cena que você criou acima: 
 
-    [![Definindo a ID de referência](indepth-images/ref09.png)](indepth-images/ref09.png#lightbox)
+    [![Definindo a referência I D para AltScene em referência de storyboard.](indepth-images/ref09.png)](indepth-images/ref09.png#lightbox)
 7. Controle-clique em um widget de interface do usuário (como um botão) em uma cena existente e crie um novo transição para a **referência do storyboard** que você acabou de criar. No menu pop-up, selecione **Mostrar** para concluir o transição: 
 
     [![Configurando o tipo transição](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 
@@ -331,13 +331,13 @@ Para adicionar uma referência a uma cena específica do mesmo storyboard, faça
     [![Editando o storyboard no Xcode](indepth-images/ref11.png)](indepth-images/ref11.png#lightbox)
 3. No **Inspetor de identidade**, insira uma **ID de storyboard** para o controlador de janela da nova cena: 
 
-    [![Definindo a ID do storyboard](indepth-images/ref12.png)](indepth-images/ref12.png#lightbox)
+    [![Definindo o storyboard I D como IntScene em Identity.](indepth-images/ref12.png)](indepth-images/ref12.png#lightbox)
 4. Arraste uma **referência de storyboard** da **caixa de ferramentas** para a design Surface: 
 
     [![Selecionando uma referência de storyboard na biblioteca](indepth-images/ref03.png)](indepth-images/ref03.png#lightbox)
 5. No **Inspetor de atributo**, selecione **ID de referência** (ID do storyboard) da cena que você criou acima: 
 
-    [![Definindo a ID de referência](indepth-images/ref13.png)](indepth-images/ref13.png#lightbox)
+    [![Definindo a referência I D para IntScene em referência de storyboard.](indepth-images/ref13.png)](indepth-images/ref13.png#lightbox)
 6. Controle-clique em um widget de interface do usuário (como um botão) em uma cena existente e crie um novo transição para a **referência do storyboard** que você acabou de criar. No menu pop-up, selecione **Mostrar** para concluir o transição: 
 
     [![Selecionando o tipo transição](indepth-images/ref06.png)](indepth-images/ref06.png#lightbox) 

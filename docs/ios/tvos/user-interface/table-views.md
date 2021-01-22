@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 364aa1ebc70517ee8378e603922486ae29adf6c1
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: a3ae6b794ce94ddc5dffdb13dec53eef52b23800
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91436437"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697612"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Trabalhando com exibições de tabela tvOS no Xamarin
 
@@ -70,7 +70,7 @@ Para começar, faça o seguinte:
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-1. Em Visual Studio para Mac, inicie um novo projeto de aplicativo do tvOS **tvOS**e selecione aplicativo de  >  **App**  >  **exibição única** do aplicativo tvOS e clique no botão **Avançar** : 
+1. Em Visual Studio para Mac, inicie um novo projeto de aplicativo do tvOS e selecione aplicativo de  >    >  **exibição única** do aplicativo tvOS e clique no botão **Avançar** : 
 
     [![Selecionar aplicativo de modo de exibição único](table-views-images/table02.png)](table-views-images/table02.png#lightbox)
 1. Insira um **nome** para o aplicativo e clique em **Avançar**: 
@@ -115,7 +115,7 @@ Para começar, faça o seguinte:
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-1. No Visual Studio, inicie um novo projeto de aplicativo do tvOS **tvOS**e selecione  >  **aplicativo de exibição única** do tvOS e insira um nome para seu aplicativo. Clique no botão **OK** para criar uma nova solução: 
+1. No Visual Studio, inicie um novo projeto de aplicativo do tvOS e selecione  >  **aplicativo de exibição única** do tvOS e insira um nome para seu aplicativo. Clique no botão **OK** para criar uma nova solução: 
 
     [![Selecionar aplicativo de modo de exibição único](table-views-images/table02-vs.png)](table-views-images/table02-vs.png#lightbox)
 1. No **Gerenciador de soluções**, clique duas vezes no `Main.storyboard` arquivo para abri-lo no designer do IOS: 
@@ -132,13 +132,13 @@ Para começar, faça o seguinte:
     [![Layout da interface do usuário](table-views-images/table08-vs.png)](table-views-images/table08-vs.png#lightbox)
 1. Você precisará selecionar todas as partes do modo de exibição de tabela e atribuir a ela um **nome de classe** personalizado na guia **widget** do **Gerenciador de propriedades** para que você possa acessá-la posteriormente no código C#. Por exemplo, o **controlador de exibição de tabela**: 
 
-    [![A guia do widget](table-views-images/table09-vs.png)](table-views-images/table09-vs.png#lightbox)
+    [![A guia widget do Gerenciador de propriedades, onde você atribui um nome de classe.](table-views-images/table09-vs.png)](table-views-images/table09-vs.png#lightbox)
 1. Certifique-se de criar uma classe personalizada para o **controlador de exibição de tabela**, a exibição de **tabela** e quaisquer células de **protótipo**. Visual Studio para Mac adicionará as classes personalizadas à árvore do projeto conforme elas forem criadas: 
 
     [![As classes personalizadas na árvore do projeto](table-views-images/table10-vs.png)](table-views-images/table10-vs.png#lightbox)
 1. Em seguida, selecione o modo de exibição de tabela no Design Surface e ajuste as propriedades conforme necessário. Como o número de **células de protótipo** e o **estilo** (simples ou agrupado): 
 
-    [![A guia do widget](table-views-images/table11-vs.png)](table-views-images/table11-vs.png#lightbox)
+    [![A guia do widget, onde você pode alterar as propriedades conforme necessário.](table-views-images/table11-vs.png)](table-views-images/table11-vs.png#lightbox)
 1. Para cada **célula de protótipo**, selecione-a e atribua **um identificador** exclusivo na guia **widget** do **Gerenciador de propriedades**. Essa etapa é _muito importante_ , pois você precisará desse identificador posteriormente quando preencher a tabela. Por exemplo `AttrCell`: 
 
     [![Atribuir um identificador](table-views-images/table12-vs.png)](table-views-images/table12-vs.png#lightbox)
@@ -147,7 +147,7 @@ Para começar, faça o seguinte:
     [![O menu suspenso estilo](table-views-images/table13-vs.png)](table-views-images/table13-vs.png#lightbox)
 1. Atribua um **nome** exclusivo a cada elemento de interface do usuário no design de célula de protótipo na guia **widget** do **Gerenciador de propriedades** para que você possa acessá-los mais tarde em código C#: 
 
-    [![A guia do widget](table-views-images/table14-vs.png)](table-views-images/table14-vs.png#lightbox)
+    [![A guia widget, onde você pode atribuir um nome para cada elemento U I.](table-views-images/table14-vs.png)](table-views-images/table14-vs.png#lightbox)
 1. Repita a etapa acima para todas as células de protótipo na exibição de tabela.
 1. Em seguida, atribua classes personalizadas ao restante do design da interface do usuário, layout da exibição de detalhes e atribua **nomes** exclusivos a cada elemento da interface do usuário na exibição de detalhes para que você possa acessá-los em C# também. Por exemplo: 
 
@@ -278,7 +278,7 @@ namespace tvTable
 }
 ```
 
-Essa classe contém todas as informações sobre uma **cidade**de destino, uma coleção de **Attractions** para essa cidade e fornece dois métodos auxiliares ( `AddAttraction` ) para facilitar a adição de Attractions à cidade.
+Essa classe contém todas as informações sobre uma **cidade** de destino, uma coleção de **Attractions** para essa cidade e fornece dois métodos auxiliares ( `AddAttraction` ) para facilitar a adição de Attractions à cidade.
 
 <a name="The-Table-Data-Source"></a>
 

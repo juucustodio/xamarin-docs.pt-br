@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 05/24/2017
-ms.openlocfilehash: 0d95ecb1997ba70a2994d74bacdedd334f2b4c61
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: 78ae9a4dae15b65dbeaa884ebf7022e2787dc2a0
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91429735"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697638"
 ---
 # <a name="collection-views-in-xamarinmac"></a>Exibições de coleção no Xamarin. Mac
 
@@ -32,7 +32,7 @@ Talvez você queira dar uma olhada na seção [expondo classes/métodos C# para 
 
 ## <a name="about-collection-views"></a>Sobre exibições de coleção
 
-O objetivo principal de um modo de exibição de coleção ( `NSCollectionView` ) é organizar visualmente um grupo de objetos de maneira organizada usando um layout de exibição de coleção ( `NSCollectionViewLayout` ), com cada objeto individual ( `NSCollectionViewItem` ) obtendo sua própria exibição na coleção maior. As exibições de coleção funcionam por meio de associação de dados e técnicas de codificação de valor chave e, como tal, você deve ler a documentação de [codificação de dados e de código chave-valor](~/mac/app-fundamentals/databinding.md) antes de continuar com este artigo.
+O objetivo principal de um modo de exibição de coleção ( `NSCollectionView` ) é organizar visualmente um grupo de objetos de maneira organizada usando um layout de exibição de coleção ( `NSCollectionViewLayout` ), com cada objeto individual ( `NSCollectionViewItem` ) obtendo sua própria exibição na coleção maior. As exibições de coleção funcionam por meio de associação de dados e Key-Value técnicas de codificação e, como tal, você deve ler a [vinculação de dados e Key-Value](~/mac/app-fundamentals/databinding.md) documentação de codificação antes de continuar com este artigo.
 
 O modo de exibição de coleção não tem um item de exibição de coleção interna padrão (como uma exibição de estrutura de tópicos ou tabela), portanto, o desenvolvedor é responsável por projetar e implementar uma _exibição de protótipo_ usando outros controles AppKit, como campos de imagem, campos de texto, rótulos, etc. Essa exibição de protótipo será usada para exibir e trabalhar com cada item gerenciado pelo modo de exibição de coleção e armazenado em um `.xib` arquivo.
 
@@ -42,7 +42,7 @@ Como o desenvolvedor é responsável pela aparência de um item de exibição de
 
 ## <a name="defining-the-data-model"></a>Definindo o modelo de dados
 
-Antes de vincular dados a uma exibição de coleção no Interface Builder, uma classe compatível com KVC (codificação de valor de chave)/Key-Value de observação (KVO) deve ser definida no aplicativo Xamarin. Mac para atuar como o _modelo de dados_ para a associação. O modelo de dados fornece todos os dados que serão exibidos na coleção e recebe quaisquer modificações para os dados que o usuário faz na interface de usuário ao executar o aplicativo.
+Antes de vincular os dados a uma exibição de coleção no Interface Builder, uma classe compatível com a KVC (codificação de Key-Value)/Key-Value observando (KVO) deve ser definida no aplicativo Xamarin. Mac para atuar como o _modelo de dados_ para a associação. O modelo de dados fornece todos os dados que serão exibidos na coleção e recebe quaisquer modificações para os dados que o usuário faz na interface de usuário ao executar o aplicativo.
 
 Veja o exemplo de um aplicativo que gerencia um grupo de funcionários, a seguinte classe pode ser usada para definir o modelo de dados:
 
@@ -200,7 +200,7 @@ Como o modo de exibição de coleção não inclui um protótipo de célula padr
 Faça o seguinte:
 
 1. Na **Gerenciador de soluções**, clique com o botão direito do mouse no nome do projeto e selecione **Adicionar**  >  **novo arquivo...**
-2. Selecione **Mac**  >  **controlador de exibição**do Mac, dê a ele um nome (como `EmployeeItem` neste exemplo) e clique no botão **novo** para criar: 
+2. Selecione   >  **controlador de exibição** do Mac, dê a ele um nome (como `EmployeeItem` neste exemplo) e clique no botão **novo** para criar: 
 
     ![Adicionando um novo controlador de exibição](collection-view-images/proto01.png)
 
@@ -581,10 +581,10 @@ Faça o seguinte:
     ![Adicionando uma exibição de coleção ao layout](collection-view-images/collection01.png)
 3. Com o modo de exibição de coleção selecionado, use o editor de restrição para fixá-lo na exibição quando ele for redimensionado:
 
-    ![Adicionando restrições](collection-view-images/collection02.png)
+    ![A captura de tela mostra adicionar novas restrições.](collection-view-images/collection02.png)
 4. Verifique se a exibição de coleção está selecionada na **design Surface** (e não na **exibição de rolagem com borda** ou na **exibição de clipe** que a contém), alterne para o **Editor do assistente** e crie uma **tomada** para a exibição de coleção:
 
-    ![Adicionando restrições](collection-view-images/collection03.png)
+    ![Captura de tela mostra o editor do assistente onde você pode criar uma tomada.](collection-view-images/collection03.png)
 5. Salve as alterações e retorne ao Visual Studio para sincronização.
 
 <a name="Bringing-it-all-Together"></a>
@@ -813,12 +813,12 @@ public override void ViewDidLoad()
 
 ## <a name="summary"></a>Resumo
 
-Este artigo fez uma visão detalhada de como trabalhar com exibições de coleção em um aplicativo Xamarin. Mac. Primeiro, ele analisou a exposição de uma classe C# para Objective-C usando KVC (codificação de valor chave) e KVO (key-value Observation). Em seguida, ele mostrou como usar uma classe compatível com KVO e vincular dados a exibições de coleção no Interface Builder do Xcode. Por fim, ele mostrou como interagir com exibições de coleção em código C#.
+Este artigo fez uma visão detalhada de como trabalhar com exibições de coleção em um aplicativo Xamarin. Mac. Primeiro, ele analisou a exposição de uma classe C# para Objective-C usando Key-Value Coding (KVC) e Key-Value observando (KVO). Em seguida, ele mostrou como usar uma classe compatível com KVO e vincular dados a exibições de coleção no Interface Builder do Xcode. Por fim, ele mostrou como interagir com exibições de coleção em código C#.
 
 ## <a name="related-links"></a>Links Relacionados
 
 - [MacCollectionNew (exemplo)](/samples/xamarin/mac-samples/maccollectionnew)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
-- [Associação de dados e a codificação de chave-valor](~/mac/app-fundamentals/databinding.md)
+- [Associação de dados e codificação de chave-valor](~/mac/app-fundamentals/databinding.md)
 - [NSCollectionView](https://developer.apple.com/reference/appkit/nscollectionview)
 - [Diretrizes de interface humana do OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

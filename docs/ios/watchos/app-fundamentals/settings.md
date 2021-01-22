@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: c5ad40c375320ed21acb3f0a75c5c66f2efc7824
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 7a3839cb7c747879f1549fb8f6715fded62d45bb
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938617"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697716"
 ---
 # <a name="working-with-watchos-settings-in-xamarin"></a>Trabalhando com configurações de watchOS no Xamarin
 
@@ -34,7 +34,7 @@ No **aplicativo do iPhone** em sua solução (*não* o aplicativo de inspeção 
 
    ![Renomear o pacote](settings-images/settings-rename.png)
 
-3. Adicione uma nova chave `ApplicationGroupContainerIdentifier` ao **root. plist** com o valor definido para o grupo de aplicativos que você configurou (por exemplo, `group.com.xamarin.WatchSettings`no exemplo):
+3. Adicione uma nova chave `ApplicationGroupContainerIdentifier` ao **root. plist** com o valor definido para o grupo de aplicativos que você configurou (por exemplo, `group.com.xamarin.WatchSettings` no exemplo):
 
    [![Adicionar uma chave ApplicationGroupContainerIdentifier ao root. plist](settings-images/settings-appgroup-sml.png)](settings-images/settings-appgroup.png#lightbox)
 
@@ -62,7 +62,7 @@ var userName = shared.StringForKey ("name_preference");
 
 Os usuários irão interagir com as configurações por meio do novo aplicativo **Apple Watch** em seu iPhone. Esse aplicativo permite que o usuário mostre/oculte aplicativos no Watch e também edite as configurações expostas usando o **Settings-Watch. Bundle**.
 
-![Exemplo de configurações do aplicativo](settings-images/applewatch-1.png) ![Exemplo de configurações do aplicativo](settings-images/applewatch-2.png)
+![Captura de tela mostra WatchKitSettings no aplicativo.](settings-images/applewatch-1.png) ![Captura de tela mostra WatchTodo no aplicativo.](settings-images/applewatch-2.png)
 
 ## <a name="related-links"></a>Links Relacionados
 

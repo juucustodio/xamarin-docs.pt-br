@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 719436835f5d104930adfe8cd7aa95de326784e9
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.openlocfilehash: e320e5e3ad7942f371e01baaade753a2bb35f76e
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91432084"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697651"
 ---
 # <a name="layout-options-in-xamarinios"></a>Opções de layout no Xamarin. iOS
 
@@ -25,11 +25,11 @@ Há dois mecanismos diferentes para controlar o layout quando uma exibição é 
 
 Quando um usuário redimensiona uma janela, como quando o dispositivo é girado e a orientação é alterada, o sistema redimensiona automaticamente as exibições dentro dessa janela de acordo com suas regras de dimensionamento automático. Essas regras podem ser definidas em C# usando a `AutoresizingMask` propriedade de `UIView` ou no **painel de propriedades** do designer do IOS, conforme ilustrado abaixo:
 
- [![Designer de Visual Studio para Mac](layout-options-images/image41.png)](layout-options-images/image41.png#lightbox)
+ [![Captura de tela mostra a Painel de Propriedades do designer I S.](layout-options-images/image41.png)](layout-options-images/image41.png#lightbox)
 
 Quando um controle é selecionado, isso permite que você especifique manualmente o local e as dimensões do controle, bem como a escolha do comportamento de **dimensionamento** automático. Conforme ilustrado na captura de tela abaixo, podemos usar as molas e Struts no controle de dimensionamento automático para definir a relação da exibição selecionada para o pai:
 
- [![Designer de Visual Studio para Mac](layout-options-images/image42.png)](layout-options-images/image42.png#lightbox)
+ [![Captura de tela mostra o controle de dimensionamento automático na Painel de Propriedades do designer I S.](layout-options-images/image42.png)](layout-options-images/image42.png#lightbox)
 
 O ajuste de uma *mola* fará com que a exibição seja redimensionada com base na largura ou na altura de sua exibição pai. O ajuste de um *Strut* fará com que a exibição mantenha uma distância constante entre si mesma e sua exibição pai, nessa borda específica.
 
@@ -54,11 +54,11 @@ imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutor
 
 Também podemos ajustar os controles usando o designer. A seleção dos Struts como exibido abaixo fará com que a imagem permaneça alinhada à direita sem ser recortada na parte inferior da exibição:
 
- [![Autorotação](layout-options-images/autoresize.png)](layout-options-images/autoresize.png#lightbox)
+ [![Captura de tela mostra o controle de dimensionamento automático com esquerda e inferior selecionados. ](layout-options-images/autoresize.png)](layout-options-images/autoresize.png#lightbox)
 
 Essas capturas de tela mostram como os controles redimensionam ou se reposicionam quando a tela é girada:
 
- [![Autorotação](layout-options-images/image44a.png)](layout-options-images/image44a.png#lightbox)
+ [![Captura de tela mostrar um dispositivo móvel exibido em retrato e paisagem com texto e gráfico ajustados.](layout-options-images/image44a.png)](layout-options-images/image44a.png#lightbox)
 
 Observe que a exibição de texto e o campo de texto são esticados para manter as mesmas margens esquerda e direita, devido à `FlexibleWidth` configuração. A imagem tem a margem superior e esquerda flexível, o que significa que preserva as margens inferior e direita – mantendo a imagem na exibição quando a tela é girada. Layouts complexos normalmente exigem uma combinação dessas configurações em todos os controles visíveis para manter a interface do usuário consistente e impedir que os controles se sobreponham quando os limites da exibição são alterados (devido a rotação ou outro evento de redimensionamento).
 

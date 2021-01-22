@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 04/12/2017
-ms.openlocfilehash: 0bde2ee6451b7160ac7c1655e705984e53c82ff4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: de87e650f68e5a327564c0a4216bee2b3e04fe2f
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939003"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697599"
 ---
 # <a name="provisioning-profiles-for-xamarinmac-apps"></a>Perfis de provisionamento para aplicativos Xamarin.Mac
 
@@ -43,13 +43,13 @@ Faça o seguinte:
     [![Selecionar os computadores permitidos](profiles-images/certif17.png)](profiles-images/certif17.png#lightbox)
 5. Agora, insira um **Nome do Perfil** e clique no botão **Gerar**:
 
-    [![Gerar o perfil](profiles-images/certif18.png)](profiles-images/certif18.png#lightbox)
+    [![A captura de tela mostra a inserção do nome do perfil na janela de provisionamento.](profiles-images/certif18.png)](profiles-images/certif18.png#lightbox)
 6. Clique no botão **Download** para baixar o novo perfil:
 
-    [![Baixar o perfil](profiles-images/certif19.png)](profiles-images/certif19.png#lightbox)
+    [![Captura de tela mostra o botão de download do perfil.](profiles-images/certif19.png)](profiles-images/certif19.png#lightbox)
 7. Os perfis de provisionamento de desenvolvimento são instalados no painel de Preferências de Perfis das **Preferências do Sistema** do aplicativo do Mac:
 
-    [![Instalar o perfil](profiles-images/certif20.png)](profiles-images/certif20.png#lightbox)
+    [![Captura de tela mostra a caixa de diálogo de verificação de instalação.](profiles-images/certif20.png)](profiles-images/certif20.png#lightbox)
 8. O painel de Preferências de Perfil mostrará todos os perfis instalados:
 
     [![Mostrar todos os perfis instalados](profiles-images/image47.png)](profiles-images/image47.png#lightbox)
