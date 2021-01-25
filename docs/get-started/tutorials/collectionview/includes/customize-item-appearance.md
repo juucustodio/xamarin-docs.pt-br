@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4464b5cc4220072de3d55d76f568dab938d3d805
-ms.sourcegitcommit: b75c369adb8e02a429b6c0fed8ba4a855099bf01
+ms.openlocfilehash: 6118d4ee8d2fa56a3b14d3d280db4991a36874fc
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98558966"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98690151"
 ---
 Anteriormente, o [`CollectionView`](xref:Xamarin.Forms.CollectionView) era preenchido com os dados usando a associação de dados. No entanto, apesar da associação de dados a uma coleção, em que cada objeto na coleção definiu vários itens de dados, apenas um único item de dados foi exibido por objeto (a propriedade `Name` do objeto `Monkey`).
 
@@ -49,6 +49,8 @@ Neste exercício, você modificará o projeto **CollectionViewTutorial** para qu
 
     [![Captura de tela de uma CollectionView cujos itens são modelados com um modelo de dados](../images/customize-item-appearance.png "CollectionView exibindo dados modelados")](../images/customize-item-appearance-large.png#lightbox "CollectionView exibindo dados modelados")
 
+    Interrompa o aplicativo no Visual Studio.
+
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. Em **MainPage.xaml**, modifique a declaração [`CollectionView`](xref:Xamarin.Forms.CollectionView) para personalizar a aparência de cada item de dados:
@@ -87,3 +89,5 @@ Neste exercício, você modificará o projeto **CollectionViewTutorial** para qu
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
 
     [![Captura de tela de uma CollectionView cujos itens são modelados com um modelo de dados](../images/customize-item-appearance.png "CollectionView exibindo dados modelados")](../images/customize-item-appearance-large.png#lightbox "CollectionView exibindo dados modelados")
+
+    Interrompa o aplicativo no Visual Studio para Mac.

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a7c2aa15521b89e4930746dc5421ce67fa26b2b9
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: f205e97c11c6ae1c75b101ada57c10ef49a9c146
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "67559976"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98634733"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -21,7 +21,7 @@ ms.locfileid: "67559976"
 
     Este código define a propriedade [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) como [`Horizontal`](xref:Xamarin.Forms.StackOrientation.Horizontal).
 
-1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador remoto de iOS ou do Android Emulator escolhido:
+1. Caso o aplicativo ainda esteja em execução, salve as alterações no arquivo. Dessa maneira, a interface do usuário do aplicativo será atualizada de modo automático em seu simulador ou emulador. Caso contrário, na barra de ferramentas do Visual Studio, clique no botão **Iniciar** (um botão triangular semelhante ao botão Reproduzir) para executar a inicialização do aplicativo dentro do simulador remoto de iOS ou do Android Emulator de sua preferência:
 
     [![Captura de tela das exibições filho orientadas horizontalmente em um StackLayout, no iOS e no Android](../images/orientation.png "StackLayout que contém instâncias de rótulo orientadas horizontalmente")](../images/orientation-large.png#lightbox "StackLayout que contém instâncias de rótulo orientadas horizontalmente")
 
@@ -42,7 +42,7 @@ ms.locfileid: "67559976"
 
     Este código define a propriedade [`Orientation`](xref:Xamarin.Forms.StackLayout.Orientation) como [`Horizontal`](xref:Xamarin.Forms.StackOrientation.Horizontal).
 
-1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
+1. Caso o aplicativo ainda esteja em execução, salve as alterações no arquivo. Dessa maneira, a interface do usuário do aplicativo será atualizada de modo automático em seu simulador ou emulador. Caso contrário, na barra de ferramentas do Visual Studio para Mac, clique no botão **Iniciar** (um botão triangular semelhante ao botão Reproduzir) para executar a inicialização do aplicativo dentro do simulador de iOS ou do Android Emulator de sua preferência:
 
     [![Captura de tela das exibições filho orientadas horizontalmente em um StackLayout, no iOS e no Android](../images/orientation.png "StackLayout que contém instâncias de rótulo orientadas horizontalmente")](../images/orientation-large.png#lightbox "StackLayout que contém instâncias de rótulo orientadas horizontalmente")
 

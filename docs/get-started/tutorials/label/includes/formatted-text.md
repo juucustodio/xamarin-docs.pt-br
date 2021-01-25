@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 841dac9486097e27923ccfe582803b4ec50371cf
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 4352ff38e785a0a222cf8d2d64511ed14b3ae192
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "60896633"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98689812"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -30,9 +30,11 @@ ms.locfileid: "60896633"
     > [!NOTE]
     > A propriedade [`FormattedText`](xref:Xamarin.Forms.Label.FormattedText) é do tipo [`FormattedString`](xref:Xamarin.Forms.FormattedString), que inclui uma ou mais instâncias de [`Span`](xref:Xamarin.Forms.Span).
 
-1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro de seu simulador remoto de iOS ou do Android Emulator escolhido. Observe que a aparência de [`Label`](xref:Xamarin.Forms.Label) mudou:
+1. Caso o aplicativo ainda esteja em execução, salve as alterações no arquivo. Dessa maneira, a interface do usuário do aplicativo será atualizada de modo automático em seu simulador ou emulador. Caso contrário, na barra de ferramentas do Visual Studio, clique no botão **Iniciar** (um botão triangular semelhante ao botão Reproduzir) para executar a inicialização do aplicativo dentro do simulador remoto de iOS ou do Android Emulator de sua preferência. Observe que a aparência de [`Label`](xref:Xamarin.Forms.Label) mudou:
 
     [![Captura de tela de um rótulo exibindo o texto formatado, no iOS e no Android](../images/label-formatted-text.png "Rótulo com texto formatado")](../images/label-formatted-text-large.png#lightbox "Rótulo com texto formatado")
+
+    Interrompa o aplicativo no Visual Studio.
 
     Para obter mais informações sobre como definir a aparência de [`Span`](xref:Xamarin.Forms.Span), confira [Texto formatado](~/xamarin-forms/user-interface/text/label.md#formatted-text) no guia [Rótulo do Xamarin.Forms](~/xamarin-forms/user-interface/text/label.md).
 
@@ -60,8 +62,10 @@ ms.locfileid: "60896633"
     > [!NOTE]
     > A propriedade [`FormattedText`](xref:Xamarin.Forms.Label.FormattedText) é do tipo [`FormattedString`](xref:Xamarin.Forms.FormattedString), que inclui uma ou mais instâncias de [`Span`](xref:Xamarin.Forms.Span).
 
-1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido. Observe que a aparência de [`Label`](xref:Xamarin.Forms.Label) mudou:
+1. Caso o aplicativo ainda esteja em execução, salve as alterações no arquivo. Dessa maneira, a interface do usuário do aplicativo será atualizada de modo automático em seu simulador ou emulador. Caso contrário, na barra de ferramentas do Visual Studio para Mac, clique no botão **Iniciar** (um botão triangular semelhante ao botão Reproduzir) para executar a inicialização do aplicativo dentro do simulador de iOS ou do Android Emulator de sua preferência. Observe que a aparência de [`Label`](xref:Xamarin.Forms.Label) mudou:
 
     [![Captura de tela de um rótulo exibindo o texto formatado, no iOS e no Android](../images/label-formatted-text.png "Rótulo com texto formatado")](../images/label-formatted-text-large.png#lightbox "Rótulo com texto formatado")
+
+    Interrompa o aplicativo no Visual Studio para Mac.
 
     Para obter mais informações sobre como definir a aparência de [`Span`](xref:Xamarin.Forms.Span), confira [Texto formatado](~/xamarin-forms/user-interface/text/label.md#formatted-text) no guia [Rótulo do Xamarin.Forms](~/xamarin-forms/user-interface/text/label.md).

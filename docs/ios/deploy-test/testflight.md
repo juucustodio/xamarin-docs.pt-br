@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 35adaf4a5cf9ce103cb36320692ad8307b9d1354
-ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
+ms.openlocfilehash: f2aa56982df0a2ec27b677dbe7d12ec9c3289041
+ms.sourcegitcommit: 424eaef56fd2933c98e72f1d3e7ac71730fe4835
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91564115"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758078"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Usando TestFlight para distribuir aplicativos Xamarin.iOS
 
@@ -37,9 +37,14 @@ Todos os testadores devem testar o aplicativo em pelo menos um dispositivo iOS 8
 
 ## <a name="provisioning"></a>Provisionamento
 
-Para testar builds com o TestFlight, é necessário criar um *perfil de distribuição na App Store* com o novo direito beta. Esse direito permite que teste beta por meio do TestFlight e quaisquer **novos** perfis de distribuição da App Store automaticamente contêm esse direito. Você pode seguir as instruções passo a passo no guia [Creating a Distribution Profile](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioningprofile) (Como criar um perfil de distribuição) para gerar um novo perfil.
+Para testar builds com o TestFlight, é necessário criar um **perfil de distribuição na App Store** com o novo direito beta. Esse direito permite que teste beta por meio do TestFlight e quaisquer **novos** perfis de distribuição da App Store automaticamente contêm esse direito. Você pode seguir as instruções passo a passo no guia [Creating a Distribution Profile](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioningprofile) (Como criar um perfil de distribuição) para gerar um novo perfil.
 
 Você pode confirmar que seu perfil de distribuição contém o direito beta ao [validar seu build no Xcode](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md), conforme ilustrado abaixo:
+
+1. Abra o XCode no host de Build do Mac depois de arquivar o aplicativo
+2. Selecione a **janela > menu organizador**
+3. Selecionar **arquivos** à esquerda
+4. Selecione o arquivo que você deseja validar e clique no botão **validar**
 
 [![Enviando o aplicativo para a Apple](testflight-images/validate-build.png)](testflight-images/validate-build.png#lightbox)
 
@@ -133,7 +138,7 @@ Primeiro, compile o [distribuível final](~/ios/deploy-test/app-distribution/app
 ### <a name="submitting-your-build"></a>Enviando seu Build
  Para enviar seu aplicativo para a Apple, você precisará ir para seu Host do Build e usar o programa Carregador de Aplicativos, que é instalado como parte do Xcode. Para obter mais informações sobre como acessar o Carregador de Aplicativos, confira o guia [Access Application Loader](https://help.apple.com/itc/apploader/#/apdATD1E927-D1E1A1303-D1E927A1126) (Acessar o Carregador de Aplicativos) da Apple.
 
-Após abri-lo, selecione a opção **Deliver Your App ** (Entregar seu Aplicativo) e carregue o zip ou arquivo `.ipa` criado acima. O Carregador de Aplicativos validará e carregará seu build para o iTunes Connect.
+Após abri-lo, selecione a opção **Deliver Your App** (Entregar seu Aplicativo) e carregue o zip ou arquivo `.ipa` criado acima. O Carregador de Aplicativos validará e carregará seu build para o iTunes Connect.
 
  Consulte a seção [Enviando seu aplicativo para a Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) para saber mais sobre essas etapas.
 
@@ -197,7 +202,7 @@ Usuários do iTunes Connect existentes aparecerão na lista. Para selecioná-los
 
 [![Ativar a opção de testador interno](testflight-images/internal-tester.png)](testflight-images/internal-tester.png#lightbox)
 
-Para adicionar um usuário que não está na lista, selecione o **+** botão ao lado de *usuários*e forneça um nome, sobrenome e endereço de email para criar uma conta. O usuário precisará confirmar seu email para ativar a conta:
+Para adicionar um usuário que não está na lista, selecione o **+** botão ao lado de *usuários* e forneça um nome, sobrenome e endereço de email para criar uma conta. O usuário precisará confirmar seu email para ativar a conta:
 
 [![Adicionando um usuário](testflight-images/add-new-user.png)](testflight-images/add-new-user.png#lightbox)
 

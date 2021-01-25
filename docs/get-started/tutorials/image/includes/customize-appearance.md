@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 58ed33adbc25e026431609370075c24c3b6ba690
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 42d1f79b22e25e46f81f7c5a77389fd578a4d894
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574649"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98689781"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -24,9 +24,11 @@ ms.locfileid: "84574649"
 
     Além disso, a propriedade [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) especifica que a imagem será centralizada horizontalmente.
 
-1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador remoto de iOS ou do Android Emulator escolhido:
+1. Caso o aplicativo ainda esteja em execução, salve as alterações no arquivo. Dessa maneira, a interface do usuário do aplicativo será atualizada de modo automático em seu simulador ou emulador. Caso contrário, na barra de ferramentas do Visual Studio, clique no botão **Iniciar** (um botão triangular semelhante ao botão Reproduzir) para executar a inicialização do aplicativo dentro do simulador remoto de iOS ou do Android Emulator de sua preferência:
 
     [![Captura de tela de uma imagem que é dimensionada diferentemente no iOS e no Android](../images/customize-appearance.png "Imagem dimensionada segundo cada plataforma")](../images/customize-appearance-large.png#lightbox "Imagem dimensionada segundo cada plataforma")
+
+    Interrompa o aplicativo no Visual Studio.
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -46,6 +48,8 @@ ms.locfileid: "84574649"
 
     Além disso, a propriedade [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) especifica que a imagem será centralizada horizontalmente.
 
-1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
+1. Caso o aplicativo ainda esteja em execução, salve as alterações no arquivo. Dessa maneira, a interface do usuário do aplicativo será atualizada de modo automático em seu simulador ou emulador. Caso contrário, na barra de ferramentas do Visual Studio para Mac, clique no botão **Iniciar** (um botão triangular semelhante ao botão Reproduzir) para executar a inicialização do aplicativo dentro do simulador de iOS ou do Android Emulator de sua preferência:
 
     [![Captura de tela de uma imagem que é dimensionada diferentemente no iOS e no Android](../images/customize-appearance.png "Imagem dimensionada segundo cada plataforma")](../images/customize-appearance-large.png#lightbox "Imagem dimensionada segundo cada plataforma")
+
+    Interrompa o aplicativo no Visual Studio para Mac.

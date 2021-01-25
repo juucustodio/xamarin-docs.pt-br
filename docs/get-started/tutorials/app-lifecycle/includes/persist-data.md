@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5d9d5e4eb757d6afd1c13cb4851edd23feaa6e65
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: cd1e8aae7755953d58439211cf485dbb99ee76ea
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "77135101"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98634982"
 ---
 A subclasse [`Application`](xref:Xamarin.Forms.Application) tem um dicionário [`Properties`](xref:Xamarin.Forms.Application.Properties) estático que pode ser usado para armazenar dados entre alterações de estado do ciclo de vida. Esse dicionário usa uma chave `string` e armazena um valor de `object`. O dicionário é salvo automaticamente no dispositivo e é populado novamente quando o aplicativo é reiniciado.
 
@@ -111,9 +111,11 @@ Neste exercício, você modificará o aplicativo para persistir o texto de um [`
 
     Digite algum texto no [`Entry`](xref:Xamarin.Forms.Entry) e pressione a tecla de retorno. Em seguida, coloque o aplicativo em segundo plano tocando botão Página Inicial para invocar o método `OnSleep`.
 
-    Por fim, inicie o aplicativo novamente usando o Visual Studio e o texto que foi inserido em [`Entry`](xref:Xamarin.Forms.Entry) será restaurado:
+    Interrompa e reinicie o aplicativo no Visual Studio. Dessa maneira, o texto inserido anteriormente na [`Entry`](xref:Xamarin.Forms.Entry) será restaurado:
 
     [![Captura de tela de uma entrada cuja propriedade Text é mantida nas alterações de estado de ciclo de vida, no iOS e no Android](../images/persist-data.png "Entrada cuja propriedade Text é mantida nas alterações de estado de ciclo de vida")](../images/persist-data-large.png#lightbox "Entrada cuja propriedade Text é mantida nas alterações de estado de ciclo de vida")
+
+    Interrompa o aplicativo no Visual Studio.
 
     Para obter mais informações sobre como persistir dados no dicionário de propriedades, confira [Dicionário de propriedades](~/xamarin-forms/app-fundamentals/application-class.md#properties-dictionary) no guia [Classe de aplicativo do Xamarin.Forms](~/xamarin-forms/app-fundamentals/application-class.md).
 
@@ -215,8 +217,10 @@ Neste exercício, você modificará o aplicativo para persistir o texto de um [`
 
     Digite algum texto no [`Entry`](xref:Xamarin.Forms.Entry) e pressione a tecla de retorno. Em seguida, coloque o aplicativo em segundo plano tocando botão Página Inicial para invocar o método `OnSleep`.
 
-    Por fim, inicie o aplicativo novamente usando o Visual Studio para Mac e o texto que foi inserido em [`Entry`](xref:Xamarin.Forms.Entry) será restaurado:
+    Interrompa e reinicie o aplicativo no Visual Studio para Mac. Dessa maneira, o texto inserido anteriormente na [`Entry`](xref:Xamarin.Forms.Entry) será restaurado:
 
     [![Captura de tela de uma entrada cuja propriedade Text é mantida nas alterações de estado de ciclo de vida, no iOS e no Android](../images/persist-data.png "Entrada cuja propriedade Text é mantida nas alterações de estado de ciclo de vida")](../images/persist-data-large.png#lightbox "Entrada cuja propriedade Text é mantida nas alterações de estado de ciclo de vida")
+
+    Interrompa o aplicativo no Visual Studio para Mac.
 
     Para obter mais informações sobre como persistir dados no dicionário de propriedades, confira [Dicionário de propriedades](~/xamarin-forms/app-fundamentals/application-class.md#properties-dictionary) no guia [Classe de aplicativo do Xamarin.Forms](~/xamarin-forms/app-fundamentals/application-class.md).

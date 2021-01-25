@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 93ee0681adcc63fe05b4be88ff67f0aeee3e03ca
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: c2d340f10a6fb71d3ea1e6ed7fd5bfd3d2862729
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "61384366"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98689618"
 ---
 Arquivos de imagem podem ser adicionados a projetos de plataforma e referenciados no código compartilhado do Xamarin.Forms. Esse método de distribuição de imagens é necessário quando as imagens são específicas da plataforma, como ao usar resoluções diferentes em diferentes plataformas ou designs ligeiramente diferentes.
 
@@ -56,9 +56,11 @@ Neste exercício, você modificará a solução **ImageTutorial** para exibir um
     > [!NOTE]
     > Para imagens PNG no iOS, a extensão **.png** pode ser omitida do nome de arquivo especificado na propriedade [`Source`](xref:Xamarin.Forms.Image.Source). Para outros formatos de imagem, a extensão é necessária.
 
-1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
+1. Na barra de ferramentas do Visual Studio, clique no botão **Iniciar** (um botão triangular semelhante ao botão Reproduzir) para executar a inicialização do aplicativo dentro do simulador de iOS ou do Android Emulator de sua preferência:
 
     [![Captura de tela de uma exibição de imagem que mostra uma imagem local, no iOS e no Android](../images/local-file.png "Exibição de imagem mostrando uma imagem local")](../images/local-file-large.png#lightbox "Exibição de imagem mostrando uma imagem local")
+
+    Interrompa o aplicativo no Visual Studio.
 
     Para obter mais informações sobre imagens locais, confira [Imagens locais](~/xamarin-forms/user-interface/images.md#local-images) no guia [Imagens no Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
 
@@ -105,5 +107,7 @@ Neste exercício, você modificará a solução **ImageTutorial** para exibir um
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
 
     [![Captura de tela de uma exibição de imagem que mostra uma imagem local, no iOS e no Android](../images/local-file.png "Exibição de imagem mostrando uma imagem local")](../images/local-file-large.png#lightbox "Exibição de imagem mostrando uma imagem local")
+
+    Interrompa o aplicativo no Visual Studio para Mac.
 
     Para obter mais informações sobre imagens locais, confira [Imagens locais](~/xamarin-forms/user-interface/images.md#local-images) no guia [Imagens no Xamarin.Forms](~/xamarin-forms/user-interface/images.md).

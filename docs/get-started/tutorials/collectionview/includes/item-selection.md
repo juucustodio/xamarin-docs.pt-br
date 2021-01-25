@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 41c1c8ae97c62a3eb2a73681b215e7687d0e473c
-ms.sourcegitcommit: b75c369adb8e02a429b6c0fed8ba4a855099bf01
+ms.openlocfilehash: 456bc5fc0c30563c5950f4cacf3e3e7bdb177134
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98558981"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98689739"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -34,6 +34,8 @@ ms.locfileid: "98558981"
     [![Captura de tela de uma CollectionView que responde à seleção do item, no iOS e no Android](../images/item-selection.png "Seleção de item da CollectionView")](../images/item-selection-large.png#lightbox "Seleção de item da CollectionView")
 
     Defina um ponto de interrupção no manipulador de eventos `OnSelectionChanged` e selecione um item no [`CollectionView`](xref:Xamarin.Forms.CollectionView). Examine o valor da variável `selectedItem` para garantir que ela contenha os dados do item selecionado.
+
+    Interrompa o aplicativo no Visual Studio.
 
     Para obter mais informações sobre a seleção de itens, confira [Seleção da CollectionView do Xamarin.Forms](~/xamarin-forms/user-interface/collectionview/selection.md).
 
@@ -65,5 +67,7 @@ ms.locfileid: "98558981"
     [![Captura de tela de uma CollectionView que responde à seleção do item, no iOS e no Android](../images/item-selection.png "Seleção de item da CollectionView")](../images/item-selection-large.png#lightbox "Seleção de item da CollectionView")
 
     Defina um ponto de interrupção no manipulador de eventos `OnSelectionChanged` e selecione um item no [`CollectionView`](xref:Xamarin.Forms.CollectionView). Examine o valor da variável `selectedItem` para garantir que ela contenha os dados do item selecionado.
+
+    Interrompa o aplicativo no Visual Studio para Mac.
 
     Para obter mais informações sobre a seleção de itens, confira [Seleção da CollectionView do Xamarin.Forms](~/xamarin-forms/user-interface/collectionview/selection.md).

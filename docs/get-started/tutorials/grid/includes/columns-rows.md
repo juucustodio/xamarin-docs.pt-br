@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e1705e9311d4875a5b866ac5acb7d20aa107a2bb
-ms.sourcegitcommit: bc0c1740aa0708459729c0e671ab3ff7de3e2eee
+ms.openlocfilehash: 624d7f2866767bbb748988a3c486718d7691faf6
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83435393"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98634853"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -44,7 +44,7 @@ ms.locfileid: "83435393"
     > [!NOTE]
     > O espaçamento entre colunas e linhas em uma [`Grid`](xref:Xamarin.Forms.Grid) pode ser definido com as propriedades [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) e [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing). Para obter mais informações, confira [Espaçamento](~/xamarin-forms/user-interface/layouts/grid.md#space-between-rows-and-columns) no guia [Grade do Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
-1. Na barra de ferramentas do Visual Studio, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador remoto de iOS ou do Android Emulator escolhido:
+1. Caso o aplicativo ainda esteja em execução, salve as alterações no arquivo. Dessa maneira, a interface do usuário do aplicativo será atualizada de modo automático em seu simulador ou emulador. Caso contrário, na barra de ferramentas do Visual Studio, clique no botão **Iniciar** (um botão triangular semelhante ao botão Reproduzir) para executar a inicialização do aplicativo dentro do simulador remoto de iOS ou do Android Emulator de sua preferência:
 
     [![Captura de tela de uma grade que tem conteúdo disposto em colunas e linhas, no iOS e no Android](../images/columns-rows.png "Grade com conteúdo em colunas e linhas")](../images/columns-rows-large.png#lightbox "Grade com conteúdo em colunas e linhas")
 
@@ -86,6 +86,6 @@ ms.locfileid: "83435393"
     > [!NOTE]
     > O espaçamento entre colunas e linhas em uma [`Grid`](xref:Xamarin.Forms.Grid) pode ser definido com as propriedades [`ColumnSpacing`](xref:Xamarin.Forms.Grid.ColumnSpacing) e [`RowSpacing`](xref:Xamarin.Forms.Grid.RowSpacing). Para obter mais informações, confira [Espaçamento](~/xamarin-forms/user-interface/layouts/grid.md#space-between-rows-and-columns) no guia [Grade do Xamarin.Forms](~/xamarin-forms/user-interface/layouts/grid.md).
 
-1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com o botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido:
+1. Caso o aplicativo ainda esteja em execução, salve as alterações no arquivo. Dessa maneira, a interface do usuário do aplicativo será atualizada de modo automático em seu simulador ou emulador. Caso contrário, na barra de ferramentas do Visual Studio para Mac, clique no botão **Iniciar** (um botão triangular semelhante ao botão Reproduzir) para executar a inicialização do aplicativo dentro do simulador de iOS ou do Android Emulator de sua preferência:
 
     [![Captura de tela de uma grade que tem conteúdo disposto em colunas e linhas, no iOS e no Android](../images/columns-rows.png "Grade com conteúdo em colunas e linhas")](../images/columns-rows-large.png#lightbox "Grade com conteúdo em colunas e linhas")

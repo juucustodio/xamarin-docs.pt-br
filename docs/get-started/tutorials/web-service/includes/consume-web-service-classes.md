@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bf46d8ab4ca124bc36dd971513a78147e71a0039
-ms.sourcegitcommit: 4d260b655cb52b990dda79c239a9721f2e964625
+ms.openlocfilehash: a642e34c5f49e63503b34c44f536f0428993335b
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98570707"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98634916"
 ---
 Neste exercício, você criará uma interface do usuário para consumir a classe `RestService`, que recupera os dados do repositório .NET da API Web do GitHub. Os dados recuperados serão exibidos por um [`CollectionView`](xref:Xamarin.Forms.CollectionView).
 
@@ -80,6 +80,8 @@ Neste exercício, você criará uma interface do usuário para consumir a classe
 
     [![Captura de tela de repositórios .NET do GitHub, no iOS e no Android](../images/consume-web-service.png)](../images/consume-web-service-large.png#lightbox)
 
+    Interrompa o aplicativo no Visual Studio.
+
     Para obter mais informações sobre como consumir serviços Web baseados em REST no Xamarin.Forms, confira [Consumir um serviço Web RESTful (guia)](~/xamarin-forms/data-cloud/web-services/rest.md).
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
@@ -153,5 +155,7 @@ Neste exercício, você criará uma interface do usuário para consumir a classe
 1. Na barra de ferramentas do Visual Studio para Mac, pressione o botão **Iniciar** (o botão triangular que se parece com um botão Reproduzir) para iniciar o aplicativo dentro do simulador de iOS ou do Android Emulator escolhido. Toque no [`Button`](xref:Xamarin.Forms.Button) para recuperar os dados do repositório .NET do GitHub:
 
     [![Captura de tela de repositórios .NET do GitHub, no iOS e no Android](../images/consume-web-service.png)](../images/consume-web-service-large.png#lightbox)
+
+    Interrompa o aplicativo no Visual Studio para Mac.
 
     Para obter mais informações sobre como consumir serviços Web baseados em REST no Xamarin.Forms, confira [Consumir um serviço Web RESTful (guia)](~/xamarin-forms/data-cloud/web-services/rest.md).

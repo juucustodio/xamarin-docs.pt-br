@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 590acbe98b2d67a10bed0fc66de0350da888d319
-ms.sourcegitcommit: b75c369adb8e02a429b6c0fed8ba4a855099bf01
+ms.openlocfilehash: ff37327e1fd942382c3eb81b8c6bcc0041347b0e
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98558982"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98690136"
 ---
 Um [`CollectionView`](xref:Xamarin.Forms.CollectionView) é populado com os dados usando a propriedade [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource), que é do tipo `IEnumerable`. A etapa anterior populou o `CollectionView` no XAML com uma matriz de cadeias de caracteres. No entanto, normalmente um `CollectionView` será populado com os dados de uma coleção, definida no código, que implementa `IEnumerable`.
 
@@ -191,6 +191,8 @@ Neste exercício, você modificará o projeto **CollectionViewTutorial** para po
 
     O [`CollectionView`](xref:Xamarin.Forms.CollectionView) está exibindo a propriedade `Name` para cada `Monkey` na coleção `Monkeys`. Isso ocorre porque, por padrão, o `CollectionView` chama o método `ToString` ao exibir os objetos de uma coleção (que foi substituído na classe `Monkey` para retornar o valor da propriedade `Name`).
 
+    Interrompa o aplicativo no Visual Studio.
+
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. Na **Painel de Soluções**, no projeto **CollectionViewTutorial**, adicione uma classe denominada `Monkey` que contém o seguinte código:
@@ -371,3 +373,5 @@ Neste exercício, você modificará o projeto **CollectionViewTutorial** para po
     [![Captura de tela de uma CollectionView populada com os dados de uma coleção, no iOS e no Android](../images/populate-data.png "CollectionView exibindo dados de uma coleção")](../images/populate-data-large.png#lightbox "CollectionView exibindo dados de uma coleção")
 
     O [`CollectionView`](xref:Xamarin.Forms.CollectionView) está exibindo a propriedade `Name` para cada `Monkey` na coleção `Monkeys`. Isso ocorre porque, por padrão, o `CollectionView` chama o método `ToString` ao exibir os objetos de uma coleção (que foi substituído na classe `Monkey` para retornar o valor da propriedade `Name`).
+
+    Interrompa o aplicativo no Visual Studio para Mac.

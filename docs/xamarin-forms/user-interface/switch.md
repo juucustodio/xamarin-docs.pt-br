@@ -10,12 +10,12 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b44a3fa34044327be6a928588397c3371f196336
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 760d6f6e6d57a1ab9a6537e8974e85e26195d8cb
+ms.sourcegitcommit: 424eaef56fd2933c98e72f1d3e7ac71730fe4835
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93371125"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758013"
 ---
 # <a name="no-locxamarinforms-switch"></a>Xamarin.Forms Comutador
 
@@ -68,7 +68,7 @@ Switch switch = new Switch { OnColor = Color.Orange, ThumbColor = Color.Green };
 
 A captura de tela a seguir mostra o `Switch` em seus Estados de alternância **liga** e **desliga** , com as `OnColor` `ThumbColor` Propriedades e definidas:
 
-![Captura de tela de interruptores em Estados de ligado e off, no iOS e no Android](switch-images/switch-states-colors.png "Comutadores no iOS e no Android")
+![Captura de tela de opções em Estados ligado e desligado, no iOS e no Android com as cores alteradas.](switch-images/switch-states-colors.png "Comutadores no iOS e no Android")
 
 ## <a name="respond-to-a-switch-state-change"></a>Responder a uma alteração de estado de comutador
 

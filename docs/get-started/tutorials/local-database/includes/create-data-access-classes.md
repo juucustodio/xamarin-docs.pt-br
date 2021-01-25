@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b11a5972c2aabace8a6991a82f5719f34450297d
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: b39d337c80a50fb6a3899b609eac1e73ed9bcb6d
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "67841496"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98690159"
 ---
 Neste exercício, você adicionará classes de acesso a dados ao projeto **LocalDatabaseTutorial**, que será usado para persistir dados sobre pessoas no banco de dados.
 
@@ -118,6 +118,8 @@ Neste exercício, você adicionará classes de acesso a dados ao projeto **Local
     > [!IMPORTANT]
     > A vantagem de expor o banco de dados como um singleton é que uma conexão de banco de dados individual criada é mantida aberta enquanto o aplicativo é executado, evitando, portanto, o trabalho de abrir e fechar o arquivo de banco de dados cada vez que uma operação de banco de dados é realizada.
 
+    Para obter mais informações sobre o padrão de design singleton, confira [Padrões de design: singleton](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Design-Patterns-Singleton).    
+
 1. Compile a solução para garantir que não haja erros.
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
@@ -229,5 +231,7 @@ Neste exercício, você adicionará classes de acesso a dados ao projeto **Local
 
     > [!IMPORTANT]
     > A vantagem de expor o banco de dados como um singleton é que uma conexão de banco de dados individual criada é mantida aberta enquanto o aplicativo é executado, evitando, portanto, o trabalho de abrir e fechar o arquivo de banco de dados cada vez que uma operação de banco de dados é realizada.
+
+    Para obter mais informações sobre o padrão de design singleton, confira [Padrões de design: singleton](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Design-Patterns-Singleton).
 
 1. Compile a solução para garantir que não haja erros.

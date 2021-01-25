@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 875f00b379879aa131d37018f89e475170e5320e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: d32dd7d641861f1a95ff35dbbf89a7671594e873
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "67277096"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98634813"
 ---
 O Xamarin.Forms tem um pop-up modal, conhecido como um alerta, para alertar o usuário ou para fazer perguntas simples sobre eles. Neste exercício, você aprenderá a usar o método [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*), da classe [`Page`](xref:Xamarin.Forms.Page), para exibir um alerta ao usuário e fazer uma pergunta simples.
 
@@ -12,7 +12,7 @@ O Xamarin.Forms tem um pop-up modal, conhecido como um alerta, para alertar o us
 
 Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão mais recente) com a carga de trabalho **Desenvolvimento mobile com .NET** instalada. Além disso, você precisará de um Mac emparelhado para compilar o aplicativo do tutorial no iOS. Para obter informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md). Para obter informações sobre como conectar o Visual Studio 2019 a um host de build Mac, confira [Emparelhar com o Mac para desenvolvimento no Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
-1. Inicie o Visual Studio e crie um novo aplicativo Xamarin.Forms em branco chamado **PopupsTutorial**. Verifique se o aplicativo usa o .NET Standard como o mecanismo de código compartilhado.
+1. Inicie o Visual Studio e crie um novo aplicativo Xamarin.Forms em branco chamado **PopupsTutorial**.
 
     > [!IMPORTANT]
     > Os snippets de C# e XAML neste tutorial exigem que a solução seja denominada **PopupsTutorial**. Usar um nome diferente causará erros de build ao copiar o código deste tutorial para a solução.
@@ -67,7 +67,9 @@ Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão 
 
     [![Captura de tela de um alerta que faz uma pergunta, no iOS e no Android](../images/alert-question.png "Alerta que faz uma pergunta")](../images/alert-question-large.png#lightbox "Alerta que faz uma pergunta")
 
-    Observe que, depois de selecionar uma resposta à pergunta, a resposta é enviada para a janela de **Saída** do Visual Studio.
+    Observe que, depois de selecionar uma resposta à pergunta, a resposta é enviada para a janela de **Saída** do Visual Studio. Caso essa janela não esteja visível, será possível torná-la visível selecionando a opção de menu **Exibir > Saída**.
+
+    Interrompa o aplicativo no Visual Studio.
 
     Confira mais informações sobre a exibição de alertas em [Exibir um alerta](~/xamarin-forms/user-interface/pop-ups.md#display-an-alert) no guia [Exibir pop-ups](~/xamarin-forms/user-interface/pop-ups.md).
 
@@ -75,7 +77,7 @@ Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão 
 
 Para concluir este tutorial, você precisará ter o Visual Studio para Mac (versão mais recente), com suporte para plataforma iOS e Android, instalado. Além disso, você também precisará do Xcode (versão mais recente). Para obter mais informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md).
 
-1. Inicie o Visual Studio para Mac e crie um novo aplicativo Xamarin.Forms em branco chamado **PopupsTutorial**. Verifique se o aplicativo usa o .NET Standard como o mecanismo de código compartilhado.
+1. Inicie o Visual Studio para Mac e crie um novo aplicativo Xamarin.Forms em branco chamado **PopupsTutorial**.
 
     > [!IMPORTANT]
     > Os snippets de C# e XAML neste tutorial exigem que a solução seja denominada **PopupsTutorial**. Usar um nome diferente causará erros de build ao copiar o código deste tutorial para a solução.
@@ -130,6 +132,8 @@ Para concluir este tutorial, você precisará ter o Visual Studio para Mac (vers
 
     [![Captura de tela de um alerta que faz uma pergunta, no iOS e no Android](../images/alert-question.png "Alerta que faz uma pergunta")](../images/alert-question-large.png#lightbox "Alerta que faz uma pergunta")
 
-    Observe que, depois de selecionar uma resposta à pergunta, a resposta é enviada para a janela de **Saída do Aplicativo** do Visual Studio para Mac.
+    Observe que, depois de selecionar uma resposta à pergunta, a resposta é enviada para a janela de **Saída do Aplicativo** do Visual Studio para Mac. Caso essa janela não esteja visível, será possível torná-la visível selecionando a opção de menu **Exibir > Outras Janelas > Saída do Aplicativo**.
+
+    Interrompa o aplicativo no Visual Studio para Mac.
 
     Confira mais informações sobre a exibição de alertas em [Exibir um alerta](~/xamarin-forms/user-interface/pop-ups.md#display-an-alert) no guia [Exibir pop-ups](~/xamarin-forms/user-interface/pop-ups.md).

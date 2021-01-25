@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 42b42e8013032b684b31e8bd974c433ef176be52
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 69b0ddb8e0feec64e99f0019eb0c2f4417c6c2ff
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71059529"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98689835"
 ---
 Antes de tentar realizar este tutorial, você deve ter concluído com sucesso:
 
@@ -22,3 +22,5 @@ Neste tutorial, você aprenderá como:
 Você usará o Visual Studio 2019 ou Visual Studio para Mac, para criar um aplicativo simples que demonstra como personalizar um [`Button`](xref:Xamarin.Forms.Button). Estas capturas de tela mostram o aplicativo final:
 
 [![Captura de tela de um botão com uma aparência visual alterada, no iOS e no Android](../images/change-button-appearance.png "Botão com aparência alterada")](../images/change-button-appearance-large.png#lightbox "Botão com aparência alterada")
+
+Você também usará a [Recarga Dinâmica de XAML para Xamarin.Forms](~/xamarin-forms/xaml/hot-reload.md) a fim de conferir alterações da interface do usuário sem a necessidade de recompilar seu aplicativo.

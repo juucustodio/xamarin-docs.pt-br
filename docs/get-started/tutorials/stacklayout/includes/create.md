@@ -1,16 +1,18 @@
 ---
-ms.openlocfilehash: 45a387690792074af6a18fe3c639692863cdf4be
-ms.sourcegitcommit: 83cf2a4d99546751c6394510a463a2b2a8bf75b8
+ms.openlocfilehash: 9d96f61b258691715ebdbfe0d4221eed240c1bdf
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83343400"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98634738"
 ---
+Um [`StackLayout`](xref:Xamarin.Forms.StackLayout) é um layout que organiza filhos em uma pilha unidimensional de modo horizontal ou vertical. Por padrão, a orientação do `StackLayout` é vertical.
+
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão mais recente) com a carga de trabalho **Desenvolvimento mobile com .NET** instalada. Além disso, você precisará de um Mac emparelhado para compilar o aplicativo do tutorial no iOS. Para obter informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md). Para obter informações sobre como conectar o Visual Studio 2019 a um host de build Mac, confira [Emparelhar com o Mac para desenvolvimento no Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
-1. Inicie o Visual Studio e crie um novo aplicativo Xamarin.Forms em branco chamado **StackLayoutTutorial**. Verifique se o aplicativo usa o .NET Standard como o mecanismo de código compartilhado.
+1. Inicie o Visual Studio e crie um novo aplicativo Xamarin.Forms em branco chamado **StackLayoutTutorial**.
 
     > [!IMPORTANT]
     > Os snippets de C# e XAML neste tutorial exigem que a solução seja denominada **StackLayoutTutorial**. Usar um nome diferente causará erros de build ao copiar o código deste tutorial para a solução.
@@ -47,7 +49,7 @@ Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão 
 
 Para concluir este tutorial, você precisará ter o Visual Studio para Mac (versão mais recente), com suporte para plataforma iOS e Android, instalado. Além disso, você também precisará do Xcode (versão mais recente). Para obter mais informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md).
 
-1. Inicie o Visual Studio para Mac e crie um novo aplicativo Xamarin.Forms em branco chamado **StackLayoutTutorial**. Verifique se o aplicativo usa o .NET Standard como o mecanismo de código compartilhado.
+1. Inicie o Visual Studio para Mac e crie um novo aplicativo Xamarin.Forms em branco chamado **StackLayoutTutorial**.
 
     > [!IMPORTANT]
     > Os snippets de C# e XAML neste tutorial exigem que a solução seja denominada **StackLayoutTutorial**. Usar um nome diferente causará erros de build ao copiar o código deste tutorial para a solução.

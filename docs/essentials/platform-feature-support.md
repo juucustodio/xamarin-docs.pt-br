@@ -8,12 +8,12 @@ ms.date: 08/20/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9c21e4c746224902b4dcc317b53d751d33c45df1
-ms.sourcegitcommit: 86663f94f8eddb808eb4504cd32ddaf217b6406c
+ms.openlocfilehash: cb172ff7d86229d4ee0cebc2e3ea6bc326e7fa29
+ms.sourcegitcommit: 424eaef56fd2933c98e72f1d3e7ac71730fe4835
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98166661"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758026"
 ---
 # <a name="platform-support"></a>Suporte de plataforma
 
@@ -49,7 +49,7 @@ Guia de ícones:
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | [Accelerometer](accelerometer.md?context=xamarin/xamarin-forms) | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![watchOS com suporte](~/media/shared/yes.png "watchOS com suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen com suporte](~/media/shared/yes.png "Tizen com suporte") | ![macOS sem suporte](~/media/shared/no.png "macOS sem suporte") |
 | [Ações do aplicativo](app-actions.md?context=xamarin/xamarin-forms) | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![watchOS não tem suporte](~/media/shared/no.png "watchOS não tem suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen não tem suporte](~/media/shared/no.png "Tizen não tem suporte") | ![macOS sem suporte](~/media/shared/no.png "macOS sem suporte") |
-| [Informações do aplicativo](app-information.md?context=xamarin/xamarin-forms) | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![watchOS com suporte](~/media/shared/no.png "watchOS não tem suporte") | ![tvOS com suporte](~/media/shared/yes.png "tvOS com suporte") | ![Tizen com suporte](~/media/shared/yes.png "Tizen com suporte") | ![compatível com macOS](~/media/shared/yes.png "compatível com macOS") |
+| [Informações do aplicativo](app-information.md?context=xamarin/xamarin-forms) | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![watchOS não tem suporte](~/media/shared/no.png "watchOS não tem suporte") | ![tvOS com suporte](~/media/shared/yes.png "tvOS com suporte") | ![Tizen com suporte](~/media/shared/yes.png "Tizen com suporte") | ![compatível com macOS](~/media/shared/yes.png "compatível com macOS") |
 | [Tema do aplicativo](app-theme.md?context=xamarin/xamarin-forms) | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![watchOS com suporte](~/media/shared/yes.png "watchOS com suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen com suporte](~/media/shared/yes.png "Tizen com suporte") | ![compatível com macOS](~/media/shared/yes.png "compatível com macOS") |
 | [Barometer](barometer.md?context=xamarin/xamarin-forms) | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![watchOS com suporte](~/media/shared/yes.png "watchOS com suporte") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Tizen com suporte](~/media/shared/yes.png "Tizen com suporte") | ![macOS sem suporte](~/media/shared/no.png "macOS sem suporte") |
 | [Bateria](battery.md?context=xamarin/xamarin-forms) | ![Com suporte para Android](~/media/shared/yes.png "Com suporte para Android") | ![iOS com suporte](~/media/shared/yes.png "iOS com suporte") | ![UWP com suporte](~/media/shared/yes.png "UWP com suporte") | ![suporte limitado a watchOS](~/media/shared/warn.png "suporte limitado a watchOS") | ![tvOS não tem suporte](~/media/shared/no.png "tvOS não tem suporte") | ![Suporte limitado a tizen](~/media/shared/warn.png "Suporte limitado a tizen") | ![compatível com macOS](~/media/shared/yes.png "compatível com macOS") |

@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 247e75435f42a49d5d1ea01a4d0ec3da67866156
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: d0b00cf71a6121026dfa368592da8ce8d3be0373
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "67277086"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98634980"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão mais recente) com a carga de trabalho **Desenvolvimento mobile com .NET** instalada. Além disso, você precisará de um Mac emparelhado para compilar o aplicativo do tutorial no iOS. Para obter informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md). Para obter informações sobre como conectar o Visual Studio 2019 a um host de build Mac, confira [Emparelhar com o Mac para desenvolvimento no Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
-1. Inicie o Visual Studio e crie um novo aplicativo Xamarin.Forms em branco chamado **AppLifecycleTutorial**. Verifique se o aplicativo usa o .NET Standard como o mecanismo de código compartilhado.
+1. Inicie o Visual Studio e crie um novo aplicativo Xamarin.Forms em branco chamado **AppLifecycleTutorial**.
 
     > [!IMPORTANT]
     > Os snippets de C# e XAML neste tutorial exigem que a solução seja denominada **AppLifecycleTutorial**. Usar um nome diferente causará erros de build ao copiar o código deste tutorial para a solução.
@@ -72,13 +72,15 @@ Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão 
     > [!NOTE]
     > Esses blocos de código mostram a saída de exemplo ao executar o aplicativo no Android.
 
+    Interrompa o aplicativo no Visual Studio.
+
     Para obter mais informações sobre o ciclo de vida do aplicativo do Xamarin.Forms, confira [Ciclo de vida do aplicativo do Xamarin.Forms](~/xamarin-forms/app-fundamentals/app-lifecycle.md).
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Para concluir este tutorial, você precisará ter o Visual Studio para Mac (versão mais recente), com suporte para plataforma iOS e Android, instalado. Além disso, você também precisará do Xcode (versão mais recente). Para obter mais informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md).
 
-1. Inicie o Visual Studio para Mac e crie um novo aplicativo Xamarin.Forms em branco chamado **AppLifecycleTutorial**. Verifique se o aplicativo usa o .NET Standard como o mecanismo de código compartilhado.
+1. Inicie o Visual Studio para Mac e crie um novo aplicativo Xamarin.Forms em branco chamado **AppLifecycleTutorial**.
 
     > [!IMPORTANT]
     > Os snippets de C# e XAML neste tutorial exigem que a solução seja denominada **AppLifecycleTutorial**. Usar um nome diferente causará erros de build ao copiar o código deste tutorial para a solução.
@@ -143,5 +145,7 @@ Para concluir este tutorial, você precisará ter o Visual Studio para Mac (vers
 
     > [!NOTE]
     > Esses blocos de código mostram a saída de exemplo ao executar o aplicativo no iOS.
+
+    Interrompa o aplicativo no Visual Studio para Mac.
 
     Para obter mais informações sobre o ciclo de vida do aplicativo do Xamarin.Forms, confira [Ciclo de vida do aplicativo do Xamarin.Forms](~/xamarin-forms/app-fundamentals/app-lifecycle.md).
