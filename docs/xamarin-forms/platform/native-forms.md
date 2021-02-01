@@ -6,22 +6,22 @@ ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/19/2019
+ms.date: 02/01/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 241aa896cb66c4ff594c786ad484781adcddffa1
-ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
+ms.openlocfilehash: 6d17f20babd11a58540306f146ee9dc2bf1a5da4
+ms.sourcegitcommit: 9ab5a1e346e20f54e8b7aa655fd3d117b43978cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98609125"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99223549"
 ---
 # <a name="no-locxamarinforms-in-xamarin-native-projects"></a>Xamarin.Forms em projetos nativos do Xamarin
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/native2forms)
 
-Normalmente, um Xamarin.Forms aplicativo inclui uma ou mais páginas que derivam de [`ContentPage`](xref:Xamarin.Forms.ContentPage) e essas páginas são compartilhadas por todas as plataformas em um projeto de biblioteca .net Standard ou projeto compartilhado. No entanto, formulários nativos permitem que `ContentPage` páginas derivadas sejam adicionadas diretamente a aplicativos xamarin. Ios, xamarin. Android e UWP nativos. Em comparação com o projeto nativo consumir `ContentPage` páginas derivadas de um projeto de biblioteca .net Standard ou de um projeto compartilhado, a vantagem de adicionar páginas diretamente a projetos nativos é que as páginas podem ser estendidas com exibições nativas. Exibições nativas podem então ser nomeadas em XAML com `x:Name` e referenciadas do code-behind. Para obter mais informações sobre exibições nativas, consulte [exibições nativas](~/xamarin-forms/platform/native-views/index.md).
+Normalmente, um Xamarin.Forms aplicativo inclui uma ou mais páginas que derivam de [`ContentPage`](xref:Xamarin.Forms.ContentPage) e essas páginas são compartilhadas por todas as plataformas em um projeto de biblioteca .net Standard ou projeto compartilhado. No entanto, os formulários nativos permitem que `ContentPage` páginas derivadas sejam adicionadas diretamente a aplicativos xamarin. Ios, xamarin. Android e UWP nativos. Em comparação com o projeto nativo consumir `ContentPage` páginas derivadas de um projeto de biblioteca .net Standard ou de um projeto compartilhado, a vantagem de adicionar páginas diretamente a projetos nativos é que as páginas podem ser estendidas com exibições nativas. Exibições nativas podem então ser nomeadas em XAML com `x:Name` e referenciadas do code-behind. Para obter mais informações sobre exibições nativas, consulte [exibições nativas](~/xamarin-forms/platform/native-views/index.md).
 
 O processo de consumo de uma Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage) página derivada em um projeto nativo é o seguinte:
 
@@ -56,6 +56,10 @@ public class AppDelegate : UIApplicationDelegate
     {
         Forms.Init();
 
+        // Create app-level resource dictionary.
+        Xamarin.Forms.Application.Current = new Xamarin.Forms.Application();
+        Xamarin.Forms.Application.Current.Resources = new MyDictionary();
+
         Instance = this;
         _window = new UIWindow(UIScreen.MainScreen.Bounds);
 
@@ -65,13 +69,22 @@ public class AppDelegate : UIApplicationDelegate
         });
 
         FolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
-        UIViewController mainPage = new NotesPage().CreateViewController();
-        mainPage.Title = "Notes";
 
-        _navigation = new AppNavigationController(mainPage);
+        NotesPage notesPage = new NotesPage()
+        {
+            // Set the parent so that the app-level resource dictionary can be located.
+            Parent = Xamarin.Forms.Application.Current
+        };
+
+        UIViewController notesPageController = notesPage.CreateViewController();
+        notesPageController.Title = "Notes";
+
+        _navigation = new AppNavigationController(notesPageController);
+
         _window.RootViewController = _navigation;
         _window.MakeKeyAndVisible();
 
+        notesPage.Parent = null;
         return true;
     }
     // ...
@@ -81,17 +94,23 @@ public class AppDelegate : UIApplicationDelegate
 Esse método`FinishedLaunching`   executa as seguintes tarefas:
 
 - Xamarin.Forms é inicializado chamando o `Forms.Init` método.
+- Um novo `Xamarin.Forms.Application` objeto is é criado, e seu dicionário de recursos no nível do aplicativo é definido como um `ResourceDictionary` que é definido em XAML.
 - Uma referência à `AppDelegate` classe é armazenada no `static` `Instance` campo. Isso é para fornecer um mecanismo para outras classes chamarem métodos definidos na `AppDelegate` classe.
 - O `UIWindow` , que é o contêiner principal para exibições em aplicativos nativos do IOS, é criado.
 - A `FolderPath` propriedade é inicializada para um caminho no dispositivo em que os dados de observação serão armazenados.
-- A `NotesPage` classe, que é uma Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage) página derivada definida em XAML, é construída e convertida em um `UIViewController` usando o `CreateViewController` método de extensão.
+- Um `NotesPage` objeto é criado, que é uma Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage) página derivada definida em XAML, e seu pai é definido como o objeto criado anteriormente `Xamarin.Forms.Application` .
+- O `NotesPage` objeto é convertido em um `UIViewController` usando o `CreateViewController` método de extensão.
 - A `Title` propriedade de `UIViewController` é definida, que será exibida no `UINavigationBar` .
 - Um `AppNavigationController` é criado para gerenciar a navegação hierárquica. Essa é uma classe de controlador de navegação personalizada, que deriva de `UINavigationController` . O `AppNavigationController` objeto gerencia uma pilha de controladores de exibição, e o `UIViewController` passado para o Construtor será apresentado inicialmente quando o `AppNavigationController` for carregado.
 - O `AppNavigationController` objeto é definido como o nível superior `UIViewController` para o `UIWindow` , e o `UIWindow` é definido como a janela de chave para o aplicativo e torna-se visível.
+- A `Parent` Propriedade do `NotesPage` objeto é definida como `null` , para evitar um vazamento de memória.
 
 Depois que o `FinishedLaunching` método for executado, a interface do usuário definida na Xamarin.Forms `NotesPage` classe será exibida, conforme mostrado na seguinte captura de tela:
 
 [![A captura de tela mostra um ecrã de anotações em um dispositivo móvel.](native-forms-images/ios-notespage.png "Aplicativo Xamarin. iOS com uma interface do usuário XAML")](native-forms-images/ios-notespage-large.png#lightbox "Aplicativo Xamarin. iOS com uma interface do usuário XAML")
+
+> [!IMPORTANT]
+> Todas as [`ContentPage`](xref:Xamarin.Forms.ContentPage) páginas derivadas podem consumir recursos definidos no nível do aplicativo `ResourceDictionary` , desde que a `Parent` propriedade da página esteja definida para o `Application` objeto.
 
 Interagir com a interface do usuário, por exemplo, tocando em **+** [`Button`](xref:Xamarin.Forms.Button) , resultará no seguinte manipulador de eventos na `NotesPage` execução do code-behind:
 
@@ -107,12 +126,18 @@ O `static` `AppDelegate.Instance` campo permite que o `AppDelegate.NavigateToNot
 ```csharp
 public void NavigateToNoteEntryPage(Note note)
 {
-    var noteEntryPage = new NoteEntryPage
+    NoteEntryPage noteEntryPage = new NoteEntryPage
     {
-        BindingContext = note
-    }.CreateViewController();
-    noteEntryPage.Title = "Note Entry";
-    _navigation.PushViewController(noteEntryPage, true);
+        BindingContext = note,
+        // Set the parent so that the app-level resource dictionary can be located.
+        Parent = Xamarin.Forms.Application.Current
+    };
+
+    var noteEntryViewController = noteEntryPage.CreateViewController();
+    noteEntryViewController.Title = "Note Entry";
+
+    _navigation.PushViewController(noteEntryViewController, true);
+    noteEntryPage.Parent = null;
 }
 ```
 
@@ -160,6 +185,11 @@ public class MainActivity : AppCompatActivity
         base.OnCreate(bundle);
 
         Forms.Init(this, bundle);
+
+        // Create app-level resource dictionary.
+        Xamarin.Forms.Application.Current = new Xamarin.Forms.Application();
+        Xamarin.Forms.Application.Current.Resources = new MyDictionary();
+
         Instance = this;
 
         SetContentView(Resource.Layout.Main);
@@ -168,12 +198,21 @@ public class MainActivity : AppCompatActivity
         SupportActionBar.Title = "Notes";
 
         FolderPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData));
-        AndroidX.Fragment.App.Fragment mainPage = new NotesPage().CreateSupportFragment(this);
+
+        NotesPage notesPage = new NotesPage()
+        {
+            // Set the parent so that the app-level resource dictionary can be located.
+            Parent = Xamarin.Forms.Application.Current
+        };
+        AndroidX.Fragment.App.Fragment notesPageFragment = notesPage.CreateSupportFragment(this);
+
         SupportFragmentManager
             .BeginTransaction()
             .Replace(Resource.Id.fragment_frame_layout, mainPage)
             .Commit();
-        ...
+        //...
+
+        notesPage.Parent = null;
     }
     ...
 }
@@ -182,18 +221,24 @@ public class MainActivity : AppCompatActivity
 Esse método`OnCreate`   executa as seguintes tarefas:
 
 - Xamarin.Forms é inicializado chamando o `Forms.Init` método.
+- Um novo `Xamarin.Forms.Application` objeto is é criado, e seu dicionário de recursos no nível do aplicativo é definido como um `ResourceDictionary` que é definido em XAML.
 - Uma referência à `MainActivity` classe é armazenada no `static` `Instance` campo. Isso é para fornecer um mecanismo para outras classes chamarem métodos definidos na `MainActivity` classe.
 - O `Activity` conteúdo é definido de um recurso de layout. No aplicativo de exemplo, o layout consiste em um `LinearLayout` que contém um `Toolbar` e um `FrameLayout` para atuar como um contêiner de fragmento.
 - O `Toolbar` é recuperado e definido como a barra de ação para o `Activity` , e o título da barra de ação é definido.
 - A `FolderPath` propriedade é inicializada para um caminho no dispositivo em que os dados de observação serão armazenados.
-- A `NotesPage` classe, que é uma Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage) página derivada definida em XAML, é construída e convertida em um `Fragment` usando o `CreateSupportFragment` método de extensão.
+- Um `NotesPage` objeto é criado, que é uma Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage) página derivada definida em XAML, e seu pai é definido como o objeto criado anteriormente `Xamarin.Forms.Application` .
+- O `NotesPage` objeto é convertido em um `Fragment` usando o `CreateSupportFragment` método de extensão.
 - A `SupportFragmentManager` classe cria e confirma uma transação que substitui a `FrameLayout` instância pelo `Fragment` para a `NotesPage` classe.
+- A `Parent` Propriedade do `NotesPage` objeto é definida como `null` , para evitar um vazamento de memória.
 
 Para obter mais informações sobre fragmentos, consulte [fragmentos](~/android/platform/fragments/index.md).
 
 Depois que o `OnCreate` método for executado, a interface do usuário definida na Xamarin.Forms `NotesPage` classe será exibida, conforme mostrado na seguinte captura de tela:
 
 [![Captura de tela mostra um ecrã de anotações em um dispositivo móvel com uma faixa azul e um texto de nota colorido.](native-forms-images/android-notespage.png "Aplicativo Xamarin. Android com uma interface do usuário XAML")](native-forms-images/android-notespage-large.png#lightbox "Aplicativo Xamarin. Android com uma interface do usuário XAML")
+
+> [!IMPORTANT]
+> Todas as [`ContentPage`](xref:Xamarin.Forms.ContentPage) páginas derivadas podem consumir recursos definidos no nível do aplicativo `ResourceDictionary` , desde que a `Parent` propriedade da página esteja definida para o `Application` objeto.
 
 Interagir com a interface do usuário, por exemplo, tocando em **+** [`Button`](xref:Xamarin.Forms.Button) , resultará no seguinte manipulador de eventos na `NotesPage` execução do code-behind:
 
@@ -209,15 +254,21 @@ O `static` `MainActivity.Instance` campo permite que o `MainActivity.NavigateToN
 ```csharp
 public void NavigateToNoteEntryPage(Note note)
 {
-    AndroidX.Fragment.App.Fragment noteEntryPage = new NoteEntryPage
+    NoteEntryPage noteEntryPage = new NoteEntryPage
     {
-        BindingContext = note
-    }.CreateSupportFragment(this);
+        BindingContext = note,
+        // Set the parent so that the app-level resource dictionary can be located.
+        Parent = Xamarin.Forms.Application.Current
+    };
+
+    AndroidX.Fragment.App.Fragment noteEntryFragment = noteEntryPage.CreateSupportFragment(this);
     SupportFragmentManager
         .BeginTransaction()
         .AddToBackStack(null)
-        .Replace(Resource.Id.fragment_frame_layout, noteEntryPage)
+        .Replace(Resource.Id.fragment_frame_layout, noteEntryFragment)
         .Commit();
+
+    noteEntryPage.Parent = null;
 }
 ```
 
@@ -278,7 +329,23 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 
 ## <a name="uwp"></a>UWP
 
-No UWP, a `App` classe nativa normalmente é o lugar para executar tarefas relacionadas à inicialização do aplicativo. Xamarin.Forms geralmente é inicializado, em Xamarin.Forms aplicativos UWP, na `OnLaunched` substituição na classe nativa `App` , para passar o `LaunchActivatedEventArgs` argumento para o `Forms.Init` método. Por esse motivo, os aplicativos UWP nativos que consomem uma Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage) página derivada podem chamar com mais facilidade o `Forms.Init` método do `App.OnLaunched` método.
+No UWP, a `App` classe nativa normalmente é o lugar para executar tarefas relacionadas à inicialização do aplicativo. Xamarin.Forms geralmente é inicializado, em Xamarin.Forms aplicativos UWP, na `OnLaunched` substituição na classe nativa `App` , para passar o `LaunchActivatedEventArgs` argumento para o `Forms.Init` método. Por esse motivo, os aplicativos UWP nativos que consomem uma Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage) página derivada podem chamar com mais facilidade o `Forms.Init` método do `App.OnLaunched` método:
+
+```csharp
+protected override void OnLaunched(LaunchActivatedEventArgs e)
+{
+    // ...
+    Xamarin.Forms.Forms.Init(e);
+
+    // Create app-level resource dictionary.
+    Xamarin.Forms.Application.Current = new Xamarin.Forms.Application();
+    Xamarin.Forms.Application.Current.Resources = new MyDictionary();
+
+    // ...
+}
+```
+
+Além disso, o `OnLaunched` método também pode criar qualquer dicionário de recursos de nível de aplicativo exigido pelo aplicativo.
 
 Por padrão, a `App` classe nativa inicia a `MainPage` classe como a primeira página do aplicativo. O exemplo de código a seguir mostra a `MainPage` classe no aplicativo de exemplo:
 
@@ -293,13 +360,18 @@ public sealed partial class MainPage : Page
 
     public MainPage()
     {
-        this.InitializeComponent();
         this.NavigationCacheMode = NavigationCacheMode.Enabled;
         Instance = this;
         FolderPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData));
-        notesPage = new Notes.UWP.Views.NotesPage();
+
+        notesPage = new Notes.UWP.Views.NotesPage
+        {
+            // Set the parent so that the app-level resource dictionary can be located.
+            Parent = Xamarin.Forms.Application.Current
+        };
         this.Content = notesPage.CreateFrameworkElement();
-        // ...        
+        // ...
+        notesPage.Parent = null;    
     }
     // ...
 }
@@ -310,11 +382,16 @@ O `MainPage` construtor executa as seguintes tarefas:
 - O Caching está habilitado para a página, de forma que um novo `MainPage` não seja construído quando um usuário navegar de volta para a página.
 - Uma referência à `MainPage` classe é armazenada no `static` `Instance` campo. Isso é para fornecer um mecanismo para outras classes chamarem métodos definidos na `MainPage` classe.
 - A `FolderPath` propriedade é inicializada para um caminho no dispositivo em que os dados de observação serão armazenados.
-- A `NotesPage` classe, que é uma Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage) página derivada definida em XAML, é construída e convertida em um `FrameworkElement` usando o `CreateFrameworkElement` método de extensão e, em seguida, definida como o conteúdo da `MainPage` classe.
+- Um `NotesPage` objeto é criado, que é uma Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage) página derivada definida em XAML, e seu pai é definido como o objeto criado anteriormente `Xamarin.Forms.Application` .
+- O `NotesPage` objeto é convertido em um `FrameworkElement` usando o `CreateFrameworkElement` método de extensão e, em seguida, definido como o conteúdo da `MainPage` classe.
+- A `Parent` Propriedade do `NotesPage` objeto é definida como `null` , para evitar um vazamento de memória.
 
 Depois que o `MainPage` Construtor for executado, a interface do usuário definida na Xamarin.Forms `NotesPage` classe será exibida, conforme mostrado na seguinte captura de tela:
 
 [![Captura de tela mostra uma página de anotações com anotações e data/hora.](native-forms-images/uwp-notespage.png "Aplicativo UWP com uma interface do usuário::: não-Loc (Xamarin. Forms)::: XAML")](native-forms-images/uwp-notespage-large.png#lightbox "Aplicativo UWP com uma interface do usuário::: não-Loc (Xamarin. Forms)::: XAML")
+
+> [!IMPORTANT]
+> Todas as [`ContentPage`](xref:Xamarin.Forms.ContentPage) páginas derivadas podem consumir recursos definidos no nível do aplicativo `ResourceDictionary` , desde que a `Parent` propriedade da página esteja definida para o `Application` objeto.
 
 Interagir com a interface do usuário, por exemplo, tocando em **+** [`Button`](xref:Xamarin.Forms.Button) , resultará no seguinte manipulador de eventos na `NotesPage` execução do code-behind:
 
@@ -332,9 +409,12 @@ public void NavigateToNoteEntryPage(Note note)
 {
     noteEntryPage = new Notes.UWP.Views.NoteEntryPage
     {
-        BindingContext = note
+        BindingContext = note,
+        // Set the parent so that the app-level resource dictionary can be located.
+        Parent = Xamarin.Forms.Application.Current
     };
     this.Frame.Navigate(noteEntryPage);
+    noteEntryPage.Parent = null;
 }
 ```
 

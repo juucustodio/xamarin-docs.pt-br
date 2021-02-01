@@ -10,12 +10,12 @@ ms.date: 12/01/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ea0be2136b354ef7a613904799481079bcae52ad
-ms.sourcegitcommit: 1decf2c65dc4c36513f7dd459a5df01e170a036f
+ms.openlocfilehash: 8a2947ef2c326c57bc646cd980109ed9a1b97347
+ms.sourcegitcommit: 9ab5a1e346e20f54e8b7aa655fd3d117b43978cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98115230"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99223705"
 ---
 # <a name="no-locxamarinforms-flyoutpage"></a>Xamarin.Forms FlyoutPage
 
@@ -27,7 +27,7 @@ Uma página de submenu normalmente exibe uma lista de itens, conforme mostrado n
 
 A localização da lista de itens é idêntico em cada plataforma e selecionar um dos itens navegará até a página de detalhes correspondente. Além disso, a página do submenu também apresenta uma barra de navegação que contém um botão que pode ser usado para navegar até a página de detalhes ativa:
 
-- No iOS, a barra de navegação está presente na parte superior da página e tem um botão que navega até a página de detalhes. Além disso, é possível navegar até a página de detalhes ativa passando o dedo na página mestra para a esquerda.
+- No iOS, a barra de navegação está presente na parte superior da página e tem um botão que navega até a página de detalhes. Além disso, a página de detalhes ativa pode ser navegada ao passar o submenu para a esquerda.
 - No Android, a barra de navegação está presente na parte superior da página e exibe um título, um ícone e um botão que navega até a página de detalhes. O ícone é definido no atributo `[Activity]` que decora a classe `MainActivity` no projeto específico da plataforma Android. Além disso, a página de detalhes ativa pode ser navegada passando o dedo para a esquerda da página do submenu, tocando na página de detalhes na extrema direita da tela e tocando no botão *voltar* na parte inferior da tela.
 - Na UWP (Plataforma Universal do Windows), a barra de navegação está presente na parte superior da página e tem um botão que navega até a página de detalhes.
 
@@ -214,7 +214,7 @@ public class FlyoutMenuPageCS : ContentPage
 
 As capturas de tela a seguir mostram a página do submenu em cada plataforma:
 
-![Exemplo de página mestra](flyoutpage-images/flyoutpage.png)
+![Exemplo de página de submenu](flyoutpage-images/flyoutpage.png)
 
 ### <a name="create-and-display-the-detail-page"></a>Criar e exibir a página de detalhes
 

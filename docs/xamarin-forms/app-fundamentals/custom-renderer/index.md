@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsRenderizadores personalizados
+title: Xamarin.Forms Renderizadores personalizados
 description: Os renderizadores personalizados permitem que os desenvolvedores substituam a renderização dos controles nativos em cada plataforma, para personalizar a aparência e o comportamento dos Xamarin.Forms controles.
 ms.prod: xamarin
 ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
@@ -10,16 +10,16 @@ ms.date: 12/03/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: be281f9b7987a8d23ba6ac93f0771e432f277d45
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 21fc2c5ba042a19c68961bd969084aed0a8a4f18
+ms.sourcegitcommit: 9ab5a1e346e20f54e8b7aa655fd3d117b43978cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138912"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99223679"
 ---
-# <a name="xamarinforms-custom-renderers"></a>Xamarin.FormsRenderizadores personalizados
+# <a name="no-locxamarinforms-custom-renderers"></a>Xamarin.Forms Renderizadores personalizados
 
-_As interfaces de usuário do Xamarin. Forms são renderizadas usando os controles nativos da plataforma de destino, permitindo que os Xamarin.Forms aplicativos mantenham a aparência apropriada para cada plataforma. Os renderizadores personalizados permitem que os desenvolvedores substituam esse processo para personalizar a aparência e o comportamento dos Xamarin.Forms controles em cada plataforma._
+_Xamarin.Forms as interfaces do usuário são renderizadas usando os controles nativos da plataforma de destino, permitindo que os Xamarin.Forms aplicativos mantenham a aparência apropriada para cada plataforma. Os renderizadores personalizados permitem que os desenvolvedores substituam esse processo para personalizar a aparência e o comportamento dos Xamarin.Forms controles em cada plataforma._
 
 ## <a name="introduction-to-custom-renderers"></a>[Introdução aos renderizadores personalizados](introduction.md)
 
@@ -55,8 +55,4 @@ Um Xamarin.Forms [`WebView`](xref:Xamarin.Forms.WebView) é uma exibição que e
 
 ## <a name="implementing-a-view"></a>[Implementando uma exibição](view.md)
 
-Xamarin.Formsos controles de interfaces de usuário personalizados devem derivar da [`View`](xref:Xamarin.Forms.View) classe, que é usada para posicionar layouts e controles na tela. Este artigo demonstra como criar um renderizador personalizado para um Xamarin.Forms controle personalizado que é usado para exibir um fluxo de vídeo de visualização da câmera do dispositivo.
-
-## <a name="implementing-a-video-player"></a>[Implementando um player de vídeo](video-player/index.md)
-
-Este artigo mostra como gravar renderizadores para implementar um controle personalizado `VideoPlayer` que pode reproduzir vídeos da Web, vídeos inseridos como recursos de aplicativo ou vídeos armazenados na biblioteca de vídeos no dispositivo do usuário. Várias técnicas são demonstradas, incluindo a implementação de métodos e de propriedades vinculáveis somente leitura.
+Xamarin.Forms os controles de interfaces de usuário personalizados devem derivar da [`View`](xref:Xamarin.Forms.View) classe, que é usada para posicionar layouts e controles na tela. Este artigo demonstra como criar um renderizador personalizado para um Xamarin.Forms controle personalizado que é usado para exibir um fluxo de vídeo de visualização da câmera do dispositivo.

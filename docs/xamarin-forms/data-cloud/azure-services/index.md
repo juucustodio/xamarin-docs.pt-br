@@ -10,12 +10,12 @@ ms.date: 06/28/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3c75fc9add49e3754241c129a8243d33095c3abf
-ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
+ms.openlocfilehash: cc080b9c69614b2e743e32139622502250de3684
+ms.sourcegitcommit: 9ab5a1e346e20f54e8b7aa655fd3d117b43978cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94590370"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99223692"
 ---
 # <a name="no-locxamarinforms-and-azure-services"></a>Xamarin.Forms e os serviços do Azure
 
@@ -23,7 +23,7 @@ ms.locfileid: "94590370"
 
 Um banco de dados de documentos Azure Cosmos DB é um banco de dados NoSQL que fornece acesso de baixa latência a documentos JSON, oferecendo um serviço de banco de dados rápido, altamente disponível e escalonável para aplicativos que exigem dimensionamento contínuo e replicação global. Este artigo explica como usar a biblioteca de cliente do Azure Cosmos DB .NET Standard para integrar um banco de dados de documentos Azure Cosmos DB a um Xamarin.Forms aplicativo.
 
-## <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-no-locxamarinforms"></a>[Enviar e receber notificações por push com os hubs de notificação do Azure e Xamarin.Forms](azure-notification-hub.md)
+## <a name="send-and-receive-push-notifications-with-azure-notification-hubs-and-no-locxamarinforms"></a>[Enviar e receber notificações por push com os hubs de notificação do Azure e Xamarin.Forms](/azure/developer/mobile-apps/notification-hubs-backend-service-xamarin-forms)
 
 Os hubs de notificação do Azure permitem centralizar notificações entre plataformas para que seu aplicativo de back-end possa se comunicar com um único Hub. Os hubs de notificação do Azure cuidam da distribuição de notificações por push para vários provedores de plataforma. Este artigo explica como integrar os hubs de notificação do Azure em um Xamarin.Forms aplicativo.
 
