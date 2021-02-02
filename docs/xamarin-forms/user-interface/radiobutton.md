@@ -10,14 +10,14 @@ ms.date: 10/02/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e57003825e0ea77d54ec528b18328e98f3d1b81e
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: f1f36329c36dfae3f2ca0754ecbb867520d4c530
+ms.sourcegitcommit: bd8ce0ae64698246db92a6c4396983290dc54a22
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97939830"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99427740"
 ---
-# <a name="no-locxamarinforms-radiobutton"></a>Xamarin.Forms Índices
+# <a name="xamarinforms-radiobutton"></a>Xamarin.Forms Índices
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
 
@@ -175,13 +175,13 @@ O exemplo XAML a seguir mostra o Agrupamento explícito de [`RadioButton`](xref:
 
 ```xaml
 <Label Text="What's your favorite color?" />
-<RadioButton Text="Red"
+<RadioButton Content="Red"
              GroupName="colors" />
-<RadioButton Text="Green"
+<RadioButton Content="Green"
              GroupName="colors" />
-<RadioButton Text="Blue"
+<RadioButton Content="Blue"
              GroupName="colors" />
-<RadioButton Text="Other"
+<RadioButton Content="Other"
              GroupName="colors" />
 ```
 
@@ -215,7 +215,7 @@ Um botão de opção tem dois estados: marcado ou desmarcado. Quando um botão d
 Quando a `IsChecked` propriedade é alterada, seja por meio de manipulação de usuário ou programática, o `CheckedChanged` evento é acionado. Um manipulador de eventos para esse evento pode ser registrado para responder à alteração:
 
 ```xaml
-<RadioButton Text="Red"
+<RadioButton Content="Red"
              GroupName="colors"
              CheckedChanged="OnColorsRadioButtonCheckedChanged" />
 ```
@@ -298,10 +298,10 @@ O exemplo de XAML a seguir mostra como definir um estado visual para `Checked` o
     </ContentPage.Resources>
     <StackLayout>
         <Label Text="What's your favorite mode of transport?" />
-        <RadioButton Text="Car" />
-        <RadioButton Text="Bike" />
-        <RadioButton Text="Train" />
-        <RadioButton Text="Walking" />
+        <RadioButton Content="Car" />
+        <RadioButton Content="Bike" />
+        <RadioButton Content="Train" />
+        <RadioButton Content="Walking" />
     </StackLayout>
 </ContentPage>
 ```
