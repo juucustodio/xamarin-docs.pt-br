@@ -196,23 +196,6 @@ items:
             href: app-fundamentals/custom-renderer/hybridwebview.md
           - name: Implementando uma exibição
             href: app-fundamentals/custom-renderer/view.md
-          - name: Implementando um player de vídeo
-            href: app-fundamentals/custom-renderer/video-player/index.md
-            items:
-              - name: Criando os players de vídeo da plataforma
-                href: app-fundamentals/custom-renderer/video-player/player-creation.md
-              - name: Reproduzindo um vídeo da Web
-                href: app-fundamentals/custom-renderer/video-player/web-videos.md
-              - name: Associando fontes de vídeo ao player
-                href: app-fundamentals/custom-renderer/video-player/source-bindings.md
-              - name: Carregando vídeos de recursos do aplicativo
-                href: app-fundamentals/custom-renderer/video-player/loading-resources.md
-              - name: Acessando a biblioteca de vídeos do dispositivo
-                href: app-fundamentals/custom-renderer/video-player/accessing-library.md
-              - name: Controles de transporte de vídeo personalizado
-                href: app-fundamentals/custom-renderer/video-player/custom-transport.md
-              - name: Posicionamento de vídeo personalizado
-                href: app-fundamentals/custom-renderer/video-player/custom-positioning.md
       - name: Associação de dados
         href: app-fundamentals/data-binding/index.md
         items:
@@ -932,7 +915,7 @@ items:
           - name: Banco de dados de documentos do Azure Cosmos DB
             href: data-cloud/azure-services/azure-cosmosdb.md
           - name: Hubs de notificação do Azure
-            href: data-cloud/azure-services/azure-notification-hub.md
+            href: /azure/developer/mobile-apps/notification-hubs-backend-service-xamarin-forms
           - name: Armazenamento do Azure
             href: data-cloud/azure-services/azure-storage.md
           - name: Azure Search
