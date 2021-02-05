@@ -6,18 +6,18 @@ ms.assetid: 15D02690-AC03-457E-8815-8E4C17E4D642
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/24/2020
+ms.date: 02/05/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b331ea54e1ae0d5746090d155cb14465bcec0307
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: 95b60c4ab28200dd2bc2434396df0832532bdd7a
+ms.sourcegitcommit: 06701714021545eb5e932847829b876082194ffc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938986"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585865"
 ---
-# <a name="no-locxamarinforms-shapes-polyline"></a>Xamarin.Forms Formas: polilinha
+# <a name="xamarinforms-shapes-polyline"></a>Xamarin.Forms Formas: polilinha
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -36,10 +36,10 @@ Para obter mais informações sobre a `FillRule` enumeração, consulte [ Xamari
 
 ## <a name="create-a-polyline"></a>Criar uma polilinha
 
-Para desenhar uma polilinha, crie um `Polyline` objeto e defina sua `Points` propriedade para os vértices de uma forma. Para dar um contorno à polilinha, defina sua `Stroke` propriedade como a [`Color`](xref:Xamarin.Forms.Color) . A `StrokeThickness` propriedade especifica a espessura da estrutura de tópicos da polilinha.
+Para desenhar uma polilinha, crie um `Polyline` objeto e defina sua `Points` propriedade para os vértices de uma forma. Para dar um contorno à polilinha, defina sua `Stroke` propriedade como um [`Brush`](xref:Xamarin.Forms.Brush) objeto derivado. A `StrokeThickness` propriedade especifica a espessura da estrutura de tópicos da polilinha. Para obter mais informações sobre `Brush` objetos, consulte [ Xamarin.Forms pincéis](~/xamarin-forms/user-interface/brushes/index.md).
 
 > [!IMPORTANT]
-> Se você definir a `Fill` propriedade de a `Polyline` para a [`Color`](xref:Xamarin.Forms.Color) , o espaço interior da polilinha será pintado, mesmo que o ponto inicial e o ponto de extremidade não se interseccionam.
+> Se você definir a `Fill` propriedade de um `Polyline` para um [`Brush`](xref:Xamarin.Forms.Brush) objeto derivado, o espaço interior da polilinha será pintado, mesmo que o ponto inicial e o ponto de extremidade não se interseccionam.
 
 O exemplo de XAML a seguir mostra como desenhar uma polilinha:
 
@@ -100,3 +100,4 @@ Neste exemplo, o comportamento de preenchimento da polilinha é determinado usan
 - [ShapeDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Existentes](index.md)
 - [Xamarin.Forms Formas: regras de preenchimento](fillrules.md)
+- [Xamarin.Forms Pincéis](~/xamarin-forms/user-interface/brushes/index.md)
