@@ -11,13 +11,13 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 01f625d9ecfb91bc36013b7f6d45fb3d275e8bee
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.sourcegitcommit: 10c7dd16fe78226053d1d036492b6c9102fc421b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
+ms.lasthandoff: 02/05/2021
 ms.locfileid: "93370813"
 ---
-# <a name="no-locxamarinforms-cells"></a>Xamarin.Forms Nas
+# <a name="xamarinforms-cells"></a>Xamarin.Forms Nas
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/formsgallery)
 
@@ -31,7 +31,7 @@ Uma *célula* é um elemento especializado usado para itens em uma tabela e desc
 
 Xamarin.Forms o oferece suporte aos seguintes tipos de célula:
 
-| Type | Descrição | Aparência |
+| Tipo | Descrição | Aparência |
 | --- | --- | --- |
 | `TextCell` | Um [`TextCell`](xref:Xamarin.Forms.TextCell) exibe uma ou duas cadeias de caracteres de texto. Defina a [`Text`](xref:Xamarin.Forms.TextCell.Text) propriedade e, opcionalmente, a [`Detail`](xref:Xamarin.Forms.TextCell.Detail) propriedade para essas cadeias de caracteres de texto.<br /><br />[Documentação](xref:Xamarin.Forms.TextCell)  /  da API [Guia](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#textcell) | [![Exemplo de textcell](cells-images/TextCell.png "Exemplo de textcell")](cells-images/TextCell-Large.png#lightbox "Exemplo de textcell")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TextCellDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TextCellDemoPage.xaml) |
 | `ImageCell` | O [`ImageCell`](xref:Xamarin.Forms.ImageCell) exibe as mesmas informações como [`TextCell`](xref:Xamarin.Forms.TextCell) , mas inclui um bitmap que você define com a [`Source`](xref:Xamarin.Forms.Image.Source) propriedade.<br /><br />[Documentação](xref:Xamarin.Forms.ImageCell)  /  da API [Guia](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#imagecell) | [![Exemplo de ImageCell](cells-images/ImageCell.png "Exemplo de ImageCell")](cells-images/ImageCell-Large.png#lightbox "Exemplo de ImageCell")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageCellDemoPage.cs)  /  [Página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageCellDemoPage.xaml) |

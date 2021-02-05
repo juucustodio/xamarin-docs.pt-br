@@ -14,13 +14,13 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 8bfa78ef334829ab228d691368ec44ac71d415ad
-ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
+ms.sourcegitcommit: 10c7dd16fe78226053d1d036492b6c9102fc421b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
+ms.lasthandoff: 02/05/2021
 ms.locfileid: "91433508"
 ---
-# <a name="no-locxamarinforms-quickstart-deep-dive"></a>Xamarin.Forms Aprofundamento do guia de início rápido
+# <a name="xamarinforms-quickstart-deep-dive"></a>Xamarin.Forms Aprofundamento do guia de início rápido
 
 No [ Xamarin.Forms início rápido](~/get-started/index.yml), o aplicativo Notes foi criado. Este artigo revisa o que foi criado para compreender os conceitos básicos de como Xamarin.Forms os aplicativos funcionam.
 
@@ -39,7 +39,7 @@ Os projetos são:
 - Notes.iOS – esse projeto contém o código específico do iOS e é o ponto de entrada para o aplicativo iOS.
 - Notes.UWP – esse projeto contém código específico da UWP (Plataforma Universal do Windows) e é o ponto de entrada para o aplicativo UWP.
 
-## <a name="anatomy-of-a-no-locxamarinforms-application"></a>Anatomia de um Xamarin.Forms aplicativo
+## <a name="anatomy-of-a-xamarinforms-application"></a>Anatomia de um Xamarin.Forms aplicativo
 
 A captura de tela a seguir mostra o conteúdo do projeto de biblioteca do .NET Standard Notes no Visual Studio:
 
@@ -65,7 +65,7 @@ Os projetos são:
 - Notes.Android – esse projeto contém o código específico do Android e é o ponto de entrada para aplicativos Android.
 - Notes.iOS – esse projeto contém o código específico do iOS e é o ponto de entrada para aplicativos iOS.
 
-## <a name="anatomy-of-a-no-locxamarinforms-application"></a>Anatomia de um Xamarin.Forms aplicativo
+## <a name="anatomy-of-a-xamarinforms-application"></a>Anatomia de um Xamarin.Forms aplicativo
 
 A captura de tela a seguir mostra o conteúdo do projeto de biblioteca do .NET Standard Notes no Visual Studio para Mac:
 
@@ -382,11 +382,11 @@ await Navigation.PopAsync();
 
 Para obter mais informações sobre navegação hierárquica, veja [Navegação hierárquica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
 
-## <a name="data-binding"></a>Associação de dados
+## <a name="data-binding"></a>Vinculação de dados
 
 A vinculação de dados é usada para simplificar a forma como um Xamarin.Forms aplicativo exibe e interage com seus dados. Ela estabelece uma conexão entre a interface do usuário e o aplicativo subjacente. A [`BindableObject`](xref:Xamarin.Forms.BindableObject) classe contém grande parte da infraestrutura para dar suporte à vinculação de dados.
 
-A vinculação de dados conecta dois objetos, chamados de a *origem* e o *destino*. O objeto *origem* fornece os dados. O objeto *destino* consumirá (e geralmente exibirá) dados do objeto de origem. Por exemplo, um [`Editor`](xref:Xamarin.Forms.Editor) (objeto de*destino* ) normalmente vinculará sua [`Text`](xref:Xamarin.Forms.InputView.Text) Propriedade a uma `string` propriedade pública em um objeto de *origem* . O diagrama a seguir ilustra essa relação de associação:
+A vinculação de dados conecta dois objetos, chamados de a *origem* e o *destino*. O objeto *origem* fornece os dados. O objeto *destino* consumirá (e geralmente exibirá) dados do objeto de origem. Por exemplo, um [`Editor`](xref:Xamarin.Forms.Editor) (objeto de *destino* ) normalmente vinculará sua [`Text`](xref:Xamarin.Forms.InputView.Text) Propriedade a uma `string` propriedade pública em um objeto de *origem* . O diagrama a seguir ilustra essa relação de associação:
 
 ![Associação de dados](deepdive-images/data-binding.png)
 
@@ -530,15 +530,15 @@ Esse aprofundamento examinou os conceitos básicos do desenvolvimento de aplicat
 - Os modelos de dados fornecem a capacidade de definir a apresentação de dados em exibições com suporte. Para saber mais, veja [Modelos de dados](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 - Cada página, layout e exibição é renderizado diferentemente em cada plataforma usando uma classe `Renderer`, que por sua vez cria um controle nativo, organiza sua disposição na tela e adiciona o comportamento especificado no código compartilhado. Os desenvolvedores podem implementar suas próprias classes `Renderer` personalizadas para personalizar a aparência e/ou o comportamento de um controle. Para obter mais informações, veja [Renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 - Efeitos também permitem que os controles nativos em cada plataforma sejam personalizados. Os efeitos são criados em projetos específicos da plataforma por meio da subclasse da [`PlatformEffect`](xref:Xamarin.Forms.PlatformEffect`2) classe e são consumidos anexando-os a um Xamarin.Forms controle apropriado. Para obter mais informações, veja [Efeitos](~/xamarin-forms/app-fundamentals/effects/index.md).
-- O código compartilhado pode acessar a funcionalidade nativa por meio da [`DependencyService`](xref:Xamarin.Forms.DependencyService) classe. Para obter mais informações, consulte [Acessar recursos nativos com DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
+- O código compartilhado pode acessar a funcionalidade nativa por meio da classe [`DependencyService`](xref:Xamarin.Forms.DependencyService). Para obter mais informações, consulte [Acessar recursos nativos com DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
-Como alternativa, a [_criação de aplicativos Xamarin.Forms móveis com _](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)o, um livro de Charles Petzold, é um bom local para saber mais sobre o Xamarin.Forms . O livro está disponível em PDF ou em vários formatos de livro eletrônico.
+Como alternativa, a [_criação de aplicativos Xamarin.Forms móveis com_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)o, um livro de Charles Petzold, é um bom local para saber mais sobre o Xamarin.Forms . O livro está disponível em PDF ou em vários formatos de livro eletrônico.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Linguagem de marcação de aplicativo extensível (XAML)](~/xamarin-forms/xaml/index.yml)
+- [XAML (linguagem XAML)](~/xamarin-forms/xaml/index.yml)
 - [Associação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md)
-- [Referência de Controles](~/xamarin-forms/user-interface/controls/index.md)
+- [Referência de controles](~/xamarin-forms/user-interface/controls/index.md)
 - [Extensões de marcação do XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
 - [Xamarin.Forms Amostras](/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Exemplos de Introdução](/samples/browse/?products=xamarin&term=Xamarin.Forms%2bget%2bstarted)

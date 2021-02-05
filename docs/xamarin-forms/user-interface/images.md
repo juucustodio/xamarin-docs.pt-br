@@ -11,13 +11,13 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 2ea65a646add3f42ee88e5cd884e80131b9964bf
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.sourcegitcommit: 10c7dd16fe78226053d1d036492b6c9102fc421b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
+ms.lasthandoff: 02/05/2021
 ms.locfileid: "93373829"
 ---
-# <a name="images-in-no-locxamarinforms"></a>Imagens em Xamarin.Forms
+# <a name="images-in-xamarinforms"></a>Imagens em Xamarin.Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/workingwithimages)
 
@@ -55,8 +55,8 @@ Os arquivos de imagem podem ser adicionados a cada projeto de aplicativo e refer
 
 Para usar uma única imagem em todos os aplicativos, *o mesmo nome de arquivo deve ser usado em todas as plataformas* e deve ser um nome de recurso Android válido (ou seja, apenas letras minúsculas, numerais, sublinhado e o período são permitidos).
 
-- **Ios** -a maneira preferida de gerenciar e dar suporte a imagens desde o Ios 9 é usar **conjuntos de imagens de catálogo de ativos** , que devem conter todas as versões de uma imagem que são necessárias para dar suporte a vários dispositivos e fatores de escala para um aplicativo. Para obter mais informações, consulte [adicionando imagens a um conjunto de imagens do catálogo de ativos](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
-- Imagens no local do **Android** no diretório de **recursos/empates** com a **ação de compilação: AndroidResource**. Versões de alto e baixo DPI de uma imagem também podem ser fornecidas (em subdiretórios de **recursos** nomeados apropriadamente, como **Drawable-ldpi** , **estilododesenho-hdpi** e **estilododesenho-xhdpi** ).
+- **Ios** -a maneira preferida de gerenciar e dar suporte a imagens desde o Ios 9 é usar **conjuntos de imagens de catálogo de ativos**, que devem conter todas as versões de uma imagem que são necessárias para dar suporte a vários dispositivos e fatores de escala para um aplicativo. Para obter mais informações, consulte [adicionando imagens a um conjunto de imagens do catálogo de ativos](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
+- Imagens no local do **Android** no diretório de **recursos/empates** com a **ação de compilação: AndroidResource**. Versões de alto e baixo DPI de uma imagem também podem ser fornecidas (em subdiretórios de **recursos** nomeados apropriadamente, como **Drawable-ldpi**, **estilododesenho-hdpi** e **estilododesenho-xhdpi**).
 - **Plataforma universal do Windows (UWP)** – por padrão, as imagens devem ser colocadas no diretório raiz do aplicativo com a **ação de compilação: conteúdo**. Como alternativa, as imagens podem ser colocadas em um diretório diferente, que é especificado com uma plataforma específica. Para obter mais informações, consulte [diretório de imagem padrão no Windows](~/xamarin-forms/platform/windows/default-image-directory.md).
 
 > [!IMPORTANT]
@@ -95,7 +95,7 @@ o iOS, o Android e o UWP incluem suporte para diferentes resoluções de imagem,
 
 A maneira preferida de gerenciar imagens desde o iOS 9 é arrastar imagens para cada resolução necessária para o conjunto de imagens apropriado do catálogo de ativos. Para obter mais informações, consulte [adicionando imagens a um conjunto de imagens do catálogo de ativos](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 
-Antes do iOS 9, as versões da retina da imagem poderiam ser colocadas na pasta de **recursos** -duas e três vezes a resolução com um **@2x** ou **@3x** sufixos no nome do arquivo antes da extensão de arquivos (por exemplo, **myimage@2x.png** ). No entanto, esse método de trabalhar com imagens em um aplicativo iOS foi preterido pela Apple. Para obter mais informações, consulte [tamanhos de imagem e nomes de](~/ios/app-fundamentals/images-icons/displaying-an-image.md)dados.
+Antes do iOS 9, as versões da retina da imagem poderiam ser colocadas na pasta de **recursos** -duas e três vezes a resolução com um **@2x** ou **@3x** sufixos no nome do arquivo antes da extensão de arquivos (por exemplo, **myimage@2x.png**). No entanto, esse método de trabalhar com imagens em um aplicativo iOS foi preterido pela Apple. Para obter mais informações, consulte [tamanhos de imagem e nomes de](~/ios/app-fundamentals/images-icons/displaying-an-image.md)dados.
 
 As imagens de resolução alternativa do Android devem ser colocadas em [diretórios especialmente nomeados](https://developer.android.com/guide/practices/screens_support.html) no projeto do Android, conforme mostrado na seguinte captura de tela:
 
@@ -120,7 +120,7 @@ Alguns controles têm propriedades que exibem uma imagem, como:
 
 Imagens inseridas também são fornecidas com um aplicativo (como imagens locais), mas em vez de ter uma cópia da imagem na estrutura de arquivos de cada aplicativo, o arquivo de imagem é inserido no assembly como um recurso. Esse método de distribuição de imagens é recomendado quando imagens idênticas são usadas em cada plataforma e é especialmente adequada para a criação de componentes, pois a imagem é agrupada com o código.
 
-Para inserir uma imagem em um projeto, clique com o botão direito do mouse para adicionar novos itens e selecione a imagem/s que você deseja adicionar. Por padrão, a imagem terá a **ação de compilação: nenhuma** ; Isso precisa ser definido para a **ação de Build: EmbeddedResource**.
+Para inserir uma imagem em um projeto, clique com o botão direito do mouse para adicionar novos itens e selecione a imagem/s que você deseja adicionar. Por padrão, a imagem terá a **ação de compilação: nenhuma**; Isso precisa ser definido para a **ação de Build: EmbeddedResource**.
 
 <!-- markdownlint-disable MD001 -->
 

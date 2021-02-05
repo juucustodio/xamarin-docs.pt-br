@@ -11,13 +11,13 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 37973db6288f092d756a29de61731a296eac3924
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.sourcegitcommit: 10c7dd16fe78226053d1d036492b6c9102fc421b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
+ms.lasthandoff: 02/05/2021
 ms.locfileid: "93375402"
 ---
-# <a name="text-in-no-locxamarinforms"></a>Texto em Xamarin.Forms
+# <a name="text-in-xamarinforms"></a>Texto em Xamarin.Forms
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
@@ -31,7 +31,7 @@ Xamarin.Forms tem três exibições principais para trabalhar com texto:
 
 A aparência do texto pode ser alterada usando [estilos](#styles) internos ou personalizados e alguns controles dão suporte a [fontes](#fonts)personalizadas.
 
-## <a name="label"></a>[Rotular](label.md)
+## <a name="label"></a>[Chamada](label.md)
 
 A `Label` exibição é usada para exibir texto. Ele pode mostrar várias linhas de texto ou uma única linha de texto. `Label` pode apresentar texto com várias opções de formatação usadas em linha. O modo de exibição de rótulo pode encapsular ou truncar texto quando ele não couber em uma linha.
 

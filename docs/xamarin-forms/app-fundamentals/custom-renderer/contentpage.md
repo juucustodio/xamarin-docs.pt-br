@@ -11,10 +11,10 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.openlocfilehash: 10e794dba276ed9d67b0e947d203cce0b62b7353
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.sourcegitcommit: 10c7dd16fe78226053d1d036492b6c9102fc421b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
+ms.lasthandoff: 02/05/2021
 ms.locfileid: "93374479"
 ---
 # <a name="customizing-a-contentpage"></a>Personalizando uma ContentPage
@@ -37,7 +37,7 @@ O processo de renderização pode ser aproveitado para implementar personalizaç
 
 Agora, cada item será abordado separadamente, a fim de implementar um `CameraPage` que fornece um feed de câmera em tempo real e a capacidade de tirar uma foto.
 
-## <a name="creating-the-no-locxamarinforms-page"></a>Criando a Xamarin.Forms página
+## <a name="creating-the-xamarinforms-page"></a>Criando a Xamarin.Forms página
 
 Um inalterado [`ContentPage`](xref:Xamarin.Forms.ContentPage) pode ser adicionado ao Xamarin.Forms projeto compartilhado, conforme mostrado no exemplo de código XAML a seguir:
 
@@ -76,7 +76,7 @@ public class CameraPageCS : ContentPage
 
 Uma instância do `CameraPage` será usada para exibir o feed de câmera em tempo real em cada plataforma. A personalização do controle será realizada no renderizador personalizado, portanto, nenhuma implementação adicional é necessária na classe `CameraPage`.
 
-## <a name="consuming-the-no-locxamarinforms-page"></a>Consumindo a Xamarin.Forms página
+## <a name="consuming-the-xamarinforms-page"></a>Consumindo a Xamarin.Forms página
 
 O vazio `CameraPage` deve ser exibido pelo Xamarin.Forms aplicativo. Isso ocorre quando um botão na instância de `MainPage` é tocado, o que por sua vez executa o método `OnTakePhotoButtonClicked`, conforme mostrado no exemplo de código a seguir:
 
