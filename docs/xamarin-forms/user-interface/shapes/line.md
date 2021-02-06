@@ -6,18 +6,18 @@ ms.assetid: 384F1A72-6D3B-4FD3-BC40-E00A73A463EC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/24/2020
+ms.date: 02/05/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5d5ecd7804c6cd8321827cd8aef98245124beca0
-ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
+ms.openlocfilehash: 962800c5deb546ddf6a74d1f52ffaf60734ae463
+ms.sourcegitcommit: 06701714021545eb5e932847829b876082194ffc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97939102"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585839"
 ---
-# <a name="no-locxamarinforms-shapes-line"></a>Xamarin.Forms Formas: linha
+# <a name="xamarinforms-shapes-line"></a>Xamarin.Forms Formas: linha
 
 [![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
@@ -36,7 +36,7 @@ Para obter informações sobre como controlar como terminações de linha são d
 
 ## <a name="create-a-line"></a>Criar uma linha
 
-Para desenhar uma linha, crie um `Line` objeto e defina suas `X1` `Y1` Propriedades e como seu ponto de partida e suas `X2` `Y` Propriedades e para seu ponto de extremidade. Além disso, defina sua `Stroke` propriedade como a [`Color`](xref:Xamarin.Forms.Color) porque uma linha sem um traço é invisível.
+Para desenhar uma linha, crie um `Line` objeto e defina suas `X1` `Y1` Propriedades e como seu ponto de partida e suas `X2` `Y` Propriedades e para seu ponto de extremidade. Além disso, defina sua `Stroke` propriedade como um [`Brush`](xref:Xamarin.Forms.Brush) objeto derivado porque uma linha sem um traço é invisível. Para obter mais informações sobre `Brush` objetos, consulte [ Xamarin.Forms pincéis](~/xamarin-forms/user-interface/brushes/index.md).
 
 > [!NOTE]
 > A definição da `Fill` propriedade de um `Line` não tem efeito, pois uma linha não tem interior.
@@ -53,7 +53,7 @@ O exemplo de XAML a seguir mostra como desenhar uma linha:
 
 Neste exemplo, uma linha diagonal vermelha é desenhada de (40, 0) para (0120):
 
-![Linha](line-images/line.png "Linha")
+![Linha diagonal](line-images/line.png "Linha")
 
 Como as `X1` `Y1` Propriedades,, e `X2` `Y2` têm valores padrão de 0, é possível desenhar algumas linhas com a sintaxe mínima:
 
@@ -86,3 +86,4 @@ Para obter mais informações sobre como desenhar uma linha tracejada, consulte 
 
 - [ShapeDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Existentes](index.md)
+- [Xamarin.Forms Pincéis](~/xamarin-forms/user-interface/brushes/index.md)
