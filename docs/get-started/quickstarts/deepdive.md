@@ -1,34 +1,34 @@
 ---
 title: Xamarin.Forms Aprofundamento do guia de início rápido
-description: Este artigo examina os conceitos básicos do desenvolvimento de aplicativos usando o Xamarin.Forms . Os tópicos abordados incluíam a anatomia de um Xamarin.Forms aplicativo, conceitos básicos de aplicativos e de arquitetura e a interface do usuário.
+description: Este artigo examina os conceitos básicos do desenvolvimento de aplicativos usando o Xamarin.Forms shell. Os tópicos abordados incluíam a anatomia de um Xamarin.Forms aplicativo de Shell, conceitos básicos de arquitetura e aplicativo e a interface do usuário.
 zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.custom: video
-ms.assetid: 7B2340A1-6883-41D8-860C-0BB6C4E0C316
+ms.assetid: F65C83B7-BC9F-425F-8662-931B652A2946
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/27/2018
+ms.date: 01/25/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8bfa78ef334829ab228d691368ec44ac71d415ad
-ms.sourcegitcommit: 10c7dd16fe78226053d1d036492b6c9102fc421b
+ms.openlocfilehash: 2c110093d0fea6e5d97d8e58474d84edb008b1ee
+ms.sourcegitcommit: 1f391667869a4541dd9b42d78862dc01d69ed160
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "91433508"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99818235"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Xamarin.Forms Aprofundamento do guia de início rápido
 
-No [ Xamarin.Forms início rápido](~/get-started/index.yml), o aplicativo Notes foi criado. Este artigo revisa o que foi criado para compreender os conceitos básicos de como Xamarin.Forms os aplicativos funcionam.
+No [ Xamarin.Forms início rápido](~/get-started/index.yml), o aplicativo Notes foi criado. Este artigo revisa o que foi criado para compreender os conceitos básicos de como Xamarin.Forms funcionam os aplicativos do Shell.
 
 ::: zone pivot="windows"
 
 ## <a name="introduction-to-visual-studio"></a>Introdução ao Visual Studio
 
-O Visual Studio organiza o código em *Soluções* e *Projetos*. Uma solução é um contêiner que pode conter um ou mais projetos. Um projeto pode ser um aplicativo, uma biblioteca com suporte, um aplicativo de teste, entre outros. O aplicativo Notes consiste em uma solução contendo quatro projetos, conforme mostrado na captura de tela a seguir:
+O Visual Studio organiza o código em *Soluções* e *Projetos*. Uma solução é um contêiner que pode conter um ou mais projetos. Um projeto pode ser um aplicativo, uma biblioteca com suporte, um aplicativo de teste, entre outros. O aplicativo Notes consiste em uma solução contendo três projetos, conforme mostrado na captura de tela a seguir:
 
 ![Gerenciador de Soluções do Visual Studio](deepdive-images/vs/solution.png)
 
@@ -37,7 +37,6 @@ Os projetos são:
 - Notes – esse projeto é o projeto da biblioteca do .NET Standard que contém todos os códigos compartilhados e interfaces do usuário compartilhadas.
 - Notes.Android – esse projeto contém o código específico do Android e é o ponto de entrada para o aplicativo Android.
 - Notes.iOS – esse projeto contém o código específico do iOS e é o ponto de entrada para o aplicativo iOS.
-- Notes.UWP – esse projeto contém código específico da UWP (Plataforma Universal do Windows) e é o ponto de entrada para o aplicativo UWP.
 
 ## <a name="anatomy-of-a-xamarinforms-application"></a>Anatomia de um Xamarin.Forms aplicativo
 
@@ -47,7 +46,7 @@ A captura de tela a seguir mostra o conteúdo do projeto de biblioteca do .NET S
 
 O projeto tem um nó de **dependências** que contém os nós **NuGet** e **SDK** :
 
-- **NuGet** &ndash; os Xamarin.Forms pacotes NuGet do SQLite-net-PCL que foram adicionados ao projeto.
+- **NuGet** &ndash; os Xamarin.Forms Xamarin.Essentials pacotes NuGet,, Newtonsoft.Json e SQLite-net-PCL que foram adicionados ao projeto.
 - **SDK** &ndash; o metapacote `NETStandard.Library` que faz referência ao conjunto completo de pacotes NuGet que definem o .NET Standard.
 
 ::: zone-end
@@ -73,7 +72,7 @@ A captura de tela a seguir mostra o conteúdo do projeto de biblioteca do .NET S
 
 O projeto tem um nó de **dependências** que contém os nós **NuGet** e **SDK** :
 
-- **NuGet** &ndash; os Xamarin.Forms pacotes NuGet do SQLite-net-PCL que foram adicionados ao projeto.
+- **NuGet** &ndash; os Xamarin.Forms Xamarin.Essentials pacotes NuGet,, Newtonsoft.Json e SQLite-net-PCL que foram adicionados ao projeto.
 - **SDK** &ndash; o metapacote `NETStandard.Library` que faz referência ao conjunto completo de pacotes NuGet que definem o .NET Standard.
 
 ::: zone-end
@@ -82,13 +81,17 @@ O projeto também consiste em vários arquivos:
 
 - **Data\NoteDatabase.cs** – essa classe contém código para criar o banco de dados e ler, gravar e excluir dados do banco de dados.
 - **Modelos\Note.cs** – essa classe define um modelo de `Note` cujas instâncias armazenam dados sobre cada observação no aplicativo.
+- **Views\AboutPage.XAML** – a marcação XAML para a `AboutPage` classe, que define a interface do usuário para a página About.
+- **Views\AboutPage.XAML.cs** – o code-behind da `AboutPage` classe, que contém a lógica de negócios que é executada quando o usuário interage com a página.
+- **Views\NotesPage.XAML** – a marcação XAML para a `NotesPage` classe, que define a interface do usuário para a página mostrada quando o aplicativo é iniciado.
+- **Views\NotesPage.XAML.cs** – o code-behind da `NotesPage` classe, que contém a lógica de negócios que é executada quando o usuário interage com a página.
+- **Views\NoteEntryPage.XAML** – a marcação XAML da `NoteEntryPage` classe, que define a interface do usuário para a página mostrada quando o usuário insere uma nota.
+- **Views\NoteEntryPage.XAML.cs** – o code-behind da `NoteEntryPage` classe, que contém a lógica de negócios que é executada quando o usuário interage com a página.
 - **XAML** – a marcação XAML para a classe `App`, que define um dicionário de recursos para o aplicativo.
-- **App.XAML.CS** – o code-behind para a classe `App`, que é responsável por instanciar a primeira página que será exibida pelo aplicativo em cada plataforma e por processar eventos de ciclo de vida do aplicativo.
+- **App.XAML.cs** – o code-behind para a `App` classe, que é responsável por instanciar o aplicativo de shell e para manipular eventos de ciclo de vida do aplicativo.
+- **AppShell. XAML** – a marcação XAML para a `AppShell` classe, que define a hierarquia visual do aplicativo.
+- **AppShell.XAML.cs** – o code-behind da `AppShell` classe, que cria uma rota para o para `NoteEntryPage` que possa ser navegada por meio de programação.
 - **AssemblyInfo.cs** – esse arquivo contém um atributo de aplicativo sobre o projeto, que é aplicado no nível do assembly.
-- **NotesPage.xaml** – a marcação XAML para a classe `NotesPage`, que define a interface do usuário para a página exibida quando o aplicativo é iniciado.
-- **NotesPage.xaml.cs** – o code-behind para a classe `NotesPage`, que contém a lógica de negócios executada quando o usuário interage com a página.
-- **NoteEntryPage.xaml** – a marcação XAML para a classe `NoteEntryPage`, que define a interface do usuário para a página exibida quando o usuário insere uma observação.
-- **NoteEntryPage.xaml.cs** – o code-behind para a classe `NoteEntryPage`, que contém a lógica de negócios executada quando o usuário interage com a página.
 
 Para saber mais sobre a anatomia de um aplicativo Xamarin.iOS, consulte [Anatomia de um aplicativo Xamarin.iOS](~/ios/get-started/hello-ios/hello-ios-deepdive.md#anatomy-of-a-xamarinios-application). Para saber mais sobre a anatomia de um aplicativo Xamarin.Android, consulte [Anatomia de um aplicativo Xamarin.Android](~/android/get-started/hello-android/hello-android-deepdive.md#anatomy).
 
@@ -96,18 +99,9 @@ Para saber mais sobre a anatomia de um aplicativo Xamarin.iOS, consulte [Anatomi
 
 Um Xamarin.Forms aplicativo é arquitetado da mesma forma que um aplicativo tradicional entre plataformas. O código compartilhado normalmente é colocado em uma biblioteca do .NET Standard e aplicativos específicos de plataforma consomem o código compartilhado. O diagrama a seguir mostra uma visão geral dessa relação para o aplicativo Notes:
 
-::: zone pivot="windows"
+![Arquitetura do Notes](deepdive-images/architecture.png)
 
-![Arquitetura do Notes](deepdive-images/vs/architecture.png)
-
-::: zone-end
-::: zone pivot="macos"
-
-![Arquitetura do Notes](deepdive-images/vsmac/architecture.png)
-
-::: zone-end
-
-Para maximizar a reutilização do código de inicialização, os Xamarin.Forms aplicativos têm uma única classe denominada `App` responsável por instanciar a primeira página que será exibida pelo aplicativo em cada plataforma, conforme mostrado no exemplo de código a seguir:
+Para maximizar a reutilização do código de inicialização, Xamarin.Forms os aplicativos têm uma única classe denominada `App` responsável por instanciar o aplicativo em cada plataforma, conforme mostrado no exemplo de código a seguir:
 
 ```csharp
 using Xamarin.Forms;
@@ -119,14 +113,14 @@ namespace Notes
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new NotesPage());
+            MainPage = new AppShell();
         }
-        ...
+        // ...
     }
 }
 ```
 
-Esse código define a `MainPage` propriedade da `App` classe para uma [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instância cujo conteúdo é uma `NotesPage` instância.
+Esse código define a `MainPage` propriedade da `App` classe para o `AppShell` objeto. A `AppShell` classe define a hierarquia visual do aplicativo. O Shell usa essa hierarquia visual e produz a interface do usuário para ela. Para obter mais informações sobre como definir a hierarquia visual do aplicativo, consulte [hierarquia visual do aplicativo](#application-visual-hierarchy).
 
 Além disso, o arquivo **AssemblyInfo.cs** contém um único atributo de aplicativo, que é aplicado no nível do assembly:
 
@@ -138,7 +132,9 @@ using Xamarin.Forms.Xaml;
 
 O [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) atributo ativa o compilador XAML, para que o XAML seja compilado diretamente na linguagem intermediária. Para saber mais, consulte [XAML Compilation](~/xamarin-forms/xaml/xamlc.md) (Compilação de XAML).
 
-## <a name="launching-the-application-on-each-platform"></a>Iniciar o aplicativo em cada plataforma
+## <a name="launch-the-application-on-each-platform"></a>Iniciar o aplicativo em cada plataforma
+
+A forma como o aplicativo é iniciado em cada plataforma é específica para a plataforma.
 
 ### <a name="ios"></a>iOS
 
@@ -191,52 +187,42 @@ namespace Notes.Droid
 
 A `OnCreate` substituição Inicializa a Xamarin.Forms estrutura chamando o `Init` método. Isso faz com que a implementação específica do Android do seja Xamarin.Forms carregada no aplicativo antes que o Xamarin.Forms aplicativo seja carregado.
 
-::: zone pivot="windows"
+## <a name="application-visual-hierarchy"></a>Hierarquia visual do aplicativo
 
-### <a name="universal-windows-platform"></a>Plataforma Universal do Windows
+Xamarin.Forms Os aplicativos de shell definem a hierarquia visual do aplicativo em uma classe que subclasse a `Shell` classe. No aplicativo Notes, esta é a `Appshell` classe:
 
-Em aplicativos Plataforma Universal do Windows (UWP), o `Init` método que inicializa a Xamarin.Forms estrutura é invocado da `App` classe:
-
-```csharp
-Xamarin.Forms.Forms.Init (e);
-
-if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
-{
-  ...
-}
+```xaml
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:Notes.Views"
+       x:Class="Notes.AppShell">
+    <TabBar>
+        <ShellContent Title="Notes"
+                      Icon="icon_feed.png"
+                      ContentTemplate="{DataTemplate views:NotesPage}" />
+        <ShellContent Title="About"
+                      Icon="icon_about.png"
+                      ContentTemplate="{DataTemplate views:AboutPage}" />
+    </TabBar>
+</Shell>
 ```
 
-Isso faz com que a implementação específica de UWP do seja Xamarin.Forms carregada no aplicativo. A Xamarin.Forms página inicial é iniciada pela `MainPage` classe:
+Esse XAML consiste em dois objetos principais:
 
-```csharp
-namespace Notes.UWP
-{
-    public sealed partial class MainPage
-    {
-        public MainPage()
-        {
-            this.InitializeComponent();
-            this.LoadApplication(new Notes.App());
-        }
-    }
-}
-```
+- `TabBar`. O `TabBar` representa a barra de guia inferior e deve ser usado quando o padrão de navegação para o aplicativo usa guias inferiores. O objeto `TabBar` é um filho do objeto `Shell`.
+- `ShellContent`, que representa os `ContentPage` objetos para cada guia no `TabBar` . Cada `ShellContent` objeto é um filho do `TabBar` objeto.
 
-O Xamarin.Forms aplicativo é carregado com o `LoadApplication` método.
+Esses objetos não representam nenhuma interface do usuário, mas sim a organização da hierarquia visual do aplicativo. O Shell usará esses objetos e produzirá a interface de navegação do conteúdo para o usuário. Portanto, a `AppShell` classe define define duas páginas navegáveis a partir das guias inferiores. As páginas são criadas sob demanda, em resposta à navegação do usuário.
 
-> [!NOTE]
-> Plataforma Universal do Windows aplicativos podem ser compilados com o Xamarin.Forms , mas apenas usando o Visual Studio no Windows.
-
-::: zone-end
+Para obter mais informações sobre aplicativos de Shell, consulte [ Xamarin.Forms shell](~/xamarin-forms/app-fundamentals/shell/index.md).
 
 ## <a name="user-interface"></a>Interface do usuário
 
-Há quatro grupos de controle principais usados para criar a interface do usuário de um Xamarin.Forms aplicativo:
+Há vários grupos de controle usados para criar a interface do usuário de um Xamarin.Forms aplicativo:
 
 1. **Páginas** – as Xamarin.Forms páginas representam telas de aplicativos móveis de plataforma cruzada. O aplicativo Notes usa a [`ContentPage`](xref:Xamarin.Forms.ContentPage) classe para exibir telas únicas. Para obter mais informações sobre páginas, consulte [ Xamarin.Forms páginas](~/xamarin-forms/user-interface/controls/pages.md).
-1. **Exibições** – Xamarin.Forms exibições são os controles exibidos na interface do usuário, como rótulos, botões e caixas de entrada de texto. O aplicativo notas concluídas usa [`ListView`](xref:Xamarin.Forms.ListView) as [`Editor`](xref:Xamarin.Forms.Editor) [`Button`](xref:Xamarin.Forms.Button) exibições, e. Para obter mais informações sobre exibições, consulte [ Xamarin.Forms exibições](~/xamarin-forms/user-interface/controls/views.md).
+1. **Exibições** – Xamarin.Forms exibições são os controles exibidos na interface do usuário, como rótulos, botões e caixas de entrada de texto. O aplicativo notas concluídas usa [`CollectionView`](xref:Xamarin.Forms.CollectionView) as [`Editor`](xref:Xamarin.Forms.Editor) [`Button`](xref:Xamarin.Forms.Button) exibições, e. Para obter mais informações sobre exibições, consulte [ Xamarin.Forms exibições](~/xamarin-forms/user-interface/controls/views.md).
 1. **Layouts** – os Xamarin.Forms layouts são contêineres usados para compor exibições em estruturas lógicas. O aplicativo Notes usa a [`StackLayout`](xref:Xamarin.Forms.StackLayout) classe para organizar as exibições em uma pilha vertical e a [`Grid`](xref:Xamarin.Forms.Grid) classe para organizar os botões horizontalmente. Para obter mais informações sobre layouts, consulte [ Xamarin.Forms layouts](~/xamarin-forms/user-interface/controls/layouts.md).
-1. **Células** – Xamarin.Forms as células são elementos especializados usados para itens em uma lista e descrevem como cada item em uma lista deve ser desenhado. O aplicativo Notes usa o [`TextCell`](xref:Xamarin.Forms.TextCell) para exibir dois itens para cada linha na lista. Para obter mais informações sobre células, consulte [ Xamarin.Forms células](~/xamarin-forms/user-interface/controls/cells.md).
 
 No runtime, cada controle será mapeado para seu equivalente nativo, que é o que será renderizado.
 
@@ -250,7 +236,7 @@ O código XAML a seguir mostra um exemplo de como usar um [`StackLayout`](xref:X
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Notes.NoteEntryPage"
+             x:Class="Notes.Views.NoteEntryPage"
              Title="Note Entry">
     ...    
     <StackLayout Margin="{StaticResource PageMargin}">
@@ -269,7 +255,7 @@ Por padrão, o [`StackLayout`](xref:Xamarin.Forms.StackLayout) assume uma orient
 > [!NOTE]
 > O tamanho das exibições pode ser definido por meio das propriedades `HeightRequest` e `WidthRequest`.
 
-Para obter mais informações sobre a [`StackLayout`](xref:Xamarin.Forms.StackLayout) classe, consulte [StackLayout](~/xamarin-forms/user-interface/layouts/stacklayout.md).
+Para obter mais informações sobre a [`StackLayout`](xref:Xamarin.Forms.StackLayout) classe, consulte [ Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stacklayout.md).
 
 ### <a name="responding-to-user-interaction"></a>Respondendo à interação do usuário
 
@@ -280,12 +266,15 @@ async void OnSaveButtonClicked(object sender, EventArgs e)
 {
     var note = (Note)BindingContext;
     note.Date = DateTime.UtcNow;
-    await App.Database.SaveNoteAsync(note);
-    await Navigation.PopAsync();
+    if (!string.IsNullOrWhiteSpace(note.Text))
+    {
+        await App.Database.SaveNoteAsync(note);
+    }
+    await Shell.Current.GoToAsync("..");
 }
 ```
 
-O método `OnSaveButtonClicked` salva a observação no banco de dados e navega de volta para a página anterior.
+O método `OnSaveButtonClicked` salva a observação no banco de dados e navega de volta para a página anterior. Para obter mais informações sobre navegação, consulte [Navigation](#navigation).
 
 > [!NOTE]
 > O arquivo code-behind de uma classe XAML pode acessar um objeto definido em XAML usando o nome atribuído a ele com o atributo `x:Name`. O valor atribuído a esse atributo tem as mesmas regras que variáveis C#, no sentido de que deve começar com uma letra ou um sublinhado e não conter espaços.
@@ -299,88 +288,150 @@ A conexão do botão Salvar para o método `OnSaveButtonClicked` ocorre na marca
 
 ### <a name="lists"></a>Listas
 
-O [`ListView`](xref:Xamarin.Forms.ListView) é responsável por exibir uma coleção de itens verticalmente em uma lista. Cada item no `ListView` estará contido em uma única célula.
+O [`CollectionView`](xref:Xamarin.Forms.CollectionView) é responsável por exibir uma coleção de itens em uma lista. Por padrão, os itens de lista são exibidos verticalmente e cada item é exibido em uma única linha.
 
-O exemplo de código a seguir mostra o [`ListView`](xref:Xamarin.Forms.ListView) do `NotesPage` :
+O exemplo de código a seguir mostra o [`CollectionView`](xref:Xamarin.Forms.CollectionView) do `NotesPage` :
 
 ```xaml
-<ListView x:Name="listView"
-          Margin="{StaticResource PageMargin}"
-          ItemSelected="OnListViewItemSelected">
-    <ListView.ItemTemplate>
+<CollectionView x:Name="collectionView"
+                Margin="{StaticResource PageMargin}"
+                SelectionMode="Single"
+                SelectionChanged="OnSelectionChanged">
+    <CollectionView.ItemsLayout>
+        <LinearItemsLayout Orientation="Vertical"
+                           ItemSpacing="10" />
+    </CollectionView.ItemsLayout>
+    <CollectionView.ItemTemplate>
         <DataTemplate>
-            <TextCell Text="{Binding Text}"
-                      Detail="{Binding Date}" />
+            <StackLayout>
+                <Label Text="{Binding Text}"
+                       FontSize="Medium" />
+                <Label Text="{Binding Date}"
+                       TextColor="{StaticResource TertiaryColor}"
+                       FontSize="Small" />
+            </StackLayout>
         </DataTemplate>
-    </ListView.ItemTemplate>
-</ListView>
+    </CollectionView.ItemTemplate>
+</CollectionView>
 ```
 
-O layout de cada linha no [`ListView`](xref:Xamarin.Forms.ListView) é definido dentro do [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) elemento e usa a vinculação de dados para exibir todas as anotações que são recuperadas pelo aplicativo. A [`ListView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) propriedade é definida como a fonte de dados, em `NotesPage.xaml.cs` :
+O layout de cada linha no [`CollectionView`](xref:Xamarin.Forms.CollectionView) é definido dentro do [`CollectionView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) elemento e usa a vinculação de dados para exibir todas as anotações que são recuperadas pelo aplicativo. A [`CollectionView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) propriedade é definida como a fonte de dados, em **NotesPage.XAML.cs**:
 
 ```csharp
 protected override async void OnAppearing()
 {
     base.OnAppearing();
 
-    listView.ItemsSource = await App.Database.GetNotesAsync();
+    collectionView.ItemsSource = await App.Database.GetNotesAsync();
 }
 ```    
 
-Esse código popula o [`ListView`](xref:Xamarin.Forms.ListView) com todas as anotações armazenadas no banco de dados.
+Esse código popula o [`CollectionView`](xref:Xamarin.Forms.CollectionView) com todas as anotações armazenadas no banco de dados e é executado quando a página é exibida.
 
-Quando uma linha é selecionada no [`ListView`](xref:Xamarin.Forms.ListView) , o [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) evento é acionado. Um manipulador de eventos, chamado `OnListViewItemSelected`, é executado quando o evento é disparado:
+Quando um item é selecionado no [`CollectionView`](xref:Xamarin.Forms.CollectionView) , o evento é disparado `SelectionChanged` . Um manipulador de eventos, chamado `OnSelectionChanged`, é executado quando o evento é disparado:
 
 ```csharp
-async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
+async void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
 {
-    if (e.SelectedItem != null)
+    if (e.CurrentSelection != null)
     {
-        ...
+        // ...
     }
 }
 ```
 
-O [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) evento pode acessar o objeto que foi associado à célula por meio da [`e.SelectedItem`](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) propriedade.
+O `SelectionChanged` evento pode acessar o objeto que foi associado ao item por meio da `e.CurrentSelection` propriedade.
 
-Para obter mais informações sobre a [`ListView`](xref:Xamarin.Forms.ListView) classe, consulte [ListView](~/xamarin-forms/user-interface/listview/index.md).
+Para obter mais informações sobre a [`CollectionView`](xref:Xamarin.Forms.CollectionView) classe, consulte [ Xamarin.Forms CollectionView](~/xamarin-forms/user-interface/collectionview/index.md).
 
 ## <a name="navigation"></a>Navegação
 
-Xamarin.Forms fornece várias experiências de navegação de página diferentes, dependendo do [`Page`](xref:Xamarin.Forms.Page) tipo que está sendo usado. Para a [`ContentPage`](xref:Xamarin.Forms.ContentPage) navegação de instâncias podem ser hierárquicas ou modais. Para obter informações sobre a navegação modal, consulte [ Xamarin.Forms páginas modais](~/xamarin-forms/app-fundamentals/navigation/modal.md).
+A navegação é executada em um aplicativo Shell, especificando um URI para onde navegar. Os URIs de navegação têm três componentes:
+
+- Uma *rota*, que define o caminho para o conteúdo que existe como parte da hierarquia visual do Shell.
+- Uma *página*. As páginas que não existam na hierarquia visual do Shell podem ser enviadas por push para a pilha de navegação de qualquer lugar em um aplicativo Shell. Por exemplo, o `NoteEntryPage` não é definido na hierarquia visual do Shell, mas pode ser enviado por push para a pilha de navegação, conforme necessário.
+- Um ou mais *parâmetros de consulta*. Parâmetros de consulta são aqueles que podem ser passados para a página de destino durante a navegação.
+
+Um URI de navegação não precisa incluir todos os três componentes, mas quando ele faz a estrutura é://Route/Page? QueryParameters
 
 > [!NOTE]
-> As [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) classes e [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) fornecem experiências de navegação alternativas. Para obter mais informações, veja [Navegação](~/xamarin-forms/app-fundamentals/navigation/index.md).
+> As rotas podem ser definidas em elementos na hierarquia visual do Shell por meio da `Route` propriedade. No entanto, se a `Route` propriedade não estiver definida, como no aplicativo Notes, uma rota será gerada no tempo de execução.
 
-Na navegação hierárquica, a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) classe é usada para navegar por uma pilha de [`ContentPage`](xref:Xamarin.Forms.ContentPage) objetos, para frente e para trás, conforme desejado. A classe implementa a navegação como uma pilha UEPS (último a entrar, primeiro a sair) de [`Page`](xref:Xamarin.Forms.Page) objetos. Para mover-se de uma página para outra, um aplicativo enviará por push uma nova página para a pilha de navegação, na qual ela se tornará a página ativa. Para retornar à página anterior, o aplicativo removerá o item mais recente, que é a página atual da pilha de navegação, então a nova página de nível mais alto se tornará a página ativa.
+Para obter mais informações sobre a navegação do Shell, consulte [ Xamarin.Forms navegação do Shell](~/xamarin-forms/app-fundamentals/shell/navigation.md).
 
-A classe `NavigationPage` também adicionará uma barra de navegação à parte superior da página que exibe um título e um botão **Voltar** apropriado para a plataforma, que retornará à página anterior.
+### <a name="register-routes"></a>Registrar rotas
 
-A primeira página adicionada a uma pilha de navegação é conhecida como a página *raiz* do aplicativo e o exemplo de código a seguir mostra como isso é realizado no aplicativo Notes:
+Para navegar até uma página que não existe na hierarquia visual do Shell, é necessário que ela seja registrada primeiro com o sistema de roteamento do Shell. usando o `Routing.RegisterRoute` método. No aplicativo Notes, isso ocorre no `AppShell` Construtor:
 
 ```csharp
-public App ()
+public partial class AppShell : Shell
 {
-    ...
-    MainPage = new NavigationPage (new NotesPage ());
+    public AppShell()
+    {
+        // ...
+        Routing.RegisterRoute(nameof(NoteEntryPage), typeof(NoteEntryPage));
+    }
 }
 ```
 
-Todas as [`ContentPage`](xref:Xamarin.Forms.ContentPage) instâncias têm uma [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) propriedade que expõe métodos para modificar a pilha de páginas. Esses métodos só devem ser invocados se o aplicativo incluir um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) . Para navegar até o `NoteEntryPage` , é necessário invocar o [ `PushAsync` ] (xref: Xamarin.Forms . NavigationPage. PushAsync ( Xamarin.Forms . Page)), conforme demonstrado no exemplo de código abaixo:
+Neste exemplo, uma rota chamada `NoteEntryPage` é registrada no `NoteEntryPage` tipo. Essa página pode então ser navegada para usar a navegação baseada em URI, de qualquer lugar no aplicativo.
+
+### <a name="perform-navigation"></a>Realizar navegação
+
+A navegação é executada pelo `GoToAsync` método, que aceita um argumento que representa a rota para a qual navegar:
 
 ```csharp
-await Navigation.PushAsync(new NoteEntryPage());
+await Shell.Current.GoToAsync("NoteEntryPage");
 ```
 
-Isso faz com que o novo objeto `NoteEntryPage` seja enviado por push para a pilha de navegação, em que ele se torna a página ativa.
+Neste exemplo, o `NoteEntryPage` é navegado para.
 
-A página ativa pode ser removida como o item mais recente da pilha de navegação pressionando o botão *Voltar* no dispositivo, independentemente de este ser um botão físico no dispositivo ou um botão na tela. Para retornar de forma programática a página original, o `NoteEntryPage` objeto deve invocar o [`PopAsync`](xref:Xamarin.Forms.NavigationPage.PopAsync) método, conforme demonstrado no exemplo de código abaixo:
+> [!IMPORTANT]
+> Uma pilha de navegação é criada quando uma página que não está na hierarquia visual do Shell é navegada para.
+
+Ao navegar até uma página, os dados podem ser passados para a página como um parâmetro de consulta:
 
 ```csharp
-await Navigation.PopAsync();
+async void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+{
+    if (e.CurrentSelection != null)
+    {
+        // Navigate to the NoteEntryPage, passing the ID as a query parameter.
+        Note note = (Note)e.CurrentSelection.FirstOrDefault();
+        await Shell.Current.GoToAsync($"{nameof(NoteEntryPage)}?{nameof(NoteEntryPage.ItemId)}={note.ID.ToString()}");
+    }
+}
 ```
 
-Para obter mais informações sobre navegação hierárquica, veja [Navegação hierárquica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
+Este exemplo recupera o item atualmente selecionado no [`CollectionView`](xref:Xamarin.Forms.CollectionView) e navega para o `NoteEntryPage` , com o valor da Propriedade do `ID` `Note` objeto que está sendo passado como um parâmetro de consulta para a `NoteEntryPage.ItemId` propriedade.
+
+> [!NOTE]
+> Os parâmetros de consulta são codificados em URL antes da navegação.
+
+Para receber os dados passados, a `NoteEntryPage` classe é decorada com o `QueryPropertyAttribute`
+
+```csharp
+[QueryProperty(nameof(ItemId), nameof(ItemId))]
+public partial class NoteEntryPage : ContentPage
+{
+    public string ItemId
+    {
+        set
+        {
+            LoadNote(value);
+        }
+    }
+    // ...
+}
+```
+
+O primeiro argumento para o `QueryPropertyAttribute` especifica que a `ItemId` Propriedade receberá os dados passados, com o segundo argumento especificando a ID de parâmetro de consulta. Portanto, o `QueryPropertyAttribute` no exemplo acima Especifica que a `ItemId` Propriedade receberá os dados passados no `ItemId` parâmetro de consulta do URI na `GoToAsync` chamada do método. `ItemId`Em seguida, a propriedade chama o `LoadNote` método para recuperar a nota do dispositivo.
+
+A navegação para trás é executada especificando ".." como o argumento para o `GoToAsync` método:
+
+```csharp
+await Shell.Current.GoToAsync("..");
+```
 
 ## <a name="data-binding"></a>Vinculação de dados
 
@@ -397,32 +448,51 @@ Estabelecer a vinculação de dados é um processo de duas etapas:
 - A [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) Propriedade do objeto de *destino* deve ser definida como a *origem*.
 - Uma associação deve ser estabelecida entre o *destino* e a *origem*. Em XAML, isso é obtido usando a [`Binding`](xref:Xamarin.Forms.Xaml.BindingExtension) extensão de marcação.
 
-No aplicativo Notes, o destino de associação é o [`Editor`](xref:Xamarin.Forms.Editor) que exibe uma observação, enquanto a `Note` instância definida como [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) do `NoteEntryPage` é a origem da associação.
-
-O `BindingContext` de `NoteEntryPage` é definido durante a navegação da página, conforme mostrado no exemplo de código a seguir:
+No aplicativo Notes, o destino de associação é o [`Editor`](xref:Xamarin.Forms.Editor) que exibe uma observação, enquanto a `Note` instância definida como [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) do `NoteEntryPage` é a origem da associação. Inicialmente, o `BindingContext` de `NoteEntryPage` é definido quando o construtor de página é executado:
 
 ```csharp
-async void OnNoteAddedClicked(object sender, EventArgs e)
+public NoteEntryPage()
 {
-    await Navigation.PushAsync(new NoteEntryPage
-    {
-        BindingContext = new Note()
-    });
+    // ...
+    BindingContext = new Note();
 }
+```
 
-async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
+Neste exemplo, a página `BindingContext` é definida como uma nova `Note` quando a `NoteEntryPage` é criada. Trata-se do cenário de adição de uma nova nota ao aplicativo.
+
+Além disso, a página `BindingContext` também pode ser definida quando a navegação até `NoteEntryPage` ocorrer, desde que uma nota existente tenha sido selecionada no `NotesPage` :
+
+```csharp
+[QueryProperty(nameof(ItemId), nameof(ItemId))]
+public partial class NoteEntryPage : ContentPage
 {
-    if (e.SelectedItem != null)
+    public string ItemId
     {
-        await Navigation.PushAsync(new NoteEntryPage
+        set
         {
-            BindingContext = e.SelectedItem as Note
-        });
+            LoadNote(value);
+        }
+
+        async void LoadNote(string itemId)
+        {
+            try
+            {
+                int id = Convert.ToInt32(itemId);
+                // Retrieve the note and set it as the BindingContext of the page.
+                Note note = await App.Database.GetNoteAsync(id);
+                BindingContext = note;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Failed to load note.");
+            }
+        }    
+        // ...    
     }
 }
 ```
 
-No `OnNoteAddedClicked` método, que é executado quando uma nova nota é adicionada ao aplicativo, o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de `NoteEntryPage` é definido como uma nova `Note` instância. No `OnListViewItemSelected` método, que é executado quando uma nota existente é selecionada no [`ListView`](xref:Xamarin.Forms.ListView) , o `BindingContext` de `NoteEntryPage` é definido como a `Note` instância selecionada, que é acessada por meio da [`e.SelectedItem`](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) propriedade.
+Neste exemplo, quando a navegação de página ocorre, a página `BindingContext` é definida como o `Note` objeto selecionado depois de ser recuperada do banco de dados.
 
 > [!IMPORTANT]
 > Embora a [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) propriedade de cada objeto de *destino* possa ser definida individualmente, isso não é necessário. `BindingContext` é uma propriedade especial que é herdada por todos os seus filhos. Portanto, quando o `BindingContext` no [`ContentPage`](xref:Xamarin.Forms.ContentPage) é definido como uma `Note` instância, todos os filhos do `ContentPage` têm o mesmo `BindingContext` e podem se associar a propriedades públicas do `Note` objeto.
@@ -431,8 +501,7 @@ No `OnNoteAddedClicked` método, que é executado quando uma nova nota é adicio
 
 ```xaml
 <Editor Placeholder="Enter your note"
-        Text="{Binding Text}"
-        ... />
+        Text="{Binding Text}" />
 ```
 
 Uma associação entre a [`Editor.Text`](xref:Xamarin.Forms.InputView.Text) propriedade e a `Text` Propriedade do objeto de *origem* é estabelecida. As alterações feitas no `Editor` serão propagadas automaticamente para o objeto `Note`. Da mesma forma, se forem feitas alterações na `Note.Text` propriedade, o Xamarin.Forms mecanismo de associação também atualizará o conteúdo do `Editor` . Isso é conhecido como uma *associação bidirecional*.
@@ -450,14 +519,14 @@ A [`Style`](xref:Xamarin.Forms.Style) classe agrupa uma coleção de valores de 
 - [`Style`](xref:Xamarin.Forms.Style) as instâncias definidas no nível de exibição podem ser aplicadas à exibição e a seus filhos.
 
 > [!IMPORTANT]
-> Todos os estilos usados em todo o aplicativo são armazenados no dicionário de recursos do aplicativo para evitar duplicação. No entanto, o XAML específico de uma página não deve ser incluído no dicionário de recursos do aplicativo, uma vez que os recursos então serão analisados na inicialização do aplicativo, em vez de quando exigido por uma página.
+> Todos os estilos usados em todo o aplicativo são armazenados no dicionário de recursos do aplicativo para evitar duplicação. No entanto, o XAML específico de uma página não deve ser incluído no dicionário de recursos do aplicativo, uma vez que os recursos então serão analisados na inicialização do aplicativo, em vez de quando exigido por uma página. Para obter mais informações, consulte [reduzir o tamanho do dicionário de recursos do aplicativo](~/xamarin-forms/deploy-test/performance.md#reduce-the-application-resource-dictionary-size).
 
 Cada [`Style`](xref:Xamarin.Forms.Style) instância contém uma coleção de um ou mais [`Setter`](xref:Xamarin.Forms.Setter) objetos, com cada `Setter` um com um [`Property`](xref:Xamarin.Forms.Setter.Property) e um [`Value`](xref:Xamarin.Forms.Setter.Value) . O `Property` é o nome da propriedade vinculável do elemento ao qual o estilo é aplicado e o `Value` é o valor aplicado à propriedade. O exemplo de código a seguir mostra um estilo de `NoteEntryPage`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Notes.NoteEntryPage"
+             x:Class="Notes.Views.NoteEntryPage"
              Title="Note Entry">
     <ContentPage.Resources>
         <!-- Implicit styles -->
@@ -480,39 +549,7 @@ Ao criar um [`Style`](xref:Xamarin.Forms.Style) , a [`TargetType`](xref:Xamarin.
 
 Para obter mais informações sobre estilos XAML, consulte [estilizando Xamarin.Forms aplicativos usando estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md).
 
-### <a name="providing-platform-specific-styles"></a>Como fornecendo estilos específicos da plataforma
-
-A extensão de marcação `OnPlatform` permite que você personalize a aparência da interface do usuário por plataforma:
-
-```xaml
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Notes.App">
-    <Application.Resources>
-        ...
-        <Color x:Key="iOSNavigationBarColor">WhiteSmoke</Color>
-        <Color x:Key="AndroidNavigationBarColor">#2196F3</Color>
-        <Color x:Key="iOSNavigationBarTextColor">Black</Color>
-        <Color x:Key="AndroidNavigationBarTextColor">White</Color>
-
-        <Style TargetType="{x:Type NavigationPage}">
-            <Setter Property="BarBackgroundColor"
-                    Value="{OnPlatform iOS={StaticResource iOSNavigationBarColor},
-                                       Android={StaticResource AndroidNavigationBarColor}}" />
-             <Setter Property="BarTextColor"
-                    Value="{OnPlatform iOS={StaticResource iOSNavigationBarTextColor},
-                                       Android={StaticResource AndroidNavigationBarTextColor}}" />           
-        </Style>
-        ...
-    </Application.Resources>
-</Application>
-```
-
-Isso [`Style`](xref:Xamarin.Forms.Style) define [`Color`](xref:Xamarin.Forms.Color) valores diferentes para as [`BarBackgroundColor`](xref:Xamarin.Forms.NavigationPage.BarBackgroundColor) [`BarTextColor`](xref:Xamarin.Forms.NavigationPage.BarTextColor) Propriedades e de [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) , dependendo da plataforma que está sendo usada.
-
-Para obter mais informações sobre extensões de marcação XAML, consulte [Extensões de marcação XAML](~/xamarin-forms/xaml/markup-extensions/index.md). Para obter informações sobre a extensão de marcação de `OnPlatform`, consulte [Extensão de marcação OnPlatform](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension).
-
-## <a name="testing-and-deployment"></a>Teste e implantação
+## <a name="test-and-deployment"></a>Teste e implantação
 
 Tanto o Visual Studio para Mac quanto o Visual Studio oferecem várias opções para testar e implantar um aplicativo. Depurar aplicativos é uma parte comum do ciclo de vida de desenvolvimento de aplicativo e ajuda a diagnosticar problemas de código. Para saber mais, consulte [Definir um ponto de interrupção](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/set_a_breakpoint), [Percorrer o código](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/step_through_code) e [Enviar as informações para a janela de log](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging/output_information_to_log_window).
 
@@ -520,30 +557,27 @@ Simuladores são um bom lugar para começar a implantar e testar um aplicativo e
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Esse aprofundamento examinou os conceitos básicos do desenvolvimento de aplicativos usando o Xamarin.Forms . As próximas etapas sugeridas incluem ler sobre as seguintes funcionalidades:
+Esse aprofundamento examinou os conceitos básicos do desenvolvimento de aplicativos usando o Xamarin.Forms shell. As próximas etapas sugeridas incluem ler sobre as seguintes funcionalidades:
 
-- Há quatro grupos de controle principais usados para criar a interface do usuário de um Xamarin.Forms aplicativo. Para obter mais informações, confira [Referência de controles](~/xamarin-forms/user-interface/controls/index.md).
+- Xamarin.Forms O Shell reduz a complexidade do desenvolvimento de aplicativos móveis fornecendo os recursos fundamentais que a maioria dos aplicativos móveis exigem. Para obter mais informações, consulte [ Xamarin.Forms shell](~/xamarin-forms/app-fundamentals/shell/index.md).
+- Há vários grupos de controle usados para criar a interface do usuário de um Xamarin.Forms aplicativo. Para obter mais informações, confira [Referência de controles](~/xamarin-forms/user-interface/controls/index.md).
 - A associação de dados é uma técnica para vincular propriedades de dois objetos para que as alterações em uma propriedade sejam automaticamente refletidas na outra propriedade. Para obter mais informações, confira [Associação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- Xamarin.Forms fornece várias experiências de navegação de página diferentes, dependendo do tipo de página que está sendo usado. Para obter mais informações, veja [Navegação](~/xamarin-forms/app-fundamentals/navigation/index.md).
+- Xamarin.Forms fornece várias experiências de navegação de página, dependendo do tipo de página que está sendo usado. Para obter mais informações, veja [Navegação](~/xamarin-forms/app-fundamentals/navigation/index.md).
 - Estilos ajudam a reduzir as marcações repetitivas e permitem que a aparência de aplicativos seja alterada com mais facilidade. Para obter mais informações, consulte [estilizando Xamarin.Forms aplicativos](~/xamarin-forms/user-interface/styles/index.md).
-- As extensões de marcação XAML estendem a eficiência e a flexibilidade do XAML permitindo que os atributos do elemento sejam definidos de fontes que não sejam cadeias de caracteres de texto literal. Para obter mais informações, confira [Extensões de marcação XAML](~/xamarin-forms/xaml/markup-extensions/index.md).
 - Os modelos de dados fornecem a capacidade de definir a apresentação de dados em exibições com suporte. Para saber mais, veja [Modelos de dados](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
-- Cada página, layout e exibição é renderizado diferentemente em cada plataforma usando uma classe `Renderer`, que por sua vez cria um controle nativo, organiza sua disposição na tela e adiciona o comportamento especificado no código compartilhado. Os desenvolvedores podem implementar suas próprias classes `Renderer` personalizadas para personalizar a aparência e/ou o comportamento de um controle. Para obter mais informações, veja [Renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 - Efeitos também permitem que os controles nativos em cada plataforma sejam personalizados. Os efeitos são criados em projetos específicos da plataforma por meio da subclasse da [`PlatformEffect`](xref:Xamarin.Forms.PlatformEffect`2) classe e são consumidos anexando-os a um Xamarin.Forms controle apropriado. Para obter mais informações, veja [Efeitos](~/xamarin-forms/app-fundamentals/effects/index.md).
+- Cada página, layout e exibição é renderizado diferentemente em cada plataforma usando uma classe `Renderer`, que por sua vez cria um controle nativo, organiza sua disposição na tela e adiciona o comportamento especificado no código compartilhado. Os desenvolvedores podem implementar suas próprias classes `Renderer` personalizadas para personalizar a aparência e/ou o comportamento de um controle. Para obter mais informações, veja [Renderizadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 - O código compartilhado pode acessar a funcionalidade nativa por meio da classe [`DependencyService`](xref:Xamarin.Forms.DependencyService). Para obter mais informações, consulte [Acessar recursos nativos com DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
-
-Como alternativa, a [_criação de aplicativos Xamarin.Forms móveis com_](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)o, um livro de Charles Petzold, é um bom local para saber mais sobre o Xamarin.Forms . O livro está disponível em PDF ou em vários formatos de livro eletrônico.
 
 ## <a name="related-links"></a>Links relacionados
 
+- [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md)
 - [XAML (linguagem XAML)](~/xamarin-forms/xaml/index.yml)
 - [Associação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Referência de controles](~/xamarin-forms/user-interface/controls/index.md)
-- [Extensões de marcação do XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
+- [Exemplos de introdução](/samples/browse/?products=xamarin&term=Xamarin.Forms%2bget%2bstarted)
 - [Xamarin.Forms Amostras](/samples/browse/?products=xamarin&term=Xamarin.Forms)
-- [Exemplos de Introdução](/samples/browse/?products=xamarin&term=Xamarin.Forms%2bget%2bstarted)
 - [Xamarin.Forms Referência de API](xref:Xamarin.Forms)
-- [Aprendizado autodirigido gratuito (vídeo)](https://university.xamarin.com/self-guided/)
 
 ## <a name="related-video"></a>Vídeo relacionado
 

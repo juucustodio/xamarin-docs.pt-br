@@ -7,12 +7,12 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 04/10/2017
-ms.openlocfilehash: da3148022f1280a18fd398e7c960c1a8440c0200
-ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
+ms.openlocfilehash: eb59d86582b50b5b0c166f2b5672422b481db048
+ms.sourcegitcommit: 1f391667869a4541dd9b42d78862dc01d69ed160
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91456802"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99818027"
 ---
 # <a name="building-mobile-apps"></a>Criar aplicativos móveis
 
@@ -21,7 +21,7 @@ Antes de começar, confira o [requisitos de sistema](requirements.md) e as [inst
 ## <a name="build-your-first-app"></a>Criar seu primeiro aplicativo
 
 > [!div class="nextstepaction"]
-> [Início rápido do Xamarin.Forms](~/get-started/quickstarts/single-page.md)
+> [Início rápido do Xamarin.Forms](~/get-started/quickstarts/app.md)
 
 Se você deseja criar um aplicativo usando tecnologias de interface do usuário nativas (como Android XML ou Xcode Storyboards), tente um desses guias específicos da plataforma:
 
@@ -36,7 +36,7 @@ Para saber mais sobre como funciona o Xamarin e como abordar os projetos de dese
 
 Este documento explica o *funcionamento do Xamarin* em um alto nível e inclui links para as guias de introdução do Xamarin.Forms, Android e iOS.
 
-### <a name="mobile-software-development-lifecycle"></a>[Ciclo de vida do desenvolvimento de software móvel](~/cross-platform/get-started/introduction-to-mobile-sdlc.md)
+### <a name="mobile-software-development-lifecycle"></a>[O ciclo de vida do desenvolvimento de software móvel](~/cross-platform/get-started/introduction-to-mobile-sdlc.md)
 
 Este artigo aborda o ciclo de vida de desenvolvimento de software em relação a aplicativos móveis e discute algumas das considerações necessárias ao criar projetos móveis. Para desenvolvedores que querem começar diretamente a compilar, este guia pode ser ignorado e lido posteriormente para obter um entendimento mais completo do desenvolvimento móvel.
 
