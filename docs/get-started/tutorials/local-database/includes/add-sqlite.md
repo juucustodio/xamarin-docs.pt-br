@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e4c0e1500e6e445580a971c6af0af0fd267ee0f7
-ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
-ms.translationtype: HT
+ms.openlocfilehash: a204177ccd5319d0b2564c00ad0408f89bceb668
+ms.sourcegitcommit: 1f391667869a4541dd9b42d78862dc01d69ed160
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98690100"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99974525"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
@@ -26,7 +26,7 @@ Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão 
     ![Captura de tela do Pacote do NuGet do SQLite.NET no Gerenciador de Pacotes do NuGet](../images/vs/add-package.png "Pacote do NuGet SQLite.NET")
 
     > [!NOTE]
-    > Há diversos pacotes NuGet com nomes semelhantes. O pacote correto tem estes atributos:
+    > Há muitos pacotes NuGet com nomes semelhantes. O pacote correto tem estes atributos:
     > - **Autores:** SQLite-net
     > - **Link do NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
     >
@@ -56,7 +56,7 @@ Para concluir este tutorial, você precisará ter o Visual Studio para Mac (vers
     ![Captura de tela do Pacote do NuGet do SQLite.NET no Gerenciador de Pacotes do NuGet](../images/vsmac/add-package.png "Pacote do NuGet SQLite.NET")
 
     > [!NOTE]
-    > Há diversos pacotes NuGet com nomes semelhantes. O pacote correto tem estes atributos:
+    > Há muitos pacotes NuGet com nomes semelhantes. O pacote correto tem estes atributos:
     > - **ID:** sqlite-net-pcl
     > - **Autor:** SQLite-net
     > - **Link do NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)  
