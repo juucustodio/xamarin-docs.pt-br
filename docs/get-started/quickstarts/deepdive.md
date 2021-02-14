@@ -13,12 +13,12 @@ ms.date: 01/25/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2c110093d0fea6e5d97d8e58474d84edb008b1ee
-ms.sourcegitcommit: 1f391667869a4541dd9b42d78862dc01d69ed160
+ms.openlocfilehash: 723ea0f3c6703824bfbfca51f4ecfc8c5ab0b83a
+ms.sourcegitcommit: 0a6b19004932c1ac82e16c95d5d3d5eb35a5b17f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99818235"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100255295"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Xamarin.Forms Aprofundamento do guia de início rápido
 
@@ -405,9 +405,6 @@ async void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
 
 Este exemplo recupera o item atualmente selecionado no [`CollectionView`](xref:Xamarin.Forms.CollectionView) e navega para o `NoteEntryPage` , com o valor da Propriedade do `ID` `Note` objeto que está sendo passado como um parâmetro de consulta para a `NoteEntryPage.ItemId` propriedade.
 
-> [!NOTE]
-> Os parâmetros de consulta são codificados em URL antes da navegação.
-
 Para receber os dados passados, a `NoteEntryPage` classe é decorada com o `QueryPropertyAttribute`
 
 ```csharp
@@ -432,6 +429,8 @@ A navegação para trás é executada especificando ".." como o argumento para o
 ```csharp
 await Shell.Current.GoToAsync("..");
 ```
+
+Para obter mais informações sobre navegação para trás, consulte [navegação para trás](~/xamarin-forms/app-fundamentals/shell/navigation.md#backwards-navigation).
 
 ## <a name="data-binding"></a>Vinculação de dados
 

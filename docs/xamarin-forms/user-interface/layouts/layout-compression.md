@@ -10,12 +10,12 @@ ms.date: 12/13/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c710328426590322f60f482708931c160b2100ca
-ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
+ms.openlocfilehash: 9b22297fe06211b550ac2fdd62ee934b4ba849ee
+ms.sourcegitcommit: 0a6b19004932c1ac82e16c95d5d3d5eb35a5b17f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93372646"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100255331"
 ---
 # <a name="layout-compression"></a>Compactação de Layout
 
@@ -58,7 +58,7 @@ Esse botão é especificado como um controle personalizado com a seguinte hierar
 </ContentView>
 ```
 
-A hierarquia de exibição aninhada resultante pode ser examinada com [Xamarin Inspector](~/tools/inspector/index.md). No Android, a hierarquia de exibição aninhada contém 17 exibições:
+A hierarquia de exibição aninhada resultante pode ser examinada com a árvore visual dinâmica. No Android, a hierarquia de exibição aninhada contém 17 exibições:
 
 ![Botão Exibir hierarquia para o Facebook](layout-compression-images/no-compression.png)
 
