@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 88761472c4beae3f40f2ca6852eea4db8276c4c9
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: cd1271df727b3b37c49f744e0893703b9c2460d5
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930673"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373712"
 ---
 # <a name="large-page-titles-on-ios"></a>Títulos de páginas grandes no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Essa plataforma específica do iOS é usada para exibir o título da página como um título grande na barra de navegação de um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) , para dispositivos que usam o Ios 11 ou superior. Um título grande é alinhado à esquerda e usa uma fonte maior e faz a transição para um título padrão à medida que o usuário começa a rolar o conteúdo, de modo que o espaço da tela seja usado com eficiência. No entanto, na orientação paisagem, o título voltará ao centro da barra de navegação para otimizar o layout do conteúdo. Ele é consumido em XAML definindo a `NavigationPage.PrefersLargeTitles` Propriedade anexada como um `boolean` valor:
 
@@ -77,9 +77,9 @@ public class iOSLargeTitlePageCS : ContentPage
 
 O `Page.On<iOS>` método especifica que essa plataforma específica será executada somente no Ios. O `Page.SetLargeTitleDisplay` método, no [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, controla o comportamento de título grande no [`Page`](xref:Xamarin.Forms.Page) , com a `LargeTitleDisplayMode` Enumeração fornecendo três valores possíveis:
 
-- `Always`– Force a barra de navegação e o tamanho da fonte para usar o formato grande.
-- `Automatic`– Use o mesmo estilo (grande ou pequeno) que o item anterior na pilha de navegação.
-- `Never`– Force o uso da barra de navegação de formato normal e pequena.
+- `Always` – Force a barra de navegação e o tamanho da fonte para usar o formato grande.
+- `Automatic` – Use o mesmo estilo (grande ou pequeno) que o item anterior na pilha de navegação.
+- `Never` – Force o uso da barra de navegação de formato normal e pequena.
 
 Além disso, o `SetLargeTitleDisplay` método pode ser usado para alternar os valores de enumeração chamando o `LargeTitleDisplay` método, que retorna o atual `LargeTitleDisplayMode` :
 
@@ -100,10 +100,10 @@ switch (On<iOS>().LargeTitleDisplay())
 
 O resultado é que um especificado `LargeTitleDisplayMode` é aplicado ao [`Page`](xref:Xamarin.Forms.Page) , que controla o comportamento do título grande:
 
-![Efeito de desfoque específico da plataforma](page-large-title-images/large-title.png)
+![Efeito de desfoque Platform-Specific](page-large-title-images/large-title.png)
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

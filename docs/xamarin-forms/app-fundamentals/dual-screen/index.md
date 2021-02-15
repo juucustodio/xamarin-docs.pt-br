@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsTela dupla
+title: Xamarin.Forms Tela dupla
 description: Este guia explica como criar Xamarin.Forms aplicativos para dispositivos de tela dupla.
 ms.prod: xamarin
 ms.assetid: f9906e83-f8ae-48f9-997b-e1540b96ee8e
@@ -10,18 +10,16 @@ ms.date: 02/08/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 2b0290daedab4a6e825d2bab4bea9889b4966645
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: e1d2a443a6005050c518e21e4e0f2df64c2aab0c
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918307"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91562620"
 ---
-# <a name="no-locxamarinforms-dual-screen"></a>Xamarin.Formstela dupla
+# <a name="no-locxamarinforms-dual-screen"></a>Xamarin.Forms tela dupla
 
-![API de pré-lançamento](~/media/shared/preview.png)
-
-Dispositivos de tela dupla como o Microsoft Surface Duo facilitam novas possibilidades de experiência do usuário para seus aplicativos. Xamarin.Formsinclui `TwoPaneView` `DualScreenInfo` classes e para que você possa desenvolver aplicativos para dispositivos de tela dupla.
+Dispositivos de tela dupla como o Microsoft Surface Duo facilitam novas possibilidades de experiência do usuário para seus aplicativos. Xamarin.Forms inclui `TwoPaneView` `DualScreenInfo` classes e para que você possa desenvolver aplicativos para dispositivos de tela dupla.
 
 ## <a name="get-started"></a>Introdução
 
@@ -51,7 +49,7 @@ Siga estas etapas para adicionar recursos de tela dupla a um Xamarin.Forms aplic
 
 Se a `DualScreenInfo` classe ou o `TwoPaneView` layout não estiver funcionando conforme o esperado, verifique as instruções de configuração nesta página. Omitir ou configurar o `Init` método ou os `ConfigurationChanges` valores de atributo são causas comuns de erros.
 
-Examine os [ Xamarin.Forms exemplos de tela dupla](https://docs.microsoft.com/dual-screen/xamarin/samples) para obter orientações adicionais e implementação de referência.
+Examine os [ Xamarin.Forms exemplos de tela dupla](/dual-screen/xamarin/samples) para obter orientações adicionais e implementação de referência.
 
 ## <a name="next-steps"></a>Próximas etapas
 
@@ -62,4 +60,4 @@ Depois de adicionar o NuGet, adicione recursos de tela dupla ao seu aplicativo c
 - [Classe auxiliar DualScreenInfo](dual-screen-info.md) – a `DualScreenInfo` classe permite que você determine em qual painel sua exibição está, qual é o tamanho máximo, em que situação o dispositivo está, o ângulo da dobradiça e muito mais.
 - [Gatilhos de tela dupla](triggers.md) : o [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) namespace inclui dois gatilhos de estado que disparam uma [`VisualState`](xref:Xamarin.Forms.VisualState) alteração quando o modo de exibição do layout anexado, ou janela, é alterado.
 
-Visite os [documentos do desenvolvedor de tela dupla](https://docs.microsoft.com/dual-screen/) para obter mais informações.
+Visite os [documentos do desenvolvedor de tela dupla](/dual-screen/) para obter mais informações.

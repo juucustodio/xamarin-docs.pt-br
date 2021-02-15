@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsComutador
+title: Xamarin.Forms Comutador
 description: A Xamarin.Forms opção é um tipo de botão que pode ser manipulado pelo usuário para alternar entre os Estados ligado e desligado. Este artigo explica como usar a classe switch para exibir um elemento de interface do usuário de alternância.
 ms.prod: xamarin
 ms.assetId: B2F9CC65-481B-4323-8E77-C6BE29C90DE9
@@ -10,16 +10,16 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 12831eec6ba97eee7cde7479729c5c22dce78e90
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 760d6f6e6d57a1ab9a6537e8974e85e26195d8cb
+ms.sourcegitcommit: 424eaef56fd2933c98e72f1d3e7ac71730fe4835
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84946410"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758013"
 ---
-# <a name="xamarinforms-switch"></a>Xamarin.FormsComutador
+# <a name="no-locxamarinforms-switch"></a>Xamarin.Forms Comutador
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
 
 O Xamarin.Forms [`Switch`](xref:Xamarin.Forms.Switch) controle é um botão de alternância horizontal que pode ser manipulado pelo usuário para alternar entre os Estados ligado e desligado, que são representados por um `boolean` valor. A `Switch` classe é herdada de [`View`](xref:Xamarin.Forms.View) .
 
@@ -29,9 +29,9 @@ As capturas de tela a seguir mostram um `Switch` controle em seus Estados de alt
 
 O `Switch` controle define as seguintes propriedades:
 
-- [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled)é um `boolean` valor que indica se o `Switch` está **ativado**.
-- [`OnColor`](xref:Xamarin.Forms.Switch.OnColor)é um `Color` que afeta como o `Switch` é renderizado no estado alternado ou **ativado**.
-- `ThumbColor`é o `Color` do switch Thumb.
+- [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) é um `boolean` valor que indica se o `Switch` está **ativado**.
+- [`OnColor`](xref:Xamarin.Forms.Switch.OnColor) é um `Color` que afeta como o `Switch` é renderizado no estado alternado ou **ativado**.
+- `ThumbColor` é o `Color` do switch Thumb.
 
 Essas propriedades são apoiadas por um [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objeto, o que significa que o `Switch` pode ser estilizado e ser o destino de associações de dados.
 
@@ -68,7 +68,7 @@ Switch switch = new Switch { OnColor = Color.Orange, ThumbColor = Color.Green };
 
 A captura de tela a seguir mostra o `Switch` em seus Estados de alternância **liga** e **desliga** , com as `OnColor` `ThumbColor` Propriedades e definidas:
 
-![Captura de tela de interruptores em Estados de ligado e off, no iOS e no Android](switch-images/switch-states-colors.png "Comutadores no iOS e no Android")
+![Captura de tela de opções em Estados ligado e desligado, no iOS e no Android com as cores alteradas.](switch-images/switch-states-colors.png "Comutadores no iOS e no Android")
 
 ## <a name="respond-to-a-switch-state-change"></a>Responder a uma alteração de estado de comutador
 
@@ -125,7 +125,7 @@ Para obter informações sobre gatilhos, consulte [ Xamarin.Forms gatilhos](~/xa
 
 ## <a name="switch-visual-states"></a>Alternar estados visuais
 
-[`Switch`](xref:Xamarin.Forms.Switch)tem `On` e os `Off` Estados visuais que podem ser usados para iniciar uma alteração visual quando a [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) propriedade é alterada.
+[`Switch`](xref:Xamarin.Forms.Switch) tem `On` e os `Off` Estados visuais que podem ser usados para iniciar uma alteração visual quando a [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) propriedade é alterada.
 
 O exemplo de XAML a seguir mostra como definir estados visuais para `On` os `Off` Estados e:
 
@@ -163,6 +163,6 @@ Um aplicativo pode inserir um estado em que o `Switch` que está sendo alternado
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Alternar demonstrações](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
-- [Xamarin.FormsGatilhos](~/xamarin-forms/app-fundamentals/triggers.md)
-- [Xamarin.FormsGerenciador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Alternar demonstrações](/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
+- [Xamarin.Forms Gatilhos](~/xamarin-forms/app-fundamentals/triggers.md)
+- [Xamarin.Forms Gerenciador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)

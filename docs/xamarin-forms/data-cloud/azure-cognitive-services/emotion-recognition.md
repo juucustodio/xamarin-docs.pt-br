@@ -10,16 +10,16 @@ ms.date: 05/10/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ac7b90fb3e70fd07fcafe78a68136338469862e0
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 5b3a20c621ac76ac3b18ba5c503b8dc2b962ef1b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936351"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366809"
 ---
 # <a name="perceived-emotion-recognition-using-the-face-api"></a>Reconhecimento de emoções percebido usando o API de Detecção Facial
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 O API de Detecção Facial pode executar a detecção de emoções para detectar raiva, con, aversão, medo, felicidade, neutro, tristeza e surpresa, em uma expressão facial baseada em anotações observadas por codificadores humanos. No entanto, é importante observar que as expressões faciais sozinhas podem não representar necessariamente os Estados internos das pessoas.
 
@@ -54,9 +54,9 @@ A falha ao passar uma chave de API válida para o API de Detecção Facial resul
 
 O reconhecimento de emoções é executado fazendo uma solicitação POST contendo uma imagem para a `detect` API em `https://[location].api.cognitive.microsoft.com/face/v1.0` , em que `[location]]` é a região que você usou para obter sua chave de API. Os parâmetros de solicitação opcionais são:
 
-- `returnFaceId`– se deve retornar faceIds das faces detectadas. O valor padrão é `true`.
-- `returnFaceLandmarks`– se deve retornar pontos de referência de face das faces detectadas. O valor padrão é `false`.
-- `returnFaceAttributes`– Se é para analisar e retornar um ou mais atributos de face especificados. Os atributos de face com suporte incluem,,,,,,, `age` ,, `gender` ,, `headPose` `smile` `facialHair` `glasses` `emotion` `hair` `makeup` `occlusion` `accessories` `blur` , `exposure` e `noise` . Observe que a análise de atributo facial tem custo adicional computacional e tempo.
+- `returnFaceId` – se deve retornar faceIds das faces detectadas. O valor padrão é `true`.
+- `returnFaceLandmarks` – se deve retornar pontos de referência de face das faces detectadas. O valor padrão é `false`.
+- `returnFaceAttributes` – Se é para analisar e retornar um ou mais atributos de face especificados. Os atributos de face com suporte incluem,,,,,,, `age` ,, `gender` ,, `headPose` `smile` `facialHair` `glasses` `emotion` `hair` `makeup` `occlusion` `accessories` `blur` , `exposure` e `noise` . Observe que a análise de atributo facial tem custo adicional computacional e tempo.
 
 O conteúdo da imagem deve ser colocado no corpo da solicitação POST como uma URL ou dados binários.
 
@@ -183,5 +183,5 @@ A captura de tela a seguir mostra o resultado do processo de reconhecimento de e
 ## <a name="related-links"></a>Links relacionados
 
 - [API de detecção facial](/azure/cognitive-services/face/overview/).
-- [Serviços cognitivas todo (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+- [Serviços cognitivas todo (exemplo)](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 - [API REST de face](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)

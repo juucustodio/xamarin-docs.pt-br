@@ -6,18 +6,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/30/2018
-ms.openlocfilehash: 729dede97a9b153738ca72af499d4d1e9d77fae0
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 3c42743a26ab4ec5388c1d3458d88ef4d161a1f3
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73021452"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454839"
 ---
 # <a name="linking-on-android"></a>Vinculação no Android
 
 Aplicativos Xamarin.Android usam um *vinculador* para reduzir o tamanho do aplicativo. O vinculador utiliza uma análise estática do seu aplicativo para determinar quais assemblies, tipos e membros são realmente usados. O vinculador, em seguida, se comporta como um *coletor de lixo*, procurando continuamente assemblies, tipos e membros que são referenciados, até todo o fechamento desses elementos ser encontrado. Tudo fora esse fechamento é *descartado*.
 
-Por exemplo, a amostra [Hello, Android](https://docs.microsoft.com/samples/xamarin/monodroid-samples/hellom4a):
+Por exemplo, a amostra [Hello, Android](/samples/xamarin/monodroid-samples/hellom4a):
 
 |Configuração|Tamanho 1.2.0|Tamanho 4.0.1|
 |---|---|---|
@@ -179,7 +179,7 @@ class MyActivity {
 ### <a name="linkdescription"></a>LinkDescription
 
 A [`@(LinkDescription)`](~/android/deploy-test/building-apps/build-process.md) 
- **ação Build** pode ser usada em arquivos que podem conter um arquivo de [configuração de linker personalizado](~/cross-platform/deploy-test/linker.md).
+ **ação de compilação** pode ser usada em arquivos que podem conter um [arquivo de configuração de vinculador personalizado](~/cross-platform/deploy-test/linker.md).
 arquivo. Arquivos de configuração de vinculador personalizados podem ser necessários para preservar membros `internal` ou `private` que precisam ser preservados.
 
 ### <a name="custom-attributes"></a>Atributos personalizados
@@ -207,7 +207,7 @@ Quando um assembly é vinculado, os seguintes tipos de atributo personalizados s
 - System.Diagnostics.DebuggerTypeProxyAttribute
 - System.Diagnostics.DebuggerVisualizerAttribute
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Configuração de linker personalizado](~/cross-platform/deploy-test/linker.md)
+- [Configuração do vinculador personalizado](~/cross-platform/deploy-test/linker.md)
 - [Vinculação no iOS](~/ios/deploy-test/linker.md)

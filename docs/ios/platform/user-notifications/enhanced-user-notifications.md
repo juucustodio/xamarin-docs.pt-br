@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: d4fe04412eb4fb456bc49d71c1e5fe87df5f9e76
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8a18bfe3a72334eab3304492da63e6ce8f889a72
+ms.sourcegitcommit: 3edcc63fcf86409b73cd6e5dc77f0093a99b3f87
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939628"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98062609"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Notificações de usuário aprimoradas no Xamarin. iOS
 
@@ -112,6 +112,7 @@ A nova estrutura de notificação de usuário fornece uma API de notificação u
 - **Ios** -suporte completo para gerenciar e agendar notificações.
 - **tvOS** -adiciona a capacidade de crachá de ícones de aplicativos para notificações locais e remotas.
 - **watchOS** -adiciona a capacidade de encaminhar notificações do dispositivo IOS emparelhado do usuário para seus Apple Watch e dá aos aplicativos de inspeção a capacidade de fazer notificações locais diretamente no próprio relógio.
+- **MacOS** -suporte completo para gerenciar e agendar notificações.
 
 Para obter mais informações, consulte a [referência da estrutura Usernotifications](https://developer.apple.com/reference/usernotifications) da Apple e a documentação do [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui) .
 
@@ -129,22 +130,48 @@ Além disso, esses níveis de aprovação devem ser solicitados e definidos para
 
 A permissão de notificação deve ser solicitada assim que o aplicativo é iniciado, adicionando o seguinte código ao `FinishedLaunching` método do `AppDelegate` e definindo o tipo de notificação desejado ( `UNAuthorizationOptions` ):
 
+> [!NOTE]
+> `UNUserNotificationCenter` Só está disponível no iOS 10 +. Portanto, é uma prática recomendada verificar a versão do macOS antes de enviar a solicitação. 
+
 ```csharp
 using UserNotifications;
 ...
 
 public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 {
-    // Request notification permissions from the user
-    UNUserNotificationCenter.Current.RequestAuthorization (UNAuthorizationOptions.Alert, (approved, err) => {
-        // Handle approval
-    });
+    // Version check
+    if (UIDevice.CurrentDevice.CheckSystemVersion (10, 0)) {
+        // Request notification permissions from the user
+        UNUserNotificationCenter.Current.RequestAuthorization (UNAuthorizationOptions.Alert, (approved, err) => {
+            // Handle approval
+        });
+    }
 
     return true;
 }
 ```
 
-Além disso, um usuário sempre pode alterar os privilégios de notificação para um aplicativo a qualquer momento usando o aplicativo de **configurações** no dispositivo. O aplicativo deve verificar os privilégios de notificação solicitados do usuário antes de apresentar uma notificação usando o seguinte código:
+Como essa API é unificada e também funciona no Mac 10.14 +, se você for voltados macOS, também deverá verificar a permissão de notificação assim que possível:
+
+```csharp
+using UserNotifications;
+...
+
+public override void DidFinishLaunching (NSNotification notification)
+{
+    // Check we're at least v10.14
+    if (NSProcessInfo.ProcessInfo.IsOperatingSystemAtLeastVersion (new NSOperatingSystemVersion (10, 14, 0))) {
+        // Request notification permissions from the user
+        UNUserNotificationCenter.Current.RequestAuthorization (UNAuthorizationOptions.Alert | UNAuthorizationOptions.Badge | UNAuthorizationOptions.Sound, (approved, err) => {
+            // Handle approval
+        });
+    }
+}
+
+> [!NOTE]
+> With MacOS apps, for the permission dialog to appear, you must sign your macOS app, even if building locally in DEBUG mode. Therefore, **Project->Options->Mac Signing->Sign the application bundle** must be checked.
+
+Additionally, a user can always change the notification privileges for an app at any time using the **Settings** app on the device. The app should check for the user's requested notification privileges before presenting a notification using the following code:
 
 ```csharp
 // Get current notification settings
@@ -536,7 +563,7 @@ Para implementar uma extensão de serviço em um aplicativo Xamarin. iOS, faça 
 
 1. Abra a solução do aplicativo no Visual Studio para Mac.
 2. Clique com o botão direito do mouse no nome da solução na **painel de soluções** e selecione **Adicionar**  >  **Adicionar novo projeto**.
-3. Selecione **iOS**  >  **extensões do**  >  **serviço de notificação** extensões do IOS e clique no botão **Avançar** : 
+3. Selecione   >  **extensões do**  >  **serviço de notificação** extensões do IOS e clique no botão **Avançar** : 
 
     [![Selecionar extensões do serviço de notificação](enhanced-user-notifications-images/extension02.png)](enhanced-user-notifications-images/extension02.png#lightbox)
 4. Insira um **nome** para a extensão e clique no botão **Avançar** : 
@@ -558,7 +585,7 @@ Para implementar uma extensão de serviço em um aplicativo Xamarin. iOS, faça 
 -----
 
 > [!IMPORTANT]
-> O identificador de pacote para a extensão de serviço deve corresponder ao identificador de pacote do aplicativo principal com `.appnameserviceextension` acrescentado ao final. Por exemplo, se o aplicativo principal tiver um identificador de pacote de `com.xamarin.monkeynotify` , a extensão de serviço deverá ter um identificador de pacote de `com.xamarin.monkeynotify.monkeynotifyserviceextension` . Isso deve ser definido automaticamente quando a extensão é adicionada à solução. 
+> O identificador de pacote para a extensão de serviço deve corresponder ao identificador de pacote do aplicativo principal com `.appnameserviceextension` acrescentado ao final. Por exemplo, se o aplicativo principal tiver um identificador de pacote de  `com.xamarin.monkeynotify` , a extensão de serviço deverá ter um identificador de pacote de `com.xamarin.monkeynotify.monkeynotifyserviceextension` . Isso deve ser definido automaticamente quando a extensão é adicionada à solução. 
 
 Há uma classe principal na extensão do Notification Service que precisará ser modificada para fornecer a funcionalidade necessária. Por exemplo:
 
@@ -666,7 +693,7 @@ Este artigo abordou todas as maneiras como as notificações dos usuários foram
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Amostras do iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Amostras do iOS 10](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)
 - [Referência da estrutura do usernotifications](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
 - [Guia de programação de notificação local e remota](https://developer.apple.com/documentation/usernotifications)

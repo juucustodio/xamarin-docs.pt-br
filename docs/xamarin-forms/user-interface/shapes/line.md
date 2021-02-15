@@ -1,27 +1,25 @@
 ---
-title: 'Xamarin.FormsFormas: linha'
+title: 'Xamarin.Forms Formas: linha'
 description: A Xamarin.Forms classe line pode ser usada para desenhar linhas.
 ms.prod: xamarin
 ms.assetid: 384F1A72-6D3B-4FD3-BC40-E00A73A463EC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/20/2020
+ms.date: 02/05/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a5d130922a9bd8f30b33b99f7f3dc512f056269f
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 962800c5deb546ddf6a74d1f52ffaf60734ae463
+ms.sourcegitcommit: 06701714021545eb5e932847829b876082194ffc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918628"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585839"
 ---
-# <a name="no-locxamarinforms-shapes-line"></a>Xamarin.FormsFormas: linha
+# <a name="xamarinforms-shapes-line"></a>Xamarin.Forms Formas: linha
 
-![API de pré-lançamento](~/media/shared/preview.png)
-
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 A `Line` classe deriva da `Shape` classe e pode ser usada para desenhar linhas. Para obter informações sobre as propriedades que a `Line` classe herda da `Shape` classe, consulte [ Xamarin.Forms formas](index.md).
 
@@ -38,7 +36,7 @@ Para obter informações sobre como controlar como terminações de linha são d
 
 ## <a name="create-a-line"></a>Criar uma linha
 
-Para desenhar uma linha, crie um `Line` objeto e defina suas `X1` `Y1` Propriedades e como seu ponto de partida e suas `X2` `Y` Propriedades e para seu ponto de extremidade. Além disso, defina sua `Stroke` propriedade como a [`Color`](xref:Xamarin.Forms.Color) porque uma linha sem um traço é invisível.
+Para desenhar uma linha, crie um `Line` objeto e defina suas `X1` `Y1` Propriedades e como seu ponto de partida e suas `X2` `Y` Propriedades e para seu ponto de extremidade. Além disso, defina sua `Stroke` propriedade como um [`Brush`](xref:Xamarin.Forms.Brush) objeto derivado porque uma linha sem um traço é invisível. Para obter mais informações sobre `Brush` objetos, consulte [ Xamarin.Forms pincéis](~/xamarin-forms/user-interface/brushes/index.md).
 
 > [!NOTE]
 > A definição da `Fill` propriedade de um `Line` não tem efeito, pois uma linha não tem interior.
@@ -50,19 +48,17 @@ O exemplo de XAML a seguir mostra como desenhar uma linha:
       Y1="0"
       X2="0"
       Y2="120"
-      Stroke="Red"
-      StrokeThickness="1" />
+      Stroke="Red" />
 ```
 
 Neste exemplo, uma linha diagonal vermelha é desenhada de (40, 0) para (0120):
 
-![Descritos](line-images/line.png "Linha")
+![Linha diagonal](line-images/line.png "Linha")
 
 Como as `X1` `Y1` Propriedades,, e `X2` `Y2` têm valores padrão de 0, é possível desenhar algumas linhas com a sintaxe mínima:
 
 ```xaml
 <Line Stroke="Red"
-      StrokeThickness="1"
       X2="200" />
 ```
 
@@ -76,7 +72,6 @@ O exemplo de XAML a seguir mostra como desenhar uma linha tracejada:
       X2="0"
       Y2="120"
       Stroke="DarkBlue"
-      StrokeThickness="1"
       StrokeDashArray="1,1"
       StrokeDashOffset="6" />
 ```
@@ -89,5 +84,6 @@ Para obter mais informações sobre como desenhar uma linha tracejada, consulte 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ShapeDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.FormsExistentes](index.md)
+- [ShapeDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms Existentes](index.md)
+- [Xamarin.Forms Pincéis](~/xamarin-forms/user-interface/brushes/index.md)

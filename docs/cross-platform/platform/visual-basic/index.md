@@ -6,12 +6,12 @@ ms.assetid: f264c632-8feb-4015-a5e5-cb9c681c787d
 author: davidortinau
 ms.author: daortin
 ms.date: 04/24/2019
-ms.openlocfilehash: 594f7584e914b7bd8f4d7b72b3c82c42bb2fb73e
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 8ccf96e266f9d5eae69a178cfcad3d1e48fb6962
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73014579"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457518"
 ---
 # <a name="visual-basic-and-net-standard"></a>Visual Basic e .NET Standard
 
@@ -39,13 +39,13 @@ Ao adicionar um Visual Basic .NET Standard biblioteca no Visual Studio, você de
 
 2. Digite **Visual Basic biblioteca** para filtrar as opções de projeto e escolha a opção **biblioteca de classes (.net Standard)** com o ícone de Visual Basic:
 
-    [Filtro de![para Visual Basic biblioteca](xamarin-forms-images/06-sml.png)](xamarin-forms-images/06.png#lightbox)
+    [![Filtro para a biblioteca de Visual Basic](xamarin-forms-images/06-sml.png)](xamarin-forms-images/06.png#lightbox)
 
 3. Na próxima tela, digite um nome para o projeto e pressione **criar**.
 
-4. O projeto Visual Basic aparecerá conforme mostrado na **Gerenciador de soluções** assim:
+4. O projeto Visual Basic aparecerá conforme mostrado na  **Gerenciador de soluções** assim:
 
-    [![Visual Basic projeto vazio](images/new-library-sml.png)](images/new-library.png#lightbox)
+    [![Projeto Visual Basic vazio](images/new-library-sml.png)](images/new-library.png#lightbox)
 
 O projeto agora está pronto para que Visual Basic código seja adicionado. .NET Standard projetos podem ser referenciados por outros projetos (projetos de aplicativo ou projetos de biblioteca).
 
@@ -58,9 +58,9 @@ As páginas a seguir descrevem como usar o Visual Basic.NET .NET Standard biblio
 - [Compilando aplicativos Xamarin. iOS e Xamarin. Android nativos que usam o VB](native-apps.md)
 - [Criando aplicativos Xamarin. Forms com VB](xamarin-forms.md)
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [TaskyVB (exemplo)](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-taskyvb/)
-- [XamarinFormsVB (exemplo)](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
+- [TaskyVB (exemplo)](/samples/xamarin/mobile-samples/visualbasic-taskyvb/)
+- [XamarinFormsVB (exemplo)](/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
 - [.NET Standard e Xamarin](~/cross-platform/app-fundamentals/net-standard.md)
 - [.NET Standard](/dotnet/standard/net-standard/)

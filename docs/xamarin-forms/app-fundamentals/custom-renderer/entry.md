@@ -10,16 +10,16 @@ ms.date: 11/26/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d5a5dc7de2835038079a1bdf8af5be44a173f86e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c04626a3139a7fa44b2b13b2c1dd343188322f3c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939822"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368499"
 ---
 # <a name="customizing-an-entry"></a>Personalizando uma entrada
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
 
 _O Xamarin.Forms controle de entrada permite que uma única linha de texto seja editada. Este artigo demonstra como criar um renderizador personalizado para o controle de entrada, permitindo que os desenvolvedores substituam a renderização nativa padrão por sua própria personalização específica da plataforma._
 
@@ -212,4 +212,4 @@ Este artigo demonstrou como criar um renderizador de controle personalizado para
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [CustomRendererEntry (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
+- [CustomRendererEntry (amostra)](/samples/xamarin/xamarin-forms-samples/customrenderers-entry)

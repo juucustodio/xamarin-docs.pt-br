@@ -1,27 +1,27 @@
 ---
-title: Xamarin.FormsSubmenu do Shell
+title: Xamarin.Forms Submenu do Shell
 description: O submenu é o menu raiz de um aplicativo Shell e é acessível por meio de um ícone ou passando o dedo na lateral da tela. O submenu consiste em um cabeçalho opcional, itens de submenu e itens de menu opcionais.
 ms.prod: xamarin
 ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/30/2020
+ms.date: 01/12/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 821eafab6896d8771ba38332a43c0cbc319797a7
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: bad3a19de5a8feae2ca2fd02c1a454ac379e9f42
+ms.sourcegitcommit: 1decf2c65dc4c36513f7dd459a5df01e170a036f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87917836"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98115152"
 ---
-# <a name="no-locxamarinforms-shell-flyout"></a>Xamarin.FormsSubmenu do Shell
+# <a name="no-locxamarinforms-shell-flyout"></a>Xamarin.Forms Submenu do Shell
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
-O submenu é o menu raiz de um aplicativo Shell e é acessível por meio de um ícone ou passando o dedo na lateral da tela. O submenu consiste em um cabeçalho opcional, itens de submenu e itens de menu opcionais:
+O submenu é o menu raiz de um aplicativo Shell e é acessível por meio de um ícone ou passando o dedo na lateral da tela. O submenu consiste em um cabeçalho opcional, itens de submenu, itens de menu opcionais e um rodapé opcional:
 
 ![Captura de tela de um submenu anotado do Shell](flyout-images/flyout-annotated.png "Submenu anotado")
 
@@ -63,6 +63,20 @@ Além disso, o submenu pode ser aberto de forma programática e fechado com a de
 ```csharp
 Shell.Current.FlyoutIsPresented = false;
 ```
+
+## <a name="flyout-width-and-height"></a>Largura e altura do submenu
+
+A largura e a altura do submenu podem ser personalizadas definindo as `Shell.FlyoutWidth` `Shell.FlyoutHeight` Propriedades anexadas e como `double` valores:
+
+```xaml
+<Shell ...
+       FlyoutWidth="400"
+       FlyoutHeight="200">
+    ...
+</Shell>
+```
+
+Isso permite cenários como expandir o submenu em toda a tela ou reduzir a altura do submenu para que ele não oculte a barra de guias.
 
 ## <a name="flyout-header"></a>Cabeçalho do submenu
 
@@ -134,15 +148,68 @@ O exemplo a seguir mostra como recolher o cabeçalho do submenu à medida que o 
 </Shell>
 ```
 
+## <a name="flyout-footer"></a>Rodapé do submenu
+
+O rodapé do submenu é o conteúdo que, opcionalmente, aparece na parte inferior do submenu, com sua aparência sendo definida por um `object` que pode ser definida por meio do `Shell.FlyoutFooter` valor da propriedade:
+
+```xaml
+<Shell.FlyoutFooter>
+    <controls:FlyoutFooter />
+</Shell.FlyoutFooter>
+```
+
+O tipo `FlyoutFooter` é mostrado no exemplo a seguir:
+
+```xaml
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             x:Class="Xaminals.Controls.FlyoutFooter">
+    <StackLayout>
+        <Label Text="Xaminals"
+               TextColor="GhostWhite"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+        <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy}'}"
+               TextColor="GhostWhite"
+               HorizontalOptions="Center" />
+    </StackLayout>
+</ContentView>
+```
+
+Isso resulta no seguinte rodapé submenu:
+
+![Captura de tela do rodapé do submenu](flyout-images/flyout-footer.png "Rodapé do submenu")
+
+Como alternativa, a aparência do rodapé do submenu pode ser definida definindo a `Shell.FlyoutFooterTemplate` propriedade como a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) :
+
+```xaml
+<Shell.FlyoutFooterTemplate>
+    <DataTemplate>
+        <StackLayout>
+            <Label Text="Xaminals"
+                   TextColor="GhostWhite"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+            <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy}'}"
+                   TextColor="GhostWhite"
+                   HorizontalOptions="Center" />
+        </StackLayout>
+    </DataTemplate>
+</Shell.FlyoutFooterTemplate>
+```
+
+O rodapé do submenu é fixado na parte inferior do submenu e pode ser qualquer altura. Além disso, o rodapé nunca obscurece nenhum item de menu.
+
 ## <a name="flyout-background-image"></a>Imagem da tela de fundo do submenu
 
 O submenu pode ter uma imagem de tela de fundo opcional, que aparece sob o cabeçalho do submenu e atrás de quaisquer itens do submenu e do menu. A imagem de plano de fundo pode ser especificada definindo a `FlyoutBackgroundImage` propriedade vinculável, do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource) , em um arquivo, recurso inserido, URI ou fluxo.
 
 A taxa de proporção da imagem de plano de fundo pode ser configurada definindo a `FlyoutBackgroundImageAspect` propriedade vinculável, do tipo [`Aspect`](xref:Xamarin.Forms.Aspect) , para um dos `Aspect` membros da enumeração:
 
-- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill)-Corta a imagem para que ela preencha a área de exibição enquanto preserva a taxa de proporção.
-- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit)-letterboxes a imagem, se necessário, para que a imagem caiba na área de exibição, com espaço em branco adicionado à parte superior/inferior ou aos lados, dependendo se a imagem for larga ou comprida.
-- [`Fill`](xref:Xamarin.Forms.Aspect.Fill)– Alonga a imagem para preencher completamente e exatamente a área de exibição. Isso pode resultar em distorção de imagem.
+- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) -Corta a imagem para que ela preencha a área de exibição enquanto preserva a taxa de proporção.
+- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -letterboxes a imagem, se necessário, para que a imagem caiba na área de exibição, com espaço em branco adicionado à parte superior/inferior ou aos lados, dependendo se a imagem for larga ou comprida.
+- [`Fill`](xref:Xamarin.Forms.Aspect.Fill) – Alonga a imagem para preencher completamente e exatamente a área de exibição. Isso pode resultar em distorção de imagem.
 
 A propriedade de `FlyoutBackgroundImageAspect` é definida por padrão como `AspectFit`.
 
@@ -295,9 +362,9 @@ Para obter mais informações sobre pincéis, consulte [ Xamarin.Forms pincéis]
 
 Por padrão, um submenu pode ser rolado verticalmente quando os itens do submenu não se ajustam ao submenu. Esse comportamento pode ser alterado definindo a `Shell.FlyoutVerticalScrollMode` propriedade vinculável como um dos `ScrollMode` membros da enumeração:
 
-- `Disabled`– indica que a rolagem vertical será desabilitada.
-- `Enabled`– indica que a rolagem vertical será habilitada.
-- `Auto`– indica que a rolagem vertical será habilitada se os itens do submenu não couberem no submenu. Este é o valor padrão da propriedade `Shell.FlyoutVerticalScrollMode`.
+- `Disabled` – indica que a rolagem vertical será desabilitada.
+- `Enabled` – indica que a rolagem vertical será habilitada.
+- `Auto` – indica que a rolagem vertical será habilitada se os itens do submenu não couberem no submenu. Este é o valor padrão da propriedade `Shell.FlyoutVerticalScrollMode`.
 
 O exemplo a seguir mostra como desabilitar a rolagem vertical:
 
@@ -487,7 +554,23 @@ Além disso, os [`Grid`](xref:Xamarin.Forms.Grid) [`Image`](xref:Xamarin.Forms.I
 > [!NOTE]
 > O mesmo modelo também pode ser usado para `MenuItem` objetos.
 
-## <a name="flyoutitem-tab-order"></a>Ordem de tabulação do FlyoutItem
+## <a name="set-flyoutitem-visibility"></a>Definir visibilidade de FlyoutItem
+
+Itens de submenu são visíveis no submenu por padrão. No entanto, um item de submenu pode ser ocultado no submenu definindo a `Shell.FlyoutItemIsVisible` Propriedade anexada, que usa como padrão `true` para `false` :
+
+```xaml
+<Shell ...>
+    <FlyoutItem ...
+                Shell.FlyoutItemIsVisible="False">
+        ...
+    </FlyoutItem>
+</Shell>
+```
+
+> [!NOTE]
+> A `Shell.FlyoutItemIsVisible` Propriedade anexada pode ser definida `FlyoutItem` nos `MenuItem` objetos,, `Tab` e `ShellContent` .
+
+## <a name="set-flyoutitem-tab-order"></a>Definir ordem de tabulação FlyoutItem
 
 Por padrão, a ordem de tabulação dos objetos `FlyoutItem` é a mesma ordem em que eles são listados no XAML ou em que são adicionados de maneira programática a uma coleção filha. Essa é a ordem em que ocorrerá a navegação dos objetos `FlyoutItem` por meio do teclado e, geralmente, essa ordem padrão é a melhor ordem.
 
@@ -536,6 +619,54 @@ Neste exemplo, a `CurrentItem` propriedade é definida na classe de subclasse `S
 Shell.Current.CurrentItem = aboutItem;
 ```
 
+## <a name="replace-flyout-content"></a>Substituir conteúdo do submenu
+
+Itens de submenu, que representam o conteúdo do submenu, podem, opcionalmente, ser substituídos por seu próprio conteúdo, definindo a `Shell.FlyoutContent` propriedade vinculável como um `object` :
+
+```xaml
+<Shell.FlyoutContent>
+    <CollectionView BindingContext="{x:Reference shell}"
+                    IsGrouped="True"
+                    ItemsSource="{Binding FlyoutItems}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Label Text="{Binding Title}"
+                       TextColor="White"
+                       FontSize="Large" />
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</Shell.FlyoutContent>
+```
+
+Neste exemplo, o conteúdo do submenu é substituído por um [`CollectionView`](xref:Xamarin.Forms.CollectionView) que exibe o título de cada item na `FlyoutItems` coleção.
+
+> [!NOTE]
+> A `FlyoutItems` propriedade, na `Shell` classe, é uma coleção somente leitura de itens de submenu.
+
+Como alternativa, o conteúdo do submenu pode ser definido definindo a `Shell.FlyoutContentTemplate` propriedade como a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) :
+
+```xaml
+<Shell.FlyoutContentTemplate>
+    <DataTemplate>
+        <CollectionView BindingContext="{x:Reference shell}"
+                        IsGrouped="True"
+                        ItemsSource="{Binding FlyoutItems}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Title}"
+                           TextColor="White"
+                           FontSize="Large" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </DataTemplate>
+</Shell.FlyoutContentTemplate>
+```
+
+> [!IMPORTANT]
+> Um cabeçalho de submenu pode, opcionalmente, ser exibido acima do conteúdo do submenu e um rodapé de submenu pode, opcionalmente, ser exibido abaixo do conteúdo do submenu. Se o conteúdo do submenu for rolável, o Shell tentará honrar o comportamento de rolagem do seu cabeçalho de submenu.
+
 ## <a name="menu-items"></a>Itens de menu
 
 Os itens de menu podem ser adicionados opcionalmente ao submenu e cada item de menu é representado por um [`MenuItem`](xref:Xamarin.Forms.MenuItem) objeto. A posição dos objetos `MenuItem` no submento depende da ordem de declaração deles na hierarquia visual do Shell. Portanto, qualquer objeto `MenuItem` declarado antes do objeto `FlyoutItem` aparecerá na parte superior do submenu, e qualquer objeto `MenuItem` declarado após `FlyoutItem` aparecerá na parte inferior do submenu.
@@ -543,7 +674,7 @@ Os itens de menu podem ser adicionados opcionalmente ao submenu e cada item de m
 > [!NOTE]
 > A `MenuItem` classe tem um [`Clicked`](xref:Xamarin.Forms.MenuItem.Clicked) evento e uma [`Command`](xref:Xamarin.Forms.MenuItem.Command) propriedade. Portanto, os objetos `MenuItem` permitem cenários que executam uma ação em resposta ao `MenuItem` que está sendo tocado. Esses cenários incluem realizar a navegação e abrir um navegador em uma página da Web específica.
 
-[`MenuItem`](xref:Xamarin.Forms.MenuItem)os objetos podem ser adicionados ao submenu, conforme mostrado no exemplo a seguir:
+[`MenuItem`](xref:Xamarin.Forms.MenuItem) os objetos podem ser adicionados ao submenu, conforme mostrado no exemplo a seguir:
 
 ```xaml
 <Shell ...>
@@ -690,7 +821,7 @@ Além disso, as classes de estilo personalizado podem ser definidas e aplicadas 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xaminals (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
-- [Xamarin.FormsClasses de estilo](~/xamarin-forms/user-interface/styles/xaml/style-class.md)
-- [Xamarin.FormsGerenciador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)
-- [Xamarin.FormsPincéis](~/xamarin-forms/user-interface/brushes/index.md)
+- [Xaminals (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Xamarin.Forms Classes de estilo](~/xamarin-forms/user-interface/styles/xaml/style-class.md)
+- [Xamarin.Forms Gerenciador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Xamarin.Forms Pincéis](~/xamarin-forms/user-interface/brushes/index.md)

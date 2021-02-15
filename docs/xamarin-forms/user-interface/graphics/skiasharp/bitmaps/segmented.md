@@ -10,16 +10,16 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5c3909271580d0568d7c603de0d434ff5b3f3bc4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: fe63f3fdab5d508ab0202fbfe93bdc223f97d28a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138665"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370163"
 ---
 # <a name="segmented-display-of-skiasharp-bitmaps"></a>Exibição segmentada de bitmaps SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 O `SKCanvas` objeto SkiaSharp define um método chamado `DrawBitmapNinePatch` e dois métodos chamados `DrawBitmapLattice` que são muito semelhantes. Ambos os métodos renderizam um bitmap para o tamanho de um retângulo de destino, mas em vez de alongar o bitmap uniformemente, eles exibem partes do bitmap em suas dimensões de pixel e ampliam outras partes do bitmap para que ele se ajuste ao retângulo:
 
@@ -27,7 +27,7 @@ O `SKCanvas` objeto SkiaSharp define um método chamado `DrawBitmapNinePatch` e 
 
 Esses métodos geralmente são usados para renderizar bitmaps que formam parte dos objetos da interface do usuário, como botões. Ao criar um botão, geralmente você deseja que o tamanho de um botão seja baseado no conteúdo do botão, mas provavelmente deseja que a borda do botão tenha a mesma largura, independentemente do conteúdo do botão. Esse é um aplicativo ideal do `DrawBitmapNinePatch` .
 
-`DrawBitmapNinePatch`é um caso especial do `DrawBitmapLattice` , mas é o mais fácil de usar e entender os dois métodos.
+`DrawBitmapNinePatch` é um caso especial do `DrawBitmapLattice` , mas é o mais fácil de usar e entender os dois métodos.
 
 ## <a name="the-nine-patch-display"></a>A exibição de nove patches 
 
@@ -47,7 +47,7 @@ canvas.DrawBitmapNinePatch(bitmap, centerRectangle, destRectangle, paint);
 
 O retângulo central é relativo ao bitmap. É um `SKRectI` valor (a versão de inteiro de `SKRect` ) e todas as coordenadas e tamanhos estão em unidades de pixels. O retângulo de destino é relativo à superfície de exibição. O argumento `paint` é opcional.
 
-A página de **exibição de nove patches** no exemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) primeiro usa um construtor estático para criar uma propriedade estática pública do tipo `SKBitmap` :
+A página de **exibição de nove patches** no exemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) primeiro usa um construtor estático para criar uma propriedade estática pública do tipo `SKBitmap` :
 
 ```csharp
 public partial class NinePatchDisplayPage : ContentPage
@@ -110,7 +110,7 @@ public class NinePatchDisplayPage : ContentPage
 
 O `centerRect` retângulo abrange a matriz central de 16 círculos. Os círculos nos cantos são exibidos em suas dimensões de pixel e todo o resto é alongado de acordo:
 
-[![Nove-exibição de patch](segmented-images/NinePatchDisplay.png "Nove-exibição de patch")](segmented-images/NinePatchDisplay-Large.png#lightbox)
+[![Nove-exibição de patch](segmented-images/NinePatchDisplay.png "Nine-Patch exibir")](segmented-images/NinePatchDisplay-Large.png#lightbox)
 
 A página UWP tem de ser de 500 pixels de largura e, portanto, exibe as linhas superior e inferior como uma série de círculos do mesmo tamanho. Caso contrário, todos os círculos que não estão nos cantos são esticados para formar elipses.
 
@@ -131,7 +131,7 @@ A [`SKLattice`](xref:SkiaSharp.SKLattice) estrutura define quatro propriedades:
 - [`XDivs`](xref:SkiaSharp.SKLattice.XDivs), uma matriz de inteiros
 - [`YDivs`](xref:SkiaSharp.SKLattice.YDivs), uma matriz de inteiros
 - [`Flags`](xref:SkiaSharp.SKLattice.Flags), uma matriz de `SKLatticeFlags` , um tipo de enumeração
-- [`Bounds`](xref:SkiaSharp.SKLattice.Bounds)de tipo `Nullable<SKRectI>` para especificar um retângulo de origem opcional dentro do bitmap
+- [`Bounds`](xref:SkiaSharp.SKLattice.Bounds) de tipo `Nullable<SKRectI>` para especificar um retângulo de origem opcional dentro do bitmap
 
 A `XDivs` matriz divide a largura do bitmap em faixas verticais. A primeira faixa se estende do pixel 0 à esquerda para `XDivs[0]` . Essa faixa é renderizada em sua largura de pixel. A segunda faixa se estende de `XDivs[0]` para `XDivs[1]` e é ampliada. A terceira faixa se estende de `XDivs[1]` para `XDivs[2]` e é renderizada em sua largura de pixel. A última faixa se estende do último elemento da matriz para a borda direita do bitmap. Se a matriz tiver um número par de elementos, ela será exibida na largura do pixel. Caso contrário, ele será ampliado. O número total de faixas verticais é um maior que o número de elementos na matriz.
 
@@ -141,8 +141,8 @@ Juntos, a `XDivs` `YDivs` matriz e divide o bitmap em retângulos. O número de 
 
 De acordo com a documentação do skia, a `Flags` matriz contém um elemento para cada retângulo, primeiro a linha superior de retângulos, a segunda linha e assim por diante. A `Flags` matriz é do tipo [`SKLatticeFlags`](xref:SkiaSharp.SKLatticeFlags) , uma enumeração com os seguintes membros:
 
-- `Default`com valor 0
-- `Transparent`com valor 1
+- `Default` com valor 0
+- `Transparent` com valor 1
 
 No entanto, esses sinalizadores parecem não funcionar conforme deveriam, e é melhor ignorá-los. Mas não defina a `Flags` propriedade como `null` . Defina-o como uma matriz de `SKLatticeFlags` valores grande o suficiente para abranger o número total de retângulos.
 
@@ -182,7 +182,7 @@ As `XDivs` Propriedades e `YDivs` são definidas como matrizes de apenas dois in
 
 A exibição é idêntica ao programa anterior:
 
-[![Malha nove-patch](segmented-images/LatticeNinePatch.png "Malha nove-patch")](segmented-images/LatticeNinePatch-Large.png#lightbox)
+[![Malha nove-patch](segmented-images/LatticeNinePatch.png "Nine-Patch malha")](segmented-images/LatticeNinePatch-Large.png#lightbox)
 
 A página de **exibição malha** divide o bitmap em 16 retângulos:
 
@@ -230,5 +230,5 @@ A página de **exibição malha** generaliza a criação da `Flags` matriz, perm
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 4dde8941b09ac7b235b94e73e86dc60167fb6bd4
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 8715559db3f551773f41659a0c7c36adb29f0d1e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574451"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437229"
 ---
 # <a name="introduction-to-macos-sierra"></a>Introdução ao macOS Sierra
 
@@ -127,7 +127,7 @@ Além disso, foi `AppKit` modificado para funcionar no novo colorspace **sRGB** 
 
 A Apple oferece as seguintes práticas recomendadas ao trabalhar com cores amplas:
 
-- `NSColor`Agora, o usa o espaço de cores sRGB e não fixe mais valores para o `0.0` intervalo de to `1.0` . Se o aplicativo depender do comportamento anterior do fixe, será necessário modificá-lo para macOS Sierra.
+- `NSColor` Agora, o usa o espaço de cores sRGB e não fixe mais valores para o `0.0` intervalo de to `1.0` . Se o aplicativo depender do comportamento anterior do fixe, será necessário modificá-lo para macOS Sierra.
 - Ao usar uma API de nível baixo, como gráficos principal ou metal para fornecer processamento de imagens, o aplicativo deve usar um espaço de cores de intervalo estendido e um formato de pixel que dê suporte a valores de ponto flutuante de 16 bits. Quando necessário, o aplicativo terá que fixe manualmente os valores de componente de cor.
 - Os principais gráficos, a imagem principal e os sombreadores de desempenho de metal fornecem novos métodos para conversão entre os dois espaços de cores.
 
@@ -151,7 +151,7 @@ As seguintes APIs foram preteridas no macOS Sierra:
 
 Consulte a documentação de [diffs da API do MacOS v 10.12](https://developer.apple.com/library/archive/releasenotes/General/APIDiffsMacOS10_12/index.html) da Apple para obter uma lista completa de substituições e alterações.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Amostras de Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+- [Amostras de Mac](/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [O que há de novo no macOS 10,12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)

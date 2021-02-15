@@ -1,5 +1,5 @@
 ---
-title: Esquemas de namespace personalizado XAML emXamarin.Forms
+title: Esquemas de namespace personalizado XAML em Xamarin.Forms
 description: Um esquema de namespace personalizado XAML pode ser definido com a classe XmlnsDefinitionAttribute, que especifica um mapeamento entre uma URL personalizada e um ou mais namespaces CLR. O esquema de namespace personalizado pode então ser usado em declarações de namespace XAML.
 ms.prod: xamarin
 ms.assetid: FDF201A1-8C35-4569-A728-F9B0A0C5B31A
@@ -10,16 +10,16 @@ ms.date: 12/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 41a95b1a82ab8aa1f6938e5a2bcdebcef368e72d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f950db0694b21239b742867d519e893d9a62384c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138158"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374058"
 ---
-# <a name="xaml-custom-namespace-schemas-in-xamarinforms"></a>Esquemas de namespace personalizado XAML emXamarin.Forms
+# <a name="xaml-custom-namespace-schemas-in-no-locxamarinforms"></a>Esquemas de namespace personalizado XAML em Xamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
 
 Os tipos em uma biblioteca podem ser referenciados em XAML declarando um namespace XAML para a biblioteca, com a declaração de namespace especificando o nome do namespace CLR (Common Language Runtime) e um nome de assembly:
 
@@ -136,7 +136,7 @@ Para consumir o `CircleButton` controle, um namespace XAML é declarado, com a d
 </ContentPage>
 ```
 
-`CircleButton`as instâncias podem então ser adicionadas ao [`ContentPage`](xref:Xamarin.Forms.ContentPage) declarando-as com o `controls` prefixo do namespace.
+`CircleButton` as instâncias podem então ser adicionadas ao [`ContentPage`](xref:Xamarin.Forms.ContentPage) declarando-as com o `controls` prefixo do namespace.
 
 Para localizar os tipos de esquema de namespace personalizado, o Xamarin.Forms pesquisará assemblies referenciados em busca de `XmlnsDefinitionAttribute` instâncias. Se o `xmlns` atributo de um elemento em um arquivo XAML corresponder ao `XmlNamespace` valor da propriedade em um `XmlnsDefinitionAttribute` , Xamarin.Forms o tentará usar o `XmlnsDefinitionAttribute.ClrNamespace` valor da propriedade para a resolução do tipo. Se a resolução de tipo falhar, o Xamarin.Forms continuará a tentar a resolução de tipo com base em quaisquer instâncias de correspondência adicionais `XmlnsDefinitionAttribute` .
 
@@ -146,6 +146,6 @@ O resultado é que duas `CircleButton` instâncias são exibidas:
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Esquemas de namespace personalizados (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
+- [Esquemas de namespace personalizados (exemplo)](/samples/xamarin/xamarin-forms-samples/xaml-customnamespaceschemas)
 - [Prefixos recomendados de namespace do XAML](custom-prefix.md)
-- [Namespaces XAML emXamarin.Forms](namespaces.md)
+- [Namespaces XAML em Xamarin.Forms](namespaces.md)

@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8ffa7ab7c9d2cebb9854ed155c3a00fe65e497c9
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2b5fbae64d1cef6fb39fbe505b77fbc931803349
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936130"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375259"
 ---
 # <a name="polylines-and-parametric-equations"></a>Polilinhas e equações paramétricas
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Use SkiaSharp para renderizar qualquer linha que você possa definir com equações paramétricas_
 
@@ -126,5 +126,5 @@ Observe que o `SKPath` é criado em um `using` bloco. Isso `SKPath` consome mais
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

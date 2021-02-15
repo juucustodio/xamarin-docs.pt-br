@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 410b66e91168ed07da6f102d96b965f9e6a184f7
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 4eb81a074adb6d2b828bb74edfde9916d69960b1
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571630"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434974"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>Alterações adicionais do tvOS 10 frameworks
 
@@ -66,7 +66,7 @@ o tvOS 10 faz os seguintes aprimoramentos na estrutura de imagem principal:
 - O `ImageWithExtent` método da classe [CIFilter](https://developer.apple.com/reference/coreimage/cifilter) pode ser usado para inserir o processamento personalizado na operação de filtro. A imagem principal invocará o retorno de chamada fornecido entre os filtros ao processar uma imagem para saída ou exibição.
 - O aplicativo agora pode processar imagens em um espaço de cores fora do espaço de cores de trabalho do contexto de imagem principal, convertendo dentro e fora do espaço de cores antes e depois do processamento.
 - Vários aprimoramentos de desempenho de renderização foram feitos para `UIImage` renderização (quando apoiado por armazenamentos de imagem de imagem de núcleo) em `UIImageView` objetos.
-- `UIImage`objetos marcados com largura ampla serão renderizados como uma cor de ampla gama em `UIImageView` objetos em dispositivos IOS que dão suporte a cores amplas.
+- `UIImage` objetos marcados com largura ampla serão renderizados como uma cor de ampla gama em `UIImageView` objetos em dispositivos IOS que dão suporte a cores amplas.
 - O código do kernel da imagem de núcleo agora pode solicitar formatos de saída de pixel específicos.
 
 Além disso, os seguintes novos filtros de imagem de núcleo foram adicionados:
@@ -96,7 +96,7 @@ Os aprimoramentos a seguir foram feitos na estrutura de base para o tvOS 10:
 Os aprimoramentos a seguir foram feitos na estrutura GameKit no tvOS 10:
 
 - Um novo tipo de conta somente iCloud foi implementado pela classe [GKCloudPlayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) .
-- A nova classe [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) fornece uma solução generalizada para gerenciar o armazenamento de dados persistente em Game Center. `GKGameSession`mantém uma lista de players e o aplicativo é o formulário responsável que implementa como e quando a data do participante é armazenada, recuperada ou trocada entre os jogadores. Em muitas instâncias, as sessões de jogos podem substituir as correspondências existentes, correspondências em tempo real ou métodos de salvamento de jogos persistentes.
+- A nova classe [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) fornece uma solução generalizada para gerenciar o armazenamento de dados persistente em Game Center. `GKGameSession` mantém uma lista de players e o aplicativo é o formulário responsável que implementa como e quando a data do participante é armazenada, recuperada ou trocada entre os jogadores. Em muitas instâncias, as sessões de jogos podem substituir as correspondências existentes, correspondências em tempo real ou métodos de salvamento de jogos persistentes.
 
 <a name="GameplayKit-Enhancements"></a>
 
@@ -195,7 +195,7 @@ Os aprimoramentos a seguir foram feitos na estrutura UIKit no tvOS 10:
 - Inicie o compartilhamento de CloudKit e modifique suas propriedades usando as novas `UICloudSharingController` `UICloudSharingControllerDelegate` classes e.
 - Aproveite as células de pré-busca para melhorar a experiência de rolagem do `UICollectionViews` com o novo `UICollectionViewDataSourcePrefetching` delegado.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Exemplos do tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [O que há de novo no tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

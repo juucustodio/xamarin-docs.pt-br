@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: 86e05dc0e9cd5df325126cc5a339b36dd27c1e45
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 1747601596cd1772210d9a66755d7aa98ca14052
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73030356"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457023"
 ---
 # <a name="working-with-screen-sizes"></a>Trabalhando com tamanhos de tela
 
@@ -21,15 +21,15 @@ Os dispositivos Android com desgaste podem ter uma exibição retangular ou roun
 
 ## <a name="identifying-screen-type"></a>Identificando tipo de tela
 
-A biblioteca de suporte de desgaste fornece alguns controles que ajudam você a detectar e adaptar-se a diferentes formas de tela, como `WatchViewStub` e `BoxInsetLayout`.
+A biblioteca de suporte de desgaste fornece alguns controles que ajudam você a detectar e adaptar-se a diferentes formas de tela, como `WatchViewStub` e `BoxInsetLayout` .
 
-Lembre-se de que alguns dos outros controles de biblioteca de suporte (como `GridViewPager`) detectam *automaticamente* a forma da tela e não devem ser adicionados como filhos dos controles descritos abaixo.
+Lembre-se de que alguns dos outros controles de biblioteca de suporte (como `GridViewPager` ) detectam *automaticamente* a forma da tela e não devem ser adicionados como filhos dos controles descritos abaixo.
 
 ### <a name="watchviewstub"></a>WatchViewStub
 
-Consulte o exemplo de [WatchViewStub](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchviewstub) para ver como detectar o tipo de tela e exibir um layout diferente para cada tipo.
+Consulte o exemplo de [WatchViewStub](/samples/xamarin/monodroid-samples/wear-watchviewstub) para ver como detectar o tipo de tela e exibir um layout diferente para cada tipo.
 
-O arquivo de layout principal contém um `android.support.wearable.view.WatchViewStub` que faz referência a layouts diferentes para telas retangulares e arredondadas usando os atributos `app:rectLayout` e `app:roundLayout`:
+O arquivo de layout principal contém um `android.support.wearable.view.WatchViewStub` que faz referência a layouts diferentes para telas retangulares e arredondadas usando os `app:rectLayout` `app:roundLayout` atributos e:
 
 ```xml
 <android.support.wearable.view.WatchViewStub

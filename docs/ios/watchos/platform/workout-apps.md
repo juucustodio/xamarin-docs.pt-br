@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: c4fc1607667dd6201c28c4d00a2938760e429f0f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 826d8c982e9976cb4147c0ed77a55a4b1d18f879
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938977"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432410"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>Aplicativos de treinamento do watchOS no Xamarin
 
@@ -390,8 +390,8 @@ public override void DidGenerateEvent (HKWorkoutSession workoutSession, HKWorkou
 
 A Apple adicionou os seguintes novos tipos de evento no watchOS 3:
 
-- `HKWorkoutEventType.Lap`-São para eventos que interrompem o treinamento em partes de distância igual. Por exemplo, para marcar um colo em uma faixa durante a execução.
-- `HKWorkoutEventType.Marker`-São para pontos de interesse arbitrários no treinamento. Por exemplo, atingir um ponto específico na rota de uma execução ao ar.
+- `HKWorkoutEventType.Lap` -São para eventos que interrompem o treinamento em partes de distância igual. Por exemplo, para marcar um colo em uma faixa durante a execução.
+- `HKWorkoutEventType.Marker` -São para pontos de interesse arbitrários no treinamento. Por exemplo, atingir um ponto específico na rota de uma execução ao ar.
 
 Esses novos tipos podem ser criados pelo aplicativo e armazenados no treinamento para uso posterior na criação de gráficos e estatísticas.
 
@@ -1253,5 +1253,5 @@ Este artigo abordou os aprimoramentos que a Apple fez para testar aplicativos no
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Amostras do iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Amostras do iOS 10](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)
 - [Introdução ao HealthKit](~/ios/platform/healthkit.md)

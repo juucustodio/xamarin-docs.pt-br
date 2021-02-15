@@ -7,41 +7,40 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/19/2017
-ms.openlocfilehash: 7262e44fe862e7a5c71f0b1dcfa5d672932fd4ee
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 09b3ef1446f489b8f9077d59f74fee7cf157ca50
+ms.sourcegitcommit: 836d54779190b1bef1b43bc0c2016c9b3034bfda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032179"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281281"
 ---
 # <a name="introduction-to-ios-11"></a>Introdução ao iOS 11
 
-![Exemplo de ARKit](images/arkit.png) ![Colocar objetos em AR](images/arkit2.png) ![Exemplo de do coreml](images/coreml.png) ![Exemplo de MapKit](images/mapkit.png) ![Exemplo de retângulos de visão](images/vision1.png) ![Exemplo de faces de visão](images/vision2.png) ![Arrastar e soltar exemplo](images/drag-drop.png) ![Arrastar e soltar exemplo](images/drag-drop2.png) ![Exemplo de SiriKit](images/sirikit.png)
+![Exemplo de ARKit](images/arkit.png) ![Colocar objetos em AR](images/arkit2.png) ![Exemplo de do coreml](images/coreml.png) ![Exemplo de MapKit](images/mapkit.png) ![Exemplo de retângulos de visão](images/vision1.png) ![Exemplo de faces de visão](images/vision2.png) ![Arrastar e soltar exemplo 1](images/drag-drop.png) ![Arrastar e soltar exemplo 2](images/drag-drop2.png) ![Exemplo de SiriKit](images/sirikit.png)
 
 o iOS 11 inclui muitos recursos novos e aprimoramentos em várias estruturas:
 
-## <a name="preparing-your-app-for-ios-11updating-your-appindexmd"></a>[Preparando seu aplicativo para o iOS 11](updating-your-app/index.md)
+## <a name="preparing-your-app-for-ios-11"></a>[Preparando seu aplicativo para o iOS 11](updating-your-app/index.md)
 
 A Apple introduziu atualizações de arquitetura, novas alterações visuais e um processo do iTunes Connect atualizado para o iOS 11. Use este guia para verificar se seu aplicativo Xamarin. iOS está preparado para a nova versão.
 
-## <a name="arkitarkitindexmd"></a>[ARKit](arkit/index.md)
+## <a name="arkit"></a>[ARKit](arkit/index.md)
 
 O ARKit traz a realidade aumentada para o iOS, permitindo que os usuários interajam com o mundo por meio da câmera do dispositivo.
-Com o Xamarin, você também pode usar [ARKit com UrhoSharp](arkit/urhosharp.md).
 
-## <a name="coremlcoremlmd"></a>[CoreML](coreml.md)
+## <a name="coreml"></a>[CoreML](coreml.md)
 
 Os modelos de aprendizado de máquina podem ser integrados a aplicativos iOS 11 com do coreml. A estrutura do coreml fornece uma API simples para incorporar modelos existentes em projetos de aplicativo para permitir que os problemas sejam analisados diretamente no aplicativo.
 
-## <a name="corenfccorenfcmd"></a>[CoreNFC](corenfc.md)
+## <a name="corenfc"></a>[CoreNFC](corenfc.md)
 
 o iPhone 7 e os dispositivos mais recentes podem ler marcas de NFC (comunicação a curta distância), permitindo que os aplicativos detectem produtos, lugares ou coisas marcados no mundo todo.
 
-## <a name="drag-and-dropdrag-and-dropmd"></a>[Arrastar e soltar](drag-and-drop.md)
+## <a name="drag-and-drop"></a>[Arrastar e soltar](drag-and-drop.md)
 
 A estrutura de arrastar e soltar traz suporte para todo o iOS para mover dados por toque. No iPad, você pode arrastar ambos dentro e entre aplicativos diferentes; enquanto estiver no iPhone, você pode arrastar apenas dentro do mesmo aplicativo. Há suporte para muitos tipos de personalização, incluindo tipos de dados avançados, animações e manipulação de gestos de multitoque.
 
-## <a name="mapkitmapkitmd"></a>[MapKit](mapkit.md)
+## <a name="mapkit"></a>[MapKit](mapkit.md)
 
 O MapKit tem vários aprimoramentos, incluindo suporte para agrupamento automático de marcadores e adição de uma bússola à exibição.
 
@@ -49,37 +48,36 @@ O MapKit tem vários aprimoramentos, incluindo suporte para agrupamento automát
 
 O PDFKit agora está disponível no iOS 11, trazendo recursos de criação e edição de PDF para seus aplicativos.
 
-## <a name="sirikitsirikitmd"></a>[SiriKit](sirikit.md)
+## <a name="sirikit"></a>[SiriKit](sirikit.md)
 
 O Siri agora dá suporte a ainda mais interações, incluindo listas e observações, além de outros aprimoramentos, como nomes de aplicativo alternativos.
 
-## <a name="visionvisionmd"></a>[Visão](vision.md)
+## <a name="vision"></a>[Visão](vision.md)
 
 Traz uma variedade de recursos de análise e processamento de imagens para o iOS, incluindo detecção e reconhecimento facial, modelos de do coreml, novas APIs de detecção de código de barras, detecção de texto e de horizonte e detecção e rastreamento de objetos mais gerais.
 
 ## <a name="samples"></a>Exemplos
 
-Temos uma série de C# [exemplos](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS11) para você começar:
+Temos uma série de [exemplos](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS11) em C# para você começar:
 
-- [Exemplo de ARKit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitsample)
-- [ARKit colocando objetos](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
-- [ARKit e UrhoSharp](arkit/urhosharp.md)
-- [Exemplo de reconhecimento de imagem do coreml](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition)
-- [Do coreml com o modelo personalizado do Azure](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlazuremodel)
-- [Exemplo de leitor de marca CoreNFC](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-nfctagreader)
-- [Arraste & exibição de tabela drop](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddroptableview)
-- [Arrastar & remover exibição de coleção](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropcollectionview)
-- [Arrastar & soltar exibição personalizada](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropcustomview)
-- [DragBoard arrastar & soltar exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-draganddropdragboard)
-- [Exemplo de MapKit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample)
-- [Exemplo de SiriKit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-sirikitsample)
-- [Exemplo de estrutura de fotos atualizada](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-samplephotoapp)
-- [Exemplo de visão & do coreml](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision)
-- [Exemplo de detecção de retângulos de visão](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionrectangles/)
-- [Exemplo de detecção de faces de visão](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-visionfaces)
-- [Exemplo de widgets do PDKFit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-pdfannotationwidgetsadvanced)
-- [Exemplo de marca d' água PDFKit](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-pdfdocumentwatermark)
+- [Exemplo de ARKit](/samples/xamarin/ios-samples/ios11-arkitsample)
+- [ARKit colocando objetos](/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
+- [Exemplo de reconhecimento de imagem do coreml](/samples/xamarin/ios-samples/ios11-coremlimagerecognition)
+- [Do coreml com o modelo personalizado do Azure](/samples/xamarin/ios-samples/ios11-coremlazuremodel)
+- [Exemplo de leitor de marca CoreNFC](/samples/xamarin/ios-samples/ios11-nfctagreader)
+- [Arraste & exibição de tabela drop](/samples/xamarin/ios-samples/ios11-draganddroptableview)
+- [Arrastar & remover exibição de coleção](/samples/xamarin/ios-samples/ios11-draganddropcollectionview)
+- [Arrastar & soltar exibição personalizada](/samples/xamarin/ios-samples/ios11-draganddropcustomview)
+- [DragBoard arrastar & soltar exemplo](/samples/xamarin/ios-samples/ios11-draganddropdragboard)
+- [Exemplo de MapKit](/samples/xamarin/ios-samples/ios11-mapkitsample)
+- [Exemplo de SiriKit](/samples/xamarin/ios-samples/ios11-sirikitsample)
+- [Exemplo de estrutura de fotos atualizada](/samples/xamarin/ios-samples/ios11-samplephotoapp)
+- [Exemplo de visão & do coreml](/samples/xamarin/ios-samples/ios11-coremlvision)
+- [Exemplo de detecção de retângulos de visão](/samples/xamarin/ios-samples/ios11-visionrectangles/)
+- [Exemplo de detecção de faces de visão](/samples/xamarin/ios-samples/ios11-visionfaces)
+- [Exemplo de widgets do PDKFit](/samples/xamarin/ios-samples/ios11-pdfannotationwidgetsadvanced)
+- [Exemplo de marca d' água PDFKit](/samples/xamarin/ios-samples/ios11-pdfdocumentwatermark)
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Exemplos do Xamarin iOS 11](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS11)
+- [Exemplos do Xamarin iOS 11](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS11)

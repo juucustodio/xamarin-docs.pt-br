@@ -10,16 +10,19 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 22f7272751c30bed350fe7aada8d5dacf0acc809
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2f4fedcae3942f1662ec5102ae6c42191f65f888
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136780"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374856"
 ---
 # <a name="summary-of-chapter-12-styles"></a>Resumo do capítulo 12. Estilos
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12)
+
+> [!NOTE]
+> Este livro foi publicado na Primavera de 2016 e não foi atualizado desde então. Há muito no livro que permanece valioso, mas alguns materiais estão desatualizados e alguns tópicos não estão mais totalmente corretos ou completos.
 
 No Xamarin.Forms , os estilos permitem que várias exibições compartilhem uma coleção de configurações de propriedade. Isso reduz a marcação e habilita a manutenção de temas visuais consistentes.
 
@@ -27,7 +30,7 @@ Os estilos são quase sempre definidos e consumidos na marcação. Um objeto do 
 
 ## <a name="the-basic-style"></a>O estilo básico
 
-Um `Style` requer que [`TargetType`](xref:Xamarin.Forms.Style.TargetType) seja definido como o tipo do objeto visual ao qual se aplica. Quando uma `Style` é instanciada em um dicionário de recursos (como é comum), ela também requer um `x:Key` atributo.
+Um `Style` requer que  [`TargetType`](xref:Xamarin.Forms.Style.TargetType) seja definido como o tipo do objeto visual ao qual se aplica. Quando uma `Style` é instanciada em um dicionário de recursos (como é comum), ela também requer um `x:Key` atributo.
 
 O `Style` tem uma propriedade content do tipo [`Setters`](xref:Xamarin.Forms.Style.Setters) , que é uma coleção de [`Setter`](xref:Xamarin.Forms.Setter) objetos. Cada `Setter` um associa um [`Property`](xref:Xamarin.Forms.Setter.Property) com um [`Value`](xref:Xamarin.Forms.Setter.Value) .
 
@@ -49,7 +52,7 @@ Embora não seja comum, você pode instanciar e inicializar `Style` objetos no c
 
 ## <a name="style-inheritance"></a>Herança de estilo
 
-`Style`tem uma [`BasedOn`](xref:Xamarin.Forms.Style.BasedOn) propriedade que você pode definir para uma `StaticResource` extensão de marcação fazendo referência a outro estilo. Isso permite que os estilos herdem de estilos anteriores e adicionem ou substituam as configurações de propriedade. O exemplo [**StyleInheritance**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/StyleInheritance) demonstra isso.
+`Style` tem uma [`BasedOn`](xref:Xamarin.Forms.Style.BasedOn) propriedade que você pode definir para uma `StaticResource` extensão de marcação fazendo referência a outro estilo. Isso permite que os estilos herdem de estilos anteriores e adicionem ou substituam as configurações de propriedade. O exemplo [**StyleInheritance**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/StyleInheritance) demonstra isso.
 
 Se `Style2` é baseado em `Style1` , o `TargetType` de `Style2` deve ser igual `Style1` ou derivado de `Style1` . O dicionário de recursos no qual `Style1` é armazenado deve ser o mesmo dicionário de recursos do `Style2` ou um dicionário de recursos mais alto na árvore visual.
 
@@ -90,12 +93,12 @@ Seis desses campos são do tipo `Style` que você pode definir diretamente para 
 
 Os outros seis campos são do tipo `string` e podem ser usados como chaves de dicionário para estilos dinâmicos:
 
-- [`BodyStyleKey`](xref:Xamarin.Forms.Device.Styles.BodyStyleKey)igual a "BodyStyle"
-- [`TitleStyleKey`](xref:Xamarin.Forms.Device.Styles.TitleStyleKey)igual a "TitleStyle"
-- [`SubtitleStyleKey`](xref:Xamarin.Forms.Device.Styles.SubtitleStyleKey)igual a "subtítulostyle"
-- [`CaptionStyleKey`](xref:Xamarin.Forms.Device.Styles.CaptionStyleKey)igual a "Captionstyle"
-- [`ListItemTextStyleKey`](xref:Xamarin.Forms.Device.Styles.ListItemTextStyleKey)igual a "ListItemTextStyle"
-- [`ListItemDetailTextStyleKey`](xref:Xamarin.Forms.Device.Styles.ListItemDetailTextStyleKey)igual a "ListItemDetailTextStyle"
+- [`BodyStyleKey`](xref:Xamarin.Forms.Device.Styles.BodyStyleKey) igual a "BodyStyle"
+- [`TitleStyleKey`](xref:Xamarin.Forms.Device.Styles.TitleStyleKey) igual a "TitleStyle"
+- [`SubtitleStyleKey`](xref:Xamarin.Forms.Device.Styles.SubtitleStyleKey) igual a "subtítulostyle"
+- [`CaptionStyleKey`](xref:Xamarin.Forms.Device.Styles.CaptionStyleKey) igual a "Captionstyle"
+- [`ListItemTextStyleKey`](xref:Xamarin.Forms.Device.Styles.ListItemTextStyleKey) igual a "ListItemTextStyle"
+- [`ListItemDetailTextStyleKey`](xref:Xamarin.Forms.Device.Styles.ListItemDetailTextStyleKey) igual a "ListItemDetailTextStyle"
 
 Esses estilos são ilustrados pelo exemplo de [**DeviceStylesList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/DeviceStylesList) .
 

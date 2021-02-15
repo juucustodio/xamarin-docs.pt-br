@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 02/11/2020
-ms.openlocfilehash: af926b518c55bd0d6c73180e512dd669e93778f7
-ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
+ms.openlocfilehash: d75ec48bf9736297c31e0bb5af5a71de4332c66b
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853065"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454267"
 ---
 # <a name="walkthrough-bind-an-android-kotlin-library"></a>Walkthrough: associar uma biblioteca Kotlin do Android
 
@@ -25,9 +25,9 @@ A plataforma Android, juntamente com suas ferramentas e linguagens nativas, est�
 
 O objetivo deste documento é descrever uma abordagem de alto nível para lidar com esse cenário e fornecer um guia passo a passo detalhado com um exemplo simples.
 
-## <a name="background"></a>Segundo plano
+## <a name="background"></a>Tela de fundo
 
-O Kotlin foi lançado em fevereiro de 2016 e foi posicionado como uma alternativa ao compilador Java padrão em Android Studio por 2017. Mais tarde, no 2019, o Google anunciou que a linguagem de programação Kotlin se tornou sua linguagem preferida para desenvolvedores de aplicativos Android. A abordagem de associação de alto nível é semelhante ao [processo de vinculação de bibliotecas Java regulares](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/) com algumas etapas específicas de Kotlin importantes.
+O Kotlin foi lançado em fevereiro de 2016 e foi posicionado como uma alternativa ao compilador Java padrão em Android Studio por 2017. Mais tarde, no 2019, o Google anunciou que a linguagem de programação Kotlin se tornou sua linguagem preferida para desenvolvedores de aplicativos Android. A abordagem de associação de alto nível é semelhante ao [processo de vinculação de bibliotecas Java regulares](../binding-java-library/index.md) com algumas etapas específicas de Kotlin importantes.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -103,7 +103,7 @@ O arquivo AAR é um arquivo Android, que contém o código-fonte Kotlin compilad
 
 A segunda etapa é preparar o arquivo de transformação de metadados, que é usado pelo Xamarin. Android para gerar as respectivas classes C#. Um projeto de associação do Xamarin. Android descobrirá todas as classes e membros nativos de um determinado arquivo do Android, gerando subsequentemente um arquivo XML com os metadados apropriados. O arquivo de transformação de metadados criado manualmente é aplicado à linha de base gerada anteriormente para criar o arquivo de definição XML final usado para gerar o código C#.
 
-Os metadados usam a sintaxe [XPath](https://www.w3.org/TR/xpath/)   e são usados pelo gerador de associações para influenciar a criação do assembly de associação. O artigo de [metadados de associação Java](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata) fornece mais informações sobre transformações, que podem ser aplicadas:
+Os metadados usam a sintaxe [XPath](https://www.w3.org/TR/xpath/)   e são usados pelo gerador de associações para influenciar a criação do assembly de associação. O artigo de [metadados de associação Java](../binding-java-library/customizing-bindings/java-bindings-metadata.md) fornece mais informações sobre transformações, que podem ser aplicadas:
 
 1. Criar um arquivo de **Metadata.xml** vazio:
 
@@ -198,7 +198,7 @@ Os metadados usam a sintaxe [XPath](https://www.w3.org/TR/xpath/)   e são usa
     Os genéricos Java e Kotlin não têm suporte de associações do Xamarin. Android, portanto, um método C# generalizado para acessar a API genérica é criado. Como solução alternativa, você pode criar uma biblioteca Kotlin do wrapper e expor as APIs necessárias de forma forte, sem genéricos. Como alternativa, você pode criar auxiliares no lado do C# para resolver o problema da mesma maneira por meio de APIs de tipo forte.
 
     > [!TIP]
-    > Ao transformar os metadados, todas as alterações podem ser aplicadas à associação gerada. O artigo da [biblioteca Java de associação](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/) explica em detalhes como os metadados são gerados e processados.
+    > Ao transformar os metadados, todas as alterações podem ser aplicadas à associação gerada. O artigo da [biblioteca Java de associação](../binding-java-library/index.md) explica em detalhes como os metadados são gerados e processados.
 
 ## <a name="build-a-binding-library"></a>Criar uma biblioteca de associação
 
@@ -275,7 +275,7 @@ A etapa final é consumir a biblioteca de associação do Xamarin. Android em um
     }
     ```
 
-    `BubblePickerAdapter`e `BubblePickerListener` são duas classes a serem criadas a partir do zero, que lidam com a interação de controle e dados de bolhas:
+    `BubblePickerAdapter` e `BubblePickerListener` são duas classes a serem criadas a partir do zero, que lidam com a interação de controle e dados de bolhas:
 
     ```csharp
     public class BubblePickerAdapter : Java.Lang.Object, IBubblePickerAdapter
@@ -342,8 +342,8 @@ Agora você deve ter um aplicativo Xamarin. Android básico que usa uma bibliote
 - [Visual Studio para Mac](https://visualstudio.microsoft.com/downloads)
 - [Descompilador de Java](http://java-decompiler.github.io/)
 - [Biblioteca BubblePicker Kotlin](https://github.com/igalata/Bubble-Picker)
-- [Biblioteca Java de associação](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/)
+- [Biblioteca Java de associação](../binding-java-library/index.md)
 - [XPath](https://www.w3.org/TR/xpath/)
-- [Metadados de associação Java](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata)
+- [Metadados de associação Java](../binding-java-library/customizing-bindings/java-bindings-metadata.md)
 - [Xamarin. Kotlin. StdLib NuGet](https://www.nuget.org/packages/Xamarin.Kotlin.StdLib/)
 - [Repositório de projetos de exemplo](https://github.com/alexeystrakh/xamarin-binding-kotlin-framework)

@@ -4,19 +4,19 @@ description: A classe share no Xamarin.Essentials permite que um aplicativo Comp
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 01/06/2020
+ms.date: 01/04/2021
 ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ef4c9961e7e1fac20084247f4c85e87b79bcc427
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b6bc8383f1c19e94c6760a213b4b9813ea77139a
+ms.sourcegitcommit: 2a7bbe9cbee3727ba20ee755c1713bcfdb4d8ecb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84801891"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98950945"
 ---
-# <a name="xamarinessentials-share"></a>Xamarin.Essentials: Compartilhar
+# <a name="no-locxamarinessentials-share"></a>Xamarin.Essentials: Compartilhar
 
 A classe **Share** permite que um aplicativo compartilhe dados, como links de texto e da Web com outros aplicativos no dispositivo.
 
@@ -60,11 +60,11 @@ public class ShareTest
 
 Interface do usuário para compartilhar com aplicativo externo exibida quando uma solicitação é feita:
 
-![Compartilhar](images/share.png)
+![Compartilhar com a interface do usuário do aplicativo externo](images/share.png)
 
-## <a name="files"></a>Arquivos
+## <a name="file"></a>Arquivo
 
-Esse recurso permite que um aplicativo compartilhe arquivos com outros aplicativos no dispositivo. Xamarin.Essentialso detectará automaticamente o tipo de arquivo (MIME) e solicitará um compartilhamento. Cada plataforma poderá ser compatível somente com extensões de arquivo específicas.
+Esse recurso permite que um aplicativo compartilhe arquivos com outros aplicativos no dispositivo. Xamarin.Essentials o detectará automaticamente o tipo de arquivo (MIME) e solicitará um compartilhamento. Cada plataforma poderá ser compatível somente com extensões de arquivo específicas.
 
 Veja um exemplo de como gravar texto no disco e compartilhá-lo com outros aplicativos:
 
@@ -80,20 +80,26 @@ await Share.RequestAsync(new ShareFileRequest
 });
 ```
 
-## <a name="presentation-location"></a>Local da apresentação
+## <a name="multiple-files"></a>Vários arquivos
 
-Ao solicitar um compartilhamento no iPadOS, você tem a capacidade de apresentá-lo em um controle pop-up. Você pode especificar o local usando a `PresentationSourceBounds` Propriedade:
+O uso de compartilhamento de vários arquivos difere do único arquivo somente na capacidade de enviar vários arquivos ao mesmo tempo:
 
 ```csharp
-await Share.RequestAsync(new ShareFileRequest
+var file1 = Path.Combine(FileSystem.CacheDirectory, "Attachment1.txt");
+File.WriteAllText(file, "Content 1");
+var file2 = Path.Combine(FileSystem.CacheDirectory, "Attachment2.txt");
+File.WriteAllText(file, "Content 2");
+
+await Share.RequestAsync(new ShareMultipleFilesRequest
 {
-    Title = Title,
-    File = new ShareFile(file),
-    PresentationSourceBounds = DeviceInfo.Platform== DevicePlatform.iOS && DeviceInfo.Idiom == DeviceIdiom.Tablet
-                            ? new System.Drawing.Rectangle(0, 20, 0, 0)
-                            : System.Drawing.Rectangle.Empty
+    Title = ShareFilesTitle,
+    Files = new ShareFile[] { new ShareFile(file1), new ShareFile(file2) }
 });
 ```
+
+## <a name="presentation-location"></a>Local da apresentação
+
+[!include[](~/essentials/includes/ios-PresentationSourceBounds.md)]
 
 ## <a name="platform-differences"></a>Diferenças entre plataformas
 

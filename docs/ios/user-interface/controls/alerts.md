@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 1264b28b2ee56ec5de610350a199668c67d5c33c
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: b7dae8afbb5db378687f9ecb9469236dc68831ae
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73022097"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435495"
 ---
 # <a name="displaying-alerts-in-xamarinios"></a>Exibindo alertas no Xamarin. iOS
 
@@ -30,7 +30,7 @@ Use `UIAlertControllerStyle` para indicar o tipo de alerta a ser exibido. Esses 
 Há três etapas necessárias a serem seguidas ao criar um controlador de alerta:
 
 - Crie e configure o alerta com um:
-  - título
+  - title
   - mensagem
   - preferível
 
@@ -81,7 +81,7 @@ Os alertas também podem exibir uma planilha de ações, semelhante à captura d
 
  ![Alerta de planilha de ações](alerts-images/alert3.png)
 
-Os botões são adicionados ao alerta com o método `AddAction`:
+Os botões são adicionados ao alerta com o `AddAction` método:
 
 ```csharp
 actionSheetButton.TouchUpInside += ((sender, e) => {
@@ -109,7 +109,7 @@ actionSheetButton.TouchUpInside += ((sender, e) => {
 });
 ```
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Controles (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [Controles (exemplo)](/samples/xamarin/ios-samples/controls)
 - [Controlador de alerta](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller)

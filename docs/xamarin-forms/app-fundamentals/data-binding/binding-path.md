@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsCaminho de associação
+title: Xamarin.Forms Caminho de associação
 description: Este artigo explica como usar Xamarin.Forms associações de dados para acessar subpropriedades e membros da coleção com a propriedade Path da classe Binding.
 ms.prod: xamarin
 ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D
@@ -10,16 +10,16 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a0ac8a568c3e8c46fa7e53112461aa0bff5684ae
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 4fd8c91ccf18e72c4e5881261637b7f41b2f3c79
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84570785"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373608"
 ---
-# <a name="xamarinforms-binding-path"></a>Xamarin.FormsCaminho de associação
+# <a name="no-locxamarinforms-binding-path"></a>Xamarin.Forms Caminho de associação
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Em todos os exemplos anteriores de associação de dados, a [`Path`](xref:Xamarin.Forms.Binding.Path) propriedade da `Binding` classe (ou a [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) propriedade da `Binding` extensão de marcação) foi definida como uma única propriedade. Na verdade, é possível definir `Path` como uma *subpropriedade* (uma propriedade de uma propriedade) ou como um membro de uma coleção.
 
@@ -38,7 +38,7 @@ A propriedade `Time` de `TimePicker` é do tipo `TimeSpan`, mas talvez você des
 
 A propriedade `Time` é do tipo `TimeSpan`, que tem uma propriedade `TotalSeconds`. As propriedades `Time` e `TotalSeconds` são simplesmente conectadas com um ponto. Os itens da cadeia de caracteres `Path` sempre se referem a propriedades e não aos tipos dessas propriedades.
 
-Esse exemplo e vários outros são mostrados na página **Variações de caminho**:
+Esse exemplo e vários outros são mostrados na página **Variações de caminho** :
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -166,7 +166,7 @@ Como Xamarin.Forms processa o caminho de associação, ele instala um `PropertyC
 
 Se uma propriedade no caminho de associação não implementar `INotifyPropertyChanged`, todas as alterações a essa propriedade serão ignoradas. Algumas alterações podem invalidar por completo o caminho de associação. Portanto, você deverá usar essa técnica somente quando a cadeia de caracteres de propriedades e subpropriedades nunca se tornarem inválidas.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [Demonstrações de associação de dados (amostra)](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Capítulo de vinculação de dados do Xamarin.Forms livro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

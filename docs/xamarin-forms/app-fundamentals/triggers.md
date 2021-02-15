@@ -10,16 +10,16 @@ ms.date: 04/17/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fa907babc8dae0f466fd870f55b0e5be23114498
-ms.sourcegitcommit: 37ad3c1ef8faa5bfeeb305fde06e7b4654a643e1
+ms.openlocfilehash: 6f54ec3afd3d53d4a7bee40159bccff2d23f44f6
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87795988"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609035"
 ---
 # <a name="no-locxamarinforms-triggers"></a>Xamarin.Forms Gatilhos
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 
 Os gatilhos permitem expressar ações declarativamente em XAML que alteram a aparência dos controles com base em eventos ou alterações de propriedade. Além disso, os gatilhos de estado, que são um grupo especializado de gatilhos, definem quando um [`VisualState`](xref:Xamarin.Forms.VisualState) deve ser aplicado.
 
@@ -521,8 +521,8 @@ O exemplo de XAML a seguir mostra um [`Style`](xref:Xamarin.Forms.Style) que inc
 
 Neste exemplo, os objetos de [`Style`](xref:Xamarin.Forms.Style) destinos implícitos [`Grid`](xref:Xamarin.Forms.Grid) . Quando a [`IsChecked`](xref:Xamarin.Forms.CheckBox.IsChecked) Propriedade do [`CheckBox`](xref:Xamarin.Forms.CheckBox) é `false` , a cor do plano de fundo do `Grid` é definida como branco. Quando a `CheckBox.IsChecked` propriedade se torna `true` , uma [`VisualState`](xref:Xamarin.Forms.VisualState) alteração é disparada e a cor do plano de fundo `Grid` fica preta:
 
-[![Captura de tela de uma alteração de estado visual disparada, no Ios e no Android](triggers-images/comparestatetrigger-unchecked.png "Exemplo de CompareStateTrigger")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "Exemplo de CompareStateTrigger") 
- [ ![Captura de tela de uma alteração de estado visual disparada, no Ios e no Android](triggers-images/comparestatetrigger-checked.png "Exemplo de CompareStateTrigger")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "Exemplo de CompareStateTrigger")
+[![Captura de tela de uma alteração de estado visual acionada, no Ios e no Android, com o gatilho desmarcado.](triggers-images/comparestatetrigger-unchecked.png "Exemplo de CompareStateTrigger")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "Exemplo de CompareStateTrigger") 
+ [ ![Captura de tela de uma alteração de estado visual disparada, no Ios e no Android, com o gatilho verificado.](triggers-images/comparestatetrigger-checked.png "Exemplo de CompareStateTrigger")](triggers-images/comparestatetrigger-checked-large.png#lightbox "Exemplo de CompareStateTrigger")
 
 ### <a name="device-state-trigger"></a>Gatilho de estado do dispositivo
 
@@ -574,7 +574,7 @@ O exemplo de XAML a seguir mostra um [`Style`](xref:Xamarin.Forms.Style) que inc
 </Style>
 ```
 
-Neste exemplo, os objetos de [`Style`](xref:Xamarin.Forms.Style) destinos explícitos [`ContentPage`](xref:Xamarin.Forms.ContentPage) . `ContentPage`os objetos que consomem o estilo definem sua cor de plano de fundo como prata no iOS, para azul pálido no Android e para azul marinho no UWP. As capturas de tela a seguir mostram as páginas resultantes no iOS e no Android:
+Neste exemplo, os objetos de [`Style`](xref:Xamarin.Forms.Style) destinos explícitos [`ContentPage`](xref:Xamarin.Forms.ContentPage) . `ContentPage` os objetos que consomem o estilo definem sua cor de plano de fundo como prata no iOS, para azul pálido no Android e para azul marinho no UWP. As capturas de tela a seguir mostram as páginas resultantes no iOS e no Android:
 
 [![Captura de tela de uma alteração de estado visual disparada, no iOS e no Android](triggers-images/devicestatetrigger.png "Exemplo de DeviceStateTrigger")](triggers-images/devicestatetrigger-large.png#lightbox "Exemplo de DeviceStateTrigger")
 
@@ -619,10 +619,10 @@ O exemplo de XAML a seguir mostra um [`Style`](xref:Xamarin.Forms.Style) que inc
 </Style>
 ```
 
-Neste exemplo, os objetos de [`Style`](xref:Xamarin.Forms.Style) destinos explícitos [`ContentPage`](xref:Xamarin.Forms.ContentPage) . `ContentPage`os objetos que consomem o estilo definem sua cor de plano de fundo como prata quando a orientação é retrato e definem a cor do plano de fundo como branco quando a orientação é paisagem.
+Neste exemplo, os objetos de [`Style`](xref:Xamarin.Forms.Style) destinos explícitos [`ContentPage`](xref:Xamarin.Forms.ContentPage) . `ContentPage` os objetos que consomem o estilo definem sua cor de plano de fundo como prata quando a orientação é retrato e definem a cor do plano de fundo como branco quando a orientação é paisagem.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplo de gatilhos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
-- [Xamarin.FormsGerenciador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)
-- [Xamarin.FormsAPI de gatilho](xref:Xamarin.Forms.TriggerAction`1)
+- [Exemplo de gatilhos](/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
+- [Xamarin.Forms Gerenciador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Xamarin.Forms API de gatilho](xref:Xamarin.Forms.TriggerAction`1)

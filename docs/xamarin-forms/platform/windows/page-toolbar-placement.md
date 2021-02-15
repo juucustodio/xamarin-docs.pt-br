@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0c2bbc89f503cfbaad24d8f1ac5d0635c1c22e48
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 4caf352024d7ae2a89d49ff021f0f90f35fdd8eb
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937807"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372204"
 ---
 # <a name="page-toolbar-placement-on-windows"></a>Posicionamento da barra de ferramentas da página no Windows
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esse Plataforma Universal do Windows específico da plataforma é usado para alterar o posicionamento de uma barra de ferramentas em um [`Page`](xref:Xamarin.Forms.Page) , e é consumido em XAML definindo a [`Page.ToolbarPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Page.ToolbarPlacementProperty) Propriedade anexada como um valor da [`ToolbarPlacement`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement) enumeração:
 
@@ -45,10 +45,10 @@ O `Page.On<Windows>` método especifica que essa plataforma específica será ex
 
 O resultado é que o posicionamento da barra de ferramentas especificado é aplicado à [`Page`](xref:Xamarin.Forms.Page) instância:
 
-[![Posicionamento da barra de ferramentas específico da plataforma](page-toolbar-placement-images/toolbar-placement.png)](page-toolbar-placement-images/toolbar-placement-large.png#lightbox "Posicionamento da barra de ferramentas específico da plataforma")
+[![Posicionamento da barra de ferramentas específico da plataforma](page-toolbar-placement-images/toolbar-placement.png)](page-toolbar-placement-images/toolbar-placement-large.png#lightbox "Platform-Specific de posicionamento da barra de ferramentas")
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API WindowsSpecific](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

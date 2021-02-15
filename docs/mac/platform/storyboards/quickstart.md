@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: f6dbbd85a11c492227f0e19ca1a561595660bf20
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 39e8e63c7612df95123e1e32edbfb3a8c28ffe37
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937573"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697703"
 ---
-# <a name="storyboards-in-xamarinmac-quick-start"></a>Storyboards no Xamarin. Mac – Início Rápido
+# <a name="storyboards-in-xamarinmac--quick-start"></a>Storyboards no Xamarin. Mac – Início Rápido
 
-Como uma rápida introdução ao uso de storyboards para definir uma interface do usuário do aplicativo Xamarin. Mac, vamos iniciar um novo projeto Xamarin. Mac. Selecione aplicativo **Mac**  >  **App**  >  **Cocoa app** e clique no botão **Avançar** :
+Como uma rápida introdução ao uso de storyboards para definir uma interface do usuário do aplicativo Xamarin. Mac, vamos iniciar um novo projeto Xamarin. Mac. Selecione aplicativo **Mac**  >    >  **Cocoa app** e clique no botão **Avançar** :
 
 [![Adicionando um novo aplicativo Cocoa](quickstart-images/qs01.png)](quickstart-images/qs01.png#lightbox)
 
@@ -30,7 +30,7 @@ Use o nome do **projeto** padrão e o **nome da solução** e clique no botão *
 
 No **Gerenciador de soluções**, clique duas vezes no `Main.storyboard` arquivo para abri-lo para edição no interface Builder do Xcode:
 
-[![Editando o storyboard no Xcode](quickstart-images/qs04.png)](quickstart-images/qs04.png#lightbox)
+[![Editando o storyboard no Xcode Interface Builder.](quickstart-images/qs04.png)](quickstart-images/qs04.png#lightbox)
 
 Como você pode ver acima, o storyboard padrão define a barra de menus do aplicativo e sua janela principal com o modo de exibição controlador e exibição. Para nosso aplicativo de exemplo, vamos criar uma interface do usuário que tenha uma exibição de _conteúdo_ principal em um lado e uma _exibição de Inspetor_ no segundo.
 
@@ -58,7 +58,7 @@ A partir daqui, clicaremos em todos os quatro ícones de **i-feixe** ao lado da 
 
 Se retornarmos para Visual Studio para Mac e executar o projeto, observe que a exibição de texto é redimensionada automaticamente para preencher o lado esquerdo do modo de exibição de divisão à medida que a janela ou a divisão são redimensionadas:
 
-[![Um exemplo do aplicativo em execução](quickstart-images/qs10.png)](quickstart-images/qs10.png#lightbox)
+[![Um exemplo do aplicativo em execução, exibindo o texto no painel esquerdo da janela.](quickstart-images/qs10.png)](quickstart-images/qs10.png#lightbox)
 
 Como vamos usar o lado direito do modo de exibição de divisão como uma área de Inspetor, queremos que ele tenha um tamanho menor e permitir que ele seja recolhido. Retorne ao Xcode e edite o modo de exibição do lado direito selecionando-o na Design Surface e clicando no **Inspetor de tamanho**. A partir daqui, insira uma **largura** de `250` :
 
@@ -70,7 +70,7 @@ Em seguida, selecione o item de divisão que representa o lado direito, defina u
 
 Se retornarmos para Visual Studio para Mac e executar o projeto agora, observe que o lado direito mantém seu tamanho menor e a janela é redimensionada:
 
-[![Um exemplo do aplicativo em execução](quickstart-images/qs13.png)](quickstart-images/qs13.png#lightbox)
+[![Um exemplo do aplicativo em execução, exibindo o texto no painel esquerdo maior da janela.](quickstart-images/qs13.png)](quickstart-images/qs13.png#lightbox)
 
 <a name="Defining-a-Presentation-Segue"></a>
 
@@ -80,19 +80,19 @@ Vamos fazer o layout do lado direito do modo de exibição de divisão para atua
 
 Adicionaremos um botão ao inspetor e um controlador de exibição ao Design Surface. Vamos redimensionar o controlador de exibição para que seja o tamanho que queremos que nosso popover seja e adicione quatro botões a ele. Em seguida, vamos **controlar** a tecla de clique no botão no modo de exibição de Inspetor e arrastar para o controlador de exibição que representará nosso popover:
 
-[![Arrastando para criar um novo transição](quickstart-images/qs14.png)](quickstart-images/qs14.png#lightbox)
+[![Arrastando para criar um novo transição no controlador de exibição.](quickstart-images/qs14.png)](quickstart-images/qs14.png#lightbox)
 
 No menu pop-up, selecionaremos **popover**: 
 
-[![Selecionando o tipo transição](quickstart-images/qs15.png)](quickstart-images/qs15.png#lightbox)
+[![Selecionando o tipo de transição popover do controlador de exibição.](quickstart-images/qs15.png)](quickstart-images/qs15.png#lightbox)
 
 Por fim, selecionaremos o transição na Design Surface e definiremos a **borda preferida** para a **esquerda**. Em seguida, arrastaremos uma linha do **modo de exibição âncora** para o botão ao qual queremos que a popover seja anexada:
 
-[![Arrastando para criar um novo transição](quickstart-images/qs16.png)](quickstart-images/qs16.png#lightbox)
+[![Arrastando para criar um novo transição anexando a exibição de âncora ao botão.](quickstart-images/qs16.png)](quickstart-images/qs16.png#lightbox)
 
 Se voltarmos para Visual Studio para Mac, execute o aplicativo e clique no botão **nenhum** no Inspetor, o popover será exibido:
 
-[![Um exemplo de transição em execução](quickstart-images/qs17.png)](quickstart-images/qs17.png#lightbox)
+[![Um exemplo de transição em execução, exibindo o popover.](quickstart-images/qs17.png)](quickstart-images/qs17.png#lightbox)
 
 <a name="Creating-App-Preferences"></a>
 
@@ -102,7 +102,7 @@ A maioria dos aplicativos macOS padrão fornece uma _caixa de diálogo de prefer
 
 Para definir uma janela de diálogo de preferência padrão, primeiro arraste um controlador de exibição de guia para a Design Surface:
 
-[![Editando o storyboard no Xcode](quickstart-images/qs18.png)](quickstart-images/qs18.png#lightbox)
+[![Editando o storyboard no Xcode arrastando primeiro o controlador de exibição de guia para o Design Surface.](quickstart-images/qs18.png)](quickstart-images/qs18.png#lightbox)
 
 Novamente, isso será fornecido automaticamente com dois controladores de exibição filho anexados. Por exemplo, vamos adicionar um rótulo a cada exibição que será centralizada dentro dele:
 
@@ -114,11 +114,11 @@ Em seguida, queremos exibir a janela Preferências quando o usuário seleciona o
 
 No pop-up, selecionamos **modal** para mostrar essa janela como uma caixa de diálogo modal:
 
-[![Selecionando o tipo transição](quickstart-images/qs21.png)](quickstart-images/qs21.png#lightbox)
+[![Selecionando o tipo de transição modal no menu Action transição.](quickstart-images/qs21.png)](quickstart-images/qs21.png#lightbox)
 
 Se salvarmos nossas alterações, retorne para Visual Studio para Mac, execute o aplicativo e selecione o item de menu **preferências...** , nossa nova caixa de diálogo de preferências será exibida:
 
-[![Um exemplo de transição em execução](quickstart-images/qs22.png)](quickstart-images/qs22.png#lightbox)
+[![Um exemplo de transição em execução, mostrando a caixa de diálogo novas preferências.](quickstart-images/qs22.png)](quickstart-images/qs22.png#lightbox)
 
 Você pode observar que isso não se parece com uma janela de diálogo de preferência de aplicativo macOS padrão. Para corrigir isso, inclua dois arquivos de imagem na pasta do aplicativo Xamarin. Mac `Resources` na **Gerenciador de soluções** e retorne ao interface Builder do Xcode.
 

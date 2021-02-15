@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsIntrodução ao DependencyService
+title: Xamarin.Forms Introdução ao DependencyService
 description: Este artigo explica como usar a Xamarin.Forms classe DependencyService para invocar a funcionalidade da plataforma nativa.
 ms.prod: xamarin
 ms.assetid: 5d019604-4f6f-4932-9b26-1fce3b4d88f8
@@ -10,16 +10,16 @@ ms.date: 06/12/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f4d43a0c9c4878733d65b170c27e744b397aa4d0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1234584dda50746e45d121eb03a3c6abafd8473a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138353"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371502"
 ---
-# <a name="xamarinforms-dependencyservice-introduction"></a>Xamarin.FormsIntrodução ao DependencyService
+# <a name="no-locxamarinforms-dependencyservice-introduction"></a>Xamarin.Forms Introdução ao DependencyService
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 
 A [`DependencyService`](xref:Xamarin.Forms.DependencyService) classe é um localizador de serviço que permite que Xamarin.Forms os aplicativos invoquem a funcionalidade de plataforma nativa do código compartilhado.
 
@@ -32,7 +32,7 @@ O processo para usar o [`DependencyService`](xref:Xamarin.Forms.DependencyServic
 
 O diagrama a seguir mostra como a funcionalidade da plataforma nativa é invocada em um Xamarin.Forms aplicativo:
 
-![Visão geral do local do serviço usando a Xamarin.Forms classe DependencyService](introduction-images/dependency-service.png "Local do serviço DependencyService")
+![Visão geral do local do serviço usando a classe::: no-Loc (Xamarin. Forms)::: DependencyService](introduction-images/dependency-service.png "Local do serviço DependencyService")
 
 ## <a name="create-an-interface"></a>Criar uma interface
 
@@ -159,5 +159,5 @@ Para obter mais informações sobre como resolver implementações de plataforma
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações de DependencyService (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
-- [Xamarin.FormsRegistro e resolução do DependencyService](registration-and-resolution.md)
+- [Demonstrações de DependencyService (exemplo)](/samples/xamarin/xamarin-forms-samples/dependencyservice/)
+- [Xamarin.Forms Registro e resolução do DependencyService](registration-and-resolution.md)

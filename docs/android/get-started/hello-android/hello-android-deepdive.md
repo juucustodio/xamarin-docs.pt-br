@@ -9,12 +9,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: 2f8c6a80b00a4a91c40c70af05ac0ebe18daaed3
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: e07a7e6ea11cbf717db22dd46eaa5e28d907bafa
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571435"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454917"
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: aprofundamento
 
@@ -70,7 +70,7 @@ O Visual Studio organiza o código em _Soluções_ e _Projetos_. Uma solução �
 
 ## <a name="introduction-to-visual-studio-for-mac"></a>Introdução ao Visual Studio para Mac
 
-O Visual Studio para Mac é um IDE de software livre gratuito semelhante ao Visual Studio. Ele conta com um designer visual totalmente integrado, um editor de texto complementado com ferramentas de refatoração, um navegador de assembly, integração de código-fonte e muito mais. Neste guia, você aprenderá a usar algumas funcionalidades básicas do Visual Studio para Mac. Se você for novo no Visual Studio para Mac, convém conferir a [Introdução ao Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/), que é mais detalhada.
+O Visual Studio para Mac é um IDE de software livre gratuito semelhante ao Visual Studio. Ele conta com um designer visual totalmente integrado, um editor de texto complementado com ferramentas de refatoração, um navegador de assembly, integração de código-fonte e muito mais. Neste guia, você aprenderá a usar algumas funcionalidades básicas do Visual Studio para Mac. Se você for novo no Visual Studio para Mac, convém conferir a [Introdução ao Visual Studio para Mac](/visualstudio/mac/), que é mais detalhada.
 
 O Visual Studio para Mac segue a prática do Visual Studio de organizar o código em _Soluções_ e _Projetos_. Uma solução é um contêiner que pode conter um ou mais Projetos. Um projeto pode ser um aplicativo (por exemplo, para iOS ou Android), uma biblioteca com suporte, um aplicativo de teste e muito mais. No aplicativo **Phoneword**, você adicionou um novo Projeto Android usando o modelo **Aplicativo Android** para a solução **Phoneword** criada no guia [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).
 
@@ -231,7 +231,7 @@ Agora que os conceitos básicos de `MainActivity` foram abordados, é hora de se
 
 No Android, as atividades passam por diferentes estágios de um ciclo de vida, dependendo de suas interações com o usuário. Atividades podem ser criadas, iniciadas e colocadas em pausa, retomadas e destruídas e assim por diante. A classe `Activity` contém métodos que o sistema chama em determinados pontos no ciclo de vida da tela. O diagrama a seguir ilustra uma vida típica de uma atividade, bem como alguns dos métodos de ciclo de vida correspondentes:
 
-[![Ciclo de vida da atividade](hello-android-deepdive-images/04-lifecycle-sml.png)](hello-android-deepdive-images/04-lifecycle.png#lightbox)
+[![Ciclo de vida de atividade](hello-android-deepdive-images/04-lifecycle-sml.png)](hello-android-deepdive-images/04-lifecycle.png#lightbox)
 
 Substituindo `Activity` métodos de ciclo de vida, você pode controlar como a atividade é carregada, como ela reage ao usuário e até mesmo o que acontece depois que ela desaparece da tela do dispositivo. Por exemplo, você pode substituir os métodos de ciclo de vida no diagrama acima para executar algumas tarefas importantes:
 

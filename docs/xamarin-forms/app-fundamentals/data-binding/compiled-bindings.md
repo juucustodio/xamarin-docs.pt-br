@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsAssociações compiladas
+title: Xamarin.Forms Associações compiladas
 description: Este artigo explica como usar associações compiladas para melhorar o desempenho de vinculação de dados em Xamarin.Forms aplicativos.
 ms.prod: xamarin
 ms.assetid: ABE6B7F7-875E-4402-A1D2-845CE374402B
@@ -10,16 +10,16 @@ ms.date: 09/18/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 094691796fed9653f2a2e468ccb1c33d1a408a49
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ecd30a9473351b146c41b6599bdb74f3b53d11f6
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84571552"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373387"
 ---
-# <a name="xamarinforms-compiled-bindings"></a>Xamarin.FormsAssociações compiladas
+# <a name="no-locxamarinforms-compiled-bindings"></a>Xamarin.Forms Associações compiladas
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 _As associações compiladas são resolvidas mais rapidamente do que as associações clássicas, portanto, melhorando o desempenho da vinculação de dados em Xamarin.Forms aplicativos._
 
@@ -38,7 +38,7 @@ O processo para usar associações compiladas é:
 > [!NOTE]
 > É recomendável definir o `x:DataType` atributo no mesmo nível na hierarquia de exibição que o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) está definido. No entanto, esse atributo pode ser redefinido em qualquer local em uma hierarquia de exibição.
 
-Para usar associações compiladas, o `x:DataType` atributo deve ser definido como um literal de cadeia de caracteres ou um tipo usando a `x:Type` extensão de marcação. No tempo de compilação de XAML, as expressões de associação inválidas serão relatadas como erros de build. No entanto, o compilador XAML relatará um erro de build somente para a primeira expressão de associação inválida que encontrar. Todas as expressões de associação válidas definidas no `VisualElement` ou seus filhos serão compiladas, independentemente de o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) ser definido no XAML ou no código. Compilar uma expressão de associação gera o código compilado que obterá um valor de uma propriedade na *origem* e o definirá na propriedade de *destino* especificada na marcação. Além disso, dependendo da expressão de associação, o código gerado poderá observar alterações no valor da propriedade de *origem* e atualizar a propriedade de *destino*, e pode enviar por push alterações do *destino* para a *origem*.
+Para usar associações compiladas, o `x:DataType` atributo deve ser definido como um literal de cadeia de caracteres ou um tipo usando a `x:Type` extensão de marcação. No tempo de compilação de XAML, as expressões de associação inválidas serão relatadas como erros de build. No entanto, o compilador XAML relatará um erro de build somente para a primeira expressão de associação inválida que encontrar. Todas as expressões de associação válidas definidas no `VisualElement` ou seus filhos serão compiladas, independentemente de o [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) ser definido no XAML ou no código. Compilar uma expressão de associação gera o código compilado que obterá um valor de uma propriedade na *origem* e o definirá na propriedade de *destino* especificada na marcação. Além disso, dependendo da expressão de associação, o código gerado poderá observar alterações no valor da propriedade de *origem* e atualizar a propriedade de *destino* , e pode enviar por push alterações do *destino* para a *origem*.
 
 > [!IMPORTANT]
 > As associações compiladas estão atualmente desabilitadas para todas as expressões de associação que definem a [`Source`](xref:Xamarin.Forms.Binding.Source) propriedade. Isso acontece porque a propriedade `Source` sempre é definida usando a extensão de marcação `x:Reference`, que não pode ser resolvida em tempo de compilação.
@@ -178,4 +178,4 @@ Essas diferenças de desempenho podem aumentar em dispositivos móveis, dependen
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [Demonstrações de associação de dados (amostra)](/samples/xamarin/xamarin-forms-samples/databindingdemos)

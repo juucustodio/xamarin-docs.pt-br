@@ -10,16 +10,16 @@ ms.date: 04/14/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 855fde62483dcbc6f8769e7a8eb66d84aadfe1da
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: dfc7ec9b029cedf5584590e17565069bbf83ed2a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934973"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373166"
 ---
 # <a name="3d-rotations-in-skiasharp"></a>Rotações 3D no SkiaSharp
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Use transformações não afim para girar objetos 2D no espaço 3D._
 
@@ -117,7 +117,7 @@ A rotação em volta do eixo Z é igual a em gráficos 2D:
 
 A direção da rotação é implícita pela destros do sistema de coordenadas. Esse é um sistema canhoto, portanto, se você apontar o polegar do lado esquerdo para aumentar os valores de um eixo específico — à direita da rotação em volta do eixo X, para a rotação em volta do eixo Y e para a rotação em volta do eixo Z, então a curva dos outros dedos indica a direção da rotação para ângulos positivos.
 
-`SKMatrix44`tem métodos e estática generalizados [`CreateRotation`](xref:SkiaSharp.SKMatrix44.CreateRotation(System.Single,System.Single,System.Single,System.Single)) [`CreateRotationDegrees`](xref:SkiaSharp.SKMatrix44.CreateRotationDegrees(System.Single,System.Single,System.Single,System.Single)) que permitem especificar o eixo ao qual a rotação ocorre:
+`SKMatrix44` tem métodos e estática generalizados [`CreateRotation`](xref:SkiaSharp.SKMatrix44.CreateRotation(System.Single,System.Single,System.Single,System.Single)) [`CreateRotationDegrees`](xref:SkiaSharp.SKMatrix44.CreateRotationDegrees(System.Single,System.Single,System.Single,System.Single)) que permitem especificar o eixo ao qual a rotação ocorre:
 
 ```csharp
 public static SKMatrix44 CreateRotationDegrees (Single x, Single y, Single z, Single degrees)
@@ -540,5 +540,5 @@ Essa rotação 3D é cercada por várias transformações 2D para mover o centro
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

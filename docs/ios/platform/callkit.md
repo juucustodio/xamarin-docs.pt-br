@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 791ab82e0e5f47929eff561ac836ec87e6d6c134
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 0dd7736d37f6db17ad794258d9dff852b2745053
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997313"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431848"
 ---
 # <a name="callkit-in-xamarinios"></a>CallKit no Xamarin. iOS
 
@@ -56,8 +56,8 @@ Examine com mais detalhes o aplicativo MonkeyCall do diagrama acima. O aplicativ
 
 Há duas interfaces principais no CallKit que o aplicativo usa:
 
-- `CXProvider`-Isso permite que o aplicativo MonkeyCall informe o sistema de quaisquer notificações fora de banda que possam ocorrer.
-- `CXCallController`– Permite que o aplicativo MonkeyCall informe o sistema de ações de usuário local.
+- `CXProvider` -Isso permite que o aplicativo MonkeyCall informe o sistema de quaisquer notificações fora de banda que possam ocorrer.
+- `CXCallController` – Permite que o aplicativo MonkeyCall informe o sistema de ações de usuário local.
 
 ### <a name="the-cxprovider"></a>O CXProvider
 
@@ -217,7 +217,7 @@ namespace MonkeyCall
 }
 ```
 
-`ActiveCall`mantém várias propriedades que definem o estado da chamada e dois eventos que podem ser gerados quando o estado da chamada é alterado. Como este é apenas um exemplo, há três métodos usados para iniciar, responder e encerrar uma chamada simulada.
+`ActiveCall` mantém várias propriedades que definem o estado da chamada e dois eventos que podem ser gerados quando o estado da chamada é alterado. Como este é apenas um exemplo, há três métodos usados para iniciar, responder e encerrar uma chamada simulada.
 
 ### <a name="the-startcallrequest-class"></a>A classe StartCallRequest
 
@@ -1261,4 +1261,4 @@ Este artigo abordou a nova API do CallKit lançada pela Apple no iOS 10 e como i
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Amostras do iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Amostras do iOS 10](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)

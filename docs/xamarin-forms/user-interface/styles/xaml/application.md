@@ -1,5 +1,5 @@
 ---
-title: Estilos globais emXamarin.Forms
+title: Estilos globais em Xamarin.Forms
 description: Os estilos podem ser disponibilizados globalmente adicionando-os ao dicionário de recursos do aplicativo. Isso ajuda a evitar a duplicação de estilos em páginas ou controles.
 ms.prod: xamarin
 ms.assetid: BDC65F82-65E0-4C8E-BB91-8E340EB2D15A
@@ -10,16 +10,16 @@ ms.date: 02/17/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: ae3759c1e111906b82596af80d4bdcffd5d23305
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8d24300dcee76511466ec97f4944fe0be1278354
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938522"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371580"
 ---
-# <a name="global-styles-in-xamarinforms"></a>Estilos globais emXamarin.Forms
+# <a name="global-styles-in-no-locxamarinforms"></a>Estilos globais em Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
 _Os estilos podem ser disponibilizados globalmente adicionando-os ao dicionário de recursos do aplicativo. Isso ajuda a evitar a duplicação de estilos em páginas ou controles._
 
@@ -107,7 +107,7 @@ O original `buttonStyle` , definido no nível do aplicativo, é substituído pel
 
 ## <a name="create-a-global-style-in-c35"></a>Criar um estilo global em C&#35;
 
-[`Style`](xref:Xamarin.Forms.Style)as instâncias podem ser adicionadas à coleção do aplicativo [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) em C# criando um novo [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) e, em seguida, adicionando as `Style` instâncias ao `ResourceDictionary` , conforme mostrado no exemplo de código a seguir:
+[`Style`](xref:Xamarin.Forms.Style) as instâncias podem ser adicionadas à coleção do aplicativo [`Resources`](xref:Xamarin.Forms.VisualElement.Resources) em C# criando um novo [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) e, em seguida, adicionando as `Style` instâncias ao `ResourceDictionary` , conforme mostrado no exemplo de código a seguir:
 
 ```csharp
 public class App : Application
@@ -155,9 +155,9 @@ O `buttonStyle` é aplicado às [`Button`](xref:Xamarin.Forms.Button) instância
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Extensões de marcação XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [Estilos básicos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
-- [Trabalhando com estilos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
+- [Extensões de marcação do XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
+- [Estilos básicos (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
+- [Trabalhando com estilos (exemplo)](/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [Estilo](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)

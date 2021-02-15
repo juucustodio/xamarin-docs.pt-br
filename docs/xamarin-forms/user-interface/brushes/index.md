@@ -1,30 +1,25 @@
 ---
-title: Xamarin.FormsPincéis
+title: Xamarin.Forms Pincéis
 description: A Xamarin.Forms classe Brush é uma classe abstrata que pinta uma área com sua saída.
 ms.prod: xamarin
 ms.assetid: 44420FC2-304C-4175-8654-76769F79A813
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/28/2020
+ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4f1f56103b20eac84ce6106c0955acebf974cfe3
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: e0bb8b5e1668e683fa8b15f752b77d865cb317b5
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918903"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940389"
 ---
-# <a name="no-locxamarinforms-brushes"></a>Xamarin.FormsPincéis
-
-![API de visualização](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
+# <a name="no-locxamarinforms-brushes"></a>Xamarin.Forms Pincéis
 
 Um pincel permite que você pinte uma área, como o plano de fundo de um controle, usando abordagens diferentes. O suporte a pincel no Xamarin.Forms está disponível no `Xamarin.Forms` namespace no Ios, no Android, no MacOS, no plataforma universal do Windows (UWP) e no Windows Presentation Foundation (WPF).
-
-> [!IMPORTANT]
-> O suporte a pincel no Xamarin.Forms é experimental no momento e só pode ser usado com a definição do `Brush_Experimental` sinalizador. Para obter mais informações, consulte [sinalizadores experimentais](~/xamarin-forms/internals/experimental-flags.md).
 
 A `Brush` classe é uma classe abstrata que pinta uma área com sua saída. As classes que derivam de `Brush` descrevem diferentes maneiras de pintar uma área. A lista a seguir descreve os diferentes tipos de pincel disponíveis no Xamarin.Forms :
 

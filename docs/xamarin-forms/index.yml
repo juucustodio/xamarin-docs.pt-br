@@ -12,12 +12,12 @@ metadata:
   no-loc:
   - Xamarin.Forms
   - Xamarin.Essentials
-  ms.openlocfilehash: 05429940463d2ab309fe1ce0bc012f9290bfc73b
-  ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+  ms.openlocfilehash: b94366d2b0b99d719e20b2ac125051c2f65edfc1
+  ms.sourcegitcommit: 1f391667869a4541dd9b42d78862dc01d69ed160
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/28/2020
-  ms.locfileid: "84138691"
+  ms.lasthandoff: 02/08/2021
+  ms.locfileid: "99818176"
 highlightedContent:
   items:
   - title: O que é o Xamarin.Forms?
@@ -25,13 +25,13 @@ highlightedContent:
     url: ~/get-started/what-is-xamarin-forms.md
   - title: Encontrar um exemplo
     itemType: download
-    url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms
+    url: /samples/browse/?products=xamarin&term=Xamarin.Forms
   - title: Novidades
     itemType: whats-new
     url: ~/whats-new/index.yml
   - title: Aprimore suas habilidades de desenvolvimento móvel
     itemType: learn
-    url: https://docs.microsoft.com/learn/browse/?roles=developer&products=xamarin
+    url: /learn/browse/?products=xamarin&roles=developer
 productDirectory:
   title: Introdução
   summary: Saiba como criar aplicativos multiplataforma para Android e iOS com o C# e o .NET usando o Visual Studio no Windows e no macOS.
@@ -61,9 +61,9 @@ productDirectory:
   - title: Compilar um aplicativo completo
     imageSrc: https://docs.microsoft.com//media/common/i_mobile-app-developement.svg
     links:
-    - url: ~/get-started/quickstarts/single-page.md
+    - url: ~/get-started/quickstarts/app.md
       text: Arquivo > Novo
-    - url: ~/get-started/quickstarts/multi-page.md
+    - url: ~/get-started/quickstarts/navigation.md
       text: Adicionar navegação
     - url: ~/get-started/quickstarts/database.md
       text: Adicionar um banco de dados
@@ -163,7 +163,7 @@ conceptualContent:
       url: ~/essentials/troubleshooting.md
       itemType: overview
     - text: Namespace do Xamarin.Essentials
-      url: https://docs.microsoft.com/dotnet/api/xamarin.essentials?view=xamarin-essentials
+      url: /dotnet/api/xamarin.essentials?view=xamarin-essentials
       itemType: reference
     footerLink:
       url: ~/essentials/index.md?context=xamarin/xamarin-forms
@@ -232,4 +232,4 @@ additionalContent:
     - title: Elementos gráficos de SkiaSharp em Xamarin.Forms
       summary: Este livro eletrônico é um guia para desenhar gráficos vetoriais 2D, bitmaps e textos em aplicativos do Xamarin.Forms.
       url: ~/xamarin-forms/user-interface/graphics/skiasharp/index.md
-  footer: '[Blogs](https://devblogs.microsoft.com/xamarin/) - [Twitter](https://twitter.com/xamarinhq) - [Stack Overflow](https://stackoverflow.com/questions/tagged/xamarin) - [Developer Community](https://developercommunity.visualstudio.com/spaces/8/index.html) - [Notas sobre a versão](https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/)'
+  footer: '[Blogs](https://devblogs.microsoft.com/xamarin/) - [Twitter](https://twitter.com/xamarinhq) - [Microsoft Q&A](/answers/products/dotnet) - [Developer Community](https://dotnet.microsoft.com/platform/community) - [Notas sobre a versão](/xamarin/xamarin-forms/release-notes/)'

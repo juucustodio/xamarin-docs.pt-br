@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/25/2018
-ms.openlocfilehash: a70095c5897163d3699d03ec42c33826f6d40419
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: aca9227bc5c885000bffe858e0fc8b34d3724dfd
+ms.sourcegitcommit: 0c45e3f810947e3d43223aa01bf3e43a0defca65
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997144"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90843493"
 ---
 # <a name="ios-platform-features-overview"></a>Visão geral dos recursos da plataforma iOS
 
@@ -22,6 +22,7 @@ Esta página lista as versões recentes do iOS, além de destacar algumas das es
 
 | Versão | Descrição |
 |-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Introdução ao iOS 14](~/ios/platform/ios14/index.md) | Este documento descreve o Xamarin. iOS 14.|
 | [Introdução ao iOS 13](~/ios/platform/ios13/index.md) | Este documento descreve o Xamarin. iOS 13.|
 | [Introdução ao iOS 12](~/ios/platform/introduction-to-ios12/index.md) | Este documento descreve os recursos do iOS 12 disponíveis para uso durante a criação de aplicativos Xamarin. iOS.|
 | [Introdução ao iOS 11](~/ios/platform/introduction-to-ios11/index.md) | Este documento descreve os recursos novos e atualizados no iOS 11 e no Xcode 9, como ARKit, Core ML, Core NFC, drag e drop, MapKit, PDFKit, SiriKit e Vision. Ele é vinculado a guias que descrevem como usar esses recursos com o Xamarin. iOS. |

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 83baf0982da49b5568a43a1695f78150119d4d88
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 0917b991694b8b857d13d78e6eb087dca27db91e
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71107155"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98690131"
 ---
 Parabéns por concluir este tutorial, no qual você aprendeu a:
 
@@ -23,6 +23,6 @@ Para saber mais sobre os conceitos básicos da criação de aplicativos móveis 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ImageTutorial (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-imagetutorial/)
+- [ImageTutorial (amostra)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-imagetutorial/)
 - [Imagens do Xamarin.Forms (guia)](~/xamarin-forms/user-interface/images.md)
 - [API de Imagem](xref:Xamarin.Forms.Image)

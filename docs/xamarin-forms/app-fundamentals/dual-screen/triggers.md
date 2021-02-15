@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Formsgatilhos de tela dupla
+title: Xamarin.Forms gatilhos de tela dupla
 description: Este artigo explica como usar Xamarin.Forms gatilhos de tela dupla para responder a alterações de interface do usuário com XAML.
 ms.prod: xamarin
 ms.assetid: 2181715D-3995-4E71-9A21-6B892F0B3B59
@@ -10,21 +10,19 @@ ms.date: 02/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 16a76fb06c0ee54e90fa1bf0d44e419be40ee254
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 59ed6628479048beaaa5a379d495a14079181149
+ms.sourcegitcommit: 69bd0fdc698c9b0c0d73217776d7084f32ae88ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918291"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90832262"
 ---
-# <a name="no-locxamarinforms-dual-screen-triggers"></a>Xamarin.Formsgatilhos de tela dupla
-
-![API de pré-lançamento](~/media/shared/preview.png)
+# <a name="no-locxamarinforms-dual-screen-triggers"></a>Xamarin.Forms gatilhos de tela dupla
 
 O [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) namespace inclui dois gatilhos de Estado:
 
-- [`SpanModeStateTrigger`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger)dispara uma [`VisualState`](xref:Xamarin.Forms.VisualState) alteração quando o modo de exibição do layout anexado é alterado.
-- `WindowSpanModeStateTrigger`dispara uma [`VisualState`](xref:Xamarin.Forms.VisualState) alteração quando o modo de exibição da janela é alterado.
+- [`SpanModeStateTrigger`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger) dispara uma [`VisualState`](xref:Xamarin.Forms.VisualState) alteração quando o modo de exibição do layout anexado é alterado.
+- `WindowSpanModeStateTrigger` dispara uma [`VisualState`](xref:Xamarin.Forms.VisualState) alteração quando o modo de exibição da janela é alterado.
 
 Para obter mais informações sobre gatilhos de estado, consulte [gatilhos de estado](~/xamarin-forms/app-fundamentals/triggers.md#state-triggers).
 
@@ -124,5 +122,5 @@ Neste exemplo, os Estados visuais são definidos em um [`Grid`](xref:Xamarin.For
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xamarin.FormsGatilhos](~/xamarin-forms/app-fundamentals/triggers.md)
-- [Xamarin.FormsGerenciador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)
+- [Xamarin.Forms Gatilhos](~/xamarin-forms/app-fundamentals/triggers.md)
+- [Xamarin.Forms Gerenciador de estado visual](~/xamarin-forms/user-interface/visual-state-manager.md)

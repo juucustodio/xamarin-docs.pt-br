@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Formse introdução aos serviços cognitivas do Azure
+title: Xamarin.Forms e introdução aos serviços cognitivas do Azure
 description: Este artigo fornece uma introdução a um aplicativo de exemplo que demonstra como invocar algumas das APIs de serviço cognitiva da Microsoft.
 ms.prod: xamarin
 ms.assetid: 74121ADB-1322-4C1E-A103-F37257BC7CB0
@@ -10,16 +10,16 @@ ms.date: 02/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: cce5b0fc9c3d1d04c20b1be242197e3bc9e4f901
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 4dba270cbc08b3ce9209568a1e625e71cfa17d8d
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929331"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374453"
 ---
-# <a name="xamarinforms-and-azure-cognitive-services-introduction"></a>Xamarin.Formse introdução aos serviços cognitivas do Azure
+# <a name="no-locxamarinforms-and-azure-cognitive-services-introduction"></a>Xamarin.Forms e introdução aos serviços cognitivas do Azure
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _Os serviços cognitivas da Microsoft são um conjunto de APIs, SDKs e serviços disponíveis aos desenvolvedores para tornar seus aplicativos mais inteligentes, adicionando recursos como reconhecimento facial, reconhecimento de fala e compreensão da linguagem. Este artigo fornece uma introdução ao aplicativo de exemplo que demonstra como invocar algumas das APIs de serviço cognitiva da Microsoft._
 
@@ -79,10 +79,10 @@ O projeto de código compartilhado também contém alguns arquivos importantes:
 
 O aplicativo de exemplo usa os seguintes pacotes NuGet:
 
-- `Newtonsoft.Json`– fornece uma estrutura JSON para .NET.
-- `PCLStorage`– fornece um conjunto de APIs de e/s de arquivo local de plataforma cruzada.
-- `sqlite-net-pcl`– fornece armazenamento de banco de dados SQLite.
-- `Xam.Plugin.Media`– fornece criação de fotos entre plataformas e APIs de separação.
+- `Newtonsoft.Json` – fornece uma estrutura JSON para .NET.
+- `PCLStorage` – fornece um conjunto de APIs de e/s de arquivo local de plataforma cruzada.
+- `sqlite-net-pcl` – fornece armazenamento de banco de dados SQLite.
+- `Xam.Plugin.Media` – fornece criação de fotos entre plataformas e APIs de separação.
 
 Além disso, esses pacotes NuGet também instalam suas próprias dependências.
 
@@ -132,4 +132,4 @@ O aplicativo de exemplo invoca os seguintes serviços cognitivas da Microsoft:
 
 - [Reconhecimento de fala com a API do serviço de fala](~/xamarin-forms/data-cloud/azure-cognitive-services/speech-recognition.md)
 - [Documentação dos serviços cognitivas da Microsoft](https://www.microsoft.com/cognitive-services/documentation)
-- [Serviços cognitivas todo (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+- [Serviços cognitivas todo (exemplo)](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)

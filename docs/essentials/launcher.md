@@ -1,5 +1,5 @@
 ---
-title: Xamarin.EssentialsIniciador
+title: Xamarin.Essentials Iniciador
 description: A classe do iniciador no Xamarin.Essentials permite que um aplicativo Abra um URI pelo sistema.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
@@ -9,14 +9,14 @@ ms.date: 08/20/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: dcb236c47cf2eec77b3b90da798b0cf0d58f3c1d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1e68755778522fa61d593d25e763fae1569724cf
+ms.sourcegitcommit: 2a7bbe9cbee3727ba20ee755c1713bcfdb4d8ecb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84802308"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98950970"
 ---
-# <a name="xamarinessentials-launcher"></a>Xamarin.Essentials: Iniciador
+# <a name="no-locxamarinessentials-launcher"></a>Xamarin.Essentials: Iniciador
 
 A classe **Launcher** permite que um aplicativo abra um URI pelo sistema. Isso geralmente é utilizado quando a vinculação profunda é usada em esquemas de URI personalizados de outro aplicativo. Se quiser abrir o navegador em um site, confira a API do **[Browser](open-browser.md)**.
 
@@ -84,7 +84,7 @@ Nenhuma configuração adicional.
 
 ## <a name="files"></a>Arquivos
 
-Esse recurso permite que um aplicativo solicite que outros aplicativos abram e exibam um arquivo. Xamarin.Essentialso detectará automaticamente o tipo de arquivo (MIME) e solicitará que o arquivo seja aberto.
+Esse recurso permite que um aplicativo solicite que outros aplicativos abram e exibam um arquivo. Xamarin.Essentials o detectará automaticamente o tipo de arquivo (MIME) e solicitará que o arquivo seja aberto.
 
 Aqui está um exemplo de gravação de texto em disco e solicitação de abertura:
 
@@ -98,6 +98,10 @@ await Launcher.OpenAsync(new OpenFileRequest
     File = new ReadOnlyFile(file)
 });
 ```
+
+## <a name="presentation-location-when-opening-files"></a>Local da apresentação ao abrir arquivos
+
+[!include[](~/essentials/includes/ios-PresentationSourceBounds.md)]
 
 ## <a name="platform-differences"></a>Diferenças entre plataformas
 

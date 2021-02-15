@@ -10,16 +10,16 @@ ms.date: 05/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e0fbdc91c2661732e3afdbde44ce9891f89c5f62
-ms.sourcegitcommit: 14d67a2db82e67471584b1749e0d5b9ec0c0c09b
+ms.openlocfilehash: 3fe1b7d56e71cac0b7a5a7b4e2bc68710241f13f
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88228632"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609151"
 ---
 # <a name="no-locxamarinforms-webview"></a>Xamarin.Forms WebView
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
 [`WebView`](xref:Xamarin.Forms.WebView) é uma exibição para exibir conteúdo Web e HTML em seu aplicativo:
 
@@ -386,11 +386,11 @@ void webviewNavigated(object sender, WebNavigatedEventArgs e)
 
 Isso resulta na seguinte saída (carregando):
 
-![Exemplo de evento de navegação do WebView](webview-images/loading-start.png)
+![Captura de tela mostra o evento de navegação do WebView durante o carregamento.](webview-images/loading-start.png)
 
 Carregamento concluído:
 
-![Exemplo de evento de navegação do WebView](webview-images/loading-end.png)
+![Captura de tela mostra o evento de navegação do WebView após o carregamento.](webview-images/loading-end.png)
 
 ## <a name="reloading-content"></a>Recarregando conteúdo
 
@@ -418,9 +418,12 @@ Um aplicativo pode retornar ao uso da `UIWebView` classe Ios para implementar o 
 [assembly: ExportRenderer(typeof(Xamarin.Forms.WebView), typeof(Xamarin.Forms.Platform.iOS.WebViewRenderer))]
 ```
 
+> [!NOTE]
+> Em Xamarin.Forms 5,0, a `WebViewRenderer` classe foi removida. Portanto, Xamarin.Forms 5,0 não contém uma referência ao `UIWebView` controle.
+
 `WebView` no Android, por padrão, é tão rápido quanto o navegador interno.
 
-O [UWP WebView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/web-view) usa o mecanismo de renderização do Microsoft Edge. Os dispositivos desktop e Tablet devem ver o mesmo desempenho que usar o navegador Edge em si.
+O [UWP WebView](/windows/uwp/design/controls-and-patterns/web-view) usa o mecanismo de renderização do Microsoft Edge. Os dispositivos desktop e Tablet devem ver o mesmo desempenho que usar o navegador Edge em si.
 
 ## <a name="permissions"></a>Permissões
 
@@ -490,7 +493,7 @@ Grade *sem* WidthRequest & HeightRequest. A grade é um dos poucos layouts que n
 
 ## <a name="invoking-javascript"></a>Invocando JavaScript
 
-[`WebView`](xref:Xamarin.Forms.WebView) inclui a capacidade de invocar uma função JavaScript do C# e retornar qualquer resultado para o código C# de chamada. Isso é feito com o [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) método, que é mostrado no exemplo a seguir do exemplo do [WebView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview) :
+[`WebView`](xref:Xamarin.Forms.WebView) inclui a capacidade de invocar uma função JavaScript do C# e retornar qualquer resultado para o código C# de chamada. Isso é feito com o [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) método, que é mostrado no exemplo a seguir do exemplo do [WebView](/samples/xamarin/xamarin-forms-samples/userinterface-webview) :
 
 ```csharp
 var numberEntry = new Entry { Text = "5" };
@@ -553,13 +556,16 @@ Neste exemplo, um único `Cookie` é adicionado ao `CookieContainer` objeto, que
 
 A partir de abril de 2020, a [Apple rejeitará aplicativos](https://developer.apple.com/news/?id=12232019b) que ainda usam a API preterida `UIWebView` . Embora Xamarin.Forms o tenha mudado `WKWebView` como o padrão, ainda há uma referência ao SDK mais antigo nos Xamarin.Forms binários. O comportamento atual do [vinculador do IOS](~/ios/deploy-test/linker.md) não remove isso e, como resultado, a API preterida `UIWebView` ainda parecerá ser referenciada de seu aplicativo quando você enviar para a loja de aplicativos.
 
+> [!IMPORTANT]
+> Em Xamarin.Forms 5,0, a `WebViewRenderer` classe foi removida. Portanto, Xamarin.Forms 5,0 não contém uma referência ao `UIWebView` controle.
+
 Uma versão de visualização do vinculador está disponível para corrigir esse problema. Para habilitar a visualização, você precisará fornecer um argumento adicional `--optimize=experimental-xforms-product-type` para o vinculador.
 
 Os pré-requisitos para isso funcionam são:
 
-- ** Xamarin.Forms 4,5 ou superior**. Xamarin.Forms 4,6, ou superior, será necessário se seu aplicativo usar o Visual de material.
+- **Xamarin.Forms 4,5 ou superior**. Xamarin.Forms 4,6, ou superior, será necessário se seu aplicativo usar o Visual de material.
 - **Xamarin. Ios 13.10.0.17 ou superior**. Verifique sua versão do Xamarin. iOS [no Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). Esta versão do Xamarin. iOS está incluída no Visual Studio para Mac 8.4.1 e no Visual Studio 16.4.3.
-- **Remova as referências `UIWebView` a **. Seu código não deve ter nenhuma referência a `UIWebView` ou nenhuma classe que use `UIWebView` .
+- **Remova as referências `UIWebView` a**. Seu código não deve ter nenhuma referência a `UIWebView` ou nenhuma classe que use `UIWebView` .
 
 Para obter mais informações sobre como detectar e remover `UIWebView` referências, consulte [UIWebView preterition](~/ios/user-interface/controls/webview.md#uiwebview-deprecation).
 
@@ -584,7 +590,7 @@ Siga estas etapas para que o vinculador remova as `UIWebView` referências:
 
 1. **Abrir opções** &ndash; de projeto do IOS Clique com o botão direito do mouse no seu projeto iOS e escolha **Opções**.
 1. **Navegue até a seção** &ndash; Build do IOS Selecione a seção **Build do IOS** .
-1. **Atualize os argumentos _mTouch_ adicionais** &ndash; nos **argumentos adicionais do _mTouch_ ** adicione esse sinalizador `--optimize=experimental-xforms-product-type` (além de qualquer valor que possa já estar lá). Observação: esse sinalizador funciona junto com o **comportamento do vinculador** definido como **somente SDK** ou **vincular tudo**. Se, por algum motivo, você vir erros ao definir o comportamento do vinculador como todos, isso provavelmente é um problema no código do aplicativo ou em uma biblioteca de terceiros que não é segura para o vinculador. Para obter mais informações sobre o vinculador, consulte [vinculando aplicativos Xamarin. Ios](~/ios/deploy-test/linker.md).
+1. **Atualize os argumentos _mTouch_ adicionais** &ndash; nos **argumentos adicionais do _mTouch_** adicione esse sinalizador `--optimize=experimental-xforms-product-type` (além de qualquer valor que possa já estar lá). Observação: esse sinalizador funciona junto com o **comportamento do vinculador** definido como **somente SDK** ou **vincular tudo**. Se, por algum motivo, você vir erros ao definir o comportamento do vinculador como todos, isso provavelmente é um problema no código do aplicativo ou em uma biblioteca de terceiros que não é segura para o vinculador. Para obter mais informações sobre o vinculador, consulte [vinculando aplicativos Xamarin. Ios](~/ios/deploy-test/linker.md).
 1. **Atualizar todas as configurações** &ndash; de compilação Use as listas de **configuração** e **plataforma** na parte superior da janela para atualizar todas as configurações de compilação. A configuração mais importante a ser atualizada é a configuração de **lançamento/iPhone** , pois ela normalmente é usada para criar compilações para envio da loja de aplicativos.
 
 Você pode ver a janela com o novo sinalizador em vigor nesta captura de tela:
@@ -597,6 +603,6 @@ Agora, quando você cria uma nova compilação (versão) e a envia para a loja d
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Trabalhando com o WebView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
-- [WebView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview)
+- [Trabalhando com o WebView (exemplo)](/samples/xamarin/xamarin-forms-samples/workingwithwebview)
+- [WebView (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-webview)
 - [Reprovação de UIWebView](~/ios/user-interface/controls/webview.md#uiwebview-deprecation)

@@ -6,12 +6,12 @@ ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 55830c21c178a13fd58b73b6920c21cfa3e9c945
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: eb792f7b2e24e5a3a25fd48ed0ec60cbaceea107
+ms.sourcegitcommit: 424eaef56fd2933c98e72f1d3e7ac71730fe4835
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86940030"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758117"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Usando Jenkins com Xamarin
 
@@ -44,7 +44,7 @@ O diagrama a seguir ilustra todos esses elementos em um servidor de compilação
 
 os aplicativos iOS só podem ser compilados e assinados em um computador que esteja executando o macOS. Um Mac mini é uma opção razoável de menor custo, mas qualquer computador capaz de executar o OS X 10,10 (Yosemite) ou superior é suficiente.
 
-Se o TFS estiver sendo usado para controle do código-fonte, você deverá instalar [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/). O Team Explorer Everywhere fornece acesso de plataforma cruzada ao TFS no terminal no macOS.
+Se o TFS estiver sendo usado para controle do código-fonte, você deverá instalar [Team Explorer Everywhere](/azure/devops/java/download-eclipse-plug-in/). O Team Explorer Everywhere fornece acesso de plataforma cruzada ao TFS no terminal no macOS.
 
 [!include[](~/tools/ci/includes/firewall-information.md)]
 
@@ -81,15 +81,15 @@ A personalização de Jenkins é opcional e não precisa ser realizada sempre qu
 
 Se for necessário personalizar o Jenkins, clique no botão **alterar padrões** . Isso apresentará duas caixas de diálogo consecutivas: uma que solicita parâmetros de linha de comando Java e outra que solicita parâmetros de linha de comando Jenkins. As duas capturas de tela a seguir mostram essas duas caixas de diálogo:
 
-[![Esta captura de tela mostra as caixas de diálogo](jenkins-walkthrough-images/image6.png)](jenkins-walkthrough-images/image6.png#lightbox)
+[![Esta captura de tela mostra a caixa de diálogo que solicita parâmetros de linha de comando Java.](jenkins-walkthrough-images/image6.png)](jenkins-walkthrough-images/image6.png#lightbox)
 
-[![Esta captura de tela mostra as caixas de diálogo](jenkins-walkthrough-images/image7.png)](jenkins-walkthrough-images/image7.png#lightbox)
+[![Esta captura de tela mostra a caixa de diálogo que solicita parâmetros de linha de comando Jenkins.](jenkins-walkthrough-images/image7.png)](jenkins-walkthrough-images/image7.png#lightbox)
 
 Depois que o Jenkins estiver em execução, talvez você queira defini-lo como um item de logon para que ele seja inicializado sempre que o usuário fizer logon no computador. Você pode fazer isso clicando com o botão direito do mouse no ícone de Jenkins no Dock e escolhendo **opções... > abrir no logon**, conforme mostrado na seguinte captura de tela:
 
 [![Você pode fazer isso clicando com o botão direito do mouse no ícone de Jenkins no Dock e escolhendo OptionsOpen no logon, conforme mostrado nesta captura de tela](jenkins-walkthrough-images/image8.png)](jenkins-walkthrough-images/image8.png#lightbox)
 
-Isso fará com que o Jenkins. app seja iniciado automaticamente cada vez que o usuário fizer logon, mas não quando o computador for inicializado. É possível especificar uma conta de usuário que o OS X usará para fazer logon automaticamente no momento da inicialização. Abra as **preferências do sistema**e selecione o ícone **usuários & grupos** , conforme mostrado nesta captura de tela:
+Isso fará com que o Jenkins. app seja iniciado automaticamente cada vez que o usuário fizer logon, mas não quando o computador for inicializado. É possível especificar uma conta de usuário que o OS X usará para fazer logon automaticamente no momento da inicialização. Abra as **preferências do sistema** e selecione o ícone **usuários & grupos** , conforme mostrado nesta captura de tela:
 
 [![Abra as preferências do sistema e selecione o ícone grupos de usuários, conforme mostrado nesta captura de tela](jenkins-walkthrough-images/image9.png)](jenkins-walkthrough-images/image9.png#lightbox)
 
@@ -114,7 +114,7 @@ Isso exibirá a página **Jenkins Plugin Manager** . Se você clicar na guia dis
 Rolar por todos os plugins de 600 para encontrar alguns pode ser entediante e propenso a erros. Jenkins fornece um campo de pesquisa de filtro no canto superior direito da interface. Usar esse campo de filtro para pesquisa simplificará a localização e instalação de um ou todos os seguintes plug-ins:
 
 - **Plug-in do MSBuild do Jenkins** – esse plug-in possibilita a criação de soluções do Visual Studio e Visual Studio para Mac (. sln) e projetos (. csproj).
-- **Plug-in de injetador de ambiente** – esse é um plug-in opcional, mas útil que possibilita definir variáveis de ambiente no nível de trabalho e de compilação. Ele também oferece proteção extra para variáveis como as senhas usadas para assinar o código do aplicativo. Às vezes, é abreviado como o *plug-in EnvInject* .
+- **Plug-in de injetador de ambiente** – esse é um plug-in opcional, mas útil que possibilita definir variáveis de ambiente no nível de trabalho e de compilação. Ele também oferece proteção extra para variáveis como as senhas usadas para assinar o código do aplicativo. Às vezes, é abreviado como o  *plug-in EnvInject* .
 - **Plug-in Team Foundation Server** – esse é um plug-in opcional que só é necessário se você estiver usando o Team Foundation Server ou Team Foundation Services para controle do código-fonte.
 
 O Jenkins dá suporte ao git sem nenhum plug-in extra.
@@ -139,10 +139,10 @@ Clique nesse botão e preencha o **nome** e o **caminho** para os campos do **MS
 
 Esta seção é obrigatória se você pretende usar o TFS para o controle do código-fonte.
 
-Para que uma estação de trabalho macOS interaja com um servidor TFS, [Team Explorer Everywhere](https://docs.microsoft.com/azure/devops/java/download-eclipse-plug-in/) deve ser instalada na estação de trabalho. Team Explorer Everywhere é um conjunto de ferramentas da Microsoft que inclui um cliente de linha de comando de plataforma cruzada para acessar o TFS. Team Explorer Everywhere pode ser baixado da Microsoft e instalado em três etapas:
+Para que uma estação de trabalho macOS interaja com um servidor TFS, [Team Explorer Everywhere](/azure/devops/java/download-eclipse-plug-in/) deve ser instalada na estação de trabalho. Team Explorer Everywhere é um conjunto de ferramentas da Microsoft que inclui um cliente de linha de comando de plataforma cruzada para acessar o TFS. Team Explorer Everywhere pode ser baixado da Microsoft e instalado em três etapas:
 
 1. Descompacte o arquivo morto em um diretório que possa ser acessado pela conta de usuário. Por exemplo, você pode descompactar o arquivo para **~/tee**.
-2. Configure o Shell ou o caminho do sistema para incluir a pasta que contém os arquivos que foram descompactados na etapa um acima. Por exemplo:
+2. Configure o Shell ou o caminho do sistema para incluir a pasta que contém os arquivos que foram descompactados na etapa um acima. Por exemplo,
 
     ```
     echo export PATH~/tee/:$PATH' >> ~/.bash_profile
@@ -175,7 +175,7 @@ Na página **Configurar segurança global** , marque a caixa de seleção **habi
 
 [![Na página Configurar segurança global, marque a caixa de seleção Habilitar segurança e o formulário controle de acesso deve aparecer, semelhante a esta captura de tela](jenkins-walkthrough-images/image19.png)](jenkins-walkthrough-images/image19.png#lightbox)
 
-Alterne o botão de opção do **próprio banco de dados de usuário do Jenkins** na **seção realm de segurança**e verifique se a opção permitir que **os usuários se inscrevam** também está marcada, conforme ilustrado na captura de tela a seguir:
+Alterne o botão de opção do **próprio banco de dados de usuário do Jenkins** na **seção realm de segurança** e verifique se a opção permitir que **os usuários se inscrevam** também está marcada, conforme ilustrado na captura de tela a seguir:
 
 [![Alterne o botão de opção do banco de dados de usuário do Jenkins próprio na seção realm de segurança e verifique se a opção permitir que os usuários se inscrevam também está marcada](jenkins-walkthrough-images/image20.png)](jenkins-walkthrough-images/image20.png#lightbox)
 
@@ -266,7 +266,7 @@ Quando uma compilação é iniciada, a caixa de diálogo histórico de compilaç
 
 Se o trabalho for executado com sucesso, um círculo azul será exibido. Se o trabalho falhar, um círculo vermelho será exibido.
 
-Para ajudar na solução de problemas que possam surgir como parte da compilação, o Jenkins capturará toda a saída do console para o trabalho. Para ver a saída do console, clique no trabalho no **histórico de compilação**e, em seguida, no link **saída do console** , no menu à esquerda. A captura de tela a seguir mostra o link de **saída do console** , bem como algumas das saídas de um trabalho bem-sucedido:
+Para ajudar na solução de problemas que possam surgir como parte da compilação, o Jenkins capturará toda a saída do console para o trabalho. Para ver a saída do console, clique no trabalho no **histórico de compilação** e, em seguida, no link **saída do console** , no menu à esquerda. A captura de tela a seguir mostra o link de **saída do console** , bem como algumas das saídas de um trabalho bem-sucedido:
 
 ![Esta captura de tela mostra o link de saída do console, bem como algumas das saídas de um trabalho bem-sucedido](jenkins-walkthrough-images/image31.png)
 
@@ -323,7 +323,7 @@ Depois que a etapa de compilação for adicionada ao projeto, preencha os campos
 
 ![Depois que a etapa de compilação for adicionada ao projeto, preencha os campos de formulário que aparecem](jenkins-walkthrough-images/image37.png)
 
-Essa etapa de compilação será executada `xbuild` na pasta **$Workspace** . O arquivo de compilação do MSBuild é definido como o arquivo **Xamarin. Android. csproj** . Os **argumentos de linha de comando** especificam uma compilação de versão do **PackageForAndroid**de destino. O produto desta etapa será um APK no seguinte local:
+Essa etapa de compilação será executada `xbuild` na pasta **$Workspace** . O arquivo de compilação do MSBuild é definido como o arquivo **Xamarin. Android. csproj** . Os **argumentos de linha de comando** especificam uma compilação de versão do **PackageForAndroid** de destino. O produto desta etapa será um APK no seguinte local:
 
 ```
 $WORKSPACE/[PROJECT NAME]/bin/Release
@@ -396,4 +396,4 @@ Neste guia, introduzimos o Jenkins como um servidor de Build no macOS e o config
 ## <a name="related-links"></a>Links Relacionados
 
 - [Integração contínua](~/tools/ci/index.md)
-- [Teste do App Center](https://docs.microsoft.com/appcenter/test-cloud/)
+- [Teste do App Center](/appcenter/test-cloud/)

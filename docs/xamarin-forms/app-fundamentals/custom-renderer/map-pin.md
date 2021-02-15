@@ -10,16 +10,16 @@ ms.date: 11/06/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4a9dca7556e9e08915e7e8915a0c01cd1ce6f676
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 81a273091d14f8da908d1d52751f262b3a00027c
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935714"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609060"
 ---
 # <a name="customizing-a-map-pin"></a>Personalizando um marcador de mapa
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)
 
 _Este artigo demonstra como criar um renderizador personalizado para o Controle de Mapeamento, que exibe um mapa nativo com um marcador personalizado e uma exibição personalizada dos dados de marcador em cada plataforma._
 
@@ -38,7 +38,7 @@ O processo de renderização pode ser usado para implementar personalizações e
 Cada item agora será abordado por vez, para implementar um renderizador `CustomMap` que exibe um mapa nativo com um marcador personalizado e uma exibição personalizada dos dados do marcador em cada plataforma.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps)deve ser inicializado e configurado antes do uso. Para obter mais informações, consulte [`Maps Control`](~/xamarin-forms/user-interface/map/index.md).
+> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) deve ser inicializado e configurado antes do uso. Para obter mais informações, confira [`Maps Control`](~/xamarin-forms/user-interface/map/index.md).
 
 ## <a name="creating-the-custom-map"></a>Criando o mapa personalizado
 
@@ -174,7 +174,7 @@ As seções a seguir abordam a implementação de cada classe de renderizador pe
 
 As seguintes capturas de tela mostram o mapa, antes e após a personalização:
 
-![Controle de Mapeamento antes e após a personalização](map-pin-images/map-layout-ios.png)
+![As capturas de tela mostram um dispositivo móvel com um PIN comum e um PIN anotado.](map-pin-images/map-layout-ios.png)
 
 No iOS, o marcador é chamado de *anotação* e pode ser uma imagem personalizada ou um marcador definido pelo sistema de várias cores. As anotações podem opcionalmente mostrar um *texto explicativo*, que é exibido em resposta à seleção da anotação pelo usuário. O texto explicativo exibe o `Label` e as propriedades `Address` da instância `Pin`, com as exibições acessório direita e esquerda opcionais. Na captura de tela acima, a exibição acessório esquerda é a imagem de um macaco, com a exibição acessório direita sendo o botão *Informações*.
 
@@ -347,7 +347,7 @@ Para obter mais informações sobre como personalizar uma instância `MKMapView`
 
 As seguintes capturas de tela mostram o mapa, antes e após a personalização:
 
-![Controle de Mapeamento antes e após a personalização](map-pin-images/map-layout-android.png)
+![As capturas de tela mostram um dispositivo móvel com um marcador comum e um marcador personalizado.](map-pin-images/map-layout-android.png)
 
 No Android, o marcador é chamado de *marcador* e pode ser uma imagem personalizada ou um marcador definido pelo sistema de várias cores. Os marcadores podem mostrar uma *janela de informações*, que é exibida na resposta ao toque do usuário no marcador. A janela de informações exibe as propriedades `Label` e `Address` da instância `Pin` e pode ser personalizada para incluir outros tipos de conteúdo. No entanto, apenas uma janela de informações pode ser mostrada por vez.
 
@@ -510,7 +510,7 @@ Para obter mais informações sobre como personalizar uma instância `MapView`, 
 
 As seguintes capturas de tela mostram o mapa, antes e após a personalização:
 
-![Controle de Mapeamento antes e após a personalização](map-pin-images/map-layout-uwp.png)
+![As capturas de tela mostram um dispositivo móvel com um ícone de mapa comum e um ícone de mapa personalizado.](map-pin-images/map-layout-uwp.png)
 
 No UWP, o marcador é chamado de *ícone de mapa* e pode ser uma imagem personalizada ou a imagem padrão definida pelo sistema. Um ícone de mapa pode mostrar um `UserControl`, que é exibido em resposta ao toque do usuário no ícone de mapa. O `UserControl` pode exibir qualquer conteúdo, incluindo as propriedades `Label` e `Address` da instância `Pin`.
 
@@ -650,11 +650,11 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 
 Esse método abre um navegador da Web e navega para o endereço armazenado na propriedade `Url` da instância `CustomPin`. Observe que o endereço foi definido durante a criação da coleção `CustomPin` no projeto da biblioteca do .NET Standard.
 
-Para obter mais informações sobre como personalizar uma instância `MapControl`, confira [Visão geral de mapas e localização](https://msdn.microsoft.com/library/windows/apps/mt219699.aspx) no MSDN.
+Para obter mais informações sobre como personalizar uma instância `MapControl`, confira [Visão geral de mapas e localização](/windows/uwp/maps-and-location/) no MSDN.
 
 ## <a name="related-links"></a>Links Relacionados
 
 - [Controle de mapas](~/xamarin-forms/user-interface/map/index.md)
 - [Mapas do iOS](~/ios/user-interface/controls/ios-maps/index.md)
 - [API de mapas](~/android/platform/maps-and-location/maps/maps-api.md)
-- [Marcador personalizado (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)
+- [Marcador personalizado (amostra)](/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)

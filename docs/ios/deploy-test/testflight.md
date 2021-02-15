@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 1f86227573fc5e9dc39d4781125c49a067e8967d
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: f2aa56982df0a2ec27b677dbe7d12ec9c3289041
+ms.sourcegitcommit: 424eaef56fd2933c98e72f1d3e7ac71730fe4835
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997482"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758078"
 ---
 # <a name="using-testflight-to-distribute-xamarinios-apps"></a>Usando TestFlight para distribuir aplicativos Xamarin.iOS
 
@@ -37,9 +37,14 @@ Todos os testadores devem testar o aplicativo em pelo menos um dispositivo iOS 8
 
 ## <a name="provisioning"></a>Provisionamento
 
-Para testar builds com o TestFlight, é necessário criar um *perfil de distribuição na App Store* com o novo direito beta. Esse direito permite que teste beta por meio do TestFlight e quaisquer **novos** perfis de distribuição da App Store automaticamente contêm esse direito. Você pode seguir as instruções passo a passo no guia [Creating a Distribution Profile](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioningprofile) (Como criar um perfil de distribuição) para gerar um novo perfil.
+Para testar builds com o TestFlight, é necessário criar um **perfil de distribuição na App Store** com o novo direito beta. Esse direito permite que teste beta por meio do TestFlight e quaisquer **novos** perfis de distribuição da App Store automaticamente contêm esse direito. Você pode seguir as instruções passo a passo no guia [Creating a Distribution Profile](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioningprofile) (Como criar um perfil de distribuição) para gerar um novo perfil.
 
 Você pode confirmar que seu perfil de distribuição contém o direito beta ao [validar seu build no Xcode](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md), conforme ilustrado abaixo:
+
+1. Abra o XCode no host de Build do Mac depois de arquivar o aplicativo
+2. Selecione a **janela > menu organizador**
+3. Selecionar **arquivos** à esquerda
+4. Selecione o arquivo que você deseja validar e clique no botão **validar**
 
 [![Enviando o aplicativo para a Apple](testflight-images/validate-build.png)](testflight-images/validate-build.png#lightbox)
 
@@ -52,9 +57,9 @@ O fluxo de trabalho a seguir descreve as etapas necessárias para começar a usa
 3. Gerencie Testes Beta:
     - Adicione Metadados.
     - Adicione Usuários Internos:
-      - Máximo de 25 Usuários.
+      - Máximo de 100 usuários, cada usuário pode testar até 30 dispositivos.
     - Adicione Usuários Externos:
-      - Máximo de 1.000 Usuários.
+      - Máximo de 10000 usuários.
       - Requer uma análise de teste beta, que exige a conformidade com as diretrizes da Apple.
 4. Receba Comentários de usuários, aja com base neles e retorne para a etapa 2.
 
@@ -133,7 +138,7 @@ Primeiro, compile o [distribuível final](~/ios/deploy-test/app-distribution/app
 ### <a name="submitting-your-build"></a>Enviando seu Build
  Para enviar seu aplicativo para a Apple, você precisará ir para seu Host do Build e usar o programa Carregador de Aplicativos, que é instalado como parte do Xcode. Para obter mais informações sobre como acessar o Carregador de Aplicativos, confira o guia [Access Application Loader](https://help.apple.com/itc/apploader/#/apdATD1E927-D1E1A1303-D1E927A1126) (Acessar o Carregador de Aplicativos) da Apple.
 
-Após abri-lo, selecione a opção **Deliver Your App ** (Entregar seu Aplicativo) e carregue o zip ou arquivo `.ipa` criado acima. O Carregador de Aplicativos validará e carregará seu build para o iTunes Connect.
+Após abri-lo, selecione a opção **Deliver Your App** (Entregar seu Aplicativo) e carregue o zip ou arquivo `.ipa` criado acima. O Carregador de Aplicativos validará e carregará seu build para o iTunes Connect.
 
  Consulte a seção [Enviando seu aplicativo para a Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) para saber mais sobre essas etapas.
 
@@ -187,7 +192,7 @@ Testadores Internos são membros de sua equipe de desenvolvimento atribuídos a 
 - **Legal** – o Agente de Equipe é o único usuário administrativo que terá a função Legal atribuída. Isso permite que ele assine contratos legais.
 - **Técnico** – um usuário técnico pode alterar a maioria das propriedades em relação a um aplicativo. Por exemplo, editar informações do aplicativo, carregar um binário e enviar um aplicativo para análise.
 
-Cada build pode ser compartilhado com um máximo de 25 membros.
+Cada compilação pode ser compartilhada com um máximo de 100 membros, que pode cada teste em até 30 dispositivos.
 
 Para adicionar testadores, navegue até **Usuários e Funções** na tela principal do iTunes Connect:
 
@@ -197,7 +202,7 @@ Usuários do iTunes Connect existentes aparecerão na lista. Para selecioná-los
 
 [![Ativar a opção de testador interno](testflight-images/internal-tester.png)](testflight-images/internal-tester.png#lightbox)
 
-Para adicionar um usuário que não está na lista, selecione o **+** botão ao lado de *usuários*e forneça um nome, sobrenome e endereço de email para criar uma conta. O usuário precisará confirmar seu email para ativar a conta:
+Para adicionar um usuário que não está na lista, selecione o **+** botão ao lado de *usuários* e forneça um nome, sobrenome e endereço de email para criar uma conta. O usuário precisará confirmar seu email para ativar a conta:
 
 [![Adicionando um usuário](testflight-images/add-new-user.png)](testflight-images/add-new-user.png#lightbox)
 
@@ -221,7 +226,7 @@ Para enviar seu aplicativo para análise, clique no texto **Enviar para Análise
 
 Para seu aplicativo ser aprovado na análise, você deve inserir todos os metadados necessários na página Informações do Beta do TestFlight.
 
-Agora você pode começar a preparar convites e adicionar até 2.000 testadores externos por meio da guia Testadores Externos, inserindo seu email, Nome e Sobrenome, conforme ilustra a captura de tela abaixo. O email que você inserir não precisa ser sua ID da Apple; ele é apenas o email que receberá o convite.
+Agora você pode começar a preparar convites e a adicionar até 10000 testadores externos por meio da guia testadores externos, inserindo seu email, nome e sobrenome, conforme ilustrado na captura de tela abaixo. O email que você inserir não precisa ser sua ID da Apple; ele é apenas o email que receberá o convite.
 
 [![Convidar testadores](testflight-images/add-external.png)](testflight-images/add-external.png#lightbox)
 

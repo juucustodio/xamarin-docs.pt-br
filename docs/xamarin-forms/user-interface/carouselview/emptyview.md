@@ -1,29 +1,27 @@
 ---
-title: Xamarin.FormsCarouselView EmptyView
+title: Xamarin.Forms CarouselView EmptyView
 description: No CarouselView, é possível especificar uma exibição vazia que fornece comentários ao usuário quando não há dados disponíveis para exibição. O modo de exibição vazio pode ser uma cadeia de caracteres, uma exibição ou várias exibições.
 ms.prod: xamarin
 ms.assetid: C6DEE1A9-63FC-4889-BC77-F401D5D7DF32
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/03/2019
+ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0dd1f4a15d9a8c1315cd3f0f71b641c82bebe004
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 26db8044111741c7198eb1b125986e20f55b6add
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918654"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940532"
 ---
-# <a name="no-locxamarinforms-carouselview-emptyview"></a>Xamarin.FormsCarouselView EmptyView
+# <a name="no-locxamarinforms-carouselview-emptyview"></a>Xamarin.Forms CarouselView EmptyView
 
-![API de pré-lançamento](~/media/shared/preview.png)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
-
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)define as seguintes propriedades que podem ser usadas para fornecer comentários do usuário quando não há dados a serem exibidos:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) define as seguintes propriedades que podem ser usadas para fornecer comentários do usuário quando não há dados a serem exibidos:
 
 - [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView), do tipo `object` , a cadeia de caracteres, a associação ou a exibição que será exibida quando a [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) propriedade for `null` , ou quando a coleção especificada pela `ItemsSource` propriedade for `null` ou vazia. O valor padrão é `null`.
 - [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate), do tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , o modelo a ser usado para formatar o especificado `EmptyView` . O valor padrão é `null`.
@@ -69,19 +67,22 @@ A [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) propriedade pode ser def
                Placeholder="Filter" />
     <CarouselView ItemsSource="{Binding Monkeys}">
         <CarouselView.EmptyView>
-            <StackLayout>
-                <Label Text="No results matched your filter."
-                       Margin="10,25,10,10"
-                       FontAttributes="Bold"
-                       FontSize="18"
-                       HorizontalOptions="Fill"
-                       HorizontalTextAlignment="Center" />
-                <Label Text="Try a broader filter?"
-                       FontAttributes="Italic"
-                       FontSize="12"
-                       HorizontalOptions="Fill"
-                       HorizontalTextAlignment="Center" />
-            </StackLayout>
+            <ContentView>
+                <StackLayout HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="CenterAndExpand">
+                    <Label Text="No results matched your filter."
+                           Margin="10,25,10,10"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           HorizontalOptions="Fill"
+                           HorizontalTextAlignment="Center" />
+                    <Label Text="Try a broader filter?"
+                           FontAttributes="Italic"
+                           FontSize="12"
+                           HorizontalOptions="Fill"
+                           HorizontalTextAlignment="Center" />
+                </StackLayout>
+            </ContentView>
         </CarouselView.EmptyView>
         <CarouselView.ItemTemplate>
             ...
@@ -90,18 +91,23 @@ A [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) propriedade pode ser def
 </StackLayout>
 ```
 
+Neste exemplo, o que parece um redundante [`ContentView`](xref:Xamarin.Forms) foi adicionado como o elemento raiz do [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) . Isso ocorre porque, internamente, `EmptyView` é adicionado a um contêiner nativo que não fornece nenhum contexto para Xamarin.Forms layout. Portanto, para posicionar as exibições que compõem seu `EmptyView` , você deve adicionar um layout raiz, cujo filho é um layout que pode se posicionar dentro do layout raiz.
+
 Este é o código C# equivalente:
 
 ```csharp
 SearchBar searchBar = new SearchBar { ... };
 CarouselView carouselView = new CarouselView
 {
-    EmptyView = new StackLayout
+    EmptyView = new ContentView
     {
-        Children =
+        Content = new StackLayout
         {
-            new Label { Text = "No results matched your filter.", ... },
-            new Label { Text = "Try a broader filter?", ... }
+            Children =
+            {
+                new Label { Text = "No results matched your filter.", ... },
+                new Label { Text = "Try a broader filter?", ... }
+            }
         }
     }
 };
@@ -321,7 +327,7 @@ Para obter mais informações sobre seletores de modelo de dados, consulte [cria
 
 ## <a name="related-links"></a>Links relacionados
 
-- [CarouselView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
-- [Xamarin.FormsModelos de dados](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
-- [Xamarin.FormsDicionários de recursos](~/xamarin-forms/xaml/resource-dictionaries.md)
+- [CarouselView (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+- [Xamarin.Forms Modelos de dados](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Xamarin.Forms Dicionários de recursos](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Criar um Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

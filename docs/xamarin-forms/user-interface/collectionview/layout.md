@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsLayout CollectionView
+title: Xamarin.Forms Layout CollectionView
 description: Por padrão, um CollectionView exibirá seus itens em uma lista vertical. No entanto, listas e grades verticais e horizontais podem ser especificadas.
 ms.prod: xamarin
 ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
@@ -10,18 +10,18 @@ ms.date: 07/20/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 73e7ace96c17aea2b397f2706e128ea498338b09
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: dcff583f929e0ce8cda9fe81dc88452c6056ddf1
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918265"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371476"
 ---
-# <a name="no-locxamarinforms-collectionview-layout"></a>Xamarin.FormsLayout CollectionView
+# <a name="no-locxamarinforms-collectionview-layout"></a>Xamarin.Forms Layout CollectionView
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)define as seguintes propriedades que controlam o layout:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define as seguintes propriedades que controlam o layout:
 
 - [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout), do tipo [`IItemsLayout`](xref:Xamarin.Forms.IItemsLayout) , especifica o layout a ser usado.
 - [`ItemSizingStrategy`](xref:Xamarin.Forms.StructuredItemsView.ItemSizingStrategy), do tipo [`ItemSizingStrategy`](xref:Xamarin.Forms.ItemSizingStrategy) , especifica a estratégia de medida do item a ser usada.
@@ -45,8 +45,8 @@ Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.Bin
 
 A [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) enumeração define os seguintes membros:
 
-- `Vertical`indica que o [`CollectionView`](xref:Xamarin.Forms.CollectionView) será expandido verticalmente à medida que os itens forem adicionados.
-- `Horizontal`indica que o [`CollectionView`](xref:Xamarin.Forms.CollectionView) será expandido horizontalmente conforme os itens são adicionados.
+- `Vertical` indica que o [`CollectionView`](xref:Xamarin.Forms.CollectionView) será expandido verticalmente à medida que os itens forem adicionados.
+- `Horizontal` indica que o [`CollectionView`](xref:Xamarin.Forms.CollectionView) será expandido horizontalmente conforme os itens são adicionados.
 
 A `LinearItemsLayout` classe herda da [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) classe e define uma `ItemSpacing` propriedade, do tipo `double` , que representa o espaço vazio em volta de cada item. O valor padrão dessa propriedade é 0 e seu valor sempre deve ser maior ou igual a 0. A `LinearItemsLayout` classe também define static `Vertical` e `Horizontal` Members. Esses membros podem ser usados para criar listas verticais ou horizontais, respectivamente. Como alternativa, um `LinearItemsLayout` objeto pode ser criado, especificando um [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) membro de enumeração como um argumento.
 
@@ -59,7 +59,7 @@ A [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) classe herda da [`Item
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que as propriedades podem ser destinos de associações de dados.
 
 > [!NOTE]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView)usa os mecanismos de layout nativos para executar o layout.
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) usa os mecanismos de layout nativos para executar o layout.
 
 ## <a name="vertical-list"></a>Lista vertical
 
@@ -327,9 +327,9 @@ Por padrão, um horizontal [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayou
 
 ## <a name="headers-and-footers"></a>Cabeçalhos e rodapés
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)pode apresentar um cabeçalho e um rodapé que rolam com os itens na lista. O cabeçalho e o rodapé podem ser cadeias de caracteres, exibições ou [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) objetos.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) pode apresentar um cabeçalho e um rodapé que rolam com os itens na lista. O cabeçalho e o rodapé podem ser cadeias de caracteres, exibições ou [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) objetos.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)define as seguintes propriedades para especificar o cabeçalho e o rodapé:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define as seguintes propriedades para especificar o cabeçalho e o rodapé:
 
 - `Header`, do tipo `object` , especifica a cadeia de caracteres, a associação ou a exibição que será exibida no início da lista.
 - `HeaderTemplate`, do tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , especifica o `DataTemplate` a ser usado para formatar o `Header` .
@@ -550,8 +550,8 @@ Esse código resulta em uma grade vertical de duas colunas, que tem um espaçame
 
 Por padrão, cada item em um [`CollectionView`](xref:Xamarin.Forms.CollectionView) é individualmente medido e dimensionado, desde que os elementos da interface do usuário em [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) não especifiquem tamanhos fixos. Esse comportamento, que pode ser alterado, é especificado pelo [`CollectionView.ItemSizingStrategy`](xref:Xamarin.Forms.StructuredItemsView.ItemSizingStrategy) valor da propriedade. Esse valor de propriedade pode ser definido como um dos [`ItemSizingStrategy`](xref:Xamarin.Forms.ItemSizingStrategy) membros da enumeração:
 
-- `MeasureAllItems`– cada item é medido individualmente. Este é o valor padrão.
-- `MeasureFirstItem`– somente o primeiro item é medido, sendo que todos os itens subsequentes recebem o mesmo tamanho do primeiro item.
+- `MeasureAllItems` – cada item é medido individualmente. Esse é o valor padrão.
+- `MeasureFirstItem` – somente o primeiro item é medido, sendo que todos os itens subsequentes recebem o mesmo tamanho do primeiro item.
 
 > [!IMPORTANT]
 > A `MeasureFirstItem` estratégia de dimensionamento resultará em maior desempenho quando usada em situações em que o tamanho do item se destina a ser uniforme em todos os itens.
@@ -593,7 +593,7 @@ O `OnImageTapped` manipulador de eventos é executado em resposta a um [`Image`]
 
 ## <a name="right-to-left-layout"></a>Layout da direita para a esquerda
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)pode definir o layout de seu conteúdo em uma direção de fluxo da direita para a esquerda definindo sua [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade como [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft) . No entanto, a `FlowDirection` propriedade deve ser idealmente definida em um layout de página ou raiz, o que faz com que todos os elementos dentro da página ou layout raiz respondam à direção do fluxo:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) pode definir o layout de seu conteúdo em uma direção de fluxo da direita para a esquerda definindo sua [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade como [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft) . No entanto, a `FlowDirection` propriedade deve ser idealmente definida em um layout de página ou raiz, o que faz com que todos os elementos dentro da página ou layout raiz respondam à direção do fluxo:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -617,6 +617,6 @@ Para obter mais informações sobre a direção do fluxo, consulte [localizaçã
 
 ## <a name="related-links"></a>Links relacionados
 
-- [CollectionView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [CollectionView (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 - [Localização da direita para a esquerda](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
-- [Xamarin.FormsRolagem de CollectionView](scrolling.md)
+- [Xamarin.Forms Rolagem de CollectionView](scrolling.md)

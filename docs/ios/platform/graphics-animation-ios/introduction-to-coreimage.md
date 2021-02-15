@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 9e0363f941784ecc488861c0d2f089a30c275a10
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 7cb94956266a3094cc62ccc66c3d44e97884f04d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937391"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435300"
 ---
 # <a name="core-image-in-xamarinios"></a>Imagem principal no Xamarin. iOS
 
@@ -46,7 +46,7 @@ var ciImage = CIImage.FromCGImage(image.CGImage);
 CIFeature[] features = detector.FeaturesInImage(ciImage);
 ```
 
-A matriz de recursos será preenchida com `CIFaceFeature` objetos (se quaisquer faces forem detectadas). Há um `CIFaceFeature` para cada face. `CIFaceFeature`tem as seguintes propriedades:
+A matriz de recursos será preenchida com `CIFaceFeature` objetos (se quaisquer faces forem detectadas). Há um `CIFaceFeature` para cada face. `CIFaceFeature` tem as seguintes propriedades:
 
 - HasMouthPosition – se uma boca foi detectada para essa face.
 - HasLeftEyePosition – se o olho à esquerda foi detectado para esta face.
@@ -222,7 +222,7 @@ Este artigo mostrou como usar alguns dos novos recursos da estrutura de imagem p
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Imagem principal (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/coreimage)
+- [Imagem principal (exemplo)](/samples/xamarin/ios-samples/coreimage)
 - [Ajustar o contrato e o brilho de uma receita de imagem](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image)
 - [Usando filtros de imagem de núcleo](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
 - [Referência de classe CIFilter](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Reference/QuartzCoreFramework/Classes/CIFilter_Class/Reference/Reference.htm)

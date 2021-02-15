@@ -10,16 +10,16 @@ ms.date: 09/14/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 6de2caf95d4ce983f7e97e0bc017932df534aedb
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: ee69ca1e95f7dcffa60387579e89c3a2d3e985da
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931853"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374284"
 ---
 # <a name="touch-manipulations"></a>Manipulações de toque
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Usar transformações de matriz para implementar arrastar, apertar e girar toque_
 
@@ -268,7 +268,7 @@ A manipulação da `Pressed` ação é quase igual ao programa anterior, exceto 
 
 Em seguida, o programa calcula dois vetores da nova posição do dedo em relação ao ponto dinâmico e a posição do dedo antigo em relação ao ponto dinâmico. As proporções desses vetores são fatores de dimensionamento. Como a divisão por zero é uma possibilidade, elas devem ser verificadas quanto a valores infinitos ou valores NaN (não um número). Se tudo estiver bem, uma transformação de dimensionamento será concatenada com o `SKMatrix` valor salvo como um campo.
 
-Ao experimentar essa página, você observará que pode arrastar o bitmap com um ou dois dedos ou dimensioná-lo com dois dedos. O dimensionamento é _anisotropic_, o que significa que o dimensionamento pode ser diferente nas direções horizontal e vertical. Isso distorce a taxa de proporção, mas também permite que você vire o bitmap para criar uma imagem espelho. Você também pode descobrir que pode reduzir o bitmap para uma dimensão zero e ele desaparece. No código de produção, você desejará se proteger contra isso.
+Ao experimentar essa página, você observará que pode arrastar o bitmap com um ou dois dedos ou dimensioná-lo com dois dedos. O dimensionamento é _anisotropic_ , o que significa que o dimensionamento pode ser diferente nas direções horizontal e vertical. Isso distorce a taxa de proporção, mas também permite que você vire o bitmap para criar uma imagem espelho. Você também pode descobrir que pode reduzir o bitmap para uma dimensão zero e ele desaparece. No código de produção, você desejará se proteger contra isso.
 
 ## <a name="two-finger-rotation"></a>Rotação de dois dedos
 
@@ -419,7 +419,7 @@ enum TouchManipulationMode
 }
 ```
 
-`PanOnly`é um arrastar de um dedo que é implementado com a tradução. Todas as opções subsequentes também incluem panorâmica, mas envolvem dois dedos: `IsotropicScale` é uma operação de pinçagem que resulta na escala de objetos igualmente nas direções horizontal e vertical. `AnisotropicScale`permite o dimensionamento diferente.
+`PanOnly` é um arrastar de um dedo que é implementado com a tradução. Todas as opções subsequentes também incluem panorâmica, mas envolvem dois dedos: `IsotropicScale` é uma operação de pinçagem que resulta na escala de objetos igualmente nas direções horizontal e vertical. `AnisotropicScale` permite o dimensionamento diferente.
 
 A `ScaleRotate` opção é para dimensionamento e rotação de dois dedos. O dimensionamento é isotropic. Como mencionado anteriormente, a implementação de rotação de dois dedos com dimensionamento de anisotropic é problemática porque os movimentos de dedo são essencialmente os mesmos.
 
@@ -708,7 +708,7 @@ Nos `Moved` eventos e `Released` , o método chama `Manipulate` . Nesses momento
 
 Isso é importante: o `Manipulate` método pode assumir que está processando a movimentação de apenas um dedo. No momento da chamada, nenhum dos outros dedos está se movendo e, se eles realmente estiverem sendo movidos (como é provável), esses movimentos serão processados em chamadas futuras para `Manipulate` .
 
-O `Manipulate` método primeiro copia o dicionário para uma matriz para sua conveniência. Ele ignora algo diferente das duas primeiras entradas. Se mais de dois dedos estiverem tentando manipular o bitmap, os outros serão ignorados. `Manipulate`é o membro final de `TouchManipulationBitmap` :
+O `Manipulate` método primeiro copia o dicionário para uma matriz para sua conveniência. Ele ignora algo diferente das duas primeiras entradas. Se mais de dois dedos estiverem tentando manipular o bitmap, os outros serão ignorados. `Manipulate` é o membro final de `TouchManipulationBitmap` :
 
 ```csharp
 class TouchManipulationBitmap
@@ -751,7 +751,7 @@ Para a manipulação de um dedo, o `pivotPoint` é o centro do bitmap. Isso é p
 
 Em ambos os casos, `TouchManipulationManager` retorna um `SKMatrix` valor, que o método concatena com a `Matrix` propriedade atual que o `TouchManipulationPage` usa para renderizar o bitmap.
 
-`TouchManipulationManager`é generalizado e não usa outros arquivos, exceto `TouchManipulationMode` . Talvez você possa usar essa classe sem alterar seus próprios aplicativos. Ela define uma única propriedade do tipo `TouchManipulationMode`:
+`TouchManipulationManager` é generalizado e não usa outros arquivos, exceto `TouchManipulationMode` . Talvez você possa usar essa classe sem alterar seus próprios aplicativos. Ela define uma única propriedade do tipo `TouchManipulationMode`:
 
 ```csharp
 class TouchManipulationManager
@@ -763,7 +763,7 @@ class TouchManipulationManager
 
 No entanto, você provavelmente desejará evitar a `AnisotropicScale` opção. É muito fácil com essa opção manipular o bitmap para que um dos fatores de dimensionamento se torne zero. Isso faz com que o bitmap desapareça da visão, nunca para retornar. Se você realmente precisa de dimensionamento anisotropic, convém aprimorar a lógica para evitar resultados indesejáveis.
 
-`TouchManipulationManager`faz uso de vetores, mas como não há nenhuma `SKVector` estrutura em SkiaSharp, `SKPoint` é usado em vez disso. `SKPoint`dá suporte ao operador de subtração e o resultado pode ser tratado como um vetor. A única lógica específica de vetor que precisava ser adicionada é um `Magnitude` cálculo:
+`TouchManipulationManager` faz uso de vetores, mas como não há nenhuma `SKVector` estrutura em SkiaSharp, `SKPoint` é usado em vez disso. `SKPoint` dá suporte ao operador de subtração e o resultado pode ser tratado como um vetor. A única lógica específica de vetor que precisava ser adicionada é um `Magnitude` cálculo:
 
 ```csharp
 class TouchManipulationManager
@@ -1060,7 +1060,7 @@ O código percorre a coleção e exibe a pilha de bitmaps desde o início da col
 
 [![Captura de tela tripla da página de exibição de dispersão de bitmap](touch-images/bitmapscatterview-small.png)](touch-images/bitmapscatterview-large.png#lightbox "Captura de tela tripla da página de exibição de dispersão de bitmap")
 
-## <a name="single-finger-scaling"></a>Dimensionamento de dedo único
+## <a name="single-finger-scaling"></a>Dimensionamento de Single-Finger
 
 Uma operação de dimensionamento geralmente requer um gesto de pinçagem usando dois dedos. No entanto, é possível implementar o dimensionamento com um único dedo fazendo com que o dedo mova os cantos de um bitmap.
 
@@ -1273,6 +1273,6 @@ Esse código divide efetivamente a área do bitmap em uma forma de losango inter
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 - [Invocando eventos por meio de efeitos](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

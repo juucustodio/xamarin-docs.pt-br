@@ -10,20 +10,20 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 644e6ab4acffa7acf2d86733d68fed8db07a752a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 7e27db7cd05c1997d3ac889b36aca5e3716d2d08
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932360"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367589"
 ---
 # <a name="lines-and-stroke-caps"></a>Limites de linha e de traço
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Saiba como usar o SkiaSharp para desenhar linhas com limites de traço diferentes_
 
-No SkiaSharp, a renderização de uma única linha é muito diferente da renderização de uma série de linhas retas conectadas. No entanto, mesmo ao desenhar linhas únicas, muitas vezes é necessário dar uma largura de traço específica a linhas. Como essas linhas se tornam mais largas, a aparência das extremidades das linhas também se torna importante. A aparência do final da linha é chamada de ponta do *traço*:
+No SkiaSharp, a renderização de uma única linha é muito diferente da renderização de uma série de linhas retas conectadas. No entanto, mesmo ao desenhar linhas únicas, muitas vezes é necessário dar uma largura de traço específica a linhas. Como essas linhas se tornam mais largas, a aparência das extremidades das linhas também se torna importante. A aparência do final da linha é chamada de ponta do *traço* :
 
 ![As três opções de Caps Stroke](lines-images/strokecapsexample.png)
 
@@ -37,11 +37,11 @@ Por padrão, a [`StrokeWidth`](xref:SkiaSharp.SKPaint.StrokeWidth) propriedade d
 
 A aparência de começa e termina em linhas é chamada de uma *extremidade de linha* ou, em skia, uma *extremidade de traço*. A palavra "Cap" neste contexto refere-se a um tipo de chapéu &mdash; algo que fica no final da linha. Você define a [`StrokeCap`](xref:SkiaSharp.SKPaint.StrokeCap) Propriedade do `SKPaint` objeto como um dos membros da enumeração a seguir [`SKStrokeCap`](xref:SkiaSharp.SKStrokeCap) :
 
-- `Butt`(o padrão)
+- `Butt` (o padrão)
 - `Square`
 - `Round`
 
-Elas são mais bem ilustradas com um programa de exemplo. A seção **linhas e caminhos SkiaSharp** do programa [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) começa com uma página chamada **Stroke Caps** com base na [`StrokeCapsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/StrokeCapsPage.cs) classe. Esta página define um `PaintSurface` manipulador de eventos que percorre os três membros da `SKStrokeCap` enumeração, exibindo o nome do membro de enumeração e desenhando uma linha usando essa extremidade de traço:
+Elas são mais bem ilustradas com um programa de exemplo. A seção **linhas e caminhos SkiaSharp** do programa [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) começa com uma página chamada **Stroke Caps** com base na [`StrokeCapsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/StrokeCapsPage.cs) classe. Esta página define um `PaintSurface` manipulador de eventos que percorre os três membros da `SKStrokeCap` enumeração, exibindo o nome do membro de enumeração e desenhando uma linha usando essa extremidade de traço:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -109,9 +109,9 @@ DrawPoints (SKPointMode mode, points, paint)
 
 O `points` parâmetro é uma matriz de `SKPoint` valores e `mode` é um membro da [`SKPointMode`](xref:SkiaSharp.SKPointMode) enumeração, que tem três membros:
 
-- `Points`para renderizar os pontos individuais
-- `Lines`para conectar cada par de pontos
-- `Polygon`para conectar todos os pontos consecutivos
+- `Points` para renderizar os pontos individuais
+- `Lines` para conectar cada par de pontos
+- `Polygon` para conectar todos os pontos consecutivos
 
 A página **várias linhas** demonstra esse método. O arquivo [**MultipleLinesPage. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/MultipleLinesPage.xaml) instancia duas `Picker` exibições que permitem selecionar um membro da `SKPointMode` enumeração e um membro da `SKStrokeCap` enumeração:
 
@@ -243,5 +243,5 @@ Se as linhas estão conectadas ou não, o aspecto crucial do trabalho com caminh
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

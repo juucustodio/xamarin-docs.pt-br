@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsToolbarItem
+title: Xamarin.Forms ToolbarItem
 description: A classe ToolbarItem é um tipo especial de botão usado na barra de navegação de um aplicativo.
 ms.prod: xamarin
 ms.assetId: CC737D54-0280-46BD-A2BC-A0FB67DDD6A1
@@ -10,16 +10,16 @@ ms.date: 07/29/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 46aba32ebbae1646b9af00877bba530b619210cd
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 59954a16cbf1fb01c974968848596138469ab9b2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138210"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371203"
 ---
-# <a name="xamarinforms-toolbaritem"></a>Xamarin.FormsToolbarItem
+# <a name="no-locxamarinforms-toolbaritem"></a>Xamarin.Forms ToolbarItem
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
 
 A Xamarin.Forms [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) classe é um tipo especial de botão que pode ser adicionado à `Page` coleção de um objeto `ToolbarItems` . Cada `ToolbarItem` objeto será exibido como um botão na barra de navegação do aplicativo. Uma `ToolbarItem` instância pode ter um ícone e aparecer como um item de menu primário ou secundário. A `ToolbarItem` classe é herdada de [`MenuItem`](xref:Xamarin.Forms.MenuItem) .
 
@@ -29,15 +29,15 @@ As capturas de tela a seguir mostram `ToolbarItem` objetos na barra de navegaç�
 
 A `ToolbarItem` classe define as seguintes propriedades:
 
-* [`Order`](xref:Xamarin.Forms.ToolbarItem.Order)é um `ToolbarItemOrder` valor de enumeração que determina se a `ToolbarItem` instância é exibida no menu primário ou secundário.
-* [`Priority`](xref:Xamarin.Forms.ToolbarItem.Priority)é um `integer` valor que determina a ordem de exibição dos itens na `Page` coleção de um objeto `ToolbarItems` .
+* [`Order`](xref:Xamarin.Forms.ToolbarItem.Order) é um `ToolbarItemOrder` valor de enumeração que determina se a `ToolbarItem` instância é exibida no menu primário ou secundário.
+* [`Priority`](xref:Xamarin.Forms.ToolbarItem.Priority) é um `integer` valor que determina a ordem de exibição dos itens na `Page` coleção de um objeto `ToolbarItems` .
 
 A `ToolbarItem` classe herda as seguintes propriedades normalmente usadas da `MenuItem` classe:
 
-* [`Command`](xref:Xamarin.Forms.MenuItem.Command)é um `ICommand` que permite a vinculação de ações do usuário, como toques ou cliques de dedos, a comandos definidos em um ViewModel.
-* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter)é um `object` que especifica o parâmetro que deve ser passado para o `Command` .
-* [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource)é um `ImageSource` valor que determina o ícone de exibição em um `ToolbarItem` objeto.
-* [`Text`](xref:Xamarin.Forms.MenuItem.Text)é um `string` que determina o texto de exibição em um `ToolbarItem` objeto.
+* [`Command`](xref:Xamarin.Forms.MenuItem.Command) é um `ICommand` que permite a vinculação de ações do usuário, como toques ou cliques de dedos, a comandos definidos em um ViewModel.
+* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter) é um `object` que especifica o parâmetro que deve ser passado para o `Command` .
+* [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) é um `ImageSource` valor que determina o ícone de exibição em um `ToolbarItem` objeto.
+* [`Text`](xref:Xamarin.Forms.MenuItem.Text) é um `string` que determina o texto de exibição em um `ToolbarItem` objeto.
 
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos para que uma `ToolbarItem` instância possa ser o destino de associações de dados.
 
@@ -103,7 +103,7 @@ void OnItemClicked(object sender, EventArgs e)
 }
 ```
 
-`ToolbarItem`os objetos também podem usar `Command` as `CommandParameter` Propriedades e para reagir à entrada do usuário sem manipuladores de eventos. Para obter mais informações sobre a `ICommand` interface e a vinculação de dados MVVM, veja [ Xamarin.Forms comportamento MVVM MenuItem](~/xamarin-forms/user-interface/menuitem.md#define-menuitem-behavior-with-mvvm).
+`ToolbarItem` os objetos também podem usar `Command` as `CommandParameter` Propriedades e para reagir à entrada do usuário sem manipuladores de eventos. Para obter mais informações sobre a `ICommand` interface e a vinculação de dados MVVM, veja [ Xamarin.Forms comportamento MVVM MenuItem](~/xamarin-forms/user-interface/menuitem.md#define-menuitem-behavior-with-mvvm).
 
 ## <a name="enable-or-disable-a-toolbaritem-at-runtime"></a>Habilitar ou desabilitar um ToolbarItem em tempo de execução
 
@@ -115,7 +115,7 @@ Para obter mais informações, consulte [habilitar ou desabilitar um MenuItem em
 
 O `ToolbarItemOrder` enum tem `Default` os `Primary` valores, `Secondary` e.
 
-Quando a `Order` propriedade for definida como `Primary` , o `ToolbarItem` objeto será exibido na barra de navegação principal em todas as plataformas. `ToolbarItem`os objetos são priorizados sobre o título da página, que será truncado para liberar espaço para os itens. As capturas de tela a seguir mostram `ToolbarItem` objetos no menu principal no Ios e no Android:
+Quando a `Order` propriedade for definida como `Primary` , o `ToolbarItem` objeto será exibido na barra de navegação principal em todas as plataformas. `ToolbarItem` os objetos são priorizados sobre o título da página, que será truncado para liberar espaço para os itens. As capturas de tela a seguir mostram `ToolbarItem` objetos no menu principal no Ios e no Android:
 
 !["Captura de tela de menu primário do ToolbarItem Android e iOS"](toolbaritem-images/toolbaritem-primary-menu.png "Captura de tela do menu principal do ToolbarItem no Android e iOS")
 
@@ -128,6 +128,6 @@ Quando a `Order` propriedade é definida como `Secondary` , o comportamento vari
 
 ## <a name="related-links"></a>Links relacionados
 
-* [Demonstrações do ToolbarItem](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
-* [Imagens emXamarin.Forms](~/xamarin-forms/user-interface/images.md)
-* [Xamarin.FormsMenuItem](~/xamarin-forms/user-interface/menuitem.md)
+* [Demonstrações do ToolbarItem](/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
+* [Imagens em Xamarin.Forms](~/xamarin-forms/user-interface/images.md)
+* [Xamarin.Forms MenuItem](~/xamarin-forms/user-interface/menuitem.md)

@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d30e1f86e2ef22250b9e25e2352501b6f2c05ade
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: c565467d3c42dbaa9f9d9fc40352efbc964503a9
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939133"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372308"
 ---
 # <a name="navigationpage-bar-translucency-on-ios"></a>NavigationPage bar Translucency no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Essa plataforma específica do iOS é usada para alterar a transparência da barra de navegação em um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) e é consumida em XAML definindo a [`NavigationPage.IsNavigationBarTranslucent`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.IsNavigationBarTranslucentProperty) Propriedade anexada como um `boolean` valor:
 
@@ -53,10 +53,10 @@ O `NavigationPage.On<iOS>` método especifica que essa plataforma específica se
 
 O resultado é que a transparência da barra de navegação pode ser alterada:
 
-![Barra de navegação translúcida específica da plataforma](navigation-bar-translucent-images/translucent-navigation-bar.png)
+![Barra de navegação translúcida Platform-Specific](navigation-bar-translucent-images/translucent-navigation-bar.png)
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e01d661d5481c59175b5a9f747b2a11cb4a6301a
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 03b54f479e9fcc3b332ab45594ac013a4eea6aa3
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71059536"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451452"
 ---
 Parabéns por concluir este tutorial, no qual você aprendeu a:
 
@@ -22,6 +22,6 @@ Para saber mais sobre os conceitos básicos da criação de aplicativos móveis 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PopupsTutorial (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-popupstutorial/)
+- [PopupsTutorial (amostra)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-popupstutorial/)
 - [Exibir pop-ups (guia)](~/xamarin-forms/user-interface/pop-ups.md)
 - [API de Página](xref:Xamarin.Forms.Page)

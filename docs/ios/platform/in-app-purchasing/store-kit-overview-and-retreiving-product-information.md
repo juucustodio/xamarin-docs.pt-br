@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: f05bc534b1220e6659f123a17dc57e02185fdea4
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: b7bfa98f84210c921790989c60a7bda21b7c6bcd
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996338"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435539"
 ---
 # <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Visão geral do StoreKit e recuperação das informações do produto no Xamarin. iOS
 
@@ -80,11 +80,11 @@ A primeira etapa na venda de um produto de compra no aplicativo é exibi-lo: Rec
 
 Independentemente do tipo de produtos que um aplicativo vende (consumível, não consumível ou de um tipo de assinatura), o processo de recuperação de informações do produto para exibição é o mesmo. O código InAppPurchaseSample que acompanha este artigo contém um projeto chamado *itens consumíveis* que demonstra como recuperar informações de produção para exibição. Ele mostra como:
 
-- Crie uma implementação de `SKProductsRequestDelegate` e implemente o `ReceivedResponse` método abstract. O código de exemplo chama essa `InAppPurchaseManager` classe.
-- Verifique com StoreKit para ver se os pagamentos são permitidos (usando `SKPaymentQueue.CanMakePayments` ).
-- Crie uma instância `SKProductsRequest` com as IDs de produto que foram definidas no iTunes Connect. Isso é feito no método do exemplo `InAppPurchaseManager.RequestProductData` .
-- Chame o método Start no `SKProductsRequest` . Isso dispara uma chamada assíncrona para os servidores da loja de aplicativos. O delegado ( `InAppPurchaseManager` ) será chamado com os resultados.
-- O método () do delegado `InAppPurchaseManager` `ReceivedResponse` atualiza a interface do usuário com os dados retornados da loja de aplicativos (preços de produtos & descrições ou mensagens sobre produtos inválidos).
+- Crie uma implementação de  `SKProductsRequestDelegate` e implemente o  `ReceivedResponse` método abstract. O código de exemplo chama essa  `InAppPurchaseManager` classe.
+- Verifique com StoreKit para ver se os pagamentos são permitidos (usando  `SKPaymentQueue.CanMakePayments` ).
+- Crie uma instância  `SKProductsRequest` com as IDs de produto que foram definidas no iTunes Connect. Isso é feito no método do exemplo  `InAppPurchaseManager.RequestProductData` .
+- Chame o método Start no  `SKProductsRequest` . Isso dispara uma chamada assíncrona para os servidores da loja de aplicativos. O delegado ( `InAppPurchaseManager` ) será chamado com os resultados.
+- O método () do delegado `InAppPurchaseManager`  `ReceivedResponse` atualiza a interface do usuário com os dados retornados da loja de aplicativos (preços de produtos & descrições ou mensagens sobre produtos inválidos).
 
 A interação geral é parecida com esta (o **StoreKit** é integrado ao Ios e a **loja de aplicativos** representa os servidores da Apple):
 
@@ -92,7 +92,7 @@ A interação geral é parecida com esta (o **StoreKit** é integrado ao Ios e a
 
 ### <a name="displaying-product-information-example"></a>Exibindo o exemplo de informações do produto
 
-O código de exemplo [InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) *itens consumíveis* demonstra como as informações do produto podem ser recuperadas. A tela principal do exemplo exibe informações para dois produtos que são recuperados da loja de aplicativos:   
+O código de exemplo [InAppPurchaseSample](/samples/xamarin/ios-samples/storekit) *itens consumíveis* demonstra como as informações do produto podem ser recuperadas. A tela principal do exemplo exibe informações para dois produtos que são recuperados da loja de aplicativos:   
 
  [![A tela principal exibe produtos de informações recuperados da loja de aplicativos](store-kit-overview-and-retreiving-product-information-images/image23.png)](store-kit-overview-and-retreiving-product-information-images/image23.png#lightbox)   
 

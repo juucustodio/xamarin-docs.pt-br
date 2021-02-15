@@ -5,18 +5,18 @@ ms.assetid: 34062D84-3E55-4AF7-A688-8551068B1E57
 author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
-ms.date: 01/06/2020
+ms.date: 01/04/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d594e627fed21c3c2a73770313fcae29695370c5
-ms.sourcegitcommit: a658de488a6da916145ed4aa016825565110e767
+ms.openlocfilehash: 3d0ec65b363f727834b12e6a12e832fbcf446ea9
+ms.sourcegitcommit: 995ee23d93e08dceb8754cc6c682cd2f4594345b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86972552"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97972351"
 ---
-# <a name="xamarinessentials-permissions"></a>Xamarin.Essentials: Permissões
+# <a name="no-locxamarinessentials-permissions"></a>Xamarin.Essentials: Permissões
 
 A classe **Permissions** fornece a capacidade de verificar e solicitar permissões de tempo de execução.
 
@@ -44,7 +44,7 @@ var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>()
 
 Um `PermissionException` será gerado se a permissão necessária não for declarada.
 
-É melhor verificar o status da permissão antes de solicitá-la. Cada sistema operacional retornará um estado padrão diferente se o usuário nunca tiver sido solicitado. iOS retorna `Unknown` , enquanto outros retornam `Denied` .
+É melhor verificar o status da permissão antes de solicitá-la. Cada sistema operacional retornará um estado padrão diferente se o usuário nunca tiver sido solicitado. iOS retorna `Unknown` , enquanto outros retornam `Denied` . Se o status for `Granted` , não será necessário fazer outras chamadas. No iOS se o status for `Denied` solicitado que o usuário altere a permissão nas configurações e no Android, você poderá chamar `ShouldShowRationale` para detectar se o usuário já negou a permissão no passado.
 
 ## <a name="requesting-permissions"></a>Solicitando permissões
 
@@ -56,7 +56,7 @@ var status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
 
 Um `PermissionException` será gerado se a permissão necessária não for declarada.
 
-Observe que, em algumas plataformas, uma solicitação de permissão só pode ser ativada uma única vez. Solicitações adicionais devem ser manipuladas pelo desenvolvedor para verificar se uma permissão está no `Denied` estado e solicitar que o usuário a ative manualmente.
+Observe que, em algumas plataformas, uma solicitação de permissão só pode ser ativada uma única vez. Solicitações adicionais devem ser manipuladas pelo desenvolvedor para verificar se uma permissão está no `Denied` estado e solicitar que o usuário a ative manualmente. 
 
 ## <a name="permission-status"></a>Status da permissão
 
@@ -68,9 +68,14 @@ Ao usar `CheckStatusAsync` `RequestAsync` o ou um `PermissionStatus` será retor
 * Concedido-o usuário concedeu permissão ou é concedido automaticamente
 * Restrito-em um estado restrito
 
+
+## <a name="explain-why-permission-is-needed"></a>Explicar por que a permissão é necessária
+
+É uma prática recomendada explicar por que seu aplicativo precisa de uma permissão específica. No iOS, você deve especificar uma cadeia de caracteres que será exibida para o usuário. O Android não tem essa capacidade e também o status de permissão padrão como desabilitado. Isso limita a capacidade de saber se o usuário negou a permissão ou se é a primeira vez que solicita o usuário. O `ShouldShowRationale` método pode ser usado para determinar se uma interface do usuário educacional deve ser exibida. Se o método retornar, `true` isso ocorre porque o usuário negou ou desabilitou a permissão no passado. Outras plataformas sempre retornarão `false` ao chamar esse método.
+
 ## <a name="available-permissions"></a>Permissões disponíveis
 
-Xamarin.EssentialsTenta abstrair o máximo possível de permissões. No entanto, cada sistema operacional tem um conjunto diferente de permissões de tempo de execução. Além disso, há diferenças ao fornecer uma única API para algumas permissões. Aqui está um guia para as permissões disponíveis no momento:
+Xamarin.Essentials Tenta abstrair o máximo possível de permissões. No entanto, cada sistema operacional tem um conjunto diferente de permissões de tempo de execução. Além disso, há diferenças ao fornecer uma única API para algumas permissões. Aqui está um guia para as permissões disponíveis no momento:
 
 Guia de ícones:
 
@@ -101,18 +106,30 @@ Guia de ícones:
 Se uma permissão for marcada como ![sem suporte](~/media/shared/no.png "sem suporte") , ela sempre retornará `Granted` quando for marcada ou solicitada.
 
 ## <a name="general-usage"></a>Uso geral
-Aqui está um padrão de uso geral para lidar com permissões.
+
+O código a seguir apresenta o padrão de uso geral para determinar se uma permissão foi concedida e solicitá-la se não tiver. Esse código usa recursos que estão disponíveis com a Xamarin.Essentials versão 1.6.0 ou posterior.
 
 ```csharp
 public async Task<PermissionStatus> CheckAndRequestLocationPermission()
 {
     var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
-    if (status != PermissionStatus.Granted)
+    
+    if (status == PermissionStatus.Granted)
+        return status;        
+    
+    if (status == PermissionStatus.Denied && DeviceInfo.Platform == DevicePlatform.iOS)
     {
-        status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
+        // Prompt the user to turn on in settings
+        // On iOS once a permission has been denied it may not be requested again from the application
+        return status;
     }
+    
+    if (Permissions.ShouldShowRationale<Permissions.LocationWhenInUse>())
+    {
+        // Prompt the user with additional information as to why the permission is needed
+    }   
 
-    // Additionally could prompt the user to turn on in settings
+    status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
 
     return status;
 }
@@ -192,7 +209,7 @@ Em seguida, você pode chamar sua nova permissão no projeto do Android.
 await Permissions.RequestAsync<ReadWriteStoragePermission>();
 ```
 
-Se você quisesse chamar essa API de seu código compartilhado, poderia criar uma interface e usar um [serviço de dependência](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/dependency-service/) para registrar e obter a implementação.
+Se você quisesse chamar essa API de seu código compartilhado, poderia criar uma interface e usar um [serviço de dependência](../xamarin-forms/app-fundamentals/dependency-service/index.md) para registrar e obter a implementação.
 
 ```csharp
 public interface IReadWritePermission
@@ -235,21 +252,21 @@ if (status != PermissionStatus.Granted)
 
 # <a name="android"></a>[Android](#tab/android)
 
-As permissões devem ter os atributos correspondentes definidos no arquivo de manifesto do Android.
+As permissões devem ter os atributos correspondentes definidos no arquivo de manifesto do Android. O padrão de status de permissão é negado.
 
-Leia mais sobre as [permissões na documentação do Xamarin. Android](https://docs.microsoft.com/xamarin/android/app-fundamentals/permissions) .
+Leia mais sobre as [permissões na documentação do Xamarin. Android](../android/app-fundamentals/permissions.md) .
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-As permissões devem ter uma cadeia de caracteres correspondente no `Info.plist` arquivo. Uma vez que uma permissão é solicitada e um pop-up não será mais exibido se você solicitar a permissão uma segunda vez. Você deve solicitar que o usuário ajuste manualmente a configuração na tela de configurações de aplicativos no iOS.
+As permissões devem ter uma cadeia de caracteres correspondente no `Info.plist` arquivo. Uma vez que uma permissão é solicitada e um pop-up não será mais exibido se você solicitar a permissão uma segunda vez. Você deve solicitar que o usuário ajuste manualmente a configuração na tela de configurações de aplicativos no iOS. O padrão de status de permissão é desconhecido.
 
-Leia mais sobre a documentação de [recursos de privacidade e segurança do IOS](https://docs.microsoft.com/xamarin/ios/app-fundamentals/security-privacy) .
+Leia mais sobre a documentação de [recursos de privacidade e segurança do IOS](../ios/app-fundamentals/security-privacy.md) .
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-As permissões devem ter recursos de correspondência declarados no manifesto do pacote.
+As permissões devem ter recursos de correspondência declarados no manifesto do pacote. O padrão de status de permissão é desconhecido na maioria das instâncias.
 
-Leia mais sobre a documentação da [declaração de capacidade do aplicativo](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) .
+Leia mais sobre a documentação da [declaração de capacidade do aplicativo](/windows/uwp/packaging/app-capability-declarations) .
 
 --------------
 

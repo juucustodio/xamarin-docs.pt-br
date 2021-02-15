@@ -10,16 +10,16 @@ ms.date: 01/21/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fddee777ac74cb3ca50ebd0dca809d4a2f1412ab
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: d0b9b5a568a94208d5e177c88d2e73edb54b735c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918417"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375181"
 ---
 # <a name="add-a-tap-gesture-recognizer"></a>Adicionar um reconhecedor de gestos Tap
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-tapgesture)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/workingwithgestures-tapgesture)
 
 _O gesto de toque é usado para detecção de toque e é implementado com a classe TapGestureRecognizer._
 
@@ -117,6 +117,6 @@ public class TapViewModel : INotifyPropertyChanged
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [TapGesture (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-tapgesture)
+- [TapGesture (amostra)](/samples/xamarin/xamarin-forms-samples/workingwithgestures-tapgesture)
 - [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
 - [TapGestureRecognizer](xref:Xamarin.Forms.TapGestureRecognizer)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 02/02/2018
-ms.openlocfilehash: 55e41c01421e2cd5a0bb5c3a0a9fe2d025c8a223
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: beaa26e0d028fb614baf76ff52d05b80584f14d4
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938041"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435251"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Guia de Início rápido Olá, tvOS
 
@@ -38,7 +38,7 @@ Este artigo apresentará os principais conceitos necessários para criar um apli
 
 Abordaremos os seguintes conceitos:
 
-- **Visual Studio para Mac** – introdução ao Visual Studio para Mac e como criar aplicativos Xamarin. tvOS com ele.
+- **Visual Studio para Mac**  – introdução ao Visual Studio para Mac e como criar aplicativos Xamarin. tvOS com ele.
 - **Anatomia de um aplicativo xamarin. tvOS** – o que é composto por um aplicativo Xamarin. tvOS.
 - **Criar uma interface do usuário** – como usar o para Xamarin designer para IOS para criar uma interface do usuário.
 - **Implantação e teste** – como executar e testar seu aplicativo no simulador de tvOS e no hardware tvOS real.
@@ -78,11 +78,11 @@ Se você estiver familiarizado com a programação do iOS, observará muitas sem
 Vamos dar uma olhada nos arquivos no projeto:
 
 - `Main.cs` – isso contém o ponto de entrada principal do aplicativo. Quando o aplicativo é iniciado, ele contém a primeira classe e método que é executado.
-- `AppDelegate.cs`– Esse arquivo contém a classe de aplicativo principal que é responsável pela escuta de eventos do sistema operacional.
-- `Info.plist`– Esse arquivo contém propriedades de aplicativo, como o nome do aplicativo, ícones, etc.
-- `ViewController.cs`– Essa é a classe que representa a janela principal e controla o ciclo de vida dela.
-- `ViewController.designer.cs`– Esse arquivo contém um código de direcionamento que ajuda você a se integrar à interface do usuário da tela principal.
-- `Main.storyboard`– A interface do usuário para a janela principal. Esse arquivo pode ser criado e mantido pelo Xamarin Designer para iOS.
+- `AppDelegate.cs` – Esse arquivo contém a classe de aplicativo principal que é responsável pela escuta de eventos do sistema operacional.
+- `Info.plist` – Esse arquivo contém propriedades de aplicativo, como o nome do aplicativo, ícones, etc.
+- `ViewController.cs` – Essa é a classe que representa a janela principal e controla o ciclo de vida dela.
+- `ViewController.designer.cs` – Esse arquivo contém um código de direcionamento que ajuda você a se integrar à interface do usuário da tela principal.
+- `Main.storyboard` – A interface do usuário para a janela principal. Esse arquivo pode ser criado e mantido pelo Xamarin Designer para iOS.
 
 Nas seções a seguir, vamos dar uma olhada rápida em alguns desses arquivos. Vamos explorá-las mais detalhadamente mais tarde, mas é uma boa ideia entender suas noções básicas agora.
 
@@ -492,7 +492,7 @@ Este artigo forneceu um início rápido para desenvolver aplicativos para tvOS c
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Exemplos do tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guias de interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

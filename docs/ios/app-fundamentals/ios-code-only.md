@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/03/2018
-ms.openlocfilehash: edd49cc891a86d3323bab319ab811e85f9148640
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 7b6852485fed6cc14c9f9b2e1a303b7c2e576da9
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997092"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433581"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Criando interfaces de usuário do iOS no código no Xamarin. iOS
 
@@ -54,8 +54,8 @@ O modelo de projeto vazio adiciona quatro arquivos ao projeto:
 
 [![Arquivos de projeto](ios-code-only-images/empty-project.w157-sml.png "Arquivos de projeto")](ios-code-only-images/empty-project.w157.png#lightbox)
 
-1. **AppDelegate.cs** -contém uma `UIApplicationDelegate` subclasse, `AppDelegate` , que é usada para manipular eventos de aplicativo do Ios. A janela do aplicativo é criada no `AppDelegate` `FinishedLaunching` método do.
-1. **Main.cs** -contém o ponto de entrada para o aplicativo, que especifica a classe para o `AppDelegate` .
+1. **AppDelegate.cs** -contém uma  `UIApplicationDelegate` subclasse,  `AppDelegate` , que é usada para manipular eventos de aplicativo do Ios. A janela do aplicativo é criada no `AppDelegate`  `FinishedLaunching` método do.
+1. **Main.cs** -contém o ponto de entrada para o aplicativo, que especifica a classe para o  `AppDelegate` .
 1. **Info. plist** -arquivo de lista de propriedades que contém informações de configuração de aplicativo.
 1. **Intitulars. plist** – arquivo de lista de propriedades que contém informações sobre os recursos e as permissões do aplicativo.
 
@@ -234,7 +234,7 @@ namespace CodeOnlyDemo
 
 ## <a name="initializing-the-view"></a>Inicializando a exibição
 
-`UIViewController`contém um método chamado `ViewDidLoad` que é chamado quando o controlador de exibição é carregado pela primeira vez na memória. Esse é um local apropriado para fazer a inicialização do modo de exibição, como definir suas propriedades.
+`UIViewController` contém um método chamado `ViewDidLoad` que é chamado quando o controlador de exibição é carregado pela primeira vez na memória. Esse é um local apropriado para fazer a inicialização do modo de exibição, como definir suas propriedades.
 
 Por exemplo, o código a seguir adiciona um botão e um manipulador de eventos para enviar por push um novo controlador de exibição para a pilha de navegação quando o botão é pressionado:
 
@@ -498,7 +498,7 @@ namespace CodeOnlyDemo
 
 ### <a name="drawing-in-a-uiview"></a>Desenho em um UIView
 
-Cada `UIView` tem um `Draw` método que é chamado pelo sistema quando ele precisa ser desenhado. `Draw`Nunca deve ser chamado diretamente. Ele é chamado pelo sistema durante o processamento do loop de execução. Na primeira vez que o loop de execução é adicionado após uma exibição ser adicionada à hierarquia de exibição, seu `Draw` método é chamado. As chamadas subsequentes `Draw` ocorrem quando a exibição é marcada como precisa ser desenhada chamando `SetNeedsDisplay` ou `SetNeedsDisplayInRect` na exibição.
+Cada `UIView` tem um `Draw` método que é chamado pelo sistema quando ele precisa ser desenhado. `Draw` Nunca deve ser chamado diretamente. Ele é chamado pelo sistema durante o processamento do loop de execução. Na primeira vez que o loop de execução é adicionado após uma exibição ser adicionada à hierarquia de exibição, seu `Draw` método é chamado. As chamadas subsequentes `Draw` ocorrem quando a exibição é marcada como precisa ser desenhada chamando `SetNeedsDisplay` ou `SetNeedsDisplayInRect` na exibição.
 
 Podemos adicionar o código de desenho à nossa exibição adicionando esse código dentro do `Draw` método substituído, conforme mostrado abaixo:
 
@@ -539,7 +539,7 @@ Para usar o `CircleView` que acabamos de criar, podemos adicioná-lo como uma su
 
 ### <a name="loading-a-view"></a>Carregando uma exibição
 
- `UIViewController`tem um método chamado `LoadView` que é chamado pelo controlador para criar sua exibição. Esse é um local apropriado para criar uma exibição e atribuí-la à propriedade do controlador `View` .
+ `UIViewController` tem um método chamado `LoadView` que é chamado pelo controlador para criar sua exibição. Esse é um local apropriado para criar uma exibição e atribuí-la à propriedade do controlador `View` .
 
 Primeiro, precisamos de um controlador, portanto, crie uma nova classe vazia chamada `CircleController` .
 
@@ -629,4 +629,4 @@ Este artigo abordou como desenvolver aplicativos iOS programaticamente no Visual
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [SimpleLogin (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplelogin)
+- [SimpleLogin (exemplo)](/samples/xamarin/ios-samples/simplelogin)

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2018
-ms.openlocfilehash: 2676565a62b4b9d4414e9a69737b287bcc992c0b
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: e3003aa06f310e9dee962ff6f4ad12c2de9263e8
+ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572007"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92928614"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparar um aplicativo para lançamento
 
@@ -39,7 +39,7 @@ Cada uma dessas etapas é descrita abaixo em mais detalhes.
 
 ## <a name="specify-the-application-icon"></a>Especificar o ícone do aplicativo
 
-É altamente recomendável que cada aplicativo Xamarin.Android especifique um ícone do aplicativo. Alguns mercados de aplicativo não permitirão que um aplicativo Android seja ser publicado sem um. O atributo `Icon` propriedade do `Application` é usado para especificar o ícone do aplicativo de um projeto Xamarin.Android.
+É altamente recomendável que cada aplicativo Xamarin. Android especifique um ícone de aplicativo. Alguns mercados de aplicativo não permitirão que um aplicativo Android seja ser publicado sem um. O atributo `Icon` propriedade do `Application` é usado para especificar o ícone do aplicativo de um projeto Xamarin.Android.
 
 <!-- markdownlint-disable MD001 -->
 
@@ -51,13 +51,13 @@ No Visual Studio 2017 e posteriores, especifique o ícone do aplicativo por meio
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-No Visual Studio para Mac, também é possível especificar o ícone do aplicativo usando a seção **Aplicativo Android** de **Opções de Projeto**, conforme mostrado na seguinte captura de tela:
+No Visual Studio para Mac, também é possível especificar o ícone do aplicativo usando a seção **Aplicativo Android** de **Opções de Projeto** , conforme mostrado na seguinte captura de tela:
 
 [![Definir o ícone do aplicativo](images/xs/01-application-icon-sml.png)](images/xs/01-application-icon.png#lightbox)
 
 -----
 
-Nesses exemplos, `@drawable/icon` refere-se a um arquivo de ícone localizado em **Resources/drawable/icon.png** (a extensão **.png** não está incluída no nome do recurso). Esse atributo também pode ser declarado no arquivo **Properties\AssemblyInfo.cs**, conforme mostrado neste snippet de exemplo:
+Nesses exemplos, `@drawable/icon` refere-se a um arquivo de ícone localizado em **Resources/drawable/icon.png** (a extensão **.png** não está incluída no nome do recurso). Esse atributo também pode ser declarado no arquivo **Properties\AssemblyInfo.cs** , conforme mostrado neste snippet de exemplo:
 
 ```csharp
 [assembly: Application(Icon = "@drawable/icon")]
@@ -69,15 +69,15 @@ Normalmente, `using Android.App` é declarado na parte superior de **AssemblyInf
 
 ## <a name="version-the-application"></a>Controle de versão do aplicativo
 
-Controle de versão é importante para a distribuição e manutenção de aplicativos Android. Sem algum tipo de controle de versão em vigor, é difícil determinar se ou como um aplicativo deve ser atualizado. Para ajudar no controle de versão, o Android reconhece dois tipos diferentes de informação: 
+Controle de versão é importante para a distribuição e manutenção de aplicativos Android. Sem algum tipo de controle de versão em vigor, é difícil determinar se ou como um aplicativo deve ser atualizado. Para ajudar no controle de versão, o Android reconhece dois tipos diferentes de informação:
 
-- **Número de versão** &ndash; Um valor inteiro (usado internamente pelo Android e o aplicativo) que representa a versão do aplicativo. A maioria dos aplicativos começa com esse valor é definido como 1 e, em seguida, ele é incrementado a cada build. Esse valor não tem relação ou afinidade com o atributo de nome de versão (veja abaixo). Aplicativos e serviços de publicação não devem exibir esse valor para os usuários. Esse valor é armazenado no arquivo **AndroidManifest.xml** como `android:versionCode`. 
+- **Número de versão** &ndash; Um valor inteiro (usado internamente pelo Android e o aplicativo) que representa a versão do aplicativo. A maioria dos aplicativos começa com esse valor é definido como 1 e, em seguida, ele é incrementado a cada build. Esse valor não tem relação ou afinidade com o atributo de nome de versão (veja abaixo). Aplicativos e serviços de publicação não devem exibir esse valor para os usuários. Esse valor é armazenado no arquivo **AndroidManifest.xml** como `android:versionCode`.
 
-- **Nome da versão** &ndash; Uma cadeia de caracteres usada apenas para comunicação de informações ao usuário sobre a versão do aplicativo (como instalado em um dispositivo específico). O nome da versão será exibido aos usuários ou no Google Play. Essa cadeia de caracteres não é usada internamente pelo Android. O nome da versão pode ser qualquer valor de cadeia de caracteres que ajude um usuário a identificar o build instalado no dispositivo. Esse valor é armazenado no arquivo **AndroidManifest.xml** como `android:versionName`. 
+- **Nome da versão** &ndash; Uma cadeia de caracteres usada apenas para comunicação de informações ao usuário sobre a versão do aplicativo (como instalado em um dispositivo específico). O nome da versão será exibido aos usuários ou no Google Play. Essa cadeia de caracteres não é usada internamente pelo Android. O nome da versão pode ser qualquer valor de cadeia de caracteres que ajude um usuário a identificar o build instalado no dispositivo. Esse valor é armazenado no arquivo **AndroidManifest.xml** como `android:versionName`.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-No Visual Studio, esses valores podem ser definidos na seção **Manifesto Android** do projeto **Propriedades**, conforme mostrado na seguinte captura de tela:
+No Visual Studio, esses valores podem ser definidos na seção **Manifesto Android** do projeto **Propriedades** , conforme mostrado na seguinte captura de tela:
 
 [![Definir o número de versão](images/vs/02-versioning-sml.png)](images/vs/02-versioning.png#lightbox)
 
@@ -97,7 +97,7 @@ APKs do Xamarin.Android podem ficar menores por meio de uma combinação do vinc
 
 ### <a name="configure-the-linker"></a>Configurar o vinculador
 
-O modo Versão desativa o runtime compartilhado e ativa a vinculação para que o aplicativo seja fornecido apenas com as partes necessárias do Xamarin.Android em runtime. O *vinculador* no Xamarin.Android usa análise estática para determinar quais assemblies, tipos e membros de tipo são usados ou referenciados por um aplicativo Xamarin.Android. O vinculador, em seguida, descarta todos os assemblies, tipos e membros que não são usados (ou referenciados). Isso pode resultar em uma redução significativa no tamanho do pacote. Considere o exemplo [HelloWorld](~/android/deploy-test/linker.md), que apresenta uma redução 83% no tamanho final de seu APK: 
+O modo Versão desativa o runtime compartilhado e ativa a vinculação para que o aplicativo seja fornecido apenas com as partes necessárias do Xamarin.Android em runtime. O *vinculador* no Xamarin.Android usa análise estática para determinar quais assemblies, tipos e membros de tipo são usados ou referenciados por um aplicativo Xamarin.Android. O vinculador, em seguida, descarta todos os assemblies, tipos e membros que não são usados (ou referenciados). Isso pode resultar em uma redução significativa no tamanho do pacote. Considere o exemplo [HelloWorld](~/android/deploy-test/linker.md), que apresenta uma redução 83% no tamanho final de seu APK:
 
 - Configuração: Nenhum &ndash; Xamarin.Android 4.2.5 Tamanho = 17,4 MB.
 
@@ -113,14 +113,14 @@ O menu suspenso **Vinculação** fornece as seguintes opções para controlar o 
 
 - **Nenhum** &ndash; Isso desativa o vinculador; nenhuma vinculação será executada.
 
-- **Apenas Assemblies do SDK** &ndash; Isso vinculará apenas os assemblies [exigidos pelo Xamarin.Android](~/cross-platform/internals/available-assemblies.md). 
+- **Apenas Assemblies do SDK** &ndash; Isso vinculará apenas os assemblies [exigidos pelo Xamarin.Android](~/cross-platform/internals/available-assemblies.md).
     Outros assemblies não serão vinculados.
 
 - **Assemblies de SDK e de Usuário** &ndash; Isso vinculará todos os assemblies exigidos pelo aplicativo, e não apenas os exigidos pelo Xamarin.Android.
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-Defina as opções do vinculador por meio da guia **Vinculador** na seção **Build do Android** de **Opções de Projeto**, conforme mostrado na seguinte captura de tela:
+Defina as opções do vinculador por meio da guia **Vinculador** na seção **Build do Android** de **Opções de Projeto** , conforme mostrado na seguinte captura de tela:
 
 [![Opções do vinculador](images/xs/03-linking-sml.png)](images/xs/03-linking.png#lightbox)
 
@@ -138,11 +138,12 @@ A vinculação pode produzir alguns efeitos colaterais indesejados, portanto, é
 
 ### <a name="proguard"></a>ProGuard
 
-*ProGuard* é uma ferramenta de SDK do Android que vincula e ofusca o código Java. O ProGuard normalmente é usado para criar aplicativos menores, reduzindo a superfície de grandes bibliotecas incluídas (como Google Play Services) em seu APK. O ProGuard remove códigos de bytes Java não utilizados, o que torna o aplicativo menor. Por exemplo, usar o ProGuard em pequenos aplicativos Xamarin.Android geralmente alcança uma redução de 24% no tamanho &ndash; usar o ProGuard em aplicativos maiores com várias dependências de biblioteca geralmente alcança uma redução de tamanho ainda maior. 
+*ProGuard* é uma ferramenta de SDK do Android que vincula e ofusca o código Java.
+O ProGuard normalmente é usado para criar aplicativos menores, reduzindo a superfície de grandes bibliotecas incluídas (como Google Play Services) em seu APK. O ProGuard remove códigos de bytes Java não utilizados, o que torna o aplicativo menor. Por exemplo, usar o ProGuard em pequenos aplicativos Xamarin.Android geralmente alcança uma redução de 24% no tamanho &ndash; usar o ProGuard em aplicativos maiores com várias dependências de biblioteca geralmente alcança uma redução de tamanho ainda maior.
 
-O ProGuard é não uma alternativa ao vinculador do Xamarin.Android. O vinculador do Xamarin.Android vincula código *gerenciado*, enquanto o ProGuard vincula código de bytes Java. O processo de build primeiro usa o vinculador do Xamarin.Android para otimizar o código (C#) gerenciado no aplicativo e posteriormente usa o ProGuard (se habilitado) para otimizar o APK no código de bytes Java. 
+O ProGuard é não uma alternativa ao vinculador do Xamarin.Android. O vinculador do Xamarin.Android vincula código *gerenciado* , enquanto o ProGuard vincula código de bytes Java. O processo de build primeiro usa o vinculador do Xamarin.Android para otimizar o código (C#) gerenciado no aplicativo e posteriormente usa o ProGuard (se habilitado) para otimizar o APK no código de bytes Java.
 
-Quando **Habilitar ProGuard** está marcado, o Xamarin.Android executa a ferramenta ProGuard no APK resultante. Um arquivo de configuração do ProGuard é gerado e usado pelo ProGuard no momento da build. O Xamarin. Android também dá suporte a ações de build personalizadas em *ProguardConfiguration*. Você pode adicionar um arquivo de configuração ProGuard personalizado ao projeto, clicar com o botão direito do mouse nele e selecioná-lo como uma ação de build, conforme mostrado neste exemplo: 
+Quando **Habilitar ProGuard** está marcado, o Xamarin.Android executa a ferramenta ProGuard no APK resultante. Um arquivo de configuração do ProGuard é gerado e usado pelo ProGuard no momento da build. O Xamarin. Android também dá suporte a ações de build personalizadas em *ProguardConfiguration* . Você pode adicionar um arquivo de configuração ProGuard personalizado ao projeto, clicar com o botão direito do mouse nele e selecioná-lo como uma ação de build, conforme mostrado neste exemplo:
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -154,7 +155,7 @@ Quando **Habilitar ProGuard** está marcado, o Xamarin.Android executa a ferrame
 
 -----
 
-O ProGuard é desabilitado por padrão. A opção **Habilitar o ProGuard** só está disponível quando o projeto é definido para o modo **Versão**. Todas as ações de build do ProGuard serão ignoradas, a menos que **Habilitar ProGuard** esteja marcada. A configuração de ProGuard do Xamarin.Android não ofusca o APK e não é possível habilitar a ofuscação, mesmo com arquivos de configuração personalizados. Se você quiser usar ofuscação, consulte [Proteção de aplicativo com o Dotfuscator](~/android/deploy-test/release-prep/index.md#dotfuscator). 
+O ProGuard é desabilitado por padrão. A opção **Habilitar o ProGuard** só está disponível quando o projeto é definido para o modo **Versão** . Todas as ações de build do ProGuard serão ignoradas, a menos que **Habilitar ProGuard** esteja marcada. A configuração de ProGuard do Xamarin.Android não ofusca o APK e não é possível habilitar a ofuscação, mesmo com arquivos de configuração personalizados. Se você quiser usar ofuscação, consulte [Proteção de aplicativo com o Dotfuscator](~/android/deploy-test/release-prep/index.md#dotfuscator).
 
 Para obter mais informações sobre como usar a ferramenta do ProGuard, consulte [ProGuard](~/android/deploy-test/release-prep/proguard.md).
 
@@ -166,12 +167,12 @@ Para obter mais informações sobre como usar a ferramenta do ProGuard, consulte
 
 ### <a name="disable-debugging"></a>Desabilitar a depuração
 
-Durante o desenvolvimento de um aplicativo Android, a depuração é realizada com o uso do JDWP *(Java Debug Wire Protocol)*. Esta é uma tecnologia que permite que ferramentas como **adb** se comuniquem com uma JVM para fins de depuração. O JDWP é ativado por padrão para compilações de depuração de um aplicativo Xamarin.Android. Embora JDWP seja importante durante o desenvolvimento, pode representar um problema de segurança em aplicativos lançados. 
+Durante o desenvolvimento de um aplicativo Android, a depuração é realizada com o uso do JDWP *(Java Debug Wire Protocol)* . Esta é uma tecnologia que permite que ferramentas como **adb** se comuniquem com uma JVM para fins de depuração. O JDWP é ativado por padrão para compilações de depuração de um aplicativo Xamarin.Android. Embora JDWP seja importante durante o desenvolvimento, pode representar um problema de segurança em aplicativos lançados.
 
 > [!IMPORTANT]
 > Sempre desabilite o estado de depuração em um aplicativo lançado na medida do possível (via JDWP) para obter acesso completo ao processo de Java e executar código arbitrário no contexto do aplicativo se esse estado de depuração não estiver desabilitado.
 
-O manifesto do Android contém o atributo `android:debuggable`, que controla se o aplicativo pode ou não ser depurado. Ele é considerado uma prática recomendada para definir o atributo `android:debuggable` como `false`. A maneira mais simples de fazer isso é adicionar uma instrução de compilação condicional ao **AssemblyInfo.cs**: 
+O manifesto do Android contém o atributo `android:debuggable`, que controla se o aplicativo pode ou não ser depurado. Ele é considerado uma prática recomendada para definir o atributo `android:debuggable` como `false`. A maneira mais simples de fazer isso é adicionar uma instrução de compilação condicional ao **AssemblyInfo.cs** :
 
 ```csharp
 #if DEBUG
@@ -181,7 +182,7 @@ O manifesto do Android contém o atributo `android:debuggable`, que controla se 
 #endif
 ```
 
-Observe que as compilações de depuração definem automaticamente algumas permissões para facilitar a depuração (como **Internet** e **ReadExternalStorage**). Compilações de versão, no entanto, usam apenas permissões explicitamente configuradas. Se você achar que alternar para o build de versão faz com que o aplicativo perca uma permissão que estava disponível no build de depuração, verifique se habilitou essa permissão explicitamente na lista **Permissões necessárias** conforme descrito em [Permissões](~/android/app-fundamentals/permissions.md). 
+Observe que as compilações de depuração definem automaticamente algumas permissões para facilitar a depuração (como **Internet** e **ReadExternalStorage** ). Compilações de versão, no entanto, usam apenas permissões explicitamente configuradas. Se você achar que alternar para o build de versão faz com que o aplicativo perca uma permissão que estava disponível no build de depuração, verifique se habilitou essa permissão explicitamente na lista **Permissões necessárias** conforme descrito em [Permissões](~/android/app-fundamentals/permissions.md).
 
 <a name="dotfuscator" id="dotfuscator"></a>
 
@@ -193,7 +194,7 @@ Mesmo com [depuração desabilitada](#Disable_Debugging), os invasores ainda pod
 O [Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) poderá ser usado para ofuscar o código gerenciado e injetar código de detecção do estado de segurança de runtime em um aplicativo Xamarin.Android no momento da compilação para detectar e responder se o aplicativo estiver em execução em um dispositivo desbloqueado por rooting.
 
 O Dotfuscator CE está incluído no Visual Studio 2017.
-Para usar o Dotfuscator, clique em **Ferramentas > Proteção PreEmptive – Dotfuscator**.
+Para usar o Dotfuscator, clique em **Ferramentas > Proteção PreEmptive – Dotfuscator** .
 
 Para configurar o Dotfuscator CE, consulte [Using Dotfuscator Community Edition with Xamarin](https://www.preemptive.com/obfuscating-xamarin-with-dotfuscator) (Como usar o Dotfuscator Community Edition com o Xamarin).
 Quando estiver configurado, o Dotfuscator CE protegerá automaticamente cada build criado.
@@ -245,13 +246,13 @@ As propriedades de empacotamento podem ser definidas na seção **Opções do An
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-As propriedades de empacotamento podem ser definidas em **Opções de Projeto**, conforme mostrado na seguinte captura de tela:
+As propriedades de empacotamento podem ser definidas em **Opções de Projeto** , conforme mostrado na seguinte captura de tela:
 
 [![Propriedades de empacotamento](images/xs/04-packaging-sml.png)](images/xs/04-packaging.png#lightbox)
 
 -----
 
-Muitas dessas propriedades, como **Usar Runtime Compartilhado** e **Usar Implantação Rápida**, destinam-se ao modo de Depuração. No entanto, quando o aplicativo é configurado para modo Versão, existem outras configurações que determinam como o aplicativo é [otimizado para velocidade de execução e tamanho](#shrink_apk), [como é protegido contra violação](#protect_app) e como pode ser empacotado para dar suporte a restrições de tamanho e arquiteturas diferentes.
+Muitas dessas propriedades, como **Usar Runtime Compartilhado** e **Usar Implantação Rápida** , destinam-se ao modo de Depuração. No entanto, quando o aplicativo é configurado para modo Versão, existem outras configurações que determinam como o aplicativo é [otimizado para velocidade de execução e tamanho](#shrink_apk), [como é protegido contra violação](#protect_app) e como pode ser empacotado para dar suporte a restrições de tamanho e arquiteturas diferentes.
 
 ### <a name="specify-supported-architectures"></a>Especificar arquiteturas com suporte
 
@@ -259,11 +260,11 @@ Ao preparar um aplicativo Xamarin.Android para a versão, é necessário especif
 
 ### <a name="generate-one-package-apk-per-selected-abi"></a>Gerar um pacote (. APK) por ABI selecionado
 
-Quando essa opção é habilitada, um APK é criado para cada ABI com suporte (selecionado na guia **Avançado**, conforme descrito em [arquiteturas de CPU](~/android/app-fundamentals/cpu-architectures.md)) em vez de um único e grande APK para todas as ABIs com suporte. Essa opção só está disponível quando o projeto é configurado para o modo Versão e é desabilitada por padrão.
+Quando essa opção é habilitada, um APK é criado para cada ABI com suporte (selecionado na guia **Avançado** , conforme descrito em [arquiteturas de CPU](~/android/app-fundamentals/cpu-architectures.md)) em vez de um único e grande APK para todas as ABIs com suporte. Essa opção só está disponível quando o projeto é configurado para o modo Versão e é desabilitada por padrão.
 
 ### <a name="multi-dex"></a>Multi-Dex
 
-Quando a opção **Habilitar Multi-Dex** é habilitada, as ferramentas de SDK do Android são usadas para ignorar o limite de método de 65K do formato de arquivo **.dex**. A limitação do método de 65K baseia-se no número de métodos aos quais um aplicativo _faz referência_ (inclusive aqueles em todas as bibliotecas das quais o aplicativo depende) &ndash; e não se baseia no número de métodos _gravados no código-fonte_. Se um aplicativo apenas definir alguns métodos, mas usar muitos (ou grandes bibliotecas), é possível que o limite de 65K seja excedido.
+Quando a opção **Habilitar Multi-Dex** é habilitada, as ferramentas de SDK do Android são usadas para ignorar o limite de método de 65K do formato de arquivo **.dex** . A limitação do método de 65K baseia-se no número de métodos aos quais um aplicativo _faz referência_ (inclusive aqueles em todas as bibliotecas das quais o aplicativo depende) &ndash; e não se baseia no número de métodos _gravados no código-fonte_ . Se um aplicativo apenas definir alguns métodos, mas usar muitos (ou grandes bibliotecas), é possível que o limite de 65K seja excedido.
 
 É possível que um aplicativo não use todos os métodos em cada biblioteca referenciada, portanto, é possível que uma ferramenta como o ProGuard (veja acima) possa remover métodos não utilizados do código. A prática recomendada será habilitar **Habilitar Multi-Dex** somente se for absolutamente necessário, ou seja, o aplicativo ainda faz referência a mais métodos Java de 65K, mesmo após usar o ProGuard.
 
@@ -291,7 +292,7 @@ Depois de concluir todas as etapas acima, o aplicativo estará pronto para build
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-Depois de concluir todas as etapas acima, compile o aplicativo (selecione **Compilar > Compilar Tudo**) para verificar se o build é bem-sucedido no modo Liberação. Observe que esta etapa ainda não produz um APK.
+Depois de concluir todas as etapas acima, compile o aplicativo (selecione **Compilar > Compilar Tudo** ) para verificar se o build é bem-sucedido no modo Liberação. Observe que esta etapa ainda não produz um APK.
 
 -----
 
@@ -309,21 +310,21 @@ Para iniciar o processo de publicação, clique com o botão direito do mouse no
 
 [![Gerenciador de arquivos](images/vs/08-archive-manager-sml.png)](images/vs/08-archive-manager.png#lightbox)
 
-Outra maneira de criar um arquivo morto é clicar com o botão direito do mouse na solução na **Gerenciador de soluções** e selecionar **arquivar tudo...**, que compila a solução e arquiva todos os projetos do Xamarin que podem gerar um arquivo morto:
+Outra maneira de criar um arquivo morto é clicar com o botão direito do mouse na solução na **Gerenciador de soluções** e selecionar **arquivar tudo...** , que compila a solução e arquiva todos os projetos do Xamarin que podem gerar um arquivo morto:
 
 [![Arquivar tudo](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png#lightbox)
 
-Tanto **Arquivar** quanto **Arquivar Tudo** inicializam automaticamente o **Gerenciador de Arquivo Morto**. Para iniciar o **Gerenciador de Arquivo Morto** diretamente, clique no item de menu **Ferramentas > Gerenciador de Arquivo Morto...**:
+Tanto **Arquivar** quanto **Arquivar Tudo** inicializam automaticamente o **Gerenciador de Arquivo Morto** . Para iniciar o **Gerenciador de Arquivo Morto** diretamente, clique no item de menu **Ferramentas > Gerenciador de Arquivo Morto...** :
 
 [![Iniciar o Gerenciador de arquivos](images/vs/10-launch-archive-manager-sml.png)](images/vs/10-launch-archive-manager.png#lightbox)
 
-Acesse os arquivos mortos da solução a qualquer momento clicando com o botão direito do mouse no nó **Solução** e selecionando **Exibir Arquivos Mortos**:
+Acesse os arquivos mortos da solução a qualquer momento clicando com o botão direito do mouse no nó **Solução** e selecionando **Exibir Arquivos Mortos** :
 
 [![Exibir arquivos mortos](images/vs/11-view-archives-sml.png)](images/vs/11-view-archives.png#lightbox)
 
 ### <a name="the-archive-manager"></a>O Gerenciador de Arquivo Morto
 
-O **Gerenciador de Arquivo Morto** é composto por um painel de **Lista de Soluções**, uma **Lista de Arquivos Mortos** e um **Painel de Detalhes**:
+O **Gerenciador de Arquivo Morto** é composto por um painel de **Lista de Soluções** , uma **Lista de Arquivos Mortos** e um **Painel de Detalhes** :
 
 [![Painéis do Gerenciador de arquivos](images/vs/12-archive-manager-detail-sml.png)](images/vs/12-archive-manager-detail.png#lightbox)
 
@@ -335,7 +336,7 @@ A **Lista de Soluções** exibe todas as soluções que têm pelo menos um proje
 
 O **Lista de Arquivos Mortos** exibe a lista de todos os arquivos mortos para a solução selecionada. O **Lista de Arquivos Mortos** inclui as seguintes seções:
 
-- **Nome da solução selecionada** &ndash; Exibe o nome da solução selecionada na **Lista de Soluções**. Todas as informações mostradas na **Lista Arquivos Mortos** refere-se a essa solução selecionada.
+- **Nome da solução selecionada** &ndash; Exibe o nome da solução selecionada na **Lista de Soluções** . Todas as informações mostradas na **Lista Arquivos Mortos** refere-se a essa solução selecionada.
 - **Filtro de Plataformas** &ndash; Esse campo torna possível filtrar arquivos por tipo de plataforma (por exemplo, iOS ou Android).
 - **Itens do Arquivo Morto** &ndash; Lista de arquivos mortos para a solução selecionada. Cada item da lista inclui o nome do projeto, a data de criação e a plataforma. Também pode mostrar informações adicionais, como o progresso quando um item está sendo arquivado ou publicado.
 
@@ -359,7 +360,7 @@ A caixa de diálogo **Canal de Distribuição** mostra informações sobre o apl
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-Para começar o processo de publicação, selecione **Compilar > Arquivo Morto para Publicação**:
+Para começar o processo de publicação, selecione **Compilar > Arquivo Morto para Publicação** :
 
 [![Arquivo morto para publicação](images/xs/07-archive-for-publishing-sml.png)](images/xs/07-archive-for-publishing.png#lightbox)
 
@@ -367,7 +368,7 @@ Para começar o processo de publicação, selecione **Compilar > Arquivo Morto p
 
 [![Exibição de arquivo morto](images/xs/08-archives-view-sml.png)](images/xs/08-archives-view.png#lightbox)
 
-Neste exemplo, o **Gerenciador de Arquivo Morto** lista somente um aplicativo arquivado, **MyApp**. Observe que o campo de comentários permite salvar um breve comentário com o arquivo morto. Para publicar uma versão arquivada de um aplicativo Xamarin. Android, selecione o aplicativo no **Gerenciador de arquivamento** e clique em **assinar e distribuir...** conforme mostrado acima. A caixa de diálogo **Assinar e Distribuir** resultante apresenta duas opções:
+Neste exemplo, o **Gerenciador de Arquivo Morto** lista somente um aplicativo arquivado, **MyApp** . Observe que o campo de comentários permite salvar um breve comentário com o arquivo morto. Para publicar uma versão arquivada de um aplicativo Xamarin. Android, selecione o aplicativo no **Gerenciador de arquivamento** e clique em **assinar e distribuir...** conforme mostrado acima. A caixa de diálogo **Assinar e Distribuir** resultante apresenta duas opções:
 
 [![Assinar e distribuir](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png#lightbox)
 
@@ -380,7 +381,7 @@ Aqui, é possível selecionar o canal de distribuição:
 
 -----
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Dispositivos de Vários Núcleos e Xamarin.Android](~/android/deploy-test/multicore-devices.md)
 - [Arquitetura de CPU](~/android/app-fundamentals/cpu-architectures.md)

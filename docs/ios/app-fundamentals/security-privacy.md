@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 9c2d00051d1e51db4523a484a0c187016ea9061f
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: f665d2de767721cd2f5eedd45653e36c01395569
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84567821"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435277"
 ---
 # <a name="ios-security-and-privacy-features"></a>Recursos de privacidade e segurança do iOS
 
@@ -116,6 +116,6 @@ Para definir qualquer uma das chaves de privacidade, faça o seguinte:
 
 Este artigo abordou as alterações de segurança e privacidade feitas pela Apple no iOS 10 e como elas afetam um aplicativo Xamarin. iOS.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Amostras do iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Amostras do iOS 10](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)

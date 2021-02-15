@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 71e64f7b8286f22040a802336e9be756d932c0cd
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 92631f66f729e2d1519bf577accb6f1ce9c1e1b5
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936533"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373582"
 ---
 # <a name="basic-animation-in-skiasharp"></a>Animação básica no SkiaSharp
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Descubra como animar seus elementos gráficos do SkiaSharp_
 
@@ -27,7 +27,7 @@ Você pode animar elementos gráficos do SkiaSharp no fazendo com que Xamarin.Fo
 
 ![Vários círculos concêntricos aparentemente se expandim do centro](animation-images/animationexample.png)
 
-A página de **elipse Pulsating** no programa [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) anima os dois eixos de uma elipse para que pareça ser Pulsating e você pode até mesmo controlar a taxa dessa pulsation. O arquivo [**PulsatingEllipsePage. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) instancia um Xamarin.Forms `Slider` e um `Label` para exibir o valor atual do controle deslizante. Essa é uma maneira comum de integrar um `SKCanvasView` com outras Xamarin.Forms exibições:
+A página de **elipse Pulsating** no programa [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) anima os dois eixos de uma elipse para que pareça ser Pulsating e você pode até mesmo controlar a taxa dessa pulsation. O arquivo [**PulsatingEllipsePage. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) instancia um Xamarin.Forms `Slider` e um `Label` para exibir o valor atual do controle deslizante. Essa é uma maneira comum de integrar um `SKCanvasView` com outras Xamarin.Forms exibições:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -146,7 +146,7 @@ O método calcula um raio máximo com base no tamanho da área de exibição e u
 
 [![Captura de tela tripla da página de elipse Pulsating](animation-images/pulsatingellipse-small.png)](animation-images/pulsatingellipse-large.png#lightbox "Captura de tela tripla da página de elipse Pulsating")
 
-Observe que o `SKPaint` objeto é criado em um `using` bloco. Como muitas classes SkiaSharp `SKPaint` deriva de `SKObject` , que deriva de `SKNativeObject` , que implementa a [`IDisposable`](xref:System.IDisposable) interface. `SKPaint`Substitui o `Dispose` método para liberar recursos não gerenciados.
+Observe que o `SKPaint` objeto é criado em um `using` bloco. Como muitas classes SkiaSharp `SKPaint` deriva de `SKObject` , que deriva de `SKNativeObject` , que implementa a [`IDisposable`](xref:System.IDisposable) interface. `SKPaint` Substitui o `Dispose` método para liberar recursos não gerenciados.
 
  Colocar `SKPaint` em um `using` bloco garante que `Dispose` seja chamado no final do bloco para liberar esses recursos não gerenciados. Isso acontece mesmo quando a memória usada pelo `SKPaint` objeto é liberada pelo coletor de lixo do .net, mas no código de animação, é melhor ser proativa na liberação de memória de forma mais ordenada.
 
@@ -251,5 +251,5 @@ O resultado é que a imagem tem a mesma aparência quando `t` é igual a 0 `t` ,
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: 89b5dc2ae296b9e9033c45bf93c87de83054f721
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: f7f5d7daed42eeb3a36dd9b0d09b31a06b0de142
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996481"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457946"
 ---
 # <a name="cross-platform-performance"></a>Desempenho de plataforma cruzada
 
@@ -207,7 +207,7 @@ double Compute(double x)
 
 A inicialização lenta ocorre na primeira vez que a propriedade `Lazy<T>.Value` é acessada. O tipo encapsulado é criado e retornado no primeiro acesso, então é armazenado para eventuais acessos futuros.
 
-Para obter mais informações sobre a inicialização lenta, veja [Inicialização lenta](https://msdn.microsoft.com/library/dd997286(v=vs.110).aspx).
+Para obter mais informações sobre a inicialização lenta, veja [Inicialização lenta](/dotnet/framework/performance/lazy-initialization).
 
 <a name="async"></a>
 

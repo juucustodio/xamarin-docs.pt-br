@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 0de7fcd5af9e0338679893b3d7fde073c5274365
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 30709b9b75c18f954135e950b95094f9ee2d71ac
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84567704"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435269"
 ---
 # <a name="threading-in-xamarinios"></a>Threading no Xamarin. iOS
 
 O tempo de execução do Xamarin. iOS fornece aos desenvolvedores acesso às APIs de Threading do .NET, explicitamente ao usar threads ( `System.Threading.Thread, System.Threading.ThreadPool` ) e implicitamente ao usar os padrões de delegado assíncrono ou os métodos BeginXxx, bem como o intervalo completo de APIs que dão suporte à biblioteca paralela de tarefas.
 
-O Xamarin recomenda enfaticamente que você use a TPL ( [biblioteca paralela de tarefas](https://msdn.microsoft.com/library/dd460717.aspx) ) para compilar aplicativos por alguns motivos:
+O Xamarin recomenda enfaticamente que você use a TPL ( [biblioteca paralela de tarefas](/dotnet/standard/parallel-programming/task-parallel-library-tpl) ) para compilar aplicativos por alguns motivos:
 
 - O Agendador TPL padrão delegará a execução da tarefa para o pool de threads, que, por sua vez, aumentará dinamicamente o número de threads necessários conforme o processo ocorre, evitando, ao mesmo tempo, um cenário em que muitos threads acabam concorrendo para a CPU. 
 - É mais fácil pensar nas operações em termos de tarefas TPL. Você pode manipulá-los facilmente, agendá-los, serializar sua execução ou iniciar muitos em paralelo com um rico conjunto de APIs. 
@@ -70,6 +70,6 @@ void MyThreadStart (object arg)
 
 Observação: como o Xamarin. iOS 5,2, você não precisa mais fornecer o seu próprio `NSAutoReleasePool` como um será fornecido automaticamente para você.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Como trabalhar com o thread de interface do usuário](~/ios/user-interface/ios-ui/ui-thread.md)

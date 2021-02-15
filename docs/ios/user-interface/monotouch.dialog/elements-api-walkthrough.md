@@ -1,22 +1,22 @@
 ---
 title: Criando um aplicativo Xamarin. iOS usando a API de elementos
-description: Este artigo se baseia nas informações apresentadas no artigo da caixa de diálogo introdução ao MonoTouch. Ele apresenta uma explicação que mostra como usar a caixa de diálogo MonoTouch. (MT. D) a API de elementos para começar a criar rapidamente um aplicativo com o MT. 3D.
+description: Este artigo se baseia nas informações apresentadas no artigo da caixa de diálogo introdução ao MonoTouch. Ele apresenta uma explicação que mostra como usar a caixa de diálogo MonoTouch. (MT. D) a API de elementos para começar a criar rapidamente um aplicativo com o MT. D.
 ms.prod: xamarin
 ms.assetid: F1124734-DF44-F1F3-0832-46F52A788CDC
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: davidortinau
 ms.author: daortin
-ms.openlocfilehash: 3e1e7a9c5fb01f73cddb4cab3a95aa421bd8c3fb
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b95066379e7b6845bf1265b43681aec83b130aa4
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86933361"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436746"
 ---
 # <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Criando um aplicativo Xamarin. iOS usando a API de elementos
 
-_Este artigo se baseia nas informações apresentadas no artigo da caixa de diálogo introdução ao MonoTouch. Ele apresenta uma explicação que mostra como usar a caixa de diálogo MonoTouch. (MT. D) a API de elementos para começar a criar rapidamente um aplicativo com o MT. 3D._
+_Este artigo se baseia nas informações apresentadas no artigo da caixa de diálogo introdução ao MonoTouch. Ele apresenta uma explicação que mostra como usar a caixa de diálogo MonoTouch. (MT. D) a API de elementos para começar a criar rapidamente um aplicativo com o MT. D._
 
 Neste tutorial, usaremos o MT. A API D Elements para criar um estilo de detalhes mestre do aplicativo que exibe uma lista de tarefas. Quando o usuário selecionar o **+** botão na barra de navegação, uma nova linha será adicionada à tabela para a tarefa. A seleção da linha navegará até a tela de detalhes que nos permite atualizar a descrição da tarefa e a data de vencimento, conforme ilustrado abaixo:
 
@@ -28,7 +28,7 @@ MT. A D é distribuída com o Xamarin. iOS. Para usá-lo, clique com o botão di
 
 ## <a name="elements-api-walkthrough"></a>Instruções da API de elementos
 
-No artigo da [caixa de diálogo introdução ao MonoTouch](~/ios/user-interface/monotouch.dialog/index.md) , obtivemos uma compreensão sólida das diferentes partes do Mt. 3D. Vamos usar a API Elements para colocá-las juntas em um aplicativo.
+No artigo [introdução ao MonoTouch](~/ios/user-interface/monotouch.dialog/index.md) , obtivemos uma compreensão sólida das diferentes partes do Mt. D. Vamos usar a API Elements para colocá-las juntas em um aplicativo.
 
 ## <a name="setting-up-the-multi-screen-application"></a>Configurando o aplicativo de várias telas
 
@@ -38,9 +38,9 @@ Para criar um aplicativo de várias telas com MonoTouch. dialog, precisamos:
 
 1. Criar um `UINavigationController.`
 1. Criar um `DialogViewController.`
-1. Adicione o `DialogViewController` como a raiz do`UINavigationController.` 
-1. Adicione um `RootElement` ao`DialogViewController.`
-1. Adicionar `Sections` e `Elements` ao`RootElement.` 
+1. Adicione o `DialogViewController` como a raiz do  `UINavigationController.` 
+1. Adicione um `RootElement` ao  `DialogViewController.`
+1. Adicionar `Sections` e  `Elements` ao  `RootElement.` 
 
 ### <a name="using-a-uinavigationcontroller"></a>Usando um UINavigationController
 
@@ -143,7 +143,7 @@ Este artigo apresentou uma explicação que mostrou como usar a API de elementos
 
 ## <a name="related-links"></a>Links relacionados
 
-- [MTDWalkthrough (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/mtdwalkthrough)
+- [MTDWalkthrough (exemplo)](/samples/xamarin/ios-samples/mtdwalkthrough)
 - [Introdução à caixa de diálogo MonoTouch.](~/ios/user-interface/monotouch.dialog/index.md)
 - [Explicação da API de reflexão](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
 - [Instruções do elemento JSON](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)

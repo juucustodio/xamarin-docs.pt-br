@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e9c20f8ca0656f6bad72e1e09fbe873a9208be2b
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 64464b40f7fdd18eb6b634a599a411e0cd167e0b
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71107159"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98689634"
 ---
 Parabéns por concluir este tutorial, no qual você aprendeu a:
 
@@ -23,6 +23,6 @@ Para saber mais sobre os conceitos básicos da criação de aplicativos móveis 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [EntryTutorial (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-entrytutorial/)
+- [EntryTutorial (amostra)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-entrytutorial/)
 - [Entrada do Xamarin.Forms (guia)](~/xamarin-forms/user-interface/text/entry.md)
 - [API de Entrada](xref:Xamarin.Forms.Entry)

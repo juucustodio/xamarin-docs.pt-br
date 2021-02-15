@@ -10,16 +10,16 @@ ms.date: 02/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 38c7f11ecf65a2a9ec9ef54b5beb270f51d24dda
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 857a4e465a4f42d2fd6a2a4d977334820fb2ea4f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929942"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366081"
 ---
 # <a name="text-translation-using-the-translator-api"></a>Conversão de texto usando a API do Tradutor
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _A API do Microsoft Translator pode ser usada para traduzir a fala e o texto por meio de uma API REST. Este artigo explica como usar o API de Tradução de Texto da Microsoft para traduzir texto de um idioma para outro em um Xamarin.Forms aplicativo._
 
@@ -153,5 +153,5 @@ Este artigo explicou como usar o API de Tradução de Texto da Microsoft para co
 
 - [Documentação da API do Conversor de Texto](/azure/cognitive-services/translator/)
 - [Consumir um serviço Web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [Serviços cognitivas todo (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
+- [Serviços cognitivas todo (exemplo)](/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 - [API de Tradução de Texto](/azure/cognitive-services/translator/reference/v3-0-reference)

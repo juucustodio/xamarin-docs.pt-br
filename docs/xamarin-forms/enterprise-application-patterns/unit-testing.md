@@ -10,14 +10,17 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4f30b8be762e23f84a90595a56912587cc3aa838
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: dbc863c6f0de49c809de9d13dc9c682b43e2befe
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934245"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373946"
 ---
 # <a name="unit-testing-enterprise-apps"></a>Aplicativos empresariais de teste de unidade
+
+> [!NOTE]
+> Este livro eletrônico foi publicado na Primavera de 2017 e não foi atualizado desde então. Há muito no livro que permanece valioso, mas parte do material está desatualizada.
 
 Os aplicativos móveis têm problemas exclusivos que os aplicativos baseados na área de trabalho e na Web não precisam se preocupar. Os usuários móveis serão diferentes pelos dispositivos que usam, por conectividade de rede, pela disponibilidade de serviços e uma variedade de outros fatores. Portanto, os aplicativos móveis devem ser testados, pois serão usados no mundo real para melhorar sua qualidade, confiabilidade e desempenho. Há muitos tipos de teste que devem ser executados em um aplicativo, incluindo testes de unidade, testes de integração e testes de interface do usuário, com o teste de unidade sendo a forma mais comum de teste.
 
@@ -41,15 +44,15 @@ Seguir esse padrão garante que os testes de unidade sejam legíveis e consisten
 Uma das motivações para adotar uma arquitetura com acoplamento flexível é que ela facilita o teste de unidade. Um dos tipos registrados com Autofac é a `OrderService` classe. O exemplo de código a seguir mostra um contorno desta classe:
 
 ```csharp
-public class OrderDetailViewModel : ViewModelBase  
+public class OrderDetailViewModel : ViewModelBase  
 {  
-    private IOrderService _ordersService;  
+    private IOrderService _ordersService;  
 
-    public OrderDetailViewModel(IOrderService ordersService)  
-    {  
-        _ordersService = ordersService;  
-    }  
-    ...  
+    public OrderDetailViewModel(IOrderService ordersService)  
+    {  
+        _ordersService = ordersService;  
+    }  
+    ...  
 }
 ```
 
@@ -84,15 +87,15 @@ Ao implementar o padrão MVVM, os modelos de exibição normalmente invocam oper
 
 ```csharp
 [Fact]  
-public async Task OrderPropertyIsNotNullAfterViewModelInitializationTest()  
+public async Task OrderPropertyIsNotNullAfterViewModelInitializationTest()  
 {  
-    var orderService = new OrderMockService();  
-    var orderViewModel = new OrderDetailViewModel(orderService);  
+    var orderService = new OrderMockService();  
+    var orderViewModel = new OrderDetailViewModel(orderService);  
 
-    var order = await orderService.GetOrderAsync(1, GlobalSetting.Instance.AuthToken);  
-    await orderViewModel.InitializeAsync(order);  
+    var order = await orderService.GetOrderAsync(1, GlobalSetting.Instance.AuthToken);  
+    await orderViewModel.InitializeAsync(order);  
 
-    Assert.NotNull(orderViewModel.Order);  
+    Assert.NotNull(orderViewModel.Order);  
 }
 ```
 
@@ -108,21 +111,21 @@ As propriedades que podem ser atualizadas diretamente pelo teste de unidade pode
 
 ```csharp
 [Fact]  
-public async Task SettingOrderPropertyShouldRaisePropertyChanged()  
+public async Task SettingOrderPropertyShouldRaisePropertyChanged()  
 {  
-    bool invoked = false;  
-    var orderService = new OrderMockService();  
-    var orderViewModel = new OrderDetailViewModel(orderService);  
+    bool invoked = false;  
+    var orderService = new OrderMockService();  
+    var orderViewModel = new OrderDetailViewModel(orderService);  
 
-    orderViewModel.PropertyChanged += (sender, e) =>  
-    {  
-        if (e.PropertyName.Equals("Order"))  
-            invoked = true;  
-    };  
-    var order = await orderService.GetOrderAsync(1, GlobalSetting.Instance.AuthToken);  
-    await orderViewModel.InitializeAsync(order);  
+    orderViewModel.PropertyChanged += (sender, e) =>  
+    {  
+        if (e.PropertyName.Equals("Order"))  
+            invoked = true;  
+    };  
+    var order = await orderService.GetOrderAsync(1, GlobalSetting.Instance.AuthToken);  
+    await orderViewModel.InitializeAsync(order);  
 
-    Assert.True(invoked);  
+    Assert.True(invoked);  
 }
 ```
 
@@ -134,20 +137,20 @@ Os modelos de exibição que usam a [`MessagingCenter`](xref:Xamarin.Forms.Messa
 
 ```csharp
 [Fact]  
-public void AddCatalogItemCommandSendsAddProductMessageTest()  
+public void AddCatalogItemCommandSendsAddProductMessageTest()  
 {  
-    bool messageReceived = false;  
-    var catalogService = new CatalogMockService();  
-    var catalogViewModel = new CatalogViewModel(catalogService);  
+    bool messageReceived = false;  
+    var catalogService = new CatalogMockService();  
+    var catalogViewModel = new CatalogViewModel(catalogService);  
 
-    Xamarin.Forms.MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(  
-        this, MessageKeys.AddProduct, (sender, arg) =>  
-    {  
-        messageReceived = true;  
-    });  
-    catalogViewModel.AddCatalogItemCommand.Execute(null);  
+    Xamarin.Forms.MessagingCenter.Subscribe<CatalogViewModel, CatalogItem>(  
+        this, MessageKeys.AddProduct, (sender, arg) =>  
+    {  
+        messageReceived = true;  
+    });  
+    catalogViewModel.AddCatalogItemCommand.Execute(null);  
 
-    Assert.True(messageReceived);  
+    Assert.True(messageReceived);  
 }
 ```
 
@@ -159,15 +162,15 @@ Os testes de unidade também podem ser escritos para verificar se as exceções 
 
 ```csharp
 [Fact]  
-public void InvalidEventNameShouldThrowArgumentExceptionText()  
+public void InvalidEventNameShouldThrowArgumentExceptionText()  
 {  
-    var behavior = new MockEventToCommandBehavior  
-    {  
-        EventName = "OnItemTapped"  
-    };  
-    var listView = new ListView();  
+    var behavior = new MockEventToCommandBehavior  
+    {  
+        EventName = "OnItemTapped"  
+    };  
+    var listView = new ListView();  
 
-    Assert.Throws<ArgumentException>(() => listView.Behaviors.Add(behavior));  
+    Assert.Throws<ArgumentException>(() => listView.Behaviors.Add(behavior));  
 }
 ```
 
@@ -184,15 +187,15 @@ A lógica de validação é geralmente simples de testar, porque normalmente é 
 
 ```csharp
 [Fact]  
-public void CheckValidationPassesWhenBothPropertiesHaveDataTest()  
+public void CheckValidationPassesWhenBothPropertiesHaveDataTest()  
 {  
-    var mockViewModel = new MockViewModel();  
-    mockViewModel.Forename.Value = "John";  
-    mockViewModel.Surname.Value = "Smith";  
+    var mockViewModel = new MockViewModel();  
+    mockViewModel.Forename.Value = "John";  
+    mockViewModel.Surname.Value = "Smith";  
 
-    bool isValid = mockViewModel.Validate();  
+    bool isValid = mockViewModel.Validate();  
 
-    Assert.True(isValid);  
+    Assert.True(isValid);  
 }
 ```
 
@@ -202,20 +205,20 @@ Além disso, verificando se a validação foi realizada com sucesso, os testes d
 
 ```csharp
 [Fact]  
-public void CheckValidationFailsWhenOnlyForenameHasDataTest()  
+public void CheckValidationFailsWhenOnlyForenameHasDataTest()  
 {  
-    var mockViewModel = new MockViewModel();  
-    mockViewModel.Forename.Value = "John";  
+    var mockViewModel = new MockViewModel();  
+    mockViewModel.Forename.Value = "John";  
 
-    bool isValid = mockViewModel.Validate();  
+    bool isValid = mockViewModel.Validate();  
 
-    Assert.False(isValid);  
-    Assert.NotNull(mockViewModel.Forename.Value);  
-    Assert.Null(mockViewModel.Surname.Value);  
-    Assert.True(mockViewModel.Forename.IsValid);  
-    Assert.False(mockViewModel.Surname.IsValid);  
-    Assert.Empty(mockViewModel.Forename.Errors);  
-    Assert.NotEmpty(mockViewModel.Surname.Errors);  
+    Assert.False(isValid);  
+    Assert.NotNull(mockViewModel.Forename.Value);  
+    Assert.Null(mockViewModel.Surname.Value);  
+    Assert.True(mockViewModel.Forename.IsValid);  
+    Assert.False(mockViewModel.Surname.IsValid);  
+    Assert.Empty(mockViewModel.Forename.Errors);  
+    Assert.NotEmpty(mockViewModel.Surname.Errors);  
 }
 ```
 

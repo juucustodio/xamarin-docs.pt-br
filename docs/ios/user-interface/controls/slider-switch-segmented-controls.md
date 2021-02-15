@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: cf0e617b225cc7535acffa0880a0bc089ae8da28
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 65fd825b6858efa02fcada196b4229cc69313b3e
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934050"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697482"
 ---
 # <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Controles deslizantes, comutadores e controle segmentados no Xamarin. iOS
 
@@ -62,7 +62,7 @@ O controle deslizante personalizado tem esta aparência:
 
 o iOS usa o `UISwitch` como uma entrada booliana que pode ser representada por um botão de opção em outras plataformas. O usuário pode manipular o controle movendo o *polegar* entre as posições **Ativar/desativar** .
 
- [![Switch](slider-switch-segmented-controls-images/image28a.png)](slider-switch-segmented-controls-images/image28a.png#lightbox)
+ [![Comutador](slider-switch-segmented-controls-images/image28a.png)](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 A aparência da opção pode ser personalizada na **painel de propriedades** do designer, o que permitirá controlar o estado padrão, **Ativar/desativar** as cores de tonalidade e uma **imagem on/off**. Isso é ilustrado na imagem abaixo:
 
@@ -78,21 +78,21 @@ switch1.On = true;
 
 ## <a name="segmented-controls"></a>Controles segmentados
 
-Um controle segmentado é uma maneira organizada de permitir que os usuários interajam com um pequeno número de opções. Ele é disposto horizontalmente e cada segmento funciona como um botão separado. Ao usar o designer, o controle segmentado pode ser encontrado em **caixa de ferramentas > controles**e deve ser semelhante à imagem a seguir:
+Um controle segmentado é uma maneira organizada de permitir que os usuários interajam com um pequeno número de opções. Ele é disposto horizontalmente e cada segmento funciona como um botão separado. Ao usar o designer, o controle segmentado pode ser encontrado em **caixa de ferramentas > controles** e deve ser semelhante à imagem a seguir:
 
- [![Controle segmentado](slider-switch-segmented-controls-images/segmentedcontrol.png)](slider-switch-segmented-controls-images/segmentedcontrol.png#lightbox)
+ [![Ícone de controle segmentado.](slider-switch-segmented-controls-images/segmentedcontrol.png)](slider-switch-segmented-controls-images/segmentedcontrol.png#lightbox)
 
 Um recurso exclusivo do designer permite que cada segmento seja selecionado individualmente na superfície de design, conforme ilustrado abaixo:
 
- [![Controle segmentado](slider-switch-segmented-controls-images/segmentedcontrolselection.png)](slider-switch-segmented-controls-images/segmentedcontrolselection.png#lightbox)
+ [![Segmentos de controle segmentados selecionados individualmente.](slider-switch-segmented-controls-images/segmentedcontrolselection.png)](slider-switch-segmented-controls-images/segmentedcontrolselection.png#lightbox)
 
 Isso permite que o Painel de Propriedades seja usado para controlar com mais precisão as propriedades de cada segmento. Você pode ver as propriedades editáveis na captura de tela abaixo:
 
- [![Controle segmentado](slider-switch-segmented-controls-images/segmentedcontrolproperties.png)](slider-switch-segmented-controls-images/segmentedcontrolproperties.png#lightbox)
+ [![Propriedades de controle segmentado.](slider-switch-segmented-controls-images/segmentedcontrolproperties.png)](slider-switch-segmented-controls-images/segmentedcontrolproperties.png#lightbox)
 
 Deve-se observar que o estilo de controle segmentado foi preterido em iOS7 e, portanto, ajustar as opções para isso em um aplicativo iOS7 não terá nenhum efeito.
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Controles (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [Controles (exemplo)](/samples/xamarin/ios-samples/controls)
 - [Controlador de alerta](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller)

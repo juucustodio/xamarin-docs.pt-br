@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: b311f3121ea6a58975d41b9690e31a44daa0951e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: a9e555c6e4713c4d34f4e14ea29164a769bc3db9
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84573697"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435631"
 ---
 # <a name="tvos-app-distribution-overview"></a>Visão geral da distribuição de aplicativos tvOS
 
@@ -81,9 +81,9 @@ Para obter mais informações sobre como obter a configuração e como distribui
 
 Este artigo forneceu uma breve visão geral dos mecanismos de distribuição que estão disponíveis para aplicativos Xamarin. tvOS. Ele introduziu a loja de aplicativos da Apple TV, a implantação ad hoc e a interna e forneceu links para informações mais detalhadas.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Exemplos do tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guias de interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

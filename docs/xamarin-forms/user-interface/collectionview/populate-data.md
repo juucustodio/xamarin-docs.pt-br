@@ -1,27 +1,27 @@
 ---
-title: Xamarin.FormsDados CollectionView
+title: Xamarin.Forms Dados CollectionView
 description: Um CollectionView é populado com dados definindo sua propriedade ItemsSource para qualquer coleção que implemente IEnumerable.
 ms.prod: xamarin
 ms.assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/29/2020
+ms.date: 10/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e381184271d4a7bfa9872d2502d2281b1f3864bf
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1848adba6ae29a5963228469b429195558266820
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134557"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369435"
 ---
-# <a name="xamarinforms-collectionview-data"></a>Xamarin.FormsDados CollectionView
+# <a name="no-locxamarinforms-collectionview-data"></a>Xamarin.Forms Dados CollectionView
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)inclui as seguintes propriedades que definem os dados a serem exibidos e sua aparência:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) inclui as seguintes propriedades que definem os dados a serem exibidos e sua aparência:
 
 - [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource), do tipo `IEnumerable` , especifica a coleção de itens a serem exibidos e tem um valor padrão de `null` .
 - [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate), do tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , especifica o modelo a ser aplicado a cada item na coleção de itens a ser exibida.
@@ -29,64 +29,18 @@ ms.locfileid: "84134557"
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que as propriedades podem ser destinos de associações de dados.
 
 > [!NOTE]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView)define uma `ItemsUpdatingScrollMode` propriedade que representa o comportamento de rolagem do `CollectionView` quando novos itens são adicionados a ele. Para obter mais informações sobre essa propriedade, consulte [controlar posição de rolagem quando novos itens forem adicionados](scrolling.md#control-scroll-position-when-new-items-are-added).
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) define uma `ItemsUpdatingScrollMode` propriedade que representa o comportamento de rolagem do `CollectionView` quando novos itens são adicionados a ele. Para obter mais informações sobre essa propriedade, consulte [controlar posição de rolagem quando novos itens forem adicionados](scrolling.md#control-scroll-position-when-new-items-are-added).
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)dá suporte à virtualização de dados incremental à medida que o usuário rola. Para obter mais informações, consulte [carregar dados incrementalmente](#load-data-incrementally).
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) dá suporte à virtualização de dados incremental à medida que o usuário rola. Para obter mais informações, consulte [carregar dados incrementalmente](#load-data-incrementally).
 
 ## <a name="populate-a-collectionview-with-data"></a>Preencher um CollectionView com dados
 
-Um [`CollectionView`](xref:Xamarin.Forms.CollectionView) é populado com dados definindo sua [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) propriedade para qualquer coleção que implementa `IEnumerable` . Os itens podem ser adicionados em XAML inicializando a `ItemsSource` propriedade de uma matriz de cadeias de caracteres:
-
-```xaml
-<CollectionView>
-  <CollectionView.ItemsSource>
-    <x:Array Type="{x:Type x:String}">
-      <x:String>Baboon</x:String>
-      <x:String>Capuchin Monkey</x:String>
-      <x:String>Blue Monkey</x:String>
-      <x:String>Squirrel Monkey</x:String>
-      <x:String>Golden Lion Tamarin</x:String>
-      <x:String>Howler Monkey</x:String>
-      <x:String>Japanese Macaque</x:String>
-    </x:Array>
-  </CollectionView.ItemsSource>
-</CollectionView>
-```
-
-> [!NOTE]
-> Observe que o elemento `x:Array` requer um atributo `Type` que indica o tipo dos itens na matriz.
-
-Este é o código C# equivalente:
-
-```csharp
-CollectionView collectionView = new CollectionView();
-collectionView.ItemsSource = new string[]
-{
-    "Baboon",
-    "Capuchin Monkey",
-    "Blue Monkey",
-    "Squirrel Monkey",
-    "Golden Lion Tamarin",
-    "Howler Monkey",
-    "Japanese Macaque"
-};
-```
-
-> [!WARNING]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView)gerará uma exceção se sua [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) for atualizada fora do thread da interface do usuário.
-
-Por padrão, [`CollectionView`](xref:Xamarin.Forms.CollectionView) o exibe itens em uma lista vertical, conforme mostrado nas capturas de tela a seguir:
-
-[![Captura de tela de CollectionView contendo itens de texto, no iOS e no Android](populate-data-images/text.png "Itens de texto em um CollectionView")](populate-data-images/text-large.png#lightbox "Itens de texto em um CollectionView")
+Um [`CollectionView`](xref:Xamarin.Forms.CollectionView) é populado com dados definindo sua [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) propriedade para qualquer coleção que implementa `IEnumerable` . Por padrão, [`CollectionView`](xref:Xamarin.Forms.CollectionView) o exibe itens em uma lista vertical.
 
 > [!IMPORTANT]
 > Se o [`CollectionView`](xref:Xamarin.Forms.CollectionView) for necessário para atualizar à medida que os itens forem adicionados, removidos ou alterados na coleção subjacente, a coleção subjacente deverá ser uma `IEnumerable` coleção que enviará notificações de alteração de propriedade, como `ObservableCollection` .
 
-Para obter informações sobre como alterar o [`CollectionView`](xref:Xamarin.Forms.CollectionView) layout, consulte [ Xamarin.Forms layout CollectionView](layout.md). Para obter informações sobre como definir a aparência de cada item no `CollectionView` , consulte [definir a aparência do item](#define-item-appearance).
-
-### <a name="data-binding"></a>Associação de dados
-
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)pode ser preenchido com dados usando a vinculação de dados para associar sua [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) Propriedade a uma `IEnumerable` coleção. Em XAML, isso é obtido com a `Binding` extensão de marcação:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) pode ser preenchido com dados usando a vinculação de dados para associar sua [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) Propriedade a uma `IEnumerable` coleção. Em XAML, isso é obtido com a `Binding` extensão de marcação:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}" />
@@ -104,7 +58,10 @@ Neste exemplo, os [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) dado
 > [!NOTE]
 > Associações compiladas podem ser habilitadas para melhorar o desempenho de vinculação de dados em Xamarin.Forms aplicativos. Para saber mais, confira [Associações compiladas](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
 
-Para obter mais informações sobre a vinculação de dados, consulte [ Xamarin.Forms vinculação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+Para obter informações sobre como alterar o [`CollectionView`](xref:Xamarin.Forms.CollectionView) layout, consulte [ Xamarin.Forms layout CollectionView](layout.md). Para obter informações sobre como definir a aparência de cada item no `CollectionView` , consulte [definir a aparência do item](#define-item-appearance). Para obter mais informações sobre a vinculação de dados, consulte [ Xamarin.Forms vinculação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+
+> [!WARNING]
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) gerará uma exceção se sua [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) for atualizada fora do thread da interface do usuário.
 
 ## <a name="define-item-appearance"></a>Definir a aparência do item
 
@@ -256,7 +213,7 @@ Para obter mais informações sobre seletores de modelo de dados, consulte [cria
 
 ## <a name="context-menus"></a>Menus de contexto
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)dá suporte a menus de contexto para itens de dados por meio do `SwipeView` , que revela o menu de contexto com um gesto de passar o dedo. O `SwipeView` é um controle de contêiner que encapsula em um item de conteúdo e fornece itens de menu de contexto para esse item de conteúdo. Portanto, os menus de contexto são implementados para um `CollectionView` criando um `SwipeView` que define o conteúdo que o `SwipeView` encapsulado e os itens do menu de contexto que são revelados pelo gesto de passar o dedo. Isso é feito definindo o `SwipeView` como a exibição raiz no [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que define a aparência de cada item de dados no `CollectionView` :
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) dá suporte a menus de contexto para itens de dados por meio do `SwipeView` , que revela o menu de contexto com um gesto de passar o dedo. O `SwipeView` é um controle de contêiner que encapsula em um item de conteúdo e fornece itens de menu de contexto para esse item de conteúdo. Portanto, os menus de contexto são implementados para um `CollectionView` criando um `SwipeView` que define o conteúdo que o `SwipeView` encapsulado e os itens do menu de contexto que são revelados pelo gesto de passar o dedo. Isso é feito definindo o `SwipeView` como a exibição raiz no [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que define a aparência de cada item de dados no `CollectionView` :
 
 ```xaml
 <CollectionView x:Name="collectionView"
@@ -329,13 +286,13 @@ Neste exemplo, o `SwipeView` conteúdo é um [`Grid`](xref:Xamarin.Forms.Grid) q
 
 [![Captura de tela de itens de menu de contexto CollectionView, em iOS e Android](populate-data-images/swipeview.png "CollectionView com itens de menu de contexto SwipeView")](populate-data-images/swipeview-large.png#lightbox "CollectionView com itens de menu de contexto SwipeView")
 
-`SwipeView`dá suporte a quatro direções de toque diferentes, com a direção do dedo sendo definida pela `SwipeItems` coleção direcional à `SwipeItems` qual os objetos são adicionados. Por padrão, um item de dedo é executado quando ele é tocado pelo usuário. Além disso, quando um item de dedo for executado, os itens do dedo serão ocultados e o `SwipeView` conteúdo será exibido novamente. No entanto, esses comportamentos podem ser alterados.
+`SwipeView` dá suporte a quatro direções de toque diferentes, com a direção do dedo sendo definida pela `SwipeItems` coleção direcional à `SwipeItems` qual os objetos são adicionados. Por padrão, um item de dedo é executado quando ele é tocado pelo usuário. Além disso, quando um item de dedo for executado, os itens do dedo serão ocultados e o `SwipeView` conteúdo será exibido novamente. No entanto, esses comportamentos podem ser alterados.
 
 Para obter mais informações sobre o `SwipeView` controle, consulte [ Xamarin.Forms SwipeView](~/xamarin-forms/user-interface/swipeview.md).
 
 ## <a name="pull-to-refresh"></a>Puxar para atualizar
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)dá suporte à funcionalidade de pull para atualizar por meio do `RefreshView` , que permite que os dados sejam exibidos para serem atualizados ao puxar a lista de itens. O `RefreshView` é um controle de contêiner que fornece a funcionalidade de pull para atualizar para seu filho, desde que o filho ofereça suporte a conteúdo rolável. Portanto, o pull para a atualização é implementado para um definindo `CollectionView` -o como o filho de um `RefreshView` :
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) dá suporte à funcionalidade de pull para atualizar por meio do `RefreshView` , que permite que os dados sejam exibidos para serem atualizados ao puxar a lista de itens. O `RefreshView` é um controle de contêiner que fornece a funcionalidade de pull para atualizar para seu filho, desde que o filho ofereça suporte a conteúdo rolável. Portanto, o pull para a atualização é implementado para um definindo `CollectionView` -o como o filho de um `RefreshView` :
 
 ```xaml
 <RefreshView IsRefreshing="{Binding IsRefreshing}"
@@ -374,20 +331,20 @@ Para obter mais informações sobre o `RefreshView` , consulte [ Xamarin.Forms R
 
 ## <a name="load-data-incrementally"></a>Carregar dados de forma incremental
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)dá suporte à virtualização de dados incremental à medida que o usuário rola. Isso permite cenários como o carregamento assíncrono de uma página de dados de um serviço Web, à medida que o usuário rola. Além disso, o ponto no qual mais dados são carregados é configurável para que os usuários não vejam o espaço em branco ou sejam interrompidos da rolagem.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) dá suporte à virtualização de dados incremental à medida que o usuário rola. Isso permite cenários como o carregamento assíncrono de uma página de dados de um serviço Web, à medida que o usuário rola. Além disso, o ponto no qual mais dados são carregados é configurável para que os usuários não vejam o espaço em branco ou sejam interrompidos da rolagem.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)define as propriedades a seguir para controlar o carregamento incremental de dados:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define as propriedades a seguir para controlar o carregamento incremental de dados:
 
 - `RemainingItemsThreshold`, do tipo `int` , o limite de itens ainda não visíveis na lista na qual o `RemainingItemsThresholdReached` evento será acionado.
 - `RemainingItemsThresholdReachedCommand`, do tipo `ICommand` , que é executado quando o `RemainingItemsThreshold` é atingido.
 - `RemainingItemsThresholdReachedCommandParameter`, do tipo `object`, que é o parâmetro passado para `RemainingItemsThresholdReachedCommand`.
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)também define um `RemainingItemsThresholdReached` evento que é acionado quando o `CollectionView` é rolado muito suficiente para que `RemainingItemsThreshold` os itens não tenham sido exibidos. Esse evento pode ser tratado para carregar mais itens. Além disso, quando o `RemainingItemsThresholdReached` evento é acionado, o `RemainingItemsThresholdReachedCommand` é executado, permitindo que o carregamento de dados incremental ocorra em um ViewModel.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) também define um `RemainingItemsThresholdReached` evento que é acionado quando o `CollectionView` é rolado muito suficiente para que `RemainingItemsThreshold` os itens não tenham sido exibidos. Esse evento pode ser tratado para carregar mais itens. Além disso, quando o `RemainingItemsThresholdReached` evento é acionado, o `RemainingItemsThresholdReachedCommand` é executado, permitindo que o carregamento de dados incremental ocorra em um ViewModel.
 
 O valor padrão da `RemainingItemsThreshold` propriedade é-1, que indica que o `RemainingItemsThresholdReached` evento nunca será acionado. Quando o valor da propriedade for 0, o `RemainingItemsThresholdReached` evento será acionado quando o item final no [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) for exibido. Para valores maiores que 0, o `RemainingItemsThresholdReached` evento será acionado quando o `ItemsSource` contiver esse número de itens ainda não rolados.
 
 > [!NOTE]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView)valida a `RemainingItemsThreshold` propriedade para que seu valor seja sempre maior ou igual a-1.
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) valida a `RemainingItemsThreshold` propriedade para que seu valor seja sempre maior ou igual a-1.
 
 O exemplo de XAML a seguir mostra um [`CollectionView`](xref:Xamarin.Forms.CollectionView) que carrega dados de forma incremental:
 
@@ -424,9 +381,9 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 
 ## <a name="related-links"></a>Links relacionados
 
-- [CollectionView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
-- [Xamarin.FormsRefreshView](~/xamarin-forms/user-interface/refreshview.md)
-- [Xamarin.FormsSwipeView](~/xamarin-forms/user-interface/swipeview.md)
-- [Xamarin.FormsAssociação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md)
-- [Xamarin.FormsModelos de dados](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [CollectionView (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [Xamarin.Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md)
+- [Xamarin.Forms SwipeView](~/xamarin-forms/user-interface/swipeview.md)
+- [Xamarin.Forms Associação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+- [Xamarin.Forms Modelos de dados](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Criar um Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

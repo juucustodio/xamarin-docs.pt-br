@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: b9e32fecab7fc5048de319d35ed1a1e55f32b96c
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: d9ea7a822b8b841df682a20a70d9231996a17d3d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929799"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436697"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Controles padrão no Xamarin. Mac
 
@@ -387,14 +387,14 @@ Os controles de menu disponíveis para macOS podem ser definidos para popular a 
 
 Além de definir itens em Interface Builder, controles de menu (como `NSComboBox` ) fornecem um conjunto completo de métodos que permitem adicionar, editar ou excluir os itens da lista interna que eles mantêm:
 
-- `Add`-Adiciona um novo item ao final da lista.
-- `GetItem`-Retorna o item no índice fornecido.
-- `Insert`-Insere um novo item na lista no local especificado.
-- `IndexOf`-Retorna o índice do item especificado.
-- `Remove`-Remove o item determinado da lista.
-- `RemoveAll`-Remove todos os itens da lista.
-- `RemoveAt`-Remove o item no índice fornecido.
-- `Count`-Retorna o número de itens na lista.
+- `Add` -Adiciona um novo item ao final da lista.
+- `GetItem` -Retorna o item no índice fornecido.
+- `Insert` -Insere um novo item na lista no local especificado.
+- `IndexOf` -Retorna o índice do item especificado.
+- `Remove` -Remove o item determinado da lista.
+- `RemoveAll` -Remove todos os itens da lista.
+- `RemoveAt` -Remove o item no índice fornecido.
+- `Count` -Retorna o número de itens na lista.
 
 > [!IMPORTANT]
 > Se você estiver usando uma fonte de dados externa ( `UsesDataSource = true` ), chamar qualquer um dos métodos acima gerará uma exceção.
@@ -407,10 +407,10 @@ Em vez de usar os dados internos interno para fornecer as linhas para o controle
 
 Para trabalhar com uma fonte de dados externa, você criará uma instância da fonte de dados do controle de menu ( `NSComboBoxDataSource` por exemplo) e substituirá vários métodos para fornecer os dados necessários:
 
-- `ItemCount`-Retorna o número de itens na lista.
-- `ObjectValueForItem`-Retorna o valor do item para um determinado índice.
-- `IndexOfItem`-Retorna o índice para o valor do item de atribuições.
-- `CompletedString`-Retorna o primeiro valor de item correspondente para o valor de item parcialmente tipado. Esse método será chamado somente se o preenchimento automático tiver sido habilitado ( `Completes = true` ).
+- `ItemCount` -Retorna o número de itens na lista.
+- `ObjectValueForItem` -Retorna o valor do item para um determinado índice.
+- `IndexOfItem` -Retorna o índice para o valor do item de atribuições.
+- `CompletedString` -Retorna o primeiro valor de item correspondente para o valor de item parcialmente tipado. Esse método será chamado somente se o preenchimento automático tiver sido habilitado ( `Completes = true` ).
 
 Consulte a seção [bancos de dados e caixas de combinação](~/mac/app-fundamentals/databases.md#Databases-and-ComboBoxes) do documento [trabalhando com bancos de dados](~/mac/app-fundamentals/databases.md) para obter mais detalhes.
 
@@ -420,10 +420,10 @@ Consulte a seção [bancos de dados e caixas de combinação](~/mac/app-fundamen
 
 Os métodos a seguir estão disponíveis para ajustar a aparência do controle de menu:
 
-- `HasVerticalScroller`-Se `true` , o controle exibirá uma barra de rolagem vertical. 
-- `VisibleItems`-Ajustar o número de itens exibidos quando o controle é aberto. O valor padrão é cinco (5).
-- `IntercellSpacing`-Ajuste a quantidade de espaço em um determinado item fornecendo um `NSSize` local onde o `Width` especifica as margens esquerda e direita e `Height` especifica o espaço antes e depois de um item.
-- `ItemHeight`-Especifica a altura de cada item na lista.
+- `HasVerticalScroller` -Se `true` , o controle exibirá uma barra de rolagem vertical. 
+- `VisibleItems` -Ajustar o número de itens exibidos quando o controle é aberto. O valor padrão é cinco (5).
+- `IntercellSpacing` -Ajuste a quantidade de espaço em um determinado item fornecendo um `NSSize` local onde o `Width` especifica as margens esquerda e direita e `Height` especifica o espaço antes e depois de um item.
+- `ItemHeight` -Especifica a altura de cada item na lista.
 
 Para tipos suspensos do `NSPopupButtons` , o primeiro item de menu fornece o título para o controle. Por exemplo: 
 
@@ -441,11 +441,11 @@ DropDownSelected.Title = "Item 1";
 
 Os métodos e as propriedades a seguir permitem que você manipule os itens selecionados na lista do controle de menu:
 
-- `SelectItem`-Seleciona o item no índice fornecido.
-- `Select`-Selecione o valor do item fornecido.
-- `DeselectItem`– Anula a seleção do item no índice fornecido.
-- `SelectedIndex`-Retorna o índice do item selecionado no momento.
-- `SelectedValue`-Retorna o valor do item selecionado no momento.
+- `SelectItem` -Seleciona o item no índice fornecido.
+- `Select` -Selecione o valor do item fornecido.
+- `DeselectItem` – Anula a seleção do item no índice fornecido.
+- `SelectedIndex` -Retorna o índice do item selecionado no momento.
+- `SelectedValue` -Retorna o valor do item selecionado no momento.
 
 Use o `ScrollItemAtIndexToTop` para apresentar o item no índice especificado na parte superior da lista e a `ScrollItemAtIndexToVisible` para rolar até a lista até que o item no índice especificado esteja visível.
 
@@ -455,10 +455,10 @@ Use o `ScrollItemAtIndexToTop` para apresentar o item no índice especificado na
 
 Os controles de menu fornecem os seguintes eventos para responder à interação do usuário:
 
-- `SelectionChanged`-É chamado quando o usuário seleciona um valor da lista.
-- `SelectionIsChanging`-É chamado antes que o novo item selecionado do usuário se torne a seleção ativa.
-- `WillPopup`-É chamado antes que a lista suspensa de itens seja exibida.
-- `WillDismiss`-É chamado antes que a lista suspensa de itens seja fechada.
+- `SelectionChanged` -É chamado quando o usuário seleciona um valor da lista.
+- `SelectionIsChanging` -É chamado antes que o novo item selecionado do usuário se torne a seleção ativa.
+- `WillPopup` -É chamado antes que a lista suspensa de itens seja exibida.
+- `WillDismiss` -É chamado antes que a lista suspensa de itens seja fechada.
 
 Para `NSComboBox` controles, eles incluem todos os mesmos eventos que o `NSTextField` , como o `Changed` evento que é chamado sempre que o usuário edita o valor do texto na caixa de combinação.
 
@@ -577,7 +577,7 @@ FeedbackLabel.StringValue = string.Format("Number: {0}",NumberField.IntValue);
 
 Um `NSTextView` fornece uma área de edição e exibição de texto completo com formatação interna. Como um `NSTextField` , use a `StringValue` propriedade para ler ou definir o valor da área.
 
-Para obter um exemplo de um exemplo complexo de como trabalhar com exibições de texto em um aplicativo Xamarin. Mac, consulte o [aplicativo de exemplo SourceWriter](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter é um editor de código-fonte simples que dá suporte para a conclusão de código e realce de sintaxe simples.
+Para obter um exemplo de um exemplo complexo de como trabalhar com exibições de texto em um aplicativo Xamarin. Mac, consulte o [aplicativo de exemplo SourceWriter](/samples/xamarin/mac-samples/sourcewriter). SourceWriter é um editor de código-fonte simples que dá suporte para a conclusão de código e realce de sintaxe simples.
 
 O código do SourceWriter foi totalmente comentado e, quando disponível, foram fornecidos links de tecnologias-chave ou métodos para informações relevantes na Documentação de Guias do Xamarin.Mac.
 
@@ -644,7 +644,7 @@ Este artigo fez uma visão detalhada do trabalho com os controles padrão do App
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [MacControls (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccontrols)
+- [MacControls (exemplo)](/samples/xamarin/mac-samples/maccontrols)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Windows](~/mac/user-interface/window.md)
 - [Associação de dados e a codificação de chave-valor](~/mac/app-fundamentals/databinding.md)

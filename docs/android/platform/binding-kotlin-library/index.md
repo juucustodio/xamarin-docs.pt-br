@@ -7,19 +7,19 @@ ms.technology: xamarin-android
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 02/11/2020
-ms.openlocfilehash: d2251a0219ca25ecd37e42361e49ac966bac131d
-ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
+ms.openlocfilehash: 4fcb36f76ff2714a7a783b716abfe44de51b2855
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85852994"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91454137"
 ---
 # <a name="bind-android-kotlin-libraries"></a>Associar bibliotecas Kotlin do Android
 
 > [!IMPORTANT]
 > No momento, estamos investigando o uso de associação personalizada na plataforma Xamarin. Faça [**esta pesquisa**](https://www.surveymonkey.com/r/KKBHNLT) para informar os futuros esforços de desenvolvimento.
 
-A plataforma Android, juntamente com suas linguagens e ferramentas nativas, está constantemente evoluindo e há muitas bibliotecas de terceiros que foram desenvolvidas usando as ofertas mais recentes. Maximizar o código e a reutilização de componentes é um dos principais objetivos do desenvolvimento de várias plataformas. A capacidade de reutilizar os componentes criados com Kotlin tornou-se cada vez mais importante para os desenvolvedores do Xamarin, pois sua popularidade entre os desenvolvedores continua crescendo. Talvez você já esteja familiarizado com o processo de vinculação de bibliotecas [Java](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/) regulares. A documentação adicional agora está disponível descrevendo o processo de [vinculação de uma biblioteca Kotlin](walkthrough.md), para que elas sejam consumíveis por um aplicativo Xamarin da mesma maneira. A finalidade deste documento é descrever uma abordagem de alto nível para criar uma associação Kotlin para o Xamarin.
+A plataforma Android, juntamente com suas linguagens e ferramentas nativas, está constantemente evoluindo e há muitas bibliotecas de terceiros que foram desenvolvidas usando as ofertas mais recentes. Maximizar o código e a reutilização de componentes é um dos principais objetivos do desenvolvimento de várias plataformas. A capacidade de reutilizar os componentes criados com Kotlin tornou-se cada vez mais importante para os desenvolvedores do Xamarin, pois sua popularidade entre os desenvolvedores continua crescendo. Talvez você já esteja familiarizado com o processo de vinculação de bibliotecas [Java](../binding-java-library/index.md) regulares. A documentação adicional agora está disponível descrevendo o processo de [vinculação de uma biblioteca Kotlin](walkthrough.md), para que elas sejam consumíveis por um aplicativo Xamarin da mesma maneira. A finalidade deste documento é descrever uma abordagem de alto nível para criar uma associação Kotlin para o Xamarin.
 
 ## <a name="high-level-approach"></a>Abordagem de alto nível
 
@@ -59,8 +59,8 @@ A abordagem acima descreve as etapas de alto nível necessárias para criar uma 
 - [Visual Studio para Mac](https://visualstudio.microsoft.com/downloads)
 - [Descompilador de Java](http://java-decompiler.github.io/)
 - [Biblioteca BubblePicker Kotlin](https://github.com/igalata/Bubble-Picker)
-- [Biblioteca Java de associação](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/)
+- [Biblioteca Java de associação](../binding-java-library/index.md)
 - [XPath](https://www.w3.org/TR/xpath/)
-- [Metadados de associação Java](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata)
+- [Metadados de associação Java](../binding-java-library/customizing-bindings/java-bindings-metadata.md)
 - [Xamarin. Kotlin. StdLib NuGet](https://www.nuget.org/packages/Xamarin.Kotlin.StdLib/)
 - [Repositório de projetos de exemplo](https://github.com/xamcat/xamarin-binding-kotlin-framework)

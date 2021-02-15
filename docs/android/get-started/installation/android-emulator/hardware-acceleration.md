@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: jondouglas
 ms.author: jodou
 ms.date: 02/13/2020
-ms.openlocfilehash: 93336f5a741cf9643288163f2bf1d8ef44ea52d2
-ms.sourcegitcommit: d42dadc6da584953865b1adb616489d91a7b25d0
+ms.openlocfilehash: 4956e0dc4961065650fc9289884c24cd5b5f702c
+ms.sourcegitcommit: 6d347e1d7641ac1d2b389fb1dc7a6882a08f7c00
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86473431"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91851529"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>Aceleração de hardware para o desempenho do emulador (Hyper-V e HAXM)
 
@@ -37,7 +37,7 @@ No entanto, o Android Emulator será executado muito lentamente se a aceleraçã
 As tecnologias de virtualização a seguir estão disponíveis para acelerar o Android Emulator:
 
 1. **Hyper-V e WHPX (Plataforma de Hipervisor do Windows) da Microsoft**.
-   O [Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/) é um recurso de virtualização do Windows que torna possível executar sistemas de computador virtualizados em um computador host físico.
+   O [Hyper-V](/virtualization/hyper-v-on-windows/) é um recurso de virtualização do Windows que torna possível executar sistemas de computador virtualizados em um computador host físico.
 
 2. **HAXM (Hardware Accelerated Execution Manager) da Intel**.
    O HAXM é um mecanismo de virtualização para computadores que executam CPUs Intel.
@@ -115,9 +115,11 @@ Se o computador atender aos critérios acima, use as seguintes etapas para acele
 
 Ao criar um dispositivo virtual (consulte [Gerenciando dispositivos virtuais com o Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), certifique-se de selecionar uma imagem de sistema baseada em **x86**. Se você usar uma imagem de sistema baseada em ARM, o dispositivo virtual não será acelerado e será executado lentamente.
 
+Agora, o Hyper-V deve ser habilitado e você pode executar o emulador do Android acelerado.
+
 ## <a name="accelerating-with-haxm"></a>Acelerar com HAXM
 
-Use o HAXM para acelerar o Android Emulator se o computador não tiver suporte para Hyper-V. Você deve [desabilitar o Device Guard](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vswin#disable-devguard) se quiser usar o HAXM.
+Se o computador não oferecer suporte ao Hyper-V, você poderá usar o HAXM para acelerar o emulador do Android. Você deve [desabilitar o Device Guard](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vswin#disable-devguard) se quiser usar o HAXM.
 
 ### <a name="verifying-haxm-support"></a>Verificar o suporte para HAXM
 

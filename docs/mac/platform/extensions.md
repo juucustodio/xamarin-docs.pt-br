@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: ac4c8d7bbd28946b6089e7f22a36727d2d73ec18
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: abb14f2074a2f519037ef2a9e85f2bf66613b836
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939198"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436795"
 ---
 # <a name="xamarinmac-extension-support"></a>Suporte à extensão de Xamarin.Mac
 
@@ -44,7 +44,7 @@ As dicas a seguir podem ser úteis ao trabalhar com extensões no Xamarin. Mac:
 
     [![O log do sistema](extensions-images/extension02.png)](extensions-images/extension02.png#lightbox)
 - Conforme observado acima, a execução do aplicativo host de extensão o registrará no sistema. Excluindo o pacote de aplicativos com o cancelamento do registro. 
-- Se as versões "isoladas" das extensões de um aplicativo forem registradas, use o seguinte comando para localizá-las (para que elas possam ser excluídas):`plugin kit -mv`
+- Se as versões "isoladas" das extensões de um aplicativo forem registradas, use o seguinte comando para localizá-las (para que elas possam ser excluídas): `plugin kit -mv`
 
 <a name="Walkthrough-and-Sample-App"></a>
 
@@ -52,7 +52,7 @@ As dicas a seguir podem ser úteis ao trabalhar com extensões no Xamarin. Mac:
 
 Como o desenvolvedor criará e trabalhará com as extensões do Xamarin. Mac da mesma forma que as extensões do Xamarin. iOS, consulte a documentação [introdução às extensões](~/ios/platform/extensions.md) para obter mais detalhes.
 
-Um projeto Xamarin. Mac de exemplo que contém exemplos pequenos e funcionais de cada tipo de extensão pode ser encontrado [aqui](https://docs.microsoft.com/samples/xamarin/mac-samples/extensionsamples).
+Um projeto Xamarin. Mac de exemplo que contém exemplos pequenos e funcionais de cada tipo de extensão pode ser encontrado [aqui](/samples/xamarin/mac-samples/extensionsamples).
 
 <a name="Summary"></a>
 
@@ -63,5 +63,5 @@ Este artigo deu uma olhada rápida no trabalho com extensões em um aplicativo X
 ## <a name="related-links"></a>Links Relacionados
 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
-- [ExtensionSamples](https://docs.microsoft.com/samples/xamarin/mac-samples/extensionsamples)
+- [ExtensionSamples](/samples/xamarin/mac-samples/extensionsamples)
 - [Diretrizes de Interface Humana do macOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

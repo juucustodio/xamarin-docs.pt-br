@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 03840e127ba53ee63623252585e51e51e6890eb5
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 9bee1cb5108053dac74fcde4f4f5171c24c7ce1a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571591"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437219"
 ---
 # <a name="additional-macos-sierra-framework-changes"></a>Alterações adicionais de estrutura do MacOS Serra
 
@@ -39,11 +39,11 @@ O aprimoramento a seguir foi feito para a estrutura AppKit para macOS Sierra:
 - A passagem de layout de exibição adiada foi otimizada e estendida.
 - A API do tipo "arrastar e soltar" agora inclui as novas `NSFilePromiseProvider` `NSFilePromiseReceiver` classes e para dar suporte ao arrastar pássaros.
 - Vários construtores de conveniência foram adicionados aos controles existentes:
-  - `NSButton`inclui novos construtores para a criação de botões de push, caixas de seleção e botões de opção.
-  - `NSTextField`inclui novos construtores para a criação de rótulos de quebra automática e sem encapsulamento, rótulos atribuídos e campos de texto editáveis.
-  - `NSSegmentedControl`inclui novos construtores para a criação de controles segmentados de um grupo de rótulos ou imagens.
-  - `NSSlider`inclui novos construtores para a criação de controles deslizantes lineares horizontais.
-  - `NSImageView`inclui novos construtores para a criação de exibições de imagem não editáveis de um determinado `NSImage` .
+  - `NSButton` inclui novos construtores para a criação de botões de push, caixas de seleção e botões de opção.
+  - `NSTextField` inclui novos construtores para a criação de rótulos de quebra automática e sem encapsulamento, rótulos atribuídos e campos de texto editáveis.
+  - `NSSegmentedControl` inclui novos construtores para a criação de controles segmentados de um grupo de rótulos ou imagens.
+  - `NSSlider` inclui novos construtores para a criação de controles deslizantes lineares horizontais.
+  - `NSImageView` inclui novos construtores para a criação de exibições de imagem não editáveis de um determinado `NSImage` .
 - O novo `NSGridView` foi adicionado para fazer o layout automático de uma coleção de subexibições em uma grade com linhas e colunas de tamanho variável que podem ser ocultadas ou exibidas dinamicamente.
 
 <a name="AVFoundation-Framework-Enhancements"></a>
@@ -103,7 +103,7 @@ O aprimoramento a seguir foi feito para a estrutura GameKit para macOS Sierra:
 
 - O **aplicativo Game Center** foi preterido e removido do MacOS. Se o aplicativo usar GameKit, ele _deverá_ apresentar sua própria interface para exibir recursos de GameKit, como placares, etc.
 - Um novo tipo de conta somente iCloud foi implementado pela classe [GKCloudPlayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) .
-- A nova classe [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) fornece uma solução generalizada para gerenciar o armazenamento de dados persistente em Game Center. `GKGameSession`mantém uma lista de players e o aplicativo é o formulário responsável que implementa como e quando a data do participante é armazenada, recuperada ou trocada entre os jogadores. Em muitas instâncias, as sessões de jogos podem substituir as correspondências existentes, correspondências em tempo real ou métodos de salvamento de jogos persistentes.
+- A nova classe [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) fornece uma solução generalizada para gerenciar o armazenamento de dados persistente em Game Center. `GKGameSession` mantém uma lista de players e o aplicativo é o formulário responsável que implementa como e quando a data do participante é armazenada, recuperada ou trocada entre os jogadores. Em muitas instâncias, as sessões de jogos podem substituir as correspondências existentes, correspondências em tempo real ou métodos de salvamento de jogos persistentes.
 
 <a name="GamePlayKit-Framework-Enhancements"></a>
 
@@ -199,7 +199,7 @@ As seguintes estruturas foram adicionadas ao macOS Sierra:
 - **Estrutura de tentativas** – essa estrutura permite que o aplicativo examine as interações (como local ou ações do usuário) e tome medidas com base nessas informações.
 - **Safariservices Framework** – essa estrutura permite que o aplicativo desenvolva extensões de aplicativo para o Safari (como bloqueadores de conteúdo) para MacOS e Ios.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Amostras de Mac](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+- [Amostras de Mac](/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [O que há de novo no OS X 10,12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)

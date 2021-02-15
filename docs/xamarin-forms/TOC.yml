@@ -32,9 +32,9 @@ items:
         href: ~/get-started/quickstarts/index.md
         items:
           - name: Arquivo > Novo
-            href: ~/get-started/quickstarts/single-page.md
+            href: ~/get-started/quickstarts/app.md
           - name: Multipágina
-            href: ~/get-started/quickstarts/multi-page.md
+            href: ~/get-started/quickstarts/navigation.md
           - name: Banco de Dados
             href: ~/get-started/quickstarts/database.md
           - name: Estilo
@@ -59,7 +59,7 @@ items:
           - name: Layout de grade
             href: ~/get-started/tutorials/grid/index.yml
           - name: Listas
-            href: ~/get-started/tutorials/listview/index.yml
+            href: ~/get-started/tutorials/collectionview/index.yml
           - name: Pop-ups
             href: ~/get-started/tutorials/pop-ups/index.yml
           - name: Ciclo de vida do aplicativo
@@ -145,6 +145,8 @@ items:
             href: xaml/field-modifiers.md
           - name: Carregar XAML em runtime
             href: xaml/runtime-load.md
+      - name: XAML do Xamarin.Forms no Q&A
+        href: /answers/topics/dotnet-xamarinforms-xaml.html
   - name: Conceitos básicos de aplicativo
     items:
       - name: Visão geral
@@ -194,23 +196,6 @@ items:
             href: app-fundamentals/custom-renderer/hybridwebview.md
           - name: Implementando uma exibição
             href: app-fundamentals/custom-renderer/view.md
-          - name: Implementando um player de vídeo
-            href: app-fundamentals/custom-renderer/video-player/index.md
-            items:
-              - name: Criando os players de vídeo da plataforma
-                href: app-fundamentals/custom-renderer/video-player/player-creation.md
-              - name: Reproduzindo um vídeo da Web
-                href: app-fundamentals/custom-renderer/video-player/web-videos.md
-              - name: Associando fontes de vídeo ao player
-                href: app-fundamentals/custom-renderer/video-player/source-bindings.md
-              - name: Carregando vídeos de recursos do aplicativo
-                href: app-fundamentals/custom-renderer/video-player/loading-resources.md
-              - name: Acessando a biblioteca de vídeos do dispositivo
-                href: app-fundamentals/custom-renderer/video-player/accessing-library.md
-              - name: Controles de transporte de vídeo personalizado
-                href: app-fundamentals/custom-renderer/video-player/custom-transport.md
-              - name: Posicionamento de vídeo personalizado
-                href: app-fundamentals/custom-renderer/video-player/custom-positioning.md
       - name: Associação de dados
         href: app-fundamentals/data-binding/index.md
         items:
@@ -306,8 +291,8 @@ items:
             href: app-fundamentals/navigation/tabbed-page.md
           - name: CarouselPage
             href: app-fundamentals/navigation/carousel-page.md
-          - name: MasterDetailPage
-            href: app-fundamentals/navigation/master-detail-page.md
+          - name: FlyoutPage
+            href: app-fundamentals/navigation/flyoutpage.md
           - name: Páginas modais
             href: app-fundamentals/navigation/modal.md
       - name: Shell
@@ -352,8 +337,6 @@ items:
     items:
       - name: Visão geral
         href: user-interface/index.yml
-      - name: Marcação do C#
-        href: user-interface/csharp-markup.md
       - name: Referência de controles
         items:
           - name: Visão geral
@@ -374,8 +357,6 @@ items:
         items:
           - name: BoxView
             href: user-interface/boxview.md
-          - name: Expansor
-            href: user-interface/expander.md
           - name: Image
             href: user-interface/images.md
           - name: Rotular
@@ -398,8 +379,6 @@ items:
                 href: user-interface/map/geocoder.md
               - name: Iniciar o aplicativo de mapas nativos
                 href: user-interface/map/native-map-app.md
-          - name: MediaElement
-            href: user-interface/mediaelement.md
           - name: Formas
             items:
               - name: Visão geral
@@ -559,13 +538,6 @@ items:
                     href: user-interface/brushes/radialgradient.md
           - name: Cores
             href: user-interface/colors.md
-          - name: DataPages
-            href: user-interface/datapages/index.md
-            items:
-              - name: Introdução
-                href: user-interface/datapages/get-started.md
-              - name: Referência de Controles
-                href: user-interface/datapages/controls.md
           - name: Exibir pop-ups
             href: user-interface/pop-ups.md
           - name: Fontes
@@ -666,8 +638,6 @@ items:
             href: platform/android/index.md
           - name: Migração AndroidX
             href: platform/android/androidx-migration.md
-          - name: AppCompat e Design de material
-            href: platform/android/appcompat-material-design.md
           - name: Botão de sombras e preenchimento
             href: platform/android/button-padding-shadow.md
           - name: Opções do IME de entrada
@@ -714,6 +684,8 @@ items:
             href: platform/ios/entry-cursor-color.md
           - name: Tamanho da fonte de entrada
             href: platform/ios/entry-font-size.md
+          - name: Sombra da FlyoutPage
+            href: platform/ios/flyoutpage-shadow.md
           - name: Formatação
             href: platform/ios/formatting.md
           - name: Estilo de apresentação da página modal
@@ -728,8 +700,6 @@ items:
             href: platform/ios/listview-separator-style.md
           - name: Atualizações de controle do thread principal
             href: platform/ios/main-thread-updates-ui.md
-          - name: Sombra do MasterDetailPage
-            href: platform/ios/masterdetailpage-shadow.md
           - name: Separador da barra de NavigationPage
             href: platform/ios/navigation-bar-separator.md
           - name: Modo de cor do texto da barra de NavigationPage
@@ -772,12 +742,12 @@ items:
             href: platform/windows/index.md
           - name: Diretório de imagem padrão
             href: platform/windows/default-image-directory.md
+          - name: Barra de navegação da FlyoutPage
+            href: platform/windows/flyoutpage-navigation-bar.md
           - name: Sentido de leitura de InputView
             href: platform/windows/inputview-reading-order.md
           - name: SelectionMode de ListView
             href: platform/windows/listview-selectionmode.md
-          - name: Barra de navegação de MasterDetailPage
-            href: platform/windows/masterdetailpage-navigation-bar.md
           - name: Posicionamento da barra de ferramentas da página
             href: platform/windows/page-toolbar-placement.md
           - name: Instalação da plataforma
@@ -792,6 +762,8 @@ items:
             href: platform/windows/visualelement-access-keys.md
           - name: Modo de cor herdado de VisualElement
             href: platform/windows/legacy-color-mode.md
+          - name: Modo de execução de WebView
+            href: platform/windows/webview-executionmode.md
           - name: Alertas do JavaScript de WebView
             href: platform/windows/webview-javascript-alert.md
       - name: Criar elementos específicos à plataforma
@@ -836,6 +808,8 @@ items:
         href: ~/essentials/platform-feature-support.md?context=xamarin/xamarin-forms
       - name: Acelerômetro
         href: ~/essentials/accelerometer.md?context=xamarin/xamarin-forms
+      - name: Ações do aplicativo
+        href: ~/essentials/app-actions.md?context=xamarin/xamarin-forms
       - name: Informações do aplicativo
         href: ~/essentials/app-information.md?context=xamarin/xamarin-forms
       - name: Tema do aplicativo
@@ -852,6 +826,8 @@ items:
         href: ~/essentials/compass.md?context=xamarin/xamarin-forms
       - name: Conectividade
         href: ~/essentials/connectivity.md?context=xamarin/xamarin-forms
+      - name: Contatos
+        href: ~/essentials/contacts.md?context=xamarin/xamarin-forms
       - name: Detectar movimento
         href: ~/essentials/detect-shake.md?context=xamarin/xamarin-forms
       - name: Informações sobre DeviceDisplay
@@ -860,6 +836,8 @@ items:
         href: ~/essentials/device-information.md?context=xamarin/xamarin-forms
       - name: Email
         href: ~/essentials/email.md?context=xamarin/xamarin-forms
+      - name: Seletor de arquivos
+        href: ~/essentials/file-picker.md?context=xamarin/xamarin-forms
       - name: Auxiliares do sistema de arquivos
         href: ~/essentials/file-system-helpers.md?context=xamarin/xamarin-forms
       - name: Lanterna
@@ -870,6 +848,8 @@ items:
         href: ~/essentials/geolocation.md?context=xamarin/xamarin-forms
       - name: Giroscópio
         href: ~/essentials/gyroscope.md?context=xamarin/xamarin-forms
+      - name: Comentários táteis
+        href: ~/essentials/haptic-feedback.md?context=xamarin/xamarin-forms
       - name: Inicializador
         href: ~/essentials/launcher.md?context=xamarin/xamarin-forms
       - name: Magnetômetro
@@ -878,6 +858,8 @@ items:
         href: ~/essentials/main-thread.md?context=xamarin/xamarin-forms
       - name: Mapas
         href: ~/essentials/maps.md?context=xamarin/xamarin-forms
+      - name: Seletor de mídia
+        href: ~/essentials/media-picker.md?context=xamarin/xamarin-forms
       - name: Abrir navegador
         href: ~/essentials/open-browser.md?context=xamarin/xamarin-forms
       - name: Sensor de orientação
@@ -890,6 +872,8 @@ items:
         href: ~/essentials/platform-extensions.md?context=xamarin/xamarin-forms
       - name: Preferências
         href: ~/essentials/preferences.md?context=xamarin/xamarin-forms
+      - name: Captura de tela
+        href: ~/essentials/screenshot.md?context=xamarin/xamarin-forms
       - name: Armazenamento seguro
         href: ~/essentials/secure-storage.md?context=xamarin/xamarin-forms
       - name: Compartilhar
@@ -907,9 +891,11 @@ items:
       - name: Web Authenticator
         href: ~/essentials/web-authenticator.md?context=xamarin/xamarin-forms
       - name: Notas sobre a versão do Xamarin.Essentials
-        href: 'https://docs.microsoft.com/xamarin/essentials/release-notes/'
+        href: /xamarin/essentials/release-notes/
       - name: Solução de problemas
         href: ~/essentials/troubleshooting.md?context=xamarin/xamarin-forms
+      - name: Xamarin.Essentials no Q&A
+        href: /answers/topics/dotnet-xamarinessentials.html
   - name: Dados e Serviços de Nuvem do Azure
     items:
       - name: Visão geral
@@ -929,15 +915,13 @@ items:
           - name: Banco de dados de documentos do Azure Cosmos DB
             href: data-cloud/azure-services/azure-cosmosdb.md
           - name: Hubs de notificação do Azure
-            href: data-cloud/azure-services/azure-notification-hub.md
+            href: /azure/developer/mobile-apps/notification-hubs-backend-service-xamarin-forms
           - name: Armazenamento do Azure
             href: data-cloud/azure-services/azure-storage.md
           - name: Azure Search
             href: data-cloud/azure-services/azure-search.md
           - name: Verificação de
             href: data-cloud/azure-services/azure-functions.md
-          - name: Serviço Azure SignalR
-            href: data-cloud/azure-services/azure-signalr.md
       - name: Serviços Cognitivos do Azure
         items:
           - name: Visão geral dos serviços cognitivos
@@ -1012,6 +996,8 @@ items:
       - name: Perguntas frequentes
         href: troubleshooting/questions/index.md
         items:
+          - name: Como posso migrar meu aplicativo para o Xamarin.Forms 5.0?
+            href: troubleshooting/questions/forms5-migration.md
           - name: Posso atualizar o modelo padrão Xamarin.Forms para um pacote NuGet mais recente?
             href: troubleshooting/questions/update-forms-template.md
           - name: Por que o designer XAML do Visual Studio não funciona para arquivos XAML do Xamarin.Forms?
@@ -1020,8 +1006,10 @@ items:
             href: troubleshooting/questions/android-linkassemblies-error.md
           - name: 'Por que meu projeto Android Xamarin.Forms.Maps falha com COMPILETODALVIK: UNEXPECTED TOP-LEVEL ERROR?'
             href: troubleshooting/questions/maps-compiletodalvik-error.md
+  - name: Xamarin.Forms no Q&A
+    href: /answers/topics/dotnet-xamarinforms.html
   - name: Notas de Versão
-    href: 'https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/'
+    href: /xamarin/xamarin-forms/release-notes/
   - name: Exemplos
     href: samples/index.md
   - name: Criação de aplicativos móveis com Xamarin.Forms Book

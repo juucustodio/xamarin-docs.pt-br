@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: eccd0415fdc1db357f904b843a015df60a35a488
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: e71760f813a8974a11ac46e6c9b286bb0eb55f83
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939601"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432824"
 ---
 # <a name="collection-views-in-xamarinios"></a>Exibições de coleção no Xamarin. iOS
 
@@ -40,9 +40,9 @@ Células são objetos que representam um único item no conjunto de dados que es
 
 A `UICollectionViewCell` classe tem as seguintes propriedades para cada uma dessas exibições:
 
-- `ContentView`– Essa exibição contém o conteúdo que a célula apresenta. Ele é renderizado na ordem z superior na tela.
-- `SelectedBackgroundView`– As células têm suporte interno para seleção. Essa exibição é usada para indicar visualmente que uma célula está selecionada. Ele é processado logo abaixo de `ContentView` quando uma célula é selecionada.
-- `BackgroundView`– As células também podem exibir um plano de fundo, que é apresentado pelo `BackgroundView` . Essa exibição é renderizada sob o `SelectedBackgroundView` .
+- `ContentView` – Essa exibição contém o conteúdo que a célula apresenta. Ele é renderizado na ordem z superior na tela.
+- `SelectedBackgroundView` – As células têm suporte interno para seleção. Essa exibição é usada para indicar visualmente que uma célula está selecionada. Ele é processado logo abaixo de  `ContentView` quando uma célula é selecionada.
+- `BackgroundView` – As células também podem exibir um plano de fundo, que é apresentado pelo  `BackgroundView` . Essa exibição é renderizada sob o  `SelectedBackgroundView` .
 
 Ao definir o `ContentView` que for menor do que o `BackgroundView` e `SelectedBackgroundView` o, o `BackgroundView` pode ser usado para estruturar visualmente o conteúdo, enquanto o `SelectedBackgroundView` será exibido quando uma célula for selecionada, como mostrado abaixo:
 
@@ -138,10 +138,10 @@ Exibições de decoração são puramente exibições visuais que podem ser exib
 
 Assim como acontece com outras partes do iOS, como `UITableView` e `MKMapView` , `UICollectionView` obtém seus dados de uma *fonte de dados*, que é exposta no Xamarin. Ios por meio da **`UICollectionViewDataSource`** classe. Essa classe é responsável por fornecer conteúdo para o `UICollectionView` , como:
 
-- **Células** – retornadas do `GetCell` método.
-- **Exibições complementares** – retornadas do `GetViewForSupplementaryElement` método.
-- **Número de seções** – retornadas do `NumberOfSections` método. O padrão é 1 se não for implementado.
-- **Número de itens por seção** – retornados do `GetItemsCount` método.
+- **Células** – retornadas do  `GetCell` método.
+- **Exibições complementares** – retornadas do  `GetViewForSupplementaryElement` método.
+- **Número de seções** – retornadas do  `NumberOfSections` método. O padrão é 1 se não for implementado.
+- **Número de itens por seção** – retornados do  `GetItemsCount` método.
 
 ### <a name="uicollectionviewcontroller"></a>UICollectionViewController
 Para sua conveniência, a `UICollectionViewController` classe está disponível. Isso é configurado automaticamente para ser o delegado, que é discutido na próxima seção e fonte de dados para sua `UICollectionView` exibição.
@@ -233,7 +233,7 @@ public override bool ShouldHighlightItem (UICollectionView collectionView, NSInd
 
 Quando o realce estiver desabilitado, o processo de seleção de uma célula também será desabilitado. Além disso, também há um `ShouldSelectItem` método que controla a seleção diretamente, embora se `ShouldHighlightItem` seja implementado e retorna false, `ShouldSelectItem` não é chamado.
 
- `ShouldSelectItem`permite a ativação ou desativação da seleção de item por item, quando `ShouldHighlightItem` não está implementado. Ele também permite o realce sem seleção, se `ShouldHighlightItem` for implementado e retorna true, enquanto `ShouldSelectItem` retorna false.
+ `ShouldSelectItem` permite a ativação ou desativação da seleção de item por item, quando `ShouldHighlightItem` não está implementado. Ele também permite o realce sem seleção, se `ShouldHighlightItem` for implementado e retorna true, enquanto `ShouldSelectItem` retorna false.
 
  <a name="Cell_Menus"></a>
 
@@ -241,9 +241,9 @@ Quando o realce estiver desabilitado, o processo de seleção de uma célula tam
 
 Cada célula em um `UICollectionView` é capaz de mostrar um menu que permite recortar, copiar e colar, opcionalmente, com suporte. Para criar um menu Editar em uma célula:
 
-1. Substituir `ShouldShowMenu` e retornar true se o item deve mostrar um menu.
-1. Substitua `CanPerformAction` e retorne verdadeiro para cada ação que o item puder executar, que será qualquer um dos comandos Recortar, copiar ou colar.
-1. Substitua `PerformAction` para executar a edição e a cópia da operação de colagem.
+1. Substituir  `ShouldShowMenu` e retornar true se o item deve mostrar um menu.
+1. Substitua  `CanPerformAction` e retorne verdadeiro para cada ação que o item puder executar, que será qualquer um dos comandos Recortar, copiar ou colar.
+1. Substitua  `PerformAction` para executar a edição e a cópia da operação de colagem.
 
 A captura de tela a seguir mostra o menu quando uma célula é longa pressionada:
 
@@ -253,7 +253,7 @@ A captura de tela a seguir mostra o menu quando uma célula é longa pressionada
 
 ## <a name="layout"></a>Layout
 
-`UICollectionView`dá suporte a um sistema de layout que permite que o posicionamento de todos os seus elementos, células, exibições suplementares e exibições de decoração seja gerenciado independentemente do `UICollectionView` próprio.
+`UICollectionView` dá suporte a um sistema de layout que permite que o posicionamento de todos os seus elementos, células, exibições suplementares e exibições de decoração seja gerenciado independentemente do `UICollectionView` próprio.
 Usando o sistema de layout, um aplicativo pode dar suporte a layouts como a grade que vimos neste artigo, além de fornecer layouts personalizados.
 
  <a name="Layout_Basics"></a>
@@ -262,8 +262,8 @@ Usando o sistema de layout, um aplicativo pode dar suporte a layouts como a grad
 
 Layouts em um `UICollectionView` são definidos em uma classe que herda de `UICollectionViewLayout` . A implementação de layout é responsável pela criação dos atributos de layout para cada item no `UICollectionView` . Há duas maneiras de criar um layout:
 
-- Use o interno `UICollectionViewFlowLayout` .
-- Forneça um layout personalizado herdando de `UICollectionViewLayout` .
+- Use o interno  `UICollectionViewFlowLayout` .
+- Forneça um layout personalizado herdando de  `UICollectionViewLayout` .
 
  <a name="Flow_Layout"></a>
 
@@ -273,13 +273,13 @@ A `UICollectionViewFlowLayout` classe fornece um layout baseado em linha adequad
 
 Para usar um layout de fluxo:
 
-- Criar uma instância do `UICollectionViewFlowLayout` :
+- Criar uma instância do  `UICollectionViewFlowLayout` :
 
 ```csharp
 var layout = new UICollectionViewFlowLayout ();
 ```
 
-- Passe a instância para o construtor do `UICollectionView` :
+- Passe a instância para o construtor do  `UICollectionView` :
 
 ```csharp
 simpleCollectionViewController = new SimpleCollectionViewController (layout);
@@ -315,9 +315,9 @@ Na edição para usar `UICollectionViewFlowLayout` diretamente, ele também pode
 Para implementar isso, a subclasse `UICollectionViewFlowLayout` requer:
 
 - Inicializar todas as propriedades de layout que se aplicam ao próprio layout ou a todos os itens no layout no construtor.
-- Substituindo `ShouldInvalidateLayoutForBoundsChange` , retornando true para que, quando os limites das `UICollectionView` alterações, o layout das células seja recalculado. Isso é usado nesse caso, verifique se o código da transformação aplicada à célula centermost será aplicado durante a rolagem.
-- Substituindo `TargetContentOffset` para fazer com que a célula centermost se encaixe no centro do as `UICollectionView` paradas de rolagem.
-- Substituindo `LayoutAttributesForElementsInRect` para retornar uma matriz de `UICollectionViewLayoutAttributes` . Cada `UICollectionViewLayoutAttribute` contém informações sobre como fazer o layout de um item específico, incluindo propriedades como `Center` , `Size` `ZIndex` e `Transform3D` .
+- Substituindo  `ShouldInvalidateLayoutForBoundsChange` , retornando true para que, quando os limites das  `UICollectionView` alterações, o layout das células seja recalculado. Isso é usado nesse caso, verifique se o código da transformação aplicada à célula centermost será aplicado durante a rolagem.
+- Substituindo  `TargetContentOffset` para fazer com que a célula centermost se encaixe no centro do as  `UICollectionView` paradas de rolagem.
+- Substituindo  `LayoutAttributesForElementsInRect` para retornar uma matriz de  `UICollectionViewLayoutAttributes` . Cada  `UICollectionViewLayoutAttribute` contém informações sobre como fazer o layout de um item específico, incluindo propriedades como  `Center` ,  `Size`  `ZIndex` e  `Transform3D` .
 
 O código a seguir mostra uma implementação desse tipo:
 
@@ -396,9 +396,9 @@ Além de usar `UICollectionViewFlowLayout` , os layouts também podem ser totalm
 
 Os principais métodos a serem substituídos são:
 
-- `PrepareLayout`– Usado para executar cálculos geométricos iniciais que serão usados em todo o processo de layout.
-- `CollectionViewContentSize`– Retorna o tamanho da área usada para exibir o conteúdo.
-- `LayoutAttributesForElementsInRect`– Assim como com o exemplo de UICollectionViewFlowLayout mostrado anteriormente, esse método é usado para fornecer informações para o quanto ao `UICollectionView` layout de cada item. No entanto, ao contrário do `UICollectionViewFlowLayout` , ao criar um layout personalizado, você pode posicionar itens, no entanto, escolher.
+- `PrepareLayout` – Usado para executar cálculos geométricos iniciais que serão usados em todo o processo de layout.
+- `CollectionViewContentSize` – Retorna o tamanho da área usada para exibir o conteúdo.
+- `LayoutAttributesForElementsInRect` – Assim como com o exemplo de UICollectionViewFlowLayout mostrado anteriormente, esse método é usado para fornecer informações para o quanto ao  `UICollectionView` layout de cada item. No entanto, ao contrário do  `UICollectionViewFlowLayout` , ao criar um layout personalizado, você pode posicionar itens, no entanto, escolher.
 
 Por exemplo, o mesmo conteúdo pode ser apresentado em um layout circular, conforme mostrado abaixo:
 
@@ -718,10 +718,10 @@ public override void ViewDidLoad ()
 
 Aqui estamos usando vários novos métodos adicionados à exibição de coleção para implementar e controlar a operação de arrastar:
 
-- `BeginInteractiveMovementForItem`-Marca o início de uma operação de movimentação.
-- `UpdateInteractiveMovementTargetPosition`-É enviado à medida que o local do item é atualizado.
-- `EndInteractiveMovement`-Marca o final de uma movimentação de item.
-- `CancelInteractiveMovement`-Marca o usuário Cancelando a operação de movimentação.
+- `BeginInteractiveMovementForItem` -Marca o início de uma operação de movimentação.
+- `UpdateInteractiveMovementTargetPosition` -É enviado à medida que o local do item é atualizado.
+- `EndInteractiveMovement` -Marca o final de uma movimentação de item.
+- `CancelInteractiveMovement` -Marca o usuário Cancelando a operação de movimentação.
 
 Quando o aplicativo for executado, a operação de arrastar funcionará exatamente como o reconhecedor de gestos de arrastar padrão que vem com o modo de exibição de coleção.
 
@@ -1195,77 +1195,77 @@ Nas seções a seguir, examinaremos detalhadamente as alterações feitas em cad
 
 As seguintes alterações ou adições foram feitas na `UICollectionView` classe para IOS 9:
 
-- `BeginInteractiveMovementForItem`– Marca o início de uma operação de arrastar.
-- `CancelInteractiveMovement`– Informa ao modo de exibição de coleção que o usuário cancelou uma operação de arrastar.
-- `EndInteractiveMovement`– Informa ao modo de exibição de coleção que o usuário concluiu uma operação de arrastar.
-- `GetIndexPathsForVisibleSupplementaryElements`– Retorna o `indexPath` de um cabeçalho ou rodapé em uma seção de exibição de coleção.
-- `GetSupplementaryView`– Retorna o cabeçalho ou o rodapé fornecido.
-- `GetVisibleSupplementaryViews`– Retorna uma lista de todos os cabeçalhos e rodapés visíveis.
-- `UpdateInteractiveMovementTargetPosition`– Informa o modo de exibição de coleção que o usuário moveu ou está movendo um item durante uma operação de arrastar.
+- `BeginInteractiveMovementForItem` – Marca o início de uma operação de arrastar.
+- `CancelInteractiveMovement` – Informa ao modo de exibição de coleção que o usuário cancelou uma operação de arrastar.
+- `EndInteractiveMovement` – Informa ao modo de exibição de coleção que o usuário concluiu uma operação de arrastar.
+- `GetIndexPathsForVisibleSupplementaryElements` – Retorna o `indexPath` de um cabeçalho ou rodapé em uma seção de exibição de coleção.
+- `GetSupplementaryView` – Retorna o cabeçalho ou o rodapé fornecido.
+- `GetVisibleSupplementaryViews` – Retorna uma lista de todos os cabeçalhos e rodapés visíveis.
+- `UpdateInteractiveMovementTargetPosition` – Informa o modo de exibição de coleção que o usuário moveu ou está movendo um item durante uma operação de arrastar.
 
 ### <a name="uicollectionviewcontroller"></a>UICollectionViewController
 
 As seguintes alterações ou adições foram feitas na `UICollectionViewController` classe no Ios 9:
 
-- `InstallsStandardGestureForInteractiveMovement`– Se `true` o novo reconhecedor de gestos que dá suporte automaticamente ao arrastar para a reordenação, será usado.
-- `CanMoveItem`– Informa o modo de exibição de coleção se um determinado item puder ser arrastado reordenado.
-- `GetTargetContentOffset`– Usado para obter o deslocamento de um determinado item de exibição de coleção.
-- `GetTargetIndexPathForMove`– Obtém o `indexPath` de um determinado item para uma operação de arrastar.
-- `MoveItem`– Move a ordem de um determinado item na lista.
+- `InstallsStandardGestureForInteractiveMovement` – Se `true` o novo reconhecedor de gestos que dá suporte automaticamente ao arrastar para a reordenação, será usado.
+- `CanMoveItem` – Informa o modo de exibição de coleção se um determinado item puder ser arrastado reordenado.
+- `GetTargetContentOffset` – Usado para obter o deslocamento de um determinado item de exibição de coleção.
+- `GetTargetIndexPathForMove` – Obtém o `indexPath` de um determinado item para uma operação de arrastar.
+- `MoveItem` – Move a ordem de um determinado item na lista.
 
 ### <a name="uicollectionviewdatasource"></a>UICollectionViewDataSource
 
 As seguintes alterações ou adições foram feitas na `UICollectionViewDataSource` classe no Ios 9:
 
-- `CanMoveItem`– Informa o modo de exibição de coleção se um determinado item puder ser arrastado reordenado.
-- `MoveItem`– Move a ordem de um determinado item na lista.
+- `CanMoveItem` – Informa o modo de exibição de coleção se um determinado item puder ser arrastado reordenado.
+- `MoveItem` – Move a ordem de um determinado item na lista.
 
 ### <a name="uicollectionviewdelegate"></a>UICollectionViewDelegate
 
 As seguintes alterações ou adições foram feitas na `UICollectionViewDelegate` classe no Ios 9:
 
-- `GetTargetContentOffset`– Usado para obter o deslocamento de um determinado item de exibição de coleção.
-- `GetTargetIndexPathForMove`– Obtém o `indexPath` de um determinado item para uma operação de arrastar.
+- `GetTargetContentOffset` – Usado para obter o deslocamento de um determinado item de exibição de coleção.
+- `GetTargetIndexPathForMove` – Obtém o `indexPath` de um determinado item para uma operação de arrastar.
 
 ### <a name="uicollectionviewflowlayout"></a>UICollectionViewFlowLayout
 
 As seguintes alterações ou adições foram feitas na `UICollectionViewFlowLayout` classe no Ios 9:
 
-- `SectionFootersPinToVisibleBounds`– Une os rodapés de seção aos limites de exibição de coleção visíveis.
-- `SectionHeadersPinToVisibleBounds`– Une os cabeçalhos de seção aos limites de exibição de coleção visíveis.
+- `SectionFootersPinToVisibleBounds` – Une os rodapés de seção aos limites de exibição de coleção visíveis.
+- `SectionHeadersPinToVisibleBounds` – Une os cabeçalhos de seção aos limites de exibição de coleção visíveis.
 
 ### <a name="uicollectionviewlayout"></a>UICollectionViewLayout
 
 As seguintes alterações ou adições foram feitas na `UICollectionViewLayout` classe no Ios 9:
 
-- `GetInvalidationContextForEndingInteractiveMovementOfItems`– Retorna o contexto de invalidação no final de uma operação de arrastar quando o usuário termina ou cancela o recurso.
-- `GetInvalidationContextForInteractivelyMovingItems`– Retorna o contexto Invalidation no início de uma operação de arrastar.
-- `GetLayoutAttributesForInteractivelyMovingItem`– Obtém os atributos de layout de um determinado item ao arrastar um item.
-- `GetTargetIndexPathForInteractivelyMovingItem`– Retorna o `indexPath` do item que está no ponto determinado ao arrastar um item.
+- `GetInvalidationContextForEndingInteractiveMovementOfItems` – Retorna o contexto de invalidação no final de uma operação de arrastar quando o usuário termina ou cancela o recurso.
+- `GetInvalidationContextForInteractivelyMovingItems` – Retorna o contexto Invalidation no início de uma operação de arrastar.
+- `GetLayoutAttributesForInteractivelyMovingItem` – Obtém os atributos de layout de um determinado item ao arrastar um item.
+- `GetTargetIndexPathForInteractivelyMovingItem` – Retorna o `indexPath` do item que está no ponto determinado ao arrastar um item.
 
 ### <a name="uicollectionviewlayoutattributes"></a>UICollectionViewLayoutAttributes
 
 As seguintes alterações ou adições foram feitas na `UICollectionViewLayoutAttributes` classe no Ios 9:
 
-- `CollisionBoundingPath`– Retorna o caminho de colisão de dois itens durante uma operação de arrastar.
-- `CollisionBoundsType`– Retorna o tipo de colisão (como a `UIDynamicItemCollisionBoundsType` ) que ocorreu durante uma operação de arrastar.
+- `CollisionBoundingPath` – Retorna o caminho de colisão de dois itens durante uma operação de arrastar.
+- `CollisionBoundsType` – Retorna o tipo de colisão (como a `UIDynamicItemCollisionBoundsType` ) que ocorreu durante uma operação de arrastar.
 
 ### <a name="uicollectionviewlayoutinvalidationcontext"></a>UICollectionViewLayoutInvalidationContext
 
 As seguintes alterações ou adições foram feitas na `UICollectionViewLayoutInvalidationContext` classe no Ios 9:
 
-- `InteractiveMovementTarget`– Retorna o item de destino de uma operação de arrastar.
-- `PreviousIndexPathsForInteractivelyMovingItems`– Retorna o `indexPaths` de outros itens envolvidos em uma operação de arrastar para reordenar.
-- `TargetIndexPathsForInteractivelyMovingItems`– Retorna o `indexPaths` dos itens que serão reordenados como resultado de uma operação de arrastar para reordenar.
+- `InteractiveMovementTarget` – Retorna o item de destino de uma operação de arrastar.
+- `PreviousIndexPathsForInteractivelyMovingItems` – Retorna o `indexPaths` de outros itens envolvidos em uma operação de arrastar para reordenar.
+- `TargetIndexPathsForInteractivelyMovingItems` – Retorna o `indexPaths` dos itens que serão reordenados como resultado de uma operação de arrastar para reordenar.
 
 ### <a name="uicollectionviewsource"></a>UICollectionViewSource
 
 As seguintes alterações ou adições foram feitas na `UICollectionViewSource` classe no Ios 9:
 
-- `CanMoveItem`– Informa o modo de exibição de coleção se um determinado item puder ser arrastado reordenado.
-- `GetTargetContentOffset`– Retorna os deslocamentos de itens que serão movidos por meio de uma operação de arrastar para reordenar.
-- `GetTargetIndexPathForMove`– Retorna o `indexPath` de um item que será movido durante uma operação de arrastar para reordenar.
-- `MoveItem`– Move a ordem de um determinado item na lista.
+- `CanMoveItem` – Informa o modo de exibição de coleção se um determinado item puder ser arrastado reordenado.
+- `GetTargetContentOffset` – Retorna os deslocamentos de itens que serão movidos por meio de uma operação de arrastar para reordenar.
+- `GetTargetIndexPathForMove` – Retorna o `indexPath` de um item que será movido durante uma operação de arrastar para reordenar.
+- `MoveItem` – Move a ordem de um determinado item na lista.
 
 ## <a name="summary"></a>Resumo
 
@@ -1274,8 +1274,8 @@ Ele abordou a implementação de uma ação simples de arrastar para reordenar e
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Amostras do iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
-- [Exemplo de exibição de coleção](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-collectionview)
-- [SimpleCollectionView (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplecollectionview)
+- [Amostras do iOS 9](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
+- [Exemplo de exibição de coleção](/samples/xamarin/ios-samples/ios9-collectionview)
+- [SimpleCollectionView (exemplo)](/samples/xamarin/ios-samples/simplecollectionview)
 - [Eventos, protocolos e delegados](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 - [Trabalhando com tabelas e células](~/ios/user-interface/controls/tables/index.md)

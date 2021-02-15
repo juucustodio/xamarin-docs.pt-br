@@ -1,29 +1,27 @@
 ---
-title: Xamarin.FormsDados do CarouselView
+title: Xamarin.Forms Dados do CarouselView
 description: Um CarouselView é populado com dados definindo sua propriedade ItemsSource para qualquer coleção que implemente IEnumerable.
 ms.prod: xamarin
 ms.assetid: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/29/2020
+ms.date: 10/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f2359880626b292f410af094c82ba6bb3ed50426
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: b47c810f26dad6c1f6b58eb82bdd234d5cd3f6aa
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918404"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940428"
 ---
-# <a name="no-locxamarinforms-carouselview-data"></a>Xamarin.FormsDados do CarouselView
+# <a name="no-locxamarinforms-carouselview-data"></a>Xamarin.Forms Dados do CarouselView
 
-![API de pré-lançamento](~/media/shared/preview.png)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
-
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)inclui as seguintes propriedades que definem os dados a serem exibidos e sua aparência:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) inclui as seguintes propriedades que definem os dados a serem exibidos e sua aparência:
 
 - [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource), do tipo `IEnumerable` , especifica a coleção de itens a serem exibidos e tem um valor padrão de `null` .
 - [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate), do tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , especifica o modelo a ser aplicado a cada item na coleção de itens a ser exibida.
@@ -31,61 +29,18 @@ ms.locfileid: "87918404"
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que as propriedades podem ser destinos de associações de dados.
 
 > [!NOTE]
-> [`CarouselView`](xref:Xamarin.Forms.CarouselView)define uma `ItemsUpdatingScrollMode` propriedade que representa o comportamento de rolagem do `CarouselView` quando novos itens são adicionados a ele. Para obter mais informações sobre essa propriedade, consulte [controlar posição de rolagem quando novos itens forem adicionados](scrolling.md#control-scroll-position-when-new-items-are-added).
+> [`CarouselView`](xref:Xamarin.Forms.CarouselView) define uma `ItemsUpdatingScrollMode` propriedade que representa o comportamento de rolagem do `CarouselView` quando novos itens são adicionados a ele. Para obter mais informações sobre essa propriedade, consulte [controlar posição de rolagem quando novos itens forem adicionados](scrolling.md#control-scroll-position-when-new-items-are-added).
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)dá suporte à virtualização de dados incremental à medida que o usuário rola. Para obter mais informações, consulte [carregar dados incrementalmente](#load-data-incrementally).
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) dá suporte à virtualização de dados incremental à medida que o usuário rola. Para obter mais informações, consulte [carregar dados incrementalmente](#load-data-incrementally).
 
 ## <a name="populate-a-carouselview-with-data"></a>Popular um CarouselView com dados
 
-Um [`CarouselView`](xref:Xamarin.Forms.CarouselView) é populado com dados definindo sua [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) propriedade para qualquer coleção que implementa `IEnumerable` . Os itens podem ser adicionados em XAML inicializando a `ItemsSource` propriedade de uma matriz de cadeias de caracteres:
-
-```xaml
-<CarouselView>
-    <CarouselView.ItemsSource>
-        <x:Array Type="{x:Type x:String}">
-            <x:String>Baboon</x:String>
-            <x:String>Capuchin Monkey</x:String>
-            <x:String>Blue Monkey</x:String>
-            <x:String>Squirrel Monkey</x:String>
-            <x:String>Golden Lion Tamarin</x:String>
-            <x:String>Howler Monkey</x:String>
-            <x:String>Japanese Macaque</x:String>
-        </x:Array>
-    </CarouselView.ItemsSource>
-</CarouselView>
-```
-
-> [!NOTE]
-> Observe que o elemento `x:Array` requer um atributo `Type` que indica o tipo dos itens na matriz.
-
-Este é o código C# equivalente:
-
-```csharp
-CarouselView carouselView = new CarouselView();
-carouselView.ItemsSource = new string[]
-{
-    "Baboon",
-    "Capuchin Monkey",
-    "Blue Monkey",
-    "Squirrel Monkey",
-    "Golden Lion Tamarin",
-    "Howler Monkey",
-    "Japanese Macaque"
-};
-```
+Um [`CarouselView`](xref:Xamarin.Forms.CarouselView) é populado com dados definindo sua [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) propriedade para qualquer coleção que implementa `IEnumerable` . Por padrão, o [`CarouselView`](xref:Xamarin.Forms.CarouselView) exibe os itens horizontalmente.
 
 > [!IMPORTANT]
 > Se o [`CarouselView`](xref:Xamarin.Forms.CarouselView) for necessário para atualizar à medida que os itens forem adicionados, removidos ou alterados na coleção subjacente, a coleção subjacente deverá ser uma `IEnumerable` coleção que enviará notificações de alteração de propriedade, como `ObservableCollection` .
 
-Por padrão, o [`CarouselView`](xref:Xamarin.Forms.CarouselView) exibe os itens horizontalmente. As capturas de tela a seguir mostram uma `CarouselView` exibição de itens de cadeia de caracteres diferentes no Ios e no Android:
-
-[![Captura de tela de CarouselView contendo itens de texto, no iOS e no Android](populate-data-images/text.png "Itens de texto em um CarouselView")](populate-data-images/text-large.png#lightbox "Itens de texto em um CarouselView")
-
-Para obter informações sobre como alterar a [`CarouselView`](xref:Xamarin.Forms.CarouselView) orientação, consulte [ Xamarin.Forms layout CarouselView](layout.md). Para obter informações sobre como definir a aparência de cada item no `CarouselView` , consulte [definir a aparência do item](#define-item-appearance).
-
-### <a name="data-binding"></a>Associação de dados
-
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)pode ser preenchido com dados usando a vinculação de dados para associar sua [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) Propriedade a uma `IEnumerable` coleção. Em XAML, isso é obtido com a `Binding` extensão de marcação:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) pode ser preenchido com dados usando a vinculação de dados para associar sua [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) Propriedade a uma `IEnumerable` coleção. Em XAML, isso é obtido com a `Binding` extensão de marcação:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}" />
@@ -103,7 +58,7 @@ Neste exemplo, os [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) dado
 > [!NOTE]
 > Associações compiladas podem ser habilitadas para melhorar o desempenho de vinculação de dados em Xamarin.Forms aplicativos. Para saber mais, confira [Associações compiladas](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
 
-Para obter mais informações sobre a vinculação de dados, consulte [ Xamarin.Forms vinculação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+Para obter informações sobre como alterar a [`CarouselView`](xref:Xamarin.Forms.CarouselView) orientação, consulte [ Xamarin.Forms layout CarouselView](layout.md). Para obter informações sobre como definir a aparência de cada item no `CarouselView` , consulte [definir a aparência do item](#define-item-appearance). Para obter mais informações sobre a vinculação de dados, consulte [ Xamarin.Forms vinculação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
 ## <a name="define-item-appearance"></a>Definir a aparência do item
 
@@ -291,7 +246,7 @@ Para obter mais informações sobre indicadores, consulte [ Xamarin.Forms Indica
 
 ## <a name="context-menus"></a>Menus de contexto
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)dá suporte a menus de contexto para itens de dados por meio do `SwipeView` , que revela o menu de contexto com um gesto de passar o dedo. O `SwipeView` é um controle de contêiner que encapsula em um item de conteúdo e fornece itens de menu de contexto para esse item de conteúdo. Portanto, os menus de contexto são implementados para um `CarouselView` criando um `SwipeView` que define o conteúdo que o `SwipeView` encapsulado e os itens do menu de contexto que são revelados pelo gesto de passar o dedo. Isso é obtido com a adição de um `SwipeView` ao [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que define a aparência de cada item de dados no `CarouselView` :
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) dá suporte a menus de contexto para itens de dados por meio do `SwipeView` , que revela o menu de contexto com um gesto de passar o dedo. O `SwipeView` é um controle de contêiner que encapsula em um item de conteúdo e fornece itens de menu de contexto para esse item de conteúdo. Portanto, os menus de contexto são implementados para um `CarouselView` criando um `SwipeView` que define o conteúdo que o `SwipeView` encapsulado e os itens do menu de contexto que são revelados pelo gesto de passar o dedo. Isso é obtido com a adição de um `SwipeView` ao [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) que define a aparência de cada item de dados no `CarouselView` :
 
 ```xaml
 <CarouselView x:Name="carouselView"
@@ -383,13 +338,13 @@ Neste exemplo, o `SwipeView` conteúdo é um [`StackLayout`](xref:Xamarin.Forms.
 [![Captura de tela do item de menu de contexto inferior do CarouselView, no Ios e no Android](populate-data-images/swipeview-bottom.png "CarouselView com item de menu de contexto SwipeView inferior")](populate-data-images/swipeview-bottom-large.png#lightbox "CarouselView com item de menu de contexto SwipeView inferior") 
  [ ![Captura de tela do item de menu superior do CarouselView, no Ios e no Android](populate-data-images/swipeview-top.png "CarouselView com o item de menu de contexto SwipeView superior")](populate-data-images/swipeview-top-large.png#lightbox "CarouselView com o item de menu de contexto SwipeView superior")
 
-`SwipeView`dá suporte a quatro direções de toque diferentes, com a direção do dedo sendo definida pela `SwipeItems` coleção direcional à `SwipeItems` qual os objetos são adicionados. Por padrão, um item de dedo é executado quando ele é tocado pelo usuário. Além disso, quando um item de dedo for executado, os itens do dedo serão ocultados e o `SwipeView` conteúdo será exibido novamente. No entanto, esses comportamentos podem ser alterados.
+`SwipeView` dá suporte a quatro direções de toque diferentes, com a direção do dedo sendo definida pela `SwipeItems` coleção direcional à `SwipeItems` qual os objetos são adicionados. Por padrão, um item de dedo é executado quando ele é tocado pelo usuário. Além disso, quando um item de dedo for executado, os itens do dedo serão ocultados e o `SwipeView` conteúdo será exibido novamente. No entanto, esses comportamentos podem ser alterados.
 
 Para obter mais informações sobre o `SwipeView` controle, consulte [ Xamarin.Forms SwipeView](~/xamarin-forms/user-interface/swipeview.md).
 
 ## <a name="pull-to-refresh"></a>Puxar para atualizar
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)dá suporte à funcionalidade de pull para atualizar por meio do `RefreshView` , que permite que os dados sejam exibidos para serem atualizados ao puxar os itens. O `RefreshView` é um controle de contêiner que fornece a funcionalidade de pull para atualizar para seu filho, desde que o filho ofereça suporte a conteúdo rolável. Portanto, o pull para a atualização é implementado para um definindo `CarouselView` -o como o filho de um `RefreshView` :
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) dá suporte à funcionalidade de pull para atualizar por meio do `RefreshView` , que permite que os dados sejam exibidos para serem atualizados ao puxar os itens. O `RefreshView` é um controle de contêiner que fornece a funcionalidade de pull para atualizar para seu filho, desde que o filho ofereça suporte a conteúdo rolável. Portanto, o pull para a atualização é implementado para um definindo `CarouselView` -o como o filho de um `RefreshView` :
 
 ```xaml
 <RefreshView IsRefreshing="{Binding IsRefreshing}"
@@ -428,20 +383,20 @@ Para obter mais informações sobre o `RefreshView` , consulte [ Xamarin.Forms R
 
 ## <a name="load-data-incrementally"></a>Carregar dados de forma incremental
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)dá suporte à virtualização de dados incremental à medida que o usuário rola. Isso permite cenários como o carregamento assíncrono de uma página de dados de um serviço Web, à medida que o usuário rola. Além disso, o ponto no qual mais dados são carregados é configurável para que os usuários não vejam o espaço em branco ou sejam interrompidos da rolagem.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) dá suporte à virtualização de dados incremental à medida que o usuário rola. Isso permite cenários como o carregamento assíncrono de uma página de dados de um serviço Web, à medida que o usuário rola. Além disso, o ponto no qual mais dados são carregados é configurável para que os usuários não vejam o espaço em branco ou sejam interrompidos da rolagem.
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)define as propriedades a seguir para controlar o carregamento incremental de dados:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) define as propriedades a seguir para controlar o carregamento incremental de dados:
 
 - `RemainingItemsThreshold`, do tipo `int` , o limite de itens ainda não visíveis na lista na qual o `RemainingItemsThresholdReached` evento será acionado.
 - `RemainingItemsThresholdReachedCommand`, do tipo `ICommand` , que é executado quando o `RemainingItemsThreshold` é atingido.
 - `RemainingItemsThresholdReachedCommandParameter`, do tipo `object`, que é o parâmetro passado para `RemainingItemsThresholdReachedCommand`.
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView)também define um `RemainingItemsThresholdReached` evento que é acionado quando o `CarouselView` é rolado muito suficiente para que `RemainingItemsThreshold` os itens não tenham sido exibidos. Esse evento pode ser tratado para carregar mais itens. Além disso, quando o `RemainingItemsThresholdReached` evento é acionado, o `RemainingItemsThresholdReachedCommand` é executado, permitindo que o carregamento de dados incremental ocorra em um ViewModel.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) também define um `RemainingItemsThresholdReached` evento que é acionado quando o `CarouselView` é rolado muito suficiente para que `RemainingItemsThreshold` os itens não tenham sido exibidos. Esse evento pode ser tratado para carregar mais itens. Além disso, quando o `RemainingItemsThresholdReached` evento é acionado, o `RemainingItemsThresholdReachedCommand` é executado, permitindo que o carregamento de dados incremental ocorra em um ViewModel.
 
 O valor padrão da `RemainingItemsThreshold` propriedade é-1, que indica que o `RemainingItemsThresholdReached` evento nunca será acionado. Quando o valor da propriedade for 0, o `RemainingItemsThresholdReached` evento será acionado quando o item final no [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) for exibido. Para valores maiores que 0, o `RemainingItemsThresholdReached` evento será acionado quando o `ItemsSource` contiver esse número de itens ainda não rolados.
 
 > [!NOTE]
-> [`CarouselView`](xref:Xamarin.Forms.CarouselView)valida a `RemainingItemsThreshold` propriedade para que seu valor seja sempre maior ou igual a-1.
+> [`CarouselView`](xref:Xamarin.Forms.CarouselView) valida a `RemainingItemsThreshold` propriedade para que seu valor seja sempre maior ou igual a-1.
 
 O exemplo de XAML a seguir mostra um [`CarouselView`](xref:Xamarin.Forms.CarouselView) que carrega dados de forma incremental:
 
@@ -479,9 +434,9 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 
 ## <a name="related-links"></a>Links relacionados
 
-- [CarouselView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
-- [Xamarin.FormsIndicatorView](~/xamarin-forms/user-interface/indicatorview.md)
-- [Xamarin.FormsRefreshView](~/xamarin-forms/user-interface/refreshview.md)
-- [Xamarin.FormsAssociação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md)
-- [Xamarin.FormsModelos de dados](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [CarouselView (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+- [Xamarin.Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md)
+- [Xamarin.Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md)
+- [Xamarin.Forms Associação de dados](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+- [Xamarin.Forms Modelos de dados](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Criar um Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

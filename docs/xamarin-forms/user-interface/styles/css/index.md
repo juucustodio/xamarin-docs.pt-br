@@ -1,6 +1,6 @@
 ---
 title: Estilizando Xamarin.Forms aplicativos usando folhas de estilos em cascata (CSS)
-description: Xamarin.Formsdá suporte a elementos visuais de estilo usando folhas de estilos em cascata (CSS).
+description: Xamarin.Forms dá suporte a elementos visuais de estilo usando folhas de estilos em cascata (CSS).
 ms.prod: xamarin
 ms.assetid: C89D57A6-DAB9-4C42-963F-26D67627DDC2
 ms.technology: xamarin-forms
@@ -11,20 +11,20 @@ ms.date: 07/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 62c8fdd6a0dd2f07b17891346081ccbcebe26c77
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 656a9dbec5f0520b4167c482b227ea863eb4c412
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918583"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373530"
 ---
 # <a name="styling-no-locxamarinforms-apps-using-cascading-style-sheets-css"></a>Estilizando Xamarin.Forms aplicativos usando folhas de estilos em cascata (CSS)
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 
-_Xamarin.Formsdá suporte a elementos visuais de estilo usando folhas de estilos em cascata (CSS)._
+_Xamarin.Forms dá suporte a elementos visuais de estilo usando folhas de estilos em cascata (CSS)._
 
-Xamarin.Formsos aplicativos podem ser estilizados usando o CSS. Uma folha de estilos consiste em uma lista de regras, com cada regra que consiste em um ou mais seletores e um bloco de declaração. Um bloco de declaração consiste em uma lista de declarações entre chaves, com cada declaração que consiste em uma propriedade, dois-pontos e um valor. Quando há várias declarações em um bloco, um ponto-e-vírgula é inserido como um separador. O exemplo de código a seguir mostra algum Xamarin.Forms CSS em conformidade:
+Xamarin.Forms os aplicativos podem ser estilizados usando o CSS. Uma folha de estilos consiste em uma lista de regras, com cada regra que consiste em um ou mais seletores e um bloco de declaração. Um bloco de declaração consiste em uma lista de declarações entre chaves, com cada declaração que consiste em uma propriedade, dois-pontos e um valor. Quando há várias declarações em um bloco, um ponto-e-vírgula é inserido como um separador. O exemplo de código a seguir mostra algum Xamarin.Forms CSS em conformidade:
 
 ```css
 navigationpage {
@@ -79,7 +79,7 @@ No Xamarin.Forms , as folhas de estilo CSS são analisadas e avaliadas em tempo 
 > [!NOTE]
 > Atualmente, todo o estilo possível com o estilo XAML não pode ser executado com o CSS. No entanto, os estilos XAML podem ser usados para complementar o CSS para propriedades que não têm suporte no momento pelo Xamarin.Forms . Para obter mais informações sobre estilos XAML, consulte [estilizando Xamarin.Forms aplicativos usando estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md).
 
-O exemplo [MonkeyAppCSS](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss) demonstra como usar o CSS para estilizar um aplicativo simples e é mostrado nas seguintes capturas de tela:
+O exemplo [MonkeyAppCSS](/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss) demonstra como usar o CSS para estilizar um aplicativo simples e é mostrado nas seguintes capturas de tela:
 
 [![Página principal do MonkeyApp com estilo de CSS](css-images/MonkeyAppMainPage.png "Página principal do MonkeyApp com estilo de CSS")](css-images/MonkeyAppMainPage-Large.png#lightbox "Página principal do MonkeyApp com estilo de CSS")
 
@@ -114,7 +114,7 @@ Uma folha de estilos pode ser carregada e analisada com a [`StyleSheet`](xref:Xa
 A [`StyleSheet.Source`](xref:Xamarin.Forms.Xaml.StyleSheetExtension.Source) propriedade especifica a folha de estilos como um URI relativo ao local do arquivo XAML delimitador ou relativo à raiz do projeto se o URI começar com um `/` .
 
 > [!WARNING]
-> O arquivo CSS não será carregado se sua ação de Build não estiver definida como **EmbeddedResource**.
+> O arquivo CSS não será carregado se sua ação de Build não estiver definida como  **EmbeddedResource**.
 
 Como alternativa, uma folha de estilos pode ser carregada e analisada com a [`StyleSheet`](xref:Xamarin.Forms.StyleSheets.StyleSheet) classe, antes de ser adicionada a uma [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) , inserindo-a em uma `CDATA` seção:
 
@@ -363,61 +363,61 @@ No momento, não há suporte para os seguintes seletores:
 
 ## <a name="property-reference"></a>Referência de propriedade
 
-As propriedades de CSS a seguir têm suporte no Xamarin.Forms (na coluna **valores** , os tipos são em _itálico_, enquanto os literais de cadeia de caracteres são `gray` ):
+As propriedades de CSS a seguir têm suporte no Xamarin.Forms (na coluna **valores** , os tipos são em _itálico_ , enquanto os literais de cadeia de caracteres são `gray` ):
 
 |Propriedade|Aplica-se a|Valores|Exemplo|
 |---|---|---|---|
 |`align-content`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \| `initial` |`align-content: space-between;`|
 |`align-items`|`FlexLayout`| `stretch` \| `center` \| `start` \| `end` \| `flex-start` \| `flex-end` \| `initial` |`align-items: flex-start;`|
 |`align-self`|`VisualElement`| `auto` \| `stretch` \| `center` \| `start` \| `end` \| `flex-start` \| `flex-end` \| `initial`|`align-self: flex-end;`|
-|`background-color`|`VisualElement`|_cor_ \| do`initial` |`background-color: springgreen;`|
+|`background-color`|`VisualElement`|_cor_ \| do `initial` |`background-color: springgreen;`|
 |`background-image`|`Page`|_string_ \| `initial` |`background-image: bg.png;`|
-|`border-color`|`Button`, `Frame`, `ImageButton`|_cor_ \| do`initial`|`border-color: #9acd32;`|
-|`border-radius`|`BoxView`, `Button`, `Frame`, `ImageButton`|_double_ \| `initial` |`border-radius: 10;`|
-|`border-width`|`Button`, `ImageButton`|_double_ \| `initial` |`border-width: .5;`|
-|`color`|`ActivityIndicator`, `BoxView`, `Button`, `CheckBox`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `ProgressBar`, `SearchBar`, `Switch`, `TimePicker`|_cor_ \| do`initial` |`color: rgba(255, 0, 0, 0.3);`|
-|`column-gap`|`Grid`|_double_ \| `initial`|`column-gap: 9;`|
+|`border-color`|`Button`, `Frame`, `ImageButton`|_cor_ \| do `initial`|`border-color: #9acd32;`|
+|`border-radius`|`BoxView`, `Button`, `Frame`, `ImageButton`|_duplo_ \|`initial` |`border-radius: 10;`|
+|`border-width`|`Button`, `ImageButton`|_duplo_ \|`initial` |`border-width: .5;`|
+|`color`|`ActivityIndicator`, `BoxView`, `Button`, `CheckBox`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `ProgressBar`, `SearchBar`, `Switch`, `TimePicker`|_cor_ \| do `initial` |`color: rgba(255, 0, 0, 0.3);`|
+|`column-gap`|`Grid`|_duplo_ \|`initial`|`column-gap: 9;`|
 |`direction`|`VisualElement`|`ltr` \| `rtl` \| `inherit` \| `initial` |`direction: rtl;`|
 |`flex-direction`|`FlexLayout`| `column` \| `columnreverse` \| `row` \| `rowreverse` \| `row-reverse` \| `column-reverse` \| `initial`|`flex-direction: column-reverse;`|
 |`flex-basis`|`VisualElement`|_float_ \| `auto` \| `initial`. Além disso, um percentual no intervalo de 0% a 100% pode ser especificado com o `%` sinal.|`flex-basis: 25%;`|
-|`flex-grow`|`VisualElement`|_FLOAT_ \| `initial`|`flex-grow: 1.5;`|
-|`flex-shrink`|`VisualElement`|_FLOAT_ \| `initial`|`flex-shrink: 1;`|
+|`flex-grow`|`VisualElement`|_float_ \|`initial`|`flex-grow: 1.5;`|
+|`flex-shrink`|`VisualElement`|_float_ \|`initial`|`flex-shrink: 1;`|
 |`flex-wrap`|`VisualElement`| `nowrap` \| `wrap` \| `reverse` \| `wrap-reverse` \| `initial`|`flex-wrap: wrap-reverse;`|
 |`font-family`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_string_ \| `initial` |`font-family: Consolas;`|
 |`font-size`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|_duplo_ \| _namedsize_ \|  `initial` |`font-size: 12;`|
 |`font-style`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|`bold` \| `italic` \| `initial` |`font-style: bold;`|
-|`height`|`VisualElement`|_double_ \| `initial` |`min-height: 250;`|
+|`height`|`VisualElement`|_duplo_ \|`initial` |`min-height: 250;`|
 |`justify-content`|`FlexLayout`| `start` \| `center` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \| `initial`|`justify-content: flex-end;`|
-|`letter-spacing`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `SearchHandler`, `Span`, `TimePicker`|_double_ \| `initial`|`letter-spacing: 2.5;`|
-|`line-height`|`Label`, `Span`|_double_ \| `initial` |`line-height: 1.8;`|
+|`letter-spacing`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `SearchHandler`, `Span`, `TimePicker`|_duplo_ \|`initial`|`letter-spacing: 2.5;`|
+|`line-height`|`Label`, `Span`|_duplo_ \|`initial` |`line-height: 1.8;`|
 |`margin`|`View`|_espessura_ \|`initial` |`margin: 6 12;`|
 |`margin-left`|`View`|_espessura_ \|`initial` |`margin-left: 3;`|
 |`margin-top`|`View`|_espessura_ \|`initial` |`margin-top: 2;`|
 |`margin-right`|`View`|_espessura_ \|`initial` |`margin-right: 1;`|
 |`margin-bottom`|`View`|_espessura_ \|`initial` |`margin-bottom: 6;`|
-|`max-lines`|`Label`|_int_ \| `initial`|`max-lines: 2;`|
-|`min-height`|`VisualElement`|_double_ \| `initial` |`min-height: 50;`|
-|`min-width`|`VisualElement`|_double_ \| `initial` |`min-width: 112;`|
-|`opacity`|`VisualElement`|_double_ \| `initial` |`opacity: .3;`|
-|`order`|`VisualElement`|_int_ \| `initial`|`order: -1;`|
+|`max-lines`|`Label`|_INT_ \| `initial`|`max-lines: 2;`|
+|`min-height`|`VisualElement`|_duplo_ \|`initial` |`min-height: 50;`|
+|`min-width`|`VisualElement`|_duplo_ \|`initial` |`min-width: 112;`|
+|`opacity`|`VisualElement`|_duplo_ \|`initial` |`opacity: .3;`|
+|`order`|`VisualElement`|_INT_ \| `initial`|`order: -1;`|
 |`padding`|`Button`, `ImageButton`, `Layout`, `Page`|_espessura_ \|`initial` |`padding: 6 12 12;`|
-|`padding-left`|`Button`, `ImageButton`, `Layout`, `Page`|_double_ \| `initial`|`padding-left: 3;`|
-|`padding-top`|`Button`, `ImageButton`, `Layout`, `Page`| _double_ \| `initial` |`padding-top: 4;`|
-|`padding-right`|`Button`, `ImageButton`, `Layout`, `Page`| _double_ \| `initial` |`padding-right: 2;`|
-|`padding-bottom`|`Button`, `ImageButton`, `Layout`, `Page`| _double_ \| `initial` |`padding-bottom: 6;`|
+|`padding-left`|`Button`, `ImageButton`, `Layout`, `Page`|_duplo_ \|`initial`|`padding-left: 3;`|
+|`padding-top`|`Button`, `ImageButton`, `Layout`, `Page`| _duplo_ \|`initial` |`padding-top: 4;`|
+|`padding-right`|`Button`, `ImageButton`, `Layout`, `Page`| _duplo_ \|`initial` |`padding-right: 2;`|
+|`padding-bottom`|`Button`, `ImageButton`, `Layout`, `Page`| _duplo_ \|`initial` |`padding-bottom: 6;`|
 |`position`|`FlexLayout`| `relative` \| `absolute` \| `initial`|`position: absolute;`|
-|`row-gap`|`Grid`| _double_ \| `initial`|`row-gap: 12;`|
-|`text-align`| `Entry`, `EntryCell`, `Label`, `SearchBar`|`left` \| `top` \| `right` \| `bottom` \| `start` \| `center` \| `middle` \| `end` \| `initial`. `left`e `right` devem ser evitados em ambientes da direita para a esquerda.| `text-align: right;`|
+|`row-gap`|`Grid`| _duplo_ \|`initial`|`row-gap: 12;`|
+|`text-align`| `Entry`, `EntryCell`, `Label`, `SearchBar`|`left` \| `top` \| `right` \| `bottom` \| `start` \| `center` \| `middle` \| `end` \| `initial`. `left` e `right` devem ser evitados em ambientes da direita para a esquerda.| `text-align: right;`|
 |`text-decoration`|`Label`, `Span`|`none` \| `underline` \| `strikethrough` \| `line-through` \| `initial`|`text-decoration: underline, line-through;`|
 |`text-transform`|`Button`,`Editor`, `Entry`, `Label`, `SearchBar`, `SearchHandler`|`none` \| `default` \| `uppercase` \| `lowercase` \| `initial` |`text-transform: uppercase;`|
 |`transform`|`VisualElement`| `none`, `rotate`, `rotateX`, `rotateY`, `scale`, `scaleX`, `scaleY`, `translate`, `translateX`, `translateY`, `initial` |`transform: rotate(180), scaleX(2.5);`|
-|`transform-origin`|`VisualElement`| _duplo_, _duplo_ \|`initial` |`transform-origin: 7.5, 12.5;`|
+|`transform-origin`|`VisualElement`| _duplo_ , _duplo_ \|`initial` |`transform-origin: 7.5, 12.5;`|
 |`vertical-align`|`Label`|`left` \| `top` \| `right` \| `bottom` \| `start` \| `center` \| `middle` \| `end` \| `initial`|`vertical-align: bottom;`|
 |`visibility`|`VisualElement`|`true` \| `visible` \| `false` \| `hidden` \| `collapse` \| `initial`|`visibility: hidden;`|
-|`width`|`VisualElement`|_double_ \| `initial`|`min-width: 320;`|
+|`width`|`VisualElement`|_duplo_ \|`initial`|`min-width: 320;`|
 
 > [!NOTE]
-> `initial`é um valor válido para todas as propriedades. Ele limpa o valor (redefinido como padrão) que foi definido com base em outro estilo.
+> `initial` é um valor válido para todas as propriedades. Ele limpa o valor (redefinido como padrão) que foi definido com base em outro estilo.
 
 Atualmente, não há suporte para as seguintes propriedades:
 
@@ -429,51 +429,51 @@ Além disso, não há nenhum `inherit` valor e, portanto, não há suporte para 
 
 `Span`Elementos de direcionamento têm um problema conhecido que impede que os spans sejam o destino de estilos CSS por elemento e nome (usando o `#` símbolo). O `Span` elemento deriva de `GestureElement` , que não tem a `StyleClass` propriedade, portanto, não há suporte para direcionamento de classe CSS. Para obter mais informações, consulte [não é possível aplicar estilos de CSS para controle de extensão](https://github.com/xamarin/Xamarin.Forms/issues/5979).
 
-### <a name="no-locxamarinforms-specific-properties"></a>Xamarin.FormsPropriedades específicas
+### <a name="no-locxamarinforms-specific-properties"></a>Xamarin.Forms Propriedades específicas
 
-As Xamarin.Forms Propriedades específicas de CSS a seguir também têm suporte (na coluna **valores** , os tipos são em _itálico_, enquanto os literais de cadeia de caracteres são `gray` ):
+As Xamarin.Forms Propriedades específicas de CSS a seguir também têm suporte (na coluna **valores** , os tipos são em _itálico_ , enquanto os literais de cadeia de caracteres são `gray` ):
 
 |Propriedade|Aplica-se a|Valores|Exemplo|
 |---|---|---|---|
-|`-xf-bar-background-color`|`NavigationPage`, `TabbedPage`|_cor_ \| do`initial` |`-xf-bar-background-color: teal;`|
-|`-xf-bar-text-color`|`NavigationPage`, `TabbedPage`|_cor_ \| do`initial` |`-xf-bar-text-color: gray`|
+|`-xf-bar-background-color`|`NavigationPage`, `TabbedPage`|_cor_ \| do `initial` |`-xf-bar-background-color: teal;`|
+|`-xf-bar-text-color`|`NavigationPage`, `TabbedPage`|_cor_ \| do `initial` |`-xf-bar-text-color: gray`|
 |`-xf-horizontal-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-horizontal-scroll-bar-visibility: never;`|
-|`-xf-max-length`|`Entry`, `Editor`, `SearchBar`|_int_ \| `initial` |`-xf-max-length: 20;`|
-|`-xf-max-track-color`|`Slider`|_cor_ \| do`initial` |`-xf-max-track-color: red;`|
-|`-xf-min-track-color`|`Slider`|_cor_ \| do`initial` |`-xf-min-track-color: yellow;`|
-|`-xf-orientation`|`ScrollView`, `StackLayout`| `horizontal` \| `vertical` \| `both` \| `initial`. `both`Só tem suporte em um `ScrollView` . |`-xf-orientation: horizontal;`|
-|`-xf-placeholder`|`Entry`, `Editor`, `SearchBar`|_texto_ \| entre aspas`initial` |`-xf-placeholder: Enter name;`|
-|`-xf-placeholder-color`|`Entry`, `Editor`, `SearchBar`|_cor_ \| do`initial` |`-xf-placeholder-color: green;`|
-|`-xf-spacing`|`StackLayout`|_double_ \| `initial` |`-xf-spacing: 8;`|
-|`-xf-thumb-color`|`Slider`, `Switch`|_cor_ \| do`initial` |`-xf-thumb-color: limegreen;`|
+|`-xf-max-length`|`Entry`, `Editor`, `SearchBar`|_INT_ \| `initial` |`-xf-max-length: 20;`|
+|`-xf-max-track-color`|`Slider`|_cor_ \| do `initial` |`-xf-max-track-color: red;`|
+|`-xf-min-track-color`|`Slider`|_cor_ \| do `initial` |`-xf-min-track-color: yellow;`|
+|`-xf-orientation`|`ScrollView`, `StackLayout`| `horizontal` \| `vertical` \| `both` \| `initial`. `both` Só tem suporte em um `ScrollView` . |`-xf-orientation: horizontal;`|
+|`-xf-placeholder`|`Entry`, `Editor`, `SearchBar`|_texto_ \| entre aspas `initial` |`-xf-placeholder: Enter name;`|
+|`-xf-placeholder-color`|`Entry`, `Editor`, `SearchBar`|_cor_ \| do `initial` |`-xf-placeholder-color: green;`|
+|`-xf-spacing`|`StackLayout`|_duplo_ \|`initial` |`-xf-spacing: 8;`|
+|`-xf-thumb-color`|`Slider`, `Switch`|_cor_ \| do `initial` |`-xf-thumb-color: limegreen;`|
 |`-xf-vertical-scroll-bar-visibility`|`ScrollView`| `default` \| `always` \| `never` \| `initial` |`-xf-vertical-scroll-bar-visibility: always;`|
 |`-xf-vertical-text-alignment`|`Label`| `start` \| `center` \| `end` \| `initial`|`-xf-vertical-text-alignment: end;`|
 |`-xf-visual`|`VisualElement`|_string_ \| `initial` |`-xf-visual: material;`|
 
-### <a name="no-locxamarinforms-shell-specific-properties"></a>Xamarin.FormsPropriedades específicas do Shell
+### <a name="no-locxamarinforms-shell-specific-properties"></a>Xamarin.Forms Propriedades específicas do Shell
 
-As Xamarin.Forms Propriedades CSS específicas do Shell a seguir também têm suporte (na coluna **valores** , os tipos são em _itálico_, enquanto os literais de cadeia de caracteres são `gray` ):
+As Xamarin.Forms Propriedades CSS específicas do Shell a seguir também têm suporte (na coluna **valores** , os tipos são em _itálico_ , enquanto os literais de cadeia de caracteres são `gray` ):
 
 |Propriedade|Aplica-se a|Valores|Exemplo|
 |---|---|---|---|
-|`-xf-flyout-background`|`Shell`|_cor_ \| do`initial` |`-xf-flyout-background: red;`|
-|`-xf-shell-background`|`Element`|_cor_ \| do`initial` |`-xf-shell-background: green;`|
-|`-xf-shell-disabled`|`Element`|_cor_ \| do`initial` |`-xf-shell-disabled: blue;`|
-|`-xf-shell-foreground`|`Element`|_cor_ \| do`initial` |`-xf-shell-foreground: yellow;`|
-|`-xf-shell-tabbar-background`|`Element`|_cor_ \| do`initial` |`-xf-shell-tabbar-background: white;`|
-|`-xf-shell-tabbar-disabled`|`Element`|_cor_ \| do`initial` |`-xf-shell-tabbar-disabled: black;`|
-|`-xf-shell-tabbar-foreground`|`Element`|_cor_ \| do`initial` |`-xf-shell-tabbar-foreground: gray;`|
-|`-xf-shell-tabbar-title`|`Element`|_cor_ \| do`initial` |`-xf-shell-tabbar-title: lightgray;`|
-|`-xf-shell-tabbar-unselected`|`Element`|_cor_ \| do`initial` |`-xf-shell-tabbar-unselected: cyan;`|
-|`-xf-shell-title`|`Element`|_cor_ \| do`initial` |`-xf-shell-title: teal;`|
-|`-xf-shell-unselected`|`Element`|_cor_ \| do`initial` |`-xf-shell-unselected: limegreen;`|
+|`-xf-flyout-background`|`Shell`|_cor_ \| do `initial` |`-xf-flyout-background: red;`|
+|`-xf-shell-background`|`Element`|_cor_ \| do `initial` |`-xf-shell-background: green;`|
+|`-xf-shell-disabled`|`Element`|_cor_ \| do `initial` |`-xf-shell-disabled: blue;`|
+|`-xf-shell-foreground`|`Element`|_cor_ \| do `initial` |`-xf-shell-foreground: yellow;`|
+|`-xf-shell-tabbar-background`|`Element`|_cor_ \| do `initial` |`-xf-shell-tabbar-background: white;`|
+|`-xf-shell-tabbar-disabled`|`Element`|_cor_ \| do `initial` |`-xf-shell-tabbar-disabled: black;`|
+|`-xf-shell-tabbar-foreground`|`Element`|_cor_ \| do `initial` |`-xf-shell-tabbar-foreground: gray;`|
+|`-xf-shell-tabbar-title`|`Element`|_cor_ \| do `initial` |`-xf-shell-tabbar-title: lightgray;`|
+|`-xf-shell-tabbar-unselected`|`Element`|_cor_ \| do `initial` |`-xf-shell-tabbar-unselected: cyan;`|
+|`-xf-shell-title`|`Element`|_cor_ \| do `initial` |`-xf-shell-title: teal;`|
+|`-xf-shell-unselected`|`Element`|_cor_ \| do `initial` |`-xf-shell-unselected: limegreen;`|
 
-### <a name="color"></a>Color
+### <a name="color"></a>Cor
 
 Há `color` suporte para os seguintes valores:
 
 - `X11`[cores](https://en.wikipedia.org/wiki/X11_color_names), que correspondem a cores CSS, cores predefinidas UWP e Xamarin.Forms cores. Observe que esses valores de cor não diferenciam maiúsculas de minúsculas.
-- cores hexa: `#rgb` , `#argb` , `#rrggbb` ,`#aarrggbb`
+- cores hexa: `#rgb` , `#argb` , `#rrggbb` , `#aarrggbb`
 - cores RGB: `rgb(255,0,0)` , `rgb(100%,0%,0%)` . Os valores estão no intervalo de 0-255 ou 0%-100%.
 - cores RGBA: `rgba(255, 0, 0, 0.8)` , `rgba(100%, 0%, 0%, 0.8)` . O valor de opacidade está no intervalo 0,0-1,0.
 - cores HSL: `hsl(120, 100%, 50%)` . O valor h está no intervalo de 0-360, enquanto s e l estão no intervalo de 0%-100%.
@@ -511,10 +511,10 @@ Gradientes lineares e radiais podem ser especificados usando as `linear-gradient
 
 > [!VIDEO https://youtube.com/embed/va-Vb7vtan8]
 
-**Xamarin.Formsvídeo de CSS 3,0**
+**Xamarin.Forms vídeo de CSS 3,0**
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [MonkeyAppCSS (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
+- [MonkeyAppCSS (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 - [Dicionários de recurso](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Estilizando Xamarin.Forms aplicativos usando estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)

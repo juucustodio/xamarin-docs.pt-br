@@ -1,27 +1,25 @@
 ---
-title: 'Xamarin.FormsFormas: polígono'
+title: 'Xamarin.Forms Formas: polígono'
 description: A Xamarin.Forms Classe Polygon pode ser usada para desenhar polígonos, que são uma série de linhas conectadas que formam formas fechadas.
 ms.prod: xamarin
 ms.assetid: D6539F60-A5AC-46EF-86EB-E9F508EB1FA8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/16/2020
+ms.date: 02/05/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 52043bd507d35a1ebe2628c13c14429c604569c9
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 2928e3bd32d7dd2722f01ad5a51dbaab127afd77
+ms.sourcegitcommit: 06701714021545eb5e932847829b876082194ffc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918492"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99585878"
 ---
-# <a name="no-locxamarinforms-shapes-polygon"></a>Xamarin.FormsFormas: polígono
+# <a name="xamarinforms-shapes-polygon"></a>Xamarin.Forms Formas: polígono
 
-![API de pré-lançamento](~/media/shared/preview.png)
-
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 A `Polygon` classe deriva da `Shape` classe e pode ser usada para desenhar polígonos, que são uma série de linhas conectadas que formam formas fechadas. Para obter informações sobre as propriedades que a `Polygon` classe herda da `Shape` classe, consulte [ Xamarin.Forms formas](index.md).
 
@@ -38,7 +36,7 @@ Para obter mais informações sobre a `FillRule` enumeração, consulte [ Xamari
 
 ## <a name="create-a-polygon"></a>Criar um polígono
 
-Para desenhar um polígono, crie um `Polygon` objeto e defina sua `Points` propriedade para os vértices de uma forma. Uma linha é desenhada automaticamente que conecta o primeiro e o último pontos. Para pintar o interior do polígono, defina sua `Fill` propriedade como a [`Color`](xref:Xamarin.Forms.Color) . Para dar um contorno ao polígono, defina sua `Stroke` propriedade como a [`Color`](xref:Xamarin.Forms.Color) . A `StrokeThickness` propriedade especifica a espessura do contorno do polígono.
+Para desenhar um polígono, crie um `Polygon` objeto e defina sua `Points` propriedade para os vértices de uma forma. Uma linha é desenhada automaticamente que conecta o primeiro e o último pontos. Para pintar o interior do polígono, defina sua `Fill` propriedade como um [`Brush`](xref:Xamarin.Forms.Brush) objeto derivado. Para dar um contorno ao polígono, defina sua `Stroke` propriedade como um [`Brush`](xref:Xamarin.Forms.Brush) objeto derivado. A `StrokeThickness` propriedade especifica a espessura do contorno do polígono. Para obter mais informações sobre `Brush` objetos, consulte [ Xamarin.Forms pincéis](~/xamarin-forms/user-interface/brushes/index.md).
 
 O exemplo de XAML a seguir mostra como desenhar um polígono preenchido:
 
@@ -99,6 +97,7 @@ Neste exemplo, o comportamento de preenchimento de cada polígono é determinado
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ShapeDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.FormsExistentes](index.md)
-- [Xamarin.FormsFormas: regras de preenchimento](fillrules.md)
+- [ShapeDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms Existentes](index.md)
+- [Xamarin.Forms Formas: regras de preenchimento](fillrules.md)
+- [Xamarin.Forms Pincéis](~/xamarin-forms/user-interface/brushes/index.md)

@@ -1,6 +1,6 @@
 ---
-title: Texto emXamarin.Forms
-description: Xamarin.Formstem três exibições principais para trabalhar com texto, e este artigo explica como usá-las para inserir e exibir texto em Xamarin.Forms aplicativos.
+title: Texto em Xamarin.Forms
+description: Xamarin.Forms tem três exibições principais para trabalhar com texto, e este artigo explica como usá-las para inserir e exibir texto em Xamarin.Forms aplicativos.
 ms.prod: xamarin
 ms.assetid: 4DBA7689-E5C8-4583-8FB4-02AB208B4416
 ms.technology: xamarin-forms
@@ -10,20 +10,20 @@ ms.date: 10/26/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b44a0b3e3542638874ee366a86967d73c0d53652
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 37973db6288f092d756a29de61731a296eac3924
+ms.sourcegitcommit: 10c7dd16fe78226053d1d036492b6c9102fc421b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573788"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "93375402"
 ---
-# <a name="text-in-xamarinforms"></a>Texto emXamarin.Forms
+# <a name="text-in-xamarinforms"></a>Texto em Xamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Usando Xamarin.Forms para inserir ou exibir texto._
 
-Xamarin.Formstem três exibições principais para trabalhar com texto:
+Xamarin.Forms tem três exibições principais para trabalhar com texto:
 
 - **[Rótulo](#label)** &mdash; do para apresentar texto de linha única ou de várias linhas. Pode mostrar texto com várias opções de formatação na mesma linha.
 - **[Entrada](#entry)** &mdash; do para inserir o texto que é apenas uma linha. A entrada tem um modo de senha.
@@ -33,7 +33,7 @@ A aparência do texto pode ser alterada usando [estilos](#styles) internos ou pe
 
 ## <a name="label"></a>[Chamada](label.md)
 
-A `Label` exibição é usada para exibir texto. Ele pode mostrar várias linhas de texto ou uma única linha de texto. `Label`pode apresentar texto com várias opções de formatação usadas em linha. O modo de exibição de rótulo pode encapsular ou truncar texto quando ele não couber em uma linha.
+A `Label` exibição é usada para exibir texto. Ele pode mostrar várias linhas de texto ou uma única linha de texto. `Label` pode apresentar texto com várias opções de formatação usadas em linha. O modo de exibição de rótulo pode encapsular ou truncar texto quando ele não couber em uma linha.
 
 ![Exemplo de rótulo](images/label.png)
 
@@ -43,7 +43,7 @@ Para obter informações sobre como personalizar a fonte usada em um rótulo, co
 
 ## <a name="entry"></a>[Entrada](entry.md)
 
-`Entry`é usado para aceitar entrada de texto de linha única. `Entry`oferece controle sobre cores e fontes. `Entry`tem um modo de senha e pode mostrar o texto do espaço reservado até que o texto seja inserido.
+`Entry` é usado para aceitar entrada de texto de linha única. `Entry` oferece controle sobre cores e fontes. `Entry` tem um modo de senha e pode mostrar o texto do espaço reservado até que o texto seja inserido.
 
 ![Exemplo de entrada](images/entry.png)
 
@@ -53,7 +53,7 @@ Observe que, ao contrário `Label` de, `Entry` não é possível ter configuraç
 
 ## <a name="editor"></a>[Editor](editor.md)
 
-`Editor`é usado para aceitar a entrada de texto de várias linhas. `Editor`oferece controle sobre cores e fontes.
+`Editor` é usado para aceitar a entrada de texto de várias linhas. `Editor` oferece controle sobre cores e fontes.
 
 ![Exemplo de editor](images/editor.png)
 
@@ -67,6 +67,6 @@ Muitos controles dão suporte a diferentes configurações de fonte usando as fo
 
 Consulte [trabalhando com estilos](~/xamarin-forms/user-interface/styles/index.md) para saber como configurar fontes, [cores](~/xamarin-forms/user-interface/colors.md)e outras propriedades de exibição que se aplicam a vários controles.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Texto (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [Texto (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-text)

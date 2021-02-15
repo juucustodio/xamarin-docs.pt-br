@@ -10,16 +10,16 @@ ms.date: 08/05/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 71238775e9cc9d3e32ab9c9287e5b52c759ca9eb
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 103839c7016b7e9776e80f3f3459f8dc92b3bcbb
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939926"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371645"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Passando parâmetros de efeito como propriedades anexadas
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)
 
 _As propriedades anexadas podem ser usadas para definir parâmetros de efeito que respondem às alterações de propriedade de tempo de execução. Este artigo demonstra como usar propriedades anexadas para passar parâmetros para um efeito e alterar um parâmetro em tempo de execução._
 
@@ -442,4 +442,4 @@ Este artigo demonstrou o uso de propriedades anexadas para passar parâmetros pa
 - [Efeito](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
-- [Efeito de sombra (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)
+- [Efeito de sombra (amostra)](/samples/xamarin/xamarin-forms-samples/effects-shadoweffectruntimechange)

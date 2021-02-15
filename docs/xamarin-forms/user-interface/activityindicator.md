@@ -1,5 +1,5 @@
 ---
-title: Indicador de atividade emXamarin.Forms
+title: Indicador de atividade em Xamarin.Forms
 description: O controle ActivityIndicator indica aos usuários que o aplicativo está envolvido em uma atividade demorada, sem dar qualquer indicação de progresso. Este artigo explica como usar um ActivityIndicator em XAML e código.
 ms.prod: xamarin
 ms.assetid: 4CEED02D-5CA3-4C3A-B7ED-3193FC272261
@@ -10,15 +10,15 @@ ms.date: 07/10/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a83885175a44f2174db343abf4591f8777041d39
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 739fc90eda513e4627f5804283bdcab9c0cbacb4
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136507"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373114"
 ---
-# <a name="xamarinforms-activityindicator"></a>Xamarin.FormsActivityIndicator
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
+# <a name="no-locxamarinforms-activityindicator"></a>Xamarin.Forms ActivityIndicator
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
 
 O Xamarin.Forms [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) controle exibe uma animação para mostrar que o aplicativo está envolvido em uma atividade demorada. Ao contrário do [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) , o `ActivityIndicator` não fornece nenhuma indicação de progresso. O `ActivityIndicator` herda de [`View`](xref:Xamarin.Forms.View) .
 
@@ -28,8 +28,8 @@ As capturas de tela a seguir mostram um `ActivityIndicator` controle no Ios e no
 
 O `ActivityIndicator` controle define as seguintes propriedades:
 
-* [`Color`](xref:Xamarin.Forms.ActivityIndicator.Color)é um `Color` valor que define a cor de exibição do `ActivityIndicator` .
-* [`IsRunning`](xref:Xamarin.Forms.ActivityIndicator.IsRunning)é um `bool` valor que indica se o `ActivityIndicator` deve estar visível e animado ou oculto. Quando o valor é `false` o `ActivityIndicator` não está visível.
+* [`Color`](xref:Xamarin.Forms.ActivityIndicator.Color) é um `Color` valor que define a cor de exibição do `ActivityIndicator` .
+* [`IsRunning`](xref:Xamarin.Forms.ActivityIndicator.IsRunning) é um `bool` valor que indica se o `ActivityIndicator` deve estar visível e animado ou oculto. Quando o valor é `false` o `ActivityIndicator` não está visível.
 
 Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objetos, o que significa que o `ActivityIndicator` pode ser estilizado e ser o destino de associações de dados.
 
@@ -67,5 +67,5 @@ As capturas de tela a seguir mostram o `ActivityIndicator` com a `Color` proprie
 
 ## <a name="related-links"></a>Links relacionados
 
-* [Demonstrações do ActivityIndicator](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
+* [Demonstrações do ActivityIndicator](/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
 * [ProgressBar](~/xamarin-forms/user-interface/progressbar.md)

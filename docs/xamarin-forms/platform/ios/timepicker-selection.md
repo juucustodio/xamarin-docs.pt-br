@@ -10,16 +10,16 @@ ms.date: 01/15/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 009482c8f1e90aaa2f592ea04d8fd4f0f31324e8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a8c8a378775a9e52731e4b2df37b983fc15c1867
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137014"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375311"
 ---
 # <a name="timepicker-item-selection-on-ios"></a>Seleção de item do timeseparar no iOS
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esses controles específicos da plataforma iOS quando a seleção de item ocorre em um [`TimePicker`](xref:Xamarin.Forms.TimePicker) , permitindo ao usuário especificar que a seleção de item ocorre durante a pesquisa de itens no controle ou apenas uma vez que o botão **Done** é pressionado. Ele é consumido em XAML definindo a `TimePicker.UpdateMode` Propriedade anexada como um valor da `UpdateMode` enumeração:
 
@@ -46,8 +46,8 @@ timePicker.On<iOS>().SetUpdateMode(UpdateMode.WhenFinished);
 
 O `TimePicker.On<iOS>` método especifica que essa plataforma específica será executada somente no Ios. O `TimePicker.SetUpdateMode` método, no [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, é usado para controlar quando ocorre a seleção de item, com a `UpdateMode` Enumeração fornecendo dois valores possíveis:
 
-- `Immediately`– a seleção de item ocorre quando o usuário procura itens no [`TimePicker`](xref:Xamarin.Forms.TimePicker) . Esse é o comportamento padrão no Xamarin.Forms .
-- `WhenFinished`– a seleção de itens ocorre apenas quando o usuário pressionou o botão **concluído** no [`TimePicker`](xref:Xamarin.Forms.TimePicker) .
+- `Immediately` – a seleção de item ocorre quando o usuário procura itens no [`TimePicker`](xref:Xamarin.Forms.TimePicker) . Esse é o comportamento padrão no Xamarin.Forms .
+- `WhenFinished` – a seleção de itens ocorre apenas quando o usuário pressionou o botão **concluído** no [`TimePicker`](xref:Xamarin.Forms.TimePicker) .
 
 Além disso, o `SetUpdateMode` método pode ser usado para alternar os valores de enumeração chamando o `UpdateMode` método, que retorna o atual `UpdateMode` :
 
@@ -65,10 +65,10 @@ switch (timePicker.On<iOS>().UpdateMode())
 
 O resultado é que um especificado `UpdateMode` é aplicado ao [`TimePicker`](xref:Xamarin.Forms.TimePicker) , que controla quando a seleção de item ocorre:
 
-[![Captura de tela dos modos de atualização do timeseparar](timepicker-selection-images/timepicker-updatemode.png "Específico da plataforma UpdateMode")](timepicker-selection-images/timepicker-updatemode-large.png#lightbox "Específico da plataforma UpdateMode")
+[![Captura de tela dos modos de atualização do timeseparar](timepicker-selection-images/timepicker-updatemode.png "Platform-Specific UpdateMode do TimeSeparator")](timepicker-selection-images/timepicker-updatemode-large.png#lightbox "Platform-Specific UpdateMode do TimeSeparator")
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

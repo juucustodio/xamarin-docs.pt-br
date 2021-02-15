@@ -10,16 +10,19 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8f23034df684e778677e4f2e480e1c41807536fb
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: b2083a8dd17749074258c8bd5e6d1a7374c758f9
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136806"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368486"
 ---
 # <a name="summary-of-chapter-10-xaml-markup-extensions"></a>Resumo do capítulo 10. Extensões de marcação XAML
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10)
+
+> [!NOTE]
+> Este livro foi publicado na Primavera de 2016 e não foi atualizado desde então. Há muito no livro que permanece valioso, mas alguns materiais estão desatualizados e alguns tópicos não estão mais totalmente corretos ou completos.
 
 Normalmente, o analisador XAML converte qualquer conjunto de cadeias de caracteres como um valor de atributo para o tipo da propriedade com base nas conversões padrão para os tipos de dados básicos do .NET ou um [`TypeConverter`](xref:Xamarin.Forms.TypeConverter) derivativo anexado à propriedade ou seu tipo com um [`TypeConverterAttribute`](xref:Xamarin.Forms.TypeConverterAttribute) .
 
@@ -33,16 +36,16 @@ Uma extensão de marcação XAML é uma classe que implementa a [`IMarkupExtensi
 
 As seguintes extensões de marcação XAML são suportadas por todas as implementações do XAML:
 
-- `x:Static`com suporte pelo[`StaticExtension`](xref:Xamarin.Forms.Xaml.StaticExtension)
-- `x:Reference`com suporte pelo[`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension)
-- `x:Type`com suporte pelo[`TypeExtension`](xref:Xamarin.Forms.Xaml.TypeExtension)
-- `x:Null`com suporte pelo[`NullExtension`](xref:Xamarin.Forms.Xaml.NullExtension)
-- `x:Array`com suporte pelo[`ArrayExtension`](xref:Xamarin.Forms.Xaml.ArrayExtension)
+- `x:Static` com suporte pelo [`StaticExtension`](xref:Xamarin.Forms.Xaml.StaticExtension)
+- `x:Reference` com suporte pelo [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension)
+- `x:Type` com suporte pelo [`TypeExtension`](xref:Xamarin.Forms.Xaml.TypeExtension)
+- `x:Null` com suporte pelo [`NullExtension`](xref:Xamarin.Forms.Xaml.NullExtension)
+- `x:Array` com suporte pelo [`ArrayExtension`](xref:Xamarin.Forms.Xaml.ArrayExtension)
 
 Essas quatro extensões de marcação XAML são suportadas por muitas implementações do XAML, incluindo Xamarin.Forms :
 
-- `StaticResource`com suporte pelo[`StaticResourceExtension`](xref:Xamarin.Forms.Xaml.StaticResourceExtension)
-- `DynamicResource`com suporte pelo[`DynamicResourceExtension`](xref:Xamarin.Forms.Xaml.DynamicResourceExtension)
+- `StaticResource` com suporte pelo [`StaticResourceExtension`](xref:Xamarin.Forms.Xaml.StaticResourceExtension)
+- `DynamicResource` com suporte pelo [`DynamicResourceExtension`](xref:Xamarin.Forms.Xaml.DynamicResourceExtension)
 - `Binding`com suporte [`BindingExtension`](xref:Xamarin.Forms.Xaml.BindingExtension) &mdash; discutido no [capítulo 16. Associação de dados](chapter16.md)
 - `TemplateBinding`com suporte [`TemplateBindingExtension`](xref:Xamarin.Forms.Xaml.TemplateBindingExtension) &mdash; não abordado no livro
 
@@ -92,7 +95,7 @@ Use [`x:Array`](xref:Xamarin.Forms.Xaml.ArrayExtension) para definir uma matriz.
 
 Você pode criar suas próprias extensões de marcação XAML escrevendo uma classe que implementa a [`IMarkupExtension`](xref:Xamarin.Forms.Xaml.IMarkupExtension) interface com um [`ProvideValue`](xref:Xamarin.Forms.Xaml.IMarkupExtension.ProvideValue(System.IServiceProvider)) método.
 
-A [`HslColorExtension`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/HslColorExtension.cs) classe atende a esses requisitos. Ele cria um valor do tipo `Color` com base nos valores das propriedades nomeadas `H` , `S` , `L` e `A` . Essa classe é o primeiro item em uma Xamarin.Forms biblioteca chamada [**Xamarin. FormsBook. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) que é criado e usado no decorrer deste livro.
+A [`HslColorExtension`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/HslColorExtension.cs) classe atende a esses requisitos. Ele cria um valor do tipo `Color` com base nos valores das propriedades nomeadas `H` , `S` , `L` e `A` . Essa classe é o primeiro item em uma Xamarin.Forms biblioteca chamada [**Xamarin.Forms book. Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) que é criado e usado no decorrer deste livro.
 
 O exemplo [**CustomExtensionDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter10/CustomExtensionDemo) demonstra como fazer referência a essa biblioteca e usar a extensão de marcação personalizada.
 

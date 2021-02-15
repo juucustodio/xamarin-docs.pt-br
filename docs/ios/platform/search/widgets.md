@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: aa9d946f295b46a3aa2d9559d28907d9a30f184b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9a45fcccd693a51230a51600964acd75704e1b93
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938964"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91429716"
 ---
 # <a name="search-and-home-screen-widget-enhancements-in-ios-10"></a>Aprimoramentos no widget de pesquisa e na tela inicial no iOS 10
 
@@ -194,7 +194,7 @@ Este artigo abordou os aprimoramentos que a Apple fez no sistema de widget no iO
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Amostras do iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Amostras do iOS 10](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)
 - [Introdução às extensões](~/ios/platform/extensions.md)
 - [Introdução ao toque 3D](~/ios/platform/3d-touch.md)
 - [Guia de programação de extensão de aplicativo](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 5d10f1def56d73c6837587bbbd47299d208a345a
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: d2a3181360abd7ee7a5124602d0c4186b0a8ec38
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997469"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430165"
 ---
 # <a name="building-modern-macos-apps"></a>Compilando aplicativos macOS modernos
 
@@ -419,10 +419,10 @@ O `CALayer` , fornecido pela animação de núcleo, pode ser usado para tarefas 
 
 Um `CALayer` objeto fornece várias propriedades que permitem ao desenvolvedor controlar o que é apresentado na tela ao usuário, como:
 
-- `Content`-Pode ser um `NSImage` ou `CGImage` que fornece o conteúdo da camada.
-- `BackgroundColor`-Define a cor do plano de fundo da camada como um`CGColor`
-- `BorderWidth`-Define a largura da borda.
-- `BorderColor`-Define a cor da borda.
+- `Content` -Pode ser um `NSImage` ou `CGImage` que fornece o conteúdo da camada.
+- `BackgroundColor` -Define a cor do plano de fundo da camada como um `CGColor`
+- `BorderWidth` -Define a largura da borda.
+- `BorderColor` -Define a cor da borda.
 
 Para utilizar gráficos principais na interface do usuário do aplicativo, ele deve usar exibições de _camada com suporte_ , que a Apple sugere que o desenvolvedor sempre deve habilitar na exibição de conteúdo da janela. Dessa forma, todas as exibições filho herdarão automaticamente o suporte de camada também.
 
@@ -728,8 +728,8 @@ namespace MacModern
 
 O estático `NSTableViewRowAction.FromStyle` é usado para criar uma nova ação de linha de tabela dos seguintes estilos:
 
-- `Regular`-Executa uma ação não destrutiva padrão, como editar o conteúdo da linha.
-- `Destructive`-Executa uma ação destrutiva, como excluir a linha da tabela. Essas ações serão renderizadas com um plano de fundo vermelho.
+- `Regular` -Executa uma ação não destrutiva padrão, como editar o conteúdo da linha.
+- `Destructive` -Executa uma ação destrutiva, como excluir a linha da tabela. Essas ações serão renderizadas com um plano de fundo vermelho.
 
 <a name="Scroll-View-Enhancements"></a>
 
@@ -741,8 +741,8 @@ Como resultado, o primeiro item na área de conteúdo da exibição de rolagem p
 
 Para corrigir esse problema, a Apple adicionou duas novas propriedades à `NSScrollView` classe:
 
-- `ContentInsets`– Permite que o desenvolvedor forneça um `NSEdgeInsets` objeto que define o deslocamento que será aplicado à parte superior da exibição de rolagem.
-- `AutomaticallyAdjustsContentInsets`-Se `true` a exibição de rolagem manipulará automaticamente o `ContentInsets` para o desenvolvedor.
+- `ContentInsets` – Permite que o desenvolvedor forneça um `NSEdgeInsets` objeto que define o deslocamento que será aplicado à parte superior da exibição de rolagem.
+- `AutomaticallyAdjustsContentInsets` -Se `true` a exibição de rolagem manipulará automaticamente o `ContentInsets` para o desenvolvedor.
 
 Usando o `ContentInsets` desenvolvedor, é possível ajustar o início da exibição de rolagem para permitir a inclusão de acessórios, como:
 
@@ -780,7 +780,7 @@ A Apple sugere o seguinte:
 
 - **Remover restrições de largura fixa** -todas as exibições baseadas em texto devem ter permissão para redimensionar com base em seu conteúdo. A exibição de largura fixa pode cortar seu conteúdo em idiomas específicos.
 - **Usar tamanhos de conteúdo intrínsecos** -por padrão, as exibições baseadas em texto serão dimensionadas automaticamente para ajustar seu conteúdo. Para exibição baseada em texto que não está dimensionando corretamente, selecione-as no interface Builder do Xcode e escolha **Editar**  >  **tamanho para ajustar o conteúdo**.
-- **Aplicar atributos à esquerda e à direita** – como a direção do texto pode ser alterada com base no idioma do usuário, use os `Leading` atributos novo e de restrição, em `Trailing` oposição `Right` aos `Left` atributos e existentes. `Leading`e `Trailing` será ajustado automaticamente com base na direção dos idiomas.
+- **Aplicar atributos à esquerda e à direita** – como a direção do texto pode ser alterada com base no idioma do usuário, use os `Leading` atributos novo e de restrição, em `Trailing` oposição `Right` aos `Left` atributos e existentes. `Leading` e `Trailing` será ajustado automaticamente com base na direção dos idiomas.
 - **Fixar exibições nas exibições adjacentes** – isso permite que as exibições sejam reposicionadas e redimensionadas à medida que as exibições relacionadas a elas são alteradas em resposta ao idioma selecionado.
 - **Não defina os tamanhos mínimo e/ou máximo do Windows** – permita que o Windows altere o tamanho conforme o idioma selecionado redimensiona suas áreas de conteúdo.
 - **Alterações no layout de teste constantemente** -durante o desenvolvimento no aplicativo devem ser testadas constantemente em idiomas diferentes. Consulte a documentação de teste da Apple em [seu aplicativo internacionalizado](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/TestingYourInternationalApp/TestingYourInternationalApp.html#//apple_ref/doc/uid/10000171i-CH7-SW1) para obter mais detalhes.
@@ -941,10 +941,10 @@ Para lidar com essa situação, o desenvolvedor pode criar uma ação personaliz
 
 A Apple incluiu vários recursos voltados para o usuário em macOS Sierra que permitem ao desenvolvedor aproveitar ao máximo a plataforma Mac, como:
 
-- **NSUserActivity** – isso permite que o aplicativo descreva a atividade na qual o usuário está envolvido no momento. `NSUserActivity`foi inicialmente criado para dar suporte à entrega, em que uma atividade iniciada em um dos dispositivos do usuário pode ser escolhida e continuada em outro dispositivo. `NSUserActivity`funciona da mesma forma no macOS que no iOS, portanto, consulte nossa [introdução à](~/ios/platform/handoff.md) documentação do IOS para obter mais detalhes.
+- **NSUserActivity** – isso permite que o aplicativo descreva a atividade na qual o usuário está envolvido no momento. `NSUserActivity` foi inicialmente criado para dar suporte à entrega, em que uma atividade iniciada em um dos dispositivos do usuário pode ser escolhida e continuada em outro dispositivo. `NSUserActivity` funciona da mesma forma no macOS que no iOS, portanto, consulte nossa [introdução à](~/ios/platform/handoff.md) documentação do IOS para obter mais detalhes.
 - **Siri no Mac** -Siri usa a atividade atual ( `NSUserActivity` ) para fornecer contexto aos comandos que um usuário pode emitir.
 - **Restauração de estado** – quando o usuário sai de um aplicativo no MacOS e depois o reinicia, o aplicativo será retornado automaticamente ao seu estado anterior. O desenvolvedor pode usar a API de restauração de estado para codificar e restaurar os Estados da interface do usuário transitórias antes que a interface seja exibida para o usuário. Se o aplicativo for `NSDocument` baseado, a restauração de estado será manipulada automaticamente. Para habilitar a restauração de estado para `NSDocument` aplicativos não baseados, defina o `Restorable` da `NSWindow` classe como `true` .
-- **Documentos na nuvem** -antes da MacOS Sierra, um aplicativo tinha que optar explicitamente por trabalhar com documentos na unidade icloud do usuário. No macOS Sierra as pastas **área de trabalho** e **documentos** do usuário podem ser sincronizadas com a unidade icloud automaticamente pelo sistema. Como resultado, cópias locais de documentos podem ser excluídas para liberar espaço na máquina do usuário. `NSDocument`os aplicativos baseados irão lidar automaticamente com essa alteração. Todos os outros tipos de aplicativo precisarão usar um `NSFileCoordinator` para sincronizar a leitura e a gravação de documentos.
+- **Documentos na nuvem** -antes da MacOS Sierra, um aplicativo tinha que optar explicitamente por trabalhar com documentos na unidade icloud do usuário. No macOS Sierra as pastas **área de trabalho** e **documentos** do usuário podem ser sincronizadas com a unidade icloud automaticamente pelo sistema. Como resultado, cópias locais de documentos podem ser excluídas para liberar espaço na máquina do usuário. `NSDocument` os aplicativos baseados irão lidar automaticamente com essa alteração. Todos os outros tipos de aplicativo precisarão usar um `NSFileCoordinator` para sincronizar a leitura e a gravação de documentos.
 
 <a name="Summary"></a>
 
@@ -954,4 +954,4 @@ Este artigo abordou várias dicas, recursos e técnicas que um desenvolvedor pod
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Exemplos do macOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+- [Exemplos do macOS](/samples/browse/?products=xamarin&term=Xamarin.Mac)

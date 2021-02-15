@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsAssociações básicas
+title: Xamarin.Forms Associações básicas
 description: Este artigo explica como usar a Xamarin.Forms vinculação de dados, que vincula um par de propriedades entre dois objetos, pelo menos um dos quais geralmente é um objeto de interface de usuário. Esses dois objetos são chamados de destino e origem.
 ms.prod: xamarin
 ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40
@@ -11,18 +11,18 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.custom: video
-ms.openlocfilehash: c0c6bc6e1005997548952aedc09cd83a451e7caa
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 107916edee01171b8ff5d4871de3b1243c385dd5
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84133517"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366419"
 ---
-# <a name="xamarinforms-basic-bindings"></a>Xamarin.FormsAssociações básicas
+# <a name="no-locxamarinforms-basic-bindings"></a>Xamarin.Forms Associações básicas
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
-Uma Xamarin.Forms ligação de dados vincula um par de propriedades entre dois objetos, pelo menos um dos quais geralmente é um objeto de interface do usuário. Esses dois objetos são chamados de *destino* e *origem*:
+Uma Xamarin.Forms ligação de dados vincula um par de propriedades entre dois objetos, pelo menos um dos quais geralmente é um objeto de interface do usuário. Esses dois objetos são chamados de *destino* e *origem* :
 
 - O *destino* é o objeto (e a propriedade) no qual a associação de dados é definida.
 - A *origem* é o objeto (e propriedade) referenciado pela associação de dados.
@@ -102,7 +102,7 @@ Ao manipular `Slider`, o `Label` gira de acordo:
 
 [![Vinculação de código básica](basic-bindings-images/basiccodebinding-small.png "Vinculação de código básica")](basic-bindings-images/basiccodebinding-large.png#lightbox "Vinculação de código básica")
 
-A página **Associação de XAML básica** é idêntica à **Associação de código básica**, exceto que ela define a associação de dados inteira em XAML:
+A página **Associação de XAML básica** é idêntica à **Associação de código básica** , exceto que ela define a associação de dados inteira em XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -156,7 +156,7 @@ A marcação mostrada na página **Associação de XAML básica** pode ser simpl
 
 A propriedade `BindingContext` é um componente importante de associações de dados, mas nem sempre é necessária. O objeto de origem pode ser especificado na chamada `SetBinding` ou na extensão de marcação `Binding`.
 
-Isso é demonstrado no exemplo **Associação de código alternativa**. O arquivo XAML é semelhante ao exemplo **Associação de código básica**, exceto que o `Slider` é definido para controlar a propriedade `Scale` do `Label`. Por esse motivo, o `Slider` é definido para um intervalo de &ndash;2 a 2:
+Isso é demonstrado no exemplo **Associação de código alternativa**. O arquivo XAML é semelhante ao exemplo **Associação de código básica** , exceto que o `Slider` é definido para controlar a propriedade `Scale` do `Label`. Por esse motivo, o `Slider` é definido para um intervalo de &ndash;2 a 2:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -332,9 +332,9 @@ A propriedade `BindingContext` do `StackLayout` é definida para o objeto `slide
 
 No [próximo artigo](binding-mode.md), você verá como o *modo de associação* pode alterar o fluxo de dados entre objetos de origem e destino.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [Demonstrações de associação de dados (amostra)](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Capítulo de vinculação de dados do Xamarin.Forms livro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 
 ## <a name="related-video"></a>Vídeo relacionados

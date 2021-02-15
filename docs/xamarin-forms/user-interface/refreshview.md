@@ -12,16 +12,16 @@ no-loc:
 - Xamarin.Essentials
 - RefreshView
 - Universal Windows Platform
-ms.openlocfilehash: 83802683aee722468acf9bcc827ba66f45c05e6b
-ms.sourcegitcommit: cd0c0999b53e825b60471bfbfd4144cfcd783587
+ms.openlocfilehash: 470093465191897a56cd54a6edaf828afbf40e11
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86225475"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93372867"
 ---
-# <a name="xamarinforms-refreshview"></a>Xamarin.Forms RefreshView
+# <a name="no-locxamarinforms-no-locrefreshview"></a>Xamarin.Forms RefreshView
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
 
 O `RefreshView` é um controle de contêiner que fornece a funcionalidade de pull para atualizar para conteúdo rolável. Portanto, o filho de um `RefreshView` deve ser um controle rolável, como [`ScrollView`](xref:Xamarin.Forms.ScrollView) , [`CollectionView`](xref:Xamarin.Forms.CollectionView) ou [`ListView`](xref:Xamarin.Forms.ListView) .
 
@@ -37,7 +37,7 @@ Essas propriedades são apoiadas por [`BindableProperty`](xref:Xamarin.Forms.Bin
 > [!NOTE]
 > No Universal Windows Platform , a direção de pull de um `RefreshView` pode ser definida com uma plataforma específica. Para obter mais informações, consulte [ RefreshView direção de pull](~/xamarin-forms/platform/windows/refreshview-pulldirection.md).
 
-## <a name="create-a-refreshview"></a>Criar um RefreshView
+## <a name="create-a-no-locrefreshview"></a>Criar um RefreshView
 
 O exemplo a seguir mostra como criar uma instância de `RefreshView` em XAML:
 
@@ -79,12 +79,12 @@ O valor da `RefreshView.IsRefreshing` propriedade indica o estado atual do `Refr
 
 Quando o usuário inicia uma atualização, o `ICommand` definido pela `Command` propriedade é executado, o que deve atualizar os itens que estão sendo exibidos. Uma visualização de atualização é mostrada enquanto a atualização ocorre, que consiste em um círculo de progresso animado:
 
-[![Captura de tela de uma RefreshView atualização de dados, no Ios e no Android](refreshview-images/default-progress-circle.png "[! Parar. Não-LOC (RefreshView)] atualizando dados")](refreshview-images/default-progress-circle-large.png#lightbox "[! Parar. Não-LOC (RefreshView)] atualizando dados")
+[![Captura de tela de um::: no-Loc (RefreshView)::: Atualizando dados, no iOS e no Android](refreshview-images/default-progress-circle.png "::: no-Loc (RefreshView)::: Atualizando dados")](refreshview-images/default-progress-circle-large.png#lightbox "::: no-Loc (RefreshView)::: Atualizando dados")
 
 > [!NOTE]
 > Definir manualmente a `IsRefreshing` propriedade como disparará `true` a visualização de atualização e executará o `ICommand` definido pela `Command` propriedade.
 
-## <a name="refreshview-appearance"></a>RefreshViewaparência
+## <a name="no-locrefreshview-appearance"></a>RefreshView aparência
 
 Além das propriedades `RefreshView` herdadas da [`VisualElement`](xref:Xamarin.Forms.VisualElement) classe, `RefreshView` também define a `RefreshColor` propriedade. Essa propriedade pode ser definida para definir a cor do círculo de progresso que aparece durante a atualização:
 
@@ -95,14 +95,14 @@ Além das propriedades `RefreshView` herdadas da [`VisualElement`](xref:Xamarin.
 
 A captura de tela a seguir mostra um `RefreshView` com o `RefreshColor` conjunto de propriedades:
 
-[![Captura de tela de um RefreshView com círculo de progresso azul-petróleo, no Ios e no Android](refreshview-images/teal-progress-circle.png "[! Parar. Não-LOC (RefreshView)] com um círculo de progresso azul-petróleo")](refreshview-images/teal-progress-circle-large.png#lightbox "[! Parar. Não-LOC (RefreshView)] com um círculo de progresso azul-petróleo")
+[![Captura de tela de um::: no-Loc (RefreshView)::: com um círculo de progresso azul-petróleo, no iOS e no Android](refreshview-images/teal-progress-circle.png "::: no-Loc (RefreshView)::: com um círculo de progresso azul-petróleo")](refreshview-images/teal-progress-circle-large.png#lightbox "::: no-Loc (RefreshView)::: com um círculo de progresso azul-petróleo")
 
 Além disso, a `BackgroundColor` propriedade pode ser definida como um [`Color`](xref:Xamarin.Forms.Color) que representa a cor do plano de fundo do círculo de progresso.
 
 > [!NOTE]
 > No iOS, a `BackgroundColor` propriedade define a cor do plano de fundo do `UIView` que contém o círculo de progresso.
 
-## <a name="disable-a-refreshview"></a>Desabilitar umRefreshView
+## <a name="disable-a-no-locrefreshview"></a>Desabilitar um RefreshView
 
 Um aplicativo pode inserir um estado em que o pull para atualizar não é uma operação válida. Nesses casos, o `RefreshView` pode ser desabilitado definindo sua `IsEnabled` propriedade como `false` . Isso impedirá que os usuários possam disparar pull para atualização.
 
@@ -110,6 +110,6 @@ Como alternativa, ao definir a `Command` propriedade, o `CanExecute` delegado de
 
 ## <a name="related-links"></a>Links relacionados
 
-- [RefreshViewNova](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
-- [Layouts vinculáveis emXamarin.Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)
-- [RefreshViewDireção específica da plataforma de pull](~/xamarin-forms/platform/windows/refreshview-pulldirection.md)
+- [RefreshView Nova](/samples/xamarin/xamarin-forms-samples/userinterface-refreshviewdemo/)
+- [Layouts vinculáveis em Xamarin.Forms](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)
+- [RefreshView Direção específica da plataforma de pull](~/xamarin-forms/platform/windows/refreshview-pulldirection.md)

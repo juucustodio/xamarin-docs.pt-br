@@ -1,27 +1,25 @@
 ---
-title: 'Xamarin.FormsFormas: caminho'
+title: 'Xamarin.Forms Formas: caminho'
 description: A Xamarin.Forms classe path pode ser usada para desenhar curvas e formas complexas.
 ms.prod: xamarin
 ms.assetid: B29486F4-9A5E-4588-ABDF-7EB1E69B9AE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/21/2020
+ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 274ff08d7fffc1cd3a817906e14ebddfac2c9337
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: b184d56647e47b95bbd809baee4d9cba7360ee2f
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918257"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939986"
 ---
-# <a name="no-locxamarinforms-shapes-path"></a>Xamarin.FormsFormas: caminho
+# <a name="no-locxamarinforms-shapes-path"></a>Xamarin.Forms Formas: caminho
 
-![API de pré-lançamento](~/media/shared/preview.png)
-
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 A `Path` classe deriva da `Shape` classe e pode ser usada para desenhar curvas e formas complexas. Essas curvas e formas geralmente são descritas usando `Geometry` objetos. Para obter informações sobre as propriedades que a `Path` classe herda da `Shape` classe, consulte [ Xamarin.Forms formas](index.md).
 
@@ -48,17 +46,13 @@ O exemplo de XAML a seguir mostra como desenhar um triângulo usando a sintaxe d
 ```xaml
 <Path Data="M 10,100 L 100,100 100,50Z"
       Stroke="Black"
-      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Start" />
 ```
 
-A `Data` cadeia de caracteres começa com o comando move, indicado por `M` , que estabelece um ponto de partida absoluto para o caminho. `L`é o comando line, que cria uma linha reta a partir do ponto inicial até o ponto de extremidade especificado. `Z`é o comando Close, que cria uma linha que conecta o ponto atual ao ponto de partida. O resultado é um triângulo:
+A `Data` cadeia de caracteres começa com o comando move, indicado por `M` , que estabelece um ponto de partida absoluto para o caminho. `L` é o comando line, que cria uma linha reta a partir do ponto inicial até o ponto de extremidade especificado. `Z` é o comando Close, que cria uma linha que conecta o ponto atual ao ponto de partida. O resultado é um triângulo:
 
 ![Triângulo do caminho](path-images/triangle.png "Triângulo do caminho")
-
-> [!NOTE]
-> A sintaxe de marcação de caminho só está disponível em XAML.
 
 Para obter mais informações sobre a sintaxe de marcação de caminho, consulte [ Xamarin.Forms sintaxe de marcação de caminho](path-markup-syntax.md).
 
@@ -66,13 +60,12 @@ Para obter mais informações sobre a sintaxe de marcação de caminho, consulte
 
 As curvas e formas podem ser descritas usando `Geometry` objetos, que são usados para definir a `Path` Propriedade do objeto `Data` . Há uma variedade de `Geometry` objetos a serem escolhidos. As `EllipseGeometry` `LineGeometry` classes, e `RectangleGeometry` descrevem formas relativamente simples. Para criar formas mais complexas ou criar curvas, use um `PathGeometry` .
 
-`PathGeometry`os objetos são compostos de um ou mais `PathFigure` objetos. Cada `PathFigure` objeto representa uma forma diferente. Cada `PathFigure` objeto é composto de um ou mais `PathSegment` objetos, cada um representando uma parte de conexão da forma. Os tipos de segmento incluem as `LineSegment` seguintes `BezierSegment` classes, e `ArcSegment` .
+`PathGeometry` os objetos são compostos de um ou mais `PathFigure` objetos. Cada `PathFigure` objeto representa uma forma diferente. Cada `PathFigure` objeto é composto de um ou mais `PathSegment` objetos, cada um representando uma parte de conexão da forma. Os tipos de segmento incluem as `LineSegment` seguintes `BezierSegment` classes, e `ArcSegment` .
 
 O exemplo de XAML a seguir mostra como desenhar um triângulo usando um `PathGeometry` objeto:
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Aspect="Uniform"
       HorizontalOptions="Start">
     <Path.Data>
@@ -103,8 +96,8 @@ Para obter mais informações sobre geometrias, consulte [ Xamarin.Forms geometr
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ShapeDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.FormsExistentes](index.md)
-- [Xamarin.FormsGeometrias](geometries.md)
-- [Xamarin.FormsSintaxe de marcação de caminho](path-markup-syntax.md)
-- [Xamarin.FormsTransformações de caminho](path-transforms.md)
+- [ShapeDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms Existentes](index.md)
+- [Xamarin.Forms Geometrias](geometries.md)
+- [Xamarin.Forms Sintaxe de marcação de caminho](path-markup-syntax.md)
+- [Xamarin.Forms Transformações de caminho](path-transforms.md)

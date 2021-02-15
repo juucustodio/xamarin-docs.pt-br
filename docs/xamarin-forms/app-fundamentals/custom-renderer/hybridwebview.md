@@ -10,16 +10,16 @@ ms.date: 03/31/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e0653e46d2c349e05df8716e5114de8f631cab1a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: dcfb713da09a9dab1974110e161d8045132f6b2f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939536"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375012"
 ---
 # <a name="customizing-a-webview"></a>Personalizando uma WebView
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)
 
 _Um Xamarin.Forms `WebView` é uma exibição que exibe conteúdo Web e HTML em seu aplicativo. Este artigo explica como criar um renderizador personalizado que estende o `WebView` para permitir que o código C# seja invocado do JavaScript._
 
@@ -148,7 +148,7 @@ O processo para criar a classe do renderizador personalizado é a seguinte:
 
 1. Crie uma subclasse da `WkWebViewRenderer` classe no Ios e a `WebViewRenderer` classe no Android e UWP, que renderiza o controle personalizado.
 1. Substitua o `OnElementChanged` método que renderiza o [`WebView`](xref:Xamarin.Forms.WebView) e a lógica de gravação para personalizá-lo. Esse método é chamado quando um `HybridWebView` objeto é criado.
-1. Adicione um `ExportRenderer` atributo à classe de processador personalizado ou *AssemblyInfo.cs*, para especificar que ele será usado para renderizar o Xamarin.Forms controle personalizado. Esse atributo é usado para registrar o renderizador personalizado com Xamarin.Forms .
+1. Adicione um `ExportRenderer` atributo à classe de processador personalizado ou *AssemblyInfo.cs* , para especificar que ele será usado para renderizar o Xamarin.Forms controle personalizado. Esse atributo é usado para registrar o renderizador personalizado com Xamarin.Forms .
 
 > [!NOTE]
 > Para a maioria dos Xamarin.Forms elementos, é opcional fornecer um renderizador personalizado em cada projeto de plataforma. Se um renderizador personalizado não estiver registrado, será usado o renderizador padrão da classe base do controle. No entanto, são necessários renderizadores personalizados em cada projeto da plataforma durante a renderização de um elemento [View](xref:Xamarin.Forms.View).
@@ -487,4 +487,4 @@ Essa funcionalidade é obtida da seguinte maneira:
 
 ## <a name="related-links"></a>Links relacionados
 
-- [HybridWebView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)
+- [HybridWebView (exemplo)](/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)

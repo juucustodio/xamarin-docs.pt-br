@@ -10,16 +10,19 @@ ms.date: 07/18/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f9bafbf4af2a89acd02d436604e882be87cbde8c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8a95f4a88ea0adff78475dab8699308fbe49aa46
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136832"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370202"
 ---
 # <a name="summary-of-chapter-6-button-clicks"></a>Resumo do capítulo 6. Cliques no botão
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
+
+> [!NOTE]
+> Este livro foi publicado na Primavera de 2016 e não foi atualizado desde então. Há muito no livro que permanece valioso, mas alguns materiais estão desatualizados e alguns tópicos não estão mais totalmente corretos ou completos.
 
 A [`Button`](xref:Xamarin.Forms.Button) é a exibição que permite ao usuário iniciar um comando. Um `Button` é identificado pelo texto (e, opcionalmente, uma imagem, como demonstrado no [capítulo 13, bitmaps](chapter13.md)). Consequentemente, `Button` define muitas das mesmas propriedades que `Label` :
 
@@ -29,13 +32,13 @@ A [`Button`](xref:Xamarin.Forms.Button) é a exibição que permite ao usuário 
 - [`FontAttributes`](xref:Xamarin.Forms.Button.FontAttributes)
 - [`TextColor`](xref:Xamarin.Forms.Button.TextColor)
 
-`Button`também define três propriedades que regem a aparência de sua borda, mas o suporte dessas propriedades e sua independência mútua são específicos da plataforma:
+`Button` também define três propriedades que regem a aparência de sua borda, mas o suporte dessas propriedades e sua independência mútua são específicos da plataforma:
 
-- [`BorderColor`](xref:Xamarin.Forms.Button.BorderColor)do tipo`Color`
-- [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth)do tipo`Double`
-- [`BorderRadius`](xref:Xamarin.Forms.Button.BorderRadius)do tipo`Double`
+- [`BorderColor`](xref:Xamarin.Forms.Button.BorderColor) do tipo `Color`
+- [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth) do tipo `Double`
+- [`BorderRadius`](xref:Xamarin.Forms.Button.BorderRadius) do tipo `Double`
 
-`Button`também herda todas as propriedades de `VisualElement` e `View` , incluindo `BackgroundColor` , `HorizontalOptions` e `VerticalOptions` .
+`Button` também herda todas as propriedades de `VisualElement` e `View` , incluindo `BackgroundColor` , `HorizontalOptions` e `VerticalOptions` .
 
 ## <a name="processing-the-click"></a>Processando o clique
 
@@ -59,7 +62,7 @@ Vários `Button` objetos também podem ser diferenciados pela definição da [`S
 
 O exemplo [**SimplestKeypad**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/SimplestKeypad) usa o mesmo manipulador de eventos para todas as 10 chaves de número em um teclado numérico e distingue entre elas com a `StyleId` Propriedade:
 
-[![Captura de tela tripla do teclado mais simples](images/ch06fg04-small.png "Calculator")](images/ch06fg04-large.png#lightbox "Calculator")
+[![Captura de tela tripla do teclado mais simples](images/ch06fg04-small.png "Calculadora")](images/ch06fg04-large.png#lightbox "Calculadora")
 
 ## <a name="saving-transient-data"></a>Salvando dados transitórios
 
@@ -93,4 +96,4 @@ O exemplo de [**PersistentKeypad**](https://github.com/xamarin/xamarin-forms-boo
 - [Capítulo 6 texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch06-Apr2016.pdf)
 - [Exemplos do capítulo 6](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06)
 - [Exemplos do capítulo 6 F #](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/FS)
-- [Xamarin.FormsButton](~/xamarin-forms/user-interface/button.md)
+- [Xamarin.Forms Button](~/xamarin-forms/user-interface/button.md)

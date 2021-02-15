@@ -1,27 +1,27 @@
 ---
-title: Xamarin.FormsEmptyView CollectionView
+title: Xamarin.Forms EmptyView CollectionView
 description: Em CollectionView, um modo de exibição vazio pode ser especificado para fornecer comentários ao usuário quando nenhum dado está disponível para exibição. O modo de exibição vazio pode ser uma cadeia de caracteres, uma exibição ou várias exibições.
 ms.prod: xamarin
 ms.assetid: 6CEBCFE6-5577-4F68-9709-431062609153
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
+ms.date: 11/05/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d35e39e55d66452e47c7a3e3faf86a7a7d6adaca
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: e689620a943719f769e897676dbd2628e5f1558c
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136481"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590422"
 ---
-# <a name="xamarinforms-collectionview-emptyview"></a>Xamarin.FormsEmptyView CollectionView
+# <a name="no-locxamarinforms-collectionview-emptyview"></a>Xamarin.Forms EmptyView CollectionView
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView)define as seguintes propriedades que podem ser usadas para fornecer comentários do usuário quando não há dados a serem exibidos:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define as seguintes propriedades que podem ser usadas para fornecer comentários do usuário quando não há dados a serem exibidos:
 
 - [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView), do tipo `object` , a cadeia de caracteres, a associação ou a exibição que será exibida quando a [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) propriedade for `null` , ou quando a coleção especificada pela `ItemsSource` propriedade for `null` ou vazia. O valor padrão é `null`.
 - [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate), do tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) , o modelo a ser usado para formatar o especificado `EmptyView` . O valor padrão é `null`.
@@ -75,23 +75,28 @@ A [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) propriedade pode ser def
             </DataTemplate>
         </CollectionView.ItemTemplate>
         <CollectionView.EmptyView>
-            <StackLayout>
-                <Label Text="No results matched your filter."
-                       Margin="10,25,10,10"
-                       FontAttributes="Bold"
-                       FontSize="18"
-                       HorizontalOptions="Fill"
-                       HorizontalTextAlignment="Center" />
-                <Label Text="Try a broader filter?"
-                       FontAttributes="Italic"
-                       FontSize="12"
-                       HorizontalOptions="Fill"
-                       HorizontalTextAlignment="Center" />
-            </StackLayout>
+            <ContentView>
+                <StackLayout HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="CenterAndExpand">
+                    <Label Text="No results matched your filter."
+                           Margin="10,25,10,10"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           HorizontalOptions="Fill"
+                           HorizontalTextAlignment="Center" />
+                    <Label Text="Try a broader filter?"
+                           FontAttributes="Italic"
+                           FontSize="12"
+                           HorizontalOptions="Fill"
+                           HorizontalTextAlignment="Center" />
+                </StackLayout>
+            </ContentView>
         </CollectionView.EmptyView>
     </CollectionView>
 </StackLayout>
 ```
+
+Neste exemplo, o que parece um redundante [`ContentView`](xref:Xamarin.Forms) foi adicionado como o elemento raiz do [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) . Isso ocorre porque, internamente, `EmptyView` é adicionado a um contêiner nativo que não fornece nenhum contexto para Xamarin.Forms layout. Portanto, para posicionar as exibições que compõem seu `EmptyView` , você deve adicionar um layout raiz, cujo filho é um layout que pode se posicionar dentro do layout raiz.
 
 Este é o código C# equivalente:
 
@@ -99,12 +104,15 @@ Este é o código C# equivalente:
 SearchBar searchBar = new SearchBar { ... };
 CollectionView collectionView = new CollectionView
 {
-    EmptyView = new StackLayout
+    EmptyView = new ContentView
     {
-        Children =
+        Content = new StackLayout
         {
-            new Label { Text = "No results matched your filter.", ... },
-            new Label { Text = "Try a broader filter?", ... }
+            Children =
+            {
+                new Label { Text = "No results matched your filter.", ... },
+                new Label { Text = "Try a broader filter?", ... }
+            }
         }
     }
 };
@@ -330,7 +338,7 @@ Para obter mais informações sobre seletores de modelo de dados, consulte [cria
 
 ## <a name="related-links"></a>Links relacionados
 
-- [CollectionView (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
-- [Xamarin.FormsModelos de dados](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
-- [Xamarin.FormsDicionários de recursos](~/xamarin-forms/xaml/resource-dictionaries.md)
+- [CollectionView (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [Xamarin.Forms Modelos de dados](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
+- [Xamarin.Forms Dicionários de recursos](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Criar um Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

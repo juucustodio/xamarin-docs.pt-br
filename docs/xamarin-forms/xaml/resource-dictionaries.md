@@ -1,26 +1,26 @@
 ---
-title: Xamarin.Formsdicionários de recursos
-description: Xamarin.FormsOs recursos XAML são objetos que podem ser compartilhados e reutilizados em um Xamarin.Forms aplicativo.
+title: Xamarin.Forms dicionários de recursos
+description: Xamarin.Forms Os recursos XAML são objetos que podem ser compartilhados e reutilizados em um Xamarin.Forms aplicativo.
 ms.prod: xamarin
 ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/01/2020
+ms.date: 11/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.custom: video
-ms.openlocfilehash: a1c7cfd4a0f3549b11ac51dc13b40da552f6b758
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 60d16183e1a2ea162c97bbf8b30636a5a9999204
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139406"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590246"
 ---
-# <a name="xamarinforms-resource-dictionaries"></a>Xamarin.Formsdicionários de recursos
+# <a name="no-locxamarinforms-resource-dictionaries"></a>Xamarin.Forms dicionários de recursos
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 
 Um [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) é um repositório de recursos que são usados por um Xamarin.Forms aplicativo. Os recursos típicos que são armazenados em um `ResourceDictionary` incluem [estilos](~/xamarin-forms/user-interface/styles/index.md), [modelos de controle](~/xamarin-forms/app-fundamentals/templates/control-template.md), [modelos de dados](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md), cores e conversores.
 
@@ -133,11 +133,11 @@ Quando os recursos compartilharem chaves, os recursos definidos na parte inferio
 
 ## <a name="stand-alone-resource-dictionaries"></a>Dicionários de recursos autônomos
 
-Uma classe derivada de [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) também pode estar em um arquivo autônomo separado. O arquivo resultante pode ser compartilhado entre aplicativos.
+Uma classe derivada de [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) também pode estar em um arquivo XAML autônomo. O arquivo XAML pode ser compartilhado entre aplicativos.
 
 Para criar esse arquivo, adicione um novo **modo de exibição de conteúdo** ou item de página de **conteúdo** ao projeto (mas não a uma **exibição de conteúdo** ou a uma página de **conteúdo** com apenas um arquivo C#). Exclua o arquivo code-behind e, no arquivo XAML, altere o nome da classe base de [`ContentView`](xref:Xamarin.Forms.ContentView) ou [`ContentPage`](xref:Xamarin.Forms.ContentPage) para [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . Além disso, remova o `x:Class` atributo da marca raiz do arquivo.
 
-O exemplo de XAML a seguir mostra um [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) chamado **myresourcedictionary. XAML**:
+O exemplo de XAML a seguir mostra um [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) chamado **myresourcedictionary. XAML** :
 
 ```xaml
 <ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
@@ -168,6 +168,17 @@ O exemplo de XAML a seguir mostra um [`ResourceDictionary`](xref:Xamarin.Forms.R
 
 Neste exemplo, o [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) contém um único recurso, que é um objeto do tipo [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) . **Myresourcedictionary. XAML** pode ser consumido mesclando-o em outro dicionário de recursos.
 
+Por padrão, o vinculador removerá arquivos XAML autônomos de builds de versão quando o comportamento do vinculador for definido para vincular todos os assemblies. Para garantir que os arquivos XAML autônomos permaneçam em uma compilação de versão:
+
+1. Adicione um `Preserve` atributo personalizado ao assembly que contém os arquivos XAML autônomos. Para obter mais informações, consulte [preservando código](~/ios/deploy-test/linker.md).
+1. Defina o `Preserve` atributo no nível do assembly:
+
+    ```csharp
+    [assembly:Preserve(AllMembers = true)]
+    ```
+
+Para obter mais informações sobre vinculação, consulte [vinculando aplicativos Xamarin. Ios](~/ios/deploy-test/linker.md) e [vinculando no Android](~/android/deploy-test/linker.md).
+
 ## <a name="merged-resource-dictionaries"></a>Dicionários de recursos mesclados
 
 Os dicionários de recurso mesclados combinam um ou mais [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) objetos em outro `ResourceDictionary` .
@@ -194,7 +205,7 @@ Essa sintaxe não instancia a `MyResourceDictionary` classe. Em vez disso, ele f
 
 ### <a name="merge-resource-dictionaries-from-other-assemblies"></a>Mesclar dicionários de recurso de outros assemblies
 
-Um [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) também pode ser mesclado em outro `ResourceDictionary` adicionando-o à [`MergedDictionaries`](xref:Xamarin.Forms.ResourceDictionary.MergedDictionaries) Propriedade do `ResourceDictionary` . Essa técnica permite que os dicionários de recursos sejam mesclados, independentemente do assembly no qual residem. A mesclagem de dicionários de recursos de assemblies externos exige que o [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) tenha uma ação de compilação definida como **EmbeddedResource**, tenha um arquivo code-behind e defina o `x:Class` atributo na marca raiz do arquivo.
+Um [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) também pode ser mesclado em outro `ResourceDictionary` adicionando-o à [`MergedDictionaries`](xref:Xamarin.Forms.ResourceDictionary.MergedDictionaries) Propriedade do `ResourceDictionary` . Essa técnica permite que os dicionários de recursos sejam mesclados, independentemente do assembly no qual residem. A mesclagem de dicionários de recursos de assemblies externos exige que o [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) tenha uma ação de compilação definida como **EmbeddedResource** , tenha um arquivo code-behind e defina o `x:Class` atributo na marca raiz do arquivo.
 
 > [!WARNING]
 > A [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) classe também define uma [`MergedWith`](xref:Xamarin.Forms.ResourceDictionary.MergedWith) propriedade. No entanto, essa propriedade foi preterida e não deve mais ser usada.
@@ -236,10 +247,12 @@ Quando [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) os recursos
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Dicionários de recursos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
+- [Dicionários de recursos (exemplo)](/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 - [Extensões de marcação do XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
-- [Xamarin.FormsEstilos](~/xamarin-forms/user-interface/styles/index.md)
-- [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
+- [Xamarin.Forms Estilos](~/xamarin-forms/user-interface/styles/index.md)
+- [Como vincular aplicativos do Xamarin.iOS](~/ios/deploy-test/linker.md)
+- [Vinculação no Android](~/android/deploy-test/linker.md)
+- [API ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 
 ## <a name="related-video"></a>Vídeo relacionado
 

@@ -6,12 +6,12 @@ ms.assetid: 99484E96-DC69-4697-8BBB-1B44C5CBB5ED
 author: davidortinau
 ms.author: daortin
 ms.date: 10/23/2018
-ms.openlocfilehash: 9c87a65481ca58b2861c40a420459d629852f6b6
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 357bf2c6e137aacd471b517852f3a7b424af3f7d
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997417"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456568"
 ---
 # <a name="continuous-integration-with-xamarin"></a>Integração contínua com o Xamarin
 
@@ -27,11 +27,11 @@ Esta seção identifica quais recursos do DevOps no Azure e no Visual Studio voc
 
 ## <a name="working-with-continuous-integration-environments"></a>Trabalhando com ambientes de integração contínua
 
-### <a name="build-xamarin-apps-with-azure-pipelines"></a>[Compilar aplicativos Xamarin com Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin/)
+### <a name="build-xamarin-apps-with-azure-pipelines"></a>[Compilar aplicativos Xamarin com Azure Pipelines](/azure/devops/pipelines/languages/xamarin/)
 
 Use Azure Pipelines para criar automaticamente aplicativos Xamarin para Android e iOS.
 
-### <a name="build-xamarin-apps-using-app-center"></a>[Compilar aplicativos Xamarin usando App Center](https://docs.microsoft.com/appcenter/build/xamarin/)
+### <a name="build-xamarin-apps-using-app-center"></a>[Compilar aplicativos Xamarin usando App Center](/appcenter/build/xamarin/)
 
 Crie soluções Xamarin. iOS e Xamarin. Android com App Center, diretamente do GitHub, do Azure DevOps ou do bitbucket.
 

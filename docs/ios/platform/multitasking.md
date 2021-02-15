@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: b86f3a159a144f02ea13663bfddb41ed0100f740
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 76ce375e611ddc8ee21d76e7947601319bf9dba8
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931398"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628937"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Multitarefa para iPad no Xamarin. iOS
 
@@ -100,7 +100,7 @@ Como com o deslizamento e a exibição de divisão, o usuário tem controle tota
 
 Para que seu aplicativo exiba o vídeo PIP na solicitação do usuário, você precisará usar o _AVKit_ ou as APIs do _AV Foundation_. A estrutura do Media Player foi depreciada no iOS 9 e não dá suporte a PIP.
 
-A imagem na imagem está disponível apenas em um iPad pro, iPad Air, iPad Air 2, iPad mini 2, iPad mini 3 ou iPad mini 4. Para obter mais informações, consulte nosso [aplicativo de exemplo PictureInPicture](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9) e a [imagem da Apple no Picture início rápido](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/QuickStartForPictureInPicture.html#//apple_ref/doc/uid/TP40015145-CH14) Documentation.
+A imagem na imagem está disponível apenas em um iPad pro, iPad Air, iPad Air 2, iPad mini 2, iPad mini 3 ou iPad mini 4. Para obter mais informações, consulte nosso [aplicativo de exemplo PictureInPicture](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9) e a [imagem da Apple no Picture início rápido](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/QuickStartForPictureInPicture.html#//apple_ref/doc/uid/TP40015145-CH14) Documentation.
 
 <a name="Supporting-Multitasking-in-your-App"></a>
 
@@ -124,13 +124,13 @@ Em um iPad, um aplicativo de tela inteira tem classes regulares de tamanho horiz
 
 Em iPads que dão suporte ao deslizamento e à exibição de divisão, você pode terminar com as seguintes combinações:
 
-| **Direção** | **Aplicativo primário** | **Aplicativo secundário** |
+| **Orientation** | **Aplicativo primário** | **Aplicativo secundário** |
 |--- |--- |--- |
 | **Retrato** |75% da tela<br />Compactar horizontalmente<br />Vertical regular|25% da tela<br />Compactar horizontalmente<br />Vertical regular|
 | **Paisagem** |75% da tela<br />Horizontal regular<br />Vertical regular|25% da tela<br />Compactar horizontalmente<br />Vertical regular|
 | **Paisagem** |50% da tela<br />Compactar horizontalmente<br />Vertical regular|50% da tela<br />Compactar horizontalmente<br />Vertical regular|
 
-No aplicativo de exemplo [MuliTask](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) , se ele for executado em tela inteira em um iPad no modo paisagem, ele apresentará a lista e a exibição de detalhes ao mesmo tempo:
+No aplicativo de exemplo [MuliTask](/samples/xamarin/ios-samples/ios9-multitask) , se ele for executado em tela inteira em um iPad no modo paisagem, ele apresentará a lista e a exibição de detalhes ao mesmo tempo:
 
 [![A lista e a exibição de detalhes apresentados ao mesmo tempo](multitasking-images/sizeclasses03.png)](multitasking-images/sizeclasses03.png#lightbox)
 
@@ -158,7 +158,7 @@ A **Guia de comando** abrirá um alternador de aplicativo que permite ao usuári
 
 Se um aplicativo iOS 9 incluir atalhos de teclado, o usuário poderá manter o **comando**, a **opção** ou as teclas de **controle** para exibi-los em um pop-up:
 
-[![O pop-up atalhos de teclado](multitasking-images/keyboard02.png)](multitasking-images/keyboard02.png#lightbox)
+[![Captura de tela mostra os atalhos de teclado para um aplicativo.](multitasking-images/keyboard02.png)](multitasking-images/keyboard02.png#lightbox)
 
 #### <a name="defining-custom-keyboard-shortcuts"></a>Definindo atalhos de teclado personalizados
 
@@ -194,9 +194,9 @@ Em seguida, substituimos a `KeyCommands` propriedade e criamos uma nova `UIKeyCo
 
 Se executarmos esse aplicativo em um iPad com um teclado de hardware anexado e o usuário digitar **Command-N**, uma nova entrada será adicionada à lista. Se o usuário mantiver a tecla de **comando** , a lista de atalhos será exibida:
 
-[![O pop-up atalhos de teclado](multitasking-images/keyboard03.png)](multitasking-images/keyboard03.png#lightbox)
+[![Captura de tela mostra o novo atalho de entrada para um aplicativo.](multitasking-images/keyboard03.png)](multitasking-images/keyboard03.png#lightbox)
 
-Consulte o aplicativo de [multitarefa](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) de exemplo para obter uma implementação de exemplo.
+Consulte o aplicativo de [multitarefa](/samples/xamarin/ios-samples/ios9-multitask) de exemplo para obter uma implementação de exemplo.
 
 <a name="Resource-Management-Considerations"></a>
 
@@ -253,8 +253,8 @@ Este artigo abordou as etapas necessárias para garantir que um aplicativo Xamar
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Amostras do iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
-- [Multitarefa (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask)
+- [Amostras do iOS 9](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
+- [Multitarefa (exemplo)](/samples/xamarin/ios-samples/ios9-multitask)
 - [Introdução aos storyboards unificados](~/ios/user-interface/storyboards/unified-storyboards.md)
 - [iOS 9 para desenvolvedores](https://developer.apple.com/ios/pre-release/)
 - [iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

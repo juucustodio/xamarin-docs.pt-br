@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/07/2018
+ms.date: 11/05/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 212674472706a36c66436a3955ab7b988f8e246b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 5d06b0467a5029fec6d0c92a683114b9e0d04685
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137547"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940181"
 ---
 # <a name="right-to-left-localization"></a>Localização da direita para a esquerda
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)
 
 _A localização da direita para a esquerda adiciona suporte à direção de fluxo da direita para a esquerda para Xamarin.Forms aplicativos._
 
@@ -77,7 +77,7 @@ A localidade com leitura da direita para a esquerda necessária deve ser adicion
 
 ![Idiomas com suporte do info. plist](rtl-images/ios-locales.png "Idiomas com suporte do info. plist")
 
-Para obter mais informações, confira [Noções básicas de localização no iOS](https://docs.microsoft.com/xamarin/ios/app-fundamentals/localization/#localization-basics-in-ios).
+Para obter mais informações, confira [Noções básicas de localização no iOS](../../../ios/app-fundamentals/localization/index.md#localization-basics-in-ios).
 
 A localização da direita para a esquerda pode então ser testada, alterando o idioma e a região no dispositivo/simulador para uma localidade com leitura da direita para a esquerda que foi especificada em **Info.plist**.
 
@@ -123,31 +123,30 @@ A localização da direita para a esquerda pode então ser testada, alterando o 
 
 ## <a name="limitations"></a>Limitações
 
-Xamarin.Formsa localização da direita para a esquerda atualmente tem uma série de limitações:
+Xamarin.Forms a localização da direita para a esquerda atualmente tem uma série de limitações:
 
-- [`NavigationPage`](xref:Xamarin.Forms.NavigationPage)o local do botão, a localização do item da barra de ferramentas e a animação da transição são controlados pela localidade do dispositivo, em vez da [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
-- [`CarouselPage`](xref:Xamarin.Forms.CarouselPage)a direção do dedo não inverte.
-- [`Image`](xref:Xamarin.Forms.Image)o conteúdo Visual não é invertido.
-- [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String))e a [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet(System.String,System.String,System.String,System.String[])) orientação é controlada pela localidade do dispositivo, em vez da [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
-- [`WebView`](xref:Xamarin.Forms.WebView)o conteúdo não respeita a [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
+- [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) o local do botão, a localização do item da barra de ferramentas e a animação da transição são controlados pela localidade do dispositivo, em vez da [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
+- [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) a direção do dedo não inverte.
+- [`Image`](xref:Xamarin.Forms.Image) o conteúdo Visual não é invertido.
+- [`WebView`](xref:Xamarin.Forms.WebView) o conteúdo não respeita a [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
 - Uma propriedade `TextDirection` precisa ser adicionada, para controlar o alinhamento do texto.
 
 ### <a name="ios"></a>iOS
 
-- [`Stepper`](xref:Xamarin.Forms.Stepper)a orientação é controlada pela localidade do dispositivo, em vez da [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
-- [`EntryCell`](xref:Xamarin.Forms.EntryCell)o alinhamento de texto é controlado pela localidade do dispositivo, em vez da [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
-- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions)gestos e alinhamento não são revertidos.
+- [`Stepper`](xref:Xamarin.Forms.Stepper) a orientação é controlada pela localidade do dispositivo, em vez da [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
+- [`EntryCell`](xref:Xamarin.Forms.EntryCell) o alinhamento de texto é controlado pela localidade do dispositivo, em vez da [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
+- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) gestos e alinhamento não são revertidos.
 
 ### <a name="android"></a>Android
 
-- [`SearchBar`](xref:Xamarin.Forms.SearchBar)a orientação é controlada pela localidade do dispositivo, em vez da [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
-- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions)o posicionamento é controlado pela localidade do dispositivo, em vez da [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
+- [`SearchBar`](xref:Xamarin.Forms.SearchBar) a orientação é controlada pela localidade do dispositivo, em vez da [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
+- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) o posicionamento é controlado pela localidade do dispositivo, em vez da [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
 
 ### <a name="uwp"></a>UWP
 
-- [`Editor`](xref:Xamarin.Forms.Editor)o alinhamento de texto é controlado pela localidade do dispositivo, em vez da [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
-- [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection)a propriedade não é herdada por [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) filhos.
-- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions)o alinhamento de texto é controlado pela localidade do dispositivo, em vez da [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
+- [`Editor`](xref:Xamarin.Forms.Editor) o alinhamento de texto é controlado pela localidade do dispositivo, em vez da [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
+- [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) a propriedade não é herdada por [`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage) filhos.
+- [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) o alinhamento de texto é controlado pela localidade do dispositivo, em vez da [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
 
 ## <a name="force-right-to-left-layout"></a>Forçar layout da direita para a esquerda
 
@@ -187,14 +186,17 @@ Os aplicativos Xamarin. Android podem ser forçados a usar sempre um layout da d
 Window.DecorView.LayoutDirection = LayoutDirection.Rtl;
 ```
 
-Essa abordagem é útil para aplicativos que sempre exigem um layout da direita para a esquerda e remove a necessidade de definir a [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade.
+> [!NOTE]
+> Essa abordagem requer que o aplicativo esteja configurado para dar suporte ao layout da direita para a esquerda. Para obter mais informações, consulte [instalação da plataforma Android](#android).
+
+Essa abordagem é útil para aplicativos que sempre exigem um layout da direita para a esquerda e remove a necessidade de definir a [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) propriedade para a maioria dos controles. No entanto, alguns controles, como [`CollectionView`](xref:Xamarin.Forms.CollectionView) , não respeitam a `LayoutDirection` propriedade e ainda exigem `FlowDirection` que a propriedade seja definida.
 
 ## <a name="right-to-left-language-support-with-xamarinuniversity"></a>Suporte a idiomas da direita para a esquerda com o Xamarin.University
 
 > [!VIDEO https://youtube.com/embed/f2lQ5yw3iiU]
 
-**Xamarin.Formsvídeo de suporte da direita para a esquerda 3,0**
+**Xamarin.Forms vídeo de suporte da direita para a esquerda 3,0**
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Aplicativo de exemplo TodoLocalizedRTL](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)
+- [Aplicativo de exemplo TodoLocalizedRTL](/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)

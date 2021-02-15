@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/20/2018
-ms.openlocfilehash: 2dd0a9a98c05204606f157cd9cd1028582af375b
-ms.sourcegitcommit: 5d75830fca6f2e58452d4445806e3653a3145dc0
+ms.openlocfilehash: 9e702bdb31563588d20b9cd70e35b67aefe67e0c
+ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75870903"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92928367"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Receptores de difusão no Xamarin. Android
 
@@ -20,33 +20,33 @@ _Esta seção discute como usar um receptor de difusão._
 
 ## <a name="broadcast-receiver-overview"></a>Visão geral do receptor de difusão
 
-Um _receptor de difusão_ é um componente do Android que permite que um aplicativo responda às mensagens (um [`Intent`](xref:Android.Content.Intent)Android) que são transmitidos pelo sistema operacional Android ou por um aplicativo. As difusões seguem um modelo de _publicação/assinatura_ &ndash; um evento faz com que uma difusão seja publicada e recebida por esses componentes interessados no evento.
+Um _receptor de difusão_ é um componente do Android que permite que um aplicativo responda às mensagens (um Android [`Intent`](xref:Android.Content.Intent) ) que são transmitidas pelo sistema operacional Android ou por um aplicativo. As difusões seguem um modelo de _publicação/assinatura_ &ndash; um evento faz com que uma difusão seja publicada e recebida por esses componentes interessados no evento.
 
 O Android identifica dois tipos de difusões:
 
-- A **difusão explícita** &ndash; esses tipos de difusão visam um aplicativo específico. O uso mais comum de uma difusão explícita é iniciar uma atividade. Um exemplo de uma difusão explícita quando um aplicativo precisa discar um número de telefone; Ele enviará uma intenção que tem como alvo o aplicativo de telefone no Android e passa o número de telefone a ser discado. Em seguida, o Android roteará a intenção para o aplicativo de telefone.
-- A **difusão implícita** &ndash; essas difusões são expedidas para todos os aplicativos no dispositivo. Um exemplo de difusão implícita é a intenção de `ACTION_POWER_CONNECTED`. Essa intenção é publicada toda vez que o Android detecta que a bateria no dispositivo está carregando. O Android roteará essa intenção para todos os aplicativos que se registraram para esse evento.
+- **Difusão explícita** &ndash; Esses tipos de difusão visam um aplicativo específico. O uso mais comum de uma difusão explícita é iniciar uma atividade. Um exemplo de uma difusão explícita quando um aplicativo precisa discar um número de telefone; Ele enviará uma intenção que tem como alvo o aplicativo de telefone no Android e passa o número de telefone a ser discado. Em seguida, o Android roteará a intenção para o aplicativo de telefone.
+- **Difusão implícita** &ndash; Essas difusões são expedidas para todos os aplicativos no dispositivo. Um exemplo de difusão implícita é a `ACTION_POWER_CONNECTED` intenção. Essa intenção é publicada toda vez que o Android detecta que a bateria no dispositivo está carregando. O Android roteará essa intenção para todos os aplicativos que se registraram para esse evento.
 
-O receptor de difusão é uma subclasse do tipo `BroadcastReceiver` e deve substituir o método [`OnReceive`](xref:Android.Content.BroadcastReceiver.OnReceive*) . O Android executará `OnReceive` no thread principal, portanto, esse método deve ser projetado para ser executado rapidamente. Deve-se ter cuidado ao gerar threads no `OnReceive` porque o Android pode encerrar o processo quando o método é concluído. Se um receptor de difusão precisar executar o trabalho de longa execução, é recomendável agendar um _trabalho_ usando o `JobScheduler` ou o _Dispatcher do trabalho firebase_. O agendamento do trabalho com um trabalho será discutido em um guia separado.
+O receptor de difusão é uma subclasse do `BroadcastReceiver` tipo e deve substituir o [`OnReceive`](xref:Android.Content.BroadcastReceiver.OnReceive*) método. O Android será executado `OnReceive` no thread principal, portanto, esse método deve ser projetado para ser executado rapidamente. Deve-se ter cuidado ao gerar threads no, `OnReceive` pois o Android pode encerrar o processo quando o método for concluído. Se um receptor de difusão precisar executar o trabalho de longa execução, é recomendável agendar um _trabalho_ usando o `JobScheduler` ou o _Dispatcher do trabalho firebase_ . O agendamento do trabalho com um trabalho será discutido em um guia separado.
 
-Um _filtro de intenção_ é usado para registrar um receptor de difusão para que o Android possa rotear mensagens corretamente. O filtro de intenção pode ser especificado em tempo de execução (às vezes, isso é chamado de _receptor de contexto registrado_ ou de _registro dinâmico_) ou pode ser definido estaticamente no manifesto do Android (um _receptor registrado pelo manifesto_). O Xamarin. Android fornece C# um atributo, `IntentFilterAttribute`, que registrará de forma estática o filtro de intenção (isso será discutido em mais detalhes posteriormente neste guia). A partir do Android 8,0, não é possível que um aplicativo se registre estaticamente para uma difusão implícita.
+Um _filtro de intenção_ é usado para registrar um receptor de difusão para que o Android possa rotear mensagens corretamente. O filtro de intenção pode ser especificado em tempo de execução (às vezes, isso é chamado de _receptor de contexto registrado_ ou de _registro dinâmico_ ) ou pode ser definido estaticamente no manifesto do Android (um _receptor registrado pelo manifesto_ ). O Xamarin. Android fornece um atributo C#, `IntentFilterAttribute` , que registrará estaticamente o filtro de intenção (isso será discutido em mais detalhes posteriormente neste guia). A partir do Android 8,0, não é possível que um aplicativo se registre estaticamente para uma difusão implícita.
 
-A principal diferença entre o receptor registrado pelo manifesto e o receptor registrado pelo contexto é que um receptor registrado pelo contexto responderá apenas a difusões enquanto um aplicativo estiver em execução, enquanto um receptor registrado pelo manifesto pode responder a difusões, embora o aplicativo possa não estar em execução.  
+A principal diferença entre o receptor registrado pelo manifesto e o receptor registrado pelo contexto é que um receptor registrado pelo contexto responderá apenas a difusões enquanto um aplicativo estiver em execução, enquanto um receptor registrado pelo manifesto pode responder a difusões, mesmo que o aplicativo possa não estar em execução.  
 
 Há dois conjuntos de APIs para gerenciar um receptor de difusão e enviar difusões:
 
-1. **`Context`** &ndash; a classe `Android.Content.Context` pode ser usada para registrar um receptor de difusão que responderá a eventos de todo o sistema. O `Context` também é usado para publicar difusões em todo o sistema.
-2. **[`LocalBroadcastManager`](https://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html#sendBroadcast(android.content.Intent))** &ndash; esta é uma API que está disponível por meio do [pacote NuGet da biblioteca de suporte do Xamarin](https://www.nuget.org/packages/Xamarin.Android.Support.v4/). Essa classe é usada para manter difusões e receptores de difusão isolados no contexto do aplicativo que os está usando. Essa classe pode ser útil para impedir que outros aplicativos respondam a difusões somente do aplicativo ou enviem mensagens para destinatários particulares.
+1. **`Context`**&ndash;A `Android.Content.Context` classe pode ser usada para registrar um receptor de difusão que responderá a eventos de todo o sistema. O `Context` também é usado para publicar difusões de todo o sistema.
+2. **[`LocalBroadcastManager`](https://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html#sendBroadcast(android.content.Intent))**&ndash;Esta é uma API que está disponível por meio do [pacote NuGet da biblioteca de suporte do Xamarin v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/). Essa classe é usada para manter difusões e receptores de difusão isolados no contexto do aplicativo que os está usando. Essa classe pode ser útil para impedir que outros aplicativos respondam a difusões somente do aplicativo ou enviem mensagens para destinatários particulares.
 
 Um receptor de difusão pode não exibir caixas de diálogo e não é recomendável iniciar uma atividade dentro de um receptor de difusão. Se um receptor de difusão precisar notificar o usuário, ele deverá publicar uma notificação.
 
-Não é possível associar ou iniciar um serviço de dentro de um receptor de difusão. 
+Não é possível associar ou iniciar um serviço de dentro de um receptor de difusão.
 
 Este guia explicará como criar um receptor de difusão e como registrá-lo para que ele possa receber difusões.
 
 ## <a name="creating-a-broadcast-receiver"></a>Criando um receptor de difusão
 
-Para criar um receptor de difusão no Xamarin. Android, um aplicativo deve fazer a subclasse da classe `BroadcastReceiver`, adorna-la com a `BroadcastReceiverAttribute`e substituir o método `OnReceive`:
+Para criar um receptor de difusão no Xamarin. Android, um aplicativo deve subclassear a `BroadcastReceiver` classe, adorna-la com o `BroadcastReceiverAttribute` e substituir o `OnReceive` método:
 
 ```csharp
 [BroadcastReceiver(Enabled = true, Exported = false)]
@@ -61,15 +61,15 @@ public class SampleReceiver : BroadcastReceiver
 }
 ```
 
-Quando o Xamarin. Android compila a classe, ele também atualizará o AndroidManifest com os metadados necessários para registrar o receptor. Para um receptor de difusão estaticamente registrado, o `Enabled` deve ser definido adequadamente como `true`, caso contrário, o Android não poderá criar uma instância do receptor.
+Quando o Xamarin. Android compila a classe, ele também atualizará o AndroidManifest com os metadados necessários para registrar o receptor. Para um receptor de difusão estaticamente registrado, o `Enabled` deve ser adequadamente definido como `true` ; caso contrário, o Android não será capaz de criar uma instância do receptor.
 
-A propriedade `Exported` controla se o receptor de difusão pode receber mensagens de fora do aplicativo. Se a propriedade não estiver definida explicitamente, o valor padrão da propriedade será determinado pelo Android com base em se houver filtros de intenção associados ao receptor de difusão. Se houver pelo menos um filtro de intenção para o receptor de difusão, o Android assumirá que a propriedade `Exported` é `true`. Se não houver nenhum filtro de intenção associado ao receptor de difusão, o Android assumirá que o valor é `false`. 
+A `Exported` propriedade controla se o receptor de difusão pode receber mensagens de fora do aplicativo. Se a propriedade não estiver definida explicitamente, o valor padrão da propriedade será determinado pelo Android com base em se houver filtros de intenção associados ao receptor de difusão. Se houver pelo menos um filtro de intenção para o receptor de difusão, o Android irá pressupor que a `Exported` propriedade é `true` . Se não houver nenhum filtro de intenção associado ao receptor de difusão, o Android assumirá que o valor é `false` .
 
-O método `OnReceive` recebe uma referência à `Intent` que foi expedida para o receptor de difusão. Isso possibilita que o remetente da intenção passe valores para o receptor de difusão.
+O `OnReceive` método recebe uma referência ao `Intent` que foi expedida para o receptor de difusão. Isso possibilita que o remetente da intenção passe valores para o receptor de difusão.
 
 ### <a name="statically-registering-a-broadcast-receiver-with-an-intent-filter"></a>Registrando estaticamente um receptor de difusão com um filtro de intenção
 
-Quando um `BroadcastReceiver` é decorado com o [`IntentFilterAttribute`](xref:Android.App.IntentFilterAttribute), o Xamarin. Android adicionará o elemento de `<intent-filter>` necessário ao manifesto do Android no momento da compilação. O trecho a seguir é um exemplo de um receptor de difusão que será executado quando um dispositivo terminar a inicialização (se as permissões do Android apropriadas foram concedidas pelo usuário):
+Quando um `BroadcastReceiver` é decorado com o [`IntentFilterAttribute`](xref:Android.App.IntentFilterAttribute) , o Xamarin. Android adicionará o `<intent-filter>` elemento necessário ao manifesto do Android no momento da compilação. O trecho a seguir é um exemplo de um receptor de difusão que será executado quando um dispositivo terminar a inicialização (se as permissões do Android apropriadas foram concedidas pelo usuário):
 
 ```csharp
 [BroadcastReceiver(Enabled = true)]
@@ -84,9 +84,9 @@ public class MyBootReceiver : BroadcastReceiver
 ```
 
 > [!NOTE]
-> No Android 8,0 (API 26 e superior), o [Google colocou limitações](https://developer.android.com/about/versions/oreo/background) sobre o que os aplicativos podem fazer, enquanto os usuários não estão interagindo diretamente com eles. Essas limitações afetam os serviços em segundo plano e os receptores de difusão implícitas, como `Android.Content.Intent.ActionBootCompleted`. Devido a essas limitações, você pode ter dificuldades para registrar um receptor de difusão `Boot Completed` em versões mais recentes do Android. Se esse for o caso, observe que essas restrições não se aplicam aos serviços de primeiro plano, que podem ser chamados do receptor de difusão.
+> No Android 8,0 (API 26 e superior), o [Google colocou limitações](https://developer.android.com/about/versions/oreo/background) sobre o que os aplicativos podem fazer, enquanto os usuários não estão interagindo diretamente com eles. Essas limitações afetam os serviços em segundo plano e os receptores de difusão implícitas, como `Android.Content.Intent.ActionBootCompleted` . Devido a essas limitações, você pode ter dificuldades para registrar um `Boot Completed` receptor de difusão em versões mais recentes do Android. Se esse for o caso, observe que essas restrições não se aplicam aos serviços de primeiro plano, que podem ser chamados do receptor de difusão.
 
-Também é possível criar um filtro de intenção que responderá a tentativas personalizadas. Considere o exemplo a seguir: 
+Também é possível criar um filtro de intenção que responderá a tentativas personalizadas. Considere o seguinte exemplo:
 
 ```csharp
 [BroadcastReceiver(Enabled = true)]
@@ -100,15 +100,15 @@ public class MySampleBroadcastReceiver : BroadcastReceiver
 }
 ```
 
-Os aplicativos destinados ao Android 8,0 (API nível 26) ou superior podem não se registrar estaticamente em uma difusão implícita. Os aplicativos ainda podem se registrar estaticamente em uma difusão explícita. Há uma pequena lista de difusões implícitas que são isentas dessa restrição. Essas exceções são descritas no guia de [exceções de difusão implícita](https://developer.android.com/guide/components/broadcast-exceptions.html) na documentação do Android. Aplicativos interessados em difusões implícitas devem fazer isso dinamicamente usando o método `RegisterReceiver`. Isso é descrito a seguir.
+Os aplicativos destinados ao Android 8,0 (API nível 26) ou superior podem não se registrar estaticamente em uma difusão implícita. Os aplicativos ainda podem se registrar estaticamente em uma difusão explícita. Há uma pequena lista de difusões implícitas que são isentas dessa restrição. Essas exceções são descritas no guia de [exceções de difusão implícita](https://developer.android.com/guide/components/broadcast-exceptions.html) na documentação do Android. Aplicativos interessados em difusões implícitas devem fazer isso dinamicamente usando o `RegisterReceiver` método. Isso é descrito a seguir.
 
-### <a name="context-registering-a-broadcast-receiver"></a>Contexto-registro de um receptor de difusão
+### <a name="context-registering-a-broadcast-receiver"></a>Context-Registering um receptor de difusão
 
-O registro de contexto (também conhecido como registro dinâmico) de um receptor é executado invocando o método `RegisterReceiver`, e o receptor de difusão deve ter o registro cancelado com uma chamada para o método `UnregisterReceiver`. Para evitar vazamento de recursos, é importante cancelar o registro do receptor quando ele não for mais relevante para o contexto (a atividade ou o serviço). Por exemplo, um serviço pode difundir uma intenção para informar uma atividade de que as atualizações estão disponíveis para serem exibidas ao usuário. Quando a atividade é iniciada, ela se registra para essas intenções. Quando a atividade é movida para o plano de fundo e deixa de ser visível para o usuário, ela deve cancelar o registro do receptor porque a interface do usuário para exibir as atualizações não está mais visível. O trecho de código a seguir é um exemplo de como registrar e cancelar o registro de um receptor de difusão no contexto de uma atividade:
+O registro de contexto (também conhecido como registro dinâmico) de um receptor é executado invocando o `RegisterReceiver` método, e o receptor de difusão deve ter o registro cancelado com uma chamada para o `UnregisterReceiver` método. Para evitar vazamento de recursos, é importante cancelar o registro do receptor quando ele não for mais relevante para o contexto (a atividade ou o serviço). Por exemplo, um serviço pode difundir uma intenção para informar uma atividade de que as atualizações estão disponíveis para serem exibidas ao usuário. Quando a atividade é iniciada, ela se registra para essas intenções. Quando a atividade é movida para o plano de fundo e deixa de ser visível para o usuário, ela deve cancelar o registro do receptor porque a interface do usuário para exibir as atualizações não está mais visível. O trecho de código a seguir é um exemplo de como registrar e cancelar o registro de um receptor de difusão no contexto de uma atividade:
 
 ```csharp
 [Activity(Label = "MainActivity", MainLauncher = true, Icon = "@mipmap/icon")]
-public class MainActivity: Activity 
+public class MainActivity: Activity
 {
     MySampleBroadcastReceiver receiver;
 
@@ -120,14 +120,14 @@ public class MainActivity: Activity
         // Code omitted for clarity
     }
 
-    protected override void OnResume() 
+    protected override void OnResume()
     {
         base.OnResume();
         RegisterReceiver(receiver, new IntentFilter("com.xamarin.example.TEST"));
         // Code omitted for clarity
     }
 
-    protected override void OnPause() 
+    protected override void OnPause()
     {
         UnregisterReceiver(receiver);
         // Code omitted for clarity
@@ -136,14 +136,14 @@ public class MainActivity: Activity
 }
 ```
 
-No exemplo anterior, quando a atividade entra em primeiro plano, ela registrará um receptor de difusão que escutará uma intenção personalizada usando o método de ciclo de vida `OnResume`. À medida que a atividade é movida para o plano de fundo, o método `OnPause()` cancelará o registro do receptor.
+No exemplo anterior, quando a atividade entra em primeiro plano, ela registrará um receptor de difusão que escutará uma intenção personalizada usando o método de `OnResume` ciclo de vida. À medida que a atividade é movida para o plano de fundo, o `OnPause()` método cancelará o registro do receptor.
 
 ## <a name="publishing-a-broadcast"></a>Publicando uma difusão
 
-Uma difusão pode ser publicada em todos os aplicativos instalados no dispositivo, criando um objeto de tentativa e expedindo-o com o `SendBroadcast` ou o método `SendOrderedBroadcast`.  
+Uma difusão pode ser publicada em todos os aplicativos instalados no dispositivo, criando um objeto de tentativa e expedindo-o com o `SendBroadcast` `SendOrderedBroadcast` método ou.  
 
-1. Os **métodos Context. SendBroadcast** &ndash; há várias implementações desse método.
-   Esses métodos vão difundir a intenção para todo o sistema. Receptores de difusão que receberão a intenção em uma ordem indeterminada. Isso proporciona uma grande flexibilidade, mas significa que é possível que outros aplicativos se registrem e recebam a intenção. Isso pode representar um risco de segurança potencial. Os aplicativos podem precisar implementar a segurança adicional para impedir o acesso não autorizado. Uma solução possível é usar o `LocalBroadcastManager` que enviará apenas mensagens no espaço privado do aplicativo. Este trecho de código é um exemplo de como despachar uma intenção usando um dos métodos `SendBroadcast`:
+1. Métodos Context. **SendBroadcast** &ndash; Há várias implementações desse método.
+   Esses métodos vão difundir a intenção para todo o sistema. Receptores de difusão que receberão a intenção em uma ordem indeterminada. Isso proporciona uma grande flexibilidade, mas significa que é possível que outros aplicativos se registrem e recebam a intenção. Isso pode representar um risco de segurança potencial. Os aplicativos podem precisar implementar a segurança adicional para impedir o acesso não autorizado. Uma solução possível é usar o `LocalBroadcastManager` que enviará apenas mensagens no espaço privado do aplicativo. Este trecho de código é um exemplo de como despachar uma intenção usando um dos `SendBroadcast` métodos:
 
    ```csharp
    Intent message = new Intent("com.xamarin.example.TEST");
@@ -152,7 +152,7 @@ Uma difusão pode ser publicada em todos os aplicativos instalados no dispositiv
    SendBroadcast(message);
    ```
 
-    Esse trecho de código é outro exemplo de envio de uma difusão usando o método `Intent.SetAction` para identificar a ação:
+    Esse trecho de código é outro exemplo de envio de uma difusão usando o  `Intent.SetAction` método para identificar a ação:
 
     ```csharp
     Intent intent = new Intent();
@@ -161,17 +161,17 @@ Uma difusão pode ser publicada em todos os aplicativos instalados no dispositiv
     SendBroadcast(intent);
     ```
 
-2. **Context. SendOrderedBroadcast** &ndash; esse método é muito semelhante a `Context.SendBroadcast`, com a diferença de que a intenção será publicada uma para destinatários, na ordem em que os destinatários foram registrados.
+2. **Context. SendOrderedBroadcast** &ndash; esse método é muito semelhante a `Context.SendBroadcast` , com a diferença de que a intenção será publicada uma às vezes para os destinatários, na ordem em que os destinatários foram registrados.
 
 ### <a name="localbroadcastmanager"></a>LocalBroadcastManager
 
-A [biblioteca de suporte do Xamarin v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) fornece uma classe auxiliar chamada [`LocalBroadcastManager`](https://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html). O `LocalBroadcastManager` destina-se a aplicativos que não desejam enviar ou receber difusões de outros aplicativos no dispositivo. O `LocalBroadcastManager` apenas publicará mensagens dentro do contexto do aplicativo e somente para os receptores de difusão registrados com o `LocalBroadcastManager`. Este trecho de código é um exemplo de registro de um receptor de difusão com `LocalBroadcastManager`:
+A [biblioteca de suporte do Xamarin v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) fornece uma classe auxiliar chamada [`LocalBroadcastManager`](https://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html) . O destina-se a `LocalBroadcastManager` aplicativos que não desejam enviar ou receber difusões de outros aplicativos no dispositivo. O `LocalBroadcastManager` só publicará mensagens dentro do contexto do aplicativo e apenas aos receptores de difusão registrados com o `LocalBroadcastManager` . Este trecho de código é um exemplo de registro de um receptor de difusão com `LocalBroadcastManager` :
 
 ```csharp
 Android.Support.V4.Content.LocalBroadcastManager.GetInstance(this). RegisterReceiver(receiver, new IntentFilter("com.xamarin.example.TEST"));
 ```
 
-Outros aplicativos no dispositivo não podem receber as mensagens que são publicadas com o `LocalBroadcastManager`. Este trecho de código mostra como despachar uma intenção usando o `LocalBroadcastManager`:
+Outros aplicativos no dispositivo não podem receber as mensagens que são publicadas com o `LocalBroadcastManager` . Este trecho de código mostra como despachar uma intenção usando o `LocalBroadcastManager` :
 
 ```csharp
 Intent message = new Intent("com.xamarin.example.TEST");

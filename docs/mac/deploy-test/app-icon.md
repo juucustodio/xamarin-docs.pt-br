@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: d0acd44561b220507aafda7af05cd2862f6c9009
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: fdc132143905db6cc32ebd9aeb07268e69bf2070
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73021709"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434681"
 ---
 # <a name="application-icon-for-xamarinmac-apps"></a>Ícone do aplicativo para aplicativos Xamarin.Mac
 
-_Este artigo abrange a criação das imagens necessárias para o ícone de um aplicativo Xamarin.Mac, agrupando as imagens em um arquivo .icns e incluindo o ícone no projeto Xamarin.Mac._
+_Este artigo aborda a criação das imagens necessárias para um ícone do aplicativo Xamarin. Mac, o agrupamento das imagens em um arquivo. icns e a inclusão do ícone no projeto Xamarin. Mac._
 
 ## <a name="overview"></a>Visão geral
 
@@ -24,7 +24,7 @@ Ao trabalhar com C# e .NET em um aplicativo Xamarin.Mac, um desenvolvedor tem ac
 
 Um ícone grande deve transmitir o objetivo principal de uma experiência de aplicativo e dica de Xamarin.Mac que o usuário deve esperar ao usar o aplicativo. Este artigo aborda todas as etapas necessárias para criar os Ativos de Imagem necessários para um ícone, empacotando os ativos em um arquivo `AppIcon.appiconset` e consumindo esse arquivo em um aplicativo de Xamarin.Mac.
 
-![O editor AppIcon.appiconset](app-icon-images/intro01.png "O editor AppIcon.appiconset")
+![O editor AppIcon. appiconset](app-icon-images/intro01.png "O editor AppIcon. appiconset")
 
 ## <a name="application-icon"></a>Ícone do aplicativo
 
@@ -50,8 +50,8 @@ Leia as seções [Galeria de Ícone do Aplicativo](https://developer.apple.com/l
 
 Como qualquer outro Recurso de Imagem que o desenvolvedor usará em um aplicativo Xamarin.Mac, o ícone do aplicativo precisa fornecer uma versão de resolução Standard e Retina. Novamente, como qualquer outra imagem, use um formato `@2x` ao nomear os arquivos de ícone:
 
-- **Nome de imagem de resolução**  - _padrão_**.** _filename-extension_ (Exemplo: **icon_512x512.png**)
-- **Nome de**  - imagem de alta resolução _._**@2x** _filename-extension_ (Exemplo: **icon_512x512@2x.png**)
+- **Resolução padrão**   -  _ImageName_**.** _nome do arquivo-extensão_ (exemplo: **icon_512x512.png**)
+- **Alta resolução**   -  _ImageName_** @2x .** _nome do arquivo-extensão_ (exemplo: **icon_512x512@2x.png** )
 
 Por exemplo, para fornecer a versão de 512 x 512 do ícone do aplicativo, o arquivo seria nomeado **icon_512x512.png** e **icon_512x512@2x.png**.
 
@@ -80,11 +80,11 @@ Faça o seguinte:
 
 1. No **Painel de Soluções**, abra **Assets.xcassets** > **AppIcons.appiconset**: 
 
-    ![Edição do AppIcon.appiconset](app-icon-images/intro01.png "Edição do AppIcon.appiconset")
+    ![Editando o AppIcon. appiconset](app-icon-images/intro01.png "Editando o AppIcon. appiconset")
 2. Para cada tamanho de ícone necessário, clique no ícone e selecione o arquivo de imagem correspondentes criado acima: 
 
     [![Selecionando uma imagem de ícone](app-icon-images/intro02.png "Selecionando uma imagem de ícone")](app-icon-images/intro02-large.png#lightbox)
-3. Salve suas alterações.
+3. Salve as alterações.
 
 ## <a name="using-the-icon"></a>Usar o Ícone
 
@@ -100,17 +100,17 @@ Faça o seguinte:
 
 Quando o aplicativo for executado, o novo ícone será exibido no compartimento:
 
-![Um exemplo de um ícone de aplicativo no dock do macOS](app-icon-images/icon04.png "Um exemplo de um ícone de aplicativo no dock do macOS")
+![Um exemplo de um ícone de aplicativo no encaixe macOS](app-icon-images/icon04.png "Um exemplo de um ícone de aplicativo no encaixe macOS")
 
 ## <a name="summary"></a>Resumo
 
 Este artigo apresentou uma visão detalhada de como trabalhar com imagens necessárias para criar um ícone de aplicativo macOS ícone, um ícone de empacotamento e como incluir um ícone em um projeto Xamarin.Mac.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [MacImages (amostra)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
+- [MacImages (amostra)](/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
-- [Trabalhando com Imagens](~/mac/app-fundamentals/image.md)
+- [Trabalhando com imagens](~/mac/app-fundamentals/image.md)
 - [Diretrizes de interface humana macOS – ícones e imagens](https://developer.apple.com/macos/human-interface-guidelines/icons-and-images/image-size-and-resolution/)
 - [Sobre a alta resolução para OS X](https://developer.apple.com/library/content/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Introduction/Introduction.html)
 - [Construtor Icns](https://itunes.apple.com/us/app/icns-builder/id554660130?mt=12)

@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 46e8dec3d5644defdeb8a2265a73815adfde92d8
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8a856dd74bb319436dbe1c8506d34dfcdb268834
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136026"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374167"
 ---
 # <a name="listview-group-header-style-on-ios"></a>Estilo do cabeçalho do grupo ListView no iOS
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Esses controles específicos da plataforma iOS controlam se [`ListView`](xref:Xamarin.Forms.ListView) as células de cabeçalho flutuam durante a rolagem. Ele é consumido em XAML definindo a `ListView.GroupHeaderStyle` propriedade vinculável como um valor da `GroupHeaderStyle` enumeração:
 
@@ -46,8 +46,8 @@ listView.On<iOS>().SetGroupHeaderStyle(GroupHeaderStyle.Grouped);
 
 O `ListView.On<iOS>` método especifica que essa plataforma específica será executada somente no Ios. O `ListView.SetGroupHeaderStyle` método, no [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, é usado para controlar se [`ListView`](xref:Xamarin.Forms.ListView) as células de cabeçalho flutuam durante a rolagem. A `GroupHeaderStyle` enumeração fornece dois valores possíveis:
 
-- `Plain`– indica que as células de cabeçalho flutuam quando o [`ListView`](xref:Xamarin.Forms.ListView) é rolado (padrão).
-- `Grouped`– indica que as células de cabeçalho não flutuam quando a [`ListView`](xref:Xamarin.Forms.ListView) é rolada.
+- `Plain` – indica que as células de cabeçalho flutuam quando o [`ListView`](xref:Xamarin.Forms.ListView) é rolado (padrão).
+- `Grouped` – indica que as células de cabeçalho não flutuam quando a [`ListView`](xref:Xamarin.Forms.ListView) é rolada.
 
 Além disso, o `ListView.GetGroupHeaderStyle` método pode ser usado para retornar o `GroupHeaderStyle` que é aplicado ao [`ListView`](xref:Xamarin.Forms.ListView) .
 
@@ -57,6 +57,6 @@ O resultado é que um `GroupHeaderStyle` valor especificado é aplicado ao [`Lis
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

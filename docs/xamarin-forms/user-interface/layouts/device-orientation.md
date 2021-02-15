@@ -10,16 +10,16 @@ ms.date: 04/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: de5ebf086af7fa8d7c6360bf3a1f48f57b834e44
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 955cb8371e6363f617738dcf2fe4a6eb27dcb032
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938431"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98608852"
 ---
 # <a name="device-orientation"></a>Orientação do dispositivo
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
 
 É importante considerar como seu aplicativo será usado e como a orientação paisagem pode ser incorporada para melhorar a experiência do usuário. Layouts individuais podem ser criados para acomodar várias orientações e usar melhor o espaço disponível. No nível do aplicativo, a rotação pode ser desabilitada ou habilitada.
 
@@ -76,9 +76,9 @@ O Xamarin. Android dá suporte a várias opções para especificar a orientaçã
 - **ReversePortrait** &ndash; faz com que o aplicativo use orientação retrato, voltado para a direção oposta, para que pareça "de cabeça para baixo".
 - **FullSensor** &ndash; faz com que o aplicativo confie nos dados do sensor para selecionar a orientação correta (fora dos possíveis 4).
 - **FullUser** &ndash; faz com que o aplicativo use as preferências de orientação do usuário. Se a rotação automática estiver habilitada, todas as quatro orientações poderão ser usadas.
-- **Userlandscape** &ndash; _ \[ Sem suporte \] _ faz com que o aplicativo use a orientação paisagem, a menos que o usuário tenha a rotação automática habilitada; nesse caso, ele usará o sensor para determinar a orientação. Esta opção interromperá a compilação.
-- **Userretrato** &ndash; _ \[ Sem suporte \] _ faz com que o aplicativo use a orientação retrato, a menos que o usuário tenha a rotação automática habilitada; nesse caso, ele usará o sensor para determinar a orientação. Esta opção interromperá a compilação.
-- **Bloqueado** &ndash; Sem _ \[ suporte \] _ faz com que o aplicativo use a orientação da tela, o que estiver na inicialização, não respondendo às alterações na orientação física do dispositivo. Esta opção interromperá a compilação.
+- **Userlandscape** &ndash; _\[ Sem suporte \]_ faz com que o aplicativo use a orientação paisagem, a menos que o usuário tenha a rotação automática habilitada; nesse caso, ele usará o sensor para determinar a orientação. Esta opção interromperá a compilação.
+- **Userretrato** &ndash; _\[ Sem suporte \]_ faz com que o aplicativo use a orientação retrato, a menos que o usuário tenha a rotação automática habilitada; nesse caso, ele usará o sensor para determinar a orientação. Esta opção interromperá a compilação.
+- **Bloqueado** &ndash; Sem _\[ suporte \]_ faz com que o aplicativo use a orientação da tela, o que estiver na inicialização, não respondendo às alterações na orientação física do dispositivo. Esta opção interromperá a compilação.
 
 Observe que as APIs nativas do Android fornecem muito controle sobre como a orientação é gerenciada, incluindo opções que se contradizem explicitamente às preferências expressas do usuário.
 
@@ -88,7 +88,7 @@ No Plataforma Universal do Windows (UWP), as orientações com suporte são defi
 
 ## <a name="reacting-to-changes-in-orientation"></a>Reagindo a alterações na orientação
 
-Xamarin.Formsnão oferece nenhum evento nativo para notificar seu aplicativo sobre alterações de orientação no código compartilhado. No entanto, [Xamarin.Essentials](~/essentials/index.md) contém uma `DeviceDisplay` classe [] que fornece notificações de alterações de orientação.
+Xamarin.Forms não oferece nenhum evento nativo para notificar seu aplicativo sobre alterações de orientação no código compartilhado. No entanto, [Xamarin.Essentials](~/essentials/index.md) contém uma `DeviceDisplay` classe [] que fornece notificações de alterações de orientação.
 
 Para detectar orientações sem Xamarin.Essentials , monitore o `SizeChanged` evento do `Page` , que é acionado quando a largura ou a altura das `Page` alterações. Quando a largura do `Page` for maior que a altura, o dispositivo estará no modo paisagem. Para obter mais informações, consulte [exibir uma imagem com base na orientação da tela](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation).
 
@@ -147,11 +147,11 @@ As regras acima também se aplicam ao implementar interfaces para vários tamanh
 
 Considere o seguinte aplicativo, exibido em retrato:
 
-![Aplicativo de foto em retrato](device-orientation-images/photo-stack-portrait.png)
+![A captura de tela mostra o StackLayout do aplicativo de fotos em retrato.](device-orientation-images/photo-stack-portrait.png)
 
 e paisagem:
 
-![Aplicativo de fotos em paisagem](device-orientation-images/photo-stack-landscape.png)
+![A captura de tela mostra o StackLayout do aplicativo de fotos em paisagem.](device-orientation-images/photo-stack-landscape.png)
 
 Isso é feito com o seguinte XAML:
 
@@ -215,17 +215,17 @@ protected override void OnSizeAllocated (double width, double height){
 
 Observe o seguinte:
 
-- `outerStack`é ajustado para apresentar a imagem e os controles como uma pilha horizontal ou vertical, dependendo da orientação, para aproveitar melhor o espaço disponível.
+- `outerStack` é ajustado para apresentar a imagem e os controles como uma pilha horizontal ou vertical, dependendo da orientação, para aproveitar melhor o espaço disponível.
 
 ### <a name="absolutelayout"></a>AbsoluteLayout
 
 Considere o seguinte aplicativo, exibido em retrato:
 
-![Aplicativo de foto em retrato](device-orientation-images/photo-abs-portrait.png)
+![A captura de tela mostra o AbsoluteLayout do aplicativo de fotos em retrato.](device-orientation-images/photo-abs-portrait.png)
 
 e paisagem:
 
-![Aplicativo de fotos em paisagem](device-orientation-images/photo-abs-landscape.png)
+![A captura de tela mostra o AbsoluteLayout do aplicativo de fotos em paisagem.](device-orientation-images/photo-abs-landscape.png)
 
 Isso é feito com o seguinte XAML:
 
@@ -273,11 +273,11 @@ Observe o seguinte:
 
 Considere o seguinte aplicativo, exibido em retrato:
 
-![Aplicativo de foto em retrato](device-orientation-images/photo-rel-portrait.png)
+![A captura de tela mostra o RelativeLayout do aplicativo de fotos em retrato.](device-orientation-images/photo-rel-portrait.png)
 
 e paisagem:
 
-![Aplicativo de fotos em paisagem](device-orientation-images/photo-rel-landscape.png)
+![A captura de tela mostra o RelativeLayout do aplicativo de fotos em paisagem.](device-orientation-images/photo-rel-landscape.png)
 
 Isso é feito com o seguinte XAML:
 
@@ -364,11 +364,11 @@ Observe o seguinte:
 
 Considere o seguinte aplicativo, exibido em retrato:
 
-![Aplicativo de foto em retrato](device-orientation-images/photo-grid-portrait.png)
+![A captura de tela mostra a grade do aplicativo de fotos em retrato.](device-orientation-images/photo-grid-portrait.png)
 
 e paisagem:
 
-![Aplicativo de fotos em paisagem](device-orientation-images/photo-grid-landscape.png)
+![Captura de tela mostra a grade do aplicativo de fotos em paisagem.](device-orientation-images/photo-grid-landscape.png)
 
 Isso é feito com o seguinte XAML:
 
@@ -464,7 +464,7 @@ Observe o seguinte:
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Layout (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
-- [Exemplo de BusinessTumble (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)
-- [Layout responsivo (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
+- [Layout (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [Exemplo de BusinessTumble (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)
+- [Layout responsivo (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
 - [Exibir uma imagem com base na orientação da tela](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation)

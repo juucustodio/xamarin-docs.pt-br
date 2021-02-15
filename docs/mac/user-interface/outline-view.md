@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 7f1ae2ecfa7d6dbed56b8009593fc172615fd051
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f10c2f54c2440e97faa6491efcaa48ec109d0008
+ms.sourcegitcommit: 424eaef56fd2933c98e72f1d3e7ac71730fe4835
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86928790"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758091"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Exibições de estrutura de tópicos no Xamarin. Mac
 
@@ -66,7 +66,7 @@ Arraste um modo de exibição de estrutura de tópicos para o controlador de exi
 
 Selecione o modo de exibição de estrutura de tópicos na **hierarquia de interface** e as seguintes propriedades estão disponíveis no **Inspetor de atributo**:
 
-[![O Inspetor de atributo](outline-view-images/edit05.png)](outline-view-images/edit05.png#lightbox)
+[![Captura de tela mostra as propriedades disponíveis no Inspetor de atributo.](outline-view-images/edit05.png)](outline-view-images/edit05.png#lightbox)
 
 - **Coluna de estrutura de tópicos** -a coluna de tabela na qual os dados hierárquicos são exibidos.
 - **Coluna de estrutura de tópicos de salvamento automático** -se `true` , a coluna de estrutura de tópicos será automaticamente salva e restaurada entre as execuções do aplicativo.
@@ -97,11 +97,11 @@ Selecione o modo de exibição de estrutura de tópicos na **hierarquia de inter
 - **Trunca a última linha visível** -se `true` , a célula será truncada nos dados não puder se ajustar dentro de seus limites.
 
 > [!IMPORTANT]
-> A menos que você esteja mantendo um aplicativo Xamarin. Mac herdado, `NSView` exibições de estrutura de tópicos baseadas devem ser usadas em `NSCell` exibições de tabela baseadas em. `NSCell`é considerado herdado e pode não ter suporte no futuro.
+> A menos que você esteja mantendo um aplicativo Xamarin. Mac herdado, `NSView` exibições de estrutura de tópicos baseadas devem ser usadas em `NSCell` exibições de tabela baseadas em. `NSCell` é considerado herdado e pode não ter suporte no futuro.
 
 Selecione uma coluna de tabela na **hierarquia de interface** e as seguintes propriedades estão disponíveis no **Inspetor de atributo**:
 
-[![O Inspetor de atributo](outline-view-images/edit06.png)](outline-view-images/edit06.png#lightbox)
+[![Captura de tela mostra as propriedades disponíveis para a coluna da tabela selecionada no Inspetor de atributo.](outline-view-images/edit06.png)](outline-view-images/edit06.png#lightbox)
 
 - **Título** – define o título da coluna.
 - **Alinhamento** – defina o alinhamento do texto dentro das células.
@@ -115,23 +115,23 @@ Selecione uma coluna de tabela na **hierarquia de interface** e as seguintes pro
 
 Você também pode redimensionar a coluna arrastando sua alça (verticalmente centralizada no lado direito da coluna) à esquerda ou à direita.
 
-Vamos selecionar cada coluna em nosso modo de exibição de tabela e dar à primeira coluna **Title** um título `Product` e a segunda `Details` .
+Vamos selecionar cada coluna em nosso modo de exibição de tabela e dar à primeira coluna  um título `Product` e a segunda `Details` .
 
 Selecione uma exibição de célula de tabela ( `NSTableViewCell` ) na **hierarquia de interface** e as seguintes propriedades estão disponíveis no Inspetor de **atributo**:
 
-[![O Inspetor de atributo](outline-view-images/edit07.png)](outline-view-images/edit07.png#lightbox)
+[![Captura de tela mostra as propriedades disponíveis para a célula da tabela selecionada no Inspetor de atributo.](outline-view-images/edit07.png)](outline-view-images/edit07.png#lightbox)
 
 Essas são todas as propriedades de uma exibição padrão. Você também tem a opção de redimensionar as linhas desta coluna aqui.
 
 Selecione uma célula de exibição de tabela (por padrão, isso é um `NSTextField` ) na **hierarquia de interface** e as seguintes propriedades estão disponíveis no Inspetor de **atributo**:
 
-[![O Inspetor de atributo](outline-view-images/edit08.png)](outline-view-images/edit08.png#lightbox)
+[![Captura de tela mostra as propriedades disponíveis para a célula de exibição de tabela selecionada no Inspetor de atributo.](outline-view-images/edit08.png)](outline-view-images/edit08.png#lightbox)
 
 Você terá todas as propriedades de um campo de texto padrão para definir aqui. Por padrão, um campo de texto padrão é usado para exibir dados de uma célula em uma coluna.
 
 Selecione uma exibição de célula de tabela ( `NSTableFieldCell` ) na **hierarquia de interface** e as seguintes propriedades estão disponíveis no Inspetor de **atributo**:
 
-[![O Inspetor de atributo](outline-view-images/edit09.png)](outline-view-images/edit09.png#lightbox)
+[![Captura de tela mostra as propriedades disponíveis para a célula de exibição de tabela selecionada.](outline-view-images/edit09.png)](outline-view-images/edit09.png#lightbox)
 
 As configurações mais importantes aqui são:
 
@@ -163,10 +163,10 @@ O processo é o mesmo para qualquer elemento de exibição de estrutura de tópi
 2. Selecione o modo de exibição de estrutura de tópicos na **hierarquia de interface**, clique no botão de controle e arraste-o para o `ViewController.h` arquivo.
 3. Crie uma **tomada** para o modo de exibição de estrutura de tópicos chamado `ProductOutline` :
 
-    [![Configurando uma tomada](outline-view-images/edit13.png)](outline-view-images/edit13.png#lightbox)
+    [![Captura de tela mostra uma tomada chamada ProductOutline no Inspetor de atributo.](outline-view-images/edit13.png)](outline-view-images/edit13.png#lightbox)
 4. Crie **saídas** para as colunas de tabelas também chamadas `ProductColumn` e `DetailsColumn` :
 
-    [![Configurando uma tomada](outline-view-images/edit14.png)](outline-view-images/edit14.png#lightbox)
+    [![Captura de tela mostra uma tomada chamada DetailsColumn no Inspetor de atributo.](outline-view-images/edit14.png)](outline-view-images/edit14.png#lightbox)
 5. Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
 Em seguida, escreveremos o código para exibir alguns dados para a estrutura de tópicos quando o aplicativo for executado.
@@ -177,7 +177,7 @@ Em seguida, escreveremos o código para exibir alguns dados para a estrutura de 
 
 Com nossa exibição de estrutura de tópicos projetada em Interface Builder e exposta por meio de uma **tomada**, em seguida, precisamos criar o código C# para preenchê-lo.
 
-Primeiro, vamos criar uma nova `Product` classe para manter as informações das linhas individuais e grupos de subprodutos. Na **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar**  >  **novo arquivo...** Selecione **General**  >  **classe vazia**geral, insira `Product` para o **nome** e clique no botão **novo** :
+Primeiro, vamos criar uma nova `Product` classe para manter as informações das linhas individuais e grupos de subprodutos. Na **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar**  >  **novo arquivo...** Selecione   >  **classe vazia** geral, insira `Product` para o **nome** e clique no botão **novo** :
 
 [![Criando uma classe vazia](outline-view-images/populate01.png)](outline-view-images/populate01.png#lightbox)
 
@@ -219,7 +219,7 @@ namespace MacOutlines
 }
 ```
 
-Em seguida, precisamos criar uma subclasse de `NSOutlineDataSource` para fornecer os dados para nossa estrutura de tópicos conforme solicitado. Na **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar**  >  **novo arquivo...** Selecione **General**  >  **classe vazia**geral, insira `ProductOutlineDataSource` para o **nome** e clique no botão **novo** .
+Em seguida, precisamos criar uma subclasse de `NSOutlineDataSource` para fornecer os dados para nossa estrutura de tópicos conforme solicitado. Na **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar**  >  **novo arquivo...** Selecione   >  **classe vazia** geral, insira `ProductOutlineDataSource` para o **nome** e clique no botão **novo** .
 
 Edite o `ProductTableDataSource.cs` arquivo e faça com que ele se pareça com o seguinte:
 
@@ -282,7 +282,7 @@ namespace MacOutlines
 
 Essa classe tem armazenamento para os itens de nossa exibição de estrutura de tópicos e substitui o `GetChildrenCount` para retornar o número de linhas na tabela. O `GetChild` retorna um item pai ou filho específico (conforme solicitado pelo modo de exibição de estrutura de tópicos) e `ItemExpandable` define o item especificado como um pai ou filho.
 
-Por fim, precisamos criar uma subclasse de `NSOutlineDelegate` para fornecer o comportamento para nossa estrutura de tópicos. Na **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar**  >  **novo arquivo...** Selecione **General**  >  **classe vazia**geral, insira `ProductOutlineDelegate` para o **nome** e clique no botão **novo** .
+Por fim, precisamos criar uma subclasse de `NSOutlineDelegate` para fornecer o comportamento para nossa estrutura de tópicos. Na **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar**  >  **novo arquivo...** Selecione   >  **classe vazia** geral, insira `ProductOutlineDelegate` para o **nome** e clique no botão **novo** .
 
 Edite o `ProductOutlineDelegate.cs` arquivo e faça com que ele se pareça com o seguinte:
 
@@ -443,7 +443,7 @@ Se executarmos o aplicativo e clicarmos nos cabeçalhos de coluna, as linhas ser
 
 Se você quiser permitir que o usuário selecione uma única linha, clique duas vezes no `Main.storyboard` arquivo para abri-lo para edição no interface Builder. Selecione o modo de exibição de estrutura de tópicos na **hierarquia de interface** e desmarque a caixa de seleção **vários** no **Inspetor de atributo**:
 
-[![O Inspetor de atributo](outline-view-images/select01.png)](outline-view-images/select01.png#lightbox)
+[![Captura de tela mostra o Inspetor de atributo, no qual você pode alterar a configuração múltipla.](outline-view-images/select01.png)](outline-view-images/select01.png#lightbox)
 
 Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
@@ -465,7 +465,7 @@ Isso permitirá que o usuário selecione uma única linha no modo de exibição 
 
 Se você quiser permitir que o usuário selecione várias linhas, clique duas vezes no `Main.storyboard` arquivo para abri-lo para edição no interface Builder. Selecione o modo de exibição de estrutura de tópicos na **hierarquia de interface** e marque a caixa de seleção **vários** no **Inspetor de atributo**:
 
-[![O Inspetor de atributo](outline-view-images/select02.png)](outline-view-images/select02.png#lightbox)
+[![Captura de tela mostra o Inspetor de atributo em que você pode selecionar vários.](outline-view-images/select02.png)](outline-view-images/select02.png#lightbox)
 
 Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
@@ -515,7 +515,7 @@ O `GetNextTypeSelectMatch` método usa o dado `searchString` e retorna o item do
 
 Se você quiser permitir que o usuário Arraste colunas de reordenação no modo de exibição de estrutura de tópicos, clique duas vezes no `Main.storyboard` arquivo para abri-lo para edição no interface Builder. Selecione o modo de exibição de estrutura de tópicos na **hierarquia de interface** e marque a caixa de seleção **Reordenar** no **Inspetor de atributo**:
 
-[![O Inspetor de atributo](outline-view-images/reorder01.png)](outline-view-images/reorder01.png#lightbox)
+[![Captura de tela mostra o Inspetor de atributo, no qual você pode selecionar reordenação.](outline-view-images/reorder01.png)](outline-view-images/reorder01.png#lightbox)
 
 Se fornecermos um valor para a **Propriedade** autosave e verificar o campo de **informações da coluna** , as alterações feitas no layout da tabela serão salvas automaticamente para nós e restauradas na próxima vez em que o aplicativo for executado.
 
@@ -672,11 +672,11 @@ Para obter mais informações, consulte a seção [usando imagens com exibiçõe
 
 ## <a name="data-binding-outline-views"></a>Exibições da Associação de dados
 
-Usando a codificação de valor chave e técnicas de vinculação de dados em seu aplicativo Xamarin. Mac, você pode diminuir muito a quantidade de código que você precisa escrever e manter para popular e trabalhar com elementos de interface do usuário. Você também tem o benefício de desacoplar ainda mais os dados de backup (_modelo de dados_) da sua interface do usuário de front-end (_Model-View-Controller_), levando a um design de aplicativo mais fácil de manter e mais flexível.
+Usando Key-Value codificação e técnicas de vinculação de dados em seu aplicativo Xamarin. Mac, você pode diminuir muito a quantidade de código que você precisa escrever e manter para popular e trabalhar com elementos da interface do usuário. Você também tem o benefício de desacoplar ainda mais os dados de backup (_modelo de dados_) da sua interface do usuário de front-end (_Model-View-Controller_), levando a um design de aplicativo mais fácil de manter e mais flexível.
 
-A KVC (codificação de valor chave) é um mecanismo para acessar as propriedades de um objeto indiretamente, usando chaves (cadeias de caracteres especialmente formatadas) para identificar Propriedades em vez de acessá-las por meio de variáveis de instância ou métodos de acessador ( `get/set` ). Ao implementar acessadores compatíveis com codificação de chave-valor em seu aplicativo Xamarin. Mac, você obterá acesso a outros recursos do macOS, como KVO (chave-valor, observação), vinculação de dados, dados principais, associações de Cocoa e scripts.
+A codificação de Key-Value (KVC) é um mecanismo para acessar propriedades de um objeto indiretamente, usando chaves (cadeias de caracteres especialmente formatadas) para identificar Propriedades em vez de acessá-las por meio de variáveis de instância ou métodos de acessador ( `get/set` ). Com a implementação de acessadores em conformidade com a codificação Key-Value em seu aplicativo Xamarin. Mac, você tem acesso a outros recursos do macOS, como Key-Value observando (KVO), vinculação de dados, dados principais, associações de Cocoa e scripts.
 
-Para obter mais informações, consulte a seção [estrutura de dados de exibição de tópicos](~/mac/app-fundamentals/databinding.md#Outline_View_Data_Binding) de nossa vinculação de dados e documentação de [codificação de chave-valor](~/mac/app-fundamentals/databinding.md) .
+Para obter mais informações, consulte a seção [estrutura de dados de exibição de contorno](~/mac/app-fundamentals/databinding.md#Outline_View_Data_Binding) da nossa vinculação de [dados e](~/mac/app-fundamentals/databinding.md) a documentação de codificação de Key-Value.
 
 <a name="Summary"></a>
 
@@ -686,12 +686,12 @@ Este artigo deu uma visão detalhada de como trabalhar com exibições de estrut
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [MacOutlines (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macoutlines)
-- [MacImages (amostra)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
+- [MacOutlines (exemplo)](/samples/xamarin/mac-samples/macoutlines)
+- [MacImages (amostra)](/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Exibições de tabela](~/mac/user-interface/table-view.md)
 - [Listas de origem](~/mac/user-interface/source-list.md)
-- [Associação de dados e a codificação de chave-valor](~/mac/app-fundamentals/databinding.md)
+- [Associação de dados e codificação de chave-valor](~/mac/app-fundamentals/databinding.md)
 - [Diretrizes de interface humana do OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Introdução aos modos de exibição de estrutura de tópicos](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/OutlineView/OutlineView.html#//apple_ref/doc/uid/10000023i)
 - [NSOutlineView](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSOutlineView_Class/index.html#//apple_ref/doc/uid/TP40004079)

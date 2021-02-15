@@ -10,22 +10,22 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 785532d1a8fedfaef367c8fb8ae437220c3de9c4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 39e9effa1c43a4456a1e75e391e14804e2aa0011
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938171"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375090"
 ---
 # <a name="drawing-a-simple-circle-in-skiasharp"></a>Desenhando um círculo simples em SkiaSharp
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Aprenda as noções básicas do desenho SkiaSharp, incluindo telas e objetos de pintura_
 
 Este artigo apresenta os conceitos de desenho de elementos gráficos no Xamarin.Forms usando o SkiaSharp, incluindo a criação de um `SKCanvasView` objeto para hospedar os gráficos, o tratamento do `PaintSurface` evento e o uso de um `SKPaint` objeto para especificar a cor e outros atributos de desenho.
 
-O programa [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) contém todo o código de exemplo para esta série de artigos do SkiaSharp. A primeira página é denominada **círculo simples** e invoca a classe de página [`SimpleCirclePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) . Este código mostra como desenhar um círculo no centro da página com um raio de 100 pixels. O contorno do círculo é vermelho e o interior do círculo é azul.
+O programa [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) contém todo o código de exemplo para esta série de artigos do SkiaSharp. A primeira página é denominada **círculo simples** e invoca a classe de página [`SimpleCirclePage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) . Este código mostra como desenhar um círculo no centro da página com um raio de 100 pixels. O contorno do círculo é vermelho e o interior do círculo é azul.
 
 ![Um círculo azul descrito em vermelho](circle-images/circleexample.png)
 
@@ -63,8 +63,8 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 O [`SKPaintSurfaceEventArgs`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs) objeto que acompanha o evento tem duas propriedades:
 
-- [`Info`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Info)do tipo[`SKImageInfo`](xref:SkiaSharp.SKImageInfo)
-- [`Surface`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Surface)do tipo[`SKSurface`](xref:SkiaSharp.SKSurface)
+- [`Info`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Info) do tipo [`SKImageInfo`](xref:SkiaSharp.SKImageInfo)
+- [`Surface`](xref:SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs.Surface) do tipo [`SKSurface`](xref:SkiaSharp.SKSurface)
 
 A `SKImageInfo` estrutura contém informações sobre a superfície de desenho, o mais importante, sua largura e altura em pixels. O `SKSurface` objeto representa a superfície de desenho em si. Neste programa, a superfície de desenho é uma exibição de vídeo, mas em outros programas um `SKSurface` objeto também pode representar um bitmap que você usa SkiaSharp para desenhar.
 
@@ -163,5 +163,5 @@ A próxima amostra no artigo [integração com Xamarin.Forms ](~/xamarin-forms/u
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

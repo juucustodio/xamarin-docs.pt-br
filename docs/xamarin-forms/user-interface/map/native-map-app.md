@@ -1,5 +1,5 @@
 ---
-title: Inicie o aplicativo de mapa nativo deXamarin.Forms
+title: Inicie o aplicativo de mapa nativo de Xamarin.Forms
 description: O aplicativo de mapas nativo em cada plataforma pode ser iniciado de um Xamarin.Forms aplicativo pela Xamarin.Essentials classe do iniciador.
 ms.prod: xamarin
 ms.assetid: 5CF7CD67-3F20-4D80-B99E-D35A5FD1019A
@@ -10,16 +10,16 @@ ms.date: 10/30/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c135d5dd02bba5102f5a93132f079526c84865d5
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: cbd61d956b17df556cb4bb452f60b0e41b31b707
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84129331"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368239"
 ---
-# <a name="launch-the-native-map-app-from-xamarinforms"></a>Inicie o aplicativo de mapa nativo deXamarin.Forms
+# <a name="launch-the-native-map-app-from-no-locxamarinforms"></a>Inicie o aplicativo de mapa nativo de Xamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 O aplicativo de mapa nativo em cada plataforma pode ser iniciado de um Xamarin.Forms aplicativo pela Xamarin.Essentials `Launcher` classe. Essa classe permite que um aplicativo abra outro aplicativo por meio de seu esquema de URI personalizado. A funcionalidade do iniciador pode ser chamada com o `OpenAsync` método, passando `string` um `Uri` argumento ou que represente o esquema de URL personalizado a ser aberto. Para obter mais informações sobre o Xamarin.Essentials , consulte [Xamarin.Essentials](~/essentials/index.md?context=xamarin/xamarin-forms) .
 
@@ -80,7 +80,7 @@ Este código de exemplo resulta na inicialização do aplicativo de mapa nativo 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exemplo de mapas](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Exemplo de mapas](/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Xamarin.Essentials](~/essentials/index.md?context=xamarin/xamarin-forms)
 - [Links de mapa](https://developer.apple.com/library/archive/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html)
 - [Guia do desenvolvedor de mapas](https://developer.android.com/guide/components/intents-common.html#Maps)

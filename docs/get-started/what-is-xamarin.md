@@ -10,12 +10,12 @@ ms.date: 05/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 708a310ea015f9e678d534898fde18abc3848120
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 8c89a71de12fcd21ee907b6478d7a616f0d5337f
+ms.sourcegitcommit: 1f391667869a4541dd9b42d78862dc01d69ed160
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84198326"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99818053"
 ---
 # <a name="what-is-xamarin"></a>O que é o Xamarin?
 
@@ -49,7 +49,7 @@ Para obter mais informações sobre a arquitetura específica da plataforma, con
 
 ### <a name="added-features"></a>Recursos adicionados
 
-O Xamarin combina as capacidades de plataformas nativas e adiciona vários recursos, incluindo:
+O Xamarin combina as capacidades das plataformas nativas, ao mesmo tempo que adiciona recursos que incluem:
 
 1. **Associação completa para os SDKs subjacentes** – o Xamarin contém associações para praticamente todos os SDKs de plataforma subjacente no iOS e Android. Além disso, essas associações são fortemente tipadas, o que significa que são fáceis de navegar e usar e oferecem uma verificação de tipo de tempo de build e durante o desenvolvimento. As associações fortemente tipadas levam a menos erros de runtime e aplicativos de maior qualidade.
 1. **Objective-C, Java, C e C++ Interop** – o Xamarin oferece recursos para invocar diretamente bibliotecas Objective-C, Java, C e C++, permitindo que você use uma ampla gama de código de terceiros. Essa funcionalidade permite que você use as bibliotecas do iOS e Android existentes escritas em Objective-C, Java ou C/C++. Além disso, o Xamarin oferece projetos de associação que permitem associar bibliotecas Objective-C e Java nativas usando uma sintaxe declarativa.
@@ -76,7 +76,7 @@ Para obter mais informações, confira a [Arquitetura do Xamarin.iOS](~/ios/inte
 
 ### Xamarin.Essentials
 
-Xamarin.Essentialsé uma biblioteca que fornece APIs de plataforma cruzada para recursos de dispositivo nativo. Como o Xamarin, Xamarin.Essentials é uma abstração que simplifica o processo de acesso à funcionalidade nativa. Alguns exemplos de funcionalidade fornecida pelo Xamarin.Essentials incluem:
+Xamarin.Essentials é uma biblioteca que fornece APIs de plataforma cruzada para recursos de dispositivo nativo. Como o Xamarin, Xamarin.Essentials é uma abstração que simplifica o processo de acesso à funcionalidade nativa. Alguns exemplos de funcionalidade fornecida pelo Xamarin.Essentials incluem:
 
 - Informações do dispositivo
 - Sistema de arquivos
@@ -85,11 +85,11 @@ Xamarin.Essentialsé uma biblioteca que fornece APIs de plataforma cruzada para 
 - Conversão de texto em fala
 - Bloqueio de tela
 
-Para obter mais informações, consulte [Xamarin.Essentials](~/essentials/index.md).
+Para obter mais informações, confira [Xamarin.Essentials](~/essentials/index.md).
 
 ### Xamarin.Forms
 
-Xamarin.Formsé uma estrutura de interface do usuário de código-fonte aberto. Xamarin.Formspermite que os desenvolvedores criem aplicativos Xamarin. iOS, Xamarin. Android e Windows a partir de uma única base de código compartilhada. Xamarin.Formspermite que os desenvolvedores criem interfaces de usuário em XAML com code-behind em C#. Essas interfaces do usuário são renderizadas como controles nativos de alto desempenho em cada plataforma. Alguns exemplos de recursos fornecidos pelo Xamarin.Forms incluem:
+Xamarin.Forms é uma estrutura de interface do usuário de código-fonte aberto. Xamarin.Forms permite que os desenvolvedores criem aplicativos Xamarin. iOS, Xamarin. Android e Windows a partir de uma única base de código compartilhada. Xamarin.Forms permite que os desenvolvedores criem interfaces de usuário em XAML com code-behind em C#. Essas interfaces do usuário são renderizadas como controles nativos de alto desempenho em cada plataforma. Alguns exemplos de recursos fornecidos pelo Xamarin.Forms incluem:
 
 - Idioma da interface do usuário XAML
 - Associação de dados
@@ -97,13 +97,13 @@ Xamarin.Formsé uma estrutura de interface do usuário de código-fonte aberto. 
 - Efeitos
 - Estilo
 
-Para obter mais informações, consulte [Xamarin.Forms](~/xamarin-forms/index.yml).
+Para obter mais informações, confira [Xamarin.Forms](~/xamarin-forms/index.yml).
 
 ## <a name="get-started"></a>Introdução
 
 Os guias a seguir ajudarão você a criar seu primeiro aplicativo usando o Xamarin:
 
-- [Introdução aoXamarin.Forms](~/xamarin-forms/index.yml)
+- [Introdução ao Xamarin.Forms](~/xamarin-forms/index.yml)
 - [Introdução ao Xamarin.Android](~/android/index.yml)
 - [Introdução ao Xamarin.iOS](~/ios/index.yml)
 - [Introdução ao Xamarin.Mac](~/mac/index.yml)

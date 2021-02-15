@@ -10,16 +10,16 @@ ms.date: 03/23/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5cb43bfe572b98a6530dfeb8d923ac71b5b633a7
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 56254d4a5d255f2db05ff82f224df4ddff04ab1f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932035"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373088"
 ---
 # <a name="the-scale-transform"></a>A transformação de escala
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Descobrir a transformação de escala de SkiaSharp para dimensionar objetos para vários tamanhos_
 
@@ -105,7 +105,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Você pode estar imaginando: como os fatores de dimensionamento afetam o valor retornado do `MeasureText` método de `SKPaint` ? A resposta é: não. `Scale`é um método de `SKCanvas` . Ele não afeta nada que você faça com um `SKPaint` objeto até que você use esse objeto para renderizar algo na tela.
+Você pode estar imaginando: como os fatores de dimensionamento afetam o valor retornado do `MeasureText` método de `SKPaint` ? A resposta é: não. `Scale` é um método de `SKCanvas` . Ele não afeta nada que você faça com um `SKPaint` objeto até que você use esse objeto para renderizar algo na tela.
 
 Como você pode ver, tudo desenhado após a `Scale` chamada aumenta proporcionalmente:
 
@@ -348,5 +348,5 @@ O código também exibe a estrela 10 mais vezes, cada vez que diminui o fator de
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

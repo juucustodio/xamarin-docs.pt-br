@@ -1,27 +1,30 @@
 ---
-title: Xamarin.FormsRoundEffect reutilizável
+title: Xamarin.Forms RoundEffect reutilizável
 description: RoundEffect é um efeito reutilizável que pode ser aplicado a qualquer controle derivado de Visualelement para renderizar o controle como um círculo.
 ms.prod: xamarin
 ms.assetid: B5DE7507-B565-4EE5-9897-27E5733FD173
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 10/25/2019
+ms.date: 10/27/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: fc3776934a4c109b2527132b11c6c6a93b7d9f9e
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 74df5809576745903f978862ddc8a1e98aa1c973
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138847"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374258"
 ---
-# <a name="xamarinforms-reusable-roundeffect"></a>Xamarin.FormsRoundEffect reutilizável
+# <a name="no-locxamarinforms-reusable-roundeffect"></a>Xamarin.Forms RoundEffect reutilizável
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
 
-O RoundEffect simplifica a renderização de qualquer controle derivado de Visualelement como um círculo. Esse efeito pode ser usado para criar imagens circulares, botões e outros controles:
+> [!IMPORTANT]
+> Não é mais necessário usar um `RoundEffect` para renderizar um controle como um círculo. A abordagem mais recente recomendada é recortar o controle usando um `EllipseGeometry` . Para obter mais informações, consulte [cortar com uma geometria](~/xamarin-forms/user-interface/shapes/geometries.md#clip-with-a-geometry).
+
+O RoundEffect simplifica a renderização de qualquer controle derivado de `VisualElement` um círculo. Esse efeito pode ser usado para criar imagens circulares, botões e outros controles:
 
 [![Capturas de tela do RoundEffect no iOS e no Android](example-roundeffect-images/round-effect-cropped.png)](example-roundeffect-images/round-effect.png#lightbox)
 
@@ -224,6 +227,6 @@ A `RoundEffect` classe pode ser aplicada a qualquer controle derivado de `Visual
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Aplicativo de exemplo RoundEffect](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
+- [Aplicativo de exemplo RoundEffect](/samples/xamarin/xamarin-forms-samples/effects-roundeffect/)
 - [Introdução aos efeitos](~/xamarin-forms/app-fundamentals/effects/introduction.md)
 - [Criando um efeito](~/xamarin-forms/app-fundamentals/effects/creating.md)

@@ -1,23 +1,23 @@
 ---
-title: Hot recarregamento de XAML paraXamarin.Forms
+title: Hot recarregamento de XAML para Xamarin.Forms
 description: Recarregue imediatamente as alterações no arquivo XAML em seu aplicativo em execução para que você não precise compilar o Xamarin.Forms projeto após cada alteração de XAML.
 ms.prod: xamarin
 ms.assetid: E220F054-32EE-424C-A7E5-6156BE271519
 ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
-ms.date: 03/14/2020
+ms.date: 01/14/2021
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 0655739c95ba58b8d93aae6d3987d54bd0582c7b
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 62c7be9bd737b4d1860dca9f75cdde6acfadaa96
+ms.sourcegitcommit: 99e340360e8615fbc2971f48d6856f8701594825
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127446"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98204093"
 ---
-# <a name="xaml-hot-reload-for-xamarinforms"></a>Hot recarregamento de XAML paraXamarin.Forms
+# <a name="xaml-hot-reload-for-no-locxamarinforms"></a>Hot recarregamento de XAML para Xamarin.Forms
 
 Os Hot recarregamento de XAML são conectados ao fluxo de trabalho existente para aumentar a produtividade e poupar tempo. Sem o Hot recarregamento de XAML, você precisa compilar e implantar seu aplicativo toda vez que desejar ver uma alteração XAML. Com a recarga a quente, quando você salva o arquivo XAML, as alterações são refletidas em seu aplicativo em execução. Além disso, o estado de navegação e os dados serão mantidos, permitindo que você itere rapidamente na interface do usuário sem perder seu lugar no aplicativo. Portanto, com o Hot recarregamento de XAML, você gastará menos tempo recriando e implantando seus aplicativos para validar as alterações na interface do usuário.
 
@@ -26,7 +26,7 @@ Os Hot recarregamento de XAML são conectados ao fluxo de trabalho existente par
 >
 > O Hot recarregamento de Xamarin.Forms XAML _para não_ funciona atualmente para Xamarin.Forms projetos UWP.
 
-## <a name="system-requirements"></a>Requisitos de sistema
+## <a name="system-requirements"></a>Requisitos do sistema
 
 | IDE/estrutura | Versão necessária |
 |------|------------------|
@@ -34,15 +34,16 @@ Os Hot recarregamento de XAML são conectados ao fluxo de trabalho existente par
 Visual Studio 2019 para Mac | 8,4 ou superior
 Xamarin.Forms | 4,1 ou superior
 
-## <a name="enable-xaml-hot-reload-for-xamarinforms"></a>Habilitar o Hot recarregamento de XAML paraXamarin.Forms
+## <a name="enable-xaml-hot-reload-for-no-locxamarinforms"></a>Habilitar o Hot recarregamento de XAML para Xamarin.Forms
 
 Se você estiver iniciando com base em um modelo, o Hot recarregamento de XAML será ativado por padrão e o projeto será configurado para funcionar sem nenhuma configuração adicional. Depure seu aplicativo em um emulador do Android ou iOS, simulador ou dispositivo físico, altere o XAML e salve o arquivo para disparar um Hot recarregamento de XAML.
 
 Se você estiver trabalhando a partir de uma Xamarin.Forms solução existente, nenhuma instalação adicional será necessária para usar o Hot recarregamento de XAML, mas talvez seja necessário verificar sua configuração para garantir a melhor experiência. Primeiro, habilite-o nas configurações do IDE:
 
-* No Windows, marque a caixa de seleção **habilitar o WebLoad do xamarin** em **ferramentas**  >  **Opções**  >  **xamarin**  >  **Hot recarregar**.
-* No Mac, marque a caixa de seleção **habilitar o Xamarin Hot reload** nas ferramentas de preferências do **Visual Studio**  >  **Preferences**  >  **para**  >  **recarregamento dinâmico**do xamarin.
-  * Em versões anteriores do Visual Studio para Mac, o menu é em **Visual Studio**  >  **preferências**  >  **projetos**  >  **Xamarin Hot reload**.
+* No Windows, marque a caixa de seleção **habilitar o recarregamento do XAML** (e as plataformas necessárias) em **ferramentas**  >  **Opções**  >  **depuração**  >  **quente de recarregamento**.
+  * Em versões anteriores do Visual Studio 2019, a caixa de seleção está em **ferramentas**  >  **Opções**  >    >  **WebLoad** do Xamarin.
+* No Mac, marque a caixa de seleção **habilitar o Xamarin Hot reload** nas ferramentas de preferências do **Visual Studio**  >    >  **para**  >  **recarregamento dinâmico** do xamarin.
+  * Em versões anteriores do Visual Studio para Mac, a caixa de seleção é em **Visual Studio**  >  **preferências**  >  **projetos**  >  **Xamarin Hot reload**.
 
 Em seguida, em suas configurações de Build do Android e iOS, verifique se o vinculador está definido como "não vincular" ou "link nenhum". Para usar o recarregamento de XAML com um dispositivo IOS físico, você também precisa marcar **habilitar o intérprete mono** (Visual Studio 16,4 e superior) ou adicionar **--interpretador** para seus **args mTouch adicionais** (Visual Studio 16,3 e inferior).
 
@@ -57,8 +58,8 @@ Se você fizer uma alteração que o Hot recarregamento de XAML não possa recar
 ## <a name="reload-on-multiple-platforms-at-once"></a>Recarregar em várias plataformas de uma vez
 
 O Hot recarregamento de XAML dá suporte à depuração simultânea no Visual Studio e Visual Studio para Mac. Você pode implantar um Android e um destino iOS ao mesmo tempo para ver suas alterações refletidas em ambas as plataformas de uma só vez. Para depurar em várias plataformas, consulte:
-* **Windows** [Como definir vários projetos de inicialização](https://docs.microsoft.com/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2019)
-* **Mac** [definir vários projetos de inicialização](https://docs.microsoft.com/visualstudio/mac/set-startup-projects?view=vsmac-2019)
+*  [Como definir vários projetos de inicialização](/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2019)
+* **Mac** [definir vários projetos de inicialização](/visualstudio/mac/set-startup-projects?view=vsmac-2019)
 
 ## <a name="known-limitations"></a>Limitações conhecidas
 
@@ -84,4 +85,4 @@ O Hot recarregamento de XAML dá suporte à depuração simultânea no Visual St
 * Se nada acontecer ao salvar o arquivo XAML, verifique se o Hot recarregamento de XAML está habilitado no IDE.
 * Se você estiver Depurando em um iPhone físico e seu aplicativo ficar sem resposta, verifique se o intérprete está habilitado. Para ativá-lo, marque **habilitar o intérprete mono** (Visual Studio 16.4/8.4 e superior) ou adicionar **--intérprete** para o campo **argumentos mTouch adicionais** (Visual Studio 16.3/8.3 e anterior) em suas configurações de Build do Ios.
 
-Para relatar um bug, use **a ajuda**  >  **enviar comentários**para  >  **relatar um problema** no Windows e **ajudar**  >  **a relatar um problema** no Mac.
+Para relatar um bug, use **a ajuda**  >  **enviar comentários** para  >  **relatar um problema** no Windows e **ajudar**  >  **a relatar um problema** no Mac.

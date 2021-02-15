@@ -6,12 +6,12 @@ ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 16b8f303555bc2f45516c3c060c0d2482f9c4954
-ms.sourcegitcommit: 4691b48f14b166afcec69d1350b769ff5bf8c9f6
+ms.openlocfilehash: 3e67d2c329e5ea0ad91eebcc4301965682d647aa
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728220"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457998"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Criando manualmente pacotes NuGet para o Xamarin
 
@@ -51,7 +51,7 @@ Os arquivos mais **. nuspec** especificam o número de versão da estrutura de d
 
 Você pode especificar a versão com um conjunto de números sem um ponto decimal ou pode especificá-la usando pontos decimais. Sem o ponto decimal, o NuGet simplesmente pegará cada número e o transformará em uma versão inserindo um '. ' entre cada dígito.
 
-Na acima, "MonoAndroid10" significa "Android 1,0". Isso apenas significa que a [estrutura de destino](~/android/app-fundamentals/android-api-levels.md) do projeto precisa ser o monoandroid versão 1,0 ou superior. A versão é especificada no elemento `<TargetFrameworkVersion>` no arquivo de projeto.
+Na acima, "MonoAndroid10" significa "Android 1,0". Isso apenas significa que a [estrutura de destino](~/android/app-fundamentals/android-api-levels.md) do projeto precisa ser o monoandroid versão 1,0 ou superior. A versão é especificada no `<TargetFrameworkVersion>` elemento no arquivo de projeto.
 
 Para esclarecer:
 
@@ -80,4 +80,4 @@ Alguns exemplos de código-fonte aberto para os quais você pode se referir:
 ## <a name="related-links"></a>Links Relacionados
 
 - [Criação automatizada de NuGet Nugetizer-3000](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)       
-- [Incluindo um NuGet em seu projeto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)
+- [Incluindo um NuGet em seu projeto](/visualstudio/mac/nuget-walkthrough)

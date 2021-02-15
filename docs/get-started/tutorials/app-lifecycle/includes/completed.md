@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9f22de73ded5bce1a257ba22c288d58b09a18003
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: 7c5c0cec8a4ffc6c1ca38708d21a0a27ee966cbb
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71059534"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451449"
 ---
 Parabéns por concluir este tutorial, no qual você aprendeu a:
 
@@ -22,7 +22,7 @@ Para saber mais sobre os conceitos básicos da criação de aplicativos móveis 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [AppLifecycleTutorial (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-applifecycletutorial/)
+- [AppLifecycleTutorial (amostra)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-applifecycletutorial/)
 - [Ciclo de vida do aplicativo no Xamarin.Forms (guia)](~/xamarin-forms/app-fundamentals/app-lifecycle.md)
 - [Classe de Aplicativo do Xamarin.Forms (guia)](~/xamarin-forms/app-fundamentals/application-class.md)
 - [API do Aplicativo](xref:Xamarin.Forms.Application)

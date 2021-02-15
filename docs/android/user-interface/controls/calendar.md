@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/06/2018
-ms.openlocfilehash: d9c655a503ebdd9ebc08646fb385cdd8f4aa5753
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: d0cd17f424426d326a3e53f0c289fc72068bb3ef
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78292680"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457270"
 ---
 # <a name="xamarinandroid-calendar"></a>Calendário do Xamarin. Android
 
@@ -21,28 +21,28 @@ Um novo conjunto de APIs de calendário introduzidas no Android 4 dá suporte a 
 
 ## <a name="adding-permissions"></a>Adicionando permissões
 
-Ao trabalhar com as novas APIs de calendário em seu aplicativo, a primeira coisa que você precisa fazer é adicionar as permissões apropriadas ao manifesto do Android. As permissões que você precisa adicionar são `android.permisson.READ_CALENDAR` e `android.permission.WRITE_CALENDAR`, dependendo se você está lendo e/ou gravando dados de calendário.
+Ao trabalhar com as novas APIs de calendário em seu aplicativo, a primeira coisa que você precisa fazer é adicionar as permissões apropriadas ao manifesto do Android. As permissões que você precisa adicionar são `android.permisson.READ_CALENDAR` e `android.permission.WRITE_CALENDAR` , dependendo se você está lendo e/ou gravando dados de calendário.
 
 ## <a name="using-the-calendar-contract"></a>Usando o contrato de calendário
 
-Depois de definir as permissões, você pode interagir com os dados do calendário usando a classe `CalendarContract`. Essa classe fornece um modelo de dados que os aplicativos podem usar quando interagem com o provedor de calendário. O `CalendarContract` permite que os aplicativos resolvam os URIs para entidades de calendário, como calendários e eventos. Ele também fornece uma maneira de interagir com vários campos em cada entidade, como o nome e a ID de um calendário, ou a data de início e de término de um evento.
+Depois de definir as permissões, você pode interagir com os dados do calendário usando a `CalendarContract` classe. Essa classe fornece um modelo de dados que os aplicativos podem usar quando interagem com o provedor de calendário. O `CalendarContract` permite que os aplicativos resolvam os URIs para entidades de calendário, como calendários e eventos. Ele também fornece uma maneira de interagir com vários campos em cada entidade, como o nome e a ID de um calendário, ou a data de início e de término de um evento.
 
 Vejamos um exemplo que usa a API de calendário. Neste exemplo, examinaremos como enumerar calendários e seus eventos, bem como adicionar um novo evento a um calendário.
 
 ## <a name="listing-calendars"></a>Listando calendários
 
-Primeiro, vamos examinar como enumerar os calendários que foram registrados no aplicativo de calendário. Para fazer isso, podemos instanciar uma `CursorLoader`. Introduzido no Android 3,0 (API 11), `CursorLoader` é a maneira preferida de consumir um `ContentProvider`. No mínimo, precisaremos especificar o URI de conteúdo para calendários e as colunas que desejamos retornar; Essa especificação de coluna é conhecida como _projeção_.
+Primeiro, vamos examinar como enumerar os calendários que foram registrados no aplicativo de calendário. Para fazer isso, podemos instanciar um `CursorLoader` . Introduzido no Android 3,0 (API 11), `CursorLoader` é a maneira preferida de consumir um `ContentProvider` . No mínimo, precisaremos especificar o URI de conteúdo para calendários e as colunas que desejamos retornar; Essa especificação de coluna é conhecida como _projeção_.
 
-Chamar o método `CursorLoader.LoadInBackground` nos permite consultar um provedor de conteúdo para dados, como o provedor de calendário.
+Chamar o `CursorLoader.LoadInBackground` método nos permite consultar um provedor de conteúdo para dados, como o provedor de calendário.
 `LoadInBackground` executa a operação de carregamento real e retorna um `Cursor` com os resultados da consulta.
 
-O `CalendarContract` nos ajuda a especificar o conteúdo `Uri` e a projeção. Para obter o `Uri` de conteúdo para consultar calendários, podemos simplesmente usar a propriedade `CalendarContract.Calendars.ContentUri` como esta:
+O nos `CalendarContract` ajuda a especificar o conteúdo `Uri` e a projeção. Para obter o conteúdo `Uri` para consultar calendários, podemos simplesmente usar a `CalendarContract.Calendars.ContentUri` propriedade como esta:
 
 ```csharp
 var calendarsUri = CalendarContract.Calendars.ContentUri;
 ```
 
-Usando o `CalendarContract` para especificar quais colunas de calendário queremos que sejam igualmente simples. Apenas adicionamos campos na classe `CalendarContract.Calendars.InterfaceConsts` a uma matriz. Por exemplo, o código a seguir inclui a ID do calendário, o nome de exibição e o nome da conta:
+Usar o `CalendarContract` para especificar quais colunas de calendário queremos é igualmente simples. Apenas adicionamos campos na `CalendarContract.Calendars.InterfaceConsts` classe a uma matriz. Por exemplo, o código a seguir inclui a ID do calendário, o nome de exibição e o nome da conta:
 
 ```csharp
 string[] calendarsProjection = {
@@ -52,7 +52,7 @@ string[] calendarsProjection = {
 };
 ```
 
-O `Id` é importante incluir se você estiver usando uma `SimpleCursorAdapter` para associar os dados à interface do usuário, como veremos em breve. Com o URI de conteúdo e a projeção em vigor, criamos uma instância do `CursorLoader` e chamamos o método `CursorLoader.LoadInBackground` para retornar um cursor com os dados do calendário, conforme mostrado abaixo:
+O `Id` é importante incluir se você estiver usando um `SimpleCursorAdapter` para associar os dados à interface do usuário, como veremos em breve. Com o URI de conteúdo e a projeção em vigor, criamos uma instância do `CursorLoader` e chamamos o `CursorLoader.LoadInBackground` método para retornar um cursor com os dados do calendário, conforme mostrado abaixo:
 
 ```csharp
 var loader = new CursorLoader(this, calendarsUri, calendarsProjection, null, null, null);
@@ -60,7 +60,7 @@ var cursor = (ICursor)loader.LoadInBackground();
 
 ```
 
-A interface do usuário para este exemplo contém um `ListView`, com cada item na lista que representa um único calendário. O XML a seguir mostra a marcação que inclui o `ListView`:
+A interface do usuário para este exemplo contém um `ListView` , com cada item na lista que representa um único calendário. O XML a seguir mostra a marcação que inclui `ListView` :
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -94,7 +94,7 @@ android:layout_height="wrap_content">
 </LinearLayout>
 ```
 
-A partir desse ponto, é apenas o código Android normal para associar os dados do cursor à interface do usuário. Usaremos uma `SimpleCursorAdapter` da seguinte maneira:
+A partir desse ponto, é apenas o código Android normal para associar os dados do cursor à interface do usuário. Usaremos o seguinte `SimpleCursorAdapter` :
 
 ```csharp
 string[] sourceColumns = {
@@ -110,9 +110,9 @@ SimpleCursorAdapter adapter = new SimpleCursorAdapter (this,
 ListAdapter = adapter;
 ```
 
-No código acima, o adaptador usa as colunas especificadas na matriz de `sourceColumns` e as grava nos elementos da interface do usuário na matriz `targetResources` para cada entrada de calendário no cursor. A atividade usada aqui é uma subclasse de `ListActivity`; Ele inclui a propriedade `ListAdapter` para a qual definimos o adaptador.
+No código acima, o adaptador pega as colunas especificadas na `sourceColumns` matriz e as grava nos elementos da interface do usuário na `targetResources` matriz para cada entrada de calendário no cursor. A atividade usada aqui é uma subclasse de `ListActivity` ; ela inclui a `ListAdapter` Propriedade à qual definimos o adaptador.
 
-Aqui está uma captura de tela mostrando o resultado final, com as informações de calendário exibidas no `ListView`:
+Aqui está uma captura de tela mostrando o resultado final, com as informações de calendário exibidas no `ListView` :
 
 [![CalendarDemo em execução no emulador, exibindo duas entradas de calendário](calendar-images/11-calendar.png)](calendar-images/11-calendar.png#lightbox)
 
@@ -135,13 +135,13 @@ ListView.ItemClick += (sender, e) => {
 };
 ```
 
-Nesse código, estamos criando uma intenção para abrir uma atividade do tipo `EventListActivity`, passando a ID do calendário na intenção. Precisaremos da ID para saber qual calendário deve ser consultado em busca de eventos. No método `OnCreate` do `EventListActivity`, podemos recuperar a ID da `Intent`, conforme mostrado abaixo:
+Nesse código, estamos criando uma intenção para abrir uma atividade do tipo `EventListActivity` , passando a ID do calendário na intenção. Precisaremos da ID para saber qual calendário deve ser consultado em busca de eventos. No `EventListActivity` método do `OnCreate` , podemos recuperar a ID do `Intent` conforme mostrado abaixo:
 
 ```csharp
 _calId = Intent.GetIntExtra ("calId", -1);
 ```
 
-Agora, vamos consultar eventos para esta ID de calendário. O processo para consultar eventos é semelhante à maneira como consultamos uma lista de calendários anteriormente, apenas desta vez, vamos trabalhar com a classe `CalendarContract.Events`. O código a seguir cria uma consulta para recuperar eventos:
+Agora, vamos consultar eventos para esta ID de calendário. O processo de consulta de eventos é semelhante à maneira como consultamos uma lista de calendários anteriormente, apenas desta vez vamos trabalhar com a `CalendarContract.Events` classe. O código a seguir cria uma consulta para recuperar eventos:
 
 ```csharp
 var eventsUri = CalendarContract.Events.ContentUri;
@@ -157,10 +157,10 @@ var loader = new CursorLoader(this, eventsUri, eventsProjection,
 var cursor = (ICursor)loader.LoadInBackground();
 ```
 
-Nesse código, primeiro obtemos o conteúdo `Uri` para eventos da propriedade `CalendarContract.Events.ContentUri`. Em seguida, especificamos as colunas de evento que desejamos recuperar na matriz eventsProjection.
-Por fim, criamos uma instância de `CursorLoader` com essas informações e chamamos o método `LoadInBackground` do carregador para retornar um `Cursor` com os dados do evento.
+Nesse código, primeiro obtemos o conteúdo `Uri` de eventos da `CalendarContract.Events.ContentUri` propriedade. Em seguida, especificamos as colunas de evento que desejamos recuperar na matriz eventsProjection.
+Por fim, criamos uma instância `CursorLoader` com essas informações e chamamos o `LoadInBackground` método do carregador para retornar um `Cursor` com os dados do evento.
 
-Para exibir os dados de evento na interface do usuário, podemos usar marcação e código da mesma forma que fizemos antes para exibir a lista de calendários. Novamente, usamos `SimpleCursorAdapter` para associar os dados a uma `ListView`, conforme mostrado no código a seguir:
+Para exibir os dados de evento na interface do usuário, podemos usar marcação e código da mesma forma que fizemos antes para exibir a lista de calendários. Novamente, usamos `SimpleCursorAdapter` para associar os dados a um `ListView` , conforme mostrado no código a seguir:
 
 ```csharp
 string[] sourceColumns = {
@@ -178,13 +178,13 @@ adapter.ViewBinder = new ViewBinder ();
 ListAdapter = adapter;
 ```
 
-A principal diferença entre esse código e o código usado anteriormente para mostrar a lista de calendários é o uso de um `ViewBinder`, que é definido na linha:
+A principal diferença entre esse código e o código que usamos anteriormente para mostrar a lista de calendários é o uso de um `ViewBinder` , que é definido na linha:
 
 ```csharp
 adapter.ViewBinder = new ViewBinder ();
 ```
 
-A classe `ViewBinder` nos permite controlar ainda mais como associamos valores a exibições. Nesse caso, usamos-o para converter a hora de início do evento de milissegundos em uma cadeia de caracteres de data, conforme mostrado na seguinte implementação:
+A `ViewBinder` classe nos permite controlar ainda mais como associamos valores a exibições. Nesse caso, usamos-o para converter a hora de início do evento de milissegundos em uma cadeia de caracteres de data, conforme mostrado na seguinte implementação:
 
 ```csharp
 class ViewBinder : Java.Lang.Object, SimpleCursorAdapter.IViewBinder
@@ -210,16 +210,16 @@ class ViewBinder : Java.Lang.Object, SimpleCursorAdapter.IViewBinder
 
 Isso exibe uma lista de eventos, conforme mostrado abaixo:
 
-[![captura de tela do aplicativo de exemplo exibindo três eventos de calendário](calendar-images/12-events.png)](calendar-images/12-events.png#lightbox)
+[![Captura de tela do aplicativo de exemplo exibindo três eventos de calendário](calendar-images/12-events.png)](calendar-images/12-events.png#lightbox)
 
 ## <a name="adding-a-calendar-event"></a>Adicionando um evento de calendário
 
-Vimos como ler os dados do calendário. Agora, vamos ver como adicionar um evento a um calendário. Para que isso funcione, não se esqueça de incluir a permissão `android.permission.WRITE_CALENDAR` mencionada anteriormente. Para adicionar um evento a um calendário, iremos:
+Vimos como ler os dados do calendário. Agora, vamos ver como adicionar um evento a um calendário. Para que isso funcione, não se esqueça de incluir a `android.permission.WRITE_CALENDAR` permissão mencionada anteriormente. Para adicionar um evento a um calendário, iremos:
 
-1. Crie uma instância de `ContentValues`.
-1. Use as chaves da classe `CalendarContract.Events.InterfaceConsts` para preencher a instância de `ContentValues`.
+1. Crie uma  `ContentValues` instância.
+1. Use as chaves da  `CalendarContract.Events.InterfaceConsts` classe para popular a  `ContentValues` instância.
 1. Defina os fusos horários para as horas de início e término do evento.
-1. Use um `ContentResolver` para inserir os dados do evento no calendário.
+1. Use um  `ContentResolver` para inserir os dados do evento no calendário.
 
 O código a seguir ilustra estas etapas:
 
@@ -246,7 +246,7 @@ var uri = ContentResolver.Insert (CalendarContract.Events.ContentUri,
     eventValues);
 ```
 
-Observe que, se não definirmos o fuso horário, uma exceção do tipo `Java.Lang.IllegalArgumentException` será lançada. Como os valores de tempo do evento devem ser expressos em milissegundos desde a época, criamos um método `GetDateTimeMS` (em `EventListActivity`) para converter nossas especificações de data em formato de milissegundo:
+Observe que se não definirmos o fuso horário, uma exceção do tipo `Java.Lang.IllegalArgumentException` será lançada. Como os valores de tempo do evento devem ser expressos em milissegundos desde a época, criamos um `GetDateTimeMS` método (em `EventListActivity` ) para converter nossas especificações de data em formato de milissegundo:
 
 ```csharp
 long GetDateTimeMS (int yr, int month, int day, int hr, int min)
@@ -265,14 +265,14 @@ long GetDateTimeMS (int yr, int month, int day, int hr, int min)
 
 Se adicionarmos um botão à interface do usuário da lista de eventos e executarmos o código acima no manipulador de eventos Click do botão, o evento será adicionado ao calendário e atualizado em nossa lista, conforme mostrado abaixo:
 
-[![captura de tela do aplicativo de exemplo com eventos de calendário seguidos do botão Adicionar evento de exemplo](calendar-images/13.png)](calendar-images/13.png#lightbox)
+[![Captura de tela do aplicativo de exemplo com eventos de calendário seguidos do botão Adicionar evento de exemplo](calendar-images/13.png)](calendar-images/13.png#lightbox)
 
 Se abrirmos o aplicativo de calendário, veremos que o evento também é escrito lá:
 
-[![captura de tela do aplicativo de calendário exibindo o evento de calendário selecionado](calendar-images/14.png)](calendar-images/14.png#lightbox)
+[![Captura de tela do aplicativo de calendário exibindo o evento de calendário selecionado](calendar-images/14.png)](calendar-images/14.png#lightbox)
 
 Como você pode ver, o Android permite um acesso poderoso e fácil para recuperar e persistir dados de calendário, permitindo que os aplicativos integrem diretamente os recursos de calendário.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Demonstração do calendário (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/calendardemo)
+- [Demonstração do calendário (exemplo)](/samples/xamarin/monodroid-samples/calendardemo)

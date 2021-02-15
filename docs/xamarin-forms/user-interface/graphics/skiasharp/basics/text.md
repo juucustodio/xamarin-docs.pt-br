@@ -10,16 +10,16 @@ ms.date: 03/10/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: a98c7210f2e71f6f26d53da3555f3f9b5e016952
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: fdc529e6b5f1678bd26b40a17b5e0c5257a6dc0e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935974"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368577"
 ---
 # <a name="integrating-text-and-graphics"></a>Integração de texto e elementos gráficos
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Consulte como determinar o tamanho da cadeia de caracteres de texto renderizado para integrar texto com gráficos SkiaSharp_
 
@@ -65,10 +65,10 @@ A segunda [`MeasureText`](xref:SkiaSharp.SKPaint.MeasureText(System.String,SkiaS
 
 As `Left` `Top` Propriedades e da `SKRect` estrutura indicam as coordenadas do canto superior esquerdo do texto renderizado se o texto for exibido por uma `DrawText` chamada com as posições X e Y de 0. Por exemplo, quando esse programa estiver em execução em um simulador do iPhone 7, `TextSize` o valor 90,6254 será atribuído como resultado do cálculo após a primeira chamada para `MeasureText` . O `SKRect` valor obtido da segunda chamada para `MeasureText` tem os seguintes valores de propriedade:
 
-- `Left`= 6
+- `Left` = 6
 - `Top` = &ndash;68
-- `Width`= 664,8214
-- `Height`= 88;
+- `Width` = 664,8214
+- `Height` = 88;
 
 Tenha em mente que as coordenadas X e Y que você passa para o `DrawText` método especificam o lado esquerdo do texto na linha de base. O `Top` valor indica que o texto estende 68 pixels acima da linha de base e (subtraindo 68 de 88) 20 pixels abaixo da linha de base. O `Left` valor de 6 indica que o texto começa com seis pixels à direita do valor X na `DrawText` chamada. Isso permite um espaçamento entre caracteres normal. Se você quiser exibir o texto de forma confortavel no canto superior esquerdo da tela, passe os negativos desses `Left` `Top` valores e como as coordenadas X e Y de `DrawText` , neste exemplo, &ndash; 6 e 68.
 
@@ -179,5 +179,5 @@ Outro objeto gráfico comum é o bitmap. Esse é um tópico grande abordado em d
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

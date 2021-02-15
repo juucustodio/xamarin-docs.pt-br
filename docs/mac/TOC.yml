@@ -44,7 +44,7 @@
       items:
         - name: Windows
           href: user-interface/window.md
-        - name: Diálogos
+        - name: Caixas de diálogo
           href: user-interface/dialog.md
         - name: Alertas
           href: user-interface/alert.md
@@ -52,7 +52,7 @@
           href: user-interface/menu.md
         - name: Controles padrão
           href: user-interface/standard-controls.md
-        - name: Barras de Ferramentas
+        - name: Barras de ferramentas
           href: user-interface/toolbar.md
         - name: Exibições de tabela
           href: user-interface/table-view.md
@@ -60,7 +60,7 @@
           href: user-interface/outline-view.md
         - name: Listas de origem
           href: user-interface/source-list.md
-        - name: Modos de exibição de coleção
+        - name: Exibições de coleção
           href: user-interface/collection-view.md
         - name: Criar controles personalizados
           href: user-interface/custom-controls.md
@@ -70,7 +70,7 @@
         - name: Introdução ao macOS Mojave
           href: platform/introduction-to-macos-mojave/index.md
           items:
-            - name: Introdução
+            - name: Guia de Introdução
               href: platform/introduction-to-macos-mojave/get-started.md
         - name: Introdução ao macOS High Sierra
           href: platform/introduction-to-macos-high-sierra/index.md
@@ -81,7 +81,7 @@
               href: platform/introduction-to-macos-sierra/modern-cocoa-apps.md
             - name: Alterações adicionais de estrutura do MacOS Serra
               href: platform/introduction-to-macos-sierra/additional-framework-changes.md
-            - name: solução de problemas
+            - name: Solução de problemas
               href: platform/introduction-to-macos-sierra/troubleshooting.md
         - name: Associando bibliotecas de Mac
           href: platform/binding.md
@@ -158,7 +158,7 @@
             - name: Objective Sharpie
               href: ~/cross-platform/macios/binding/objective-sharpie/index.md?context=xamarin/mac
               items:
-                - name: Introdução
+                - name: Guia de Introdução
                   href: ~/cross-platform/macios/binding/objective-sharpie/get-started.md?context=xamarin/mac
                 - name: Ferramentas e comandos
                   href: ~/cross-platform/macios/binding/objective-sharpie/tools.md?context=xamarin/mac
@@ -182,7 +182,7 @@
                       href: ~/cross-platform/macios/binding/objective-sharpie/examples/advanced.md?context=xamarin/mac
                 - name: Histórico de versões
                   href: ~/cross-platform/macios/binding/objective-sharpie/releases.md?context=xamarin/mac
-            - name: solução de problemas
+            - name: Solução de problemas
               href: ~/cross-platform/macios/binding/troubleshooting.md?context=xamarin/mac
         - name: Referências nativas
           href: ~/cross-platform/macios/native-references.md?context=xamarin/mac
@@ -214,14 +214,16 @@
           href: internals/frameworks.md
         - name: Registrador
           href: internals/registrar.md
-    - name: solução de problemas
+    - name: Solução de problemas
       href: troubleshooting/index.md
       items:
         - name: Dicas de solução de problemas
           href: troubleshooting/troubleshooting.md
         - name: Mensagens de erro (mmp)
           href: troubleshooting/mmp-errors.md
-    - name: Notas de versão
-      href: 'https://docs.microsoft.com/xamarin/mac/release-notes/'
+    - name: Xamarin.Mac.no Q&A
+      href: /answers/topics/dotnet-macos.html
+    - name: Notas sobre a versão
+      href: /xamarin/mac/release-notes/
     - name: Exemplos
       href: samples/index.md

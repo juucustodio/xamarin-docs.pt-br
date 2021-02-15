@@ -10,18 +10,18 @@ ms.date: 08/07/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3341ada6c5605917eeec79aac96e38cb99b40fc4
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 123a0868ce098f8c54e6805a1b2b9a6efb04c238
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138197"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375389"
 ---
-# <a name="theme-a-xamarinforms-application"></a>Aplicar tema a um Xamarin.Forms aplicativo
+# <a name="theme-a-no-locxamarinforms-application"></a>Aplicar tema a um Xamarin.Forms aplicativo
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 
-Xamarin.Formsos aplicativos podem responder a alterações de estilo dinamicamente em tempo de execução usando a `DynamicResource` extensão de marcação. Essa extensão de marcação é semelhante à `StaticResource` extensão de marcação, pois ambas usam uma chave de dicionário para buscar um valor de a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . No entanto, enquanto a `StaticResource` extensão de marcação executa uma única pesquisa de dicionário, a `DynamicResource` extensão de marcação mantém um link para a chave de dicionário. Portanto, se o valor associado à chave for substituído, a alteração será aplicada ao [`VisualElement`](xref:Xamarin.Forms.VisualElement) . Isso permite que os tempos de execução sejam implementados em Xamarin.Forms aplicativos.
+Xamarin.Forms os aplicativos podem responder a alterações de estilo dinamicamente em tempo de execução usando a `DynamicResource` extensão de marcação. Essa extensão de marcação é semelhante à `StaticResource` extensão de marcação, pois ambas usam uma chave de dicionário para buscar um valor de a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) . No entanto, enquanto a `StaticResource` extensão de marcação executa uma única pesquisa de dicionário, a `DynamicResource` extensão de marcação mantém um link para a chave de dicionário. Portanto, se o valor associado à chave for substituído, a alteração será aplicada ao [`VisualElement`](xref:Xamarin.Forms.VisualElement) . Isso permite que os tempos de execução sejam implementados em Xamarin.Forms aplicativos.
 
 O processo para implementar o tempo de execução em um Xamarin.Forms aplicativo é o seguinte:
 
@@ -86,7 +86,7 @@ Cada [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) contém [`Col
 
 ## <a name="set-a-default-theme"></a>Definir um tema padrão
 
-Um aplicativo requer um tema padrão, para que os controles tenham valores para os recursos que consomem. Um tema padrão pode ser definido mesclando o tema [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) no nível de aplicativo `ResourceDictionary` que é definido em **app. XAML**:
+Um aplicativo requer um tema padrão, para que os controles tenham valores para os recursos que consomem. Um tema padrão pode ser definido mesclando o tema [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) no nível de aplicativo `ResourceDictionary` que é definido em **app. XAML** :
 
 ```xaml
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
@@ -225,8 +225,8 @@ void OnPickerSelectionChanged(object sender, EventArgs e)
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Temas (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
+- [Temas (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 - [Responder às alterações do tema do sistema](system-theme-changes.md)
 - [Dicionários de recurso](~/xamarin-forms/xaml/resource-dictionaries.md)
-- [Estilos dinâmicos emXamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
+- [Estilos dinâmicos em Xamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
 - [Estilizando Xamarin.Forms aplicativos usando estilos XAML](~/xamarin-forms/user-interface/styles/xaml/index.md)

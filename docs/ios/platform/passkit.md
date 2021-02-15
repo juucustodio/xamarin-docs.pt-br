@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/13/2018
-ms.openlocfilehash: d5a4a78341f66ec754d9161e201023c0ebb478d4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: edbdf656774026eab66ada748bedb61cead3a31a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939185"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435335"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit no Xamarin. iOS
 
@@ -56,7 +56,7 @@ Cada parte do ecossistema tem uma função claramente definida:
 - **Carteira** – aplicativo IOS interno da Apple que armazena e exibe passagens. Esse é o único lugar que as passagens são renderizadas para uso no mundo real (caso o código de barras seja exibido, juntamente com todos os dados localizados no passado).
 - **Aplicativos complementares** – aplicativos do IOS 6 criados por provedores de passagem para estender a funcionalidade dos passos que eles emitem, como adicionar valor a um cartão de loja, alterar o assento em uma passagem de tabuleiro ou outra função específica de negócios. Os aplicativos complementares não são necessários para que uma passagem seja útil.
 - **Seu servidor** – um servidor seguro em que as passagens podem ser geradas e assinadas para distribuição. Seu aplicativo complementar pode se conectar ao seu servidor para gerar novas passagens ou solicitar atualizações para os passos existentes. Opcionalmente, você pode implementar a API do serviço Web que a carteira chamaria para os passos de atualização.
-- **Servidores APNS** – o servidor tem a capacidade de notificar a carteira de atualizações a uma passagem em um determinado dispositivo usando o APNS. Envie uma notificação por push para carteira que, em seguida, entrará em contato com o servidor para obter detalhes da alteração. Os aplicativos complementares não precisam implementar o APNS para esse recurso (eles podem escutar `PKPassLibraryDidChangeNotification` ).
+- **Servidores APNS** – o servidor tem a capacidade de notificar a carteira de atualizações a uma passagem em um determinado dispositivo usando o APNS. Envie uma notificação por push para carteira que, em seguida, entrará em contato com o servidor para obter detalhes da alteração. Os aplicativos complementares não precisam implementar o APNS para esse recurso (eles podem escutar  `PKPassLibraryDidChangeNotification` ).
 - **Aplicativos de canal** – os aplicativos que não manipulam diretamente os passos (como os aplicativos complementares), mas que podem melhorar seu utilitário reconhecendo as passagens e permitindo que elas sejam adicionadas à carteira. Os clientes de email, os navegadores de rede social e outros aplicativos de agregação de dados podem encontrar anexos ou links a serem aprovados.
 
 Todo o ecossistema parece complexo e, portanto, vale a pena observar que alguns componentes são opcionais e muito mais simples são possíveis implementações de PassKit.
@@ -85,7 +85,7 @@ Um arquivo de passagem é, na verdade, um arquivamento ZIP com uma extensão **.
 
 - **pass.jsem** – obrigatório. Contém todas as informações para a passagem.
 - **manifest.jsem** – obrigatório. Contém hashes SHA1 para cada arquivo na passagem, exceto o arquivo de assinatura e esse arquivo (manifest.jsem).
-- **assinatura** – obrigatório. Criado assinando o `manifest.json` arquivo com o certificado gerado no portal de provisionamento do Ios.
+- **assinatura** – obrigatório. Criado assinando o  `manifest.json` arquivo com o certificado gerado no portal de provisionamento do Ios.
 - **logo.png** – opcional.
 - **background.png** – opcional.
 - **icon.png** – opcional.
@@ -101,7 +101,7 @@ JSON é o formato porque as passagens normalmente são criadas em um servidor �
 
 - **teamIdentifier** – isso vincula todas as passagens que você gera para sua conta da loja de aplicativos. Esse valor é visível no portal de provisionamento do iOS.
 - **passTypeIdentifier** – Registre-se no portal de provisionamento para que os grupos passem juntos (se você produzir mais de um tipo). Por exemplo, um café pode criar um tipo de passagem de cartão de loja para permitir que seus clientes ganhem créditos de fidelidade, mas também um tipo de passagem de cupom separado para criar e distribuir cupons de desconto. Essa mesma cafeteria pode até mesmo manter eventos de música ao vivo e emitir passagens de tíquete de evento para eles.
-- **SerialNumber** – uma cadeia de caracteres exclusiva dentro dessa `passTypeidentifier` . O valor é opaco para carteira, mas é importante para o acompanhamento de passagens específicas ao se comunicar com o servidor.
+- **SerialNumber** – uma cadeia de caracteres exclusiva dentro dessa  `passTypeidentifier` . O valor é opaco para carteira, mas é importante para o acompanhamento de passagens específicas ao se comunicar com o servidor.
 
 Há um grande número de outras chaves JSON em cada passagem, um exemplo do que é mostrado abaixo:
 
@@ -198,9 +198,9 @@ A tradução de uma passagem em vários idiomas é semelhante à localização d
 
 As passagens são assinadas com um certificado privado que você gera no portal de provisionamento do iOS. As etapas para assinar a passagem são:
 
-1. Calcule um hash SHA1 para cada arquivo no diretório Pass (não inclua o `manifest.json` `signature` arquivo ou, nenhum dos quais deve existir nesse estágio de qualquer maneira).
-1. Escreva `manifest.json` como uma lista de chaves/valores JSON de cada nome de arquivo com seu hash.
-1. Use o certificado para assinar o `manifest.json` arquivo e gravar o resultado em um arquivo chamado `signature` .
+1. Calcule um hash SHA1 para cada arquivo no diretório Pass (não inclua o  `manifest.json`  `signature` arquivo ou, nenhum dos quais deve existir nesse estágio de qualquer maneira).
+1. Escreva  `manifest.json` como uma lista de chaves/valores JSON de cada nome de arquivo com seu hash.
+1. Use o certificado para assinar o  `manifest.json` arquivo e gravar o resultado em um arquivo chamado  `signature` .
 1. COMPACTe tudo e dê ao arquivo resultante uma `.pkpass` extensão de arquivo.
 
 Como sua chave privada é necessária para assinar a passagem, esse processo só deve ser feito em um servidor seguro que você controla. Não distribua suas chaves para tentar e gerar passagens em um aplicativo.
@@ -222,7 +222,7 @@ Para criar uma ID de tipo de passagem, faça o seguinte.
 
 A primeira etapa é configurar uma ID de tipo de passagem para cada _tipo_ diferente de pass a ser suportado. A ID de passagem (ou o identificador de tipo de passagem) cria um identificador exclusivo para a passagem. Usaremos essa ID para vincular a passagem à sua conta de desenvolvedor usando um certificado.
 
-1. Na [seção certificados, identificadores e perfis do portal de provisionamento do IOS](https://developer.apple.com/account/overview.action), navegue até **identificadores** e selecione as IDs de **tipo de passagem** . Em seguida, selecione o **+** botão para criar um novo tipo de passagem: [ ![ criar um novo tipo de passagem](passkit-images/passid.png)](passkit-images/passid.png#lightbox)
+1. Na  [seção certificados, identificadores e perfis do portal de provisionamento do IOS](https://developer.apple.com/account/overview.action), navegue até  **identificadores** e selecione as IDs de  **tipo de passagem** . Em seguida, selecione o **+** botão para criar um novo tipo de passagem: [ ![ criar um novo tipo de passagem](passkit-images/passid.png)](passkit-images/passid.png#lightbox)
 
 2. Forneça uma **Descrição** (nome) e um **identificador** (cadeia de caracteres exclusiva) para a passagem. Observe que todas as IDs de tipo de passagem devem começar com a cadeia `pass.` de caracteres neste exemplo que usamos `pass.com.xamarin.coupon.banana` : [ ![ forneça uma descrição e um identificador](passkit-images/register.png)](passkit-images/register.png#lightbox)
 
@@ -234,7 +234,7 @@ Para criar um novo certificado para essa ID de tipo de passagem, faça o seguint
 
 1. Selecione a ID de passagem recém-criada na lista e clique em **Editar** : [ ![ Selecione a nova ID de passagem na lista](passkit-images/pass-done.png)](passkit-images/pass-done.png#lightbox)
 
-    Em seguida, selecione **criar certificado...** :
+    Em seguida, selecione  **criar certificado...** :
 
     [![Selecione criar certificado](passkit-images/cert-dist.png)](passkit-images/cert-dist.png#lightbox)
 
@@ -259,7 +259,7 @@ Agora que criamos o tipo Pass, podemos criar manualmente uma passagem para o tes
 - Conecte manifest.jscom o arquivo Certificate. p12 baixado.
 - COMPACTe o conteúdo do diretório e renomeie com a extensão. pkpass.
 
-Há alguns arquivos de origem no [código de exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) para este artigo que podem ser usados para gerar uma passagem. Use os arquivos no `CouponBanana.raw` diretório do diretório CreateAPassManually. Os seguintes arquivos estão presentes:
+Há alguns arquivos de origem no [código de exemplo](/samples/xamarin/ios-samples/passkit) para este artigo que podem ser usados para gerar uma passagem. Use os arquivos no `CouponBanana.raw` diretório do diretório CreateAPassManually. Os seguintes arquivos estão presentes:
 
  [![Esses arquivos estão presentes](passkit-images/image18.png)](passkit-images/image18.png#lightbox)
 
@@ -288,7 +288,7 @@ Em seguida, uma assinatura deve ser gerada para esse arquivo usando o certificad
 
 Baixe os **materiais de suporte da semente de bolso** no site de [downloads da Apple](https://developer.apple.com/downloads/index.action?name=Passbook) . Use a `signpass` ferramenta para transformar a pasta em uma passagem (isso também calculará os hashes SHA1 e expedirá a saída para um arquivo. pkpass).
 
-#### <a name="testing"></a>Testes
+#### <a name="testing"></a>Testando
 
 Se você examinar a saída dessas ferramentas (definindo o nome de arquivo como. zip e, em seguida, abri-la), você verá os seguintes arquivos (Observe a adição dos `manifest.json` `signature` arquivos e):
 
@@ -416,7 +416,7 @@ As seguintes classes PassKit estão disponíveis para os aplicativos acessarem p
 
 ## <a name="example"></a>Exemplo
 
-Consulte o projeto PassLibrary no código de [exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) deste artigo. Ele demonstra as seguintes funções comuns que seriam necessárias em um aplicativo do bolso Companion:
+Consulte o projeto PassLibrary no código de [exemplo](/samples/xamarin/ios-samples/passkit) deste artigo. Ele demonstra as seguintes funções comuns que seriam necessárias em um aplicativo do bolso Companion:
 
 ### <a name="check-that-wallet-is-available"></a>Verifique se a carteira está disponível
 
@@ -447,7 +447,7 @@ Os aplicativos podem solicitar uma lista de passagens da biblioteca. Essa lista 
 var passes = library.GetPasses ();  // returns PKPass[]
 ```
 
-Observe que o simulador não filtra a lista de passagens retornadas, portanto, esse método sempre deve ser testado em dispositivos reais. Essa lista pode ser exibida em um UITableView. O [aplicativo de exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) tem esta aparência após dois cupons terem sido adicionados:
+Observe que o simulador não filtra a lista de passagens retornadas, portanto, esse método sempre deve ser testado em dispositivos reais. Essa lista pode ser exibida em um UITableView. O [aplicativo de exemplo](/samples/xamarin/ios-samples/passkit) tem esta aparência após dois cupons terem sido adicionados:
 
  [![O aplicativo de exemplo tem a seguinte aparência depois que dois cupons tiverem sido adicionados](passkit-images/image29.png)](passkit-images/image29.png#lightbox)
 
@@ -468,7 +468,7 @@ string passInfo =
                 + "\nPassUrl:" + pass.PassUrl;
 ```
 
-Essa cadeia de caracteres é mostrada como um alerta no [exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit):
+Essa cadeia de caracteres é mostrada como um alerta no [exemplo](/samples/xamarin/ios-samples/passkit):
 
  [![O alerta selecionado pelo cupom no exemplo](passkit-images/image30.png)](passkit-images/image30.png#lightbox)
 
@@ -556,7 +556,7 @@ Este artigo introduziu o PassKit, descreveu alguns dos motivos pelos quais ele �
 ## <a name="related-links"></a>Links Relacionados
 
 - [Carteira para desenvolvedores](https://developer.apple.com/wallet/)
-- [Exemplo de PassKit](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit)
+- [Exemplo de PassKit](/samples/xamarin/ios-samples/passkit)
 - [Guia do desenvolvedor de carteira](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/PassKit_PG/index.html#//apple_ref/doc/uid/TP40012195-CH1-SW1)
 - [Estruturas – Apple Pay e carteira (vídeos WWDC)](https://developer.apple.com/videos/frameworks/apple-pay-and-wallet)
 - [Referência da estrutura do PassKit](https://developer.apple.com/library/prerelease/ios/#documentation/UserExperience/Reference/PassKit_Framework/_index.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: b1ba548135cedd951d7f0a349f273b29182839d1
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: deda3a96272db42af17221e613822b858d57abb1
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86928673"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436336"
 ---
 # <a name="multi-touch-finger-tracking-in-xamarinios"></a>Acompanhamento de dedos multitoque no Xamarin. iOS
 
@@ -22,7 +22,7 @@ Há ocasiões em que um aplicativo multitoque precisa acompanhar os dedos indivi
 
 Quando um dedo toca a tela pela primeira vez, o iOS cria um [`UITouch`](xref:UIKit.UITouch) objeto para esse dedo. Esse objeto permanece o mesmo que o dedo é movido na tela e, em seguida, é levantado da tela e, nesse ponto, o objeto é Descartado. Para manter o controle dos dedos, um programa deve evitar armazenar esse `UITouch` objeto diretamente. Em vez disso, ele pode usar a [`Handle`](xref:Foundation.NSObject.Handle) Propriedade do tipo `IntPtr` para identificar exclusivamente esses `UITouch` objetos.
 
-Quase sempre, um programa que controla os dedos individuais mantém um dicionário para acompanhamento de toque. Para um programa iOS, a chave de dicionário é o `Handle` valor que identifica um dedo específico. O valor do dicionário depende do aplicativo. No programa [FingerPaint](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) , cada traço de dedo (de toque para liberação) é associado a um objeto que contém todas as informações necessárias para renderizar a linha desenhada com esse dedo. O programa define uma `FingerPaintPolyline` classe pequena para essa finalidade:
+Quase sempre, um programa que controla os dedos individuais mantém um dicionário para acompanhamento de toque. Para um programa iOS, a chave de dicionário é o `Handle` valor que identifica um dedo específico. O valor do dicionário depende do aplicativo. No programa [FingerPaint](/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) , cada traço de dedo (de toque para liberação) é associado a um objeto que contém todas as informações necessárias para renderizar a linha desenhada com esse dedo. O programa define uma `FingerPaintPolyline` classe pequena para essa finalidade:
 
 ```csharp
 class FingerPaintPolyline
@@ -58,7 +58,7 @@ List<FingerPaintPolyline> completedPolylines = new List<FingerPaintPolyline>();
 
 Os objetos nele `List` estão na mesma ordem em que foram desenhados.
 
-`FingerPaintCanvasView`Substitui cinco métodos definidos por `View` :
+`FingerPaintCanvasView` Substitui cinco métodos definidos por `View` :
 
 - [`TouchesBegan`](xref:UIKit.UIResponder.TouchesBegan(Foundation.NSSet,UIKit.UIEvent))
 - [`TouchesMoved`](xref:UIKit.UIResponder.TouchesMoved(Foundation.NSSet,UIKit.UIEvent))
@@ -181,7 +181,7 @@ public override void TouchesCancelled(NSSet touches, UIEvent evt)
 }
 ```
 
-Totalmente, esse processamento permite que o programa [FingerPaint](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) acompanhe os dedos individuais e desenhe os resultados na tela:
+Totalmente, esse processamento permite que o programa [FingerPaint](/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint) acompanhe os dedos individuais e desenhe os resultados na tela:
 
 [![Acompanhamento de dedos individuais e desenho dos resultados na tela](touch-tracking-images/image01.png)](touch-tracking-images/image01.png#lightbox)
 
@@ -190,4 +190,4 @@ Agora você viu como é possível acompanhar os dedos individuais na tela e faze
 ## <a name="related-links"></a>Links Relacionados
 
 - [Guia equivalente do Xamarin Android](~/android/app-fundamentals/touch/touch-tracking.md)
-- [FingerPaint (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)
+- [FingerPaint (exemplo)](/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)

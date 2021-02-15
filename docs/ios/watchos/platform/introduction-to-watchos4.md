@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/07/2017
-ms.openlocfilehash: 947e64c010d60a13a79a7832413d6f0226fdbdb4
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c299772916cbf706dfb5a52c1fa452ff7a26a48a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73028242"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430449"
 ---
 # <a name="introduction-to-watchos-4"></a>Introdução ao watchOS 4
 
@@ -29,8 +29,8 @@ Alterações desde watchOS 3:
 * O código do aplicativo e a interface do usuário são executados em um único processo.
 * A permissão de local pode ser concedida na inspeção (não é necessário solicitar que o usuário aceite em seu telefone).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-* [Exemplos de watchOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)
+* [Exemplos de watchOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2bwatchOS)
 * [WatchKit (Apple)](https://developer.apple.com/documentation/watchkit)
 * [O que há de novo no watchOS 4 (Apple) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/205/)

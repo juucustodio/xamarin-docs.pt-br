@@ -1,5 +1,5 @@
 ---
-title: Estilos dinâmicos emXamarin.Forms
+title: Estilos dinâmicos em Xamarin.Forms
 description: Este artigo explica como um Xamarin.Forms aplicativo pode responder a alterações de estilo dinamicamente em tempo de execução usando recursos dinâmicos.
 ms.prod: xamarin
 ms.assetid: 13D4FA4B-DF10-42BF-B001-2C49367FC216
@@ -11,16 +11,16 @@ no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
 ms.custom: video
-ms.openlocfilehash: d40ca3423cca68757cf458faf5cca1138aec5461
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 520af44a307c8d493f550bbaeaa009bcdc94d8e0
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84140082"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371606"
 ---
-# <a name="dynamic-styles-in-xamarinforms"></a>Estilos dinâmicos emXamarin.Forms
+# <a name="dynamic-styles-in-no-locxamarinforms"></a>Estilos dinâmicos em Xamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
 
 _Os estilos não respondem às alterações de propriedade e permanecem inalterados durante o período de um aplicativo. Por exemplo, depois de atribuir um estilo a um elemento visual, se uma das instâncias de setter for modificada, removida ou uma nova instância de setter adicionada, as alterações não serão aplicadas ao elemento visual. No entanto, os aplicativos podem responder a alterações de estilo dinamicamente em tempo de execução usando recursos dinâmicos._
 
@@ -214,8 +214,8 @@ O `tealSearchBarStyle` é atribuído diretamente à [`Style`](xref:Xamarin.Forms
 ## <a name="related-links"></a>Links relacionados
 
 - [Extensões de marcação do XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [Estilos dinâmicos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
-- [Trabalhando com estilos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
+- [Estilos dinâmicos (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
+- [Trabalhando com estilos (exemplo)](/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [Estilo](xref:Xamarin.Forms.Style)
 - [Setter](xref:Xamarin.Forms.Setter)

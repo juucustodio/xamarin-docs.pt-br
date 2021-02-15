@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/13/2017
-ms.openlocfilehash: 84953ce2ec09cc757b5719991e499dc24b708cae
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 98f7f7b23fc437dee28f6797c3401bae472fa672
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996104"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433361"
 ---
 # <a name="watchos-background-tasks-in-xamarin"></a>Tarefas em segundo plano do watchOS no Xamarin
 
@@ -699,4 +699,4 @@ Este artigo abordou os aprimoramentos que a Apple fez no watchOS e como eles pod
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Amostras do iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Amostras do iOS 10](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 04/28/2017
-ms.openlocfilehash: 1f5f9e13607d672a6fdec5ed8fb116466973a260
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 6171066c8a6ceed7314cc50510ce4813d5ce1c0c
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938028"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628976"
 ---
 # <a name="localization-in-xamarinios"></a>Localização no Xamarin. iOS
 
@@ -41,13 +41,13 @@ O código do aplicativo nem sempre precisa verificar esse valor – o Xamarin e 
 > [!NOTE]
 > Use `NSLocale.PreferredLanguages` para determinar as preferências de idioma do usuário, independentemente das localizações com suporte do aplicativo. Os valores retornados por esse método foram alterados no iOS 9; consulte a [Nota técnica TN2418](https://developer.apple.com/library/content/technotes/tn2418/_index.html) para obter detalhes.
 
-### <a name="locale"></a>Localidade
+### <a name="locale"></a>Locale
 
 Os usuários escolhem sua localidade no aplicativo **configurações** . Essa configuração afeta a forma como as datas, as horas, os números e a moeda são formatados.
 
 Isso permite que os usuários escolham se verão formatos de 12 horas ou de 24 horas, se o seu separador decimal for uma vírgula ou um ponto, e a ordem de dia, mês e ano na exibição de data.
 
-Com o Xamarin, você tem acesso às classes iOS da Apple ( `NSNumberFormatter` ), bem como às classes .net em System. Globalization. Os desenvolvedores devem avaliar o que é mais adequado às suas necessidades, pois há diferentes recursos disponíveis em cada um. Em particular, se você estiver recuperando e exibindo os preços de compra no aplicativo usando o StoreKit, deverá usar as classes de formatação da Apple para obter as informações de preço retornadas.
+Com o Xamarin, você tem acesso às classes iOS da Apple ( `NSNumberFormatter` ), bem como às classes .net em System. Globalization. Os desenvolvedores devem avaliar o que é mais adequado às suas necessidades, pois há diferentes recursos disponíveis em cada um. Em particular, se você estiver recuperando e exibindo In-App preços de compra usando o StoreKit, deverá usar as classes de formatação da Apple para obter as informações de preço retornadas.
 
 A localidade atual pode ser consultada de uma das duas maneiras:
 
@@ -80,8 +80,8 @@ Em [Q Technical&um QA1828: como o Ios determina o idioma do seu aplicativo](http
 
 - Os idiomas preferenciais do usuário (encontrados no aplicativo de **configurações** )
 - As localizações agrupadas com o aplicativo (pastas. lproj)
-- `CFBundleDevelopmentRegion`(Valor**info. plist** especificando o idioma padrão para o aplicativo)
-- `CFBundleLocalizations`(Matriz**info. plist** especificando todas as localizações com suporte)
+- `CFBundleDevelopmentRegion` (Valor **info. plist** especificando o idioma padrão para o aplicativo)
+- `CFBundleLocalizations` (Matriz **info. plist** especificando todas as localizações com suporte)
 
 Conforme indicado no Q técnico&A, `CFBundleDevelopmentRegion` representa a região e o idioma padrão de um aplicativo. Se o aplicativo não der suporte explicitamente a qualquer um dos idiomas preferenciais de um usuário, ele usará o idioma especificado por esse campo.
 
@@ -124,13 +124,13 @@ O `NSBundle.MainBundle.GetLocalizedString` método pesquisa o texto localizado q
 
 - **Base. lproj** é o diretório que contém recursos para o idioma padrão.
   Geralmente, ele está localizado na raiz do projeto (mas também pode ser colocado na pasta de **recursos** ).
-- os diretórios ** &lt; &gt; . lproj de idioma** são criados para cada idioma com suporte, geralmente na pasta de **recursos** .
+- os diretórios **&lt; &gt; . lproj de idioma** são criados para cada idioma com suporte, geralmente na pasta de **recursos** .
 
 Pode haver vários arquivos **. Strings** diferentes em cada diretório de idioma:
 
 - **Inlocalizáveis. Strings** – a lista principal de texto localizado.
 - **InfoPlist. Strings** – determinadas chaves específicas são permitidas neste arquivo para converter itens como o nome do aplicativo.
-- ** \<storyboard-name> . Strings** – arquivo opcional que contém traduções para elementos da interface do usuário em um Storyboard.
+- **\<storyboard-name> . Strings** – arquivo opcional que contém traduções para elementos da interface do usuário em um Storyboard.
 
 A **ação de Build** para esses arquivos deve ser **recurso de pacote**.
 
@@ -145,9 +145,9 @@ A sintaxe para valores de cadeia de caracteres localizados é:
 
 Você deve escapar os seguintes caracteres em Strings:
 
-- `\"`citar
-- `\\`barra invertida
-- `\n`separados
+- `\"` citar
+- `\\` barra invertida
+- `\n` separados
 
 Este é um exemplo de **es/localizáveis. Strings** (isto é, Espanhol) do exemplo:
 
@@ -192,7 +192,7 @@ LaunchScreen.xib
 
 ### <a name="app-name"></a>Nome do aplicativo
 
-Colocar um arquivo **InfoPlist. Strings** em um diretório **. lproj** permite que você substitua alguns valores do **info. plist**do aplicativo, incluindo o nome do aplicativo:
+Colocar um arquivo **InfoPlist. Strings** em um diretório **. lproj** permite que você substitua alguns valores do **info. plist** do aplicativo, incluindo o nome do aplicativo:
 
 ```console
 "CFBundleDisplayName" = "LeónTodo";
@@ -251,7 +251,7 @@ o iOS fornece uma série de recursos para ajudar na criação de aplicativos com
 - Use layouts automáticos `leading` e `trailing` atributos para alinhamento de controle (que corresponde à esquerda e à direita para inglês, mas é invertido para idiomas RTL).
   O [`UIStackView`](~/ios/user-interface/controls/uistackview.md) controle é particularmente útil para dispor controles que reconhecem a RTL.
 - Use `TextAlignment = UITextAlignment.Natural` para alinhamento de texto (que será deixado para a maioria dos idiomas, mas adequado para RTL).
-- `UINavigationController`inverte automaticamente o botão voltar e reverte a direção do dedo.
+- `UINavigationController` inverte automaticamente o botão voltar e reverte a direção do dedo.
 
 As capturas de tela a seguir mostram o [exemplo de tarefa localizada](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) em árabe e Hebraico (embora o inglês tenha sido inserido nos campos):
 
@@ -270,7 +270,7 @@ O exemplo de [tarefa (localizada no código)](https://github.com/conceptdev/xama
 
 ### <a name="project-structure"></a>Estrutura do Projeto
 
-![Árvore de recursos](images/solution-code.png)
+![Captura de tela mostra a árvore de recursos para um exemplo, incluindo o local de cadeias de caracteres localizáveis.](images/solution-code.png)
 
 ### <a name="localizablestrings-file"></a>Arquivo. Strings localizável
 
@@ -311,7 +311,7 @@ O diretório **base. lproj** contém o storyboard e também deve conter todas as
 
 Os outros diretórios de linguagem contêm um arquivo **localizável. Strings** para qualquer recurso de cadeia de caracteres referenciado no código, bem como um arquivo **MainStoryboard. String** que contém traduções para texto no storyboard.
 
-![Árvore de recursos](images/solution-storyboard.png)
+![Captura de tela mostra a árvore de recursos para um exemplo, incluindo o local das cadeias de caracteres MainStoryboard.](images/solution-storyboard.png)
 
 Os diretórios de idioma devem conter uma cópia de todas as imagens que foram localizadas, para substituir aquela presente em **base. lproj**.
 

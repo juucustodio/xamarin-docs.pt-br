@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 4235e6049b9700edbb3974f1e4cbaf7c405f6e83
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 246757ddc43c5480b26ab4c1360a036fd111dcfa
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937469"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435346"
 ---
 # <a name="watchos-proactive-suggestions-in-xamarin"></a>Sugestões proativas do watchOS no Xamarin
 
@@ -44,7 +44,7 @@ Adicionar suporte de sugestão proativa ao aplicativo Xamarin. iOS normalmente �
 
 As sugestões proativas funcionam com os aplicativos de três maneiras principais:
 
-- **`NSUserActivity`**-Ajuda o sistema a entender em que informações o usuário está trabalhando no momento na tela.
+- **`NSUserActivity`** -Ajuda o sistema a entender em que informações o usuário está trabalhando no momento na tela.
 - **Sugestões de localização** – se o aplicativo oferecer ou consumir informações baseadas na localização, essa extensão de API oferecerá novas maneiras de compartilhar essas informações entre aplicativos.
 
 E tem suporte no aplicativo implementando o seguinte:
@@ -57,7 +57,7 @@ Todos esses recursos têm uma coisa em comum, todos eles usam `NSUserActivity` e
 
 ## <a name="nsuseractivity"></a>NSUserActivity
 
-Conforme mencionado acima, `NSUserActivity` o ajuda o sistema a entender em que informações o usuário está trabalhando no momento na tela. `NSUserActivity`é um mecanismo de cache de estado leve para capturar a atividade do usuário à medida que navega pelo aplicativo. Por exemplo, olhando para o aplicativo restaurante:
+Conforme mencionado acima, `NSUserActivity` o ajuda o sistema a entender em que informações o usuário está trabalhando no momento na tela. `NSUserActivity` é um mecanismo de cache de estado leve para capturar a atividade do usuário à medida que navega pelo aplicativo. Por exemplo, olhando para o aplicativo restaurante:
 
 [![O aplicativo de restaurante](proactive-suggestions-images/activity02.png)](proactive-suggestions-images/activity02.png#lightbox)
 
@@ -153,7 +153,7 @@ Verifique se esse é o mesmo identificador de tipo de atividade ( `com.xamarin.p
 
 Com a quantidade mínima de código apresentada acima, o aplicativo agora pode aproveitar três novos recursos do iOS 10:
 
-- **Entrega**
+- **Handoff**
 - **Pesquisa de destaque**
 - **Lembretes de Siri contextuais**
 
@@ -175,7 +175,7 @@ Toda a funcionalidade acima tem uma coisa em comum, todas elas indicam de onde a
 
 o watchOS 3 foi aprimorado para habilitar essa funcionalidade para um aplicativo por meio de várias pequenas modificações e adições a estruturas existentes:
 
-- `NSUserActivity`tem campos adicionais para capturar informações de local que são exibidas dentro do aplicativo.
+- `NSUserActivity` tem campos adicionais para capturar informações de local que são exibidas dentro do aplicativo.
 - Várias adições foram feitas em MapKit e CoreSpotlight para capturar o local.
 - A funcionalidade de reconhecimento de local foi adicionada ao Siri, mapas, multitarefa e outros aplicativos no sistema.
 
@@ -362,5 +362,5 @@ Este artigo abordou as sugestões proativas e mostrou como o desenvolvedor pode 
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Exemplos de watchOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)
+- [Exemplos de watchOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2bwatchOS)
 - [Guia de programação do SiriKit](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)

@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/05/2018
-ms.openlocfilehash: a7aba55f0470ad44dcce3de56ed15308439785e2
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: f6461c1d571afb29f6ac3c0615165d8d0380a66d
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73029849"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91429661"
 ---
 # <a name="get-started-with-macos-mojave"></a>Introdução ao macOS Mojave
 
 Este documento descreve como ser configurado para criar aplicativos macOS Mojave com o Xamarin. Mac. Ele discute como baixar o Xcode 10 e atualizar o Visual Studio para Mac.
 
-## <a name="download-and-install"></a>Baixar e instalar
+## <a name="download-and-install"></a>Fazer o download e instalar
 
 1. **Instale o mais recente Xcode 10 beta** – os desenvolvedores da Apple registrados podem baixar e instalar a versão mais recente do Xcode 10 no [portal do desenvolvedor da Apple](https://developer.apple.com/download/).
 
@@ -38,4 +38,4 @@ Este documento descreve como ser configurado para criar aplicativos macOS Mojave
 ## <a name="related-links"></a>Links relacionados
 
 - [Baixar o Xcode 10](https://developer.apple.com/download/)
-- [Notas de versão do Xamarin. Mac 5,0](https://docs.microsoft.com/xamarin/mac/release-notes/5/5.0/)
+- [Notas de versão do Xamarin. Mac 5,0](/xamarin/mac/release-notes/5/5.0/)

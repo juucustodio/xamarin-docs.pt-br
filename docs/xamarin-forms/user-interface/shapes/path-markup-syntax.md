@@ -1,33 +1,30 @@
 ---
-title: 'Xamarin.FormsFormas: sintaxe de marcação de caminho'
-description: Xamarin.FormsA sintaxe de marcação de caminho permite especificar de forma compacta geometrias de caminho em XAML.
+title: 'Xamarin.Forms Formas: sintaxe de marcação de caminho'
+description: Xamarin.Forms A sintaxe de marcação de caminho permite especificar de forma compacta geometrias de caminho em XAML.
 ms.prod: xamarin
 ms.assetid: A2C1BD59-1A16-4E26-A825-0338E2AF9E65
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/19/2020
+ms.date: 11/13/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8250bd5e5f7d6c9cb93a986656e908b40cec9ae2
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 542d06970cb414b7590cd13757b4e4902af3dd7f
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918516"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939076"
 ---
-# <a name="no-locxamarinforms-shapes-path-markup-syntax"></a>Xamarin.FormsFormas: sintaxe de marcação de caminho
+# <a name="no-locxamarinforms-shapes-path-markup-syntax"></a>Xamarin.Forms Formas: sintaxe de marcação de caminho
 
-![API de pré-lançamento](~/media/shared/preview.png)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-
-Xamarin.Formsa sintaxe de marcação de caminho permite especificar de forma compacta geometrias de caminho em XAML. A sintaxe é especificada como um valor de cadeia de caracteres para a `Path.Data` Propriedade:
+Xamarin.Forms a sintaxe de marcação de caminho permite especificar de forma compacta geometrias de caminho em XAML. A sintaxe é especificada como um valor de cadeia de caracteres para a `Path.Data` Propriedade:
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Data="M13.908992,16.207977 L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983Z" />
 ```
 
@@ -35,7 +32,7 @@ A sintaxe de marcação de caminho é composta por um `FillRule` valor opcional 
 
 Nesta sintaxe:
 
-- *fillRule* é um opcional `Xamarin.Forms.Shapes.FillRule` que especifica se a geometria deve usar `EvenOdd` ou `Nonzero` `FillRule` . `F0`é usado para especificar a `EvenOdd` regra de preenchimento, enquanto `F1` é usado para especificar a `Nonzero` regra de preenchimento. Para obter mais informações sobre regras de preenchimento, consulte [ Xamarin.Forms formas: regras de preenchimento](fillrules.md).
+- *fillRule* é um opcional `Xamarin.Forms.Shapes.FillRule` que especifica se a geometria deve usar `EvenOdd` ou `Nonzero` `FillRule` . `F0` é usado para especificar a `EvenOdd` regra de preenchimento, enquanto `F1` é usado para especificar a `Nonzero` regra de preenchimento. Para obter mais informações sobre regras de preenchimento, consulte [ Xamarin.Forms formas: regras de preenchimento](fillrules.md).
 - *figureDescription* representa uma figura composta por um comando de movimentação, comandos de desenho e um comando de fechamento opcional. Um comando move especifica o ponto inicial da figura. Os comandos Draw descrevem o conteúdo da figura e o comando opcional Close fecha a figura.
 
 No exemplo acima, a sintaxe de marcação de caminho Especifica um ponto de partida usando o comando Move ( `M` ), uma série de linhas retas usando o comando line ( `L` ) e fecha o caminho com o comando Close ( `Z` ).
@@ -43,7 +40,13 @@ No exemplo acima, a sintaxe de marcação de caminho Especifica um ponto de part
 Na sintaxe de marcação de caminho, os espaços não são necessários antes ou depois dos comandos. Além disso, dois números não precisam ser separados por uma vírgula ou espaço em branco, mas isso só pode ser obtido quando a cadeia de caracteres não é ambígua.
 
 > [!TIP]
-> A linguagem de marcação de caminho usa uma sintaxe compatível com definições de caminho de imagem SVG (gráficos vetoriais escalonáveis) e, portanto, pode ser útil para portar gráficos do formato SVG.
+> A sintaxe de marcação de caminho é compatível com definições de caminho de imagem SVG (gráficos vetoriais escalonáveis) e, portanto, pode ser útil para portar gráficos do formato SVG.
+
+Embora a sintaxe de marcação de caminho seja destinada ao consumo em XAML, ela pode ser convertida em um `Geometry` objeto no código invocando o `ConvertFromInvariantString` método na `PathGeometryConverter` classe:
+
+```csharp
+Geometry pathData = (Geometry)new PathGeometryConverter().ConvertFromInvariantString("M13.908992,16.207977 L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983Z");
+```
 
 ## <a name="move-command"></a>Comando de movimentação
 
@@ -51,7 +54,7 @@ O comando mover especifica o ponto de partida de uma nova figura. A sintaxe para
 
 Nessa sintaxe, *StartPoint* é uma [`Point`](xref:Xamarin.Forms.Point) estrutura que especifica o ponto de partida de uma nova figura. Se você listar vários pontos após o comando mover, uma linha será desenhada para esses pontos.
 
-`M 10,10`é um exemplo de um comando de movimentação válido.
+`M 10,10` é um exemplo de um comando de movimentação válido.
 
 ## <a name="draw-commands"></a>Comandos de desenho
 
@@ -74,7 +77,7 @@ O comando linha cria uma linha reta entre o ponto atual e o ponto de extremidade
 
 Nessa sintaxe, *Endpoint* é um [`Point`](xref:Xamarin.Forms.Point) que representa o ponto final da linha.
 
-`L 20,30`e `L 20 30` são exemplos de comandos de linha válidos.
+`L 20,30` e `L 20 30` são exemplos de comandos de linha válidos.
 
 Para obter informações sobre como criar uma linha reta como um `PathGeometry` objeto, consulte [criar um LineSegment](geometries.md#create-a-linesegment).
 
@@ -100,13 +103,13 @@ O comando de arco elíptico cria um arco elíptico entre o ponto atual e o ponto
 
 Nesta sintaxe:
 
-- `size`é um [`Size`](xref:Xamarin.Forms.Size) que representa o raio x e y do arco.
-- `rotationAngle`é um `double` que representa a rotação da elipse, em graus.
-- `isLargeArcFlag`deve ser definido como 1 se o ângulo do arco deve ser 180 graus ou maior, caso contrário, defina-o como 0.
-- `sweepDirectionFlag`deve ser definido como 1 se o arco for desenhado em uma direção de ângulo positivo; caso contrário, defina-o como 0.
-- `endPoint`é um [`Point`](xref:Xamarin.Forms.Point) para o qual o arco é desenhado.
+- `size` é um [`Size`](xref:Xamarin.Forms.Size) que representa o raio x e y do arco.
+- `rotationAngle` é um `double` que representa a rotação da elipse, em graus.
+- `isLargeArcFlag` deve ser definido como 1 se o ângulo do arco deve ser 180 graus ou maior, caso contrário, defina-o como 0.
+- `sweepDirectionFlag` deve ser definido como 1 se o arco for desenhado em uma direção de ângulo positivo; caso contrário, defina-o como 0.
+- `endPoint` é um [`Point`](xref:Xamarin.Forms.Point) para o qual o arco é desenhado.
 
-`A 150,150 0 1,0 150,-150`é um exemplo de um comando de arco elíptico válido.
+`A 150,150 0 1,0 150,-150` é um exemplo de um comando de arco elíptico válido.
 
 Para obter informações sobre como criar um arco elíptico como um `PathGeometry` objeto, consulte [criar um ArcSegment](geometries.md#create-an-arcsegment).
 
@@ -120,7 +123,7 @@ Nesta sintaxe:
 - *ControlPoint2* é um [`Point`](xref:Xamarin.Forms.Point) que representa o segundo ponto de controle da curva, que determina a tangente final da curva.
 - o *ponto de extremidade* é um [`Point`](xref:Xamarin.Forms.Point) que representa o ponto para o qual a curva é desenhada.
 
-`C 100,200 200,400 300,200`é um exemplo de um comando de curva de Bézier cúbica válido.
+`C 100,200 200,400 300,200` é um exemplo de um comando de curva de Bézier cúbica válido.
 
 Para obter informações sobre como criar uma curva de Bézier cúbica como um `PathGeometry` objeto, consulte [criar um BezierSegment](geometries.md#create-a-beziersegment).
 
@@ -139,7 +142,7 @@ Para obter informações sobre como criar uma curva de Bézier quadrática como 
 
 ### <a name="smooth-cubic-bezier-curve-command"></a>Comando de curva de Bézier cubica suave
 
-O comando de curva de Bézier cubica suave cria uma curva de Bézier cúbica entre o ponto atual e o ponto de extremidade especificado usando o ponto de controle especificado. A sintaxe para esse comando é: `S` *controlPoint2* *ponto de extremidade* ControlPoint2 ou ponto de `s` *controlPoint2* *extremidade*ControlPoint2.  
+O comando de curva de Bézier cubica suave cria uma curva de Bézier cúbica entre o ponto atual e o ponto de extremidade especificado usando o ponto de controle especificado. A sintaxe para esse comando é: `S`  *ponto de extremidade* ControlPoint2 ou ponto de `s`  *extremidade* ControlPoint2.  
 
 Nesta sintaxe:
 
@@ -148,7 +151,7 @@ Nesta sintaxe:
 
 Assume-se que o primeiro ponto de controle seja a reflexão do segundo ponto de controle do comando anterior, em relação ao ponto atual. Se não houver nenhum comando anterior, ou o comando anterior não era um comando de curva de Bézier cúbica ou um comando de curva de Bézier cúbico suave, o primeiro ponto de controle será considerado coincidente com o ponto atual.
 
-`S 100,200 200,300`é um exemplo de um comando de curva de Bézier cúbica suave válido.
+`S 100,200 200,300` é um exemplo de um comando de curva de Bézier cúbica suave válido.
 
 ### <a name="smooth-quadratic-bezier-curve-command"></a>Comando de curva de Bézier quadrática suave
 
@@ -158,7 +161,7 @@ Nessa sintaxe, *Endpoint* é um [`Point`](xref:Xamarin.Forms.Point) que represen
 
 O ponto de controle é assumido ser a reflexão do ponto de controle do comando anterior relativo ao ponto atual. Se não houver nenhum comando anterior ou se o comando anterior não fosse uma curva de Bézier quadrática ou um comando Smooth de curva de Bézier quadrática, o ponto de controle será considerado como coincidente com o ponto atual.
 
-`T 100,30`é um exemplo de um comando de curva de Bezier cubica quadrática válido.
+`T 100,30` é um exemplo de um comando de curva de Bezier cubica quadrática válido.
 
 ## <a name="close-command"></a>Comando de fechamento
 
@@ -170,14 +173,14 @@ A sintaxe para o comando fechar é: `Z` ou `z` .
 
 Em vez de um valor numérico padrão, você também pode usar os seguintes valores especiais que diferenciam maiúsculas de minúsculas:
 
-- `Infinity`representa `double.PositiveInfinity` .
+- `Infinity` representa `double.PositiveInfinity` .
 - `-Infinity`representa `double.NegativeInfinity` .
-- `NaN`representa `double.NaN` .
+- `NaN` representa `double.NaN` .
 
 Além disso, você também pode usar notação científica sem diferenciação de maiúsculas e minúsculas. Portanto, `+1.e17` é um valor válido.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ShapeDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.FormsFormas: geometrias](geometries.md)
-- [Xamarin.FormsFormas: regras de preenchimento](fillrules.md)
+- [ShapeDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms Formas: geometrias](geometries.md)
+- [Xamarin.Forms Formas: regras de preenchimento](fillrules.md)

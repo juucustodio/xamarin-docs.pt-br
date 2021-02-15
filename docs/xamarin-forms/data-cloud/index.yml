@@ -13,12 +13,12 @@ metadata:
   no-loc:
   - Xamarin.Forms
   - Xamarin.Essentials
-  ms.openlocfilehash: eed87cca333da2459e3a03f1bc2da6e10e32c9fd
-  ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+  ms.openlocfilehash: e8679b8d43736f4355ba127a043394ac30dadb89
+  ms.sourcegitcommit: 9ab5a1e346e20f54e8b7aa655fd3d117b43978cc
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/28/2020
-  ms.locfileid: "84127005"
+  ms.lasthandoff: 02/01/2021
+  ms.locfileid: "99223653"
 landingContent:
 - title: Armazenamento de dados local
   linkLists:
@@ -35,15 +35,13 @@ landingContent:
     - text: Banco de dados de documentos do Azure Cosmos DB
       url: azure-services/azure-cosmosdb.md
     - text: Hubs de notificação do Azure
-      url: azure-services/azure-notification-hub.md
+      url: /azure/developer/mobile-apps/notification-hubs-backend-service-xamarin-forms
     - text: Armazenamento do Azure
       url: azure-services/azure-storage.md
     - text: Pesquisa do Azure
       url: azure-services/azure-search.md
     - text: Funções do Azure
       url: azure-services/azure-functions.md
-    - text: Serviço Azure SignalR
-      url: azure-services/azure-signalr.md
 - title: Serviços cognitivos do Azure
   linkLists:
   - linkListType: concept
@@ -77,7 +75,7 @@ landingContent:
     - text: REST
       url: authentication/rest.md
     - text: Provedor de identidade
-      url: authentication/oauth.md
+      url: ../../essentials/web-authenticator.md
     - text: Azure Active Directory B2C
       url: authentication/azure-ad-b2c.md
     - text: Autenticação de banco de dados de documento do Azure Cosmos DB

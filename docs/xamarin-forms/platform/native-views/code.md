@@ -10,16 +10,16 @@ ms.date: 04/27/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4cad46bdee1b49c316947bc56bdb69a3b9e9a270
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 32997a1453ca52abdfa0cac60e7637ae3367eeb2
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938200"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374193"
 ---
 # <a name="native-views-in-c"></a>Exibições nativas em C\#
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
 
 _Exibições nativas do iOS, Android e UWP podem ser referenciadas diretamente de Xamarin.Forms páginas criadas usando C#. Este artigo demonstra como adicionar exibições nativas a um Xamarin.Forms layout criado usando C# e como substituir o layout de modos de exibição personalizados para corrigir o uso da API de medição._
 
@@ -29,12 +29,12 @@ Qualquer Xamarin.Forms controle que permita `Content` ser definido, ou que tenha
 
 As capturas de tela a seguir demonstram as exibições específicas da plataforma que foram adicionadas a um Xamarin.Forms [`StackLayout`](xref:Xamarin.Forms.StackLayout) :
 
-[![StackLayout contendo exibições específicas da plataforma](code-images/screenshots-sml.png)](code-images/screenshots.png#lightbox "StackLayout contendo exibições específicas da plataforma")
+[![StackLayout contendo exibições de Platform-Specific](code-images/screenshots-sml.png)](code-images/screenshots.png#lightbox "StackLayout contendo exibições de Platform-Specific")
 
 A capacidade de adicionar exibições específicas de plataforma a um Xamarin.Forms layout é habilitada por dois métodos de extensão em cada plataforma:
 
-- `Add`– Adiciona uma exibição específica da plataforma à [`Children`](xref:Xamarin.Forms.Layout`1.Children) coleção de um layout.
-- `ToView`– usa uma exibição específica da plataforma e a encapsula como uma Xamarin.Forms [`View`](xref:Xamarin.Forms.View) que pode ser definida como a `Content` propriedade de um controle.
+- `Add` – Adiciona uma exibição específica da plataforma à [`Children`](xref:Xamarin.Forms.Layout`1.Children) coleção de um layout.
+- `ToView` – usa uma exibição específica da plataforma e a encapsula como uma Xamarin.Forms [`View`](xref:Xamarin.Forms.View) que pode ser definida como a `Content` propriedade de um controle.
 
 O uso desses métodos em um Xamarin.Forms projeto compartilhado requer a importação do namespace específico da plataforma apropriado Xamarin.Forms :
 
@@ -42,7 +42,7 @@ O uso desses métodos em um Xamarin.Forms projeto compartilhado requer a importa
 - **Android** – Xamarin.Forms . Platform. Android
 - **Plataforma universal do Windows (UWP)** – Xamarin.Forms . Platform. UWP
 
-## <a name="adding-platform-specific-views-on-each-platform"></a>Adicionando exibições específicas da plataforma em cada plataforma
+## <a name="adding-platform-specific-views-on-each-platform"></a>Adicionando exibições de Platform-Specific em cada plataforma
 
 As seções a seguir demonstram como adicionar exibições específicas da plataforma a um Xamarin.Forms layout em cada plataforma.
 
@@ -325,5 +325,5 @@ Este artigo explicou como adicionar exibições nativas a um Xamarin.Forms layou
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [NativeEmbedding (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
+- [NativeEmbedding (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
 - [Formulários nativos](~/xamarin-forms/platform/native-forms.md)

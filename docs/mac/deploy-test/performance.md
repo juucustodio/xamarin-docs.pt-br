@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 11/10/2017
-ms.openlocfilehash: a5a759ae9f156eec71706d9681fac2a94995848e
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: a1649c4b8498f3e7ad3684cb4d119236b4ceaf57
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73021686"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435481"
 ---
 # <a name="xamarinmac-performance"></a>Desempenho do Xamarin.Mac
 
@@ -21,7 +21,7 @@ ms.locfileid: "73021686"
 Aplicativos Xamarin.Mac são semelhantes a Xamarin.iOS e muitas das mesmas sugestões de desempenho são aplicáveis:
 
 - [Desempenho do Xamarin.iOS](~/ios/deploy-test/performance.md)
-- [Desempenho multiplataforma](~/cross-platform/deploy-test/memory-perf-best-practices.md)
+- [Desempenho de plataforma cruzada](~/cross-platform/deploy-test/memory-perf-best-practices.md)
 
 Mas há inúmeras sugestões específicas para macOS que podem ser úteis.
 
@@ -59,9 +59,9 @@ Aplicativos da área de trabalho geralmente processam grandes quantidades de dad
 
 Sempre que possível, use [async](~/cross-platform/platform/async.md) e threads para evitar o bloqueio da interface do usuário.
 
-Para operações de execução longa, considere o uso de [NSProgressIndicator](https://docs.microsoft.com/samples/xamarin/mac-samples/progressbarexample) ou outras opções observadas no [HIG](https://developer.apple.com/macos/human-interface-guidelines/indicators/progress-indicators/) da Apple para notificar os usuários.
+Para operações de execução longa, considere o uso de [NSProgressIndicator](/samples/xamarin/mac-samples/progressbarexample) ou outras opções observadas no [HIG](https://developer.apple.com/macos/human-interface-guidelines/indicators/progress-indicators/) da Apple para notificar os usuários.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Desempenho multiplataforma](~/cross-platform/deploy-test/memory-perf-best-practices.md)
+- [Desempenho de plataforma cruzada](~/cross-platform/deploy-test/memory-perf-best-practices.md)
 - [Desempenho do Xamarin.iOS](~/ios/deploy-test/performance.md)

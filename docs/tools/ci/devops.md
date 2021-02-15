@@ -7,12 +7,12 @@ manager: crdun
 ms.workload:
 - xamarin
 ms.date: 10/23/2018
-ms.openlocfilehash: bd1a728dfe14ff9243402bedae74db7be93bf466
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 61a7017d2ba784770d1199b6332d781b36b6d0e0
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78291871"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91452473"
 ---
 # <a name="devops-with-xamarin"></a>DevOps com Xamarin
 
@@ -42,7 +42,7 @@ Comentário Geral: todos os recursos de planejamento e acompanhamento são indep
 
 Link de referência: **[Analisar e modelar a arquitetura](/visualstudio/modeling/analyze-and-model-your-architecture)**
 
-Recursos de design são independentes da linguagem de codificação ou funcionam com linguagens .NET como C#. Consulte [Funções de arquitetura e diagramas de modelagem no desenvolvimento de software](/visualstudio/modeling/scenario-change-your-design-using-visualization-and-modeling#ModelingDiagramsTools) para aspectos relacionados a código.
+Recursos de design são independentes da linguagem de codificação ou funcionam com linguagens .NET como C#. Consulte [funções de diagramas de arquitetura e modelagem no desenvolvimento de software](/visualstudio/modeling/scenario-change-your-design-using-visualization-and-modeling#ModelingDiagramsTools) para saber quais aspectos estão relacionados ao código.
 
 |Recurso|Tem suporte com o Xamarin|Comentários Adicionais|
 |-------------|----------------------------|-------------------------|
@@ -65,13 +65,13 @@ Recursos de design são independentes da linguagem de codificação ou funcionam
 |[Localizar alterações de código e outros históricos](/visualstudio/ide/find-code-changes-and-other-history-with-codelens)|Sim|Exceto entre os limites específicos da plataforma em que a implementação não é resolvida até o tempo de execução.|
 |[Usar mapas de códigos para depurar aplicativos](/visualstudio/modeling/use-code-maps-to-debug-your-applications)|Sim||
 
-## <a name="build"></a>Build
+## <a name="build"></a>Compilação
 
 Link de referência: **[Azure Pipelines](/azure/devops/pipelines/index?view=vsts)**
 
 |Recurso|Tem suporte com o Xamarin|Comentários Adicionais|
 |-------------|----------------------------|-------------------------|
-|Servidor TFS local|Sim|Computadores de build devem ter Xamarin instalado e podem ser vinculados a um computador OSX para compilar para iOS. Confira [Usar TFVC](/azure/devops/repos/tfvc/overview?view=vsts)|
+|Servidor TFS local|Sim|Computadores de build devem ter Xamarin instalado e podem ser vinculados a um computador OSX para compilar para iOS. Consulte [usar TFVC](/azure/devops/repos/tfvc/overview?view=vsts)|
 |Servidor de build local vinculado ao Azure Pipelines|Sim|Consulte [Build and release agents](/azure/devops/pipelines/agents/agents?view=vsts) (Agentes de build e de versão) para obter instruções.|
 |Serviço de controlador hospedado do Azure Pipelines|Sim|Consulte [Compilar seu aplicativo Xamarin](/azure/devops/pipelines/languages/xamarin?view=vsts&tabs=vsts).|
 |Compilar definições com pré e pós-scripts|Sim||
@@ -84,9 +84,9 @@ Link de referência: **[Azure Pipelines](/azure/devops/pipelines/index?view=vsts
 |Planejando testes, criando casos de teste e organizando conjuntos de testes|Sim||
 |Teste manual|Sim||
 |Gerenciador de Teste (testes de gravação e reprodução)|Sim|Somente dispositivos Windows e emuladores Android do Visual Studio.|
-|Cobertura de código|n/d||
-|[Efetuar teste de unidade em seu código](/visualstudio/test/unit-test-your-code/)|Sim|Para os destinos Android e Windows, as ferramentas internas do MSTest podem ser usadas. Para executar testes de unidade em Windows, Android e iOS, o Xamarin recomenda NUnit. Confira [Usar o TFVC](/azure/devops/repos/tfvc/overview?view=vsts).|
-|[Usar a automação de interface do usuário para testar seu código](/visualstudio/test/use-ui-automation-to-test-your-code/)|Somente Windows|O gravador de teste da interface do usuário do Visual Studio é somente Windows. Para todas as plataformas, confira [Xamarin.UITest](/appcenter/test-cloud/uitest/).|
+|Cobertura de código|N/D||
+|[Teste de unidade em seu código](/visualstudio/test/unit-test-your-code/)|Sim|Para os destinos Android e Windows, as ferramentas internas do MSTest podem ser usadas. Para executar testes de unidade em Windows, Android e iOS, o Xamarin recomenda NUnit. Confira [Usar o TFVC](/azure/devops/repos/tfvc/overview?view=vsts).|
+|[Usar a automação da interface do usuário para testar o código](/visualstudio/test/use-ui-automation-to-test-your-code/)|Somente Windows|O gravador de teste da interface do usuário do Visual Studio é somente Windows. Para todas as plataformas, confira [Xamarin.UITest](/appcenter/test-cloud/uitest/).|
 
 ## <a name="improve-code-quality"></a>Melhorar a qualidade do código
 
@@ -95,14 +95,14 @@ Link de referência: **[Melhorar a qualidade do código](/visualstudio/test/impr
 |Recurso|Tem suporte com o Xamarin|Comentários Adicionais|
 |-------------|----------------------------|-------------------------|
 |[Analisar a qualidade do código gerenciado](/visualstudio/code-quality/analyzing-managed-code-quality-by-using-code-analysis)|Sim||
-|[Localizar código duplicado usando detecção de clone de código](https://msdn.microsoft.com/library/hh205279.aspx)|Sim||
+|[Localizar código duplicado usando detecção de clone de código](/previous-versions/hh205279(v=vs.140))|Sim||
 |[Medir complexidade e facilidade de manutenção do código gerenciado](/visualstudio/code-quality/measuring-complexity-and-maintainability-of-managed-code)|Sim||
-|[Gerenciador de Desempenho](/visualstudio/profiling/performance-explorer)|Não|Use o [Xamarin Profiler](/xamarin/tools/profiler/) por meio de Visual Studio para Mac em vez disso. Observe que o Xamarin Profiler está atualmente em visualização e ainda não funciona para destinos do Windows.|
-|[Analisar problemas de memória do .NET Framework](https://msdn.microsoft.com/library/dn342825.aspx)|Não|Ferramentas do Visual Studio não têm ganchos na estrutura Mono para a criação de perfil.|
+|[Performance Explorer](/visualstudio/profiling/performance-explorer)|Não|Use o [Xamarin Profiler](../profiler/index.md) por meio de Visual Studio para Mac em vez disso. Observe que o Xamarin Profiler está atualmente em visualização e ainda não funciona para destinos do Windows.|
+|[Analisar problemas de memória .NET Framework](/visualstudio/misc/analyze-dotnet-framework-memory-issues)|Não|Ferramentas do Visual Studio não têm ganchos na estrutura Mono para a criação de perfil.|
 
 ## <a name="release-management"></a>Gerenciamento de liberações
 
-Link de referência: **[Build e versão no Azure Pipelines e no TFS](/azure/devops/pipelines/overview?view=vsts)**
+Link de referência: ** [Compilar e liberar no Azure pipelines e no TFS](/azure/devops/pipelines/overview?view=vsts)**
 
 |Recurso|Tem suporte com o Xamarin|Comentários Adicionais|
 |-------------|----------------------------|-------------------------|

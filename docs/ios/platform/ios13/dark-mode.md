@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/28/2019
-ms.openlocfilehash: be487ab839e2fb4d21b85719a56dc34303317a5f
-ms.sourcegitcommit: 09bc69d7119a04684c9e804c5cb113b8b1bb7dfc
+ms.openlocfilehash: 77f852914e41b636901348a0490d2d5927b044f0
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71206392"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628781"
 ---
 # <a name="dark-mode-in-xamarinios"></a>Modo escuro no Xamarin. iOS
 
@@ -32,7 +32,7 @@ A Apple fornece um menu de desenvolvedor no iOS 13 para alternar entre os modos 
 
 ## <a name="assets-for-light-and-dark-modes"></a>Ativos para os modos claro e escuro
 
-O catálogo de ativos no Visual Studio agora dá suporte a imagens e cores opcionais para cada modo de aparência: Universal, Dark e Light. Ao definir imagens e cores dessa forma, o iOS escolherá automaticamente a imagem e a cor apropriadas.
+O catálogo de ativos no Visual Studio agora dá suporte a imagens e cores opcionais para cada modo de aparência: universal, Dark e Light. Ao definir imagens e cores dessa forma, o iOS escolherá automaticamente a imagem e a cor apropriadas.
 
 Abra seu arquivo **assets. xcassets** no seu projeto do IOS e adicione um novo conjunto de imagens. Observe que você pode especificar imagens universais, escuras e leves em qualquer uma das resoluções de destino. Na captura de tela abaixo, há uma imagem para Dark e Light com o nome de "MicrosoftLogo":
 
@@ -40,7 +40,7 @@ Abra seu arquivo **assets. xcassets** no seu projeto do IOS e adicione um novo c
 
 **Assets. xcassets** também contém entradas para **backgroundColor** e **TitleColor**, que são definições de cores. Essas cores agora estão disponíveis pelo nome a ser usado em todo o aplicativo. O **backgroundColor** foi atribuído ao plano de fundo da exibição e **TitleColor** ao rótulo, conforme mostrado nesta captura de tela:
 
-![Ativos para os modos claro e escuro](dark-mode-images/LightAndDark_01.png)
+![Captura de tela mostra dispositivos móveis no modo claro e escuro com cores de plano de fundo e de título diferentes.](dark-mode-images/LightAndDark_01.png)
 
 ## <a name="dynamic-system-colors"></a>Cores dinâmicas do sistema
 

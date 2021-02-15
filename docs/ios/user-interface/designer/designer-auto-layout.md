@@ -7,14 +7,18 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 44297e32821721d483a265e7d2a69016f4e1a87b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 37d90bc42e843dd3b3c8f07689e0e229225ff57d
+ms.sourcegitcommit: d1f0e0a9100548cfe0960ed2225b979cc1d7c28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86940017"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96439467"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Layout automático com o Xamarin Designer para iOS
+
+> [!WARNING]
+> O designer do iOS começará a ser dividido no Visual Studio 2019 versão 16,8 e no Visual Studio 2019 para Mac versão 8,8.
+> A maneira recomendada para criar interfaces de usuário do iOS é diretamente em um Mac que executa o Xcode. Para obter mais informações, consulte [projetando interfaces do usuário com o Xcode](../storyboards/index.md). 
 
 O layout automático (também chamado de "layout adaptável") é uma abordagem de design responsiva. Ao contrário do sistema de layout de transição, onde o local de cada elemento é embutido em código para um ponto na tela, o layout automático é sobre *relações* – as posições de elementos em relação a outros elementos na superfície de design. No coração do layout automático está a ideia de restrições ou regras que definem o posicionamento de um elemento ou conjunto de elementos no contexto de outros elementos na tela. Como os elementos não estão vinculados a uma posição específica na tela, as restrições ajudam a criar um layout adaptável que parece bom em diferentes tamanhos de tela e orientações de dispositivo.
 
@@ -30,7 +34,7 @@ Este guia pressupõe o conhecimento dos componentes do designer da [introdução
 
 Uma restrição é uma representação matemática da relação entre dois elementos na tela. A representação da posição de um elemento de interface do usuário como uma relação matemática resolve vários problemas associados ao código da localização de um elemento de interface do usuário. Por exemplo, se tivéssemos de colocar um botão 20px na parte inferior da tela no modo retrato, a posição do botão estará fora da tela no modo paisagem. Para evitar isso, poderíamos definir uma restrição que coloca a borda inferior do botão 20px na parte inferior da exibição. Em seguida, a posição da borda do botão seria calculada como *Button. Bottom = View. Bottom-20px*, que colocaria o botão 20px na parte inferior da exibição no modo retrato e paisagem. A capacidade de calcular o posicionamento com base em uma relação matemática é o que torna as restrições tão úteis no design da interface do usuário.
 
-Quando definimos uma restrição, criamos um `NSLayoutConstraint` objeto que usa como argumentos os objetos a serem restritos e as propriedades, ou *atributos*, em que a restrição atuará. No designer do iOS, os atributos incluem bordas como a *esquerda*, *direita*, *superior*e *inferior* de um elemento. Eles também incluem atributos de tamanho, como *altura* e *largura*, e o local do ponto central, *CenterX* e *CenterY*. Por exemplo, quando adicionamos uma restrição na posição do limite esquerdo de dois botões, o designer está gerando o seguinte código nos bastidores:
+Quando definimos uma restrição, criamos um `NSLayoutConstraint` objeto que usa como argumentos os objetos a serem restritos e as propriedades, ou *atributos*, em que a restrição atuará. No designer do iOS, os atributos incluem bordas como a *esquerda*, *direita*, *superior* e *inferior* de um elemento. Eles também incluem atributos de tamanho, como *altura* e *largura*, e o local do ponto central, *CenterX* e *CenterY*. Por exemplo, quando adicionamos uma restrição na posição do limite esquerdo de dois botões, o designer está gerando o seguinte código nos bastidores:
 
 ```csharp
 View.AddConstraint (NSLayoutConstraint.Create (Button1, NSLayoutAttribute.Left, NSLayoutRelation.Equal, Button2, NSLayoutAttribute.Left, 1, 10));
@@ -77,7 +81,7 @@ O **W** definirá Width e **H** definirá a restrição de altura. Ao verificar 
 
 Quatro caixas de combinação para restrições de espaçamento lista as exibições vizinhas para ancorar a restrição
 
-## <a name="surface-based-constraint-editing"></a>Edição de restrição baseada em superfície
+## <a name="surface-based-constraint-editing"></a>Edição de restrição de Surface-Based
 
 Para uma edição de restrição mais ajustada, podemos interagir com restrições diretamente na superfície de design. Esta seção apresenta os conceitos básicos da edição de restrição baseada em superfície, incluindo controles de espaçamento de PIN, áreas de soltar e trabalho com diferentes tipos de restrições.
 
@@ -89,13 +93,13 @@ A ferramenta de designer do iOS oferece dois tipos de controles para manipular e
 
 Eles são alternados selecionando o botão modo de restrições na barra restrições.
 
-Os 4 identificadores em forma de T em cada lado do elemento definem as bordas *superior*, *direita*, *inferior*e *esquerda* do elemento para uma restrição. Os dois identificadores de formato cruzado à direita e à parte inferior do elemento definem a *altura* e a restrição de *largura* , respectivamente. O quadrado médio lida com as restrições *CenterX* e *CenterY* .
+Os 4 identificadores em forma de T em cada lado do elemento definem as bordas *superior*, *direita*, *inferior* e *esquerda* do elemento para uma restrição. Os dois identificadores de formato cruzado à direita e à parte inferior do elemento definem a *altura* e a restrição de *largura* , respectivamente. O quadrado médio lida com as restrições *CenterX* e *CenterY* .
 
 Para criar uma restrição, escolha um identificador e arraste-o para algum lugar na superfície de design. Quando você inicia a operação de arrastar, uma série de linhas/caixas verdes aparecerá na superfície informando o que você pode restringir. Por exemplo, na captura de tela abaixo, estamos restringindo o lado superior do botão do meio:
 
  [![Restringindo o lado superior do botão do meio](designer-auto-layout-images/image07.png)](designer-auto-layout-images/image07.png#lightbox)
 
-Observe as três linhas verdes tracejadas entre os outros dois botões. As linhas verdes indicam *áreas de soltar*ou os atributos de outros elementos aos quais podemos restringir. Na captura de tela acima, os outros dois botões oferecem 3 áreas verticais de soltar ( *inferior*, *Center*, *superior*) para restringir nosso botão. A linha verde tracejada na parte superior da exibição significa que o controlador de exibição oferece uma restrição na parte superior da exibição e a caixa verde sólida significa que o controlador de exibição oferece uma restrição abaixo do guia de layout superior.
+Observe as três linhas verdes tracejadas entre os outros dois botões. As linhas verdes indicam *áreas de soltar* ou os atributos de outros elementos aos quais podemos restringir. Na captura de tela acima, os outros dois botões oferecem 3 áreas verticais de soltar ( *inferior*, *Center*, *superior*) para restringir nosso botão. A linha verde tracejada na parte superior da exibição significa que o controlador de exibição oferece uma restrição na parte superior da exibição e a caixa verde sólida significa que o controlador de exibição oferece uma restrição abaixo do guia de layout superior.
 
 > [!IMPORTANT]
 > Guias de layout são tipos especiais de destinos de restrição que nos permitem criar restrições superiores e inferiores que levam em conta a presença de barras do sistema, como barras de status ou barras de ferramentas. Um dos principais usos é ter um aplicativo compatível entre o iOS 6 e o iOS 7, já que a versão mais recente tem a exibição de contêiner sendo estendida abaixo da barra de status. Para obter mais informações sobre o guia de layout superior, consulte a [documentação da Apple](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2).
@@ -185,7 +189,7 @@ Para acessar uma restrição no código, primeiro você precisa expô-lo no desi
 3. Em seguida, atribua um **nome** à restrição na guia **widget** do Gerenciador de **Propriedades**:
 
     [![A guia do widget](designer-auto-layout-images/modify02.png)](designer-auto-layout-images/modify02.png#lightbox)
-4. Salve as alterações.
+4. Salve suas alterações.
 
 Com as alterações acima em vigor, você pode acessar a restrição no código e modificar suas propriedades. Por exemplo, você pode usar o seguinte para definir a altura do modo de exibição anexado como zero:
 
@@ -226,7 +230,7 @@ A chave aqui é chamar o `LayoutIfNeeded` método da exibição pai dentro do bl
 
 ## <a name="summary"></a>Resumo
 
-Este guia introduziu o layout automático (ou "adaptável") do iOS e o conceito de restrições como representações matemáticas de relações entre elementos na superfície de design. Ele descreveu como habilitar o layout automático no designer do iOS, trabalhando com a **barra de ferramentas de restrições**e editando restrições individualmente na superfície de design. Em seguida, explicamos como solucionar problemas de três restrições comuns. Por fim, ele mostrou como modificar restrições no código.
+Este guia introduziu o layout automático (ou "adaptável") do iOS e o conceito de restrições como representações matemáticas de relações entre elementos na superfície de design. Ele descreveu como habilitar o layout automático no designer do iOS, trabalhando com a **barra de ferramentas de restrições** e editando restrições individualmente na superfície de design. Em seguida, explicamos como solucionar problemas de três restrições comuns. Por fim, ele mostrou como modificar restrições no código.
 
 ## <a name="related-links"></a>Links Relacionados
 

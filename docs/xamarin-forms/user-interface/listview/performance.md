@@ -10,16 +10,16 @@ ms.date: 12/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e2b8e057d9687cd0a472451fc73cc578f9358277
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 98f91ec614df08997e7cbf23530086f541500b5d
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139874"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375467"
 ---
 # <a name="listview-performance"></a>Desempenho de ListView
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
 
 Ao escrever aplicativos móveis, o desempenho é importante. Os usuários passaram a esperar uma rolagem suave e tempos de carregamento rápido. A falha ao atender às expectativas dos seus usuários custará as classificações na loja de aplicativos ou, no caso de um aplicativo de linha de negócios, custará o tempo e o dinheiro da sua organização.
 
@@ -31,7 +31,7 @@ ListViews são frequentemente usados para exibir muito mais dados do que se ajus
 
 Para conservar a memória, os [`ListView`](xref:Xamarin.Forms.ListView) equivalentes nativos para cada plataforma têm recursos internos para reutilizar linhas. Somente as células visíveis na tela são carregadas na memória e o **conteúdo** é carregado em células existentes. Esse padrão impede que o aplicativo instancie milhares de objetos, economizando tempo e memória.
 
-Xamarin.Formspermite a [`ListView`](xref:Xamarin.Forms.ListView) reutilização de célula por meio da [`ListViewCachingStrategy`](xref:Xamarin.Forms.ListViewCachingStrategy) enumeração, que tem os seguintes valores:
+Xamarin.Forms permite a [`ListView`](xref:Xamarin.Forms.ListView) reutilização de célula por meio da [`ListViewCachingStrategy`](xref:Xamarin.Forms.ListViewCachingStrategy) enumeração, que tem os seguintes valores:
 
 ```csharp
 public enum ListViewCachingStrategy
@@ -167,20 +167,20 @@ Há muitas técnicas para melhorar o desempenho de um `ListView` . As sugestões
 - Limite o uso do [`Cell.ForceUpdateSize`](xref:Xamarin.Forms.Cell.ForceUpdateSize) método. Se for usado, ele diminuirá o desempenho.
 - No Android, evite configurar a `ListView` visibilidade ou a cor de um separador de linhas após ter sido instanciada, pois resulta em uma grande penalidade de desempenho.
 - Evite alterar o layout de célula com base no [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) . A alteração do layout gera custos grandes de medição e inicialização.
-- Evite hierarquias de layout profundamente aninhadas. Use `AbsoluteLayout` ou `Grid` para ajudar a reduzir o aninhamento.
-- Evite outros específicos que não sejam `LayoutOptions` `Fill` ( `Fill` o mais barato de computar).
+- Evite hierarquias de layout profundamente aninhadas. Use  `AbsoluteLayout` ou  `Grid` para ajudar a reduzir o aninhamento.
+- Evite outros específicos que não sejam `LayoutOptions`  `Fill` ( `Fill` o mais barato de computar).
 - Evite colocar um `ListView` por dentro de um pelos `ScrollView` seguintes motivos:
   - O `ListView` implementa sua própria rolagem.
   - O `ListView` não receberá nenhum gesto, pois eles serão manipulados pelo pai `ScrollView` .
   - O `ListView` pode apresentar um cabeçalho e um rodapé personalizados que rolam com os elementos da lista, potencialmente oferecendo a funcionalidade `ScrollView` usada para o. Para obter mais informações, consulte [cabeçalhos e rodapés](~/xamarin-forms/user-interface/listview/customizing-list-appearance.md#headers-and-footers).
 - Considere um renderizador personalizado se você precisar de um design específico e complexo apresentado em suas células.
 
-`AbsoluteLayout`tem o potencial de executar layouts sem uma única chamada de medida, tornando-o altamente funcional. Se `AbsoluteLayout` não puder ser usado, considere [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) . Se estiver usando `RelativeLayout` , passar restrições diretamente será consideravelmente mais rápido do que usar a API de expressão. Esse método é mais rápido porque a API de expressão usa JIT e no iOS a árvore precisa ser interpretada, o que é mais lento. A API de expressão é adequada para layouts de página, onde ele só é necessário no layout inicial e na rotação, mas no `ListView` , onde ele é executado constantemente durante a rolagem, ele afeta o desempenho.
+`AbsoluteLayout` tem o potencial de executar layouts sem uma única chamada de medida, tornando-o altamente funcional. Se `AbsoluteLayout` não puder ser usado, considere [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) . Se estiver usando `RelativeLayout` , passar restrições diretamente será consideravelmente mais rápido do que usar a API de expressão. Esse método é mais rápido porque a API de expressão usa JIT e no iOS a árvore precisa ser interpretada, o que é mais lento. A API de expressão é adequada para layouts de página, onde ele só é necessário no layout inicial e na rotação, mas no `ListView` , onde ele é executado constantemente durante a rolagem, ele afeta o desempenho.
 
 Criar um renderizador personalizado para uma [`ListView`](xref:Xamarin.Forms.ListView) ou suas células é uma abordagem para reduzir o efeito de cálculos de layout no desempenho de rolagem. Para obter mais informações, consulte [Personalizando um ListView](~/xamarin-forms/app-fundamentals/custom-renderer/listview.md) e [Personalizando um ViewCell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md).
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Exibição do renderizador personalizado (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
-- [ViewCell de processador personalizado (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
+- [Exibição do renderizador personalizado (exemplo)](/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
+- [ViewCell de processador personalizado (exemplo)](/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
 - [ListViewCachingStrategy](xref:Xamarin.Forms.ListViewCachingStrategy)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: davidortinau
 ms.author: daortin
-ms.openlocfilehash: bdbff7760e7680173c57e5fc83cecb80967c0a51
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 2eef38791f420fd49b87b46fd131f1e6ce501892
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996091"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436585"
 ---
 # <a name="creating-a-xamarinios-application-using-the-reflection-api"></a>Criando um aplicativo Xamarin. iOS usando a API de reflexão
 
@@ -27,8 +27,8 @@ MT. A D é distribuída com o Xamarin. iOS. Para usá-lo, clique com o botão di
 Usar a API de reflexão é tão simples quanto:
 
 1. Criando uma classe decorada com MT. Atributos de D.
-1. Criar uma `BindingContext` instância, passando uma instância da classe acima.
-1. Criando um `DialogViewController` , passando-o para o `BindingContext’s` `RootElement` .
+1. Criar uma  `BindingContext` instância, passando uma instância da classe acima.
+1. Criando um  `DialogViewController` , passando-o para o  `BindingContext’s` `RootElement` .
 
 Vejamos um exemplo para ilustrar como usar a API de reflexão. Neste exemplo, criaremos uma tela simples de entrada de dados, conforme mostrado abaixo:
 
@@ -143,7 +143,7 @@ Este artigo apresentou uma explicação da API de reflexão. Mostramos como adic
 
 ## <a name="related-links"></a>Links relacionados
 
-- [MTDReflectionWalkthrough (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/mtdreflectionwalkthrough)
+- [MTDReflectionWalkthrough (exemplo)](/samples/xamarin/ios-samples/mtdreflectionwalkthrough)
 - [Introdução à caixa de diálogo MonoTouch](~/ios/user-interface/monotouch.dialog/index.md)
 - [Instruções da API de elementos](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
 - [Instruções do elemento JSON](~/ios/user-interface/monotouch.dialog/monotouch.dialog-json-markup.md)

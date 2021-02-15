@@ -10,16 +10,16 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 418d29010a8cce81d2bb8c365608c54b61739622
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: db2baea124f013d3b35451e62bd67c32dcebc470
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84135636"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373595"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>Os gradientes circulares do SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 A [`SKShader`](xref:SkiaSharp.SKShader) classe define métodos estáticos para criar quatro tipos diferentes de gradientes. O artigo [**gradiente linear SkiaSharp**](linear-gradient.md) discute o [`CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient*) método. Este artigo aborda os outros três tipos de gradientes, todos baseados em círculos.
 
@@ -57,7 +57,7 @@ Os dois primeiros argumentos especificam o centro de um círculo e um raio. O gr
 
 Se você usar `CreateRadialGradient` o para preencher um círculo, poderá definir o centro do gradiente para o centro do círculo e o raio do gradiente para o raio do círculo. Nesse caso, o `SKShaderTileMode` argumento não tem nenhum efeito sobre a renderização do gradiente. Mas se a área preenchida pelo gradiente for maior do que o círculo definido pelo gradiente, o `SKShaderTileMode` argumento terá um efeito profundo sobre o que acontece fora do círculo.
 
-O efeito de `SKShaderMode` é demonstrado na página **gradiente radial** no exemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . O arquivo XAML para esta página cria uma instância de um `Picker` que permite que você selecione um dos três membros da `SKShaderTileMode` enumeração:
+O efeito de `SKShaderMode` é demonstrado na página **gradiente radial** no exemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . O arquivo XAML para esta página cria uma instância de um `Picker` que permite que você selecione um dos três membros da `SKShaderTileMode` enumeração:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -215,7 +215,7 @@ Se você preencher toda a tela com esse gradiente, verá que ela é vermelha no 
 
 ## <a name="radial-gradients-for-masking"></a>Gradientes radiais para mascaramento
 
-Como gradientes lineares, gradientes radiais podem incorporar cores transparentes ou parcialmente transparentes. Esse recurso é útil para um processo chamado _mascaramento_, que oculta parte de uma imagem para acentuar outra parte da imagem.
+Como gradientes lineares, gradientes radiais podem incorporar cores transparentes ou parcialmente transparentes. Esse recurso é útil para um processo chamado _mascaramento_ , que oculta parte de uma imagem para acentuar outra parte da imagem.
 
 A página **máscara de gradiente radial** mostra um exemplo. O programa carrega um dos bitmaps de recurso. Os `CENTER` `RADIUS` campos e foram determinados de um exame do bitmap e fazem referência a uma área que deve ser realçada. O `PaintSurface` manipulador começa calculando um retângulo para exibir o bitmap e, em seguida, o exibe nesse retângulo:
 
@@ -285,7 +285,7 @@ Depois de desenhar o bitmap, alguns códigos simples são convertidos `CENTER` e
 
 [![Máscara de gradiente radial](circular-gradients-images/RadialGradientMask.png "Máscara de gradiente radial")](circular-gradients-images/RadialGradientMask-Large.png#lightbox)
 
-Essa abordagem não é a melhor maneira de mascarar um bitmap. O problema é que a máscara tem, na maioria, uma cor de branco, que foi escolhida para corresponder ao plano de fundo da tela. Se o plano de fundo for outra cor &mdash; ou talvez um gradiente &mdash; , ele não corresponderá. Uma abordagem melhor para mascaramento é mostrada no artigo [SkiaSharp carregador-Duff Blend Modes](../blend-modes/porter-duff.md).
+Essa abordagem não é a melhor maneira de mascarar um bitmap. O problema é que a máscara tem, na maioria, uma cor de branco, que foi escolhida para corresponder ao plano de fundo da tela. Se o plano de fundo for outra cor &mdash; ou talvez um gradiente &mdash; , ele não corresponderá. Uma abordagem melhor para mascaramento é mostrada no artigo [SkiaSharp Porter-Duff os modos de mesclagem](../blend-modes/porter-duff.md).
 
 ## <a name="radial-gradients-for-specular-highlights"></a>Gradientes radiais para realces especulares
 
@@ -334,7 +334,7 @@ public class RadialSpecularHighlightPage : ContentPage
 }
 ```
 
-A `CreateRadialGradient` chamada cria um gradiente que começa nesse `offCenter` ponto com branco e termina com vermelho a uma distância da metade do raio. Veja como ela se parece:
+A `CreateRadialGradient` chamada cria um gradiente que começa nesse `offCenter` ponto com branco e termina com vermelho a uma distância da metade do raio. Esta é a aparência dele:
 
 [![Realce de especula radial](circular-gradients-images/RadialSpecularHighlight.png "Realce de especula radial")](circular-gradients-images/RadialSpecularHighlight-Large.png#lightbox)
 
@@ -622,5 +622,5 @@ Os dois círculos têm centros de `offCenter` e `center` . O círculo centraliza
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

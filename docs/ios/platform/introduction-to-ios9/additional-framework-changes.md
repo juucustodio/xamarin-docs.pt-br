@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 30501600e0b86498ae967340e2201a135b22d7ad
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8a4b1b5ed3089cb7044850cf19629fa063e43703
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939108"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436345"
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Alterações adicionais em estruturas do iOS 9
 
@@ -74,8 +74,8 @@ A Apple incluiu as seguintes alterações na estrutura base do iOS 9:
 
 As seguintes alterações foram feitas na classe [NSBundle](xref:Foundation.NSBundle) para IOS 9:
 
-- `GetPreservationPriorityForTag (NSString tag)`-Obtém a prioridade de preservação atual para recursos com a marca fornecida. Os valores válidos estão no intervalo `0.0` para `1.0` , os recursos com a menor prioridade serão limpos primeiro.
-- `SetPreservationPriorityForTag (double priority, NSSet tags)`-Define a prioridade de preservação atual para recursos com as marcações fornecidas. Os valores válidos estão no intervalo `0.0` para `1.0` , os recursos com a menor prioridade serão limpos primeiro.
+- `GetPreservationPriorityForTag (NSString tag)` -Obtém a prioridade de preservação atual para recursos com a marca fornecida. Os valores válidos estão no intervalo `0.0` para `1.0` , os recursos com a menor prioridade serão limpos primeiro.
+- `SetPreservationPriorityForTag (double priority, NSSet tags)` -Define a prioridade de preservação atual para recursos com as marcações fornecidas. Os valores válidos estão no intervalo `0.0` para `1.0` , os recursos com a menor prioridade serão limpos primeiro.
 
 Para obter mais informações, consulte a [referência do NSBundle](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Reference/Foundation/Classes/NSBundle_Class/index.html#//apple_ref/occ/cl/NSBundle)da Apple.
 
@@ -260,7 +260,7 @@ Use os `UITextInputAssistantItem` grupos de botões nova classe para barra de la
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Amostras do iOS 9](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [Amostras do iOS 9](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS9)
 - [Introdução ao iOS 9](~/ios/platform/introduction-to-ios9/index.md)
 - [iOS 9 para desenvolvedores](https://developer.apple.com/ios/pre-release/)
 - [O que há de novo no iOS 9,0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

@@ -10,18 +10,18 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c1939c30cbefdbf8d6546761a8c6ac7199bfff62
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 3480c2fe2ef94a2a1beee9a924a59cd90d3a42b3
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139679"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370800"
 ---
 # <a name="the-separable-blend-modes"></a>Os modos de mesclagem separáveis
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Como você viu no artigo [**SkiaSharp carregador-Duff Blend Modes**](porter-duff.md), os modos de combinação carregador-Duff geralmente executam operações de recorte. Os modos de mesclagem separáveis são diferentes. Os modos separáveis alteram os componentes individuais de cor de vermelho, verde e azul de uma imagem. Os modos de mesclagem separáveis podem misturar cores para demonstrar que a combinação de vermelho, verde e azul é realmente branca:
+Como vimos no artigo [**SkiaSharp Porter-Duff modos de mesclagem**](porter-duff.md), os modos Porter-Duff Blend geralmente executam operações de recorte. Os modos de mesclagem separáveis são diferentes. Os modos separáveis alteram os componentes individuais de cor de vermelho, verde e azul de uma imagem. Os modos de mesclagem separáveis podem misturar cores para demonstrar que a combinação de vermelho, verde e azul é realmente branca:
 
 ![Cores primárias](separable-images/SeparableSample.png "Cores primárias")
 
@@ -155,7 +155,7 @@ A tabela a seguir mostra todos os modos de combinação de separáveis com expli
 | `Plus`       | Preto     | Clareia adicionando cores: SC + DC |
 | `Modulate`   | Branco     | Escurece multiplicando as cores: SC · Origem | 
 | `Screen`     | Preto     | Complementa o produto de Complementos: SC + DC &ndash; SC · Origem |
-| `Overlay`    | Cinza      | Inverso de`HardLight` |
+| `Overlay`    | Cinza      | Inverso de `HardLight` |
 | `Darken`     | Branco     | Mínimo de cores: mín. (SC, DC) |
 | `Lighten`    | Preto     | Máximo de cores: máx. (SC, DC) |
 | `ColorDodge` | Preto     | Claree o destino com base na origem |
@@ -166,7 +166,7 @@ A tabela a seguir mostra todos os modos de combinação de separáveis com expli
 | `Exclusion`  | Preto     | Semelhante a `Difference` mas menor contraste |
 | `Multiply`   | Branco     | Escurece multiplicando as cores: SC · Origem |
 
-Algoritmos mais detalhados podem ser encontrados na especificação W3C de [**composição e mesclagem de nível 1**](https://www.w3.org/TR/compositing-1/) e na referência de skia [**SkBlendMode**](https://skia.org/user/api/SkBlendMode_Reference), embora a notação nessas duas fontes não seja a mesma. Tenha em mente que `Plus` normalmente é considerado um modo de mesclagem carregador-Duff e `Modulate` não faz parte da especificação W3C.
+Algoritmos mais detalhados podem ser encontrados na especificação W3C de [**composição e mesclagem de nível 1**](https://www.w3.org/TR/compositing-1/) e na referência de skia [**SkBlendMode**](https://skia.org/user/api/SkBlendMode_Reference), embora a notação nessas duas fontes não seja a mesma. Tenha em mente que `Plus` normalmente é considerado um modo de mesclagem Porter-Duff e `Modulate` não faz parte da especificação do W3C.
 
 Se a origem for transparente, para todos os modos de mistura separáveis, exceto `Modulate` , o modo de mesclagem não terá nenhum efeito. Como vimos anteriormente, o modo de `Modulate` mesclagem incorpora o canal alfa na multiplicação. Caso contrário, `Modulate` terá o mesmo efeito que `Multiply` . 
 
@@ -430,5 +430,5 @@ O `Darken` modo também funciona para esse mesmo efeito.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

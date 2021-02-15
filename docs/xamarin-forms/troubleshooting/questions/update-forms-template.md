@@ -10,14 +10,14 @@ ms.date: 04/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: bdead80671a1ae6539de6614441df7e86863a5a6
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 9dc5b8e63a35c3a0b797d0794af7a31aea4969c9
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137469"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91555587"
 ---
-# <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-package"></a>Posso atualizar o Xamarin.Forms modelo padrão para um pacote NuGet mais recente?
+# <a name="can-i-update-the-no-locxamarinforms-default-template-to-a-newer-nuget-package"></a>Posso atualizar o Xamarin.Forms modelo padrão para um pacote NuGet mais recente?
 
 Este guia usa o Xamarin.Forms modelo de biblioteca .net Standard como um exemplo, mas o mesmo método geral também funcionará para o Xamarin.Forms modelo de projeto compartilhado. Este guia é escrito com o exemplo de atualização de Xamarin.Forms 1.5.1.6471 para 2.1.0.6529, mas as mesmas etapas são possíveis para definir outras versões como o padrão.
 
@@ -34,7 +34,7 @@ Este guia usa o Xamarin.Forms modelo de biblioteca .net Standard como um exemplo
 
     Exemplo: `<package id="Xamarin.Forms" version="1.5.1.6471" />` -> `<package id="Xamarin.Forms" version="2.1.0.6529" />`
 
-4. Altere o elemento "Name" do arquivo de [modelo de vários projetos](https://msdn.microsoft.com/library/ms185308.aspx) principal ( `Xamarin.Forms.PCL.vstemplate` ) para torná-lo exclusivo. Por exemplo:
+4. Altere o elemento "Name" do arquivo de [modelo de vários projetos](/visualstudio/ide/how-to-create-multi-project-templates) principal ( `Xamarin.Forms.PCL.vstemplate` ) para torná-lo exclusivo. Por exemplo:
 
     > `<Name>Blank App (Xamarin.Forms Portable) - 2.1.0.6529</Name>`
 

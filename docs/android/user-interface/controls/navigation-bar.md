@@ -6,33 +6,33 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/01/2017
-ms.openlocfilehash: 99d0303dc1560796cb372d0b8af2fafd16c6097f
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: 67c5655c3bbea8cd0a8c21f27719221f599bf481
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78292381"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457426"
 ---
 # <a name="xamarinandroid-navigation-bar"></a>Barra de navegação do Xamarin. Android
 
 O Android 4 introduziu um novo recurso de interface do usuário do sistema chamado *barra de navegação*, que fornece controles de navegação em dispositivos que não incluem botões de hardware para **página inicial**, **voltar**e **menu**.
 A captura de tela a seguir mostra a barra de navegação de um dispositivo principal Nexus:
 
- [![exemplo de uma barra de navegação do Android](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png#lightbox)
+ [![Exemplo de uma barra de navegação do Android](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png#lightbox)
 
-Vários novos sinalizadores estão disponíveis que controlam a visibilidade da barra de navegação e de seus controles, bem como a visibilidade da barra do sistema que foi introduzida no Android 3. Os sinalizadores são definidos na classe `Android.View.View` e estão listados abaixo:
+Vários novos sinalizadores estão disponíveis que controlam a visibilidade da barra de navegação e de seus controles, bem como a visibilidade da barra do sistema que foi introduzida no Android 3. Os sinalizadores são definidos na `Android.View.View` classe e são listados abaixo:
 
-- `SystemUiFlagVisible` &ndash; torna a barra de navegação visível.
-- `SystemUiFlagLowProfile` &ndash; esmaece os controles na barra de navegação.
-- `SystemUiFlagHideNavigation` &ndash; oculta a barra de navegação.
+- `SystemUiFlagVisible`&ndash;Torna a barra de navegação visível.
+- `SystemUiFlagLowProfile`&ndash;Escurece os controles na barra de navegação.
+- `SystemUiFlagHideNavigation`&ndash;Oculta a barra de navegação.
 
-Esses sinalizadores podem ser aplicados a qualquer exibição na hierarquia de exibição, definindo a propriedade `SystemUiVisibility`. Se várias exibições tiverem essa propriedade definida, o sistema as combinará com uma operação ou e as aplicará, desde que a janela na qual os sinalizadores estejam definidos Mantenha o foco. Quando você remove uma exibição, todos os sinalizadores definidos também serão removidos.
+Esses sinalizadores podem ser aplicados a qualquer exibição na hierarquia de exibição, definindo a `SystemUiVisibility` propriedade. Se várias exibições tiverem essa propriedade definida, o sistema as combinará com uma operação ou e as aplicará, desde que a janela na qual os sinalizadores estejam definidos Mantenha o foco. Quando você remove uma exibição, todos os sinalizadores definidos também serão removidos.
 
-O exemplo a seguir mostra um aplicativo simples em que clicar em qualquer um dos botões altera o `SystemUiVisibility`:
+O exemplo a seguir mostra um aplicativo simples em que clicar em qualquer um dos botões altera `SystemUiVisibility` :
 
- [Capturas de tela de ![que demonstram SystemUiVisibility visíveis, baixo perfil e ocultos](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png#lightbox)
+ [![Capturas de tela que demonstram SystemUiVisibility visíveis, de baixo perfil e ocultos](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png#lightbox)
 
-O código para alterar o `SystemUiVisibility` define a propriedade em um `TextView` do manipulador de eventos de clique de cada botão, conforme mostrado abaixo:
+O código para alterar o `SystemUiVisibility` define a propriedade em um `TextView` manipulador de eventos de clique de cada botão, como mostrado abaixo:
 
 ```csharp
 var tv = FindViewById<TextView> (Resource.Id.systemUiFlagTextView);
@@ -55,7 +55,7 @@ visibleButton.Click += delegate {
 }
 ```
 
-Além disso, uma alteração de `SystemUiVisibility` gera um evento de `SystemUiVisibilityChange`. Assim como a configuração da propriedade `SystemUiVisibility`, um manipulador para o evento `SystemUiVisibilityChange` pode ser registrado para qualquer exibição na hierarquia. Por exemplo, o código a seguir usa a instância de `TextView` para se registrar no evento:
+Além disso, uma `SystemUiVisibility` alteração gera um `SystemUiVisibilityChange` evento. Assim como a configuração da `SystemUiVisibility` propriedade, um manipulador para o `SystemUiVisibilityChange` evento pode ser registrado para qualquer exibição na hierarquia. Por exemplo, o código a seguir usa a `TextView` instância para se registrar no evento:
 
 ```csharp
 tv.SystemUiVisibilityChange +=
@@ -64,6 +64,6 @@ tv.SystemUiVisibilityChange +=
   };
 ```
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [SystemUIVisibilityDemo (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/systemuivisibilitydemo)
+- [SystemUIVisibilityDemo (exemplo)](/samples/xamarin/monodroid-samples/systemuivisibilitydemo)

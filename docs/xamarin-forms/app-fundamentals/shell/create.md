@@ -10,16 +10,16 @@ ms.date: 05/24/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 62c323dd73f656d5b4f4e06c672fd952845efb22
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: f4b15911f48b4260da8839f376800e95c63bf0e4
+ms.sourcegitcommit: 0a6b19004932c1ac82e16c95d5d3d5eb35a5b17f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84137794"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "93373621"
 ---
 # <a name="create-a-xamarinforms-shell-application"></a>Criar um Xamarin.Forms aplicativo de Shell
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 O processo para criar um Xamarin.Forms aplicativo de Shell é o seguinte:
 
@@ -85,7 +85,7 @@ Neste exemplo, a classe `AppShell` é um arquivo XAML que deriva da classe `Shel
 
 A etapa final na criação de um Xamarin.Forms aplicativo de Shell é descrever a hierarquia visual do aplicativo, na classe de subclasse `Shell` . Uma classe `Shell` na subclasse consiste em três principais objetos hierárquicos:
 
-- `FlyoutItem` ou `TabBar` Um `FlyoutItem` representa um ou mais itens no submenu e deve ser usado quando o padrão de navegação para o aplicativo inclui um submenu. Um `TabBar` representa a barra de guias inferior e deve ser usado quando o padrão de navegação para o aplicativo começa com as guias inferiores. Cada objeto `FlyoutItem` ou objeto `TabBar` é um filho do objeto `Shell`.
+- `FlyoutItem` ou `TabBar`. Um `FlyoutItem` representa um ou mais itens no submenu e deve ser usado quando o padrão de navegação para o aplicativo inclui um submenu. Um `TabBar` representa a barra de guias inferior e deve ser usado quando o padrão de navegação para o aplicativo começa com as guias inferiores. Cada objeto `FlyoutItem` ou objeto `TabBar` é um filho do objeto `Shell`.
 - `Tab`, que representa o conteúdo agrupado, navegável pelas guias inferiores. Cada objeto `Tab` é um filho de um objeto `FlyoutItem` ou de um objeto `TabBar`.
 - `ShellContent`, que representa os objetos `ContentPage` em seu aplicativo. Cada objeto `ShellContent` é um filho de um objeto `Tab`. Quando mais de um objeto `ShellContent` estiver presente em um `Tab`, os objetos poderão ser navegados por meio das guias superiores.
 
@@ -142,4 +142,4 @@ Pressionar o ícone de hambúrguer ou passar o dedo da esquerda para a direita e
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xaminals (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Xaminals (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

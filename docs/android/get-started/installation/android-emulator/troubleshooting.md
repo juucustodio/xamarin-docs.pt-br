@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/27/2018
-ms.openlocfilehash: ff68666d9f0385b159b9ac9908ff997f53715308
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: f82c80e431b125ce0a94ec653f41bfc7931f58bb
+ms.sourcegitcommit: d1980b2251999224e71c1289e4b4097595b7e261
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571929"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92928549"
 ---
 # <a name="android-emulator-troubleshooting"></a>Solução de problemas do Android Emulator
 
@@ -27,11 +27,11 @@ Algumas mensagens de erro podem ser exibidas pelo emulador quando você implanta
 
 ### <a name="deployment-errors"></a>Erros de implantação
 
-Se vir um erro sobre uma falha ao instalar o APK no emulador ou sobre uma falha ao executar o Android Debug Bridge (**adb**), verifique se o SDK do Android pode se conectar ao emulador. Para verificar a conectividade do emulador, use as seguintes etapas:
+Se vir um erro sobre uma falha ao instalar o APK no emulador ou sobre uma falha ao executar o Android Debug Bridge ( **adb** ), verifique se o SDK do Android pode se conectar ao emulador. Para verificar a conectividade do emulador, use as seguintes etapas:
 
-1. Inicie o emulador no **Android Device Manager** (selecione seu dispositivo virtual e clique em **Iniciar**).
+1. Inicie o emulador no **Android Device Manager** (selecione seu dispositivo virtual e clique em **Iniciar** ).
 
-2. Abra um prompt de comando e vá para a pasta em que o **adb** está instalado. Se o SDK do Android estiver instalado na localização padrão, o **adb** estará localizado em **C:\\Arquivos de Programas (x86)\\Android\\android-sdk\\platform-tools\\adb.exe**. Se não estiver, modifique esse caminho para a localização do SDK do Android em seu computador.
+2. Abra um prompt de comando e vá para a pasta em que o **adb** está instalado. Se o SDK do Android estiver instalado na localização padrão, o **adb** estará localizado em **C:\\Arquivos de Programas (x86)\\Android\\android-sdk\\platform-tools\\adb.exe** . Se não estiver, modifique esse caminho para a localização do SDK do Android em seu computador.
 
 3. Digite o seguinte comando:
 
@@ -46,11 +46,11 @@ Se vir um erro sobre uma falha ao instalar o APK no emulador ou sobre uma falha 
    emulator-5554   device
    ```
 
-5. Se o emulador não aparecer nessa lista, inicie o **Gerenciador de SDK do Android**, aplique todas as atualizações e tente iniciar o emulador novamente.
+5. Se o emulador não aparecer nessa lista, inicie o **Gerenciador de SDK do Android** , aplique todas as atualizações e tente iniciar o emulador novamente.
 
 ### <a name="mmio-access-error"></a>Erro ao acessar o MMIO
 
-Se for exibida a mensagem **Ocorreu um erro de acesso de MMIO**, reinicie o emulador.
+Se for exibida a mensagem **Ocorreu um erro de acesso de MMIO** , reinicie o emulador.
 
 <a name="gps-win"></a>
 
@@ -88,7 +88,7 @@ Se a aceleração de hardware não estiver habilitada, iniciar um dispositivo vi
 
 Se essa mensagem de erro for exibida, confira [Problemas de aceleração de hardware](#accel-issues-win) mais adiante para ver as etapas você pode seguir para verificar e habilitar a aceleração de hardware.
 
-### <a name="acceleration-is-enabled-but-the-emulator-runs-too-slowly"></a>A aceleração de está habilitada, mas o emulador é executado muito lentamente 
+### <a name="acceleration-is-enabled-but-the-emulator-runs-too-slowly"></a>A aceleração de está habilitada, mas o emulador é executado muito lentamente
 
 Uma causa comum para esse problema é não estar usando uma imagem com base em x86 em seu dispositivo virtual (AVD). Ao criar um dispositivo virtual (confira [Gerenciando dispositivos virtuais com o Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), certifique-se de selecionar uma imagem de sistema baseada em x86:
 
@@ -104,11 +104,11 @@ Se estiver usando o Hyper-V ou o HAXM para aceleração de hardware, você poder
 "C:\Program Files (x86)\Android\android-sdk\emulator\emulator-check.exe" accel
 ```
 
-Esse comando presume que o SDK do Android está instalado na localização padrão do **C:\\Arquivos de Programa (x86)\\Android\\android-sdk**. Se não estiver, modifique o caminho acima para a localização do SDK do Android no computador.
+Esse comando presume que o SDK do Android está instalado na localização padrão do **C:\\Arquivos de Programa (x86)\\Android\\android-sdk** . Se não estiver, modifique o caminho acima para a localização do SDK do Android no computador.
 
 ### <a name="hardware-acceleration-not-available"></a>Aceleração de hardware não disponível
 
-Se o Hyper-V estiver disponível, uma mensagem semelhante ao exemplo a seguir será retornada do comando **emulator-check.exe accel**:
+Se o Hyper-V estiver disponível, uma mensagem semelhante ao exemplo a seguir será retornada do comando **emulator-check.exe accel** :
 
 ```cmd
 HAXM is not installed, but Windows Hypervisor Platform is available.
@@ -130,7 +130,7 @@ Se a aceleração de hardware não estiver disponível, confira [Acelerar com o 
 
 ### <a name="incorrect-bios-settings"></a>Configurações incorretas de BIOS
 
-Se o BIOS não tiver sido configurado corretamente para dar suporte à aceleração de hardware, uma mensagem semelhante ao exemplo a seguir será exibida quando você executar o comando **emulator-check.exe accel**:
+Se o BIOS não tiver sido configurado corretamente para dar suporte à aceleração de hardware, uma mensagem semelhante ao exemplo a seguir será exibida quando você executar o comando **emulator-check.exe accel** :
 
 ```cmd
 VT feature disabled in BIOS/UEFI
@@ -148,9 +148,9 @@ No entanto, ainda poderá haver problemas devido a questões específicas do Hyp
 
 Em alguns casos, habilitar o **Hyper-V** e a **Plataforma de Hipervisor do Windows** na caixa de diálogo **Ativar ou desativar recursos do Windows** pode não habilitar adequadamente o Hyper-V. Para verificar se o Hyper-V está habilitado, use as seguintes etapas:
 
-1. Na caixa de pesquisa do Windows, digite **powershell**.
+1. Na caixa de pesquisa do Windows, digite **powershell** .
 
-2. Clique com o botão direito do mouse em **Windows PowerShell** nos resultados da pesquisa e selecione **Executar como administrador**.
+2. Clique com o botão direito do mouse em **Windows PowerShell** nos resultados da pesquisa e selecione **Executar como administrador** .
 
 3. No console do PowerShell, insira o seguinte comando:
 
@@ -158,7 +158,7 @@ Em alguns casos, habilitar o **Hyper-V** e a **Plataforma de Hipervisor do Windo
     Get-WindowsOptionalFeature -FeatureName Microsoft-Hyper-V-All -Online
     ```
 
-    Se o Hyper-V não estiver habilitado, uma mensagem semelhante ao exemplo a seguir será exibida para indicar que o estado do Hyper-V é **Desabilitado**:
+    Se o Hyper-V não estiver habilitado, uma mensagem semelhante ao exemplo a seguir será exibida para indicar que o estado do Hyper-V é **Desabilitado** :
 
     ```
     FeatureName      : Microsoft-Hyper-V-All
@@ -166,7 +166,7 @@ Em alguns casos, habilitar o **Hyper-V** e a **Plataforma de Hipervisor do Windo
     Description      : Provides services and management tools for creating and running virtual machines and their resources.
     RestartRequired  : Possible
     State            : Disabled
-    CustomProperties : 
+    CustomProperties :
     ```
 
 4. No console do PowerShell, insira o seguinte comando:
@@ -175,7 +175,7 @@ Em alguns casos, habilitar o **Hyper-V** e a **Plataforma de Hipervisor do Windo
     Get-WindowsOptionalFeature -FeatureName HypervisorPlatform -Online
     ```
 
-    Se o Hipervisor não estiver habilitado, uma mensagem semelhante ao exemplo a seguir será exibida para indicar que o estado de HypervisorPlatform é **Desabilitado**:
+    Se o Hipervisor não estiver habilitado, uma mensagem semelhante ao exemplo a seguir será exibida para indicar que o estado de HypervisorPlatform é **Desabilitado** :
 
     ```
     FeatureName      : HypervisorPlatform
@@ -183,7 +183,7 @@ Em alguns casos, habilitar o **Hyper-V** e a **Plataforma de Hipervisor do Windo
     Description      : Enables virtualization software to run on the Windows hypervisor
     RestartRequired  : Possible
     State            : Disabled
-    CustomProperties : 
+    CustomProperties :
     ```
 
 Se o Hyper-V e/ou a HypervisorPlatform não estiverem habilitados, use os seguintes comandos do PowerShell para habilitá-los:
@@ -193,9 +193,9 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 Enable-WindowsOptionalFeature -Online -FeatureName HypervisorPlatform -All
 ```
 
-Após a conclusão desses comandos, reinicialize. 
+Após a conclusão desses comandos, reinicialize.
 
-Para obter mais informações sobre como habilitar o Hyper-V (incluindo técnicas para habilitar o Hyper-V usando a ferramenta Gerenciamento e Manutenção de Imagens de Implantação ), confira [Instalar o Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
+Para obter mais informações sobre como habilitar o Hyper-V (incluindo técnicas para habilitar o Hyper-V usando a ferramenta Gerenciamento e Manutenção de Imagens de Implantação ), confira [Instalar o Hyper-V](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 
 ### <a name="haxm-issues"></a>Problemas do HAXM
 
@@ -254,7 +254,7 @@ Você pode desabilitar o Hyper-V no Painel de Controle seguindo estas etapas:
 
 1. Insira **recursos do windows** na caixa de pesquisa do Windows e selecione **Ativar ou desativar recursos do Windows** nos resultados da pesquisa.
 
-2. Desmarque a opção **Hyper-V**:
+2. Desmarque a opção **Hyper-V** :
 
     ![Desabilitando o Hyper-V na caixa de diálogo Recursos do Windows](troubleshooting-images/win/03-uncheck-hyper-v.png)
 
@@ -264,7 +264,7 @@ Como alternativa, você pode usar o seguinte comando do PowerShell para desabili
 
 `Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Hypervisor`
 
-O Intel HAXM e o Microsoft Hyper-V não podem estar ativos ao mesmo tempo. Infelizmente, não há nenhuma maneira de alternar entre o Hyper-V e o HAXM sem reiniciar o computador. 
+O Intel HAXM e o Microsoft Hyper-V não podem estar ativos ao mesmo tempo. Infelizmente, não há nenhuma maneira de alternar entre o Hyper-V e o HAXM sem reiniciar o computador.
 
 Em alguns casos, as etapas acima não funcionarão para desabilitar o Hyper-V caso o Device Guard e o Credential Guard estiverem habilitados. Se não for possível desabilitar o Hyper-V (ou ele parecer estar desabilitado, mas ainda ocorrer falha na instalação do HAXM), siga as etapas da próxima seção para desabilitar o Device Guard e o Credential Guard.
 
@@ -276,23 +276,23 @@ O Device Guard e o Credential Guard podem impedir que o Hyper-V seja desabilitad
 
 1. Insira **Informações do sistema** na caixa de pesquisa do Windows e selecione **Informações do Sistema** nos resultados da pesquisa.
 
-2. No **Resumo do Sistema**, verifique se **Segurança com base em Virtualização de Device Guard** está presente e está no estado **Em execução**:
+2. No **Resumo do Sistema** , verifique se **Segurança com base em Virtualização de Device Guard** está presente e está no estado **Em execução** :
 
    [![A proteção de dispositivo está presente e em execução](troubleshooting-images/win/04-device-guard-sml.png)](troubleshooting-images/win/04-device-guard.png#lightbox)
 
 Se o Device Guard estiver habilitado, use as seguintes etapas para desabilitá-lo:
 
-1. Verifique se o **Hyper-V** está desabilitado (em **Ativar ou desativar recursos do Windows**) conforme descrito na seção anterior.
+1. Verifique se o **Hyper-V** está desabilitado (em **Ativar ou desativar recursos do Windows** ) conforme descrito na seção anterior.
 
-2. Na Caixa de Pesquisa do Windows, digite **gpedit.msc** e selecione o resultado da pesquisa **Editar política de grupo**. Essas etapas iniciam o **Editor de Política de Grupo Local**.
+2. Na Caixa de Pesquisa do Windows, digite **gpedit.msc** e selecione o resultado da pesquisa **Editar política de grupo** . Essas etapas iniciam o **Editor de Política de Grupo Local** .
 
-3. No **Editor de Política de Grupo Local**, navegue até **Configuração do Computador > Modelos Administrativos > Sistema > Device Guard**:
+3. No **Editor de Política de Grupo Local** , navegue até **Configuração do Computador > Modelos Administrativos > Sistema > Device Guard** :
 
    [![Proteção de dispositivo no Editor de Política de Grupo Local](troubleshooting-images/win/05-group-policy-editor-sml.png)](troubleshooting-images/win/05-group-policy-editor.png#lightbox)
 
-4. Altere a opção **Ativar Segurança Baseada em Virtualização** para **Desabilitada** (conforme mostrado acima) e saia do **Editor de Política de Grupo Local**.
+4. Altere a opção **Ativar Segurança Baseada em Virtualização** para **Desabilitada** (conforme mostrado acima) e saia do **Editor de Política de Grupo Local** .
 
-5. Na caixa de pesquisa do Windows, digite **cmd**. Quando o **Prompt de Comando** aparecer nos resultados da pesquisa, clique com o botão direito do mouse em **Prompt de Comando** e selecione **Executar como Administrador**.
+5. Na caixa de pesquisa do Windows, digite **cmd** . Quando o **Prompt de Comando** aparecer nos resultados da pesquisa, clique com o botão direito do mouse em **Prompt de Comando** e selecione **Executar como Administrador** .
 
 6. Copie e cole os comandos a seguir na janela do prompt de comando (se unidade **Z:** estiver em uso, selecione uma letra da unidade não usada):
 
@@ -327,13 +327,13 @@ Se o emulador ainda não estiver em execução, você poderá iniciá-lo da linh
 
 **C:\\Usuários\\*nome de usuário*\\.android\\avd**
 
-Você pode iniciar o emulador com uma imagem de AVD desta localização passando o nome da pasta do AVD. Por exemplo, esse comando inicia um AVD chamado **Pixel_API_27**:
+Você pode iniciar o emulador com uma imagem de AVD desta localização passando o nome da pasta do AVD. Por exemplo, esse comando inicia um AVD chamado **Pixel_API_27** :
 
 ```cmd
 "C:\Program Files (x86)\Android\android-sdk\emulator\emulator.exe" -partition-size 512 -no-boot-anim -verbose -feature WindowsHypervisorPlatform -avd Pixel_API_27 -prop monodroid.avdname=Pixel_API_27
 ```
 
-Esse exemplo presume que o SDK do Android está instalado na localização padrão do **C:\\Arquivos de Programa (x86)\\Android\\android-sdk**. Se não estiver, modifique o caminho acima para a localização do SDK do Android no computador.
+Esse exemplo presume que o SDK do Android está instalado na localização padrão do **C:\\Arquivos de Programa (x86)\\Android\\android-sdk** . Se não estiver, modifique o caminho acima para a localização do SDK do Android no computador.
 
 Quando você executar esse comando, ele produzirá muitas linhas de saída enquanto o emulador é iniciado. Em particular, linhas como o exemplo a seguir serão impressas se a aceleração de hardware estiver habilitada e funcionando corretamente (neste exemplo, o HAXM é usado para a aceleração de hardware):
 
@@ -346,7 +346,7 @@ emulator: CPU Acceleration status: HAXM version 6.2.1 (4) is installed and usabl
 
 Com frequência, você pode diagnosticar problemas do emulador exibindo os logs do Device Manager. Esses logs são gravados na seguinte localização:
 
-**C:\\Usuários\\*nome de usuário*\\AppData\\Roaming\\XamarinDeviceManager**
+**C: \\ Users \\ *nome_do_usuário* \\ AppData \\ \\ logs do Xamarin local \\ \\ 16,0**
 
 Você pode exibir cada arquivo **DeviceManager.log** usando um editor de texto como o Bloco de notas. A entrada de log de exemplo a seguir indica que o HAXM não foi encontrado no computador:
 
@@ -363,11 +363,11 @@ Algumas mensagens de erro podem ser exibidas pelo emulador quando você implanta
 
 ### <a name="deployment-errors"></a>Erros de implantação
 
-Se vir um erro sobre uma falha ao instalar o APK no emulador ou sobre uma falha ao executar o Android Debug Bridge (**adb**), verifique se o SDK do Android pode se conectar ao emulador. Para verificar a conectividade, use as seguintes etapas:
+Se vir um erro sobre uma falha ao instalar o APK no emulador ou sobre uma falha ao executar o Android Debug Bridge ( **adb** ), verifique se o SDK do Android pode se conectar ao emulador. Para verificar a conectividade, use as seguintes etapas:
 
-1. Inicie o emulador no **Android Device Manager** (selecione seu dispositivo virtual e clique em **Iniciar**).
+1. Inicie o emulador no **Android Device Manager** (selecione seu dispositivo virtual e clique em **Iniciar** ).
 
-2. Abra um prompt de comando e vá para a pasta em que o **adb** está instalado. Se o SDK do Android estiver instalado na localização padrão, o **adb** estará localizado no diretório **~/Library/Developer/Xamarin/android-sdk-macosx/platform-tools/adb**. Se não estiver, modifique o caminho para a localização do SDK do Android no computador.
+2. Abra um prompt de comando e vá para a pasta em que o **adb** está instalado. Se o SDK do Android estiver instalado na localização padrão, o **adb** estará localizado no diretório **~/Library/Developer/Xamarin/android-sdk-macosx/platform-tools/adb** . Se não estiver, modifique o caminho para a localização do SDK do Android no computador.
 
 3. Digite o seguinte comando:
 
@@ -382,7 +382,7 @@ Se vir um erro sobre uma falha ao instalar o APK no emulador ou sobre uma falha 
    emulator-5554   device
    ```
 
-5. Se o emulador não aparecer nessa lista, inicie o **Gerenciador de SDK do Android**, aplique todas as atualizações e tente iniciar o emulador novamente.
+5. Se o emulador não aparecer nessa lista, inicie o **Gerenciador de SDK do Android** , aplique todas as atualizações e tente iniciar o emulador novamente.
 
 ### <a name="mmio-access-error"></a>Erro ao acessar o MMIO
 
@@ -420,7 +420,7 @@ As seções a seguir tratam desses cenários com mais detalhes.
 
 Se a aceleração de hardware não estiver habilitada, poderá aparecer uma caixa de diálogo com uma mensagem semelhante a **o dispositivo será executado sem aceleração** quando você implantar seu aplicativo no Android Emulator. Se você não tiver certeza se a aceleração de hardware está habilitada no computador (ou se quiser saber qual tecnologia está fornecendo a aceleração), confira [Problemas de aceleração de hardware](#accel-issues-mac) mais adiante para ver as etapas que pode seguir para verificar e habilitar a aceleração de hardware.
 
-### <a name="acceleration-is-enabled-but-the-emulator-runs-too-slowly"></a>A aceleração de está habilitada, mas o emulador é executado muito lentamente 
+### <a name="acceleration-is-enabled-but-the-emulator-runs-too-slowly"></a>A aceleração de está habilitada, mas o emulador é executado muito lentamente
 
 Uma causa comum para esse problema é não estar usando uma imagem com base em x86 em seu dispositivo virtual. Ao criar um dispositivo virtual (confira [Gerenciando dispositivos virtuais com o Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)), certifique-se de selecionar uma imagem de sistema baseada em x86:
 
@@ -466,13 +466,13 @@ Se o emulador ainda não estiver em execução, você poderá iniciá-lo da linh
 
 **~/.android/avd**
 
-Você pode iniciar o emulador com uma imagem de AVD desta localização passando o nome da pasta do AVD. Por exemplo, esse comando inicia um AVD chamado **Pixel_2_API_28**:
+Você pode iniciar o emulador com uma imagem de AVD desta localização passando o nome da pasta do AVD. Por exemplo, esse comando inicia um AVD chamado **Pixel_2_API_28** :
 
 ```cmd
 ~/Library/Developer/Xamarin/android-sdk-macosx/emulator/emulator -partition-size 512 -no-boot-anim -verbose -feature WindowsHypervisorPlatform -avd Pixel_2_API_28 -prop monodroid.avdname=Pixel_2_API_28
 ```
 
-Se o SDK do Android estiver instalado na localização padrão, o emulador estará localizado no diretório **~/Library/Developer/Xamarin/android-sdk-macosx/emulator**. Se não estiver, modifique o caminho para a localização do SDK do Android no Mac.
+Se o SDK do Android estiver instalado na localização padrão, o emulador estará localizado no diretório **~/Library/Developer/Xamarin/android-sdk-macosx/emulator** . Se não estiver, modifique o caminho para a localização do SDK do Android no Mac.
 
 Quando você executar esse comando, ele produzirá muitas linhas de saída enquanto o emulador é iniciado. Em particular, linhas como o exemplo a seguir serão impressas se a aceleração de hardware estiver habilitada e funcionando corretamente (neste exemplo, o Framework de Hipervisor é usado para a aceleração de hardware):
 

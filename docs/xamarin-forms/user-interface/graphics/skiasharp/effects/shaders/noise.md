@@ -10,18 +10,18 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 45ec48c0b7b58e26fa47d7343e96bb49591cb339
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1a9a8b8dc31369b5774935a2e8fca5cf17faa24b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127758"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93371242"
 ---
 # <a name="skiasharp-noise-and-composing"></a>Ruído e composição do SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
-Gráficos vetoriais simples tendem a parecer não naturais. As linhas retas, as curvas suaves e as cores sólidas não se assemelham às imperfeições de objetos do mundo real. Ao trabalhar com gráficos gerados por computador para o filme de 1982 de _Tron_, a cientista do computador Ken perlr começou a desenvolver algoritmos que usaram processos aleatórios para fornecer a essas imagens mais texturas realistas. Em 1997, Ken Perl ganhou um prêmio da Academia para a realização técnica. Seu trabalho chegou a ser conhecido como o ruído de Perl e tem suporte no SkiaSharp. Aqui está um exemplo:
+Gráficos vetoriais simples tendem a parecer não naturais. As linhas retas, as curvas suaves e as cores sólidas não se assemelham às imperfeições de objetos do mundo real. Ao trabalhar com gráficos gerados por computador para o filme de 1982 de _Tron_ , a cientista do computador Ken perlr começou a desenvolver algoritmos que usaram processos aleatórios para fornecer a essas imagens mais texturas realistas. Em 1997, Ken Perl ganhou um prêmio da Academia para a realização técnica. Seu trabalho chegou a ser conhecido como o ruído de Perl e tem suporte no SkiaSharp. Aqui está um exemplo:
 
 ![Exemplo de ruído de perlm](noise-images/NoiseSample.png "Exemplo de ruído de perlm")
 
@@ -31,7 +31,7 @@ O suporte do Perl-ruído no skia é baseado em uma especificação W3C para CSS 
 
 ## <a name="exploring-perlin-noise"></a>Explorando o ruído de Perl
 
-A [`SKShader`](xref:SkiaSharp.SKShader) classe define dois métodos estáticos diferentes para gerar o ruído de perlm: [`CreatePerlinNoiseFractalNoise`](xref:SkiaSharp.SKShader.CreatePerlinNoiseFractalNoise*) e [`CreatePerlinNoiseTurbulence`](xref:SkiaSharp.SKShader.CreatePerlinNoiseTurbulence*) . Os parâmetros são idênticos:
+A [`SKShader`](xref:SkiaSharp.SKShader) classe define dois métodos estáticos diferentes para gerar o ruído de perlm:  [`CreatePerlinNoiseFractalNoise`](xref:SkiaSharp.SKShader.CreatePerlinNoiseFractalNoise*) e [`CreatePerlinNoiseTurbulence`](xref:SkiaSharp.SKShader.CreatePerlinNoiseTurbulence*) . Os parâmetros são idênticos:
 
 ```csharp
 public static SkiaSharp CreatePerlinNoiseFractalNoise (float baseFrequencyX, float baseFrequencyY, int numOctaves, float seed);
@@ -47,7 +47,7 @@ O `numOctaves` valor é um número inteiro de 1 ou superior. Ele está relaciona
 
 O `seed` parâmetro é o ponto de partida para o gerador de número aleatório. Embora especificado como um valor de ponto flutuante, a fração é truncada antes de ser usada e 0 é igual a 1.
 
-A página de **ruído do Perl** na [ **SkiaSharpFormsDemos**)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) permite que você experimente vários valores dos `baseFrequency` `numOctaves` argumentos e. Este é o arquivo XAML:
+A página de **ruído do Perl** na [ **SkiaSharpFormsDemos** )](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) permite que você experimente vários valores dos `baseFrequency` `numOctaves` argumentos e. Este é o arquivo XAML:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -188,7 +188,7 @@ public static SKShader CreatePerlinNoiseFractalNoise (float baseFrequencyX, floa
 public static SKShader CreatePerlinNoiseTurbulence (float baseFrequencyX, float baseFrequencyY, int numOctaves, float seed, SKPointI tileSize);
 ```
 
-A [`SKPointI`](xref:SkiaSharp.SKPointI) estrutura é a versão inteira da estrutura familiar [`SKPoint`](xref:SkiaSharp.SKPoint) . `SKPointI`define `X` e `Y` Propriedades do tipo `int` em vez de `float` .
+A [`SKPointI`](xref:SkiaSharp.SKPointI) estrutura é a versão inteira da estrutura familiar [`SKPoint`](xref:SkiaSharp.SKPoint) . `SKPointI` define `X` e `Y` Propriedades do tipo `int` em vez de `float` .
 
 Esses métodos criam um padrão de repetição do tamanho especificado. Em cada bloco, a borda direita é igual à borda esquerda e a borda superior é igual à borda inferior. Essa característica é demonstrada na página de **ruído do Perl** . O arquivo XAML é semelhante ao exemplo anterior, mas tem apenas uma `Stepper` exibição para alterar o `seed` argumento:
 
@@ -401,5 +401,5 @@ O parâmetro final é um membro da `SKBlendMode` enumeração, uma enumeração 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

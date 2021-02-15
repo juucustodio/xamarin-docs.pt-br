@@ -1,6 +1,6 @@
 ---
-title: Xamarin.FormsPesquisa de Shell
-description: Xamarin.FormsOs aplicativos de shell podem usar a funcionalidade de pesquisa integrada que é fornecida por uma caixa de pesquisa que pode ser adicionada à parte superior de cada página.
+title: Xamarin.Forms Pesquisa de Shell
+description: Xamarin.Forms Os aplicativos de shell podem usar a funcionalidade de pesquisa integrada que é fornecida por uma caixa de pesquisa que pode ser adicionada à parte superior de cada página.
 ms.prod: xamarin
 ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
@@ -10,18 +10,18 @@ ms.date: 07/21/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 00dfec5b48507c83f43d0622c11770ecec304ea6
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 7420c5883856379db98001fce2fd36bf576cc2fb
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87917550"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609073"
 ---
-# <a name="no-locxamarinforms-shell-search"></a>Xamarin.FormsPesquisa de Shell
+# <a name="no-locxamarinforms-shell-search"></a>Xamarin.Forms Pesquisa de Shell
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
-Xamarin.FormsO Shell inclui a funcionalidade de pesquisa integrada que é fornecida pela `SearchHandler` classe. A funcionalidade de pesquisa pode ser adicionada a uma página definindo a propriedade anexada `Shell.SearchHandler` como um objeto `SearchHandler` da subclasse. Isso faz com que uma caixa de pesquisa seja adicionada na parte superior da página:
+Xamarin.Forms O Shell inclui a funcionalidade de pesquisa integrada que é fornecida pela `SearchHandler` classe. A funcionalidade de pesquisa pode ser adicionada a uma página definindo a propriedade anexada `Shell.SearchHandler` como um objeto `SearchHandler` da subclasse. Isso faz com que uma caixa de pesquisa seja adicionada na parte superior da página:
 
 [![Captura de tela de um shell SearchHandler, no iOS e no Android](search-images/searchhandler.png "SearchHandler do Shell")](search-images/searchhandler-large.png#lightbox "SearchHandler do Shell")
 
@@ -102,11 +102,11 @@ O método `MonkeySearchHandler.OnQueryChanged` retorna um `List` de objetos `Ani
 
 A propriedade `ShowsResults` é definida como `true`, de modo que as sugestões de pesquisa são exibidas enquanto o usuário insere uma consulta de pesquisa:
 
-[![Captura de tela dos resultados da pesquisa em um shell SearchHandler, no iOS e no Android](search-images/search-results.png "Resultados da pesquisa do Shell SearchHandler")](search-images/search-results-large.png#lightbox "Resultados da pesquisa do Shell SearchHandler")
+[![Captura de tela dos resultados da pesquisa em um shell SearchHandler, no iOS e no Android, com resultados para a cadeia de caracteres parcial M.](search-images/search-results.png "Resultados da pesquisa do Shell SearchHandler")](search-images/search-results-large.png#lightbox "Resultados da pesquisa do Shell SearchHandler")
 
 À medida que a consulta de pesquisa muda, a área de sugestões da pesquisa é atualizada:
 
-[![Captura de tela dos resultados da pesquisa em um shell SearchHandler, no iOS e no Android](search-images/search-results-change.png "Resultados da pesquisa do Shell SearchHandler")](search-images/search-results-change-large.png#lightbox "Resultados da pesquisa do Shell SearchHandler")
+[![Captura de tela dos resultados da pesquisa em um shell SearchHandler, no iOS e no Android, com resultados para a cadeia de caracteres parcial M o n.](search-images/search-results-change.png "Resultados da pesquisa do Shell SearchHandler")](search-images/search-results-change-large.png#lightbox "Resultados da pesquisa do Shell SearchHandler")
 
 Quando um resultado de pesquisa é selecionado, ocorre a navegação até `MonkeyDetailPage`, e os dados sobre o macaco selecionado são exibidos:
 
@@ -231,14 +231,14 @@ A classe `SearchHandler` define as seguintes propriedades que afetam sua aparên
 
 O teclado apresentado quando os usuários interagem com um `SearchHandler` pode ser definido programaticamente por meio da `Keyboard` propriedade, para uma das seguintes propriedades da [`Keyboard`](xref:Xamarin.Forms.Keyboard) classe:
 
-- [`Chat`](xref:Xamarin.Forms.Keyboard.Chat)– usado para texto e locais em que emojis são úteis.
-- [`Default`](xref:Xamarin.Forms.Keyboard.Default)– o teclado padrão.
-- [`Email`](xref:Xamarin.Forms.Keyboard.Email)– usado ao inserir endereços de email.
-- [`Numeric`](xref:Xamarin.Forms.Keyboard.Numeric)– usado ao inserir números.
-- [`Plain`](xref:Xamarin.Forms.Keyboard.Plain)– usado ao inserir texto, sem nenhum [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) especificado.
-- [`Telephone`](xref:Xamarin.Forms.Keyboard.Telephone)– usado ao inserir números de telefone.
-- [`Text`](xref:Xamarin.Forms.Keyboard.Text)– usado ao inserir texto.
-- [`Url`](xref:Xamarin.Forms.Keyboard.Url)– usado para inserir caminhos de arquivo & endereços da Web.
+- [`Chat`](xref:Xamarin.Forms.Keyboard.Chat) – usado para texto e locais em que emojis são úteis.
+- [`Default`](xref:Xamarin.Forms.Keyboard.Default) – o teclado padrão.
+- [`Email`](xref:Xamarin.Forms.Keyboard.Email) – usado ao inserir endereços de email.
+- [`Numeric`](xref:Xamarin.Forms.Keyboard.Numeric) – usado ao inserir números.
+- [`Plain`](xref:Xamarin.Forms.Keyboard.Plain) – usado ao inserir texto, sem nenhum [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) especificado.
+- [`Telephone`](xref:Xamarin.Forms.Keyboard.Telephone) – usado ao inserir números de telefone.
+- [`Text`](xref:Xamarin.Forms.Keyboard.Text) – usado ao inserir texto.
+- [`Url`](xref:Xamarin.Forms.Keyboard.Url) – usado para inserir caminhos de arquivo & endereços da Web.
 
 Isso pode ser feito no XAML da seguinte maneira:
 
@@ -252,16 +252,16 @@ Este é o código C# equivalente:
 SearchHandler searchHandler = new SearchHandler { Keyboard = Keyboard.Email };
 ```
 
-A [`Keyboard`](xref:Xamarin.Forms.Keyboard) classe também tem um [`Create`](xref:Xamarin.Forms.Keyboard.Create*) método de fábrica que pode ser usado para personalizar um teclado especificando a capitalização, a verificação ortográfica e o comportamento de sugestão. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags)os valores de enumeração são especificados como argumentos para o método, com um `Keyboard` retorno personalizado sendo retornado. A enumeração `KeyboardFlags` contém os seguintes valores:
+A [`Keyboard`](xref:Xamarin.Forms.Keyboard) classe também tem um [`Create`](xref:Xamarin.Forms.Keyboard.Create*) método de fábrica que pode ser usado para personalizar um teclado especificando a capitalização, a verificação ortográfica e o comportamento de sugestão. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) os valores de enumeração são especificados como argumentos para o método, com um `Keyboard` retorno personalizado sendo retornado. A enumeração `KeyboardFlags` contém os seguintes valores:
 
-- [`None`](xref:Xamarin.Forms.KeyboardFlags.None)– nenhum recurso é adicionado ao teclado.
-- [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence)– indica que a primeira letra da primeira palavra de cada sentença inserida será automaticamente capitalizada.
-- [`Spellcheck`](xref:Xamarin.Forms.KeyboardFlags.Spellcheck)– indica que a verificação ortográfica será executada no texto inserido.
-- [`Suggestions`](xref:Xamarin.Forms.KeyboardFlags.Suggestions)– indica que as conclusões do Word serão oferecidas no texto inserido.
-- [`CapitalizeWord`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeWord)– indica que a primeira letra de cada palavra será automaticamente capitalizada.
-- [`CapitalizeCharacter`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeCharacter)– indica que cada caractere será colocado em maiúscula automaticamente.
-- [`CapitalizeNone`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeNone)– indica que nenhuma capitalização automática ocorrerá.
-- [`All`](xref:Xamarin.Forms.KeyboardFlags.All)– indica que a verificação ortográfica, as preenchimentos de palavras e a capitalização de frase ocorrerão no texto inserido.
+- [`None`](xref:Xamarin.Forms.KeyboardFlags.None) – nenhum recurso é adicionado ao teclado.
+- [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) – indica que a primeira letra da primeira palavra de cada sentença inserida será automaticamente capitalizada.
+- [`Spellcheck`](xref:Xamarin.Forms.KeyboardFlags.Spellcheck) – indica que a verificação ortográfica será executada no texto inserido.
+- [`Suggestions`](xref:Xamarin.Forms.KeyboardFlags.Suggestions) – indica que as conclusões do Word serão oferecidas no texto inserido.
+- [`CapitalizeWord`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeWord) – indica que a primeira letra de cada palavra será automaticamente capitalizada.
+- [`CapitalizeCharacter`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeCharacter) – indica que cada caractere será colocado em maiúscula automaticamente.
+- [`CapitalizeNone`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeNone) – indica que nenhuma capitalização automática ocorrerá.
+- [`All`](xref:Xamarin.Forms.KeyboardFlags.All) – indica que a verificação ortográfica, as preenchimentos de palavras e a capitalização de frase ocorrerão no texto inserido.
 
 O exemplo de código XAML a seguir mostra como personalizar o padrão [`Keyboard`](xref:Xamarin.Forms.Keyboard) para oferecer preenchimentos de palavras e colocar todos os caracteres inseridos em maiúsculas:
 
@@ -336,5 +336,5 @@ Além disso, a classe `SearchHandler` fornece os seguintes métodos substituíve
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xaminals (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
-- [Xamarin.FormsNavegação do Shell](navigation.md)
+- [Xaminals (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Xamarin.Forms Navegação do Shell](navigation.md)

@@ -10,14 +10,17 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3f85c6528a1bf599c38a39b4e88400bc8b0c4f05
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 30c2f39a299b59022df8d651762df0dd7023e264
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931983"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98608956"
 ---
 # <a name="containerized-microservices"></a>Microsserviços em contêineres
+
+> [!NOTE]
+> Este livro eletrônico foi publicado na Primavera de 2017 e não foi atualizado desde então. Há muito no livro que permanece valioso, mas parte do material está desatualizada.
 
 O desenvolvimento de aplicativos cliente-servidor resultou em um foco na criação de aplicativos em camadas que usam tecnologias específicas em cada camada. Esses aplicativos costumam ser chamados de aplicativos *monolíticos* e empacotados em hardware previamente dimensionado para picos de carga. As principais desvantagens dessa abordagem de desenvolvimento são o acoplamento rígido entre os componentes de cada camada, que os componentes individuais não podem ser dimensionados com facilidade e o custo do teste. Uma atualização simples pode ter efeitos imprevistos no restante da camada e, portanto, uma alteração em um componente de aplicativo requer que sua camada inteira seja testada novamente e reimplantada.
 
@@ -33,7 +36,7 @@ Os microserviços oferecem uma abordagem diferente para desenvolvimento e implan
 
 Os microserviços podem escalar horizontalmente de forma independente, em comparação com aplicativos monolíticos gigantes que são dimensionados juntos. Isso significa que uma área funcional específica, que exige mais capacidade de processamento ou largura de banda de rede para dar suporte à demanda, pode ser dimensionada em vez de reduzir desnecessariamente outras áreas do aplicativo. A Figura 8-2 ilustra essa abordagem, em que os microserviços são implantados e dimensionados de forma independente, criando instâncias de serviços entre máquinas.
 
-![Abordagem de dimensionamento de aplicativos de microserviços](containerized-microservices-images/microservicesapp.png)
+![O diagrama mostra dois aplicativos com blocos que representam diferentes áreas funcionais e seis retângulos que hospedam várias áreas funcionais de ambos os aplicativos.](containerized-microservices-images/microservicesapp.png)
 
 **Figura 8-2**: abordagem de dimensionamento do aplicativo de microserviços
 
@@ -67,7 +70,7 @@ Um contêiner é um ambiente operacional isolado, controlado por recursos e port
 
 Há muitas semelhanças entre contêineres e máquinas virtuais, como ilustrado na Figura 8-3.
 
-![Abordagem de dimensionamento de aplicativos de microserviços](containerized-microservices-images/containersvsvirtualmachines.png)
+![O diagrama mostra uma comparação entre máquinas virtuais e contêineres, em que as máquinas virtuais têm três aplicativos cada um com silo em um convidado, com um hipervisor e um host o S, e os contêineres têm três aplicativos hospedados em um mecanismo de contêiner em um único sistema operacional.](containerized-microservices-images/containersvsvirtualmachines.png)
 
 **Figura 8-3**: comparação de máquinas virtuais e contêineres
 
@@ -101,7 +104,7 @@ Para obter mais informações sobre o aplicativo de referência, consulte [micro
 
 O aplicativo móvel eShopOnContainers comunica-se com os microserviços de back-end em contêineres usando a comunicação *direta de cliente para microserviço* , que é mostrada na Figura 8-5.
 
-![Abordagem de dimensionamento de aplicativos de microserviços](containerized-microservices-images/directclienttomicroservicecommunication.png)
+![O diagrama mostra um aplicativo hospedado em um dispositivo móvel conectado a três microserviços de back-end, cada um com seu próprio contêiner da Web A P.](containerized-microservices-images/directclienttomicroservicecommunication.png)
 
 **Figura 8-5**: comunicação direta de cliente para microserviço
 

@@ -9,15 +9,15 @@ metadata:
   author: conceptdev
   ms.author: crdun
   ms.date: 09/26/2019
-  ms.openlocfilehash: c28f849f772bb496b526552745a0aea1c2e08e62
-  ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+  ms.openlocfilehash: a8e84b82d2c3bf3507c6ef898c015590a4a5bfe6
+  ms.sourcegitcommit: 1f391667869a4541dd9b42d78862dc01d69ed160
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 04/09/2020
-  ms.locfileid: "76940714"
+  ms.lasthandoff: 02/08/2021
+  ms.locfileid: "99818006"
 highlightedContent:
   items:
-  - title: Configuração e instalação
+  - title: Instalação e configuração
     itemType: download
     url: ~/get-started/installation/index.md
   - title: O que é o Xamarin?
@@ -28,7 +28,7 @@ highlightedContent:
     url: ~/whats-new/index.yml
   - title: Aprimore suas habilidades de desenvolvimento móvel
     itemType: learn
-    url: https://docs.microsoft.com/learn/browse/?roles=developer&products=xamarin
+    url: /learn/browse/?products=xamarin&roles=developer
 productDirectory:
   items:
   - title: Xamarin.Forms multiplataforma
@@ -56,8 +56,8 @@ productDirectory:
     links:
     - url: ~/ios/get-started/hello-ios/hello-ios-quickstart.md
       text: Compilar um aplicativo iOS
-    - url: ~/ios/platform/ios13/index.md
-      text: iOS 13
+    - url: ~/ios/platform/ios14/index.md
+      text: iOS 14
     - url: ~/ios/index.yml
       text: Todos os documentos do iOS
   - title: Mac
@@ -74,10 +74,10 @@ conceptualContent:
   - title: Criar seu primeiro aplicativo
     links:
     - text: Arquivo > Novo
-      url: ~/get-started/quickstarts/single-page.md
+      url: ~/get-started/quickstarts/app.md
       itemType: get-started
     - text: Adicionar navegação
-      url: ~/get-started/quickstarts/multi-page.md
+      url: ~/get-started/quickstarts/navigation.md
       itemType: get-started
     - text: Adicionar um banco de dados
       url: ~/get-started/quickstarts/database.md
@@ -86,7 +86,7 @@ conceptualContent:
       url: ~/get-started/quickstarts/styling.md
       itemType: get-started
     footerLink:
-      url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms%20get%20started
+      url: /samples/browse/?products=xamarin&term=Xamarin.Forms%2bget%2bstarted
       text: Encontrar um exemplo
   - title: Seguir um tutorial
     links:
@@ -128,8 +128,8 @@ additionalContent:
       summary: Entenda como os aplicativos iniciam e vão para o segundo plano.
       url: ~/xamarin-forms/app-fundamentals/app-lifecycle.md
     - title: Mostrar uma lista de dados
-      summary: Use o ListView para rolar pelos dados e selecioná-los.
-      url: ~/xamarin-forms/user-interface/listview/index.md
+      summary: Usar CollectionView para rolar e selecionar dados.
+      url: ~/xamarin-forms/user-interface/collectionview/index.md
     - title: Usar XAML e vinculação de dados
       summary: Use o padrão MVVM para mostrar dados em sua interface do usuário.
       url: ~/xamarin-forms/xaml/xaml-basics/index.md
@@ -148,20 +148,6 @@ additionalContent:
     - title: Renderizar gráficos de SkiaSharp
       summary: Renderize gráficos de vetor 2D multiplataforma.
       url: ~/xamarin-forms/user-interface/graphics/skiasharp/index.md
-  - title: Ferramentas para desenvolvedores móveis
-    items:
-    - title: Simulador de iOS para Windows
-      summary: Interagir com o Simulador de iOS usando o Visual Studio no Windows.
-      url: ~/tools/ios-simulator/index.md
-    - title: Criador de perfil
-      summary: Identificar e corrigir problemas de desempenho.
-      url: ~/tools/profiler/index.md
-    - title: .NET Embedding
-      summary: Permite que seu código .NET existente seja consumido a partir de outras linguagens de programação.
-      url: ~/tools/dotnet-embedding/index.md
-    - title: MonoGame
-      summary: Compile jogos de desktop, móveis e de console com C#.
-      url: ~/graphics-games/monogame/introduction/index.md
   - title: Visão geral das plataformas do Xamarin
     items:
     - title: Xamarin.Forms multiplataforma
@@ -181,7 +167,7 @@ additionalContent:
       - text: Conceitos avançados e recursos internos
         url: ~/xamarin-forms/internals/index.md
       - text: Exemplos
-        url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms
+        url: /samples/browse/?products=xamarin&term=Xamarin.Forms
     - title: Android
       links:
       - text: Conceitos básicos do aplicativo
@@ -197,7 +183,7 @@ additionalContent:
       - text: Conceitos avançados e recursos internos
         url: ~/android/internals/index.md
       - text: Exemplos
-        url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android
+        url: /samples/browse/?products=xamarin&term=Xamarin.Android
     - title: iOS
       links:
       - text: Conceitos básicos do aplicativo
@@ -213,7 +199,7 @@ additionalContent:
       - text: Conceitos avançados e recursos internos
         url: ~/ios/internals/index.md
       - text: Exemplos
-        url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS
+        url: /samples/browse/?products=xamarin&term=Xamarin.iOS
     - title: Mac
       links:
       - text: Conceitos básicos do aplicativo
@@ -227,5 +213,5 @@ additionalContent:
       - text: Conceitos avançados e recursos internos
         url: ~/mac/internals/index.md
       - text: Exemplos
-        url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac
-  footer: '[Blogs](https://devblogs.microsoft.com/xamarin/) - [Twitter](https://twitter.com/xamarinhq) - [Stack Overflow](https://stackoverflow.com/questions/tagged/xamarin) - [Comunidade de Desenvolvedores](https://developercommunity.visualstudio.com/spaces/8/index.html)'
+        url: /samples/browse/?products=xamarin&term=Xamarin.Mac
+  footer: '[Blogs](https://devblogs.microsoft.com/xamarin/) - [Twitter](https://twitter.com/xamarinhq) - [Microsoft Q&A](/answers/products/dotnet) - [Developer Community](https://dotnet.microsoft.com/platform/community)'

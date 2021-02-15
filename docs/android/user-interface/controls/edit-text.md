@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 08/09/2018
-ms.openlocfilehash: 6180896002d19c51bce47bf53aaecdc11b0cae6e
-ms.sourcegitcommit: db422e33438f1b5c55852e6942c3d1d75dc025c4
+ms.openlocfilehash: fb29478791c97028ff4d62f97922c672f7a8b17b
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "78292382"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457245"
 ---
 # <a name="xamarinandroid-edit-text"></a>Editar texto do Xamarin. Android
 
 Nesta seção, você usará o widget [EDITTEXT](xref:Android.Widget.EditText) para criar um campo de texto para entrada do usuário. Depois que o texto tiver sido inserido no campo, a tecla **Enter** exibirá o texto em uma mensagem do sistema.
 
-Abra **Resources/layout/activity_main. axml** e adicione o elemento [EDITTEXT](xref:Android.Widget.EditText) a um layout de contenção. O exemplo a seguir **activity_main. axml** tem um `EditText` que foi adicionado a um `LinearLayout`:
+Abra **Resources/layout/activity_main. axml** e adicione o elemento [EDITTEXT](xref:Android.Widget.EditText) a um layout de contenção. O exemplo a seguir **activity_main. axml** tem um `EditText` que foi adicionado a um `LinearLayout` :
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -35,7 +35,7 @@ Abra **Resources/layout/activity_main. axml** e adicione o elemento [EDITTEXT](x
 </LinearLayout>
 ```
 
-Neste exemplo de código, o atributo `EditText` `android:imeOptions` é definido como `actionGo`. Essa configuração altera a ação padrão [feita](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_DONE) para a ação [go](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_GO) para que tocar na tecla **Enter** dispare o manipulador de entrada `KeyPress`.
+Neste exemplo de código, o `EditText` atributo `android:imeOptions` é definido como `actionGo` . Essa configuração altera a ação padrão [feita](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_DONE) para a ação [go](https://developer.android.com/reference/android/view/inputmethod/EditorInfo#IME_ACTION_GO) para que tocar a tecla **Enter** dispare o manipulador de `KeyPress` entrada.
 (Normalmente, `actionGo` é usado para que a tecla **Enter** leve o usuário para o destino de uma URL que é digitada em.)
 
 Para manipular a entrada de texto do usuário, adicione o seguinte código ao final do método [OnCreate](xref:Android.App.Activity.OnCreate*) em **MainActivity.cs**:
@@ -52,20 +52,20 @@ edittext.KeyPress += (object sender, View.KeyEventArgs e) => {
 };
 ```
 
-Além disso, adicione a seguinte instrução `using` à parte superior de **MainActivity.cs** se ela ainda não estiver presente:
+Além disso, adicione a seguinte `using` instrução à parte superior de **MainActivity.cs** se ela ainda não estiver presente:
 
 ```csharp
 using Android.Views;
 ```
 
-Este exemplo de código inplana o elemento [EDITTEXT](xref:Android.Widget.EditText) do layout e adiciona um manipulador de [pressionamento](xref:Android.Views.View.KeyPress) de teclas que define a ação a ser feita quando uma tecla é pressionada enquanto o widget tem foco. Nesse caso, o método é definido para escutar a tecla **Enter** (quando tocado) e, em seguida, exibir uma mensagem do [sistema](xref:Android.Widget.Toast) com o texto que foi inserido. Observe que a propriedade [Handled](xref:Android.Views.View.KeyEventArgs.Handled) sempre deve ser `true` se o evento tiver sido tratado. Isso é necessário para impedir que o evento seja bolha (o que resultaria em um retorno de carro no campo de texto).
+Este exemplo de código inplana o elemento [EDITTEXT](xref:Android.Widget.EditText) do layout e adiciona um manipulador de [pressionamento](xref:Android.Views.View.KeyPress) de teclas que define a ação a ser feita quando uma tecla é pressionada enquanto o widget tem foco. Nesse caso, o método é definido para escutar a tecla **Enter** (quando tocado) e, em seguida, exibir uma mensagem do [sistema](xref:Android.Widget.Toast) com o texto que foi inserido. Observe que a propriedade [Handled](xref:Android.Views.View.KeyEventArgs.Handled) sempre deve ser `true` se o evento tiver sido manipulado. Isso é necessário para impedir que o evento seja bolha (o que resultaria em um retorno de carro no campo de texto).
 
 Execute o aplicativo e insira algum texto no campo de texto. Quando você pressionar a tecla **Enter** , o sistema de notificação será exibido conforme mostrado à direita:
 
-[![exemplos de inserção de texto em EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
+[![Exemplos de inserção de texto em EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
 
 *Partes desta página são modificações com base no trabalho criado e compartilhado pelo projeto de software livre do Android e usadas de acordo com os termos descritos na licença de atribuição do* [*Creative Commons 2,5*](https://creativecommons.org/licenses/by/2.5/) *. Este tutorial se baseia no tutorial de coisas de formulário do* [*Android*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [EditTextSample](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-edittextsample)
+- [EditTextSample](/samples/xamarin/monodroid-samples/userinterface-edittextsample)

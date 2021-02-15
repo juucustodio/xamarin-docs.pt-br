@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/22/2017
-ms.openlocfilehash: 6002e5cc62dfe30c14f21943c690a5a1b15a0c12
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 55f471fe02618becbfc4a7ab8571d9690fe44843
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936585"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430591"
 ---
 # <a name="table-parts-and-functionality-in-xamarinios"></a>Partes de tabela e funcionalidade no Xamarin. iOS
 
@@ -78,7 +78,7 @@ A finalidade de cada classe é descrita abaixo:
 
 - **UITableView** – uma exibição que contém uma coleção de células dentro de um contêiner de rolagem. A exibição de tabela normalmente usa a tela inteira em um aplicativo do iPhone, mas pode existir como parte de uma exibição maior no iPad (ou aparecer em um popover). 
 - **UITableViewCell** – uma exibição que representa uma única célula (ou linha) em uma exibição de tabela. Há quatro tipos de célula internos e é possível criar células personalizadas em C# ou com o designer do iOS. 
-- **UITableViewSource** – Xamarin. Ios-classe abstrata exclusiva que fornece todos os métodos necessários para exibir uma tabela, incluindo a contagem de linhas, retornando uma exibição de célula para cada linha, manipulando a seleção de linhas e muitos outros recursos opcionais. Você *deve* fazer uma subclasse para obter um UITableView funcionando. 
+- **UITableViewSource** – Xamarin. Ios-classe abstrata exclusiva que fornece todos os métodos necessários para exibir uma tabela, incluindo a contagem de linhas, retornando uma exibição de célula para cada linha, manipulando a seleção de linhas e muitos outros recursos opcionais. Você  *deve* fazer uma subclasse para obter um UITableView funcionando. 
 - **NSIndexPath** – contém propriedades de linha e seção que identificam exclusivamente a posição de uma célula em uma tabela. 
 - **UITableViewController** – uma UIViewController pronta para uso que tem um UITableView codificado como sua exibição e acessível por meio da propriedade Tableview. 
 - **UIViewController** – se a tabela não ocupar a tela inteira, você poderá adicionar um UITableView a qualquer UIViewController com seu conjunto de quadros adequadamente. 
@@ -92,4 +92,4 @@ Neste documento, todos os exemplos usam UITableViewSource e ignoram essas duas c
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [WorkingWithTables (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)
+- [WorkingWithTables (exemplo)](/samples/xamarin/ios-samples/workingwithtables)

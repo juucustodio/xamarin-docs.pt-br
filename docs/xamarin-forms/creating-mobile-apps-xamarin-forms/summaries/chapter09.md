@@ -10,19 +10,19 @@ ms.date: 07/19/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e8feb636057f1e11c7df90236dee44697203d51c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6dec0c3e3fc4d25aecfe4e4141c4cc285fd7f8d8
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136845"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366185"
 ---
 # <a name="summary-of-chapter-9-platform-specific-api-calls"></a>Resumo do capítulo 9. Chamadas de API específicas à plataforma
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter09)
 
-> [!NOTE] 
-> As observações nesta página indicam áreas em que Xamarin.Forms houve uma divergência do material apresentado no livro.
+> [!NOTE]
+> Este livro foi publicado na Primavera de 2016 e não foi atualizado desde então. Há muito no livro que permanece valioso, mas alguns materiais estão desatualizados e alguns tópicos não estão mais totalmente corretos ou completos.
 
 Às vezes, é necessário executar algum código que varie de acordo com a plataforma. Este capítulo explora as técnicas.
 
@@ -40,7 +40,7 @@ Uma abordagem mais estruturada para executar o código específico da plataforma
 
 ## <a name="dependencyservice-and-the-portable-class-library"></a>DependencyService e a biblioteca de classes portátil
 
-> [!NOTE] 
+> [!NOTE]
 > As bibliotecas de classes portáteis foram substituídas por bibliotecas de .NET Standard. Todo o código de exemplo do livro foi convertido para usar bibliotecas do .NET Standard.
 
 Normalmente, uma biblioteca não pode acessar classes em projetos de aplicativo. Essa restrição parece impedir que a técnica mostrada em **PlatInfoSap2** seja usada em uma biblioteca. No entanto, Xamarin.Forms contém uma classe chamada [`DependencyService`](xref:Xamarin.Forms.DependencyService) que usa a reflexão .net para acessar classes públicas no projeto de aplicativo da biblioteca.

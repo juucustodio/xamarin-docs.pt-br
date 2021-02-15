@@ -10,14 +10,17 @@ ms.date: 08/07/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: df79a9b6a7b0ab44d4fcf03f12a7b4d8aabd0a82
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b21fecf139262a88fbbe3de3ea8129cc0f9b211e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939263"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373348"
 ---
 # <a name="accessing-remote-data"></a>Acesso a dados remotos
+
+> [!NOTE]
+> Este livro eletrônico foi publicado na Primavera de 2017 e não foi atualizado desde então. Há muito no livro que permanece valioso, mas parte do material está desatualizada.
 
 Muitas soluções modernas baseadas na Web fazem uso de serviços Web, hospedados por servidores Web, para fornecer funcionalidade para aplicativos cliente remotos. As operações que um serviço Web expõe constituem uma API da Web.
 
@@ -56,31 +59,31 @@ A Figura 10-1 mostra a interação das classes que lêem os dados do catálogo d
 
 [![Recuperando dados do microserviço de catálogo](accessing-remote-data-images/catalogdata.png)](accessing-remote-data-images/catalogdata-large.png#lightbox "Recuperando dados do microserviço de catálogo")
 
-**Figura 10-1**: Recuperando dados do microserviço de catálogo
+**Figura 10-1** : Recuperando dados do microserviço de catálogo
 
 Quando o `CatalogView` é navegado para, o `OnInitialize` método na `CatalogViewModel` classe é chamado. Esse método recupera dados de catálogo do microserviço de catálogo, conforme demonstrado no exemplo de código a seguir:
 
 ```csharp
-public override async Task InitializeAsync(object navigationData)  
+public override async Task InitializeAsync(object navigationData)  
 {  
-    ...  
-    Products = await _productsService.GetCatalogAsync();  
-    ...  
+    ...  
+    Products = await _productsService.GetCatalogAsync();  
+    ...  
 }
 ```
 
 Esse método chama o `GetCatalogAsync` método da `CatalogService` instância que foi injetada no `CatalogViewModel` por Autofac. O seguinte exemplo de código mostra o método `GetCatalogAsync`:
 
 ```csharp
-public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()  
+public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()  
 {  
-    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.CatalogEndpoint);  
-    builder.Path = "api/v1/catalog/items";  
-    string uri = builder.ToString();  
+    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.CatalogEndpoint);  
+    builder.Path = "api/v1/catalog/items";  
+    string uri = builder.ToString();  
 
-    CatalogRoot catalog = await _requestProvider.GetAsync<CatalogRoot>(uri);  
-    ...  
-    return catalog?.Data.ToObservableCollection();            
+    CatalogRoot catalog = await _requestProvider.GetAsync<CatalogRoot>(uri);  
+    ...  
+    return catalog?.Data.ToObservableCollection();            
 }
 ```
 
@@ -89,18 +92,18 @@ Esse método cria o URI que identifica o recurso ao qual a solicitação será e
 O exemplo de código a seguir mostra o `GetAsync` método na `RequestProvider` classe:
 
 ```csharp
-public async Task<TResult> GetAsync<TResult>(string uri, string token = "")  
+public async Task<TResult> GetAsync<TResult>(string uri, string token = "")  
 {  
-    HttpClient httpClient = CreateHttpClient(token);  
-    HttpResponseMessage response = await httpClient.GetAsync(uri);  
+    HttpClient httpClient = CreateHttpClient(token);  
+    HttpResponseMessage response = await httpClient.GetAsync(uri);  
 
-    await HandleResponse(response);  
-    string serialized = await response.Content.ReadAsStringAsync();  
+    await HandleResponse(response);  
+    string serialized = await response.Content.ReadAsStringAsync();  
 
-    TResult result = await Task.Run(() =>   
-        JsonConvert.DeserializeObject<TResult>(serialized, _serializerSettings));  
+    TResult result = await Task.Run(() =>   
+        JsonConvert.DeserializeObject<TResult>(serialized, _serializerSettings));  
 
-    return result;  
+    return result;  
 }
 ```
 
@@ -109,18 +112,18 @@ Esse método chama o `CreateHttpClient` método, que retorna uma instância da `
 O `CreateHttpClient` método é mostrado no exemplo de código a seguir:
 
 ```csharp
-private HttpClient CreateHttpClient(string token = "")  
+private HttpClient CreateHttpClient(string token = "")  
 {  
-    var httpClient = new HttpClient();  
-    httpClient.DefaultRequestHeaders.Accept.Add(  
-        new MediaTypeWithQualityHeaderValue("application/json"));  
+    var httpClient = new HttpClient();  
+    httpClient.DefaultRequestHeaders.Accept.Add(  
+        new MediaTypeWithQualityHeaderValue("application/json"));  
 
-    if (!string.IsNullOrEmpty(token))  
-    {  
-        httpClient.DefaultRequestHeaders.Authorization =   
-            new AuthenticationHeaderValue("Bearer", token);  
-    }  
-    return httpClient;  
+    if (!string.IsNullOrEmpty(token))  
+    {  
+        httpClient.DefaultRequestHeaders.Authorization =   
+            new AuthenticationHeaderValue("Bearer", token);  
+    }  
+    return httpClient;  
 }
 ```
 
@@ -131,23 +134,23 @@ Quando o `GetAsync` método na `RequestProvider` classe chama `HttpClient.GetAsy
 ```csharp
 [HttpGet]  
 [Route("[action]")]  
-public async Task<IActionResult> Items(  
-    [FromQuery]int pageSize = 10, [FromQuery]int pageIndex = 0)  
+public async Task<IActionResult> Items(  
+    [FromQuery]int pageSize = 10, [FromQuery]int pageIndex = 0)  
 {  
-    var totalItems = await _catalogContext.CatalogItems  
-        .LongCountAsync();  
+    var totalItems = await _catalogContext.CatalogItems  
+        .LongCountAsync();  
 
-    var itemsOnPage = await _catalogContext.CatalogItems  
-        .OrderBy(c=>c.Name)  
-        .Skip(pageSize * pageIndex)  
-        .Take(pageSize)  
-        .ToListAsync();  
+    var itemsOnPage = await _catalogContext.CatalogItems  
+        .OrderBy(c=>c.Name)  
+        .Skip(pageSize * pageIndex)  
+        .Take(pageSize)  
+        .ToListAsync();  
 
-    itemsOnPage = ComposePicUri(itemsOnPage);  
-    var model = new PaginatedItemsViewModel<CatalogItem>(  
-        pageIndex, pageSize, totalItems, itemsOnPage);             
+    itemsOnPage = ComposePicUri(itemsOnPage);  
+    var model = new PaginatedItemsViewModel<CatalogItem>(  
+        pageIndex, pageSize, totalItems, itemsOnPage);             
 
-    return Ok(model);  
+    return Ok(model);  
 }
 ```
 
@@ -161,31 +164,31 @@ A Figura 10-2 mostra a interação de classes que enviam os dados da cesta exibi
 
 [![Enviando dados para o microserviço da cesta](accessing-remote-data-images/basketdata.png)](accessing-remote-data-images/basketdata-large.png#lightbox "Enviando dados para o microserviço da cesta")
 
-**Figura 10-2**: enviando dados para o microserviço da cesta
+**Figura 10-2** : enviando dados para o microserviço da cesta
 
 Quando um item é adicionado à cesta de compras, o `ReCalculateTotalAsync` método na `BasketViewModel` classe é chamado. Esse método atualiza o valor total dos itens na cesta e envia os dados da cesta para o microserviço da cesta, conforme demonstrado no exemplo de código a seguir:
 
 ```csharp
-private async Task ReCalculateTotalAsync()  
+private async Task ReCalculateTotalAsync()  
 {  
-    ...  
-    await _basketService.UpdateBasketAsync(new CustomerBasket  
-    {  
-        BuyerId = userInfo.UserId,   
-        Items = BasketItems.ToList()  
-    }, authToken);  
+    ...  
+    await _basketService.UpdateBasketAsync(new CustomerBasket  
+    {  
+        BuyerId = userInfo.UserId,   
+        Items = BasketItems.ToList()  
+    }, authToken);  
 }
 ```
 
 Esse método chama o `UpdateBasketAsync` método da `BasketService` instância que foi injetada no `BasketViewModel` por Autofac. O método a seguir mostra o `UpdateBasketAsync` método:
 
 ```csharp
-public async Task<CustomerBasket> UpdateBasketAsync(CustomerBasket customerBasket, string token)  
+public async Task<CustomerBasket> UpdateBasketAsync(CustomerBasket customerBasket, string token)  
 {  
-    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.BasketEndpoint);  
-    string uri = builder.ToString();  
-    var result = await _requestProvider.PostAsync(uri, customerBasket, token);  
-    return result;  
+    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.BasketEndpoint);  
+    string uri = builder.ToString();  
+    var result = await _requestProvider.PostAsync(uri, customerBasket, token);  
+    return result;  
 }
 ```
 
@@ -194,22 +197,22 @@ Esse método cria o URI que identifica o recurso ao qual a solicitação será e
 O exemplo de código a seguir mostra um dos `PostAsync` métodos na `RequestProvider` classe:
 
 ```csharp
-public async Task<TResult> PostAsync<TResult>(  
-    string uri, TResult data, string token = "", string header = "")  
+public async Task<TResult> PostAsync<TResult>(  
+    string uri, TResult data, string token = "", string header = "")  
 {  
-    HttpClient httpClient = CreateHttpClient(token);  
-    ...  
-    var content = new StringContent(JsonConvert.SerializeObject(data));  
-    content.Headers.ContentType = new MediaTypeHeaderValue("application/json");  
-    HttpResponseMessage response = await httpClient.PostAsync(uri, content);  
+    HttpClient httpClient = CreateHttpClient(token);  
+    ...  
+    var content = new StringContent(JsonConvert.SerializeObject(data));  
+    content.Headers.ContentType = new MediaTypeHeaderValue("application/json");  
+    HttpResponseMessage response = await httpClient.PostAsync(uri, content);  
 
-    await HandleResponse(response);  
-    string serialized = await response.Content.ReadAsStringAsync();  
+    await HandleResponse(response);  
+    string serialized = await response.Content.ReadAsStringAsync();  
 
-    TResult result = await Task.Run(() =>  
-        JsonConvert.DeserializeObject<TResult>(serialized, _serializerSettings));  
+    TResult result = await Task.Run(() =>  
+        JsonConvert.DeserializeObject<TResult>(serialized, _serializerSettings));  
 
-    return result;  
+    return result;  
 }
 ```
 
@@ -219,10 +222,10 @@ Quando o `PostAsync` método na `RequestProvider` classe chama `HttpClient.PostA
 
 ```csharp
 [HttpPost]  
-public async Task<IActionResult> Post([FromBody]CustomerBasket value)  
+public async Task<IActionResult> Post([FromBody]CustomerBasket value)  
 {  
-    var basket = await _repository.UpdateBasketAsync(value);  
-    return Ok(basket);  
+    var basket = await _repository.UpdateBasketAsync(value);  
+    return Ok(basket);  
 }
 ```
 
@@ -234,28 +237,28 @@ A Figura 10-3 mostra as interações de classes que excluem dados de cesta do mi
 
 ![Excluindo dados do microserviço da cesta](accessing-remote-data-images/checkoutdata.png)
 
-**Figura 10-3**: excluindo dados do microserviço da cesta
+**Figura 10-3** : excluindo dados do microserviço da cesta
 
 Quando o processo de check-out é invocado, o `CheckoutAsync` método na `CheckoutViewModel` classe é chamado. Esse método cria um novo pedido, antes de limpar a cesta de compras, conforme demonstrado no exemplo de código a seguir:
 
 ```csharp
-private async Task CheckoutAsync()  
+private async Task CheckoutAsync()  
 {  
-    ...  
-    await _basketService.ClearBasketAsync(_shippingAddress.Id.ToString(), authToken);  
-    ...  
+    ...  
+    await _basketService.ClearBasketAsync(_shippingAddress.Id.ToString(), authToken);  
+    ...  
 }
 ```
 
 Esse método chama o `ClearBasketAsync` método da `BasketService` instância que foi injetada no `CheckoutViewModel` por Autofac. O método a seguir mostra o `ClearBasketAsync` método:
 
 ```csharp
-public async Task ClearBasketAsync(string guidUser, string token)  
+public async Task ClearBasketAsync(string guidUser, string token)  
 {  
-    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.BasketEndpoint);  
-    builder.Path = guidUser;  
-    string uri = builder.ToString();  
-    await _requestProvider.DeleteAsync(uri, token);  
+    UriBuilder builder = new UriBuilder(GlobalSetting.Instance.BasketEndpoint);  
+    builder.Path = guidUser;  
+    string uri = builder.ToString();  
+    await _requestProvider.DeleteAsync(uri, token);  
 }
 ```
 
@@ -264,10 +267,10 @@ Esse método cria o URI que identifica o recurso ao qual a solicitação será e
 O exemplo de código a seguir mostra o `DeleteAsync` método na `RequestProvider` classe:
 
 ```csharp
-public async Task DeleteAsync(string uri, string token = "")  
+public async Task DeleteAsync(string uri, string token = "")  
 {  
-    HttpClient httpClient = CreateHttpClient(token);  
-    await httpClient.DeleteAsync(uri);  
+    HttpClient httpClient = CreateHttpClient(token);  
+    await httpClient.DeleteAsync(uri);  
 }
 ```
 
@@ -277,9 +280,9 @@ Quando o `DeleteAsync` método na `RequestProvider` classe chama `HttpClient.Del
 
 ```csharp
 [HttpDelete("{id}")]  
-public void Delete(string id)  
+public void Delete(string id)  
 {  
-    _repository.DeleteBasketAsync(id);  
+    _repository.DeleteBasketAsync(id);  
 }
 ```
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/13/2016
-ms.openlocfilehash: 1b71ff60ea0e23ce9d631286aec624a84f163ce5
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9cbf6e58586a223de51f1294aa1b4235b3b631f8
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937484"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436280"
 ---
 # <a name="introduction-to-watchos"></a>Introdução ao watchOS 5
 
@@ -69,7 +69,7 @@ Todos são programados usando subclasses personalizadas do `WKInterfaceControlle
 ### <a name="normal-interaction"></a>Interação normal
 
 A maior parte da interação de aplicativo/extensão de inspeção será com as subclasses de `WKInterfaceController` que você escreve para corresponder às cenas na interface do seu aplicativo de inspeção **. Storyboard**. Isso é abordado em detalhes nos artigos de [instalação](~/ios/watchos/get-started/installation.md) e [introdução](~/ios/watchos/get-started/index.md) .
-A imagem a seguir mostra uma parte do storyboard do exemplo do [catálogo do Watch kit](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) . Para cada cena mostrada aqui, há um `WKInterfaceController` ( `LabelDetailController` ,,, `ButtonDetailController` `SwitchDetailController` etc.) personalizado correspondente no projeto de extensão.
+A imagem a seguir mostra uma parte do storyboard do exemplo do [catálogo do Watch kit](/samples/xamarin/ios-samples/watchos-watchkitcatalog) . Para cada cena mostrada aqui, há um `WKInterfaceController` ( `LabelDetailController` ,,, `ButtonDetailController` `SwitchDetailController` etc.) personalizado correspondente no projeto de extensão.
 
 ![Exemplos de interação normal](intro-to-watchos-images/scenes.png)
 
@@ -81,7 +81,7 @@ As breves aparências são exibidas brevemente e mostram o ícone do aplicativo 
 
 A aparência demorada combina uma área de **caixilho** fornecida pelo sistema e ignora o botão com seu conteúdo personalizado baseado em Storyboard.
 
-`WKUserNotificationInterfaceController`estende-se `WKInterfaceController` com os métodos `DidReceiveLocalNotification` e `DidReceiveRemoteNotification` .
+`WKUserNotificationInterfaceController` estende-se `WKInterfaceController` com os métodos `DidReceiveLocalNotification` e `DidReceiveRemoteNotification` .
 Substitua esses métodos para reagir a eventos de notificação.
 
 Para obter mais informações sobre o design da interface do usuário de notificação, consulte as [diretrizes de interface humana Apple Watch](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/Notifications.html#//apple_ref/doc/uid/TP40014992-CH20-SW1)
@@ -130,8 +130,8 @@ Confira a documentação da Apple:
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Catálogo watchOS 3 (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [Catálogo watchOS 1 (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [Catálogo watchOS 3 (exemplo)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [Catálogo watchOS 1 (exemplo)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Instalar e configurar](~/ios/watchos/get-started/installation.md)
 - [Primeiro vídeo do aplicativo Watch](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Guia de desenvolvimento do kit de inspeção da Apple](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)

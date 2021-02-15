@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: d768be516b67ed23bdb851d87286a856a7269de4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 5be17553c3c51a3fd0d746711b1714011988497f
+ms.sourcegitcommit: 424eaef56fd2933c98e72f1d3e7ac71730fe4835
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935545"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758104"
 ---
 # <a name="table-views-in-xamarinmac"></a>Exibições de tabela no Xamarin. Mac
 
@@ -67,7 +67,7 @@ Arraste um modo de exibição de tabela para o controlador de exibição no **Ed
 
 Selecione o modo de exibição de tabela na **hierarquia de interface** e as seguintes propriedades estão disponíveis no **Inspetor de atributo**:
 
-[![O Inspetor de atributo](table-view-images/edit05.png)](table-view-images/edit05.png#lightbox)
+[![Captura de tela mostra as propriedades disponíveis no Inspetor de atributo.](table-view-images/edit05.png)](table-view-images/edit05.png#lightbox)
 
 - **Modo de conteúdo** – permite que você use views ( `NSView` ) ou Cells ( `NSCell` ) para exibir os dados nas linhas e colunas. A partir do macOS 10,7, você deve usar exibições.
 - **Flutua linhas de grupo** – se `true` , a exibição de tabela desenhará células agrupadas como se elas estivessem flutuantes.
@@ -93,11 +93,11 @@ Selecione o modo de exibição de tabela na **hierarquia de interface** e as seg
 - **Trunca a última linha visível** -se `true` , a célula será truncada nos dados não puder se ajustar dentro de seus limites.
 
 > [!IMPORTANT]
-> A menos que você esteja mantendo um aplicativo Xamarin. Mac herdado, as `NSView` exibições de tabela baseadas devem ser usadas em `NSCell` exibições de tabela baseadas em. `NSCell`é considerado herdado e pode não ter suporte no futuro.
+> A menos que você esteja mantendo um aplicativo Xamarin. Mac herdado, as `NSView` exibições de tabela baseadas devem ser usadas em `NSCell` exibições de tabela baseadas em. `NSCell` é considerado herdado e pode não ter suporte no futuro.
 
 Selecione uma coluna de tabela na **hierarquia de interface** e as seguintes propriedades estão disponíveis no **Inspetor de atributo**:
 
-[![O Inspetor de atributo](table-view-images/edit06.png)](table-view-images/edit06.png#lightbox)
+[![Captura de tela mostra as propriedades disponíveis para uma coluna de tabela no Inspetor de atributo.](table-view-images/edit06.png)](table-view-images/edit06.png#lightbox)
 
 - **Título** – define o título da coluna.
 - **Alinhamento** – defina o alinhamento do texto dentro das células.
@@ -111,23 +111,23 @@ Selecione uma coluna de tabela na **hierarquia de interface** e as seguintes pro
 
 Você também pode redimensionar a coluna arrastando sua alça (verticalmente centralizada no lado direito da coluna) à esquerda ou à direita.
 
-Vamos selecionar cada coluna em nosso modo de exibição de tabela e dar à primeira coluna **Title** um título `Product` e a segunda `Details` .
+Vamos selecionar cada coluna em nosso modo de exibição de tabela e dar à primeira coluna  um título `Product` e a segunda `Details` .
 
 Selecione uma exibição de célula de tabela ( `NSTableViewCell` ) na **hierarquia de interface** e as seguintes propriedades estão disponíveis no Inspetor de **atributo**:
 
-[![O Inspetor de atributo](table-view-images/edit07.png)](table-view-images/edit07.png#lightbox)
+[![Captura de tela mostra as propriedades disponíveis para uma exibição de célula de tabela no Inspetor de atributo.](table-view-images/edit07.png)](table-view-images/edit07.png#lightbox)
 
 Essas são todas as propriedades de uma exibição padrão. Você também tem a opção de redimensionar as linhas desta coluna aqui.
 
 Selecione uma célula de exibição de tabela (por padrão, isso é um `NSTextField` ) na **hierarquia de interface** e as seguintes propriedades estão disponíveis no Inspetor de **atributo**:
 
-[![O Inspetor de atributo](table-view-images/edit08.png)](table-view-images/edit08.png#lightbox)
+[![Captura de tela mostra as propriedades disponíveis para uma célula de exibição de tabela no Inspetor de atributo.](table-view-images/edit08.png)](table-view-images/edit08.png#lightbox)
 
 Você terá todas as propriedades de um campo de texto padrão para definir aqui. Por padrão, um campo de texto padrão é usado para exibir dados de uma célula em uma coluna.
 
 Selecione uma exibição de célula de tabela ( `NSTableFieldCell` ) na **hierarquia de interface** e as seguintes propriedades estão disponíveis no Inspetor de **atributo**:
 
-[![O Inspetor de atributo](table-view-images/edit09.png)](table-view-images/edit09.png#lightbox)
+[![Captura de tela mostra as propriedades disponíveis para uma célula de exibição de tabela diferente no Inspetor de atributo.](table-view-images/edit09.png)](table-view-images/edit09.png#lightbox)
 
 As configurações mais importantes aqui são:
 
@@ -159,10 +159,10 @@ O processo é o mesmo para qualquer elemento de exibição de tabela que desejam
 2. Selecione o modo de exibição de tabela na **hierarquia de interface**, clique no botão de controle e arraste-o para o `ViewController.h` arquivo.
 3. Crie uma **tomada** para a exibição de tabela chamada `ProductTable` : 
 
-    [![Configurando uma tomada](table-view-images/edit13.png)](table-view-images/edit13.png#lightbox)
+    [![Captura de tela mostra uma conexão de tomada criada para a exibição de tabela chamada Producttable.](table-view-images/edit13.png)](table-view-images/edit13.png#lightbox)
 4. Crie **saídas** para as colunas de tabelas também chamadas `ProductColumn` e `DetailsColumn` : 
 
-    [![Configurando uma tomada](table-view-images/edit14.png)](table-view-images/edit14.png#lightbox)
+    [![Captura de tela mostra as conexões de uma tomada criadas para outras exibições de tabela.](table-view-images/edit14.png)](table-view-images/edit14.png#lightbox)
 5. Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
 Em seguida, escreveremos o código para exibir alguns dados da tabela quando o aplicativo for executado.
@@ -173,7 +173,7 @@ Em seguida, escreveremos o código para exibir alguns dados da tabela quando o a
 
 Com o modo de exibição de tabela criado em Interface Builder e exposto por meio de uma **tomada**, em seguida, precisamos criar o código C# para preenchê-lo.
 
-Primeiro, vamos criar uma nova `Product` classe para manter as informações das linhas individuais. Na **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar**  >  **novo arquivo...** Selecione **General**  >  **classe vazia**geral, insira `Product` para o **nome** e clique no botão **novo** :
+Primeiro, vamos criar uma nova `Product` classe para manter as informações das linhas individuais. Na **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar**  >  **novo arquivo...** Selecione   >  **classe vazia** geral, insira `Product` para o **nome** e clique no botão **novo** :
 
 [![Criando uma classe vazia](table-view-images/populate01.png)](table-view-images/populate01.png#lightbox)
 
@@ -207,7 +207,7 @@ namespace MacTables
 
 ```
 
-Em seguida, precisamos criar uma subclasse de `NSTableDataSource` para fornecer os dados da nossa tabela conforme solicitado. Na **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar**  >  **novo arquivo...** Selecione **General**  >  **classe vazia**geral, insira `ProductTableDataSource` para o **nome** e clique no botão **novo** .
+Em seguida, precisamos criar uma subclasse de `NSTableDataSource` para fornecer os dados da nossa tabela conforme solicitado. Na **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar**  >  **novo arquivo...** Selecione   >  **classe vazia** geral, insira `ProductTableDataSource` para o **nome** e clique no botão **novo** .
 
 Edite o `ProductTableDataSource.cs` arquivo e faça com que ele se pareça com o seguinte:
 
@@ -246,7 +246,7 @@ namespace MacTables
 
 Essa classe tem armazenamento para os itens de exibição de tabela e substitui o `GetRowCount` para retornar o número de linhas na tabela.
 
-Por fim, precisamos criar uma subclasse de `NSTableDelegate` para fornecer o comportamento da nossa tabela. Na **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar**  >  **novo arquivo...** Selecione **General**  >  **classe vazia**geral, insira `ProductTableDelegate` para o **nome** e clique no botão **novo** .
+Por fim, precisamos criar uma subclasse de `NSTableDelegate` para fornecer o comportamento da nossa tabela. Na **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar**  >  **novo arquivo...** Selecione   >  **classe vazia** geral, insira `ProductTableDelegate` para o **nome** e clique no botão **novo** .
 
 Edite o `ProductTableDelegate.cs` arquivo e faça com que ele se pareça com o seguinte:
 
@@ -333,7 +333,7 @@ public override void AwakeFromNib ()
 
 Se executarmos o aplicativo, o seguinte será exibido:
 
-[![Uma execução de aplicativo de exemplo](table-view-images/populate02.png)](table-view-images/populate02.png#lightbox)
+[![Captura de tela mostra uma janela denominada tabela Product com três entradas.](table-view-images/populate02.png)](table-view-images/populate02.png#lightbox)
 
 <a name="Sorting_by_Column"></a>
 
@@ -341,11 +341,11 @@ Se executarmos o aplicativo, o seguinte será exibido:
 
 Vamos permitir que o usuário classifique os dados na tabela clicando em um cabeçalho de coluna. Primeiro, clique duas vezes no `Main.storyboard` arquivo para abri-lo para edição no interface Builder. Selecione a `Product` coluna, insira `Title` para a **chave de classificação**, `compare:` para o **seletor** e selecione `Ascending` para a **ordem**:
 
-[![Definindo a chave de classificação](table-view-images/sort01.png)](table-view-images/sort01.png#lightbox)
+[![Captura de tela mostra a Interface Builder em que você pode definir a chave de classificação para a coluna produto.](table-view-images/sort01.png)](table-view-images/sort01.png#lightbox)
 
 Selecione a `Details` coluna, insira `Description` para a **chave de classificação**, `compare:` para o **seletor** e selecione `Ascending` para a **ordem**:
 
-[![Definindo a chave de classificação](table-view-images/sort02.png)](table-view-images/sort02.png#lightbox)
+[![Captura de tela mostra a Interface Builder em que você pode definir a chave de classificação para a coluna de detalhes.](table-view-images/sort02.png)](table-view-images/sort02.png#lightbox)
 
 Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
@@ -403,7 +403,7 @@ Se executarmos o aplicativo e clicarmos nos cabeçalhos de coluna, as linhas ser
 
 Se você quiser permitir que o usuário selecione uma única linha, clique duas vezes no `Main.storyboard` arquivo para abri-lo para edição no interface Builder. Selecione o modo de exibição de tabela na **hierarquia de interface** e desmarque a caixa de seleção **vários** no **Inspetor de atributo**:
 
-[![O Inspetor de atributo](table-view-images/select01.png)](table-view-images/select01.png#lightbox)
+[![Captura de tela mostra o Interface Builder onde você pode selecionar vários no Inspetor de atributo.](table-view-images/select01.png)](table-view-images/select01.png#lightbox)
 
 Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
@@ -420,10 +420,10 @@ Isso permitirá que o usuário selecione uma única linha no modo de exibição 
 
 O modo de exibição de tabela ( `NSTableView` ) contém os seguintes métodos para trabalhar com a seleção de linha:
 
-- `DeselectRow(nint)`-Anula a seleção da linha determinada na tabela.
-- `SelectRow(nint,bool)`-Seleciona a linha determinada. Passe `false` para o segundo parâmetro selecionar apenas uma linha por vez.
-- `SelectedRow`-Retorna a linha atual selecionada na tabela.
-- `IsRowSelected(nint)`-Retorna `true` se a linha fornecida está selecionada.
+- `DeselectRow(nint)` -Anula a seleção da linha determinada na tabela.
+- `SelectRow(nint,bool)` -Seleciona a linha determinada. Passe `false` para o segundo parâmetro selecionar apenas uma linha por vez.
+- `SelectedRow` -Retorna a linha atual selecionada na tabela.
+- `IsRowSelected(nint)` -Retorna `true` se a linha fornecida está selecionada.
 
 <a name="Multiple_Row_Selection"></a>
 
@@ -431,7 +431,7 @@ O modo de exibição de tabela ( `NSTableView` ) contém os seguintes métodos p
 
 Se você quiser permitir que o usuário selecione várias linhas, clique duas vezes no `Main.storyboard` arquivo para abri-lo para edição no interface Builder. Selecione o modo de exibição de tabela na **hierarquia de interface** e marque a caixa de seleção **vários** no **Inspetor de atributo**:
 
-[![O Inspetor de atributo](table-view-images/select02.png)](table-view-images/select02.png#lightbox)
+[![Captura de tela mostra o Interface Builder onde você pode selecionar vários para permitir seleção múltipla de linha.](table-view-images/select02.png)](table-view-images/select02.png#lightbox)
 
 Salve as alterações e retorne ao Visual Studio para Mac para sincronizar com o Xcode.
 
@@ -448,15 +448,15 @@ Isso permitirá que o usuário selecione uma única linha no modo de exibição 
 
 O modo de exibição de tabela ( `NSTableView` ) contém os seguintes métodos para trabalhar com a seleção de linha:
 
-- `DeselectAll(NSObject)`-Anula a seleção de todas as linhas na tabela. Use `this` para o primeiro parâmetro a ser enviado no objeto, fazendo a seleção. 
-- `DeselectRow(nint)`-Anula a seleção da linha determinada na tabela.
-- `SelectAll(NSobject)`– Seleciona todas as linhas na tabela. Use `this` para o primeiro parâmetro a ser enviado no objeto, fazendo a seleção.
-- `SelectRow(nint,bool)`-Seleciona a linha determinada. Pass `false` para o segundo parâmetro Limpe a seleção e selecione apenas uma única linha, passe `true` para estender a seleção e inclua essa linha.
-- `SelectRows(NSIndexSet,bool)`-Seleciona o conjunto de linhas fornecido. Pass `false` para o segundo parâmetro desmarque a seleção e selecione apenas uma dessas linhas, passe `true` para estender a seleção e inclua essas linhas.
-- `SelectedRow`-Retorna a linha atual selecionada na tabela.
-- `SelectedRows`-Retorna um `NSIndexSet` que contém os índices das linhas selecionadas.
-- `SelectedRowCount`-Retorna o número de linhas selecionadas.
-- `IsRowSelected(nint)`-Retorna `true` se a linha fornecida está selecionada.
+- `DeselectAll(NSObject)` -Anula a seleção de todas as linhas na tabela. Use `this` para o primeiro parâmetro a ser enviado no objeto, fazendo a seleção. 
+- `DeselectRow(nint)` -Anula a seleção da linha determinada na tabela.
+- `SelectAll(NSobject)` – Seleciona todas as linhas na tabela. Use `this` para o primeiro parâmetro a ser enviado no objeto, fazendo a seleção.
+- `SelectRow(nint,bool)` -Seleciona a linha determinada. Pass `false` para o segundo parâmetro Limpe a seleção e selecione apenas uma única linha, passe `true` para estender a seleção e inclua essa linha.
+- `SelectRows(NSIndexSet,bool)` -Seleciona o conjunto de linhas fornecido. Pass `false` para o segundo parâmetro desmarque a seleção e selecione apenas uma dessas linhas, passe `true` para estender a seleção e inclua essas linhas.
+- `SelectedRow` -Retorna a linha atual selecionada na tabela.
+- `SelectedRows` -Retorna um `NSIndexSet` que contém os índices das linhas selecionadas.
+- `SelectedRowCount` -Retorna o número de linhas selecionadas.
+- `IsRowSelected(nint)` -Retorna `true` se a linha fornecida está selecionada.
 
 <a name="Type_to_Select_Row"></a>
 
@@ -490,7 +490,7 @@ O `GetNextTypeSelectMatch` método usa o dado `searchString` e retorna a linha d
 
 Se executarmos o aplicativo e digitarmos um caractere, uma linha será selecionada:
 
-[![Uma execução de aplicativo de exemplo](table-view-images/type02.png)](table-view-images/type02.png#lightbox)
+[![Captura de tela mostra o resultado da execução do aplicativo.](table-view-images/type02.png)](table-view-images/type02.png#lightbox)
 
 <a name="Reordering_Columns"></a>
 
@@ -498,7 +498,7 @@ Se executarmos o aplicativo e digitarmos um caractere, uma linha será seleciona
 
 Se você quiser permitir que o usuário Arraste colunas de reordenação na exibição de tabela, clique duas vezes no `Main.storyboard` arquivo para abri-lo para edição no interface Builder. Selecione o modo de exibição de tabela na **hierarquia de interface** e marque a caixa de seleção **Reordenar** no **Inspetor de atributo**:
 
-[![O Inspetor de atributo](table-view-images/reorder01.png)](table-view-images/reorder01.png#lightbox)
+[![Captura de tela mostra a Interface Builder onde você pode selecionar Reodering no Inspetor de atributo.](table-view-images/reorder01.png)](table-view-images/reorder01.png#lightbox)
 
 Se fornecermos um valor para a **Propriedade** autosave e verificar o campo de **informações da coluna** , as alterações feitas no layout da tabela serão salvas automaticamente para nós e restauradas na próxima vez em que o aplicativo for executado.
 
@@ -909,11 +909,11 @@ Se o usuário escolher excluir, a linha será removida e a tabela será redesenh
 
 ## <a name="data-binding-table-views"></a>Exibições de tabela de associação de dados
 
-Usando a codificação de valor chave e técnicas de vinculação de dados em seu aplicativo Xamarin. Mac, você pode diminuir muito a quantidade de código que você precisa escrever e manter para popular e trabalhar com elementos de interface do usuário. Você também tem o benefício de desacoplar ainda mais os dados de backup (_modelo de dados_) da sua interface do usuário de front-end (_Model-View-Controller_), levando a um design de aplicativo mais fácil de manter e mais flexível.
+Usando Key-Value codificação e técnicas de vinculação de dados em seu aplicativo Xamarin. Mac, você pode diminuir muito a quantidade de código que você precisa escrever e manter para popular e trabalhar com elementos da interface do usuário. Você também tem o benefício de desacoplar ainda mais os dados de backup (_modelo de dados_) da sua interface do usuário de front-end (_Model-View-Controller_), levando a um design de aplicativo mais fácil de manter e mais flexível.
 
-A KVC (codificação de valor chave) é um mecanismo para acessar as propriedades de um objeto indiretamente, usando chaves (cadeias de caracteres especialmente formatadas) para identificar Propriedades em vez de acessá-las por meio de variáveis de instância ou métodos de acessador ( `get/set` ). Ao implementar acessadores compatíveis com codificação de chave-valor em seu aplicativo Xamarin. Mac, você obterá acesso a outros recursos do macOS, como KVO (chave-valor, observação), vinculação de dados, dados principais, associações de Cocoa e scripts.
+A codificação de Key-Value (KVC) é um mecanismo para acessar propriedades de um objeto indiretamente, usando chaves (cadeias de caracteres especialmente formatadas) para identificar Propriedades em vez de acessá-las por meio de variáveis de instância ou métodos de acessador ( `get/set` ). Com a implementação de acessadores em conformidade com a codificação Key-Value em seu aplicativo Xamarin. Mac, você tem acesso a outros recursos do macOS, como Key-Value observando (KVO), vinculação de dados, dados principais, associações de Cocoa e scripts.
 
-Para obter mais informações, consulte a seção de [vinculação de dados de exibição de tabela](~/mac/app-fundamentals/databinding.md#Table_View_Data_Binding) de nossa vinculação de [dados e a documentação de codificação de chave-valor](~/mac/app-fundamentals/databinding.md) .
+Para obter mais informações, consulte a seção de [vinculação de dados de exibição de tabela](~/mac/app-fundamentals/databinding.md#Table_View_Data_Binding) de nossa vinculação de [dados e](~/mac/app-fundamentals/databinding.md) a documentação de codificação de Key-Value.
 
 <a name="Summary"></a>
 
@@ -923,12 +923,12 @@ Este artigo deu uma visão detalhada de como trabalhar com exibições de tabela
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [MacTables (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/mactables)
-- [MacImages (amostra)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
+- [MacTables (exemplo)](/samples/xamarin/mac-samples/mactables)
+- [MacImages (amostra)](/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Exibições de estrutura de tópicos](~/mac/user-interface/outline-view.md)
 - [Listas de origem](~/mac/user-interface/source-list.md)
-- [Associação de dados e a codificação de chave-valor](~/mac/app-fundamentals/databinding.md)
+- [Associação de dados e codificação de chave-valor](~/mac/app-fundamentals/databinding.md)
 - [Diretrizes de interface humana do OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [NSTableView](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSTableView_Class/index.html#//apple_ref/doc/uid/TP40004125)
 - [NSTableViewDelegate](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/NSTableViewDelegate_Protocol/index.html#//apple_ref/doc/uid/TP40008622)

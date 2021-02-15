@@ -6,12 +6,12 @@ ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
 author: davidortinau
 ms.author: daortin
 ms.date: 10/09/2017
-ms.openlocfilehash: 441ac213531c84aa3b7edfd6dfabab3f2c37d15d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9439b33c0e2c8458fd1308003aa9cd93148b6eac
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934778"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457309"
 ---
 # <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure e Xamarin
 
@@ -21,7 +21,7 @@ ms.locfileid: "86934778"
 
 ## <a name="connected-services-in-visual-studio-for-mac"></a>Serviços conectados no Visual Studio para Mac
 
-O novo recurso [Serviços conectados](connected-services.md) do Visual Studio para Mac ajuda os desenvolvedores a adicionar com rapidez e facilidade a funcionalidade do Azure a aplicativos móveis de dentro do IDE. Disponível no momento para teste no canal alfa.
+O novo recurso [Serviços conectados](/visualstudio/mac/connected-services) do Visual Studio para Mac ajuda os desenvolvedores a adicionar com rapidez e facilidade a funcionalidade do Azure a aplicativos móveis de dentro do IDE. Disponível no momento para teste no canal alfa.
 
 ## <a name="azure-app-services"></a>Serviços de Aplicativo do Azure
 
@@ -43,7 +43,7 @@ Você pode facilmente girar um [site do Azure](https://trywebsites.azurewebsites
 
 Este tutorial apresenta como integrar tecnologias REST, WCF e serviço Web SOAP com aplicativos móveis Xamarin. Ele examina várias implementações de serviço, avalia as ferramentas e bibliotecas disponíveis para integrá-las e fornece padrões de exemplo para o consumo de dados de serviço. Por fim, ele fornece uma visão geral básica da criação de um serviço Web RESTful para consumo com um aplicativo do Xamarin Mobile.
 
-## <a name="samples"></a>Amostras
+## <a name="samples"></a>Exemplos
 
 Além dos exemplos de [documentação](https://github.com/xamarin/mobile-samples/tree/master/Azure), os seguintes aplicativos completos demonstram vários recursos do Azure incorporados aos aplicativos Xamarin:
 
@@ -58,5 +58,5 @@ Além dos exemplos de [documentação](https://github.com/xamarin/mobile-samples
 ## <a name="related-links"></a>Links Relacionados
 
 - [Exemplo de PCL do Azure (por @paulbatum ) (exemplo)](https://github.com/paulbatum/mobile-services-xamarin-pcl)
-- [Azure portal](https://azure.microsoft.com/)
+- [Portal do Azure](https://azure.microsoft.com/)
 - [Cliente móvel para Xamarin (NuGet)](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)

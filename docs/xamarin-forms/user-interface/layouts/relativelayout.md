@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/13/2020
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 77b1837fb58d5743fd887b9f636f7f7311b807d3
-ms.sourcegitcommit: 9bd6b1b20d126b3f837c4cf859b25895c242e54e
+ms.openlocfilehash: 22e7611cbe9aaad00f3b512cbe1a44bcc3f3541b
+ms.sourcegitcommit: c5e72d2ca4152b62ab6583f0dbe84b3ba29d8283
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88648168"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97677514"
 ---
 # <a name="no-locxamarinforms-relativelayout"></a>Xamarin.Forms RelativeLayout
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-relativelayoutdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-relativelayoutdemos)
 
 [![::: no-Loc (Xamarin. Forms)::: RelativeLayout](relativelayout-images/layouts.png)](relativelayout-images/layouts-large.png#lightbox)
 
@@ -341,7 +341,7 @@ Neste exemplo, os filhos são adicionados ao [`RelativeLayout`](xref:Xamarin.For
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações do RelativeLayout (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-relativelayoutdemos)
+- [Demonstrações do RelativeLayout (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-relativelayoutdemos)
 - [Xamarin.Forms Propriedades anexadas](~/xamarin-forms/xaml/attached-properties.md)
 - [Extensões de marcação do XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
 - [Escolher um Xamarin.Forms layout](choose-layout.md)

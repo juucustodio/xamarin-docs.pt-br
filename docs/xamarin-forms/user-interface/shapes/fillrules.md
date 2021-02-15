@@ -1,27 +1,25 @@
 ---
-title: 'Xamarin.FormsFormas: regras de preenchimento'
-description: Xamarin.FormsRegras de preenchimento de formas determinam se um ponto está na região de preenchimento de uma forma.
+title: 'Xamarin.Forms Formas: regras de preenchimento'
+description: Xamarin.Forms Regras de preenchimento de formas determinam se um ponto está na região de preenchimento de uma forma.
 ms.prod: xamarin
 ms.assetid: 5CABB22B-C6BE-43D1-91D9-6E90A4BD5622
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/24/2020
+ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 536992f5a8501f51e14dc15caa9825771e4ed950
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 3daf08c688be41652ae2573b0bf58e2ace2072c6
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918599"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609138"
 ---
-# <a name="no-locxamarinforms-shapes-fill-rules"></a>Xamarin.FormsFormas: regras de preenchimento
+# <a name="no-locxamarinforms-shapes-fill-rules"></a>Xamarin.Forms Formas: regras de preenchimento
 
-![API de pré-lançamento](~/media/shared/preview.png)
-
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 Várias Xamarin.Forms classes Shapes têm `FillRule` Propriedades, do tipo `FillRule` . Isso inclui `Polygon` , `Polyline` e `GeometryGroup` .
 
@@ -38,7 +36,6 @@ O exemplo XAML a seguir cria e renderiza uma forma composta, com o `FillRule` pa
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Fill="#CCCCFF"
       Aspect="Uniform"
       HorizontalOptions="Start">
@@ -80,7 +77,6 @@ O exemplo XAML a seguir cria e renderiza uma forma composta, com a `FillRule` de
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Fill="#CCCCFF"
       Aspect="Uniform"
       HorizontalOptions="Start">
@@ -105,11 +101,11 @@ O exemplo XAML a seguir cria e renderiza uma forma composta, com a `FillRule` de
 
 Neste exemplo, uma forma composta composta por uma série de anéis concêntricos é exibida:
 
-![Forma composta com regra de preenchimento diferente de zero](fillrule-images/nonzero.png "Forma composta com regra de preenchimento diferente de zero")
+![O diagrama mostra quatro círculos concêntricos, todos preenchidos.](fillrule-images/nonzero.png "Forma composta com regra de preenchimento diferente de zero")
 
 Na forma composta, observe que todos os anéis estão preenchidos. Isso ocorre porque todos os segmentos estão sendo executados na mesma direção e, portanto, um raio desenhado de qualquer ponto irá cruzar um ou mais segmentos e a soma dos cruzamentos não será igual a zero:
 
-![Forma composta por anotação com regra de preenchimento diferente de zero](fillrule-images/nonzero-annotated.png "Forma composta por anotação com regra de preenchimento diferente de zero")
+![Diagrama mostra os círculos do diagrama anterior com setas direcionais e um Ray anotado com + 1 para cada círculo que ele cruzar.](fillrule-images/nonzero-annotated.png "Forma composta por anotação com regra de preenchimento diferente de zero")
 
 Na imagem acima, as setas vermelhas representam a direção em que os segmentos são desenhados e a seta preta representa um raio arbitrário em execução a partir de um ponto no anel mais interno. Iniciando com um valor de zero, para cada segmento que o raio cruza, um valor de um é adicionado, já que o segmento cruza o raio da esquerda para a direita.
 
@@ -117,7 +113,6 @@ Uma forma mais complexa com segmentos executados em direções diferentes é nec
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Fill="#CCCCFF">
      <Path.Data>
          <GeometryGroup FillRule="Nonzero">
@@ -177,11 +172,11 @@ Uma forma mais complexa com segmentos executados em direções diferentes é nec
 
 Neste exemplo, uma série de segmentos de arco são desenhados, que não são fechados:
 
-![Forma composta com regra de preenchimento diferente de zero](fillrule-images/nonzero-gaps.png "Forma composta com regra de preenchimento diferente de zero")
+![O diagrama mostra quatro círculos concêntricos, com a maior parte e terceiro de preenchimento externo.](fillrule-images/nonzero-gaps.png "Forma composta com regra de preenchimento diferente de zero")
 
 Na imagem acima, o terceiro arco do centro não é preenchido. Isso ocorre porque a soma dos valores de um determinado raio atravessando os segmentos em seu caminho é zero:
 
-![Forma composta por anotação com regra de preenchimento diferente de zero](fillrule-images/nonzero-gaps-annotated.png "Forma composta por anotação com regra de preenchimento diferente de zero")
+![Diagrama mostra os círculos do diagrama anterior com setas direcionais e dois raios anotados com + 1 ou – 1 para cada círculo que cruzam.](fillrule-images/nonzero-gaps-annotated.png "Forma composta por anotação com regra de preenchimento diferente de zero")
 
 Na imagem acima, o círculo vermelho representa um ponto, as linhas pretas representam raios arbitrários que se movem do ponto na região não preenchida e as setas vermelhas representam a direção em que os segmentos são desenhados. Como pode ser visto, a soma dos valores dos raios que cruzam os segmentos é zero:
 
@@ -192,5 +187,5 @@ Uma soma de zero resultados no anel não está sendo preenchida.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [ShapeDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.FormsExistentes](index.md)
+- [ShapeDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [Xamarin.Forms Existentes](index.md)

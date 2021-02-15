@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 2a7a09b1dec840090587377199533ef8c6ec63b5
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 884b14cdb268fe417388a9007bc1c8990114f7e7
+ms.sourcegitcommit: 424eaef56fd2933c98e72f1d3e7ac71730fe4835
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572660"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758130"
 ---
 # <a name="menus-in-xamarinmac"></a>Menus no Xamarin. Mac
 
@@ -47,7 +47,7 @@ De acordo com a Apple e, por padrão, todos os aplicativos macOS têm um conjunt
 - **Menu da Apple** – esse menu fornece acesso a itens em todo o sistema que estão disponíveis para o usuário em todos os momentos, independentemente de qual aplicativo está sendo executado. Esses itens não podem ser modificados pelo desenvolvedor.
 - **Menu do aplicativo** – esse menu exibe o nome do aplicativo em negrito e ajuda o usuário a identificar qual aplicativo está em execução no momento. Ele contém itens que se aplicam ao aplicativo como um todo e não a um determinado documento ou processo, como sair do aplicativo.
 - **Menu arquivo** -itens usados para criar, abrir ou salvar documentos com os quais seu aplicativo funciona. Se o seu aplicativo não for baseado em documento, esse menu poderá ser renomeado ou removido.
-- **Menu Editar** – mantém comandos como **recortar**, **copiar**e **colar** , que são usados para editar ou modificar elementos na interface do usuário do aplicativo.
+- **Menu Editar** – mantém comandos como **recortar**, **copiar** e **colar** , que são usados para editar ou modificar elementos na interface do usuário do aplicativo.
 - **Menu Formatar** – se o aplicativo funcionar com texto, esse menu conterá comandos para ajustar a formatação desse texto.
 - **Menu Exibir** – mantém comandos que afetam o modo como o conteúdo é exibido (exibido) na interface do usuário do aplicativo.
 - **Menus específicos do aplicativo** -esses são todos os menus que são específicos para seu aplicativo (como um menu de indicadores para um navegador da Web). Eles devem aparecer entre os menus de **exibição** e de **janela** na barra.
@@ -64,7 +64,7 @@ Sempre que você cria um novo projeto do Xamarin. Mac, você obtém automaticame
 
 Clique duas vezes no arquivo **Main. Storyboard** para abri-lo para edição no interface Builder do Xcode e você verá a interface do editor de menus:
 
-[![Editando a interface do usuário no Xcode](menu-images/defaultbar01.png "Editando a interface do usuário no Xcode")](menu-images/defaultbar01-large.png#lightbox)
+[![Editando a interface do usuário no Xcode, mostrando o storyboard do ponto principal.](menu-images/defaultbar01.png "Editando a interface do usuário no Xcode")](menu-images/defaultbar01-large.png#lightbox)
 
 Aqui, podemos clicar em itens como o item de menu **abrir** no menu **arquivo** e editar ou ajustar suas propriedades no **Inspetor de atributos**:
 
@@ -92,7 +92,7 @@ Se você fosse executar um aplicativo Xamarin. Mac recém-criado antes de adicio
 
 ![Um item de menu habilitado](menu-images/appmenu03.png "Um item de menu habilitado")
 
-Enquanto outros itens de menu, como **recortar**, **copiar**e **colar** não são:
+Enquanto outros itens de menu, como **recortar**, **copiar** e **colar** não são:
 
 ![Itens de menu desabilitados](menu-images/appmenu04.png "Itens de menu desabilitados")
 
@@ -108,7 +108,7 @@ Salve as alterações no design da interface do usuário e volte para a Visual S
 
 ![Os itens de menu são automaticamente habilitados/desabilitados](menu-images/appmenu07.png "Os itens de menu são automaticamente habilitados/desabilitados")
 
-Observe como os itens **recortar**, **copiar**e **colar** são automaticamente habilitados e totalmente funcionais, tudo sem escrever uma única linha de código. 
+Observe como os itens **recortar**, **copiar** e **colar** são automaticamente habilitados e totalmente funcionais, tudo sem escrever uma única linha de código. 
 
 O que está acontecendo? Lembre-se das ações internas de predefinição que vêm conectadas aos itens de menu padrão (como apresentado acima), a maioria dos elementos da interface do usuário Cocoa que fazem parte do macOS tem ganchos internos para ações específicas (como `copy:` ). Assim, quando eles são adicionados a uma janela, ativa e selecionada, o item de menu correspondente ou os itens anexados a essa ação são automaticamente habilitados. Se o usuário selecionar esse item de menu, a funcionalidade interna ao elemento de interface do usuário será chamada e executada, tudo isso sem intervenção do desenvolvedor.
 
@@ -120,7 +120,7 @@ Por padrão, toda vez que um evento de usuário ocorre, o `NSMenu` habilita auto
 - **Ações personalizadas e validateMenuItem:** -para qualquer item de menu associado a uma [ação personalizada de controlador de janela ou exibição](#Working-with-Custom-Window-Actions), você pode adicionar a `validateMenuItem:` ação e habilitar ou desabilitar manualmente os itens de menu.
 - **Habilitação do menu manual** -você define manualmente a `Enabled` propriedade de cada `NSMenuItem` para habilitar ou desabilitar cada item em um menu individualmente.
 
-Para escolher um sistema, defina a `AutoEnablesItems` propriedade de um `NSMenu` . `true`é automático (o comportamento padrão) e `false` é manual. 
+Para escolher um sistema, defina a `AutoEnablesItems` propriedade de um `NSMenu` . `true` é automático (o comportamento padrão) e `false` é manual. 
 
 > [!IMPORTANT]
 > Se você optar por usar o menu manual habilitando, nenhum dos itens de menu, mesmo aqueles controlados por classes AppKit como `NSTextView` , serão atualizados automaticamente. Você será responsável por habilitar e desabilitar todos os itens manualmente no código.
@@ -435,7 +435,7 @@ public void defineKeyword (NSObject sender) {
 }
 ```
 
-Em seguida, clique duas vezes no arquivo de storyboard do aplicativo no **painel de soluções** para abri-lo para edição no interface Builder do Xcode. Selecione o **primeiro Respondente** na **cena do aplicativo**e, em seguida, alterne para o **Inspetor de atributos**:
+Em seguida, clique duas vezes no arquivo de storyboard do aplicativo no **painel de soluções** para abri-lo para edição no interface Builder do Xcode. Selecione o **primeiro Respondente** na **cena do aplicativo** e, em seguida, alterne para o **Inspetor de atributos**:
 
 ![O Inspetor de atributos](menu-images/action01.png "O Inspetor de atributos")
 
@@ -465,7 +465,7 @@ Nesta seção, examinaremos a remoção de itens de menu que não são necessár
 
 Clique duas vezes no arquivo **Main. Storyboard** no **painel de soluções** para abri-lo para edição:
 
-[![Editando a interface do usuário no Xcode](menu-images/maint01.png "Editando a interface do usuário no Xcode")](menu-images/maint01-large.png#lightbox)
+[![Clicando duas vezes no arquivo de storyboard para editar a interface do usuário no Xcode.](menu-images/maint01.png "Editando a interface do usuário no Xcode")](menu-images/maint01-large.png#lightbox)
 
 Para nosso aplicativo Xamarin. Mac específico, não vamos usar o menu de **exibição** padrão, portanto, vamos removê-lo. Na **hierarquia de interface** , selecione o item de menu **Exibir** que faz parte da barra de menus principal:
 
@@ -529,8 +529,8 @@ Vamos fazer o seguinte:
     [![Selecionando o tipo de ação](menu-images/maint17.png "Selecionando o tipo de ação")](menu-images/maint17-large.png#lightbox)
 3. Insira um **nome** de "phraseAddress" e pressione o botão **conectar** para criar a nova ação: 
 
-    [![Configurando a ação](menu-images/maint18.png "Configurando a ação")](menu-images/maint18-large.png#lightbox)
-4. Repita as etapas acima para os itens de menu **Data**, **saudação**e **assinatura** : 
+    [![Configurando a ação inserindo um nome.](menu-images/maint18.png "Configurando a ação")](menu-images/maint18-large.png#lightbox)
+4. Repita as etapas acima para os itens de menu **Data**, **saudação** e **assinatura** : 
 
     [![As ações concluídas](menu-images/maint19.png "As ações concluídas")](menu-images/maint19-large.png#lightbox)
 5. Salve as alterações na barra de menus.
@@ -895,7 +895,7 @@ Os menus contextuais aparecem quando o usuário clica com o botão direito do mo
 
 Vamos editar nosso arquivo **. Storyboard principal** no Xcode e adicionar uma janela de **janela** ao nosso design, definir sua **classe** como "NSPanel" no **Inspetor de identidade**, adicionar um novo item de **Assistente** ao menu **janela** e anexá-lo à nova janela usando um **show transição**:
 
-[![Configurando o tipo transição](menu-images/context01.png "Configurando o tipo transição")](menu-images/context01-large.png#lightbox)
+[![Definindo o tipo transição no arquivo de storyboard do ponto principal.](menu-images/context01.png "Configurando o tipo transição")](menu-images/context01-large.png#lightbox)
 
 Vamos fazer o seguinte:
 
@@ -910,7 +910,7 @@ Vamos fazer o seguinte:
     [![Arrastando para criar um transição](menu-images/context04.png "Arrastando para criar um transição")](menu-images/context04-large.png#lightbox)
 4. Na caixa de diálogo pop-up, selecione **menu**: 
 
-    ![Configurando o tipo transição](menu-images/context05.png "Configurando o tipo transição")
+    ![Configurando o tipo transição selecionando menu de saídas no menu de contexto do rótulo.](menu-images/context05.png "Configurando o tipo transição")
 5. No **Inspetor de identidade**, defina a classe do controlador de exibição como "PanelViewController": 
 
     [![Definindo a classe transição](menu-images/context10.png "Definindo a classe transição")](menu-images/context10-large.png#lightbox)
@@ -918,10 +918,10 @@ Vamos fazer o seguinte:
 7. Alterne para o **Editor do assistente** e selecione o arquivo **PanelViewController. h** .
 8. Crie uma ação para o item de menu de **documento** chamado `propertyDocument` : 
 
-    [![Configurando a ação](menu-images/context06.png "Configurando a ação")](menu-images/context06-large.png#lightbox)
+    [![Configurando a ação chamada propertyDocument.](menu-images/context06.png "Configurando a ação")](menu-images/context06-large.png#lightbox)
 9. Repita a criação de ações para os itens de menu restantes: 
 
-    [![As ações necessárias](menu-images/context07.png "As ações necessárias")](menu-images/context07-large.png#lightbox)
+    [![Repetindo ações para os itens de menu restantes.](menu-images/context07.png "As ações necessárias")](menu-images/context07-large.png#lightbox)
 10. Finalmente, crie uma tomada para o **rótulo de propriedade** chamado `propertyLabel` : 
 
     [![Configurando a tomada](menu-images/context08.png "Configurando a tomada")](menu-images/context08-large.png#lightbox)
@@ -992,7 +992,7 @@ public override void DidFinishLaunching (NSNotification notification)
 }
 ```
 
-`NSStatusBar statusBar = NSStatusBar.SystemStatusBar;`nos dá acesso à barra de status de todo o sistema. `var item = statusBar.CreateStatusItem (NSStatusItemLength.Variable);`Cria um novo item da barra de status. A partir daí, criamos um menu e um número de itens de menu e anexamos o menu ao item da barra de status que acabamos de criar. 
+`NSStatusBar statusBar = NSStatusBar.SystemStatusBar;` nos dá acesso à barra de status de todo o sistema. `var item = statusBar.CreateStatusItem (NSStatusItemLength.Variable);` Cria um novo item da barra de status. A partir daí, criamos um menu e um número de itens de menu e anexamos o menu ao item da barra de status que acabamos de criar. 
 
 Se executarmos o aplicativo, o novo item da barra de status será exibido. Selecionar um item no menu irá alterar o texto na exibição de texto: 
 
@@ -1008,18 +1008,18 @@ O menu Dock aparece para o aplicativo Mac quando o usuário clica com o botão d
 
 Vamos criar um menu de encaixe personalizado para nosso aplicativo fazendo o seguinte:
 
-1. Em Visual Studio para Mac, clique com o botão direito do mouse no projeto do aplicativo e selecione **Adicionar**  >  **novo arquivo...** Na caixa de diálogo novo arquivo, selecione definição de interface vazia do **Xamarin. Mac**  >  **Empty Interface Definition**, use "DockMenu" para o **nome** e clique no botão **novo** para criar o novo arquivo **DockMenu. xib** :
+1. Em Visual Studio para Mac, clique com o botão direito do mouse no projeto do aplicativo e selecione **Adicionar**  >  **novo arquivo...** Na caixa de diálogo novo arquivo, selecione definição de interface vazia do **Xamarin. Mac**  >  , use "DockMenu" para o **nome** e clique no botão **novo** para criar o novo arquivo **DockMenu. xib** :
 
     ![Adicionando uma definição de interface vazia](menu-images/dock02.png "Adicionando uma definição de interface vazia")
-2. No **painel de soluções**, clique duas vezes no arquivo **DockMenu. xib** para abri-lo para edição no Xcode. Crie um novo **menu** com os seguintes itens: **endereço**, **Data**, **saudação**e **assinatura** 
+2. No **painel de soluções**, clique duas vezes no arquivo **DockMenu. xib** para abri-lo para edição no Xcode. Crie um novo **menu** com os seguintes itens: **endereço**, **Data**, **saudação** e **assinatura** 
 
     [![Criação do layout da interface do usuário](menu-images/dock03.png "Criação do layout da interface do usuário")](menu-images/dock03-large.png#lightbox)
 3. Em seguida, vamos conectar nossos novos itens de menu às nossas ações existentes que criamos para nosso menu personalizado na seção [adicionando, editando e excluindo menus](#Adding,_Editing_and_Deleting_Menus) acima. Alterne para o **Inspetor de conexão** e selecione o **primeiro Respondente** na **hierarquia de interface**. Role para baixo e localize a `phraseAddress:` ação. Arraste uma linha do círculo nessa ação para o item de menu de **endereço** :
 
-    [![Arrastando para conectar uma ação](menu-images/dock04.png "Arrastando para conectar uma ação")](menu-images/dock04-large.png#lightbox)
+    [![Arrastando uma linha para o item de menu de endereço.](menu-images/dock04.png "Arrastando para conectar uma ação")](menu-images/dock04-large.png#lightbox)
 4. Repita para todos os outros itens de menu anexando-os às ações correspondentes: 
 
-    [![As ações necessárias](menu-images/dock05.png "As ações necessárias")](menu-images/dock05-large.png#lightbox)
+    [![Repetindo outros itens de menu anexando-os às ações correspondentes.](menu-images/dock05.png "As ações necessárias")](menu-images/dock05-large.png#lightbox)
 5. Em seguida, selecione o **aplicativo** na **hierarquia de interface**. No **Inspetor de conexão**, arraste uma linha do círculo na `dockMenu` tomada para o menu que acabamos de criar:
 
     [![Arrastando a conexão com a tomada](menu-images/dock06.png "Arrastando a conexão com a tomada")](menu-images/dock06-large.png#lightbox)
@@ -1051,7 +1051,7 @@ Vamos criar um botão pop-up personalizado para nosso aplicativo fazendo o segui
 1. Edite o arquivo **Main. Storyboard** no Xcode e arraste um **botão pop-up** do **Inspetor de biblioteca** para a janela do **painel** que criamos na seção de [menus contextuais](#Contextual_Menus) : 
 
     [![Adicionando um botão pop-up](menu-images/popup01.png "Adicionando um botão pop-up")](menu-images/popup01-large.png#lightbox)
-2. Adicionar um novo item de menu e definir os títulos dos itens no pop-up para: **endereço**, **Data**, **saudação**e **assinatura** 
+2. Adicionar um novo item de menu e definir os títulos dos itens no pop-up para: **endereço**, **Data**, **saudação** e **assinatura** 
 
     [![Configurando os itens de menu](menu-images/popup02.png "Configurando os itens de menu")](menu-images/popup02-large.png#lightbox)
 3. Em seguida, vamos conectar nossos novos itens de menu às ações existentes que criamos para nosso menu personalizado na seção [adicionando, editando e excluindo menus](#Adding,_Editing_and_Deleting_Menus) acima. Alterne para o **Inspetor de conexão** e selecione o **primeiro Respondente** na **hierarquia de interface**. Role para baixo e localize a `phraseAddress:` ação. Arraste uma linha do círculo nessa ação para o item de menu de **endereço** : 
@@ -1072,9 +1072,9 @@ Você pode criar e trabalhar com listas suspensas exatamente da mesma maneira qu
 
 Este artigo deu uma visão detalhada de como trabalhar com menus e itens de menu em um aplicativo Xamarin. Mac. Primeiro, examinamos a barra de menus do aplicativo e examinamos a criação de menus contextuais. em seguida, examinamos os menus de barra de status e os menus de encaixe personalizados. Por fim, abordamos os menus pop-up e as listas suspensas.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [MacMenus (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macmenus)
+- [MacMenus (exemplo)](/samples/xamarin/mac-samples/macmenus)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Diretrizes de interface humana – menus](https://developer.apple.com/macos/human-interface-guidelines/menus/menu-anatomy/)
 - [Introdução aos menus do aplicativo e listas pop-up](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/MenuList/MenuList.html)

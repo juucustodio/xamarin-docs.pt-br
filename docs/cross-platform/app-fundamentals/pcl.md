@@ -6,12 +6,12 @@ ms.assetid: 76ba8f7a-9b6e-40f5-9a29-ff1274ece4f2
 author: davidortinau
 ms.author: daortin
 ms.date: 07/18/2018
-ms.openlocfilehash: 63ef7045051f21259e01c36fc5f702585b04a57b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: a1672937b8c7c0ce429b82aee34ecf45aa59d4c8
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934340"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91457413"
 ---
 # <a name="portable-class-libraries-pcl"></a>PCL (Bibliotecas de classe portáteis)
 
@@ -54,7 +54,7 @@ Isso inclui perfis que são combinações de:
 - Windows Phone 8
 - Aplicativos UWP
 
-Você pode ler mais sobre os recursos de perfis diferentes no [site da Microsoft](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx) e ver o [Resumo do perfil PCL](https://portablelibraryprofiles.stephencleary.com/) de outro membro da Comunidade, que inclui informações de estrutura com suporte e outras observações.
+Você pode ler mais sobre os recursos de perfis diferentes no [site da Microsoft](/dotnet/standard/cross-platform/cross-platform-development-with-the-portable-class-library) e ver o [Resumo do perfil PCL](https://portablelibraryprofiles.stephencleary.com/) de outro membro da Comunidade, que inclui informações de estrutura com suporte e outras observações.
 
 **Benefícios**
 
@@ -198,7 +198,7 @@ Isso torna o PCL uma maneira ideal de fornecer componentes e bibliotecas entre p
 
 ## <a name="pcl-example"></a>Exemplo de PCL
 
-O aplicativo de exemplo [TaskyPortable](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/) demonstra como uma biblioteca de classes portátil pode ser usada com o Xamarin.
+O aplicativo de exemplo [TaskyPortable](/samples/xamarin/mobile-samples/taskyportable/) demonstra como uma biblioteca de classes portátil pode ser usada com o Xamarin.
 Aqui estão algumas capturas de tela dos aplicativos resultantes em execução no iOS e no Android:
 
 [![Aqui estão algumas capturas de tela dos aplicativos resultantes em execução no iOS, Android e Windows Phone](pcl-images/image18.png)](pcl-images/image18.png#lightbox)
@@ -272,9 +272,9 @@ Este artigo abordou brevemente os benefícios e as armadilhas das bibliotecas de
 
 ## <a name="related-links"></a>Links relacionados
 
-- [TaskyPortable (exemplo)](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
+- [TaskyPortable (exemplo)](/samples/xamarin/mobile-samples/taskyportable/)
 - [Compilar aplicativos de plataforma cruzada](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 - [Visual Basic portátil](~/cross-platform/platform/visual-basic/index.md)
 - [Projetos compartilhados](~/cross-platform/app-fundamentals/shared-projects.md)
 - [Opções de código de compartilhamento](~/cross-platform/app-fundamentals/code-sharing.md)
-- [Desenvolvimento de plataforma cruzada com o .NET Framework (Microsoft)](https://docs.microsoft.com/dotnet/standard/cross-platform/cross-platform-development-with-the-portable-class-library)
+- [Desenvolvimento de plataforma cruzada com o .NET Framework (Microsoft)](/dotnet/standard/cross-platform/cross-platform-development-with-the-portable-class-library)

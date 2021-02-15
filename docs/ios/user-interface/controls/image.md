@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/13/2018
-ms.openlocfilehash: 32f145d791a40bd90e848f1124ce150cbd9c7575
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2350c068b0a719e8d633c0f96712aec40e7865aa
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937744"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697469"
 ---
 # <a name="displaying-images-with-xamarinios"></a>Exibindo imagens com Xamarin. iOS
 
@@ -59,7 +59,7 @@ O diretório de **recursos** deve ser tão nomeado, e todos os arquivos devem te
 
 No designer do iOS, use uma **exibição de imagem** para exibir uma imagem ou uma série animada de imagens. O ícone de **exibição de imagem** da caixa de ferramentas é mostrado abaixo:
 
- [![ImageView na caixa de ferramentas](image-images/image35a.png)](image-images/image35.png#lightbox)
+ [![Ícone de ImageView na caixa de ferramentas.](image-images/image35a.png)](image-images/image35.png#lightbox)
 
 Arraste o **modo de exibição de imagem** da **caixa de ferramentas** para o controlador de exibição. Em seguida, em **modo de exibição de imagem > imagem** , a lista suspensa fornecerá uma lista de todos os arquivos de imagem disponíveis em seu projeto. Selecione qualquer um deles para adicioná-lo à sua exibição de imagem.
 
@@ -83,4 +83,4 @@ As referências de arquivo de recurso nunca precisam incluir a pasta de **recurs
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Controles (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [Controles (exemplo)](/samples/xamarin/ios-samples/controls)

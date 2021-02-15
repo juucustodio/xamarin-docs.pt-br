@@ -13,12 +13,12 @@ metadata:
   no-loc:
   - Xamarin.Forms
   - Xamarin.Essentials
-  ms.openlocfilehash: f96a1b923354fe5efee3413e30b18909d8428bfc
-  ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
+  ms.openlocfilehash: 3e892c7087584ccf18264683919aa73bd2eb1995
+  ms.sourcegitcommit: b75c369adb8e02a429b6c0fed8ba4a855099bf01
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/28/2020
-  ms.locfileid: "84138093"
+  ms.lasthandoff: 01/18/2021
+  ms.locfileid: "98554990"
 landingContent:
 - title: Layouts
   linkLists:
@@ -42,8 +42,8 @@ landingContent:
       url: editor/index.yml
     - text: Image
       url: image/index.yml
-    - text: ListView
-      url: listview/index.yml
+    - text: CollectionView
+      url: collectionview/index.yml
     - text: Pop-ups
       url: pop-ups/index.yml
 - title: Conceitos básicos do aplicativo

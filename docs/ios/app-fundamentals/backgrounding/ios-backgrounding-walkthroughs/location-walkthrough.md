@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: bbb0dfbc9a6bf1396c8d517cc2c3289e2857a836
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2350db2e8d4f43a33b0ce394e06ffd2c16b6b7ad
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938392"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436553"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Walkthrough-local do plano de fundo no Xamarin. iOS
 
@@ -73,9 +73,9 @@ Este tutorial explica alguns conceitos importantes de plano de fundo, incluindo 
 
     O código acima define um número de propriedades e permissões na classe [CLLocationManager](xref:CoreLocation.CLLocationManager) :
 
-    - `PausesLocationUpdatesAutomatically`– É um booliano que pode ser definido dependendo se o sistema tem permissão para pausar atualizações de local. Em algum dispositivo, ele usa como padrão `true` , o que pode fazer com que o dispositivo pare de obter atualizações de local de plano de fundo após cerca de 15 minutos.
-    - `RequestAlwaysAuthorization`-Você deve passar esse método para dar ao usuário do aplicativo a opção de permitir que o local seja acessado em segundo plano. `RequestWhenInUseAuthorization`também pode ser passado se você quiser conceder ao usuário a opção de permitir que o local seja acessado somente quando o aplicativo estiver em primeiro plano.
-    - `AllowsBackgroundLocationUpdates`– Essa é uma propriedade booliana, introduzida no iOS 9, que pode ser definida para permitir que um aplicativo Receba atualizações de local quando suspenso.
+    - `PausesLocationUpdatesAutomatically` – É um booliano que pode ser definido dependendo se o sistema tem permissão para pausar atualizações de local. Em algum dispositivo, ele usa como padrão `true` , o que pode fazer com que o dispositivo pare de obter atualizações de local de plano de fundo após cerca de 15 minutos.
+    - `RequestAlwaysAuthorization` -Você deve passar esse método para dar ao usuário do aplicativo a opção de permitir que o local seja acessado em segundo plano. `RequestWhenInUseAuthorization` também pode ser passado se você quiser conceder ao usuário a opção de permitir que o local seja acessado somente quando o aplicativo estiver em primeiro plano.
+    - `AllowsBackgroundLocationUpdates` – Essa é uma propriedade booliana, introduzida no iOS 9, que pode ser definida para permitir que um aplicativo Receba atualizações de local quando suspenso.
 
     > [!IMPORTANT]
     > o iOS 8 (e superior) também requer uma entrada no arquivo **info. plist** para mostrar o usuário como parte da solicitação de autorização.
@@ -84,7 +84,7 @@ Este tutorial explica alguns conceitos importantes de plano de fundo, incluindo 
 
 1. o iOS 9 requer que, ao usar `AllowsBackgroundLocationUpdates` o **info. plist** , inclua a chave `UIBackgroundModes` com o valor `location` . Se você concluiu a etapa 2 deste passo a passos, ele já deve estar em seu arquivo info. plist.
 
-1. Dentro da `LocationManager` classe, crie um método chamado `StartLocationUpdates` com o código a seguir. Esse código mostra como começar a receber atualizações de local do `CLLocationManager` :
+1. Dentro da `LocationManager` classe, crie um método chamado `StartLocationUpdates` com o código a seguir. Esse código mostra como começar a receber atualizações de local do   `CLLocationManager` :
 
     ```csharp
     if (CLLocationManager.LocationServicesEnabled) {
@@ -101,7 +101,7 @@ Este tutorial explica alguns conceitos importantes de plano de fundo, incluindo 
 
     Há várias coisas importantes que ocorrem neste método. Primeiro, executamos uma verificação para ver se o aplicativo tem acesso aos dados de localização no dispositivo. Verificamos isso chamando `LocationServicesEnabled` no `CLLocationManager` . Esse método retornará **false** se o usuário tiver negado o acesso do aplicativo às informações de localização.
 
-1. Em seguida, diga ao Gerenciador de locais a frequência de atualização. `CLLocationManager`fornece muitas opções para filtrar e configurar dados de localização, incluindo a frequência de atualizações. Neste exemplo, defina `DesiredAccuracy` como atualizar sempre que o local for alterado por um medidor. Para obter mais informações sobre como configurar a frequência de atualização de local e outras preferências, consulte a [referência de classe CLLocationManager](https://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) na documentação da Apple.
+1. Em seguida, diga ao Gerenciador de locais a frequência de atualização. `CLLocationManager` fornece muitas opções para filtrar e configurar dados de localização, incluindo a frequência de atualizações. Neste exemplo, defina `DesiredAccuracy` como atualizar sempre que o local for alterado por um medidor. Para obter mais informações sobre como configurar a frequência de atualização de local e outras preferências, consulte a [referência de classe CLLocationManager](https://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) na documentação da Apple.
 
 1. Por fim, chame `StartUpdatingLocation` na `CLLocationManager` instância. Isso informa o Gerenciador de local para obter uma correção inicial no local atual e iniciar o envio de atualizações
 
@@ -278,5 +278,5 @@ Neste tutorial, criamos um aplicativo iOS com reconhecimento de plano de fundo b
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Local (parte 4) (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/location)
+- [Local (parte 4) (exemplo)](/samples/xamarin/ios-samples/location)
 - [Referência da estrutura de localização principal](https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CoreLocation_Framework/_index.html)

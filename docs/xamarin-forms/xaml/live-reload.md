@@ -11,12 +11,12 @@ ms.date: 10/26/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b67594e2675c774512f3bf64f2e91ef10dbff444
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: bdc5b715d4502590b56b41b864835a47076ad518
+ms.sourcegitcommit: 122b8ba3dcf4bc59368a16c44e71846b11c136c5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134206"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91556445"
 ---
 # <a name="xamarin-live-reload-preview"></a>Recarregamento do Xamarin Live (versão prévia)
 
@@ -33,7 +33,7 @@ O Xamarin Live reload permite que você **faça alterações no XAML e os veja r
 * [Visual Studio 2017 versão 15,7 ou superior](https://visualstudio.microsoft.com/vs/) com o **desenvolvimento móvel com** carga de trabalho do .net.
 * [ Xamarin.Forms 3.0.0 ou superior](https://www.nuget.org/packages/Xamarin.Forms/).
 
-## <a name="getting-started"></a>Introdução
+## <a name="getting-started"></a>Guia de Introdução
 ### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Instale o Xamarin Live recarregar do Visual Studio Marketplace
 
 A recarga ao vivo do Xamarin é distribuída por meio do Visual Studio Marketplace. Para instalar a extensão, visite a [página de recarregamento do Xamarin Live no site Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Xamarin.XamarinLiveReload) e clique em **baixar**.
@@ -118,7 +118,7 @@ Não. Na verdade, você pode até mesmo iniciar todos os seus destinos de aplica
 * Há suporte apenas para o recarregamento de XAML.
 * O estado da interface do usuário não pode ser mantido entre reimplantações, a menos que o MVVM seja usado.
 
-## <a name="known-issues"></a>Problemas Conhecidos
+## <a name="known-issues"></a>Problemas conhecidos
 
 * Somente com suporte no Visual Studio.
 * A vinculação deve ser definida para **não vincular** ou **vincular somente SDKs de estrutura** 
@@ -145,7 +145,7 @@ Não. Na verdade, você pode até mesmo iniciar todos os seus destinos de aplica
 
 * *Exceção ao carregar assemblies: System. IO. FileNotFoundException: não foi possível carregar o assembly ' Xamarin. Live. recarregar, Version = 0.3.27.0, Culture = neutral, PublicKeyToken = '.*
 
-  O projeto host deve estar usando `PackageReference` em vez de`packages.config`
+  O projeto host deve estar usando `PackageReference` em vez de `packages.config`
 
 ### <a name="app-doesnt-connect"></a>O aplicativo não se conecta
 
@@ -186,7 +186,7 @@ Provavelmente, a maneira mais fácil é instalar o servidor [mosquitto](https://
 
 1. Criar uma nova VM do servidor Ubuntu no portal do Azure
 2. Adicione uma nova regra de porta de entrada para 1883 (porta MQTT padrão) na guia rede
-3. Abrir o [Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview) (modo bash)
+3. Abrir o [Cloud Shell](/azure/cloud-shell/overview) (modo bash)
 4. Digite `ssh [USERNAME]@[PUBLIC_IP]` usando o nome de usuário que você escolheu em 1) e o IP público mostrado na página de visão geral da VM
 5. Execute `sudo apt-get install mosquitto` , inserindo a senha que você escolheu em 1)
 

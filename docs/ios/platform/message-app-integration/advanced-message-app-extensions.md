@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: c303125ac02c8e7c47fb16928df1432c66a8e8d2
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 8a1f386209ccc1f2cb33348930f29bf5ac65ce4f
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937144"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435618"
 ---
 # <a name="advanced-message-app-extensions-in-xamarinios"></a>Extensões avançadas do aplicativo de mensagens no Xamarin. iOS
 
@@ -30,7 +30,7 @@ Como mencionado acima, uma extensão de aplicativo de mensagem se integra ao apl
 As extensões de aplicativos de mensagens fornecem três tipos de conteúdo principais:
 
 - **Mensagens interativas** – são um tipo de conteúdo de mensagem personalizada que um aplicativo gera, quando o usuário toca na mensagem, o aplicativo será iniciado em primeiro plano.
-- **Adesivos** -são imagens geradas pelo aplicativo que podem ser incluídas nas mensagens enviadas entre os usuários. Veja nosso aplicativo de exemplo de [Ice de gelo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder) para obter um exemplo de implementação de um aplicativo de pacote de adesivo.
+- **Adesivos** -são imagens geradas pelo aplicativo que podem ser incluídas nas mensagens enviadas entre os usuários. Veja nosso aplicativo de exemplo de [Ice de gelo](/samples/xamarin/ios-samples/ios10-icecreambuilder) para obter um exemplo de implementação de um aplicativo de pacote de adesivo.
 - **Outro conteúdo com suporte** -o aplicativo pode fornecer conteúdo como fotos, vídeos, texto ou links do tipo que sempre tenha sido suportado pelo aplicativo de mensagens.
 
 Novo no iOS 10, o aplicativo de mensagens agora inclui sua própria loja de aplicativos interna dedicada. Todos os aplicativos que incluem extensões de aplicativos de mensagens serão exibidos e promovidos nesse armazenamento. A gaveta de aplicativos de novas mensagens exibirá todos os aplicativos que foram baixados da loja de aplicativos de mensagens para fornecer acesso rápido aos usuários.
@@ -71,8 +71,8 @@ Quando invocado pelo usuário, uma extensão do aplicativo de mensagem será exi
 1. O `MSMessageAppViewController` objeto na extensão do aplicativo de mensagem é a classe principal que é chamada quando a exibição da extensão é exibida para o usuário.
 2. A conversa é apresentada ao usuário como uma `MSConversation` instância de objeto.
 3. A `MSMessage` classe representa uma determinada bolha de mensagem na conversa.
-4. `MSSession`controla como uma mensagem é enviada.
-5. `MSMessageTemplateLayout`controla como a mensagem é exibida
+4. `MSSession` controla como uma mensagem é enviada.
+5. `MSMessageTemplateLayout` controla como a mensagem é exibida
 
 ## <a name="the-extension-lifecycle"></a>O ciclo de vida da extensão
 
@@ -503,9 +503,9 @@ Com os recursos básicos da nova API de mensagens abordada em detalhes acima, ex
 
 Primeiro, há vários outros métodos de substituição na `MSMessagesAppViewController` classe que fornecem um acesso mais profundo à conversa:
 
-- `DidStartSendingMessage`-Isso é chamado quando o usuário toca no botão enviar. Isso não significa que a mensagem realmente foi entregue ao destinatário, apenas que o processo de envio foi iniciado.
-- `DidCancelSendingMessage`-Isso acontece quando o usuário toca no botão *X* no canto superior direito da bolha da mensagem na transcrição da conversa.
-- `DidReceiveMessage`-Esse método é chamado quando a extensão do aplicativo de mensagem está ativa uma nova mensagem foi recebida de um dos participantes na conversa.
+- `DidStartSendingMessage` -Isso é chamado quando o usuário toca no botão enviar. Isso não significa que a mensagem realmente foi entregue ao destinatário, apenas que o processo de envio foi iniciado.
+- `DidCancelSendingMessage` -Isso acontece quando o usuário toca no botão *X* no canto superior direito da bolha da mensagem na transcrição da conversa.
+- `DidReceiveMessage` -Esse método é chamado quando a extensão do aplicativo de mensagem está ativa uma nova mensagem foi recebida de um dos participantes na conversa.
 
 ### <a name="group-conversations"></a>Conversas de grupo
 
@@ -605,6 +605,6 @@ Este artigo apresentou técnicas avançadas para trabalhar com extensões de apl
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Construtor de sorvetes (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-icecreambuilder)
+- [Construtor de sorvetes (exemplo)](/samples/xamarin/ios-samples/ios10-icecreambuilder)
 - [Referência de mensagens](https://developer.apple.com/reference/messages)
 - [Guia de programação de extensão de aplicativo](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214)

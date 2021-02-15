@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsMessagingCenter
+title: Xamarin.Forms MessagingCenter
 description: A Xamarin.Forms classe MessagingCenter implementa o padrão de publicação-assinatura, permitindo a comunicação baseada em mensagem entre componentes que são inconvenientes de vincular por referências de objeto e tipo.
 ms.prod: xamarin
 ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
@@ -10,16 +10,16 @@ ms.date: 10/08/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: c817936c77764b95842226b9a9a31c26667d6d0f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 5ccff2fd24537be0bbf2d809b20a00bc35667c95
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937443"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93366848"
 ---
-# <a name="xamarinforms-messagingcenter"></a>Xamarin.FormsMessagingCenter
+# <a name="no-locxamarinforms-messagingcenter"></a>Xamarin.Forms MessagingCenter
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
 
 O padrão de publicação-assinatura é um padrão de troca de mensagens em que os publicadores enviam mensagens sem ter conhecimento de nenhum receptor, conhecido como assinante. Da mesma forma, os assinantes escutam mensagens específicas, sem ter conhecimento de nenhum publicador.
 
@@ -38,7 +38,7 @@ Os editores enviam mensagens usando o [`MessagingCenter.Send`](xref:Xamarin.Form
 
 ## <a name="publish-a-message"></a>Publicar uma mensagem
 
-[`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter)as mensagens são cadeias de caracteres. Os editores notificam os assinantes de uma mensagem com uma das [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) sobrecargas. O exemplo de código a seguir publica uma mensagem `Hi`:
+[`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) as mensagens são cadeias de caracteres. Os editores notificam os assinantes de uma mensagem com uma das [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) sobrecargas. O exemplo de código a seguir publica uma mensagem `Hi`:
 
 ```csharp
 MessagingCenter.Send<MainPage>(this, "Hi");
@@ -94,7 +94,7 @@ Neste exemplo, o [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) m�
 Os assinantes podem cancelar a assinatura de mensagens que não desejam mais receber. Isso é obtido com uma das [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) sobrecargas:
 
 ```csharp
-MessagingCenter.Unsubscribe<MainPage>(this, "Hi");
+MessagingCenter.Unsubscribe<MainPage>(this, "Hi");
 ```
 
 Neste exemplo, o [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) método cancela a assinatura do `this` objeto da `Hi` mensagem enviada pelo `MainPage` tipo.
@@ -102,11 +102,11 @@ Neste exemplo, o [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*
 As mensagens que contêm dados de carga devem ter a assinatura cancelada usando a [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) sobrecarga que especifica dois argumentos genéricos:
 
 ```csharp
-MessagingCenter.Unsubscribe<MainPage, string>(this, "Hi");
+MessagingCenter.Unsubscribe<MainPage, string>(this, "Hi");
 ```
 
 Neste exemplo, o [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) método cancela a assinatura do `this` objeto da `Hi` mensagem enviada pelo `MainPage` tipo, cujos dados de carga são um `string` .
 
 ## <a name="related-links"></a>Links relacionados
 
-- [MessagingCenterSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
+- [MessagingCenterSample](/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)

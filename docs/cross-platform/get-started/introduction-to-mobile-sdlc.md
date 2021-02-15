@@ -6,12 +6,12 @@ ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: davidortinau
 ms.author: daortin
 ms.date: 11/22/2016
-ms.openlocfilehash: 32dec6b8fcdd5387e138a7812d8c3e2074673111
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f3de8f6bb5cc8cb717642ebc86cefe1a184f4a78
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939614"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456620"
 ---
 # <a name="mobile-software-development-lifecycle"></a>O ciclo de vida do desenvolvimento de software móvel
 
@@ -70,7 +70,7 @@ Depois de terem sido determinados os recursos e funcionalidade do aplicativo, a 
 
 #### <a name="ux-design"></a>Design da experiência do usuário
 
-Geralmente, a experiência do usuário é feita por meio de delineados ou modelos com um dos vários [kits de ferramentas de design](https://docs.microsoft.com/windows/uwp/design/downloads/). Os modelos permitem criar uma experiência do usuário sem necessidade de se preocupar com o design da interface do usuário real:
+Geralmente, a experiência do usuário é feita por meio de delineados ou modelos com um dos vários [kits de ferramentas de design](/windows/uwp/design/downloads/). Os modelos permitem criar uma experiência do usuário sem necessidade de se preocupar com o design da interface do usuário real:
 
  [![Geralmente, a experiência do usuário é feita por meio de delineados ou modelos usando ferramentas como o Balsamiq](introduction-to-mobile-sdlc-images/balsamiq.png)](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
 
@@ -78,7 +78,7 @@ Ao criar modelos de experiência do usuário, é importante considerar as diretr
 
 1. **Apple**  -   [Diretrizes de interface humana](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
 1. **Android** – [diretrizes de design](https://developer.android.com/design/index.html)
-1. **UWP** – [Noções básicas de design da UWP](https://docs.microsoft.com/windows/uwp/design/basics/)
+1. **UWP** – [Noções básicas de design da UWP](/windows/uwp/design/basics/)
 
 Por exemplo, cada aplicativo tem uma metáfora para mudar entre seções em um aplicativo. O iOS usa uma barra de guias na parte inferior da tela, o Android usa uma barra de guias na parte superior da tela e a UWP usa a exibição [Pivô ou guia](/windows/uwp/design/controls-and-patterns/pivot).
 
@@ -153,7 +153,7 @@ Isso permite aos desenvolvedores o uso de um canal de distribuição para seus a
 
 #### <a name="uwp"></a>UWP
 
-Aplicativos UWP são distribuídos aos usuários por meio da Microsoft Store. Os desenvolvedores enviam seus aplicativos para aprovação e depois disso eles aparecem na loja. Para saber mais sobre como publicar aplicativos do Windows, consulte a documentação de [Publicação](https://docs.microsoft.com/windows/uwp/publish/) da UWP.
+Aplicativos UWP são distribuídos aos usuários por meio da Microsoft Store. Os desenvolvedores enviam seus aplicativos para aprovação e depois disso eles aparecem na loja. Para saber mais sobre como publicar aplicativos do Windows, consulte a documentação de [Publicação](/windows/uwp/publish/) da UWP.
 
 ## <a name="mobile-development-considerations"></a>Considerações sobre desenvolvimento móvel
 
@@ -224,7 +224,7 @@ O Google não impõe limites quanto a quais dispositivos podem executar o sistem
 
 Devido à fragmentação extrema de dispositivos Android, a maioria das pessoas escolhe os 5 ou 6 dispositivos mais populares para os quais projetar e testar e dá prioridade a eles.
 
-#### <a name="security-considerations"></a>Considerações de segurança
+#### <a name="security-considerations"></a>Considerações sobre segurança
 
 Todos os aplicativos no SO Android executam sob uma identidade distinta e isolada, com permissões limitadas. Por padrão, os aplicativos podem fazer muito pouco. Por exemplo, sem permissões especiais, um aplicativo não pode enviar uma mensagem de texto, determinar o estado do telefone ou até mesmo acessar a Internet! Para acessar esses recursos, os aplicativos devem especificar no seu arquivo de manifesto do aplicativo quais permissões eles desejam e quando eles serão instalados. O SO lê essas permissões, notifica o usuário que o aplicativo está solicitando essas permissões e, em seguida, permite que o usuário continue ou cancele a instalação.
 Essa é uma etapa essencial no modelo de distribuição Android por causa do modelo aberto de repositório de aplicativos, já que os aplicativos não são coletados do modo que seriam para iOS, por exemplo. Para obter uma lista de permissões de aplicativo, veja o artigo de referência [Permissões de Manifesto](https://developer.android.com/reference/android/Manifest.permission.html) na documentação do Android.
@@ -241,9 +241,9 @@ A segunda parte é fornecer agentes de segundo plano para tarefas de processamen
 
 Embora o hardware da UWP seja bastante homogêneo, ainda há componentes opcionais que, portanto, exigem consideração especial durante a codificação. As funcionalidades opcionais do hardware incluem a câmera, a bússola e o giroscópio. Há também uma classe especial de memória insuficiente (256 MB) que requer consideração especial ou os desenvolvedores podem optar por não dar suporte a memória insuficiente.
 
-#### <a name="security-considerations"></a>Considerações de segurança
+#### <a name="security-considerations"></a>Considerações sobre segurança
 
-Para saber mais sobre considerações de segurança importantes na UWP, consulte a documentação de [Segurança](https://docs.microsoft.com/windows/uwp/security/).
+Para saber mais sobre considerações de segurança importantes na UWP, consulte a documentação de [Segurança](/windows/uwp/security/).
 
 ## <a name="summary"></a>Resumo
 

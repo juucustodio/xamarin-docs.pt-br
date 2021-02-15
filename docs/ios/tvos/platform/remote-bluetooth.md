@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 743bdf4d843d9e427e2343bf58cc29b98ec07e2b
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 1c1a51fe5999ac5556f2d27e98603b966fdd7f56
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997040"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437075"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Controladores remotos e Bluetooth Siri para tvOS no Xamarin
 
@@ -38,7 +38,7 @@ O Siri Remote tem os seguintes recursos e usos esperados em seu aplicativo tvOS:
 
 |Recurso|Uso geral do aplicativo|Uso do aplicativo de jogo|
 |---|---|---|
-|**Superfície de toque**<br />Passe o dedo para navegar, pressione para selecionar e manter os menus contextuais.|**Tocar/passar o dedo**<br />Navegação de interface do usuário entre itens com foco.<br /><br />**Selecione**<br />Ativa o item selecionado (em foco).|**Tocar/passar o dedo**<br />Depende do design do jogo e pode ser usado como um teclado D tocando nas bordas.<br /><br />**Selecione**<br />Execute a função de botão principal.|
+|**Superfície de toque**<br />Passe o dedo para navegar, pressione para selecionar e manter os menus contextuais.|**Tocar/passar o dedo**<br />Navegação de interface do usuário entre itens com foco.<br /><br />**Clique em**<br />Ativa o item selecionado (em foco).|**Tocar/passar o dedo**<br />Depende do design do jogo e pode ser usado como um teclado D tocando nas bordas.<br /><br />**Clique em**<br />Execute a função de botão principal.|
 |**Menu**<br />Pressione para retornar à tela ou ao menu anterior.|Retorna à tela anterior e sai para a tela inicial da Apple TV na tela principal do aplicativo.|Pausar e retomar o jogo, retorna à tela anterior e sai para a tela inicial da Apple TV na tela principal do aplicativo.|
 |**Siri/pesquisa**<br />Em países com siri, pressione e segure para controle de voz, em todos os outros países, exibe a tela de pesquisa.|n/d|n/d|
 |**Reproduzir/Pausar**<br />Reproduzir e pausar mídia ou fornecer uma função secundária em aplicativos.|Inicia a reprodução de mídia e pausa/retoma a reprodução.|Executa a função de botão secundário ou ignora o vídeo introdutório (se existir).|
@@ -51,7 +51,7 @@ O Siri Remote tem os seguintes recursos e usos esperados em seu aplicativo tvOS:
 
 A superfície de toque do Siri remoto é capaz de detectar uma variedade de gestos de dedo único que você pode responder em seu aplicativo Xamarin. tvOS:
 
-|Passar o dedo|Clique em |Toque|
+|Swipe|Clique em|Toque|
 |---|---|---|
 |![Move a seleção](remote-bluetooth-images/Gesture01.png)|![Ativa o item selecionado](remote-bluetooth-images/Gesture02.png)|![Botões direcionais](remote-bluetooth-images/Gesture03.png)|
 |Move a seleção (foco) entre os elementos da interface do usuário na tela (para cima, para baixo à esquerda, à direita). O passe do dedo pode ser usado para rolar por listas grandes de conteúdo rapidamente usando o inércia.|Ativa o item selecionado (em foco) ou atua como o botão principal em um jogo. Clicar e segurar pode ativar menus contextuais ou funções secundárias.|Tocar levemente na superfície de toque nas bordas atua como botões direcionais em um teclado D, movendo o foco para cima, para baixo, para a esquerda ou para a direita, dependendo da área tocada. Dependendo do aplicativo, o pode ser usado para revelar controles ocultos.|
@@ -188,7 +188,7 @@ namespace tvRemote
 
 Se você estiver criando um tipo personalizado com base em `UIKit` seu aplicativo Xamarin. tvOS (por exemplo `UIView` ,), também terá a capacidade de fornecer manipulação de baixo nível de pressionamento de botão por `UIPress` eventos.
 
-Um `UIPress` evento é tvOS o que um `UITouch` evento é para IOS, exceto `UIPress` retorna informações sobre pressionamentos de botão no Siri remoto ou em outros dispositivos Bluetooth conectados (como um controlador de jogo). `UIPress`eventos descrevem o botão que está sendo pressionado e seu estado (iniciado, cancelado, alterado ou encerrado).
+Um `UIPress` evento é tvOS o que um `UITouch` evento é para IOS, exceto `UIPress` retorna informações sobre pressionamentos de botão no Siri remoto ou em outros dispositivos Bluetooth conectados (como um controlador de jogo). `UIPress` eventos descrevem o botão que está sendo pressionado e seu estado (iniciado, cancelado, alterado ou encerrado).
 
 Para botões analógicos em dispositivos como controladores de jogos Bluetooth, `UIPress` o também retorna a quantidade de força que está sendo aplicada ao botão. A `Type` Propriedade do `UIPress` evento define qual botão físico mudou de estado, enquanto o restante das propriedades descreve a alteração que ocorreu.
 
@@ -367,7 +367,7 @@ Este artigo abordou o novo Siri Remote que acompanha o Apple TV, gestos de super
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Exemplos do tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guias de interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

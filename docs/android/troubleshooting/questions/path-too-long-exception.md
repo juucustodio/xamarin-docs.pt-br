@@ -1,6 +1,6 @@
 ---
-title: Como resolver um erro PathTooLongException?
-description: Este artigo explica como resolver um PathTooLongException que pode ocorrer durante a construção de um aplicativo.
+title: Como fazer resolver um erro PathTooLongException?
+description: Este artigo explica como resolver um PathTooLongException que pode ocorrer durante a criação de um aplicativo.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 60EE1C8D-BE44-4612-B3B5-70316D71B1EA
@@ -8,32 +8,32 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 05/29/2018
-ms.openlocfilehash: ffe88546ff58387865d71268bd64ec05c8aec3c5
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: d58cb676b347caac00c39a381de94954219d1865
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73026785"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456854"
 ---
-# <a name="how-do-i-resolve-a-pathtoolongexception-error"></a>Como resolver um erro PathTooLongException?
+# <a name="how-do-i-resolve-a-pathtoolongexception-error"></a>Como fazer resolver um erro PathTooLongException?
 
 ## <a name="cause"></a>Causa
 
-Nomes de caminho gerados em um projeto Xamarin.Android podem ser bastante longos.
+Os nomes de caminho gerados em um projeto Xamarin. Android podem ser muito longos.
 Por exemplo, um caminho como o seguinte poderia ser gerado durante uma compilação:
 
-**C:\\\\Alguns\\\\Projetos\\de\\Solução\\de Diretório obj Debug\\\\__library_projects__\\Xamarin.Forms.Platform.Android library_project_imports ativos**
+**C: \\ algum \\ projeto de solução de diretório \\ \\ \\ obj \\ debug \\ __library_projects__ \\ Xamarin. Forms. Platform. Android \\ library_project_imports \\ ativos**
 
-No Windows (onde o comprimento máximo de um caminho é [de 260 caracteres),](https://msdn.microsoft.com/library/windows/desktop/aa365247.aspx)um **PathTooLongException** poderia ser produzido durante a construção do projeto se um caminho gerado exceder o comprimento máximo. 
+No Windows (em que o comprimento máximo de um caminho é de [260 caracteres](/windows/win32/fileio/naming-a-file)), um **PathTooLongException** poderia ser produzido ao compilar o projeto se um caminho gerado exceder o comprimento máximo. 
 
 ## <a name="fix"></a>Fix
 
-A `UseShortFileNames` propriedade MSBuild `True` está definida para contornar esse erro por padrão. Quando esta propriedade `True`é definida para , o processo de compilação usa nomes de caminho mais curtos para reduzir a probabilidade de produzir um **PathTooLongException**.
-Por exemplo, `UseShortFileNames` quando `True`é definido para , o caminho acima é encurtado para um caminho semelhante ao seguinte:
+A `UseShortFileNames` Propriedade MSBuild é definida como `True` para contornar esse erro por padrão. Quando essa propriedade é definida como `True` , o processo de compilação usa nomes de caminho mais curtos para reduzir a probabilidade de produzir um **PathTooLongException**.
+Por exemplo, quando `UseShortFileNames` é definido como `True` , o caminho acima é reduzido para o caminho que é semelhante ao seguinte:
 
-**C:\\\\Alguns\\\\Projetos\\de\\Solução\\\\de\\Diretório\\obj Debug lp 1 jl ativos**
+**C: \\ alguns \\ projetos de solução de diretório \\ \\ \\ obj \\ debug \\ LP \\ 1 \\ JL \\ assets**
 
-Para definir essa propriedade manualmente, adicione a seguinte propriedade MSBuild ao arquivo project **.csproj:**
+Para definir essa propriedade manualmente, adicione a seguinte Propriedade do MSBuild ao arquivo Project **. csproj** :
 
 ```xml
 <PropertyGroup>
@@ -41,7 +41,7 @@ Para definir essa propriedade manualmente, adicione a seguinte propriedade MSBui
 </PropertyGroup>
 ```
 
-Se a configuração deste sinalizador não corrigir o erro **PathTooLongException,** outra abordagem é `IntermediateOutputPath` especificar uma raiz de saída intermediária [comum](https://blogs.msdn.microsoft.com/kirillosenkov/2015/04/04/using-a-common-intermediate-and-output-directory-for-your-solution/) para projetos em sua solução, configurando no arquivo projeto **.csproj.** Tente usar um caminho relativamente curto. Por exemplo:
+Se a definição desse sinalizador não corrigir o erro **PathTooLongException** , outra abordagem será especificar uma [raiz de saída intermediária comum](/archive/blogs/kirillosenkov/using-a-common-intermediate-and-output-directory-for-your-solution) para projetos em sua solução definindo `IntermediateOutputPath` no arquivo Project **. csproj** . Tente usar um caminho relativamente curto. Por exemplo:
 
 ```xml
 <PropertyGroup>
@@ -49,4 +49,4 @@ Se a configuração deste sinalizador não corrigir o erro **PathTooLongExceptio
 </PropertyGroup>
 ```
 
-Para obter mais informações sobre a configuração de propriedades de compilação, consulte [Processo de compilação](~/android/deploy-test/building-apps/build-process.md).
+Para obter mais informações sobre como definir propriedades de compilação, consulte [processo de compilação](~/android/deploy-test/building-apps/build-process.md).

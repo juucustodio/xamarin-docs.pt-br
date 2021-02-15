@@ -10,20 +10,20 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b5b03779b9f0847621456b25582fb8ea04f8386d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1c345edf4c9980497d1fcd877a9142819afa9b56
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84131697"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368642"
 ---
 # <a name="skiasharp-blend-modes"></a>Modos de mesclagem SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Esses artigos se concentram na [`BlendMode`](xref:SkiaSharp.SKPaint.BlendMode) propriedade de [`SKPaint`](xref:SkiaSharp.SKPaint) . A `BlendMode` propriedade é do tipo [`SKBlendMode`](xref:SkiaSharp.SKBlendMode) , uma enumeração com 29 membros.
 
-A `BlendMode` propriedade determina o que acontece quando um objeto gráfico (geralmente chamado de _origem_) é renderizado sobre os objetos gráficos existentes (chamados de _destino_). Normalmente, esperamos que o novo objeto gráfico oculte os objetos abaixo dele. Mas isso ocorre apenas porque o modo de mesclagem padrão é `SKBlendMode.SrcOver` , o que significa que a origem é desenhada _sobre_ o destino. Os outros 28 membros de `SKBlendMode` causam outros efeitos. Na programação de gráficos, a técnica de combinar objetos gráficos de várias maneiras é conhecida como _composição_.
+A `BlendMode` propriedade determina o que acontece quando um objeto gráfico (geralmente chamado de _origem_ ) é renderizado sobre os objetos gráficos existentes (chamados de _destino_ ). Normalmente, esperamos que o novo objeto gráfico oculte os objetos abaixo dele. Mas isso ocorre apenas porque o modo de mesclagem padrão é `SKBlendMode.SrcOver` , o que significa que a origem é desenhada _sobre_ o destino. Os outros 28 membros de `SKBlendMode` causam outros efeitos. Na programação de gráficos, a técnica de combinar objetos gráficos de várias maneiras é conhecida como _composição_.
 
 ## <a name="the-skblendmodes-enumeration"></a>A enumeração SKBlendModes
 
@@ -31,7 +31,7 @@ Os modos de combinação de SkiaSharp correspondem de forma mais próxima aos de
 
 Os 29 membros da `SKBlendMode` enumeração podem ser divididos em três categorias:
 
-| Carregador-Duff | Separáveis    | Não separáveis |
+| Porter-Duff | Separáveis    | Não separáveis |
 | ----------- | ------------ | ------------- |
 | `Clear`     | `Modulate`   | `Hue`         |
 | `Src`       | `Screen`     | `Saturation`  |
@@ -51,7 +51,7 @@ Os nomes dessas três categorias terão mais significado nas discussões a segui
 
 Esses modos de mesclagem são discutidos em _aproximadamente_ a mesma ordem no documento de **composição e MESCLAgem** do W3C de nível 1, mas há algumas diferenças: o `Src` modo é chamado de _cópia_ no documento W3C e `Plus` é chamado _mais claro_. O documento W3C define um modo de mesclagem _normal_ que não está incluído no `SKBlendModes` porque seria o mesmo que o `SrcOver` . O `Modulate` modo de mesclagem (na parte superior da primeira coluna) não está incluído no documento W3C e a discussão sobre o `Multiply` modo precede `Screen` .
 
-Como o `Modulate` modo de mesclagem é exclusivo do skia, ele será discutido como um modo carregador-Duff adicional e como um modo separáveis.
+Como o `Modulate` modo de mesclagem é exclusivo do skia, ele será discutido como um modo de Porter-Duff adicional e como um modo separáveis.
 
 ## <a name="the-importance-of-transparency"></a>A importância da transparência
 
@@ -81,9 +81,9 @@ Você verá esse plano de fundo vermelho por trás dos seus gráficos SkiaSharp 
 
 O artigo [**SkiaSharp Transparency**](../../basics/transparency.md) mostrou algumas técnicas básicas de uso da transparência para organizar vários gráficos em uma imagem composta. Os modos de mesclagem vão além disso, mas a transparência permanece crucial para os modos de mesclagem.
 
-## <a name="skiasharp-porter-duff-blend-modes"></a>[Modos de SkiaSharp carregador-Duff Blend](porter-duff.md)
+## <a name="skiasharp-porter-duff-blend-modes"></a>[Modos de SkiaSharp Porter-Duff Blend](porter-duff.md)
 
-Use os modos de mesclagem carregador-Duff para compor cenas com base em imagens de origem e de destino.
+Use os modos de mesclagem Porter-Duff para compor cenas com base em imagens de origem e de destino.
 
 ## <a name="skiasharp-separable-blend-modes"></a>[Modos de SkiaSharp separáveis Blend](separable.md)
 
@@ -95,5 +95,5 @@ Use os modos de combinação não separáveis para alterar matiz, saturação ou
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

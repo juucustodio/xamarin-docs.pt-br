@@ -1,5 +1,5 @@
 ---
-title: Manipulação de arquivos emXamarin.Forms
+title: Manipulação de arquivos em Xamarin.Forms
 description: A manipulação de arquivos com Xamarin.Forms o pode ser obtida com o uso de código em uma biblioteca de .net Standard ou por meio de recursos incorporados.
 ms.prod: xamarin
 ms.assetid: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8
@@ -10,22 +10,22 @@ ms.date: 06/21/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f62e5522b5b9a10a3806a70fe949561d77ce0d4e
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 11f33c07d2a98e326717f284f0b5d6308a65a693
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84574347"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374713"
 ---
-# <a name="file-handling-in-xamarinforms"></a>Manipulação de arquivos emXamarin.Forms
+# <a name="file-handling-in-no-locxamarinforms"></a>Manipulação de arquivos em Xamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 
 _A manipulação de arquivos com Xamarin.Forms o pode ser obtida com o uso de código em uma biblioteca de .net Standard ou por meio de recursos incorporados._
 
 ## <a name="overview"></a>Visão geral
 
-Xamarin.Formso código é executado em várias plataformas – cada um deles tem seu próprio sistema de arquivos. Anteriormente, isso significava que ler e gravar arquivos era realizado mais facilmente usando as APIs de arquivo nativo em cada plataforma. Como alternativa, os recursos inseridos são uma solução mais simples para distribuir os arquivos de dados com um aplicativo. No entanto, com o .NET Standard 2.0, é possível compartilhar o código de acesso de arquivo nas bibliotecas .NET Standard.
+Xamarin.Forms o código é executado em várias plataformas – cada um deles tem seu próprio sistema de arquivos. Anteriormente, isso significava que ler e gravar arquivos era realizado mais facilmente usando as APIs de arquivo nativo em cada plataforma. Como alternativa, os recursos inseridos são uma solução mais simples para distribuir os arquivos de dados com um aplicativo. No entanto, com o .NET Standard 2.0, é possível compartilhar o código de acesso de arquivo nas bibliotecas .NET Standard.
 
 Para saber mais sobre o tratamento de arquivos de imagem, confira a página [Trabalhando com imagens](~/xamarin-forms/user-interface/images.md).
 
@@ -63,7 +63,7 @@ Essas operações são demonstradas no aplicativo de exemplo, que inclui uma pá
 
 ## <a name="loading-files-embedded-as-resources"></a>Carregamento de arquivos inseridos como recursos
 
-Para inserir um arquivo em um assembly do **.NET Standard**, crie ou adicione um arquivo e certifique-se de que seja **Ação de build: EmbeddedResource**.
+Para inserir um arquivo em um assembly do **.NET Standard** , crie ou adicione um arquivo e certifique-se de que seja **Ação de build: EmbeddedResource**.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
@@ -75,7 +75,7 @@ Para inserir um arquivo em um assembly do **.NET Standard**, crie ou adicione um
 
 -----
 
-`GetManifestResourceStream` é usado para acessar o arquivo inserido usando sua **ID de recurso**. Por padrão, a ID do recurso é o nome de arquivo prefixado com o namespace padrão para o projeto no qual ele está incorporado – nesse caso, o assembly é **WorkingWithFiles** e o nome do arquivo é **LibTextResource.txt**, portanto, a ID do recurso é `WorkingWithFiles.LibTextResource.txt` .
+`GetManifestResourceStream` é usado para acessar o arquivo inserido usando sua **ID de recurso**. Por padrão, a ID do recurso é o nome de arquivo prefixado com o namespace padrão para o projeto no qual ele está incorporado – nesse caso, o assembly é **WorkingWithFiles** e o nome do arquivo é **LibTextResource.txt** , portanto, a ID do recurso é `WorkingWithFiles.LibTextResource.txt` .
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
@@ -87,7 +87,7 @@ using (var reader = new System.IO.StreamReader (stream))
 }
 ```
 
-A variável `text` pode ser usada para exibir o texto ou, caso contrário, usá-lo no código. Esta captura de tela do [aplicativo de exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles) mostra o texto renderizado em um controle `Label`.
+A variável `text` pode ser usada para exibir o texto ou, caso contrário, usá-lo no código. Esta captura de tela do [aplicativo de exemplo](/samples/xamarin/xamarin-forms-samples/workingwithfiles) mostra o texto renderizado em um controle `Label`.
 
  [![Arquivo de texto inserido na biblioteca do .NET Standard](files-images/pcltext-sml.png "Arquivo de texto inserido na biblioteca .NET Standard exibida no aplicativo")](files-images/pcltext.png#lightbox "Arquivo de texto inserido na biblioteca .NET Standard exibida no aplicativo")
 
@@ -135,7 +135,7 @@ Stream stream = assembly.GetManifestResourceStream
 
 ### <a name="organizing-resources"></a>Organização de recursos
 
-Os exemplos acima supõem que o arquivo é inserido na raiz do projeto da biblioteca .NET Standard, em cujo caso a ID de recurso é do formato **Namespace.Filename.Extension**, como `WorkingWithFiles.LibTextResource.txt` e `WorkingWithFiles.iOS.SharedTextResource.txt`.
+Os exemplos acima supõem que o arquivo é inserido na raiz do projeto da biblioteca .NET Standard, em cujo caso a ID de recurso é do formato **Namespace.Filename.Extension** , como `WorkingWithFiles.LibTextResource.txt` e `WorkingWithFiles.iOS.SharedTextResource.txt`.
 
 É possível organizar os recursos inseridos em pastas. Quando um recurso inserido é colocado em uma pasta, o nome da pasta se torna parte da ID de recurso (separado por pontos) para que o formato de ID de recurso se torne **Namespace.Folder.Filename.Extension**. Colocar os arquivos usados no aplicativo de exemplo em uma pasta **MyFolder** tornaria as IDs de recurso correspondentes `WorkingWithFiles.MyFolder.LibTextResource.txt` e `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
 
@@ -157,8 +157,8 @@ foreach (var res in assembly.GetManifestResourceNames()) {
 
 Este artigo mostrou algumas operações de arquivo simples para salvar e carregar texto no dispositivo e para carregar recursos inseridos. Com o .NET Standard 2.0, é possível compartilhar o código de acesso de arquivo nas bibliotecas .NET Standard.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [FilesSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
-- [Xamarin.FormsAmostras](https://github.com/xamarin/xamarin-forms-samples)
+- [FilesSample](/samples/xamarin/xamarin-forms-samples/workingwithfiles)
+- [Xamarin.Forms Amostras](https://github.com/xamarin/xamarin-forms-samples)
 - [Trabalhando com o sistema de arquivos no Xamarin.iOS](~/ios/app-fundamentals/file-system.md)

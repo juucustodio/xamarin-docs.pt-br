@@ -1,27 +1,27 @@
 ---
 title: Exibir pop-ups
-description: Xamarin.Formsfornece três elementos de interface do usuário pop-up – um alerta, uma planilha de ação e um prompt. Este artigo demonstra como usar o alerta, a folha de ações e as APIs de prompt para exibir caixas de diálogo que perguntam aos usuários perguntas simples, orientam os usuários por meio de tarefas e exibem prompts.
+description: Xamarin.Forms fornece três elementos de interface do usuário pop-up – um alerta, uma planilha de ação e um prompt. Este artigo demonstra como usar o alerta, a folha de ações e as APIs de prompt para exibir caixas de diálogo que perguntam aos usuários perguntas simples, orientam os usuários por meio de tarefas e exibem prompts.
 ms.prod: xamarin
 ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/10/2020
+ms.date: 12/10/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 75cc3070f552ef05c3e8702d27caf7c353ac0a8f
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 09cffb4e5c7d8f6b78d5ab1de6ec9839c3969e87
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931866"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940103"
 ---
 # <a name="display-pop-ups"></a>Exibir pop-ups
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
 
-Exibir um alerta, pedir a um usuário para fazer uma escolha ou exibir um prompt é uma tarefa comum da interface do usuário. Xamarin.Formstem três métodos na [`Page`](xref:Xamarin.Forms.Page) classe para interagir com o usuário por meio de um pop-up: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) , [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) e `DisplayPromptAsync` . Eles são renderizados com os controles nativos apropriados em cada plataforma.
+Exibir um alerta, pedir a um usuário para fazer uma escolha ou exibir um prompt é uma tarefa comum da interface do usuário. Xamarin.Forms tem três métodos na [`Page`](xref:Xamarin.Forms.Page) classe para interagir com o usuário por meio de um pop-up: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) , [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) e `DisplayPromptAsync` . Eles são renderizados com os controles nativos apropriados em cada plataforma.
 
 ## <a name="display-an-alert"></a>Exibir um alerta
 
@@ -45,7 +45,12 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 }
 ```
 
-[![DisplayAlert](pop-ups-images/alert2-sml.png "Caixa de diálogo de alerta com dois botões")](pop-ups-images/alert2.png#lightbox "Caixa de diálogo de alerta com dois botões")
+[![Caixa de diálogo de alerta com dois botões](pop-ups-images/alert2-sml.png)](pop-ups-images/alert2.png#lightbox)
+
+O [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) método também tem sobrecargas que aceitam um [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) argumento que especifica a direção na qual os elementos da interface do usuário fluem no alerta. Para obter mais informações sobre a direção do fluxo, consulte [localização da direita para a esquerda](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
+
+> [!WARNING]
+> Por padrão, no UWP, quando um alerta é exibido, qualquer chave de acesso definida na página por trás do alerta ainda pode ser ativada. Para obter mais informações, consulte [as chaves de acesso do visualelement no Windows](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
 
 ## <a name="guide-users-through-tasks"></a>Orientar os usuários por meio de tarefas
 
@@ -74,6 +79,8 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 ```
 
 [![DisplayActionSheet](pop-ups-images/action2-sml.png "Caixa de diálogo da folha de ações com o botão destruir")](pop-ups-images/action2.png#lightbox "Caixa de diálogo da folha de ações com o botão destruir")
+
+O [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) método também tem uma sobrecarga que aceita um [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) argumento que especifica a direção na qual os elementos da interface do usuário fluem dentro da folha de ações. Para obter mais informações sobre a direção do fluxo, consulte [localização da direita para a esquerda](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
 
 ## <a name="display-a-prompt"></a>exibir um prompt
 
@@ -108,8 +115,12 @@ string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", initialV
 
 Esse código exibe uma resposta predefinida de 10, limita o número de caracteres que podem ser inseridos em 2 e exibe o teclado numérico para a entrada do usuário:
 
-[![Captura de tela de um prompt modal, no iOS e no Android](pop-ups-images/keyboard-prompt.png "Prompt modal")](pop-ups-images/keyboard-prompt-large.png#lightbox "Prompt modal")
+[![Captura de tela de um prompt modal opcional, no iOS e no Android](pop-ups-images/keyboard-prompt.png "Prompt modal")](pop-ups-images/keyboard-prompt-large.png#lightbox "Prompt modal")
+
+> [!WARNING]
+> Por padrão, no UWP, quando um prompt é exibido, qualquer chave de acesso definida na página por trás do prompt ainda pode ser ativada. Para obter mais informações, consulte [as chaves de acesso do visualelement no Windows](~/xamarin-forms/platform/windows/visualelement-access-keys.md).
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PopupsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
+- [PopupsSample](/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
+- [Localização da direita para a esquerda](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)

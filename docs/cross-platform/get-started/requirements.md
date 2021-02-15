@@ -6,12 +6,12 @@ ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: davidortinau
 ms.author: daortin
 ms.date: 10/16/2019
-ms.openlocfilehash: c4eaebc8d5f184b1108815c37e992fa97e67aa8f
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: e732e4f04aa5a219a267502bd1aca11ccb2b72f8
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "79304586"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91458206"
 ---
 # <a name="system-requirements"></a>Requisitos do sistema
 
@@ -70,7 +70,7 @@ Os aplicativos móveis do Xamarin podem ser implantados em dispositivos físicos
 
 ## <a name="installation-instructions"></a>Instruções de instalação
 
-A versão mais recente do Xamarin para macOS pode ser baixada com o [Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation). Para o Windows, siga as [instruções de instalação do Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio).
+A versão mais recente do Xamarin para macOS pode ser baixada com o [Visual Studio para Mac](/visualstudio/mac/installation). Para o Windows, siga as [instruções de instalação do Visual Studio](/visualstudio/install/install-visual-studio).
 
 Uma lista completa das nossas versões atuais do produto está disponível na [página de novidades](~/whats-new/index.yml). Esta página também contém links para as notas sobre a versão.
 

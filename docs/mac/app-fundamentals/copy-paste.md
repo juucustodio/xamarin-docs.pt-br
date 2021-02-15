@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 002b6ced319bf7e7b1c5b9b7cc472c43eefcc450
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: e85a273c75fd09672c6c75738adcdc576705af09
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574236"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433983"
 ---
 # <a name="copy-and-paste-in-xamarinmac"></a>Copiar e colar no Xamarin. Mac
 
@@ -659,11 +659,11 @@ Em sua forma mais simples, pasteboards são usados para mover dados dentro de um
 
 Uma área de ti pode ser pública ou privada e pode ser usada para uma variedade de finalidades em um aplicativo ou entre vários aplicativos. o macOS fornece vários pasteboards padrão, cada um com um uso específico e bem definido:
 
-- `NSGeneralPboard`-A área de transferência padrão para operações de **recortar**, **copiar** e **colar** .
-- `NSRulerPboard`– Dá suporte a operações de **recortar**, **copiar** e **colar** em **réguas**.
-- `NSFontPboard`– Dá suporte a operações de **recortar**, **copiar** e **colar** em `NSFont` objetos.
-- `NSFindPboard`– Dá suporte a painéis de localização específicos do aplicativo que podem compartilhar texto de pesquisa.
-- `NSDragPboard`– Dá suporte a operações de **arrastar & soltar** .
+- `NSGeneralPboard` -A área de transferência padrão para operações de **recortar**, **copiar** e **colar** .
+- `NSRulerPboard` – Dá suporte a operações de **recortar**, **copiar** e **colar** em **réguas**.
+- `NSFontPboard` – Dá suporte a operações de **recortar**, **copiar** e **colar** em `NSFont` objetos.
+- `NSFindPboard` – Dá suporte a painéis de localização específicos do aplicativo que podem compartilhar texto de pesquisa.
+- `NSDragPboard` – Dá suporte a operações de **arrastar & soltar** .
 
 Na maioria das situações, você usará um dos pasteboards definidos pelo sistema. Mas pode haver situações que exijam que você crie seu próprio pasteboards. Nessas situações, você pode usar o `FromName (string name)` método da `NSPasteboard` classe para criar uma área de dados personalizada com o nome fornecido.
 
@@ -1276,9 +1276,9 @@ if (ok) {
 
 Este artigo deu uma visão detalhada de como trabalhar com a área de trabalho em um aplicativo Xamarin. Mac para dar suporte a operações de cópia e colagem. Primeiro, ele introduziu um exemplo simples para familiarizar-se com as operações padrão do pasteboards. Em seguida, precisou de uma visão detalhada da área de dados e de como ler e gravar os dados dela. Por fim, ele examinou o uso de um tipo de dados personalizado para dar suporte à cópia e colagem de tipos de dados complexos em um aplicativo.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [MacCopyPaste (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccopypaste)
+- [MacCopyPaste (exemplo)](/samples/xamarin/mac-samples/maccopypaste)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Guia de programação da área de ti](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PasteboardGuide106/Articles/pbGettingStarted.html)
 - [Diretrizes de Interface Humana do macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

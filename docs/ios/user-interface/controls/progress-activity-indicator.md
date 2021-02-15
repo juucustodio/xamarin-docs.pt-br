@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 07/11/2017
-ms.openlocfilehash: 76e1ee54a5e1b729fdcb0b0a2c1f278703b2b4d6
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 0bfb4168e3d990ae1afb3ee2022553053c383083
+ms.sourcegitcommit: 513feb0e07558766e3de4a898e53d56b27c20559
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73021965"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98697586"
 ---
 # <a name="progress-and-activity-indicators-in-xamarinios"></a>Indicadores de progresso e atividade no Xamarin. iOS
 
@@ -32,29 +32,29 @@ A Apple tem as seguintes sugestões para trabalhar com indicadores de atividade:
 
 ### <a name="implementing-an-activity-indicator"></a>Implementando um indicador de atividade
 
-Um indicador de atividade é implementado por meio da classe [`UIActivityIndictorView`](xref:UIKit.UIActivityIndicatorView) para indicar que um `UIActivity` está ocorrendo.
+Um indicador de atividade é implementado por meio da [`UIActivityIndictorView`](xref:UIKit.UIActivityIndicatorView) classe para indicar que está ocorrendo `UIActivity` .
 
 ### <a name="activity-indicators-and-storyboards"></a>Indicadores de atividade e storyboards
 
 Se você estiver usando o designer do iOS para criar sua interface do usuário, o indicador de atividade poderá ser adicionado ao layout na caixa de ferramentas. As propriedades a seguir podem ser ajustadas da Painel de Propriedades:
 
-![Painel de Propriedades](progress-activity-indicator-images/progress-indicator1.png)
+![Captura de tela mostra a Painel de Propriedades onde você pode modificar as propriedades de estilo, cor e comportamento.](progress-activity-indicator-images/progress-indicator1.png)
 
 ### <a name="managing-activity-indicator-behavior"></a>Gerenciamento do comportamento do indicador de atividade
 
-Use os métodos `StartAnimating()` e `StopAnimating()` para iniciar e parar a animação do indicador de atividade.
+Use os `StartAnimating()` `StopAnimating()` métodos e para iniciar e parar a animação do indicador de atividade.
 
-Defina a propriedade `HidesWhenStopped` como `true` para fazer com que o indicador de atividade desapareça depois que `StopAnimating()` tiver sido chamado. Isso é definido como `true` por padrão. A qualquer momento, você pode ver se o indicador de atividade está executando sua animação de rotação verificando a propriedade `IsAnimating`. 
+Defina a `HidesWhenStopped` propriedade como `true` para fazer com que o indicador de atividade desapareça após `StopAnimating()` ter sido chamado. Isso é definido como `true` por padrão. A qualquer momento, você pode ver se o indicador de atividade está executando sua animação de rotação verificando a `IsAnimating` propriedade. 
 
 ### <a name="managing-activity-indicator-appearances"></a>Gerenciando aparências do indicador de atividade
 
-A enumeração de `UIActivityIndicatorViewStyle` pode ser passada como um parâmetro ao instanciar o indicador de atividade. Você pode usar isso para definir o estilo visual como `Gray`, `White`ou `WhiteLarge`, por exemplo:
+A `UIActivityIndicatorViewStyle` enumeração pode ser passada como um parâmetro ao instanciar o indicador de atividade. Você pode usar isso para definir o estilo visual como `Gray` , `White` ou `WhiteLarge` , por exemplo:
 
 ```csharp
 activitySpinner = new UIActivityIndicatorView(UIActivityIndicatorViewStyle.WhiteLarge);
 ```
 
-Você pode substituir a cor fornecida por `UIActivityIndicatorViewStyle` definindo a propriedade `Color`.
+Você pode substituir a cor fornecida pelo `UIActivityIndicatorViewStyle`  definindo a `Color` propriedade.
 
 ## <a name="progress-bar"></a>Barra de Andamento
 
@@ -63,11 +63,11 @@ Uma barra de progresso apresenta uma linha que preenche a cor para indicar o est
 A Apple tem as seguintes sugestões para trabalhar com barras de progresso:
 
 - **Relatar com precisão o progresso** -as barras de progresso sempre devem ser uma representação precisa do tempo necessário para concluir uma tarefa. Nunca simule o tempo para que o aplicativo pareça estar ocupado.
-- **Use para durações bem definidas** -a barra de progresso não deve mostrar apenas que uma tarefa demorada está ocorrendo, mas forneça ao usuário e a indicação de quanto da tarefa foi concluída e uma estimativa do tempo restante.
+- **Usar para Well-Defined durações** -a barra de progresso não deve mostrar apenas que uma tarefa demorada está ocorrendo, mas que o usuário e a indicação de quanto da tarefa foi concluída e uma estimativa do tempo restante.
 
 ### <a name="implementing-an-progress-bar"></a>Implementando uma barra de progresso
 
-Uma barra de progresso é criada instanciando um [`UIProgressView`](xref:UIKit.UIProgressView)
+Uma barra de progresso é criada instanciando-se um [`UIProgressView`](xref:UIKit.UIProgressView)
 
 ### <a name="progress-bars-and-storyboards"></a>Barras de progresso e storyboards
 
@@ -75,27 +75,27 @@ Você também pode adicionar uma barra de progresso à sua interface do usuário
 
 As propriedades a seguir podem ser ajustadas no painel de propriedades:
 
-![Painel de Propriedades](progress-activity-indicator-images/progress-indicator3.png)
+![Captura de tela mostra a Painel de Propriedades em que você pode Modificar estilo, progresso, tonalidade de progresso, rastrear tonalidade, imagem de progresso e rastrear Propriedades de imagem.](progress-activity-indicator-images/progress-indicator3.png)
 
 ### <a name="managing-progress-bar-behavior"></a>Gerenciamento do comportamento da barra de progresso
 
-O progresso da barra pode ser inicialmente definido usando a propriedade `Progress`:
+O progresso da barra pode ser inicialmente definido usando a `Progress` Propriedade:
 
 ```csharp
 ProgressBar.Progress = 0f;
 ```
 
-O progresso pode ser ajustado usando o método `SetProgress` e passando um booliano declarando se você deseja que a alteração seja animada ou não.
+O progresso pode ser ajustado usando o `SetProgress` método e passando um booliano declarando se você deseja que a alteração seja animada ou não.
 
 ```csharp
 ProgressBar.SetProgress(1.0f, true);
 ```
 
-Para obter mais informações sobre como usar a barra de progresso, consulte a receita de [progresso de relatórios](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/networking/download_progress) e o exemplo de [tvOS de UICatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-uicatalog).
+Para obter mais informações sobre como usar a barra de progresso, consulte a receita de [progresso de relatórios](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/networking/download_progress) e o exemplo de [tvOS de UICatalog](/samples/xamarin/ios-samples/tvos-uicatalog).
 
 ### <a name="managing-progress-bar-appearance"></a>Gerenciando a aparência da barra de progresso
 
-Semelhante a um indicador de atividade, a enumeração de `UIProgressViewStyle` pode ser passada como um parâmetro ao instanciar a barra de progresso.
+Semelhante a um indicador de atividade, a `UIProgressViewStyle` enumeração pode ser passada como um parâmetro ao instanciar a barra de progresso.
 
 A imagem de progresso e de rastreamento e a cor de tonalidade podem ser ajustadas usando as seguintes propriedades:
 

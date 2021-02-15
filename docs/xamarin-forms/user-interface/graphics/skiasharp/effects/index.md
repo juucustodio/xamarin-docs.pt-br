@@ -10,16 +10,16 @@ ms.date: 08/22/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d9fa710f5dfc61c2892b8fc409a39b37cf449018
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: c6179f94b43f12a7bf4b91a05702c0539f3c8658
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136299"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367784"
 ---
 # <a name="skiasharp-effects"></a>Efeitos de SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 A [`SKPaint`](xref:SkiaSharp.SKPaint) classe SkiaSharp define seis propriedades que podem ser classificadas sob o termo geral de _efeitos_. Essas são propriedades que alteram a exibição normal de elementos gráficos de alguma forma. Os efeitos SkiaSharp se enquadram em seis categorias:
 
@@ -33,7 +33,7 @@ Defina a [`Shader`](xref:SkiaSharp.SKPaint.Shader) propriedade de `SKPaint` como
 
 ## <a name="blend-modes"></a>[Modos do Blend](blend-modes/index.md)
 
-Defina a [`BlendMode`](xref:SkiaSharp.SKPaint.BlendMode) propriedade de `SKPaint` como um membro da [`SKBlendMode`](xref:SkiaSharp.SKBlendMode) enumeração para controlar o que acontece quando um gráfico de origem é exibido em um destino. O SkiaSharp dá suporte a todos os modos de composição e mesclagem CSS, incluindo os modos carregador-Duff, separáveis Blend e modos de mesclagem não separáveis.
+Defina a [`BlendMode`](xref:SkiaSharp.SKPaint.BlendMode) propriedade de `SKPaint` como um membro da [`SKBlendMode`](xref:SkiaSharp.SKBlendMode) enumeração para controlar o que acontece quando um gráfico de origem é exibido em um destino. O SkiaSharp dá suporte a todos os modos de composição e mesclagem de CSS, incluindo os modos de Porter-Duff, modos de mistura separáveis e modos de mistura não separáveis.
 
 ## <a name="mask-filters"></a>[Filtros de máscara](mask-filters.md)
 
@@ -47,9 +47,9 @@ Defina a [`ImageFilter`](xref:SkiaSharp.SKPaint.ImageFilter) propriedade de `SKP
 
 Defina a [`ColorFilter`](xref:SkiaSharp.SKPaint.ColorFilter) propriedade de `SKPaint` como um objeto do tipo [`SKColorFilter`](xref:SkiaSharp.SKColorFilter) para alterar as cores usando tabelas ou transformações de matriz.
 
-Todos os códigos de exemplo para esses artigos estão no [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos). No home page, selecione **efeitos de SkiaSharp**.
+Todos os códigos de exemplo para esses artigos estão no [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos). No home page, selecione **efeitos de SkiaSharp**.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -6,22 +6,22 @@ ms.assetid: 455fda67-3879-4299-8036-b12840e6a498
 author: davidortinau
 ms.author: daortin
 ms.date: 04/24/2019
-ms.openlocfilehash: 9f227f51596a4ed93fd830c3f3495a90c1f7f722
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: 96f8a8c2fa49e1ff59621908ef89d08d302aaffa
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73014562"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93367966"
 ---
 # <a name="visual-basic-in-xamarin-android-and-ios"></a>Visual Basic no Xamarin Android e iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-taskyvb/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/mobile-samples/visualbasic-taskyvb/)
 
-O aplicativo de exemplo [TaskyVB](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-taskyvb/) demonstra como Visual Basic código compilado em uma biblioteca .net Standard pode ser usado com o Xamarin. Aqui estão algumas capturas de tela dos aplicativos resultantes em execução no Android e iOS:
+O aplicativo de exemplo [TaskyVB](/samples/xamarin/mobile-samples/visualbasic-taskyvb/) demonstra como Visual Basic código compilado em uma biblioteca .net Standard pode ser usado com o Xamarin. Aqui estão algumas capturas de tela dos aplicativos resultantes em execução no Android e iOS:
 
  [![Android e iOS executando um aplicativo criado com Visual Basic](native-apps-images/simulators-sml.png)](native-apps-images/simulators.png#lightbox)
 
-Os projetos do Android e do iOS no exemplo são todos gravados no C#. A interface do usuário para cada aplicativo é criada com tecnologias nativas, enquanto o gerenciamento de `TodoItem` é fornecido pela biblioteca de .NET Standard de Visual Basic usando um arquivo XML (para fins de demonstração, não um banco de dados completo).
+Os projetos do Android e do iOS no exemplo são todos escritos em C#. A interface do usuário para cada aplicativo é criada com tecnologias nativas, enquanto o `TodoItem` gerenciamento é fornecido pela biblioteca Visual Basic .net Standard usando um arquivo XML (para fins de demonstração, não um banco de dados completo).
 
 ## <a name="sample-walkthrough"></a>Passo a passo de exemplo
 
@@ -44,7 +44,7 @@ A biblioteca de exemplo contém os conceitos básicos de nosso aplicativo nesses
 
 ### <a name="todoitemvb"></a>TodoItem. vb
 
-Essa classe contém o objeto comercial a ser usado em todo o aplicativo. Ele será definido em Visual Basic e compartilhado com os projetos Android e iOS que são gravados no C#.
+Essa classe contém o objeto comercial a ser usado em todo o aplicativo. Ele será definido em Visual Basic e compartilhado com os projetos Android e iOS que são escritos em C#.
 
 A definição de classe é mostrada aqui:
 
@@ -61,7 +61,7 @@ O exemplo usa serialização e desserialização de XML para carregar e salvar o
 
 ### <a name="todoitemmanagervb"></a>TodoItemManager. vb
 
-A classe Manager apresenta a ' API ' para o código portátil. Ele fornece operações CRUD básicas para a classe `TodoItem`, mas nenhuma implementação dessas operações.
+A classe Manager apresenta a ' API ' para o código portátil. Ele fornece operações CRUD básicas para a `TodoItem` classe, mas nenhuma implementação dessas operações.
 
 ```vb
 Public Class TodoItemManager
@@ -177,7 +177,7 @@ var path = Path.Combine(libraryPath, xmlFilename);
 TaskMgr = new TodoItemManager(path);
 ```
 
-O restante do código do aplicativo se preocupa principalmente com a interface do usuário e usando a classe `TaskMgr` para carregar e salvar `TodoItem` classes.
+O restante do código do aplicativo se preocupa principalmente com a interface do usuário e usando a `TaskMgr` classe para carregar e salvar `TodoItem` classes.
 
 ## <a name="visual-studio-2019-for-mac"></a>Visual Studio 2019 para Mac
 
@@ -192,7 +192,7 @@ O Visual Studio 2017 _não pode_ Compilar Visual Basic projetos.
 
 Este artigo demonstrou como consumir Visual Basic código em aplicativos Xamarin usando o Visual Studio e bibliotecas de .NET Standard. Embora o Xamarin não ofereça suporte a Visual Basic diretamente, a compilação de Visual Basic em uma biblioteca .NET Standard permite que o código escrito com Visual Basic seja incluído nos aplicativos iOS e Android.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [TaskyVB (exemplo de .NET Standard)](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyVB)
-- [O que há de novo no .NET Standard](https://docs.microsoft.com/dotnet/standard/whats-new/whats-new-in-dotnet-standard?tabs=csharp)
+- [Novidades no .NET Standard](/dotnet/standard/whats-new/whats-new-in-dotnet-standard?tabs=csharp)

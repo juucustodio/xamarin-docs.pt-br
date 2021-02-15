@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: alexeystrakh
 ms.author: alstrakh
 ms.date: 02/11/2020
-ms.openlocfilehash: 3c63b1a4ed58b0efcc510085934a5380e6049ae7
-ms.sourcegitcommit: a3f13a216fab4fc20a9adf343895b9d6a54634a5
+ms.openlocfilehash: 3bc6f0a95bdd01991ccea69d7917f5fabcb9f51b
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853152"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430968"
 ---
 # <a name="walkthrough-bind-an-ios-swift-library"></a>Walkthrough: associar uma biblioteca Swift do iOS
 
@@ -35,8 +35,8 @@ Para concluir este passo a passo, você precisa de:
 
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
 - [Visual Studio para Mac](https://visualstudio.microsoft.com/downloads)
-- [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/get-started#installing-objective-sharpie)
-- [CLI do AppCenter](https://docs.microsoft.com/appcenter/test-cloud/) (opcional)
+- [Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/get-started.md#installing-objective-sharpie)
+- [CLI do AppCenter](/appcenter/test-cloud/) (opcional)
 
 ## <a name="build-a-native-library"></a>Criar uma biblioteca nativa
 
@@ -203,9 +203,9 @@ Por exemplo, neste tutorial, uma associação para o [SDK do Gigya Swift](https:
 
 ## <a name="prepare-metadata"></a>Preparar metadados
 
-Neste momento, você deve ter a estrutura com o cabeçalho de interface gerado por Objective-C pronto para ser consumido por uma associação do Xamarin. iOS.  A próxima etapa é preparar as interfaces de definição de API, que são usadas por um projeto de associação para gerar classes C#. Essas definições podem ser criadas manualmente ou automaticamente pela ferramenta de [nitidez objetiva](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) e pelo arquivo de cabeçalho gerado. Use a nitidez para gerar os metadados:
+Neste momento, você deve ter a estrutura com o cabeçalho de interface gerado por Objective-C pronto para ser consumido por uma associação do Xamarin. iOS.  A próxima etapa é preparar as interfaces de definição de API, que são usadas por um projeto de associação para gerar classes C#. Essas definições podem ser criadas manualmente ou automaticamente pela ferramenta de [nitidez objetiva](../../../cross-platform/macios/binding/objective-sharpie/index.md) e pelo arquivo de cabeçalho gerado. Use a nitidez para gerar os metadados:
 
-1. Baixe a última ferramenta de [nitidez do objetivo](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) do site de downloads oficiais e instale-a seguindo o assistente. Quando a instalação for concluída, você poderá verificá-la executando o comando de nitidez:
+1. Baixe a última ferramenta de [nitidez do objetivo](../../../cross-platform/macios/binding/objective-sharpie/index.md) do site de downloads oficiais e instale-a seguindo o assistente. Quando a instalação for concluída, você poderá verificá-la executando o comando de nitidez:
 
     ```bash
     sharpie -v
@@ -299,7 +299,7 @@ A próxima etapa é criar um projeto de associação do Xamarin. iOS usando o mo
 
         As duas primeiras opções (  `-L ...`   aquelas) dizem ao compilador nativo onde encontrar as bibliotecas Swift. O compilador nativo ignorará bibliotecas que não têm a arquitetura correta, o que significa que é possível passar o local para bibliotecas de simuladores e bibliotecas de dispositivos ao mesmo tempo, para que ele funcione para compilações de simuladores e dispositivos (esses caminhos são corretos apenas para iOS; para tvOS e watchOS precisam ser atualizados). Uma desvantagem é que essa abordagem requer que o Xcode correto esteja em/Application/Xcode.app, se o consumidor da biblioteca de associação tiver o Xcode em um local diferente, ele não funcionará. A solução alternativa é adicionar essas opções nos argumentos adicionais de mTouch nas opções de Build do iOS do projeto executável ( `--gcc_flags -L... -L...` ). A terceira opção faz com que o vinculador nativo armazene o local das bibliotecas Swift no executável, para que o sistema operacional possa encontrá-las.
 
-1. A ação final é criar a biblioteca e verificar se você não tem nenhum erro de compilação. Muitas vezes, você descobrirá que os metadados de associações produzidos por nitidez objetiva serão anotados com o  `[Verify]`   atributo. Esses atributos indicam que você deve verificar se a nitidez do objetivo fez a coisa correta comparando a associação com a declaração objetiva-C original (que será fornecida em um comentário acima da declaração associada). Você pode saber mais sobre membros marcados com o atributo pelo [link a seguir](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/platform/verify). Depois que o projeto é compilado, ele pode ser consumido por um aplicativo Xamarin. iOS.
+1. A ação final é criar a biblioteca e verificar se você não tem nenhum erro de compilação. Muitas vezes, você descobrirá que os metadados de associações produzidos por nitidez objetiva serão anotados com o  `[Verify]`   atributo. Esses atributos indicam que você deve verificar se a nitidez do objetivo fez a coisa correta comparando a associação com a declaração objetiva-C original (que será fornecida em um comentário acima da declaração associada). Você pode saber mais sobre membros marcados com o atributo pelo [link a seguir](../../../cross-platform/macios/binding/objective-sharpie/platform/verify.md). Depois que o projeto é compilado, ele pode ser consumido por um aplicativo Xamarin. iOS.
 
 ## <a name="consume-the-binding-library"></a>Consumir a biblioteca de associação
 
@@ -366,7 +366,7 @@ Parabéns! Você criou com êxito um aplicativo Xamarin. iOS e uma biblioteca de
         ![Visual Studio UITest novo](walkthrough-images/visualstudio-uitest-new.png)
 
         > [!TIP]
-        > Você pode encontrar mais informações sobre como criar um projeto UITest e configurá-lo para seu aplicativo pelo [link a seguir](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
+        > Você pode encontrar mais informações sobre como criar um projeto UITest e configurá-lo para seu aplicativo pelo [link a seguir](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
 
     - Crie um teste básico para executar o aplicativo e usar alguns dos recursos do SDK Swift. Esse teste ativa o aplicativo, tenta fazer logon e, em seguida, pressiona o botão Cancelar:
 
@@ -390,14 +390,14 @@ Parabéns! Você criou com êxito um aplicativo Xamarin. iOS e uma biblioteca de
         ```
 
         > [!TIP]
-        > Leia mais sobre o UITests Framework e a automação da interface do usuário pelo [link a seguir](https://docs.microsoft.com/appcenter/test-cloud/uitest/).
+        > Leia mais sobre o UITests Framework e a automação da interface do usuário pelo [link a seguir](/appcenter/test-cloud/uitest/).
 
     - Crie um aplicativo iOS no app Center, crie uma nova execução de teste com um novo conjunto de dispositivos para executar o teste:
 
         ![novo Visual Studio app Center](walkthrough-images/visualstudio-appcenter-new.png)
 
         > [!TIP]
-        > Saiba mais sobre o AppCenter Test Cloud pelo [link a seguir](https://docs.microsoft.com/appcenter/test-cloud/).
+        > Saiba mais sobre o AppCenter Test Cloud pelo [link a seguir](/appcenter/test-cloud/).
 
     - Instalar a CLI do AppCenter
 
@@ -428,13 +428,13 @@ Você desenvolveu um aplicativo Xamarin. iOS básico que usa uma estrutura Swift
 
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
 - [Visual Studio para Mac](https://visualstudio.microsoft.com/downloads)
-- [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/)
-- [Verificação de metadados de nitidez](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/platform/verify)
-- [Estrutura de objetivo de associação-C](https://docs.microsoft.com/xamarin/ios/platform/binding-objective-c/walkthrough)
+- [Objective Sharpie](../../../cross-platform/macios/binding/objective-sharpie/index.md)
+- [Verificação de metadados de nitidez](../../../cross-platform/macios/binding/objective-sharpie/platform/verify.md)
+- [Estrutura de objetivo de associação-C](../binding-objective-c/walkthrough.md)
 - [SDK do iOS Gigya (estrutura Swift)](https://developers.gigya.com/display/GD/Swift+SDK)
 - [Swift 5,1 de estabilidade da ABI](https://swift.org/blog/swift-5-1-released/)
 - [NuGet SwiftRuntimeSupport](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/)
-- [Automação do Xamarin UITest](https://docs.microsoft.com/appcenter/test-cloud/uitest/)
-- [Configuração do Xamarin. iOS UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
-- [Test Cloud AppCenter](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
+- [Automação do Xamarin UITest](/appcenter/test-cloud/uitest/)
+- [Configuração do Xamarin. iOS UITest](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
+- [Test Cloud AppCenter](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
 - [Repositório de projetos de exemplo](https://github.com/alexeystrakh/xamarin-binding-swift-framework)

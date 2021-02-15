@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: 91ead74f1ae26e10046b1e57d722e84014546108
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: db630ba7db1532f24fb6e810653427d1678ad5e2
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929019"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434648"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Solução de problemas de aplicativos tvOS criados com o Xamarin
 
@@ -21,7 +21,7 @@ _Este artigo aborda os problemas conhecidos que você pode encontrar ao trabalha
 
 <a name="Known-Issues"></a>
 
-## <a name="known-issues"></a>Problemas Conhecidos
+## <a name="known-issues"></a>Problemas conhecidos
 
 A versão atual do suporte do tvOS do Xamarin tem os seguintes problemas conhecidos:
 
@@ -76,7 +76,7 @@ Section
  reserved2 0
 ```
 
-`addr`e `size` serão diferentes, mas outros campos devem ser idênticos.
+`addr` e `size` serão diferentes, mas outros campos devem ser idênticos.
 
 Você precisará certificar-se de que todas as bibliotecas estáticas () de terceiros `.a` que você está usando foram criadas em relação a bibliotecas tvOS (não bibliotecas Ios) e que também incluem informações de BitCode.
 
@@ -202,7 +202,7 @@ Com esse arquivo em vigor, você deve ser capaz de adicionar com êxito o arquiv
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Exemplos do tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guias de interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

@@ -10,16 +10,16 @@ ms.date: 09/11/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9ed7e485adbc13862ff6fb6af9b02c43cc6a1f10
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 1da087a8906eb87b14f015371a584b164a8a9340
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86935636"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373023"
 ---
-# <a name="creating-a-xamarinforms-datatemplate"></a>Criando um Xamarin.Forms DataTemplate
+# <a name="creating-a-no-locxamarinforms-datatemplate"></a>Criando um Xamarin.Forms DataTemplate
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 
 _Os modelos de dados podem ser criados embutidos, em um ResourceDictionary ou de um tipo personalizado ou de um Xamarin.Forms tipo de célula apropriado. Este artigo explora cada técnica._
 
@@ -289,5 +289,5 @@ Este artigo explicou como criar modelos de dados, embutidos, de um tipo personal
 ## <a name="related-links"></a>Links Relacionados
 
 - [Aparência de célula](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)
-- [Modelos de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
+- [Modelos de dados (amostra)](/samples/xamarin/xamarin-forms-samples/templates-datatemplates)
 - [DataTemplate](xref:Xamarin.Forms.DataTemplate)

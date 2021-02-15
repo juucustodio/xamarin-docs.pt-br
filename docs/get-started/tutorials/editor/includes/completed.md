@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5c3d829038692635284c447e11ab08ad2afe6885
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: e38869b0079479395e2bb29deaba970ae08a4b33
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "71059532"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98690155"
 ---
 Parabéns por concluir este tutorial, no qual você aprendeu a:
 
@@ -23,6 +23,6 @@ Para saber mais sobre os conceitos básicos da criação de aplicativos móveis 
 
 ## <a name="related-links"></a>Links relacionados
 
-- [EditorTutorial (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-editortutorial/)
+- [EditorTutorial (amostra)](/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-editortutorial/)
 - [Editor de Xamarin.Forms (guia)](~/xamarin-forms/user-interface/text/editor.md)
 - [API de Editor](xref:Xamarin.Forms.Editor)

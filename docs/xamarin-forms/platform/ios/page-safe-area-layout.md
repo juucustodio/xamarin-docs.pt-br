@@ -10,16 +10,16 @@ ms.date: 10/24/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 920246e9cbbe85c606969333ccb05d3c87dcef66
-ms.sourcegitcommit: 14d67a2db82e67471584b1749e0d5b9ec0c0c09b
+ms.openlocfilehash: f5907e5493ff43c6a69dc4a8a8e5d2b4fc78210e
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88228580"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374869"
 ---
 # <a name="safe-area-layout-guide-on-ios"></a>Guia de layout de área segura no iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 Essa plataforma específica do iOS é usada para garantir que o conteúdo da página seja posicionado em uma área da tela que seja segura para todos os dispositivos que usam o iOS 11 e superior. Especificamente, ele ajudará a garantir que o conteúdo não seja recortado por cantos do dispositivo arredondado, pelo indicador inicial ou pelo invólucro do sensor em um iPhone X. Ele é consumido em XAML definindo a `Page.UseSafeArea` Propriedade anexada como um `boolean` valor:
 
@@ -68,6 +68,6 @@ protected override void OnAppearing()
 
 ## <a name="related-links"></a>Links relacionados
 
-- [PlatformSpecifics (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
+- [PlatformSpecifics (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Criação de itens específicos à plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [API iOSSpecific](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

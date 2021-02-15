@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 10/07/2017
-ms.openlocfilehash: abe9c95c889aed5258ea3a5367e05368ddb7c77f
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: ec43c98b891ee1541be9b1ac2563e280730628e3
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574165"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430500"
 ---
 # <a name="introduction-to-watchos-3"></a>Introdução ao watchOS 3
 
@@ -149,7 +149,7 @@ Para saber mais, consulte nosso guia de [tarefas em segundo plano](~/ios/watchos
 o watchOS 3 inclui vários aprimoramentos para a estrutura WatchKit, incluindo o seguinte:
 
 - O aplicativo pode obter o estado do Digital Crown usando a nova classe [WKCrownSequencer](https://developer.apple.com/reference/watchkit/wkcrownsequencer) e receber atualizações quando o usuário girar a coroa usando a classe [WKCrownDelegate](https://developer.apple.com/reference/watchkit/wkcrowndelegate) .
-- A classe [WKExtension](https://developer.apple.com/reference/watchkit/wkextension) agora inclui o `ApplicationState` método e a constante [WKApplicationState](https://developer.apple.com/reference/watchkit/wkapplicationstate) que o aplicativo pode usar para acompanhar o estado de tempo de execução do aplicativo. `WKExtension`também fornece dois novos métodos que podem ser usados para agendar tarefas em segundo plano.
+- A classe [WKExtension](https://developer.apple.com/reference/watchkit/wkextension) agora inclui o `ApplicationState` método e a constante [WKApplicationState](https://developer.apple.com/reference/watchkit/wkapplicationstate) que o aplicativo pode usar para acompanhar o estado de tempo de execução do aplicativo. `WKExtension` também fornece dois novos métodos que podem ser usados para agendar tarefas em segundo plano.
 - O [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) agora inclui os novos `ApplicationWillEnterForeground` `ApplicationDidEnterBackground` e os `HandleBackgroundTasks` métodos para monitorar as alterações no estado do aplicativo e tratar as atualizações de tarefas em segundo plano.
 - Uma nova classe [WKGestureRecognizer](https://developer.apple.com/reference/watchkit/wkgesturerecognizer) foi adicionada para fornecer os seguintes tipos de reconhecimento de gesto para os aplicativos Watch: [WKLongPressGestureRecognizer](https://developer.apple.com/reference/watchkit/wklongpressgesturerecognizer), [WKPanGestureRecognizer](https://developer.apple.com/reference/watchkit/wkpangesturerecognizer), [WKSwipeGestureRecognizer](https://developer.apple.com/reference/watchkit/wkswipegesturerecognizer) e [WKTapGestureRecognizer](https://developer.apple.com/reference/watchkit/wktapgesturerecognizer).
 - A nova classe [WKinterfaceHMCamera](https://developer.apple.com/reference/watchkit/wkinterfacehmcamera) fornece uma interface para qualquer câmera de IP anexada homekit.
@@ -188,7 +188,7 @@ As seguintes APIs foram preteridas no watchOS 3:
 
 Consulte a documentação de [diferenças da API watchOS 2,2](https://developer.apple.com/library/prerelease/content/releasenotes/General/watchOS30APIDiffs/index.html) da Apple para watchOS 3,0 para obter uma lista completa de reprovações e alterações.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Exemplos de watchOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)
+- [Exemplos de watchOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2bwatchOS)
 - [O que há de novo no watchOS 3](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInwatchOS/Articles/watchOS3.html#//apple_ref/doc/uid/TP40017085-SW1)

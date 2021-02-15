@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 06/05/2017
-ms.openlocfilehash: 451e69be771a1a3214a772f0f9afc48893a6fa8d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: acde83ee88ab17884cadd375f83efee8afb0385e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86929578"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433379"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Manual de introdução a C# para Desenvolvedores de Objective-C
 
@@ -143,7 +143,7 @@ Objective-C usa *blocos* para criar fechamentos, em que você pode criar uma fun
 };
 ```
 
-Para obter mais informações sobre expressões lambda, confira o [Guia de Programação em C#](https://msdn.microsoft.com/library/vstudio/bb397687.aspx) da Microsoft.
+Para obter mais informações sobre expressões lambda, confira o [Guia de Programação em C#](/dotnet/csharp/language-reference/operators/lambda-expressions) da Microsoft.
 
 ## <a name="summary"></a>Resumo
 

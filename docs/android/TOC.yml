@@ -2,7 +2,7 @@
   href: index.yml
   expanded: true
   items:
-    - name: Introdução
+    - name: Começar agora
       href: get-started/index.md
       expanded: true
       items:
@@ -18,9 +18,9 @@
               items:
                 - name: Aceleração de hardware (Hyper-V e HAXM)
                   href: get-started/installation/android-emulator/hardware-acceleration.md
-                - name: Gerenciador de dispositivos
+                - name: Gerenciador de Dispositivos
                   href: get-started/installation/android-emulator/device-manager.md
-                - name: Propriedades do dispositivo
+                - name: Propriedades do Dispositivo
                   href: get-started/installation/android-emulator/device-properties.md
                 - name: Solução de problemas
                   href: get-started/installation/android-emulator/troubleshooting.md
@@ -31,16 +31,16 @@
         - name: 'Hello, Android'
           href: get-started/hello-android/index.md
           items:
-            - name: 'Parte 1: Guia de Início Rápido'
+            - name: 'Parte 1: início rápido'
               href: get-started/hello-android/hello-android-quickstart.md
-            - name: 'Parte 2: Aprofundamento'
+            - name: 'Parte 2: aprofundamento'
               href: get-started/hello-android/hello-android-deepdive.md
         - name: 'Multitela Hello, Android'
           href: get-started/hello-android-multiscreen/index.md
           items:
-            - name: 'Parte 1: Guia de Início Rápido'
+            - name: 'Parte 1: início rápido'
               href: get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md
-            - name: 'Parte 2: Aprofundamento'
+            - name: 'Parte 2: aprofundamento'
               href: get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md
         - name: Xamarin para Desenvolvedores Java
           href: get-started/java-developers.md
@@ -145,9 +145,9 @@
               href: user-interface/android-designer/diagnostics.md
             - name: Analisadores de diagnóstico do Android Designer
               href: user-interface/android-designer/diagnostic-analyzers.md
-        - name: Tema de material
+        - name: Material Theme
           href: user-interface/material-theme.md
-        - name: Perfil do usuário
+        - name: Perfil do Usuário
           href: user-interface/user-profile.md
         - name: Splash Screen
           href: user-interface/splash-screen.md
@@ -226,7 +226,7 @@
               items:
                 - name: Seletor de data
                   href: user-interface/controls/pickers/date-picker.md
-                - name: Seletor de tempo
+                - name: Seletor de Tempo
                   href: user-interface/controls/pickers/time-picker.md
             - name: Menu pop-up
               href: user-interface/controls/popup-menu.md
@@ -234,7 +234,7 @@
               href: user-interface/controls/ratingbar.md
             - name: Controle giratório
               href: user-interface/controls/spinner.md
-            - name: Alternar
+            - name: Comutador
               href: user-interface/controls/switch.md
             - name: TextureView
               href: user-interface/controls/texture-view.md
@@ -271,7 +271,7 @@
         - name: Autenticação de impressão digital
           href: platform/fingerprint-authentication/index.md
           items:
-            - name: Guia de Introdução
+            - name: Introdução
               href: platform/fingerprint-authentication/get-started.md
             - name: Verificação de impressões digitais
               href: platform/fingerprint-authentication/scanning.md
@@ -339,7 +339,7 @@
         - name: Mapas e local
           href: platform/maps-and-location/index.md
           items:
-            - name: Local
+            - name: Location
               href: platform/maps-and-location/location.md
             - name: Mapas
               href: platform/maps-and-location/maps/index.md
@@ -359,7 +359,7 @@
               href: platform/java-integration/android-callable-wrappers.md
             - name: Trabalhar com JNI
               href: platform/java-integration/working-with-jni.md
-            - name: 'Portabilidade de Java para C#'
+            - name: Portabilidade de Java para C#
               href: platform/java-integration/porting-java-to-csharp.md
         - name: Associação de uma biblioteca Java
           href: platform/binding-java-library/index.md
@@ -391,12 +391,14 @@
     - name: Xamarin.Essentials
       href: ~/essentials/index.md?context=xamarin/android
       items:
-        - name: Guia de Introdução
+        - name: Introdução
           href: ~/essentials/get-started.md?context=xamarin/android
         - name: Suporte a recursos e a plataformas
           href: ~/essentials/platform-feature-support.md?context=xamarin/android
         - name: Acelerômetro
           href: ~/essentials/accelerometer.md?context=xamarin/android
+        - name: Ações do aplicativo
+          href: ~/essentials/app-actions.md?context=xamarin/android
         - name: Informações do aplicativo
           href: ~/essentials/app-information.md?context=xamarin/android
         - name: Tema do aplicativo
@@ -413,6 +415,8 @@
           href: ~/essentials/compass.md?context=xamarin/android
         - name: Conectividade
           href: ~/essentials/connectivity.md?context=xamarin/android
+        - name: Contatos
+          href: ~/essentials/contacts.md?context=xamarin/android
         - name: Detectar movimento
           href: ~/essentials/detect-shake.md?context=xamarin/android
         - name: Informações sobre DeviceDisplay
@@ -421,6 +425,8 @@
           href: ~/essentials/device-information.md?context=xamarin/android
         - name: Email
           href: ~/essentials/email.md?context=xamarin/android
+        - name: Seletor de arquivos
+          href: ~/essentials/file-picker.md?context=xamarin/android
         - name: Auxiliares do sistema de arquivos
           href: ~/essentials/file-system-helpers.md?context=xamarin/android
         - name: Lanterna
@@ -431,6 +437,8 @@
           href: ~/essentials/geolocation.md?context=xamarin/android
         - name: Giroscópio
           href: ~/essentials/gyroscope.md?context=xamarin/android
+        - name: Comentários táteis
+          href: ~/essentials/haptic-feedback.md?context=xamarin/android
         - name: Inicializador
           href: ~/essentials/launcher.md?context=xamarin/android
         - name: Magnetômetro
@@ -439,6 +447,8 @@
           href: ~/essentials/main-thread.md?context=xamarin/android
         - name: Mapas
           href: ~/essentials/maps.md?context=xamarin/android
+        - name: Seletor de mídia
+          href: ~/essentials/media-picker.md?context=xamarin/android
         - name: Abrir navegador
           href: ~/essentials/open-browser.md?context=xamarin/android
         - name: Sensor de orientação
@@ -451,6 +461,8 @@
           href: ~/essentials/platform-extensions.md?context=xamarin/android
         - name: Preferências
           href: ~/essentials/preferences.md?context=xamarin/android
+        - name: Captura de tela
+          href: ~/essentials/screenshot.md?context=xamarin/android
         - name: Armazenamento seguro
           href: ~/essentials/secure-storage.md?context=xamarin/android
         - name: Compartilhar
@@ -468,9 +480,11 @@
         - name: Web Authenticator
           href: ~/essentials/web-authenticator.md?context=xamarin/android
         - name: Notas sobre a versão do Xamarin.Essentials
-          href: 'https://docs.microsoft.com/xamarin/essentials/release-notes/'
+          href: /xamarin/essentials/release-notes/
         - name: Solução de problemas
           href: ~/essentials/troubleshooting.md?context=xamarin/android
+        - name: Xamarin.Essentials no Q&A
+          href: /answers/topics/dotnet-xamarinessentials.html
     - name: Serviços de dados e de nuvem
       href: data-cloud/index.md
       items:
@@ -504,7 +518,7 @@
         - name: Google Messaging
           href: data-cloud/google-messaging/index.md
           items:
-            - name: Mensagens na nuvem do firebase
+            - name: Firebase Cloud Messaging
               href: data-cloud/google-messaging/firebase-cloud-messaging.md
             - name: Passo a passo sobre notificações FCM
               href: data-cloud/google-messaging/remote-notifications-with-fcm.md
@@ -526,6 +540,12 @@
           items:
             - name: Processo de build
               href: deploy-test/building-apps/build-process.md
+            - name: Compilar itens
+              href: deploy-test/building-apps/build-items.md
+            - name: Propriedades de build
+              href: deploy-test/building-apps/build-properties.md
+            - name: Destinos de build
+              href: deploy-test/building-apps/build-targets.md
             - name: Compilação de APKs específicos para ABI
               href: deploy-test/building-apps/abi-specific-apks.md
         - name: Emulador de linha de comando
@@ -592,7 +612,7 @@
           href: ~/cross-platform/internals/available-assemblies.md?context=xamarin/android
         - name: Design de API
           href: internals/api-design.md
-        - name: Coleta de Lixo
+        - name: Coleta de lixo
           href: internals/garbage-collection.md
         - name: Limitações
           href: internals/limitations.md
@@ -643,7 +663,7 @@
     - name: Wear
       href: wear/index.md
       items:
-        - name: Introdução
+        - name: Começar agora
           href: wear/get-started/index.md
           items:
             - name: Introdução ao Android Wear
@@ -674,9 +694,11 @@
               href: wear/deploy-test/debug-on-emulator.md
             - name: Depurar em um dispositivo Wear
               href: wear/deploy-test/debug-on-device.md
-            - name: Packaging
+            - name: Empacotamento
               href: wear/deploy-test/packaging.md
+    - name: Xamarin.Android no Q&A
+      href: /answers/topics/dotnet-android.html
     - name: Notas sobre a versão
-      href: 'https://docs.microsoft.com/xamarin/android/release-notes/'
+      href: /xamarin/android/release-notes/
     - name: Exemplos
       href: samples/index.md

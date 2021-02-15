@@ -10,16 +10,16 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: b0fecac02c44e3ba721dd4625e7bee264c6869d0
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: c266cdee5a0949edc6ade7fff81816d0405af27f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84134752"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374882"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>Exibindo bitmaps SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 O assunto dos bitmaps SkiaSharp foi introduzido no artigo **[noções básicas de bitmap em SkiaSharp](../basics/bitmaps.md)**. Esse artigo mostrou três maneiras de carregar bitmaps e três maneiras de exibir bitmaps. Este artigo revisa as técnicas para carregar bitmaps e vai mais fundo o uso dos `DrawBitmap` métodos do `SKCanvas` .
 
@@ -27,7 +27,7 @@ O assunto dos bitmaps SkiaSharp foi introduzido no artigo **[noções básicas d
 
 Os `DrawBitmapLattice` `DrawBitmapNinePatch` métodos e são discutidos no artigo **[exibição segmentada de bitmaps SkiaSharp](segmented.md)**.
 
-Os exemplos nesta página são do aplicativo **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** . Na home page desse aplicativo, escolha **bitmaps SkiaSharp**e, em seguida, vá para a seção **exibindo bitmaps** .
+Os exemplos nesta página são do aplicativo **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** . Na home page desse aplicativo, escolha **bitmaps SkiaSharp** e, em seguida, vá para a seção **exibindo bitmaps** .
 
 ## <a name="loading-a-bitmap"></a>Carregando um bitmap
 
@@ -95,7 +95,7 @@ using (Stream stream = assembly.GetManifestResourceStream(resourceID))
 
 Os arquivos de bitmap também podem ser armazenados como recursos no projeto da plataforma individual para iOS, Android e o Plataforma Universal do Windows (UWP). No entanto, carregar esses bitmaps requer o código localizado no projeto da plataforma.
 
-Uma terceira abordagem para obter um bitmap é da biblioteca de imagens do usuário. O código a seguir usa um serviço de dependência que está incluído no aplicativo **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** . A biblioteca de .NET Standard **SkiaSharpFormsDemo** inclui a `IPhotoLibrary` interface, enquanto cada um dos projetos de plataforma contém uma `PhotoLibrary` classe que implementa essa interface.
+Uma terceira abordagem para obter um bitmap é da biblioteca de imagens do usuário. O código a seguir usa um serviço de dependência que está incluído no aplicativo **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** . A biblioteca de .NET Standard **SkiaSharpFormsDemo** inclui a `IPhotoLibrary` interface, enquanto cada um dos projetos de plataforma contém uma `PhotoLibrary` classe que implementa essa interface.
 
 ```csharp
 IPhotoicturePicker picturePicker = DependencyService.Get<IPhotoLibrary>();
@@ -147,7 +147,7 @@ No entanto, a cor em si é irrelevante. Somente o canal alfa é examinado quando
 
 O `SKPaint` objeto também desempenha uma função ao exibir bitmaps usando modos de mesclagem ou efeitos de filtro. Eles são demonstrados nos artigos [SkiaSharp composição e mesclagem modos](../effects/blend-modes/index.md) e [filtros de imagem SkiaSharp](../effects/image-filters.md).
 
-A página **dimensões de pixel** no programa de exemplo **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** exibe um recurso de bitmap que tem 320 pixels de largura por 240 pixels de altura:
+A página **dimensões de pixel** no programa de exemplo **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** exibe um recurso de bitmap que tem 320 pixels de largura por 240 pixels de altura:
 
 ```csharp
 public class PixelDimensionsPage : ContentPage
@@ -197,7 +197,7 @@ Se o aplicativo quiser exibir o bitmap em seu canto superior esquerdo, ele simpl
 
 ## <a name="a-method-for-loading-resource-bitmaps"></a>Um método para carregar bitmaps de recurso
 
-Muitos dos exemplos que chegam precisarão carregar recursos de bitmap. A `BitmapExtensions` classe estática na solução **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** contém um método para ajudar:
+Muitos dos exemplos que chegam precisarão carregar recursos de bitmap. A `BitmapExtensions` classe estática na solução **[SkiaSharpFormsDemos](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** contém um método para ajudar:
 
 ```csharp
 static class BitmapExtensions
@@ -322,7 +322,7 @@ A taxa de proporção do bitmap é preservada, mas as áreas à esquerda e à di
 
 ## <a name="a-versatile-bitmap-display-function"></a>Uma função de exibição de bitmap versátil
 
-Os ambientes de programação baseados em XAML (como UWP e Xamarin.Forms ) têm um recurso para expandir ou reduzir o tamanho dos bitmaps enquanto preservam suas taxas de proporção. Embora o SkiaSharp não inclua esse recurso, você mesmo pode implementá-lo. A `BitmapExtensions` classe incluída no aplicativo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) mostra como. A classe define dois novos `DrawBitmap` métodos que executam o cálculo de taxa de proporção. Esses novos métodos são métodos de extensão do `SKCanvas` .
+Os ambientes de programação baseados em XAML (como UWP e Xamarin.Forms ) têm um recurso para expandir ou reduzir o tamanho dos bitmaps enquanto preservam suas taxas de proporção. Embora o SkiaSharp não inclua esse recurso, você mesmo pode implementá-lo. A `BitmapExtensions` classe incluída no aplicativo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) mostra como. A classe define dois novos `DrawBitmap` métodos que executam o cálculo de taxa de proporção. Esses novos métodos são métodos de extensão do `SKCanvas` .
 
 Os novos `DrawBitmap` métodos incluem um parâmetro do tipo `BitmapStretch` , uma enumeração definida no arquivo **BitmapExtensions.cs** :
 
@@ -338,7 +338,7 @@ public enum BitmapStretch
 }
 ```
 
-Os `None` Membros,, e `Fill` `Uniform` `UniformToFill` são os mesmos da [`Stretch`](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.media.stretch.aspx) Enumeração UWP. A Xamarin.Forms [`Aspect`](xref:Xamarin.Forms.Aspect) Enumeração semelhante define membros `Fill` , `AspectFit` e `AspectFill` .
+Os `None` Membros,, e `Fill` `Uniform` `UniformToFill` são os mesmos da [`Stretch`](/uwp/api/Windows.UI.Xaml.Media.Stretch) Enumeração UWP. A Xamarin.Forms [`Aspect`](xref:Xamarin.Forms.Aspect) Enumeração semelhante define membros `Fill` , `AspectFit` e `AspectFill` .
 
 A página de **dimensionamento uniforme** mostrada acima centraliza o bitmap dentro do retângulo, mas você pode desejar outras opções, como posicionar o bitmap no lado esquerdo ou direito do retângulo, ou na parte superior ou inferior. Essa é a finalidade da `BitmapAlignment` enumeração:
 
@@ -622,7 +622,7 @@ Aqui estão algumas combinações de opções:
 
 [![Modos de dimensionamento](displaying-images/ScalingModes.png "Modos de dimensionamento")](displaying-images/ScalingModes-Large.png#lightbox)
 
-A página de **subconjunto de retângulo** tem praticamente o mesmo arquivo XAML que os **modos de dimensionamento**, mas o arquivo code-behind define um subconjunto retangular do bitmap fornecido pelo `SOURCE` campo: 
+A página de **subconjunto de retângulo** tem praticamente o mesmo arquivo XAML que os **modos de dimensionamento** , mas o arquivo code-behind define um subconjunto retangular do bitmap fornecido pelo `SOURCE` campo: 
 
 ```csharp
 public partial class ScalingModesPage : ContentPage
@@ -668,5 +668,5 @@ Essa origem de retângulo isola a cabeça do macaco, conforme mostrado nestas ca
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

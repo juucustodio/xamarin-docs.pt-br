@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 3fd119828a953c002c7d66f248bf26b413018ae4
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f1c21d64c8e1e271043e7d0b918f6033e21daac7
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939692"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432988"
 ---
 # <a name="watchos-image-controls-in-xamarin"></a>Controles de imagem watchOS no Xamarin
 
@@ -36,7 +36,7 @@ Você pode usar os tamanhos do kit de inspeção (38 mm e 42 mm) em uma imagem d
 
 A maneira mais eficiente de exibir imagens é *incluí-las no projeto de aplicativo de inspeção* e exibi-las usando o `SetImage(string imageName)` método.
 
-Por exemplo, o exemplo [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog/) tem um número de imagens adicionadas a um catálogo de ativos no projeto de aplicativo Watch:
+Por exemplo, o exemplo [WatchKitCatalog](/samples/xamarin/ios-samples/watchos-watchkitcatalog/) tem um número de imagens adicionadas a um catálogo de ativos no projeto de aplicativo Watch:
 
 ![O exemplo de WatchKitCatalog tem um número de imagens adicionadas a um catálogo de ativos no projeto de aplicativo de inspeção](image-images/asset-whale-sml.png)
 
@@ -57,7 +57,7 @@ Além de carregar imagens armazenadas no próprio aplicativo Watch, você pode e
 
 Para carregar imagens da extensão Watch, crie `UIImage` instâncias e, em seguida, chame `SetImage` com o `UIImage` objeto.
 
-Por exemplo, o exemplo [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) tem uma imagem chamada **Bumblebee** no projeto de extensão Watch:
+Por exemplo, o exemplo [WatchKitCatalog](/samples/xamarin/ios-samples/watchos-watchkitcatalog) tem uma imagem chamada **Bumblebee** no projeto de extensão Watch:
 
 ![O exemplo WatchKitCatalog tem uma imagem chamada Bumblebee no projeto de extensão Watch](image-images/asset-bumblebee-sml.png)
 
@@ -76,7 +76,7 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 
 Para animar um conjunto de imagens, todas elas devem começar com o mesmo prefixo e ter um sufixo numérico.
 
-O exemplo de [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) tem uma série de imagens numeradas no projeto de aplicativo de inspeção com o prefixo de **barramento** :
+O exemplo de [WatchKitCatalog](/samples/xamarin/ios-samples/watchos-watchkitcatalog) tem uma série de imagens numeradas no projeto de aplicativo de inspeção com o prefixo de **barramento** :
 
 ![O exemplo WatchKitCatalog tem uma série de imagens numeradas no projeto de aplicativo de inspeção com o prefixo de barramento](image-images/asset-bus-animation-sml.png)
 
@@ -124,5 +124,5 @@ O cache cerca de 20 MB de tamanho. Ele é mantido entre as reinicializações do
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [WatchKitCatalog (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchKitCatalog (exemplo)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Documento de imagem da Apple](https://developer.apple.com/documentation/watchkit/wkinterfaceimage)

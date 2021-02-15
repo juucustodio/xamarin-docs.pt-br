@@ -9,14 +9,14 @@ ms.date: 03/13/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f54c31afef691d316cbc3108792ab3158359c47c
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 09e39f5cc99e5556274fb8d55db7f8b81970f8e1
+ms.sourcegitcommit: dac04cec56290fb19034f3e135708f6966a8f035
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84802318"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92169924"
 ---
-# <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocalização
+# <a name="no-locxamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocalização
 
 A classe **Geolocation** fornece APIs para recuperar as coordenadas atuais de geolocalização do dispositivo.
 
@@ -120,31 +120,44 @@ A altitude nem sempre está disponível. Se não estiver disponível, a propried
 Para consultar as coordenadas do [local](xref:Xamarin.Essentials.Location) atual do dispositivo, use `GetLocationAsync`. É melhor passar um `GeolocationRequest` e `CancellationToken` completo, pois pode demorar um pouco para obter o local do dispositivo.
 
 ```csharp
-try
-{
-    var request = new GeolocationRequest(GeolocationAccuracy.Medium);
-    var location = await Geolocation.GetLocationAsync(request);
+CancellationTokenSource cts;
 
-    if (location != null)
+async Task GetCurrentLocation()
+{
+    try
     {
-        Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
+        var request = new GeolocationRequest(GeolocationAccuracy.Medium, TimeSpan.FromSeconds(10));
+        cts = new CancellationTokenSource();
+        var location = await Geolocation.GetLocationAsync(request, cts.Token);
+
+        if (location != null)
+        {
+            Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
+        }
+    }
+    catch (FeatureNotSupportedException fnsEx)
+    {
+        // Handle not supported on device exception
+    }
+    catch (FeatureNotEnabledException fneEx)
+    {
+        // Handle not enabled on device exception
+    }
+    catch (PermissionException pEx)
+    {
+        // Handle permission exception
+    }
+    catch (Exception ex)
+    {
+        // Unable to get location
     }
 }
-catch (FeatureNotSupportedException fnsEx)
+
+protected override void OnDisappearing()
 {
-    // Handle not supported on device exception
-}
-catch (FeatureNotEnabledException fneEx)
-{
-    // Handle not enabled on device exception
-}
-catch (PermissionException pEx)
-{
-    // Handle permission exception
-}
-catch (Exception ex)
-{
-    // Unable to get location
+    if (cts != null && !cts.IsCancellationRequested)
+        cts.Cancel();
+    base.OnDisappearing();
 }
 ```
 
@@ -176,7 +189,7 @@ A tabela a seguir descreve a precisão por plataforma:
 | iOS | 100 |
 | UWP | 30–500 |
 
-### <a name="high"></a>Alta
+### <a name="high"></a>Alto
 
 | Plataforma | Distância (em metros) |
 | --- | --- |
@@ -214,7 +227,7 @@ if (location != null)
 
 As [`Location`](xref:Xamarin.Essentials.Location) [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) classes e definem `CalculateDistance` métodos que permitem calcular a distância entre duas localizações geográficas. Essa distância calculada não considera estradas ou outros caminhos e é simplesmente a distância mais curta entre os dois pontos ao longo da superfície da Terra, também conhecido como _ortodromia_ ou, coloquialmente, a distância "em linha reta".
 
-Aqui está um exemplo:
+Veja um exemplo:
 
 ```csharp
 Location boston = new Location(42.358056, -71.063611);
@@ -238,7 +251,7 @@ No iOS, a [altitude](https://developer.apple.com/documentation/corelocation/cllo
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-No UWP, a altitude é retornada em metros. Consulte a documentação do [AltitudeReferenceSystem](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem#Windows_Devices_Geolocation_Geopoint_AltitudeReferenceSystem) para obter mais informações.
+No UWP, a altitude é retornada em metros. Consulte a documentação do [AltitudeReferenceSystem](/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem#Windows_Devices_Geolocation_Geopoint_AltitudeReferenceSystem) para obter mais informações.
 
 -----
 

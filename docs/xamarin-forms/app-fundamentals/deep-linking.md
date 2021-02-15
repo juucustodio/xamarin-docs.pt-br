@@ -11,16 +11,16 @@ ms.date: 11/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d2bd0bf696e652e95e0feb88cca7cf685b14433b
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 99da232d13202aadc338ff419042998f646b7c28
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936494"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373062"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexação de aplicativo e vinculação profunda
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/deeplinking)
 
 _A indexação de aplicativos permite que os aplicativos que, de outra forma, seriam esquecidos após alguns usos para permanecerem relevantes, aparecendo nos resultados da pesquisa. A vinculação profunda permite que os aplicativos respondam a um resultado de pesquisa que contém dados de aplicativos, normalmente navegando até uma página referenciada de um link profundo. Este artigo explica como usar a indexação de aplicativos e a vinculação profunda para tornar o Xamarin.Forms conteúdo do aplicativo pesquisável em dispositivos IOS e Android._
 
@@ -28,7 +28,7 @@ _A indexação de aplicativos permite que os aplicativos que, de outra forma, se
 
 **Vinculação profunda com o Xamarin.Forms e o vídeo do Azure**
 
-Xamarin.Formsa indexação de aplicativos e a vinculação profunda fornecem uma API para publicar metadados para indexação de aplicativos à medida que os usuários navegam por aplicativos. O conteúdo indexado pode ser pesquisado no Spotlight Search, na Pesquisa Google ou em uma pesquisa na Web. Tocar em um resultado de pesquisa que contém um link profundo acionará um evento que poderá ser tratado por um aplicativo. Isso normalmente é usado para navegar até a página referenciada do link profundo.
+Xamarin.Forms a indexação de aplicativos e a vinculação profunda fornecem uma API para publicar metadados para indexação de aplicativos à medida que os usuários navegam por aplicativos. O conteúdo indexado pode ser pesquisado no Spotlight Search, na Pesquisa Google ou em uma pesquisa na Web. Tocar em um resultado de pesquisa que contém um link profundo acionará um evento que poderá ser tratado por um aplicativo. Isso normalmente é usado para navegar até a página referenciada do link profundo.
 
 Este aplicativo de exemplo demonstra um aplicativo de Lista de tarefas em que os dados são armazenados em um banco de dados local do SQLite, como mostrado nas seguintes capturas de tela:
 
@@ -39,9 +39,9 @@ Cada instância `TodoItem` criada pelo usuário é indexada. Então, a pesquisa 
 Para obter mais informações sobre como usar um banco de dados SQLite, consulte bancos de dados [ Xamarin.Forms locais](~/xamarin-forms/data-cloud/data/databases.md).
 
 > [!NOTE]
-> Xamarin.Formsa indexação de aplicativos e a funcionalidade de vinculação profunda só estão disponíveis nas plataformas iOS e Android e exigem, no mínimo, o iOS 9 e a API 23, respectivamente.
+> Xamarin.Forms a indexação de aplicativos e a funcionalidade de vinculação profunda só estão disponíveis nas plataformas iOS e Android e exigem, no mínimo, o iOS 9 e a API 23, respectivamente.
 
-## <a name="setup"></a>Instalação
+## <a name="setup"></a>Configuração
 
 As seções a seguir fornecem instruções de configuração adicionais para usar esse recurso nas plataformas Android e iOS.
 
@@ -68,8 +68,8 @@ Na plataforma Android, há uma série de pré-requisitos que devem ser atendidos
 Depois que esses pré-requisitos forem atendidos, a configuração adicional a seguir será necessária para usar a Xamarin.Forms indexação de aplicativos e a vinculação profunda na plataforma Android:
 
 1. Instale o [ Xamarin.Forms . AppLinks](https://www.nuget.org/packages/Xamarin.Forms.AppLinks/) pacote NuGet no projeto de aplicativo Android.
-1. No arquivo **MainActivity.cs**, adicione uma declaração para usar o namespace `Xamarin.Forms.Platform.Android.AppLinks`.
-1. No arquivo **MainActivity.cs**, adicione uma declaração para usar o namespace `Firebase`.
+1. No arquivo **MainActivity.cs** , adicione uma declaração para usar o namespace `Xamarin.Forms.Platform.Android.AppLinks`.
+1. No arquivo **MainActivity.cs** , adicione uma declaração para usar o namespace `Firebase`.
 1. Em um navegador da Web, crie um projeto por meio do [Console do Firebase](https://console.firebase.google.com/).
 1. No Console do Firebase, adicione o Firebase ao seu aplicativo Android e insira os dados necessários.
 1. Baixe o arquivo **google-services.json** resultante.
@@ -81,7 +81,7 @@ FirebaseApp.InitializeApp(this);
 AndroidAppLinks.Init(this);
 ```
 
-Quando **google-services.json** é adicionado ao projeto (e a ação de build *GoogleServicesJson** é definida), o processo de build extrai a chave de API e a ID do cliente e, em seguida, adiciona essas credenciais ao arquivo de manifesto gerado.
+Quando **google-services.json** é adicionado ao projeto (e a ação de build *GoogleServicesJson* * é definida), o processo de build extrai a chave de API e a ID do cliente e, em seguida, adiciona essas credenciais ao arquivo de manifesto gerado.
 
 > [!NOTE]
 > Neste artigo, os termos links de aplicativo e links profundos são frequentemente usados ​​de forma intercambiável. No entanto, no Android, estes termos têm significados separados. No Android, um link profundo é um filtro de intenção que permite aos usuários inserir diretamente uma atividade específica no aplicativo. Clicar em um link profundo pode abrir uma caixa de diálogo de desambiguidade, que permite ao usuário selecionar um dos vários aplicativos que podem manipular a URL. Um link de aplicativo do Android é um link profundo com base na URL do site, que foi verificada para pertencer ao seu site. Clicar em um link de aplicativo abre seu aplicativo se ele estiver instalado, sem abrir uma caixa de diálogo de desambiguidade.
@@ -251,7 +251,7 @@ Este artigo explicou como usar a indexação de aplicativos e a vinculação pro
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Vinculação profunda (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/deeplinking)
+- [Vinculação profunda (amostra)](/samples/xamarin/xamarin-forms-samples/deeplinking)
 - [APIs de pesquisa do iOS](~/ios/platform/search/index.md)
 - [Vinculação de aplicativo no Android 6.0](~/android/platform/app-linking.md)
 - [AppLinkEntry](xref:Xamarin.Forms.AppLinkEntry)

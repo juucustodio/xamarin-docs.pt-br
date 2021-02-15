@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/15/2017
-ms.openlocfilehash: 6ade57c60332f736e04b991bf83a7b12afa4cf54
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 0e05c243d2cebe641f77ada013b04198ee754acc
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939458"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433200"
 ---
 # <a name="app-search-enhancements-in-xamarinios"></a>Aprimoramentos de pesquisa de aplicativo no Xamarin. iOS
 
@@ -118,4 +118,4 @@ Este artigo abordou os aprimoramentos que a Apple fez na pesquisa de aplicativo 
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Amostras do iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Amostras do iOS 10](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)

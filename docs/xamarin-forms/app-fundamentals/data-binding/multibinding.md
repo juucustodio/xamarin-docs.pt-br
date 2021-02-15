@@ -6,17 +6,17 @@ ms.assetid: E73AE622-664C-4A90-B5B2-BD47D0E7A1A7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/18/2020
-ms.openlocfilehash: 0aafe01fcbde6cf1aacf3e2dd47444d4b77021e2
-ms.sourcegitcommit: 79ba3deb031c8a60d0841bb3dbeaaf65daf2b224
+ms.date: 10/26/2020
+ms.openlocfilehash: ad9171aa6138b12d66ba8289c4e68766ce733e97
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85846381"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939103"
 ---
 # <a name="xamarinforms-multi-bindings"></a>Várias associações do Xamarin. Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 As várias associações fornecem a capacidade de anexar uma coleção de [`Binding`](xref:Xamarin.Forms.Binding) objetos a uma única propriedade de destino de associação. Eles são criados com a `MultiBinding` classe, que avalia todos os seus `Binding` objetos e retorna um único valor por meio de uma `IMultiValueConverter` instância fornecida pelo seu aplicativo. Além disso, `MultiBinding` o reavalia todos os seus `Binding` objetos quando qualquer um dos dados ligados é alterado.
 
@@ -102,9 +102,9 @@ O `Convert` método converte valores de origem em um valor para o destino de ass
 
 O `Convert` método retorna um `object` que representa um valor convertido. Esse método deve retornar:
 
-- `BindableProperty.UnsetValue`para indicar que o conversor não produziu um valor e que a associação usará o `FallbackValue` .
-- `Binding.DoNothing`para instruir o Xamarin. Forms a não executar nenhuma ação. Por exemplo, para instruir o Xamarin. Forms a não transferir um valor para o destino de associação, ou não usar o `FallbackValue` .
-- `null`para indicar que o conversor não pode executar a conversão e que a associação usará o `TargetNullValue` .
+- `BindableProperty.UnsetValue` para indicar que o conversor não produziu um valor e que a associação usará o `FallbackValue` .
+- `Binding.DoNothing` para instruir o Xamarin. Forms a não executar nenhuma ação. Por exemplo, para instruir o Xamarin. Forms a não transferir um valor para o destino de associação, ou não usar o `FallbackValue` .
+- `null` para indicar que o conversor não pode executar a conversão e que a associação usará o `TargetNullValue` .
 
 > [!IMPORTANT]
 > Um `MultiBinding` que recebe `BindableProperty.UnsetValue` de um `Convert` método deve definir sua [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) propriedade. Da mesma forma, um `MultiBinding` que recebe `null` de um `Convert` método deve definir seu [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) propety.
@@ -118,9 +118,9 @@ O `ConvertBack` método converte um destino de associação para os valores de a
 
 O `ConvertBack` método retorna uma matriz de valores, do tipo `object[]` , que foram convertidos do valor de destino de volta para os valores de origem. Esse método deve retornar:
 
-- `BindableProperty.UnsetValue`na posição `i` para indicar que o conversor não pode fornecer um valor para a associação de origem no índice `i` e que nenhum valor deve ser definido nele.
-- `Binding.DoNothing`na posição `i` para indicar que nenhum valor deve ser definido na associação de origem no índice `i` .
-- `null`para indicar que o conversor não pode executar a conversão ou que não dá suporte à conversão nesta direção.
+- `BindableProperty.UnsetValue` na posição `i` para indicar que o conversor não pode fornecer um valor para a associação de origem no índice `i` e que nenhum valor deve ser definido nele.
+- `Binding.DoNothing` na posição `i` para indicar que nenhum valor deve ser definido na associação de origem no índice `i` .
+- `null` para indicar que o conversor não pode executar a conversão ou que não dá suporte à conversão nesta direção.
 
 ## <a name="consume-a-imultivalueconverter"></a>Consumir um IMultiValueConverter
 
@@ -155,6 +155,33 @@ Neste exemplo, o `MultiBinding` objeto usa a `AllTrueMultiConverter` instância 
 
 Por padrão, a [`CheckBox.IsChecked`](xref:Xamarin.Forms.CheckBox.IsChecked) propriedade usa uma [`TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay) associação. Portanto, o `ConvertBack` método da `AllTrueMultiConverter` instância é executado quando o [`CheckBox`](xref:Xamarin.Forms.CheckBox) é desmarcado pelo usuário, que define os valores de associação de origem como o valor da `CheckBox.IsChecked` propriedade.
 
+O código C# equivalente é mostrado abaixo:
+
+```csharp
+public class MultiBindingConverterCodePage : ContentPage
+{
+    public MultiBindingConverterCodePage()
+    {
+        BindingContext = new GroupViewModel();
+
+        CheckBox checkBox = new CheckBox();
+        checkBox.SetBinding(CheckBox.IsCheckedProperty, new MultiBinding
+        {
+            Bindings = new Collection<BindingBase>
+            {
+                new Binding("Employee1.IsOver16"),
+                new Binding("Employee1.HasPassedTest"),
+                new Binding("Employee1.IsSuspended", converter: new InverterConverter())
+            },
+            Converter = new AllTrueMultiConverter()
+        });
+
+        Title = "MultiBinding converter demo";
+        Content = checkBox;
+    }
+}
+```
+
 ## <a name="format-strings"></a>Formatar cadeias de caracteres
 
 Um `MultiBinding` pode formatar qualquer resultado de várias ligações que é exibido como uma cadeia de caracteres, com a `StringFormat` propriedade. Essa propriedade pode ser definida como uma cadeia de caracteres de formatação .NET padrão, com espaços reservados, que especifica como formatar o resultado de várias associações:
@@ -173,6 +200,22 @@ Um `MultiBinding` pode formatar qualquer resultado de várias ligações que é 
 
 Neste exemplo, a `StringFormat` Propriedade combina os três valores associados em uma única cadeia de caracteres que é exibida pelo [`Label`](xref:Xamarin.Forms.Label) .
 
+O código C# equivalente é mostrado abaixo:
+
+```csharp
+Label label = new Label();
+label.SetBinding(Label.TextProperty, new MultiBinding
+{
+    Bindings = new Collection<BindingBase>
+    {
+        new Binding("Employee1.Forename"),
+        new Binding("Employee1.MiddleName"),
+        new Binding("Employee1.Surname")
+    },
+    StringFormat = "{0} {1} {2}"
+});
+```
+
 > [!IMPORTANT]
 > O número de parâmetros em um formato de cadeia de caracteres composta não pode exceder o número de `Binding` objetos filho no `MultiBinding` .
 
@@ -190,7 +233,7 @@ Para obter mais informações sobre fallbacks de associação, consulte [fallbac
 
 ## <a name="nest-multibinding-objects"></a>Aninhar objetos MultiBinding
 
-`MultiBinding`os objetos podem ser aninhados para que vários `MultiBinding` objetos sejam avaliados para retornar um valor por meio de uma `IMultiValueConverter` instância:
+`MultiBinding` os objetos podem ser aninhados para que vários `MultiBinding` objetos sejam avaliados para retornar um valor por meio de uma `IMultiValueConverter` instância:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -224,33 +267,34 @@ Neste exemplo, o `MultiBinding` objeto usa sua `AnyTrueMultiConverter` instânci
 
 ## <a name="use-a-relativesource-binding-in-a-multibinding"></a>Usar uma associação RelativeSource em uma MultiBinding
 
-`MultiBinding`os objetos dão suporte a associações relativas, que fornecem a capacidade de definir a origem da associação em relação à posição do destino de associação:
+`MultiBinding` os objetos dão suporte a associações relativas, que fornecem a capacidade de definir a origem da associação em relação à posição do destino de associação:
 
 ```xaml
 <ContentPage ...
-             xmlns:local="clr-namespace:DataBindingDemos">
+             xmlns:local="clr-namespace:DataBindingDemos"
+             xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit">
     <ContentPage.Resources>
         <local:AllTrueMultiConverter x:Key="AllTrueConverter" />
 
         <ControlTemplate x:Key="CardViewExpanderControlTemplate">
-            <Expander BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
-                      IsExpanded="{Binding IsExpanded, Source={RelativeSource TemplatedParent}}"
-                      BackgroundColor="{Binding CardColor}">
-                <Expander.IsVisible>
+            <xct:Expander BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
+                          IsExpanded="{Binding IsExpanded, Source={RelativeSource TemplatedParent}}"
+                          BackgroundColor="{Binding CardColor}">
+                <xct:Expander.IsVisible>
                     <MultiBinding Converter="{StaticResource AllTrueConverter}">
                         <Binding Path="IsExpanded" />
                         <Binding Path="IsEnabled" />
                     </MultiBinding>
-                </Expander.IsVisible>
-                <Expander.Header>
+                </xct:Expander.IsVisible>
+                <xct:Expander.Header>
                     <Grid>
                         <!-- XAML that defines Expander header goes here -->
                     </Grid>
-                </Expander.Header>
+                </xct:Expander.Header>
                 <Grid>
                     <!-- XAML that defines Expander content goes here -->
                 </Grid>
-            </Expander>
+            </xct:Expander>
         </ControlTemplate>
     </ContentPage.Resources>
 
@@ -267,13 +311,16 @@ Neste exemplo, o `MultiBinding` objeto usa sua `AnyTrueMultiConverter` instânci
 </ContentPage>
 ```
 
+> [!NOTE]
+> O `Expander` controle agora faz parte do Xamarin Community Toolkit.
+
 Neste exemplo, o `TemplatedParent` modo de associação relativo é usado para associar de dentro de um modelo de controle à instância do objeto de tempo de execução à qual o modelo é aplicado. O `Expander` , que é o elemento raiz do [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) , tem seu `BindingContext` definido como a instância do objeto de tempo de execução à qual o modelo é aplicado. Portanto, o `Expander` e seus filhos resolvem suas expressões de associação e [`Binding`](xref:Xamarin.Forms.Binding) objetos, em relação às propriedades do `CardViewExpander` objeto. O `MultiBinding` usa a `AllTrueMultiConverter` instância para definir a `Expander.IsVisible` propriedade como `true` desde que os dois [`Binding`](xref:Xamarin.Forms.Binding) objetos sejam avaliados como `true` . Caso contrário, a `Expander.IsVisible` propriedade será definida como `false` .
 
 Para obter mais informações sobre associações relativas, veja [Associações Relativas do Xamarin.Forms](relative-bindings.md). Para obter mais informações sobre modelos de controle, consulte [Xamarin. Forms Control templates](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações de associação de dados (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
+- [Demonstrações de associação de dados (amostra)](/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Formatação de cadeia de caracteres do Xamarin.Forms](string-formatting.md)
 - [Fallbacks de associação do Xamarin.Forms](binding-fallbacks.md)
 - [Associações relativas do Xamarin.Forms](relative-bindings.md)

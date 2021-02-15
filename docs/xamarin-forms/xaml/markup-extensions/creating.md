@@ -10,26 +10,26 @@ ms.date: 01/05/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 878ebcaa5249261afac2776a9e7cf47c0c047135
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 87153223c79365053bfc05b2a8a97c9aa1d4c4a4
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84130527"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369045"
 ---
 # <a name="creating-xaml-markup-extensions"></a>Criação de extensões de marcação do XAML
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 
-No nível de programação, uma extensão de marcação XAML é uma classe que implementa [`IMarkupExtension`](xref:Xamarin.Forms.Xaml.IMarkupExtension) a [`IMarkupExtension<T>`](xref:Xamarin.Forms.Xaml.IMarkupExtension`1) interface ou. Você pode explorar o código-fonte das extensões de marcação padrão descritas abaixo no [diretório **MarkupExtensions** ](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) do Xamarin.Forms repositório github.
+No nível de programação, uma extensão de marcação XAML é uma classe que implementa [`IMarkupExtension`](xref:Xamarin.Forms.Xaml.IMarkupExtension) a [`IMarkupExtension<T>`](xref:Xamarin.Forms.Xaml.IMarkupExtension`1) interface ou. Você pode explorar o código-fonte das extensões de marcação padrão descritas abaixo no [diretório **MarkupExtensions**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) do Xamarin.Forms repositório github.
 
 Também é possível definir suas próprias extensões de marcação XAML personalizadas derivando de `IMarkupExtension` ou `IMarkupExtension<T>` . Use o formulário genérico se a extensão de marcação obtiver um valor de um tipo específico. Esse é o caso com várias extensões de Xamarin.Forms marcação:
 
-- `TypeExtension`deriva de`IMarkupExtension<Type>`
-- `ArrayExtension`deriva de`IMarkupExtension<Array>`
-- `DynamicResourceExtension`deriva de`IMarkupExtension<DynamicResource>`
-- `BindingExtension`deriva de`IMarkupExtension<BindingBase>`
-- `ConstraintExpression`deriva de`IMarkupExtension<Constraint>`
+- `TypeExtension` deriva de `IMarkupExtension<Type>`
+- `ArrayExtension` deriva de `IMarkupExtension<Array>`
+- `DynamicResourceExtension` deriva de `IMarkupExtension<DynamicResource>`
+- `BindingExtension` deriva de `IMarkupExtension<BindingBase>`
+- `ConstraintExpression` deriva de `IMarkupExtension<Constraint>`
 
 As duas `IMarkupExtension` interfaces definem apenas um método, denominado `ProvideValue` :
 
@@ -156,7 +156,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 }
 ```
 
-`ImageResourceExtension`é útil quando um arquivo XAML precisa acessar um arquivo de imagem armazenado como um recurso inserido no projeto de biblioteca .NET Standard. Ele usa a `Source` propriedade para chamar o `ImageSource.FromResource` método estático. Esse método requer um nome de recurso totalmente qualificado, que consiste no nome do assembly, no nome da pasta, e no nome de arquivo separado por pontos. O segundo argumento para o `ImageSource.FromResource` método fornece o nome do assembly e só é necessário para Builds de versão em UWP. Independentemente, `ImageSource.FromResource` deve ser chamado a partir do assembly que contém o bitmap, o que significa que essa extensão de recurso XAML não pode fazer parte de uma biblioteca externa, a menos que as imagens também estejam nessa biblioteca. (Consulte o artigo [**imagens inseridas**](~/xamarin-forms/user-interface/images.md#embedded-images) para obter mais informações sobre como acessar os bitmaps armazenados como recursos incorporados.)
+`ImageResourceExtension` é útil quando um arquivo XAML precisa acessar um arquivo de imagem armazenado como um recurso inserido no projeto de biblioteca .NET Standard. Ele usa a `Source` propriedade para chamar o `ImageSource.FromResource` método estático. Esse método requer um nome de recurso totalmente qualificado, que consiste no nome do assembly, no nome da pasta, e no nome de arquivo separado por pontos. O segundo argumento para o `ImageSource.FromResource` método fornece o nome do assembly e só é necessário para Builds de versão em UWP. Independentemente, `ImageSource.FromResource` deve ser chamado a partir do assembly que contém o bitmap, o que significa que essa extensão de recurso XAML não pode fazer parte de uma biblioteca externa, a menos que as imagens também estejam nessa biblioteca. (Consulte o artigo [**imagens inseridas**](~/xamarin-forms/user-interface/images.md#embedded-images) para obter mais informações sobre como acessar os bitmaps armazenados como recursos incorporados.)
 
 Embora o `ImageResourceExtension` exija que a `Source` propriedade seja definida, a `Source` propriedade é indicada em um atributo como a propriedade content da classe. Isso significa que a `Source=` parte da expressão entre chaves pode ser omitida. Na página **demonstração de recurso de imagem** , os `Image` elementos buscam duas imagens usando o nome da pasta e o nome de arquivo separado por pontos:
 
@@ -188,7 +188,7 @@ Este é o programa em execução:
 
 ## <a name="service-providers"></a>Provedores de serviço
 
-Usando o `IServiceProvider` argumento para `ProvideValue` , as extensões de marcação XAML podem obter acesso a informações úteis sobre o arquivo XAML no qual estão sendo usadas. Mas para usar o `IServiceProvider` argumento com êxito, você precisa saber quais tipos de serviços estão disponíveis em contextos específicos. A melhor maneira de entender esse recurso é estudar o código-fonte das extensões de marcação XAML existentes na [pasta **MarkupExtensions** ](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) no Xamarin.Forms repositório no github. Lembre-se de que alguns tipos de serviços são internos ao Xamarin.Forms .
+Usando o `IServiceProvider` argumento para `ProvideValue` , as extensões de marcação XAML podem obter acesso a informações úteis sobre o arquivo XAML no qual estão sendo usadas. Mas para usar o `IServiceProvider` argumento com êxito, você precisa saber quais tipos de serviços estão disponíveis em contextos específicos. A melhor maneira de entender esse recurso é estudar o código-fonte das extensões de marcação XAML existentes na [pasta **MarkupExtensions**](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) no Xamarin.Forms repositório no github. Lembre-se de que alguns tipos de serviços são internos ao Xamarin.Forms .
 
 Em algumas extensões de marcação XAML, esse serviço pode ser útil:
 
@@ -204,7 +204,7 @@ A `GetService` chamada com um argumento de `typeof(IProvideValueTarget)` realmen
 
 As extensões de marcação XAML desempenham uma função vital em XAML, estendendo a capacidade de definir atributos de uma variedade de fontes. Além disso, se as extensões de marcação XAML existentes não fornecerem exatamente o que você precisa, você também poderá escrever suas próprias.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Extensões de marcação (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
+- [Extensões de marcação (exemplo)](/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 - [Capítulo de extensões de marcação XAML do Xamarin.Forms livro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)

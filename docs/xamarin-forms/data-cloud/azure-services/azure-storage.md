@@ -1,5 +1,5 @@
 ---
-title: Armazene e acesse dados no armazenamento do Azure deXamarin.Forms
+title: Armazene e acesse dados no armazenamento do Azure de Xamarin.Forms
 description: O armazenamento do Azure é uma solução de armazenamento em nuvem escalonável que pode ser usada para armazenar dados não estruturados e estruturados. Este artigo explica como usar Xamarin.Forms o para armazenar texto e dados binários no armazenamento do Azure e como acessar os dados.
 ms.prod: xamarin
 ms.assetid: 5B10D37B-839B-4CD0-9C65-91014A93F3EB
@@ -10,16 +10,16 @@ ms.date: 12/28/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d7b97f21e5184a445cfac85dc06a7da0e1a6a4c5
-ms.sourcegitcommit: f7fe46c0236a7130b63a33d9d1670d5111582dd2
+ms.openlocfilehash: bd726a5e5d6064ecb9aa1c862697e08a9c4733f4
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88186207"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93370111"
 ---
-# <a name="store-and-access-data-in-azure-storage-from-no-locxamarinforms"></a>Armazene e acesse dados no armazenamento do Azure deXamarin.Forms
+# <a name="store-and-access-data-in-azure-storage-from-no-locxamarinforms"></a>Armazene e acesse dados no armazenamento do Azure de Xamarin.Forms
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 
 _O armazenamento do Azure é uma solução de armazenamento em nuvem escalonável que pode ser usada para armazenar dados não estruturados e estruturados. Este artigo demonstra como usar Xamarin.Forms o para armazenar texto e dados binários no armazenamento do Azure e como acessar os dados._
 
@@ -61,15 +61,15 @@ Um blob é um arquivo de qualquer tipo e tamanho. O armazenamento do Azure dá s
 
 Um blob é carregado no armazenamento do Azure e baixado do armazenamento do Azure, como um fluxo de bytes. Portanto, os arquivos devem ser convertidos em um fluxo de bytes antes do carregamento e convertidos de volta para sua representação original após o download.
 
-Cada objeto armazenado no armazenamento do Azure tem um endereço de URL exclusivo. O nome da conta de armazenamento forma o subdomínio desse endereço, e a combinação de subdomínio e nome de domínio forma um *ponto de extremidade* para a conta de armazenamento. Por exemplo, se sua conta de armazenamento for chamada *mystorageaccount*, o ponto de extremidade de blob padrão para a conta de armazenamento será `https://mystorageaccount.blob.core.windows.net` .
+Cada objeto armazenado no armazenamento do Azure tem um endereço de URL exclusivo. O nome da conta de armazenamento forma o subdomínio desse endereço, e a combinação de subdomínio e nome de domínio forma um *ponto de extremidade* para a conta de armazenamento. Por exemplo, se sua conta de armazenamento for chamada *mystorageaccount* , o ponto de extremidade de blob padrão para a conta de armazenamento será `https://mystorageaccount.blob.core.windows.net` .
 
 A URL para acessar um objeto em uma conta de armazenamento é compilada acrescentando o local do objeto na conta de armazenamento ao ponto de extremidade. Por exemplo, um endereço de blob terá o formato `https://mystorageaccount.blob.core.windows.net/mycontainer/myblob` .
 
-## <a name="setup"></a>Instalação
+## <a name="setup"></a>Configuração
 
 O processo de integração de uma conta de armazenamento do Azure em um Xamarin.Forms aplicativo é o seguinte:
 
-1. Criar uma conta de armazenamento. Para obter mais informações, consulte [Criar uma conta de armazenamento](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/#create-a-storage-account).
+1. Criar uma conta de armazenamento. Para obter mais informações, consulte [Criar uma conta de armazenamento](/azure/storage/common/storage-account-create#create-a-storage-account).
 1. Adicione a [biblioteca de cliente do armazenamento do Azure](https://www.nuget.org/packages/WindowsAzure.Storage/) ao Xamarin.Forms aplicativo.
 1. Configure a cadeia de conexão de armazenamento. Para obter mais informações, consulte [conectando-se ao armazenamento do Azure](#connecting-to-azure-storage).
 1. Adicione `using` diretivas para os `Microsoft.WindowsAzure.Storage` `Microsoft.WindowsAzure.Storage.Blob` namespaces e a classes que acessarão o armazenamento do Azure.
@@ -96,7 +96,7 @@ A cadeia de conexão a seguir deve ser usada para se conectar ao emulador de arm
 UseDevelopmentStorage=true
 ```
 
-Para obter mais informações sobre o emulador de armazenamento do Azure, consulte [usar o emulador de armazenamento do Azure para desenvolvimento e teste](https://azure.microsoft.com/documentation/articles/storage-use-emulator/).
+Para obter mais informações sobre o emulador de armazenamento do Azure, consulte [usar o emulador de armazenamento do Azure para desenvolvimento e teste](/azure/storage/common/storage-use-emulator).
 
 ### <a name="connecting-to-azure-storage-using-a-shared-key"></a>Conectando-se ao armazenamento do Azure usando uma chave compartilhada
 
@@ -106,7 +106,7 @@ O seguinte formato de cadeia de conexão deve ser usado para se conectar ao arma
 DefaultEndpointsProtocol=[http|https];AccountName=myAccountName;AccountKey=myAccountKey
 ```
 
-`myAccountName`deve ser substituído pelo nome da sua conta de armazenamento e `myAccountKey` deve ser substituído por uma das duas chaves de acesso da conta.
+`myAccountName` deve ser substituído pelo nome da sua conta de armazenamento e `myAccountKey` deve ser substituído por uma das duas chaves de acesso da conta.
 
 > [!NOTE]
 > Ao usar a autenticação de chave compartilhada, o nome da conta e a chave de conta serão distribuídos para cada pessoa que usa seu aplicativo, o que fornecerá acesso completo de leitura/gravação à conta de armazenamento. Portanto, use a autenticação de chave compartilhada somente para fins de teste e nunca distribua chaves para outros usuários.
@@ -117,12 +117,12 @@ O seguinte formato de cadeia de conexão deve ser usado para se conectar ao arma
 
 `BlobEndpoint=myBlobEndpoint;SharedAccessSignature=mySharedAccessSignature`
 
-`myBlobEndpoint`deve ser substituído pela URL do seu ponto de extremidade de BLOB e `mySharedAccessSignature` deve ser substituído pela SAS. A SAS fornece o protocolo, o ponto de extremidade de serviço e as credenciais para acessar o recurso.
+`myBlobEndpoint` deve ser substituído pela URL do seu ponto de extremidade de BLOB e `mySharedAccessSignature` deve ser substituído pela SAS. A SAS fornece o protocolo, o ponto de extremidade de serviço e as credenciais para acessar o recurso.
 
 > [!NOTE]
 > A autenticação SAS é recomendada para aplicativos de produção. No entanto, em um aplicativo de produção, a SAS deve ser recuperada de um serviço de back-end sob demanda, em vez de ser agrupada com o aplicativo.
 
-Para obter mais informações sobre assinaturas de acesso compartilhado, consulte [usando SAS (assinaturas de acesso compartilhado)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).
+Para obter mais informações sobre assinaturas de acesso compartilhado, consulte [usando SAS (assinaturas de acesso compartilhado)](/azure/storage/common/storage-sas-overview).
 
 ## <a name="creating-a-container"></a>Criando um contêiner
 
@@ -154,7 +154,7 @@ A `CloudBlobContainer` instância pode então ser usada para criar um contêiner
 await container.CreateIfNotExistsAsync();
 ```
 
-Por padrão, um contêiner recém-criado é privado. Isso significa que uma chave de acesso de armazenamento deve ser especificada para recuperar blobs do contêiner. Para obter informações sobre como tornar BLOBs em um contêiner público, consulte [criar um contêiner](https://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-blobs/#create-a-container).
+Por padrão, um contêiner recém-criado é privado. Isso significa que uma chave de acesso de armazenamento deve ser especificada para recuperar blobs do contêiner. Para obter informações sobre como tornar BLOBs em um contêiner público, consulte [criar um contêiner](/azure/storage/blobs/storage-quickstart-blobs-dotnet#create-a-container).
 
 ## <a name="uploading-data-to-a-container"></a>Carregando dados em um contêiner
 
@@ -264,8 +264,8 @@ Depois de recuperar uma referência de contêiner, o método recupera uma refer�
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Armazenamento do Azure (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
+- [Armazenamento do Azure (exemplo)](/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 - [Introdução ao armazenamento](https://azure.microsoft.com/documentation/articles/storage-introduction/)
-- [Como usar o Armazenamento de Blobs no Xamarin](https://azure.microsoft.com/documentation/articles/storage-xamarin-blob-storage/)
-- [Usando SAS (Assinatura de Acesso Compartilhado)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)
+- [Como usar o Armazenamento de Blobs no Xamarin](/azure/storage/blobs/storage-quickstart-blobs-xamarin)
+- [Usando SAS (Assinatura de Acesso Compartilhado)](/azure/storage/common/storage-sas-overview)
 - [Armazenamento do Windows Azure (NuGet)](https://www.nuget.org/packages/WindowsAzure.Storage/)

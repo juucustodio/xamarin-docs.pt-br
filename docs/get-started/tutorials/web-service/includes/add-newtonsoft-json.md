@@ -1,23 +1,23 @@
 ---
-ms.openlocfilehash: cef0b8f56639e7bc8571ab01b820dfd54b074472
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
-ms.translationtype: HT
+ms.openlocfilehash: 4517415e2431193e56728e3bb1a24e3c7d119ca4
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "67277095"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98634917"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão mais recente) com a carga de trabalho **Desenvolvimento mobile com .NET** instalada. Além disso, você precisará de um Mac emparelhado para compilar o aplicativo do tutorial no iOS. Para obter informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md). Para obter informações sobre como conectar o Visual Studio 2019 a um host de build Mac, confira [Emparelhar com o Mac para desenvolvimento no Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
-1. Inicie o Visual Studio e crie um novo aplicativo Xamarin.Forms em branco chamado **WebServiceTutorial**. Verifique se o aplicativo usa o .NET Standard como o mecanismo de código compartilhado.
+1. Inicie o Visual Studio e crie um novo aplicativo Xamarin.Forms em branco chamado **WebServiceTutorial**.
 
     > [!IMPORTANT]
     > Os snippets de C# e XAML neste tutorial exigem que a solução seja denominada **WebServiceTutorial**. Usar um nome diferente causará erros de build ao copiar o código deste tutorial para a solução.
 
     Para obter mais informações sobre a biblioteca .NET Standard criada, confira [Anatomia de um aplicativo Xamarin.Forms](~/get-started/first-app/index.md) em [Aprofundamento do Início Rápido do Xamarin.Forms](~/get-started/first-app/index.md).
 
-1. Na **Gerenciador de Soluções**, selecione o projeto **WebServiceTutorial**, clique com o botão direito do mouse e selecione **Gerenciar Pacotes do NuGet...** :
+1. Na **Gerenciador de Soluções**, selecione o projeto **WebServiceTutorial**, clique com o botão direito do mouse e selecione **Gerenciar Pacotes do NuGet...**:
 
     ![Captura de tela do item de menu Adicionar Pacotes do NuGet sendo selecionado](../images/vs/add-nuget-packages.png "Item de menu Adicionar Pacotes do NuGet")
 
@@ -33,18 +33,18 @@ Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão 
 
 Para concluir este tutorial, você precisará ter o Visual Studio para Mac (versão mais recente), com suporte para plataforma iOS e Android, instalado. Além disso, você também precisará do Xcode (versão mais recente). Para obter mais informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md).
 
-1. Inicie o Visual Studio para Mac e crie um novo aplicativo Xamarin.Forms em branco chamado **WebServiceTutorial**. Verifique se o aplicativo usa o .NET Standard como o mecanismo de código compartilhado.
+1. Inicie o Visual Studio para Mac e crie um novo aplicativo Xamarin.Forms em branco chamado **WebServiceTutorial**.
 
     > [!IMPORTANT]
     > Os snippets de C# e XAML neste tutorial exigem que a solução seja denominada **WebServiceTutorial**. Usar um nome diferente causará erros de build ao copiar o código deste tutorial para a solução.
 
     Para obter mais informações sobre a biblioteca .NET Standard criada, confira [Anatomia de um aplicativo Xamarin.Forms](~/get-started/first-app/index.md) em [Aprofundamento do Início Rápido do Xamarin.Forms](~/get-started/first-app/index.md).
 
-1. Na **Painel de Soluções**, selecione o projeto **WebServiceTutorial**, clique com o botão direito do mouse e selecione **Adicionar > Adicionar Pacotes do NuGet...** :
+1. No **Painel de Soluções**, selecione o projeto **WebServiceTutorial**, clique com o botão direito do mouse e selecione a opção **Gerenciar Pacotes NuGet...** :
 
     ![Captura de tela do item de menu Adicionar Pacotes do NuGet sendo selecionado](../images/vsmac/add-nuget-packages.png "Item de menu Adicionar Pacotes do NuGet")
 
-1. Na janela **Adicionar Pacotes**, pesquise pelo pacote do NuGet **Newtonsoft.Json**, selecione-o e clique no botão **Adicionar Pacote** para adicioná-lo ao projeto:
+1. Na janela **Gerenciar Pacotes NuGet**, pesquise um pacote NuGet chamado **Newtonsoft.Json**, selecione-o e clique no botão **Adicionar Pacote** para adicioná-lo ao projeto:
 
     ![Captura de tela do pacote do NuGet Newtonsoft.Json no Gerenciador de Pacotes do NuGet](../images/vsmac/add-package.png "Pacote do NuGet Newtonsoft.Json")
 

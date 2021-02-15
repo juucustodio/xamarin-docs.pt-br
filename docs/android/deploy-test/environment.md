@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/15/2018
-ms.openlocfilehash: 54fc52c2f2460726fe1c22149d4e7cc0e8a92609
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: ab5b02e34afa4ff0c839f3f16cc9391e267c2f8a
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73028068"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98608748"
 ---
 # <a name="xamarinandroid-environment"></a>Ambiente do Xamarin.Android
 
@@ -44,11 +44,11 @@ O Xamarin.Android é compatível com a variável `XA_HTTP_CLIENT_HANDLER_TYPE`, 
 
 ### `XA_HTTP_CLIENT_HANDLER_TYPE`
 
-O tipo qualificado por assembly que deve herdar de [HttpMessageHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpmessagehandler?view=xamarinandroid-7.1) e é construído por meio do [construtor padrão `HttpClient()`](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=xamarinandroid-7.1#System_Net_Http_HttpClient__ctor).
+O tipo qualificado por assembly que deve herdar de [HttpMessageHandler](/dotnet/api/system.net.http.httpmessagehandler?view=xamarinandroid-7.1) e é construído por meio do [construtor padrão `HttpClient()`](/dotnet/api/system.net.http.httpclient.-ctor?view=xamarinandroid-7.1#System_Net_Http_HttpClient__ctor).
 
-No Xamarin.Android 6.1, essa variável de ambiente não é definida por padrão e [HttpClientHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpclienthandler?view=xamarinandroid-7.1) é usada.
+No Xamarin.Android 6.1, essa variável de ambiente não é definida por padrão e [HttpClientHandler](/dotnet/api/system.net.http.httpclienthandler?view=xamarinandroid-7.1) é usada.
 
-Alternativamente, o `Xamarin.Android.Net.AndroidClientHandler` valor pode ser especificado para usar[`java.net.URLConnection`](xref:Java.Net.URLConnection)
+Como alternativa, o valor `Xamarin.Android.Net.AndroidClientHandler` pode ser especificado para usar [`java.net.URLConnection`](xref:Java.Net.URLConnection)
 para acesso à rede, que *talvez* permita o uso do TLS 1.2 quando Android dá suporte a ele.
 
 Adicionado no Xamarin.Android 6.1.
@@ -79,7 +79,7 @@ Contém uma lista de variáveis de ambiente separadas por `|`.
 
 ### `debug.mono.gc`
 
-O valor da propriedade do sistema `debug.mono.debug` é um inteiro.
+O valor da propriedade do sistema `debug.mono.gc` é um inteiro.
 Se `1`, as informações de GC devem ser registradas.
 
 Isso é equivalente a fazer com que propriedade do sistema `debug.mono.log` contenha `gc`.
@@ -131,7 +131,7 @@ Em geral, a recomendação é *não usar*. O uso de rastreamento enviará a saí
 A propriedade do sistema `debug.mono.wref` permite substituir o mecanismo de referência fraca JNI padrão detectado. Há dois valores compatíveis:
 
 - `jni`: use referências fracas JNI, conforme criadas pelo `JNIEnv::NewWeakGlobalRef()` e destruídas por `JNIEnv::DeleteWeakGlobalREf()`.
-- `java`: Use referências JNI `java.lang.WeakReference` Global que fazem referência às instâncias.
+- `java`: Use referências globais JNI que fazem referência a `java.lang.WeakReference` instâncias.
 
 `java` é usado, por padrão, até a API-7 e na API-19 (Kit Kat) com ART habilitado. (A API-8 adicionou referências `jni` e o ART *interrompeu* `jni` referências.)
 
@@ -163,6 +163,6 @@ debug.mono.log=gref
 MONO_LOG_LEVEL=
 ```
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Segurança da camada de transporte](~/cross-platform/app-fundamentals/transport-layer-security.md)
+- [Protocolo TLS](~/cross-platform/app-fundamentals/transport-layer-security.md)

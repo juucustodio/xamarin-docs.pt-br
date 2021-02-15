@@ -1,27 +1,27 @@
 ---
-title: Facilitando funções noXamarin.Forms
-description: Xamarin.Formsinclui uma classe de atenuação que permite especificar uma função de transferência que controla como as animações se aceleram ou diminuem enquanto estão em execução. Este artigo demonstra como consumir as funções de atenuação predefinidas e como criar funções de atenuação personalizadas.
+title: Facilitando funções no Xamarin.Forms
+description: Xamarin.Forms inclui uma classe de atenuação que permite especificar uma função de transferência que controla como as animações se aceleram ou diminuem enquanto estão em execução. Este artigo demonstra como consumir as funções de atenuação predefinidas e como criar funções de atenuação personalizadas.
 ms.prod: xamarin
 ms.assetid: E6F124C7-A161-4C1F-AF40-52F0935E54DE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/14/2016
+ms.date: 09/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 574b6f82aea3c71d43799c6ca86997d895eed4c5
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 6ec4c16249aadce668b9fe33dad661e1f7e7ee9e
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84573797"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939011"
 ---
-# <a name="easing-functions-in-xamarinforms"></a>Facilitando funções noXamarin.Forms
+# <a name="easing-functions-in-no-locxamarinforms"></a>Facilitando funções no Xamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-easing)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-animation-easing)
 
-_O Xamarin. Forms inclui uma classe de atenuação que permite especificar uma função de transferência que controla como as animações se aceleram ou diminuem enquanto estão em execução. Este artigo demonstra como consumir as funções de atenuação predefinidas e como criar funções de atenuação personalizadas._
+_Xamarin.Forms inclui uma classe de atenuação que permite especificar uma função de transferência que controla como as animações se aceleram ou diminuem enquanto estão em execução. Este artigo demonstra como consumir as funções de atenuação predefinidas e como criar funções de atenuação personalizadas._
 
 A [`Easing`](xref:Xamarin.Forms.Easing) classe define uma série de funções de atenuação que podem ser consumidas por animações:
 
@@ -54,6 +54,9 @@ await image.TranslateTo(0, -200, 2000, Easing.BounceOut);
 ```
 
 Ao especificar uma função de atenuação para uma animação, a velocidade de animação se torna não linear e produz o efeito fornecido pela função de atenuação. Omitir uma função de atenuação ao criar uma animação faz com que a animação use a [`Linear`](xref:Xamarin.Forms.Easing.Linear) função de atenuação padrão, que produz uma velocidade linear.
+
+> [!NOTE]
+> Xamarin.Forms 5,0 inclui um conversor de tipo que converte uma representação de cadeia de caracteres de uma função de atenuação para o [`Easing`](xref:Xamarin.Forms.Easing) membro de enumeração apropriado. Esse conversor de tipo é invocado automaticamente em qualquer Propriedade do tipo `Easing` que esteja definida em XAML.
 
 Para obter mais informações sobre como usar os métodos de extensão de animação na [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) classe, consulte [animações simples](~/xamarin-forms/user-interface/animation/simple.md). As funções de atenuação também podem ser consumidas pela [`Animation`](xref:Xamarin.Forms.Animation) classe. Para obter mais informações, consulte [animações personalizadas](~/xamarin-forms/user-interface/animation/custom.md).
 
@@ -105,11 +108,11 @@ A função de atenuação personalizada é especificada como um argumento de fun
 
 ## <a name="summary"></a>Resumo
 
-Este artigo demonstrou como consumir as funções de atenuação predefinidas e como criar funções de atenuação personalizadas. Xamarin.Formsinclui uma [`Easing`](xref:Xamarin.Forms.Easing) classe que permite especificar uma função de transferência que controla como as animações se aceleram ou diminuem enquanto estão em execução.
+Este artigo demonstrou como consumir as funções de atenuação predefinidas e como criar funções de atenuação personalizadas. Xamarin.Forms inclui uma [`Easing`](xref:Xamarin.Forms.Easing) classe que permite especificar uma função de transferência que controla como as animações se aceleram ou diminuem enquanto estão em execução.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Visão geral do suporte assíncrono](~/cross-platform/platform/async.md)
-- [Funções de atenuação (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-easing)
+- [Funções de atenuação (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-animation-easing)
 - [Facilitar](xref:Xamarin.Forms.Easing)
 - [ViewExtensions](xref:Xamarin.Forms.ViewExtensions)

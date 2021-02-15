@@ -10,16 +10,16 @@ ms.date: 07/17/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 440a078857a940f57f5700a18f91fc8b25bdfae8
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3b73aabd184060e273d7a1e3e20f6e78eb0ba0d1
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937196"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373543"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>Noções básicas de bitmap no SkiaSharp
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Carregue bitmaps de várias fontes e exiba-os._
 
@@ -104,7 +104,7 @@ O `SKBitmap.Decode` método estático é responsável por decodificar arquivos d
 
 ## <a name="loading-a-bitmap-resource"></a>Carregando um recurso de bitmap
 
-Em termos de código, a abordagem mais fácil para carregar bitmaps está incluindo um recurso de bitmap diretamente em seu aplicativo. O programa **SkiaSharpFormsDemos** inclui uma pasta chamada **Media** contendo vários arquivos de bitmap, incluindo um chamado **monkey.png**. Para bitmaps armazenados como recursos de programa, você deve usar a caixa de diálogo **Propriedades** para dar ao arquivo uma **ação de compilação** do **recurso incorporado**!
+Em termos de código, a abordagem mais fácil para carregar bitmaps está incluindo um recurso de bitmap diretamente em seu aplicativo. O programa **SkiaSharpFormsDemos** inclui uma pasta chamada **Media** contendo vários arquivos de bitmap, incluindo um chamado **monkey.png**. Para bitmaps armazenados como recursos de programa, você deve usar a caixa de diálogo **Propriedades** para dar ao arquivo uma **ação de compilação** do **recurso incorporado** !
 
 Cada recurso inserido tem uma *ID de recurso* que consiste no nome do projeto, na pasta e no nome do arquivo, todos conectados por pontos: **SkiaSharpFormsDemos.Media.monkey.png**. Você pode obter acesso a esse recurso especificando essa ID de recurso como um argumento para o [`GetManifestResourceStream`](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) método da [`Assembly`](xref:System.Reflection.Assembly) classe:
 
@@ -251,6 +251,6 @@ Você pode exibir bitmaps com vários graus de transparência e o próximo artig
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 - [Escolhendo uma foto da biblioteca de imagens](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 2e8dde87456c6e33eda6846967ceea13eb412b93
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9bd048239c404c0eb3309fdc74b26bcb94db4740
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934297"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434128"
 ---
 # <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Barras de guias e controladores de barra de guias no Xamarin. iOS
 
-Os aplicativos com guias são usados no iOS para dar suporte a interfaces de usuário em que várias telas podem ser acessadas em nenhuma ordem específica. Por meio da `UITabBarController` classe, os aplicativos podem facilmente incluir suporte para esses cenários de várias telas. `UITabBarController`cuida do gerenciamento de várias telas, permitindo que o desenvolvedor do aplicativo se concentre nos detalhes de cada tela.
+Os aplicativos com guias são usados no iOS para dar suporte a interfaces de usuário em que várias telas podem ser acessadas em nenhuma ordem específica. Por meio da `UITabBarController` classe, os aplicativos podem facilmente incluir suporte para esses cenários de várias telas. `UITabBarController` cuida do gerenciamento de várias telas, permitindo que o desenvolvedor do aplicativo se concentre nos detalhes de cada tela.
 
 Normalmente, os aplicativos com guias são criados com o `UITabBarController` que está sendo a `RootViewController` janela principal. No entanto, com um pouco de código adicional, os aplicativos com guias também podem ser usados sucessivamente em alguma outra tela inicial, como o cenário em que um aplicativo apresenta primeiro uma tela de logon, seguida pela interface com guias.
 
@@ -27,7 +27,7 @@ Esta página aborda os dois cenários: quando as guias estão na raiz da hierarq
 O `UITabBarController` oferece suporte ao desenvolvimento de aplicativos com guias pelo seguinte:
 
 - Permitir que vários controladores sejam adicionados a ele.
-- Fornecer uma interface do usuário com guias, por meio da `UITabBar` classe, para permitir que um usuário alterne entre os controladores e suas exibições.
+- Fornecer uma interface do usuário com guias, por meio da  `UITabBar` classe, para permitir que um usuário alterne entre os controladores e suas exibições.
 
 Os controladores são adicionados ao `UITabBarController` por meio de sua `ViewControllers` propriedade, que é uma `UIViewController` matriz. O `UITabBarController` próprio identificador carrega o controlador apropriado e apresenta sua exibição com base na guia selecionada.
 
@@ -63,9 +63,9 @@ A `TabController` classe conterá a implementação do `UITabBarController` que 
 
 Para implementar o `UITabBarController` , precisamos fazer o seguinte:
 
-1. Defina a classe base de `TabController` como `UITabBarController` .
-1. Crie `UIViewController` instâncias para adicionar ao `TabController` .
-1. Adicione as `UIViewController` instâncias a uma matriz atribuída à `ViewControllers` Propriedade do `TabController` .
+1. Defina a classe base de  `TabController` como  `UITabBarController` .
+1. Crie  `UIViewController` instâncias para adicionar ao  `TabController` .
+1. Adicione as  `UIViewController` instâncias a uma matriz atribuída à  `ViewControllers` Propriedade do  `TabController` .
 
 Adicione o seguinte código à `TabController` classe para obter estas etapas:
 
@@ -332,6 +332,6 @@ Este artigo abordou como usar um `UITabBarController` em um aplicativo. Percorre
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Criando aplicativos com guias (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/creatingtabbedapplications)
+- [Criando aplicativos com guias (exemplo)](/samples/xamarin/ios-samples/creatingtabbedapplications)
 - [Images.zip](https://github.com/xamarin/ios-samples/blob/master/CreatingTabbedApplications/Resources/images.zip?raw=true)
 - [Referência de classe UITabBarController](https://developer.apple.com/library/ios/#documentation/uikit/reference/UITabBarController_Class/Reference/Reference.html)

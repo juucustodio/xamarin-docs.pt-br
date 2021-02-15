@@ -10,16 +10,16 @@ ms.date: 07/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: f3a5a581ffb4ca2acf1d4209b8b7a744f0daa5eb
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 21e06560bd67683496b10c8e8c9c3fff520fc36a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84128033"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368161"
 ---
 # <a name="path-effects-in-skiasharp"></a>Efeitos de caminho em SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Descobrir os vários efeitos de caminho que permitem que os caminhos sejam usados para traçar e preencher_
 
@@ -38,7 +38,7 @@ Os efeitos de caminho permitem que você:
 
 Além disso, você pode combinar dois ou mais efeitos de caminho.
 
-Este artigo também demonstra como usar o [`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath*) método de `SKPaint` para converter um caminho em outro caminho aplicando Propriedades de `SKPaint` , incluindo `StrokeWidth` e `PathEffect` . Isso resulta em algumas técnicas interessantes, como a obtenção de um caminho que seja um contorno de outro caminho. `GetFillPath`também é útil em conexão com efeitos de caminho.
+Este artigo também demonstra como usar o [`GetFillPath`](xref:SkiaSharp.SKPaint.GetFillPath*) método de `SKPaint` para converter um caminho em outro caminho aplicando Propriedades de `SKPaint` , incluindo `StrokeWidth` e `PathEffect` . Isso resulta em algumas técnicas interessantes, como a obtenção de um caminho que seja um contorno de outro caminho. `GetFillPath` também é útil em conexão com efeitos de caminho.
 
 ## <a name="dots-and-dashes"></a>Pontos e traços
 
@@ -98,7 +98,7 @@ public class AnimatedDottedTextPage : ContentPage
 }
 ```
 
-O `PaintSurface` manipulador começa criando um `SKPaint` objeto para exibir o texto. A `TextSize` propriedade é ajustada com base na largura da tela:
+O `PaintSurface` manipulador começa criando um `SKPaint` objeto para exibir o texto. A  `TextSize` propriedade é ajustada com base na largura da tela:
 
 ```csharp
 public class AnimatedDottedTextPage : ContentPage
@@ -288,7 +288,7 @@ O [`SKPath1DPathEffectStyle`](xref:SkiaSharp.SKPath1DPathEffectStyle) tem três 
 - `Rotate`
 - `Morph`
 
-O `Translate` membro faz com que o caminho permaneça na mesma orientação que é replicado ao longo de uma linha ou curva. Para `Rotate` , o caminho é girado com base em uma tangente para a curva. O caminho tem sua orientação normal para linhas horizontais. `Morph`é semelhante a `Rotate` , exceto que o próprio caminho também é curvo para corresponder à curvatura da linha que está sendo cortada.
+O `Translate` membro faz com que o caminho permaneça na mesma orientação que é replicado ao longo de uma linha ou curva. Para `Rotate` , o caminho é girado com base em uma tangente para a curva. O caminho tem sua orientação normal para linhas horizontais. `Morph` é semelhante a `Rotate` , exceto que o próprio caminho também é curvo para corresponder à curvatura da linha que está sendo cortada.
 
 A página de **efeito de caminho 1D** demonstra essas três opções. O arquivo [**OneDimensionalPathEffectPage. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml) define um seletor que contém três itens correspondentes aos três membros da enumeração:
 
@@ -421,13 +421,13 @@ Uma cadeia ou cabo de distribuição de peso uniforme trava na forma de um Caten
 
 `y = a · cosh(x / a)`
 
-O *cosh* é a função hiperbólica do cosseno. Para *x* igual a 0, *cosh* é zero e *y* é igual *a a*. Esse é o centro do Catenary. Assim como a função *cosseno* , *cosh* é considerado *mesmo*, o que significa que *cosh (– x)* é igual a *cosh (x)* e aumenta os valores para aumentar os argumentos positivos ou negativos. Esses valores descrevem as curvas que formam os lados do Catenary.
+O *cosh* é a função hiperbólica do cosseno. Para *x* igual a 0, *cosh* é zero e *y* é igual *a a*. Esse é o centro do Catenary. Assim como a função *cosseno* , *cosh* é considerado *mesmo* , o que significa que *cosh (– x)* é igual a *cosh (x)* e aumenta os valores para aumentar os argumentos positivos ou negativos. Esses valores descrevem as curvas que formam os lados do Catenary.
 
 Encontrar o valor adequado de *um* para ajustar o Catenary às dimensões da página do telefone não é um cálculo direto. Se *w* e *h* forem a largura e a altura de um retângulo, o valor ideal de *um* atenderá à seguinte equação:
 
 `cosh(w / 2 / a) = 1 + h / a`
 
-O método a seguir na [`LinkedChainPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) classe incorpora essa igualdade referindo-se às duas expressões à esquerda e à direita do sinal de igual como `left` e `right` . Para valores pequenos de *a*, `left` é maior que `right` ; para valores grandes de *a*, `left` é menor que `right` . O `while` loop é limitado em um valor ideal de *um*:
+O método a seguir na [`LinkedChainPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) classe incorpora essa igualdade referindo-se às duas expressões à esquerda e à direita do sinal de igual como `left` e `right` . Para valores pequenos de *a* , `left` é maior que `right` ; para valores grandes de *a* , `left` é menor que `right` . O `while` loop é limitado em um valor ideal de *um* :
 
 ```csharp
 float FindOptimumA(float width, float height)
@@ -691,7 +691,7 @@ Por esse motivo, o programa primeiro calcula um valor chamado `length` que é o 
 
 ## <a name="from-path-to-path-again"></a>De caminho para caminho novamente
 
-Na parte inferior do `DrawSurface` manipulador na **correia do transportador**, comente a `canvas.DrawPath` chamada e substitua-a pelo código a seguir:
+Na parte inferior do `DrawSurface` manipulador na **correia do transportador** , comente a `canvas.DrawPath` chamada e substitua-a pelo código a seguir:
 
 ```csharp
 SKPath newPath = new SKPath();
@@ -1289,7 +1289,7 @@ public class CatsInFramePage : ContentPage
 
 O `catPath` pode ser usado no `SKPathEffect.Create2DPath` método se a `SKPaint` Propriedade do objeto `Style` for definida como `Stroke` . No entanto, se o `catPath` for usado diretamente neste programa, toda a cabeça do gato será preenchida e as caixas estreitas nem mesmo estarão visíveis. (Experimente!) É necessário obter o contorno desse caminho e usar essa estrutura de tópicos no `SKPathEffect.Create2DPath` método.
 
-O construtor faz esse trabalho. Primeiro, ele aplica duas transformações ao `catPath` para mover o ponto (0, 0) para o centro e dimensioná-lo em tamanho. `GetFillPath`Obtém todos os contornos dos contornos no `outlinedCatPath` , e esse objeto é usado na `SKPathEffect.Create2DPath` chamada. Os fatores de dimensionamento no `SKMatrix` valor são ligeiramente maiores do que o tamanho horizontal e vertical do gato para fornecer um pequeno buffer entre os blocos, enquanto os fatores de conversão foram derivados de certa forma empiricamente para que um gato completo fique visível no canto superior esquerdo do quadro:
+O construtor faz esse trabalho. Primeiro, ele aplica duas transformações ao `catPath` para mover o ponto (0, 0) para o centro e dimensioná-lo em tamanho. `GetFillPath` Obtém todos os contornos dos contornos no `outlinedCatPath` , e esse objeto é usado na `SKPathEffect.Create2DPath` chamada. Os fatores de dimensionamento no `SKMatrix` valor são ligeiramente maiores do que o tamanho horizontal e vertical do gato para fornecer um pequeno buffer entre os blocos, enquanto os fatores de conversão foram derivados de certa forma empiricamente para que um gato completo fique visível no canto superior esquerdo do quadro:
 
 ```csharp
 public class CatsInFramePage : ContentPage
@@ -1415,7 +1415,7 @@ Como você já descobriu, as linhas de hachura não são precisamente restritas 
 
 Agora que você já viu os efeitos de caminho que variam de pontos simples e traços a combinações estranhas, use sua imaginação e veja o que você pode criar.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

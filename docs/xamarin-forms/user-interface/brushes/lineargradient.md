@@ -1,29 +1,27 @@
 ---
-title: 'Xamarin.FormsPincéis: gradientes lineares'
+title: 'Xamarin.Forms Pincéis: gradientes lineares'
 description: A Xamarin.Forms classe LinearGradientBrush pinta uma área com um gradiente linear.
 ms.prod: xamarin
 ms.assetid: BEA2B3F5-96B0-4E39-88A6-0FAFE95C3DCD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/28/2020
+ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 734ecae4fdafd71f0c88ddc5e4b4ed0c672f2019
-ms.sourcegitcommit: 579ec4f2884fa391e5e214a3952cd6004c521eb8
+ms.openlocfilehash: 44eb40a63c5b1117ba6eb58bde3a3d6a4a49154b
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87919626"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940051"
 ---
-# <a name="no-locxamarinforms-brushes-linear-gradients"></a>Xamarin.FormsPincéis: gradientes lineares
+# <a name="no-locxamarinforms-brushes-linear-gradients"></a>Xamarin.Forms Pincéis: gradientes lineares
 
-![API de visualização](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
-
-A `LinearGradientBrush` classe deriva da `GradientBrush` classe e pinta uma área com um gradiente linear, que mistura duas ou mais cores ao longo de uma linha conhecida como o eixo gradiente. `GradientStop`os objetos são usados para especificar as cores no gradiente e suas posições. Para obter mais informações sobre `GradientStop` objetos, consulte [ Xamarin.Forms pincéis: gradientes](gradient.md).
+A `LinearGradientBrush` classe deriva da `GradientBrush` classe e pinta uma área com um gradiente linear, que mistura duas ou mais cores ao longo de uma linha conhecida como o eixo gradiente. `GradientStop` os objetos são usados para especificar as cores no gradiente e suas posições. Para obter mais informações sobre `GradientStop` objetos, consulte [ Xamarin.Forms pincéis: gradientes](gradient.md).
 
 A `LinearGradientBrush` classe define as seguintes propriedades:
 
@@ -134,5 +132,5 @@ Neste exemplo, o plano de fundo do [`Frame`](xref:Xamarin.Forms.Frame) é pintad
 
 ## <a name="related-links"></a>Links relacionados
 
-- [BrushesDemos (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
-- [Xamarin.FormsPincéis: gradientes](gradient.md)
+- [BrushesDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+- [Xamarin.Forms Pincéis: gradientes](gradient.md)

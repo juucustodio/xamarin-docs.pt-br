@@ -9,14 +9,14 @@ ms.custom: video
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: acc0c48776c7a91e9e5a060928564bc6e0c1d775
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 07bfcabc7ffef20bee43531bfab3e78155beb9a9
+ms.sourcegitcommit: 58247fe066ad271ee43c8967ac3301fdab6ca2d1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84801810"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92629568"
 ---
-# <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferências
+# <a name="no-locxamarinessentials-preferences"></a>Xamarin.Essentials: Preferências
 
 A classe **Preferences** ajuda a armazenar as preferências do aplicativo em um repositório de chave/valor.
 
@@ -62,26 +62,27 @@ Para remover todas as preferências:
 Preferences.Clear();
 ```
 
-Além desses métodos, cada uma pode receber um `sharedName` opcional que pode ser usado para criar contêineres adicionais para preferência. Leia a seguir as particularidades de implementação da plataforma.
+> [!TIP]
+> Os métodos acima assumem um `string` parâmetro opcional chamado `sharedName` . Esse parâmetro é usado para criar contêineres adicionais para preferências que são úteis em alguns casos de uso. Um caso de uso é quando seu aplicativo precisa compartilhar preferências entre extensões ou um aplicativo de inspeção. Leia as especificações de implementação da plataforma abaixo.
 
 ## <a name="supported-data-types"></a>Tipos de dados com suporte
 
-Os tipos de dados a seguir têm suporte em **Preferences**:
+Os tipos de dados a seguir têm suporte em **Preferences** :
 
 - **bool**
 - **double**
 - **int**
 - **float**
-- **Longas**
+- **longo**
 - **cadeia de caracteres**
 - **DateTime**
 
 ## <a name="integrate-with-system-settings"></a>Integrar com as configurações do sistema
 
-As preferências são armazenadas nativamente, o que permite que você integre suas configurações às configurações do sistema nativo. Siga os exemplos de plataforma e documetnation para integrar com a plataforma:
+As preferências são armazenadas nativamente, o que permite que você integre suas configurações às configurações do sistema nativo. Siga a documentação e os exemplos da plataforma para integrar-se à plataforma:
 
 * Apple: [implementando um pacote de configurações do IOS](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
-* [Exemplo de preferências do iOS aplicativo](https://docs.microsoft.com/samples/xamarin/ios-samples/appprefs/)
+* [Exemplo de preferências do iOS aplicativo](/samples/xamarin/ios-samples/appprefs/)
 * [Configurações de watchOS](https://developer.xamarin.com/guides/ios/watch/working-with/settings/)
 * Android: [introdução com telas de configurações](https://developer.android.com/guide/topics/ui/settings.html)
 
@@ -93,27 +94,27 @@ Os valores de `DateTime` são armazenados em um formato binário de 64 bits (int
 
 # <a name="android"></a>[Android](#tab/android)
 
-Todos os dados são armazenados em [Preferências Compartilhadas](https://developer.android.com/training/data-storage/shared-preferences.html). Se não houver um `sharedName` especificado, as preferências compartilhadas padrão serão usadas, caso contrário, o nome será usado para obter preferências compartilhadas **privadas** com o nome especificado.
+Todos os dados são armazenados em [Preferências Compartilhadas](https://developer.android.com/training/data-storage/shared-preferences.html). Se não `sharedName` for especificado, as preferências compartilhadas padrão serão usadas, caso contrário, o nome será usado para obter preferências **particulares** compartilhadas com o nome especificado.
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-[NSUserDefaults](https://docs.microsoft.com/xamarin/ios/app-fundamentals/user-defaults) é usado para armazenar valores em dispositivos iOS. Se nenhum `sharedName` for especificado, o `StandardUserDefaults` será usado, caso contrário, o nome será usado para criar uma nova `NSUserDefaults` com o nome especificado usado para o `NSUserDefaultsType.SuiteName`.
+[NSUserDefaults](../ios/app-fundamentals/user-defaults.md) é usado para armazenar valores em dispositivos iOS. Se nenhum `sharedName` for especificado, o `StandardUserDefaults` será usado, caso contrário, o nome será usado para criar uma nova `NSUserDefaults` com o nome especificado usado para o `NSUserDefaultsType.SuiteName`.
 
 # <a name="uwp"></a>[UWP](#tab/uwp)
 
-[ApplicationDataContainer](https://docs.microsoft.com/uwp/api/windows.storage.applicationdatacontainer) é usado para armazenar os valores no dispositivo. Se nenhum `sharedName` for especificado, o `LocalSettings` será usado, caso contrário, o nome será usado para criar um novo contêiner dentro do `LocalSettings`.
+[ApplicationDataContainer](/uwp/api/windows.storage.applicationdatacontainer) é usado para armazenar os valores no dispositivo. Se não `sharedName` for especificado, o será `LocalSettings` usado, caso contrário, o nome será usado para criar um novo contêiner dentro de `LocalSettings` .
 
-`LocalSettings`também tem a seguinte restrição de que o nome de cada configuração pode ter 255 caracteres de comprimento máximo. Cada configuração pode ter até 8K bytes de tamanho e cada configuração composta pode ter até 64K bytes de tamanho.
+`LocalSettings` também tem a seguinte restrição de que o nome de cada configuração pode ter 255 caracteres de comprimento máximo. Cada configuração pode ter até 8K bytes de tamanho e cada configuração composta pode ter até 64K bytes de tamanho.
 
 --------------
 
 ## <a name="persistence"></a>Persistência
 
-A desinstalação do aplicativo causará a remoção de todas as _Preferências_. Há uma exceção a isso para aplicativos destinados ao Android 6.0 (API nível 23) ou posterior que usam [__Backup Automático__](https://developer.android.com/guide/topics/data/autobackup). Esse recurso está ativado por padrão e preserva os dados do aplicativo, incluindo __Preferências Compartilhadas__, que é o que a API de **Preferências** utiliza. É possível desabilitar isso seguindo a [documentação](https://developer.android.com/guide/topics/data/autobackup) do Google.
+A desinstalação do aplicativo fará com que todas as _preferências_ sejam removidas, com a exceção sendo aplicativos direcionados e executados no Android 6,0 (API nível 23) ou posterior que usam o [__backup automático__](https://developer.android.com/guide/topics/data/autobackup). Esse recurso está ativado por padrão e preserva os dados do aplicativo, incluindo __Preferências Compartilhadas__ , que é o que a API de **Preferências** utiliza. É possível desabilitar isso seguindo a [documentação](https://developer.android.com/guide/topics/data/autobackup) do Google.
 
 ## <a name="limitations"></a>Limitações
 
-Ao armazenar uma cadeia de caracteres, essa API destina-se a armazenar pequenas quantidades de texto.  O desempenho pode ser abaixo da média se você tentar usá-lo para armazenar grandes quantidades de texto.
+Ao armazenar uma cadeia de caracteres, essa API destina-se a armazenar pequenas quantidades de texto. O desempenho pode ser abaixo da média se você tentar usá-lo para armazenar grandes quantidades de texto.
 
 ## <a name="api"></a>API
 

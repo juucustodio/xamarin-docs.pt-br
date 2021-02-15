@@ -9,14 +9,14 @@ ms.date: 11/04/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7a8a90674b395c90f698a4a0854dc0dc3fc5fe15
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: a7341137d7f7ddf1d0db47672af8810380805478
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84802343"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434361"
 ---
-# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Lanterna
+# <a name="no-locxamarinessentials-flashlight"></a>Xamarin.Essentials: Lanterna
 
 A classe **Flashlight** tem a capacidade de ativar ou desativar o flash da câmera do dispositivo para transformá-lo em uma lanterna.
 
@@ -120,7 +120,7 @@ Uma textura de superfície da câmera é criada para ativar ou desativar o `Flas
 
 ### <a name="uwp"></a>[UWP](#tab/uwp)
 
-[Lamp](https://docs.microsoft.com/uwp/api/windows.devices.lights.lamp) é usado para detectar a primeira lâmpada na parte traseira do dispositivo a fim de ativá-la ou desativá-la.
+[Lamp](/uwp/api/windows.devices.lights.lamp) é usado para detectar a primeira lâmpada na parte traseira do dispositivo a fim de ativá-la ou desativá-la.
 
 -----
 

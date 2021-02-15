@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/11/2016
-ms.openlocfilehash: 588dadbfe63a46bc7658d5d29a052cebe52be65c
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: a01f0075ec7f47d6653313ea50047b7f89529bc6
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997404"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91431387"
 ---
 # <a name="cloudkit-in-xamarinios"></a>CloudKit no Xamarin. iOS
 
@@ -56,7 +56,7 @@ Para acessar o CloudKit, o arquivo **. plist de direitos** deve incluir **habili
 
 ### <a name="sample-app"></a>Aplicativo de exemplo
 
-O [exemplo CloudKitAtlas](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-cloudkitatlas) demonstra como usar o CloudKit com o Xamarin. As etapas a seguir mostram como configurar a amostra – ela requer configurações adicionais além das necessárias apenas para CloudKit:
+O [exemplo CloudKitAtlas](/samples/xamarin/ios-samples/ios8-cloudkitatlas) demonstra como usar o CloudKit com o Xamarin. As etapas a seguir mostram como configurar a amostra – ela requer configurações adicionais além das necessárias apenas para CloudKit:
 
 1. Abra o projeto no Visual Studio para Mac ou no Visual Studio.
 2. No **Gerenciador de soluções**, abra o arquivo **info. plist** e verifique se o **identificador do pacote** corresponde ao que foi definido na **ID do aplicativo** criado como parte do provisionamento configurado.
@@ -373,7 +373,7 @@ ThisApp.PublicDatabase.SaveRecord(newRecord, (record, err) => {
 
 Três itens a serem observados sobre o código acima:
 
-1. Ao chamar o `SaveRecord` método do `PublicDatabase` , o desenvolvedor não precisa especificar como os dados são enviados, em qual zona ele está sendo gravado, etc. A API de conveniência está cuidando de todos esses detalhes.
+1. Ao chamar o  `SaveRecord` método do  `PublicDatabase` , o desenvolvedor não precisa especificar como os dados são enviados, em qual zona ele está sendo gravado, etc. A API de conveniência está cuidando de todos esses detalhes.
 1. A chamada é assíncrona e fornece uma rotina de chamada de retorno quando a chamada é concluída, seja com êxito ou falha. Se a chamada falhar, uma mensagem de erro será fornecida.
 1. O CloudKit não fornece armazenamento/persistência local; é apenas um meio de transferência. Assim, quando é feita uma solicitação para salvar um registro, ele é imediatamente enviado aos servidores iCloud.
 
@@ -649,7 +649,7 @@ Como mencionado acima, o CloudKit fornece uma maneira para o aplicativo identifi
 
 Há um aplicativo cliente em execução nos dispositivos de um usuário e todos os bancos de dados particulares do usuário específico dentro do contêiner CloudKit. O aplicativo cliente será vinculado a um desses usuários específicos. Isso se baseia no usuário que está conectado no iCloud localmente no dispositivo.
 
-Como isso é proveniente do iCloud, há um armazenamento de apoio avançado de informações do usuário. E como o iCloud está realmente hospedando o contêiner, ele pode correlacionar os usuários. No gráfico acima, o usuário cuja conta do iCloud `user@icloud.com` está vinculada ao cliente atual.
+Como isso é proveniente do iCloud, há um armazenamento de apoio avançado de informações do usuário. E como o iCloud está realmente hospedando o contêiner, ele pode correlacionar os usuários. No gráfico acima, o usuário cuja conta do iCloud  `user@icloud.com` está vinculada ao cliente atual.
 
 Em um contêiner por contêiner, uma ID de usuário exclusiva e gerada aleatoriamente é criada e associada à conta do iCloud do usuário (endereço de email). Essa ID de usuário é retornada ao aplicativo e pode ser usada de qualquer maneira que o desenvolvedor se comportar.
 
@@ -855,5 +855,5 @@ Este artigo abordou uma breve introdução à API do CloudKit. Ele mostrou como 
 ## <a name="related-links"></a>Links relacionados
 
 - [CloudKit (Apple)](https://developer.apple.com/icloud/cloudkit/)
-- [CloudKitAtlas (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-cloudkitatlas)
+- [CloudKitAtlas (exemplo)](/samples/xamarin/ios-samples/ios8-cloudkitatlas)
 - [Criando um perfil de provisionamento](~/ios/get-started/installation/device-provisioning/index.md)

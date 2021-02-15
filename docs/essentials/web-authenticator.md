@@ -8,14 +8,14 @@ ms.date: 03/26/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e86ebcd55f3a36da1ad5c7c13bb50e7fc9094010
-ms.sourcegitcommit: 898ba8e5140ae32a7df7e07c056aff65f6fe4260
+ms.openlocfilehash: 4ab7c5dab6a414e15531e0e0e812d604e05ab1cc
+ms.sourcegitcommit: 3edcc63fcf86409b73cd6e5dc77f0093a99b3f87
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226801"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98062596"
 ---
-# <a name="xamarinessentials-web-authenticator"></a>Xamarin.Essentials: Autenticador da Web
+# <a name="no-locxamarinessentials-web-authenticator"></a>Xamarin.Essentials: Autenticador da Web
 
 A classe **webauthenticator** permite que você inicie fluxos baseados em navegador que escutam um retorno de chamada para uma URL específica registrada para o aplicativo.
 
@@ -23,7 +23,7 @@ A classe **webauthenticator** permite que você inicie fluxos baseados em navega
 
 Muitos aplicativos exigem a adição de autenticação de usuário, e isso geralmente significa permitir que seus usuários entrem nas contas existentes da Microsoft, Facebook, Google e agora Apple.
 
-A [MSAL (biblioteca de autenticação da Microsoft)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) fornece uma excelente solução de chave para adicionar autenticação ao seu aplicativo. Há até mesmo suporte para aplicativos Xamarin em seu pacote NuGet do cliente.
+A [MSAL (biblioteca de autenticação da Microsoft)](/azure/active-directory/develop/msal-overview) fornece uma excelente solução de chave para adicionar autenticação ao seu aplicativo. Há até mesmo suporte para aplicativos Xamarin em seu pacote NuGet do cliente.
 
 Se você estiver interessado em usar seu próprio serviço Web para autenticação, é possível usar o **webauthenticator** para implementar a funcionalidade do lado do cliente.
 
@@ -46,9 +46,6 @@ Para acessar a funcionalidade **Webauthenticator** , é necessária a configura�
 
 O Android requer uma configuração de filtro de intenção para manipular o URI de retorno de chamada. Isso é facilmente conseguido por meio da subclasse da `WebAuthenticatorCallbackActivity` classe:
 
-> [!NOTE]
-> Você deve considerar a implementação de [links de aplicativo do Android](https://developer.android.com/training/app-links/) para lidar com o URI de retorno de chamada e garantir que seu aplicativo seja o único que pode se registrar para lidar com o URI de retorno de chamada.
-
 ```csharp
 const string CALLBACK_SCHEME = "myapp";
 
@@ -60,26 +57,38 @@ public class WebAuthenticationCallbackActivity : Xamarin.Essentials.WebAuthentic
 {
 }
 ```
+Se a versão do Android de destino do seu projeto estiver definida como **Android 11 (API R 30)** , você deverá atualizar seu manifesto do Android com consultas que são usadas com os novos [requisitos de visibilidade de pacote](https://developer.android.com/preview/privacy/package-visibility).
 
-Você também precisará chamar novamente o Essentials da `OnResume` substituição em seu `MainActivity` :
-
-```csharp
-protected override void OnResume()
-{
-    base.OnResume();
-
-    Xamarin.Essentials.Platform.OnResume();
-}
+Abra o arquivo **AndroidManifest.xml** na pasta Propriedades e adicione o seguinte dentro do nó do manifesto:
+```XML
+<queries>
+    <intent>
+        <action android:name="android.support.customtabs.action.CustomTabsService" />
+    </intent>
+</queries>
 ```
 
 # <a name="ios"></a>[iOS](#tab/ios)
 
-No iOS, você precisará adicionar o padrão de URI de retorno de chamada do seu aplicativo ao info. plist.
+No iOS, você precisará adicionar o padrão de URI de retorno de chamada do aplicativo ao seu info. plist, como:
 
-> [!NOTE]
-> Você deve considerar o uso de [links de aplicativo universal](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content) para registrar o URI de retorno de chamada do aplicativo como uma prática recomendada.
+```xml
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleURLName</key>
+        <string>xamarinessentials</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>xamarinessentials</string>
+        </array>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+    </dict>
+</array>
+```
 
-Você também precisará substituir o `AppDelegate` método do `OpenUrl` para chamar no Essentials:
+Você também precisará substituir seus `AppDelegate` `OpenUrl` `ContinueUserActivity` métodos e para chamar no Essentials:
 
 ```csharp
 public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
@@ -88,6 +97,13 @@ public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
         return true;
 
     return base.OpenUrl(app, url, options);
+}
+
+public override bool ContinueUserActivity(UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
+{
+    if (Xamarin.Essentials.Platform.ContinueUserActivity(application, userActivity, completionHandler))
+        return true;
+    return base.ContinueUserActivity(application, userActivity, completionHandler);
 }
 ```
 
@@ -153,7 +169,7 @@ No UWP, o `WebAuthenticationBroker` é usado se houver suporte, caso contrário,
 
 De acordo com as [diretrizes de revisão da Apple](https://developer.apple.com/app-store/review/guidelines/#sign-in-with-apple), se seu aplicativo usar qualquer serviço de logon social para autenticar, ele também deverá oferecer a entrada da Apple como uma opção.
 
-Para adicionar a entrada da Apple aos seus aplicativos, primeiro você precisará [configurar seu aplicativo para usar a entrada da Apple](https://docs.microsoft.com/xamarin/ios/platform/ios13/sign-in).
+Para adicionar a entrada da Apple aos seus aplicativos, primeiro você precisará [configurar seu aplicativo para usar a entrada da Apple](../ios/platform/ios13/sign-in.md).
 
 Para o iOS 13 e superior, você desejará chamar o `AppleSignInAuthenticator.AuthenticateAsync()` método. Isso usará as APIs de entrada nativas da Apple nos bastidores para que os usuários obtenham a melhor experiência possível nesses dispositivos. Você pode escrever seu código compartilhado para usar a API correta em tempo de execução da seguinte maneira:
 
@@ -177,7 +193,14 @@ else
     r = await WebAuthenticator.AuthenticateAsync(authUrl, callbackUrl);
 }
 
-var accessToken = r?.AccessToken;
+var authToken = string.Empty;
+if (r.Properties.TryGetValue("name", out var name) && !string.IsNullOrEmpty(name))
+    authToken += $"Name: {name}{Environment.NewLine}";
+if (r.Properties.TryGetValue("email", out var email) && !string.IsNullOrEmpty(email))
+    authToken += $"Email: {email}{Environment.NewLine}";
+
+// Note that Apple Sign In has an IdToken and not an AccessToken
+authToken += r?.AccessToken ?? r?.IdToken;
 ```
 
 > [!TIP]
@@ -190,10 +213,25 @@ var accessToken = r?.AccessToken;
 
 É possível usar a `WebAuthenticator` API com qualquer serviço de back-end da Web.  Para usá-lo com um aplicativo ASP.NET Core, primeiro você precisa configurar o aplicativo Web com as seguintes etapas:
 
-1. Configure os [provedores de autenticação social externos](https://docs.microsoft.com/aspnet/core/security/authentication/social/?view=aspnetcore-3.1&tabs=visual-studio) desejados em um aplicativo Web ASP.NET Core.
+1. Configure os [provedores de autenticação social externos](/aspnet/core/security/authentication/social/?tabs=visual-studio) desejados em um aplicativo Web ASP.NET Core.
 2. Defina o esquema de autenticação padrão como `CookieAuthenticationDefaults.AuthenticationScheme` em sua `.AddAuthentication()` chamada.
 3. Use `.AddCookie()` em sua chamada do Startup.cs `.AddAuthentication()` .
 4. Todos os provedores devem ser configurados com `.SaveTokens = true;` .
+
+
+```csharp
+services.AddAuthentication(o =>
+    {
+        o.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    })
+    .AddCookie()
+    .AddFacebook(fb =>
+    {
+        fb.AppId = Configuration["FacebookAppId"];
+        fb.AppSecret = Configuration["FacebookAppSecret"];
+        fb.SaveTokens = true;
+    });
+```
 
 > [!TIP]
 > Se você quiser incluir a entrada da Apple, poderá usar o `AspNet.Security.OAuth.Apple` pacote NuGet.  Você pode exibir o [exemplo de startup.cs](https://github.com/xamarin/Essentials/blob/develop/Samples/Sample.Server.WebAuthenticator/Startup.cs#L32-L60) completo no repositório GitHub do Essentials.
@@ -228,6 +266,9 @@ A finalidade desse controlador é inferir o esquema (provedor) que o aplicativo 
 Às vezes, talvez você queira retornar dados como o provedor de `access_token` volta para o aplicativo, o que pode ser feito por meio dos parâmetros de consulta do URI de retorno de chamada. Ou talvez você queira, em vez disso, criar sua própria identidade no servidor e retornar seu próprio token para o aplicativo. O que e como você faz essa parte é de sua escolha!
 
 Confira o [exemplo de controlador completo](https://github.com/xamarin/Essentials/blob/develop/Samples/Sample.Server.WebAuthenticator/Controllers/MobileAuthController.cs) no repositório do Essentials.
+
+> [!NOTE]
+> O exemplo acima demonstra como retornar o token de acesso do provedor de autenticação de terceiros (IE: OAuth). Para obter um token que você pode usar para autorizar solicitações da Web ao próprio back-end da Web, você deve criar seu próprio token em seu aplicativo Web e, em vez disso, retornar isso.  A [visão geral da autenticação ASP.NET Core](/aspnet/core/security/authentication) tem mais informações sobre cenários de autenticação avançada no ASP.NET Core.
 
 -----
 ## <a name="api"></a>API

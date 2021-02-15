@@ -1,25 +1,25 @@
 ---
-title: Xamarin.FormsTabbedPage
+title: Xamarin.Forms TabbedPage
 description: O Xamarin.Forms TabbedPage consiste em uma lista de guias e uma área de detalhes maior, com cada guia carregando conteúdo na área de detalhes. Este artigo demonstra como usar uma TabbedPage para navegar por uma coleção de páginas.
 ms.prod: xamarin
 ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/07/2019
+ms.date: 11/06/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 733ec985f4d285f26aca62930868970026847825
-ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
+ms.openlocfilehash: ef4c8717b419d1be4c4050f86b183385d6c10072
+ms.sourcegitcommit: f2942b518f51317acbb263be5bc0c91e66239f50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87426871"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94590331"
 ---
-# <a name="no-locxamarinforms-tabbedpage"></a>Xamarin.FormsTabbedPage
+# <a name="no-locxamarinforms-tabbedpage"></a>Xamarin.Forms TabbedPage
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
 
 O Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) consiste em uma lista de guias e uma área de detalhes maior, com cada guia carregando conteúdo na área de detalhes. As capturas de tela a seguir mostram um `TabbedPage` no Ios e no Android:
 
@@ -27,15 +27,17 @@ O Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) consiste em uma li
 
 No iOS, a lista de guias é exibida na parte inferior da tela e a área do detalhe fica acima dela. Cada guia consiste em um título e um ícone, que deve ser um arquivo PNG com um canal alfa. Na orientação retrato, os ícones da barra de guias aparecem acima dos títulos de guias. Na orientação paisagem, os ícones e títulos aparecem lado a lado. Além disso, uma barra de guias normal ou Compact pode ser exibida, dependendo do dispositivo e da orientação. Se houver mais de cinco guias, uma guia **Mais** será exibida, que poderá ser usada para acessar as guias adicionais. Para obter informações sobre os requisitos de ícone, consulte [tamanho do ícone da barra de guias](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/custom-icons#tab-bar-icon-size) em developer.Apple.com.
 
-> [!TIP]
-> O `TabbedRenderer` para IOS tem um método substituível `GetIcon` que pode ser usado para carregar ícones de guia de uma fonte especificada. Essa substituição possibilita o uso de imagens SVG como ícones em uma `TabbedPage`. Além disso, versões selecionadas e não selecionadas de um ícone podem ser fornecidas.
-
 No Android, a lista de guias é exibida na parte superior da tela, e a área de detalhes está abaixo. Cada guia consiste em um título e um ícone, que deve ser um arquivo PNG com um canal alfa. No entanto, as guias podem ser movidas para a parte inferior da tela com uma plataforma específica. Se houver mais de cinco guias e a lista de guias estiver na parte inferior da tela, será exibida uma guia *mais* que pode ser usada para acessar as guias adicionais. Para obter informações sobre os requisitos de ícone, consulte [guias](https://material.io/components/tabs/#) em material.Io e [suporte a diferentes densidades de pixel](https://developer.android.com/training/multiscreen/screendensities) em developer.Android.com. Para obter informações sobre como mover as guias para a parte inferior da tela, consulte [definindo o posicionamento e a cor da barra de ferramentas TabbedPage](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md).
 
-> [!TIP]
-> O `TabbedPageRenderer` para Android AppCompat tem um método substituível `SetTabIconImageSource` que pode ser usado para carregar ícones de guia de um personalizado `Drawable` . Essa substituição possibilita o uso de imagens SVG como ícones em uma `TabbedPage` e funciona com barras de guia superior e inferior.
-
 Na Plataforma Universal do Windows (UWP), a lista de guias é exibida na parte superior da tela e a área de detalhes está abaixo. Cada guia consiste em um título. No entanto, os ícones podem ser adicionados a cada guia com uma plataforma específica. Para obter mais informações, consulte [ícones de TabbedPage no Windows](~/xamarin-forms/platform/windows/tabbedpage-icons.md).
+
+> [!TIP]
+> Arquivos SVG (gráficos de vetor escalonáveis) podem ser exibidos como ícones de guia em um [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) :
+>
+> - A `TabbedRenderer` classe Ios tem um método substituível `GetIcon` que pode ser usado para carregar ícones de guia de uma fonte especificada. Além disso, as versões selecionadas e não marcadas de um ícone podem ser fornecidas, se necessário.
+> - A classe do Android AppCompat `TabbedPageRenderer` tem um `SetTabIconImageSource` método substituível que pode ser usado para carregar ícones de guia de um personalizado `Drawable` . Como alternativa, os arquivos SVG podem ser convertidos em recursos de vetor que podem ser redesenhados, o que pode ser exibido automaticamente pelo Xamarin.Forms . Para obter mais informações sobre como converter arquivos SVG em recursos de desenho de vetor, consulte [adicionar gráficos de vetor de várias densidades](https://developer.android.com/studio/write/vector-asset-studio) em developer.Android.com.
+>
+> Para obter mais informações, consulte [ Xamarin.Forms TabbedPage com ícones de guia SVG](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithsvgtabicons).
 
 ## <a name="create-a-tabbedpage"></a>Criar uma TabbedPage
 
@@ -112,7 +114,7 @@ Selecionar outra guia exibe o [`ContentPage`](xref:Xamarin.Forms.ContentPage) ob
 Na guia **agenda** , o [`ContentPage`](xref:Xamarin.Forms.ContentPage) objeto é encapsulado em um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) objeto.
 
 > [!WARNING]
-> Embora um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) possa ser colocado em um [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) , não é recomendável colocar um `TabbedPage` em um `NavigationPage` . Isso ocorre porque, no iOS, um `UITabBarController` sempre funciona como um wrapper para o `UINavigationController`. Para obter mais informações, confira [Interfaces combinadas do controlador de exibição](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/CombiningViewControllers.html) na Biblioteca do Desenvolvedor do iOS.
+> Embora um [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) possa ser colocado em um  [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) , não é recomendável colocar um `TabbedPage` em um `NavigationPage` . Isso ocorre porque, no iOS, um `UITabBarController` sempre funciona como um wrapper para o `UINavigationController`. Para obter mais informações, confira [Interfaces combinadas do controlador de exibição](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/CombiningViewControllers.html) na Biblioteca do Desenvolvedor do iOS.
 
 ## <a name="navigate-within-a-tab"></a>Navegar dentro de uma guia
 
@@ -238,8 +240,9 @@ Selecionar outra guia exibe o [`ContentPage`](xref:Xamarin.Forms.ContentPage) ob
 
 ## <a name="related-links"></a>Links relacionados
 
-- [TabbedPageWithNavigationPage (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
-- [TabbedPage (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpage)
+- [TabbedPageWithNavigationPage (amostra)](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
+- [TabbedPage (amostra)](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpage)
+- [TabbedPage com ícones de guia SVG](/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithsvgtabicons)
 - [Navegação hierárquica](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md)
 - [Variedades de páginas](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
 - [API TabbedPage](xref:Xamarin.Forms.TabbedPage)

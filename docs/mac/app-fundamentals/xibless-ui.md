@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: fe4927384470a37581f556f06e71d489ef90ecbb
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 47025f48b1f3455f70a077f2ca55da2cdeeba761
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84574504"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430882"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>. Storyboard/. xib-o design de interface do usuário menos no Xamarin. Mac
 
@@ -357,9 +357,9 @@ O acima cria um menu da barra de status a partir do código e o exibe quando o a
 
 Este artigo fez uma visão detalhada da criação de uma interface do usuário do aplicativo Xamarin. Mac em código C# em oposição ao uso de Interface Builder do Xcode com arquivos. Storyboard ou. xib.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [MacXibless (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macxibless)
+- [MacXibless (exemplo)](/samples/xamarin/mac-samples/macxibless)
 - [Windows](~/mac/user-interface/window.md)
 - [Menus](~/mac/user-interface/menu.md)
 - [Diretrizes de Interface Humana do macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

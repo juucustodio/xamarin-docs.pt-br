@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: davidortinau
 ms.author: daortin
 ms.date: 03/14/2017
-ms.openlocfilehash: 65ebefef0f03e2b4abd8c36fc1e0a68812e48218
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2cacbf5640da60a7d084bf4ab113ef62fad097d8
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939510"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436391"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows no Xamarin. Mac
 
@@ -104,7 +104,7 @@ A maioria dos aplicativos macOS modernos apresenta controles auxiliares e opçõ
 
 [![Um inspetor de exemplo](window-images/panel02.png)](window-images/panel02.png#lightbox)
 
-Para obter mais informações, consulte a seção [painéis](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowPanels.html#//apple_ref/doc/uid/20000957-CH42-SW1) dos [temas de design do MacOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/) da Apple e nosso aplicativo de exemplo [MacInspector](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) para obter uma implementação completa de uma **interface de Inspetor** em um aplicativo Xamarin. Mac.
+Para obter mais informações, consulte a seção [painéis](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowPanels.html#//apple_ref/doc/uid/20000957-CH42-SW1) dos [temas de design do MacOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/) da Apple e nosso aplicativo de exemplo [MacInspector](/samples/xamarin/mac-samples/macinspector) para obter uma implementação completa de uma **interface de Inspetor** em um aplicativo Xamarin. Mac.
 
 ## <a name="creating-and-maintaining-windows-in-xcode"></a>Criando e mantendo janelas no Xcode
 
@@ -750,7 +750,7 @@ Se executarmos nosso aplicativo, o painel será exibido:
 [![O painel em um aplicativo em execução](window-images/panels04.png)](window-images/panels04.png#lightbox)
 
 > [!IMPORTANT]
-> As janelas de painel foram preteridas pela Apple e devem ser substituídas por **interfaces de Inspetor**. Para obter um exemplo completo de criação de um **Inspetor** em um aplicativo Xamarin. Mac, consulte nosso aplicativo de exemplo [MacInspector](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) .
+> As janelas de painel foram preteridas pela Apple e devem ser substituídas por **interfaces de Inspetor**. Para obter um exemplo completo de criação de um **Inspetor** em um aplicativo Xamarin. Mac, consulte nosso aplicativo de exemplo [MacInspector](/samples/xamarin/mac-samples/macinspector) .
 
 ## <a name="summary"></a>Resumo
 
@@ -758,8 +758,8 @@ Este artigo deu uma visão detalhada de como trabalhar com janelas e painéis em
 
 ## <a name="related-links"></a>Links relacionados
 
-- [MacWindows (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macwindows)
-- [MacInspector (exemplo)](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector)
+- [MacWindows (exemplo)](/samples/xamarin/mac-samples/macwindows)
+- [MacInspector (exemplo)](/samples/xamarin/mac-samples/macinspector)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Trabalhando com menus](~/mac/user-interface/menu.md)
 - [Apple (temas de design do macOS)](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

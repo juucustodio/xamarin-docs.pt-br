@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 497096e7f422e8337498339737ab304b0d896dfe
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 7e56eed866cb647bd654370d587b02bcaba04d4e
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938990"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91432811"
 ---
 # <a name="watchos-troubleshooting"></a>Solução de problemas do watchOS
 
@@ -29,7 +29,7 @@ Esta página contém informações adicionais e soluções alternativas para os 
 
 <a name="knownissues"></a>
 
-## <a name="known-issues"></a>Problemas Conhecidos
+## <a name="known-issues"></a>Problemas conhecidos
 
 ### <a name="general"></a>Geral
 
@@ -162,7 +162,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
 6. Selecione **compilar > compilar tudo** para que a sincronização do Xcode reconheça a nova classe (por meio do `Register` atributo) que usamos.
 
-7. Abra novamente o storyboard clicando com o botão direito do mouse no arquivo de storyboard do aplicativo de inspeção e selecionando **abrir com > Xcode Interface Builder**:
+7. Abra novamente o storyboard clicando com o botão direito do mouse no arquivo de storyboard do aplicativo de inspeção e selecionando  **abrir com > Xcode Interface Builder**:
 
     ![Abrindo o storyboard em Interface Builder](troubleshooting-images/add-6.png)
 
@@ -175,7 +175,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
     ![O item da barra de ferramentas do editor do assistente](troubleshooting-images/add-7.png)
 
-    Quando o foco estiver no painel de código, verifique se você está olhando para o arquivo de cabeçalho **. h** e, se não clicar com o botão direito do mouse na barra de navegação estrutural e selecionar o arquivo correto (**MyInterfaceController. h**)
+    Quando o foco estiver no painel de código, verifique se você está olhando para o arquivo de cabeçalho  **. h** e, se não clicar com o botão direito do mouse na barra de navegação estrutural e selecionar o arquivo correto (**MyInterfaceController. h**)
 
     ![Selecionar MyInterfaceController](troubleshooting-images/add-8.png)
 
@@ -293,5 +293,5 @@ Exemplo:
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [WatchKitCatalog (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-- [WatchTables (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)
+- [WatchKitCatalog (exemplo)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchTables (exemplo)](/samples/xamarin/ios-samples/watchos-watchtables)

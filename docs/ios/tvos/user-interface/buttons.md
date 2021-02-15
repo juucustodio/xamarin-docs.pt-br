@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/07/2017
-ms.openlocfilehash: 0de41379800d3f8fcb26e2bc58497010b8e3bf95
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 07d48a38751680f5e7227682d0639b77b3a3627b
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931372"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436152"
 ---
 # <a name="working-with-tvos-buttons-in-xamarin"></a>Trabalhando com botões tvOS no Xamarin
 
@@ -158,7 +158,7 @@ Em seguida, defina o tamanho da tela e o local do botão. Exemplo:
 button.Frame = new CGRect (25, 25, 300, 150);
 ```
 
-Em seguida, defina o título para o botão. `UIButtons`são diferentes da maioria dos `UIKit` controles em que têm um estado, de modo que você não pode simplesmente alterar o título, você precisa alterá-lo para um determinado `UIControlState` . Por exemplo:
+Em seguida, defina o título para o botão. `UIButtons` são diferentes da maioria dos `UIKit` controles em que têm um estado, de modo que você não pode simplesmente alterar o título, você precisa alterá-lo para um determinado `UIControlState` . Por exemplo:
 
 ```csharp
 button.SetTitle ("Hello", UIControlState.Normal);
@@ -254,7 +254,7 @@ Este artigo abordou a criação e o trabalho com botões dentro de um aplicativo
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Exemplos do tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [Guias de interface humana do tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [Guia de programação de aplicativo para tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

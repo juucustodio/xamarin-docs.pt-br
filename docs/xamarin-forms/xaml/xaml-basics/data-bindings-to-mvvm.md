@@ -11,16 +11,16 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 805bdef812b33d3f4329346a437e1202a16fe3ae
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: a62fee4ca3cdb4de7f23856f123389df23692f62
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937311"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368911"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Parte 5. De associações de dados a MVVM
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _O padrão de arquitetura MVVM (Model-View-ViewModel) foi inventado com XAML em mente. O padrão impõe uma separação entre três camadas de software — a interface do usuário XAML, chamada de exibição; os dados subjacentes, chamados de modelo; e um intermediário entre a exibição e o modelo, chamado ViewModel. A exibição e o ViewModel geralmente são conectados por meio de associações de dados definidas no arquivo XAML. O BindingContext para a exibição geralmente é uma instância do ViewModel._
 
@@ -39,7 +39,7 @@ O programa pode usar `x:Static` para obter a data e a hora atuais da `DateTime.N
 <StackLayout BindingContext="{x:Static sys:DateTime.Now}" …>
 ```
 
-`BindingContext`é uma propriedade especial: quando você define o `BindingContext` em um elemento, ele é herdado por todos os filhos desse elemento. Isso significa que todos os filhos de `StackLayout` têm o mesmo `BindingContext` e podem conter associações simples para propriedades desse objeto.
+`BindingContext` é uma propriedade especial: quando você define o `BindingContext` em um elemento, ele é herdado por todos os filhos desse elemento. Isso significa que todos os filhos de `StackLayout` têm o mesmo `BindingContext` e podem conter associações simples para propriedades desse objeto.
 
 No programa **DateTime One-Shot** , dois dos filhos contêm associações a propriedades desse `DateTime` valor, mas dois outros filhos contêm associações que parecem estar faltando um caminho de associação. Isso significa que o `DateTime` valor em si é usado para `StringFormat` :
 
@@ -298,7 +298,7 @@ O arquivo XAML a seguir contém um `BoxView` cuja `Color` propriedade está asso
 
 A associação em cada `Label` é o padrão `OneWay` . Ele só precisa exibir o valor. Mas a associação em cada um `Slider` é `TwoWay` . Isso permite que o seja `Slider` inicializado a partir do ViewModel. Observe que a `Color` propriedade é definida como `Aqua` quando o ViewModel é instanciado. Mas uma alteração no `Slider` também precisa definir um novo valor para a propriedade no ViewModel, que então calcula uma nova cor.
 
-[![MVVM usando associações de dados bidirecionais](data-bindings-to-mvvm-images/hslcolorscroll.png)](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "MVVM usando associações de dados bidirecionais")
+[![MVVM usando associações de dados de Two-Way](data-bindings-to-mvvm-images/hslcolorscroll.png)](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "MVVM usando associações de dados de Two-Way")
 
 ## <a name="commanding-with-viewmodels"></a>Comando com ViewModels
 
@@ -312,14 +312,14 @@ Para permitir que ViewModels sejam mais independentes de objetos de interface do
 - `MenuItem`
 - `ToolbarItem`
 - `SearchBar`
-- `TextCell`(e, portanto, também `ImageCell` )
+- `TextCell` (e, portanto, também `ImageCell` )
 - `ListView`
 - `TapGestureRecognizer`
 
 Com exceção do `SearchBar` `ListView` elemento e, esses elementos definem duas propriedades:
 
-- `Command`do tipo`System.Windows.Input.ICommand`
-- `CommandParameter`do tipo`Object`
+- `Command` do tipo  `System.Windows.Input.ICommand`
+- `CommandParameter` do tipo  `Object`
 
 As `SearchBar` Defines `SearchCommand` e `SearchCommandParameter` Propriedades, enquanto o `ListView` define uma `RefreshCommand` Propriedade do tipo `ICommand` .
 
@@ -566,7 +566,7 @@ A `Command` propriedade da primeira `Button` que aparece nessa marcação está 
 Os comandos também podem invocar métodos assíncronos. Isso é feito usando as `async` `await` palavras-chave e ao especificar o `Execute` método:
 
 ```csharp
-DownloadCommand = new Command (async () => await DownloadAsync ());
+DownloadCommand = new Command (async () => await DownloadAsync ());
 ```
 
 Isso indica que o `DownloadAsync` método é a `Task` e deve ser aguardado:
@@ -585,7 +585,7 @@ void Download ()
 
 ## <a name="implementing-a-navigation-menu"></a>Implementando um menu de navegação
 
-O programa [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples) que contém todo o código-fonte nesta série de artigos usa um ViewModel para sua Home Page. Este ViewModel é uma definição de uma classe curta com três propriedades chamadas `Type` , `Title` e `Description` que contêm o tipo de cada uma das páginas de exemplo, um título e uma breve descrição. Além disso, o ViewModel define uma propriedade estática chamada `All` que é uma coleção de todas as páginas no programa:
+O programa [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples) que contém todo o código-fonte nesta série de artigos usa um ViewModel para sua Home Page. Este ViewModel é uma definição de uma classe curta com três propriedades chamadas `Type` , `Title` e `Description` que contêm o tipo de cada uma das páginas de exemplo, um título e uma breve descrição. Além disso, o ViewModel define uma propriedade estática chamada `All` que é uma coleção de todas as páginas no programa:
 
 ```csharp
 public class PageDataViewModel
@@ -714,7 +714,7 @@ O XAML é uma ferramenta poderosa para definir interfaces de usuário em Xamarin
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+- [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Parte 1. Introdução com XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Parte 2. Sintaxe XAML essencial](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Parte 3. Extensões de marcação XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)

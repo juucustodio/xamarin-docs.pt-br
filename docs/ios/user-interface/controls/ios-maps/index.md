@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 177701b8b50edea965e97da225265912f1f0c198
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 78c5d639ef75891c037529f270bfb36f776a12e7
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932321"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436641"
 ---
 # <a name="maps-in-xamarinios"></a>Mapas no Xamarin. iOS
 
@@ -28,13 +28,13 @@ map = new MKMapView (UIScreen.MainScreen.Bounds);
 View = map;
 ```
 
-`MKMapView`é uma `UIView` subclasse que exibe um mapa. Simplesmente adicionar o mapa usando o código acima produz um mapa interativo:
+`MKMapView` é uma `UIView` subclasse que exibe um mapa. Simplesmente adicionar o mapa usando o código acima produz um mapa interativo:
 
 ![Um mapa de exemplo](images/00-map.png)
 
 ## <a name="map-style"></a>Estilo do mapa
 
-`MKMapView`dá suporte a três estilos diferentes de mapas. Para aplicar um estilo de mapa, basta definir a `MapType` propriedade como um valor da `MKMapType` enumeração:
+`MKMapView` dá suporte a três estilos diferentes de mapas. Para aplicar um estilo de mapa, basta definir a `MapType` propriedade como um valor da `MKMapType` enumeração:
 
 ```csharp
 map.MapType = MKMapType.Standard; //road map
@@ -48,7 +48,7 @@ A captura de tela a seguir mostra os diferentes estilos de mapa disponíveis:
 
 ## <a name="panning-and-zooming"></a>Panorâmica e zoom
 
-`MKMapView`inclui suporte para recursos de interatividade de mapa, como:
+`MKMapView` inclui suporte para recursos de interatividade de mapa, como:
 
 - Zoom por meio de um gesto de pinçar
 - Movimento panorâmico por meio de um gesto panorâmico
@@ -89,7 +89,7 @@ map.ShowsUserLocation = true;
 
 ## <a name="annotations"></a>Anotações
 
- `MKMapView`também dá suporte à exibição de imagens, conhecidas como anotações, em um mapa. Elas podem ser imagens personalizadas ou Pins definidos pelo sistema de várias cores. Por exemplo, a captura de tela a seguir mostra um mapa com um PIN e uma imagem personalizada:
+ `MKMapView` também dá suporte à exibição de imagens, conhecidas como anotações, em um mapa. Elas podem ser imagens personalizadas ou Pins definidos pelo sistema de várias cores. Por exemplo, a captura de tela a seguir mostra um mapa com um PIN e uma imagem personalizada:
 
  ![Esta captura de tela mostra um mapa com um PIN e uma imagem personalizada](images/03-annotations.png)
 
@@ -97,8 +97,8 @@ map.ShowsUserLocation = true;
 
 Uma anotação em si tem duas partes:
 
-- O `MKAnnotation` objeto, que inclui dados de modelo sobre a anotação, como o título e o local da anotação.
-- O `MKAnnotationView` , que contém a imagem a ser exibida e, opcionalmente, um texto explicativo que é mostrado quando o usuário toca na anotação.
+- O  `MKAnnotation` objeto, que inclui dados de modelo sobre a anotação, como o título e o local da anotação.
+- O  `MKAnnotationView` , que contém a imagem a ser exibida e, opcionalmente, um texto explicativo que é mostrado quando o usuário toca na anotação.
 
 O MAP Kit usa o padrão de delegação do iOS para adicionar anotações a um mapa, onde a `Delegate` propriedade de `MKMapView` é definida como uma instância de um `MKMapViewDelegate` . É a implementação deste delegado que é responsável por retornar o `MKAnnotationView` para uma anotação.
 
@@ -187,8 +187,8 @@ Além disso, as sobreposições personalizadas podem ser criadas para mostrar ge
 
 Semelhante às anotações, a adição de uma sobreposição envolve duas partes:
 
-- Criar um objeto de modelo para a sobreposição e adicioná-lo ao `MKMapView` .
-- Criar uma exibição para a sobreposição no `MKMapViewDelegate` .
+- Criar um objeto de modelo para a sobreposição e adicioná-lo ao  `MKMapView` .
+- Criar uma exibição para a sobreposição no  `MKMapViewDelegate` .
 
 O modelo para a sobreposição pode ser qualquer `MKShape` subclasse. O Xamarin. iOS inclui `MKShape` subclasses para polígonos, polilinhas e círculos, por meio das `MKPolygon` `MKPolyline` classes e, `MKCircle` respectivamente.
 
@@ -223,10 +223,10 @@ o iOS inclui uma API de pesquisa local com o MAP Kit, que permite pesquisas ass�
 
 Para executar uma pesquisa local, um aplicativo deve seguir estas etapas:
 
-1. Criar `MKLocalSearchRequest` objeto.
-1. Crie um `MKLocalSearch` objeto a partir do `MKLocalSearchRequest` .
-1. Chame o `Start` método no `MKLocalSearch` objeto.
-1. Recupere o `MKLocalSearchResponse` objeto em um retorno de chamada.
+1. Criar  `MKLocalSearchRequest` objeto.
+1. Crie um  `MKLocalSearch` objeto a partir do  `MKLocalSearchRequest` .
+1. Chame o  `Start` método no  `MKLocalSearch` objeto.
+1. Recupere o  `MKLocalSearchResponse` objeto em um retorno de chamada.
 
 A própria API de pesquisa local não fornece nenhuma interface do usuário. Ele nem precisa de um mapa para ser usado. No entanto, para fazer uso prático da pesquisa local, um aplicativo precisa fornecer uma maneira de especificar uma consulta de pesquisa e exibir resultados. Além disso, como os resultados conterão dados de localização, geralmente fará sentido mostrá-los em um mapa.
 
@@ -396,7 +396,7 @@ A implementação acima adiciona uma anotação ao mapa quando um item é seleci
  ![Uma anotação adicionada ao mapa quando um item é selecionado nos resultados](images/08-search-results.png)
 
 > [!IMPORTANT]
-> `UISearchController`foi implementado no iOS 8. Se você quiser dar suporte a dispositivos anteriores a isso, será necessário usar o `UISearchDisplayController` .
+> `UISearchController` foi implementado no iOS 8. Se você quiser dar suporte a dispositivos anteriores a isso, será necessário usar o `UISearchDisplayController` .
 
 ## <a name="summary"></a>Resumo
 
@@ -405,4 +405,4 @@ Este artigo examinou a estrutura do *Kit* de *mapa* para Ios. Primeiro, ele exam
 ## <a name="related-links"></a>Links Relacionados
 
 - [SearchController](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/search-controller)
-- [MapDemo (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/mapdemo)
+- [MapDemo (exemplo)](/samples/xamarin/ios-samples/mapdemo)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: b36ae9f9fe04ea060ef0238d5af25fb771cafe85
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: e8f8c2196edd5450ca2949d59c2fc06ff62274b7
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932334"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435369"
 ---
 # <a name="text-input-in-xamarinios"></a>Entrada de texto no Xamarin. iOS
 
@@ -38,7 +38,7 @@ Esses controles são explicados abaixo:
 
 - **Espaço reservado** – isso é opcional. Se definido, ele será exibido quando o campo de texto estiver vazio, geralmente para explicar ao usuário qual entrada é esperada.
 - **Botão limpar** – isso controla quando o botão limpar padrão (o círculo cinza com (X)) aparece no campo de texto, como uma maneira para o usuário limpar o texto rapidamente. Ele pode ser permanentemente oculto, visível permanentemente ou mostrado, dependendo se o campo está sendo editado ou não.
-- **Tamanho mínimo da fonte** e **ajustar para ajustar** – permite que o tamanho da fonte seja ajustado automaticamente para ajustar o texto mais longo e evitar truncamento, mas limitado a nenhum tamanho menor do que o especificado.
+- **Tamanho mínimo da fonte** e  **ajustar para ajustar** – permite que o tamanho da fonte seja ajustado automaticamente para ajustar o texto mais longo e evitar truncamento, mas limitado a nenhum tamanho menor do que o especificado.
 - **Capitalização** – se as palavras, frases ou todas as entradas devem ser colocadas automaticamente em maiúsculas.
 - **Correção** – se a verificação ortográfica e as sugestões estão habilitadas.
 - **Teclado** – controla o estilo de teclado exibido para a entrada e, portanto, quais chaves estão disponíveis no teclado. Isso inclui o teclado numérico, o Phone pad, o email e a URL junto com outras opções.
@@ -91,4 +91,4 @@ textview1.DataDetectorTypes = UIDataDetectorType.PhoneNumber | UIDataDetectorTyp
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Controles (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
+- [Controles (exemplo)](/samples/xamarin/ios-samples/controls)

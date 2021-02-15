@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 12/05/2017
-ms.openlocfilehash: 4cc321f44238a7b738e40c02656b42f1eda1155a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 89d074e14f2a66d472f06acecf42127a7ff44c4c
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938756"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437373"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Instalando e usando o watchOS no Xamarin
 
@@ -33,7 +33,7 @@ Um aplicativo Watch consiste em três projetos:
 
 - **Inspecionar projeto de aplicativo** -contém o arquivo de storyboard da interface do usuário com todos os recursos de interface de usuário do aplicativo Watch.
 
-A solução de [exemplo de catálogo do Watch kit](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) é parecida com esta no Xamarin. Studio:
+A solução de [exemplo de catálogo do Watch kit](/samples/xamarin/ios-samples/watchos-watchkitcatalog) é parecida com esta no Xamarin. Studio:
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -45,7 +45,7 @@ A solução de [exemplo de catálogo do Watch kit](https://docs.microsoft.com/sa
 
 -----
 
-Baixe e execute o exemplo de [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) para começar.
+Baixe e execute o exemplo de [WatchKitCatalog](/samples/xamarin/ios-samples/watchos-watchkitcatalog) para começar.
 As telas do exemplo podem ser encontradas na página [controles](~/ios/watchos/user-interface/index.md) .
 
 ## <a name="creating-a-new-project"></a>Criando um novo projeto
@@ -216,6 +216,6 @@ Os arquivos de modelo watchOS (como `InterfaceController` , `ExtensionDelegate` 
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [WatchKitCatalog (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchKitCatalog (exemplo)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Primeiro vídeo do aplicativo Watch](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Dicas de WatchKit da Apple](https://developer.apple.com/watchkit/tips/)

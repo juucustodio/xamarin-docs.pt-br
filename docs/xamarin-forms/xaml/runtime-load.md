@@ -1,5 +1,5 @@
 ---
-title: Carregando XAML em tempo de execução noXamarin.Forms
+title: Carregando XAML em tempo de execução no Xamarin.Forms
 description: O XAML pode ser carregado e analisado em tempo de execução com os métodos de extensão LoadFromXaml.
 ms.prod: xamarin
 ms.assetid: 25F73FBF-2DD3-468E-A2D8-0897414F0F4A
@@ -10,16 +10,16 @@ ms.date: 12/12/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: d750aa84a48ad4c8015a619d819134cefc63c3d9
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: c027ef35462e6d2d43acf4ea5241a38abe15d41f
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84139341"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374271"
 ---
-# <a name="loading-xaml-at-runtime-in-xamarinforms"></a>Carregando XAML em tempo de execução noXamarin.Forms
+# <a name="loading-xaml-at-runtime-in-no-locxamarinforms"></a>Carregando XAML em tempo de execução no Xamarin.Forms
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)
 
 O [`Xamarin.Forms.Xaml`](xref:Xamarin.Forms.Xaml) namespace inclui dois [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) métodos de extensão que podem ser usados para carregar e analisar XAML em tempo de execução.
 
@@ -37,7 +37,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-Quando o Visual Studio cria um projeto que contém um arquivo XAML, ele analisa o arquivo XAML para gerar um arquivo de código C# (por exemplo, **MainPage.XAML.g.cs**) que contém a definição do `InitializeComponent` método:
+Quando o Visual Studio cria um projeto que contém um arquivo XAML, ele analisa o arquivo XAML para gerar um arquivo de código C# (por exemplo, **MainPage.XAML.g.cs** ) que contém a definição do `InitializeComponent` método:
 
 ```csharp
 private void InitializeComponent()
@@ -104,4 +104,4 @@ Neste exemplo, o XAML para um é inconsistente [`ContentPage`](xref:Xamarin.Form
 
 ## <a name="related-links"></a>Links relacionados
 
-- [LoadRuntimeXAML (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)
+- [LoadRuntimeXAML (exemplo)](/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)

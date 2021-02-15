@@ -7,20 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2020
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 3fa88976c49d3ccb89b74a0ce40de0583fa20795
-ms.sourcegitcommit: 9bd6b1b20d126b3f837c4cf859b25895c242e54e
+ms.openlocfilehash: 38ab33799ba2bce634817e571587b0bcef89b019
+ms.sourcegitcommit: c5e72d2ca4152b62ab6583f0dbe84b3ba29d8283
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88648155"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97677511"
 ---
 # <a name="no-locxamarinforms-absolutelayout"></a>Xamarin.Forms AbsoluteLayout
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
 
 [![::: no-Loc (Xamarin. Forms)::: AbsoluteLayout](absolutelayout-images/layouts.png)](absolutelayout-images/layouts-large.png#lightbox)
 
@@ -236,7 +236,7 @@ Neste exemplo, a posição e o tamanho de cada filho são definidos com o [`Abso
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Demonstrações do AbsoluteLayout (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
+- [Demonstrações do AbsoluteLayout (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-absolutelayoutdemos)
 - [Xamarin.Forms Propriedades anexadas](~/xamarin-forms/xaml/attached-properties.md)
 - [Escolher um Xamarin.Forms layout](choose-layout.md)
 - [Melhorar o Xamarin.Forms desempenho do aplicativo](~/xamarin-forms/deploy-test/performance.md)

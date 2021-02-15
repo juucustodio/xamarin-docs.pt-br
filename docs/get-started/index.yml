@@ -13,12 +13,12 @@ metadata:
   no-loc:
   - Xamarin.Forms
   - Xamarin.Essentials
-  ms.openlocfilehash: 7a976d8f711f2a1f940177f0fbe7605f4bfabf94
-  ms.sourcegitcommit: 57bc714633364aeb34aba9803e88802bebf321ba
-  ms.translationtype: HT
+  ms.openlocfilehash: 6dfc1ba43e85ca8f4c5ad7ba2cd9eed78c9b9973
+  ms.sourcegitcommit: e122a06da4304c2477c934a357b236e0366a2b03
+  ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 05/28/2020
-  ms.locfileid: "84133127"
+  ms.lasthandoff: 02/08/2021
+  ms.locfileid: "99821186"
 landingContent:
 - title: Introdução
   linkLists:
@@ -34,14 +34,18 @@ landingContent:
       url: installation/index.md
     - text: Criar seu primeiro aplicativo
       url: first-app/index.md
+  - linkListType: get-started
+    links:
+    - text: Xamarin.Forms no Q&A
+      url: /answers/topics/dotnet-xamarinforms.html
 - title: Guias de Início Rápido
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Criar um aplicativo Xamarin.Forms de página única
-      url: quickstarts/single-page.md
-    - text: Navegar em um aplicativo Xamarin.Forms de várias páginas
-      url: quickstarts/multi-page.md
+    - text: Criar um aplicativo Xamarin. Forms
+      url: quickstarts/app.md
+    - text: Executar a navegação em um aplicativo Xamarin. Forms
+      url: quickstarts/navigation.md
     - text: Armazenar dados em um banco de dados SQLite.NET local
       url: quickstarts/database.md
     - text: Definir o estilo de um aplicativo Xamarin.Forms multiplataforma
@@ -68,8 +72,8 @@ landingContent:
       url: tutorials/image/index.yml
     - text: Grade
       url: tutorials/grid/index.yml
-    - text: ListView
-      url: tutorials/listview/index.yml
+    - text: CollectionView
+      url: tutorials/collectionview/index.yml
     - text: Pop-ups
       url: tutorials/pop-ups/index.yml
 - title: Tutoriais de conceitos básicos do aplicativo

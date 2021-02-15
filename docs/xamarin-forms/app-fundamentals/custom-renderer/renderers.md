@@ -10,12 +10,12 @@ ms.date: 07/09/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 612200a23c198cbb1127119548c0a1dcc2928645
-ms.sourcegitcommit: cd0c0999b53e825b60471bfbfd4144cfcd783587
+ms.openlocfilehash: 8c543b481091a1b5f1a4efc2935a9c86c276686a
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86225462"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940415"
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>Classes base de renderizador e controles nativos
 
@@ -40,14 +40,14 @@ A classe `MapRenderer` pode ser encontrada nos seguintes namespaces:
 > [!NOTE]
 > Para obter informações sobre como criar renderizadores personalizados para aplicativos de Shell, consulte [ Xamarin.Forms renderizadores personalizados do Shell](~/xamarin-forms/app-fundamentals/shell/customrenderers.md).
 
-## <a name="pages"></a>Pages (Páginas)
+## <a name="pages"></a>Páginas
 
 A tabela a seguir lista as classes de processador e de controle nativo que implementam cada tipo de Xamarin.Forms [página](~/xamarin-forms/user-interface/controls/pages.md) :
 
 |Página|Renderizador|iOS|Android|Android (AppCompat)|UWP|
 |--- |--- |--- |--- |--- |--- |
 |[`ContentPage`](xref:Xamarin.Forms.ContentPage)|[PageRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/contentpage.md)|UIViewController|ViewGroup||FrameworkElement|
-|[`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)|PhoneMasterDetailRenderer (iOS – Telefone), TabletMasterDetailPageRenderer (iOS – Tablet), MasterDetailRenderer (Android), MasterDetailPageRenderer (Android AppCompat), MasterDetailPageRenderer (UWP)|UIViewController (Telefone), UISplitViewController (Tablet)|DrawerLayout (v4)|DrawerLayout (v4)|FrameworkElement (Controle Personalizado)|
+|[`FlyoutPage`](xref:Xamarin.Forms.FlyoutPage)|PhoneFlyoutPageRenderer (iOS – Phone), TabletFlyoutPageRenderer (iOS – Tablet), MasterDetailRenderer (Android), FlyoutPageRenderer (Android AppCompat), FlyoutPageRenderer (UWP)|UIViewController (Telefone), UISplitViewController (Tablet)|DrawerLayout (v4)|DrawerLayout (v4)|FrameworkElement (Controle Personalizado)|
 |[`NavigationPage`](xref:Xamarin.Forms.NavigationPage)|NavigationRenderer (iOS e Android), NavigationPageRenderer (Android AppCompat), NavigationPageRenderer (UWP)|UIToolbar|ViewGroup|ViewGroup|FrameworkElement (Controle Personalizado)|
 |[`TabbedPage`](xref:Xamarin.Forms.TabbedPage)|TabbedRenderer (iOS e Android), TabbedPageRenderer (Android AppCompat), TabbedPageRenderer (UWP)|UIView|ViewPager|ViewPager|FrameworkElement (Pivô)|
 |[`TemplatedPage`](xref:Xamarin.Forms.TemplatedPage)|PageRenderer|UIViewController|ViewGroup||FrameworkElement|
@@ -59,16 +59,16 @@ A tabela a seguir lista as classes de processador e de controle nativo que imple
 
 |Layout|Renderizador|iOS|Android|Android (AppCompat)|UWP|
 |--- |--- |--- |--- |--- |
-|[`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter)|ViewRenderer|UIView|Exibição|Exibição|FrameworkElement|
-|[`ContentView`](xref:Xamarin.Forms.ContentView)|ViewRenderer|UIView|Exibição|Exibição|FrameworkElement|
-|[`FlexLayout`](xref:Xamarin.Forms.FlexLayout)|ViewRenderer|UIView|Exibição|Exibição|FrameworkElement|
+|[`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter)|ViewRenderer|UIView|Visualizar|Visualizar|FrameworkElement|
+|[`ContentView`](xref:Xamarin.Forms.ContentView)|ViewRenderer|UIView|Visualizar|Visualizar|FrameworkElement|
+|[`FlexLayout`](xref:Xamarin.Forms.FlexLayout)|ViewRenderer|UIView|Visualizar|Visualizar|FrameworkElement|
 |[`Frame`](xref:Xamarin.Forms.Frame)|FrameRenderer|UIView|ViewGroup|CardView|Borda|
 |[`ScrollView`](xref:Xamarin.Forms.ScrollView)|ScrollViewRenderer|UIScrollView|ScrollView|ScrollView|ScrollViewer|
-|[`TemplatedView`](xref:Xamarin.Forms.TemplatedView)|ViewRenderer|UIView|Exibição|Exibição|FrameworkElement|
-|[`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)|ViewRenderer|UIView|Exibição|Exibição|FrameworkElement|
-|[`Grid`](xref:Xamarin.Forms.Grid)|ViewRenderer|UIView|Exibição|Exibição|FrameworkElement|
-|[`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)|ViewRenderer|UIView|Exibição|Exibição|FrameworkElement|
-|[`StackLayout`](xref:Xamarin.Forms.StackLayout)|ViewRenderer|UIView|Exibição|Exibição|FrameworkElement|
+|[`TemplatedView`](xref:Xamarin.Forms.TemplatedView)|ViewRenderer|UIView|Visualizar|Visualizar|FrameworkElement|
+|[`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)|ViewRenderer|UIView|Visualizar|Visualizar|FrameworkElement|
+|[`Grid`](xref:Xamarin.Forms.Grid)|ViewRenderer|UIView|Visualizar|Visualizar|FrameworkElement|
+|[`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)|ViewRenderer|UIView|Visualizar|Visualizar|FrameworkElement|
+|[`StackLayout`](xref:Xamarin.Forms.StackLayout)|ViewRenderer|UIView|Visualizar|Visualizar|FrameworkElement|
 
 ## <a name="views"></a>Exibições
 
@@ -84,35 +84,31 @@ A tabela a seguir lista as classes de processador e de controle nativo que imple
 |[`CollectionView`](xref:Xamarin.Forms.CollectionView)|CollectionViewRenderer|UICollectionView||RecyclerView|ListViewBase|
 |[`DatePicker`](xref:Xamarin.Forms.DatePicker)|DatePickerRenderer|UITextField|EditText||DatePicker|
 |[`Editor`](xref:Xamarin.Forms.Editor)|EditorRenderer|UITextView|EditText||TextBox|
-|[`Ellipse`](xref:Xamarin.Forms.Shapes.Ellipse)|EllipseRenderer|CALayer|Exibição||Elipse|
+|[`Ellipse`](xref:Xamarin.Forms.Shapes.Ellipse)|EllipseRenderer|CALayer|Visualizar||Elipse|
 |[`Entry`](xref:Xamarin.Forms.Entry)|[EntryRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/entry.md)|UITextField|EditText||TextBox|
 |[`Image`](xref:Xamarin.Forms.Image)|ImageRenderer|UIImageView|ImageView||Image|
 |[`ImageButton`](xref:Xamarin.Forms.ImageButton)|ImageButtonRenderer|UIButton||AppCompatImageButton|Botão|
 |[`IndicatorView`](xref:Xamarin.Forms.IndicatorView)|IndicatorViewRenderer|UIPageControl||LinearLayout||
 |[`Label`](xref:Xamarin.Forms.Label)|LabelRenderer|UILabel|TextView||TextBlock|
-|[`Line`](xref:Xamarin.Forms.Shapes.Line)|LineRenderer|CALayer|Exibição||Linha|
+|[`Line`](xref:Xamarin.Forms.Shapes.Line)|LineRenderer|CALayer|Visualizar||Linha|
 |[`ListView`](xref:Xamarin.Forms.ListView)|[ListViewRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/listview.md)|UITableView|ListView||ListView|
 |[`Map`](xref:Xamarin.Forms.Maps.Map)|[MapRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md)|MKMapView|MapView||MapControl|
-|[`MediaElement`](xref:Xamarin.Forms.MediaElement)|MediaElementRenderer|UIView||VideoView|MediaElement|
-|[`Path`](xref:Xamarin.Forms.Shapes.Path)|PathRenderer|CALayer|Exibição||Caminho|
+|[`Path`](xref:Xamarin.Forms.Shapes.Path)|PathRenderer|CALayer|Visualizar||Caminho|
 |[`Picker`](xref:Xamarin.Forms.Picker)|PickerRenderer|UITextField|EditText|EditText|ComboBox|
-|[`Polygon`](xref:Xamarin.Forms.Shapes.Polygon)|PolygonRenderer|CALayer|Exibição||Polygon|
-|[`Polyline`](xref:Xamarin.Forms.Shapes.Polyline)|PolylineRenderer|CALayer|Exibição||Linha poligonal|
+|[`Polygon`](xref:Xamarin.Forms.Shapes.Polygon)|PolygonRenderer|CALayer|Visualizar||Polygon|
+|[`Polyline`](xref:Xamarin.Forms.Shapes.Polyline)|PolylineRenderer|CALayer|Visualizar||Linha poligonal|
 |[`ProgressBar`](xref:Xamarin.Forms.ProgressBar)|ProgressBarRenderer|UIProgressView|ProgressBar||ProgressBar|
 |[`RadioButton`](xref:Xamarin.Forms.RadioButton)|RadioButtonRenderer|UIButton||AppCompatRadioButton|RadioButton|
-|[`Rectangle`](xref:Xamarin.Forms.Shapes.Rectangle)|RectangleRenderer|CALayer|Exibição||Retângulo|
+|[`Rectangle`](xref:Xamarin.Forms.Shapes.Rectangle)|RectangleRenderer|CALayer|Visualizar||Retângulo|
 |[`RefreshView`](xref:Xamarin.Forms.RefreshView)|RefreshViewRenderer|UIView||SwipeRefreshLayout|RefreshContainer|
 |[`SearchBar`](xref:Xamarin.Forms.SearchBar)|SearchBarRenderer|UISearchBar|SearchView||AutoSuggestBox|
 |[`Slider`](xref:Xamarin.Forms.Slider)|SliderRenderer|UISlider|SeekBar||Controle deslizante|
 |[`Stepper`](xref:Xamarin.Forms.Stepper)|StepperRenderer|UIStepper|LinearLayout||Control|
-|[`SwipeView`](xref:Xamarin.Forms.SwipeView)|SwipeViewRenderer|UIView||Exibição|SwipeControl|
-|[`Switch`](xref:Xamarin.Forms.Switch)|SwitchRenderer|UISwitch|Alternar|SwitchCompat|ToggleSwitch|
+|[`SwipeView`](xref:Xamarin.Forms.SwipeView)|SwipeViewRenderer|UIView||Visualizar|SwipeControl|
+|[`Switch`](xref:Xamarin.Forms.Switch)|SwitchRenderer|UISwitch|Opção|SwitchCompat|ToggleSwitch|
 |[`TableView`](xref:Xamarin.Forms.TableView)|TableViewRenderer|UITableView|ListView||ListView|
 |[`TimePicker`](xref:Xamarin.Forms.TimePicker)|TimePickerRenderer|UITextField|EditText||TimePicker|
 |[`WebView`](xref:Xamarin.Forms.WebView)|WkWebViewRenderer (iOS), WebViewRenderer (Android e UWP)|WkWebView|WebView||WebView|
-
-> [!NOTE]
-> O `Expander` controle é implementado usando um [`StackLayout`](xref:Xamarin.Forms.StackLayout) , com animação. Portanto, ele não tem nenhum renderizador de plataforma.
 
 ## <a name="cells"></a>Células
 
@@ -121,12 +117,12 @@ A tabela a seguir lista as classes de processador e de controle nativo que imple
 |Células|Renderizador|iOS|Android|UWP|
 |--- |--- |--- |--- |--- |
 |[`EntryCell`](xref:Xamarin.Forms.EntryCell)|EntryCellRenderer|UITableViewCell com um UITextField|LinearLayout com uma TextView e um EditText|DataTemplate com uma TextBox|
-|[`SwitchCell`](xref:Xamarin.Forms.SwitchCell)|SwitchCellRenderer|UITableViewCell com um UISwitch|Alternar|DataTemplate com uma Grid contendo um TextBlock e um ToggleSwitch|
+|[`SwitchCell`](xref:Xamarin.Forms.SwitchCell)|SwitchCellRenderer|UITableViewCell com um UISwitch|Opção|DataTemplate com uma Grid contendo um TextBlock e um ToggleSwitch|
 |[`TextCell`](xref:Xamarin.Forms.TextCell)|TextCellRenderer|UITableViewCell|LinearLayout com duas TextViews|DataTemplate com um StackPanel contendo dois TextBlocks|
 |[`ImageCell`](xref:Xamarin.Forms.ImageCell)|ImageCellRenderer|UITableViewCell com uma UIImage|LinearLayout com duas TextViews e uma ImageView|DataTemplate com uma Grade contendo uma Imagem e dois TextBlocks|
-|[`ViewCell`](xref:Xamarin.Forms.ViewCell)|[ViewCellRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md)|UITableViewCell|Exibição|DataTemplate com um ContentPresenter|
+|[`ViewCell`](xref:Xamarin.Forms.ViewCell)|[ViewCellRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md)|UITableViewCell|Visualizar|DataTemplate com um ContentPresenter|
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Xamarin.FormsRenderizadores rápidos](~/xamarin-forms/internals/fast-renderers.md)
-- [Xamarin.FormsRenderizadores personalizados do Shell](~/xamarin-forms/app-fundamentals/shell/customrenderers.md)
+- [Xamarin.Forms Renderizadores rápidos](~/xamarin-forms/internals/fast-renderers.md)
+- [Xamarin.Forms Renderizadores personalizados do Shell](~/xamarin-forms/app-fundamentals/shell/customrenderers.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/21/2017
-ms.openlocfilehash: 173af9638f4e7b2da39a89dd745ec53f54cf6c39
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 4ba1daeb94706efc9d27136c6bd4b4d13e774689
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937560"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437206"
 ---
 # <a name="xamarinios-api-design"></a>Design de API do Xamarin. iOS
 
@@ -26,7 +26,7 @@ O tempo de execução de baixo nível para se comunicar com o código Objective-
 
 Esses são alguns dos princípios de design para as associações do Xamarin. iOS (eles também se aplicam ao Xamarin. Mac, as associações mono para Objective-C no macOS):
 
-- Siga as [diretrizes de design da estrutura](https://docs.microsoft.com/dotnet/standard/design-guidelines)
+- Siga as [diretrizes de design da estrutura](/dotnet/standard/design-guidelines)
 - Permitir que os desenvolvedores criem classes Objective-C de subclasse:
 
   - Derivar de uma classe existente
@@ -63,7 +63,7 @@ Esses são alguns dos princípios de design para as associações do Xamarin. iO
 
 - Tipos nativos do C#:
 
-  - [`NSString`ficará`string`](~/ios/internals/api-design/nsstring.md)
+  - [`NSString` ficará `string`](~/ios/internals/api-design/nsstring.md)
   - Ativar `int` e `uint` parâmetros que devem ter sido enumerados em enumerações c# e enumerações c# com `[Flags]` atributos
   - Em vez de objetos de tipo neutro `NSArray` , expõem matrizes como matrizes fortemente tipadas.
   - Para eventos e notificações, dê aos usuários uma opção entre:
@@ -95,7 +95,7 @@ O Xamarin. iOS é espelhado em C# a hierarquia de classes de Objective-C. Por ex
 
 Embora esse namespace forneça associações para os tipos base Objective-C, em alguns casos, mapeamos os tipos subjacentes para tipos .NET. Por exemplo:
 
-- Em vez de lidar com NSString e [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), o tempo de execução expõe isso como [cadeias de caracteres](xref:System.String)C# e [matrizes](xref:System.Array)com RIGIDEZ de tipos em toda a API.
+- Em vez de lidar com NSString e [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), o tempo de execução expõe isso como  [cadeias de caracteres](xref:System.String)C# e  [matrizes](xref:System.Array)com RIGIDEZ de tipos em toda a API.
 
 - Várias APIs auxiliares são expostas aqui para permitir que os desenvolvedores associem APIs Objective-C de terceiros, outras APIs do iOS ou APIs que atualmente não estão associadas ao Xamarin. iOS.
 
@@ -285,9 +285,9 @@ Por exemplo, considere a classe UIWebView. Isso é expedido para uma instância 
 
 Para muitos tipos, o Xamarin. iOS criará automaticamente um delegado apropriado que encaminhará as `UIWebViewDelegate` chamadas para eventos C#. Para `UIWebView`:
 
-- O método webViewDidStartLoad é mapeado para o evento [UIWebView. LoadStarted](xref:UIKit.UIWebView.LoadStarted) .
-- O método webViewDidFinishLoad é mapeado para o evento [UIWebView. Loadfinalized](xref:UIKit.UIWebView.LoadFinished) .
-- O método WebView: didFailLoadWithError é mapeado para o evento [UIWebView. LoadError](xref:UIKit.UIWebView.LoadError) .
+- O método webViewDidStartLoad é mapeado para o evento  [UIWebView. LoadStarted](xref:UIKit.UIWebView.LoadStarted) .
+- O método webViewDidFinishLoad é mapeado para o evento  [UIWebView. Loadfinalized](xref:UIKit.UIWebView.LoadFinished) .
+- O método WebView: didFailLoadWithError é mapeado para o evento  [UIWebView. LoadError](xref:UIKit.UIWebView.LoadError) .
 
 Por exemplo, esse programa simples registra os horários de início e término ao carregar uma exibição da Web:
 
@@ -665,7 +665,7 @@ O Xamarin. iOS tem um coletor de lixo que cuidará da liberação de recursos pa
 
 Expor a `IDisposable` interface é uma maneira conveniente de auxiliar os desenvolvedores na liberação de objetos que podem encapsular grandes blocos de memória (por exemplo, um `UIImage` pode parecer apenas um ponteiro inocente, mas pode estar apontando para uma imagem de 2 megabytes) e outros recursos importantes e finitos (como um buffer de decodificação de vídeo).
 
-NSObject implementa a interface IDisposable e também o [padrão de descarte .net](https://msdn.microsoft.com/library/fs2xkftw.aspx). Isso permite aos desenvolvedores que a subclasse NSObject substitua o comportamento Dispose e libere seus próprios recursos sob demanda. Por exemplo, considere esse controlador de exibição que mantém um monte de imagens:
+NSObject implementa a interface IDisposable e também o [padrão de descarte .net](/dotnet/standard/garbage-collection/implementing-dispose). Isso permite aos desenvolvedores que a subclasse NSObject substitua o comportamento Dispose e libere seus próprios recursos sob demanda. Por exemplo, considere esse controlador de exibição que mantém um monte de imagens:
 
 ```csharp
 class MenuViewController : UIViewController {

@@ -10,16 +10,16 @@ ms.date: 08/23/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 52be7641ac3b2983f537e11bccd76f2a5b52574d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: ea590c0390ab045e5cf8b526aee66c2408d1b784
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84130176"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374661"
 ---
 # <a name="the-non-separable-blend-modes"></a>Os modos de mesclagem não separáveis
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Como vimos no artigo [**SkiaSharp separáveis Blend Modes**](separable.md), os modos de mesclagem separáveis executam operações nos canais vermelho, verde e azul separadamente. Os modos de combinação não separáveis não são. Ao operar nos níveis de matiz, saturação e luminosidade de cor, os modos de combinação não separáveis podem alterar as cores de maneiras interessantes:
 
@@ -29,7 +29,7 @@ Como vimos no artigo [**SkiaSharp separáveis Blend Modes**](separable.md), os m
 
 Para entender os modos de combinação não separáveis, é necessário tratar os pixels de destino e de origem como cores no modelo matiz-saturação-luminosidade. (A luminosidade também é conhecida como claridade).
 
-O modelo de cores HSL foi discutido no artigo [**integração com Xamarin.Forms **](../../basics/integration.md) o e um programa de exemplo nesse artigo permite a experimentação com cores HSL. Você pode criar um `SKColor` valor usando valores de matiz, saturação e luminosidade com o método estático [`SKColor.FromHsl`](xref:SkiaSharp.SKColor.FromHsl*) .
+O modelo de cores HSL foi discutido no artigo [**integração com Xamarin.Forms**](../../basics/integration.md) o e um programa de exemplo nesse artigo permite a experimentação com cores HSL. Você pode criar um `SKColor` valor usando valores de matiz, saturação e luminosidade com o método estático [`SKColor.FromHsl`](xref:SkiaSharp.SKColor.FromHsl*) .
 
 O matiz representa o comprimento de onda dominante da cor. Os valores de matiz variam de 0 a 360 e percorre os primários aditivos e subtraídos: vermelho é o valor 0, amarelo é 60, verde é 120, ciano é 180, azul é 240, magenta é 300 e o ciclo volta para o vermelho às 360.
 
@@ -211,11 +211,11 @@ Geralmente, não é o caso de você querer usar um dos modos de combinação nã
 
 ## <a name="a-matte-for-a-separable-mode"></a>Um fosco para um modo separáveis
 
-Aqui está um dos bitmaps incluídos como um recurso no exemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . O nome do arquivo é **Banana.jpg**:
+Aqui está um dos bitmaps incluídos como um recurso no exemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . O nome do arquivo é **Banana.jpg** :
 
 ![Macaco banana](non-separable-images/Banana.jpg "Macaco banana")
 
-É possível criar um fosco que abrange apenas o banana. Esse também é um recurso no exemplo [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . O nome do arquivo é **BananaMatte.png**:
+É possível criar um fosco que abrange apenas o banana. Esse também é um recurso no exemplo [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) . O nome do arquivo é **BananaMatte.png** :
 
 ![Banana fosco](non-separable-images/BananaMatte.png "Banana fosco")
 
@@ -294,5 +294,5 @@ Tente alterar o modo de mesclagem para `SKBlendMode.Saturation` . O banana perma
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

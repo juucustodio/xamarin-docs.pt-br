@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsClassificação
+title: Xamarin.Forms Classificação
 description: O Xamarin.Forms controle deslizante é uma barra horizontal que pode ser manipulada pelo usuário para selecionar um valor duplo de um intervalo contínuo. Este artigo explica como usar a classe Slider para selecionar um valor de um intervalo de valores contínuos.
 ms.prod: xamarin
 ms.assetid: 36B1C645-26E0-4874-B6B6-BDBF77662878
@@ -10,16 +10,16 @@ ms.date: 02/27/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 9fc61dcac588f49fc1df7ee96792cf55bdfa46c5
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 364cda6372986113e8a782a061783e0ca5455f3b
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84572033"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93368538"
 ---
-# <a name="xamarinforms-slider"></a>Xamarin.FormsClassificação
+# <a name="no-locxamarinforms-slider"></a>Xamarin.Forms Classificação
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
 
 _Use um controle deslizante para selecionar um intervalo de valores contínuos._
 
@@ -27,9 +27,9 @@ O Xamarin.Forms [`Slider`](xref:Xamarin.Forms.Slider) é uma barra horizontal qu
 
 O `Slider` define três propriedades do tipo `double` :
 
-- [`Minimum`](xref:Xamarin.Forms.Slider.Minimum)é o mínimo do intervalo, com um valor padrão de 0.
-- [`Maximum`](xref:Xamarin.Forms.Slider.Maximum)é o máximo do intervalo, com um valor padrão de 1.
-- [`Value`](xref:Xamarin.Forms.Slider.Value)é o valor do controle deslizante, que pode variar entre `Minimum` e `Maximum` e tem um valor padrão de 0.
+- [`Minimum`](xref:Xamarin.Forms.Slider.Minimum) é o mínimo do intervalo, com um valor padrão de 0.
+- [`Maximum`](xref:Xamarin.Forms.Slider.Maximum) é o máximo do intervalo, com um valor padrão de 1.
+- [`Value`](xref:Xamarin.Forms.Slider.Value) é o valor do controle deslizante, que pode variar entre `Minimum` e `Maximum` e tem um valor padrão de 0.
 
 Todas as três propriedades são apoiadas por `BindableProperty` objetos. A `Value` propriedade tem um modo de associação padrão de `BindingMode.TwoWay` , o que significa que ele é adequado como uma fonte de associação em um aplicativo que usa a arquitetura [MVVM (Model-View-ViewModel)](~/xamarin-forms/enterprise-application-patterns/mvvm.md) .
 
@@ -38,32 +38,32 @@ Todas as três propriedades são apoiadas por `BindableProperty` objetos. A `Val
 
 O `Slider` impõe a `Value` propriedade para que ela fique entre `Minimum` e `Maximum` , inclusive. Se a `Minimum` propriedade for definida como um valor maior que a `Value` propriedade, o `Slider` definirá a `Value` propriedade como `Minimum` . Da mesma forma, se `Maximum` for definido como um valor menor que `Value` , `Slider` o definirá a `Value` propriedade como `Maximum` .
 
-`Slider`define um [`ValueChanged`](xref:Xamarin.Forms.Slider.ValueChanged) evento que é acionado quando as `Value` alterações são feitas por meio da manipulação de usuário do `Slider` ou quando o programa define a `Value` propriedade diretamente. Um `ValueChanged` evento também é acionado quando a `Value` propriedade é conforçada, conforme descrito no parágrafo anterior.
+`Slider` define um [`ValueChanged`](xref:Xamarin.Forms.Slider.ValueChanged) evento que é acionado quando as `Value` alterações são feitas por meio da manipulação de usuário do `Slider` ou quando o programa define a `Value` propriedade diretamente. Um `ValueChanged` evento também é acionado quando a `Value` propriedade é conforçada, conforme descrito no parágrafo anterior.
 
 O [`ValueChangedEventArgs`](xref:Xamarin.Forms.ValueChangedEventArgs) objeto que acompanha o `ValueChanged` evento tem duas propriedades, ambas do tipo `double` : [`OldValue`](xref:Xamarin.Forms.ValueChangedEventArgs.OldValue) e [`NewValue`](xref:Xamarin.Forms.ValueChangedEventArgs.NewValue) . No momento em que o evento é acionado, o valor de `NewValue` é igual à `Value` Propriedade do `Slider` objeto.
 
-`Slider`também define `DragStarted` e `DragCompleted` eventos, que são acionados no início e no final da ação de arrastar. Ao contrário do [`ValueChanged`](xref:Xamarin.Forms.Slider.ValueChanged) evento, os `DragStarted` eventos e são disparados `DragCompleted` apenas por meio da manipulação de usuário do `Slider` . Quando o `DragStarted` evento é acionado, o `DragStartedCommand` , do tipo `ICommand` , é executado. Da mesma forma, quando o `DragCompleted` evento é acionado, o `DragCompletedCommand` , do tipo `ICommand` , é executado.
+`Slider` também define `DragStarted` e `DragCompleted` eventos, que são acionados no início e no final da ação de arrastar. Ao contrário do [`ValueChanged`](xref:Xamarin.Forms.Slider.ValueChanged) evento, os `DragStarted` eventos e são disparados `DragCompleted` apenas por meio da manipulação de usuário do `Slider` . Quando o `DragStarted` evento é acionado, o `DragStartedCommand` , do tipo `ICommand` , é executado. Da mesma forma, quando o `DragCompleted` evento é acionado, o `DragCompletedCommand` , do tipo `ICommand` , é executado.
 
 > [!WARNING]
 > Não use opções de layout horizontal irrestrito de `Center` , `Start` ou `End` com `Slider` . No Android e no UWP, o `Slider` colapso para uma barra de comprimento zero e no Ios, a barra é muito curta. Mantenha a `HorizontalOptions` configuração padrão de `Fill` e não use uma largura de `Auto` quando colocar `Slider` em um `Grid` layout.
 
 O `Slider` também define várias propriedades que afetam sua aparência:
 
-- [`MinimumTrackColor`](xref:Xamarin.Forms.Slider.MinimumTrackColorProperty)é a cor da barra no lado esquerdo do polegar.
-- [`MaximumTrackColor`](xref:Xamarin.Forms.Slider.MaximumTrackColorProperty)é a cor da barra no lado direito do polegar.
-- [`ThumbColor`](xref:Xamarin.Forms.Slider.ThumbColorProperty)é a cor da miniatura.
-- [`ThumbImageSource`](xref:Xamarin.Forms.Slider.ThumbImageSourceProperty)é a imagem a ser usada para o Thumb, do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource) .
+- [`MinimumTrackColor`](xref:Xamarin.Forms.Slider.MinimumTrackColorProperty) é a cor da barra no lado esquerdo do polegar.
+- [`MaximumTrackColor`](xref:Xamarin.Forms.Slider.MaximumTrackColorProperty) é a cor da barra no lado direito do polegar.
+- [`ThumbColor`](xref:Xamarin.Forms.Slider.ThumbColorProperty) é a cor da miniatura.
+- [`ThumbImageSource`](xref:Xamarin.Forms.Slider.ThumbImageSourceProperty) é a imagem a ser usada para o Thumb, do tipo [`ImageSource`](xref:Xamarin.Forms.ImageSource) .
 
 > [!NOTE]
 > As `ThumbColor` `ThumbImageSource` Propriedades e são mutuamente exclusivas. Se ambas as propriedades forem definidas, a `ThumbImageSource` Propriedade terá precedência.
 
 ## <a name="basic-slider-code-and-markup"></a>Código e marcação do controle deslizante básico
 
-O exemplo [**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) começa com três páginas que são funcionalmente idênticas, mas são implementadas de maneiras diferentes. A primeira página usa apenas código C#, a segunda usa XAML com um manipulador de eventos no código e a terceira é capaz de evitar o manipulador de eventos usando a vinculação de dados no arquivo XAML.
+O exemplo [**SliderDemos**](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) começa com três páginas que são funcionalmente idênticas, mas são implementadas de maneiras diferentes. A primeira página usa apenas código C#, a segunda usa XAML com um manipulador de eventos no código e a terceira é capaz de evitar o manipulador de eventos usando a vinculação de dados no arquivo XAML.
 
 ### <a name="creating-a-slider-in-code"></a>Criando um controle deslizante no código
 
-A página de **código do controle deslizante básico** no exemplo [**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) mostra mostrar para criar um `Slider` e dois `Label` objetos no código:
+A página de **código do controle deslizante básico** no exemplo [**SliderDemos**](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) mostra mostrar para criar um `Slider` e dois `Label` objetos no código:
 
 ```csharp
 public class BasicSliderCodePage : ContentPage
@@ -292,17 +292,17 @@ A implementação do Android do `Slider` é baseada no Android [`SeekBar`](xref:
 
 ### <a name="the-uwp-implementation"></a>A implementação de UWP
 
-A implementação de UWP do `Slider` é baseada no [`Slider`](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider) controle UWP. A `StepFrequency` propriedade de UWP `Slider` é definida como a diferença das `Maximum` `Minimum` Propriedades e dividida por 10, mas não é maior que 1.
+A implementação de UWP do `Slider` é baseada no [`Slider`](/uwp/api/windows.ui.xaml.controls.slider) controle UWP. A `StepFrequency` propriedade de UWP `Slider` é definida como a diferença das `Maximum` `Minimum` Propriedades e dividida por 10, mas não é maior que 1.
 
-Por exemplo, para o intervalo padrão de 0 a 1, a `StepFrequency` propriedade é definida como 0,1. Como o `Slider` é manipulado, a `Value` propriedade é restrita a 0, 0,1, 0,2, 0,3, 0,4, 0,5, 0,6, 0,7, 0,8, 0,9 e 1,0. (Isso é evidente na última página do exemplo de [**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) .) Quando a diferença entre as `Maximum` `Minimum` Propriedades e é 10 ou maior, `StepFrequency` é definida como 1 e a `Value` propriedade tem valores integrais.
+Por exemplo, para o intervalo padrão de 0 a 1, a `StepFrequency` propriedade é definida como 0,1. Como o `Slider` é manipulado, a `Value` propriedade é restrita a 0, 0,1, 0,2, 0,3, 0,4, 0,5, 0,6, 0,7, 0,8, 0,9 e 1,0. (Isso é evidente na última página do exemplo de [**SliderDemos**](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) .) Quando a diferença entre as `Maximum` `Minimum` Propriedades e é 10 ou maior, `StepFrequency` é definida como 1 e a `Value` propriedade tem valores integrais.
 
 ### <a name="the-stepslider-solution"></a>A solução StepSlider
 
-Um mais versátil `StepSlider` é discutido no [capítulo 27. Renderizadores personalizados](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf) do livro *criando aplicativos móveis com Xamarin.Forms *o. O `StepSlider` é semelhante a `Slider` , mas adiciona uma `Steps` propriedade para especificar o número de valores entre `Minimum` e `Maximum` .
+Um mais versátil `StepSlider` é discutido no [capítulo 27. Renderizadores personalizados](https://xamarin.azureedge.net/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf) do livro *criando aplicativos móveis com Xamarin.Forms* o. O `StepSlider` é semelhante a `Slider` , mas adiciona uma `Steps` propriedade para especificar o número de valores entre `Minimum` e `Maximum` .
 
 ## <a name="sliders-for-color-selection"></a>Controles deslizantes para seleção de cores
 
-As duas páginas finais no exemplo [**SliderDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) usam três `Slider` instâncias para seleção de cores. A primeira página manipula todas as interações no arquivo code-behind, enquanto a segunda página mostra como usar a vinculação de dados com um ViewModel.
+As duas páginas finais no exemplo [**SliderDemos**](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos) usam três `Slider` instâncias para seleção de cores. A primeira página manipula todas as interações no arquivo code-behind, enquanto a segunda página mostra como usar a vinculação de dados com um ViewModel.
 
 ### <a name="handling-sliders-in-the-code-behind-file"></a>Manipulando controles deslizantes no arquivo code-behind
 
@@ -506,7 +506,7 @@ Como os `Slider` elementos são manipulados, os `BoxView` `Label` elementos e s�
 
 O `StringFormat` componente da `Binding` extensão de marcação é definido para um formato "F2" para exibir duas casas decimais. (A formatação de cadeia de caracteres nas associações de dados é discutida na [formatação da cadeia de caracteres](~/xamarin-forms/app-fundamentals/data-binding/string-formatting.md)do artigo.) No entanto, a versão UWP do programa está limitada a valores de 0, 0,1, 0,2,... 0,9 e 1,0. Esse é um resultado direto da implementação do UWP `Slider` , conforme descrito acima na seção diferenças de [implementação de plataforma](#platform-implementation-differences).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Exemplo de demonstrações de controle deslizante](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
+- [Exemplo de demonstrações de controle deslizante](/samples/xamarin/xamarin-forms-samples/userinterface-sliderdemos)
 - [API Slider](xref:Xamarin.Forms.Slider)

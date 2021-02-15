@@ -10,16 +10,16 @@ ms.date: 11/29/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: adbceca38fca2cbe65c739f0d7fe26f18bdf5450
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 10e794dba276ed9d67b0e947d203cce0b62b7353
+ms.sourcegitcommit: 10c7dd16fe78226053d1d036492b6c9102fc421b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86939848"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "93374479"
 ---
 # <a name="customizing-a-contentpage"></a>Personalizando uma ContentPage
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
 
 _Um ContentPage é um elemento visual que exibe uma única exibição e ocupa a maior parte da tela. Este artigo demonstra como criar um renderizador personalizado para a página ContentPage, permitindo que os desenvolvedores substituam a renderização nativa padrão por sua própria personalização específica da plataforma._
 
@@ -196,7 +196,7 @@ namespace CustomRenderer.Droid
 
 A chamada para o método `OnElementChanged` da classe base cria uma instância de um controle `ViewGroup` do Android, que é um grupo de exibições. O fluxo de câmera ao vivo só é renderizado desde que o renderizador ainda não esteja anexado a um Xamarin.Forms elemento existente e desde que exista uma instância de página que está sendo processada pelo renderizador personalizado.
 
-A página, então, é personalizada invocando uma série de métodos que usam a API `Camera` para fornecer o fluxo em tempo real da câmera e a capacidade de tirar uma foto, antes que o método `AddView` seja invocado para adicionar a interface do usuário de fluxo em tempo real da câmera ao `ViewGroup`. Observe que, no Android, também é necessário substituir o método `OnLayout` para executar operações de medida e layout na exibição. Para obter mais informações, confira o [Exemplo de renderizador de ContentPage](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage).
+A página, então, é personalizada invocando uma série de métodos que usam a API `Camera` para fornecer o fluxo em tempo real da câmera e a capacidade de tirar uma foto, antes que o método `AddView` seja invocado para adicionar a interface do usuário de fluxo em tempo real da câmera ao `ViewGroup`. Observe que, no Android, também é necessário substituir o método `OnLayout` para executar operações de medida e layout na exibição. Para obter mais informações, confira o [Exemplo de renderizador de ContentPage](/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage).
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>Criando o renderizador de página na UWP
 
@@ -245,7 +245,7 @@ A chamada para o método `OnElementChanged` da classe base instancia um controle
 Ao implementar um renderizador personalizado que deriva de `PageRenderer` na UWP, o método `ArrangeOverride` também deve ser implementado para organizar os controles da página, porque o renderizador de base não sabe o que fazer com eles. Caso contrário, será gerada uma página em branco. Portanto, neste exemplo, o método `ArrangeOverride` chamada o método `Arrange` na instância de `Page`.
 
 > [!NOTE]
-> É importante parar e descartar os objetos que fornecem acesso à câmera em um aplicativo da UWP. Deixar de fazer isso pode interferir em outros aplicativos que tentam acessar a câmera do dispositivo. Para obter mais informações, confira [Exibir a visualização da câmera](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access).
+> É importante parar e descartar os objetos que fornecem acesso à câmera em um aplicativo da UWP. Deixar de fazer isso pode interferir em outros aplicativos que tentam acessar a câmera do dispositivo. Para obter mais informações, confira [Exibir a visualização da câmera](/windows/uwp/audio-video-camera/simple-camera-preview-access).
 
 ## <a name="summary"></a>Resumo
 
@@ -253,4 +253,4 @@ Este artigo demonstrou como criar um renderizador personalizado para a [`Content
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [CustomRendererContentPage (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
+- [CustomRendererContentPage (amostra)](/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)

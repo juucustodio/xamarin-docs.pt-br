@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 12/16/2019
-ms.openlocfilehash: 744a07343b9da87f196c0664f57b7d950844ab04
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: a092b5f84ebf0481652f5093a4898e44a55e19f8
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75490293"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93369552"
 ---
 # <a name="use-touch-id-and-face-id-with-xamarinios"></a>Usar ID de toque e ID facial com Xamarin. iOS
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-faceidsample/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/ios-samples/ios11-faceidsample/)
 
 o iOS dá suporte a dois sistemas de autenticação biométrico:
 
@@ -31,7 +31,7 @@ A ID de toque e a ID de face podem ser usadas por aplicativos para autenticar um
 
 ## <a name="local-authentication-context"></a>Contexto de autenticação local
 
-A autenticação biométrica no iOS depende de um objeto de _contexto de autenticação local_ , que é uma instância da classe `LAContext`. A classe `LAContext` permite que você:
+A autenticação biométrica no iOS depende de um objeto de _contexto de autenticação local_ , que é uma instância da `LAContext` classe. A `LAContext` classe permite que você:
 
 - Verifique a disponibilidade do hardware biométrico.
 - Avalie as políticas de autenticação.
@@ -42,7 +42,7 @@ A autenticação biométrica no iOS depende de um objeto de _contexto de autenti
 
 ## <a name="detect-available-authentication-methods"></a>Detectar métodos de autenticação disponíveis
 
-O projeto de exemplo inclui um `AuthenticationView` apoiado por um `AuthenticationViewController`. Essa classe substitui o método `ViewWillAppear` para detectar os métodos de autenticação disponíveis:
+O projeto de exemplo inclui um `AuthenticationView` apoiado por um `AuthenticationViewController` . Essa classe substitui o `ViewWillAppear` método para detectar os métodos de autenticação disponíveis:
 
 ```csharp
 partial class AuthenticationViewController: UIViewController
@@ -94,13 +94,13 @@ partial class AuthenticationViewController: UIViewController
 }
 ```
 
-O método `ViewWillAppear` é chamado quando a interface do usuário está prestes a ser exibida para o usuário. Esse método define uma nova instância de `LAContext` e usa o método `CanEvaluatePolicy` para determinar se a autenticação biométrica está habilitada. Nesse caso, ele verifica a versão do sistema e `BiometryType` enum para determinar quais opções biométricas estão disponíveis.
+O `ViewWillAppear` método é chamado quando a interface do usuário está prestes a ser exibida para o usuário. Esse método define uma nova instância do `LAContext` e usa o `CanEvaluatePolicy` método para determinar se a autenticação biométrica está habilitada. Nesse caso, ele verifica a versão do sistema e `BiometryType` enum para determinar quais opções biométricas estão disponíveis.
 
 Se a autenticação biométrica não estiver habilitada, o aplicativo tentará fazer fallback para a autenticação de PIN. Se nenhuma autenticação biométrica nem de PIN estiver disponível, o proprietário do dispositivo não terá habilitado os recursos de segurança e o conteúdo não poderá ser protegido por meio da autenticação local.
 
 ## <a name="authenticate-a-user"></a>Autenticar um usuário
 
-O `AuthenticationViewController` no projeto de exemplo inclui um método `AuthenticateMe`, que é responsável por autenticar o usuário:
+O `AuthenticationViewController` no projeto de exemplo inclui um `AuthenticateMe` método, que é responsável por autenticar o usuário:
 
 ```csharp
 partial class AuthenticationViewController: UIViewController
@@ -186,14 +186,14 @@ partial class AuthenticationViewController: UIViewController
 }
 ```
 
-O método `AuthenticateMe` é chamado em resposta ao usuário tocando em um botão de **logon** . Um novo objeto `LAContext` é instanciado e a versão do dispositivo é verificada para determinar quais propriedades definir no contexto de autenticação local.
+O `AuthenticateMe` método é chamado em resposta ao usuário tocando em um botão de **logon** . Um novo `LAContext` objeto é instanciado e a versão do dispositivo é verificada para determinar quais propriedades definir no contexto de autenticação local.
 
-O método `CanEvaluatePolicy` é chamado para verificar se a autenticação biométrica está habilitada, retornar à autenticação de PIN, se possível, e finalmente oferecer um modo desprotegido se nenhuma autenticação estiver disponível. Se um método de autenticação estiver disponível, o método `EvaluatePolicy` será usado para mostrar a interface do usuário e concluir o processo de autenticação.
+O `CanEvaluatePolicy` método é chamado para verificar se a autenticação biométrica está habilitada, retornar à autenticação de PIN, se possível, e finalmente oferecer um modo desprotegido se nenhuma autenticação estiver disponível. Se um método de autenticação estiver disponível, o `EvaluatePolicy` método será usado para mostrar a interface do usuário e concluir o processo de autenticação.
 
 O projeto de exemplo contém dados fictícios e uma exibição para exibir os dados se a autenticação for bem-sucedida.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Autenticação local usando a ID de toque ou a amostra de ID de face](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-faceidsample/)
+- [Autenticação local usando a ID de toque ou a amostra de ID de face](/samples/xamarin/ios-samples/ios11-faceidsample/)
 - [Sobre o Touch ID](https://support.apple.com/en-us/HT204587) em support.Apple.com
 - [Sobre a ID de face](https://support.apple.com/en-us/HT208108) em support.Apple.com

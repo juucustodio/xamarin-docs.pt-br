@@ -10,16 +10,16 @@ ms.date: 03/23/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 533cb607cc2c47bf108d5e03733f31ebfc2fe475
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: eb0c8bd01c9cab8a4048c0ee3deacad7afd56899
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86934128"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373881"
 ---
 # <a name="the-rotate-transform"></a>A transformação de rotação
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explore os efeitos e animações possíveis com a transformação SkiaSharp Rotate_
 
@@ -258,7 +258,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Os `revolveDegrees` `rotateDegrees` campos e são animados. Este programa usa uma técnica de animação diferente com base na Xamarin.Forms [`Animation`](xref:Xamarin.Forms.Animation) classe. (Essa classe é descrita no [capítulo 22 da *criação de aplicativos móveis Xamarin.Forms com * ](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf)o) `OnAppearing` . a substituição cria dois `Animation` objetos com métodos de retorno de chamada e, em seguida, `Commit` os chama para uma duração de animação:
+Os `revolveDegrees` `rotateDegrees` campos e são animados. Este programa usa uma técnica de animação diferente com base na Xamarin.Forms [`Animation`](xref:Xamarin.Forms.Animation) classe. (Essa classe é descrita no [capítulo 22 da *criação de aplicativos móveis Xamarin.Forms com*](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf)o) `OnAppearing` . a substituição cria dois `Animation` objetos com métodos de retorno de chamada e, em seguida, `Commit` os chama para uma duração de animação:
 
 ```csharp
 protected override void OnAppearing()
@@ -375,5 +375,5 @@ Para obter um relógio mais atrativo, consulte o artigo [**dados de caminho SVG 
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

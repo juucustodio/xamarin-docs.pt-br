@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 08/22/2018
-ms.openlocfilehash: 11c106483a98e4cd1412a6edb185d5da42da61ea
-ms.sourcegitcommit: 2fbe4932a319af4ebc829f65eb1fb1816ba305d3
+ms.openlocfilehash: c460eb28197ded7e56c6e11cde98abe201bd06b5
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032038"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434278"
 ---
 # <a name="arkit-2-in-xamarinios"></a>ARKit 2 no Xamarin. iOS
 
@@ -25,13 +25,13 @@ O ARKit amadureceu consideravelmente desde sua introdução no ano passado no iO
 
 ## <a name="recognizing-reference-objects"></a>Reconhecendo objetos de referência
 
-Um recurso de demonstração no ARKit 2 é a capacidade de reconhecer objetos e imagens de referência. As imagens de referência podem ser carregadas a partir de arquivos de imagem normais ([discutidos posteriormente](#more-tracking-configurations)), mas os objetos de referência devem ser verificados, usando o [`ARObjectScanningConfiguration`](xref:ARKit.ARObjectScanningConfiguration)voltado para o desenvolvedor.
+Um recurso de demonstração no ARKit 2 é a capacidade de reconhecer objetos e imagens de referência. As imagens de referência podem ser carregadas a partir de arquivos de imagem normais ([discutidos posteriormente](#more-tracking-configurations)), mas os objetos de referência devem ser verificados, usando o foco do desenvolvedor [`ARObjectScanningConfiguration`](xref:ARKit.ARObjectScanningConfiguration) .
 
 ### <a name="sample-app-scanning-and-detecting-3d-objects"></a>Aplicativo de exemplo: verificando e detectando objetos 3D
 
-O exemplo de [verificação e detecção de objetos 3D](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-scanninganddetecting3dobjects) é uma porta de um [projeto da Apple](https://developer.apple.com/documentation/arkit/scanning_and_detecting_3d_objects?language=objc) que demonstra:
+O exemplo de [verificação e detecção de objetos 3D](/samples/xamarin/ios-samples/ios12-scanninganddetecting3dobjects) é uma porta de um [projeto da Apple](https://developer.apple.com/documentation/arkit/scanning_and_detecting_3d_objects?language=objc) que demonstra:
 
-- Gerenciamento de estado do aplicativo usando objetos [`NSNotification`](xref:Foundation.NSNotification)
+- Gerenciamento de estado do aplicativo usando [`NSNotification`](xref:Foundation.NSNotification) objetos
 - Visualização personalizada
 - Gestos complexos
 - Verificação de objeto
@@ -48,14 +48,14 @@ Esse aplicativo usa uma máquina de estado que faz a transição entre os seguin
 - `AppState.Scanning`
 - `AppState.Testing`
 
-Além disso, o usa um conjunto inserido de Estados e transições quando no `AppState.Scanning`:
+Além disso, o usa um conjunto inserido de Estados e transições quando em `AppState.Scanning` :
 
 - `Scan.ScanState.Ready`
 - `Scan.ScanState.DefineBoundingBox`
 - `Scan.ScanState.Scanning`
 - `Scan.ScanState.AdjustingOrigin`
 
-O aplicativo usa uma arquitetura reativa que posta notificações de transição de estado para [`NSNotificationCenter`](xref:Foundation.NSNotificationCenter) e assina essas notificações. A configuração é semelhante a este trecho de `ViewController.cs`:
+O aplicativo usa uma arquitetura reativa que posta notificações de transição de estado para [`NSNotificationCenter`](xref:Foundation.NSNotificationCenter) e assina essas notificações. A configuração é semelhante a este trecho de código `ViewController.cs` :
 
 ```csharp
 // Configure notifications for application state changes
@@ -97,7 +97,7 @@ private void ScanPercentageChanged(NSNotification notification)
 
 ```
 
-Finalmente, `Enter{State}` métodos modificam o modelo e a UX conforme apropriado para o novo Estado:
+Por fim, `Enter{State}` os métodos modificam o modelo e a UX conforme apropriado para o novo Estado:
 
 ```csharp
 internal void EnterStateTesting()
@@ -119,10 +119,10 @@ internal void EnterStateTesting()
 
 O aplicativo mostra a "nuvem de ponto" de baixo nível do objeto contido em uma caixa delimitadora projetada em um plano horizontal detectado.
 
-Essa nuvem de ponto está disponível para desenvolvedores na propriedade [`ARFrame.RawFeaturePoints`](xref:ARKit.ARFrame.RawFeaturePoints) . Visualizar a nuvem de ponto com eficiência pode ser um problema complicado. Iterar nos pontos, criar e colocar um novo nó SceneKit para cada ponto eliminaria a taxa de quadros. Como alternativa, se for feito de forma assíncrona, haveria um retardo. O exemplo mantém o desempenho com uma estratégia de três partes:
+Essa nuvem de ponto está disponível para desenvolvedores na [`ARFrame.RawFeaturePoints`](xref:ARKit.ARFrame.RawFeaturePoints) propriedade. Visualizar a nuvem de ponto com eficiência pode ser um problema complicado. Iterar nos pontos, criar e colocar um novo nó SceneKit para cada ponto eliminaria a taxa de quadros. Como alternativa, se for feito de forma assíncrona, haveria um retardo. O exemplo mantém o desempenho com uma estratégia de três partes:
 
 - Usar código não seguro para fixar os dados no local e interpretar os dados como um buffer bruto de bytes.
-- Converter esse buffer bruto em um [`SCNGeometrySource`](xref:SceneKit.SCNGeometrySource) e criar um objeto de [`SCNGeometryElement`](xref:SceneKit.SCNGeometryElement) de "modelo".
+- Converter esse buffer bruto em um [`SCNGeometrySource`](xref:SceneKit.SCNGeometrySource) e criar um objeto de "modelo" [`SCNGeometryElement`](xref:SceneKit.SCNGeometryElement) .
 - Reunir rapidamente os dados brutos e o modelo usando [`SCNGeometry.Create(SCNGeometrySource[], SCNGeometryElement[])`](xref:SceneKit.SCNGeometry.Create(SceneKit.SCNGeometrySource[],SceneKit.SCNGeometryElement[]))
 
 ```csharp
@@ -174,7 +174,7 @@ internal static SCNGeometry CreateVisualization(NVector3[] points, UIColor color
 }
 ```
 
-O resultado é semelhante a este:
+O resultado será semelhante a este:
 
 ![point_cloud](images/arkit_point_cloud.jpeg)
 
@@ -251,13 +251,13 @@ A segunda coisa interessante que está sendo feita em relação a gestos é a ma
 
 Agora, você pode usar qualquer um dos seguintes como base para uma experiência de realidade mista:
 
-- Somente o acelerômetro do dispositivo ([`AROrientationTrackingConfiguration`](xref:ARKit.AROrientationTrackingConfiguration), Ios 11)
-- Faces ([`ARFaceTrackingConfiguration`](xref:ARKit.ARFaceTrackingConfiguration), Ios 11)
-- Imagens de referência ([`ARImageTrackingConfiguration`](xref:ARKit.ARImageTrackingConfiguration), IOS 12)
-- Verificando objetos 3D ([`ARObjectScanningConfiguration`](xref:ARKit.ARObjectScanningConfiguration), IOS 12)
-- Visual inércia odometry ([`ARWorldTrackingConfiguration`](xref:ARKit.ARWorldTrackingConfiguration), aprimorado no IOS 12)
+- Somente o acelerômetro do dispositivo ( [`AROrientationTrackingConfiguration`](xref:ARKit.AROrientationTrackingConfiguration) , Ios 11)
+- Faces ( [`ARFaceTrackingConfiguration`](xref:ARKit.ARFaceTrackingConfiguration) , Ios 11)
+- Imagens de referência ( [`ARImageTrackingConfiguration`](xref:ARKit.ARImageTrackingConfiguration) , IOS 12)
+- Verificando objetos 3D ( [`ARObjectScanningConfiguration`](xref:ARKit.ARObjectScanningConfiguration) , IOS 12)
+- Visual inércia odometry ( [`ARWorldTrackingConfiguration`](xref:ARKit.ARWorldTrackingConfiguration) , aprimorado no IOS 12)
 
-`AROrientationTrackingConfiguration`, abordado nesta [postagem de F# blog e exemplo](https://github.com/lobrien/FSharp_Face_AR), é o mais limitado e fornece uma experiência de realidade misturada ruim, já que só coloca objetos digitais em relação ao movimento do dispositivo, sem tentar vincular o dispositivo e a tela ao real países.
+`AROrientationTrackingConfiguration`, discutido nesta [postagem no blog e no exemplo de F #](https://github.com/lobrien/FSharp_Face_AR), é o mais limitado e fornece uma experiência de realidade misturada ruim, pois só coloca objetos digitais em relação ao movimento do dispositivo, sem tentar vincular o dispositivo e a tela ao mundo real.
 
 O `ARImageTrackingConfiguration` permite que você reconheça imagens 2D do mundo real (pinturas, logotipos, etc.) e use-as para ancorar a imagens digitais:
 
@@ -287,9 +287,9 @@ Há dois aspectos interessantes para essa configuração:
 - É eficiente e pode ser usado com um número potencialmente grande de imagens de referência
 - As imagens digitais são ancoradas à imagem, mesmo que essa imagem seja movida no mundo real (por exemplo, se a capa de um livro for reconhecida, ela acompanhará o livro à medida que for retirada da prateleira, contratada, etc.).
 
-O `ARObjectScanningConfiguration` foi discutido [anteriormente](#recognizing-reference-objects) e é uma configuração centrada no desenvolvedor para verificação de objetos 3D. Ele é altamente intensivo de processador e bateria e não deve ser usado em aplicativos de usuário final. O exemplo de [verificação e detecção de objetos 3D](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-scanninganddetecting3dobjects) demonstra o uso dessa configuração.
+O `ARObjectScanningConfiguration` foi discutido [anteriormente](#recognizing-reference-objects) e é uma configuração centrada no desenvolvedor para verificação de objetos 3D. Ele é altamente intensivo de processador e bateria e não deve ser usado em aplicativos de usuário final. O exemplo de [verificação e detecção de objetos 3D](/samples/xamarin/ios-samples/ios12-scanninganddetecting3dobjects) demonstra o uso dessa configuração.
 
-A configuração de controle final, `ARWorldTrackingConfiguration`, é a força da maioria das experiências de realidade mista. Essa configuração usa "Visual inércia odometry" para relacionar "pontos de recursos" do mundo real a imagens digitais. A geometria digital ou os sprites são ancorados em relação aos planos horizontais e verticais do mundo real ou em relação às instâncias de `ARReferenceObject` detectadas. Nessa configuração, a origem mundial é a posição original da câmera no espaço com o eixo Z alinhado à gravidade e os objetos digitais "permanecem em vigor" em relação aos objetos no mundo real.
+A configuração de controle final, `ARWorldTrackingConfiguration` , é a força da maioria das experiências de realidade mista. Essa configuração usa "Visual inércia odometry" para relacionar "pontos de recursos" do mundo real a imagens digitais. A geometria digital ou os sprites são ancorados em relação aos planos horizontais e verticais do mundo real ou em relação às instâncias detectadas `ARReferenceObject` . Nessa configuração, a origem mundial é a posição original da câmera no espaço com o eixo Z alinhado à gravidade e os objetos digitais "permanecem em vigor" em relação aos objetos no mundo real.
 
 ### <a name="environmental-texturing"></a>Texturing ambiental
 
@@ -299,8 +299,8 @@ ARKit 2 dá suporte a "ambiente texturing" que usa imagens capturadas para estim
 
 Para usar o texturing ambiental:
 
-- Seus objetos de [`SCNMaterial`](xref:SceneKit.SCNMaterial) devem usar [`SCNLightingModel.PhysicallyBased`](xref:SceneKit.SCNLightingModel.PhysicallyBased) e atribuir um valor no intervalo de 0 a 1 para [`Metalness.Contents`](xref:SceneKit.SCNMaterial.Metalness) e [`Roughness.Contents`](xref:SceneKit.SCNMaterialProperty.Contents) e
-- Sua configuração de rastreamento deve definir [`EnvironmentTexturing`](xref:ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing) = [`AREnvironmentTexturing.Automatic`](xref:ARKit.AREnvironmentTexturing.Automatic) :
+- Seus [`SCNMaterial`](xref:SceneKit.SCNMaterial) objetos devem usar [`SCNLightingModel.PhysicallyBased`](xref:SceneKit.SCNLightingModel.PhysicallyBased) e atribuir um valor no intervalo de 0 a 1 para [`Metalness.Contents`](xref:SceneKit.SCNMaterial.Metalness) e [`Roughness.Contents`](xref:SceneKit.SCNMaterialProperty.Contents) e
+- Sua configuração de rastreamento deve definir [`EnvironmentTexturing`](xref:ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing)  =  [`AREnvironmentTexturing.Automatic`](xref:ARKit.AREnvironmentTexturing.Automatic) :
 
 ```csharp
 var sphere = SCNSphere.Create(0.33F);
@@ -318,11 +318,11 @@ var configuration = new ARWorldTrackingConfiguration
 };
 ```
 
-Embora a textura perfeitamente reflexiva mostrada no trecho de código anterior seja divertida em um exemplo, a texturing ambiental provavelmente é melhor usada com o retentor última disparar uma resposta de "vale indefinido" (a textura é apenas uma estimativa com base no que a câmera registrado).
+Embora a textura perfeitamente reflexiva mostrada no trecho de código anterior seja divertida em um exemplo, a texturing ambiental provavelmente é mais bem usada com o retentor última ele aciona uma resposta de "vale indefinido" (a textura é apenas uma estimativa com base no que a câmera gravou).
 
 ### <a name="shared-and-persistent-ar-experiences"></a>Experiências de AR compartilhadas e persistentes
 
-Outra adição importante ao ARKit 2 é a classe [`ARWorldMap`](xref:ARKit.ARWorldMap) , que permite compartilhar ou armazenar dados de acompanhamento mundial. Você Obtém o mapa do mundo atual com [`ARSession.GetCurrentWorldMapAsync`](xref:ARKit.ARSession.GetCurrentWorldMapAsync) ou [`GetCurrentWorldMap(Action<ARWorldMap,NSError>)`](xref:ARKit.ARSession.GetCurrentWorldMap(System.Action{ARKit.ARWorldMap,Foundation.NSError})) :
+Outra adição importante ao ARKit 2 é a [`ARWorldMap`](xref:ARKit.ARWorldMap) classe, que permite compartilhar ou armazenar dados de acompanhamento mundial. Você Obtém o mapa do mundo atual com [`ARSession.GetCurrentWorldMapAsync`](xref:ARKit.ARSession.GetCurrentWorldMapAsync) ou [`GetCurrentWorldMap(Action<ARWorldMap,NSError>)`](xref:ARKit.ARSession.GetCurrentWorldMap(System.Action{ARKit.ARWorldMap,Foundation.NSError})) :
 
 ```csharp
 // Local storage
@@ -344,8 +344,8 @@ if (worldMap != null)
 Para compartilhar ou restaurar o mapa mundial:
 
 1. Carregar os dados do arquivo,
-2. Desarquive-o em um objeto `ARWorldMap`,
-3. Use-o como o valor para a propriedade [`ARWorldTrackingConfiguration.InitialWorldMap`](xref:ARKit.ARWorldTrackingConfiguration.InitialWorldMap) :
+2. Desarquive-o em um `ARWorldMap` objeto,
+3. Use-o como o valor para a [`ARWorldTrackingConfiguration.InitialWorldMap`](xref:ARKit.ARWorldTrackingConfiguration.InitialWorldMap) Propriedade:
 
 ```csharp
 var data = NSData.FromArray(File.ReadAllBytes(PersistentWorldController.PersistenWorldPath));
@@ -360,7 +360,7 @@ var configuration = new ARWorldTrackingConfiguration
 };
 ```
 
-O `ARWorldMap` contém apenas dados de controle mundial não visíveis e os objetos [`ARAnchor`](xref:ARKit.ARAnchor) , ele _não contém ativos_ digitais. Para compartilhar geometria ou imagens, você precisará desenvolver sua própria estratégia apropriada ao seu caso de uso (talvez armazenando/transmitindo apenas o local e a orientação da geometria e aplicando-o a `SCNGeometry` estáticos ou talvez armazenando/transmitindo objetos serializados). A vantagem do `ARWorldMap` é que os ativos, uma vez colocados em relação a uma `ARAnchor`compartilhada, aparecerão consistentemente entre os dispositivos ou as sessões.
+O `ARWorldMap` só contém dados de acompanhamento mundial não visíveis e os [`ARAnchor`](xref:ARKit.ARAnchor) objetos, não contém ativos _not_ digitais. Para compartilhar geometria ou imagens, você terá que desenvolver sua própria estratégia apropriada ao seu caso de uso (talvez armazenando/transmitindo apenas o local e a orientação da geometria e aplicando-o a estático `SCNGeometry` ou talvez armazenando/transmitindo objetos serializados). O benefício do `ARWorldMap` é que os ativos, uma vez colocados em relação a um compartilhado `ARAnchor` , aparecerão consistentemente entre os dispositivos ou as sessões.
 
 ### <a name="universal-scene-description-file-format"></a>Formato de arquivo de descrição de cena universal
 
@@ -370,15 +370,15 @@ O recurso Headline final da ARKit 2 é a adoção da Apple do formato de arquivo
 
 ### <a name="manual-resource-management"></a>Gerenciamento manual de recursos
 
-No ARKit, é crucial gerenciar manualmente os recursos. Isso não só permite altas taxas de quadros, na verdade é _necessário_ evitar um "congelamento de tela confuso". A estrutura ARKit é lenta ao fornecer um novo quadro de câmera ([`ARSession.CurrentFrame`](xref:ARKit.ARSession.CurrentFrame). Até que a [`ARFrame`](xref:ARKit.ARFrame) atual tenha `Dispose()` chamada, ARKit não fornecerá um novo quadro! Isso faz com que o vídeo seja "congelado" mesmo que o restante do aplicativo responda. A solução é sempre acessar `ARSession.CurrentFrame` com um bloco de `using` ou chamar manualmente `Dispose()` nele.
+No ARKit, é crucial gerenciar manualmente os recursos. Isso não só permite altas taxas de quadros, na verdade é _necessário_ evitar um "congelamento de tela confuso". A estrutura ARKit é lenta ao fornecer um novo quadro de câmera ( [`ARSession.CurrentFrame`](xref:ARKit.ARSession.CurrentFrame) . Até que o atual [`ARFrame`](xref:ARKit.ARFrame) tenha sido `Dispose()` chamado, ARKit não fornecerá um novo quadro! Isso faz com que o vídeo seja "congelado" mesmo que o restante do aplicativo responda. A solução é sempre acessar `ARSession.CurrentFrame` um `using` bloco ou chamá `Dispose()` -lo manualmente.
 
-Todos os objetos derivados de `NSObject` são `IDisposable` e `NSObject` implementa o [padrão Dispose](https://docs.microsoft.com/dotnet/standard/design-guidelines/dispose-pattern), portanto, você normalmente deve seguir [esse padrão para implementar `Dispose` em uma classe derivada](https://docs.microsoft.com/dotnet/standard/garbage-collection/implementing-dispose).
+Todos os objetos derivados de `NSObject` são `IDisposable` e `NSObject` implementam o [padrão Dispose](/dotnet/standard/design-guidelines/dispose-pattern), portanto, você normalmente deve seguir [esse padrão para implementação `Dispose` em uma classe derivada](/dotnet/standard/garbage-collection/implementing-dispose).
 
 ### <a name="manipulating-transform-matrices"></a>Manipulando matrizes de transformação
 
-Em qualquer aplicativo 3D, você vai lidar com as matrizes de transformação 4x4 que descrevem compactmente como mover, girar e distorcer um objeto por meio de espaço 3D. No SceneKit, esses são objetos [`SCNMatrix4`](xref:SceneKit.SCNMatrix4) .  
+Em qualquer aplicativo 3D, você vai lidar com as matrizes de transformação 4x4 que descrevem compactmente como mover, girar e distorcer um objeto por meio de espaço 3D. No SceneKit, esses são [`SCNMatrix4`](xref:SceneKit.SCNMatrix4) objetos.  
 
-A propriedade [`SCNNode.Transform`](xref:SceneKit.SCNNode.Transform) retorna a matriz de transformação `SCNMatrix4` para o [`SCNNode`](xref:SceneKit.SCNNode) _conforme apoiado pelo_ tipo de `simdfloat4x4` de linha-principal. Portanto, por exemplo:
+A [`SCNNode.Transform`](xref:SceneKit.SCNNode.Transform) propriedade retorna a `SCNMatrix4` matriz de transformação para o [`SCNNode`](xref:SceneKit.SCNNode) _conforme apoiado pelo_ tipo de linha principal `simdfloat4x4` . Portanto, por exemplo:
 
 ```csharp
 var node = new SCNNode { Position = new SCNVector3(2, 3, 4) };  
@@ -389,15 +389,15 @@ Console.WriteLine(xform);
 
 Como você pode ver, a posição é codificada nos três primeiros elementos da linha inferior.
 
-No Xamarin, o tipo comum para manipular matrizes de transformação é `NVector4`, que por convenção é interpretada de forma principal de coluna. Isso significa que o componente de conversão/posição é esperado em M14, M24, M34, não M41, M42, M43:
+No Xamarin, o tipo comum para manipular matrizes de transformação é `NVector4` , que por convenção é interpretada de forma principal de coluna. Isso significa que o componente de conversão/posição é esperado em M14, M24, M34, não M41, M42, M43:
 
 ![linha-principal vs coluna-principal](images/arkit_row_vs_column.png)
 
-Ser consistente com a escolha da interpretação de matriz é vital para o comportamento adequado. Como as matrizes de transformação 3D são 4x4, os erros de consistência não produzirão nenhum tipo de tempo de compilação ou até mesmo de uma exceção de tempo de execução – é apenas que as operações agirão inesperadamente. Se seus objetos SceneKit/ARKit parecerem estar presos, desaparecer ou tremular, uma matriz de transformação incorreta será uma boa possibilidade. A solução é simples: [`NMatrix4.Transpose`](xref:OpenTK.NMatrix4.Transpose*) executará um transposição de elementos in-loco.
+Ser consistente com a escolha da interpretação de matriz é vital para o comportamento adequado. Como as matrizes de transformação 3D são 4x4, os erros de consistência não produzirão nenhum tipo de tempo de compilação ou até mesmo de uma exceção de tempo de execução – é apenas que as operações agirão inesperadamente. Se seus objetos SceneKit/ARKit parecerem estar presos, desaparecer ou tremular, uma matriz de transformação incorreta será uma boa possibilidade. A solução é simples: [`NMatrix4.Transpose`](xref:OpenTK.NMatrix4.Transpose*) executará um transposição no local de elementos.
 
 ## <a name="related-links"></a>Links relacionados
 
-- [Aplicativo de exemplo – verificando e detectando objetos 3D](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-scanninganddetecting3dobjects)
+- [Aplicativo de exemplo – verificando e detectando objetos 3D](/samples/xamarin/ios-samples/ios12-scanninganddetecting3dobjects)
 - [O que há de novo no ARKit 2 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/602/)
 - [Entendendo o rastreamento e a detecção de ARKit (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/610/)
-- [Introdução ao ARKit no Xamarin. iOS](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/arkit/)
+- [Introdução ao ARKit no Xamarin. iOS](../introduction-to-ios11/arkit/index.md)

@@ -10,16 +10,16 @@ ms.date: 04/05/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 074b782bfc5458cf89e593913b6f31de633ffd73
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 2ff6b838ec7a3b1231e350dcb308e648a297fc0c
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938145"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373751"
 ---
 # <a name="finger-painting-in-skiasharp"></a>Pintura de dedos em SkiaSharp
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Use seus dedos para pintar na tela._
 
@@ -27,9 +27,9 @@ Um `SKPath` objeto pode ser atualizado e exibido continuamente. Esse recurso per
 
 ![Um exercício na pintura de dedos](finger-paint-images/fingerpaintsample.png)
 
-O suporte ao touch no não Xamarin.Forms permite o acompanhamento de dedos individuais na tela, portanto, um Xamarin.Forms efeito de controle de toque foi desenvolvido para fornecer suporte adicional ao toque. Esse efeito é descrito no artigo [**invocando eventos de efeitos**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md). As [**demonstrações de efeito de controle de toque**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) do programa de exemplo incluem duas páginas que usam SkiaSharp, incluindo um programa de pintura a dedo.
+O suporte ao touch no não Xamarin.Forms permite o acompanhamento de dedos individuais na tela, portanto, um Xamarin.Forms efeito de controle de toque foi desenvolvido para fornecer suporte adicional ao toque. Esse efeito é descrito no artigo [**invocando eventos de efeitos**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md). As [**demonstrações de efeito de controle de toque**](/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) do programa de exemplo incluem duas páginas que usam SkiaSharp, incluindo um programa de pintura a dedo.
 
-A solução [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) inclui esse evento de acompanhamento de toque. O projeto de biblioteca .NET Standard inclui a `TouchEffect` classe, a `TouchActionType` enumeração, o `TouchActionEventHandler` delegado e a `TouchActionEventArgs` classe. Cada um dos projetos de plataforma inclui uma `TouchEffect` classe para essa plataforma; o projeto do IOS também contém uma `TouchRecognizer` classe.
+A solução [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) inclui esse evento de acompanhamento de toque. O projeto de biblioteca .NET Standard inclui a `TouchEffect` classe, a `TouchActionType` enumeração, o `TouchActionEventHandler` delegado e a `TouchActionEventArgs` classe. Cada um dos projetos de plataforma inclui uma `TouchEffect` classe para essa plataforma; o projeto do IOS também contém uma `TouchRecognizer` classe.
 
 A página de **pintura digital** no **SkiaSharpFormsDemos** é uma implementação simplificada da pintura de dedos. Ele não permite selecionar a largura da cor ou do traço, não tem como limpar a tela e, claro, você não pode salvar seu trabalho artístico.
 
@@ -56,7 +56,7 @@ O arquivo [**FingerPaintPage. XAML**](https://github.com/xamarin/xamarin-forms-s
 
 Anexar o `TouchEffect` diretamente ao `SKCanvasView` não funciona em todas as plataformas.
 
-O arquivo code-behind [**FingerPaintPage.XAML.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FingerPaintPage.xaml.cs) define duas coleções para armazenar os `SKPath` objetos, bem como um `SKPaint` objeto para renderizar esses caminhos:
+O arquivo code-behind  [**FingerPaintPage.XAML.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FingerPaintPage.xaml.cs) define duas coleções para armazenar os `SKPath` objetos, bem como um `SKPaint` objeto para renderizar esses caminhos:
 
 ```csharp
 public partial class FingerPaintPage : ContentPage
@@ -174,7 +174,7 @@ Agora você viu como desenhar linhas e definir curvas usando equações paramét
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
-- [Demonstrações de efeito de controle de toque (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [Demonstrações de efeito de controle de toque (exemplo)](/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
 - [Invocando eventos por meio de efeitos](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

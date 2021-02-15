@@ -5,17 +5,17 @@ ms.prod: xamarin
 ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/29/2020
-ms.openlocfilehash: 29875b3f6c747d5dc2f45eb876a269d2bc7e85c6
-ms.sourcegitcommit: 443ecd9146fe2a7bbb9b5ab6d33c835876efcf1f
+ms.date: 02/04/2021
+ms.openlocfilehash: 6c9e91d8c434a0deea8c419def7dc3f1800b1d06
+ms.sourcegitcommit: 3b6eec7841868f50827271105577ecdc6766c162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82852462"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99606570"
 ---
 # <a name="connect-to-local-web-services-from-ios-simulators-and-android-emulators"></a>Conectar-se a serviços da Web locais de simuladores do iOS e de emuladores do Android
 
-[![Baixar exemplo](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
 
 Muitos aplicativos móveis consomem serviços Web. Durante a fase de desenvolvimento, é comum implantar um serviço Web localmente e consumi-lo de um aplicativo móvel em execução no simulador do iOS ou no emulador do Android. Isso evita a necessidade de implantar o serviço Web em um ponto de extremidade hospedado e possibilita uma experiência de depuração simples, pois o aplicativo móvel e o serviço Web estão sendo executados localmente.
 
@@ -27,7 +27,7 @@ Os aplicativos móveis em execução no simulador do iOS ou no emulador do Andro
 No entanto, é necessário um trabalho adicional para que o aplicativo em execução no simulador do iOS ou no emulador do Android possam consumir um serviço Web local que esteja exposto via HTTPS. Para este cenário, o processo é da seguinte maneira:
 
 1. Crie um certificado autoassinado de desenvolvimento em seu computador. Para saber mais, confira as informações sobre como [criar um certificado de desenvolvimento](#create-a-development-certificate).
-1. Configure seu projeto para usar a pilha `HttpClient` de rede apropriada para sua compilação de depuração. Para saber mais, confira as informações sobre como [configurar o projeto](#configure-your-project).
+1. Configure seu projeto para usar a `HttpClient` pilha de rede apropriada para sua compilação de depuração. Para saber mais, confira as informações sobre como [configurar o projeto](#configure-your-project).
 1. Especifique o endereço do computador local. Para saber mais, confira as informações sobre como [especificar o endereço do computador local](#specify-the-local-machine-address).
 1. Ignore a verificação de segurança do certificado de desenvolvimento local. Para saber mais, veja [Ignorar a verificação de segurança do certificado](#bypass-the-certificate-security-check).
 
@@ -83,19 +83,21 @@ Cada instância do emulador do Android é isolada das interfaces de rede de seu 
 
 No entanto, o roteador virtual para cada emulador gerencia um espaço de rede especial que inclui os endereços alocados previamente, sendo que o endereço `10.0.2.2` é um alias para a sua interface host de loopback (127.0.0.1 em seu computador de desenvolvimento). Portanto, considerando um serviço Web local seguro que expõe uma operação GET por meio do URI relativo `/api/todoitems/`, o aplicativo em execução no emulador do Android pode consumir a operação enviando uma solicitação GET ao `https://10.0.2.2:<port>/api/todoitems/`.
 
-### <a name="xamarinforms-example"></a>Exemplo do Xamarin.Forms
+### <a name="detect-the-operating-system"></a>Detectar o sistema operacional
 
-Em um aplicativo Xamarin. Forms, a [`Device`](xref:Xamarin.Forms.Device) classe pode ser usada para detectar a plataforma em que o aplicativo está sendo executado. O nome do host apropriado, que permite o acesso a serviços Web locais seguros, pode ser definido da seguinte maneira:
+A [`DeviceInfo`](xref:Xamarin.Essentials.DeviceInfo) classe pode ser usada para detectar a plataforma em que o aplicativo está sendo executado. O nome do host apropriado, que permite o acesso a serviços Web locais seguros, pode ser definido da seguinte maneira:
 
 ```csharp
 public static string BaseAddress =
-    Device.RuntimePlatform == Device.Android ? "https://10.0.2.2:5001" : "https://localhost:5001";
+    DeviceInfo.Platform == DevicePlatform.Android ? "https://10.0.2.2:5001" : "https://localhost:5001";
 public static string TodoItemsUrl = $"{BaseAddress}/api/todoitems/";
 ```
 
+Para obter mais informações sobre a `DeviceInfo` classe, consulte [Xamarin. Essentials: informações do dispositivo](~/essentials/device-information.md).
+
 ## <a name="bypass-the-certificate-security-check"></a>Ignorar a verificação de segurança do certificado
 
-A tentativa de invocar um serviço Web local seguro de um aplicativo em execução no simulador do iOS ou no emulador Android resultará em uma `HttpRequestException` sendo acionada, mesmo ao usar a pilha de rede gerenciada em cada plataforma. Isso ocorre porque o certificado de desenvolvimento HTTPS local é autoassinado, e certificados autoassinados não são confiados pelo iOS nem pelo Android. Portanto, é necessário ignorar os erros de SSL quando um aplicativo consome um serviço Web local seguro. Isso pode ser feito ao usar as pilhas de rede gerenciadas e nativas no iOS e no Android, definindo `ServerCertificateCustomValidationCallback` a propriedade em `HttpClientHandler` um objeto como um retorno de chamada que ignora o resultado da verificação de segurança de certificado para o certificado de desenvolvimento de HTTPS local:
+A tentativa de invocar um serviço Web local seguro de um aplicativo em execução no simulador do iOS ou no emulador Android resultará em uma `HttpRequestException` sendo acionada, mesmo ao usar a pilha de rede gerenciada em cada plataforma. Isso ocorre porque o certificado de desenvolvimento HTTPS local é autoassinado, e certificados autoassinados não são confiados pelo iOS nem pelo Android. Portanto, é necessário ignorar os erros de SSL quando um aplicativo consome um serviço Web local seguro. Isso pode ser feito ao usar as pilhas de rede gerenciadas e nativas no iOS e no Android, definindo a `ServerCertificateCustomValidationCallback` propriedade em um `HttpClientHandler` objeto como um retorno de chamada que ignora o resultado da verificação de segurança de certificado para o certificado de desenvolvimento de HTTPS local:
 
 ```csharp
 // This method must be in a class in a platform project, even if
@@ -113,7 +115,7 @@ public HttpClientHandler GetInsecureHandler()
 }
 ```
 
-Nesse exemplo de código, o resultado de validação de certificado do servidor é retornado quando o certificado que passar por validação não for o certificado `localhost`. Para esse certificado, o resultado da validação é ignorado e `true` é retornado, indicando que o certificado é válido. O objeto `HttpClientHandler` resultante deve ser passado como um argumento para o `HttpClient` Construtor para compilações de depuração:
+Nesse exemplo de código, o resultado de validação de certificado do servidor é retornado quando o certificado que passar por validação não for o certificado `localhost`. Para esse certificado, o resultado da validação é ignorado e `true` é retornado, indicando que o certificado é válido. O `HttpClientHandler` objeto resultante deve ser passado como um argumento para o `HttpClient` construtor para compilações de depuração:
 
 ```csharp
 #if DEBUG
@@ -124,9 +126,58 @@ Nesse exemplo de código, o resultado de validação de certificado do servidor 
 #endif
 ```
 
+## <a name="enable-http-clear-text-traffic"></a>Habilitar o tráfego de texto não criptografado HTTP
+
+Opcionalmente, você pode configurar seus projetos iOS e Android para permitir o tráfego HTTP de texto não criptografado. Se o serviço de back-end estiver configurado para permitir o tráfego HTTP, você poderá especificar HTTP nas URLs base e, em seguida, configurar seus projetos para permitir o tráfego de texto não criptografado:
+
+```csharp
+public static string BaseAddress =
+    DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5000" : "http://localhost:5000";
+public static string TodoItemsUrl = $"{BaseAddress}/api/todoitems/";
+```
+
+### <a name="ios-ats-opt-out"></a>aceitação do iOS ATS
+
+Para habilitar o tráfego local de texto não criptografado no iOS, você deve [recusar o ATS](~/ios/app-fundamentals/ats.md#optout) adicionando o seguinte ao seu arquivo **info. plist** :
+
+```xml
+<key>NSAppTransportSecurity</key>    
+<dict>
+    <key>NSAllowsLocalNetworking</key>
+    <true/>
+</dict>
+```
+
+### <a name="android-network-security-configuration"></a>Configuração de segurança de rede do Android
+
+Para habilitar o tráfego local de texto não criptografado no Android, você deve criar uma configuração de segurança de rede adicionando um novo arquivo XML chamado **network_security_config.xml** na pasta **Resources/XML** . O arquivo XML deve especificar a seguinte configuração:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+  <domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="true">10.0.2.2</domain>
+  </domain-config>
+</network-security-config>
+```
+
+Em seguida, configure a propriedade **networkSecurityConfig** no nó do **aplicativo** no manifesto do Android:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+    <application android:networkSecurityConfig="@xml/network_security_config">
+        ...
+    </application>
+</manifest>
+```
+
 ## <a name="related-links"></a>Links relacionados
 
-- [TodoREST (amostra)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
+- [TodoREST (amostra)](/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
 - [Habilitar o HTTPS local](/aspnet/core/getting-started#enable-local-https)
 - [Seletor de implementação de HttpClient e SSL/TLS para iOS/macOS](~/cross-platform/macios/http-stack.md)
 - [Seletor de implementação de SSL/TLS e da pilha HttpClient para Android](~/android/app-fundamentals/http-stack.md)
+- [Configuração de segurança de rede do Android](https://devblogs.microsoft.com/xamarin/cleartext-http-android-network-security/)
+- [Segurança de transporte de aplicativo iOS](~/ios/app-fundamentals/ats.md)
+- [Xamarin.Essentials: Informações do dispositivo](~/essentials/device-information.md)

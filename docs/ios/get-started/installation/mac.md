@@ -7,21 +7,21 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: 4c7ace8f2f1080126d019ed30a647ced98cbde56
-ms.sourcegitcommit: b0ea451e18504e6267b896732dd26df64ddfa843
+ms.openlocfilehash: ed722cd794691e256ee90ab35d7ae524fe8ed8f3
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73022503"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91435468"
 ---
 # <a name="installing-and-configuring-xamarinios-on-a-mac"></a>Instalando e configurando o Xamarin.iOS em um Mac
 
 > [!NOTE]
->  Este conteúdo foi movido para o Visual Studio para guias de instalação do Mac em [docs.microsoft.com](https://docs.microsoft.com/visualstudio/mac/installation).
+>  Este conteúdo foi movido para o Visual Studio para guias de instalação do Mac em [docs.microsoft.com](/visualstudio/mac/installation).
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Introdução ao Desenvolvimento Móvel](~/cross-platform/get-started/introduction-to-mobile-development.md)
+- [Introdução ao desenvolvimento móvel](~/cross-platform/get-started/introduction-to-mobile-development.md)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
 - [Criando perfis de provisionamento de desenvolvimento](https://developer.apple.com/library/ios/#documentation/ToolsLanguages/Conceptual/DevPortalGuide/CreatingandDownloadingDevelopmentProvisioningProfiles/CreatingandDownloadingDevelopmentProvisioningProfiles.html)
 - [Provisionamento usando o organizador](https://developer.apple.com/library/ios/#recipes/xcode_help-devices_organizer/articles/provision_device_for_development-generic.html)

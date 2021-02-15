@@ -1,5 +1,5 @@
 ---
-title: Xamarin.Formsrecursos de dispositivo de tela dupla
+title: Xamarin.Forms recursos de dispositivo de tela dupla
 description: Este guia explica como usar a Xamarin.Forms classe DualScreenInfo para otimizar sua experiência de aplicativo para dispositivos de tela dupla, como Surface Duo e Surface neo.
 ms.prod: xamarin
 ms.assetid: dd5eb074-f4cb-4ab4-b47d-76f862ac7cfa
@@ -10,18 +10,16 @@ ms.date: 05/19/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: e1f0ee6b3c509fcdb15653789866a9ec2dc88791
-ms.sourcegitcommit: 08290d004d1a7e7ac579bf1f96abf8437921dc70
+ms.openlocfilehash: 10bb657638e32013313779c121c9e54ea83b879a
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87918213"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374726"
 ---
-# <a name="no-locxamarinforms-dualscreeninfo-helper-class"></a>Xamarin.FormsClasse auxiliar DualScreenInfo
+# <a name="no-locxamarinforms-dualscreeninfo-helper-class"></a>Xamarin.Forms Classe auxiliar DualScreenInfo
 
-![API de pré-lançamento](~/media/shared/preview.png)
-
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
 A classe `DualScreenInfo` permite determinar o painel de sua exibição, o tamanho máximo dele, a posição do dispositivo, o ângulo da dobradiça e muito mais.
 
@@ -35,7 +33,7 @@ Siga estas instruções para criar um layout de tela dupla em seu aplicativo:
 
 ## <a name="properties"></a>Propriedades
 
-- `SpanningBounds` retorna, quando estendido em duas telas, dois retângulos indicando os limites de cada área visível. Se a janela não for estendida, ela retornará uma matriz vazia.
+- `SpanningBounds` retorna, quando estendido em duas telas, dois retângulos indicando os limites de cada área visível. Se a janela não estiver estendida, isso retornará uma matriz vazia.
 - `HingeBounds` indica a posição da dobradiça na tela.
 - `IsLandscape` indica se o dispositivo está no modo paisagem. Isso é útil porque as APIs de orientação nativas não relatam corretamente a orientação quando o aplicativo é estendido.
 - `SpanMode` indica se o layout está no modo alto, largo ou de painel único.
@@ -225,4 +223,4 @@ A captura de tela a seguir mostra o layout resultante:
 
 ## <a name="related-links"></a>Links relacionados
 
-- [DualScreen (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
+- [DualScreen (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)

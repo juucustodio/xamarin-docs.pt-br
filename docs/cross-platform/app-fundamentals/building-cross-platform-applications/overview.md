@@ -6,18 +6,18 @@ ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
 author: davidortinau
 ms.author: daortin
 ms.date: 03/23/2017
-ms.openlocfilehash: 6924379f49a80733714a488851533f506e83b245
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: bdf641ca15919958627850e000c117eeedd12de9
+ms.sourcegitcommit: 836d54779190b1bef1b43bc0c2016c9b3034bfda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86930826"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281242"
 ---
 # <a name="building-cross-platform-applications-overview"></a>Criando visão geral de aplicativos de plataforma cruzada
 
 Este guia apresenta a plataforma Xamarin e como arquitetar um aplicativo de plataforma cruzada para maximizar o uso de código e fornecer uma experiência nativa de alta qualidade em todas as principais plataformas móveis: iOS, Android e Windows Phone.
 
-A abordagem usada neste documento geralmente se aplica a aplicativos de produtividade e aplicativos de jogos, mas o foco está na produtividade e no utilitário (aplicativos sem jogo). Consulte o [documento introdução ao monogame](~/graphics-games/monogame/introduction/index.md) ou confira [Ferramentas do Visual Studio para Unity](https://docs.microsoft.com/visualstudio/cross-platform/visual-studio-tools-for-unity) para obter diretrizes de desenvolvimento de jogos entre plataformas.
+A abordagem usada neste documento geralmente se aplica a aplicativos de produtividade e aplicativos de jogos, mas o foco está na produtividade e no utilitário (aplicativos sem jogo). Consulte [Ferramentas do Visual Studio para Unity](/visualstudio/cross-platform/visual-studio-tools-for-unity) para obter diretrizes de desenvolvimento de jogos entre plataformas.
 
 A frase "Write-Once, executar em qualquer lugar" é geralmente usada para enalteça as virtudes de uma única base de código que é executada sem modificações em várias plataformas. Embora ele tenha o benefício de reutilização de código, essa abordagem geralmente leva a aplicativos que têm um conjunto de recursos de denominador mais baixo-comum e uma interface de usuário de aparência genérica que não se encaixa perfeitamente em nenhuma das plataformas de destino.
 
@@ -34,7 +34,7 @@ Aqui está um resumo dos principais pontos para criar aplicativos de plataforma 
 1. No Windows, você usará o XAML para a camada de apresentação, criado no designer de interface do usuário do Visual Studio ou do Blend.
 1. No Mac, você usará storyboards para a camada de apresentação, criada no Xcode.
 
-Os projetos do Xamarin. Forms têm suporte em todas as plataformas e permitem que você crie interfaces do usuário que podem ser compartilhadas entre plataformas usando o XAML do Xamarin. Forms. 
+Os projetos do Xamarin. Forms têm suporte em todas as plataformas e permitem que você crie interfaces do usuário que podem ser compartilhadas entre plataformas usando o XAML do Xamarin. Forms.
 
 A quantidade de reutilização de código dependerá, em grande parte, da quantidade de código mantida no núcleo compartilhado e da quantidade de código específica da interface do usuário. O código principal é qualquer coisa que não interaja diretamente com o usuário, mas, em vez disso, fornece serviços para partes do aplicativo que coletarão e exibirão essas informações.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: b547d21b19d223aebb345f7c4a1dc8dc126fb0d6
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 3d296c36febfb5671c816372aa97661494179b83
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86928777"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433909"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>Walkthrough: usando o touch no Xamarin. iOS
 
@@ -24,7 +24,7 @@ Este tutorial demonstra como escrever código que responde a diferentes tipos de
 
 Cada seção contém instruções para escrever o código do zero.
 
-Siga as instruções abaixo para adicionar código ao storyboard e saiba mais sobre os diferentes tipos de eventos de toque disponíveis no iOS. Como alternativa, abra o [exemplo concluído](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final) para ver tudo funcionando.
+Siga as instruções abaixo para adicionar código ao storyboard e saiba mais sobre os diferentes tipos de eventos de toque disponíveis no iOS. Como alternativa, abra o [exemplo concluído](/samples/xamarin/ios-samples/applicationfundamentals-touch-final) para ver tudo funcionando.
 
 <a name="Touch_Samples"></a>
 
@@ -159,7 +159,7 @@ Neste exemplo, demonstraremos algumas das APIs de toque. Siga estas etapas para 
     }
     ```
 
-    Ambos os métodos redefinirão o `touchStartedInside` sinalizador como false. `TouchesEnded`também será exibido `TouchesEnded` na tela.
+    Ambos os métodos redefinirão o `touchStartedInside` sinalizador como false. `TouchesEnded` também será exibido `TouchesEnded` na tela.
 
 1. Neste ponto, a tela de exemplos de toque é concluída. Observe como a tela muda à medida que você interage com cada uma das imagens, conforme mostrado na seguinte captura:
 
@@ -484,4 +484,4 @@ As três seções acima demonstraram diferentes maneiras de responder a eventos 
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Final do iOS Touch (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final)
+- [Final do iOS Touch (exemplo)](/samples/xamarin/ios-samples/applicationfundamentals-touch-final)

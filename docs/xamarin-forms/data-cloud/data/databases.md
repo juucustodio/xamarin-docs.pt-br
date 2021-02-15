@@ -1,6 +1,6 @@
 ---
-title: Xamarin.FormsBancos de dados locais
-description: Xamarin.Formsdá suporte a aplicativos controlados por banco de dados usando o mecanismo de banco de dados SQLite, que possibilita carregar e salvar objetos no código compartilhado. Este artigo descreve como Xamarin.Forms os aplicativos podem ler e gravar dados em um banco de dados SQLite local usando o SQLite.net.
+title: Xamarin.Forms Bancos de dados locais
+description: Xamarin.Forms dá suporte a aplicativos controlados por banco de dados usando o mecanismo de banco de dados SQLite, que possibilita carregar e salvar objetos no código compartilhado. Este artigo descreve como Xamarin.Forms os aplicativos podem ler e gravar dados em um banco de dados SQLite local usando o SQLite.net.
 ms.prod: xamarin
 ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms
@@ -10,16 +10,16 @@ ms.date: 12/05/2019
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 021831da13a936fc5eb9d2e4cb63412484ceb465
-ms.sourcegitcommit: 69d9a61ba479f707d96eb4c1c56a4b05a2a2a26f
+ms.openlocfilehash: 4331b29c54b5f7c59daf0a9e04cd398693e79201
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87426858"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374700"
 ---
-# <a name="no-locxamarinforms-local-databases"></a>Xamarin.FormsBancos de dados locais
+# <a name="no-locxamarinforms-local-databases"></a>Xamarin.Forms Bancos de dados locais
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/todo)
 
 O mecanismo de banco de dados SQLite permite que Xamarin.Forms os aplicativos carreguem e salvem objetos de dados em código compartilhado. O aplicativo de exemplo usa uma tabela de banco de dados SQLite para armazenar itens de tarefas. Este artigo descreve como usar o SQLite.Net em código compartilhado para armazenar e recuperar informações em um banco de dados local.
 
@@ -40,13 +40,12 @@ Use o Gerenciador de pacotes NuGet para pesquisar o **SQLite-net-PCL** e adicion
 Há diversos pacotes NuGet com nomes semelhantes. O pacote correto tem estes atributos:
 
 - **ID:** sqlite-net-pcl
-- **Autor(es):** SQLite-net
-- **Proprietário:** praeclarum
-- **URL do Projeto:** https://github.com/praeclarum/sqlite-net
+- **Autores:** SQLite-net
+- **Proprietários:** praeclarum
 - **Link do NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]
-> Apesar do nome do pacote, use o pacote NuGet **sqlite-net-pcl**, mesmo em projetos do .NET Standard.
+> Apesar do nome do pacote, use o pacote NuGet **sqlite-net-pcl** , mesmo em projetos do .NET Standard.
 
 ## <a name="configure-app-constants"></a>Configurar constantes do aplicativo
 
@@ -173,7 +172,7 @@ public static class TaskExtensions
 
 O `SafeFireAndForget` método aguarda a execução assíncrona do objeto fornecido `Task` e permite que você anexe um `Action` que será chamado se uma exceção for gerada.
 
-Para obter mais informações, consulte [padrão assíncrono baseado em tarefa (toque)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
+Para obter mais informações, consulte [padrão assíncrono baseado em tarefa (toque)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
 
 ### <a name="data-manipulation-methods"></a>Métodos de manipulação de dados
 
@@ -219,7 +218,7 @@ public class TodoItemDatabase {
 }
 ```
 
-## <a name="access-data-in-no-locxamarinforms"></a>Acessar dados emXamarin.Forms
+## <a name="access-data-in-no-locxamarinforms"></a>Acessar dados em Xamarin.Forms
 
 A Xamarin.Forms `App` classe expõe uma instância da `TodoItemDatabase` classe:
 
@@ -256,13 +255,13 @@ O SQLite fornece uma API robusta com mais recursos do que o que é abordado nest
 
 Para obter mais informações, consulte a [documentação do SQLite](https://www.sqlite.org/docs.html) em SQLite.org.
 
-### <a name="write-ahead-logging"></a>Log write-ahead
+### <a name="write-ahead-logging"></a>Log de Write-Ahead
 
 Por padrão, o SQLite usa um diário de reversão tradicional. Uma cópia do conteúdo do banco de dados inalterado é gravada em um arquivo de reversão separado e, em seguida, as alterações são gravadas diretamente no arquivo de banco de dados. A confirmação ocorre quando o diário de reversão é excluído.
 
-O registro write-ahead (WAL) grava as alterações em um arquivo WAL separado primeiro. No modo WAL, uma confirmação é um registro especial, acrescentado ao arquivo WAL, que permite que várias transações ocorram em um único arquivo WAL. Um arquivo WAL é mesclado de volta para o arquivo de banco de dados em uma operação especial chamada _ponto de verificação_.
+O log de Write-Ahead (WAL) grava as alterações em um arquivo WAL separado primeiro. No modo WAL, uma confirmação é um registro especial, acrescentado ao arquivo WAL, que permite que várias transações ocorram em um único arquivo WAL. Um arquivo WAL é mesclado de volta para o arquivo de banco de dados em uma operação especial chamada _ponto de verificação_.
 
-O WAL pode ser mais rápido para bancos de dados locais, pois leitores e gravadores não bloqueiam um ao outro, permitindo que as operações de leitura e gravação sejam simultâneas. No entanto, o modo WAL não permite alterações no _tamanho da página_, adiciona associações de arquivo adicionais ao banco de dados e adiciona a operação de _ponto de verificação_ extra.
+O WAL pode ser mais rápido para bancos de dados locais, pois leitores e gravadores não bloqueiam um ao outro, permitindo que as operações de leitura e gravação sejam simultâneas. No entanto, o modo WAL não permite alterações no _tamanho da página_ , adiciona associações de arquivo adicionais ao banco de dados e adiciona a operação de _ponto de verificação_ extra.
 
 Para habilitar WAL em SQLite.NET, chame o `EnableWriteAheadLoggingAsync` método na `SQLiteAsyncConnection` instância:
 
@@ -270,7 +269,7 @@ Para habilitar WAL em SQLite.NET, chame o `EnableWriteAheadLoggingAsync` método
 await Database.EnableWriteAheadLoggingAsync();
 ```
 
-Para obter mais informações, consulte [log write-ahead do SQLite](https://www.sqlite.org/wal.html) em SQLite.org.
+Para obter mais informações, consulte [SQLite Write-Ahead Logging](https://www.sqlite.org/wal.html) em SQLite.org.
 
 ### <a name="copying-a-database"></a>Copiando um banco de dados
 
@@ -289,10 +288,10 @@ Para obter mais informações, consulte [manipulação de Xamarin.Forms arquivos
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Aplicativo de exemplo todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+- [Aplicativo de exemplo todo](/samples/xamarin/xamarin-forms-samples/todo)
 - [Pacote NuGet do SQLite.NET](https://www.nuget.org/packages/sqlite-net-pcl/)
 - [Documentação do SQLite](https://www.sqlite.org/docs.html)
 - [Usando o SQLite com Android](~/android/data-cloud/data-access/using-sqlite-orm.md)
 - [Usando o SQLite com iOS](~/ios/data-cloud/data/using-sqlite-orm.md)
-- [Padrão assíncrono baseado em tarefa (toque)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
+- [Padrão assíncrono baseado em tarefa (toque)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
 - [&lt;Classe T &gt; lenta](xref:System.Lazy`1)

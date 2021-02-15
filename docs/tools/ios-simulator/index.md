@@ -6,12 +6,12 @@ ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
 author: davidortinau
 ms.author: daortin
 ms.date: 04/26/2019
-ms.openlocfilehash: 84c5a72f887f38c5efcee09cfc19986093db226e
-ms.sourcegitcommit: d86b7a18cf8b1ef28cd0fe1d311f1c58a65101a8
+ms.openlocfilehash: 826fb2bbfb202507bf4ffe062004fb0137e19176
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85101341"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91456659"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Simulador remoto de iOS para Windows
 
@@ -77,7 +77,7 @@ Com essa opção desabilitada, a depuração abre o simulador de iOS no host de 
 
 Se você tiver problemas com o simulador do iOS remoto, poderá exibir os logs nestes locais:
 
-- **Mac** –`~/Library/Logs/Xamarin/Simulator.Server`
-- **Windows** –`%LOCALAPPDATA%\Xamarin\Logs\Xamarin.Simulator`
+- **Mac** – `~/Library/Logs/Xamarin/Simulator.Server`
+- **Windows** – `%LOCALAPPDATA%\Xamarin\Logs\Xamarin.Simulator`
 
-Se você [relatar um problema no Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio), anexar esses logs poderá ser útil (há opções para manter os carregamentos privados).
+Se você [relatar um problema no Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio), anexar esses logs poderá ser útil (há opções para manter os carregamentos privados).

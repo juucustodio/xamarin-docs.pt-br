@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/20/2017
-ms.openlocfilehash: a77b5cd33710a7a8755441efc8b7134d82855c2a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 0c5f2a5c6a3274b298d3de216a2a0f42ed590611
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937963"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436474"
 ---
 # <a name="social-framework-in-xamarinios"></a>Estrutura social no Xamarin. iOS
 
@@ -50,11 +50,11 @@ if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
 }
 ```
 
- `SLComposeViewController`nunca envia um tweet diretamente sem interação com o usuário. No entanto, ele pode ser inicializado com os seguintes métodos:
+ `SLComposeViewController` nunca envia um tweet diretamente sem interação com o usuário. No entanto, ele pode ser inicializado com os seguintes métodos:
 
-- `SetInitialText`– Adiciona o texto inicial para mostrar no tweet.
-- `AddUrl`– Adiciona uma URL ao tweet.
-- `AddImage`– Adiciona uma imagem ao tweet.
+- `SetInitialText` – Adiciona o texto inicial para mostrar no tweet.
+- `AddUrl` – Adiciona uma URL ao tweet.
+- `AddImage` – Adiciona uma imagem ao tweet.
 
 Depois de inicializado, a chamada `PresentVIewController` exibe o modo de exibição criado pelo `SLComposeViewController` . O usuário pode, opcionalmente, editar e enviar o tweet ou cancelar o envio. Em ambos os casos, o controlador deve ser descartado no `CompletionHandler` , em que o resultado também pode ser verificado para ver se o tweet foi enviado ou cancelado, como mostrado abaixo:
 
@@ -472,5 +472,5 @@ Este artigo mostrou como usar a estrutura social para interagir com o Twitter e 
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [SocialFrameworkDemo (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/socialframeworkdemo)
+- [SocialFrameworkDemo (exemplo)](/samples/xamarin/ios-samples/socialframeworkdemo)
 - [Introdução aos serviços Web](~/cross-platform/data-cloud/web-services/index.md)

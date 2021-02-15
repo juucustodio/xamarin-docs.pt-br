@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 02/16/2018
-ms.openlocfilehash: 74226aff2ae135144172a06be5e7869c5cd8e408
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 6075b125f36625a8dec12c041631e3794a71cc6a
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84568445"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91455360"
 ---
 # <a name="started-services-with-xamarinandroid"></a>Serviços iniciados com Xamarin. Android
 
@@ -23,7 +23,7 @@ Ao contrário de um serviço associado, não há nenhum canal de comunicação e
 
 - `OnCreate`&ndash;Chamado uma vez, quando o serviço é iniciado pela primeira vez. É aqui que o código de inicialização deve ser implementado.
 - `OnBind`&ndash;Esse método deve ser implementado por todas as classes de serviço, no entanto, um serviço iniciado normalmente não tem um cliente associado a ele. Por isso, um serviço iniciado apenas retorna `null` . Por outro lado, um serviço híbrido (que é a combinação de um serviço vinculado e um serviço iniciado) precisa implementar e retornar um `Binder` para o cliente.
-- `OnStartCommand`&ndash;Chamado para cada solicitação para iniciar o serviço, seja em resposta a uma chamada para `StartService` ou a uma reinicialização pelo sistema. É aí que o serviço pode iniciar qualquer tarefa de execução longa. O método retorna um `StartCommandResult` valor que indica como ou se o sistema deve lidar com a reinicialização do serviço após um desligamento devido à memória insuficiente. Essa chamada ocorre no thread principal. Esse método é descrito mais detalhadamente abaixo.
+- `OnStartCommand`&ndash;Chamado para cada solicitação para iniciar o serviço, seja em resposta a uma chamada para `StartService` ou a uma reinicialização pelo sistema. É aí que o serviço pode iniciar qualquer tarefa de execução longa. O método retorna um  `StartCommandResult` valor que indica como ou se o sistema deve lidar com a reinicialização do serviço após um desligamento devido à memória insuficiente. Essa chamada ocorre no thread principal. Esse método é descrito mais detalhadamente abaixo.
 - `OnDestroy`&ndash;Esse método é chamado quando o serviço está sendo destruído. Ele é usado para executar qualquer limpeza final necessária.
 
 O método importante para um serviço iniciado é o `OnStartCommand` método. Ele será invocado toda vez que o serviço receber uma solicitação para realizar algum trabalho. O trecho de código a seguir é um exemplo de `OnStartCommand` : 
@@ -79,9 +79,9 @@ Um serviço iniciado continuará em execução indefinidamente; O Android manter
 
 Vários chamadores podem solicitar que um serviço seja iniciado. Se houver uma solicitação de início pendente, o serviço poderá usar o `startId` que é transmitido `OnStartCommand` para impedir que o serviço seja interrompido prematuramente. O `startId` corresponderá à chamada mais recente para `StartService` e será incrementado toda vez que for chamado. Portanto, se uma solicitação subsequente para `StartService` ainda não tiver resultado em uma chamada para `OnStartCommand` , o serviço poderá chamar `StopSelfResult` , passando o valor mais recente dele `startId` recebido (em vez de simplesmente chamar `StopSelf` ). Se uma chamada para `StartService` ainda não tiver resultado em uma chamada correspondente para `OnStartCommand` , o sistema não irá parar o serviço, pois o `startId` usado na `StopSelf` chamada não corresponderá à chamada mais recente `StartService` .
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [StartedServicesDemo (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-startedservicesdemo)
+- [StartedServicesDemo (exemplo)](/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-startedservicesdemo)
 - [Android. app. Service](xref:Android.App.Service)
 - [Android. app. StartCommandFlags](xref:Android.App.StartCommandFlags)
 - [Android. app. StartCommandResult](xref:Android.App.StartCommandResult)

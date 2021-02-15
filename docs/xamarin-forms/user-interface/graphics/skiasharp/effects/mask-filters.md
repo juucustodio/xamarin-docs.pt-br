@@ -10,16 +10,16 @@ ms.date: 08/27/2018
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 10192e93d2e20f9aa58ca95dd81c07f560193905
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 2a9291a56ffa1a05f8e2041033279363f8ec4d34
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84136403"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374141"
 ---
 # <a name="skiasharp-mask-filters"></a>Filtros de máscara de SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Filtros de máscara são efeitos que manipulam a geometria e o canal alfa de objetos gráficos. Para usar um filtro de máscara, defina a [`MaskFilter`](xref:SkiaSharp.SKPaint.MaskFilter) propriedade de `SKPaint` como um objeto do tipo [`SKMaskFilter`](xref:SkiaSharp.SKMaskFilter) que você criou chamando um dos `SKMaskFilter` métodos estáticos.
 
@@ -37,7 +37,7 @@ public static SKMaskFilter CreateBlur (SKBlurStyle blurStyle, float sigma);
 
 Sobrecargas permitem especificar sinalizadores para o algoritmo usado para criar o desfoque e um retângulo para evitar o desfoque em áreas que serão cobertas por outros objetos gráficos.
 
-[`SKBlurStyle`](xref:SkiaSharp.SKBlurStyle)é uma enumeração com os seguintes membros:
+[`SKBlurStyle`](xref:SkiaSharp.SKBlurStyle) é uma enumeração com os seguintes membros:
 
 - `Normal`
 - `Solid`
@@ -46,7 +46,7 @@ Sobrecargas permitem especificar sinalizadores para o algoritmo usado para criar
 
 Os efeitos desses estilos são mostrados nos exemplos abaixo. O `sigma` parâmetro especifica a extensão do Desfoque. Em versões mais antigas do skia, a extensão do Desfoque foi indicada com um valor de raio. Se um valor de RADIUS for preferível para seu aplicativo, haverá um [`SKMaskFilter.ConvertRadiusToSigma`](xref:SkiaSharp.SKMaskFilter.ConvertRadiusToSigma*) método estático que pode converter de um para o outro. O método multiplica o raio por 0,57735 e adiciona 0,5.
 
-A página **experimento de desfoque de máscara** no exemplo de [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) permite que você experimente os estilos de desfoque e os valores Sigma. O arquivo XAML instancia um `Picker` com os quatro `SKBlurStyle` membros de enumeração e um `Slider` para especificar o valor Sigma:
+A página **experimento de desfoque de máscara** no exemplo de [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) permite que você experimente os estilos de desfoque e os valores Sigma. O arquivo XAML instancia um `Picker` com os quatro `SKBlurStyle` membros de enumeração e um `Slider` para especificar o valor Sigma:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -276,5 +276,5 @@ Esse filtro de desfoque faz com que a reflexão pareça muito mais realista:
 
 ## <a name="related-links"></a>Links relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

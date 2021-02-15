@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsRenderizadores rápidos
+title: Xamarin.Forms Renderizadores rápidos
 description: Este artigo apresenta renderizadores rápidos, que reduzem os custos de inflação e renderização de um Xamarin.Forms controle no Android, nivelando a hierarquia de controle nativo resultante.
 ms.prod: xamarin
 ms.assetid: 097f87f2-d891-4f3c-be02-fb7d195a481a
@@ -10,14 +10,14 @@ ms.date: 05/28/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 29f79e4aed0314fe1590fa26c8e4b052e14a94d6
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: c9d3b023acc3c38bf1ad056a140145680fbbba10
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84198060"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97939791"
 ---
-# <a name="xamarinforms-fast-renderers"></a>Xamarin.FormsRenderizadores rápidos
+# <a name="no-locxamarinforms-fast-renderers"></a>Xamarin.Forms Renderizadores rápidos
 
 Tradicionalmente, a maioria dos renderizadores de controle original no Android é composta por duas exibições:
 
@@ -34,7 +34,6 @@ Renderizadores rápidos estão disponíveis para os seguintes controles no Xamar
 - [`Frame`](xref:Xamarin.Forms.Frame)
 - [`Image`](xref:Xamarin.Forms.Image)
 - [`Label`](xref:Xamarin.Forms.Label)
-- [`MediaElement`](xref:Xamarin.Forms.MediaElement)
 
 Funcionalmente, esses renderizadores rápidos não são diferentes dos renderizadores herdados. De Xamarin.Forms 4,0 em diante, todos os aplicativos direcionados usarão `FormsAppCompatActivity` esses renderizadores rápidos por padrão. Renderizadores para todos os novos controles, incluindo [`ImageButton`](xref:Xamarin.Forms.ImageButton) e [`CollectionView`](xref:Xamarin.Forms.CollectionView) , usam a abordagem de processador rápido.
 

@@ -10,12 +10,12 @@ ms.date: 01/29/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 4381b1fbe7b38c2695bce645903d599bdb792fc2
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 6bb9156c3f097b517474b70cdacc683d96423417
+ms.sourcegitcommit: 63029dd7ea4edb707a53ea936ddbee684a926204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937430"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98609112"
 ---
 # <a name="adding-ios-specific-formatting"></a>Adicionando formatação específica do iOS
 
@@ -32,7 +32,7 @@ Essas alternativas são discutidas abaixo.
 
 O arquivo **info. plist** permite que você configure alguns aspectos do processamento de um aplicativo IOS, como como (e se) a barra de status é mostrada.
 
-Por exemplo, o [exemplo todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo) usa o seguinte código para definir a cor da barra de navegação e a cor do texto em todas as plataformas:
+Por exemplo, o [exemplo todo](/samples/xamarin/xamarin-forms-samples/todo) usa o seguinte código para definir a cor da barra de navegação e a cor do texto em todas as plataformas:
 
 ```csharp
 var nav = new NavigationPage (new TodoListPage ());
@@ -42,7 +42,7 @@ nav.BarTextColor = Color.White;
 
 O resultado é mostrado no trecho de tela abaixo. Observe que os itens da barra de status são pretos (isso não pode ser definido no Xamarin.Forms porque ele é um recurso específico da plataforma).
 
-![iOS com temas](theme-images/status-default-sml.png)
+![Captura de tela mostrar iOS com itens de barra de status em texto preto.](theme-images/status-default-sml.png)
 
 O ideal é que a barra de status também seja branca – algo que possamos fazer diretamente no projeto do iOS. Adicione as seguintes entradas ao **info. plist** para forçar a barra de status a ficar branca:
 
@@ -59,7 +59,7 @@ ou edite o arquivo **info. plist** correspondente diretamente para incluir:
 
 Agora, quando o aplicativo é executado, a barra de navegação fica verde e seu texto é branco (devido à Xamarin.Forms formatação) *e* o texto da barra de status também é branco graças à configuração específica do IOS:
 
-![iOS com temas](theme-images/status-white-sml.png)
+![Captura de tela mostrar iOS com itens de barra de status em texto branco.](theme-images/status-white-sml.png)
 
 ## <a name="uiappearance-api"></a>API UIAppearance
 
@@ -85,7 +85,7 @@ public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 
 ### <a name="uitabbar"></a>UITabBar
 
-Por padrão, o ícone de barra de guias selecionado em um[`TabbedPage`](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)
+Por padrão, o ícone de barra de guias selecionado em um [`TabbedPage`](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)
 seria azul:
 
 ![Ícone padrão da barra de guias iOS em TabbedPage](theme-images/tabbar-default.png)
@@ -100,8 +100,8 @@ Isso faz com que a guia selecionada fique verde:
 
 ![Ícone da barra de guias verde do iOS em TabbedPage](theme-images/tabbar-custom.png)
 
-O uso dessa API permite que você personalize a aparência doXamarin.Forms
-`TabbedPage`no iOS com muito pouco código. Consulte a [receita personalizar guias](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/customize-tabs) para obter mais detalhes sobre como usar um renderizador personalizado para definir uma fonte específica para a guia.
+O uso dessa API permite que você personalize a aparência do Xamarin.Forms
+`TabbedPage` no iOS com muito pouco código. Consulte a [receita personalizar guias](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/iOS/customize-tabs) para obter mais detalhes sobre como usar um renderizador personalizado para definir uma fonte específica para a guia.
 
 ### <a name="uiswitch"></a>UISwitch
 
@@ -111,7 +111,7 @@ O `Switch` controle é outro exemplo que pode ser facilmente estilizado:
 UISwitch.Appearance.OnTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); // green
 ```
 
-Essas duas capturas de tela mostram o `UISwitch` controle padrão à esquerda e a versão personalizada (configuração `Appearance` ) à direita no [exemplo todo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo):
+Essas duas capturas de tela mostram o `UISwitch` controle padrão à esquerda e a versão personalizada (configuração `Appearance` ) à direita no [exemplo todo](/samples/xamarin/xamarin-forms-samples/todo):
 
 ![Cor de UISwitch padrão](theme-images/switch-default.png) ![Cor de UISwitch personalizada](theme-images/switch-custom.png)
 

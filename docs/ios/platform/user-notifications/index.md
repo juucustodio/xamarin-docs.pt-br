@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 09/01/2016
-ms.openlocfilehash: fc3a0ace7760b89ad9b2679243c9b6d562191554
-ms.sourcegitcommit: d0e6436edbf7c52d760027d5e0ccaba2531d9fef
+ms.openlocfilehash: dec3d9a218fa2148f4740c5af2c94c24a1436a21
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75489070"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91430262"
 ---
 # <a name="user-notifications-framework-in-xamarinios"></a>Estrutura de notificações do usuário no Xamarin. iOS
 
@@ -22,17 +22,17 @@ Além disso, o aplicativo ou a extensão pode receber (e potencialmente modifica
 
 A nova estrutura de IU de notificação do usuário permite que a extensão do aplicativo ou do aplicativo Personalize a aparência de notificações locais e remotas quando elas são apresentadas ao usuário.
 
-## <a name="enhanced-user-notificationsiosplatformuser-notificationsenhanced-user-notificationsmd"></a>[Notificações de usuário aprimoradas](~/ios/platform/user-notifications/enhanced-user-notifications.md)
+## <a name="enhanced-user-notifications"></a>[Notificações de usuário aprimoradas](~/ios/platform/user-notifications/enhanced-user-notifications.md)
 
 Este artigo apresenta todas as maneiras como as notificações de usuário foram aprimoradas para o iOS 10 e fornece uma breve introdução à implementação deles usando a nova estrutura de notificação de usuário.
 
-## <a name="advanced-user-notificationsiosplatformuser-notificationsadvanced-user-notificationsmd"></a>[Notificações de usuário avançadas](~/ios/platform/user-notifications/advanced-user-notifications.md)
+## <a name="advanced-user-notifications"></a>[Notificações de usuário avançadas](~/ios/platform/user-notifications/advanced-user-notifications.md)
 
 Este artigo analisa mais detalhadamente a nova estrutura de notificações de usuário e como tirar o máximo proveito dela em um aplicativo Xamarin. iOS.
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Amostras do iOS 10](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
+- [Amostras do iOS 10](/samples/browse/?products=xamarin&term=Xamarin.iOS%2biOS10)
 - [Referência da estrutura do usernotifications](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
 - [Guia de programação de notificação local e remota](https://developer.apple.com/documentation/usernotifications)

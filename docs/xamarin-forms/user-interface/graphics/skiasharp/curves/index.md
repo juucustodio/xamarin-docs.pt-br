@@ -10,22 +10,22 @@ ms.date: 05/24/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7d5a4fc818cef77671b6cabddc56de8234cb858d
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 69a9ddc0096b0a351a7f190f428040b5092c5154
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84127797"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373296"
 ---
 # <a name="skiasharp-curves-and-paths"></a>Curvas e caminhos de SkiaSharp
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Saiba como usar o SkiaSharp para desenhar curvas e usar recursos de caminho_
 
 A exploração de [`SKPath`](xref:SkiaSharp.SKPath) métodos e propriedades começou no artigo [**SkiaSharp de linhas e caminhos**](../paths/index.md) . Os artigos aqui continuam com métodos que adicionam curvas a um `SKPath` objeto e exploram outros recursos de caminho avançados. Você verá como é possível especificar um caminho inteiro em uma cadeia de texto concisa, como usar efeitos de caminho e como se aprofundar em elementos internos do caminho.
 
-Todos os programas de exemplo nesta seção podem ser encontrados na página **curvas e caminhos do SkiaSharp** do programa [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) e na pasta de [**curvas**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves) da solução.
+Todos os programas de exemplo nesta seção podem ser encontrados na página **curvas e caminhos do SkiaSharp** do programa [**SkiaSharpFormsDemos**](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) e na pasta de [**curvas**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves) da solução.
 
 ## <a name="three-ways-to-draw-an-arc"></a>[Três formas de desenhar um arco](arcs.md)
 
@@ -55,7 +55,7 @@ Explore a interseção de caminhos e texto
 
 Obter informações sobre caminhos e enumerar o conteúdo
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

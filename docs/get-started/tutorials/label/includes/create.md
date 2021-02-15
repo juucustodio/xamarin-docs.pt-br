@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 1bcd808221ee319fa2818563418d2362b146e354
-ms.sourcegitcommit: 89b3e383a37db5b940f0c63bbfe9cb806dc7d5d1
+ms.openlocfilehash: 2446b4410b7ded6aa070a19ae0ac742bb519b331
+ms.sourcegitcommit: a5a5c5de7d04f046a64e4875e180fc93227bf495
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389991"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98689736"
 ---
 # <a name="visual-studio"></a>[Visual Studio](#tab/vswin)
 
 Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão mais recente) com a carga de trabalho **Desenvolvimento mobile com .NET** instalada. Além disso, você precisará de um Mac emparelhado para compilar o aplicativo do tutorial no iOS. Para obter informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md). Para obter informações sobre como conectar o Visual Studio 2019 a um host de build Mac, confira [Emparelhar com o Mac para desenvolvimento no Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
-1. Inicie o Visual Studio e crie um novo aplicativo Xamarin.Forms em branco chamado **LabelTutorial**. Verifique se o aplicativo usa o .NET Standard como o mecanismo de código compartilhado.
+1. Inicie o Visual Studio e crie um novo aplicativo Xamarin.Forms em branco chamado **LabelTutorial**.
 
     > [!IMPORTANT]
     > Os snippets de C# e XAML neste tutorial exigem que a solução seja denominada **LabelTutorial**. Usar um nome diferente causará erros de build ao copiar o código deste tutorial para a solução.
@@ -41,7 +41,7 @@ Para concluir este tutorial, você precisará ter o Visual Studio 2019 (versão 
 
 Para concluir este tutorial, você precisará ter o Visual Studio para Mac (versão mais recente), com suporte para plataforma iOS e Android, instalado. Além disso, você também precisará do Xcode (versão mais recente). Para obter mais informações sobre como instalar a plataforma Xamarin, confira [Instalando o Xamarin](~/get-started/installation/index.md).
 
-1. Inicie o Visual Studio para Mac e crie um novo aplicativo Xamarin.Forms em branco chamado **LabelTutorial**. Verifique se o aplicativo usa o .NET Standard como o mecanismo de código compartilhado.
+1. Inicie o Visual Studio para Mac e crie um novo aplicativo Xamarin.Forms em branco chamado **LabelTutorial**.
 
     > [!IMPORTANT]
     > Os snippets de C# e XAML neste tutorial exigem que a solução seja denominada **LabelTutorial**. Usar um nome diferente causará erros de build ao copiar o código deste tutorial para a solução.

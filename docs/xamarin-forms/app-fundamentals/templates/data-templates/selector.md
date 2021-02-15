@@ -10,16 +10,16 @@ ms.date: 03/08/2016
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7cbeeb9a0eed37ec109b2e71c46e3f04cd08822d
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b072c04aa3d782b3bbbac0952102d0b1531e87dc
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86936442"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93373010"
 ---
-# <a name="creating-a-xamarinforms-datatemplateselector"></a>Criando um Xamarin.Forms DataTemplateSelector
+# <a name="creating-a-no-locxamarinforms-datatemplateselector"></a>Criando um Xamarin.Forms DataTemplateSelector
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
 
 _Um DataTemplateSelector pode ser usado para escolher um DataTemplate em tempo de execução com base no valor de uma propriedade associada a dados. Isso permite que vários DataTemplates sejam aplicados ao mesmo tipo de objeto, para personalizar a aparência de objetos específicos. Este artigo demonstra como criar e consumir um DataTemplateSelector._
 
@@ -48,7 +48,7 @@ Uma instância da classe de seletor de modelo de dados pode ser atribuída a Xam
 
 ### <a name="limitations"></a>Limitações
 
-[`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector)as instâncias têm as seguintes limitações:
+[`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) as instâncias têm as seguintes limitações:
 
 - A subclasse `DataTemplateSelector` deve sempre retornar o mesmo modelo para os mesmos dados se consultada várias vezes.
 - A subclasse `DataTemplateSelector` não deve retornar outra subclasse `DataTemplateSelector`.
@@ -139,5 +139,5 @@ Este artigo demonstrou como criar e consumir um [`DataTemplateSelector`](xref:Xa
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Seletor de Modelo de Dados (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
+- [Seletor de Modelo de Dados (exemplo)](/samples/xamarin/xamarin-forms-samples/templates-datatemplateselector)
 - [DataTemplateSelector](xref:Xamarin.Forms.DataTemplateSelector)

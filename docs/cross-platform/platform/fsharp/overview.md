@@ -6,12 +6,12 @@ ms.assetid: 1A0E627D-A4C1-4F95-BAED-76A0E40B9054
 author: davidortinau
 ms.author: daortin
 ms.date: 03/24/2017
-ms.openlocfilehash: 6050ede8a8f725f75011a1ebc018406c197b1dcd
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: f6fca3bd02833e429ca3cbe8592124cb4cfba65b
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938822"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453175"
 ---
 # <a name="getting-started-with-f35"></a>Introdução com F&#35;
 
@@ -51,6 +51,6 @@ Há uma infinidade de informações online para se familiarizar com a linguagem 
 
 - [F# Software Foundation](https://fsharp.org)
 - [Portal de desenvolvimento do Visual F#](https://go.microsoft.com/fwlink/?LinkID=234174)
-- [Galeria de códigos de Visual F#](https://go.microsoft.com/fwlink/?LinkID=124614)
-- [Visual F# programação de matemática/estatísticas](https://go.microsoft.com/fwlink/?LinkId=235173)
-- [Visual F# gráfico](https://go.microsoft.com/fwlink/?LinkId=235176)
+- [Galeria de códigos de Visual F#](/samples/browse/)
+- [Visual F# programação de matemática/estatísticas](/previous-versions/visualstudio/visual-studio-2010/hh273075(v=vs.100))
+- [Visual F# gráfico](/previous-versions/visualstudio/visual-studio-2010/hh273079(v=vs.100))

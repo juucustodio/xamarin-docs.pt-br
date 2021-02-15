@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
-ms.openlocfilehash: 2ba5d6b99a32684fd53572e0db00b19a6841ed64
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 74c45a4e8880e1b9c98d11dd4874a4ecf569f0c0
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996455"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91433793"
 ---
 # <a name="understanding-sirikit-concepts"></a>Noções básicas sobre os conceitos de SiriKit
 
@@ -463,7 +463,7 @@ Este artigo abordou os principais conceitos necessários para usar o SiriKit e m
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Exemplo de ElizaChat](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-elizachat)
+- [Exemplo de ElizaChat](/samples/xamarin/ios-samples/ios10-elizachat)
 - [Guia de programação do SiriKit](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)
 - [Referência de estrutura de tentativas](https://developer.apple.com/reference/intents)
 - [Referência da estrutura da interface do usuário de tentativas](https://developer.apple.com/reference/intentsui)

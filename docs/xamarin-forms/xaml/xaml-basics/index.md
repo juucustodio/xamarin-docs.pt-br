@@ -1,5 +1,5 @@
 ---
-title: Xamarin.FormsNoções básicas do XAML
+title: Xamarin.Forms Noções básicas do XAML
 description: Este guia explica como começar a usar o XAML de plataforma cruzada para dispositivos móveis. O XAML permite aos desenvolvedores definir interfaces de usuário em Xamarin.Forms aplicativos usando marcação em vez de código.
 ms.prod: xamarin
 ms.custom: video
@@ -11,16 +11,16 @@ ms.date: 10/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 8f5f69038f7d5cfe7ad46f013acb1519c4e9569f
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: 1c660c04e89c56f10435964425b2b20dbf5c8eb3
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138613"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93365860"
 ---
-# <a name="xamarinforms-xaml-basics"></a>Xamarin.FormsNoções básicas do XAML
+# <a name="no-locxamarinforms-xaml-basics"></a>Xamarin.Forms Noções básicas do XAML
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 A linguagem XAML é uma linguagem baseada em XML criada pela Microsoft como uma alternativa ao código de programação para instanciar e inicializar objetos e organizar esses objetos em hierarquias pai-filho. O XAML foi adaptado para várias tecnologias no .NET Framework, mas encontrou seu maior utilitário na definição do layout das interfaces do usuário dentro do Windows Presentation Foundation (WPF), do Silverlight, do Windows Runtime e do UWP (Plataforma Universal do Windows).
 
@@ -37,14 +37,14 @@ O XAML tem várias vantagens sobre o código equivalente:
 Também há desvantagens, principalmente relacionadas a limitações que são intrínsecas a linguagens de marcação:
 
 - O XAML não pode conter código. Todos os manipuladores de eventos devem ser definidos em um arquivo de código.
-- O XAML não pode conter loops para processamento repetitivo. (No entanto, vários Xamarin.Forms objetos visuais — mais notavelmente [`ListView`](xref:Xamarin.Forms.ListView) — podem gerar vários filhos com base nos objetos em sua `ItemsSource` coleção.)
+- O XAML não pode conter loops para processamento repetitivo. (No entanto, vários Xamarin.Forms objetos visuais — mais notavelmente  [`ListView`](xref:Xamarin.Forms.ListView) — podem gerar vários filhos com base nos objetos em sua `ItemsSource` coleção.)
 - O XAML não pode conter processamento condicional (no entanto, uma vinculação de dados pode fazer referência a um conversor de associação baseado em código que efetivamente permite algum processamento condicional.)
 - O XAML geralmente não pode instanciar classes que não definem um construtor sem parâmetros. (No entanto, às vezes há uma maneira de resolver essa restrição.)
 - O XAML geralmente não pode chamar métodos. (Novamente, essa restrição pode, às vezes, ser superada.)
 
 Ainda não há um designer visual para gerar XAML em Xamarin.Forms aplicativos. Todo o XAML deve ser escrito à mão, mas há um [Visualizador XAML](~/xamarin-forms/xaml/xaml-previewer/index.md). Os programadores novos para XAML podem querer compilar e executar com frequência seus aplicativos, especialmente depois de qualquer coisa que possa não estar correta. Até mesmo os desenvolvedores com muita experiência no XAML sabem que a experimentação é gratificante.
 
-O XAML é basicamente XML, mas XAML tem alguns recursos de sintaxe exclusivos. As mais importantes são:
+O XAML é basicamente XML, mas XAML tem alguns recursos de sintaxe exclusivos. O mais importante é:
 
 - Elementos de propriedade
 - Propriedades anexadas
@@ -54,15 +54,15 @@ Esses recursos *não* são extensões XML. O XAML é totalmente legal XML. Mas e
 
 ## <a name="requirements"></a>Requisitos
 
-Este artigo pressupõe familiaridade com o Xamarin.Forms . Este artigo também pressupõe alguma familiaridade com XML, incluindo a compreensão do uso de declarações de namespace XML e o *elemento*, a *marca*e o *atributo*dos termos.
+Este artigo pressupõe familiaridade com o Xamarin.Forms . Este artigo também pressupõe alguma familiaridade com XML, incluindo a compreensão do uso de declarações de namespace XML e o *elemento* , a *marca* e o *atributo* dos termos.
 
 Quando estiver familiarizado com o Xamarin.Forms e o XML, comece a ler a [parte 1. Introdução com XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md).
 
 ## <a name="related-links"></a>Links relacionados
 
-- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
+- [XamlSamples](/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Criando o livro de aplicativos móveis](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
-- [Xamarin.FormsAmostras](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- [Xamarin.Forms Amostras](/samples/browse/?products=xamarin&term=Xamarin.Forms)
 
 ## <a name="related-video"></a>Vídeo relacionado
 

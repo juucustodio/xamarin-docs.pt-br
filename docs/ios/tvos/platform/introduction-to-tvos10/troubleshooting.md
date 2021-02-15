@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/16/2017
-ms.openlocfilehash: cd04450d1429092453e6d8b65278d87b5d52e45e
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 65a76c0196b79a17f935f59902c8e6d2f9f25933
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84571617"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91434915"
 ---
 # <a name="troubleshooting-tvos-10-apps-built-with-xamarin"></a>Solução de problemas de aplicativos do tvOS 10 criados com o Xamarin
 
@@ -28,7 +28,7 @@ As seções a seguir listam alguns problemas conhecidos que podem ocorrer ao usa
 
 <a name="App-Store"></a>
 
-## <a name="app-store"></a>Loja de aplicativos
+## <a name="app-store"></a>App Store
 
 Problemas Conhecidos:
 
@@ -63,7 +63,7 @@ As operações de longa execução retornarão um _"você não tem permissão pa
 
 ## <a name="core-image"></a>Imagem principal
 
-A `CIImageProcessor` API agora dá suporte a uma contagem de imagens de entrada arbitrária. `CIImageProcessor`A API que foi incluída no tvOS 10 beta 1 será removida.
+A `CIImageProcessor` API agora dá suporte a uma contagem de imagens de entrada arbitrária. `CIImageProcessor` A API que foi incluída no tvOS 10 beta 1 será removida.
 
 <a name="NSUserActivity"></a>
 
@@ -84,7 +84,7 @@ Problemas Conhecidos:
 - Aplicativos com `UIView` subclasses personalizadas que substituem `LayoutSubviews` e sujam o layout antes de chamar `base.LayoutSubviews` podem disparar um loop de layout infinito no tvOS 10.
 - Os ativos de imagens invertidas ou de direção específicas não são invertidos quando atribuídos a `UIButton` objetos.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [Exemplos do tvOS](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
+- [Exemplos do tvOS](/samples/browse/?products=xamarin&term=Xamarin.iOS%2btvOS)
 - [O que há de novo no tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

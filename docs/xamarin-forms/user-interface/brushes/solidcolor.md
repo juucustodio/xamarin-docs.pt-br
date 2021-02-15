@@ -1,27 +1,25 @@
 ---
-title: 'Xamarin.FormsPincéis: cores sólidas'
+title: 'Xamarin.Forms Pincéis: cores sólidas'
 description: A Xamarin.Forms classe SolidColorBrush pinta uma área com uma cor sólida.
 ms.prod: xamarin
 ms.assetid: 4225D40A-16C1-40E1-ACBE-23E321E7FDE4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/27/2020
+ms.date: 09/24/2020
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 7b77cab7c0f87dbedf66651c3ab59ef20b7f3ecd
-ms.sourcegitcommit: 579ec4f2884fa391e5e214a3952cd6004c521eb8
+ms.openlocfilehash: 3be026df3d6c60ecef81a7409245941f34b8d563
+ms.sourcegitcommit: 044e8d7e2e53f366942afe5084316198925f4b03
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87919557"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940012"
 ---
-# <a name="no-locxamarinforms-brushes-solid-colors"></a>Xamarin.FormsPincéis: cores sólidas
+# <a name="no-locxamarinforms-brushes-solid-colors"></a>Xamarin.Forms Pincéis: cores sólidas
 
-![API de visualização](~/media/shared/preview.png "Esta API está atualmente em pré-lançamento")
-
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
 
 A `SolidColorBrush` classe deriva da `Brush` classe e é usada para pintar uma área com uma cor sólida. Há uma variedade de abordagens para especificar a cor de um `SolidColorBrush` . Por exemplo, você pode especificar sua cor com um [`Color`](xref:Xamarin.Forms.Color) valor ou usando um dos objetos predefinidos `SolidColorBrush` fornecidos pela `Brush` classe.
 
@@ -35,7 +33,7 @@ Há três técnicas principais para criar um `SolidColorBrush` . Você pode cria
 
 ### <a name="use-a-predefined-color"></a>Usar uma cor predefinida
 
-Xamarin.Formsinclui um conversor de tipo que cria um `SolidColorBrush` de um [`Color`](xref:Xamarin.Forms.Color) valor. Em XAML, isso permite que um `SolidColorBrush` a seja criado com base em um valor predefinido `Color` :
+Xamarin.Forms inclui um conversor de tipo que cria um `SolidColorBrush` de um [`Color`](xref:Xamarin.Forms.Color) valor. Em XAML, isso permite que um `SolidColorBrush` a seja criado com base em um valor predefinido `Color` :
 
 ```xaml
 <Frame Background="DarkBlue"
@@ -98,11 +96,11 @@ Para obter uma lista de objetos predefinidos `SolidColorBrush` fornecidos pela `
 
 ### <a name="use-hexadecimal-notation"></a>Usar notação hexadecimal
 
-`SolidColorBrush`os objetos também podem ser criados usando a notação hexadecimal. Com essa abordagem, uma cor é especificada em termos da quantidade de vermelho, verde e azul para combinar em uma única cor. O formato principal para especificar uma cor usando notação hexadecimal é `#rrggbb` , em que:
+`SolidColorBrush` os objetos também podem ser criados usando a notação hexadecimal. Com essa abordagem, uma cor é especificada em termos da quantidade de vermelho, verde e azul para combinar em uma única cor. O formato principal para especificar uma cor usando notação hexadecimal é `#rrggbb` , em que:
 
-- `rr`é um número hexadecimal de dois dígitos que especifica a quantidade relativa de vermelho.
-- `gg`é um número hexadecimal de dois dígitos que especifica a quantidade relativa de verde.
-- `bb`é um número hexadecimal de dois dígitos que especifica a quantidade relativa de azul.
+- `rr` é um número hexadecimal de dois dígitos que especifica a quantidade relativa de vermelho.
+- `gg` é um número hexadecimal de dois dígitos que especifica a quantidade relativa de verde.
+- `bb` é um número hexadecimal de dois dígitos que especifica a quantidade relativa de azul.
 
 Além disso, uma cor pode ser especificada como `#aarrggbb` onde `aa` especifica o valor alfa, ou transparência, da cor. Essa abordagem permite que você crie cores parcialmente transparentes.
 
@@ -131,5 +129,5 @@ Para sua conveniência, a `Brush` classe fornece um conjunto de objetos comument
 
 ## <a name="related-links"></a>Links relacionados
 
-- [BrushesDemos (exemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/BrushDemos)
-- [Cores emXamarin.Forms](~/xamarin-forms/user-interface/colors.md)
+- [BrushesDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-brushdemos/)
+- [Cores em Xamarin.Forms](~/xamarin-forms/user-interface/colors.md)

@@ -10,16 +10,16 @@ ms.date: 05/25/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 1ad548846500ccbacc2a3d117919bfb4df1a1d79
-ms.sourcegitcommit: 32d2476a5f9016baa231b7471c88c1d4ccc08eb8
+ms.openlocfilehash: aee429b3dcc898ae0663817d52ed5b03d919e239
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84138678"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93375363"
 ---
 # <a name="three-types-of-bzier-curves"></a>Três tipos de curvas de bézier
 
-[![Baixar exemplo ](~/media/shared/download.png) baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Explore como usar SkiaSharp para renderizar curvas Bézier cúbicas, quadráticas e cônicas_
 
@@ -31,7 +31,7 @@ As curvas Bézier são conhecidas por serem adequadas para o design interativo: 
 
 Os contornos de caracteres das fontes baseadas em computador geralmente são definidos com curvas Bézier.
 
-O artigo da Wikipédia na [**curva de Bézier**](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) contém algumas informações úteis do plano de fundo. O termo *curva Bézier* na verdade se refere a uma família de curvas semelhantes. O SkiaSharp dá suporte a três tipos de curvas Bézier, chamadas *cúbica*, *quadrática*e *cone*. O cone também é conhecido como o *quadrática racional*.
+O artigo da Wikipédia na [**curva de Bézier**](https://en.wikipedia.org/wiki/B%C3%A9zier_curve) contém algumas informações úteis do plano de fundo. O termo *curva Bézier* na verdade se refere a uma família de curvas semelhantes. O SkiaSharp dá suporte a três tipos de curvas Bézier, chamadas *cúbica* , *quadrática* e *cone*. O cone também é conhecido como o *quadrática racional*.
 
 ## <a name="the-cubic-bzier-curve"></a>A curva Bézier cúbica
 
@@ -122,7 +122,7 @@ O expoente mais alto de 3 confirma que esses são polinomiais cúbicos. É fáci
 
 Às vezes, é conveniente usar uma curva de Bézier para renderizar um arco circular. Uma curva Bézier cúbica pode aproximar um arco circular muito bem para um quarto de círculo, de modo que quatro curvas Bézier conectadas podem definir um círculo inteiro. Essa aproximação é discutida em dois artigos publicados há mais de 25 anos:
 
-> Tor Dokken, et al, "boa aproximação de círculos por curvatura, curvas de Bézier contínuas", *design de geométrico auxiliado por computador 7* (1990), 33-41.
+> Tor Dokken, et al, "boa aproximação de círculos por Curvature-Continuous curvas Bézier," *design geométrico auxiliado por computador 7* (1990), 33-41.
 
 > Michael Goldapp, "aproximação de arcos circulares por polinomiais cúbicos", *design de geométrico auxiliado por computador 8* (1991), 227-238.
 
@@ -420,7 +420,7 @@ No entanto, a forma de uma curva Bézier quadrática não é elíptica, motivo p
 
 A curva Bézier de cone &mdash; também conhecida como a curva Bézier de quadrática racional &mdash; é uma adição relativamente recente à família de curvas Bézier. Como a curva Bézier quadrática, a curva Bézier de quadrática racional envolve um ponto de partida, um ponto de extremidade e um ponto de controle. Mas a curva Bézier de quadrática racional também requer um valor de *peso* . Ele é chamado de quadrática *racional* porque as fórmulas paramétricas envolvem proporções.
 
-As equações paramétricas para X e Y são taxas que compartilham o mesmo denominador. Aqui está a equação para o denominador para *t* que varia de 0 a 1 e um valor de peso de *w*:
+As equações paramétricas para X e Y são taxas que compartilham o mesmo denominador. Aqui está a equação para o denominador para *t* que varia de 0 a 1 e um valor de peso de *w* :
 
 d (t) = (1 – t) ² + 2WT (1 – t) + t ²
 
@@ -498,7 +498,7 @@ Teoricamente, os pesos negativos são permitidos e fazem com que a curva dobre p
 
 Você pode usar a trigonometria para determinar a distância do ponto de controle do centro do círculo: é o raio do círculo dividido pelo cosseno da metade do ângulo α. Para desenhar um arco circular entre os pontos inicial e final, defina o peso para o mesmo cosseno da metade do ângulo. Observe que, se o ângulo for de 180 graus, as linhas tangentes nunca serão atendidas e o peso será zero. Mas para ângulos inferiores a 180 graus, a matemática funciona bem.
 
-A página de **arco circular de cone** demonstra isso. O arquivo [**ConicCircularArc. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml) instancia um `Slider` para selecionar o ângulo. O `PaintSurface` manipulador no arquivo code-behind [**ConicCircularArc.XAML.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml.cs) calcula o ponto de controle e o peso:
+A página de **arco circular de cone** demonstra isso. O arquivo [**ConicCircularArc. XAML**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml) instancia um `Slider` para selecionar o ângulo. O `PaintSurface` manipulador no arquivo code-behind  [**ConicCircularArc.XAML.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConicCircularArcPage.xaml.cs) calcula o ponto de controle e o peso:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -556,7 +556,7 @@ Mas defina o ângulo como 180 graus e a matemática falhará.
 
 Infelizmente, nesse caso, isso `ConicTo` não dá suporte a pesos negativos, porque na teoria (com base nas equações paramétricas), o círculo pode ser concluído com outra chamada para `ConicTo` com os mesmos pontos, mas um valor negativo do peso. Isso permitiria a criação de um círculo inteiro com apenas duas `ConicTo` curvas com base em qualquer ângulo entre (mas não incluindo) zero graus e 180 graus.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
-- [APIs do SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
+- [APIs do SkiaSharp](/dotnet/api/skiasharp)
+- [SkiaSharpFormsDemos (exemplo)](/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

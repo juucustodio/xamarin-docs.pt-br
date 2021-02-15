@@ -10,22 +10,22 @@ ms.date: 12/13/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5fa9c7592ecd2cb314ce12d7e303677447a5e104
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9b22297fe06211b550ac2fdd62ee934b4ba849ee
+ms.sourcegitcommit: 0a6b19004932c1ac82e16c95d5d3d5eb35a5b17f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931164"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100255331"
 ---
 # <a name="layout-compression"></a>Compactação de Layout
 
-[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
+[![Baixar Exemplo](~/media/shared/download.png) Baixar o exemplo](/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
 
 _A compactação de layout remove os layouts especificados da árvore visual em uma tentativa de melhorar o desempenho de renderização de página. Este artigo explica como habilitar a compactação de layout e os benefícios que ele pode trazer._
 
 ## <a name="overview"></a>Visão geral
 
-Xamarin.Formsexecuta o layout usando duas séries de chamadas de método recursivos:
+Xamarin.Forms executa o layout usando duas séries de chamadas de método recursivos:
 
 - O layout começa na parte superior da árvore visual com uma página e prossegue por todas as ramificações da árvore visual para abranger todos os elementos visuais em uma página. Elementos que são pais para outros elementos são responsáveis por dimensionar e posicionar seus filhos em relação a si mesmos.
 - Invalidação é o processo pelo qual uma alteração em um elemento em uma página dispara um novo ciclo de layout. Os elementos são considerados inválidos quando não têm mais o tamanho ou a posição corretos. Cada elemento na árvore visual que tem filhos é alertado sempre que um de seus filhos muda de tamanho. Portanto, uma alteração no tamanho de um elemento na árvore visual pode causar alterações que propagam a árvore.
@@ -58,7 +58,7 @@ Esse botão é especificado como um controle personalizado com a seguinte hierar
 </ContentView>
 ```
 
-A hierarquia de exibição aninhada resultante pode ser examinada com [Xamarin Inspector](~/tools/inspector/index.md). No Android, a hierarquia de exibição aninhada contém 17 exibições:
+A hierarquia de exibição aninhada resultante pode ser examinada com a árvore visual dinâmica. No Android, a hierarquia de exibição aninhada contém 17 exibições:
 
 ![Botão Exibir hierarquia para o Facebook](layout-compression-images/no-compression.png)
 
@@ -125,4 +125,4 @@ A compactação de layout remove os layouts especificados da árvore visual em u
 
 - [Criar um layout personalizado](~/xamarin-forms/user-interface/layouts/custom.md)
 - [Renderizadores Rápidos](~/xamarin-forms/internals/fast-renderers.md)
-- [LayoutCompression (exemplo)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)
+- [LayoutCompression (exemplo)](/samples/xamarin/xamarin-forms-samples/userinterface-layoutcompression)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/19/2017
-ms.openlocfilehash: bd57232b183d5940a22915a0277a016cab36af8a
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 9f27fa550bb21f4261288e8a9a3d809a0ccc7de2
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86931606"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436508"
 ---
 # <a name="introduction-to-ios-7"></a>Introdução ao iOS 7
 
@@ -26,10 +26,10 @@ o iOS 7 aumenta o suporte à animação no UIKit, permitindo que os aplicativos 
 
 ### <a name="spring-animations"></a>Animações Spring
 
- `UIView`Agora dá suporte à animação de alterações de propriedade com um efeito de mola. Para adicionar isso, chame o `AnimateNotify` método ou `AnimateNotifyAsync` , passando valores para a taxa de amortecimento de mola e a velocidade de mola inicial, conforme descrito abaixo:
+ `UIView` Agora dá suporte à animação de alterações de propriedade com um efeito de mola. Para adicionar isso, chame o `AnimateNotify` método ou `AnimateNotifyAsync` , passando valores para a taxa de amortecimento de mola e a velocidade de mola inicial, conforme descrito abaixo:
 
-- `springWithDampingRatio`– Um valor entre 0 e 1, em que o oscilação aumenta para um valor menor.
-- `initialSpringVelocity`– A velocidade inicial da mola como uma porcentagem da distância total da animação por segundo.
+- `springWithDampingRatio` – Um valor entre 0 e 1, em que o oscilação aumenta para um valor menor.
+- `initialSpringVelocity` – A velocidade inicial da mola como uma porcentagem da distância total da animação por segundo.
 
 O código a seguir produz um efeito de mola quando o centro da exibição de imagem é alterado:
 
@@ -96,12 +96,12 @@ A API é declarativa por natureza. Você declara como as interações de física
 
 Há vários comportamentos primitivos diferentes disponíveis para disparar interações complexas, incluindo:
 
-- `UIAttachmentBehavior`– Anexa dois itens dinâmicos, de forma que eles se movam juntos ou anexe um item dinâmico a um ponto de anexo.
-- `UICollisionBehavior`– Permite que itens dinâmicos participem de colisões.
-- `UIDynamicItemBehavior`– Especifica um conjunto geral de propriedades para aplicar a itens dinâmicos, como elasticidade, densidade e fricção.
-- `UIGravityBehavior`– Aplica a gravidade a um item dinâmico, fazendo com que os itens acelerem na direção do Gravitational.
-- `UIPushBehavior`– Aplica-se força a um item dinâmico.
-- `UISnapBehavior`– Permite que um item dinâmico se ajuste a uma posição com um efeito de mola.
+- `UIAttachmentBehavior` – Anexa dois itens dinâmicos, de forma que eles se movam juntos ou anexe um item dinâmico a um ponto de anexo.
+- `UICollisionBehavior` – Permite que itens dinâmicos participem de colisões.
+- `UIDynamicItemBehavior` – Especifica um conjunto geral de propriedades para aplicar a itens dinâmicos, como elasticidade, densidade e fricção.
+- `UIGravityBehavior` – Aplica a gravidade a um item dinâmico, fazendo com que os itens acelerem na direção do Gravitational.
+- `UIPushBehavior` – Aplica-se força a um item dinâmico.
+- `UISnapBehavior` – Permite que um item dinâmico se ajuste a uma posição com um efeito de mola.
 
 Embora existam muitos primitivos, o processo geral para adicionar interações baseadas em física a uma exibição usando o UIKit Dynamics é consistente entre os comportamentos:
 
@@ -239,6 +239,6 @@ Este artigo aborda várias novas adições importantes ao iOS. Primeiro, ele mos
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [Introdução ao iOS 7 (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/introtoios7)
+- [Introdução ao iOS 7 (exemplo)](/samples/xamarin/ios-samples/introtoios7)
 - [Visão geral da interface do usuário do iOS 7](~/ios/platform/introduction-to-ios7/ios7-ui.md)
 - [Operação em segundo plano](~/ios/app-fundamentals/backgrounding/index.md)

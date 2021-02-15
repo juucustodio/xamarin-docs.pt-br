@@ -10,14 +10,17 @@ ms.date: 08/08/2017
 no-loc:
 - Xamarin.Forms
 - Xamarin.Essentials
-ms.openlocfilehash: 5550ea7a355492f724459449f3b37cdcb8d05b1e
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: b5d52f92b88a3b0dbcd21a64b647c6d75e6c6ca1
+ms.sourcegitcommit: ebdc016b3ec0b06915170d0cbbd9e0e2469763b9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86932139"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93374934"
 ---
 # <a name="authentication-and-authorization"></a>Autenticação e autorização
+
+> [!NOTE]
+> Este livro eletrônico foi publicado na Primavera de 2017 e não foi atualizado desde então. Há muito no livro que permanece valioso, mas parte do material está desatualizada.
 
 A autenticação é o processo de obter credenciais de identificação, como nome e senha de um usuário, e validar essas credenciais em uma autoridade. Se as credenciais forem válidas, a entidade que enviou as credenciais será considerada uma identidade autenticada. Depois que uma identidade é autenticada, um processo de autorização determina se a identidade tem acesso a um determinado recurso.
 
@@ -61,12 +64,12 @@ Para que um aplicativo Web ASP.NET Core use o IdentityServer 4, ele deve ser adi
 Depois que o IdentityServer está incluído na solução do Visual Studio do aplicativo Web, ele deve ser adicionado ao pipeline de processamento de solicitação HTTP do aplicativo Web, para que ele possa atender solicitações ao OpenID Connect e a pontos de extremidade do OAuth 2,0. Isso é obtido no `Configure` método na classe do aplicativo Web `Startup` , conforme demonstrado no exemplo de código a seguir:
 
 ```csharp
-public void Configure(  
-    IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)  
+public void Configure(  
+    IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)  
 {  
-    ...  
-    app.UseIdentity();  
-    ...  
+    ...  
+    app.UseIdentity();  
+    ...  
 }
 ```
 
@@ -77,19 +80,19 @@ Ordenar as coisas no pipeline de processamento de solicitação HTTP do aplicati
 IdentityServer deve ser configurado no `ConfigureServices` método na classe do aplicativo Web `Startup` chamando o `services.AddIdentityServer` método, conforme demonstrado no exemplo de código a seguir do aplicativo de referência eShopOnContainers:
 
 ```csharp
-public void ConfigureServices(IServiceCollection services)  
+public void ConfigureServices(IServiceCollection services)  
 {  
-    ...  
-    services.AddIdentityServer(x => x.IssuerUri = "null")  
-        .AddSigningCredential(Certificate.Get())                 
-        .AddAspNetIdentity<ApplicationUser>()  
-        .AddConfigurationStore(builder =>  
-            builder.UseSqlServer(connectionString, options =>  
-                options.MigrationsAssembly(migrationsAssembly)))  
-        .AddOperationalStore(builder =>  
-            builder.UseSqlServer(connectionString, options =>  
-                options.MigrationsAssembly(migrationsAssembly)))  
-        .Services.AddTransient<IProfileService, ProfileService>();  
+    ...  
+    services.AddIdentityServer(x => x.IssuerUri = "null")  
+        .AddSigningCredential(Certificate.Get())                 
+        .AddAspNetIdentity<ApplicationUser>()  
+        .AddConfigurationStore(builder =>  
+            builder.UseSqlServer(connectionString, options =>  
+                options.MigrationsAssembly(migrationsAssembly)))  
+        .AddOperationalStore(builder =>  
+            builder.UseSqlServer(connectionString, options =>  
+                options.MigrationsAssembly(migrationsAssembly)))  
+        .Services.AddTransient<IProfileService, ProfileService>();  
 }
 ```
 
@@ -110,13 +113,13 @@ Para obter informações sobre como configurar o IdentityServer para usar a iden
 Ao configurar recursos de API, o `AddInMemoryApiResources` método espera uma `IEnumerable<ApiResource>` coleção. O exemplo de código a seguir mostra o `GetApis` método que fornece essa coleção no aplicativo de referência eShopOnContainers:
 
 ```csharp
-public static IEnumerable<ApiResource> GetApis()  
+public static IEnumerable<ApiResource> GetApis()  
 {  
-    return new List<ApiResource>  
-    {  
-        new ApiResource("orders", "Orders Service"),  
-        new ApiResource("basket", "Basket Service")  
-    };  
+    return new List<ApiResource>  
+    {  
+        new ApiResource("orders", "Orders Service"),  
+        new ApiResource("basket", "Basket Service")  
+    };  
 }
 ```
 
@@ -127,13 +130,13 @@ Esse método especifica que IdentityServer deve proteger as APIs de pedidos e de
 Ao configurar recursos de identidade, o `AddInMemoryIdentityResources` método espera uma `IEnumerable<IdentityResource>` coleção. Os recursos de identidade são dados como ID de usuário, nome ou endereço de email. Cada recurso de identidade tem um nome exclusivo, e tipos de declaração arbitrários podem ser atribuídos a ele, que serão incluídos no token de identidade para o usuário. O exemplo de código a seguir mostra o `GetResources` método que fornece essa coleção no aplicativo de referência eShopOnContainers:
 
 ```csharp
-public static IEnumerable<IdentityResource> GetResources()  
+public static IEnumerable<IdentityResource> GetResources()  
 {  
-    return new List<IdentityResource>  
-    {  
-        new IdentityResources.OpenId(),  
-        new IdentityResources.Profile()  
-    };  
+    return new List<IdentityResource>  
+    {  
+        new IdentityResources.OpenId(),  
+        new IdentityResources.Profile()  
+    };  
 }
 ```
 
@@ -156,38 +159,38 @@ Os clientes são aplicativos que podem solicitar tokens do IdentityServer. Norma
 Ao configurar clientes, o `AddInMemoryClients` método espera uma `IEnumerable<Client>` coleção. O exemplo de código a seguir mostra a configuração do aplicativo móvel eShopOnContainers no `GetClients` método que fornece essa coleção no aplicativo de referência eShopOnContainers:
 
 ```csharp
-public static IEnumerable<Client> GetClients(Dictionary<string,string> clientsUrl)
+public static IEnumerable<Client> GetClients(Dictionary<string,string> clientsUrl)
 {
-    return new List<Client>
-    {
-        ...
-        new Client
-        {
-            ClientId = "xamarin",
-            ClientName = "eShop Xamarin OpenId Client",
-            AllowedGrantTypes = GrantTypes.Hybrid,
-            ClientSecrets =
-            {
-                new Secret("secret".Sha256())
-            },
-            RedirectUris = { clientsUrl["Xamarin"] },
-            RequireConsent = false,
-            RequirePkce = true,
-            PostLogoutRedirectUris = { $"{clientsUrl["Xamarin"]}/Account/Redirecting" },
-            AllowedCorsOrigins = { "http://eshopxamarin" },
-            AllowedScopes = new List<string>
-            {
-                IdentityServerConstants.StandardScopes.OpenId,
-                IdentityServerConstants.StandardScopes.Profile,
-                IdentityServerConstants.StandardScopes.OfflineAccess,
-                "orders",
-                "basket"
-            },
-            AllowOfflineAccess = true,
-            AllowAccessTokensViaBrowser = true
-        },
-        ...
-    };
+    return new List<Client>
+    {
+        ...
+        new Client
+        {
+            ClientId = "xamarin",
+            ClientName = "eShop Xamarin OpenId Client",
+            AllowedGrantTypes = GrantTypes.Hybrid,
+            ClientSecrets =
+            {
+                new Secret("secret".Sha256())
+            },
+            RedirectUris = { clientsUrl["Xamarin"] },
+            RequireConsent = false,
+            RequirePkce = true,
+            PostLogoutRedirectUris = { $"{clientsUrl["Xamarin"]}/Account/Redirecting" },
+            AllowedCorsOrigins = { "http://eshopxamarin" },
+            AllowedScopes = new List<string>
+            {
+                IdentityServerConstants.StandardScopes.OpenId,
+                IdentityServerConstants.StandardScopes.Profile,
+                IdentityServerConstants.StandardScopes.OfflineAccess,
+                "orders",
+                "basket"
+            },
+            AllowOfflineAccess = true,
+            AllowAccessTokensViaBrowser = true
+        },
+        ...
+    };
 }
 ```
 
@@ -243,40 +246,40 @@ No aplicativo móvel eShopOnContainers, a comunicação com IdentityServer é ex
 Quando o usuário toca no botão de **logon** no `LoginView` , o `SignInCommand` na `LoginViewModel` classe é executado, o que, por sua vez, executa o `SignInAsync` método. O seguinte exemplo de código mostra esse método:
 
 ```csharp
-private async Task SignInAsync()  
+private async Task SignInAsync()  
 {  
-    ...  
-    LoginUrl = _identityService.CreateAuthorizationRequest();  
-    IsLogin = true;  
-    ...  
+    ...  
+    LoginUrl = _identityService.CreateAuthorizationRequest();  
+    IsLogin = true;  
+    ...  
 }
 ```
 
 Esse método invoca o `CreateAuthorizationRequest` método na `IdentityService` classe, que é mostrado no exemplo de código a seguir:
 
 ```csharp
-public string CreateAuthorizationRequest()
+public string CreateAuthorizationRequest()
 {
-    // Create URI to authorization endpoint
-    var authorizeRequest = new AuthorizeRequest(GlobalSetting.Instance.IdentityEndpoint);
+    // Create URI to authorization endpoint
+    var authorizeRequest = new AuthorizeRequest(GlobalSetting.Instance.IdentityEndpoint);
 
-    // Dictionary with values for the authorize request
-    var dic = new Dictionary<string, string>();
-    dic.Add("client_id", GlobalSetting.Instance.ClientId);
-    dic.Add("client_secret", GlobalSetting.Instance.ClientSecret); 
-    dic.Add("response_type", "code id_token");
-    dic.Add("scope", "openid profile basket orders locations marketing offline_access");
-    dic.Add("redirect_uri", GlobalSetting.Instance.Callback);
-    dic.Add("nonce", Guid.NewGuid().ToString("N"));
-    dic.Add("code_challenge", CreateCodeChallenge());
-    dic.Add("code_challenge_method", "S256");
+    // Dictionary with values for the authorize request
+    var dic = new Dictionary<string, string>();
+    dic.Add("client_id", GlobalSetting.Instance.ClientId);
+    dic.Add("client_secret", GlobalSetting.Instance.ClientSecret); 
+    dic.Add("response_type", "code id_token");
+    dic.Add("scope", "openid profile basket orders locations marketing offline_access");
+    dic.Add("redirect_uri", GlobalSetting.Instance.Callback);
+    dic.Add("nonce", Guid.NewGuid().ToString("N"));
+    dic.Add("code_challenge", CreateCodeChallenge());
+    dic.Add("code_challenge_method", "S256");
 
-    // Add CSRF token to protect against cross-site request forgery attacks.
-    var currentCSRFToken = Guid.NewGuid().ToString("N");
-    dic.Add("state", currentCSRFToken);
+    // Add CSRF token to protect against cross-site request forgery attacks.
+    var currentCSRFToken = Guid.NewGuid().ToString("N");
+    dic.Add("state", currentCSRFToken);
 
-    var authorizeUri = authorizeRequest.Create(dic); 
-    return authorizeUri;
+    var authorizeUri = authorizeRequest.Create(dic); 
+    return authorizeUri;
 }
 
 ```
@@ -295,25 +298,25 @@ O URI retornado é armazenado na `LoginUrl` propriedade da `LoginViewModel` clas
 Quando o logon for concluído, o [`WebView`](xref:Xamarin.Forms.WebView) será redirecionado para um URI de retorno. Essa `WebView` navegação fará com que o `NavigateAsync` método na `LoginViewModel` classe seja executado, o que é mostrado no exemplo de código a seguir:
 
 ```csharp
-private async Task NavigateAsync(string url)  
+private async Task NavigateAsync(string url)  
 {  
-    ...  
-    var authResponse = new AuthorizeResponse(url);  
-    if (!string.IsNullOrWhiteSpace(authResponse.Code))  
-    {  
-        var userToken = await _identityService.GetTokenAsync(authResponse.Code);  
-        string accessToken = userToken.AccessToken;  
+    ...  
+    var authResponse = new AuthorizeResponse(url);  
+    if (!string.IsNullOrWhiteSpace(authResponse.Code))  
+    {  
+        var userToken = await _identityService.GetTokenAsync(authResponse.Code);  
+        string accessToken = userToken.AccessToken;  
 
-        if (!string.IsNullOrWhiteSpace(accessToken))  
-        {  
-            Settings.AuthAccessToken = accessToken;  
-            Settings.AuthIdToken = authResponse.IdentityToken;  
+        if (!string.IsNullOrWhiteSpace(accessToken))  
+        {  
+            Settings.AuthAccessToken = accessToken;  
+            Settings.AuthIdToken = authResponse.IdentityToken;  
 
-            await NavigationService.NavigateToAsync<MainViewModel>();  
-            await NavigationService.RemoveLastFromBackStackAsync();  
-        }  
-    }  
-    ...  
+            await NavigationService.NavigateToAsync<MainViewModel>();  
+            await NavigationService.RemoveLastFromBackStackAsync();  
+        }  
+    }  
+    ...  
 }
 ```
 
@@ -336,30 +339,30 @@ Quando o usuário toca no botão **fazer logoff** no `ProfileView` , o `LogoutCo
 Quando uma exibição é criada e navegada, o `InitializeAsync` método do modelo de exibição associado do modo de exibição é executado, o que executa o `Logout` método da `LoginViewModel` classe, que é mostrado no exemplo de código a seguir:
 
 ```csharp
-private void Logout()  
+private void Logout()  
 {  
-    var authIdToken = Settings.AuthIdToken;  
-    var logoutRequest = _identityService.CreateLogoutRequest(authIdToken);  
+    var authIdToken = Settings.AuthIdToken;  
+    var logoutRequest = _identityService.CreateLogoutRequest(authIdToken);  
 
-    if (!string.IsNullOrEmpty(logoutRequest))  
-    {  
-        // Logout  
-        LoginUrl = logoutRequest;  
-    }  
-    ...  
+    if (!string.IsNullOrEmpty(logoutRequest))  
+    {  
+        // Logout  
+        LoginUrl = logoutRequest;  
+    }  
+    ...  
 }
 ```
 
 Esse método invoca o `CreateLogoutRequest` método na `IdentityService` classe, passando o token de identidade recuperado das configurações do aplicativo como um parâmetro. Para obter mais informações sobre configurações de aplicativo, consulte [Gerenciamento de configuração](~/xamarin-forms/enterprise-application-patterns/configuration-management.md). O seguinte exemplo de código mostra o método `CreateLogoutRequest`:
 
 ```csharp
-public string CreateLogoutRequest(string token)  
+public string CreateLogoutRequest(string token)  
 {  
-    ...  
-    return string.Format("{0}?id_token_hint={1}&post_logout_redirect_uri={2}",   
-        GlobalSetting.Instance.LogoutEndpoint,  
-        token,  
-        GlobalSetting.Instance.LogoutCallback);  
+    ...  
+    return string.Format("{0}?id_token_hint={1}&post_logout_redirect_uri={2}",   
+        GlobalSetting.Instance.LogoutEndpoint,  
+        token,  
+        GlobalSetting.Instance.LogoutCallback);  
 }
 ```
 
@@ -370,14 +373,14 @@ O URI retornado é armazenado na `LoginUrl` propriedade da `LoginViewModel` clas
 No aplicativo móvel, o [`WebView`](xref:Xamarin.Forms.WebView) será redirecionado para o URI de redirecionamento de logout da postagem. Essa `WebView` navegação fará com que o `NavigateAsync` método na `LoginViewModel` classe seja executado, o que é mostrado no exemplo de código a seguir:
 
 ```csharp
-private async Task NavigateAsync(string url)  
+private async Task NavigateAsync(string url)  
 {  
-    ...  
-    Settings.AuthAccessToken = string.Empty;  
-    Settings.AuthIdToken = string.Empty;  
-    IsLogin = false;  
-    LoginUrl = _identityService.CreateAuthorizationRequest();  
-    ...  
+    ...  
+    Settings.AuthAccessToken = string.Empty;  
+    Settings.AuthIdToken = string.Empty;  
+    IsLogin = false;  
+    LoginUrl = _identityService.CreateAuthorizationRequest();  
+    ...  
 }
 ```
 
@@ -396,9 +399,9 @@ Restringir o acesso a uma rota ASP.NET Core MVC pode ser obtido aplicando um atr
 
 ```csharp
 [Authorize]  
-public class BasketController : Controller  
+public class BasketController : Controller  
 {  
-    ...  
+    ...  
 }
 ```
 
@@ -420,16 +423,16 @@ O aplicativo móvel eShopOnContainers comunica-se com o microserviço de identid
 Para executar a autorização com IdentityServer, seu middleware de autorização deve ser adicionado ao pipeline de solicitação HTTP do aplicativo Web. O middleware é adicionado no `ConfigureAuth` método na classe do aplicativo Web `Startup` , que é invocada a partir do `Configure` método e é demonstrada no exemplo de código a seguir do aplicativo de referência eShopOnContainers:
 
 ```csharp
-protected virtual void ConfigureAuth(IApplicationBuilder app)  
+protected virtual void ConfigureAuth(IApplicationBuilder app)  
 {  
-    var identityUrl = Configuration.GetValue<string>("IdentityUrl");  
-    app.UseIdentityServerAuthentication(new IdentityServerAuthenticationOptions  
-    {  
-        Authority = identityUrl.ToString(),  
-        ScopeName = "basket",  
-        RequireHttpsMetadata = false  
-    });  
-} 
+    var identityUrl = Configuration.GetValue<string>("IdentityUrl");  
+    app.UseIdentityServerAuthentication(new IdentityServerAuthenticationOptions  
+    {  
+        Authority = identityUrl.ToString(),  
+        ScopeName = "basket",  
+        RequireHttpsMetadata = false  
+    });  
+} 
 ```
 
 Esse método garante que a API só possa ser acessada com um token de acesso válido. O middleware valida o token de entrada para garantir que ele seja enviado de um emissor confiável e valida que o token é válido para ser usado com a API que o recebe. Portanto, navegar até o controlador de classificação ou de cesta retornará um código de status HTTP 401 (não autorizado), indicando que um token de acesso é necessário.
@@ -442,8 +445,8 @@ Esse método garante que a API só possa ser acessada com um token de acesso vá
 Ao fazer solicitações para os microserviços de classificação e cesta, o token de acesso, obtido do IdentityServer durante o processo de autenticação, deve ser incluído na solicitação, conforme mostrado no exemplo de código a seguir:
 
 ```csharp
-var authToken = Settings.AuthAccessToken;  
-Order = await _ordersService.GetOrderAsync(Convert.ToInt32(order.OrderNumber), authToken);
+var authToken = Settings.AuthAccessToken;  
+Order = await _ordersService.GetOrderAsync(Convert.ToInt32(order.OrderNumber), authToken);
 ```
 
 O token de acesso é armazenado como uma configuração de aplicativo e é recuperado do armazenamento específico da plataforma e incluído na chamada para o `GetOrderAsync` método na `OrderService` classe.
@@ -451,12 +454,12 @@ O token de acesso é armazenado como uma configuração de aplicativo e é recup
 Da mesma forma, o token de acesso deve ser incluído ao enviar dados para uma API protegida por IdentityServer, conforme mostrado no exemplo de código a seguir:
 
 ```csharp
-var authToken = Settings.AuthAccessToken;  
-await _basketService.UpdateBasketAsync(new CustomerBasket  
+var authToken = Settings.AuthAccessToken;  
+await _basketService.UpdateBasketAsync(new CustomerBasket  
 {  
-    BuyerId = userInfo.UserId,   
-    Items = BasketItems.ToList()  
-}, authToken);
+    BuyerId = userInfo.UserId,   
+    Items = BasketItems.ToList()  
+}, authToken);
 ```
 
 O token de acesso é recuperado do armazenamento específico da plataforma e incluído na chamada para o `UpdateBasketAsync` método na `BasketService` classe.
@@ -464,7 +467,7 @@ O token de acesso é recuperado do armazenamento específico da plataforma e inc
 A `RequestProvider` classe, no aplicativo móvel eShopOnContainers, usa a `HttpClient` classe para fazer solicitações às APIs RESTful expostas pelo aplicativo de referência eShopOnContainers. Ao fazer solicitações às APIs de ordenação e de cesta, que exigem autorização, um token de acesso válido deve ser incluído com a solicitação. Isso é obtido com a adição do token de acesso aos cabeçalhos da `HttpClient` instância, conforme demonstrado no exemplo de código a seguir:
 
 ```csharp
-httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 ```
 
 A `DefaultRequestHeaders` propriedade da `HttpClient` classe expõe os cabeçalhos que são enviados com cada solicitação e o token de acesso é adicionado ao `Authorization` cabeçalho prefixado com a cadeia de caracteres `Bearer` . Quando a solicitação é enviada a uma API RESTful, o valor do `Authorization` cabeçalho é extraído e validado para garantir que ele seja enviado de um emissor confiável e usado para determinar se o usuário tem permissão para invocar a API que a recebe.

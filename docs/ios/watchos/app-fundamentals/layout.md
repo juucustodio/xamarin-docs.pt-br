@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/17/2017
-ms.openlocfilehash: 345c05a439423474644ac64ef86f9adc580ab0b1
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: 1fdb7a10bd767085ba8758fa2e026cc36c93639a
+ms.sourcegitcommit: 00e6a61eb82ad5b0dd323d48d483a74bedd814f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86937716"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91436924"
 ---
 # <a name="working-with-watchos-layout-in-xamarin"></a>Trabalhando com o layout watchOS no Xamarin
 
@@ -54,9 +54,9 @@ Quando o tamanho é definido como **relativo ao contêiner** , você pode fornec
 
 ![Fornecer um valor proporcional e um ajuste de deslocamento](layout-images/button-attributes.png)
 
-### <a name="group"></a>Agrupar
+### <a name="group"></a>Grupo
 
-`WKInterfaceGroup`é um contêiner de layout simples que pode ser configurado para empilhar controles vertical ou horizontalmente. Ele inclui o espaçamento entre cada controle por padrão, mas você pode modificar o espaçamento (e as indefinições) no Inspetor de **atributos** .
+`WKInterfaceGroup` é um contêiner de layout simples que pode ser configurado para empilhar controles vertical ou horizontalmente. Ele inclui o espaçamento entre cada controle por padrão, mas você pode modificar o espaçamento (e as indefinições) no Inspetor de **atributos** .
 
 ![Modificar o espaçamento e as indefinições no Inspetor de atributos](layout-images/group-attributes.png)
 
@@ -79,6 +79,6 @@ Eles podem ser posicionados em seus layouts usando **grupos** ou as configuraç�
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [WatchKitCatalog (exemplo)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchKitCatalog (exemplo)](/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Referência de layout da Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/Layout.html)
 - [Referência de tipografia de & de cor da Apple](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/ColorandTypography.html)

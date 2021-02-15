@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: davidortinau
 ms.author: daortin
 ms.date: 04/25/2018
-ms.openlocfilehash: ea54dcd1df800df1df855fc6b7efedecfda1a24f
-ms.sourcegitcommit: 952db1983c0bc373844c5fbe9d185e04a87d8fb4
+ms.openlocfilehash: 7c63f4c245d6fc5cb6e9da6320e159229b07de6e
+ms.sourcegitcommit: 4e399f6fa72993b9580d41b93050be935544ffaa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86996858"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91453669"
 ---
 # <a name="install-and-setup-wear-os-on-xamarinandroid"></a>Instalar e configurar o sistema operacional de desgaste no Xamarin. Android
 
@@ -28,7 +28,7 @@ O seguinte é necessário para criar aplicativos de desgaste do Android baseados
 
 - O **SDK do Android** -SDK do Android 5.0.1 (API 21) ou posterior deve ser instalado por meio do gerenciador de SDK do Android.
 
-- **Java Developer Kit** &ndash; O desenvolvimento do Xamarin Android requer o [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) se você estiver desenvolvendo para o nível de API 24 ou superior (o JDK 1,8 também oferece suporte a níveis de API anteriores a 24).
+- **Java Developer Kit** &ndash; O desenvolvimento do Xamarin Android requer o   [JDK 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) se você estiver desenvolvendo para o nível de API 24 ou superior (o JDK 1,8 também oferece suporte a níveis de API anteriores a 24).
 
 Você pode continuar a usar o [JDK 1,7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) se estiver desenvolvendo especificamente para o nível de API 23 ou anterior.
 
@@ -115,4 +115,4 @@ Para saber mais sobre aplicativos de desgaste de pacotes, consulte [trabalhando 
 
 ## <a name="related-links"></a>Links Relacionados
 
-- [SkeletonWear (exemplo)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-skeletonwear)
+- [SkeletonWear (exemplo)](/samples/xamarin/monodroid-samples/wear-skeletonwear)

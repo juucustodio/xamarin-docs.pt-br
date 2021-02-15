@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 03/18/2017
-ms.openlocfilehash: 2f70dd3b18c36d478548672bb78d329cb2a4c9ab
-ms.sourcegitcommit: 008bcbd37b6c96a7be2baf0633d066931d41f61a
+ms.openlocfilehash: cac0d9bc6d4ac2c07bcfd09275ff3f78e0e18b91
+ms.sourcegitcommit: e27e29c14b783263e063baaa65d4eecb8dd31f57
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86938769"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98628833"
 ---
 # <a name="compiling-for-different-devices-in-xamarinios"></a>Compilando para diferentes dispositivos no Xamarin. iOS
 
@@ -20,11 +20,11 @@ As propriedades de build do executável podem ser configuradas da página de pro
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-[![A página de propriedades de compilação do iOS de projetos](compiling-for-different-devices-images/image1.png)](compiling-for-different-devices-images/image1.png#lightbox) 
+[![A página de propriedades de compilação do iOS de projetos para Visual Studio para Mac.](compiling-for-different-devices-images/image1.png)](compiling-for-different-devices-images/image1.png#lightbox) 
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-[![A página de propriedades de compilação do iOS de projetos](compiling-for-different-devices-images/image1a.png)](compiling-for-different-devices-images/image1a.png#lightbox)
+[![A página de propriedades de compilação do iOS de projetos do Visual Studio.](compiling-for-different-devices-images/image1a.png)](compiling-for-different-devices-images/image1a.png#lightbox)
 
 -----
 
@@ -34,7 +34,7 @@ Além das opções de configuração disponíveis na interface do usuário, voc�
 
 O Visual Studio para Mac permite que você configure duas propriedades importantes relacionadas ao SDK: a versão do SDK do iOS usada para compilar seu software e o destino de implantação (ou a versão do iOS mínima necessária).
 
-A opção **Versão do SDK** do iOS permite que você use diferentes versões de um SDK publicado pela Apple, o que direciona o Xamarin.iOS aos compiladores, vinculadores e bibliotecas que ele deve referenciar durante o build. Clique com o botão direito do mouse no projeto e escolha **Opções**e, em seguida, **Build do IOS** na janela Opções:
+A opção **Versão do SDK** do iOS permite que você use diferentes versões de um SDK publicado pela Apple, o que direciona o Xamarin.iOS aos compiladores, vinculadores e bibliotecas que ele deve referenciar durante o build. Clique com o botão direito do mouse no projeto e escolha **Opções** e, em seguida, **Build do IOS** na janela Opções:
 
 [![Escolha a versão do SDK na janela Opções](compiling-for-different-devices-images/sdk-version-sml.png)](compiling-for-different-devices-images/sdk-version.png#lightbox)
 
@@ -58,9 +58,9 @@ O mecanismo de back-end de otimização do LLVM produz código mais rígido que 
 
 Você pode habilitar essas opções de Build do iOS no Visual Studio para Mac ou no Visual Studio.
 
-[![Habilitando LLVM](compiling-for-different-devices-images/image2.png)](compiling-for-different-devices-images/image2.png#lightbox)
+[![Habilitando L L V M em Visual Studio para Mac.](compiling-for-different-devices-images/image2.png)](compiling-for-different-devices-images/image2.png#lightbox)
 
-[![Habilitando LLVM](compiling-for-different-devices-images/image2a.png)](compiling-for-different-devices-images/image2a.png#lightbox)
+[![Habilitando L L V M no Visual Studio.](compiling-for-different-devices-images/image2a.png)](compiling-for-different-devices-images/image2a.png#lightbox)
 
 ## <a name="architecture-support"></a>Suporte à arquitetura
 

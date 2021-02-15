@@ -7,16 +7,20 @@ ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
 ms.date: 01/31/2018
-ms.openlocfilehash: e5cbbc10f189abb6d0d0b2ef99b50ae53d1103c2
-ms.sourcegitcommit: 93e6358aac2ade44e8b800f066405b8bc8df2510
+ms.openlocfilehash: 07f3e313a743c9d95f8baf2be7a31f16c6ca4f7e
+ms.sourcegitcommit: d1f0e0a9100548cfe0960ed2225b979cc1d7c28f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84572280"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96439474"
 ---
 # <a name="ios-designer-basics"></a>Noções básicas do iOS designer
 
 _Este guia apresenta o Xamarin Designer para iOS. Ele demonstra como usar o designer do iOS para formatar visualmente os controles, como acessar esses controles no código e como editar propriedades._
+
+> [!WARNING]
+> O designer do iOS começará a ser dividido no Visual Studio 2019 versão 16,8 e no Visual Studio 2019 para Mac versão 8,8.
+> A maneira recomendada para criar interfaces de usuário do iOS é diretamente em um Mac que executa o Xcode. Para obter mais informações, consulte [projetando interfaces do usuário com o Xcode](../storyboards/index.md). 
 
 O Xamarin Designer para iOS é um designer de interface visual semelhante ao Interface Builder do Xcode e ao Designer Android. Alguns dos seus muitos recursos incluem a integração direta com o Visual Studio para Windows e Mac, edição do tipo "arrastar e soltar", uma interface para configurar manipuladores de eventos e a capacidade de renderizar controles personalizados.
 
@@ -68,13 +72,13 @@ Alguns controles, como rótulos que contêm texto estático, podem ser adicionad
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-Para acessar e manipular o botão no código, ele deve ter um identificador exclusivo. Forneça um identificador exclusivo selecionando o botão, abrindo o **painel de propriedades**e definindo seu campo de **nome** como um valor como "SubmitButton":
+Para acessar e manipular o botão no código, ele deve ter um identificador exclusivo. Forneça um identificador exclusivo selecionando o botão, abrindo o **painel de propriedades** e definindo seu campo de **nome** como um valor como "SubmitButton":
 
 [![Definindo o nome de um botão na Painel de Propriedades](introduction-images/4-settingbuttonname-vsmac.png "Definindo o nome de um botão na Painel de Propriedades")](introduction-images/4-settingbuttonname-vsmac-large.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Para acessar e manipular o botão no código, ele deve ter um identificador exclusivo. Forneça um identificador exclusivo selecionando o botão, abrindo a **janela Propriedades**e definindo seu campo de **nome** como um valor como "SubmitButton":
+Para acessar e manipular o botão no código, ele deve ter um identificador exclusivo. Forneça um identificador exclusivo selecionando o botão, abrindo a **janela Propriedades** e definindo seu campo de **nome** como um valor como "SubmitButton":
 
 [![Definindo o nome de um botão na janela Propriedades](introduction-images/4-settingbuttonname-vs.png "Definindo o nome de um botão na janela Propriedades")](introduction-images/4-settingbuttonname-vs-large.png#lightbox)
 
@@ -84,13 +88,13 @@ Agora que o botão tem um nome, ele pode ser acessado no código. Mas como isso 
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
-Na **painel de soluções**, navegar para **ViewController.cs** e clicar no indicador de divulgação revela que a definição de classe do controlador de exibição `ViewController` abrange dois arquivos, cada um contendo uma definição de [classe parcial](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) :
+Na **painel de soluções**, navegar para **ViewController.cs** e clicar no indicador de divulgação revela que a definição de classe do controlador de exibição `ViewController` abrange dois arquivos, cada um contendo uma definição de [classe parcial](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) :
 
 [![Os dois arquivos que compõem a classe ViewController: ViewController.cs e ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vsmac.png "Os dois arquivos que compõem a classe ViewController: ViewController.cs e ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vsmac-large.png#lightbox)
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
 
-Na **Gerenciador de soluções**, navegar para **ViewController.cs** e clicar no indicador de divulgação revela que a definição de classe do controlador de exibição `ViewController` abrange dois arquivos, cada um contendo uma definição de [classe parcial](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) :
+Na **Gerenciador de soluções**, navegar para **ViewController.cs** e clicar no indicador de divulgação revela que a definição de classe do controlador de exibição `ViewController` abrange dois arquivos, cada um contendo uma definição de [classe parcial](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods) :
 
 [![Os dois arquivos que compõem a classe ViewController: ViewController.cs e ViewController.designer.cs](introduction-images/5-twoviewcontrollerfiles-vs.png "Os dois arquivos que compõem a classe ViewController: ViewController.cs e ViewController.designer.cs")](introduction-images/5-twoviewcontrollerfiles-vs-large.png#lightbox)
 
@@ -173,7 +177,7 @@ O designer do iOS tem seis seções principais:
 2. **Barra de ferramentas de restrições** – permite alternar entre o modo de edição de quadro e o modo de edição de restrição, duas maneiras diferentes de posicionar elementos em uma interface do usuário.
 3. **Caixa de ferramentas** – lista os controladores, objetos, controles, exibições de dados, reconhecedores de gesto, janelas e barras que podem ser arrastados para a superfície de design e adicionados a uma interface do usuário.
 4. **Painel de propriedades** – mostra as propriedades do controle selecionado, incluindo identidade, estilos visuais, acessibilidade, layout e comportamento.
-5. **Estrutura de tópicos do documento** – mostra a árvore de controles que compõem o layout da interface que está sendo editada. Clicar em um item na árvore o seleciona no designer do iOS e mostra suas propriedades no **painel de propriedades**. Isso é útil para selecionar um controle específico em uma interface de usuário profundamente aninhada.
+5. **Estrutura de tópicos do documento** – mostra a árvore de controles que compõem o layout da interface que está sendo editada. Clicar em um item na árvore o seleciona no designer do iOS e mostra suas propriedades no  **painel de propriedades**. Isso é útil para selecionar um controle específico em uma interface de usuário profundamente aninhada.
 6. **Barra de ferramentas inferior** – contém opções para alterar o modo como o designer do IOS exibe o arquivo. Storyboard ou. xib, incluindo o dispositivo, a orientação e o zoom.
 
 # <a name="visual-studio"></a>[Visual Studio](#tab/windows)
@@ -184,7 +188,7 @@ O designer do iOS tem seis seções principais:
 2. **Barra de ferramentas de restrições** – permite alternar entre o modo de edição de quadro e o modo de edição de restrição, duas maneiras diferentes de posicionar elementos em uma interface do usuário.
 3. **Caixa de ferramentas** – lista os controladores, objetos, controles, exibições de dados, reconhecedores de gesto, janelas e barras que podem ser arrastados para a superfície de design e adicionados a uma interface do usuário.
 4. **Janela Propriedades** – mostra as propriedades do controle selecionado, incluindo identidade, estilos visuais, acessibilidade, layout e comportamento.
-5. **Estrutura de tópicos do documento** – mostra a árvore de controles que compõem o layout da interface que está sendo editada. Clicar em um item na árvore o seleciona no designer do iOS e mostra suas propriedades na **janela Propriedades**. Isso é útil para selecionar um controle específico em uma interface de usuário profundamente aninhada.
+5. **Estrutura de tópicos do documento** – mostra a árvore de controles que compõem o layout da interface que está sendo editada. Clicar em um item na árvore o seleciona no designer do iOS e mostra suas propriedades na  **janela Propriedades**. Isso é útil para selecionar um controle específico em uma interface de usuário profundamente aninhada.
 6. **Barra de ferramentas inferior** – contém opções para alterar o modo como o designer do IOS exibe o arquivo. Storyboard ou. xib, incluindo o dispositivo, a orientação e o zoom.
 
 -----
@@ -300,8 +304,8 @@ Observe que a seleção de um dispositivo e orientação altera apenas a forma c
 
 Quando as [classes de tamanho](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) estiverem [habilitadas](~/ios/user-interface/storyboards/unified-storyboards.md#enabling-size-classes), o botão **Editar características** será exibido na barra de ferramentas inferior expandida.  Clicar no botão **Editar características** exibe opções para criar uma variação de interface com base na classe de tamanho representada pelo dispositivo e orientação selecionados. Considere os seguintes exemplos:
 
-- Se a opção **iPhone se**  /  **retrato**estiver selecionada, o popover fornecerá opções para criar uma variação de interface para a classe tamanho compacto de altura normal. 
-- Se o **iPad Pro 9,7 "**  /  **paisagem**  /  de**tela inteira** for selecionado, o popover fornecerá opções para criar uma variação de interface para a classe largura regular, tamanho normal de altura.
+- Se a opção **iPhone se**  /  **retrato** estiver selecionada, o popover fornecerá opções para criar uma variação de interface para a classe tamanho compacto de altura normal. 
+- Se o **iPad Pro 9,7 "**  /  **paisagem**  /  de **tela inteira** for selecionado, o popover fornecerá opções para criar uma variação de interface para a classe largura regular, tamanho normal de altura.
 
 # <a name="visual-studio-for-mac"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -492,13 +496,13 @@ Este e outros guias relacionados ao iOS designer referem-se ao uso de storyboard
 
 Este guia forneceu uma introdução ao designer do iOS, descrevendo seus recursos e descrevendo as ferramentas que ele oferece para criar interfaces de usuário belas.
 
-## <a name="related-links"></a>Links relacionados
+## <a name="related-links"></a>Links Relacionados
 
 - [Introdução ao Storyboards](~/ios/user-interface/storyboards/index.md)
 - [Instruções de controles designáveis do iOS](~/ios/user-interface/designer/ios-designable-controls-walkthrough.md)
 - [Hello, iOS](~/ios/get-started/hello-ios/index.md)
 - [Multitela Hello, iOS](~/ios/get-started/hello-ios-multiscreen/index.md)
 - [Visão geral de Designer Android](~/android/user-interface/android-designer/index.md)
-- [Classes parciais e métodos](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)
+- [Classes parciais e métodos](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)
 - [Mergulhando no Xamarin Designer para iOS-evoluir 2014 (vídeo)](https://www.youtube.com/watch?v=W4H9uLjoEjM)
 - [Usando o designer do iOS para criar uma tela de inicialização (vídeo)](https://university.xamarin.com/lightninglectures/using-the-ios-designer-to-create-a-launch-screen)
